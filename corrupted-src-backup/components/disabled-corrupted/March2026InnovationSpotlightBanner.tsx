@@ -88,7 +88,6 @@ const March2026InnovationSpotlightBanne, r = () => {
               </di, v>
             ))}
           </div>
-        </div>
         {/* Innovation, Card, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
           { innovatio, n, s.m, a, p((innova, t, i, o, n, ind, e, x) = > (

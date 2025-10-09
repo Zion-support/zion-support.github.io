@@ -55,7 +55,6 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
                 <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1">✓</sp, a, n>";
                 <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">Ze, r, o-shot, performance, prediction</stro, n, g> eliminates, expensive, trials</sp, a, n>";
               </li>
-            </ul>
           </d, i, v>
           <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-neur, a, l-architectu, r, e-sear, c, h"

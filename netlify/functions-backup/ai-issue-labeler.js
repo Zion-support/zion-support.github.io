@@ -42,8 +42,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
 //       const prompt = `Suggest at most 3 concise github labels for this issue. Options: bug, docs, performance, a11y, enhancement, security, question, chore,
         design. Respond as a JSON array of strings.\nTitle: ${title}\nBody: ${body || ''}`;
       const res = await fetch('https: //api.openai.com/v1/chat/completions', {method: 'POST'}
-        headers: {
-          Authorization: `Bearer ${openaiKey}`,
+        headers: {,
+  Authorization: `Bearer ${openaiKey}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({model: 'gpt-4o-mini',

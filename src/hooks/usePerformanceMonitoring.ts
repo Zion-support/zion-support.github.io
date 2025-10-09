@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 // PerformanceMetrics interface removed as it's not used in this hook
 export const _usePerformanceMonitoring = () => {
@@ -44,7 +43,6 @@ const fidObserver = new PerformanceObserver(list => {
           (entry: PerformanceEntry & { processingStart?: number }) => {
     // TODO: Add content
   }
-=======
 'use client';
 // PerformanceMetrics interface removed as it's not used in this hook;
 export const _usePerformanceMonitoring = () => {// TODO: Add content;}
@@ -80,12 +78,10 @@ const fidObserver = new PerformanceObserver(list => {// TODO: Add content;}
 //         entries.forEach()
           (entry: PerformanceEntry & { processingStart?: number }) => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime
             reportMetric('FID', fid)
           }
-<<<<<<< HEAD
   )
       }
   )
@@ -219,7 +215,6 @@ const resourceObserver = new PerformanceObserver(list => {
         const metrics = {
     // TODO: Add content
   }
-=======
         );
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -320,13 +315,11 @@ const resourceObserver = new PerformanceObserver(list => {// TODO: Add content;}
 }
         const metrics = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   domContentLoaded:
 //             navigation.domContentLoadedEventEnd -
 //             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,
-<<<<<<< HEAD
           totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
         }
         Object.entries(metrics).forEach(([key, value]) => {
@@ -347,7 +340,6 @@ const resourceObserver = new PerformanceObserver(list => {// TODO: Add content;}
   }
 }
 export default usePerformanceMonitoring
-=======
           totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;
         };
         Object.entries(metrics).forEach(([key, value]) => {// TODO: Add content;}
@@ -365,4 +357,3 @@ export default usePerformanceMonitoring
   };
 };
 export default usePerformanceMonitoring;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

@@ -13,8 +13,8 @@ interface PerformanceMetrics {
   customMetrics: Record<string, number>;
 }
 class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {
-    customMetrics: {}
+  private metrics: PerformanceMetrics = {,
+  customMetrics: {}
   };
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;

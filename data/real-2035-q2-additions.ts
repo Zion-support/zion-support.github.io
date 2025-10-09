@@ -1,12 +1,11 @@
-
       'Intent classification + prioritization'
       'On-brand response drafting'
       'Automatic polite follow-ups'
       'Lead/contact enrichment'
       'Analytics and response SLAs'
     ]
-    popular: true;
-    icon: '';
+    popular: true;,
+  icon: '';
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
     link: 'https://ziontechgroup.com/services/ai-email-responder'

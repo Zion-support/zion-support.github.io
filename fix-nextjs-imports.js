@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 // Define the replacements
 const replacements = [
   // Next.js imports to React Router
@@ -31,13 +29,11 @@ const replacements = [
     from: "import type { Metadata } from 'next';",
     to: "import { Helmet } from 'react-helmet-async';",
   },
-
   // Next.js specific patterns
   { from: 'export const metadata: Metadata = {', to: '// Metadata moved to Helmet component' },
   { from: 'export const metadata = {', to: '// Metadata moved to Helmet component' },
   { from: "'use client';", to: '' },
   { from: "'use server';", to: '' },
-
   // Router usage patterns
   {
     from: 'const router = useRouter();',
@@ -48,15 +44,12 @@ const replacements = [
   { from: 'router.back()', to: 'navigate(-1)' },
   { from: 'router.pathname', to: 'location.pathname' },
   { from: 'router.query', to: 'new URLSearchParams(location.search)' },
-
   // Link patterns
   { from: 'href=', to: 'to=', context: 'Link' },
   { from: '<Link href=', to: '<Link to=' },
-
   // Dynamic import patterns
   { from: 'dynamic(() => import(', to: 'lazy(() => import(' },
   { from: 'loading: () => <', to: 'fallback={<' },
-
   // Image patterns (replace with regular img or custom component)
   { from: '<Image', to: '<img' },
   { from: 'src={', to: 'src={', context: 'Image' },
@@ -67,11 +60,9 @@ const replacements = [
   { from: 'placeholder', to: '' },
   { from: 'blurDataURL', to: '' },
 ];
-
 // Function to process a single file
 function processFile(filePath) {
   try {
-
     // Apply replacements
     replacements.forEach(({ from, to, context }) => {
       if (context) {
@@ -95,7 +86,6 @@ function processFile(filePath) {
         }
       }
     });
-
     // Additional cleanup
     content = content
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines
@@ -109,32 +99,23 @@ function processFile(filePath) {
             imports[module].push(importsStr);
           }
         });
-
         return (
           Object.entries(imports)
             .join('\n') + '\n'
         );
       });
-
     if (modified) {
       fs.writeFileSync(filePath, content);
-
       return true;
     }
-
     return false;
   } catch (error) {
-
     return false;
   }
 }
-
 // Main execution
 async function main() {
-
   // Find all TypeScript/JavaScript files in app directory
-
-
   for (const pattern of patterns) {
     const files = await glob(pattern, {
       cwd: process.cwd(),
@@ -149,7 +130,6 @@ async function main() {
         '**/*.broken/**',
       ],
     });
-
     files.forEach(file => {
       totalFiles++;
       if (processFile(file)) {
@@ -157,20 +137,11 @@ async function main() {
       }
     });
   }
-
-
-
-
   if (fixedFiles > 0) {
-
   } else {
-
   }
 }
-
 if (import.meta.url === `file://${process.argv[1]}`) {
 }
-
 export { processFile, replacements };
-
 }}}}}}}}}}}

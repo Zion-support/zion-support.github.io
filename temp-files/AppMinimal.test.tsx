@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     // Mock component for testing

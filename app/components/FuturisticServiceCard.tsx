@@ -1,9 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
-
 interface FuturisticServiceCardProps {
-  title: string;
+  title: string;,
   description: string;
   price: string;
   features: string[];
@@ -12,7 +11,6 @@ interface FuturisticServiceCardProps {
   href: string;
   popular?: boolean;
 }
-
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   title,
   description,
@@ -24,7 +22,6 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   popular = false
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-
   const colorClasses = {
     purple: {
       gradient: 'from-purple-500 to-cyan-500',
@@ -69,9 +66,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
       shadow: 'shadow-orange-500/20'
     }
   };
-
   const currentColor = colorClasses[color];
-
   return (
     <div
       className={`relative group cursor-pointer transition-all duration-500 transform ${
@@ -86,9 +81,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           <div className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
             Most Popular
           </div>
-        </div>
       )}
-
       {/* Card */}
       <div
         className={`glass rounded-2xl p-8 border transition-all duration-500 ${
@@ -106,21 +99,17 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           >
             <Icon className="w-8 h-8 text-white" />
           </div>
-          
           {/* Animated Background */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
-
         {/* Title */}
         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
           {title}
         </h3>
-
         {/* Description */}
         <p className="text-gray-300 mb-6 leading-relaxed">
           {description}
         </p>
-
         {/* Price */}
         <div className="mb-6">
           <div className={`text-3xl font-bold ${currentColor.text} mb-2`}>
@@ -128,7 +117,6 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           </div>
           <div className="text-sm text-gray-400">per month</div>
         </div>
-
         {/* Features */}
         <ul className="space-y-3 mb-8">
           {features.slice(0, 4).map((feature, index) => (
@@ -143,7 +131,6 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
             </li>
           )}
         </ul>
-
         {/* CTA Button */}
         <button
           className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -155,13 +142,11 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           Get Started
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
         </button>
-
         {/* Hover Effect Overlay */}
         <div
           className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}
         ></div>
       </div>
-
       {/* Glow Effect */}
       <div
         className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
@@ -169,5 +154,4 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
     </div>
   );
 };
-
 export default FuturisticServiceCard;

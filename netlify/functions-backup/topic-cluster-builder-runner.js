@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'topic-cluster-builder-runner',
         source: event.source || 'unknown',
-        building: {
-          status: 'active',
+        building: {,
+  status: 'active',
           clusters: 0,
           lastBuilt: new Date().toISOString()}
         },

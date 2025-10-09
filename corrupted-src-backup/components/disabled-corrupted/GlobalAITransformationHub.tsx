@@ -78,7 +78,6 @@ const GlobalAITransformationHu, b = () => {
             </di, v>
           ))}
         </div>
-      </div>
       <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
         <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-viol, e, t-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">
           <div, className="flex, item, s-center, ga, p-3, m, b-4">

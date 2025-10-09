@@ -1,23 +1,16 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceMetrics {
-  fcp: number | null;
+  fcp: number | null;,
   lcp: number | null;
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-=======
 'use client';
 interface PerformanceOptimizerProps {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
-
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
-<<<<<<< HEAD
-
 const PerformanceOptimizer: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -25,19 +18,14 @@ const PerformanceOptimizer: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     fid: null,
     cls: null,
     ttfb: null,
-
   });
-
   useEffect(() => {
-
     // Basic performance monitoring
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-
-=======
 const PerformanceOptimizer: React.FC;
           <PerformanceOptimizerProps> = ({// TODO: Add content;}
 }
@@ -223,11 +211,9 @@ if ('IntersectionObserver' in window) {}
               });
             }
           }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       });
     });
-
     try {
       observer.observe({ entryTypes: ['paint'] });
       return () => observer.disconnect();
@@ -235,14 +221,11 @@ if ('IntersectionObserver' in window) {}
       console.warn('Performance monitoring not supported:', error);
     }
   }, []);
-
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics);
     }
   }, [metrics, onMetricsUpdate]);
-
   return null;
 };
-
 export default PerformanceOptimizer;

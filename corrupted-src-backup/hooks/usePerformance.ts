@@ -2,22 +2,18 @@
  * Performance Monitoring Hook
  * Provides React hooks for performance monitoring and optimization
  */
-
-
 export interface PerformanceMetrics {
-  renderTime: number;
+  renderTime: number;,
   componentMountTime: number;
   memoryUsage?: number;
   isSlowRender: boolean;
 }
-
 export interface UsePerformanceOptions {
   componentName: string;
   trackRenderTime?: boolean;
   trackMemoryUsage?: boolean;
   slowRenderThreshold?: number; // in milliseconds
 }
-
 /**
  * Hook for monitoring component performance
  */
@@ -28,52 +24,41 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     trackMemoryUsage = false,
     slowRenderThreshold = 16, // 60fps threshold
   } = options;
-
   const _mountTimeRef = useRef<number>(0);
   const _renderStartTimeRef = useRef<number>(0);
-
   // Track component mount time
   useEffect(() => {
     mountTimeRef.current = performance.now();
-
     return () => {
       //       const mountDuration = performance.now() - mountTimeRef.current;
       analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
     };
   }, [componentName]);
-
   // Track render performance
   const trackRender = useCallback(() => {
     if (!trackRenderTime) return;
-
     renderStartTimeRef.current = performance.now();
-
     // Use requestAnimationFrame to measure actual render time
     requestAnimationFrame(() => {
       //       const renderTime = performance.now() - renderStartTimeRef.current;
       //       const isSlowRender = renderTime > slowRenderThreshold;
-
       const metrics: PerformanceMetrics = {
         renderTime,
         componentMountTime: performance.now() - mountTimeRef.current,
         isSlowRender,
       };
-
       // Track memory usage if available
       if (trackMemoryUsage && 'memory' in performance) {
         const _memory = (performance as any).memory;
         metrics.memoryUsage = memory.usedJSHeapSize;
       }
-
       // Send to analytics
       analytics.trackPerformance(`${componentName}_render_time`, renderTime);
-
       if (isSlowRender) {
         analytics.track('slow_render', 'performance', 'warning', componentName, renderTime);
       }
     });
   }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
-
   return {
     trackRender,
     getMetrics: (): PerformanceMetrics => ({
@@ -83,7 +68,6 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     }),
   };
 };
-
 /**
  * Hook for monitoring page load performance
  */
@@ -95,7 +79,6 @@ export const usePageLoadPerformance = () => {
         const navigation = performance.getEntriesByType(
           'navigation'
         )[0] as PerformanceNavigationTiming;
-
         if (navigation) {
           const metrics = {
             domContentLoaded:
@@ -105,12 +88,10 @@ export const usePageLoadPerformance = () => {
             domInteractive: navigation.domInteractive - navigation.navigationStart,
             totalLoadTime: navigation.loadEventEnd - navigation.navigationStart,
           };
-
           // Track each metric
           Object.entries(metrics).forEach(([key, value]) => {
             analytics.trackPerformance(`page_load_${key}`, value);
           });
-
           // Track overall page load performance
           analytics.track(
             'page_load_complete',
@@ -122,7 +103,6 @@ export const usePageLoadPerformance = () => {
         }
       }
     };
-
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
@@ -133,7 +113,6 @@ export const usePageLoadPerformance = () => {
     }
   }, []);
 };
-
 /**
  * Hook for monitoring resource loading performance
  */
@@ -151,13 +130,10 @@ export const useResourcePerformance = () => {
         }
       });
     });
-
     observer.observe({ entryTypes: ['resource'] });
-
     return () => observer.disconnect();
   }, []);
 };
-
 /**
  * Hook for monitoring long tasks
  */
@@ -168,7 +144,6 @@ export const useLongTaskMonitoring = () => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
-
     return () => {
       if (observer) {
         observer.disconnect();
@@ -176,5 +151,4 @@ export const useLongTaskMonitoring = () => {
     };
   }, []);
 };
-
 export default usePerformance;

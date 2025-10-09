@@ -11,8 +11,8 @@ exports.handler = async function () {
       {stdio: 'inherit'} shell: true },
     );
     return {statusCode: 200,
-      body: JSON.stringify({
-        ok: true,
+      body: JSON.stringify({,
+  ok: true,
         task: 'broken-image-scanner-scheduler'}
       });
     };

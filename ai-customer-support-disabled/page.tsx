@@ -31,7 +31,6 @@ const AICustomerSupportPage: React.FC = () => {
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
     }
   ];
-
   const pricing = [
     {
       name: 'Starter',
@@ -89,7 +88,6 @@ const AICustomerSupportPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
@@ -117,12 +115,10 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-
 const AICustomerSupportPage2: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-      
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -246,9 +242,6 @@ const AICustomerSupportPage2: React.FC = () => {
         <Footer />
       </div>
     </div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   );
 };
-
 export default AICustomerSupportPage2;

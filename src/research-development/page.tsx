@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -12,7 +9,6 @@ const PagePage: React.FC = () => {
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
-=======
 'use client';
 import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {return (}
@@ -310,17 +306,8 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
     }
   ];
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -329,19 +316,14 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
 // Research & Development;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
-
-=======
           </div>
           {/* Research Areas Tabs */}
           <div className="mb-12">
@@ -358,15 +340,6 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
 //                 >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <area.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{area.name}</span>
                 </button>
@@ -405,15 +378,6 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
                       }`}>
                         {project.status}
-                      
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                     </div>
                     <div>
@@ -505,30 +469,12 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
 // Interested in collaborating on cutting-edge research? We welcome partnerships with;
               universities, research institutions, and industry leaders.
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
-                
-          
-          
-          
-          
-          
-          
-          
-          
           <BookOpen className="w-5 h-5 mr-2" />
 // Start Collaboration;
           </a>
@@ -536,15 +482,6 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
-                
-          
-          
-          
-          
-          
-          
-          
-          
           <Phone className="w-4 h-4 mr-2" />
 // (302) 464-0950;
           </a>
@@ -552,15 +489,6 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
-                
-          
-          
-          
-          
-          
-          
-          
-          
           <Mail className="w-4 h-4 mr-2" />
 // Email Us;
           </a>
@@ -568,10 +496,8 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );
 };
-
 export default PagePage;

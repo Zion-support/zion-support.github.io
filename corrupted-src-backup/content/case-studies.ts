@@ -1,5 +1,5 @@
 export type CaseStudy = {
-  id: string;
+  id: string;,
   title: string;
   company: string;
   industry: string;
@@ -10,7 +10,6 @@ export type CaseStudy = {
   duration: string;
   imageUrl?: string;
 };
-
 export const caseStudies: CaseStudy[] = [
   {
     id: 'global-energy-digital-twin-850m',

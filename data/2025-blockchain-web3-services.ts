@@ -1,10 +1,9 @@
-
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
     ],
     realImplementation: true,
 export interface BlockchainWeb3Service
 export interface BlockchainWeb3Service {;
-  id: string;
+  id: string;,
   name: string,
   tagline: string,
   description: string;

@@ -1,31 +1,19 @@
-<<<<<<< HEAD
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer'
 import type {
     // TODO: Add content
   }
-=======
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
 import type {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 /**
  * Enhanced Performance Monitoring;
  * Comprehensive performance tracking and optimization utilities;
  */
-<<<<<<< HEAD
  * Performance Observer Wrapper
 export class PerformanceMonitor {
     // TODO: Add content
   }
   private metrics: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number[]> = new Map()
   private observers: PerformanceObserver[] = []
   constructor() {
@@ -66,7 +54,6 @@ export class PerformanceMonitor {
   )
       this.observers.push(fidObserver)
 // Types
-=======
  * Performance Observer Wrapper;
 export class PerformanceMonitor {// TODO: Add content;}
 }
@@ -102,25 +89,15 @@ export class PerformanceMonitor {// TODO: Add content;}
       fidObserver.observe({ entryTypes: ['first-input'] });
       this.observers.push(fidObserver);
 // Types;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //   PerformanceReport,
 //   ResourceStats,
 //   MemoryStats,
 //   PerformanceWithMemory,
-<<<<<<< HEAD
 //   LayoutShift
 } from '../types/app.types'
 // Utility Functions
  * Throttle function
 export function throttle
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends (...args: unknown[]) => any>(
  * Request idle callback wrapper
 export function runWhenIdle(callback: () => void, timeout = 1000): void {
@@ -139,7 +116,6 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
     setTimeout(callback, 0)
 * Default performance monitor instance
 export const performanceMonitor = new PerformanceMonitor()
-=======
 //   LayoutShift;
 } from '../types/app.types';
 // Utility Functions;
@@ -158,4 +134,3 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {// TODO
     setTimeout(callback, 0);
 * Default performance monitor instance;
 export const performanceMonitor = new PerformanceMonitor();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

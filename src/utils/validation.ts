@@ -1,7 +1,6 @@
 /**
  * Comprehensive validation utilities;
  */
-<<<<<<< HEAD
 export interface ValidationResult {
     // TODO: Add content
   }
@@ -25,7 +24,6 @@ export function validateEmail(email: string): ValidationResult {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(email)) {
     // TODO: Add content
-=======
 export interface ValidationResult {// TODO: Add content;}
 };
   isValid: boolean;
@@ -46,13 +44,11 @@ export function validateEmail(email: string): ValidationResult {// TODO: Add con
   if (!emailRegex.test(email)) {// TODO: Add content;}
 }
     return { isValid: false, error: 'Invalid email format' };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return { isValid: false, error: 'Invalid email format' }
   }
   return { isValid: true }
 }
-<<<<<<< HEAD
 // URL validation
 export function validateURL(url: string): ValidationResult {
     // TODO: Add content
@@ -71,7 +67,6 @@ export function validateURL(url: string): ValidationResult {
     // TODO: Add content
   }
     return { isValid: false, error: 'Invalid URL format' }
-=======
 // URL validation;
 export function validateURL(url: string): ValidationResult {// TODO: Add content;}
 }
@@ -86,7 +81,6 @@ export function validateURL(url: string): ValidationResult {// TODO: Add content
   } catch {// TODO: Add content;}
 }
     return { isValid: false, error: 'Invalid URL format' };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 // String length validation
@@ -95,7 +89,6 @@ export function validateLength()
   minLength: number,
   maxLength: number,
   fieldName: string = 'Field'
-<<<<<<< HEAD
 ): ValidationResult {
     // TODO: Add content
   }
@@ -105,14 +98,6 @@ export function validateLength()
     return { isValid: false, error: `${fieldName} is required` }
   }
   if (value.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < minLength) {
     // TODO: Add content
   }
@@ -120,7 +105,6 @@ export function validateLength()
   }
   if (value.length > maxLength) {
     // TODO: Add content
-=======
 ): ValidationResult {// TODO: Add content;}
 }
   if (!value || typeof value !== 'string') {// TODO: Add content;}
@@ -135,13 +119,11 @@ export function validateLength()
   if (value.length > maxLength) {// TODO: Add content;}
 }
     return { isValid: false, error: `${fieldName} must be no more than ${maxLength} characters long` };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return { isValid: false, error: `${fieldName} must be no more than ${maxLength} characters long` }
   }
   return { isValid: true }
 }
-<<<<<<< HEAD
 // Password validation
 export function validatePassword(password: string): ValidationResult {
     // TODO: Add content
@@ -152,14 +134,6 @@ export function validatePassword(password: string): ValidationResult {
     return { isValid: false, error: 'Password is required' }
   }
   if (password.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < 8) {
     // TODO: Add content
   }
@@ -167,7 +141,6 @@ export function validatePassword(password: string): ValidationResult {
   }
   if (password.length > 128) {
     // TODO: Add content
-=======
 // Password validation;
 export function validatePassword(password: string): ValidationResult {// TODO: Add content;}
 }
@@ -183,7 +156,6 @@ export function validatePassword(password: string): ValidationResult {// TODO: A
   if (password.length > 128) {// TODO: Add content;}
 }
     return { isValid: false, error: 'Password must be no more than 128 characters long' };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return { isValid: false, error: 'Password must be no more than 128 characters long' }
   }
@@ -191,15 +163,6 @@ export function validatePassword(password: string): ValidationResult {// TODO: A
   const hasLowerCase = /[a-z]/.test(password)
   const hasNumbers = /\d/.test(password)
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|
-          
-          
-          
-          
-          
-          
-          
-          
-<<<<<<< HEAD
           <>]/.test(password)
   if (!hasUpperCase) {
     // TODO: Add content
@@ -218,7 +181,6 @@ export function validatePassword(password: string): ValidationResult {// TODO: A
   }
   if (!hasSpecialChar) {
     // TODO: Add content
-=======
           <>]/.test(password);
   if (!hasUpperCase) {// TODO: Add content;}
 }
@@ -235,13 +197,11 @@ export function validatePassword(password: string): ValidationResult {// TODO: A
   if (!hasSpecialChar) {// TODO: Add content;}
 }
     return { isValid: false, error: 'Password must contain at least one special character' };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return { isValid: false, error: 'Password must contain at least one special character' }
   }
   return { isValid: true }
 }
-<<<<<<< HEAD
 // HTML sanitization
 export function sanitizeHTML(input: any): string {
     // TODO: Add content
@@ -250,33 +210,22 @@ export function sanitizeHTML(input: any): string {
     // TODO: Add content
   }
     return ''
-=======
 // HTML sanitization;
 export function sanitizeHTML(input: any): string {// TODO: Add content;}
 }
   if (!input || typeof input !== 'string') {// TODO: Add content;}
 }
     return '';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   return input;
     .replace(/&/g, '&amp;')
     .replace(/
-          
-          
-          
-          
-          
-          
-          
-          
           </g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
     .replace(/\// g, '&#x2F;')
 }
-<<<<<<< HEAD
 // Date validation
 export function validateDate(dateString: string): ValidationResult {
     // TODO: Add content
@@ -296,7 +245,6 @@ export function validateDate(dateString: string): ValidationResult {
 const dateRegex = /^\d{4}-\d{2}-\d{2}$/
   if (!dateRegex.test(dateString)) {
     // TODO: Add content
-=======
 // Date validation;
 export function validateDate(dateString: string): ValidationResult {// TODO: Add content;}
 }
@@ -314,14 +262,12 @@ const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(dateString)) {// TODO: Add content;}
 }
     return { isValid: false, error: 'Date must be in YYYY-MM-DD format' };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return { isValid: false, error: 'Date must be in YYYY-MM-DD format' }
   }
   return { isValid: true }
 }
 // Credit card validation (Luhn algorithm)
-<<<<<<< HEAD
 export function validateCreditCard(cardNumber: string): ValidationResult {
     // TODO: Add content
   }
@@ -333,14 +279,6 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
   // Remove spaces and non-digits
 const cleaned = cardNumber.replace(/\D/g, '')
   if (cleaned.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < 13 || cleaned.length > 19) {
     // TODO: Add content
   }
@@ -361,7 +299,6 @@ let sum = 0
     // TODO: Add content
   }
         digit -= 9
-=======
 export function validateCreditCard(cardNumber: string): ValidationResult {// TODO: Add content;}
 }
   if (!cardNumber || typeof cardNumber !== 'string') {// TODO: Add content;}
@@ -387,26 +324,21 @@ let sum = 0;
       if (digit > 9) {// TODO: Add content;}
 }
         digit -= 9;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
     sum += digit
     isEven = !isEven
   }
-<<<<<<< HEAD
   if (sum % 10 !== 0) {
     // TODO: Add content
-=======
   if (sum % 10 !== 0) {// TODO: Add content;}
 }
     return { isValid: false, error: 'Invalid credit card number' };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return { isValid: false, error: 'Invalid credit card number' }
   }
   return { isValid: true }
 }
-<<<<<<< HEAD
 // JSON validation
 export function validateJSON(jsonString: string): ValidationResult {
     // TODO: Add content
@@ -425,7 +357,6 @@ export function validateJSON(jsonString: string): ValidationResult {
     // TODO: Add content
   }
     return { isValid: false, error: 'Invalid JSON format' }
-=======
 // JSON validation;
 export function validateJSON(jsonString: string): ValidationResult {// TODO: Add content;}
 }
@@ -440,7 +371,6 @@ export function validateJSON(jsonString: string): ValidationResult {// TODO: Add
   } catch {// TODO: Add content;}
 }
     return { isValid: false, error: 'Invalid JSON format' };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 // Composite validation
@@ -448,7 +378,6 @@ export function validateComposite()
   value: string,
   validators: Array;
           <(value: string) => ValidationResult>
-<<<<<<< HEAD
 ): ValidationResult {
     // TODO: Add content
   }
@@ -460,7 +389,6 @@ export function validateComposite()
     // TODO: Add content
   }
       return result
-=======
 ): ValidationResult {// TODO: Add content;}
 }
   for (const validator of validators) {// TODO: Add content;}
@@ -469,7 +397,6 @@ export function validateComposite()
     if (!result.isValid) {// TODO: Add content;}
 }
       return result;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   return { isValid: true }
@@ -479,7 +406,6 @@ export async function validateAsync()
   validator: (value: string) => Promise;
           <ValidationResult>,
   value: string,
-<<<<<<< HEAD
 ): Promise<ValidationResult> {
     // TODO: Add content
   }
@@ -491,7 +417,6 @@ export async function validateAsync()
     // TODO: Add content
   }
     return { isValid: false, error: 'Validation failed' }
-=======
 ): Promise<ValidationResult> {// TODO: Add content;}
 }
   try {// TODO: Add content;}
@@ -500,7 +425,6 @@ export async function validateAsync()
   } catch (error) {// TODO: Add content;}
 }
     return { isValid: false, error: 'Validation failed' };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 // Legacy function names for backward compatibility

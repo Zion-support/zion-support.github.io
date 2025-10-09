@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'component-size-report',
         source: event.source || 'unknown',
-        report: {
-          status: 'generated',
+        report: {,
+  status: 'generated',
           components: 0,
           totalSize: '0KB',
           lastReport: new Date().toISOString()}

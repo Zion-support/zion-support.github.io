@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface LoadingSpinnerProps {
   // Add props here
 }
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
   return (
     <div className="loadingspinner">
       {/* Component content */}
     </div>
   );
-
-=======
 'use client';
 interface LoadingSpinnerProps {// TODO: Add content;}
 }
@@ -34,15 +29,6 @@ const LoadingSpinner: React.FC;
     xl: 'w-16 h-16',
   };
   const spinner = ()
-    
-          
-          
-          
-          
-          
-          
-          
-          
           <div className={cn('flex flex-col items-center justify-center gap-3', className)}>
       <div
 className={cn()}
@@ -62,24 +48,13 @@ className={cn()}
   if (fullScreen) {// TODO: Add content;}
 }
     return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-      
           <div className="fixed inset-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
         {spinner}
       </div>
     );
   }
   return spinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
-
 export default LoadingSpinner;

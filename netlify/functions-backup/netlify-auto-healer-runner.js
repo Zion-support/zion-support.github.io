@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'netlify-auto-healer-runner',
         source: event.source || 'unknown',
-        healing: {
-          status: 'active',
+        healing: {,
+  status: 'active',
           issuesHealed: 0,
           lastHeal: new Date().toISOString()}
         },

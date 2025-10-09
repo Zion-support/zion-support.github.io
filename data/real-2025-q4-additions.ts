@@ -1,5 +1,4 @@
-
-export interface Q4Service {id: string;
+export interface Q4Service {id: string;,
   name: string;
   tagline: string;
   price: string,

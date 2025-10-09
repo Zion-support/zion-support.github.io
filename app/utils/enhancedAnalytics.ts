@@ -4,7 +4,7 @@
  * Provides comprehensive analytics tracking with event batching and offline support
  */
 export interface AnalyticsEvent {
-  category: string;
+  category: string;,
   action: string;
   label?: string;
   value?: number;

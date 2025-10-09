@@ -3,7 +3,7 @@ export type Real2036InnovativeService =
   tagline: string, description: string,
   category: string, price: string,
 export type Real2036InnovativeService =
-  id: string;
+  id: string;,
   name: string;
   tagline: string;
   description: string;

@@ -18,7 +18,7 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   skipCache?: boolean;
 }
 export interface ApiResponse<T = unknown> {
-  data: T;
+  data: T;,
   status: number;
   statusText: string;
   headers: Headers;

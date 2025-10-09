@@ -1,4 +1,3 @@
-
       'Prompt and response tracing',
       'Cost and token analytics',
       'Automatic PII redaction',
@@ -10,8 +9,8 @@
     ],
     popular: true,
     icon: '',
-    link: 'https://ziontechgroup && ziontechgroup.com/llm-observability-suite'
-    marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
+    link: 'https://ziontechgroup && ziontechgroup.com/llm-observability-suite',
+  marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
     marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [,
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ];

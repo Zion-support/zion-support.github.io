@@ -9,7 +9,7 @@ export interface CacheOptions {
   maxSize?: number; // Maximum number of entries
 }
 export interface CacheEntry<T> {
-  value: T;
+  value: T;,
   expiry: number;
   hits: number;
   lastAccessed: number;

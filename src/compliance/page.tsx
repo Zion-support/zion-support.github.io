@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -19,12 +16,9 @@ const PagePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
       <Footer />
     </div>
-
-=======
 import { Link } from 'react-router-dom';
 import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users from 'lucide-react';}
 import Navigation from '../components/Navigation';
@@ -57,17 +51,8 @@ const CompliancePage: React.FC = () => {const certifications = [}
       features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         {/* Header */}
@@ -78,15 +63,6 @@ const CompliancePage: React.FC = () => {const certifications = [}
                 to="/privacy"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
 // >
-                
-          
-          
-          
-          
-          
-          
-          
-          
           <ArrowLeft className="w-4 h-4 mr-2" />
 // Back to Privacy Policy;
           </Link>
@@ -104,15 +80,6 @@ const CompliancePage: React.FC = () => {const certifications = [}
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected;
 //                 and our services meet the most stringent requirements.
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
             {/* Certifications Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -158,8 +125,6 @@ Compliance Areas;
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default PagePage;

@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-
 import React, { useEffect } from 'react';
-
 interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
-
-=======
 'use client';
 interface SEOOptimizerProps {// TODO: Add content;}
 };
@@ -22,12 +17,9 @@ interface SEOOptimizerProps {// TODO: Add content;}
 }
 const SEOOptimizer: React.FC;
           <SEOOptimizerProps> = memo(({// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
-
 const SEOOptimizer: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
-<<<<<<< HEAD
   description = 'Leading provider of AI and IT solutions for modern enterprises',
   keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
   canonicalUrl
@@ -35,7 +27,6 @@ const SEOOptimizer: React.FC<SEOProps> = ({
   useEffect(() => {
     // Update document title
     document.title = title;
-    
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -44,7 +35,6 @@ const SEOOptimizer: React.FC<SEOProps> = ({
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', description);
-    
     // Update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -53,7 +43,6 @@ const SEOOptimizer: React.FC<SEOProps> = ({
       document.head.appendChild(metaKeywords);
     }
     metaKeywords.setAttribute('content', keywords.join(', '));
-    
     // Update canonical URL
     if (canonicalUrl) {
       let canonical = document.querySelector('link[rel="canonical"]');
@@ -65,8 +54,6 @@ const SEOOptimizer: React.FC<SEOProps> = ({
       canonical.setAttribute('href', canonicalUrl);
     }
   }, [title, description, keywords, canonicalUrl]);
-
-=======
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
@@ -162,8 +149,6 @@ const updateMetaName = (name: string, content: string) => {// TODO: Add content;
       document.head.appendChild(script);
     }
   }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return null;
 };
-
 export default SEOOptimizer;

@@ -1,17 +1,13 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
-
 // Function to fix semicolons in arrays
 function fixArraySemicolons(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
     // Fix semicolons after arrays in object properties
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
       return match.replace(';', '');
     });
-    
     fs.writeFileSync(filePath, content);
     console.log(`Fixed array semicolons in: ${filePath}`);
     return true;
@@ -20,7 +16,6 @@ function fixArraySemicolons(filePath) {
     return false;
   }
 }
-
 // Main function
 function main() {
   const files = [
@@ -36,9 +31,7 @@ function main() {
     'src/system-status/page.tsx',
     'src/test-page.tsx'
   ];
-  
   console.log('Fixing array semicolons...');
-  
   let fixedCount = 0;
   files.forEach(file => {
     if (fs.existsSync(file)) {
@@ -47,8 +40,6 @@ function main() {
       }
     }
   });
-  
   console.log(`Fixed ${fixedCount} files`);
 }
-
 main();

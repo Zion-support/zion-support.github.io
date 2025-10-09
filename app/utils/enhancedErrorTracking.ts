@@ -13,7 +13,7 @@ export interface ErrorContext {
 export interface TrackedError {
   message: string;
   stack?: string;
-  context: ErrorContext;
+  context: ErrorContext;,
   timestamp: string;
   userAgent: string;
   url: string;

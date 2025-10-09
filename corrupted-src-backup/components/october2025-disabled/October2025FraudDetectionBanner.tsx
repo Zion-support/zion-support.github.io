@@ -23,7 +23,6 @@ const October2025FraudDetectionBanne, r = () => {
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
             Revolutionary, AI, platform combini, n, g <strong, className="te, x, t-whi, t, e">Graph, Neural, Networ, k, s, Behavioral, Biometric, s & Mul, t, i-Model, M, L</stro, n, g> to, achieve, 96% fraud, reductio, n, 43x, RO, I, and, nea, r-zero, false, positives. <strong, classNam, e = "te, x, t-r, e, d-4, 0, 0">Fortune, 100, proven</stro, n, g> across, 127, countries.
           </p>
-        </div>
         {/* Key, Metrics, Grid */}
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">
           <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">

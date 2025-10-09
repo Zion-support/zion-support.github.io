@@ -175,7 +175,6 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({
                 <span, className="fo, n, t-semibo, l, d">50+</sp, a, n>
                 <sp, a, n>Expert, Insight, s</sp, a, n>
               </div>
-            </div>
           </div>
           {/* Dismiss, butto, n */}
           <button, onCli, c, k = {  () = > setIsDismiss, e, d(tr, u, e)  }, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"

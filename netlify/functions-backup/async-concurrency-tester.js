@@ -136,8 +136,8 @@ exports.handler = async function (event, context) {try {
       }
     };
     const result = {statusCode: 200,
-      body: JSON.stringify({
-        message: 'Async concurrency tester completed successfully',
+      body: JSON.stringify({,
+  message: 'Async concurrency tester completed successfully',
         timestamp: timestamp,
         function: 'async-concurrency-tester',
         status: 'success',
@@ -159,7 +159,6 @@ exports.handler = async function (event, context) {try {
         nextRun: new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString(), // 4 hours from now
       }),
     };
-
     return result;
   } catch (error) {// console.error('❌ async-concurrency-tester failed: ') error
       }

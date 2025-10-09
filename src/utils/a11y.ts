@@ -6,16 +6,13 @@
 /**
  * Generate unique ID for aria-describedby and aria-labelledby;
  */
-<<<<<<< HEAD
 export function generateId(prefix = 'a11y'): string {
     // TODO: Add content
   }
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
-=======
 export function generateId(prefix = 'a11y'): string {// TODO: Add content;}
 }
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Announce message to screen readers;
@@ -23,7 +20,6 @@ export function generateId(prefix = 'a11y'): string {// TODO: Add content;}
 export function announceToScreenReader()
   message: string,
   priority: 'polite' | 'assertive' = 'polite'
-<<<<<<< HEAD
 ): void {
     // TODO: Add content
   }
@@ -49,7 +45,6 @@ export function announceToScreenReader()
   }
     document.body.removeChild(announcement)
   }, 3000)
-=======
 ): void {// TODO: Add content;}
 }
   if (typeof document === 'undefined') return;
@@ -72,24 +67,14 @@ export function announceToScreenReader()
 }
     document.body.removeChild(announcement);
   }, 3000);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Trap focus within a container (useful for modals)
  */
-<<<<<<< HEAD
 export function trapFocus(element: HTMLElement): () => void {
     // TODO: Add content
   }
   const focusableElements = element.querySelectorAll
-          
-          
-          
-          
-          
-          
-          
-          
           <HTMLElement>()
     'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
   )
@@ -130,7 +115,6 @@ export function trapFocus(element: HTMLElement): () => void {
   }
     element.removeEventListener('keydown', handleKeyDown)
   }
-=======
 export function trapFocus(element: HTMLElement): () => void {// TODO: Add content;}
 }
   const focusableElements = element.querySelectorAll;
@@ -168,35 +152,23 @@ export function trapFocus(element: HTMLElement): () => void {// TODO: Add conten
 }
     element.removeEventListener('keydown', handleKeyDown);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Check if element is keyboard accessible;
  */
-<<<<<<< HEAD
 export function isKeyboardAccessible(element: HTMLElement): boolean {
     // TODO: Add content
   }
   const tabindex = element.getAttribute('tabindex')
   const role = element.getAttribute('role')
-=======
 export function isKeyboardAccessible(element: HTMLElement): boolean {// TODO: Add content;}
 }
   const tabindex = element.getAttribute('tabindex');
   const role = element.getAttribute('role');
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes()
 //     element.tagName.toLowerCase()
   )
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
 // isInteractive ||
@@ -210,7 +182,6 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {// TODO: Ad
 export function makeKeyboardAccessible()
   element: HTMLElement,
   onClick: (e: Event) => void,
-<<<<<<< HEAD
   options: {
     // TODO: Add content
   }
@@ -241,7 +212,6 @@ export function makeKeyboardAccessible()
     element.removeEventListener('click', onClick)
     element.removeEventListener('keydown', handleKeyDown)
   }
-=======
   options: {// TODO: Add content;}
 }
     role?: string;
@@ -267,12 +237,10 @@ export function makeKeyboardAccessible()
     element.removeEventListener('click', onClick);
     element.removeEventListener('keydown', handleKeyDown);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Check color contrast ratio (WCAG 2.1)
  */
-<<<<<<< HEAD
 export function getContrastRatio(color1: string, color2: string): number {
     // TODO: Add content
   }
@@ -286,14 +254,6 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
   }
       const normalized = val / 255
       return normalized 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 0.03928
 // ? normalized / 12.92
         : Math.pow((normalized + 0.055) / 1.055, 2.4)
@@ -306,7 +266,6 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
   const brightest = Math.max(lum1, lum2)
   const darkest = Math.min(lum1, lum2)
   return (brightest + 0.05) / (darkest + 0.05)
-=======
 export function getContrastRatio(color1: string, color2: string): number {// TODO: Add content;}
 }
   const getLuminance = (color: string): number => {// TODO: Add content;}
@@ -328,7 +287,6 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
   const brightest = Math.max(lum1, lum2);
   const darkest = Math.min(lum1, lum2);
   return (brightest + 0.05) / (darkest + 0.05);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Check if contrast ratio meets WCAG standards;
@@ -338,17 +296,14 @@ export function meetsContrastRequirements()
   color2: string,
   level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal'
-<<<<<<< HEAD
 ): boolean {
     // TODO: Add content
-=======
 ): boolean {// TODO: Add content;}
 }
   const ratio = getContrastRatio(color1, color2);
   if (level === 'AAA') {// TODO: Add content;}
 }
     return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   const ratio = getContrastRatio(color1, color2)
   if (level === 'AAA') {
@@ -361,7 +316,6 @@ export function meetsContrastRequirements()
 /**
  * Skip to content link helper;
  */
-<<<<<<< HEAD
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
     // TODO: Add content
   }
@@ -390,7 +344,6 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   }
   )
   return skipLink
-=======
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {// TODO: Add content;}
 }
   const skipLink = document.createElement('a');
@@ -414,44 +367,36 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
     skipLink.style.top = '-40px';
   });
   return skipLink;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Detect if user prefers reduced motion;
  */
-<<<<<<< HEAD
 export function prefersReducedMotion(): boolean {
     // TODO: Add content
   }
   if (typeof window === 'undefined') return false
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
-=======
 export function prefersReducedMotion(): boolean {// TODO: Add content;}
 }
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Detect if user prefers dark mode;
  */
-<<<<<<< HEAD
 export function prefersDarkMode(): boolean {
     // TODO: Add content
   }
   if (typeof window === 'undefined') return false
   return window.matchMedia('(prefers-color-scheme: dark)').matches
-=======
 export function prefersDarkMode(): boolean {// TODO: Add content;}
 }
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Get ARIA label for form validation error;
  */
-<<<<<<< HEAD
 export function getAriaInvalid(hasError: boolean): {
     // TODO: Add content
   }
@@ -463,7 +408,6 @@ export function getAriaInvalid(hasError: boolean): {
   return {
     // TODO: Add content
   }
-=======
 export function getAriaInvalid(hasError: boolean): {// TODO: Add content;}
 }
   'aria-invalid': boolean;
@@ -472,7 +416,6 @@ export function getAriaInvalid(hasError: boolean): {// TODO: Add content;}
 }
   return {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     'aria-invalid': hasError,
     ...(hasError && { 'aria-describedby': generateId('error') }
   )
@@ -485,7 +428,6 @@ export function createAccessibleTooltip()
   trigger: HTMLElement,
   content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
-<<<<<<< HEAD
 ): () => void {
     // TODO: Add content
   }
@@ -512,7 +454,6 @@ export function createAccessibleTooltip()
     switch (placement) {
     // TODO: Add content
   }
-=======
 ): () => void {// TODO: Add content;}
 }
   const tooltipId = generateId('tooltip');
@@ -536,7 +477,6 @@ export function createAccessibleTooltip()
     const triggerRect = trigger.getBoundingClientRect();
     switch (placement) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       case 'top':
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`
@@ -554,29 +494,8 @@ export function createAccessibleTooltip()
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`
         break
     }
-<<<<<<< HEAD
   }
-  const hideTooltip = () => {
-    // TODO: Add content
-  }
-    tooltip.style.display = 'none'
-  }
-  trigger.addEventListener('mouseenter', showTooltip)
-  trigger.addEventListener('mouseleave', hideTooltip)
-  trigger.addEventListener('focus', showTooltip)
-  trigger.addEventListener('blur', hideTooltip)
-  return () => {
-    // TODO: Add content
-  }
-    trigger.removeEventListener('mouseenter', showTooltip)
-    trigger.removeEventListener('mouseleave', hideTooltip)
-    trigger.removeEventListener('focus', showTooltip)
-    trigger.removeEventListener('blur', hideTooltip)
-    document.body.removeChild(tooltip)
-  }
-=======
-  };
-  const hideTooltip = () => {// TODO: Add content;}
+  const hideTooltip = () => {}
 }
     tooltip.style.display = 'none';
   };
@@ -592,12 +511,10 @@ export function createAccessibleTooltip()
     trigger.removeEventListener('blur', hideTooltip);
     document.body.removeChild(tooltip);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Manage focus restoration (useful for modals)
  */
-<<<<<<< HEAD
 export class FocusManager {
     // TODO: Add content
   }
@@ -621,15 +538,6 @@ export class FocusManager {
     // TODO: Add content
   }
     const focusable = container.querySelector
-          
-          
-          
-          
-          
-          
-          
-          
-=======
 export class FocusManager {// TODO: Add content;}
 }
   private previousFocus: HTMLElement | null = null;
@@ -648,7 +556,6 @@ export class FocusManager {// TODO: Add content;}
   moveFocusInside(container: HTMLElement): void {// TODO: Add content;}
 }
     const focusable = container.querySelector;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           <HTMLElement>()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )

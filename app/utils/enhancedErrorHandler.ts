@@ -6,7 +6,7 @@
 interface ErrorContext {
   userId?: string;
   sessionId?: string;
-  url: string;
+  url: string;,
   userAgent: string;
   timestamp: string;
   component?: string;

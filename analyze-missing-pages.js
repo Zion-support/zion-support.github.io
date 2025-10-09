@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 // Sitemap URLs from the website
 const sitemapUrls = [
   // Main Pages
@@ -15,7 +14,6 @@ const sitemapUrls = [
   '/research-development',
   '/request-quote',
   '/green-it',
-  
   // Services Pages
   '/services',
   '/services/ai-analytics',
@@ -32,7 +30,6 @@ const sitemapUrls = [
   '/services/consulting',
   '/services/onsite-support',
   '/services/5g-solutions',
-  
   // Micro SAAS Pages
   '/micro-saas',
   '/micro-saas/ai-business-intelligence',
@@ -43,7 +40,6 @@ const sitemapUrls = [
   '/micro-saas/iot-edge',
   '/micro-saas/content-creation',
   '/micro-saas/hr-platform',
-  
   // IT Services Pages
   '/it-services',
   '/it-services/infrastructure',
@@ -52,7 +48,6 @@ const sitemapUrls = [
   '/it-services/onsite-support',
   '/it-services/green-it',
   '/it-services/5g-solutions',
-  
   // Marketplace Pages
   '/marketplace',
   '/marketplace/products',
@@ -62,24 +57,20 @@ const sitemapUrls = [
   '/talent',
   '/equipment',
   '/it-onsite-services',
-  
   // Company Pages
   '/team',
   '/help',
   '/security',
   '/status',
-  
   // Legal Pages
   '/privacy',
   '/terms',
   '/cookies',
   '/sitemap',
-  
   // Auth Pages
   '/login',
   '/signup'
 ];
-
 // Existing pages from the codebase
 const existingPages = [
   // Main pages
@@ -102,7 +93,6 @@ const existingPages = [
   '/consultation',
   '/pricing',
   '/enterprise',
-  
   // Services
   '/services',
   '/ai-services',
@@ -138,7 +128,6 @@ const existingPages = [
   '/ai-code-generation',
   '/ai-customer-support-bot',
   '/ai-analytics-dashboard',
-  
   // IT Services
   '/it-services',
   '/it-infrastructure',
@@ -152,7 +141,6 @@ const existingPages = [
   '/security',
   '/compliance',
   '/gdpr',
-  
   // Emerging Technologies
   '/quantum-computing',
   '/autonomous-systems',
@@ -170,35 +158,27 @@ const existingPages = [
   '/business-apps',
   '/expense-tracker',
   '/task-manager-pro',
-  
   // Micro SAAS
   '/micro-saas',
-  
   // Other
   '/case-studies',
   '/api',
   '/offline',
   '/system-status'
 ];
-
 // Find missing pages
 const missingPages = sitemapUrls.filter(url => !existingPages.includes(url));
-
 // Find extra pages (in codebase but not in sitemap)
 const extraPages = existingPages.filter(url => !sitemapUrls.includes(url));
-
 console.log('=== MISSING PAGES (in sitemap but not in codebase) ===');
 missingPages.forEach(page => console.log(page));
-
 console.log('\n=== EXTRA PAGES (in codebase but not in sitemap) ===');
 extraPages.forEach(page => console.log(page));
-
 console.log('\n=== SUMMARY ===');
 console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
 console.log(`Total existing pages: ${existingPages.length}`);
 console.log(`Missing pages: ${missingPages.length}`);
 console.log(`Extra pages: ${extraPages.length}`);
-
 // Categorize missing pages
 const missingByCategory = {
   'Main Pages': missingPages.filter(p => ['/faq', '/partners', '/solutions', '/research-development', '/request-quote', '/green-it'].includes(p)),
@@ -209,7 +189,6 @@ const missingByCategory = {
   'Company Pages': missingPages.filter(p => ['/help', '/security'].includes(p)),
   'Auth Pages': missingPages.filter(p => ['/login', '/signup'].includes(p))
 };
-
 console.log('\n=== MISSING PAGES BY CATEGORY ===');
 Object.entries(missingByCategory).forEach(([category, pages]) => {
   if (pages.length > 0) {

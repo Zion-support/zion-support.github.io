@@ -21,8 +21,8 @@ class AutomationRunner {constructor() {
     try {const result = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe',
-        timeout: timeout)
-        cwd: process.cwd()}
+        timeout: timeout),
+  cwd: process.cwd()}
       });
       this.log(`${description} completed successfully`) 'SUCCESS');
       return {success: true} output: result };

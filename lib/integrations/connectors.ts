@@ -1,20 +1,16 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
 import { ProviderConnection, SyncLogEntry } from './types';
-
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection,
   action: string,
   details: Record<string, unknown> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
-  const log: SyncLogEntry = {
-    id: Math.random().toString(36).substr(2, 9),
+  const log: SyncLogEntry = {,
+  id: Math.random().toString(36).substr(2, 9),
 // Simple UUID generator since uuid package is not available
 const generateId = (): string => {
   return Math.random().toString(36).substr(2, 9);
 };
-
-
-
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
   action: string,
@@ -43,42 +39,33 @@ export async function simulateAction<T = any>(
     details,
     timestamp: new Date(),
   };
-
   // Simulate occasional errors
   if (Math.random() < 0.1) {
     log.status = 'error';
     log.message = `Action ${action} failed: Simulated error`;
     throw new Error(log.message);
   }
-
   // Simulate occasional warnings
   if (Math.random() < 0.2) {
     log.status = 'warning';
     log.message = `Action ${action} completed with warnings`;
   }
-
   const result = {
     success: true,
     data: details,
     timestamp: new Date().toISOString(),
   } as T;
-
   return { log, result };
 }
-  
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-
-
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
@@ -94,8 +81,6 @@ export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
-  
-
 export async function testConnection(
   connection: ProviderConnection
 ): Promise<boolean> {
@@ -106,24 +91,16 @@ export async function testConnection(
     return false;
   }
 }
-
 export async function syncData(
   connection: ProviderConnection
 ): Promise<SyncLogEntry[]> {
   const logs: SyncLogEntry[] = [];
-
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-
 // CRM actions
 export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
-
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
-  },
-
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
@@ -139,11 +116,12 @@ export const crm = {
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
@@ -164,17 +142,13 @@ export const crm = {
       timestamp: new Date(),
     });
   }
-
-
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
     return simulateAction(connection, 'ats.updateStatus', { change });
@@ -182,5 +156,4 @@ export const crm = {
 };
   return logs;
 }
-
 }}}}}}}}}}}}

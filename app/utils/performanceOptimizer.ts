@@ -16,7 +16,7 @@ const logger = {
   }
 };
 interface PerformanceMetrics {
-  loadTime: number;
+  loadTime: number;,
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;

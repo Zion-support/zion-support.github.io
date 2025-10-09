@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'front-visionary-expander',
         source: event.source || 'unknown',
-        expansion: {
-          status: 'visionary',
+        expansion: {,
+  status: 'visionary',
           expansions: 0,
           lastExpansion: new Date().toISOString()}
         },

@@ -1,6 +1,5 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-
 export default function AICustomerServicePage() {
   return (
     <div><Helmet>
@@ -9,10 +8,8 @@ export default function AICustomerServicePage() {
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-customer-service" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -25,8 +22,6 @@ export default function AICustomerServicePage() {
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
               Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.
             </p>
-          </section>
-
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2>
@@ -38,7 +33,6 @@ export default function AICustomerServicePage() {
                   Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🌍</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Multilingual Support</h3>
@@ -46,7 +40,6 @@ export default function AICustomerServicePage() {
                   Support customers in 50+ languages with real-time translation and cultural context awareness.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">📊</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Analytics Dashboard</h3>
@@ -54,7 +47,6 @@ export default function AICustomerServicePage() {
                   Real-time insights into customer satisfaction, response times, and conversation quality.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">⚡</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Instant Response</h3>
@@ -62,7 +54,6 @@ export default function AICustomerServicePage() {
                   Sub-second response times with 99.9% uptime guarantee for uninterrupted customer support.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🔗</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Easy Integration</h3>
@@ -70,7 +61,6 @@ export default function AICustomerServicePage() {
                   Seamless integration with existing CRM, helpdesk, and communication platforms.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🎯</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Personalization</h3>
@@ -80,7 +70,6 @@ export default function AICustomerServicePage() {
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
@@ -97,7 +86,6 @@ export default function AICustomerServicePage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-              
               <div className="cyber-card p-8 text-center border-2 border-cyan-400">
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$799<span className="text-lg">/month</span></div>
@@ -111,7 +99,6 @@ export default function AICustomerServicePage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-              
               <div className="cyber-card p-8 text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
@@ -127,7 +114,6 @@ export default function AICustomerServicePage() {
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Customer Service?</h2>
@@ -138,21 +124,18 @@ export default function AICustomerServicePage() {
                   Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.
                 </p>
               </div>
-              
               <div className="cyber-card p-6">
                 <h3 className="text-xl font-bold text-white mb-4">70% Cost Reduction</h3>
                 <p className="text-gray-300">
                   Reduce customer service costs by up to 70% while maintaining high-quality support standards.
                 </p>
               </div>
-              
               <div className="cyber-card p-6">
                 <h3 className="text-xl font-bold text-white mb-4">24/7 Availability</h3>
                 <p className="text-gray-300">
                   Never miss a customer inquiry with round-the-clock AI support that never sleeps or takes breaks.
                 </p>
               </div>
-              
               <div className="cyber-card p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Instant Scalability</h3>
                 <p className="text-gray-300">
@@ -161,7 +144,6 @@ export default function AICustomerServicePage() {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Service?</h2>
@@ -178,7 +160,6 @@ export default function AICustomerServicePage() {
             </div>
           </section>
         </main>
-        
         <Footer />
       </div>
     </div>

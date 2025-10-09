@@ -1,25 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-
 // Function to fix blog files with parsing errors
 function fixBlogFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
     // Fix missing closing parenthesis and return statement
     if (content.includes('};') && !content.includes('  );')) {
       content = content.replace(/};$/, '  );\n};');
       modified = true;
     }
-
     // Fix merge conflict markers
     if (content.includes('      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
       return;
     }
-
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`✓ Fixed ${filePath}`);
@@ -28,10 +23,8 @@ function fixBlogFile(filePath) {
     console.log(`✗ Error processing ${filePath}: ${error.message}`);
   }
 }
-
 // Main execution
 console.log('🔧 Fixing blog files...\n');
-
 const blogFiles = [
   'src/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'src/blog/ai-2026-april-ultimate-breakthrough-revolution/page.tsx',
@@ -52,12 +45,10 @@ const blogFiles = [
   'src/blog/ai-powered-autonomous-business-processes-2026/page.tsx',
   'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
 ];
-
 for (const file of blogFiles) {
   const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
     fixBlogFile(fullPath);
   }
 }
-
 console.log('\n✅ Blog files fixed!');

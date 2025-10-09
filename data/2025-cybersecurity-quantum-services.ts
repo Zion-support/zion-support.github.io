@@ -1,7 +1,6 @@
-
 export interface CybersecurityQuantumService
 export interface CybersecurityQuantumService {;
-  id: string;
+  id: string;,
   name: string;
   tagline: string;
   description: string;

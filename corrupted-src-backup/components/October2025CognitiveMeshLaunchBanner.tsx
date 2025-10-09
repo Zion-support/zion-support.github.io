@@ -88,7 +88,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
               <Zap, className="w-5 h-5, tex, t-yell, o, w-3, 0, 0" ar, i, a-hidd, e, n="tr, u, e" />";
               <span, className="te, x, t-white, fon, t-semibo, l, d">S, u, b-3ms, Latenc, y</sp, a, n>";
             </li>
-          </ul>
         </d, i, v>
         {/* Key, Benefits, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e="li, s, t" ar, i, a-lab, e, l="Platform, benefits, and achievemen, t, s">"

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -19,10 +16,7 @@ const PagePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
-
-=======
 'use client';
 import React, { useState } from 'react';
 const LoginPage: React.FC = () => {return (}
@@ -80,17 +74,8 @@ const LoginPage: React.FC = () => {return (}
     }
   ];
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
@@ -122,15 +107,6 @@ type="email"
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Enter your email"
 //                     />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                 </div>
                 <div>
@@ -148,15 +124,6 @@ type={showPassword ? 'text' : 'password'}
 className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Enter your password"
 //                     />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           <button
 type="button"
                       onClick={() => setShowPassword(!showPassword)}
@@ -176,15 +143,6 @@ type="checkbox"
                       onChange={handleInputChange}
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2"
 // />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           <span className="ml-2 text-sm text-gray-300">Remember me</span>
                   </label>
                   <a
@@ -192,15 +150,6 @@ type="checkbox"
                     className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
 // >
 //                     Forgot password?
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           </a>
                 </div>
                 <button
@@ -212,28 +161,10 @@ type="submit"
           <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 // Signing In...
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                   ) : ()
 // 'Sign In'
                   )}
-                
-          
-          
-          
-          
-          
-          
-          
-          
           </button>
               </form>
               <div className="mt-8 text-center">
@@ -279,15 +210,6 @@ type="submit"
                 <p className="text-xl text-gray-300 mb-8">
 // Sign in to manage your AI services, view analytics, and access all your;
 //                   enterprise solutions in one place.
-                
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
               </div>
               <div className="space-y-6">
@@ -306,28 +228,10 @@ type="submit"
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-3">
 // New to Zion Tech Group?
-                
-          
-          
-          
-          
-          
-          
-          
-          
           </h3>
                 <p className="text-gray-300 mb-4">
 // Join thousands of businesses already using our AI and IT solutions;
 //                   to transform their operations.
-                
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
                 <a
                   href="/signup"
@@ -341,10 +245,8 @@ type="submit"
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );
 };
-
 export default PagePage;

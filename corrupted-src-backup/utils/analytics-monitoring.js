@@ -5,7 +5,6 @@ export const analyticsUtils = {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const _navigation = performance.getEntriesByType('navigation')[0];
       const _paint = performance.getEntriesByType('paint');
-
       const metrics = {
         domContentLoaded:
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -14,12 +13,10 @@ export const analyticsUtils = {
         firstContentfulPaint:
           paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
       };
-
       return metrics;
     }
     return null;
   },
-
   // Error tracking
   trackError: (error, context = {}) => {
     const errorData = {
@@ -30,12 +27,10 @@ export const analyticsUtils = {
       userAgent: navigator.userAgent,
       context,
     };
-
     // Send to analytics service
     //     // You can integrate with services like Sentry, LogRocket, etc.
     return errorData;
   },
-
   // User behavior tracking
   trackUserInteraction: (action, element, metadata = {}) => {
     const interactionData = {
@@ -47,10 +42,8 @@ export const analyticsUtils = {
       url: window.location.href,
       metadata,
     };
-
     //     return interactionData;
   },
-
   // Core Web Vitals
   measureCoreWebVitals: () => {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {

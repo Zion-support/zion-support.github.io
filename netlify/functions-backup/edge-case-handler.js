@@ -45,8 +45,8 @@
     const _edgeCaseHandlingRate = (edgeCaseCount / totalTests) * 100;
     const _successRate = (successCount / totalTests) * 100;
     const result = {statusCode: 200,
-      body: JSON.stringify({
-        message: 'Edge case handler completed successfully',
+      body: JSON.stringify({,
+  message: 'Edge case handler completed successfully',
         timestamp: timestamp,
         function: 'edge-case-handler',
         status: 'success',

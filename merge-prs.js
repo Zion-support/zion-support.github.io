@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 //PR information from the JSON files
 const prs = [
   {
@@ -30,21 +28,18 @@ const prs = [
     sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db',
   },
 ];
-
 // //Ensure we're on main branch
 try {
   execSync('git checkout main', { stdio: 'inherit' });
 //   } catch (error) {
 //   process.exit(1);
 }
-
 //Pull latest changes
 try {
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   process.exit(1);
 }
-
 //Process each PR
 for (const pr of prs) {
 //   try {
@@ -57,7 +52,6 @@ for (const pr of prs) {
 //       } catch (error) {
 //       continue;
     }
-
     //Try to merge the branch
     try {
       execSync(
@@ -79,11 +73,9 @@ for (const pr of prs) {
   } catch (error) {
 //     }
 }
-
 // Push changes
 try {
   execSync('git push origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   }
-
 // 

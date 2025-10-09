@@ -2,7 +2,6 @@
  * Analytics Optimizer
  * Advanced analytics tracking with performance optimization and privacy compliance
  */
-
 class AnalyticsOptimizer {
   constructor() {
     this.config = {
@@ -13,16 +12,13 @@ class AnalyticsOptimizer {
       maxRetries: 3,
       retryDelay: 1000,
     };
-
     this.eventQueue = [];
     this.sessionId = this.generateSessionId();
     this.userId = this.getUserId();
     this.pageViews = 0;
     this.startTime = Date.now();
-
     this.init();
   }
-
   init() {
     this.setupEventListeners();
     this.setupPerformanceTracking();
@@ -31,11 +27,9 @@ class AnalyticsOptimizer {
     this.startBatchProcessor();
     this.setupPrivacyCompliance();
   }
-
   generateSessionId() {
     return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }
-
   getUserId() {
     let _userId = localStorage.getItem('analytics_user_id');
     if (!userId) {
@@ -44,7 +38,6 @@ class AnalyticsOptimizer {
     }
     return userId;
   }
-
   setupEventListeners() {
     // Track page visibility changes
     document.addEventListener('visibilitychange', () => {
@@ -53,7 +46,6 @@ class AnalyticsOptimizer {
         timestamp: Date.now(),
       });
     });
-
     // Track scroll depth
     let _maxScrollDepth = 0;
     window.addEventListener(
@@ -71,7 +63,6 @@ class AnalyticsOptimizer {
         }
       }, 1000)
     );
-
     // Track click events
     document.addEventListener('click', event => {
       const _element = event.target;
@@ -83,7 +74,6 @@ class AnalyticsOptimizer {
         href: element.href,
       });
     });
-
     // Track form submissions
     document.addEventListener('submit', event => {
       this.track('form_submit', {
@@ -93,7 +83,6 @@ class AnalyticsOptimizer {
       });
     });
   }
-
   setupPerformanceTracking() {
     // Track Core Web Vitals
     if ('web-vitals' in window) {
@@ -105,7 +94,6 @@ class AnalyticsOptimizer {
         getTTFB(metric => this.trackWebVital('TTFB', metric));
       });
     }
-
     // Track page load performance
     window.addEventListener('load', () => {
       const _perfData = performance.getEntriesByType('navigation')[0];
@@ -118,7 +106,6 @@ class AnalyticsOptimizer {
         });
       }
     });
-
     // Track resource loading
     const observer = new PerformanceObserver(list => {
       list.getEntries().forEach(entry => {
@@ -132,7 +119,6 @@ class AnalyticsOptimizer {
     });
     observer.observe({ entryTypes: ['resource'] });
   }
-
   setupErrorTracking() {
     // Track JavaScript errors
     window.addEventListener('error', event => {
@@ -144,7 +130,6 @@ class AnalyticsOptimizer {
         stack: event.error?.stack,
       });
     });
-
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', event => {
       this.track('unhandled_rejection', {
@@ -152,7 +137,6 @@ class AnalyticsOptimizer {
         stack: event.reason?.stack,
       });
     });
-
     // Track fetch errors
     const _originalFetch = window.fetch;
     window.fetch = (...args) => {
@@ -165,7 +149,6 @@ class AnalyticsOptimizer {
       });
     };
   }
-
   setupUserBehaviorTracking() {
     // Track time on page
     let _timeOnPage = 0;
@@ -176,7 +159,6 @@ class AnalyticsOptimizer {
         minutes: Math.round(timeOnPage / 60000),
       });
     }, 10000); // Track every 10 seconds
-
     // Track mouse movement patterns
     let _mouseMovements = 0;
     document.addEventListener(
@@ -191,7 +173,6 @@ class AnalyticsOptimizer {
         }
       }, 1000)
     );
-
     // Track keyboard activity
     let _keystrokes = 0;
     document.addEventListener(
@@ -207,28 +188,23 @@ class AnalyticsOptimizer {
       }, 1000)
     );
   }
-
   setupPrivacyCompliance() {
     // Check for privacy settings
     if (localStorage.getItem('privacy_mode') === 'true') {
       this.config.privacyMode = true;
       this.config.trackingEnabled = false;
     }
-
     // Respect Do Not Track
     if (navigator.doNotTrack === '1') {
       this.config.trackingEnabled = false;
     }
-
     // GDPR compliance
     if (localStorage.getItem('gdpr_consent') !== 'true') {
       this.config.trackingEnabled = false;
     }
   }
-
   track(eventName, properties = {}) {
     if (!this.config.trackingEnabled) return;
-
     const event = {
       event: eventName,
       properties: {
@@ -243,15 +219,12 @@ class AnalyticsOptimizer {
         viewportSize: `${window.innerWidth}x${window.innerHeight}`,
       },
     };
-
     this.eventQueue.push(event);
-
     // Process immediately if batch is full
     if (this.eventQueue.length >= this.config.batchSize) {
       this.flush();
     }
   }
-
   trackWebVital(name, metric) {
     this.track('web_vital', {
       metric: name,
@@ -261,7 +234,6 @@ class AnalyticsOptimizer {
       navigationType: metric.navigationType,
     });
   }
-
   trackPageView(page = window.location.pathname) {
     this.pageViews++;
     this.track('page_view', {
@@ -271,11 +243,9 @@ class AnalyticsOptimizer {
       title: document.title,
     });
   }
-
   trackCustomEvent(eventName, properties = {}) {
     this.track(eventName, properties);
   }
-
   startBatchProcessor() {
     setInterval(() => {
       if (this.eventQueue.length > 0) {
@@ -283,13 +253,10 @@ class AnalyticsOptimizer {
       }
     }, this.config.flushInterval);
   }
-
   async flush() {
     if (this.eventQueue.length === 0) return;
-
     const _events = [...this.eventQueue];
     this.eventQueue = [];
-
     try {
       await this.sendEvents(events);
     } catch (error) {
@@ -297,7 +264,6 @@ class AnalyticsOptimizer {
       this.eventQueue.unshift(...events);
     }
   }
-
   async sendEvents(events) {
     const payload = {
       events: events,
@@ -305,13 +271,10 @@ class AnalyticsOptimizer {
       userId: this.userId,
       timestamp: Date.now(),
     };
-
     // Send to multiple analytics services
     const _promises = [this.sendToGoogleAnalytics(payload), this.sendToCustomEndpoint(payload)];
-
     await Promise.allSettled(promises);
   }
-
   async sendToGoogleAnalytics(payload) {
     if (typeof gtag !== 'undefined') {
       payload.events.forEach(event => {
@@ -321,7 +284,6 @@ class AnalyticsOptimizer {
       });
     }
   }
-
   async sendToCustomEndpoint(payload) {
     try {
       const response = await fetch('/api/analytics', {
@@ -331,20 +293,17 @@ class AnalyticsOptimizer {
         },
         body: JSON.stringify(payload),
       });
-
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
     } catch (error) {
       //       }
   }
-
   throttle(func, delay) {
     let timeoutId;
     let _lastExecTime = 0;
     return function (...args) {
       //       const currentTime = Date.now();
-
       if (currentTime - lastExecTime > delay) {
         func.apply(this, args);
         lastExecTime = currentTime;
@@ -360,7 +319,6 @@ class AnalyticsOptimizer {
       }
     };
   }
-
   // Analytics insights and reporting
   getSessionData() {
     return {
@@ -371,7 +329,6 @@ class AnalyticsOptimizer {
       eventsQueued: this.eventQueue.length,
     };
   }
-
   getPerformanceMetrics() {
     const _navigation = performance.getEntriesByType('navigation')[0];
     return {
@@ -383,13 +340,11 @@ class AnalyticsOptimizer {
       memoryUsage: this.getMemoryUsage(),
     };
   }
-
   getFirstPaint() {
     const _paintEntries = performance.getEntriesByType('paint');
     const _firstPaint = paintEntries.find(entry => entry.name === 'first-paint');
     return firstPaint ? firstPaint.startTime : 0;
   }
-
   getMemoryUsage() {
     if ('memory' in performance) {
       return {
@@ -400,19 +355,16 @@ class AnalyticsOptimizer {
     }
     return null;
   }
-
   // Privacy controls
   enableTracking() {
     this.config.trackingEnabled = true;
     localStorage.setItem('analytics_consent', 'true');
   }
-
   disableTracking() {
     this.config.trackingEnabled = false;
     this.eventQueue = [];
     localStorage.setItem('analytics_consent', 'false');
   }
-
   clearUserData() {
     localStorage.removeItem('analytics_user_id');
     localStorage.removeItem('analytics_consent');
@@ -420,15 +372,11 @@ class AnalyticsOptimizer {
     this.sessionId = this.generateSessionId();
   }
 }
-
 // Initialize analytics optimizer
 const _analyticsOptimizer = new AnalyticsOptimizer();
-
 // Track initial page view
 analyticsOptimizer.trackPageView();
-
 // Export for use in other modules
 export default analyticsOptimizer;
-
 // Global analytics instance
 window.analyticsOptimizer = analyticsOptimizer;

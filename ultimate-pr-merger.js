@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 // // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
@@ -12,7 +10,6 @@ function safeGitCommand(command, description) {
 //     return { success: false, error: error.message };
   }
 }
-
 //Function to check if branch exists
 function branchExists(branchName) {
   try {
@@ -25,7 +22,6 @@ function branchExists(branchName) {
     return false;
   }
 }
-
 //All PRs to process
 const allPRs = [
   {
@@ -61,14 +57,11 @@ const allPRs = [
     description: 'Remove unused PerformanceOptimizer import',
   },
 ];
-
 //Ensure we're on main branch
 // safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
-
 // let mergedCount = 0;
 // const skippedCount = 0;
-
 //Process each PR
 for (const pr of allPRs) {
 //   // console.log(
@@ -86,13 +79,11 @@ for (const pr of allPRs) {
     });
     continue;
   }
-
 //   //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
     `Merge ${pr.branch}`
   );
-
   if (mergeResult.success) {
     mergedCount++;
 //     results.push({
@@ -106,7 +97,6 @@ for (const pr of allPRs) {
     conflictCount++;
 //     //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
-
     results.push({
       pr: pr.number,
       title: pr.title,
@@ -117,7 +107,6 @@ for (const pr of allPRs) {
     });
   }
 }
-
 //Run comprehensive system checks
 // const typeCheck = safeGitCommand(
   'pnpm run type-check',
@@ -127,7 +116,6 @@ const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
   'Production build'
 );
-
 //Push changes if any were merged
 if (mergedCount > 0) {
 //   const pushResult = safeGitCommand(
@@ -138,12 +126,11 @@ if (mergedCount > 0) {
 //     } else {
 //     }
 }
-
 //Generate comprehensive final report
 const finalReport = {
   timestamp: new Date().toISOString(),
-  summary: {
-    totalPRs: allPRs.length,
+  summary: {,
+  totalPRs: allPRs.length,
     merged: mergedCount,
     conflicts: conflictCount,
     notFound: notFoundCount,
@@ -169,15 +156,12 @@ const finalReport = {
     lastCommit: execSync('git log --oneline -1', { encoding: 'utf8' }).trim(),
   },
 };
-
 //Save detailed final report
 fs.writeFileSync(
   'ultimate-pr-merge-report.json',
   JSON.stringify(finalReport, null, 2)
 );
-
 // // // // // // // // // // // if (finalReport.systemChecks.allPassed) {
 //   } else {
 //   }
-
 // // // 

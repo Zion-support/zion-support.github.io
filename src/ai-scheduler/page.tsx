@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target, Shield from 'lucide-react';}
 import { Link } from 'react-router-dom';
 const AISchedulerPage: React.FC = () => {const features = [}
@@ -15,14 +13,10 @@ const AISchedulerPage: React.FC = () => {const features = [}
       title: 'Team Coordination',
       description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
       benefit: 'Eliminate scheduling conflicts',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -36,23 +30,11 @@ const PagePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
       <Footer />
     </div>
-
-=======
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24">
@@ -70,29 +52,11 @@ const PagePage: React.FC = () => {
 // Never miss another meeting with our AI-powered scheduling assistant. Automatically find;
 //             the best meeting times, coordinate complex team schedules, and optimize your calendar;
             for maximum productivity.
-          
-          
-          
-          
-          
-          
-          
-          
-          
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
           <Phone className="w-5 h-5 mr-2" />,
  Call: (302) 464-0950;
             </a>
@@ -190,8 +154,6 @@ Most Popular;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches;
             and maximize productivity.
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default PagePage;

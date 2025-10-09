@@ -4,8 +4,8 @@ exports.handler = async function (event, context) {
     //     const timestamp = new Date().toISOString();
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'todo_scanner_runner function executed successfully',
+      body: JSON.stringify({,
+  message: 'todo_scanner_runner function executed successfully',
         timestamp: timestamp,
         function: 'todo_scanner_runner',
       }),

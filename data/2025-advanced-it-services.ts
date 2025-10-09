@@ -1,4 +1,3 @@
-
 export const advancedITServices2025 = [
     };
     marketSize: '$15 && 15.7B',
@@ -10,8 +9,8 @@ export const advancedITServices2025 = [
     competitive_advantage: unknown,
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration',
   },
-];      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
+];      phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com'
     };
     marketSize: '$178.9B';
     targetAudience: 'Enterprise businesses, cloud providers, research institutions, government agencies';

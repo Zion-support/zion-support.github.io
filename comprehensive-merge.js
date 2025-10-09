@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
@@ -12,11 +10,9 @@ function safeGitCommand(command, description) {
     //     return { success: false, error: error.message };
   }
 }
-
 //Ensure we're on main branch
 safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
-
 //List of PR branches to try merging
 const prBranches = [
   'cursor/fix-web-application-console-errors-0bf5',
@@ -24,26 +20,21 @@ const prBranches = [
   'cursor/fix-errors-and-merge-to-main-fcbd',
   'cursor/fix-errors-and-merge-to-main-e6e1',
 ];
-
 // let mergedCount = 0;
-
 for (const branch of prBranches) {
   //   //Check if branch exists
   const branchCheck = safeGitCommand(
     `git show-ref --verify --quiet refs/remotes/origin/${branch}`,
     `Check if ${branch} exists`
   );
-
   if (!branchCheck.success) {
     //     continue;
   }
-
   //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,
     `Merge ${branch}`
   );
-
   if (mergeResult.success) {
     mergedCount++;
     //     } else {
@@ -52,14 +43,12 @@ for (const branch of prBranches) {
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
   }
 }
-
 // // // //Push changes if any were merged
 if (mergedCount > 0) {
   if (pushResult.success) {
     //     } else {
     //     }
 }
-
 // // Generate a summary report
 const summary = {
   timestamp: new Date().toISOString(),
@@ -68,6 +57,5 @@ const summary = {
   totalProcessed: prBranches.length,
   status: mergedCount > 0 ? 'success' : 'no-changes',
 };
-
 fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2));
 // 

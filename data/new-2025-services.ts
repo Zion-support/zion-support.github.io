@@ -1,4 +1,3 @@
-
 };
 // Additional 2025 real micro-SaaS, AI and IT services
 export const new2025Services: EnhancedRealMicroSaasService[] = [,
@@ -34,8 +33,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [,
     contact_info: contact,    features: [;
       'Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates'
     ];
-    popular: true;
-    icon: '';
+    popular: true;,
+  icon: '';
     color: 'from - rose - 600 to - red - 700'
     text_color: 'text - rose - 300'
     link: 'https://ziontechgroup.com / services / llm - safety - observability - suite'

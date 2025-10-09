@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ContentCarouselProps {
   // Add props here
 }
-
 const ContentCarousel: React.FC<ContentCarouselProps> = () => {
   return (
     <div className="contentcarousel">
@@ -11,5 +9,4 @@ const ContentCarousel: React.FC<ContentCarouselProps> = () => {
     </div>
   );
 };
-
 export default ContentCarousel;

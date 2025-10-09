@@ -1,4 +1,3 @@
-
       'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
@@ -6,8 +5,8 @@
       'SLA-aware escalations and summaries'
       'Analytics: response time, CSAT impact, volume by topic'
     ]
-    popular: true;
-    icon: '';
+    popular: true;,
+  icon: '';
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
     link: 'https://ziontechgroup.com/services/ai-email-triage-copilot'

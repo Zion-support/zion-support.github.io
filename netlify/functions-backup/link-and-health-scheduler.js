@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'link-and-health-scheduler',
         source: event.source || 'unknown',
-        scheduling: {
-          status: 'active',
+        scheduling: {,
+  status: 'active',
           linksScheduled: 0,
           healthChecks: 0,
           lastSchedule: new Date().toISOString()}

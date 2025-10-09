@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'anchor-links-auto-fixer',
         source: event.source || 'unknown',
-        fixing: {
-          status: 'active',
+        fixing: {,
+  status: 'active',
           linksProcessed: 0,
           lastFix: new Date().toISOString()}
         },

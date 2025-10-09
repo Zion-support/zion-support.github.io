@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-
 // TypeScript file - rateLimiter
 export default {};
-
-=======
 'use client';
 /**
  * Rate Limiting Middleware;
@@ -98,17 +94,14 @@ export const rateLimiters = {// TODO: Add content;}
   windowMs: 15 * 60 * 1000,
     max: 100;
   // Lenient: 1000 requests per hour,
-
     lenient: new RateLimiter({// TODO: Add content;}
 };
   windowMs: 60 * 60 * 1000,
     max: 1000;
 // API: 60 requests per minute,
-
     api: new RateLimiter({max: 60,}
     message: 'API rate limit exceeded. Please try again later.'
   // Authentication: 5 login attempts per 15 minutes,
-
     auth: new RateLimiter({max: 5,}
     message: 'Too many login attempts. Please try again later.',
     skipSuccessfulRequests: true;
@@ -158,4 +151,3 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
       );
     // Request allowed - headers can be added to response later;
 return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

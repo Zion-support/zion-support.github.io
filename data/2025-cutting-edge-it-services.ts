@@ -1,7 +1,6 @@
-
 export const cuttingEdgeITServices2025 = [
-export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-platform'
-    name: 'Quantum Cloud Infrastructure Platform'
+export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-platform',
+  name: 'Quantum Cloud Infrastructure Platform'
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
       'Quantum-enhanced security protocols'

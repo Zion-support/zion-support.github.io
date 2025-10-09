@@ -39,8 +39,8 @@ function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} { recursive
 }
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe')
-    encoding: 'utf8'}
+    stdio: 'pipe'),
+  encoding: 'utf8'}
   });
   return {status: res.status || 0,
     stdout: res.stdout || ''}
@@ -89,7 +89,7 @@ exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '.
   const rows = unused
     .sort((a) b) => b.size - a.size)
     .map(u =>
-        `<tr><td style="padding: 6px,border-bottom:1px solid #eee"><code>${u.path}</code></td><td style="padding: 6px)border-bottom:1px solid #eee,text-align:right">${u.size}</td></tr>`)
+        `<tr><td style="padding: 6px,border-bottom:1px solid #eee"><code>${u.path}</code><td style="padding: 6px)border-bottom:1px solid #eee,text-align:right">${u.size}</td></tr>`)
     )
     .join('\n');
   const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margin:24px} h1{font-size: 20px}margin:0 0 12px} table{border-collapse: collapse}width:100%}max-width:100%} thead td{font-weight: 700}background:#fafafa}border-bottom:1px solid #eee} code{background: #f6f8fa}padding:2px 4px}border-radius:4px}</style></head><body><h1>Unused Assets Report</h1><div>Generated: ${report.generatedAt}</div><div>Total assets: ${report.totalAssets}</div><div>Unused: ${report.unusedCount}</div><hr/><table><thead><tr><td>Asset</td><td style="text-align:right">Bytes</td></tr></thead><tbody>${rows || '<tr><td colspan=2 style="padding:6px">No unused assets found</td></tr>'}</tbody></table></body></html>`;

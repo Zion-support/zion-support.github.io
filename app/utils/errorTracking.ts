@@ -18,7 +18,7 @@ export enum ErrorCategory {
   ExternalService = 'external_service'
 }
 export interface ErrorMetadata {
-  category: ErrorCategory;
+  category: ErrorCategory;,
   severity: ErrorSeverity;
   userId?: string;
   sessionId?: string;

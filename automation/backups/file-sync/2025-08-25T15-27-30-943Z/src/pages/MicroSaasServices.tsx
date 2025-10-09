@@ -14,8 +14,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Increased productivity", "Better team coordination", "Project visibility", "Easy to use"],
       targetAudience: ["Small teams", "Startups", "Freelancers", "Small businesses"],
       tags: ["Task Management", "Productivity", "Collaboration", "Project Management"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"
       }
@@ -461,7 +461,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         <div className="text-left">
         <div className="text-left"></div>
         <div className="text-left"></div>
-      </div>
       <div className="text-left">
         {/* Header */}
         <div className="text-left">

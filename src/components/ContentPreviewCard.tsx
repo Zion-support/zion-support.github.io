@@ -1,22 +1,16 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface ContentPreviewCardProps {
-
   // Add props here
 }
-
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = () => {
   return (
     <div className="contentpreviewcard">
       {/* Component content */}
     </div>
-
-=======
 interface ContentPreviewCardProps {// TODO: Add content;}
 };
-  id: string;
-    title: string;
+  id: string;,
+  title: string;
     description: string;,
     category: string;,
     readTime: string;,
@@ -68,37 +62,18 @@ const ContentPreviewCard: React.FC;
     return colors[category] || colors.default;
   };
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${}
   // TODO: Add content;
 }
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}>
       {/* Image/Visual Header */}
-      
-          
-          
-          
-          
-          
-          
-          
-          
           <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}>
         <div className="text-center text-white">
           <div className="text-6xl mb-2">{image}</div>
           <div className="text-sm font-medium opacity-90">{category}</div>
-        </div>
         {/* Featured Badge */}
         {featured && ()}
           <div className="absolute top-4 left-4">
@@ -173,8 +148,6 @@ const ContentPreviewCard: React.FC;
         </div>
       </div>
     </article>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default ContentPreviewCard;

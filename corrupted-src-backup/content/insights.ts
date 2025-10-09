@@ -1,12 +1,11 @@
 export interface Insight {
-  id: string;
+  id: string;,
   title: string;
   summary: string;
   category: string;
   date: string; // ISO date string
   readMinutes: number;
 }
-
 export const insights: Insight[] = [
   {
     id: 'ai-cost-governance-framework',

@@ -1,14 +1,11 @@
 #!/usr/bin/env node
-
 /**
  * Comprehensive Deployment Readiness Check
  * Verifies all aspects of the application before deployment
  */
-
 const _fs = require('fs');
 const { execSync } = require('child_process');
 const _path = require('path');
-
 // Colors for console output
 const colors = {
   reset: '\x1b[0m',
@@ -18,21 +15,17 @@ const colors = {
   blue: '\x1b[34m',
   cyan: '\x1b[36m',
 };
-
 class DeploymentReadinessChecker {
   constructor() {
     this.checks = [];
     this.failures = [];
     this.warnings = [];
   }
-
   log(message, color = 'reset') {
 //     }
-
   addCheck(name, fn) {
     this.checks.push({ name, fn });
   }
-
   async runCheck(check) {
     this.log(`\n🔍 Running: ${check.name}`, 'cyan');
     try {
@@ -61,49 +54,39 @@ class DeploymentReadinessChecker {
       return false;
     }
   }
-
   async runAll() {
     this.log('\n' + '='.repeat(60), 'blue');
     this.log('🚀 DEPLOYMENT READINESS CHECK', 'blue');
     this.log('='.repeat(60) + '\n', 'blue');
-
     for (const check of this.checks) {
       await this.runCheck(check);
     }
-
     this.printSummary();
     return this.failures.length === 0;
   }
-
   printSummary() {
     this.log('\n' + '='.repeat(60), 'blue');
     this.log('📊 SUMMARY', 'blue');
     this.log('='.repeat(60), 'blue');
-
 //     const totalChecks = this.checks.length;
 //     const passed = totalChecks - this.failures.length - this.warnings.length;
-
     this.log(`\nTotal Checks: ${totalChecks}`, 'cyan');
     this.log(`✅ Passed: ${passed}`, 'green');
     this.log(`⚠️  Warnings: ${this.warnings.length}`, 'yellow');
     this.log(`❌ Failed: ${this.failures.length}`, 'red');
-
     if (this.failures.length > 0) {
       this.log('\n🔴 FAILED CHECKS:', 'red');
       this.failures.forEach((failure, index) => {
         this.log(`${index + 1}. ${failure.check}: ${failure.message}`, 'red');
       });
     }
-
     if (this.warnings.length > 0) {
       this.log('\n🟡 WARNINGS:', 'yellow');
       this.warnings.forEach((warning, index) => {
         this.log(`${index + 1}. ${warning.check}: ${warning.message}`, 'yellow');
       });
     }
-
     this.log('\n' + '='.repeat(60), 'blue');
-
     if (this.failures.length === 0) {
       this.log('🎉 ALL CHECKS PASSED! Ready for deployment.', 'green');
       this.log('='.repeat(60) + '\n', 'blue');
@@ -115,7 +98,6 @@ class DeploymentReadinessChecker {
     }
   }
 }
-
 // Define all checks
 function setupChecks(checker) {
   // Check 1: Package.json exists and is valid
@@ -123,14 +105,12 @@ function setupChecks(checker) {
     try {
 //       const pkgPath = path.join(process.cwd(), 'package.json');
       const _pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-      
       if (!pkg.name || !pkg.version) {
         return {
           success: false,
           message: 'package.json missing required fields (name, version)'
         };
       }
-      
       return {
         success: true,
         message: `${pkg.name}@${pkg.version}`
@@ -142,7 +122,6 @@ function setupChecks(checker) {
       };
     }
   });
-
   // Check 2: Dependencies installed
   checker.addCheck('Dependencies Check', async () => {
     try {
@@ -163,7 +142,6 @@ function setupChecks(checker) {
       };
     }
   });
-
   // Check 3: Linting
   checker.addCheck('Linting', async () => {
     try {
@@ -179,7 +157,6 @@ function setupChecks(checker) {
       };
     }
   });
-
   // Check 4: Type checking
   checker.addCheck('Type Checking', async () => {
     try {
@@ -195,7 +172,6 @@ function setupChecks(checker) {
       };
     }
   });
-
   // Check 5: Tests
   checker.addCheck('Test Suite', async () => {
     try {
@@ -213,12 +189,10 @@ function setupChecks(checker) {
       };
     }
   });
-
   // Check 6: Build
   checker.addCheck('Build Process', async () => {
     try {
       execSync('pnpm run build:no-check', { stdio: 'pipe' });
-      
       // Check if dist folder exists
       if (!fs.existsSync('dist')) {
         return {
@@ -226,7 +200,6 @@ function setupChecks(checker) {
           message: 'Build completed but dist folder not found'
         };
       }
-      
       // Check dist size
 //       const stats = fs.statSync('dist');
       return {
@@ -240,12 +213,10 @@ function setupChecks(checker) {
       };
     }
   });
-
   // Check 7: Environment variables (warning only)
   checker.addCheck('Environment Variables', async () => {
     const _requiredEnvVars = ['NODE_ENV'];
     const _missing = requiredEnvVars.filter(v => !process.env[v]);
-    
     if (missing.length > 0) {
       return {
         success: true,
@@ -253,13 +224,11 @@ function setupChecks(checker) {
         message: `Missing env vars: ${missing.join(', ')}`
       };
     }
-    
     return {
       success: true,
       message: 'All required environment variables set'
     };
   });
-
   // Check 8: Security audit (warning only)
   checker.addCheck('Security Audit', async () => {
     try {
@@ -276,12 +245,10 @@ function setupChecks(checker) {
       };
     }
   });
-
   // Check 9: Git status
   checker.addCheck('Git Status', async () => {
     try {
 //       const status = execSync('git status --porcelain', { stdio: 'pipe' }).toString().trim();
-      
       if (status) {
         return {
           success: true,
@@ -289,7 +256,6 @@ function setupChecks(checker) {
           message: 'Uncommitted changes detected'
         };
       }
-      
       return {
         success: true,
         message: 'Working directory clean'
@@ -302,14 +268,12 @@ function setupChecks(checker) {
       };
     }
   });
-
   // Check 10: Branch check
   checker.addCheck('Git Branch', async () => {
     try {
       const branch = execSync('git rev-parse --abbrev-ref HEAD', { stdio: 'pipe' })
         .toString()
         .trim();
-      
       if (branch !== 'main' && branch !== 'master') {
         return {
           success: true,
@@ -317,7 +281,6 @@ function setupChecks(checker) {
           message: `Deploying from branch: ${branch}`
         };
       }
-      
       return {
         success: true,
         message: `On ${branch} branch`
@@ -331,17 +294,13 @@ function setupChecks(checker) {
     }
   });
 }
-
 // Main execution
 async function main() {
   const _checker = new DeploymentReadinessChecker();
   setupChecks(checker);
-  
 //   const success = await checker.runAll();
-  
   process.exit(success ? 0 : 1);
 }
-
 // Run the checker
 main().catch(error => {
 //   process.exit(1);

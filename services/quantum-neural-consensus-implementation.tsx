@@ -1,5 +1,4 @@
-
-export const metadata: Metadata = {
+export const metadata: Metadata = {,
   title: 'Quantum Neural Consensus Implementation | Zion Tech Group',
   description:
     'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-
 export default function QuantumNeuralConsensusImplementation() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -22,7 +20,6 @@ export default function QuantumNeuralConsensusImplementation() {
               Quantum Neural Consensus Implementation
             </h1>
             <p className="text-xl text-gray-600 mb-6">Professional Technology Services</p>
-          </div>
           <div className="prose max-w-none">
             <p className="text-lg text-gray-700 mb-6">
               Our Quantum Neural Consensus Implementation services are designed to help your

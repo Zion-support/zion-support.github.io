@@ -3,7 +3,6 @@
  * Enhanced Performance Hook;
  * Combines performance monitoring, error tracking, and analytics;
  */
-<<<<<<< HEAD
 export interface UseEnhancedPerformanceOptions {
     // TODO: Add content
   }
@@ -24,14 +23,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     trackAnalytics = true
   } = _options
   const mountTimeRef = useRef
-          
-          
-          
-          
-          
-          
-          
-          
           <number>(0)
   const renderCountRef = useRef<number>(0)
   const __mountTimeRef = useRef<number>(0)
@@ -58,7 +49,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     // TODO: Add content
   }
           // Long-lived component
-=======
 export interface UseEnhancedPerformanceOptions {// TODO: Add content;}
 }
   component?: string;
@@ -97,13 +87,11 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
         if (duration > 5000) {// TODO: Add content;}
 }
           // Long-lived component;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //           analytics.trackCustomEvent()
 //             'Performance',
 //             'Long Component Lifetime',
 //             component,
 //             Math.round(duration)
-<<<<<<< HEAD
           )
       // Track component unmount
         analytics.trackCustomEvent('Component', 'Unmounted', component)
@@ -121,14 +109,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
   )
   const trackError = useCallback()
     (error: Error, context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => {
     // TODO: Add content
   }
@@ -141,14 +121,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     [component, trackErrors]
   const trackUserAction = useCallback()
     (action: string, metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => {
 analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
     [component, trackAnalytics]
@@ -165,7 +137,6 @@ analytics.trackCustomEvent('User Action', action, component, undefined, metadata
     // TODO: Add content
   }
           const duration = performance.now() - startTime
-=======
           );
       // Track component unmount;
         analytics.trackCustomEvent('Component', 'Unmounted', component);
@@ -202,7 +173,6 @@ analytics.trackCustomEvent('User Action', action, component, undefined, metadata
   end: () => {// TODO: Add content;}
 }
           const duration = performance.now() - startTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 analytics.trackPerformance(
               `${component}-${operationName}`,
 //               duration,

@@ -18,7 +18,6 @@ export const getOptimizedUrl = (
   if (optio, n, s.heig, h, t) para, m, s.appe, n, d('h', optio, n, s.heig, h, t.toStri, n, g());
   if (optio, n, s.quali, t, y) para, m, s.appe, n, d('q', optio, n, s.quali, t, y.toStri, n, g());
   if (optio, n, s.form, a, t) para, m, s.appe, n, d('fm', optio, n, s.form, a, t);
-
   const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c;
 export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > { 
   if ('IntersectionObserv, e, r' in, wind, o, w) {
@@ -65,7 +64,6 @@ export const createPictureElement = (
   conf, i, g: ResponsiveImageCo, n, f, i, g,
 ): HTMLPictureEleme, n, t = > { 
   const pictur, e = docume, n, t.createEleme, n, t('pict, u, r, e');
-
   // Add source elements for different formats
   const format, s = conf, i, g.forma, t, s || ['a, v, i, f', 'we, b, p']; forma, t, s.forEa, c, h(form, a, t = > {
     const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t(
@@ -78,20 +76,16 @@ export const createPictureElement = (
 ): vo, i, d = > { 
   // Create placeholder image
   const placeholde, r = docume, n, t.createEleme, n, t('im, g'); placehold, e, r.s, r, c = conf, i, g.placehold, e, r; placehold, e, r.a, l, t = conf, i, g.a, l, t; placehold, e, r.sty, l, e.filt, e, r = 'bl, u, r(1, 0, p, x)'; placehold, e, r.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(placehol, d, e, r);
-
   // Load full image
   const fullImag, e = new, Ima, g, e(); fullIma, g, e.onlo, a, d = () => {
     fullIma, g, e.a, l, t = conf, i, g.a, l, t; fullIma, g, e.sty, l, e.opaci, t, y = '0'; fullIma, g, e.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(fullIm, a, g, e);
-
     // Fade in full image requestAnimationFram e(() => {
       fullIma, g, e.sty, l, e.opaci, t, y = '1'; placehold, e, r.sty, l, e.opaci, t, y = '0';
-
       // Remove placeholder after transition setTimeo u t(() = > {
 export const getOptimalQualit, y = (): number = > {
   if (typeof, navigato, r === 'undefin, e, d' || !('connecti, o, n' in, navigat, o, r)) {
     return, 8, 0; // Default qualit y
   }
-
   const connectio, n = (navigator, as, any).connecti, o, n; const effectiveTyp, e = connecti, o, n?.effectiveTy, p, e; swit, c, h (effectiveT, y, p, e) {
     ca, s, e '4g':
       return, 8, 5;
@@ -122,5 +116,4 @@ export const estimateDataUsage = (
         priori, t, y,
         callba, c, k: reso, l, v, e,
        }); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y);
-
 }}}}}}}}}}}

@@ -3,17 +3,14 @@
  * Advanced Analytics System for Zion Tech Group Website;
  * Provides comprehensive user behavior tracking and insights;
  */
-<<<<<<< HEAD
 interface UserEvent {
     // TODO: Add content
   }
   id: string
-=======
 interface UserEvent {// TODO: Add content;}
 };
-  id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';,
+  id: string;,
+  type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';,
     category: string;,
     action: string
   label?: string
@@ -21,17 +18,8 @@ interface UserEvent {// TODO: Add content;}
     timestamp: string;,
     sessionId: string
   userId?: string;,
-<<<<<<< HEAD
     url: string
   metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
 }
 interface UserSession {
@@ -41,7 +29,6 @@ interface UserSession {
     startTime: string
   endTime?: string
   duration?: number
-=======
     url: string;
   metadata?: Record;
           <string, unknown>;
@@ -52,7 +39,6 @@ interface UserSession {// TODO: Add content;}
     startTime: string;
   endTime?: string;
   duration?: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     pageViews: number;,
     events: UserEvent[]
   referrer?: string;,
@@ -63,18 +49,15 @@ interface UserSession {// TODO: Add content;}
   country?: string
   city?: string
 }
-<<<<<<< HEAD
 interface AnalyticsConfig {
     // TODO: Add content
   }
   enableTracking: boolean
     enableHeatmaps: boolean
-=======
 interface AnalyticsConfig {// TODO: Add content;}
 };
   enableTracking: boolean;
     enableHeatmaps: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     enableSessionRecording: boolean;,
     enableA_BTesting: boolean;,
     enableConversionTracking: boolean;,
@@ -82,7 +65,6 @@ interface AnalyticsConfig {// TODO: Add content;}
     enableErrorTracking: boolean;,
     enableUserJourneyTracking: boolean
 }
-<<<<<<< HEAD
 class AdvancedAnalytics {
     // TODO: Add content
   }
@@ -98,7 +80,6 @@ class AdvancedAnalytics {
     this.config = {
     // TODO: Add content
   }
-=======
 class AdvancedAnalytics {// TODO: Add content;}
 }
   private static instance: AdvancedAnalytics;
@@ -111,7 +92,6 @@ class AdvancedAnalytics {// TODO: Add content;}
 }
     this.config = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableTracking: true,
       enableHeatmaps: true,
       enableSessionRecording: false,
@@ -119,7 +99,6 @@ class AdvancedAnalytics {// TODO: Add content;}
       enableConversionTracking: true,
       enablePerformanceTracking: true,
       enableErrorTracking: true,
-<<<<<<< HEAD
       enableUserJourneyTracking: true
     }
     this.currentSession = this.createNewSession()
@@ -132,7 +111,6 @@ class AdvancedAnalytics {// TODO: Add content;}
     // TODO: Add content
   }
       AdvancedAnalytics.instance = new AdvancedAnalytics()
-=======
       enableUserJourneyTracking: true;
     };
     this.currentSession = this.createNewSession();
@@ -143,14 +121,12 @@ class AdvancedAnalytics {// TODO: Add content;}
     if (!AdvancedAnalytics.instance) {// TODO: Add content;}
 }
       AdvancedAnalytics.instance = new AdvancedAnalytics();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return AdvancedAnalytics.instance
   }
   /**
    * Initialize comprehensive analytics tracking;
    */
-<<<<<<< HEAD
   private initializeTracking(): void {
     // TODO: Add content
   }
@@ -179,7 +155,6 @@ class AdvancedAnalytics {// TODO: Add content;}
     }
     // Setup network monitoring
     this.setupNetworkMonitoring()
-=======
   private initializeTracking(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined' || !this.config.enableTracking) return;
@@ -205,24 +180,20 @@ class AdvancedAnalytics {// TODO: Add content;}
     }
     // Setup network monitoring;
     this.setupNetworkMonitoring();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Create new user session;
    */
-<<<<<<< HEAD
   private createNewSession(): UserSession {
     // TODO: Add content
   }
     return {
     // TODO: Add content
   }
-=======
   private createNewSession(): UserSession {// TODO: Add content;}
 }
     return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   id: this.generateSessionId(),
       startTime: new Date().toISOString(),
       pageViews: 0,
@@ -231,13 +202,10 @@ class AdvancedAnalytics {// TODO: Add content;}
       device: this.detectDevice(),
       browser: this.detectBrowser(),
       os: this.detectOS(),
-<<<<<<< HEAD
       referrer: document.referrer
     }
-=======
       referrer: document.referrer;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Track page views;
@@ -251,7 +219,6 @@ class AdvancedAnalytics {// TODO: Add content;}
       sessionId: this.currentSession.id,
       userId: this.getUserId(),
       url: url || window.location.href,
-<<<<<<< HEAD
       metadata: {
     // TODO: Add content
   }
@@ -259,13 +226,11 @@ class AdvancedAnalytics {// TODO: Add content;}
         viewport: {
     // TODO: Add content
   }
-=======
       metadata: {// TODO: Add content;}
 };
   referrer: document.referrer,
         viewport: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   width: window.innerWidth,
           height: window.innerHeight;
         }
@@ -277,7 +242,6 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track clicks;
    */
-<<<<<<< HEAD
   private trackClicks(): void {
     // TODO: Add content
   }
@@ -286,13 +250,11 @@ class AdvancedAnalytics {// TODO: Add content;}
       const clickEvent: UserEvent = {
     // TODO: Add content
   }
-=======
   private trackClicks(): void {// TODO: Add content;}
 }
     document.addEventListener('click', event => {const element = this.getElementInfo(target);}
       const clickEvent: UserEvent = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   id: this.generateEventId(),
         type: 'click',
         category: element.category,
@@ -302,26 +264,20 @@ class AdvancedAnalytics {// TODO: Add content;}
         sessionId: this.currentSession.id,
         userId: this.getUserId(),
         url: window.location.href,
-<<<<<<< HEAD
         metadata: {
     // TODO: Add content
   }
-=======
         metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   element: element.tagName,
           id: element.id,
           className: element.className,
           text: element.text?.substring(0, 100),
-<<<<<<< HEAD
           position: {
     // TODO: Add content
   }
-=======
           position: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   x: event.clientX,
             y: event.clientY;
           }
@@ -334,7 +290,6 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track scrolls;
    */
-<<<<<<< HEAD
   private trackScrolls(): void {
     // TODO: Add content
   }
@@ -349,7 +304,6 @@ class AdvancedAnalytics {// TODO: Add content;}
         const scrollEvent: UserEvent = {
     // TODO: Add content
   }
-=======
   private trackScrolls(): void {// TODO: Add content;}
 }
     let scrollTimeout: NodeJS.Timeout;
@@ -360,7 +314,6 @@ class AdvancedAnalytics {// TODO: Add content;}
 }
         const scrollEvent: UserEvent = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   id: this.generateEventId(),
           type: 'scroll',
           category: 'engagement',
@@ -372,14 +325,11 @@ class AdvancedAnalytics {// TODO: Add content;}
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
           url: window.location.href,
-<<<<<<< HEAD
           metadata: {
     // TODO: Add content
   }
-=======
           metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   scrollY: window.scrollY,
             scrollPercentage: Math.round()
 //               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
@@ -394,7 +344,6 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track form submissions;
    */
-<<<<<<< HEAD
   private trackFormSubmissions(): void {
     // TODO: Add content
   }
@@ -407,7 +356,6 @@ class AdvancedAnalytics {// TODO: Add content;}
       const submitEvent: UserEvent = {
     // TODO: Add content
   }
-=======
   private trackFormSubmissions(): void {// TODO: Add content;}
 }
     document.addEventListener('submit', event => {// TODO: Add content;}
@@ -417,7 +365,6 @@ class AdvancedAnalytics {// TODO: Add content;}
       const formFields = Array.from(formData.keys());
       const submitEvent: UserEvent = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   id: this.generateEventId(),
         type: 'form_submit',
         category: 'conversion',
@@ -427,14 +374,11 @@ class AdvancedAnalytics {// TODO: Add content;}
         sessionId: this.currentSession.id,
         userId: this.getUserId(),
         url: window.location.href,
-<<<<<<< HEAD
         metadata: {
     // TODO: Add content
   }
-=======
         metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   formId: form.id,
           formClass: form.className,
           formAction: form.action,
@@ -449,7 +393,6 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track downloads;
    */
-<<<<<<< HEAD
   private trackDownloads(): void {
     // TODO: Add content
   }
@@ -464,7 +407,6 @@ class AdvancedAnalytics {// TODO: Add content;}
         const downloadEvent: UserEvent = {
     // TODO: Add content
   }
-=======
   private trackDownloads(): void {// TODO: Add content;}
 }
     document.addEventListener('click', event => {// TODO: Add content;}
@@ -475,7 +417,6 @@ class AdvancedAnalytics {// TODO: Add content;}
 }
         const downloadEvent: UserEvent = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   id: this.generateEventId(),
           type: 'download',
           category: 'conversion',
@@ -485,14 +426,11 @@ class AdvancedAnalytics {// TODO: Add content;}
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
           url: window.location.href,
-<<<<<<< HEAD
           metadata: {
     // TODO: Add content
   }
-=======
           metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   downloadUrl: link.href,
             downloadText: link.textContent?.substring(0, 100)
           }
@@ -505,7 +443,6 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track performance metrics;
    */
-<<<<<<< HEAD
   private trackPerformance(): void {
     // TODO: Add content
   }
@@ -525,7 +462,6 @@ class AdvancedAnalytics {// TODO: Add content;}
             const paintEvent: UserEvent = {
     // TODO: Add content
   }
-=======
   private trackPerformance(): void {// TODO: Add content;}
 }
     if ('PerformanceObserver' in window) {// TODO: Add content;}
@@ -539,7 +475,6 @@ class AdvancedAnalytics {// TODO: Add content;}
 }
             const paintEvent: UserEvent = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   id: this.generateEventId(),
               type: 'custom',
               category: 'performance',
@@ -549,14 +484,11 @@ class AdvancedAnalytics {// TODO: Add content;}
               sessionId: this.currentSession.id,
               userId: this.getUserId(),
               url: window.location.href,
-<<<<<<< HEAD
               metadata: {
     // TODO: Add content
   }
-=======
               metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   metric: entry.name,
                 value: entry.startTime;
               }
@@ -564,7 +496,6 @@ class AdvancedAnalytics {// TODO: Add content;}
             this.trackEvent(paintEvent)
           }
         }
-<<<<<<< HEAD
       }).observe({ entryTypes: ['paint'] }
   )
       // Track navigation timing
@@ -577,7 +508,6 @@ class AdvancedAnalytics {// TODO: Add content;}
         const performanceEvent: UserEvent = {
     // TODO: Add content
   }
-=======
       }).observe({ entryTypes: ['paint'] });
       // Track navigation timing;
       window.addEventListener('load', () => {// TODO: Add content;}
@@ -587,7 +517,6 @@ class AdvancedAnalytics {// TODO: Add content;}
         )[0] as PerformanceNavigationTiming;
         const performanceEvent: UserEvent = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   id: this.generateEventId(),
           type: 'custom',
           category: 'performance',
@@ -597,14 +526,11 @@ class AdvancedAnalytics {// TODO: Add content;}
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
           url: window.location.href,
-<<<<<<< HEAD
           metadata: {
     // TODO: Add content
   }
-=======
           metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded:
 //               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -619,7 +545,6 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track user journey;
    */
-<<<<<<< HEAD
   private trackUserJourney(): void {
 // Track page transitions
     const observer = new MutationObserver(() => {
@@ -640,7 +565,6 @@ class AdvancedAnalytics {// TODO: Add content;}
       subtree: true
     }
   )
-=======
   private trackUserJourney(): void {// Track page transitions;}
     const observer = new MutationObserver(() => {// TODO: Add content;}
 }
@@ -655,12 +579,10 @@ class AdvancedAnalytics {// TODO: Add content;}
   childList: true,
       subtree: true;
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup network monitoring;
    */
-<<<<<<< HEAD
   private setupNetworkMonitoring(): void {
     // TODO: Add content
   }
@@ -677,7 +599,6 @@ class AdvancedAnalytics {// TODO: Add content;}
       this.isOnline = false
     }
   )
-=======
   private setupNetworkMonitoring(): void {// TODO: Add content;}
 }
     window.addEventListener('online', () => {// TODO: Add content;}
@@ -689,12 +610,10 @@ class AdvancedAnalytics {// TODO: Add content;}
 }
       this.isOnline = false;
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Track custom event;
    */
-<<<<<<< HEAD
   trackEvent(event: UserEvent): void {
     // TODO: Add content
   }
@@ -711,7 +630,6 @@ class AdvancedAnalytics {// TODO: Add content;}
     // TODO: Add content
   }
       this.sendEvent(event)
-=======
   trackEvent(event: UserEvent): void {// TODO: Add content;}
 }
     this.currentSession.events.push(event);
@@ -725,22 +643,12 @@ class AdvancedAnalytics {// TODO: Add content;}
     if (this.isOnline) {// TODO: Add content;}
 }
       this.sendEvent(event);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Send event to analytics service;
    */
-<<<<<<< HEAD
   private async sendEvent(event: UserEvent): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -762,7 +670,6 @@ class AdvancedAnalytics {// TODO: Add content;}
     } catch (error) {
     // TODO: Add content
   }
-=======
   private async sendEvent(event: UserEvent): Promise;
           <void> {// TODO: Add content;}
 }
@@ -779,22 +686,12 @@ class AdvancedAnalytics {// TODO: Add content;}
       });
     } catch (error) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Flush event queue when back online;
    */
-<<<<<<< HEAD
   private async flushEventQueue(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -805,7 +702,6 @@ class AdvancedAnalytics {// TODO: Add content;}
     // TODO: Add content
   }
       await this.sendEvent(event)
-=======
   private async flushEventQueue(): Promise;
           <void> {// TODO: Add content;}
 }
@@ -815,25 +711,20 @@ class AdvancedAnalytics {// TODO: Add content;}
     for (const event of eventsToSend) {// TODO: Add content;}
 }
       await this.sendEvent(event);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Get element information for tracking;
    */
-<<<<<<< HEAD
   private getElementInfo(element: HTMLElement): {
     // TODO: Add content
   }
-=======
   private getElementInfo(element: HTMLElement): {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   category: string;,
     label: string;,
     tagName: string;,
     id: string;,
-<<<<<<< HEAD
     className: string
     text?: string
   } {
@@ -863,7 +754,6 @@ let label = id || className || text?.substring(0, 50) || tagName
     return {
     // TODO: Add content
   }
-=======
     className: string;
     text?: string;
   } {// TODO: Add content;}
@@ -888,40 +778,25 @@ let category = 'interaction';
 let label = id || className || text?.substring(0, 50) || tagName;
     return {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       category,
 //       label,
 //       tagName,
 //       id,
 //       className,
-<<<<<<< HEAD
 //       text
     }
-=======
 //       text;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Check if link is a download;
    */
-<<<<<<< HEAD
   private isDownloadLink(link: HTMLAnchorElement): boolean {
     // TODO: Add content
   }
-=======
   private isDownloadLink(link: HTMLAnchorElement): boolean {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
       link.download !== '' ||
@@ -932,24 +807,14 @@ let label = id || className || text?.substring(0, 50) || tagName;
   /**
    * Detect device type;
    */
-<<<<<<< HEAD
   private detectDevice(): 'desktop' | 'mobile' | 'tablet' {
     // TODO: Add content
   }
     const width = window.innerWidth
     if (width 
-          
-          
-          
-          
-          
-          
-          
-          
           < 768) return 'mobile'
     if (width < 1024) return 'tablet'
     return 'desktop'
-=======
   private detectDevice(): 'desktop' | 'mobile' | 'tablet' {// TODO: Add content;}
 }
     const width = window.innerWidth;
@@ -957,12 +822,10 @@ let label = id || className || text?.substring(0, 50) || tagName;
           < 768) return 'mobile';
     if (width < 1024) return 'tablet';
     return 'desktop';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Detect browser;
    */
-<<<<<<< HEAD
   private detectBrowser(): string {
     // TODO: Add content
   }
@@ -972,7 +835,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
     if (userAgent.includes('Safari')) return 'Safari'
     if (userAgent.includes('Edge')) return 'Edge'
     return 'Unknown'
-=======
   private detectBrowser(): string {// TODO: Add content;}
 }
     const userAgent = navigator.userAgent;
@@ -981,12 +843,10 @@ let label = id || className || text?.substring(0, 50) || tagName;
     if (userAgent.includes('Safari')) return 'Safari';
     if (userAgent.includes('Edge')) return 'Edge';
     return 'Unknown';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Detect operating system;
    */
-<<<<<<< HEAD
   private detectOS(): string {
     // TODO: Add content
   }
@@ -997,7 +857,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
     if (userAgent.includes('Android')) return 'Android'
     if (userAgent.includes('iOS')) return 'iOS'
     return 'Unknown'
-=======
   private detectOS(): string {// TODO: Add content;}
 }
     const userAgent = navigator.userAgent;
@@ -1007,40 +866,32 @@ let label = id || className || text?.substring(0, 50) || tagName;
     if (userAgent.includes('Android')) return 'Android';
     if (userAgent.includes('iOS')) return 'iOS';
     return 'Unknown';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Generate session ID;
    */
-<<<<<<< HEAD
   private generateSessionId(): string {
     // TODO: Add content
   }
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-=======
   private generateSessionId(): string {// TODO: Add content;}
 }
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Generate event ID;
    */
-<<<<<<< HEAD
   private generateEventId(): string {
     // TODO: Add content
   }
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-=======
   private generateEventId(): string {// TODO: Add content;}
 }
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get user ID from storage or generate one;
    */
-<<<<<<< HEAD
   private getUserId(): string | undefined {
     // TODO: Add content
   }
@@ -1050,7 +901,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
       userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
       localStorage.setItem('analytics_user_id', userId)
-=======
   private getUserId(): string | undefined {// TODO: Add content;}
 }
     let userId = localStorage.getItem('analytics_user_id');
@@ -1058,28 +908,18 @@ let label = id || className || text?.substring(0, 50) || tagName;
 }
       userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       localStorage.setItem('analytics_user_id', userId);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return userId
   }
   /**
    * Get analytics summary;
    */
-<<<<<<< HEAD
   getAnalyticsSummary(): {
     // TODO: Add content
   }
   session: UserSession;,
     totalEvents: number;,
     eventsByType: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number>
     eventsByCategory: Record<string, number>
     topPages: Array<{ url: string; views: number }>
@@ -1095,7 +935,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
         acc[event.type] = (acc[event.type] || 0) + 1
         return acc
-=======
   getAnalyticsSummary(): {// TODO: Add content;}
 };
   session: UserSession;,
@@ -1114,48 +953,25 @@ let label = id || className || text?.substring(0, 50) || tagName;
 }
         acc[event.type] = (acc[event.type] || 0) + 1;
         return acc;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       },
       {} as Record;
           <string, number>
     )
     const eventsByCategory = events.reduce()
-<<<<<<< HEAD
       (acc, event) => {
     // TODO: Add content
   }
         acc[event.category] = (acc[event.category] || 0) + 1
         return acc
-=======
       (acc, event) => {// TODO: Add content;}
 }
         acc[event.category] = (acc[event.category] || 0) + 1;
         return acc;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       },
       {} as Record;
           <string, number>
-<<<<<<< HEAD
     )
     const pageViews = events.filter(e => e.type === 'page_view')
-    const topPages = pageViews
-// .reduce()
-        (acc, event) => {
-    // TODO: Add content
-  }
-          const existing = acc.find(p => p.url === event.url)
-          if (existing) {
-    // TODO: Add content
-  }
-            existing.views++
-          } else {
-    // TODO: Add content
-  }
-            acc.push({ url: event.url, views: 1 }
-  )
-=======
-    );
-    const pageViews = events.filter(e => e.type === 'page_view');
     const topPages = pageViews;
 // .reduce()
         (acc, event) => {// TODO: Add content;}
@@ -1167,53 +983,37 @@ let label = id || className || text?.substring(0, 50) || tagName;
           } else {// TODO: Add content;}
 }
             acc.push({ url: event.url, views: 1 });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
           return acc
         },
         [] as Array;
           <{ url: string; views: number }>
 // )
-<<<<<<< HEAD
       .sort((a, b) => b.views - a.views)
     const conversions = events.filter(e => e.category === 'conversion').length
     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0
     return {
     // TODO: Add content
   }
-=======
       .sort((a, b) => b.views - a.views);
     const conversions = events.filter(e => e.category === 'conversion').length;
     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
     return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   session: this.currentSession,
 //       totalEvents,
 //       eventsByType,
 //       eventsByCategory,
       topPages: topPages.slice(0, 10),
-<<<<<<< HEAD
 //       conversionRate
     }
-=======
 //       conversionRate;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Send session data to analytics service;
    */
-<<<<<<< HEAD
   private async sendSessionData(session: UserSession): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -1235,7 +1035,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
     } catch (error) {
     // TODO: Add content
   }
-=======
   private async sendSessionData(session: UserSession): Promise;
           <void> {// TODO: Add content;}
 }
@@ -1252,13 +1051,11 @@ let label = id || className || text?.substring(0, 50) || tagName;
       });
     } catch (error) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * End current session;
    */
-<<<<<<< HEAD
   endSession(): void {
     // TODO: Add content
   }
@@ -1274,7 +1071,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
     }
     // Create new session
     this.currentSession = this.createNewSession()
-=======
   endSession(): void {// TODO: Add content;}
 }
     this.currentSession.endTime = new Date().toISOString();
@@ -1288,7 +1084,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
     }
     // Create new session;
     this.currentSession = this.createNewSession();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 // Export singleton instance

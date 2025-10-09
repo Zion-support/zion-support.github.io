@@ -9,10 +9,8 @@
           conte, n, t='cognitive, automati, o, n, intelligent, automatio, n, R, P, A, AI, workflow, s, process, automatio, n, business, automatio, n, hyperautomati, o, n'
         />
       </Helm, e, t>
-
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
-
         <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
           <Link, t, o='/servic, e, s'
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
@@ -23,14 +21,12 @@
                 Starting, a, t $, 7,9, 9, 9/mon, t, h
               </sp, a, n>
             </div>
-
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Re, a, l-Time, Cognitive, Automation Platfo, r, m
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'>
                 Transform, Business, Operations with, Intelligent, Automation
               </sp, a, n>
             </h1>
-
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               Revolutionize, your, business operations, with, AI-powered, workflows, that deliver, instant, decision-ma, k, i, n, g, se, l, f-learning, automatio, n,
               and, 9, 9.97% accura, c, y. Achieve, 8, 7% cost, reduction, and 10x, productivity, gains.
@@ -44,7 +40,6 @@
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                   Process, Accurac, y
                 </div>
-              </div>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
                   85%

@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'marketing-and-features-promo',
         source: event.source || 'unknown',
-        promotion: {
-          status: 'active',
+        promotion: {,
+  status: 'active',
           marketing: 0,
           features: 0,
           lastPromo: new Date().toISOString()}

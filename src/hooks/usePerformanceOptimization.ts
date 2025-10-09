@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 'use client'
 interface PerformanceMetrics {
     // TODO: Add content
   }
-=======
 'use client';
 interface PerformanceMetrics {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: number;,
     firstContentfulPaint: number;,
     largestContentfulPaint: number;,
     cumulativeLayoutShift: number;,
     firstInputDelay: number
 }
-<<<<<<< HEAD
 export const _usePerformanceOptimization = () => {
     // TODO: Add content
   }
@@ -36,7 +32,6 @@ export const _usePerformanceOptimization = () => {
   }
   loadTime: navigation
 //         ? navigation.loadEventEnd - navigation.loadEventStart
-=======
 export const _usePerformanceOptimization = () => {// TODO: Add content;}
 }
   const measurePerformance = useCallback(() => {// TODO: Add content;}
@@ -53,14 +48,12 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
 };
   loadTime: navigation;
 //         ? navigation.loadEventEnd - navigation.loadEventStart;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         : 0,
       firstContentfulPaint:
         paintEntries.find(entry => entry.name === 'first-contentful-paint')
 //           ?.startTime || 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
-<<<<<<< HEAD
       firstInputDelay: 0
     }
     // Measure LCP
@@ -175,7 +168,6 @@ if (process.env['NODE_ENV'] === 'development') {
   }, [measurePerformance, optimizeImages, preloadCriticalResources])
   return {
 measurePerformance,
-=======
       firstInputDelay: 0;
     };
     // Measure LCP;
@@ -265,6 +257,5 @@ if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
   return {measurePerformance,}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     optimizeImages,
     preloadCriticalResources;

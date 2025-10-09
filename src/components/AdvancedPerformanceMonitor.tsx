@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceMetrics {
-
-  fcp: number | null;
+  fcp: number | null;,
   lcp: number | null;
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-
-=======
 'use client';
 interface PerformanceMetrics {// TODO: Add content;}
 };
@@ -21,20 +16,13 @@ interface PerformanceMetrics {// TODO: Add content;}
     memory: number | null;
 }
 interface PerformanceMonitorProps {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
-
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-
 }
-<<<<<<< HEAD
-
 const AdvancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
-
-=======
 const AdvancedPerformanceMonitor: React.FC;
           <PerformanceMonitorProps> = ({// TODO: Add content;}
 }
@@ -46,14 +34,11 @@ const AdvancedPerformanceMonitor: React.FC;
           <PerformanceMetrics>({// TODO: Add content;}
 };
   fcp: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-<<<<<<< HEAD
   });
-
   useEffect(() => {
     // Basic performance monitoring
     const observer = new PerformanceObserver((list) => {
@@ -62,10 +47,8 @@ const AdvancedPerformanceMonitor: React.FC;
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
-
       });
     });
-
     try {
       observer.observe({ entryTypes: ['paint'] });
       return () => observer.disconnect();
@@ -73,14 +56,11 @@ const AdvancedPerformanceMonitor: React.FC;
       console.warn('Performance monitoring not supported:', error);
     }
   }, []);
-
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics);
     }
   }, [metrics, onMetricsUpdate]);
-
-=======
     memory: null;
   });
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -330,17 +310,8 @@ const getPerformanceRecommendations = useCallback(() => {// TODO: Add content;}
   if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
 }
     return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-      
           <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'>
@@ -357,7 +328,6 @@ const getPerformanceRecommendations = useCallback(() => {// TODO: Add content;}
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>
-        </div>
         {_recommendations.length > 0 && ()}
           <div className='mt-2'>
             <h4 className='font-semibold text-xs text-red-600'>;
@@ -373,8 +343,6 @@ const getPerformanceRecommendations = useCallback(() => {// TODO: Add content;}
       </div>
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return null;
 };
-
 export default AdvancedPerformanceMonitor;

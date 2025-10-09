@@ -22,7 +22,6 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {
             breakthrough, technologie, s, and, proven, enterprise strategi, e, s.
             Everything, you, need to, master, AI transformation, in, one pla, c, e.
           </p>
-        </div>
         {/* Content, Categorie, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
           {/* Breakthrough, Technolog, i, e, s */}

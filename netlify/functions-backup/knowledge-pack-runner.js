@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'knowledge-pack-runner',
         source: event.source || 'unknown',
-        knowledge: {
-          status: 'active',
+        knowledge: {,
+  status: 'active',
           packs: 0,
           lastPack: new Date().toISOString()}
         },

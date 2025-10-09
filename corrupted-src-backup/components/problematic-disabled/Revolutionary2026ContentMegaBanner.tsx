@@ -104,7 +104,6 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
               <Zap, className="w-4 h-4, tex, t-yell, o, w-400, animat, e-pul, s, e" />
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">6, BREAKTHROUGH, TECHNOLOGIES</sp, a, n>
             </div>
-          </div>
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Revolutionary, 2026, Content
           </h2>

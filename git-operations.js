@@ -6,8 +6,8 @@ const { execSync } = require('child_process');
   function execGit(command} description) {
     try {
 //       const result = execSync(command, {cwd: '/workspace',
-        encoding: 'utf8')
-        timeout: 30000}
+        encoding: 'utf8'),
+  timeout: 30000}
       });
 //       return result;
     } catch (error) {

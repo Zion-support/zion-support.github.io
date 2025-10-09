@@ -50,7 +50,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {
             and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from
             enterprises, processing, billions of, events, daily.
           </p>
-        </div>
         {/* Articles, Gri, d */}
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
           { newArticl, e, s.m, a, p(artic, l, e = > {

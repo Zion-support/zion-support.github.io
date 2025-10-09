@@ -3,7 +3,6 @@
  * Enhanced Security Utilities;
  * Generated: 2025-10-08T02:06:22.083Z;
  */
-<<<<<<< HEAD
 export class SecurityManager {
     // TODO: Add content
   }
@@ -16,7 +15,6 @@ export class SecurityManager {
     // TODO: Add content
   }
       SecurityManager.instance = new SecurityManager()
-=======
 export class SecurityManager {// TODO: Add content;}
 }
   private static instance: SecurityManager;
@@ -26,32 +24,20 @@ export class SecurityManager {// TODO: Add content;}
     if (!SecurityManager.instance) {// TODO: Add content;}
 }
       SecurityManager.instance = new SecurityManager();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return SecurityManager.instance
   }
   /**
    * Sanitize user input to prevent XSS attacks;
    */
-<<<<<<< HEAD
   sanitizeInput(input: string): string {
     // TODO: Add content
   }
     return input
-=======
   sanitizeInput(input: string): string {// TODO: Add content;}
 }
     return input;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       .replace(/[
-          
-          
-          
-          
-          
-          
-          
-          
           <>]/g, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+=/gi, '')
@@ -60,7 +46,6 @@ export class SecurityManager {// TODO: Add content;}
   /**
    * Validate and sanitize URL;
    */
-<<<<<<< HEAD
   sanitizeUrl(url: string): string {
     // TODO: Add content
   }
@@ -75,7 +60,6 @@ export class SecurityManager {// TODO: Add content;}
     // TODO: Add content
   }
       return ''
-=======
   sanitizeUrl(url: string): string {// TODO: Add content;}
 }
     try {if (!['http:', 'https:'].includes(parsed.protocol)) {}
@@ -87,13 +71,11 @@ export class SecurityManager {// TODO: Add content;}
     } catch {// TODO: Add content;}
 }
       return '';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Generate secure random token;
    */
-<<<<<<< HEAD
   generateSecureToken(_length: number = 32): string {
     // TODO: Add content
   }
@@ -108,7 +90,6 @@ export class SecurityManager {// TODO: Add content;}
       // Fallback for Node.js environment
 const crypto = require('crypto')
       crypto.randomFillSync(array)
-=======
   generateSecureToken(_length: number = 32): string {// TODO: Add content;}
 }
     const array = new Uint8Array(length);
@@ -120,14 +101,12 @@ const crypto = require('crypto')
       // Fallback for Node.js environment;
 const crypto = require('crypto');
       crypto.randomFillSync(array);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
   }
   /**
    * Implement rate limiting;
    */
-<<<<<<< HEAD
   checkRateLimit(key: string, limit: number, windowMs: number): boolean {
     // TODO: Add content
   }
@@ -142,7 +121,6 @@ const validRequests = requests.filter((time: number) => time > windowStart)
     // TODO: Add content
   }
       return false
-=======
   checkRateLimit(key: string, limit: number, windowMs: number): boolean {// TODO: Add content;}
 }
     const now = Date.now();
@@ -155,22 +133,12 @@ const validRequests = requests.filter((time: number) => time > windowStart);
     if (validRequests.length >= limit) {// TODO: Add content;}
 }
       return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     validRequests.push(now)
     storage.set(key, validRequests)
     return true
   }
-<<<<<<< HEAD
   private getRateLimitStorage(): Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number[]> {
     // TODO: Add content
   }
@@ -178,16 +146,14 @@ const validRequests = requests.filter((time: number) => time > windowStart);
     // TODO: Add content
   }
       global._rateLimitStorage = new Map()
-=======
   private getRateLimitStorage(): Map;
           <string, number[]> {// TODO: Add content;}
 }
     if (!global._rateLimitStorage) {// TODO: Add content;}
 }
       global._rateLimitStorage = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return global._rateLimitStorage
   }
 }
-export default SecurityManager.getInstance()
+export default SecurityManager.getInstance();

@@ -8,16 +8,13 @@
   performance: (message: string, data: Record;
           <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
-<<<<<<< HEAD
 }
 interface PerformanceMetrics {
     // TODO: Add content
   }
-=======
 };
 interface PerformanceMetrics {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: number;,
     renderTime: number;,
     memoryUsage: number;,
@@ -33,14 +30,11 @@ interface PerformanceMetrics {// TODO: Add content;}
   ttfb?: number
   memory?: number
 }
-<<<<<<< HEAD
 interface OptimizationConfig {
     // TODO: Add content
   }
-=======
 interface OptimizationConfig {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableLazyLoading: boolean;,
     enableCodeSplitting: boolean;,
     enableImageOptimization: boolean;,
@@ -48,60 +42,44 @@ interface OptimizationConfig {// TODO: Add content;}
     enableCompression: boolean
 }
 interface PerformanceConfig extends OptimizationConfig {}
-<<<<<<< HEAD
 class PerformanceOptimizer {
     // TODO: Add content
   }
   private _metrics: PerformanceMetrics = {
     // TODO: Add content
   }
-=======
 class PerformanceOptimizer {// TODO: Add content;}
 }
   private _metrics: PerformanceMetrics = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     bundleSize: 0,
     cacheHitRate: 0,
-<<<<<<< HEAD
     lazyLoading: false
   }
   private config: OptimizationConfig = {
     // TODO: Add content
   }
-=======
     lazyLoading: false;
   };
   private config: OptimizationConfig = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableLazyLoading: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
     enableCaching: true,
-<<<<<<< HEAD
     enableCompression: true
   }
   private observers: PerformanceObserver[] = []
   private isMonitoring: boolean = false
   constructor(config?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <OptimizationConfig>) {
     // TODO: Add content
   }
     this.config = { ...this.config, ...config }
     this.initializePerformanceMonitoring()
-=======
     enableCompression: true;
   };
   private observers: PerformanceObserver[] = [];
@@ -111,12 +89,10 @@ class PerformanceOptimizer {// TODO: Add content;}
 }
     this.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Initialize performance monitoring;
    */
-<<<<<<< HEAD
   private initializePerformanceMonitoring(): void {
     // TODO: Add content
   }
@@ -131,7 +107,6 @@ class PerformanceOptimizer {// TODO: Add content;}
   )
     // Monitor render performance
     this.measureRenderTime()
-=======
   private initializePerformanceMonitoring(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -143,26 +118,21 @@ class PerformanceOptimizer {// TODO: Add content;}
     });
     // Monitor render performance;
     this.measureRenderTime();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Public init method for external initialization;
    */
-<<<<<<< HEAD
   public init(): void {
     // TODO: Add content
   }
     this.initializePerformanceMonitoring()
-=======
   public init(): void {// TODO: Add content;}
 }
     this.initializePerformanceMonitoring();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Measure page load time;
    */
-<<<<<<< HEAD
   private measureLoadTime(): void {
     // TODO: Add content
   }
@@ -180,7 +150,6 @@ class PerformanceOptimizer {// TODO: Add content;}
     } catch (error) {
     // TODO: Add content
   }
-=======
   private measureLoadTime(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined' || !window.performance) return;
@@ -194,13 +163,11 @@ class PerformanceOptimizer {// TODO: Add content;}
       }
     } catch (error) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Measure render time using PerformanceObserver;
    */
-<<<<<<< HEAD
   private measureRenderTime(): void {
     // TODO: Add content
   }
@@ -331,7 +298,6 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
             this.metrics.fcp = entry.startTime
-=======
   private measureRenderTime(): void {// TODO: Add content;}
 }
     // Check if PerformanceObserver exists (may not be available in test environments)
@@ -426,7 +392,6 @@ const observer = new PerformanceObserver((list) => {
           if (entry.name === 'first-contentful-paint') {// TODO: Add content;}
 }
             this.metrics.fcp = entry.startTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
         }
   )
@@ -435,7 +400,6 @@ const observer = new PerformanceObserver((list) => {
       observer.observe({ entryTypes: ['paint'] }
   )
 //       this.observers.push(observer)
-<<<<<<< HEAD
     } catch {
     // TODO: Add content
   }
@@ -460,7 +424,6 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-=======
     } catch {// TODO: Add content;}
 }
       // Ignore if not supported;
@@ -479,7 +442,6 @@ const observer = new PerformanceObserver((list) => {
           if (navEntry.responseStart > 0) {// TODO: Add content;}
 }
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
         }
   )
@@ -488,7 +450,6 @@ const observer = new PerformanceObserver((list) => {
       observer.observe({ entryTypes: ['navigation'] }
   )
 //       this.observers.push(observer)
-<<<<<<< HEAD
     } catch {
     // TODO: Add content
   }
@@ -506,7 +467,6 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
         this.metrics.memoryUsage = memory.usedJSHeapSize
-=======
     } catch {// TODO: Add content;}
 }
       // Ignore if not supported;
@@ -520,14 +480,12 @@ const observer = new PerformanceObserver((list) => {
       if (memory) {// TODO: Add content;}
 }
         this.metrics.memoryUsage = memory.usedJSHeapSize;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
   }
   /**
    * Measure memory usage;
    */
-<<<<<<< HEAD
   private measureMemoryUsage(): void {
     // TODO: Add content
   }
@@ -547,7 +505,6 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
       this.metrics.memoryUsage = memory.usedJSHeapSize
-=======
   private measureMemoryUsage(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
@@ -563,13 +520,11 @@ const observer = new PerformanceObserver((list) => {
     if (memory) {// TODO: Add content;}
 }
       this.metrics.memoryUsage = memory.usedJSHeapSize;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Optimize images for better performance;
    */
-<<<<<<< HEAD
   public optimizeImages(): void {
     // TODO: Add content
   }
@@ -600,7 +555,6 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp')
-=======
   public optimizeImages(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -625,7 +579,6 @@ const observer = new PerformanceObserver((list) => {
         if (this.supportsWebP()) {// TODO: Add content;}
 }
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
     }
@@ -634,7 +587,6 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Check if browser supports WebP;
    */
-<<<<<<< HEAD
   private supportsWebP(): boolean {
     // TODO: Add content
   }
@@ -643,7 +595,6 @@ const observer = new PerformanceObserver((list) => {
     canvas.width = 1
     canvas.height = 1
     return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
-=======
   private supportsWebP(): boolean {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return false;
@@ -651,12 +602,10 @@ const observer = new PerformanceObserver((list) => {
     canvas.width = 1;
     canvas.height = 1;
     return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup lazy loading for better performance;
    */
-<<<<<<< HEAD
   public setupLazyLoading(): void {
     // TODO: Add content
   }
@@ -689,7 +638,6 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
                 element.style.backgroundImage = `url(${src})`
-=======
   public setupLazyLoading(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -714,13 +662,11 @@ const observer = new PerformanceObserver((list) => {
               } else {// TODO: Add content;}
 }
                 element.style.backgroundImage = `url(${src})`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
               }
               element.removeAttribute('data-lazy')
               lazyObserver.unobserve(element)
             }
           }
-<<<<<<< HEAD
         }
   )
       }
@@ -731,30 +677,25 @@ const observer = new PerformanceObserver((list) => {
         lazyObserver.observe(element)
       }
   )
-=======
         });
       });
       lazyElements.forEach((element) => {// TODO: Add content;}
 }
         lazyObserver.observe(element);
       });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     this.metrics.lazyLoading = true
   }
   /**
    * Enable code splitting for better performance;
    */
-<<<<<<< HEAD
   enableCodeSplitting(): void {
     // TODO: Add content
   }
     if (!this.config.enableCodeSplitting) return
-=======
   enableCodeSplitting(): void {// TODO: Add content;}
 }
     if (!this.config.enableCodeSplitting) return;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations;
     if (process.env.NODE_ENV === 'development') { }
@@ -762,7 +703,6 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Enable caching strategies;
    */
-<<<<<<< HEAD
   enableCaching(): void {
     // TODO: Add content
   }
@@ -779,7 +719,6 @@ const observer = new PerformanceObserver((list) => {
       .catch((error) => {
     // TODO: Add content
   }
-=======
   enableCaching(): void {// TODO: Add content;}
 }
     if (!this.config.enableCaching) return;
@@ -792,7 +731,6 @@ const observer = new PerformanceObserver((list) => {
       })
       .catch((error) => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         if (process.env.NODE_ENV === 'development') { }
       }
   )
@@ -800,21 +738,17 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Get current performance metrics;
    */
-<<<<<<< HEAD
   getMetrics(): PerformanceMetrics {
     // TODO: Add content
   }
     return { ...this.metrics }
-=======
   getMetrics(): PerformanceMetrics {// TODO: Add content;}
 }
     return { ...this.metrics };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get performance score (0-100)
    */
-<<<<<<< HEAD
   getPerformanceScore(): number {
     // TODO: Add content
   }
@@ -829,7 +763,6 @@ const observer = new PerformanceObserver((list) => {
     if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB
     else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB
     return Math.max(0, score)
-=======
   getPerformanceScore(): number {// TODO: Add content;}
 }
     let score = 100;
@@ -843,28 +776,23 @@ const observer = new PerformanceObserver((list) => {
     if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB;
     else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB;
     return Math.max(0, score);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Generate performance report;
    */
-<<<<<<< HEAD
   generateReport(): string {
     // TODO: Add content
   }
     const score = this.getPerformanceScore()
     return `Performance Score: ${score}`
-=======
   generateReport(): string {// TODO: Add content;}
 }
     const score = this.getPerformanceScore();
     return `Performance Score: ${score}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Lazy load images for better performance;
    */
-<<<<<<< HEAD
   lazyLoadImages(): void {
     // TODO: Add content
   }
@@ -883,7 +811,6 @@ const observer = new PerformanceObserver((list) => {
           img.src = img.dataset.src || ''
           img.removeAttribute('data-src')
           imageObserver.unobserve(img)
-=======
   lazyLoadImages(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -898,7 +825,6 @@ const observer = new PerformanceObserver((list) => {
           img.src = img.dataset.src || '';
           img.removeAttribute('data-src');
           imageObserver.unobserve(img);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
   )
@@ -910,7 +836,6 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Add critical resource hints;
    */
-<<<<<<< HEAD
   addCriticalResourceHints(): void {
     // TODO: Add content
   }
@@ -934,7 +859,6 @@ const observer = new PerformanceObserver((list) => {
     }
   )
     logger.info('Critical resource hints added', 'PerformanceOptimizer')
-=======
   addCriticalResourceHints(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -955,12 +879,10 @@ const observer = new PerformanceObserver((list) => {
       document.head.appendChild(link);
     });
     logger.info('Critical resource hints added', 'PerformanceOptimizer');
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Measure page load metrics;
    */
-<<<<<<< HEAD
   measurePageLoad(): PerformanceMetrics | null {
     // TODO: Add content
   }
@@ -970,7 +892,6 @@ const observer = new PerformanceObserver((list) => {
     return {
     // TODO: Add content
   }
-=======
   measurePageLoad(): PerformanceMetrics | null {// TODO: Add content;}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return null;
@@ -978,7 +899,6 @@ const observer = new PerformanceObserver((list) => {
     if (!navigation) return null;
     return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: this.metrics.loadTime,
       renderTime: this.metrics.renderTime,
       memoryUsage: this.metrics.memoryUsage,
@@ -990,30 +910,18 @@ const observer = new PerformanceObserver((list) => {
       lcp: this.metrics.lcp || 0,
       fid: this.metrics.fid || 0,
       cls: this.metrics.cls || 0,
-<<<<<<< HEAD
       fmp: this.metrics.fmp || 0
     }
-=======
       fmp: this.metrics.fmp || 0;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Report web vitals;
    */
-<<<<<<< HEAD
   reportWebVitals(metrics: PerformanceMetrics): void {
     // TODO: Add content
   }
     logger.performance('Web Vitals reported', metrics as unknown as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>, 'PerformanceOptimizer')
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
@@ -1028,7 +936,6 @@ const observer = new PerformanceObserver((list) => {
           (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
     // TODO: Add content
   }
-=======
   reportWebVitals(metrics: PerformanceMetrics): void {// TODO: Add content;}
 }
     logger.performance('Web Vitals reported', metrics as unknown as Record;
@@ -1042,7 +949,6 @@ const observer = new PerformanceObserver((list) => {
 }
           (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   metric_name: key,
             metric_value: value,
             metric_rating: value;
@@ -1057,25 +963,21 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Cleanup observers and resources;
    */
-<<<<<<< HEAD
   public cleanup(): void {
     // TODO: Add content
   }
     this.observers.forEach(observer => observer.disconnect())
     this.observers = []
     this.isMonitoring = false
-=======
   public cleanup(): void {// TODO: Add content;}
 }
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isMonitoring = false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Generate comprehensive performance report;
    */
-<<<<<<< HEAD
   generateComprehensiveReport(): string {
     // TODO: Add content
   }
@@ -1089,7 +991,6 @@ Render Time: ${metrics.renderTime.toFixed(2)}ms
 Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
 Bundle Size: ${metrics.bundleSize}KB
 Cache Hit Rate: ${metrics.cacheHitRate}%
-=======
   generateComprehensiveReport(): string {// TODO: Add content;}
 }
     const score = this.getPerformanceScore();
@@ -1102,7 +1003,6 @@ Render Time: ${metrics.renderTime.toFixed(2)}ms;
 Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
 Bundle Size: ${metrics.bundleSize}KB;
 Cache Hit Rate: ${metrics.cacheHitRate}%;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   Recommendations:
 ${score;}
           < 80 ? '- Consider optimizing images and enabling compression' : ''}
@@ -1113,7 +1013,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   /**
    * Optimize the entire application;
    */
-<<<<<<< HEAD
   optimize(): void {
     // TODO: Add content
   }
@@ -1124,7 +1023,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     // TODO: Add content
   }
       logger.info('Performance optimization completed')
-=======
   optimize(): void {// TODO: Add content;}
 }
     this.optimizeImages();
@@ -1133,7 +1031,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     if (process.env.NODE_ENV === 'development') {// TODO: Add content;}
 }
       logger.info('Performance optimization completed');
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }

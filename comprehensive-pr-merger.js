@@ -1,11 +1,9 @@
 #!/usr/bin/env node
-
 /**
  * Comprehensive PR Merger - Resolves conflicts and merges all open PRs
  * This script will systematically find, resolve conflicts, and merge all open PRs
  */ import { execSync } from 'child_process';
 import fs from 'fs';
-
 // //Step 1: Ensure we're on main and up to date
 // try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -14,14 +12,12 @@ import fs from 'fs';
 //   } catch (error) {
 //   process.exit(1);
 }
-
 //Step 2: Get all remote branches that could be PRs
 // const branches = execSync('git branch -r', { encoding: 'utf8' })
   .split('\n')
   .filter(branch => branch.trim())
   .map(branch => branch.trim().replace('origin/', ''))
   .filter(branch => branch.startsWith('cursor/') && branch !== 'HEAD');
-
 // //Step 3: Create merge strategy with conflict resolution
 const mergeStrategy = {
   //Branches that should be merged first (foundational)
@@ -31,7 +27,6 @@ const mergeStrategy = {
       branch.includes('error-fixing') ||
       branch.includes('merge-to-main')
   ),
-
   //Feature branches
   features: branches.filter(
     branch =>
@@ -39,7 +34,6 @@ const mergeStrategy = {
       branch.includes('enhance-') ||
       branch.includes('add-new-services')
   ),
-
   //Content branches
   content: branches.filter(
     branch =>
@@ -47,7 +41,6 @@ const mergeStrategy = {
       branch.includes('blog-') ||
       branch.includes('update-')
   ),
-
   //Skip problematic branches
   skip: branches.filter(
     branch =>
@@ -56,24 +49,20 @@ const mergeStrategy = {
       branch.includes('old')
   ),
 };
-
 // // // // // //Step 4: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
 //   try {
     //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
-
     //Try initial merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       { stdio: 'inherit' }
     );
-
 //     return { success: true, method: 'direct' };
   } catch (error) {
 //     //Check for merge conflicts
     try {
-
       if (
         status.includes('UU') ||
         status.includes('AA') ||
@@ -89,7 +78,6 @@ function resolveConflictsAndMerge(branchName) {
 //           return { success: true, method: 'theirs' };
         } catch (theirsError) {
 //           }
-
         //Strategy 2: Auto-resolve with ours
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
@@ -100,11 +88,9 @@ function resolveConflictsAndMerge(branchName) {
 //           return { success: true, method: 'ours' };
         } catch (oursError) {
 //           }
-
         //Strategy 3: Manual conflict resolution
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
-
           //Get conflicted files
           const conflictedFiles = execSync(
             'git diff --name-only --diff-filter=U',
@@ -112,7 +98,6 @@ function resolveConflictsAndMerge(branchName) {
           )
             .split('\n')
             .filter(file => file.trim());
-
 //           //For each conflicted file, try to resolve
           for (const file of conflictedFiles) {
             if (file.trim()) {
@@ -126,7 +111,6 @@ function resolveConflictsAndMerge(branchName) {
 //                 }
             }
           }
-
           //Complete the merge
           execSync(
             `git commit -m "Manual conflict resolution for ${branchName}"`,
@@ -138,32 +122,28 @@ function resolveConflictsAndMerge(branchName) {
       }
     } catch (statusError) {
 //       }
-
     //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
 //       } catch (abortError) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
     }
-
     return { success: false, method: 'failed' };
   }
 }
-
 //Step 5: Execute merge strategy
 // const results = {
   priority: [],
   features: [],
   content: [],
   failed: [],
-  summary: {
-    total: 0,
+  summary: {,
+  total: 0,
     successful: 0,
     failed: 0,
     methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
   },
 };
-
 //Merge priority branches first
 // for (const branch of mergeStrategy.priority) {
   results.priority.push({ branch, ...result });
@@ -177,7 +157,6 @@ function resolveConflictsAndMerge(branchName) {
     results.failed.push(branch);
   }
 }
-
 //Merge feature branches
 // for (const branch of mergeStrategy.features) {
   if (!mergeStrategy.skip.includes(branch)) {
@@ -193,7 +172,6 @@ function resolveConflictsAndMerge(branchName) {
     }
   }
 }
-
 //Merge content branches
 // for (const branch of mergeStrategy.content) {
   if (!mergeStrategy.skip.includes(branch)) {
@@ -209,7 +187,6 @@ function resolveConflictsAndMerge(branchName) {
     }
   }
 }
-
 //Step 6: Generate comprehensive report
 // results.timestamp = new Date().toISOString();
 results.branchCounts = {
@@ -218,21 +195,17 @@ results.branchCounts = {
   content: mergeStrategy.content.length,
   skipped: mergeStrategy.skip.length,
 };
-
 fs.writeFileSync(
   'comprehensive-merge-report.json',
   JSON.stringify(results, null, 2)
 );
-
 //Step 7: Display summary
 // // // // // // // // // // // if (results.failed.length > 0) {
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
 }
-
 // Step 8: Push changes
 // try {
   execSync('git push origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   //   }
-
 // // 

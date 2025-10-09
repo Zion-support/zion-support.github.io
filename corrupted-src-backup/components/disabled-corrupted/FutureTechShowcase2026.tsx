@@ -114,7 +114,6 @@ const FutureTechShowcase202, 6: React.FC = () => {
             Experience, the, next generation, of, AI and, technology, breakthroughs.
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
           </p>
-        </div>
         {/* Future, Tech, Articles Gr, i, d */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
           { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (

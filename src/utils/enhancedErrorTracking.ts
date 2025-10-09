@@ -3,7 +3,6 @@
  * Enhanced Error Tracking Utility;
  * Provides comprehensive error tracking with detailed context;
  */
-<<<<<<< HEAD
 export interface ErrorContext {
     // TODO: Add content
   }
@@ -12,21 +11,12 @@ export interface ErrorContext {
   userId?: string
   sessionId?: string
   metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
 }
 export interface TrackedError {
     // TODO: Add content
   }
   message: string
-=======
 export interface ErrorContext {// TODO: Add content;}
 }
   component?: string;
@@ -39,14 +29,12 @@ export interface ErrorContext {// TODO: Add content;}
 export interface TrackedError {// TODO: Add content;}
 };
   message: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   stack?: string;,
     context: ErrorContext;,
     timestamp: string;,
     userAgent: string;,
     url: string
 }
-<<<<<<< HEAD
 class EnhancedErrorTracker {
     // TODO: Add content
   }
@@ -88,7 +76,6 @@ class EnhancedErrorTracker {
         this.trackError(new Error(event.reason), {
     // TODO: Add content
   }
-=======
 class EnhancedErrorTracker {// TODO: Add content;}
 }
   private errors: TrackedError[] = [];
@@ -119,7 +106,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
 }
         this.trackError(new Error(event.reason), {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   component: 'Global',
           action: 'Unhandled Promise Rejection'
         }
@@ -128,7 +114,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
   )
     }
   }
-<<<<<<< HEAD
   public trackError(error: Error, _context: ErrorContext = {}): void {
     // TODO: Add content
   }
@@ -141,7 +126,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
       context: {
     // TODO: Add content
   }
-=======
   public trackError(error: Error, _context: ErrorContext = {}): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -151,13 +135,11 @@ class EnhancedErrorTracker {// TODO: Add content;}
       stack: error.stack,
       context: {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //         ...context,
         sessionId: this.sessionId;
       },
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-<<<<<<< HEAD
       url: window.location.href
     }
     this.errors.push(trackedError)
@@ -184,14 +166,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
     // TODO: Add content
   }
           gtag?: (command: string, action: string, parameters: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => void
         }
 // ).gtag,
@@ -203,14 +177,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
     // TODO: Add content
   }
   gtag: (command: string, action: string, parameters: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => void
         }
       ).gtag('event', 'exception', {
@@ -238,28 +204,12 @@ class EnhancedErrorTracker {// TODO: Add content;}
   }
   total: number;,
     byComponent: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number>
     recent: TrackedError[]
   } {
     // TODO: Add content
   }
     const byComponent: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number> = {}
     this.errors.forEach(error => {
       byComponent[component] = (byComponent[component] || 0) + 1
@@ -268,7 +218,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
     return {
     // TODO: Add content
   }
-=======
       url: window.location.href;
     };
     this.errors.push(trackedError);
@@ -332,7 +281,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
     });
     return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   total: this.errors.length,
 //       byComponent,
       recent: this.errors.slice(-10)

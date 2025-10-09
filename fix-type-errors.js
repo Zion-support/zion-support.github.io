@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
-
 // List of files that need type error fixes
 const filesToFix = [
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
@@ -11,11 +9,9 @@ const filesToFix = [
   '/workspace/app/not-found.tsx',
   '/workspace/app/page-optimized.tsx',
 ];
-
 // // Function to process a single file
 function processFile(filePath) {
   try {
-
     // Fix <a> tags with 'to' prop to use Link components
     if (content.includes('<a') && content.includes('to=')) {
       // Add Link import if not present
@@ -26,19 +22,16 @@ function processFile(filePath) {
         );
         modified = true;
       }
-
       // Replace <a> tags with to prop to <Link> components
       content = content.replace(/<a\s+to=/g, '<Link to=');
       content = content.replace(/<\/a>/g, '</Link>');
       modified = true;
     }
-
     // Fix href to to for Link components
     if (content.includes('<Link') && content.includes('href=')) {
       content = content.replace(/href=/g, 'to=');
       modified = true;
     }
-
     // Fix dynamic imports from Next.js to React lazy
     if (content.includes('dynamic(')) {
       // Add lazy import if not present
@@ -49,12 +42,10 @@ function processFile(filePath) {
         );
         modified = true;
       }
-
       // Replace dynamic() with lazy()
       content = content.replace(/dynamic\(/g, 'lazy(');
       modified = true;
     }
-
     // Fix Image component issues
     if (content.includes('next/image')) {
       // Replace Next.js Image with regular img tag
@@ -68,24 +59,20 @@ function processFile(filePath) {
       content = content.replace(/className={/g, 'className={');
       modified = true;
     }
-
     if (modified) {
       fs.writeFileSync(filePath, content);
       //       return true;
     }
-
     return false;
   } catch (error) {
     //     return false;
   }
 }
-
 // Process all files
 filesToFix.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
-
 // 
 }}}}}}}}}}

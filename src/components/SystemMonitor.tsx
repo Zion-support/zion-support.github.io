@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-
 import React from 'react';
-
 interface SystemMonitorProps {
   // Add props here
 }
-
 const SystemMonitor: React.FC<SystemMonitorProps> = () => {
   return (
     <div className="systemmonitor">
@@ -13,8 +9,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = () => {
     </div>
   );
 };
-
-=======
 'use client';
 /**
  * System Monitor Component;
@@ -64,8 +58,8 @@ interface SystemMetrics {// TODO: Add content;}
 }
   performance: {// TODO: Add content;}
 };
-  score: number;
-    loadTime: number;,
+  score: number;,
+  loadTime: number;,
     firstContentfulPaint: number;,
     largestContentfulPaint: number;,
     firstInputDelay: number;,
@@ -236,15 +230,6 @@ className={`h-2 rounded-full ${}
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
-          
-          
-          
-          
-          
-          
-          
-          
-          
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
           <div className="space-y-2 max-h-64 overflow-y-auto">
             {metrics.errors.recent.map((error) => ()}
@@ -270,5 +255,4 @@ className={`h-2 rounded-full ${}
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}
           <div key={category} className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default SystemMonitor;

@@ -2,9 +2,8 @@
  * Advanced Performance Monitor
  * Real-time performance monitoring and optimization
  */
-
 interface PerformanceData {
-  timestamp: number;
+  timestamp: number;,
   url: string;
   loadTime: number;
   firstContentfulPaint: number;
@@ -15,7 +14,6 @@ interface PerformanceData {
   memoryUsage: number;
   networkInfo: NetworkInformation | null;
 }
-
 interface PerformanceThresholds {
   loadTime: number;
   firstContentfulPaint: number;
@@ -23,13 +21,11 @@ interface PerformanceThresholds {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-
 class AdvancedPerformanceMonitor {
   private data: PerformanceData[] = [];
   private thresholds: PerformanceThresholds;
   private observer: PerformanceObserver | null = null;
   private isMonitoring = false;
-
   constructor(thresholds: Partial<PerformanceThresholds> = {}) {
     this.thresholds = {
       loadTime: 3000,
@@ -40,21 +36,17 @@ class AdvancedPerformanceMonitor {
       ...thresholds,
     };
   }
-
   /**
    * Start performance monitoring
    */
   public startMonitoring(): void {
     if (this.isMonitoring || typeof window === 'undefined') return;
-
     this.isMonitoring = true;
     this.setupPerformanceObserver();
     this.setupWebVitals();
     this.setupMemoryMonitoring();
     this.setupNetworkMonitoring();
-
     //     }
-
   /**
    * Stop performance monitoring
    */
@@ -65,14 +57,12 @@ class AdvancedPerformanceMonitor {
       this.observer = null;
     }
     //     }
-
   /**
    * Get performance data
    */
   public getPerformanceData(): PerformanceData[] {
     return [...this.data];
   }
-
   /**
    * Get performance summary
    */
@@ -94,7 +84,6 @@ class AdvancedPerformanceMonitor {
         performanceScore: 0,
       };
     }
-
     const _avgLoadTime = this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
     const _avgFCP = this.data.reduce((sum, d) => sum + d.firstContentfulPaint, 0) / this.data.length;
     const avgLCP =
@@ -102,7 +91,6 @@ class AdvancedPerformanceMonitor {
     const avgCLS =
       this.data.reduce((sum, d) => sum + d.cumulativeLayoutShift, 0) / this.data.length;
     const _avgFID = this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) / this.data.length;
-
     // Calculate performance score (0-100)
     const performanceScore = this.calculatePerformanceScore({
       loadTime: avgLoadTime,
@@ -111,7 +99,6 @@ class AdvancedPerformanceMonitor {
       cumulativeLayoutShift: avgCLS,
       firstInputDelay: avgFID,
     });
-
     return {
       averageLoadTime: avgLoadTime,
       averageFCP: avgFCP,
@@ -121,20 +108,17 @@ class AdvancedPerformanceMonitor {
       performanceScore,
     };
   }
-
   /**
    * Setup Performance Observer
    */
   private setupPerformanceObserver(): void {
     if (!('PerformanceObserver' in window)) return;
-
     this.observer = new PerformanceObserver(list => {
       const _entries = list.getEntries();
       entries.forEach(entry => {
         this.handlePerformanceEntry(entry);
       });
     });
-
     try {
       this.observer.observe({
         entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'],
@@ -142,32 +126,26 @@ class AdvancedPerformanceMonitor {
     } catch (error) {
       //       }
   }
-
   /**
    * Setup Web Vitals monitoring
    */
   private setupWebVitals(): void {
     if (typeof window === 'undefined') return;
-
     // Dynamic import to avoid bundle size impact
     import('web-vitals')
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS(metric => {
           this.updateMetric('cumulativeLayoutShift', metric.value);
         });
-
         getFID(metric => {
           this.updateMetric('firstInputDelay', metric.value);
         });
-
         getFCP(metric => {
           this.updateMetric('firstContentfulPaint', metric.value);
         });
-
         getLCP(metric => {
           this.updateMetric('largestContentfulPaint', metric.value);
         });
-
         getTTFB(metric => {
           this.updateMetric('loadTime', metric.value);
         });
@@ -175,37 +153,31 @@ class AdvancedPerformanceMonitor {
       .catch(error => {
         //         });
   }
-
   /**
    * Setup memory monitoring
    */
   private setupMemoryMonitoring(): void {
     if (!('memory' in performance)) return;
-
     const checkMemory = () => {
       const _memory = (performance as any).memory;
       if (memory) {
         this.updateMetric('memoryUsage', memory.usedJSHeapSize);
       }
     };
-
     // Check memory every 30 seconds
     setInterval(checkMemory, 30000);
     checkMemory(); // Initial check
   }
-
   /**
    * Setup network monitoring
    */
   private setupNetworkMonitoring(): void {
     if (!('connection' in navigator)) return;
-
     //     const connection = (navigator as any).connection;
     if (connection) {
       this.updateMetric('networkInfo', connection);
     }
   }
-
   /**
    * Handle performance entry
    */
@@ -214,7 +186,6 @@ class AdvancedPerformanceMonitor {
       timestamp: Date.now(),
       url: window.location.href,
     };
-
     switch (entry.entryType) {
       case 'navigation':
         const _navEntry = entry as PerformanceNavigationTiming;
@@ -237,13 +208,11 @@ class AdvancedPerformanceMonitor {
         }
         break;
     }
-
     if (Object.keys(data).length > 2) {
       // More than just timestamp and url
       this.addPerformanceData(data as PerformanceData);
     }
   }
-
   /**
    * Update metric
    */
@@ -269,28 +238,23 @@ class AdvancedPerformanceMonitor {
       } as PerformanceData);
     }
   }
-
   /**
    * Add performance data
    */
   private addPerformanceData(data: PerformanceData): void {
     this.data.push(data);
-
     // Keep only last 100 entries to prevent memory issues
     if (this.data.length > 100) {
       this.data = this.data.slice(-100);
     }
-
     // Check thresholds and log warnings
     this.checkThresholds(data);
   }
-
   /**
    * Check performance thresholds
    */
   private checkThresholds(data: PerformanceData): void {
     const warnings: string[] = [];
-
     if (data.loadTime > this.thresholds.loadTime) {
       warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`);
     }
@@ -314,11 +278,9 @@ class AdvancedPerformanceMonitor {
         `FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`
       );
     }
-
     if (warnings.length > 0) {
       //       }
   }
-
   /**
    * Calculate performance score
    */
@@ -330,33 +292,26 @@ class AdvancedPerformanceMonitor {
     firstInputDelay: number;
   }): number {
     let _score = 100;
-
     // Load time scoring (40% weight)
     if (metrics.loadTime > 3000) score -= 40;
     else if (metrics.loadTime > 2000) score -= 20;
     else if (metrics.loadTime > 1000) score -= 10;
-
     // FCP scoring (20% weight)
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     else if (metrics.firstContentfulPaint > 1200) score -= 10;
     else if (metrics.firstContentfulPaint > 600) score -= 5;
-
     // LCP scoring (20% weight)
     if (metrics.largestContentfulPaint > 2500) score -= 20;
     else if (metrics.largestContentfulPaint > 2000) score -= 10;
     else if (metrics.largestContentfulPaint > 1500) score -= 5;
-
     // CLS scoring (10% weight)
     if (metrics.cumulativeLayoutShift > 0.25) score -= 10;
     else if (metrics.cumulativeLayoutShift > 0.1) score -= 5;
-
     // FID scoring (10% weight)
     if (metrics.firstInputDelay > 300) score -= 10;
     else if (metrics.firstInputDelay > 100) score -= 5;
-
     return Math.max(0, Math.min(100, score));
   }
-
   /**
    * Export performance data
    */
@@ -372,7 +327,6 @@ class AdvancedPerformanceMonitor {
       2
     );
   }
-
   /**
    * Clear performance data
    */
@@ -380,7 +334,6 @@ class AdvancedPerformanceMonitor {
     this.data = [];
   }
 }
-
 // Export singleton instance
 // const performanceMonitor = new AdvancedPerformanceMonitor();
 export default performanceMonitor;

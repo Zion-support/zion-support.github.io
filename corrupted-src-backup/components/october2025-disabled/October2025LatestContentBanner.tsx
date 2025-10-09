@@ -42,7 +42,6 @@ const October2025LatestContentBanne, r = () => {
           <p, className="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o">
             Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing
           </p>
-        </div>
         {/* Articles, Gri, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">
           { articl, e, s.m, a, p((art, i, c, l, e, i, d, x) = > {

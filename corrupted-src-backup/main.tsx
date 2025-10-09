@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css';
-
 async function reportWebVitals() {
   try {
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
@@ -8,7 +7,6 @@ async function reportWebVitals() {
       if (process.env['NODE_ENV'] === 'production') {
         //         }
     };
-
     onCLS(log);
     onLCP(log);
     onFCP(log);
@@ -16,17 +14,14 @@ async function reportWebVitals() {
   } catch (error) {
     //     }
 }
-
 // const container = document.getElementById('root');
 if (!container) {
   throw new Error('Root element not found');
 }
-
 const _root = createRoot(container);
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
 reportWebVitals();

@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'sitemap_runner',
         source: event.source || 'unknown',
-        sitemap: {
-          status: 'active',
+        sitemap: {,
+  status: 'active',
           pages: 0,
           lastGenerated: new Date().toISOString()}
         },

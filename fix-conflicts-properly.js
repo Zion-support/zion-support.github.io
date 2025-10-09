@@ -1,19 +1,15 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 // Function to fix merge conflicts and syntax errors
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
     // Remove merge conflict markers and keep the HEAD version
     const conflictRegex = /\n([\s\S]*?)\n
     const originalContent = content;
@@ -21,7 +17,6 @@ function fixFile(filePath) {
       modified = true;
       return headContent.trim();
     });
-
     // Fix common syntax issues
     content = content
       // Remove any remaining conflict markers
@@ -51,7 +46,6 @@ function fixFile(filePath) {
       .replace(/^\s*\n/gm, '\n')
       // Fix missing closing braces
       .replace(/\{\s*$/, '{\n  // TODO: Add content\n}');
-
     // Additional specific fixes for common patterns
     const lines = content.split('\n');
     const cleanedLines = [];
@@ -59,11 +53,9 @@ function fixFile(filePath) {
     let braceCount = 0;
     let bracketCount = 0;
     let parenCount = 0;
-
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
       const trimmed = line.trim();
-
       // Track JSX state
       if (trimmed.includes('<') && !trimmed.includes('</')) {
         inJSX = true;
@@ -71,7 +63,6 @@ function fixFile(filePath) {
       if (trimmed.includes('</') || trimmed.includes('/>')) {
         inJSX = false;
       }
-
       // Track brace/bracket/paren counts
       braceCount += (line.match(/\{/g) || []).length;
       braceCount -= (line.match(/\}/g) || []).length;
@@ -79,13 +70,11 @@ function fixFile(filePath) {
       bracketCount -= (line.match(/\]/g) || []).length;
       parenCount += (line.match(/\(/g) || []).length;
       parenCount -= (line.match(/\)/g) || []).length;
-
       // Fix common issues
       if (trimmed === '') {
         cleanedLines.push(line);
         continue;
       }
-
       // Fix missing commas in object literals (not in JSX)
       if (!inJSX && trimmed.match(/\w+\s*$/) && i < lines.length - 1) {
         const nextLine = lines[i + 1];
@@ -94,7 +83,6 @@ function fixFile(filePath) {
           modified = true;
         }
       }
-
       // Fix missing semicolons
       if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {
         if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
@@ -102,7 +90,6 @@ function fixFile(filePath) {
           modified = true;
         }
       }
-
       // Fix missing closing braces
       if (braceCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < braceCount; j++) {
@@ -110,7 +97,6 @@ function fixFile(filePath) {
         }
         modified = true;
       }
-
       // Fix missing closing brackets
       if (bracketCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < bracketCount; j++) {
@@ -118,7 +104,6 @@ function fixFile(filePath) {
         }
         modified = true;
       }
-
       // Fix missing closing parentheses
       if (parenCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < parenCount; j++) {
@@ -126,42 +111,33 @@ function fixFile(filePath) {
         }
         modified = true;
       }
-
       cleanedLines.push(line);
     }
-
     content = cleanedLines.join('\n');
-
     // Final cleanup
     content = content
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive empty lines
       .replace(/^\s*\n/gm, '\n') // Remove empty lines with just spaces
       .replace(/\s+$/gm, ''); // Remove trailing spaces
-
     if (modified || content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
-
 // Function to find all TypeScript/React files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   const files = [];
-  
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
@@ -169,20 +145,15 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
       }
     }
   }
-  
   traverse(dir);
   return files;
 }
-
 // Main execution
 console.log('Starting proper merge conflict resolution...');
-
 const srcDir = path.join(__dirname, 'src');
 const files = findFiles(srcDir);
-
 let fixedCount = 0;
 let errorCount = 0;
-
 for (const file of files) {
   try {
     if (fixFile(file)) {
@@ -193,12 +164,10 @@ for (const file of files) {
     errorCount++;
   }
 }
-
 console.log(`\nMerge conflict resolution complete:`);
 console.log(`- Files processed: ${files.length}`);
 console.log(`- Files fixed: ${fixedCount}`);
 console.log(`- Errors: ${errorCount}`);
-
 // Run linting to check for remaining issues
 console.log('\nRunning linting to check for remaining issues...');
 try {

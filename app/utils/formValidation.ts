@@ -4,7 +4,7 @@
  * Provides common validation rules and form handling utilities
  */
 export interface ValidationRule<T = unknown> {
-  validate: (value: T) => boolean;
+  validate: (value: T) => boolean;,
   message: string;
 }
 export interface ValidationResult {

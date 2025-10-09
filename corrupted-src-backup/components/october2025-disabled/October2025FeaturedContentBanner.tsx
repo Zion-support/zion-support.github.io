@@ -87,7 +87,6 @@ const October2025FeaturedContentBanne, r = () => {
             Discover, breakthrough, AI platforms, delivering, millions in, value, to
             enterprise, organization, s
           </p>
-        </div>
         {/* Featured, Content, Car, d, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {

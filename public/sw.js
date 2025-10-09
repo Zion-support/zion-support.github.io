@@ -1,7 +1,6 @@
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
-
 // Static assets to cache
 const STATIC_ASSETS = [
   '/',
@@ -9,7 +8,6 @@ const STATIC_ASSETS = [
   '/globals.css',
   '/manifest.json'
 ];
-
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -22,7 +20,6 @@ self.addEventListener('install', (event) => {
       })
   );
 });
-
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -43,22 +40,18 @@ self.addEventListener('activate', (event) => {
       })
   );
 });
-
 // Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
-
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
-
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
-
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
@@ -66,7 +59,6 @@ self.addEventListener('fetch', (event) => {
         if (cachedResponse) {
           return cachedResponse;
         }
-
         // Otherwise fetch from network
         return fetch(request)
           .then((response) => {
@@ -74,16 +66,13 @@ self.addEventListener('fetch', (event) => {
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
-
             // Clone the response
             const responseToCache = response.clone();
-
             // Cache dynamic content
             caches.open(DYNAMIC_CACHE)
               .then((cache) => {
                 cache.put(request, responseToCache);
               });
-
             return response;
           })
           .catch(() => {
@@ -95,7 +84,6 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
-
 // Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
@@ -105,7 +93,6 @@ self.addEventListener('sync', (event) => {
     );
   }
 });
-
 // Push notifications
 self.addEventListener('push', (event) => {
   const options = {
@@ -113,8 +100,8 @@ self.addEventListener('push', (event) => {
     icon: '/icon-192x192.png',
     badge: '/badge-72x72.png',
     vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
+    data: {,
+  dateOfArrival: Date.now(),
       primaryKey: 1
     },
     actions: [
@@ -130,23 +117,19 @@ self.addEventListener('push', (event) => {
       }
     ]
   };
-
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
 });
-
 // Handle notification clicks
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
     );
   }
 });
-
 // Helper function for offline form submissions
 async function handleOfflineSubmissions() {
   // Implementation for handling offline form submissions

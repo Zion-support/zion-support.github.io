@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-
 /**
  * Merge New Cursor Branches - Process the latest cursor branches
  */ import { execSync } from 'child_process';
 import fs from 'fs';
-
 // //New cursor branches to merge
 const newCursorBranches = [
   'cursor/fix-errors-and-merge-to-main-016f',
@@ -18,7 +16,6 @@ const newCursorBranches = [
   'cursor/fix-errors-and-merge-to-main-77cd',
   'cursor/fix-errors-and-merge-to-main-921e',
 ];
-
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
@@ -28,7 +25,6 @@ function safeGitCommand(command, description) {
 //     return { success: false, error: error.message };
   }
 }
-
 //Function to check if branch exists
 function branchExists(branchName) {
   try {
@@ -41,13 +37,10 @@ function branchExists(branchName) {
     return false;
   }
 }
-
 //Ensure we're on main branch
 // safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
-
 // let mergedCount = 0;
-
 //Process each branch
 for (const branch of newCursorBranches) {
 //   //Check if branch exists
@@ -59,13 +52,11 @@ for (const branch of newCursorBranches) {
     });
     continue;
   }
-
 //   //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,
     `Merge ${branch}`
   );
-
   if (mergeResult.success) {
     mergedCount++;
 //     results.push({
@@ -75,7 +66,6 @@ for (const branch of newCursorBranches) {
   } else {
 //     //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
-
     results.push({
       branch,
       status: 'conflict',
@@ -83,7 +73,6 @@ for (const branch of newCursorBranches) {
     });
   }
 }
-
 //Run system checks
 // const typeCheck = safeGitCommand(
   'pnpm run type-check',
@@ -93,7 +82,6 @@ const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
   'Production build'
 );
-
 //Push changes if any were merged
 if (mergedCount > 0) {
 //   const pushResult = safeGitCommand(
@@ -104,12 +92,11 @@ if (mergedCount > 0) {
 //     } else {
 //     }
 }
-
 //Generate comprehensive report
 const report = {
   timestamp: new Date().toISOString(),
-  summary: {
-    totalBranches: newCursorBranches.length,
+  summary: {,
+  totalBranches: newCursorBranches.length,
     merged: mergedCount,
     notFound: notFoundCount,
     successRate: `${Math.round((mergedCount / newCursorBranches.length) * 100)}%`,
@@ -128,15 +115,12 @@ const report = {
   results: results,
   status: mergedCount > 0 ? 'success' : 'no-changes',
 };
-
 // Save detailed report
 fs.writeFileSync(
   'new-cursor-branches-merge-report.json',
   JSON.stringify(report, null, 2)
 );
-
 // // // // // // // // // if (report.systemChecks.allPassed) {
 //   } else {
 //   }
-
 // // 

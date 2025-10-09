@@ -1,18 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-
 function getRelativePath(fromPath, toPath) {
   return relative.startsWith('.') ? relative : './' + relative;
 }
-
 function processFile(filePath) {
   try {
-
     // Calculate relative paths based on file location
-
-
     if (isInBlog || isInGuides || isInPages) {
       utilsPath = '../../utils/';
       typesPath = '../../types/';
@@ -20,7 +14,6 @@ function processFile(filePath) {
       utilsPath = '../utils/';
       typesPath = '../types/';
     }
-
     // Define replacements with dynamic paths
     const replacements = [
       {
@@ -64,30 +57,23 @@ function processFile(filePath) {
         replacement: "// 'use client'; // Removed for Vite compatibility",
       },
     ];
-
     replacements.forEach(({ pattern, replacement }) => {
       if (pattern.test(content)) {
         content = content.replace(pattern, replacement);
         modified = true;
       }
     });
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-
       return true;
     }
     return false;
   } catch (error) {
-
     return false;
   }
 }
-
 function processDirectory(dirPath) {
-
   items.forEach(item => {
-
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -96,9 +82,6 @@ function processDirectory(dirPath) {
       }
     }
   });
-
   return totalFixed;
 }
-
 // Process the app directory
-

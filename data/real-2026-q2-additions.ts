@@ -1,4 +1,3 @@
-
 export const real2026Q2Additions = [
       'Jira',
       'ServiceNow',
@@ -17,8 +16,8 @@ export const real2026Q2Additions = [
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
   },
-export const real2026Q2Additions = [{id: 'ai-governance-compliance-hub'
-    name: 'AI Governance & Compliance Hub'
+export const real2026Q2Additions = [{id: 'ai-governance-compliance-hub',
+  name: 'AI Governance & Compliance Hub'
     category: 'AI & Data'
     tagline:
       'Policy, risk, and model governance with automated evidence and audit trails.'

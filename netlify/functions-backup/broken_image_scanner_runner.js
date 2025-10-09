@@ -3,8 +3,8 @@ exports.handler = async function (event, context) {try {
     const timestamp = new Date().toISOString()}
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'broken_image_scanner_runner function executed successfully',
+      body: JSON.stringify({,
+  message: 'broken_image_scanner_runner function executed successfully',
         timestamp: timestamp,
         function: 'broken_image_scanner_runner'}
       });

@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'image-optimizer-runner',
         source: event.source || 'unknown',
-        optimization: {
-          status: 'active',
+        optimization: {,
+  status: 'active',
           imagesOptimized: 0,
           lastOptimization: new Date().toISOString()}
         },

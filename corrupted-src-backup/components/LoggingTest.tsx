@@ -1,9 +1,8 @@
 import React from 'react';
 // import { Button } from '@/components/ui/button';
 // import { logger } from '@/utils/productionLogger';
-
 // Simple button component replacement
-const Button: React.FC<{
+const Button: React.FC<{,
   onClick: () => void;
   variant?: string;
   className?: string;
@@ -13,7 +12,6 @@ const Button: React.FC<{
     {children}
   </button>
 );
-
 // Simple logger replacement
 const logger = {
   error: (message: string, error?: unknown, meta?: unknown) => {

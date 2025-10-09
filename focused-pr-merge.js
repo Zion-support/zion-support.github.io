@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-
 /**
  * Focused PR Merger - Merges specific recent branches that are likely open PRs
  */ import { execSync } from 'child_process';
 import fs from 'fs';
-
 // //Step 1: Ensure we're on main and up to date
 // try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -12,7 +10,6 @@ import fs from 'fs';
 //   } catch (error) {
 //   process.exit(1);
 }
-
 //Step 2: Define specific branches to merge (most recent and relevant)
 const branchesToMerge = [
   //Recent error fixing branches
@@ -37,13 +34,11 @@ const branchesToMerge = [
   'cursor/build-ai-pricing-suggestion-engine-ea4e',
   'cursor/build-ai-resume-and-portfolio-builder-workflow-2029',
 ];
-
 // //Step 3: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
 //   try {
     //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-
     //Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
@@ -52,7 +47,6 @@ function resolveConflictsAndMerge(branchName) {
     if (isMerged !== 'not_merged') {
 //       return { success: true, method: 'already_merged' };
     }
-
     //Try direct merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
@@ -62,7 +56,6 @@ function resolveConflictsAndMerge(branchName) {
   } catch (error) {
 //     try {
       //Check for merge conflicts
-
       if (
         status.includes('UU') ||
         status.includes('AA') ||
@@ -78,7 +71,6 @@ function resolveConflictsAndMerge(branchName) {
 //           return { success: true, method: 'theirs' };
         } catch (theirsError) {
 //           }
-
         //Strategy 2: Auto-resolve with ours
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
@@ -89,11 +81,9 @@ function resolveConflictsAndMerge(branchName) {
 //           return { success: true, method: 'ours' };
         } catch (oursError) {
 //           }
-
         //Strategy 3: Manual conflict resolution
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
-
           //Get conflicted files
           const conflictedFiles = execSync(
             'git diff --name-only --diff-filter=U',
@@ -101,7 +91,6 @@ function resolveConflictsAndMerge(branchName) {
           )
             .split('\n')
             .filter(file => file.trim());
-
 //           //For each conflicted file, try to resolve
           for (const file of conflictedFiles) {
             if (file.trim()) {
@@ -115,7 +104,6 @@ function resolveConflictsAndMerge(branchName) {
 //                 }
             }
           }
-
           //Complete the merge
           execSync(
             `git commit -m "Manual conflict resolution for ${branchName}"`,
@@ -127,24 +115,21 @@ function resolveConflictsAndMerge(branchName) {
       }
     } catch (statusError) {
 //       }
-
     //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
 //       } catch (abortError) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
     }
-
     return { success: false, method: 'failed' };
   }
 }
-
 //Step 4: Execute merge process
 // const results = {
   successful: [],
   failed: [],
-  summary: {
-    total: 0,
+  summary: {,
+  total: 0,
     successful: 0,
     failed: 0,
     methods: {
@@ -157,11 +142,9 @@ function resolveConflictsAndMerge(branchName) {
     },
   },
 };
-
 //Process each branch
 for (const branch of branchesToMerge) {
   results.summary.total++;
-
   if (result.success) {
     results.successful.push({ branch, ...result });
     results.summary.successful++;
@@ -172,23 +155,19 @@ for (const branch of branchesToMerge) {
     results.summary.methods.failed++;
   }
 }
-
 //Step 5: Generate report
 // // // // // // // // // // // if (results.failed.length > 0) {
 //   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
 }
-
 //Save report
 results.timestamp = new Date().toISOString();
 fs.writeFileSync(
   'focused-pr-merge-report.json',
   JSON.stringify(results, null, 2)
 );
-
 // Push changes
 // try {
   execSync('git push origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   //   }
-
 // // 

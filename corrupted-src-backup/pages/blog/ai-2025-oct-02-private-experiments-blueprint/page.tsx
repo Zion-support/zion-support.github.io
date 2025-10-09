@@ -16,7 +16,6 @@ const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
         <li>Scop, e, d, rotating, user, identifiers without, PI, I</li>
         <li>Signed, feature, configs validated, at, the ed, g, e</li>
         <li>Budgeted, experiment, routes and, automatic, rollbacks</li>
-      </ul>
       <h2>Architectu, r, e</h2>
       <p>
         Decisions, are, evaluated at, the, edge using, pr, e‑fetch, e, d, signed, configuration, bundles.

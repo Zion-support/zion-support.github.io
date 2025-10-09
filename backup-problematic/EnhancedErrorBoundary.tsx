@@ -1,50 +1,40 @@
 'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // console.error('Error caught by boundary:', error, errorInfo);
     }
-
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
-
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
@@ -55,7 +45,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
-
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -79,7 +68,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               >
                 Go Back
               </button>
-            </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500">
@@ -95,9 +83,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;

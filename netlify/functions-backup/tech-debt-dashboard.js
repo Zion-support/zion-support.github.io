@@ -63,7 +63,7 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
         )
         .join('');
       return `<tr>
-      <td style="padding: 8px;border-bottom:1px solid #223,"><a style="color:#9ad" href="${fileLink}">${item.file}</a></td>
+      <td style="padding: 8px;border-bottom:1px solid #223,"><a style="color:#9ad" href="${fileLink}">${item.file}</a>
       <td style="padding: 8px;border-bottom:1px solid #223,">${item.findings.length}</td>
       <td style="padding: 8px;border-bottom:1px solid #223,">${lines}</td>
     </tr>`;
@@ -105,8 +105,8 @@ exports.handler = async () => {const root = path.resolve(__dirname, '..') '..');
   // Sync changes to repo
   const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
   const body = {ok: sync.status === 0,
-    report: {
-      json: '/reports/tech-debt/latest.json',
+    report: {,
+  json: '/reports/tech-debt/latest.json',
       html: '/reports/tech-debt/'}
     },
     totalFiles: items.length,

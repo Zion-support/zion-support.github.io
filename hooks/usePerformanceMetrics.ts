@@ -1,4 +1,3 @@
-
 interface PerformanceMetrics {
   fcp?: number;
   lcp?: number;
@@ -6,19 +5,15 @@ interface PerformanceMetrics {
   cls?: number;
   ttfb?: number;
 }
-
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);
-
   useEffect(() => {
     if (!('PerformanceObserver' in window)) {
       setIsSupported(false);
       return;
     }
-
     setIsSupported(true);
-
     // First Contentful Paint
     new PerformanceObserver(list => {
       const _entries = list.getEntries();
@@ -27,14 +22,12 @@ export function usePerformanceMetrics() {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
       }
     }).observe({ entryTypes: ['paint'] });
-
     // Largest Contentful Paint
     new PerformanceObserver(list => {
       const _entries = list.getEntries();
       const _lastEntry = entries[entries.length - 1];
       setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
     }).observe({ entryTypes: ['largest-contentful-paint'] });
-
     // First Input Delay
     new PerformanceObserver(list => {
       const _entries = list.getEntries();
@@ -46,7 +39,6 @@ export function usePerformanceMetrics() {
         }));
       });
     }).observe({ entryTypes: ['first-input'] });
-
     // Cumulative Layout Shift
     let _clsValue = 0;
     new PerformanceObserver(list => {
@@ -62,7 +54,6 @@ export function usePerformanceMetrics() {
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     }).observe({ entryTypes: ['layout-shift'] });
-
     // Time to First Byte
     new PerformanceObserver(list => {
       const _entries = list.getEntries();
@@ -77,6 +68,5 @@ export function usePerformanceMetrics() {
       }
     }).observe({ entryTypes: ['navigation'] });
   }, []);
-
   return { metrics, isSupported };
 }

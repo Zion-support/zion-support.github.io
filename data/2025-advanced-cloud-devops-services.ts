@@ -1,4 +1,4 @@
-export interface CloudDevOpsService {id: string;
+export interface CloudDevOpsService {id: string;,
   name: string;
   tagline: string;
   description: string;

@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'continuous-orchestrator',
         source: event.source || 'unknown',
-        orchestration: {
-          status: 'continuous',
+        orchestration: {,
+  status: 'continuous',
           services: 0,
           lastOrchestration: new Date().toISOString()}
         },

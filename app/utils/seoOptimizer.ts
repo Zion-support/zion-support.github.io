@@ -4,7 +4,7 @@
  * Provides comprehensive SEO enhancements and monitoring
  */
 interface SEOConfig {
-  siteName: string;
+  siteName: string;,
   siteUrl: string;
   defaultTitle: string;
   defaultDescription: string;

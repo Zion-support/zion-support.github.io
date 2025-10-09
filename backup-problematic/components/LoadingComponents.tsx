@@ -1,12 +1,10 @@
 import React from 'react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   color?: 'blue' | 'gray' | 'white';
   text?: string;
 }
-
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   className = '',
@@ -18,13 +16,11 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'h-8 w-8',
     lg: 'h-12 w-12',
   };
-
   const colorClasses = {
     blue: 'border-gray-300 border-t-blue-600',
     gray: 'border-gray-300 border-t-gray-600',
     white: 'border-gray-300 border-t-white',
   };
-
   return (
     <div className={`flex items-center justify-center ${className}`}>
       <div
@@ -34,5 +30,4 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   );
 };
-
 export default LoadingSpinner;

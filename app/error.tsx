@@ -1,6 +1,4 @@
 "use client";
-
-
 export default function Error({
   error,
   reset,
@@ -12,7 +10,6 @@ export default function Error({
     // Log the error to an error reporting service
     // console.error(error);
   }, [error]);
-
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="text-center">
@@ -23,7 +20,6 @@ export default function Error({
         >
           Try again
         </button>
-      </div>
     </div>
   );
 }

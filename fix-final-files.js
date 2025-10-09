@@ -43,7 +43,6 @@ const ${componentName}: React.FC<${componentName}Props> = ({
         <div className="p-4 text-center text-gray-600">
           <h3 className="text-lg font-semibold mb-2">${componentName}</h3>
           <p>Component placeholder - implementation needed</p>
-        </div>
       )}
     </div>
   );
@@ -98,5 +97,4 @@ function fixFile(filePath) {
 }
 // filesToFix.forEach(fixFile);
 // 
-
 }

@@ -7,7 +7,7 @@ export interface ErrorReport {
   message: string;
   stack?: string;
   componentStack?: string;
-  timestamp: string;
+  timestamp: string;,
   userAgent: string;
   url: string;
   severity: 'low' | 'medium' | 'high' | 'critical';

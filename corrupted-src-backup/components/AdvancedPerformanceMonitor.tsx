@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -8,5 +7,4 @@ interface PerformanceMetrics {
   ttfb?: number;
   inp?: number;
 }
-
 export default AdvancedPerformanceMonitor;

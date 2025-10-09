@@ -1,4 +1,3 @@
-
 // Latest Content 2026 Banner export function LatestContent2026Bann e r() { 
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-bl, u, e-600, t, o-te, a, l-600, tex, t-white, p, y-4'>
@@ -24,7 +23,6 @@
                 AI, FinTech, Transformation
               </Li, n, k>
             </div>
-          </div>
           <Link, t, o='/<bl, o, g'
             className='bg-whi, t, e/20, hove, r:bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
           >
@@ -34,7 +32,6 @@
       </div>
     </d, i, v > );
  }
-
 // AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() { 
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, tex, t-white, p, y-6'>
@@ -68,7 +65,6 @@
       </div>
     </d, i, v > );
  }
-
 // AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() { 
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, tex, t-white, p, y-6'>
@@ -112,7 +108,6 @@
       </div>
     </d, i, v > );
  }
-
 // AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() { 
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'>
@@ -156,7 +151,6 @@
       </div>
     </d, i, v > );
  }
-
 // New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() { 
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-6'>
@@ -209,7 +203,6 @@
       </div>
     </d, i, v > );
  }
-
 // AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() { 
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, tex, t-white, p, y-6'>
@@ -230,7 +223,6 @@
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0'>99.9%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>
                 Se, l, f-healing, infrastructur, e
               </div>
@@ -254,7 +246,6 @@
       </div>
     </d, i, v > );
  }
-
 // AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() { 
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'>
@@ -276,7 +267,6 @@
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>95%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>Process, efficienc, y</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'>
@@ -286,7 +276,6 @@
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>99.9%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>Transaction, processin, g</div>
             </div>
           </div>
@@ -299,7 +288,6 @@
       </div>
     </d, i, v > );
  }
-
 // AI Retail Automation Banner export function AIRetailAutomationBann e r() { 
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, tex, t-white, p, y-6'>
@@ -326,7 +314,6 @@
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-3, 0, 0'>3, 0, 0%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>Performance, gain, s</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'>
@@ -344,7 +331,6 @@
       </div>
     </d, i, v > );
  }
-
 // Latest 2026 Content Banner export function Latest2026ContentBann e r() { 
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, vi, a-purp, l, e-600, t, o-fuchs, i, a-600, tex, t-white, p, y-6'>

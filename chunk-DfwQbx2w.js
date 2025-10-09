@@ -256,8 +256,8 @@ function f() {if (r) return c;
           k: n,
   m: 0,
           Provider: null,
-  Consumer: null, S: null)
-          C: null}
+  Consumer: null, S: null),
+  C: null}
         }).Provider = {$$typeof: o} M: n });
         (n.Consumer = n)
       );

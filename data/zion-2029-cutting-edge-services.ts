@@ -1,5 +1,5 @@
 export type ZionCuttingEdgeService2029 =
-  id: string;
+  id: string;,
   name: string;
   tagline: string;
   price: string;

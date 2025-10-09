@@ -1,9 +1,8 @@
 // Enterprise case studies showcasing real-world AI implementations and results
-
 export interface EnterpriseCaseStudy {
   id: string;
   slug?: string;
-  title: string;
+  title: string;,
   company: string;
   industry: string;
   challenge: string;
@@ -19,7 +18,6 @@ export interface EnterpriseCaseStudy {
   publishedAt: string;
   tags: string[];
 }
-
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
   {
     id: 'fortune-500-ai-automation',

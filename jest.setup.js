@@ -1,42 +1,35 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
 const { TextEncoder, TextDecoder } = require('util');
-
 // Polyfills for Node.js environment
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
-
 // Mock files that use import.meta.env
 jest.mock('./src/utils/logger.ts', () => ({
-  logger: {
-    debug: jest.fn(),
+  logger: {,
+  debug: jest.fn(),
     info: jest.fn(),
     warn: jest.fn(),
     error: jest.fn(),
     log: jest.fn(),
   },
 }));
-
 jest.mock('./src/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn(),
 }));
-
 jest.mock('./src/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn(),
 }));
-
 jest.mock('./src/hooks/usePerformance.ts', () => ({
   usePerformance: jest.fn(() => ({
     metrics: {},
     optimize: jest.fn(),
   })),
 }));
-
 // usePerformanceMonitoring hook mock removed - hook doesn't exist
-
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
@@ -77,7 +70,6 @@ jest.mock('react-router-dom', () => {
     RouterProvider: ({ router }) => null,
   };
 });
-
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -92,7 +84,6 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
-
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -103,10 +94,8 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
-
 // Suppress console errors in tests
 let _originalError;
-
 beforeAll(() => {
   _originalError = console.error;
   console.error = jest.fn((...args) => {
@@ -120,7 +109,6 @@ beforeAll(() => {
     _originalError.call(console, ...args);
   });
 });
-
 afterAll(() => {
   if (_originalError) {
     console.error = _originalError;

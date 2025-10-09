@@ -1,4 +1,3 @@
-
       "Emerging tech breakthroughs"
       "Innovation platform"
       "Future capabilities"
@@ -12,7 +11,7 @@
 export interface EmergingTechBreakthrough2029 {;
 export interface EmergingTechBreakthrough2029
 export interface EmergingTechBreakthrough2029 {;
-  id: string;
+  id: string;,
   name: string;
   tagline: string,
   price: string,

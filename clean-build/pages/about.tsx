@@ -1,4 +1,3 @@
-
 export default function About() {
   return (
     <>
@@ -18,7 +17,6 @@ export default function About() {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 About <span className="text-yellow-300">Zion Tech Group</span>
-              </h1>
               <p className="text-xl">
                 We are a leading technology solutions provider dedicated to transforming businesses
                 through innovative digital solutions and cutting-edge technology.
@@ -26,7 +24,6 @@ export default function About() {
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -67,7 +64,6 @@ export default function About() {
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -134,7 +130,6 @@ export default function About() {
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -192,7 +187,6 @@ export default function About() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

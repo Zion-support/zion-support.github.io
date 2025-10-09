@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function CaseStudy(): React.JSX.Element {
   return (
     <>
@@ -13,7 +12,6 @@ export default function CaseStudy(): React.JSX.Element {
             content="Case study: Fortune 100 Autonomous Operations Transformation 2025 from Zion Tech Group"
           />
         </Helmet>
-
         <div className="max-w-4xl mx-auto px-4 py-20">
           <div className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -23,9 +21,7 @@ export default function CaseStudy(): React.JSX.Element {
               <span>By Zion Tech Group Team</span>
               <span>•</span>
               <span>2025-01-01</span>
-            </div>
           </div>
-
           <div className="prose prose-lg prose-invert max-w-none">
             <div className="text-gray-200 leading-relaxed">
               <h2>Introduction</h2>
@@ -33,13 +29,11 @@ export default function CaseStudy(): React.JSX.Element {
                 This is a placeholder case study. The content for "Fortune 100 Autonomous Operations
                 Transformation 2025" will be added here.
               </p>
-
               <h2>Main Content</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua.
               </p>
-
               <h2>Conclusion</h2>
               <p>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -47,7 +41,6 @@ export default function CaseStudy(): React.JSX.Element {
               </p>
             </div>
           </div>
-
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
               <div>

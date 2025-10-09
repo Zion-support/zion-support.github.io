@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'external-link-check-runner',
         source: event.source || 'unknown',
-        checking: {
-          status: 'active',
+        checking: {,
+  status: 'active',
           linksChecked: 0,
           brokenLinks: 0,
           lastCheck: new Date().toISOString()}

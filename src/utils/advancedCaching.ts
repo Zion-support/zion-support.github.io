@@ -3,7 +3,6 @@
  * Advanced Caching Utility;
  * Provides intelligent caching with TTL, LRU eviction, and storage options;
  */
-<<<<<<< HEAD
 export interface CacheOptions {
     // TODO: Add content
   }
@@ -12,18 +11,9 @@ export interface CacheOptions {
   maxSize?: number; // Maximum number of entries
 }
 export interface CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
           <T> {
     // TODO: Add content
   }
-=======
 export interface CacheOptions {// TODO: Add content;}
 }
   ttl?: number; // Time to live in milliseconds;
@@ -33,34 +23,16 @@ export interface CacheOptions {// TODO: Add content;}
 export interface CacheEntry;
           <T> {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   value: T;,
     expiry: number;,
     hits: number;,
     lastAccessed: number
 }
-<<<<<<< HEAD
 class AdvancedCache
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown> {
     // TODO: Add content
   }
   private cache: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, CacheEntry<T>> = new Map()
   private accessOrder: string[] = []
   private options: Required<CacheOptions>
@@ -148,7 +120,6 @@ class AdvancedCache
     // TODO: Add content
   }
       return window.sessionStorage
-=======
 class AdvancedCache;
           <T = unknown> {// TODO: Add content;}
 }
@@ -223,11 +194,9 @@ class AdvancedCache;
     } else if (this.options.storage === 'sessionStorage') {// TODO: Add content;}
 }
       return window.sessionStorage;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return null
   }
-<<<<<<< HEAD
   public set(key: string, value: T, ttl?: number): void {
     // TODO: Add content
   }
@@ -241,7 +210,6 @@ class AdvancedCache;
     this.cache.set(key, {
     // TODO: Add content
   }
-=======
   public set(key: string, value: T, ttl?: number): void {// TODO: Add content;}
 }
     const expiry = Date.now() + (ttl || this.options.ttl);
@@ -252,12 +220,10 @@ class AdvancedCache;
     }
     this.cache.set(key, {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       value,
 //       expiry,
       hits: 0,
       lastAccessed: Date.now()
-<<<<<<< HEAD
     }
   )
     // Update access order
@@ -304,7 +270,6 @@ class AdvancedCache;
       this.cache.delete(key)
       this.removeFromAccessOrder(key)
       return false
-=======
     });
     // Update access order;
     this.updateAccessOrder(key);
@@ -344,11 +309,9 @@ class AdvancedCache;
       this.cache.delete(key);
       this.removeFromAccessOrder(key);
       return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return true
   }
-<<<<<<< HEAD
   public delete(key: string): boolean {
     // TODO: Add content
   }
@@ -372,7 +335,6 @@ class AdvancedCache;
   }
     // Remove if exists
     this.removeFromAccessOrder(key)
-=======
   public delete(key: string): boolean {// TODO: Add content;}
 }
     this.removeFromAccessOrder(key);
@@ -392,11 +354,9 @@ class AdvancedCache;
 }
     // Remove if exists;
     this.removeFromAccessOrder(key);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     // Add to end (most recently used)
     this.accessOrder.push(key)
   }
-<<<<<<< HEAD
   private removeFromAccessOrder(key: string): void {
     // TODO: Add content
   }
@@ -447,14 +407,6 @@ class AdvancedCache;
     maxSize: number;,
     hitRate: number;,
     entries: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{
     // TODO: Add content
   }
@@ -466,14 +418,6 @@ class AdvancedCache;
     // TODO: Add content
   }
     const entries: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{ key: string; hits: number; age: number }> = []
     const now = Date.now()
     this.cache.forEach((entry, key) => {
@@ -493,7 +437,6 @@ class AdvancedCache;
     return {
     // TODO: Add content
   }
-=======
   private removeFromAccessOrder(key: string): void {// TODO: Add content;}
 }
     const index = this.accessOrder.indexOf(key);
@@ -557,7 +500,6 @@ class AdvancedCache;
     });
     return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   size: this.cache.size,
       maxSize: this.options.maxSize,
       hitRate: totalHits / Math.max(this.cache.size, 1),
@@ -571,7 +513,6 @@ class AdvancedCache;
     fetcher: () => Promise;
           <R>,
     ttl?: number,
-<<<<<<< HEAD
 ): Promise<R> {
     // TODO: Add content
   }
@@ -580,48 +521,28 @@ class AdvancedCache;
     // TODO: Add content
   }
       return cached as unknown as R
-=======
 ): Promise<R> {// TODO: Add content;}
 }
     const cached = this.get(key);
     if (cached !== null) {// TODO: Add content;}
 }
       return cached as unknown as R;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     const value = await fetcher()
     this.set(key, value, ttl)
     return value
   }
 }
-<<<<<<< HEAD
 // Export factory function
 export function createCache
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown>(options?: CacheOptions): AdvancedCache<T> {
     // TODO: Add content
   }
   return new AdvancedCache
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(options)
 }
 // Export default cache instance
 export const defaultCache = new AdvancedCache()
-=======
 // Export factory function;
 export function createCache;
           <T = unknown>(options?: CacheOptions): AdvancedCache<T> {// TODO: Add content;}
@@ -631,4 +552,3 @@ export function createCache;
 }
 // Export default cache instance;
 export const defaultCache = new AdvancedCache();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

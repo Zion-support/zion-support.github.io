@@ -1,20 +1,16 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
-
 interface ModernNavigationProps {
   className?: string;
 }
-
 const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
-
   return (
     <nav className={`bg-white shadow-md ${className}`}>
       <div className="container mx-auto px-4">
@@ -22,7 +18,6 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
           <Link href="/" className="text-xl font-bold text-blue-600">
             Zion Tech Group
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navigationItems.map(item => (
@@ -35,13 +30,10 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
               </Link>
             ))}
           </div>
-
           {/* Mobile Menu Button */}
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-        </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t">
@@ -61,5 +53,4 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
     </nav>
   );
 };
-
 export default ModernNavigation;

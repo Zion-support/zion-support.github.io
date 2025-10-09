@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect } from 'react';
-
 interface SecurityEnhancerProps {
   enableCSP?: boolean;
   enableHTTPSRedirect?: boolean;
@@ -8,7 +7,6 @@ interface SecurityEnhancerProps {
   enableClickjackingProtection?: boolean;
   enableContentTypeSniffingProtection?: boolean;
 }
-
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   enableCSP = true,
   enableHTTPSRedirect = true,
@@ -20,30 +18,23 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     if (enableCSP) {
       addContentSecurityPolicy();
     }
-    
     if (enableHTTPSRedirect) {
       enforceHTTPS();
     }
-    
     if (enableXSSProtection) {
       addXSSProtection();
     }
-    
     if (enableClickjackingProtection) {
       addClickjackingProtection();
     }
-    
     if (enableContentTypeSniffingProtection) {
       addContentTypeSniffingProtection();
     }
-    
     // Add security headers
     addSecurityHeaders();
-    
     // Add security event listeners
     addSecurityEventListeners();
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
-
   const addContentSecurityPolicy = () => {
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
@@ -63,41 +54,35 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     ].join('; ');
     document.head.appendChild(meta);
   };
-
   const enforceHTTPS = () => {
     if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
       location.replace('https:' + window.location.href.substring(window.location.protocol.length));
     }
   };
-
   const addXSSProtection = () => {
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-XSS-Protection';
     meta.content = '1; mode=block';
     document.head.appendChild(meta);
   };
-
   const addClickjackingProtection = () => {
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-Frame-Options';
     meta.content = 'DENY';
     document.head.appendChild(meta);
   };
-
   const addContentTypeSniffingProtection = () => {
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-Content-Type-Options';
     meta.content = 'nosniff';
     document.head.appendChild(meta);
   };
-
   const addSecurityHeaders = () => {
     const headers = [
       { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
       { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
       { httpEquiv: 'Strict-Transport-Security', content: 'max-age=63072000; includeSubDomains; preload' }
     ];
-
     headers.forEach(header => {
       const meta = document.createElement('meta');
       meta.httpEquiv = header.httpEquiv;
@@ -105,7 +90,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       document.head.appendChild(meta);
     });
   };
-
   const addSecurityEventListeners = () => {
     // Prevent right-click context menu (optional)
     document.addEventListener('contextmenu', (e) => {
@@ -114,7 +98,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         e.preventDefault();
       }
     });
-
     // Prevent text selection (optional)
     document.addEventListener('selectstart', (e) => {
       // Only prevent on production
@@ -122,16 +105,13 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         e.preventDefault();
       }
     });
-
     // Prevent drag and drop
     document.addEventListener('dragover', (e) => {
       e.preventDefault();
     });
-
     document.addEventListener('drop', (e) => {
       e.preventDefault();
     });
-
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
     document.addEventListener('keydown', (e) => {
       if (process.env.NODE_ENV === 'production') {
@@ -157,16 +137,13 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         }
       }
     });
-
     // Monitor for suspicious activity
     let suspiciousActivity = 0;
     const resetSuspiciousActivity = () => {
       suspiciousActivity = 0;
     };
-
     // Reset suspicious activity counter every 5 minutes
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
-
     // Track rapid clicks (potential bot activity)
     let clickCount = 0;
     document.addEventListener('click', () => {
@@ -178,7 +155,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         }
       }
     });
-
     // Track rapid keyboard input
     let keyCount = 0;
     document.addEventListener('keydown', () => {
@@ -190,8 +166,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       }
     });
   };
-
   return null;
 };
-
 export default SecurityEnhancer;

@@ -5,7 +5,7 @@
  */
 import React from 'react';
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknown>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(,
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {

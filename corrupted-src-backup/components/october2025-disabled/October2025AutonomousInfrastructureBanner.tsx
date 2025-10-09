@@ -1,4 +1,3 @@
-
 const October2025AutonomousInfrastructureBanner = () => {
   return (
     <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
@@ -6,7 +5,6 @@ const October2025AutonomousInfrastructureBanner = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Section */}
         <div className="text-center mb-10">
@@ -229,7 +227,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div>
               <div className="text-2xl font-bold text-white mb-1">99.99%</div>
               <div>Average Uptime Achieved</div>
-
             <div>
               <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
               <div>Average Payback Period</div>
@@ -237,5 +234,4 @@ const October2025AutonomousInfrastructureBanner = () => {
   );
 };
 export default October2025AutonomousInfrastructureBanner;
-
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

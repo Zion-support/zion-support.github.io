@@ -51,7 +51,7 @@ export const generateMetaTags = (data: {
 };
 // SEO Config interface
 interface SEOConfig {
-  title: string;
+  title: string;,
   description: string;
   keywords: string[];
   canonicalUrl: string;
@@ -243,8 +243,7 @@ ${pages
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`
+    <priority>${page.priority}</priority>`
   )
   .join('\n')}
 </urlset>`;

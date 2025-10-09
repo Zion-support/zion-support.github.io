@@ -54,7 +54,6 @@ const October2025NewContentBanner, 2 = () => {
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
             Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation
           </p>
-        </div>
         {/* Articles, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">
           { newArticl, e, s.m, a, p((arti, c, l, e) = > {

@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'headers-enforcer',
         source: event.source || 'unknown',
-        enforcement: {
-          status: 'active',
+        enforcement: {,
+  status: 'active',
           headersEnforced: 0,
           lastEnforcement: new Date().toISOString()}
         },

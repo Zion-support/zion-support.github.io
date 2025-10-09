@@ -3,7 +3,6 @@
  * Enhanced Analytics Utility;
  * Provides comprehensive analytics tracking with event batching and offline support;
  */
-<<<<<<< HEAD
 export interface AnalyticsEvent {
     // TODO: Add content
   }
@@ -12,14 +11,6 @@ export interface AnalyticsEvent {
   label?: string
   value?: number
   metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
 }
 export interface UserProperties {
@@ -106,7 +97,6 @@ class EnhancedAnalytics {
       metadata: {
     // TODO: Add content
   }
-=======
 export interface AnalyticsEvent {// TODO: Add content;}
 };
   category: string;,
@@ -183,14 +173,12 @@ class EnhancedAnalytics {// TODO: Add content;}
       action: 'Analytics Initialized',
       metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent;
       }
     }
   )
   }
-<<<<<<< HEAD
   public setUserProperties(properties: UserProperties): void {
     // TODO: Add content
   }
@@ -211,7 +199,6 @@ class EnhancedAnalytics {// TODO: Add content;}
       metadata: {
     // TODO: Add content
   }
-=======
   public setUserProperties(properties: UserProperties): void {// TODO: Add content;}
 }
     this.userProperties = {// TODO: Add content;}
@@ -227,13 +214,11 @@ class EnhancedAnalytics {// TODO: Add content;}
 //       ...event,
       metadata: {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //         ...event.metadata,
         sessionId: this.sessionId,
         timestamp: new Date().toISOString(),
         url: typeof window !== 'undefined' ? window.location.href : ''
       }
-<<<<<<< HEAD
     }
     // Add to queue
     this.queue.push(enrichedEvent)
@@ -256,14 +241,6 @@ class EnhancedAnalytics {// TODO: Add content;}
     // TODO: Add content
   }
           gtag?: (command: string, action: string, parameters: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => void
         }
 // ).gtag,
@@ -275,14 +252,6 @@ class EnhancedAnalytics {// TODO: Add content;}
     // TODO: Add content
   }
   gtag: (command: string, action: string, parameters: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => void
         }
       ).gtag('event', event.action, {
@@ -308,7 +277,6 @@ class EnhancedAnalytics {// TODO: Add content;}
       metadata: {
     // TODO: Add content
   }
-=======
     };
     // Add to queue;
     this.queue.push(enrichedEvent);
@@ -357,14 +325,12 @@ class EnhancedAnalytics {// TODO: Add content;}
       label: pagePath,
       metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   pageTitle: pageTitle || document.title,
         referrer: document.referrer;
       }
     }
   )
   }
-<<<<<<< HEAD
   public trackUserInteraction(action: string, label?: string, value?: number): void {
     // TODO: Add content
   }
@@ -379,14 +345,6 @@ class EnhancedAnalytics {// TODO: Add content;}
   )
   }
   public trackError(error: Error, context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>): void {
     // TODO: Add content
   }
@@ -399,7 +357,6 @@ class EnhancedAnalytics {// TODO: Add content;}
       metadata: {
     // TODO: Add content
   }
-=======
   public trackUserInteraction(action: string, label?: string, value?: number): void {// TODO: Add content;}
 }
     this.trackEvent({// TODO: Add content;}
@@ -420,14 +377,12 @@ class EnhancedAnalytics {// TODO: Add content;}
       label: error.message,
       metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   stack: error.stack,
 //         ...context;
       }
     }
   )
   }
-<<<<<<< HEAD
   public trackPerformance(metric: string, value: number, rating?: string): void {
     // TODO: Add content
   }
@@ -441,7 +396,6 @@ class EnhancedAnalytics {// TODO: Add content;}
     // TODO: Add content
   }
 //         rating
-=======
   public trackPerformance(metric: string, value: number, rating?: string): void {// TODO: Add content;}
 }
     this.trackEvent({// TODO: Add content;}
@@ -452,12 +406,10 @@ class EnhancedAnalytics {// TODO: Add content;}
       metadata: {// TODO: Add content;}
 }
 //         rating;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
   )
   }
-<<<<<<< HEAD
   public trackConversion(conversionType: string, value?: number): void {
     // TODO: Add content
   }
@@ -470,7 +422,6 @@ class EnhancedAnalytics {// TODO: Add content;}
       metadata: {
     // TODO: Add content
   }
-=======
   public trackConversion(conversionType: string, value?: number): void {// TODO: Add content;}
 }
     this.trackEvent({// TODO: Add content;}
@@ -480,7 +431,6 @@ class EnhancedAnalytics {// TODO: Add content;}
 //       value,
       metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   conversionId: `conv-${Date.now()}`
       }
     }
@@ -493,24 +443,20 @@ class EnhancedAnalytics {// TODO: Add content;}
     value?: number,
     metadata?: Record;
           <string, unknown>
-<<<<<<< HEAD
   ): void {
     // TODO: Add content
   }
     this.trackEvent({
     // TODO: Add content
   }
-=======
   ): void {// TODO: Add content;}
 }
     this.trackEvent({// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       category,
 //       action,
 //       label,
 //       value,
-<<<<<<< HEAD
 //       metadata
     }
   )
@@ -573,7 +519,6 @@ class EnhancedAnalytics {// TODO: Add content;}
     return {
     // TODO: Add content
   }
-=======
 //       metadata;
     });
   }
@@ -625,7 +570,6 @@ class EnhancedAnalytics {// TODO: Add content;}
 }
     return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   queueSize: this.queue.length,
       offlineQueueSize: this.offlineQueue.length,
       sessionId: this.sessionId,
@@ -633,10 +577,7 @@ class EnhancedAnalytics {// TODO: Add content;}
     }
   }
 }
-<<<<<<< HEAD
 // Export singleton instance
 export default analytics
-=======
 // Export singleton instance;
 export default analytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

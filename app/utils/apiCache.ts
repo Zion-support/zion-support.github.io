@@ -10,7 +10,7 @@ interface ApiCacheConfig {
   deduplicate?: boolean;
 }
 interface PendingRequest<T> {
-  promise: Promise<T>;
+  promise: Promise<T>;,
   timestamp: number;
 }
 /**

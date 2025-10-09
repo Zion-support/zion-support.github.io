@@ -214,8 +214,8 @@ function u() {return (
             }
             return ((r = {id: c++,
                 callback: u,
-  priorityLevel: r, startTime: a)
-                expirationTime: (f = a + f),
+  priorityLevel: r, startTime: a),
+  expirationTime: (f = a + f),
                 sortIndex: -1}
               }),
               a > i

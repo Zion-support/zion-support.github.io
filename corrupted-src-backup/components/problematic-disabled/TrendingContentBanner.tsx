@@ -107,7 +107,6 @@ const TrendingContentBanne, r: React.FC = () => {
             <div, classNam, e = { `px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.b, a, d, g, e) }, anima, t, e-boun, c, e`}></div>
               {currentIt, e, m.bad, g, e}
             </div>
-          </div>
           <div, classNam, e = "flex, item, s-start, ga, p-4"></div>
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s"></div>
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m"</div></Icon>

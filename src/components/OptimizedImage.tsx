@@ -1,18 +1,12 @@
 import React from 'react';
-
-<<<<<<< HEAD
 interface OptimizedImageProps {
-
   // Add props here
 }
-
 const OptimizedImage: React.FC<OptimizedImageProps> = () => {
   return (
     <div className="optimizedimage">
       {/* Component content */}
     </div>
-
-=======
 interface OptimizedImageProps {// TODO: Add content;}
 };
   src: string;,
@@ -97,17 +91,8 @@ const getOptimizedSrc = () => {// TODO: Add content;}
     onError?.();
   };
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div
       ref={imgRef} className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
@@ -128,7 +113,7 @@ const getOptimizedSrc = () => {// TODO: Add content;}
       )}
       {/* Error state */}
       {hasError && (}
-<div className="absolute inset-0 bg-gray-100 flex items-center justify-center"><div className="text-gray-400 text-sm">Failed to load image</div></div>
+<div className="absolute inset-0 bg-gray-100 flex items-center justify-center"><div className="text-gray-400 text-sm">Failed to load image</div>
       )}
       {/* Actual image */}
       {isInView && ()}
@@ -152,18 +137,7 @@ onError={handleError} className={`transition-opacity duration-300 ${}
           }}
 //         />
       )}
-    
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default OptimizedImage;

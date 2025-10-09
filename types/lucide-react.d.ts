@@ -3,9 +3,7 @@ declare module 'lucide-react' {
     size?: string | number;
     absoluteStrokeWidth?: boolean;
   }
-
   export type LucideIcon = ComponentType<LucideProps>;
-
   export const Calendar: LucideIcon;
   export const Clock: LucideIcon;
   export const ListChecks: LucideIcon;
@@ -23,19 +21,15 @@ declare module 'lucide-react' {
   export const Award: LucideIcon;
   export const TrendingUp: LucideIcon;
   export const Zap: LucideIcon;
-
   // Social media icons
   export const Github: LucideIcon;
   export const Linkedin: LucideIcon;
   export const Twitter: LucideIcon;
-
   // Communication icons
   export const Mail: LucideIcon;
   export const Phone: LucideIcon;
-
   // Location icons
   export const MapPin: LucideIcon;
-
   // UI icons
   export const Menu: LucideIcon;
   export const X: LucideIcon;
@@ -58,6 +52,5 @@ declare module 'lucide-react' {
   export const Globe: LucideIcon;
   export const Database: LucideIcon;
   export const Cloud: LucideIcon;
-
   // Add more icons as needed
 }

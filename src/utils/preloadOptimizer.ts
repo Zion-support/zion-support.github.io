@@ -2,7 +2,6 @@
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
  */
-<<<<<<< HEAD
 export const _preloadCriticalResources = () => {
     // TODO: Add content
   }
@@ -17,7 +16,6 @@ const fontPreloads = [
   fontPreloads.forEach(href => {
     // TODO: Add content
   }
-=======
 export const _preloadCriticalResources = () => {// TODO: Add content;}
 }
   if (typeof window === 'undefined') return;
@@ -30,7 +28,6 @@ const fontPreloads = [
   ];
   fontPreloads.forEach(href => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'style'
@@ -41,7 +38,6 @@ const fontPreloads = [
   )
   // Preload critical images
 const criticalImages = [
-<<<<<<< HEAD
   // TODO: Add items
 ]
 //     '/images/hero-bg.jpg',
@@ -51,7 +47,6 @@ const criticalImages = [
   criticalImages.forEach(src => {
     // TODO: Add content
   }
-=======
   // TODO: Add items;
 ];;
 //     '/images/hero-bg.jpg',
@@ -60,7 +55,6 @@ const criticalImages = [
   ];
   criticalImages.forEach(src => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'image'
@@ -69,7 +63,6 @@ const criticalImages = [
   }
   )
 }
-<<<<<<< HEAD
 export const preloadRoute = (route: string) => {
     // TODO: Add content
   }
@@ -78,32 +71,27 @@ export const preloadRoute = (route: string) => {
 const routeResources = {
     // TODO: Add content
   }
-=======
 export const preloadRoute = (route: string) => {// TODO: Add content;}
 }
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
 const routeResources = {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
     '/services': ['/api/services', '/images/services-hero.jpg'],
     '/contact': ['/api/contact', '/images/contact-hero.jpg']
   }
   const resources = routeResources[route as keyof typeof routeResources]
-<<<<<<< HEAD
   if (resources) {
     // TODO: Add content
   }
     resources.forEach(resource => {
     // TODO: Add content
   }
-=======
   if (resources) {// TODO: Add content;}
 }
     resources.forEach(resource => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       const link = document.createElement('link')
       link.rel = 'prefetch'
       link.href = resource;
@@ -112,7 +100,6 @@ const routeResources = {// TODO: Add content;}
   )
   }
 }
-<<<<<<< HEAD
 export const optimizeImages = () => {
     // TODO: Add content
   }
@@ -142,7 +129,6 @@ const images = document.querySelectorAll('img[data-lazy]')
           if (img.dataset['src']) {
     // TODO: Add content
   }
-=======
 export const optimizeImages = () => {// TODO: Add content;}
 }
   if (typeof window === 'undefined') return;
@@ -164,7 +150,6 @@ const images = document.querySelectorAll('img[data-lazy]')
           const img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
             img['src'] = img.dataset['src']
 //             img.removeAttribute('data-src')
 //             imageObserver.unobserve(img)
@@ -178,7 +163,6 @@ const images = document.querySelectorAll('img[data-lazy]')
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
-<<<<<<< HEAD
 export const optimizeThirdPartyScripts = () => {
     // TODO: Add content
   }
@@ -195,7 +179,6 @@ const scripts = document.querySelectorAll('script[data-defer]')
   if (document.readyState === 'loading') {
     // TODO: Add content
   }
-=======
 export const optimizeThirdPartyScripts = () => {// TODO: Add content;}
 }
   if (typeof window === 'undefined') return;
@@ -208,23 +191,19 @@ const scripts = document.querySelectorAll('script[data-defer]')
   // Load analytics after page load;
   if (document.readyState === 'loading') {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     document.addEventListener('DOMContentLoaded', () => {
 }
   )
   } else {
   }
 }
-<<<<<<< HEAD
 const loadAnalytics = () => {
     // TODO: Add content
   }
   // Load Google Analytics after page load
-=======
 const loadAnalytics = () => {// TODO: Add content;}
 }
   // Load Google Analytics after page load;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 const gaScript = document.createElement('script')
   gaScript.async = true;
   gaScript['src'] = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'

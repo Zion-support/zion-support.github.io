@@ -1,24 +1,20 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorId?: string;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { 
       hasError: true, 
@@ -26,39 +22,33 @@ class ErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 //     // Report error to analytics/monitoring service
     this.reportError(error, errorInfo);
-    
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
   }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
+        custom_map: {,
+  error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
       });
     }
   };
-
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorId: undefined });
   };
-
   private handleGoHome = () => {
     window.location.href = '/';
   };
-
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -90,7 +80,6 @@ class ErrorBoundary extends Component<Props, State> {
                 <Home className="w-4 h-4" />
                 Go Home
               </button>
-            </div>
             <button
               onClick={() => window.location.reload()}
               className="mt-4 text-gray-400 hover:text-white text-sm underline"
@@ -104,9 +93,7 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;

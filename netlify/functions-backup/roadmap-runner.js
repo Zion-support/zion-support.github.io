@@ -3,8 +3,8 @@ exports.config = {schedule: '*/10 * * * *'}
 };
 exports.handler = async () => {try {
     execSync('node automation/roadmap-orchestrator.cjs || true', {
-      stdio: 'inherit')
-      shell: true}
+      stdio: 'inherit'),
+  shell: true}
     });
     execSync('node automation/advanced-git-sync.cjs || true', {stdio: 'inherit')
       shell: true}

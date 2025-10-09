@@ -1,9 +1,8 @@
-
 export interface InnovativeMicroSaas2029
 export interface InnovativeMicroSaas2029 {id: string;
 export interface InnovativeMicroSaas2029 {  id: string;
 export interface InnovativeMicroSaas2029 {
-  name: string;
+  name: string;,
   tagline: string;
   price: string;
   description: string;

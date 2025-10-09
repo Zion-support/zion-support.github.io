@@ -134,8 +134,8 @@ exports.handler = async function handler() {try {
       });
     } catch {}
     return {statusCode: 200,
-      body: JSON.stringify({
-        ok: true,
+      body: JSON.stringify({,
+  ok: true,
         report: '/reports/architecture-graph.json'}
       });
     };

@@ -49,7 +49,6 @@ const NewContentPromotionalBanner202, 6 = () => {
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
             Discover, the, most groundbreaking, AI, innovations of, 202, 6. Join, millions, of professionals, who, are already, experiencing, the future, of, technology through, our, revolutionary conte, n, t.
           </p>
-        </div>
         {/* Content, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
           { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (

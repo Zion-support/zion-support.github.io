@@ -4,7 +4,6 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-
 export default [
   {
     ignores: [
@@ -71,7 +70,7 @@ export default [
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
+  globals: { ...globals.browser, ...globals.node },
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',

@@ -3,7 +3,6 @@
  * Error Boundary Configuration;
  * Centralized configuration for error handling across the application;
  */
-<<<<<<< HEAD
 export interface ErrorBoundaryConfig {
     // TODO: Add content
   }
@@ -11,14 +10,12 @@ export interface ErrorBoundaryConfig {
    * Whether to log errors to console
    */
   logErrors: boolean
-=======
 export interface ErrorBoundaryConfig {// TODO: Add content;}
 }
   /**
    * Whether to log errors to console;
    */;
   logErrors: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   /**
    * Whether to show detailed error messages;
    */,
@@ -38,48 +35,25 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
   /**
    * Maximum number of errors to store;
    */,
-
   maxStoredErrors: number
   /**
    * Custom error messages by error type;
    */,
-
-<<<<<<< HEAD
   customMessages: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, string>
-=======
   customMessages: Record;
           <string, string>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   /**
    * Fallback UI components;
    */
-<<<<<<< HEAD
   fallbackComponents: {
     // TODO: Add content
   }
   default: React.ComponentType
-          
-          
-          
-          
-          
-          
-          
-          
           <{ error: Error; resetError: () => void }>
     network: React.ComponentType<{ error: Error; resetError: () => void }>
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>
   }
-=======
   fallbackComponents: {// TODO: Add content;}
 };
   default: React.ComponentType;
@@ -87,7 +61,6 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Default error messages;
@@ -102,7 +75,6 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
 /**
  * Get error boundary configuration based on environment;
  */
-<<<<<<< HEAD
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     // TODO: Add content
   }
@@ -110,13 +82,11 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   return {
     // TODO: Add content
   }
-=======
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add content;}
 }
   const isDevelopment = process.env['NODE_ENV'] === 'development';
   return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   logErrors: true,
     showDetails: isDevelopment,
     reportErrors: !isDevelopment,
@@ -124,14 +94,11 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
     showErrorOverlay: isDevelopment,
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
-<<<<<<< HEAD
     fallbackComponents: {
     // TODO: Add content
   }
-=======
     fallbackComponents: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   default: DefaultErrorFallback,
       network: NetworkErrorFallback,
       notFound: NotFoundFallback;
@@ -141,26 +108,14 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
 /**
  * Default error fallback component;
  */
-<<<<<<< HEAD
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
     // TODO: Add content
   }
-=======
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
@@ -170,21 +125,11 @@ className="w-6 h-6 text-red-600"
             stroke="currentColor"
             viewBox="0 0 24 24"
 // >
-            
-          
-          
-          
-          
-          
-          
-          
-          
           <path strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M6 18L18 6M6 6l12 12"
 // /></svg>
-        </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
 // Oops! Something went wrong;
           </h2>
@@ -215,26 +160,14 @@ className="w-6 h-6 text-red-600"
 /**
  * Network error fallback component;
  */
-<<<<<<< HEAD
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
     // TODO: Add content
   }
-=======
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full">
@@ -244,15 +177,6 @@ className="w-6 h-6 text-yellow-600"
             stroke="currentColor"
             viewBox="0 0 24 24"
 // >
-            
-          
-          
-          
-          
-          
-          
-          
-          
           <path strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
@@ -278,26 +202,14 @@ className="w-6 h-6 text-yellow-600"
 /**
  * Not found error fallback component;
  */
-<<<<<<< HEAD
 function NotFoundFallback(): JSX.Element {
     // TODO: Add content
   }
-=======
 function NotFoundFallback(): JSX.Element {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full text-center">
         <h1 className="text-6xl font-bold text-gray-900">404</h1>
@@ -326,7 +238,6 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
 /**
  * Get error type from error object;
  */
-<<<<<<< HEAD
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
     // TODO: Add content
   }
@@ -352,7 +263,6 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   }
   if (error.message.includes('validation')) {
     // TODO: Add content
-=======
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {// TODO: Add content;}
 }
   if (error.message.includes('Network') || error.message.includes('fetch')) {// TODO: Add content;}
@@ -374,7 +284,6 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   if (error.message.includes('validation')) {// TODO: Add content;}
 }
     return 'validation';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return 'validation'
   }
@@ -383,29 +292,18 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
 /**
  * Format error for logging;
  */
-<<<<<<< HEAD
 export function formatErrorForLogging(error: Error): Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown> {
     // TODO: Add content
   }
   return {
     // TODO: Add content
   }
-=======
 export function formatErrorForLogging(error: Error): Record;
           <string, unknown> {// TODO: Add content;}
 }
   return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   message: error.message,
     stack: error.stack,
     name: error.name,

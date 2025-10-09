@@ -1,4 +1,3 @@
-
       'Quantum-secured space communication',
     id: 'quantum - space - communications',
     name: 'Quantum Space Communications',
@@ -140,8 +139,8 @@
     rating: 4 && 4.8,
     reviews: 28,
   },
-];      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup && ziontechgroup.com'
+];      mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com'
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,

@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface UserExperienceEnhancerProps {
   enableSmoothScrolling?: boolean;
   enableLoadingStates?: boolean;
@@ -8,7 +7,6 @@ interface UserExperienceEnhancerProps {
   enableAnalytics?: boolean;
   enableNotifications?: boolean;
 }
-
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   enableSmoothScrolling = true,
   enableLoadingStates = true,
@@ -18,21 +16,17 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 }) => {
   const [isOnline, setIsOnline] = useState(true);
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-
   // Handle online/offline status
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
-
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
-
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
-
   // Smooth scrolling
   useEffect(() => {
     if (enableSmoothScrolling) {
@@ -41,7 +35,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         html {
           scroll-behavior: smooth;
         }
-        
         @media (prefers-reduced-motion: reduce) {
           html {
             scroll-behavior: auto;
@@ -51,12 +44,10 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       document.head.appendChild(style);
     }
   }, [enableSmoothScrolling]);
-
   // Loading states management
   const setLoading = useCallback((key: string, loading: boolean) => {
     setLoadingStates(prev => ({ ...prev, [key]: loading }));
   }, []);
-
   // Global loading state
   useEffect(() => {
     if (enableLoadingStates) {
@@ -72,13 +63,11 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       });
     }
   }, [enableLoadingStates, setLoading]);
-
   // Error boundary enhancement
   useEffect(() => {
     if (enableErrorBoundaries) {
       const handleError = (event: ErrorEvent) => {
         // console.error('Global error caught:', event.error);
-        
         // Send error to analytics if available
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
@@ -87,10 +76,8 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           });
         }
       };
-
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
         // console.error('Unhandled promise rejection:', event.reason);
-        
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
             description: event.reason?.message || 'Unhandled promise rejection',
@@ -98,17 +85,14 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           });
         }
       };
-
       window.addEventListener('error', handleError);
       window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
       return () => {
         window.removeEventListener('error', handleError);
         window.removeEventListener('unhandledrejection', handleUnhandledRejection);
       };
     }
   }, [enableErrorBoundaries]);
-
   // Analytics enhancement
   useEffect(() => {
     if (enableAnalytics && typeof window !== 'undefined') {
@@ -128,17 +112,14 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           }
         }
       };
-
       // Track scroll depth
       let maxScrollDepth = 0;
       const handleScroll = () => {
         const scrollDepth = Math.round(
           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
         );
-        
         if (scrollDepth > maxScrollDepth) {
           maxScrollDepth = scrollDepth;
-          
           // Track milestone scroll depths
           if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
             if ('gtag' in window) {
@@ -171,7 +152,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           }
         }
       };
-
       // Track time on page
       const startTime = Date.now();
       const handleBeforeUnload = () => {
@@ -184,11 +164,9 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           });
         }
       };
-
       document.addEventListener('visibilitychange', handleVisibilityChange);
       window.addEventListener('scroll', handleScroll, { passive: true });
       window.addEventListener('beforeunload', handleBeforeUnload);
-
       return () => {
         document.removeEventListener('visibilitychange', handleVisibilityChange);
         window.removeEventListener('scroll', handleScroll);
@@ -196,7 +174,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       };
     }
   }, [enableAnalytics]);
-
   // Notifications
   useEffect(() => {
     if (enableNotifications && !isOnline) {
@@ -205,18 +182,15 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       notification.className = 'fixed top-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded-lg shadow-lg z-50';
       notification.textContent = 'You are currently offline. Some features may not be available.';
       document.body.appendChild(notification);
-
       const timer = setTimeout(() => {
         notification.remove();
       }, 5000);
-
       return () => {
         clearTimeout(timer);
         notification.remove();
       };
     }
   }, [isOnline, enableNotifications]);
-
   // Performance monitoring
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -252,16 +226,12 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           }
         }
       });
-
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
       return () => {
         observer.disconnect();
       };
     }
   }, []);
-
   return null;
 };
-
 export default UserExperienceEnhancer;

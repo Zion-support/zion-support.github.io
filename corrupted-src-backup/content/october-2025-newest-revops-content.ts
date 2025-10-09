@@ -1,5 +1,5 @@
 export interface RevOpsContent {
-  id: string;
+  id: string;,
   title: string;
   description: string;
   category: string;
@@ -22,7 +22,6 @@ export interface RevOpsContent {
     link: string;
   };
 }
-
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
     id: 'ai-revops-automation-2025',
@@ -93,15 +92,12 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
     },
   },
 ];
-
 export const getFeaturedRevOpsContent = () => {
   return octoberNewestRevOpsContent.filter(content => content.featured);
 };
-
 export const getBreakingRevOpsContent = () => {
   return octoberNewestRevOpsContent.filter(content => content.tags.includes('Breaking'));
 };
-
 export const getAllRevOpsContent = () => {
   return octoberNewestRevOpsContent;
 };

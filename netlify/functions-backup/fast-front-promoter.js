@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'fast-front-promoter',
         source: event.source || 'unknown',
-        promotion: {
-          status: 'active',
+        promotion: {,
+  status: 'active',
           promotions: 0,
           lastPromotion: new Date().toISOString()}
         },

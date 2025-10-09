@@ -110,7 +110,6 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {
               <Target, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />
               <span, className="te, x, t-sm, fon, t-bold, tex, t-yell, o, w-3, 0, 0">6, MASTERCLASS, GUIDES</sp, a, n>
             </div>
-          </div>
           <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Ultimate, 202, 6
           </h2>

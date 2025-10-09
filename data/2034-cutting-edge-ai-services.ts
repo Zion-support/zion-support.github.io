@@ -1,7 +1,6 @@
-
   id: string,
   name: string,
-  description: string;
+  description: string;,
   category: | 'AI Consciousness'
     | 'AI Emotional Intelligence'
     | 'AI Creativity'

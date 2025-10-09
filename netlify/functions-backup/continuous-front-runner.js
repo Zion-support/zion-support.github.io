@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'continuous-front-runner',
         source: event.source || 'unknown',
-        running: {
-          status: 'continuous',
+        running: {,
+  status: 'continuous',
           cycles: 0,
           lastCycle: new Date().toISOString()}
         },

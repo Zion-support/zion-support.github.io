@@ -1,8 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -18,7 +16,6 @@ const PagePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-=======
 import { Link } from 'react-router-dom';
 import { Star, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -26,7 +23,6 @@ import Footer from '../components/Footer';
 const Support: React.FC = () => {return (}
     <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="pt-20">
@@ -42,15 +38,6 @@ const Support: React.FC = () => {return (}
               to="/contact"
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
           <Phone className="w-5 h-5 mr-2" />
 // Get Free Consultation;
           </Link>
@@ -60,14 +47,10 @@ const Support: React.FC = () => {return (}
               <Phone className="w-4 h-4 mr-2" />
 // (302) 464-0950;
           </a>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         </section>
-
       </main>
       <Footer />
     </div>
   );
 };
-
 export default PagePage;

@@ -1,8 +1,7 @@
-
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
     ],
     realImplementation: true,
-  id: string;
+  id: string;,
   name: string;
   tagline: string;
   description: string;

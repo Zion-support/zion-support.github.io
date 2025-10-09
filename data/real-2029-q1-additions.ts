@@ -1,4 +1,3 @@
-
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -83,8 +82,8 @@
   };
       'Modern alternative to legacy APM addons with focused insights.'
     targetAudience: 'DBA, Backend, Platform'
-    trialDays: 14;
-    setupTime: '30 minutes'
+    trialDays: 14;,
+  setupTime: '30 minutes'
     category: 'Observability'
     realService: true,
     technology: ['Postgres', 'MySQL', 'OpenTelemetry']

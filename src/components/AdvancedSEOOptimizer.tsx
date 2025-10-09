@@ -1,19 +1,12 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-
 interface SEOProps {
-=======
 'use client';
 interface AdvancedSEOOptimizerProps {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
-<<<<<<< HEAD
-
-=======
   ogImage?: string;
   structuredData?: unknown;
   author?: string;
@@ -33,12 +26,9 @@ interface AdvancedSEOOptimizerProps {// TODO: Add content;}
 }
 const AdvancedSEOOptimizer: React.FC;
           <AdvancedSEOOptimizerProps> = ({// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
-
 const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
-<<<<<<< HEAD
   description = 'Leading provider of AI and IT solutions for modern enterprises',
   keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
   canonicalUrl
@@ -46,7 +36,6 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
   useEffect(() => {
     // Update document title
     document.title = title;
-    
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -55,7 +44,6 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', description);
-    
     // Update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -64,7 +52,6 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
       document.head.appendChild(metaKeywords);
     }
     metaKeywords.setAttribute('content', keywords.join(', '));
-    
     // Update canonical URL
     if (canonicalUrl) {
       let canonical = document.querySelector('link[rel="canonical"]');
@@ -76,8 +63,6 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
       canonical.setAttribute('href', canonicalUrl);
     }
   }, [title, description, keywords, canonicalUrl]);
-
-=======
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
@@ -269,8 +254,6 @@ if (!document.querySelector('meta[name="viewport"]')) {}
     // Add content security policy;
     updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return null;
 };
-
 export default AdvancedSEOOptimizer;

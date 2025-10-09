@@ -1,10 +1,7 @@
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-
-
 function processFile(filePath) {
   try {
-
     // Fix remaining import path issues
     const replacements = [
       // Fix root-level files
@@ -17,30 +14,23 @@ function processFile(filePath) {
         replacement: "import Link from './utils/link';",
       },
     ];
-
     replacements.forEach(({ pattern, replacement }) => {
       if (pattern.test(content)) {
         content = content.replace(pattern, replacement);
         modified = true;
       }
     });
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-
       return true;
     }
     return false;
   } catch (error) {
-
     return false;
   }
 }
-
 function processDirectory(dirPath) {
-
   items.forEach(item => {
-
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -49,9 +39,6 @@ function processDirectory(dirPath) {
       }
     }
   });
-
   return totalFixed;
 }
-
 // Process the app directory
-

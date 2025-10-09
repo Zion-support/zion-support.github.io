@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'hyper-front-index-accelerator',
         source: event.source || 'unknown',
-        acceleration: {
-          status: 'hyper',
+        acceleration: {,
+  status: 'hyper',
           indexes: 0,
           lastAcceleration: new Date().toISOString()}
         },

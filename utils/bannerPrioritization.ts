@@ -7,8 +7,6 @@
  * - User engagement metrics
  * - Performance considerations
  */
-
 export interface BannerMetadata {
   id: string;
-
 }

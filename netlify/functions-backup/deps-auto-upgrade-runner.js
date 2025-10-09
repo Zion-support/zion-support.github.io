@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'deps-auto-upgrade-runner',
         source: event.source || 'unknown',
-        upgrade: {
-          status: 'checking',
+        upgrade: {,
+  status: 'checking',
           dependencies: 0,
           updatesAvailable: 0,
           lastCheck: new Date().toISOString()}

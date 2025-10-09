@@ -7,9 +7,8 @@
  * - Dynamic banner loading
  * - Banner analytics tracking
  */
-
 export interface BannerConfig {
-  id: string;
+  id: string;,
   name: string;
   priority: number; // 1 = highest priority, 100 = lowest
   category: 'breakthrough' | 'content' | 'success-story' | 'feature' | 'announcement';
@@ -24,14 +23,10 @@ export interface BannerConfig {
     lastModified?: string;
   };
 }
-
-
 export class BannerRegistry {
   private banners: Map<string, BannerInstance> = new Map();
   private categories: Map<string, string[]> = new Map();
   private priorityQueue: string[] = [];
   private maxConcurrentBanners: number = 3;
   private loadingPromises: Map<string, Promise<void>> = new Map();
-
-
 }

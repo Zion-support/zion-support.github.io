@@ -4,7 +4,7 @@
  * Provides comprehensive user behavior tracking and insights
  */
 interface UserEvent {
-  id: string;
+  id: string;,
   type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';
   category: string;
   action: string;

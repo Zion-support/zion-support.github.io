@@ -111,7 +111,6 @@ const September30MegaBanner202, 5 = () => {
           <p, classNam, e = "te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
             Transform, your, business with, productio, n-ready, AI, achieving <strong, className="te, x, t-whi, t, e">1, 0,000x, performance, gains, 95%+ accura, c, y, and, enterpris, e-scale, deploymen, t</stro, n, g>
           </p>
-        </div>
         {/* Article, Gri, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-12">
           { breakthroughArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (

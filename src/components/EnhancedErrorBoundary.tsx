@@ -1,18 +1,13 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-<<<<<<< HEAD
 interface ErrorBoundaryState {
-  hasError: boolean;
+  hasError: boolean;,
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
-
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-
-=======
 interface Props {// TODO: Add content;}
 };
   children: ReactNode;
@@ -32,36 +27,25 @@ class EnhancedErrorBoundary extends Component;
           <Props, State> {// TODO: Add content;}
 }
   constructor(props: Props) {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
-
 class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-<<<<<<< HEAD
-
     this.state = { hasError: false, error: null, errorInfo: null };
   }
-
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return { hasError: true, error };
-
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
   }
-
   render() {
     if (this.state.hasError) {
-
       return this.props.fallback || (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300">Please refresh the page and try again.</p>
-
-=======
     this.state = {// TODO: Add content;}
 };
   hasError: false,
@@ -188,7 +172,6 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       return (
     <div>Coming Soon</div>
   )
-        
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-slate-800/50 backdrop-blur-md border border-red-500/20 rounded-lg p-8 text-center">
             <div className="mb-6">
@@ -198,32 +181,13 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           </h1>
               <p className="text-gray-300 mb-4">
 // We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
-            </div>
             <div className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={this.handleRetry}
                   className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-200"
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <RefreshCw className="w-4 h-4 mr-2" />
 // Try Again;
           </button>
@@ -231,15 +195,6 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                   onClick={this.handleReload}
                   className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <RefreshCw className="w-4 h-4 mr-2" />
 // Reload Page;
           </button>
@@ -247,15 +202,6 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                   onClick={this.handleGoHome}
                   className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors duration-200"
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <Home className="w-4 h-4 mr-2" />
 // Go Home;
           </button>
@@ -267,15 +213,6 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                   </p>
                   <p className="text-xs text-gray-500">
 // Please include this ID when contacting support.
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
                 </div>
               )}
@@ -309,14 +246,11 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           </a>
               </p>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </div>
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;

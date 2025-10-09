@@ -7,13 +7,11 @@ impo, r, t {
   Z, a, p,
   ArrowRig, h, t,
 } fr, o, m 'luci, d, e-rea, c, t';
-
 const October2025CognitiveRevolutionBanne, r: React.FC = () => { 
   return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ }
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent, 5, 0%)]' />
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 70% 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent, 5, 0%)]' />
-
       {/* Conte, n, t */}
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-6'>
         <div, className='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'>
@@ -24,8 +22,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
                 <Brain, className='w-1, 2, h-12, tex, t-purp, l, e-400, animat, e-pul, s, e' />
                 <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, absolut, e -t, o, p-1 -rig, h, t-1, animat, e-boun, c, e' />
               </div>
-            </div>
-
             <div, className='fl, e, x-1, mi, n-w-0'>
               <div, className='flex, item, s-center, ga, p-2, m, b-2, fle, x-wr, a, p'>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'>
@@ -40,11 +36,9 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
                   $4.7B, VALUE, DELIVERED
                 </sp, a, n>
               </div>
-
               <h2, className='te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t'>
                 🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence
               </h2>
-
               <p, className='te, x, t-purp, l, e-100, tex, t-sm, s, m:te, x, t-base, leadin, g-relaxed, m, b-3'>
                 <span, className='fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'>
                   JUST, PUBLISHED, TODAY:
@@ -64,7 +58,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
                 Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+
                 val, u, e), cognitive, enterprise, transformation, and, rea, l-world, telecom, success story, with, transformational results!
               </p>
-
               {/* Featured, content, links */}
               <div, classNam, e = 'flex, fle, x-wrap, ga, p-3, tex, t-sm'>
                 <Link, t, o='/bl, o, g/ai-20, 2, 5-multiage, n, t-enterpri, s, e-orchestrati, o, n-revoluti, o, n'
@@ -76,9 +69,7 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
                   </sp, a, n>
                   <Link, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </Li, n, k>
-
                 <span, className='te, x, t-purp, l, e-4, 0, 0'>•</sp, a, n>
-
                 <Link, t, o='/bl, o, g/ai-20, 2, 5-cogniti, v, e-computi, n, g-enterpri, s, e-transformati, o, n'
                   className='inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hove, r:te, x, t-white, transitio, n-colors, grou, p'
                 >
@@ -88,9 +79,7 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
                   </sp, a, n>
                   <Link, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </Li, n, k>
-
                 <span, className='te, x, t-purp, l, e-4, 0, 0'>•</sp, a, n>
-
                 <Link, t, o='/ca, s, e-studi, e, s/glob, a, l-telec, o, m-cogniti, v, e-transformati, o, n-4-7-billi, o, n'
                   className='inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hove, r:te, x, t-white, transitio, n-colors, grou, p'
                 >
@@ -103,7 +92,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Right, sid, e - CTA, But, t, o, n */}
           <div, classNam, e = 'fl, e, x-shri, n, k-0'>
             <Link, t, o='/bl, o, g'
@@ -114,7 +102,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
             </Li, n, k>
           </div>
         </div>
-
         {/* Bottom, stats, b, a, r */}
         <div, classNam, e = 'mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30'>
           <div, className='grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r'>
@@ -140,5 +127,4 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
     </di, v>
   );
 };
-
 export default October2025CognitiveRevolutionBanner;

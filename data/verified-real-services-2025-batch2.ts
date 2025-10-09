@@ -1,5 +1,4 @@
-
-export interface VerifiedRealService2025Batch2 {id: string;
+export interface VerifiedRealService2025Batch2 {id: string;,
   name: string;
   tagline: string,
   price: string,

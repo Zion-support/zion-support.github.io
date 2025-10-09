@@ -3,8 +3,8 @@ exports.handler = async function (event, context) {try {
     const timestamp = new Date().toISOString()}
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'anchor_links_auto_fixer function executed successfully',
+      body: JSON.stringify({,
+  message: 'anchor_links_auto_fixer function executed successfully',
         timestamp: timestamp,
         function: 'anchor_links_auto_fixer'}
       });

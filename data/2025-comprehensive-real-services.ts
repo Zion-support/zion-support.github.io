@@ -1,5 +1,4 @@
-
-];      phone: '+1 302 464 0950'
+];      phone: '+1 302 464 0950',
   id: string;
   name: string,
   tagline: string,

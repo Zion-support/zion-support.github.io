@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
-
 // List of page files that still need fixing
 const filesToFix = [
   '/workspace/app/offline/page.tsx',
@@ -9,15 +7,11 @@ const filesToFix = [
   '/workspace/app/team/page.tsx',
   '/workspace/app/terms/page.tsx',
 ];
-
 // // Function to process a single file
 function processFile(filePath) {
   try {
-
     // Remove any broken metadata lines
-
     for (let i = 0; i < lines.length; i++) {
-
       // Skip lines that look like broken metadata
       if (
         line.includes('const metadata: Metadata = {') ||
@@ -36,21 +30,16 @@ function processFile(filePath) {
       ) {
         continue;
       }
-
       filteredLines.push(line);
     }
-
     content = filteredLines.join('\n');
-
     // Clean up extra empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
     // Fix function declarations
     content = content.replace(
       /export default function (\w+)\(\) \{/,
       'const $1: React.FC = () => {'
     );
-
     // Add proper export at the end if missing
     if (!content.includes('export default') && content.includes('const ')) {
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];
@@ -59,24 +48,20 @@ function processFile(filePath) {
         modified = true;
       }
     }
-
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
       //       return true;
     }
-
     return false;
   } catch (error) {
     //     return false;
   }
 }
-
 // Process all files
 filesToFix.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
-
 // 
 }

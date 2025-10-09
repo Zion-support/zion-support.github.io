@@ -1,23 +1,16 @@
 'use client';
-<<<<<<< HEAD
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface ErrorBoundaryState {
-  hasError: boolean;
+  hasError: boolean;,
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
-
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
 class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
-
-=======
 interface Props {// TODO: Add content;}
 };
   children: ReactNode;
@@ -34,30 +27,22 @@ class GlobalErrorBoundary extends Component;
 }
   constructor(props: Props) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
-<<<<<<< HEAD
-
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
   }
-
   render() {
     if (this.state.hasError) {
-
       return this.props.fallback || (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300">Please refresh the page and try again.</p>
-
-=======
   static getDerivedStateFromError(error: Error): State {// TODO: Add content;}
 }
     return { hasError: true, error };
@@ -89,17 +74,8 @@ class GlobalErrorBoundary extends Component;
         return this.props.fallback;
       }
       return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-        
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full text-center">
             {/* Error Icon */}
@@ -107,7 +83,6 @@ class GlobalErrorBoundary extends Component;
               <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
               </svg>
-            </div>
             {/* Error Message */}
             <h1 className="text-2xl font-bold text-white mb-4">
 // Something went wrong;
@@ -120,15 +95,6 @@ class GlobalErrorBoundary extends Component;
           <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
 // Error Details (Development)
-                
-          
-          
-          
-          
-          
-          
-          
-          
           </summary>
                 <div className="mt-2 p-4 bg-slate-800 rounded-lg text-xs text-red-300 font-mono overflow-auto">
                   <div className="mb-2">
@@ -178,14 +144,11 @@ class GlobalErrorBoundary extends Component;
 //                 (302) 464-0950;
           </a>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </div>
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default GlobalErrorBoundary;

@@ -1,7 +1,7 @@
 import React from 'react';
 impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 export interface FeaturedItem { 
-  title: string;
+  title: string;,
   category: string;
   li, n, k: string;
   metri, c, s ?  : str, i, n, g;
@@ -175,7 +175,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
             </Li, n, k>
           )}
         </div>
-      </div>
     </div>
   );
 };

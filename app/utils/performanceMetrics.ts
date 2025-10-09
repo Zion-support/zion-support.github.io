@@ -4,7 +4,7 @@
  * Advanced performance tracking and monitoring for web applications
  */
 export interface PerformanceMetric {
-  name: string;
+  name: string;,
   value: number;
   unit: string;
   timestamp: Date;

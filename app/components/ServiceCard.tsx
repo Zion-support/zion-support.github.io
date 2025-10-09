@@ -1,9 +1,8 @@
 'use client';
 import React, { memo } from 'react';
 import { LucideIcon, ArrowRight } from 'lucide-react';
-
 interface ServiceCardProps {
-  title: string;
+  title: string;,
   description: string;
   icon: LucideIcon | string;
   price: string;
@@ -14,7 +13,6 @@ interface ServiceCardProps {
   color?: string;
   popular?: boolean;
 }
-
 const ServiceCard: React.FC<ServiceCardProps> = memo(({
   title,
   description,
@@ -39,7 +37,6 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
     orange: 'text-orange-400 hover:text-orange-300',
     yellow: 'text-yellow-400 hover:text-yellow-300'
   };
-
   const bgColorClasses = {
     cyan: 'bg-cyan-400/20',
     pink: 'bg-pink-400/20',
@@ -52,7 +49,6 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
     orange: 'bg-orange-400/20',
     yellow: 'bg-yellow-400/20'
   };
-
   return (
     <article 
       className="quantum-card p-4 sm:p-6 energy-pulse group relative"
@@ -64,22 +60,18 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
           Popular
         </div>
       )}
-      
       <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line" aria-hidden="true">
         {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
       </div>
-      
       <h3 
         id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
         className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text"
       >
         {title}
       </h3>
-      
       <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
         {description}
       </p>
-      
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
         <ul className="text-sm text-gray-300 space-y-1">
@@ -95,8 +87,6 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
             </li>
           )}
         </ul>
-      </div>
-      
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
         <div className="flex flex-wrap gap-1">
@@ -115,14 +105,12 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
           )}
         </div>
       </div>
-      
       <div className="text-center mb-4">
         <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price">
           {price}
         </div>
         <div className="text-xs text-gray-400">Category: {category}</div>
       </div>
-      
       <a
         href={href}
         className={`${colorClasses[color as keyof typeof colorClasses]} font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded inline-flex items-center justify-center w-full py-2`}
@@ -134,7 +122,5 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
     </article>
   );
 });
-
 ServiceCard.displayName = 'ServiceCard';
-
 export default ServiceCard;

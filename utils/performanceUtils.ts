@@ -1,7 +1,6 @@
 /**
  * Performance utility functions
  */
-
 export const measurePerformance = (name: string, fn: () => void) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     //     const start = performance.now();
@@ -11,7 +10,6 @@ export const measurePerformance = (name: string, fn: () => void) => {
     fn();
   }
 };
-
 export const getPageLoadTime = (): number | null => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     //     const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -19,7 +17,6 @@ export const getPageLoadTime = (): number | null => {
   }
   return null;
 };
-
 export const optimizeImages = () => {
   if (typeof window !== 'undefined') {
     const _images = document.querySelectorAll('img');

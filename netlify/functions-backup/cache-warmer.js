@@ -149,8 +149,8 @@ exports.handler = async function (event, context) {const path = require('path');
     const _warmedFunctions = baseUrl ? await warmUrls(functionUrls) : [];
     const summary = {generatedAt: new Date().toISOString(),
       baseUrl,
-      counts: {
-        pages: warmedPages.length,
+      counts: {,
+  pages: warmedPages.length,
         functions: warmedFunctions.length}
       },
       ok: warmedPages.filter(x => x.ok).length +

@@ -3,8 +3,8 @@ exports.handler = async function (event, context) {try {
     const timestamp = new Date().toISOString()}
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'marketing_and_features_promo function executed successfully',
+      body: JSON.stringify({,
+  message: 'marketing_and_features_promo function executed successfully',
         timestamp: timestamp,
         function: 'marketing_and_features_promo'}
       });

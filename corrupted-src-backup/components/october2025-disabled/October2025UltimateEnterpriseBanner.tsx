@@ -27,7 +27,6 @@ const October2025UltimateEnterpriseBanne, r = () => {
             <span, classNam, e = "te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</span>, a, n, d 
             <span, classNam, e = "te, x, t-bl, u, e-400, fon, t-bo, l, d"> transformative, result, s</sp, a, n>
           </p>
-        </div>
         {/* Content, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">
           {/* Mul, t, i-Cloud, Intelligence, Ca, r, d */}

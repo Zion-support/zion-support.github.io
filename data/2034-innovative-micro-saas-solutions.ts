@@ -1,4 +1,3 @@
-
 export type InnovativeMicroSaas =
 export type InnovativeMicroSaas = {;
   id: string,
@@ -89,8 +88,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   },
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
-    category: 'Human Resources'
-    pricing: { starter: '$69/mo' }
+    category: 'Human Resources',
+  pricing: { starter: '$69/mo' }
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync']
     integrations: ['Greenhouse', 'Lever']
     useCases: ['Faster hiring', 'Bias reduction']

@@ -7,8 +7,8 @@ exports.handler = async function (event, context) {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-      body: JSON.stringify({
-        message: 'Todo scanner runner executed successfully',
+      body: JSON.stringify({,
+  message: 'Todo scanner runner executed successfully',
         timestamp: new Date().toISOString(),
         function: 'todo-scanner-runner',
         source: event.source || 'unknown',

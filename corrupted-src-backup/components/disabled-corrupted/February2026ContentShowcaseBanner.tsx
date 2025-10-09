@@ -85,7 +85,6 @@ const February2026ContentShowcaseBanne, r = () => {
               </di, v>
             ))}
           </div>
-        </div>
         {/* Featured, Content, Cards */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (

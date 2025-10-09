@@ -1,5 +1,4 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
-
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -7,15 +6,12 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
   const { amount, currency = 'usd' } = req.body || {};
-
   if (!amount) {
     res.statusCode = 400;
     res.json({ error: 'Amount is required' });
     return;
   }
-
   try {
     const paymentIntent = {
       id: 'pi_' + Date.now(),
@@ -23,7 +19,6 @@ async function handler(req, res) {
       currency,
       status: 'requires_payment_method',
     };
-
     res.statusCode = 200;
     res.json({ paymentIntent });
   } catch {
@@ -31,5 +26,4 @@ async function handler(req, res) {
     res.json({ error: 'Failed to create payment intent' });
   }
 }
-
 export default withErrorLogging(handler);

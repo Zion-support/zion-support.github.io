@@ -4,7 +4,7 @@
  * Provides common validation functions for forms and data
  */
 export interface ValidationResult {
-  isValid: boolean;
+  isValid: boolean;,
   errors: string[];
 }
 /**
@@ -219,41 +219,32 @@ export const validators = {
     message
   })
 };
-
 /**
  * Validate password strength
  */
 export function isValidPassword(password: string): boolean {
   if (!password || password.length < 8) return false;
-  
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-  
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
-
 /**
  * Sanitize user input
  */
 export function sanitizeInput(input: string | null | undefined, maxLength?: number): string | null {
   if (!input) return null;
-  
   // Trim whitespace
   let sanitized = input.trim();
-  
   // Remove null bytes and other control characters
   sanitized = sanitized.replace(/[\x00-\x1F\x7F]/g, '');
-  
   // Enforce maximum length if specified
   if (maxLength && sanitized.length > maxLength) {
     sanitized = sanitized.substring(0, maxLength);
   }
-  
   return sanitized || null;
 }
-
 /**
  * Validation result interface
  */
@@ -261,7 +252,6 @@ export interface ValidationResult {
   isValid: boolean;
   error?: string;
 }
-
 /**
  * Validate email with detailed result
  */
@@ -277,7 +267,6 @@ export function validateEmail(email: string): ValidationResult {
   }
   return { isValid: true };
 }
-
 /**
  * Validate URL with detailed result
  */
@@ -290,7 +279,6 @@ export function validateURL(url: string): ValidationResult {
   }
   return { isValid: true };
 }
-
 /**
  * Validate string length with detailed result
  */
@@ -306,7 +294,6 @@ export function validateLength(value: string, min: number, max: number, fieldNam
   }
   return { isValid: true };
 }
-
 /**
  * Validate password with detailed result
  */
@@ -325,7 +312,6 @@ export function validatePassword(password: string): ValidationResult {
   }
   return { isValid: true };
 }
-
 /**
  * Sanitize HTML with detailed result
  */
@@ -333,7 +319,6 @@ export function sanitizeHTML(html: string): string {
   if (!html) return '';
   return sanitizeHtml(html);
 }
-
 /**
  * Validate date with detailed result
  */
@@ -341,17 +326,14 @@ export function validateDate(dateString: string): ValidationResult {
   if (!dateString) {
     return { isValid: false, error: 'Date is required' };
   }
-  
   // Check if it's a valid ISO date format (YYYY-MM-DD)
   if (!/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
     return { isValid: false, error: 'Date must be in YYYY-MM-DD format' };
   }
-  
   const date = new Date(dateString);
   if (isNaN(date.getTime())) {
     return { isValid: false, error: 'Invalid date format' };
   }
-  
   // Check if the date is actually valid (e.g., 2025-02-30 should be invalid)
   const [year, month, day] = dateString.split('-').map(Number);
   const actualDate = new Date(year, month - 1, day);
@@ -360,10 +342,8 @@ export function validateDate(dateString: string): ValidationResult {
       actualDate.getDate() !== day) {
     return { isValid: false, error: 'Invalid date' };
   }
-  
   return { isValid: true };
 }
-
 /**
  * Validate credit card with detailed result
  */
@@ -371,16 +351,13 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
   if (!cardNumber) {
     return { isValid: false, error: 'Credit card number is required' };
   }
-  
   // Remove all non-digit characters for validation
   const cleanedNumber = cardNumber.replace(/\D/g, '');
-  
   if (!isValidCreditCard(cleanedNumber)) {
     return { isValid: false, error: 'Invalid credit card number' };
   }
   return { isValid: true };
 }
-
 /**
  * Validate JSON with detailed result
  */
@@ -395,7 +372,6 @@ export function validateJSON(jsonString: string): ValidationResult {
     return { isValid: false, error: 'Invalid JSON format' };
   }
 }
-
 /**
  * Validate required field with detailed result
  */
@@ -408,7 +384,6 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
   }
   return { isValid: true };
 }
-
 /**
  * Composite validation
  */
@@ -421,7 +396,6 @@ export function validateComposite(value: unknown, validators: Array<(val: unknow
   }
   return { isValid: true };
 }
-
 /**
  * Async validation
  */

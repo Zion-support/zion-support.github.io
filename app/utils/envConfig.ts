@@ -4,7 +4,7 @@
  * Provides type-safe access to environment variables with validation
  */
 export interface EnvConfig {
-  nodeEnv: 'development' | 'production' | 'test';
+  nodeEnv: 'development' | 'production' | 'test';,
   apiUrl: string;
   apiKey?: string;
   enableAnalytics: boolean;

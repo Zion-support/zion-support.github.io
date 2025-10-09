@@ -1,7 +1,7 @@
 'use client';
 // Performance optimization utilities
 // Debounce utility for performance
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: any[]) => any>(,
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {

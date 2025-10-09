@@ -9,7 +9,6 @@ impo, r, t {
   GlobeAltIc, o, n, 
   ArrowRightIc, o, n 
 } fr, o, m '@heroico, n, s/rea, c, t/24/outli, n, e';
-
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => { 
   return (
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }
@@ -18,7 +17,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
         <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
       </div>
-
       <div, classNam, e = "container, m, x-auto, relative, z-10">
         {/* Breaking, News, Badge */}
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
@@ -29,19 +27,15 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             </sp, a, n>
             <span, className="te, x, t-r, e, d-200, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">🔥 Breaking, New, s - Octob, e, r , 1, 20, 2, 5</sp, a, n>
           </div>
-        </div>
-
         {/* Main, Headlin, e */}
         <h2, classNam, e = "te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t">
           <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">
             Autonomous, Supply, Chain Revoluti, o, n
           </sp, a, n>
         </h2>
-
         <p, className="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o">
           Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e
         </p>
-
         {/* Key, Metrics, Gr, i, d */}
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r:bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">
@@ -51,7 +45,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             </div>
             <div, className="te, x, t-emera, l, d-100, tex, t-sm, fon, t-medi, u, m">Annual, Value, Creation</div>
           </div>
-
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r:bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
               <ChartBarIcon, className="w-8 h-8, tex, t-gre, e, n-3, 0, 0" /> />
@@ -59,7 +52,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             </div>
             <div, classNam, e = "te, x, t-te, a, l-100, tex, t-sm, fon, t-medi, u, m">ROI, in, 18 Mont, h, s</div>
           </div>
-
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
               <CheckCircleIcon, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0" /> />
@@ -67,7 +59,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             </div>
             <div, className="te, x, t-cy, a, n-100, tex, t-sm, fon, t-medi, u, m">On-Time, Delivery, Rate</div>
           </div>
-
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r:bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
               <TruckIcon, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0" /> />
@@ -76,7 +67,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             <div, className="te, x, t-emera, l, d-100, tex, t-sm, fon, t-medi, u, m">Cost, Reductio, n</div>
           </div>
         </div>
-
         {/* Revolutionary, Capabilit, i, e, s */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30">
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3">
@@ -84,7 +74,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             Revolutionary, A, I-Powered, Capabilitie, s
             <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" /> />
               </
-          
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/20, hove, r:bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-a, l, l">
               <div, className="flex, item, s-center, ga, p-3, m, b-3">
@@ -106,7 +95,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">
               <div, className="flex, item, s-center, ga, p-3, m, b-3">
                 <ClockIcon, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" /> />
@@ -127,7 +115,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-te, a, l-4, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-a, l, l">
               <div, className="flex, item, s-center, ga, p-3, m, b-3">
                 <GlobeAltIcon, className="w-6 h-6, tex, t-te, a, l-4, 0, 0" <h4, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Complete, Visibilit, y</h4>
@@ -149,7 +136,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Fortune, 100, Success Story, Spotligh, t */}
         <div, className="bg-gradie, n, t-to-br, fro, m-yell, o, w-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-yell, o, w-4, 0, 0/50">
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
@@ -160,7 +146,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Fortune, 100, Retail Transformati, o, n</h3>
             </div>
           </div>
-
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">
             <d, i, v>
               <h4, className="te, x, t-xl, fon, t-bold, tex, t-yell, o, w-200, m, b-3">The, Challeng, e</h4>
@@ -183,7 +168,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <d, i, v>
               <h4, classNam, e = "te, x, t-xl, fon, t-bold, tex, t-gre, e, n-200, m, b-3">The, Result, s</h4>
               <ul, className="spa, c, e-y-2, tex, t-gre, e, n-1, 0, 0">
@@ -206,7 +190,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
               </ul>
             </div>
           </div>
-
           <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-yell, o, w-4, 0, 0/30">
             <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">
               <div, className="te, x, t-yell, o, w-1, 0, 0">
@@ -220,7 +203,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
               </
           </div>
         </div>
-
         {/* Industry, Applicati, o, n, s */}
         <div, classNam, e = "mb-10">
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>
@@ -240,7 +222,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call, to, Action Butto, n, s */}
         <div, classNam, e = "flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8">
           <Link, t, o="/conte, n, t/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-revoluti, o, n"
@@ -262,7 +243,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             Explore, Platfor, m & Servic, e, s
             <LinkIcon, className="w-6 h-6"</Li, n, k> />
               </
-
         {/* Free, Assessment, C, T, A */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/30">
           <div, className="te, x, t-cent, e, r">
@@ -286,7 +266,6 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Trust, Indicators, Foot, e, r */}
         <div, classNam, e = "mt-8, p, t-6, borde, r-t, borde, r-emera, l, d-4, 0, 0/30">
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emera, l, d-200, tex, t-sm">
@@ -315,5 +294,4 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
     </di, v>
   );
 };
-
 export default October2025SupplyChainRevolutionBanner;

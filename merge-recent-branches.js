@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-
 /**
  * Merge Recent Branches - Merges recent cursor and other important branches
  */ import { execSync } from 'child_process';
 import fs from 'fs';
-
 // //Step 1: Ensure we're on main and up to date
 // try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -12,7 +10,6 @@ import fs from 'fs';
 //   } catch (error) {
 //   process.exit(1);
 }
-
 //Step 2: Get recent branches
 // const recentBranches = [
   'cursor/fix-errors-and-merge-to-main-3b04',
@@ -35,13 +32,11 @@ import fs from 'fs';
   'chore/a11y-single-main',
   'chore/add-2027-content-and-homepage-promo',
 ];
-
 // //Step 3: Merge function with conflict resolution
 function mergeBranch(branchName) {
 //   try {
     //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-
     //Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
@@ -50,7 +45,6 @@ function mergeBranch(branchName) {
     if (isMerged !== 'not_merged') {
 //       return { success: true, method: 'already_merged' };
     }
-
     //Try to merge
     try {
       execSync(
@@ -84,13 +78,12 @@ function mergeBranch(branchName) {
 //     return { success: false, method: 'not_found' };
   }
 }
-
 //Step 4: Process all branches
 const results = {
   successful: [],
   failed: [],
-  summary: {
-    total: 0,
+  summary: {,
+  total: 0,
     successful: 0,
     failed: 0,
     methods: {
@@ -103,10 +96,8 @@ const results = {
     },
   },
 };
-
 // for (const branch of recentBranches) {
   results.summary.total++;
-
   if (result.success) {
     results.successful.push({
       branch: branch,
@@ -125,23 +116,19 @@ const results = {
     results.summary.methods[result.method]++;
   }
 }
-
 //Step 5: Generate report
 // const report = {
   ...results,
   timestamp: new Date().toISOString(),
 };
-
 fs.writeFileSync(
   'recent-branches-merge-report.json',
   JSON.stringify(report, null, 2)
 );
-
 //Step 6: Push changes
 // try {
   execSync('git push origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   }
-
 // Step 7: Summary
 // // // // // // // // // // // // // // 

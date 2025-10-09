@@ -22,7 +22,6 @@ const October2025LatestBreakthroughBanne, r = () => {
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
             Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s
           </p>
-        </div>
         {/* Content, Card, s */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
           {  octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {

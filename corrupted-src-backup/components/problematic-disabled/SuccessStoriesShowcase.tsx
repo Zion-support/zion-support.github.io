@@ -53,7 +53,6 @@ const SuccessStoriesShowcas, e: React.FC = () => {
           <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
             See, how, leading companies, are, transforming their, operations, with our, AI, solutions
           </p>
-        </div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"

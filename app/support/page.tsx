@@ -1,7 +1,4 @@
-
-      </section>    </div>
+      </section>
   );
 };
-
 export default SupportPage;
-

@@ -1,6 +1,6 @@
   id: string,
   name: string,
-  description: string;
+  description: string;,
   category: string;
   price: string;
   features: string[];

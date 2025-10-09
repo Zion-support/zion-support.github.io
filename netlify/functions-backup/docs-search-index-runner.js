@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'docs-search-index-runner',
         source: event.source || 'unknown',
-        searchIndex: {
-          status: 'active',
+        searchIndex: {,
+  status: 'active',
           searchableItems: 0,
           lastUpdate: new Date().toISOString()}
         },

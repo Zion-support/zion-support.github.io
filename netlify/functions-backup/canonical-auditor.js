@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'canonical-auditor',
         source: event.source || 'unknown',
-        auditing: {
-          status: 'active',
+        auditing: {,
+  status: 'active',
           pagesAudited: 0,
           issuesFound: 0,
           lastAudit: new Date().toISOString()}

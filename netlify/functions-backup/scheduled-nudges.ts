@@ -1,4 +1,3 @@
-
 export const handler = async function () {
   // This function assumes you have an internal endpoint to list users and their roles
   // For demo, just log. Replace with your actual user listing logic or Supabase RPC.
@@ -9,5 +8,4 @@ export const handler = async function () {
     //     }
   return { statusCode: 200, body: 'ok' };
 };
-
 export const config = { schedule: '@hourly' };

@@ -1,8 +1,7 @@
-
       'Quantum algorithms, AI/ML, Python, React, Node && Node.js, PostgreSQL, Redis, AWS, Quantum simulators',
     ],
     realImplementation: true,
-  id: string;
+  id: string;,
   name: string,
   tagline: string,
   description: string;

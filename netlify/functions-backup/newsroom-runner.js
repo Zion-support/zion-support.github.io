@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'newsroom-runner',
         source: event.source || 'unknown',
-        newsroom: {
-          status: 'active',
+        newsroom: {,
+  status: 'active',
           articles: 0,
           lastUpdate: new Date().toISOString()}
         },

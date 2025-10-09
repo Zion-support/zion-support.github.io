@@ -54,7 +54,6 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
               </div>
               <div, className="flex, item, s-center, ga, p-1" > <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} />
               </div>
-            </div>
             <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, flex, items-center, ga, p-2">
               {title}
             </h3>

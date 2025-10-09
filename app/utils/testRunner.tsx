@@ -6,7 +6,7 @@
 import React, { ReactElement, useCallback } from 'react';
 // Test result types
 export interface PerformanceMetrics {
-  renderTime: number;
+  renderTime: number;,
   memoryUsage: number;
   timestamp: string;
 }
@@ -454,7 +454,6 @@ export class TestRunner {
         .failed { border-left-color: #f44336; }
         .skipped { border-left-color: #ff9800; }
     </style>
-</head>
 <body>
     <h1>Test Results</h1>
     <div class="summary">

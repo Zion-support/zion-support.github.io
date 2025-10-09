@@ -65,7 +65,6 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
                 <Zap, className="h-4 w-4, tex, t-bl, u, e-400, m, t-0.5, fle, x-shri, n, k-0  />
                 <sp, a, n><stro, n, g>$6, 7, M+ Savin, g, s: </stro, n, g> 78% operational, cost, reduction</sp, a, n>
               </li>
-            </ul>
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, ga, p-2, transitio, n-a, l, l">"
               Read, Full, Analysis;
               <Link, className="h-4 w-4  />

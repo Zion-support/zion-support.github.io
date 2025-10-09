@@ -1,4 +1,4 @@
-const config: StorybookConfig = {
+const config: StorybookConfig = {,
   stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
   addons: ['@storybook/addon-essentials'],
   framework: {
@@ -6,5 +6,4 @@ const config: StorybookConfig = {
     options: {},
   },
 };
-
 export default config;

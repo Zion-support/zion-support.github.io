@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
 import { MetadataRoute } from 'next';
-
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -12,8 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
-
-=======
 // Mock functions for sitemap generation;
 export const getAllPages = () => [
   // TODO: Add items,
@@ -28,27 +23,11 @@ export const generateSitemap = (pages: Array;)
 }
   const baseUrl = 'https://ziontechgroup.com';
   let sitemap = '
-          
-          
-          
-          
-          
-          
-          
-          
           <?xml version="1.0" encoding="UTF-8"?>\n';
   sitemap += '<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">\n';
   pages.forEach(page => {// TODO: Add content;}
 }
     sitemap += `  
-          
-          
-          
-          
-          
-          
-          
-          
           <url>\n`;
     sitemap += `    <loc>${baseUrl}${page.path}</loc>\n`;
     sitemap += `    <priority>${page.priority}</priority>\n`;
@@ -63,4 +42,3 @@ export const generateStaticSitemap = () => {// TODO: Add content;}
 }
   return generateSitemap(getAllPages());
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

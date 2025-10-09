@@ -1,6 +1,5 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-
 export default function CloudInfrastructurePage() {
   return (
     <div><Helmet>
@@ -9,10 +8,8 @@ export default function CloudInfrastructurePage() {
         <meta name="keywords" content="cloud infrastructure, cloud migration, AWS, Azure, Google Cloud, cloud hosting, cloud security" />
         <link rel="canonical" href="https://ziontechgroup.com/cloud-infrastructure" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -25,8 +22,6 @@ export default function CloudInfrastructurePage() {
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
               Transform your business with enterprise-grade cloud infrastructure that scales automatically, ensures 99.9% uptime, and reduces costs by up to 50% while improving performance.
             </p>
-          </section>
-
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Cloud Solutions</h2>
@@ -38,7 +33,6 @@ export default function CloudInfrastructurePage() {
                   Seamlessly migrate your applications and data to the cloud with zero downtime.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">⚡</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Auto Scaling</h3>
@@ -46,7 +40,6 @@ export default function CloudInfrastructurePage() {
                   Automatically scale resources up or down based on demand to optimize costs and performance.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🔒</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Enterprise Security</h3>
@@ -54,7 +47,6 @@ export default function CloudInfrastructurePage() {
                   Bank-level security with encryption, access controls, and compliance certifications.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🌍</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Global CDN</h3>
@@ -62,7 +54,6 @@ export default function CloudInfrastructurePage() {
                   Worldwide content delivery network for lightning-fast performance across all regions.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">📊</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Monitoring</h3>
@@ -70,7 +61,6 @@ export default function CloudInfrastructurePage() {
                   24/7 monitoring and alerting to ensure optimal performance and uptime.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🔄</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Backup & Recovery</h3>
@@ -80,7 +70,6 @@ export default function CloudInfrastructurePage() {
               </div>
             </div>
           </section>
-
           {/* Cloud Providers */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Supported Cloud Providers</h2>
@@ -96,7 +85,6 @@ export default function CloudInfrastructurePage() {
                   <li>• Security best practices</li>
                 </ul>
               </div>
-              
               <div className="cyber-card p-8 text-center">
                 <div className="text-6xl mb-6">🔵</div>
                 <h3 className="text-2xl font-bold text-white mb-4">Microsoft Azure</h3>
@@ -108,7 +96,6 @@ export default function CloudInfrastructurePage() {
                   <li>• Hybrid cloud solutions</li>
                 </ul>
               </div>
-              
               <div className="cyber-card p-8 text-center">
                 <div className="text-6xl mb-6">🟡</div>
                 <h3 className="text-2xl font-bold text-white mb-4">Google Cloud</h3>
@@ -122,7 +109,6 @@ export default function CloudInfrastructurePage() {
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
@@ -139,7 +125,6 @@ export default function CloudInfrastructurePage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-              
               <div className="cyber-card p-8 text-center border-2 border-cyan-400">
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$599<span className="text-lg">/month</span></div>
@@ -153,7 +138,6 @@ export default function CloudInfrastructurePage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-              
               <div className="cyber-card p-8 text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
@@ -169,7 +153,6 @@ export default function CloudInfrastructurePage() {
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our Cloud Solutions?</h2>
@@ -179,19 +162,16 @@ export default function CloudInfrastructurePage() {
                 <h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3>
                 <p className="text-gray-300">Average 50% reduction in infrastructure costs</p>
               </div>
-              
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-green-400 mb-4">99.9%</div>
                 <h3 className="text-xl font-bold text-white mb-2">Uptime Guarantee</h3>
                 <p className="text-gray-300">99.9% uptime SLA with monitoring</p>
               </div>
-              
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-pink-400 mb-4">3x</div>
                 <h3 className="text-xl font-bold text-white mb-2">Faster Deployment</h3>
                 <p className="text-gray-300">3x faster application deployment</p>
               </div>
-              
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-yellow-400 mb-4">24/7</div>
                 <h3 className="text-xl font-bold text-white mb-2">Support</h3>
@@ -199,7 +179,6 @@ export default function CloudInfrastructurePage() {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2>
@@ -216,7 +195,6 @@ export default function CloudInfrastructurePage() {
             </div>
           </section>
         </main>
-        
         <Footer />
       </div>
     </div>

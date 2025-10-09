@@ -1,4 +1,4 @@
-export interface UltimateInnovativeService {id: string;
+export interface UltimateInnovativeService {id: string;,
   title: string;
   description: string;
   category: string;

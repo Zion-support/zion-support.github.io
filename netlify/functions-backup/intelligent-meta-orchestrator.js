@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'intelligent-meta-orchestrator',
         source: event.source || 'unknown',
-        orchestration: {
-          status: 'intelligent',
+        orchestration: {,
+  status: 'intelligent',
           mode: 'meta',
           lastOrchestration: new Date().toISOString()}
         },

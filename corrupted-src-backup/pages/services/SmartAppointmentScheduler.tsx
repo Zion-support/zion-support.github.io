@@ -177,7 +177,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3" />";
                     Email, suppor, t;
                   </li>
-                </ul>
                 <a
   hr, e, f="te
   l: +130246409, 5, 0" 

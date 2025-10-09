@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 'use client'
 // ErrorInfo interface removed as it's not used in this hook
@@ -80,7 +79,6 @@ _REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void
   }
 }
 export default useErrorMonitoring
-=======
 import React from 'react';
 'use client';
 // ErrorInfo interface removed as it's not used in this hook;
@@ -151,4 +149,3 @@ const handleUnhandledRejection = (event: unknown) => {// TODO: Add content;}
   };
 };
 export default useErrorMonitoring;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

@@ -7,7 +7,6 @@ impo, r, t {
   Rock, e, t,
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 const NextGenIntelligentAutomationBreakthroug, h = () => { 
   return (
     <>
@@ -22,10 +21,8 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
           conte, n, t='intelligent, automati, o, n, R, P, A, AI, workflow, s, process, automatio, n, hyperautomati, o, n, digital, transformatio, n'
         />
       </Helm, e, t>
-
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
-
         <article, className='container, m, x-auto, p, x-6, p, y-20'>
           <Link, t, o='/bl, o, g'
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
@@ -36,12 +33,10 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
                 Octo, b, e, r , 1, 20, 2, 5 • 20, min, read
               </sp, a, n>
             </div>
-
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>
                 How, A, I-Powered, Workflows, Are Redefining, Business, Operations
-
             <div, classNam, e = 'flex, item, s-center, ga, p-4, m, b-12'>
               <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r'>
                 <Brain, className='w-6 h-6, tex, t-whi, t, e' />
@@ -93,7 +88,6 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'>
                         </div>
-                      </div>
                       <ul, className='spa, c, e-y-2'>
                         { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>

@@ -1,11 +1,9 @@
 #!/usr/bin/env node
-
 /**
  * Focused PR Merger - Targets specific important branches for merging
  * This script focuses on merging the most important branches while avoiding conflicts
  */ import { execSync } from 'child_process';
 import fs from 'fs';
-
 // //Step 1: Ensure we're on main and up to date
 // try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -13,7 +11,6 @@ import fs from 'fs';
 //   } catch (error) {
 //   process.exit(1);
 }
-
 //Step 2: Define priority branches to merge
 const priorityBranches = [
   'add-new-2026-content',
@@ -24,7 +21,6 @@ const priorityBranches = [
   '0parff-codex-centralize-api-error-handling-resolved',
   '0smfo8-codex-fix-404-error-resolved',
 ];
-
 //Step 3: Get cursor branches (limit to most recent)
 // let cursorBranches = [];
 try {
@@ -40,26 +36,22 @@ try {
     );
 } catch (error) {
 //   }
-
 // //Step 4: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
 //   try {
     //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
-
     //Check if branch exists and has commits
     try {
       execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' });
     } catch (e) {
 //       return { success: false, method: 'not_found' };
     }
-
     //Try initial merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       { stdio: 'inherit' }
     );
-
 //     return { success: true, method: 'direct' };
   } catch (error) {
 //     try {
@@ -72,7 +64,6 @@ function resolveConflictsAndMerge(branchName) {
 //       return { success: true, method: 'theirs' };
     } catch (theirsError) {
 //       }
-
     try {
       //Strategy 2: Auto-resolve with ours
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
@@ -83,18 +74,15 @@ function resolveConflictsAndMerge(branchName) {
 //       return { success: true, method: 'ours' };
     } catch (oursError) {
 //       }
-
     try {
       //Strategy 3: Manual conflict resolution
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
-
       //Get conflicted files
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {
         encoding: 'utf8',
       })
         .split('\n')
         .filter(file => file.trim());
-
 //       //For each conflicted file, try to resolve
       for (const file of conflictedFiles) {
         if (file.trim()) {
@@ -106,7 +94,6 @@ function resolveConflictsAndMerge(branchName) {
 //             }
         }
       }
-
       //Complete the merge
       execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {
         stdio: 'inherit',
@@ -114,25 +101,22 @@ function resolveConflictsAndMerge(branchName) {
 //       return { success: true, method: 'manual' };
     } catch (manualError) {
 //       }
-
     //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
 //       } catch (abortError) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
     }
-
     return { success: false, method: 'failed' };
   }
 }
-
 //Step 5: Execute merge strategy
 // const results = {
   priority: [],
   cursor: [],
   failed: [],
-  summary: {
-    total: 0,
+  summary: {,
+  total: 0,
     successful: 0,
     failed: 0,
     methods: {
@@ -145,7 +129,6 @@ function resolveConflictsAndMerge(branchName) {
     },
   },
 };
-
 //Merge priority branches first
 // for (const branch of priorityBranches) {
   results.priority.push({ branch, ...result });
@@ -161,7 +144,6 @@ function resolveConflictsAndMerge(branchName) {
     }
   }
 }
-
 //Merge cursor branches (limit to 10 most recent)
 // const recentCursorBranches = cursorBranches.slice(0, 10);
 for (const branch of recentCursorBranches) {
@@ -178,7 +160,6 @@ for (const branch of recentCursorBranches) {
     }
   }
 }
-
 //Step 6: Generate comprehensive report
 // results.timestamp = new Date().toISOString();
 results.branchCounts = {
@@ -186,18 +167,14 @@ results.branchCounts = {
   cursor: recentCursorBranches.length,
   total: priorityBranches.length + recentCursorBranches.length,
 };
-
 fs.writeFileSync('focused-merge-report.json', JSON.stringify(results, null, 2));
-
 //Step 7: Display summary
 // // // // // // // // // // // // if (results.failed.length > 0) {
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
 }
-
 // Step 8: Push changes
 // try {
   execSync('git push origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   //   }
-
 // // 

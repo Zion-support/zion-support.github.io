@@ -2,9 +2,7 @@
  * SEO Optimization Utilities
  * Comprehensive SEO enhancements for the Zion website
  */
-
 import { Helmet } from 'react-helmet-async';
-
 // Meta tags utilities
 export const seoUtils = {/* content */}
   // Generate structured data for organization
@@ -19,7 +17,6 @@ export const seoUtils = {/* content */}
       "https://linkedin.com/company/zion-tech"
     ]
   }),
-
   // Generate breadcrumb structured data
   generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({/* content */}
     "@context": "https://schema.org",
@@ -31,7 +28,6 @@ export const seoUtils = {/* content */}
       "item": item.url
     }))
   }),
-
   // Generate FAQ structured data
   generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({/* content */}
     "@context": "https://schema.org",
@@ -45,11 +41,10 @@ export const seoUtils = {/* content */}
       }
     }))
   }),
-
   // Generate article structured data
   generateArticleSchema: (article: {/* content */}
-    title: string;
-    description: string;
+    title: string;,
+  description: string;
     author: string;
     datePublished: string;
     dateModified: string;
@@ -70,7 +65,6 @@ export const seoUtils = {/* content */}
   })
 });
 };
-
 // Sitemap generation utilities
 export const sitemapUtils = {/* content */}
   // Generate sitemap entries
@@ -82,34 +76,28 @@ export const sitemapUtils = {/* content */}
       priority: priority || '0.8'
     };
   },
-
   // Generate robots.txt content
   generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */}
     return `User-agent: *
 Allow: /
-
 Sitemap: ${sitemapUrl}`;
   }
 };
-
 // URL optimization utilities
 export const urlUtils = {/* content */}
   // Generate canonical URL
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
     return `${baseUrl}${path}`;
   },
-
   // Generate Open Graph URL
   generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
     return `${baseUrl}${path}`;
   },
-
   // Generate Twitter Card URL
   generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
     return `${baseUrl}${path}`;
   }
 };
-
 // Content optimization utilities
 export const contentOptimization = {/* content */}
   // Extract keywords from content
@@ -118,32 +106,26 @@ export const contentOptimization = {/* content */}
       .replace(/[^\w\s]/g, '')
       .split(/\s+/)
       .filter(word => word.length >= minLength);
-    
     const wordCount = words.reduce((acc, word) => {/* content */}
       acc[word] = (acc[word] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
-    
     return Object.entries(wordCount)
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
       .map(([word]) => word);
   },
-
   // Generate meta description
   generateMetaDescription: (content: string, maxLength: number = 160): string => {/* content */}
     const _cleanContent = content.replace(/<[^>]*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
-    
     return cleanContent.substring(0, maxLength - 3) + '...';
   },
-
   // Generate title tag
   generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => {/* content */}
     return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
   }
 };
-
 // Performance SEO utilities
 export const performanceSEO = {/* content */}
   // Preload critical resources
@@ -153,7 +135,6 @@ export const performanceSEO = {/* content */}
       { href: '/css/critical.css', as: 'style' },
       { href: '/images/logo.svg', as: 'image' }
     ];
-
     criticalResources.forEach(resource => {/* content */}
       const _link = document.createElement('link');
       link.rel = 'preload';
@@ -163,7 +144,6 @@ export const performanceSEO = {/* content */}
       document.head.appendChild(link);
     });
   },
-
   // Optimize images for SEO
   optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
     src: string;
@@ -181,7 +161,6 @@ export const performanceSEO = {/* content */}
     };
   }
 };
-
 // Analytics and tracking utilities
 export const analyticsUtils = {/* content */}
   // Track page views
@@ -193,14 +172,12 @@ export const analyticsUtils = {/* content */}
       });
     }
   },
-
   // Track custom events
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
       (window as Window & { gtag: Function }).gtag('event', eventName, parameters);
     }
   },
-
   // Track conversion events
   trackConversion: (conversionId: string, value?: number) => {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
@@ -211,13 +188,11 @@ export const analyticsUtils = {/* content */}
     }
   }
 };
-
 // Core Web Vitals tracking
 export const coreWebVitals = {/* content */}
   // Track Core Web Vitals
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
-
     const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */}
         metric_name: metric.name,
@@ -226,7 +201,6 @@ export const coreWebVitals = {/* content */}
         metric_delta: metric.delta
       });
     };
-
     // Import and track web vitals
     import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {/* content */}
       onCLS(trackMetric);
@@ -237,7 +211,6 @@ export const coreWebVitals = {/* content */}
     });
   }
 };
-
 // SEO component for React
 export const SEOComponent = ({/* content */}
   title, 
@@ -259,11 +232,9 @@ export const SEOComponent = ({/* content */}
 //   const siteName = 'Zion Tech Group';
 //   const siteUrl = 'https://zion.app';
 //   const defaultImage = `${siteUrl}/images/og-default.jpg`;
-  
 //   const fullTitle = title ? `${title} | ${siteName}` : siteName;
 //   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
 //   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
-
   return (
   <div> </div><Helmet>
       <title>{fullTitle}</title>
@@ -291,15 +262,12 @@ export const SEOComponent = ({/* content */}
     </Helmet>
   );
 };
-
 // Initialize SEO optimizations
 export const initializeSEO = () => {/* content */}
   // Preload critical resources
   performanceSEO.preloadCriticalResources();
-  
   // Track Core Web Vitals
   coreWebVitals.trackCoreWebVitals();
-  
   // Set up meta tags
   if (typeof document !== 'undefined') {/* content */}
 //     const viewport = document.querySelector('meta[name="viewport"]');

@@ -1,5 +1,5 @@
 export interface BreakthroughContent {
-  id: string;
+  id: string;,
   title: string;
   description: string;
   content: string;
@@ -18,7 +18,6 @@ export interface BreakthroughContent {
     roi: string;
   };
 }
-
 export const newBreakthroughContent2025: BreakthroughContent[] = [
   {
     id: 'ai-platform-optimization-2025',
@@ -27,9 +26,7 @@ export const newBreakthroughContent2025: BreakthroughContent[] = [
       'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.',
     content: `
 # AI Platform Optimization 2025
-
 Transform your AI platform with intelligent scorecards and performance monitoring that deliver measurable ROI.
-
 ## Key Features
 - Intelligent performance scorecards
 - Real-time optimization recommendations
@@ -58,9 +55,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
       'Advanced quantum AI security framework providing unprecedented protection against emerging threats.',
     content: `
 # Quantum AI Security 2025
-
 Protect your AI systems with next-generation quantum security frameworks.
-
 ## Security Features
 - Quantum-resistant encryption
 - Advanced threat detection

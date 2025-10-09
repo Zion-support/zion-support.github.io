@@ -1,10 +1,7 @@
 #!/usr/bin/env node
-
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 console.log('🔧 Starting comprehensive merge conflict resolution...');
-
 // Function to resolve merge conflicts by keeping the newer version
 function resolveConflicts() {
   try {
@@ -14,13 +11,10 @@ function resolveConflicts() {
     return true;
   } catch (error) {
     console.log('⚠️  Merge conflicts detected, resolving...');
-    
     // Get list of conflicted files
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(f => f);
-    
     console.log(`📁 Found ${conflictedFiles.length} conflicted files:`);
     conflictedFiles.forEach(file => console.log(`  - ${file}`));
-    
     // Resolve conflicts by keeping the incoming version (theirs)
     conflictedFiles.forEach(file => {
       if (fs.existsSync(file)) {
@@ -34,15 +28,12 @@ function resolveConflicts() {
         }
       }
     });
-    
     return false;
   }
 }
-
 // Function to clean up console.log statements
 function cleanConsoleLogs() {
   console.log('🧹 Cleaning up console.log statements...');
-  
   const filesToClean = [
     'app/App.tsx',
     'app/components/Footer.tsx',
@@ -50,20 +41,16 @@ function cleanConsoleLogs() {
     'app/page.tsx',
     'app/layout.tsx'
   ];
-  
   filesToClean.forEach(file => {
     if (fs.existsSync(file)) {
       try {
         let content = fs.readFileSync(file, 'utf8');
         const originalLength = content.length;
-        
         // Remove console.log statements
         content = content.replace(/^\s*console\.log\([^)]*\);\s*$/gm, '');
         content = content.replace(/^\s*console\.(warn|error|info|debug)\([^)]*\);\s*$/gm, '');
-        
         // Remove empty lines that might be left behind
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-        
         if (content.length !== originalLength) {
           fs.writeFileSync(file, content);
           console.log(`✅ Cleaned console.log statements in ${file}`);
@@ -74,17 +61,14 @@ function cleanConsoleLogs() {
     }
   });
 }
-
 // Function to optimize performance
 function optimizePerformance() {
   console.log('⚡ Optimizing performance...');
-  
   // Update package.json scripts for better performance
   const packageJsonPath = 'package.json';
   if (fs.existsSync(packageJsonPath)) {
     try {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      
       // Add performance optimization scripts
       packageJson.scripts = {
         ...packageJson.scripts,
@@ -94,7 +78,6 @@ function optimizePerformance() {
         'lint:fix': 'eslint . --ext .ts,.tsx,.js,.jsx --fix',
         'type-check': 'tsc --noEmit'
       };
-      
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       console.log('✅ Updated package.json with performance scripts');
     } catch (error) {
@@ -102,13 +85,11 @@ function optimizePerformance() {
     }
   }
 }
-
 // Main execution
 async function main() {
   try {
     // Step 1: Resolve merge conflicts
     const hasConflicts = !resolveConflicts();
-    
     if (hasConflicts) {
       console.log('🔄 Retrying merge after conflict resolution...');
       try {
@@ -119,11 +100,8 @@ async function main() {
         return;
       }
     }
-    
     // Step 2: Clean up console.log statements
-    
     // Step 3: Optimize performance
-    
     // Step 4: Run type check
     console.log('🔍 Running TypeScript type check...');
     try {
@@ -132,7 +110,6 @@ async function main() {
     } catch (error) {
       console.log('⚠️  TypeScript type check failed:', error.message);
     }
-    
     // Step 5: Run linting
     console.log('🔍 Running ESLint...');
     try {
@@ -141,12 +118,10 @@ async function main() {
     } catch (error) {
       console.log('⚠️  ESLint failed:', error.message);
     }
-    
     // Step 6: Commit all changes
     console.log('💾 Committing all improvements...');
     execSync('git add .', { stdio: 'pipe' });
     execSync('git commit -m "Comprehensive improvements: resolve conflicts, clean console.logs, optimize performance"', { stdio: 'pipe' });
-    
     console.log('🎉 All merge conflicts resolved and improvements applied!');
     console.log('📊 Summary:');
     console.log('  ✅ Merge conflicts resolved');
@@ -155,7 +130,6 @@ async function main() {
     console.log('  ✅ TypeScript type check completed');
     console.log('  ✅ ESLint cleanup completed');
     console.log('  ✅ All changes committed');
-    
   } catch (error) {
     console.error('❌ Error during merge conflict resolution:', error.message);
     process.exit(1);

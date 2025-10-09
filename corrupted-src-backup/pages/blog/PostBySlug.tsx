@@ -1,8 +1,6 @@
 import React from 'react';
-
 export default function PostBySlug(): React.JSX.Element {
   const { slug } = useParams();
-
   // Mock data - in a real app, this would come from an API or CMS
   const latestArticles = [
     {
@@ -18,7 +16,6 @@ export default function PostBySlug(): React.JSX.Element {
       author: 'Zion Tech Group Team',
     },
   ];
-
   const blogPosts = [
     {
       slug: 'enterprise-ai-transformation-roadmap-2026',
@@ -51,7 +48,6 @@ export default function PostBySlug(): React.JSX.Element {
       author: 'Zion Tech Group Team',
     },
   ];
-
   const featuredPosts = [
     {
       slug: 'autonomous-enterprise-operations-2026',
@@ -83,12 +79,10 @@ export default function PostBySlug(): React.JSX.Element {
       author: 'Zion Tech Group Team',
     },
   ];
-
   // Find the current post
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(
     post => post.slug === slug
   );
-
   if (!currentPost) {
     return (
       <div className="min-h-screen bg-gray-50">
@@ -104,15 +98,12 @@ export default function PostBySlug(): React.JSX.Element {
           >
             Back to Blog
           </a>
-        </div>
       </div>
     );
   }
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-
       {/* Article Header */}
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-12">
@@ -132,7 +123,6 @@ export default function PostBySlug(): React.JSX.Element {
           </div>
         </div>
       </div>
-
       {/* Article Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -144,7 +134,6 @@ export default function PostBySlug(): React.JSX.Element {
                 you with detailed insights, practical implementation strategies, and real-world
                 examples to help you understand and leverage this cutting-edge technology.
               </p>
-
               <h2>Key Benefits</h2>
               <ul>
                 <li>Significant performance improvements</li>
@@ -152,21 +141,18 @@ export default function PostBySlug(): React.JSX.Element {
                 <li>Reduced costs and increased ROI</li>
                 <li>Scalable and future-proof solutions</li>
               </ul>
-
               <h2>Implementation Strategy</h2>
               <p>
                 Implementing {currentPost.title} requires careful planning and execution. Our team
                 of experts has developed proven methodologies that ensure successful deployment and
                 maximum value extraction.
               </p>
-
               <h2>Real-World Applications</h2>
               <p>
                 Many leading organizations have already implemented {currentPost.title} with
                 remarkable results. Case studies show consistent improvements in efficiency, cost
                 reduction, and competitive advantage.
               </p>
-
               <h2>Conclusion</h2>
               <p>
                 {currentPost.title} represents a significant opportunity for organizations looking
@@ -177,7 +163,6 @@ export default function PostBySlug(): React.JSX.Element {
           </div>
         </div>
       </div>
-
       {/* Related Posts */}
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">

@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'revenue-ideas-lab',
         source: event.source || 'unknown',
-        lab: {
-          status: 'active',
+        lab: {,
+  status: 'active',
           ideas: 0,
           lastIdea: new Date().toISOString()}
         },

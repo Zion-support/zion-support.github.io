@@ -1,16 +1,11 @@
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-
-
 function processFile(filePath) {
   try {
-
     // Determine correct relative paths based on file location
     const isInApp =
       filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages;
-
     let utilsPath, typesPath;
-
     if (isInBlog || isInGuides || isInPages) {
       utilsPath = '../../utils/';
       typesPath = '../../types/';
@@ -24,7 +19,6 @@ function processFile(filePath) {
       utilsPath = './utils/';
       typesPath = './types/';
     }
-
     // Fix import paths
     const replacements = [
       {
@@ -64,36 +58,28 @@ function processFile(filePath) {
         replacement: `import type { Metadata } from '${typesPath}next';`,
       },
     ];
-
     replacements.forEach(({ pattern, replacement }) => {
       if (pattern.test(content)) {
         content = content.replace(pattern, replacement);
         modified = true;
       }
     });
-
     // Fix MetadataRoute namespace issue
     if (content.includes('MetadataRoute.')) {
       content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
       modified = true;
     }
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-
       return true;
     }
     return false;
   } catch (error) {
-
     return false;
   }
 }
-
 function processDirectory(dirPath) {
-
   items.forEach(item => {
-
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -102,9 +88,6 @@ function processDirectory(dirPath) {
       }
     }
   });
-
   return totalFixed;
 }
-
 // Process the app directory
-

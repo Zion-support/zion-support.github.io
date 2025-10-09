@@ -3,8 +3,8 @@ exports.handler = async function (event, context) {try {
     const timestamp = new Date().toISOString()}
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'frontpage_enhancer function executed successfully',
+      body: JSON.stringify({,
+  message: 'frontpage_enhancer function executed successfully',
         timestamp: timestamp,
         function: 'frontpage_enhancer'}
       });

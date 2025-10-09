@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
-  src: string;
+  src: string;,
   alt: string;
   width?: number;
   height?: number;
@@ -62,7 +62,6 @@ export const Image: React.FC<ImageProps> = ({
         {...props}
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
-      </div>
     );
   }
   return (

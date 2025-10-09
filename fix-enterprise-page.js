@@ -1,9 +1,6 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
-
 // // const fixedContent = `import Link from 'next/link';
-
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
   description:
@@ -11,7 +8,6 @@ export const metadata = {
   keywords:
     'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
 };
-
 export default function EnterprisePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -23,7 +19,6 @@ export default function EnterprisePage() {
             className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
             style={{ animationDelay: '2s' }}
           ></div>
-        </div>
         <div className="relative z-10 container mx-auto px-4 py-24">
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -60,7 +55,6 @@ export default function EnterprisePage() {
           </div>
         </div>
       </header>
-
       {/* Stats Section */}
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
@@ -84,7 +78,6 @@ export default function EnterprisePage() {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -97,7 +90,6 @@ export default function EnterprisePage() {
               and mission-critical applications.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🤖</div>
@@ -114,7 +106,6 @@ export default function EnterprisePage() {
                 <li>• Predictive maintenance</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -130,7 +121,6 @@ export default function EnterprisePage() {
                 <li>• Advanced cryptography</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -149,7 +139,6 @@ export default function EnterprisePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -182,8 +171,6 @@ export default function EnterprisePage() {
   );
 }
 `;
-
 // Write the fixed content
 fs.writeFileSync('app/enterprise/page.tsx', fixedContent);
-
 // 

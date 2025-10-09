@@ -147,8 +147,8 @@ exports.handler = async function () {const baseUrl = (
         mdLines.join('\n'), msg),
     ]);
     return {statusCode: 200,
-      body: JSON.stringify({
-        ok: true,
+      body: JSON.stringify({,
+  ok: true,
         totals: summary.totals,
         jsonRes,
         mdRes}

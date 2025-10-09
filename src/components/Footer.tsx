@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-
 import React from 'react';
-
 interface FooterProps {
   // Add props here
 }
-
 const Footer: React.FC<FooterProps> = () => {
   return (
     <div className="footer">
       {/* Component content */}
     </div>
-
-=======
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
@@ -91,24 +85,15 @@ const Footer: React.FC = memo(() => {const aiServices = [}
     { name: 'Security', url: '/security' },
     { name: 'Compliance', url: '/compliance' }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <footer className="bg-slate-900 border-t border-cyan-400/20 relative overflow-hidden">
       {/* Background Effects */}
 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div><div className="absolute inset-0 cyber-grid opacity-10"></div><div className="relative z-10">
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
-<div className="lg:col-span-1"><div className="flex items-center space-x-2 mb-6"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"><span className="text-white font-bold text-lg">Z</span></div><div><h2 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h2><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></div><p className="text-gray-300 mb-6 text-sm leading-relaxed">
+<div className="lg:col-span-1"><div className="flex items-center space-x-2 mb-6"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"><span className="text-white font-bold text-lg">Z</span><div><h2 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h2><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></div><p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
               </p>
               {/* Contact Info */}
@@ -176,8 +161,6 @@ to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors d
 to={link.url} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                   </Link>
               </div></div></div></div></div></footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default Footer;

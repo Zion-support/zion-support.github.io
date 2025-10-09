@@ -1,6 +1,5 @@
 'use client'
 /**
-<<<<<<< HEAD
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  * Comprehensive Monitoring Utility
@@ -97,7 +96,6 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
 const _monitoring = new MonitoringService()
 export default monitoring
 // Singleton instance
-=======
  * Comprehensive Monitoring Utility;
  * Real-time application monitoring, performance tracking, and error reporting;
  * Comprehensive Monitoring Utility;
@@ -175,6 +173,5 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
 const _monitoring = new MonitoringService()
 export default monitoring;
 // Singleton instance;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 const monitoring = new MonitoringService()
 export default monitoring;

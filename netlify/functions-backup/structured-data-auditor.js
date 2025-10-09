@@ -6,5 +6,4 @@ exports.handler = async function () {
     process.env.DEPLOY_PRIME_URL ||
     ''
   ).replace(/\/$/, '');
-
 }

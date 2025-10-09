@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, memo } from 'react';
-
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -9,7 +8,6 @@ interface SEOOptimizerProps {
   ogImage?: string;
   structuredData?: unknown;
 }
-
 const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -21,11 +19,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
   useEffect(() => {
     // Update page title
     document.title = title;
-    
     // Update meta description
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords.join(', '));
-    
     // Update Open Graph tags
     updateMetaTag('og:title', title, 'property');
     updateMetaTag('og:description', description, 'property');
@@ -33,7 +29,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     updateMetaTag('og:url', canonicalUrl, 'property');
     updateMetaTag('og:type', 'website', 'property');
     updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
-    
     // Update Twitter tags
     updateMetaTag('twitter:card', 'summary_large_image', 'name');
     updateMetaTag('twitter:title', title, 'name');
@@ -41,25 +36,19 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     updateMetaTag('twitter:image', ogImage, 'name');
     updateMetaTag('twitter:site', '@ziontechgroup', 'name');
     updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
-    
     // Update canonical URL
     updateCanonicalUrl(canonicalUrl);
-    
     // Add structured data
     if (structuredData) {
       addStructuredData(structuredData);
     }
-    
     // Add breadcrumb structured data
     addBreadcrumbStructuredData();
-    
     // Add FAQ structured data
     addFAQStructuredData();
-    
     // Add organization structured data
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
@@ -69,7 +58,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     }
     meta.setAttribute('content', content);
   };
-
   const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -79,7 +67,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     }
     canonical.setAttribute('href', url);
   };
-
   const addStructuredData = (data: any) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -92,7 +79,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     }
     document.head.appendChild(script);
   };
-
   const addBreadcrumbStructuredData = () => {
     const breadcrumbData = {
       '@context': 'https://schema.org',
@@ -117,7 +103,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     }
     document.head.appendChild(script);
   };
-
   const addFAQStructuredData = () => {
     const faqData = {
       '@context': 'https://schema.org',
@@ -160,7 +145,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     }
     document.head.appendChild(script);
   };
-
   const addOrganizationStructuredData = () => {
     const organizationData = {
       '@context': 'https://schema.org',
@@ -203,9 +187,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     }
     document.head.appendChild(script);
   };
-
   return null;
 });
-
 SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;

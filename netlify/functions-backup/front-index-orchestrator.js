@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'front-index-orchestrator',
         source: event.source || 'unknown',
-        orchestration: {
-          status: 'active',
+        orchestration: {,
+  status: 'active',
           indexes: 0,
           lastOrchestration: new Date().toISOString()}
         },

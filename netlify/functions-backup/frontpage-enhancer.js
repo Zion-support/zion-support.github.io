@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'frontpage-enhancer',
         source: event.source || 'unknown',
-        enhancement: {
-          status: 'active',
+        enhancement: {,
+  status: 'active',
           enhancements: 0,
           lastEnhancement: new Date().toISOString()}
         },

@@ -1,23 +1,19 @@
 import type { ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
 }
-
 interface State {
-  hasError: boolean;
+  hasError: boolean;,
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   private retryCount = 0;
   private maxRetries = 3;
-
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -27,7 +23,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: null,
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     // Update state so the next render will show the fallback UI
     return {
@@ -36,23 +31,19 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
-
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error details
 //     this.setState({
       error,
       errorInfo,
     });
-
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Report error to monitoring service
     this.reportError(error, errorInfo);
   }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport = {
       errorId: this.state.errorId,
@@ -64,7 +55,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
       retryCount: this.retryCount,
     };
-
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'fetch' in window) {
       fetch('/api/errors', {
@@ -75,7 +65,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         body: JSON.stringify(errorReport),
 //       }).catch(console.error);
     }
-
     // Store in localStorage for debugging
     try {
       const existingErrors = JSON.parse(
@@ -90,7 +79,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     } catch (e) {
 //       }
   };
-
   private handleRetry = () => {
     if (this.retryCount < this.maxRetries) {
       this.retryCount++;
@@ -102,11 +90,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       });
     }
   };
-
   private handleReload = () => {
     window.location.reload();
   };
-
   private handleReportBug = () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -116,22 +102,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       url: window.location.href,
     };
-
     // Create a mailto link with error details
 //     const subject = `Bug Report - Error ID: ${this.state.errorId}`;
 //     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
 //     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
     window.open(mailtoLink);
   };
-
   override render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       // Default error UI
       return (
         <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
@@ -146,7 +128,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
                   />
                 </svg>
-              </div>
               <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
                 Oops! Something went wrong
               </h2>
@@ -160,7 +141,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </p>
               )}
             </div>
-
             <div className='space-y-4'>
               <div className='flex space-x-4'>
                 {this.retryCount < this.maxRetries && (
@@ -179,7 +159,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Reload Page
                 </button>
               </div>
-
               <div className='flex space-x-4'>
                 <button
                   onClick={this.handleReportBug}
@@ -195,7 +174,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </button>
               </div>
             </div>
-
             {this.props.showDetails && this.state.error && (
               <details className='mt-8'>
                 <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
@@ -216,9 +194,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;

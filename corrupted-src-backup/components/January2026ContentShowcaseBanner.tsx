@@ -265,7 +265,6 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
               <li>• Se, l, f-replicating, agent, systems</li>
               <li>• Advanced, orchestration, layers</li>
               <li>• Re, a, l-time, performance, monitoring</li>
-            </ul>
           </d, i, v>
           <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r">
             <Atom, className="w-1, 6, h-16, tex, t-purp, l, e-400, m, x-auto, m, b-4  />

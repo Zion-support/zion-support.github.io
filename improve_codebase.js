@@ -79,8 +79,8 @@ class CodebaseImprover {constructor() {
       `build: {outDir: 'dist',
     sourcemap: mode !== 'production',
     minify: 'terser',
-    terserOptions: {
-      compress: {
+    terserOptions: {,
+  compress: {
         drop_console: true,
   drop_debugger: true,
 //         pure_funcs: ['console.log', 'console.info', 'console.debug'],

@@ -7,51 +7,24 @@ export type IntegrationProviderId =
   | 'lever'
   | 'workable'
   | 'bamboohr';
-
-
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
+  id: IntegrationProviderId;,
   name: string;
   category: 'crm' | 'ats';
   description: string;
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 }
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 }
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 export interface IntegrationProviderMeta {
   id: string;
   name: string;
@@ -59,10 +32,7 @@ export interface IntegrationProviderMeta {
   description: string;
 }
 }
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -72,7 +42,6 @@ export interface ProviderConnection {
   config?: Record<string, any>;
 }
 }
-
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -87,18 +56,15 @@ export interface ProviderConnection {
 }
   expiresAt?: number;
 }
-
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
   name: string;
   status: SyncStatus;
 }
-
   status: SyncStatus;
   lastSync?: number;
 }
-
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
@@ -116,88 +82,55 @@ export interface ProviderConnection {
   lastSync?: number;
   config?: Record<string, any>;
 }
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
   expiresAt?: number;
 }
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 }
-
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
 }
-
 }
-
   lastSync?: Date;
   config: Record<string, unknown>;
   createdAt: Date;
   updatedAt: Date;
 }
-
 export interface SyncLogEntry {
   id: string;
   connectionId: string;
   action: string;
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
   details?: Record<string, any>;
 }
-
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
@@ -208,7 +141,6 @@ export interface IntegrationProviderMeta {
   details?: Record<string, unknown>;
   timestamp: Date;
 }
-
 export interface IntegrationOverride {
   id: string;
   connectionId: string;
@@ -218,7 +150,6 @@ export interface IntegrationOverride {
   createdAt: Date;
   updatedAt: Date;
 }
-
 export interface IntegrationEvent {
   id: string;
   type: 'sync' | 'error' | 'warning' | 'connection';
@@ -227,11 +158,9 @@ export interface IntegrationEvent {
   details?: Record<string, unknown>;
   timestamp: Date;
 }
-
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
-
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
@@ -239,25 +168,19 @@ export interface IntegrationProviderMeta {
   description: string;
   payload: Record<string, any>;
 }
-
   payload: Record<string, any>;
 }
-
 export interface IntegrationProviderMeta {
   id: string;
   name: string;
   category: 'crm' | 'ats';
   description: string;
 }
-
 }
-
   payload: Record<string, any>;
 }
-
   payload: Record<string, any>;
 }
-
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
@@ -271,7 +194,6 @@ export interface IntegrationsState {
 }
   payload: Record<string, any>;
 }
-
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
@@ -279,7 +201,6 @@ export interface IntegrationProviderMeta {
   description: string;
   payload: Record<string, any>;
 }
-
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
@@ -288,7 +209,6 @@ export interface IntegrationsState {
 }
   payload: Record<string, any>;
 }
-
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -299,7 +219,6 @@ export interface ProviderConnection {
   lastSync?: number;
   createdAt: number;
 }
-
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
@@ -313,7 +232,6 @@ export interface IntegrationProviderMeta {
   payload: Record<string, any>;
 }
 }
-
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];

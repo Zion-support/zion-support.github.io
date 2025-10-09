@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'dead-code-report',
         source: event.source || 'unknown',
-        report: {
-          status: 'generated',
+        report: {,
+  status: 'generated',
           filesScanned: 0,
           deadCodeFound: 0,
           lastReport: new Date().toISOString()}

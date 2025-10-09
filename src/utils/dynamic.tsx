@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 'use client'
 interface DynamicOptions {
     // TODO: Add content
   }
   loading?: () => React.ReactElement
   ssr?: boolean
-=======
 'use client';
 interface DynamicOptions {// TODO: Add content;}
 }
   loading?: () => React.ReactElement;
   ssr?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 export function dynamic;
           <T extends ComponentType<unknown>>()

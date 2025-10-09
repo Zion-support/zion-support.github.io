@@ -1,4 +1,3 @@
-
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-orchestrator',
@@ -69,7 +68,7 @@
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator',
-  id: string;
+  id: string;,
   name: string;
   tagline: string;
   description: string;

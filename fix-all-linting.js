@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import { execSync } from 'child_process';
-
 // Files that need specific fixes
 const fixes = [
   {
@@ -79,16 +77,11 @@ const fixes = [
     ],
   },
 ];
-
 function applyFixes() {
-
   fixes.forEach(({ file, changes }) => {
     if (!fs.existsSync(file)) {
-
       return;
     }
-
-
     changes.forEach(({ from, to }) => {
       if (content.includes(from)) {
         content = content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to);
@@ -96,22 +89,14 @@ function applyFixes() {
         totalFixed++;
       }
     });
-
     if (modified) {
       fs.writeFileSync(file, content);
-
     }
   });
-
 }
-
 // Apply fixes
-
 // Run linter to check results
-
 try {
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
-
 } catch (error) {
-
 }

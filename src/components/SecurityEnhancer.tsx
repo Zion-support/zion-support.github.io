@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface SecurityEnhancerProps {
   // Add props here
 }
-
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = () => {
   return (
     <div className="securityenhancer">
       {/* Component content */}
     </div>
   );
-
-=======
 'use client';
 interface SecurityEnhancerProps {// TODO: Add content;}
 }
@@ -203,7 +198,5 @@ let keyCount = 0;
     });
   };
   return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
-
 export default SecurityEnhancer;

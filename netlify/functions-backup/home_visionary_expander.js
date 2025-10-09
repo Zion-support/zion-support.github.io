@@ -3,8 +3,8 @@ exports.handler = async function (event, context) {try {
     const timestamp = new Date().toISOString()}
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'home_visionary_expander function executed successfully',
+      body: JSON.stringify({,
+  message: 'home_visionary_expander function executed successfully',
         timestamp: timestamp,
         function: 'home_visionary_expander'}
       });

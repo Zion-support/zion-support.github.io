@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'security-audit-runner',
         source: event.source || 'unknown',
-        audit: {
-          status: 'active',
+        audit: {,
+  status: 'active',
           vulnerabilities: 0,
           lastAudit: new Date().toISOString()}
         },

@@ -9,8 +9,8 @@
 };
 export const trackPerformance = (metric) value) => {
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'timing_complete', {
-      name: metric)
-      value: Math.round(value)}
+      name: metric),
+  value: Math.round(value)}
     });
   }
 };

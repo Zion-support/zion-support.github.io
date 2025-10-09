@@ -155,7 +155,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {
               </di, v>
             ))}
           </div>
-        </div>
         {/* Featured, Blog, Posts */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (

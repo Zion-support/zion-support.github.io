@@ -1,9 +1,8 @@
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOData {
-  title: string;
+  title: string;,
   description: string;
   keywords: string[];
   canonicalUrl: string;
@@ -23,7 +22,6 @@ interface SEOData {
   section?: string;
   tags?: string[];
 }
-
 interface AdvancedSEOOptimizerProps {
   seoData: SEOData;
   enableStructuredData?: boolean;
@@ -31,7 +29,6 @@ interface AdvancedSEOOptimizerProps {
   enableTwitterCards?: boolean;
   enableSchemaMarkup?: boolean;
 }
-
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
   enableStructuredData = true,
@@ -40,12 +37,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableSchemaMarkup = true,
 }) => {
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-  
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) {
       return null;
     }
-
     const baseStructuredData = {
       '@context': 'https://schema.org',
       '@type': 'TechCompany',
@@ -74,37 +69,29 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       },
       ...seoData.structuredData,
     };
-
     if (seoData.author) {
       baseStructuredData.author = {
         '@type': 'Person',
         name: seoData.author,
       };
     }
-
     if (seoData.publishedTime) {
       baseStructuredData.datePublished = seoData.publishedTime;
     }
-
     if (seoData.modifiedTime) {
       baseStructuredData.dateModified = seoData.modifiedTime;
     }
-
     if (seoData.section) {
       baseStructuredData.articleSection = seoData.section;
     }
-
     if (seoData.tags && seoData.tags.length > 0) {
       baseStructuredData.keywords = seoData.tags.join(', ');
     }
-
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
-
   // Generate Open Graph data
   const generateOpenGraphData = useCallback(() => {
     if (!enableOpenGraph) return {};
-
     return {
       'og:title': seoData.ogTitle || seoData.title,
       'og:description': seoData.ogDescription || seoData.description,
@@ -115,11 +102,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'og:locale': 'en_US',
     };
   }, [seoData, enableOpenGraph]);
-
   // Generate Twitter Card data
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
-
     const faqData = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -151,7 +136,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       ],
     };
   }, [seoData, enableTwitterCards]);
-
   // Generate meta tags
   const generateMetaTags = useCallback(() => {
     const metaTags = [
@@ -166,17 +150,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     ];
     return metaTags;
   }, [seoData]);
-
   const structuredData = generateStructuredData();
   const openGraphData = generateOpenGraphData();
   const twitterCardData = generateTwitterCardData();
   const metaTags = generateMetaTags();
-
   useEffect(() => {
     // Update page title and meta description for better SEO
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
-      
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
@@ -184,7 +165,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         document.head.appendChild(metaDescription);
       }
       metaDescription.setAttribute('content', seoData.description);
-
       // Update canonical URL
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
@@ -195,26 +175,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
-
   const addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
     }
-    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
     structuredDataRef.current = script;
-
   useEffect(() => {
     if (structuredData) {
       addStructuredData(structuredData);
     }
   }, [structuredData]);
-
-
   useEffect(() => {
     // Track page performance
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -231,7 +206,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       }
     }
   }, []);
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -239,42 +213,35 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {metaTags.map((tag, index) => (
         <meta key={index} name={tag.name} content={tag.content} />
       ))}
-
       {/* Canonical URL */}
       {seoData.canonicalUrl && (
         <link rel="canonical" href={seoData.canonicalUrl} />
       )}
-
       {/* Open Graph Tags */}
       {Object.entries(openGraphData).map(([property, content]) => (
         <meta key={property} property={property} content={content} />
       ))}
-
       {/* Twitter Card Tags */}
       {Object.entries(twitterCardData).map(([name, content]) => (
         <meta key={name} name={name} content={content} />
       ))}
-
       {/* Additional SEO Tags */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
-
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
-
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
@@ -282,5 +249,4 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     </Helmet>
   );
 };
-
 export default AdvancedSEOOptimizer;

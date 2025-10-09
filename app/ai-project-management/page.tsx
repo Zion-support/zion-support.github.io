@@ -1,6 +1,5 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-
 export default function AIProjectManagementPage() {
   return (
     <div><Helmet>
@@ -9,10 +8,8 @@ export default function AIProjectManagementPage() {
         <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-project-management" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -25,8 +22,6 @@ export default function AIProjectManagementPage() {
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
               Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.
             </p>
-          </section>
-
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>
@@ -38,7 +33,6 @@ export default function AIProjectManagementPage() {
                   AI predicts project risks, delays, and resource needs with 90% accuracy to keep projects on track.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">⚡</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Task Allocation</h3>
@@ -46,7 +40,6 @@ export default function AIProjectManagementPage() {
                   Automatically assign tasks to the right team members based on skills, workload, and availability.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">📊</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Insights</h3>
@@ -54,7 +47,6 @@ export default function AIProjectManagementPage() {
                   Get instant visibility into project health, team performance, and budget utilization.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🎯</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Resource Optimization</h3>
@@ -62,7 +54,6 @@ export default function AIProjectManagementPage() {
                   AI optimizes resource allocation to maximize efficiency and minimize project costs.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🚨</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Risk Management</h3>
@@ -70,7 +61,6 @@ export default function AIProjectManagementPage() {
                   Proactive risk identification and mitigation strategies powered by machine learning.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">📈</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Performance Tracking</h3>
@@ -80,7 +70,6 @@ export default function AIProjectManagementPage() {
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
@@ -97,7 +86,6 @@ export default function AIProjectManagementPage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-              
               <div className="cyber-card p-8 text-center border-2 border-cyan-400">
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$499<span className="text-lg">/month</span></div>
@@ -111,7 +99,6 @@ export default function AIProjectManagementPage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-              
               <div className="cyber-card p-8 text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
@@ -127,7 +114,6 @@ export default function AIProjectManagementPage() {
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results</h2>
@@ -137,19 +123,16 @@ export default function AIProjectManagementPage() {
                 <h3 className="text-xl font-bold text-white mb-2">Faster Delivery</h3>
                 <p className="text-gray-300">Projects completed 40% faster with AI optimization</p>
               </div>
-              
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-green-400 mb-4">30%</div>
                 <h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3>
                 <p className="text-gray-300">Average 30% reduction in project costs</p>
               </div>
-              
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-pink-400 mb-4">95%</div>
                 <h3 className="text-xl font-bold text-white mb-2">On-Time Delivery</h3>
                 <p className="text-gray-300">95% of projects delivered on time</p>
               </div>
-              
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-yellow-400 mb-4">85%</div>
                 <h3 className="text-xl font-bold text-white mb-2">Team Productivity</h3>
@@ -157,7 +140,6 @@ export default function AIProjectManagementPage() {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2>
@@ -174,7 +156,6 @@ export default function AIProjectManagementPage() {
             </div>
           </section>
         </main>
-        
         <Footer />
       </div>
     </div>

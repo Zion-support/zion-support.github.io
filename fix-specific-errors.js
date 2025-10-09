@@ -1,36 +1,29 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import { glob } from 'glob';
-
 // Function to process a file
 function processFile(filePath) {
   try {
-
     // Fix malformed closing tags
     if (content.includes('</div>}')) {
       content = content.replace(/<\/div>\}/g, '}');
       modified = true;
     }
-
     // Fix malformed closing tags with semicolons
     if (content.includes('</div>;')) {
       content = content.replace(/<\/div>;/g, ';');
       modified = true;
     }
-
     // Fix malformed closing tags with commas
     if (content.includes('</div>,') && !content.includes('</div>, ')) {
       content = content.replace(/<\/div>,/g, ',');
       modified = true;
     }
-
     // Fix unterminated regular expressions
     if (content.includes('const regex = /')) {
       content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;');
       modified = true;
     }
-
     // Fix malformed object properties
     if (content.includes('const config = {')) {
       // Look for lines that might be missing colons
@@ -49,30 +42,22 @@ function processFile(filePath) {
         content = newLines.join('\n');
       }
     }
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-
       return true;
     }
-
     return false;
   } catch (error) {
-
     return false;
   }
 }
-
 // Main execution
 async function main() {
   // Find all TypeScript/JavaScript files in app directory
-
   files.forEach(file => {
     if (processFile(file)) {
       fixedCount++;
     }
   });
-
 }
-
 main().catch(console.error);

@@ -5,16 +5,13 @@ export default async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
   try {
     const { name, email, phone, details, country, service } = req.body || {};
-
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;
       res.json({ error: 'Name, email, phone, and details are required' });
       return;
     }
-
     // Process quote submission logic here
     const quote = {
       id: 'quote_' + Date.now(),
@@ -26,7 +23,6 @@ export default async function handler(req, res) {
       service: service || 'general',
       submittedAt: new Date().toISOString(),
     };
-
     // In a real application, you would save this to a database
     //     res.statusCode = 200;
     res.json({

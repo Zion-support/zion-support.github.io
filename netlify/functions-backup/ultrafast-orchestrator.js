@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'ultrafast-orchestrator',
         source: event.source || 'unknown',
-        orchestration: {
-          status: 'ultrafast',
+        orchestration: {,
+  status: 'ultrafast',
           services: 0,
           lastOrchestration: new Date().toISOString()}
         },

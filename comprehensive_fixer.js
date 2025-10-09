@@ -1,6 +1,5 @@
 import fs from 'fs';
 import { glob } from 'glob';
-
 //Comprehensive TypeScript/JSX fixes
 const fixes = [
   //Fix object literal syntax issues
@@ -175,10 +174,8 @@ const fixes = [
     replacement: 'const $1 = useMemo(() => { $2 }, [$3]); $4',
   },
 ];
-
 function fixFile(filePath) {
   try {
-
     fixes.forEach(fix => {
       //       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
@@ -186,7 +183,6 @@ function fixFile(filePath) {
         modified = true;
       }
     });
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       //       return true;
@@ -196,18 +192,14 @@ function fixFile(filePath) {
     //     return false;
   }
 }
-
 //Main function
 async function main() {
   //Find all TypeScript/TSX files
-
   //   let fixedCount = 0;
   files.forEach(file => {
     if (fixFile(file)) {
       fixedCount++;
     }
   });
-
   //   }
-
 // main().catch(console.error);

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    optimizeCss: true,
+  experimental: {,
+  optimizeCss: true,
     optimizePackageImports: ['@mui/material', '@mui/icons-material'],
     turbo: {
       rules: {
@@ -55,5 +55,4 @@ const nextConfig = {
     ];
   },
 };
-
 module.exports = nextConfig;

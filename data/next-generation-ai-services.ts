@@ -1,6 +1,6 @@
 export interface NextGenerationAIService
 export interface NextGenerationAIService {;
-  id: string;
+  id: string;,
   name: string;
   tagline: string;
   price: string,

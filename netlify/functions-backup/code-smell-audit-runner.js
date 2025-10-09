@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'code-smell-audit-runner',
         source: event.source || 'unknown',
-        audit: {
-          status: 'active',
+        audit: {,
+  status: 'active',
           filesScanned: 0,
           smellsFound: 0,
           lastAudit: new Date().toISOString()}

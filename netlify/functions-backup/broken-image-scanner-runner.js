@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'broken-image-scanner-runner',
         source: event.source || 'unknown',
-        runner: {
-          status: 'active',
+        runner: {,
+  status: 'active',
           scannerStatus: 'running',
           lastRun: new Date().toISOString()}
         },

@@ -1,20 +1,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
-
 const AIABTestingPage: React.FC = () => {
   const features = [
     {
       icon: TestTube,
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
       benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
@@ -32,7 +23,6 @@ const AIABTestingPage: React.FC = () => {
       benefits: ['Test metrics', 'Performance reports', 'Insight generation']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -62,9 +52,7 @@ const AIABTestingPage: React.FC = () => {
               <TestTube className="w-5 h-5" />
               +1 302 464 0950;
             </a>
-          </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             A/B Testing Features;
@@ -98,5 +86,4 @@ const AIABTestingPage: React.FC = () => {
     </div>
   );
 };
-
 export default AIABTestingPage;

@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import { execSync } from 'child_process';
-
 // Get all TypeScript/JavaScript files that need fixing
 const filesToFix = [
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
@@ -20,14 +18,10 @@ const filesToFix = [
   '/workspace/app/page-optimized.tsx',
   '/workspace/app/utils/__tests__/performanceMonitoring.test.ts',
 ];
-
 function fixUnusedVariables(filePath) {
   if (!fs.existsSync(filePath)) {
-
     return;
   }
-
-
   // Fix unused variables by prefixing with underscore
   const unusedVarPatterns = [
     // Unused imports
@@ -37,7 +31,6 @@ function fixUnusedVariables(filePath) {
         const unusedImports = importList.filter(imp => {
           return !content.includes(varName) || content.split(varName).length <= 2;
         });
-
         if (unusedImports.length > 0) {
           const fixedImports = importList
             .map(imp => {
@@ -79,7 +72,6 @@ function fixUnusedVariables(filePath) {
       },
     },
   ];
-
   // Apply fixes
   for (const { pattern, fix } of unusedVarPatterns) {
     if (newContent !== content) {
@@ -87,19 +79,14 @@ function fixUnusedVariables(filePath) {
       modified = true;
     }
   }
-
   if (modified) {
     fs.writeFileSync(filePath, content);
-
   }
 }
-
 // Fix all files
 filesToFix.forEach(fixUnusedVariables);
-
 // Run linter to check results
 try {
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
 } catch (error) {
-
 }

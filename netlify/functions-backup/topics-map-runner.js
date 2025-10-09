@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'topics-map-runner',
         source: event.source || 'unknown',
-        mapping: {
-          status: 'active',
+        mapping: {,
+  status: 'active',
           topics: 0,
           lastMap: new Date().toISOString()}
         },

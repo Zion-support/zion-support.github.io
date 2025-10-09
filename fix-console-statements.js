@@ -1,10 +1,7 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-
 // Function to properly fix console statements
 function fixConsoleStatements(content) {
   // Fix console statements that are already wrapped in if conditions
@@ -14,7 +11,6 @@ function fixConsoleStatements(content) {
       return match.replace(/; \}$/, '; }');
     }
   );
-
   // Fix console statements that are missing closing brace
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
@@ -22,7 +18,6 @@ function fixConsoleStatements(content) {
       return match + ' }';
     }
   );
-
   // Fix console statements that have extra closing brace
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}\s*$/gm,
@@ -30,10 +25,8 @@ function fixConsoleStatements(content) {
       return match.replace(/; \}\s*$/, '; }');
     }
   );
-
   return content;
 }
-
 // Files that need console statement fixes
 const filesToFix = [
   'app/components/AdvancedPerformanceMonitor.tsx',
@@ -49,24 +42,16 @@ const filesToFix = [
   'app/utils/analytics.ts',
   'app/utils/analyticsTracker.ts',
 ];
-
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(fullPath)) {
-
       return;
     }
-
-
     // Apply fixes
     content = fixConsoleStatements(content);
-
     fs.writeFileSync(fullPath, content);
-
   } catch (error) {
-
   }
 }
-
 // Fix all files
 filesToFix.forEach(fixFile);

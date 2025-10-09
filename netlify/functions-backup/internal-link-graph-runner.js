@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'internal-link-graph-runner',
         source: event.source || 'unknown',
-        graph: {
-          status: 'generating',
+        graph: {,
+  status: 'generating',
           links: 0,
           nodes: 0,
           lastGenerated: new Date().toISOString()}

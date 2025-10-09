@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'repo-radar-runner',
         source: event.source || 'unknown',
-        radar: {
-          status: 'scanning',
+        radar: {,
+  status: 'scanning',
           repositories: 0,
           signals: 0,
           lastScan: new Date().toISOString()}

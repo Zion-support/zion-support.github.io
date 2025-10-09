@@ -47,7 +47,6 @@ const October2025AIOperationsBanne, r = () => {
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
             Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence
           </p>
-        </div>
         {/* Articles, Gri, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {

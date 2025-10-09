@@ -1,12 +1,10 @@
 :src/components/PerformanceMonitor.tsx
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceMonitorProps {
   children: React.ReactNode;
   enableReporting?: boolean;
   enableLongTaskMonitoring?: boolean;
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
   children, 
   enableReporting = true,
@@ -14,7 +12,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 }) => {
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
-
   useEffect(() => {
     // Initialize performance monitoring
     // Add critical resource hints manually
@@ -25,7 +22,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
       ];
-      
       hints.forEach(hint => {
         const _link = document.createElement('link');
         link.rel = hint.rel;
@@ -36,7 +32,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         document.head.appendChild(link);
       });
     }
-    
     // Measure page load performance
 //     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
     if (pageLoadMetrics) {
@@ -45,13 +40,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         performanceOptimizer.reportWebVitals(pageLoadMetrics);
       }
     }
-
     // Monitor long tasks if enabled
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
         setLongTasks(prev => [...prev, ...entries]);
 //         });
-      
       return () => {
         if (observer) {
           observer.disconnect();
@@ -59,11 +52,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       };
     }
   }, [enableReporting, enableLongTaskMonitoring]);
-
   // Monitor Web Vitals using Performance Observer
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
     const observer = new PerformanceObserver((list) => {
       const _entries = list.getEntries();
       entries.forEach((entry) => {
@@ -74,7 +65,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             performanceOptimizer.reportWebVitals({ LCP: lcp });
           }
         }
-        
         if (entry.entryType === 'first-input') {
 //           const fid = (entry as any).processingStart - entry.startTime;
           setMetrics(prev => ({ ...prev, FID: fid }));
@@ -82,7 +72,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             performanceOptimizer.reportWebVitals({ FID: fid });
           }
         }
-        
         if (entry.entryType === 'layout-shift') {
 //           const cls = (entry as any).value;
           setMetrics(prev => ({ ...prev, CLS: cls }));
@@ -92,33 +81,27 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
       });
     });
-
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (e) {
 //       }
-
     return () => {
       observer.disconnect();
     };
   }, [enableReporting]);
-
   // Development mode: Log performance metrics
   useEffect(() => {
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {
 //       }
   }, [metrics]);
-
   return <>{children}</>;
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface PerformanceMonitorProps {
   enabled?: boolean;
   budget?: PerformanceBudget;
   onMetricsUpdate?: (metrics: WebVitalsMetrics) => void;
   onBudgetViolation?: (violations: string[]) => void;
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   enabled = true,
   budget = {
@@ -133,39 +116,31 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
   const [budgetStatus, setBudgetStatus] = useState<{ passed: boolean; violations: string[] }>({ passed: true, violations: [] });
-
   const updateMetrics = useCallback(() => {
 //     const newMetrics = performanceOptimizer.measurePageLoad();
     if (newMetrics) {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       onMetricsUpdate?.(newMetrics);
-      
       // Check performance budget
       const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget);
       setBudgetStatus(budgetCheck);
-      
       if (!budgetCheck.passed) {
         onBudgetViolation?.(budgetCheck.violations);
       }
     }
   }, [budget, onMetricsUpdate, onBudgetViolation]);
-
   useEffect(() => {
     if (!enabled) return;
-
     // Initial metrics
     updateMetrics();
-
     // Monitor long tasks
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
 //       });
-
     // Monitor Web Vitals
     const reportVitals = (newMetrics: WebVitalsMetrics) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       performanceOptimizer.reportWebVitals(newMetrics);
     };
-
     // Set up performance monitoring
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -182,22 +157,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           }
         });
       });
-
       observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
-
       return () => {
         observer.disconnect();
         longTaskObserver?.disconnect();
       };
     }
-
     return () => {
       longTaskObserver?.disconnect();
     };
   }, [enabled, updateMetrics]);
-
   if (!enabled) return null;
-
   return (
     <div className="performance-monitor">
       {/* Toggle button */}
@@ -208,7 +178,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       >
         📊
       </button>
-
       {/* Performance panel */}
       {isVisible && (
         <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">
@@ -221,8 +190,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             >
               ✕
             </button>
-          </div>
-
           {/* Metrics */}
           <div className="space-y-2 mb-4">
             <div className="text-sm">
@@ -244,7 +211,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               </span>
             </div>
           </div>
-
           {/* Budget Status */}
           <div className="border-t pt-3">
             <div className="flex items-center gap-2 mb-2">
@@ -261,7 +227,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               </div>
             )}
           </div>
-
           {/* Connection Quality */}
           <div className="border-t pt-3 mt-3">
             <div className="text-sm">
@@ -282,6 +247,5 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     </div>
   );
 };
-
 export default PerformanceMonitor;
 }

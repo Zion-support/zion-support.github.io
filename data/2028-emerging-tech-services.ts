@@ -1,9 +1,8 @@
-
 export interface EmergingTechService2028
 export interface EmergingTechService2028 {id: string;
 export interface EmergingTechService2028 {  id: string;
 export interface EmergingTechService2028 {
-  name: string;
+  name: string;,
   tagline: string;
   price: string;
   description: string;

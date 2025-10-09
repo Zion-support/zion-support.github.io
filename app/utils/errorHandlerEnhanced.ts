@@ -1,7 +1,7 @@
 'use client';
 // Enhanced Error Handler
 export class AppError extends Error {
-  statusCode: number;
+  statusCode: number;,
   isOperational: boolean;
   timestamp: string;
   constructor(message: string, statusCode = 500, isOperational = true) {

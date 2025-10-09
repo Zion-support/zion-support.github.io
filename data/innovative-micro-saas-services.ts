@@ -1,9 +1,8 @@
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
-  id: string;
+  id: string;,
   name: string;
   tagline: string;
   price: string,

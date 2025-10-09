@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-
 /**
  * October 2025 Cognitive Mesh Orchestration Platform Launch Banner
  * Promotes the new Cognitive Mesh content including blog case study and services
@@ -24,8 +23,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
           className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
           style={{ animationDelay: '4s' }}
         ></div>
-      </div>
-
       <div className="container mx-auto px-6 py-12 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-8">
@@ -38,15 +35,12 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
               🚀 JUST LAUNCHED - OCTOBER 2025
             </span>
              aria-hidden="true"</div>
-
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-slide-up">
             Cognitive Mesh Orchestration Platform
           </h1>
-          
           <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in">
             The Revolutionary Distributed AI Platform Transforming Enterprise Operations
           </p>
-
           <ul className="flex flex-wrap items-center justify-center gap-4 mb-8 list-none" aria-label="Platform key statistics">
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">
               <Network className="w-5 h-5 text-green-300" aria-hidden="true" />
@@ -62,12 +56,10 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             </li>
           </ul>
         </div>
-
               </div>
             </li>
           </ul>
         </section>
-
         {/* Call to Action */}
         <div  className="text-center" role="region" aria-label="Call to action">
           <div  className="inline-flex flex-col sm:flex-row gap-4">
@@ -76,7 +68,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105"
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
-
               Schedule Free Consultation
             </Link>
             <Link

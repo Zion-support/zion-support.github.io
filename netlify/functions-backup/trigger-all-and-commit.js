@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'trigger-all-and-commit',
         source: event.source || 'unknown',
-        trigger: {
-          status: 'active',
+        trigger: {,
+  status: 'active',
           functionsTriggered: 0,
           lastTrigger: new Date().toISOString()}
         },

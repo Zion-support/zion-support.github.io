@@ -1,7 +1,6 @@
 /**
  * Accessibility utilities for improving web accessibility
  */
-
 // Focus management utilities
 export const focusManagement = {
   // Trap focus within an element
@@ -13,7 +12,6 @@ export const focusManagement = {
     const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
-
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
@@ -29,20 +27,16 @@ export const focusManagement = {
         }
       }
     };
-
     element.addEventListener('keydown', handleKeyDown);
     firstElement?.focus();
-
     return () => {
       element.removeEventListener('keydown', handleKeyDown);
     };
   },
-
   // Restore focus to previous element
   restoreFocus: (element: HTMLElement): void => {
     element.focus();
   },
-
   // Skip to main content
   skipToMain: (): void => {
     const _mainElement = document.querySelector('main') as HTMLElement;
@@ -52,20 +46,17 @@ export const focusManagement = {
     }
   },
 };
-
 // ARIA utilities
 export const ariaUtils = {
   // Generate unique IDs for ARIA relationships
   generateId: (prefix: string = 'aria'): string => {
     return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
   },
-
   // Set ARIA attributes
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
-
   // Announce to screen readers
     const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
@@ -77,12 +68,11 @@ export const ariaUtils = {
     }, 1000);
   },
 };
-
 // Keyboard navigation utilities
 export const keyboardNavigation = {
   // Handle arrow key navigation for lists
-  handleArrowKeys: (
-    event: KeyboardEvent,
+  handleArrowKeys: (,
+  event: KeyboardEvent,
     items: HTMLElement[],
     currentIndex: number,
     switch (event.key) {
@@ -124,7 +114,6 @@ export const colorContrast = {
 //     const darkest = Math.min(lum1, lum2);
     return (brightest + 0.05) / (darkest + 0.05);
   },
-
   // Check if contrast meets WCAG standards
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
     return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
@@ -162,12 +151,10 @@ export const formAccessibility = {
     }
     return label;
   },
-
   // Generate unique input ID
   generateInputId: (): string => {
     return `input-${Math.random().toString(36).substr(2, 9)}`;
   },
-
   // Check color contrast
     const _thresholds = { AA: 4.5, AAA: 7 };
     // Simplified contrast calculation - in real implementation, use a proper color contrast library
@@ -253,7 +240,6 @@ export const accessibilityTesting = {
       score,
     };
   },
-
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [
@@ -266,7 +252,6 @@ export const accessibilityTesting = {
     return focusableSelectors.some(selector => element.matches(selector));
   },
 };
-
 // Initialize accessibility features
 export const initAccessibility = (): void => {
   // Add skip links

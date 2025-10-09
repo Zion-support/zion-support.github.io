@@ -68,7 +68,7 @@ export interface LoggerConfig {
 /**
  * Default logger configuration
  */
-const defaultConfig: LoggerConfig = {
+const defaultConfig: LoggerConfig = {,
   minLevel: LogLevel.INFO,
   enableConsole: true,
   enableRemote: false,

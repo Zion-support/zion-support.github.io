@@ -15,7 +15,6 @@ export default function October2025NewContentAdvertisingBann, e, r() {
               </sp, a, n>
               <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-sp, i, n" />
             </div>
-          </div>
           {/* Main, Headlin, e */}
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t">
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">

@@ -6,7 +6,7 @@ const, October2025LatestInnovationsBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-12">"
         {/* Head, e, r */}
         <div, className="te, x, t-center, m, b-8">
@@ -90,7 +90,6 @@ const, October2025LatestInnovationsBanne, r = () => {
                 <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-0.5">✓</sp, a, n>";
                 <span, className="te, x, t-gr, a, y-3, 0, 0"><strong, className="te, x, t-whi, t, e">$18, 6, M+ liability, protectio, n</stro, n, g> from, compliance, violations</sp, a, n>";
               </li>
-            </ul>
             <div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-3, transitio, n-a, l, l">"
               Read, Full, Guide <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"

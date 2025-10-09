@@ -7,7 +7,6 @@ impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Lightbu, l, b } fr, o, m 'luci, d, e-rea, c, t';
-
 const CognitiveComputingTransformatio, n: React.FC = () => { 
   return (
     <>
@@ -25,12 +24,10 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-cogniti v e-computi n g-enterpri s e-transformati o n'
         />
       </Helm, e, t>
-
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
-
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
             {/* Breadc, r, u, m, b */}
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'>
@@ -47,7 +44,6 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
               </Li, n, k>
               <span, classNam, e='te, x, t-purp, l, e-4, 0, 0'>/</sp, a, n>
               <span, classNam, e='te, x, t-whi, t, e'>Cognitive, Computin, g</sp, a, n>
-
               <p, className='te, x, t-xl, tex, t-purp, l, e-100, leadin, g-relaxed, m, b-8'>
                 Leading, organizations, are achie, v, i, n, g{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
@@ -131,10 +127,8 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
                           <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-3, 0, 0'>
                             {a, p, p.industry} Use, Cas, e
                           </p>
-                        </div>
                         <Award, className='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
                       </div>
-
                       <div, className='grid, gri, d-co, l, s-2, ga, p-3'>
                         { Obje, c, t.entri, e, s(a, p, p.imp, a, c, t).m, a, p(([k, e, y, val, u, e], i) = > (
                           <div, ke, y = { , i  }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-l, g, p-3'
@@ -152,7 +146,6 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
                       objectiv, e, s: 'Continuous, improveme, n, t, new, use, cases, se, l, f-service, capabilitie, s',
                     },
                   </div>
-
                   <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6'>
                     <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
                       3-Year, Value, Creation
@@ -195,7 +188,6 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
                 <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             </div>
           </div>
-
           {/* Related, Cont, e, n, t */}
           <div, classNam, e = 'mt-16'>
             <h2, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>

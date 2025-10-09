@@ -1,6 +1,5 @@
 // Performance utilities for optimizing React components and application performance
-
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: any[]) => any>(,
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -10,7 +9,6 @@ export const debounce = <T extends (...args: any[]) => any>(
     timeout = setTimeout(() => func(...args), wait);
   };
 };
-
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
@@ -24,7 +22,6 @@ export const throttle = <T extends (...args: any[]) => any>(
     }
   };
 };
-
 export const memoize = <T extends (...args: any[]) => any>(fn: T): T => {
   const cache = new Map();
   return ((...args: Parameters<T>) => {
@@ -193,7 +190,6 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
     link.as = as;
     document.head.appendChild(link);
 };
-
 export const isInViewport = (element: Element): boolean => {
   const rect = element.getBoundingClientRect();
   return (
@@ -203,7 +199,6 @@ export const isInViewport = (element: Element): boolean => {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
-
 export const preloadImage = (src: string): Promise<void> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -212,11 +207,9 @@ export const preloadImage = (src: string): Promise<void> => {
     img.src = src;
   });
 };
-
 export const preloadImages = async (srcs: string[]): Promise<void> => {
   await Promise.all(srcs.map(preloadImage));
 };
-
 export const getImageDimensions = (src: string): Promise<{ width: number; height: number }> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -227,7 +220,6 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
     img.src = src;
   });
 };
-
 export const createIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void,
   options?: IntersectionObserverInit
@@ -238,7 +230,6 @@ export const createIntersectionObserver = (
     ...options
   });
 };
-
 export const measurePerformance = (name: string, fn: () => void): void => {
   if (process.env.NODE_ENV === 'development') {
     const start = performance.now();
@@ -249,13 +240,11 @@ export const measurePerformance = (name: string, fn: () => void): void => {
     fn();
   }
 };
-
 export const getDeviceInfo = () => {
   const userAgent = navigator.userAgent;
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
   const isTablet = /iPad|Android(?=.*Mobile)/i.test(userAgent);
   const isDesktop = !isMobile && !isTablet;
-  
   return {
     isMobile,
     isTablet,
@@ -263,19 +252,15 @@ export const getDeviceInfo = () => {
     userAgent
   };
 };
-
 export const optimizeForDevice = () => {
   const deviceInfo = getDeviceInfo();
-  
   if (deviceInfo.isMobile) {
     // Reduce animations and effects for mobile
     document.documentElement.style.setProperty('--animation-duration', '0.2s');
     document.documentElement.style.setProperty('--transition-duration', '0.15s');
   }
-  
   return deviceInfo;
 };
-
 export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]) => void) => {
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver(callback);
@@ -284,10 +269,8 @@ export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]
   }
   return null;
 };
-
 export const measureWebVitals = () => {
   const vitals: Record<string, number> = {};
-  
   const observer = createPerformanceObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.entryType === 'paint') {
@@ -299,13 +282,11 @@ export const measureWebVitals = () => {
       }
     });
   });
-  
   return {
     vitals,
     observer
   };
 };
-
 export const optimizeBundleSize = () => {
   // Dynamic imports for heavy components
   const loadHeavyComponent = (componentName: string) => {
@@ -314,23 +295,19 @@ export const optimizeBundleSize = () => {
       return null;
     });
   };
-  
   return { loadHeavyComponent };
 };
-
 export const createLazyComponent = <T extends React.ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
   fallback?: React.ReactNode
 ) => {
   const LazyComponent = React.lazy(importFunc);
-  
   return (props: React.ComponentProps<T>) => (
     <React.Suspense fallback={fallback || <div>Loading...</div>}>
       <LazyComponent {...props} />
     </React.Suspense>
   );
 };
-
 // Memory management utilities
 export const cleanupMemory = () => {
   if ('memory' in performance) {
@@ -342,7 +319,6 @@ export const cleanupMemory = () => {
     });
   }
 };
-
 export const scheduleCleanup = () => {
   // Schedule cleanup every 5 minutes
   setInterval(cleanupMemory, 5 * 60 * 1000);

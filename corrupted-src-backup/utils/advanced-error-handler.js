@@ -2,7 +2,6 @@
  * Advanced Error Handler
  * Comprehensive error handling, logging, and recovery system
  */
-
 class AdvancedErrorHandler {
   constructor() {
     this.errorLog = [];
@@ -11,7 +10,6 @@ class AdvancedErrorHandler {
     this.recoveryStrategies = new Map();
     this.init();
   }
-
   init() {
     this.setupGlobalErrorHandlers();
     this.setupUnhandledRejectionHandler();
@@ -19,7 +17,6 @@ class AdvancedErrorHandler {
     this.setupNetworkErrorHandler();
     this.setupRecoveryStrategies();
   }
-
   setupGlobalErrorHandlers() {
     // Global error handler
     window.addEventListener('error', event => {
@@ -35,7 +32,6 @@ class AdvancedErrorHandler {
         url: window.location.href,
       });
     });
-
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', event => {
       this.handleError({
@@ -48,13 +44,11 @@ class AdvancedErrorHandler {
       });
     });
   }
-
   setupUnhandledRejectionHandler() {
     // Additional promise rejection handling
     window.addEventListener('rejectionhandled', event => {
       //       });
   }
-
   setupResourceErrorHandler() {
     // Handle resource loading errors
     document.addEventListener(
@@ -74,18 +68,15 @@ class AdvancedErrorHandler {
       true
     );
   }
-
   setupNetworkErrorHandler() {
     // Handle network-related errors
     window.addEventListener('online', () => {
       this.handleNetworkStatusChange('online');
     });
-
     window.addEventListener('offline', () => {
       this.handleNetworkStatusChange('offline');
     });
   }
-
   setupRecoveryStrategies() {
     // Define recovery strategies for different error types
     this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
@@ -93,38 +84,29 @@ class AdvancedErrorHandler {
     this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this));
     this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this));
   }
-
   handleError(errorInfo) {
     // Log error
     this.logError(errorInfo);
-
     // Attempt recovery
     this.attemptRecovery(errorInfo);
-
     // Report to external service
     if (this.reportingEnabled) {
       this.reportError(errorInfo);
     }
-
     // Show user-friendly message
     this.showUserError(errorInfo);
   }
-
   logError(errorInfo) {
     this.errorLog.push(errorInfo);
-
     // Maintain log size
     if (this.errorLog.length > this.maxLogSize) {
       this.errorLog.shift();
     }
-
     // Console logging
     //     }
-
   attemptRecovery(errorInfo) {
     //     const errorType = this.categorizeError(errorInfo);
     const _recoveryStrategy = this.recoveryStrategies.get(errorType);
-
     if (recoveryStrategy) {
       try {
         recoveryStrategy(errorInfo);
@@ -132,7 +114,6 @@ class AdvancedErrorHandler {
         //         }
     }
   }
-
   categorizeError(errorInfo) {
     if (errorInfo.message?.includes('network') || errorInfo.message?.includes('fetch')) {
       return 'network';
@@ -148,7 +129,6 @@ class AdvancedErrorHandler {
     }
     return 'unknown';
   }
-
   handleNetworkError(errorInfo) {
     // Retry failed network requests
     if (errorInfo.retryCount < 3) {
@@ -162,7 +142,6 @@ class AdvancedErrorHandler {
       this.showOfflineMessage();
     }
   }
-
   handleResourceError(errorInfo) {
     // Try to load fallback resources
     if (errorInfo.element === 'IMG') {
@@ -173,7 +152,6 @@ class AdvancedErrorHandler {
       this.loadFallbackStylesheet(errorInfo.src);
     }
   }
-
   handleJavaScriptError(errorInfo) {
     // Try to recover from JavaScript errors
     if (errorInfo.message?.includes('Cannot read property')) {
@@ -184,18 +162,15 @@ class AdvancedErrorHandler {
       this.reloadPage();
     }
   }
-
   handleMemoryError(errorInfo) {
     // Clear caches and free memory
     this.clearCaches();
     this.garbageCollect();
   }
-
   retryFailedRequest(errorInfo) {
     // Implement retry logic for failed requests
     //     const retryCount = (errorInfo.retryCount || 0) + 1;
     errorInfo.retryCount = retryCount;
-
     // Retry the original request
     if (errorInfo.originalRequest) {
       fetch(errorInfo.originalRequest)
@@ -212,7 +187,6 @@ class AdvancedErrorHandler {
         });
     }
   }
-
   loadFallbackImage(src) {
     const _img = document.querySelector(`img[src="${src}"]`);
     if (img) {
@@ -220,7 +194,6 @@ class AdvancedErrorHandler {
       img.alt = 'Image failed to load';
     }
   }
-
   loadFallbackScript(src) {
     // Load from CDN or local fallback
     const _script = document.createElement('script');
@@ -231,7 +204,6 @@ class AdvancedErrorHandler {
     };
     document.head.appendChild(script);
   }
-
   loadFallbackStylesheet(src) {
     // Load fallback stylesheet
     const _link = document.createElement('link');
@@ -243,17 +215,14 @@ class AdvancedErrorHandler {
     };
     document.head.appendChild(link);
   }
-
   handlePropertyAccessError(errorInfo) {
     // Try to fix property access errors
     //     // Implementation would depend on specific error
   }
-
   handleFunctionCallError(errorInfo) {
     // Try to fix function call errors
     //     // Implementation would depend on specific error
   }
-
   clearCaches() {
     // Clear various caches
     if ('caches' in window) {
@@ -264,29 +233,26 @@ class AdvancedErrorHandler {
       });
     }
   }
-
   garbageCollect() {
     // Force garbage collection if available
     if (window.gc) {
       window.gc();
     }
   }
-
   reloadPage() {
     // Reload page as last resort
     setTimeout(() => {
       window.location.reload();
     }, 1000);
   }
-
   showOfflineMessage() {
     // Show offline message to user
     const _offlineMessage = document.createElement('div');
     offlineMessage.className = 'offline-message';
     offlineMessage.innerHTML = `
       <div style="
-        position: fixed;
-        top: 0;
+        position: fixed;,
+  top: 0;
         left: 0;
         right: 0;
         background: #ff6b6b;
@@ -300,7 +266,6 @@ class AdvancedErrorHandler {
     `;
     document.body.appendChild(offlineMessage);
   }
-
   showUserError(errorInfo) {
     // Show user-friendly error message
     if (errorInfo.severity === 'critical') {
@@ -309,7 +274,6 @@ class AdvancedErrorHandler {
       this.showErrorToast(errorInfo);
     }
   }
-
   showCriticalErrorModal(errorInfo) {
     const _modal = document.createElement('div');
     modal.className = 'error-modal';
@@ -343,12 +307,10 @@ class AdvancedErrorHandler {
             border-radius: 4px;
             cursor: pointer;
           ">Refresh Page</button>
-        </div>
       </div>
     `;
     document.body.appendChild(modal);
   }
-
   showErrorToast(errorInfo) {
     const _toast = document.createElement('div');
     toast.className = 'error-toast';
@@ -375,7 +337,6 @@ class AdvancedErrorHandler {
       </div>
     `;
     document.body.appendChild(toast);
-
     // Auto-remove after 5 seconds
     setTimeout(() => {
       if (toast.parentElement) {
@@ -383,7 +344,6 @@ class AdvancedErrorHandler {
       }
     }, 5000);
   }
-
   handleNetworkStatusChange(status) {
     const _message = status === 'online' ? 'Connection restored' : 'Connection lost';
     this.showErrorToast({
@@ -392,7 +352,6 @@ class AdvancedErrorHandler {
       severity: 'info',
     });
   }
-
   reportError(errorInfo) {
     // Send error to external service
     if (window.gtag) {
@@ -401,7 +360,6 @@ class AdvancedErrorHandler {
         fatal: errorInfo.severity === 'critical',
       });
     }
-
     // Send to custom error reporting service
     fetch('/api/errors', {
       method: 'POST',
@@ -412,30 +370,23 @@ class AdvancedErrorHandler {
     }).catch(error => {
       //       });
   }
-
   // Public methods
   getErrorLog() {
     return this.errorLog;
   }
-
   clearErrorLog() {
     this.errorLog = [];
   }
-
   setReportingEnabled(enabled) {
     this.reportingEnabled = enabled;
   }
-
   addRecoveryStrategy(errorType, strategy) {
     this.recoveryStrategies.set(errorType, strategy);
   }
 }
-
 // Initialize error handler
 // const errorHandler = new AdvancedErrorHandler();
-
 // Export for use in other modules
 export default errorHandler;
-
 // Global error handler instance
 window.errorHandler = errorHandler;

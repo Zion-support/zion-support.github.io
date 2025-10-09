@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
@@ -12,7 +10,6 @@ function safeGitCommand(command, description) {
 //     return { success: false, error: error.message };
   }
 }
-
 //Function to check if branch exists
 function branchExists(branchName) {
   try {
@@ -25,7 +22,6 @@ function branchExists(branchName) {
     return false;
   }
 }
-
 //Current PRs to process
 const prs = [
   {
@@ -57,19 +53,15 @@ const prs = [
     priority: 'high',
   },
 ];
-
 //Ensure we're on main branch
 // safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
-
 // let mergedCount = 0;
-
 //Process each PR
 for (const pr of prs) {
 //   // console.log(
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
   );
-
   //Check if branch exists
   if (!branchExists(pr.branch)) {
 //     notFoundCount++;
@@ -81,13 +73,11 @@ for (const pr of prs) {
     });
     continue;
   }
-
 //   //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
     `Merge ${pr.branch}`
   );
-
   if (mergeResult.success) {
     mergedCount++;
 //     results.push({
@@ -100,7 +90,6 @@ for (const pr of prs) {
     conflictCount++;
 //     //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
-
     results.push({
       pr: pr.number,
       title: pr.title,
@@ -110,7 +99,6 @@ for (const pr of prs) {
     });
   }
 }
-
 //Run system checks
 // const typeCheck = safeGitCommand(
   'pnpm run type-check',
@@ -120,7 +108,6 @@ const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
   'Production build'
 );
-
 //Push changes if any were merged
 if (mergedCount > 0) {
 //   const pushResult = safeGitCommand(
@@ -131,12 +118,11 @@ if (mergedCount > 0) {
 //     } else {
 //     }
 }
-
 //Generate comprehensive report
 const report = {
   timestamp: new Date().toISOString(),
-  summary: {
-    totalPRs: prs.length,
+  summary: {,
+  totalPRs: prs.length,
     merged: mergedCount,
     conflicts: conflictCount,
     notFound: notFoundCount,
@@ -156,15 +142,12 @@ const report = {
   results: results,
   status: mergedCount > 0 ? 'success' : 'no-changes',
 };
-
 //Save detailed report
 fs.writeFileSync(
   'enhanced-pr-merge-report.json',
   JSON.stringify(report, null, 2)
 );
-
 // // // // // // // // // // if (report.systemChecks.allPassed) {
 //   } else {
 //   }
-
 // // 

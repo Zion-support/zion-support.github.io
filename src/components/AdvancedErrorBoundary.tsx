@@ -1,18 +1,11 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-
 interface ErrorBoundaryState {
-
-  hasError: boolean;
+  hasError: boolean;,
   error: Error | null;
   errorInfo: ErrorInfo | null;
-
 }
-
 interface ErrorBoundaryProps {
-
-=======
 interface ErrorBoundaryState {// TODO: Add content;}
 };
   hasError: boolean;,
@@ -22,42 +15,28 @@ interface ErrorBoundaryState {// TODO: Add content;}
 }
 interface ErrorBoundaryProps {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   children: ReactNode;
   fallback?: ReactNode;
 }
-<<<<<<< HEAD
-
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-
   constructor(props: ErrorBoundaryProps) {
     super(props);
-
     this.state = { hasError: false, error: null, errorInfo: null };
   }
-
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return { hasError: true, error };
-
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-
     this.setState({ error, errorInfo });
   }
-
   render() {
     if (this.state.hasError) {
-
       return this.props.fallback || (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300">Please refresh the page and try again.</p>
-          </div>
         </div>
-
-=======
 interface ErrorReport {// TODO: Add content;}
 };
   errorId: string | null;
@@ -237,15 +216,6 @@ class AdvancedErrorBoundary extends Component;
       }
       // Default error UI;
       return (
-        
-          
-          
-          
-          
-          
-          
-          
-          
           <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'><div className='sm:mx-auto sm:w-full sm:max-w-md'><div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'><div className='text-center'><div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'><svg className='h-6 w-6 text-red-600'
                     fill='none'
                     viewBox='0 0 24 24'
@@ -280,21 +250,11 @@ class AdvancedErrorBoundary extends Component;
                 {this.props.enableRetry &&}
 // this.retryCount;
           < this.maxRetries && ()
-                    
           <button
 onClick={this.handleRetry} className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     >
                       Try Again ({this.maxRetries - this.retryCount} attempts;
 // left)
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           </button>
                   )}
                 <button
@@ -313,12 +273,9 @@ onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 bord
                   >
                     kleber@ziontechgroup.com;
                   </a></p></div></div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       );
     }
-
     return this.props.children;
   }
 }
-
 export default AdvancedErrorBoundary;

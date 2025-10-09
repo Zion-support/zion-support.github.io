@@ -1,10 +1,7 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
-
 function fixJSXErrors(filePath) {
   try {
-
     //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
     const patterns = [
       {
@@ -33,7 +30,6 @@ function fixJSXErrors(filePath) {
         replacement: '$1 />\n          </div>',
       },
     ];
-
     patterns.forEach(fix => {
       //       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
@@ -41,7 +37,6 @@ function fixJSXErrors(filePath) {
         modified = true;
       }
     });
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       //       return true;
@@ -51,7 +46,6 @@ function fixJSXErrors(filePath) {
     //     return false;
   }
 }
-
 // Fix the specific file
 // const filePath = process.argv[2];
 if (filePath) {

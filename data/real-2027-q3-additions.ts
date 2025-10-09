@@ -1,4 +1,3 @@
-
 export const real2027Q3Additions = [
 export const real2027Q3Additions = [{id: 'it - asset - discovery - agent',
     name: 'IT Asset Discovery Agent',
@@ -296,8 +295,8 @@ export const real2027Q3Additions = [{id: 'it - asset - discovery - agent',
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [;
     ],
-    category: 'Security & Identity'
-    link: '/api - security - scanner'
+    category: 'Security & Identity',
+  link: '/api - security - scanner'
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.'
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports'

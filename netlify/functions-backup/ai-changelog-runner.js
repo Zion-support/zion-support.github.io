@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'ai-changelog-runner',
         source: event.source || 'unknown',
-        changelog: {
-          status: 'generated',
+        changelog: {,
+  status: 'generated',
           entries: 0,
           lastGenerated: new Date().toISOString()}
         },

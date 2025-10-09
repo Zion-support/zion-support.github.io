@@ -1,5 +1,4 @@
-
-export const metadata: Metadata = {
+export const metadata: Metadata = {,
   title: 'Index | Zion Tech Group',
   description:
     'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
@@ -10,7 +9,6 @@ export const metadata: Metadata = {
     type: 'article',
   },
 };
-
 export default function index() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -29,7 +27,6 @@ export default function index() {
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
                 ENTERPRISE
               </span>
-            </div>
           </div>
           <div className="prose max-w-none">
             <p className="text-lg text-gray-700 mb-6">

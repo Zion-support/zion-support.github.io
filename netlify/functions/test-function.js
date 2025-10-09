@@ -1,10 +1,9 @@
 exports.handler = async function (event, context) {
   try {
-
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'Test function working correctly',
+      body: JSON.stringify({,
+  message: 'Test function working correctly',
         timestamp: new Date().toISOString(),
         event: event,
         context: {
@@ -15,7 +14,6 @@ exports.handler = async function (event, context) {
       headers: {'Content-Type': 'application/json'}
     };
   } catch (error) {
-
     return {
       statusCode: 500,
       body: JSON.stringify({

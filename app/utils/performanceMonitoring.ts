@@ -4,7 +4,7 @@
  * Tracks Core Web Vitals and custom performance metrics
  */
 export interface PerformanceMetric {
-  name: string;
+  name: string;,
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
   timestamp: number;

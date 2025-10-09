@@ -3,8 +3,8 @@ exports.handler = async function (event, context) {try {
     const timestamp = new Date().toISOString()}
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'a11y_alt_text_runner function executed successfully',
+      body: JSON.stringify({,
+  message: 'a11y_alt_text_runner function executed successfully',
         timestamp: timestamp,
         function: 'a11y_alt_text_runner'}
       });

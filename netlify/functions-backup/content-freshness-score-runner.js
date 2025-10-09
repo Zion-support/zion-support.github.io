@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'content-freshness-score-runner',
         source: event.source || 'unknown',
-        scoring: {
-          status: 'active',
+        scoring: {,
+  status: 'active',
           pagesScored: 0,
           averageScore: 0,
           lastScore: new Date().toISOString()}

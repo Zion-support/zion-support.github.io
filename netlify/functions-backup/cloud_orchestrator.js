@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'cloud_orchestrator',
         source: event.source || 'unknown',
-        orchestration: {
-          status: 'active',
+        orchestration: {,
+  status: 'active',
           cloudServices: 0,
           lastOrchestration: new Date().toISOString()}
         },

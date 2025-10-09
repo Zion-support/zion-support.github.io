@@ -3,7 +3,6 @@
  * Advanced Performance Monitoring Utility;
  * Tracks Core Web Vitals and custom metrics;
  */
-<<<<<<< HEAD
 interface PerformanceMetrics {
     // TODO: Add content
   }
@@ -14,14 +13,6 @@ interface PerformanceMetrics {
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint,
   customMetrics: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number>
 }
 class PerformanceMonitor {
@@ -42,7 +33,6 @@ class PerformanceMonitor {
     this.setupWebVitals()
     this.setupCustomMetrics()
     this.setupResourceTiming()
-=======
 interface PerformanceMetrics {// TODO: Add content;}
 }
   fcp?: number; // First Contentful Paint;
@@ -69,12 +59,10 @@ class PerformanceMonitor {// TODO: Add content;}
     this.setupWebVitals();
     this.setupCustomMetrics();
     this.setupResourceTiming();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Initialize performance observers;
    */
-<<<<<<< HEAD
   private initializeObservers(): void {
     // TODO: Add content
   }
@@ -106,7 +94,6 @@ class PerformanceMonitor {// TODO: Add content;}
           if (lastEntry) {
     // TODO: Add content
   }
-=======
   private initializeObservers(): void {// TODO: Add content;}
 }
     try {// TODO: Add content;}
@@ -129,13 +116,11 @@ class PerformanceMonitor {// TODO: Add content;}
         this.observeEntry('largest-contentful-paint', entries => {if (lastEntry) {}
   // TODO: Add content;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //             this.recordMetric()
 //               'LCP',
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime,
 )
           }
-<<<<<<< HEAD
         }
   )
         // First Input Delay
@@ -161,7 +146,6 @@ class PerformanceMonitor {// TODO: Add content;}
   }
               clsValue += (entry as any).value
             }
-=======
         });
         // First Input Delay;
         this.observeEntry('first-input', entries => {// TODO: Add content;}
@@ -185,7 +169,6 @@ class PerformanceMonitor {// TODO: Add content;}
           if (clsValue > 0) {// TODO: Add content;}
 }
             this.recordMetric('CLS', clsValue);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
   )
           if (clsValue > 0) {
@@ -196,7 +179,6 @@ class PerformanceMonitor {// TODO: Add content;}
         }
   )
       }
-<<<<<<< HEAD
     } catch (error) {
     // TODO: Add content
   }
@@ -407,7 +389,6 @@ class PerformanceMonitor {// TODO: Add content;}
       (window as any).gtag('event', 'performance_metric', {
     // TODO: Add content
   }
-=======
     } catch (error) {// TODO: Add content;}
 }
       logger.error('Failed to initialize performance observers', error as Error);
@@ -569,7 +550,6 @@ class PerformanceMonitor {// TODO: Add content;}
 }
       (window as any).gtag('event', 'performance_metric', {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance'
@@ -577,7 +557,6 @@ class PerformanceMonitor {// TODO: Add content;}
   )
     }
   }
-<<<<<<< HEAD
   getMetrics(): PerformanceMetrics {
     // TODO: Add content
   }
@@ -592,14 +571,6 @@ class PerformanceMonitor {// TODO: Add content;}
     // TODO: Add content
   }
       if (this.metrics.fcp 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 1800) scores.push(100)
       else if (this.metrics.fcp <= 4000) scores.push(50)
       else scores.push(25)
@@ -609,14 +580,6 @@ class PerformanceMonitor {// TODO: Add content;}
     // TODO: Add content
   }
       if (this.metrics.lcp 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 2500) scores.push(100)
       else if (this.metrics.lcp <= 4000) scores.push(75)
       else if (this.metrics.lcp <= 6000) scores.push(50)
@@ -627,14 +590,6 @@ class PerformanceMonitor {// TODO: Add content;}
     // TODO: Add content
   }
       if (this.metrics.fid 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 100) scores.push(100)
       else if (this.metrics.fid <= 300) scores.push(75)
       else if (this.metrics.fid <= 500) scores.push(50)
@@ -645,19 +600,10 @@ class PerformanceMonitor {// TODO: Add content;}
     // TODO: Add content
   }
       if (this.metrics.cls 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 0.1) scores.push(100)
       else if (this.metrics.cls <= 0.25) scores.push(75)
       else if (this.metrics.cls <= 0.4) scores.push(50)
       else scores.push(25)
-=======
   getMetrics(): PerformanceMetrics {// TODO: Add content;}
 }
     return { ...this.metrics };
@@ -699,22 +645,18 @@ class PerformanceMonitor {// TODO: Add content;}
       else if (this.metrics.cls <= 0.25) scores.push(75);
       else if (this.metrics.cls <= 0.4) scores.push(50);
       else scores.push(25);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0
   }
-<<<<<<< HEAD
   generateReport(): string {
     // TODO: Add content
   }
     const score = this.getScore()
     const metrics = this.getMetrics()
-=======
   generateReport(): string {// TODO: Add content;}
 }
     const score = this.getScore();
     const metrics = this.getMetrics();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     return `
 Performance Report:
 Score: ${score}
@@ -724,13 +666,10 @@ Memory Usage: ${metrics.memoryUsage}MB;
 Bundle Size: ${metrics.bundleSize}KB;
 Cache Hit Rate: ${metrics.cacheHitRate}%
 Lazy Loading: ${metrics.lazyLoading ? 'Enabled' : 'Disabled'}
-<<<<<<< HEAD
 First Contentful Paint: ${metrics.firstContentfulPaint || 'N/A'}ms
 `
-=======
 First Contentful Paint: ${metrics.firstContentfulPaint || 'N/A'}ms;
 `;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 // Export singleton instance

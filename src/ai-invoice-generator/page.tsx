@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -19,12 +16,9 @@ const PagePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
       <Footer />
     </div>
-
-=======
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building from 'lucide-react';}
 'use client';
 import React, { memo } from 'react';
@@ -66,17 +60,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {const features = [}
       icon: Building,
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <>
       <SEOOptimizer
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
@@ -84,15 +69,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {const features = [}
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
         canonicalUrl="https:// ziontechgroup.com/ai-invoice-generator"
 //       />
-      
-          
-          
-          
-          
-          
-          
-          
-          
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="pt-24">
@@ -112,30 +88,12 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {const features = [}
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
 // Transform your invoicing process with AI-powered automation. Create, send, and track invoices;
                 effortlessly while gaining valuable insights into your business performance.
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
                   href="#pricing"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <Calculator className="w-5 h-5 mr-2" />
 // Start Free Trial;
           </a>
@@ -259,8 +217,6 @@ Most Popular;
         </main>
         <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default PagePage;

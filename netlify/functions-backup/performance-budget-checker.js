@@ -131,8 +131,8 @@ exports.handler = async function (event, context) {const baseUrl = (
     };
     const report = {generatedAt: new Date().toISOString(),
       baseUrl,
-      counts: {
-        js: scriptSrcs.length,
+      counts: {,
+  js: scriptSrcs.length,
         css: cssHrefs.length,
         img: imgSrcs.length}
       },

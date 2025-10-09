@@ -4,7 +4,7 @@
  * Provides comprehensive accessibility improvements and monitoring
  */
 interface AccessibilityConfig {
-  enableKeyboardNavigation: boolean;
+  enableKeyboardNavigation: boolean;,
   enableScreenReaderSupport: boolean;
   enableHighContrast: boolean;
   enableReducedMotion: boolean;

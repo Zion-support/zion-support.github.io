@@ -1,4 +1,3 @@
-
 export default function October2025SelfHealingSpotlightBann, e, r() { 
   return (
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'>
@@ -18,7 +17,6 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>$5.4B</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Operational, Saving, s</div>
-              </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>99.9, 9, 9%</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Uptime, Achieve, d</div>

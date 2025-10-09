@@ -7,7 +7,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-12">"
         {/* Header, Sectio, n */}
         <div, className="te, x, t-center, m, b-10">
@@ -198,7 +198,6 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {
                   <span, className="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>";
                   <sp, a, n>67% agent, turnove, r, low, satisfactio, n</sp, a, n>
                 </li>
-              </ul>
             </d, i, v>
             <d, i, v>
               <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">

@@ -1,6 +1,5 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import './index.css';
-
 // Lazy load pages for better performance
 // const Home = lazy(() => import('./pages/Home'));
 // const About = lazy(() => import('./pages/About'));
@@ -10,7 +9,6 @@ import './index.css';
 // const Team = lazy(() => import('./pages/Team'));
 // const Privacy = lazy(() => import('./pages/Privacy'));
 // const Terms = lazy(() => import('./pages/Terms'));
-
 function App() {
   useEffect(() => {
     // Initialize basic optimizations
@@ -18,7 +16,6 @@ function App() {
     return () => {
       //       };
   }, []);
-
   return (
     <ErrorBoundary>
       <div>
@@ -34,13 +31,11 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
             </Routes>
-          </Suspense>
         </Router>
       </div>
     </ErrorBoundary>
   );
 }
-
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
@@ -50,14 +45,11 @@ class ErrorBoundary extends React.Component<
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError() {
     return { hasError: true };
   }
-
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     //     }
-
   render() {
     if (this.state.hasError) {
       return (
@@ -76,9 +68,7 @@ class ErrorBoundary extends React.Component<
         )
       );
     }
-
     return this.props.children;
   }
 }
-
 export default App;

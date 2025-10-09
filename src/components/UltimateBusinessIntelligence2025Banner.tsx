@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface UltimateBusinessIntelligence2025BannerProps {
   // Add props here
 }
-
 const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = () => {
   return (
     <div className="ultimatebusinessintelligence2025banner">
       {/* Component content */}
     </div>
-
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
@@ -50,15 +45,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {// TODO: Add content;}
       type: 'Service',
                   {tag}
             {/* CTA Buttons */}
-            
-          
-          
-          
-          
-          
-          
-          
-          
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 href={currentContent.url}
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
@@ -72,21 +58,9 @@ const _UltimateBusinessIntelligence2025Banner = () => {// TODO: Add content;}
             { value: '99.9%', label: 'Success Rate' },
             { value: '5M+', label: 'Data Points Processed' },
           ].map((stat, index) => ()
-            
-          
-          
-          
-          
-          
-          
-          
-          
           <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
-    </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default UltimateBusinessIntelligence2025Banner;

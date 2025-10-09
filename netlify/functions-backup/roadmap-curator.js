@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'roadmap-curator',
         source: event.source || 'unknown',
-        curation: {
-          status: 'active',
+        curation: {,
+  status: 'active',
           roadmaps: 0,
           lastCurated: new Date().toISOString()}
         },

@@ -1,5 +1,5 @@
 export interface January2026Content {
-  id: string;
+  id: string;,
   title: string;
   description: string;
   content: string;
@@ -16,7 +16,6 @@ export interface January2026Content {
     enterprise: string;
   };
 }
-
 export const newJanuary2026Content: January2026Content[] = [
   {
     id: 'ai-2026-hyperconscious-computing',
@@ -25,9 +24,7 @@ export const newJanuary2026Content: January2026Content[] = [
       'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness and creative autonomy.',
     content: `
 # AI 2026: Hyperconscious Computing Revolution
-
 The next evolution of AI is here - systems that not only think but feel, create, and understand consciousness itself.
-
 ## Revolutionary Features
 - Genuine self-awareness and emotional intelligence
 - Creative autonomy and artistic expression
@@ -54,9 +51,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
       'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
     content: `
 # Quantum AI Synthesis 2026
-
 The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.
-
 ## Revolutionary Capabilities
 - Quantum-enhanced machine learning algorithms
 - Exponential speedup in complex problem solving

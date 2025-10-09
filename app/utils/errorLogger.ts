@@ -10,7 +10,7 @@ export enum ErrorSeverity {
   CRITICAL = 'critical'
 }
 export interface ErrorLogEntry {
-  timestamp: string;
+  timestamp: string;,
   severity: ErrorSeverity;
   message: string;
   error?: Error;

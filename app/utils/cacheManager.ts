@@ -18,7 +18,7 @@ export interface CacheConfig {
   defaultTTL?: number;
 }
 export interface CacheEntry<T> {
-  value: T;
+  value: T;,
   timestamp: number;
   ttl: number;
 }

@@ -2,9 +2,8 @@
  * Blog Content Index
  * Centralized index of all blog posts for easy discovery and navigation
  */
-
 export interface BlogPost {
-  slug: string;
+  slug: string;,
   title: string;
   description: string;
   category: string;
@@ -14,7 +13,6 @@ export interface BlogPost {
   featured?: boolean;
   valueProposition: string;
 }
-
 /**
  * October 2025 Breakthrough Content
  */
@@ -125,29 +123,24 @@ export const october2025Breakthroughs: BlogPost[] = [
     valueProposition: 'Instant reversibility, resilient releases',
   },
 ];
-
 /**
  * All blog posts combined
  */
 export const allBlogPosts: BlogPost[] = [...october2025Breakthroughs];
-
 /**
  * Helper functions
  */
 export function getFeaturedPosts(): BlogPost[] {
   return allBlogPosts.filter(post => post.featured);
 }
-
 export function getAllCategories(): string[] {
 //   const categories = new Set(allBlogPosts.map(post => post.category));
   return Array.from(categories);
 }
-
 export function getAllTags(): string[] {
 //   const tags = new Set(allBlogPosts.flatMap(post => post.tags));
   return Array.from(tags);
 }
-
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
     const _value = post.valueProposition.match(/\$(\d+)M/);
@@ -155,7 +148,6 @@ export function getTotalValueProposition(): string {
   }, 0);
   return `$${totalValue}M+ total value proposition`;
 }
-
 export const blogStats = {
   totalPosts: allBlogPosts.length,
   featuredPosts: getFeaturedPosts().length,

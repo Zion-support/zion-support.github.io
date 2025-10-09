@@ -1,15 +1,11 @@
 #!/usr/bin/env node
-
 // Analysis of missing pages based on navigation and footer links
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-
 // Get all existing pages
 const appDir = '/workspace/app';
 const existingPages = [];
-
 function findPages(dir) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -24,9 +20,7 @@ function findPages(dir) {
     }
   }
 }
-
 findPages(appDir);
-
 // Links from navigation and footer
 const referencedLinks = [
   // Main navigation
@@ -34,7 +28,6 @@ const referencedLinks = [
   '/about',
   '/contact',
   '/blog',
-  
   // AI Services
   '/ai-services',
   '/ai-marketing',
@@ -52,7 +45,6 @@ const referencedLinks = [
   '/ai-data-visualization',
   '/ai-lead-generation',
   '/ai-document-processing',
-  
   // IT Services
   '/it-infrastructure',
   '/devops',
@@ -62,7 +54,6 @@ const referencedLinks = [
   '/networking',
   '/it-consulting',
   '/managed-it',
-  
   // Micro SAAS
   '/micro-saas',
   '/ai-writing-assistant',
@@ -81,7 +72,6 @@ const referencedLinks = [
   '/api-builder',
   '/bug-tracker-pro',
   '/doc-generator',
-  
   // Emerging Technologies
   '/quantum-computing',
   '/robotics',
@@ -89,7 +79,6 @@ const referencedLinks = [
   '/blockchain-web3',
   '/business-intelligence',
   '/autonomous-systems',
-  
   // Company & Support
   '/team',
   '/case-studies',
@@ -102,7 +91,6 @@ const referencedLinks = [
   '/privacy',
   '/terms',
   '/cookies',
-  
   // Additional pages from main page
   '/ai-crm',
   '/ai-analytics',
@@ -149,17 +137,14 @@ const referencedLinks = [
   '/bug-tracker-pro',
   '/doc-generator'
 ];
-
 // Find missing pages
 const missingPages = referencedLinks.filter(link => !existingPages.includes(link));
-
 console.log('=== MISSING PAGES ANALYSIS ===');
 console.log(`Total referenced links: ${referencedLinks.length}`);
 console.log(`Total existing pages: ${existingPages.length}`);
 console.log(`Missing pages: ${missingPages.length}`);
 console.log('\n=== MISSING PAGES ===');
 missingPages.forEach(page => console.log(page));
-
 // Group missing pages by category
 const missingByCategory = {
   'AI Services': [],
@@ -170,7 +155,6 @@ const missingByCategory = {
   'Support': [],
   'Other': []
 };
-
 missingPages.forEach(page => {
   if (page.includes('/ai-') || page === '/ai-services') {
     missingByCategory['AI Services'].push(page);
@@ -188,7 +172,6 @@ missingPages.forEach(page => {
     missingByCategory['Other'].push(page);
   }
 });
-
 console.log('\n=== MISSING PAGES BY CATEGORY ===');
 Object.entries(missingByCategory).forEach(([category, pages]) => {
   if (pages.length > 0) {
@@ -196,7 +179,6 @@ Object.entries(missingByCategory).forEach(([category, pages]) => {
     pages.forEach(page => console.log(`  - ${page}`));
   }
 });
-
 // Write missing pages to file
 fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
   totalReferenced: referencedLinks.length,
@@ -205,6 +187,5 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
   missingPages: missingPages,
   missingByCategory: missingByCategory
 }, null, 2));
-
 console.log('\n=== ANALYSIS COMPLETE ===');
 console.log('Missing pages list saved to: /workspace/missing-pages.json');

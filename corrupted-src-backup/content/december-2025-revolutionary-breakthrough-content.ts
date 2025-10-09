@@ -1,9 +1,8 @@
 // December 2025 Revolutionary Breakthrough Content - Latest AI consciousness and superintelligence breakthroughs
-
 export interface RevolutionaryBreakthroughContent {
   id: string;
   slug?: string;
-  title: string;
+  title: string;,
   description: string;
   excerpt: string;
   author: string;
@@ -26,7 +25,6 @@ export interface RevolutionaryBreakthroughContent {
   transcendenceLevel?: string;
   superintelligenceLevel?: string;
 }
-
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
   {
     id: 'quantum-ai-transcendence-revolution-2025',

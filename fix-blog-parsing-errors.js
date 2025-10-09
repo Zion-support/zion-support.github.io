@@ -1,12 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-
 // Get all blog files
 const blogDir = path.join(__dirname, 'src', 'blog');
 const blogFiles = [];
-
 function findBlogFiles(dir) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -19,21 +16,16 @@ function findBlogFiles(dir) {
     }
   }
 }
-
 findBlogFiles(blogDir);
-
 function fixParsingErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
     // Fix missing closing parenthesis before closing brace
     const lines = content.split('\n');
     const newLines = [];
-    
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
       // Check if this line ends with }; and the previous line doesn't have a closing parenthesis
       if (line.trim() === '};' && i > 0) {
         const prevLine = lines[i - 1];
@@ -47,10 +39,8 @@ function fixParsingErrors(filePath) {
           }
         }
       }
-      
       newLines.push(line);
     }
-    
     if (modified) {
       content = newLines.join('\n');
       fs.writeFileSync(filePath, content);
@@ -60,10 +50,8 @@ function fixParsingErrors(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
-
 // Process all blog files
 blogFiles.forEach(file => {
   fixParsingErrors(file);
 });
-
 console.log(`Processed ${blogFiles.length} blog files`);

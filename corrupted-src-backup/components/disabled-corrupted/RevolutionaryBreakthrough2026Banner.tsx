@@ -97,7 +97,6 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {
               </di, v>
             ))}
           </div>
-        </div>
         {/* Featured, Content, Grid */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
           { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (

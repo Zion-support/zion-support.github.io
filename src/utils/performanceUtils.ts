@@ -9,25 +9,15 @@
 export function debounce<T extends (...args: unknown[]) => unknown>(),
     func: T,
   wait: number,
-<<<<<<< HEAD
 ): (...args: Parameters
           <T>) => void {
     // TODO: Add content
   }
   let timeout: NodeJS.Timeout | null = null
   return function executedFunction(...args: Parameters
-          
-          
-          
-          
-          
-          
-          
-          
           <T>) {
       timeout = null
       func(...args)
-=======
 ): (...args: Parameters;
           <T>) => void {// TODO: Add content;}
 }
@@ -39,7 +29,6 @@ export function debounce<T extends (...args: unknown[]) => unknown>(),
     if (timeout) {// TODO: Add content;}
 }
       clearTimeout(timeout);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     if (timeout) {
     // TODO: Add content
@@ -56,21 +45,12 @@ export function throttle;
           <T extends (...args: unknown[]) => unknown>(),
     func: T,
   limit: number,
-<<<<<<< HEAD
 ): (...args: Parameters
           <T>) => void {
     // TODO: Add content
   }
   let inThrottle: boolean
   return function executedFunction(...args: Parameters
-          
-          
-          
-          
-          
-          
-          
-          
           <T>) {
     // TODO: Add content
   }
@@ -80,7 +60,6 @@ export function throttle;
       func(...args)
       inThrottle = true
       setTimeout(() => (inThrottle = false), limit)
-=======
 ): (...args: Parameters;
           <T>) => void {// TODO: Add content;}
 }
@@ -93,7 +72,6 @@ export function throttle;
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }
@@ -103,19 +81,10 @@ export function throttle;
 export function memoize;
           <T extends (...args: unknown[]) => unknown>(),
     func: T,
-<<<<<<< HEAD
 ): T {
     // TODO: Add content
   }
   const cache = new Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, ReturnType<T>>()
   return ((...args: Parameters<T>): ReturnType<T> => {
     // TODO: Add content
@@ -127,19 +96,10 @@ export function memoize;
       return cache.get(key)!
     }
     const result = func(...args) as ReturnType
-          
-          
-          
-          
-          
-          
-          
-          
           <T>
     cache.set(key, result)
     return result
   }) as T
-=======
 ): T {// TODO: Add content;}
 }
   const cache = new Map;
@@ -156,7 +116,6 @@ export function memoize;
     cache.set(key, result);
     return result;
   }) as T;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Lazy load a component with dynamic import;
@@ -165,17 +124,14 @@ export function lazyLoad<T extends React.ComponentType<unknown>>()
   importFunc: () => Promise;
           <{ default: T }>,
   fallback?: React.ReactNode,
-<<<<<<< HEAD
 ): React.LazyExoticComponent<T> {
     // TODO: Add content
-=======
 ): React.LazyExoticComponent<T> {// TODO: Add content;}
 }
   const LazyComponent = React.lazy(importFunc);
   if (fallback) {// TODO: Add content;}
 }
     return LazyComponent;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   const LazyComponent = React.lazy(importFunc)
   if (fallback) {
@@ -193,20 +149,17 @@ export async function measureTime;
   name: string,
   func: () => T | Promise;
           <T>
-<<<<<<< HEAD
 ): Promise<{ result: T; duration: number }> {
     // TODO: Add content
   }
   const start = performance.now()
   const result = await func()
   const duration = performance.now() - start
-=======
 ): Promise<{ result: T; duration: number }> {// TODO: Add content;}
 }
   const start = performance.now();
   const result = await func();
   const duration = performance.now() - start;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
   return { result, duration }
 }
@@ -219,23 +172,13 @@ export async function batchAsync;
   operation: (item: T) => Promise;
           <R>,
   batchSize = 10,
-<<<<<<< HEAD
 ): Promise<R[]> {
     // TODO: Add content
   }
   const results: R[] = []
   for (let _i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
           < items.length; i += batchSize) {
     // TODO: Add content
-=======
 ): Promise<R[]> {// TODO: Add content;}
 }
   const results: R[] = [];
@@ -245,7 +188,6 @@ export async function batchAsync;
     const batch = items.slice(i, i + batchSize);
     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     const batch = items.slice(i, i + batchSize)
     const batchResults = await Promise.all(batch.map(operation))
@@ -256,7 +198,6 @@ export async function batchAsync;
 /**
  * Create a request animation frame loop;
  */
-<<<<<<< HEAD
 export function rafLoop(callback: (time: number) => boolean | void): () => void {
     // TODO: Add content
   }
@@ -282,7 +223,6 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
     // TODO: Add content
   }
       cancelAnimationFrame(rafId)
-=======
 export function rafLoop(callback: (time: number) => boolean | void): () => void {// TODO: Add content;}
 }
   let rafId: number;
@@ -303,7 +243,6 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
     if (rafId) {// TODO: Add content;}
 }
       cancelAnimationFrame(rafId);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }
@@ -313,7 +252,6 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
 export function runWhenIdle()
   callback: () => void,
   options?: IdleRequestOptions,
-<<<<<<< HEAD
 ): number {
     // TODO: Add content
   }
@@ -325,7 +263,6 @@ export function runWhenIdle()
   // Fallback for browsers that don't support requestIdleCallback
   if (typeof window !== 'undefined') {
     // TODO: Add content
-=======
 ): number {// TODO: Add content;}
 }
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {// TODO: Add content;}
@@ -336,7 +273,6 @@ export function runWhenIdle()
   if (typeof window !== 'undefined') {// TODO: Add content;}
 }
     return (window as Window).setTimeout(callback, 1) as unknown as number;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return (window as Window).setTimeout(callback, 1) as unknown as number
   }
@@ -345,7 +281,6 @@ export function runWhenIdle()
 /**
  * Cancel idle callback;
  */
-<<<<<<< HEAD
 export function cancelIdle(id: number): void {
     // TODO: Add content
   }
@@ -360,7 +295,6 @@ export function cancelIdle(id: number): void {
     // TODO: Add content
   }
       (window as Window).clearTimeout(id)
-=======
 export function cancelIdle(id: number): void {// TODO: Add content;}
 }
   if (typeof window !== 'undefined') {// TODO: Add content;}
@@ -371,23 +305,13 @@ export function cancelIdle(id: number): void {// TODO: Add content;}
     } else {// TODO: Add content;}
 }
       (window as Window).clearTimeout(id);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }
 /**
  * Virtual scroll helper;
  */
-<<<<<<< HEAD
 export class VirtualScroller
-          
-          
-          
-          
-          
-          
-          
-          
           <T> {
     // TODO: Add content
   }
@@ -425,7 +349,6 @@ export class VirtualScroller
     // TODO: Add content
   }
     return this.items.length * this.itemHeight
-=======
 export class VirtualScroller;
           <T> {// TODO: Add content;}
 }
@@ -458,7 +381,6 @@ export class VirtualScroller;
   getTotalHeight(): number {// TODO: Add content;}
 }
     return this.items.length * this.itemHeight;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 /**
@@ -467,19 +389,10 @@ export class VirtualScroller;
 export function setupLazyImages()
   selector = 'img[data-src]',
   options?: IntersectionObserverInit,
-<<<<<<< HEAD
 ): () => void {
     // TODO: Add content
   }
   const images = document.querySelectorAll
-          
-          
-          
-          
-          
-          
-          
-          
           <HTMLImageElement>(selector)
   const observer = new IntersectionObserver((entries) => {
     // TODO: Add content
@@ -498,7 +411,6 @@ export function setupLazyImages()
           img['src'] = src
           img.removeAttribute('data-src')
           observer.unobserve(img)
-=======
 ): () => void {// TODO: Add content;}
 }
   const images = document.querySelectorAll;
@@ -516,7 +428,6 @@ export function setupLazyImages()
           img['src'] = src;
           img.removeAttribute('data-src');
           observer.unobserve(img);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
     }
@@ -528,16 +439,7 @@ export function setupLazyImages()
 /**
  * Preload critical resources;
  */
-<<<<<<< HEAD
 export function preloadResources(resources: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{ url: string; as: string }>): void {
     // TODO: Add content
   }
@@ -551,7 +453,6 @@ export function preloadResources(resources: Array
     document.head.appendChild(link)
   }
   )
-=======
 export function preloadResources(resources: Array;
           <{ url: string; as: string }>): void {// TODO: Add content;}
 }
@@ -563,12 +464,10 @@ export function preloadResources(resources: Array;
     link.as = as;
     document.head.appendChild(link);
   });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Check if code splitting is supported;
  */
-<<<<<<< HEAD
 export function supportsCodeSplitting(): boolean {
     // TODO: Add content
   }
@@ -583,7 +482,6 @@ export function supportsCodeSplitting(): boolean {
     // TODO: Add content
   }
     return false
-=======
 export function supportsCodeSplitting(): boolean {// TODO: Add content;}
 }
   // Dynamic imports are supported in modern browsers;
@@ -595,13 +493,11 @@ export function supportsCodeSplitting(): boolean {// TODO: Add content;}
   } catch {// TODO: Add content;}
 }
     return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 /**
  * Optimize bundle loading;
  */
-<<<<<<< HEAD
 export function prefetchBundle(url: string): void {
     // TODO: Add content
   }
@@ -609,19 +505,16 @@ export function prefetchBundle(url: string): void {
   link.rel = 'prefetch'
   link.href = url
   document.head.appendChild(link)
-=======
 export function prefetchBundle(url: string): void {// TODO: Add content;}
 }
   const link = document.createElement('link');
   link.rel = 'prefetch';
   link.href = url;
   document.head.appendChild(link);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Memory usage monitor;
  */
-<<<<<<< HEAD
 export function getMemoryUsage(): {
     // TODO: Add content
   }
@@ -642,7 +535,6 @@ export function getMemoryUsage(): {
       total: memory.totalJSHeapSize,
       limit: memory.jsHeapSizeLimit
     }
-=======
 export function getMemoryUsage(): {// TODO: Add content;}
 };
   used: number;,
@@ -659,14 +551,12 @@ export function getMemoryUsage(): {// TODO: Add content;}
       total: memory.totalJSHeapSize,
       limit: memory.jsHeapSizeLimit;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   return null
 }
 /**
  * FPS Monitor;
  */
-<<<<<<< HEAD
 export class FPSMonitor {
     // TODO: Add content
   }
@@ -692,7 +582,6 @@ export class FPSMonitor {
     // TODO: Add content
   }
           callback(this.fps)
-=======
 export class FPSMonitor {// TODO: Add content;}
 }
   private _frames: number = 0;
@@ -713,14 +602,12 @@ export class FPSMonitor {// TODO: Add content;}
         if (callback) {// TODO: Add content;}
 }
           callback(this.fps);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
       this.rafId = requestAnimationFrame(loop)
     }
     this.rafId = requestAnimationFrame(loop)
   }
-<<<<<<< HEAD
   stop(): void {
     // TODO: Add content
   }
@@ -739,7 +626,6 @@ export class FPSMonitor {// TODO: Add content;}
 export default {
     // TODO: Add content
   }
-=======
   stop(): void {// TODO: Add content;}
 }
     if (this.rafId) {// TODO: Add content;}
@@ -754,7 +640,6 @@ export default {
 }
 export default {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //   debounce,
 //   throttle,
 //   memoize,
@@ -770,10 +655,7 @@ export default {// TODO: Add content;}
 //   supportsCodeSplitting,
 //   prefetchBundle,
 //   getMemoryUsage,
-<<<<<<< HEAD
 //   FPSMonitor
 }
-=======
 //   FPSMonitor;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

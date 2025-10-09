@@ -1,10 +1,5 @@
-
-                  </span>                </div>
-
-
+                  </span>
       </section>    </div>
   );
 };
-
 export default StatusPage;
-

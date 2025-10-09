@@ -1,11 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const PagePage: React.FC = () => {
-=======
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart, Star from 'lucide-react';}
 import { Bot } from 'lucide-react';
@@ -40,7 +36,6 @@ const AICustomerSupportBotPage: React.FC = () => {const features = [}
         'Custom integrations',
         'Multi-language support'
       popular: true,
-
       name: 'Enterprise',
       price: '$599',
       description: 'For large organizations',
@@ -58,11 +53,9 @@ const AICustomerSupportBotPage: React.FC = () => {const features = [}
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -74,25 +67,13 @@ const AICustomerSupportBotPage: React.FC = () => {const features = [}
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
-
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 // Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands;
 //             natural language and escalates complex issues to human agents seamlessly.
-          
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -143,10 +124,8 @@ Most Popular;
               Schedule Demo;
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );
 };
-
 export default PagePage;

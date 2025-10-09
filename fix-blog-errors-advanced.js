@@ -1,16 +1,14 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 //Advanced fixes for blog files
 const fixes = [
   //Fix malformed metadata objects - missing commas and braces
   {
     pattern:
       /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,
-    replacement: `export const metadata = {
+    replacement: `export const metadata = {,
   title: '$1',
   description: '$2',
   keywords: '$3',
@@ -95,10 +93,8 @@ const fixes = [
     replacement: 'return (\n    <div>{/* content */}',
   },
 ];
-
 function fixFile(filePath) {
   try {
-
     fixes.forEach(fix => {
       //       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
@@ -106,34 +102,26 @@ function fixFile(filePath) {
         modified = true;
       }
     });
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       //       return true;
     }
-
     return false;
   } catch (error) {
     //     return false;
   }
 }
-
 async function main() {
   //   const blogDir = path.join(process.cwd(), 'app', 'blog');
-
   if (!fs.existsSync(blogDir)) {
     //     return;
   }
-
   //Find all .tsx and .jsx files in blog directory
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
-
   //   let fixedCount = 0;
   files.forEach(file => {
     if (fixFile(file)) {
       fixedCount++;
     }
   });
-
   //   }
-

@@ -66,7 +66,6 @@ const October2025NewBreakthroughBanne, r = () => {
           <p, className='te, x, t-2xl, tex, t-purp, l, e-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
             Master, contex, t-aware, agen, t, s, intelligent, cost, governance, and, multimodal, intelligence with, our, latest enterprise, implementation, guides. Achieve, 7, 9% cost, reductions, and 26x, performance, improvements.
           </p>
-        </div>
         {/* Content, Card, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
           { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {

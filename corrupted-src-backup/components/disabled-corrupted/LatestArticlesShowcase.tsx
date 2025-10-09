@@ -11,7 +11,6 @@ const LatestArticlesShowcas, e: React.FC = () => {
           <p, className='te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o'>
             Explore, cuttin, g-edge, insights, on A, I, automati, o, n, and, emerging, technologies
           </p>
-        </div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
           {latestArticl, e, s.m, a, p(artic, l, e = > (
             <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'

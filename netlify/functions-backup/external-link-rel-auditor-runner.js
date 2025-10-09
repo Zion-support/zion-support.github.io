@@ -13,8 +13,8 @@ exports.handler = async () => {try {
     run('git push origin main || true')}
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        ok: true)
+      body: JSON.stringify({,
+  ok: true)
         tool: 'external-link-rel-auditor-runner'}
       });
     };

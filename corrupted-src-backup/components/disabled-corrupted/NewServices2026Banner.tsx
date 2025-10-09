@@ -1,9 +1,7 @@
-
 type NewServices2026BannerProp, s = { 
   varia, n, t?: 'showca, s, e' | 'he, r, o' | 'in, f, o'; showCou, n, t?: number;
   classNa, m, e ?  : string;
  };
-
 export default function NewServices2026Bann, e, r({
   varia, n, t = 'showc, a, s, e',
   showCou, n, t =  , 6,
@@ -64,8 +62,6 @@ export default function NewServices2026Bann, e, r({
           >
             Accelerate, transformation, with our, newest, AI-powered, solution, s.
           </p>
-        </div>
-
         <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'>
           { servic, e, s.m, a, p(s =  > (
             <Link, ke, y = { s.li, n, k  }, to={ s.li, n, k } classNa, m, e = {  `round, e, d-xl, borde, r ${varia, n, t === 'in, f, o'  ? 'bg-white, borde, r-gr, a, y-1, 0, 0'  : 'bg-whi, t, e/10, borde, r-whi, t, e/2, 0'  }, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-30, 0`}

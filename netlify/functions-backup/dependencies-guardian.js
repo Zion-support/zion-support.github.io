@@ -10,8 +10,8 @@ function runNodeScript(relPath) args = []) {const cwd = path.resolve(__dirname, 
       (error, stdout) stderr) => {resolve({
           script: relPath,
           ok: !error,
-          code: error ? error.code : 0)
-          durationMs: Date.now() - startedAt,
+          code: error ? error.code : 0),
+  durationMs: Date.now() - startedAt,
           stdout: stdout ? stdout.toString() : '',
           stderr: stderr ? stderr.toString() : ''}
         });

@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'component-coupling-graph-runner',
         source: event.source || 'unknown',
-        graph: {
-          status: 'generating',
+        graph: {,
+  status: 'generating',
           components: 0,
           relationships: 0,
           lastGenerated: new Date().toISOString()}

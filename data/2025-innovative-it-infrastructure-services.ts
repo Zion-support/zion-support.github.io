@@ -1,4 +1,3 @@
-
 export const innovativeITInfrastructureServices2025 = [{pricing: starter: unknown,
         price: 299,
         period: 'month',
@@ -78,8 +77,8 @@ export const innovativeITInfrastructureServices2025 = [
     ],
     compliance: ['SOC2', 'ISO 27001', 'NIST', 'FedRAMP', 'HIPAA', 'PCI DSS'],
   },
-    id: 'autonomous-devops-intelligence-platform'
-    name: 'Autonomous DevOps Intelligence Platform'
+    id: 'autonomous-devops-intelligence-platform',
+  name: 'Autonomous DevOps Intelligence Platform'
     description:
       'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.'
     features: [;

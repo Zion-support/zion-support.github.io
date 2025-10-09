@@ -1,4 +1,4 @@
-export interface AdvancedAIAutomationService {id: string;
+export interface AdvancedAIAutomationService {id: string;,
   name: string;
   tagline: string;
   price: string,

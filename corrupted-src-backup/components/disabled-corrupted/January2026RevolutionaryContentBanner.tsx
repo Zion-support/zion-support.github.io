@@ -61,7 +61,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'>
             Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, content: 98% automation, ra, t, e, s, quantum, computing, revolutions, and, Fortune, 500 transformations, wort, h $1, 0, B.
           </p>
-        </div>
         {/* Content, Gri, d */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
           { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (

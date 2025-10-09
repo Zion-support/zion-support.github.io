@@ -1,5 +1,4 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
-
 // Define available banners with their import paths
 const bannerComponents = {
   'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
@@ -19,16 +18,13 @@ const bannerComponents = {
     () => import('./CognitiveOrchestrationMegaBanner')
   ),
 };
-
 type BannerKey = keyof typeof bannerComponents;
-
 interface BannerRotationManagerProps {
   banners?: BannerKey[];
   maxBanners?: number;
   rotationInterval?: number;
   className?: string;
 }
-
 /**
  * BannerRotationManager - Manages the rotation and display of promotional banners
  *
@@ -46,43 +42,34 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
-
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
 //     const selected = banners.slice(0, maxBanners);
     setVisibleBanners(selected);
   }, [banners, maxBanners]);
-
   // Rotate banners at specified interval
   useEffect(() => {
     if (visibleBanners.length <= 1) return;
-
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
     }, rotationInterval);
-
     return () => clearInterval(interval);
   }, [visibleBanners.length, rotationInterval]);
-
   if (visibleBanners.length === 0) {
     return null;
   }
-
 //   const currentBanner = visibleBanners[currentIndex];
 //   const BannerComponent = bannerComponents[currentBanner];
-
   return (
     <div className={`banner-rotation-manager ${className}`}></div>
       <Suspense
         fallback={
           <div className='flex items-center justify-center py-16'></Suspense>
             <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
-          </div>
         }
       >
         <BannerComponent />
       </Suspense>
-
       {/* Banner indicators */}
       {visibleBanners.length > 1 && (
         <div className='flex justify-center mt-4 space-x-2'></div>
@@ -103,5 +90,4 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     </div>
   );
 };
-
 export default BannerRotationManager;

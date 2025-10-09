@@ -7,8 +7,8 @@ export const metaTags = {
   author: 'Zion Tech Group',
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
-  og: {
-    title: 'Bolt.new Zion App - Advanced Web Development Solutions',
+  og: {,
+  title: 'Bolt.new Zion App - Advanced Web Development Solutions',
     description:
       'Professional web development services with cutting-edge technology and innovative solutions.',
     type: 'website',
@@ -23,5 +23,4 @@ export const metaTags = {
     image: 'https://bolt.new.zion.app/og-image.jpg',
   },
 };
-
 export default metaTags;

@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'auto-scheduler',
         source: event.source || 'unknown',
-        scheduling: {
-          status: 'active',
+        scheduling: {,
+  status: 'active',
           tasksScheduled: 0,
           lastSchedule: new Date().toISOString()}
         },

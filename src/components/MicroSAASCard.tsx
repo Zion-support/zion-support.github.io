@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface MicroSAASCardProps {
-
   // Add props here
-
-=======
 'use client';
 interface MicroSAASCardProps {// TODO: Add content;}
 }
   service: {// TODO: Add content;}
 };
-  title: string;
-    description: string;
+  title: string;,
+  description: string;
     icon: string;
     price: string;,
     features: string[];,
@@ -27,35 +22,19 @@ interface MicroSAASCardProps {// TODO: Add content;}
 }
 const MicroSAASCard: React.FC;
           <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
-
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
-<<<<<<< HEAD
-
     <div className="microsaascard">
       {/* Component content */}
-
-=======
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
       {service.popular && ()}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
 // Most Popular;
           </span>
-        </div>
       )}
       <div className="text-center mb-4">
         <div className="text-4xl mb-3">{service.icon}</div>
@@ -115,9 +94,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };
-
 export default MicroSAASCard;

@@ -1,7 +1,5 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
-
 const PROD_DOMAIN = 'https://ziontechgroup.com';
-
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -9,15 +7,12 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
   const { productId, userId } = req.body || {};
-
   if (!productId) {
     res.statusCode = 400;
     res.json({ error: 'Product ID is required' });
     return;
   }
-
   try {
     // Basic checkout session creation logic
     const sessionData = {
@@ -26,7 +21,6 @@ async function handler(req, res) {
       domain: PROD_DOMAIN,
       timestamp: new Date().toISOString(),
     };
-
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ success: true, session: sessionData }));
@@ -35,5 +29,4 @@ async function handler(req, res) {
     res.end('Internal Server Error');
   }
 }
-
 export default withErrorLogging(handler);

@@ -25,7 +25,7 @@ export enum ErrorSeverity {
 }
 // Error interface
 export interface AppError {
-  id: string;
+  id: string;,
   type: ErrorType;
   severity: ErrorSeverity;
   message: string;
@@ -282,7 +282,6 @@ export class ErrorHandler {
         <div>
           <strong>${error.severity} Error</strong>
           <p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p>
-        </div>
         <button onclick="this.parentElement.parentElement.remove()" style="
           background: none;
           border: none;

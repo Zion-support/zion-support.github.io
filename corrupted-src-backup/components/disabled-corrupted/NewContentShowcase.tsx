@@ -15,7 +15,6 @@ const NewContentShowcas, e: React.FC = () => {
           <p, className="te, x, t-2xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
             Explore, our, latest breakthrough, articles, and revolutionary, services
           </p>
-        </div>
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }
           <d, i, v>
             <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6">

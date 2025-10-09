@@ -2,7 +2,6 @@ import React from 'react';
 import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const CloudMigrationPage: React.FC = () => {
   const features = [
     {
@@ -36,7 +35,6 @@ const CloudMigrationPage: React.FC = () => {
       benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
     }
   ];
-
   const migrationSteps = [
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of current infrastructure and migration strategy',
@@ -44,8 +42,8 @@ const CloudMigrationPage: React.FC = () => {
       features: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
       step: '2',
       title: 'Planning',
-      description: 'Create detailed migration plan with timelines and rollback strategies'
-      title: 'Optimization & Support',
+      description: 'Create detailed migration plan with timelines and rollback strategies',
+  title: 'Optimization & Support',
       description: 'Post-migration optimization and ongoing support',
       features: ['Performance tuning', 'Cost optimization', '24/7 support']
       step: '01',
@@ -62,7 +60,6 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Optimize performance and provide ongoing support and monitoring.',
       icon: TrendingUp,
       duration: 'Ongoing'
-
   const pricingPlans = [
       name: 'Small Business',
       price: '$2,500',
@@ -102,7 +99,6 @@ const CloudMigrationPage: React.FC = () => {
         'Multi-cloud architecture',
         'Dedicated account manager',
         'Custom integrations'
-
   const benefits = [
       title: 'Cost Reduction',
       description: 'Reduce infrastructure costs by up to 40% with cloud optimization.',
@@ -116,7 +112,6 @@ const CloudMigrationPage: React.FC = () => {
       title: 'Scalability',
       description: 'Scale resources up or down based on demand automatically.',
       percentage: 'Unlimited'
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
@@ -146,7 +141,6 @@ const CloudMigrationPage: React.FC = () => {
                 href="/demo"
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
                 Free Assessment
-
       {/* Features Section */}
       <div className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -155,7 +149,6 @@ const CloudMigrationPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our cloud migration services cover every aspect of your infrastructure transition, 
               from planning to optimization.
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-transform duration-300">
@@ -183,7 +176,6 @@ const CloudMigrationPage: React.FC = () => {
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center"
                 View Demo
           </section>
-
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Our Migration Services
@@ -203,7 +195,6 @@ const CloudMigrationPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-
           {/* Migration Process */}
               Our Migration Process
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -213,14 +204,12 @@ const CloudMigrationPage: React.FC = () => {
                     {step.step}
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-
           {/* CTA Section */}
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Migrate to the Cloud?
             <p className="text-xl text-gray-300 mb-8">
               Let our experts help you migrate to the cloud safely and efficiently
-          
               <div key={index} className="cyber-card p-8 group hover:scale-105 transition-transform duration-300">
                   <step.icon className="w-8 h-8 text-blue-400 mr-3" />
                   <h3 className="text-xl font-bold text-white">{step.title}</h3>
@@ -228,12 +217,10 @@ const CloudMigrationPage: React.FC = () => {
                   {step.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       {feature}
-
       {/* Migration Process Section */}
       <section className="py-16 px-4 bg-slate-800/50">
             <h2 className="text-4xl font-bold text-white mb-4">Our Migration Process</h2>
             <p className="text-xl text-gray-300">A proven methodology for successful cloud migrations</p>
-
               <div key={index} className="cyber-card p-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4">
                     <span className="text-white font-bold text-lg">{step.step}</span>
@@ -242,7 +229,6 @@ const CloudMigrationPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
                 <p className="text-gray-300 mb-4">{step.description}</p>
                 <div className="text-cyan-400 font-semibold">Duration: {step.duration}</div>
-
       {/* Benefits Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -271,7 +257,6 @@ const CloudMigrationPage: React.FC = () => {
                   Get Free Assessment
                   className="cyber-button-outline w-full inline-flex items-center justify-center py-3"
                   Schedule Consultation
-
       <div className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -280,11 +265,9 @@ const CloudMigrationPage: React.FC = () => {
             Don't let outdated infrastructure hold your business back. Our cloud migration 
             services will help you modernize, scale, and compete in the digital economy.
               Start Your Migration
-
       <section className="py-16 px-4">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Cloud Migration?</h2>
             <p className="text-xl text-gray-300">Proven benefits that drive business value</p>
-
             {benefits.map((benefit, index) => (
               <div key={index} className="cyber-card p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -292,11 +275,9 @@ const CloudMigrationPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-4">{benefit.description}</p>
                 <div className="text-3xl font-bold text-cyan-400">{benefit.percentage}</div>
-
       {/* Pricing Section */}
             <h2 className="text-4xl font-bold text-white mb-4">Transparent Migration Pricing</h2>
             <p className="text-xl text-gray-300">Choose the migration package that fits your needs</p>
-
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                 {plan.popular && (
@@ -320,7 +301,6 @@ const CloudMigrationPage: React.FC = () => {
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                 </button>
-
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?</h2>
@@ -328,9 +308,7 @@ const CloudMigrationPage: React.FC = () => {
             <button className="cyber-button px-8 py-4 text-lg">
             <button className="cyber-button-outline px-8 py-4 text-lg">
               Contact Our Experts
-
       <Footer />
-
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration</h1>
@@ -339,5 +317,4 @@ const CloudMigrationPage: React.FC = () => {
           Contact Us
   );
 };
-
 export default CloudMigrationPage;

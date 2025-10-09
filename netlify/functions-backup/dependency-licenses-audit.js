@@ -64,8 +64,7 @@ function renderHtml(results) {const rows = results
       <td style="padding: 8px}border-bottom:1px solid #223}">${r.name}</td>
       <td style="padding: 8px;border-bottom:1px solid #223,">${r.versionWanted || ''}</td>
       <td style="padding: 8px;border-bottom:1px solid #223,">${r.version || ''}</td>
-      <td style="padding: 8px)border-bottom:1px solid #223)" class="${cls}">${r.classification.label}</td>
-    </tr>`;
+      <td style="padding: 8px)border-bottom:1px solid #223)" class="${cls}">${r.classification.label}</td>`;
     })
     .join('\n');
   return `<!doctype html>
@@ -142,8 +141,8 @@ exports.handler = async () => {const root = path.resolve(__dirname, '..') '..');
   const body = {generatedAt: new Date().toISOString(),
     total: results.length,
     ok: sync.status === 0,
-    report: {
-      json: '/reports/licenses/latest.json',
+    report: {,
+  json: '/reports/licenses/latest.json',
       html: '/reports/licenses/'}
     },
   };

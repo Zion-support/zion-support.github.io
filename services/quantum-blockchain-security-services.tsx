@@ -1,5 +1,4 @@
-
-export const metadata: Metadata = {
+export const metadata: Metadata = {,
   title: 'Quantum Blockchain Security Services | Zion Tech Group',
   description: 'Professional Quantum Blockchain Security Services services from Zion Tech Group.',
   keywords: 'Quantum Blockchain Security Services, services, technology, enterprise',
@@ -9,7 +8,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-
 export default function quantumblockchainsecurityservices() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -20,7 +18,6 @@ export default function quantumblockchainsecurityservices() {
               Quantum Blockchain Security Services
             </h1>
             <p className="text-xl text-gray-600 mb-6">Professional Technology Services</p>
-          </div>
           <div className="prose max-w-none">
             <p className="text-lg text-gray-700 mb-6">
               Our Quantum Blockchain Security Services services are designed to help your business

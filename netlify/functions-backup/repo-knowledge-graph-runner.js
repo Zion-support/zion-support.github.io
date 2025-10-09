@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'repo-knowledge-graph-runner',
         source: event.source || 'unknown',
-        graph: {
-          status: 'generating',
+        graph: {,
+  status: 'generating',
           repositories: 0,
           knowledgeNodes: 0,
           lastGenerated: new Date().toISOString()}

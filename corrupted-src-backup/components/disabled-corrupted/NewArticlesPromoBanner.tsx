@@ -33,7 +33,6 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
                 {featuredArticl, e, s.leng, t, h} New, Articles, Published
               </h4>
               <p, className="te, x, t-bl, u, e-100, tex, t-sm">Latest, AI, insights and, researc, h</p>
-            </div>
           </div>
           <Link, t, o="/bl, o, g"
             className="bg-white, tex, t-bl, u, e-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-50, transitio, n-colors, tex, t-sm"

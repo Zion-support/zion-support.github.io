@@ -110,7 +110,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
@@ -133,18 +132,15 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
         </main>
       </div>
     </>
   );
 };
-
 const AIWorkflowAutomationPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-      
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -210,7 +206,6 @@ const AIWorkflowAutomationPage = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -276,5 +271,4 @@ const AIWorkflowAutomationPage = () => {
     </div>
   );
 };
-
 export default AIWorkflowAutomationPage2;

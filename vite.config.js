@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
-
 export default defineConfig({
   plugins: [
     react(),
@@ -14,7 +13,7 @@ export default defineConfig({
   ],
   root: '.',
   build: {
-    outDir: 'dist',
+  outDir: 'dist',
     target: 'es2015',
     minify: 'terser',
     sourcemap: false,

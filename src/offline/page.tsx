@@ -1,11 +1,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   return (
-
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -19,12 +16,9 @@ const PagePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
       <Footer />
     </div>
-
-=======
 'use client';
 /**
  * Offline Page;
@@ -37,17 +31,8 @@ const OfflinePage: React.FC = () => {const handleRetry = () => {}
 }
     window.location.href = '/';
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
         <div className="w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center">
@@ -64,15 +49,6 @@ const OfflinePage: React.FC = () => {const handleRetry = () => {}
             onClick={handleRetry}
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
 // >
-            
-          
-          
-          
-          
-          
-          
-          
-          
           <RefreshCw className="w-4 h-4" />
 // Try Again;
           </button>
@@ -89,8 +65,6 @@ onClick={handleGoHome}
           <p className="text-xs text-gray-400">
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default PagePage;

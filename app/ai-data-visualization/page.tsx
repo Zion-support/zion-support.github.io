@@ -1,6 +1,5 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-
 export default function AIDataVisualizationPage() {
   return (
     <div><Helmet>
@@ -9,10 +8,8 @@ export default function AIDataVisualizationPage() {
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-data-visualization" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -25,8 +22,6 @@ export default function AIDataVisualizationPage() {
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
               Turn complex data into beautiful, interactive visualizations with AI-powered insights that help you make data-driven decisions faster and more accurately.
             </p>
-          </section>
-
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>
@@ -38,7 +33,6 @@ export default function AIDataVisualizationPage() {
                   AI automatically selects the best chart types and creates stunning visualizations from your data.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🔍</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Insights</h3>
@@ -46,7 +40,6 @@ export default function AIDataVisualizationPage() {
                   AI analyzes your data and provides intelligent insights, trends, and recommendations.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">📱</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Interactive Dashboards</h3>
@@ -54,7 +47,6 @@ export default function AIDataVisualizationPage() {
                   Create responsive, interactive dashboards that work perfectly on all devices.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🤖</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Natural Language Queries</h3>
@@ -62,7 +54,6 @@ export default function AIDataVisualizationPage() {
                   Ask questions in plain English and get instant visual answers from your data.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">⚡</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Updates</h3>
@@ -70,7 +61,6 @@ export default function AIDataVisualizationPage() {
                   Visualizations update automatically as new data comes in, keeping insights current.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🔮</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics</h3>
@@ -80,7 +70,6 @@ export default function AIDataVisualizationPage() {
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
@@ -97,7 +86,6 @@ export default function AIDataVisualizationPage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-              
               <div className="cyber-card p-8 text-center border-2 border-cyan-400">
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className="text-lg">/month</span></div>
@@ -111,7 +99,6 @@ export default function AIDataVisualizationPage() {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
-              
               <div className="cyber-card p-8 text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
@@ -127,7 +114,6 @@ export default function AIDataVisualizationPage() {
               </div>
             </div>
           </section>
-
           {/* Use Cases Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>
@@ -137,19 +123,16 @@ export default function AIDataVisualizationPage() {
                 <h3 className="text-xl font-bold text-white mb-4">Business Intelligence</h3>
                 <p className="text-gray-300">Transform business data into actionable insights and strategic decisions.</p>
               </div>
-              
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl mb-4">📈</div>
                 <h3 className="text-xl font-bold text-white mb-4">Sales Analytics</h3>
                 <p className="text-gray-300">Track sales performance, identify trends, and optimize revenue strategies.</p>
               </div>
-              
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl mb-4">👥</div>
                 <h3 className="text-xl font-bold text-white mb-4">Customer Analytics</h3>
                 <p className="text-gray-300">Understand customer behavior and preferences through visual data analysis.</p>
               </div>
-              
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl mb-4">⚙️</div>
                 <h3 className="text-xl font-bold text-white mb-4">Operations</h3>
@@ -157,7 +140,6 @@ export default function AIDataVisualizationPage() {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Start Visualizing Your Data Today</h2>
@@ -174,7 +156,6 @@ export default function AIDataVisualizationPage() {
             </div>
           </section>
         </main>
-        
         <Footer />
       </div>
     </div>

@@ -47,7 +47,6 @@ const DistributedAITrainingScale2026 = () =>
               <span>•<
               <span>20 min read<
             </div>
-          </header>
           {/* Key Metrics Banner */}
           <div className="text-left"></div>
             <h2 className="text-left">

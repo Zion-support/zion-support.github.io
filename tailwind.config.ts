@@ -1,5 +1,4 @@
-
-const config: Config = {
+const config: Config = {,
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -49,5 +48,4 @@ const config: Config = {
   },
   plugins: [],
 };
-
 export default config;

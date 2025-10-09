@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface LazyImageProps {
-
   // Add props here
 }
-
 const LazyImage: React.FC<LazyImageProps> = () => {
   return (
     <div className="lazyimage">
       {/* Component content */}
-
-=======
 'use client';
 interface LazyImageProps {// TODO: Add content;}
 };
@@ -77,17 +71,8 @@ const LazyImage: React.FC;
     onError?.();
   };
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div
       ref={imgRef} className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
@@ -99,15 +84,6 @@ const LazyImage: React.FC;
           aria-hidden="true"
 // />
       ) : (
-
-          
-          
-          
-          
-          
-          
-          
-          
           <><img
             src={hasError ? placeholder : src}
             alt={alt} className={cn(}
@@ -124,9 +100,7 @@ const LazyImage: React.FC;
           )}
         </>
       )}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };
-
 export default LazyImage;

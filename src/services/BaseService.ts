@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-
 export abstract class BaseService {
   protected baseUrl: string;
-  
   constructor(baseUrl: string) {
     this.baseUrl = baseUrl;
   }
-  
   protected async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
     const response = await fetch(`${this.baseUrl}${endpoint}`, options);
     if (!response.ok) {
@@ -15,8 +11,6 @@ export abstract class BaseService {
     return response.json();
   }
 }
-
-=======
 'use client';
 /**
  * Base Service Class;
@@ -142,4 +136,3 @@ logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
 };
   component: this.constructor.name,
 ...context;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

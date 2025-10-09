@@ -5,7 +5,7 @@
  */
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {
-  environment: Environment;
+  environment: Environment;,
   api: {
     baseURL: string;
     timeout: number;

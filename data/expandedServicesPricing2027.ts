@@ -1,7 +1,7 @@
 // Expanded Services Pricing Guide 2027 - Zion Tech Group
 // Comprehensive pricing information for all expanded innovative services
 export type ExpandedServicePricing =
-  serviceId: string;
+  serviceId: string;,
   serviceName: string;
   category: string;
   subcategory: string;

@@ -2,7 +2,6 @@
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
  */
-<<<<<<< HEAD
 export interface SecurityHeadersConfig {
     // TODO: Add content
   }
@@ -16,7 +15,6 @@ export interface SecurityHeadersConfig {
 export const _defaultSecurityHeaders: SecurityHeadersConfig = {
     // TODO: Add content
   }
-=======
 export interface SecurityHeadersConfig {// TODO: Add content;}
 }
   contentSecurityPolicy?: string;
@@ -28,7 +26,6 @@ export interface SecurityHeadersConfig {// TODO: Add content;}
 }
 export const _defaultSecurityHeaders: SecurityHeadersConfig = {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   // Content Security Policy,
   contentSecurityPolicy: [
   // TODO: Add items,
@@ -73,7 +70,6 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {// TODO: Add cont
 export function getSecurityHeaders()
   customConfig?: Partial;
           <SecurityHeadersConfig>
-<<<<<<< HEAD
 ): Record<string, string> {
   const headers: Record<string, string> = {
     // TODO: Add content
@@ -108,7 +104,6 @@ export function getSecurityHeaders()
   }
   if (config.permissionsPolicy) {
     // TODO: Add content
-=======
 ): Record<string, string> {const headers: Record<string, string> = {}
   // TODO: Add content;
 }
@@ -138,7 +133,6 @@ export function getSecurityHeaders()
   if (config.permissionsPolicy) {// TODO: Add content;}
 }
     headers['Permissions-Policy'] = config.permissionsPolicy;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     headers['Permissions-Policy'] = config.permissionsPolicy
   }
@@ -150,7 +144,6 @@ export function getSecurityHeaders()
 export function getNextSecurityHeaders()
   customConfig?: Partial;
           <SecurityHeadersConfig>
-<<<<<<< HEAD
 ): Array<{ key: string; value: string }> {
     // TODO: Add content
   }
@@ -161,7 +154,6 @@ export function getNextSecurityHeaders()
 //     key,
 //     value
   }))
-=======
 ): Array<{ key: string; value: string }> {// TODO: Add content;}
 }
   const headers = getSecurityHeaders(customConfig);
@@ -170,6 +162,5 @@ export function getNextSecurityHeaders()
 //     key,
 //     value;
   }));
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 export default defaultSecurityHeaders

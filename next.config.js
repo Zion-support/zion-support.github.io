@@ -1,23 +1,20 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import crypto from 'crypto';
-
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
-  eslint: {
-    ignoreDuringBuilds: true,
+  eslint: {,
+  ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
     formats: ['image/webp', 'image/avif'],
@@ -27,7 +24,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Fix for "self is not defined" error by providing a polyfill
     if (isServer) {
@@ -37,7 +33,6 @@ const nextConfig = {
         })
       );
     }
-
     // Optimize bundle size
     config.optimization = {
       ...config.optimization,
@@ -94,13 +89,10 @@ const nextConfig = {
       },
       minimize: !dev,
     };
-
     // Tree shaking
     config.optimization.usedExports = true;
-
     return config;
   },
-
   async headers() {
     return [
       {
@@ -156,7 +148,6 @@ const nextConfig = {
       },
     ];
   },
-
   async redirects() {
     return [
       {
@@ -166,13 +157,11 @@ const nextConfig = {
       },
     ];
   },
-
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@heroicons/react', 'framer-motion'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
-
   // Performance optimizations
   // modularizeImports: {
   //   'lucide-react': {
@@ -182,7 +171,6 @@ const nextConfig = {
   //     transform: '@heroicons/react/{{member}}',
   //   },
   // },
-
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
@@ -190,5 +178,4 @@ const nextConfig = {
     } : false,
   },
 };
-
 export default bundleAnalyzer(nextConfig);

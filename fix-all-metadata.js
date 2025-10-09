@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
-
 // List of files that still have metadata issues
 const filesToFix = [
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
@@ -15,16 +13,12 @@ const filesToFix = [
   '/workspace/app/team/page.tsx',
   '/workspace/app/terms/page.tsx',
 ];
-
 // // Function to process a single file
 function processFile(filePath) {
   try {
-
     // Extract metadata information before removing it
-
     if (metadataMatch) {
       try {
-
         if (titleMatch) metadata.title = titleMatch[1];
         if (descMatch) metadata.description = descMatch[1];
         if (typeMatch) metadata.type = typeMatch[1];
@@ -37,20 +31,15 @@ function processFile(filePath) {
         };
       }
     }
-
     // Remove the entire metadata export
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
-
     // Remove any remaining broken metadata lines
-
     for (let i = 0; i < lines.length; i++) {
-
       // Skip broken metadata lines
       if (line.includes('title:') && !line.includes('//') && !line.includes('<title>')) {
         skipUntilSemicolon = true;
         continue;
       }
-
       if (
         skipUntilSemicolon &&
         (line.trim() === '};' ||
@@ -64,23 +53,18 @@ function processFile(filePath) {
         }
         continue;
       }
-
       if (!skipUntilSemicolon) {
         filteredLines.push(line);
       }
     }
-
     content = filteredLines.join('\n');
-
     // Clean up extra empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
     // Fix function declarations
     content = content.replace(
       /export default function (\w+)\(\) \{/,
       'const $1: React.FC = () => {'
     );
-
     // Add proper export at the end if missing
     if (!content.includes('export default') && content.includes('const ')) {
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];
@@ -89,7 +73,6 @@ function processFile(filePath) {
         modified = true;
       }
     }
-
     // Update Helmet with extracted metadata
     if (metadata.title || metadata.description) {
       //       const helmetMatch = content.match(/(<Helmet>[\s\S]*?<\/Helmet>)/);
@@ -100,28 +83,23 @@ function processFile(filePath) {
         ${metadata.type ? `<meta property="og:type" content="${metadata.type}" />` : ''}
         ${metadata.url ? `<meta property="og:url" content="${metadata.url}" />` : ''}
       </Helmet>`;
-
         content = content.replace(/(<Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
         modified = true;
       }
     }
-
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
       //       return true;
     }
-
     return false;
   } catch (error) {
     //     return false;
   }
 }
-
 // Process all files
 filesToFix.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
-
 // 

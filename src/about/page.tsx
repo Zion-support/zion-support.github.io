@@ -2,19 +2,13 @@ import React from 'react';
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
-
 const AboutPage: React.FC = () => {
-<<<<<<< HEAD
-
   const _team = [
     {
       name: 'Kleber Santos',
-
-=======
   const team = [
     {
       name: 'Kleber Santos',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.'},
@@ -29,18 +23,15 @@ const AboutPage: React.FC = () => {
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.'}
   ];
-
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
-
   const values = [
     {icon: Brain,}
       title: 'Innovation',
-<<<<<<< HEAD
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.'},
     {
       icon: Shield,
@@ -52,7 +43,6 @@ const AboutPage: React.FC = () => {
       description: 'We focus on delivering measurable business outcomes and ROI.'},
     {
       icon: Users,
-=======
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
     },
     {icon: Shield,}
@@ -64,27 +54,21 @@ const AboutPage: React.FC = () => {
       description: 'We focus on delivering measurable business outcomes and ROI.',
     },
     {icon: Users,}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.'}
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             About <span className="text-cyan-400">Zion Tech Group</span>
-          </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             We are pioneers in AI and IT solutions, transforming businesses through innovative technology and expert guidance.
           </p>
         </div>
       </section>
-
-<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -98,7 +82,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -109,7 +92,6 @@ const AboutPage: React.FC = () => {
                 <value.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300">{value.description}</p>
-=======
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,7 +109,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -158,14 +139,11 @@ const AboutPage: React.FC = () => {
                   helping organizations across all industries achieve digital transformation;
                   and sustainable growth in the age of artificial intelligence.
                 </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
               </div>
             ))}
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
       {/* Team Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -177,7 +155,6 @@ const AboutPage: React.FC = () => {
                   <span className="text-2xl font-bold text-slate-900">
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
-=======
         {/* Values Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,7 +178,6 @@ const AboutPage: React.FC = () => {
                   <p className="text-gray-600">
                     {value.description}
                   </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 mb-3">{member.role}</p>
@@ -211,8 +187,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -233,7 +207,6 @@ const AboutPage: React.FC = () => {
             >
               Our Services
             </Link>
-=======
         {/* Team Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -267,13 +240,9 @@ const AboutPage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -300,10 +269,8 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );
 };
-
 export default AboutPage;

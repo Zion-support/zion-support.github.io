@@ -1,8 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -18,12 +16,9 @@ const PagePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
       <Footer />
     </div>
-
-=======
   const _teamMembers = [
   // TODO: Add items;
 ];;
@@ -65,17 +60,8 @@ const PagePage: React.FC = () => {
     { number: '100+', label: 'AI Projects', icon: Brain },
     { number: '99.9%', label: 'Client Satisfaction', icon: Shield }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Team</h1>
@@ -84,8 +70,6 @@ const PagePage: React.FC = () => {
 // Contact Us;
           </a>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default PagePage;

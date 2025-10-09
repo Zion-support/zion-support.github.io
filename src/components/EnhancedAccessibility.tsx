@@ -1,21 +1,16 @@
 import React from 'react';
-
-<<<<<<< HEAD
 interface EnhancedAccessibilityProps {
   // Add props here
 }
-
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = () => {
   return (
     <div className="enhancedaccessibility">
       {/* Component content */}
     </div>
-
-=======
 interface AccessibilitySettings {// TODO: Add content;}
 };
-  highContrast: boolean;
-    largeText: boolean;,
+  highContrast: boolean;,
+  largeText: boolean;,
     reducedMotion: boolean;,
     screenReader: boolean;,
     focusVisible: boolean;,
@@ -249,17 +244,8 @@ const toggleHighContrast = () => {// TODO: Add content;}
   if (!isVisible) {// TODO: Add content;}
 }
     return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-      
           <button
         onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white hover:bg-slate-800 transition-colors duration-200 z-50"
         aria-label="Open accessibility settings"
@@ -273,7 +259,7 @@ const toggleHighContrast = () => {// TODO: Add content;}
           aria-label="Close accessibility settings"
         >
           ×
-        </button></div><div className="space-y-3">
+        </button><div className="space-y-3">
         {enableHighContrast && (}
           <div className="flex items-center justify-between"><span className="text-sm">High Contrast</span><button
               onClick={toggleHighContrast} className={`flex items-center px-3 py-1 rounded ${}
@@ -336,8 +322,6 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600 hover:bg-red
         >
           Reset Settings;
         </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default EnhancedAccessibility;

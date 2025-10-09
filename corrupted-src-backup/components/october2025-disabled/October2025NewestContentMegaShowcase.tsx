@@ -61,7 +61,6 @@ export default function October2025NewestContentMegaShowca, s, e() {
             <div, className="flex, item, s-center, ga, p-2">
               <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 0, 0% Explainable, A, I</sp, a, n>
             </div>
-          </div>
         </div>
         {/* Content, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
@@ -126,5 +125,4 @@ export default function October2025NewestContentMegaShowca, s, e() {
     </sec, t, i, o, n>
   );
 }
-
 }

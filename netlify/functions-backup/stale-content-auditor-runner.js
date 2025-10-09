@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'stale-content-auditor-runner',
         source: event.source || 'unknown',
-        audit: {
-          status: 'active',
+        audit: {,
+  status: 'active',
           contentAudited: 0,
           staleFound: 0,
           lastAudit: new Date().toISOString()}

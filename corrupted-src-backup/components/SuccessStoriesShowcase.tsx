@@ -52,7 +52,6 @@ key={index}
                   <div>
                     <h3 className="font-bold text-xl">{story.company}</h3>
                     <p className="text-sm opacity-90">{story.industry}</p>
-                  </div>
                 </div>
                 <div className="text-3xl font-bold">{story.result}</div>
               </div>

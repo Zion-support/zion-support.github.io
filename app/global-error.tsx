@@ -1,5 +1,4 @@
 "use client";
-
 export default function GlobalError({
   error,
   reset,
@@ -19,7 +18,6 @@ export default function GlobalError({
             >
               Try again
             </button>
-          </div>
         </div>
       </body>
     </html>

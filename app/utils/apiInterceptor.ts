@@ -16,7 +16,7 @@ class ErrorHandler {
     }
 }
 export interface APIConfig {
-  baseURL: string;
+  baseURL: string;,
   timeout: number;
   retryAttempts: number;
   retryDelay: number;

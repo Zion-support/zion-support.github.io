@@ -65,7 +65,6 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {
         >
           <div, className="te, x, t-cent, e, r">
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-1">99.7%</div>
-          </div>
           <div, className="te, x, t-cent, e, r">
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Speed, Boos, t</div>
           </div>

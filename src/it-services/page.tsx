@@ -1,10 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
 const PagePage: React.FC = () => {
-=======
 import SEOOptimizer from '../components/SEOOptimizer';
 import {Cloud, Shield, Server, BarChart, Users from 'lucide-react';}
 import { Helmet } from 'react-helmet-async';
@@ -42,7 +39,6 @@ const ItServicesPage: React.FC = () => {title: 'Advanced Threat Protection',}
       technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -54,14 +50,10 @@ const ItServicesPage: React.FC = () => {title: 'Advanced Threat Protection',}
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
-
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
 // Contact Us;
@@ -69,10 +61,8 @@ const ItServicesPage: React.FC = () => {title: 'Advanced Threat Protection',}
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
 Learn More;
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );
 };
-
 export default PagePage;

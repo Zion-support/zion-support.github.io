@@ -38,7 +38,6 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
             satisfacti, o, n.{' '}
             <strong, classNam, e = 'te, x, t-cy, a, n-4, 0, 0'>Fortune, 100, proven</stro, n, g> with, 127M, customers global, l, y.
           </p>
-        </div>
         {/* Key, Metrics, Grid */}
         <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10'>
           <div, className='bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/40, t, o-cy, a, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'>

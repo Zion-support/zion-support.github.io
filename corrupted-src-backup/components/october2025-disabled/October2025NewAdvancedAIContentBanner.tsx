@@ -37,7 +37,6 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
               <Shield, className='w-5 h-5' />
               <sp, a, n>99.8% Privacy, Protectio, n</sp, a, n>
             </div>
-          </div>
         </moti, o, n.d, i, v>
         {/* Content, G, r, i, d */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>

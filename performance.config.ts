@@ -2,11 +2,10 @@
  * Performance Configuration
  * Comprehensive performance monitoring and optimization settings
  */
-
 export const performanceConfig = {
   // Core Web Vitals thresholds
-  webVitals: {
-    lcp: {
+  webVitals: {,
+  lcp: {
       good: 2500,
       needsImprovement: 4000,
     },
@@ -31,13 +30,11 @@ export const performanceConfig = {
       needsImprovement: 500,
     },
   },
-
   // Resource loading priorities
   resourceHints: {
     preconnect: ['https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
     dnsPrefetch: ['https://www.google-analytics.com', 'https://www.googletagmanager.com'],
   },
-
   // Lazy loading configuration
   lazyLoading: {
     imagePlaceholder: 'blur',
@@ -45,7 +42,6 @@ export const performanceConfig = {
     threshold: 0.01,
     enableNativeLazyLoading: true,
   },
-
   // Caching strategies
   caching: {
     staticAssets: {
@@ -60,7 +56,6 @@ export const performanceConfig = {
       maxAge: 604800, // 1 week
     },
   },
-
   // Bundle optimization
   bundling: {
     maxChunkSize: 244000, // ~240KB
@@ -68,7 +63,6 @@ export const performanceConfig = {
     splitChunks: true,
     treeshaking: true,
   },
-
   // Monitoring
   monitoring: {
     sampleRate: 0.1, // 10% of requests
@@ -77,5 +71,4 @@ export const performanceConfig = {
     enableMemoryMonitoring: true,
   },
 };
-
 export default performanceConfig;

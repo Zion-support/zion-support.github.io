@@ -144,7 +144,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                   <li>Implement, intelligent, log analysis, and, anomaly detecti, o, n</li>
                   <li>Expec, t, e
   d: 40% reduction, in, alert noi, s, e, 3x, faster, incident respon, s, e</li>
-                </ul>
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, b-3">Phas, e, 2: Automated, Deploymen, t (Wee, k, 3-6)</h3>"

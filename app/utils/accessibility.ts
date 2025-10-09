@@ -4,7 +4,7 @@
  * WCAG 2.1 Level AA compliance helpers
  */
 export interface A11yReport {
-  errors: A11yError[];
+  errors: A11yError[];,
   warnings: A11yWarning[];
   score: number;
 }

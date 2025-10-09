@@ -1,4 +1,4 @@
-export interface ZionInnovativeService2025 {id: string;
+export interface ZionInnovativeService2025 {id: string;,
   name: string;
   tagline: string;
   price: string;

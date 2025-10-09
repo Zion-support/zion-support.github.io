@@ -1,10 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
 const PagePage: React.FC = () => {
-=======
 import {Leaf, Target, Zap, Settings, CheckCircle, Star,  Leaf,  Target,  Settings from 'lucide-react';}
 const SustainabilityTechPage: React.FC = () => {const features = [}
     {// TODO: Add content;}
@@ -24,13 +21,11 @@ const SustainabilityTechPage: React.FC = () => {const features = [}
       benefits: ['Waste reduction', 'Resource optimization', 'Recycling systems']
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
           </h1>
@@ -40,9 +35,6 @@ const SustainabilityTechPage: React.FC = () => {const features = [}
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
-
-=======
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // Sustainability Tech;
           </h1>
@@ -52,15 +44,6 @@ const SustainabilityTechPage: React.FC = () => {const features = [}
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 // Build a sustainable future with our green technology solutions. From renewable energy to circular economy,
             we help you reduce environmental impact while driving business growth.
-          
-          
-          
-          
-          
-          
-          
-          
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -96,11 +79,9 @@ const SustainabilityTechPage: React.FC = () => {const features = [}
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       </main>
       <Footer />
     </div>
   );
 };
-
 export default PagePage;

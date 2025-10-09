@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'orphan-pages-detector',
         source: event.source || 'unknown',
-        detection: {
-          status: 'active',
+        detection: {,
+  status: 'active',
           pagesScanned: 0,
           orphansFound: 0,
           lastScan: new Date().toISOString()}

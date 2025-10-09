@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 // // Read the open PRs data
 try {
 //   const prData = fs.readFileSync('open_prs_current.json', 'utf8');
@@ -10,13 +8,11 @@ try {
 //   } catch (error) {
 //   process.exit(1);
 }
-
 // Function to safely merge a PR branch
 function mergePR(pr) {
 //   const branchName = pr.head.ref;
 //   const prNumber = pr.number;
 //   const prTitle = pr.title;
-
 //   //   try {
     // Check if branch exists
     try {
@@ -27,10 +23,8 @@ function mergePR(pr) {
     } catch (error) {
 //       return false;
     }
-
     // Fetch the latest changes
 //     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
-
     // Check for merge conflicts
 //     try {
       execSync(`git merge --no-commit --no-ff origin/${branchName}`, {
@@ -45,7 +39,6 @@ function mergePR(pr) {
     } catch (mergeError) {
 //       // Reset the merge attempt
       execSync('git merge --abort', { stdio: 'pipe' });
-
       // Try to resolve conflicts automatically
       try {
 //         execSync(
@@ -63,9 +56,7 @@ function mergePR(pr) {
 //     return false;
   }
 }
-
 // Process each PR
-
 for (const pr of openPRs) {
 //   const success = mergePR(pr);
   results.push({
@@ -74,14 +65,12 @@ for (const pr of openPRs) {
     branch: pr.head.ref,
     success: success,
   });
-
   if (success) {
     successCount++;
   } else {
     failCount++;
   }
 }
-
 // Create summary report
 const summary = {
   totalPRs: openPRs.length,
@@ -90,9 +79,7 @@ const summary = {
   results: results,
   timestamp: new Date().toISOString(),
 };
-
 fs.writeFileSync('pr-merge-results.json', JSON.stringify(summary, null, 2));
-
 // // // // // Push changes to main if there were successful merges
 if (successCount > 0) {
   try {
@@ -100,5 +87,4 @@ if (successCount > 0) {
 //     } catch (error) {
 //     }
 }
-
 // // 

@@ -3,8 +3,8 @@ exports.handler = async function (event, context) {try {
     const timestamp = new Date().toISOString()}
     const result = {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'Performance monitoring runner function executed successfully',
+      body: JSON.stringify({,
+  message: 'Performance monitoring runner function executed successfully',
         timestamp: timestamp,
         function: 'performance-monitoring-runner',
         action: 'performance_monitoring',

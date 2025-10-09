@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -10,8 +9,8 @@ const ServicesPage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       description: 'Cutting-edge artificial intelligence solutions',
-      services: [
-          name: 'Machine Learning Solutions',
+      services: [,
+  name: 'Machine Learning Solutions',
           description: 'Custom ML models for predictive analytics and decision-making',
           price: 'Starting at $1,500/month',
           features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring']
@@ -72,7 +71,6 @@ const ServicesPage: React.FC = () => {
           description: 'Transform your email marketing with AI-powered content generation',
           features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns']
   ];
-
   const processSteps = [
       step: '01',
       title: 'Discovery & Analysis',
@@ -90,13 +88,11 @@ const ServicesPage: React.FC = () => {
       title: 'Optimization & Support',
       description: 'Continuous monitoring, optimization, and 24/7 support to ensure peak performance.',
       icon: TrendingUp
-
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '24/7', label: 'Support Available', icon: Users },
     { number: '50+', label: 'Expert Engineers', icon: Award }
-
   const benefits = [
   const additionalServices = [
       title: 'AI-Powered Solutions',
@@ -109,7 +105,6 @@ const ServicesPage: React.FC = () => {
       icon: BarChart,
       title: 'Measurable Results',
       description: 'Track performance with detailed analytics and reporting dashboards'
-
   return (
     <>
       <Helmet>
@@ -127,7 +122,6 @@ const ServicesPage: React.FC = () => {
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Services
                 </span>
-              </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Comprehensive AI and IT Solutions
               </p>
@@ -148,7 +142,6 @@ const ServicesPage: React.FC = () => {
                   (302) 464-0950
               </div>
           </section>
-
           {/* Service Categories */}
           <section className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
@@ -169,7 +162,6 @@ const ServicesPage: React.FC = () => {
                         <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
                           <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
                           <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                          
                           {/* Features */}
                           <div className="mb-4">
                             <h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
@@ -181,13 +173,11 @@ const ServicesPage: React.FC = () => {
                                 </li>
                               ))}
                             </ul>
-                          
                           <div className="flex items-center justify-between">
                             <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                               href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.name}`}
                               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                               Get Started
-
           {/* Benefits Section */}
                 Why Choose Our Services?
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -196,7 +186,6 @@ const ServicesPage: React.FC = () => {
                     <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                     <p className="text-gray-300 text-sm">{benefit.description}</p>
-
           {/* CTA Section */}
           <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
             <div className="max-w-4xl mx-auto text-center">
@@ -212,5 +201,4 @@ const ServicesPage: React.FC = () => {
     </>
   );
 };
-
 export default ServicesPage;

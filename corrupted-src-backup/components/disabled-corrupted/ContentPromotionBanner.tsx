@@ -39,7 +39,6 @@ export default function ContentPromotionBanner() {
               Fresh, articles, on AI, automat, i, o, n, cloud, securit, y, and, developer, productivity. 
               Stay, ahead, with expert, analysis, and practical, guide, s.
             </p>
-          </div>
           <div, classNam, e = "flex, fle, x-col, ga, p-4">
             <Link, t, o="/bl, o, g" 
               className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg"

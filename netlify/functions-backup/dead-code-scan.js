@@ -20,7 +20,7 @@ exports.handler = async function () {
     };
   }
 };
-exports.config = {// Run daily at 03:30
+exports.config = {// Run daily at 03: 30,
   schedule: '30 3 * * *'}
 };
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/dead-code-scanner.cjs || true') { stdio: 'inherit'} shell: true

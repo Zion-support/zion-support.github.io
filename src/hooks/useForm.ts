@@ -5,44 +5,24 @@ import React from 'react'
  * Provides form state management and validation;
  */
 // import { logger } from '../utils/logger';
-<<<<<<< HEAD
 import {
     // TODO: Add content
   }
-=======
 import {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //   ValidationRule,
 //   validateField,
 //   validateForm,
 //   isFormValid,
 //   getFormErrors,
-<<<<<<< HEAD
   // ValidationResult as _ValidationResult
 } from '../utils/formValidation'
 export interface UseFormConfig
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends Record<string, unknown>> {
     // TODO: Add content
   }
   initialValues: T
   validationSchema?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <Record<keyof T, ValidationRule[]>>
   onSubmit: (values: T) => void | Promise<void>
   validateOnChange?: boolean
@@ -53,17 +33,8 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   }
   values: T;,
     errors: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <keyof T, string[]>
   touched: Record<keyof T, boolean>
-=======
   // ValidationResult as _ValidationResult;
 } from '../utils/formValidation';
 export interface UseFormConfig;
@@ -82,7 +53,6 @@ export interface UseFormReturn<T extends Record<string, unknown>> {// TODO: Add 
     errors: Record;
           <keyof T, string[]>;
   touched: Record<keyof T, boolean>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   isSubmitting: boolean;,
     isValid: boolean;,
     handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;,
@@ -93,33 +63,16 @@ export interface UseFormReturn<T extends Record<string, unknown>> {// TODO: Add 
     setFieldTouched: (field: keyof T, touched: boolean) => void;,
     resetForm: () => void;,
     validateField: (field: keyof T) => void;,
-<<<<<<< HEAD
     validateAllFields: () => boolean
 export function useForm<T extends Record<string, unknown>>({
     // TODO: Add content
   }
   initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig
-          
-          
-          
-          
-          
-          
-          
-          
           <T>): UseFormReturn<T> {
     // TODO: Add content
   }
   const [values, setValues] = useState
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(initialValues)
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>)
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>)
@@ -148,14 +101,6 @@ const validateAllFields = useCallback((): boolean => {
   }
     if (Object.keys(validationSchema).length === 0) return true
     const validationResults = validateForm(values, validationSchema as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <keyof T, ValidationRule[]>)
     const formErrors = getFormErrors(validationResults)
     setErrors(formErrors)
@@ -164,14 +109,6 @@ const validateAllFields = useCallback((): boolean => {
   // Handle input change
 const handleChange = useCallback()
     (e: ChangeEvent
-          
-          
-          
-          
-          
-          
-          
-          
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     // TODO: Add content
   }
@@ -190,7 +127,6 @@ let fieldValue: unknown = value
     // TODO: Add content
   }
         setTimeout(() => validateSingleField(fieldName), 0)
-=======
     validateAllFields: () => boolean;
 export function useForm<T extends Record<string, unknown>>({// TODO: Add content;}
 }
@@ -246,11 +182,9 @@ let fieldValue: unknown = value;
       if (validateOnChange && touched[fieldName]) {// TODO: Add content;}
 }
         setTimeout(() => validateSingleField(fieldName), 0);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     [validateOnChange, touched, validateSingleField]
   // Handle input blur;
   const handleBlur = useCallback(
-<<<<<<< HEAD
       const fieldName = e.target.name as keyof T
       setTouched(prev => ({
         [fieldName]: true
@@ -259,27 +193,16 @@ let fieldValue: unknown = value;
     // TODO: Add content
   }
         validateSingleField(fieldName)
-=======
       const fieldName = e.target.name as keyof T;
       setTouched(prev => ({[fieldName]: true;}
       // Validate on blur if enabled;
       if (validateOnBlur) {// TODO: Add content;}
 }
         validateSingleField(fieldName);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 [validateOnBlur, validateSingleField]
   // Handle form submission;
   const handleSubmit = useCallback(
-<<<<<<< HEAD
     async (e: React.FormEvent
-          
-          
-          
-          
-          
-          
-          
-          
           <HTMLFormElement>) => {
     // TODO: Add content
   }
@@ -291,14 +214,6 @@ const allTouched = Object.keys(values).reduce((acc, key) => {
         acc[key as keyof T] = true
         return acc
       }, {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <keyof T, boolean>)
       setTouched(allTouched)
 const isValid = validateAllFields()
@@ -338,14 +253,6 @@ const isValid = validateAllFields()
   const resetForm = useCallback(() => {
     setValues(initialValues)
     setErrors({} as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <keyof T, string[]>)
     setTouched({} as Record<keyof T, boolean>)
   }, [initialValues])
@@ -354,7 +261,6 @@ const isValid = Object.keys(errors).length === 0 ||
     Object.values(errors).every(errorArray => errorArray.length === 0)
   return {
 values,
-=======
     async (e: React.FormEvent;
           <HTMLFormElement>) => {// TODO: Add content;}
 }
@@ -402,7 +308,6 @@ const isValid = validateAllFields();
 const isValid = Object.keys(errors).length === 0 ||
     Object.values(errors).every(errorArray => errorArray.length === 0);
   return {values,}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     errors,
     touched,
     isSubmitting,
@@ -415,10 +320,7 @@ const isValid = Object.keys(errors).length === 0 ||
     setFieldTouched,
     resetForm,
     validateField: validateSingleField,
-<<<<<<< HEAD
     validateAllFields
   }
-=======
     validateAllFields;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

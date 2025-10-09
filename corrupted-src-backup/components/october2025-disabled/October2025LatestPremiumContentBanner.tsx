@@ -26,7 +26,6 @@ const October2025LatestPremiumContentBanne, r = () => {
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20">
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-4, 0, 0">$19.2B+</div>
                 <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Total, Value, Created</div>
-              </div>
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20">
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">99.87%</div>
                 <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Average, Accurac, y</div>

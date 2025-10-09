@@ -1,5 +1,5 @@
 export interface BlogPost {
-  slug: string;
+  slug: string;,
   title: string;
   description: string;
   content: string;
@@ -11,7 +11,6 @@ export interface BlogPost {
   readTime: string;
   image?: string;
 }
-
 export const blogPosts: BlogPost[] = [
   {
     slug: 'ai-2025-oct-04-operational-ai-scorecards-v2',
@@ -20,13 +19,11 @@ export const blogPosts: BlogPost[] = [
       'KPI-linked SLIs, online canaries, and rollback-first ops that raise velocity while reducing incidents.',
     content: `
 # Operational AI Scorecards v2: Ship AI features weekly without surprises by wiring measurement to decisions.
-
 ## What You'll Implement
 - KPI-linked SLIs that predict outcomes
 - Online canaries as deploy gates
 - Budget-aware routing with safe fallbacks
 - One-click rollback with blast-radius checks
-
 ## Results
 - Fewer regressions, faster iteration, clearer ownership
     `,
@@ -45,7 +42,6 @@ export const blogPosts: BlogPost[] = [
       'Freshness windows, retrieval tiers, and semantic caches that raise answer quality while reducing cost.',
     content: `
 # Enterprise RAG Quality Budgets: Production RAG needs governance and budgets.
-
 ## Core Patterns
 - Domain schemas and strict source governance
 - Freshness windows per intent
@@ -67,14 +63,11 @@ export const blogPosts: BlogPost[] = [
       'Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.',
     content: `
 # Enterprise Agents in Production: Budgets, Approvals, and Rollback
-
 This guide shows how to ship agentic systems that operate within explicit budgets and guardrails while driving measurable outcomes.
-
 ## Ship Safely
 - Signed tools with scopes and quotas
 - Budget-aware action routing with KPI-linked SLIs
 - Canary routes and one-click rollback hooks
-
 ## Outcomes
 - Incident rate stable as automation expands
 - Faster delivery without runaway spend
@@ -94,7 +87,6 @@ This guide shows how to ship agentic systems that operate within explicit budget
     description:
       'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
     content: `# GenAI Cost Optimization v6
-
 Control GenAI costs without UX regressions: quality-tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.`,
     author: 'Zion Tech Group Platform Team',
     date: '2025-10-03',
@@ -111,15 +103,12 @@ Control GenAI costs without UX regressions: quality-tier routers, request coales
       'Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.',
     content: `
 # Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts
-
 Modern enterprises need shipping speed without surprise risk. This field guide shows how to wire governance into the product lifecycle so teams move faster with fewer incidents and lower costs.
-
 ## What You'll Ship
 - Policy tests in CI that gate risky changes
 - KPI-linked scorecards across reliability, latency, and cost
 - Budget-aware routing and circuit breakers
 - Canary playbooks with instant rollback hooks
-
 ## Outcomes
 - 8–12x deployment velocity with lower change-failure rate
 - 30–70% GenAI cost reduction via quality tiers and caches

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const NotFoundPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -19,16 +16,12 @@ const NotFoundPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
       <Footer />
     </div>
   );
 };
-
 export default NotFoundPage;
-
-=======
 export default function NotFound() {return (}
     <div>
       <div>
@@ -43,15 +36,6 @@ export default function NotFound() {return (}
           <p className="text-lg text-gray-600">
             The page you're looking for doesn't exist or has been moved.
 // Don't worry, let's get you back on track!
-          
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
         </div>
         {/* Popular Pages */}
@@ -62,15 +46,6 @@ export default function NotFound() {return (}
               href={page.href}
               className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
           <div className="text-3xl mb-3">{page.icon}</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {page.title}
@@ -97,4 +72,3 @@ export default function NotFound() {return (}
       </div>
     </div>)
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

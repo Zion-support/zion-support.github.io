@@ -18,7 +18,6 @@ const October2025DocumentAutomationBanne, r = () => {
             NEW, RELEAS, E - OCTOB, E, R , 1, 20, 2, 5
             <FileText, classNam, e = 'w-4 h-4, m, l-2' />
           </div>
-        </div>
         {/* Main, Headlin, e */}
         <div, className='te, x, t-center, m, b-6'>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, m, b-3'>

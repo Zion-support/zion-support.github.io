@@ -2,7 +2,6 @@
  * Advanced Performance Optimizer
  * Comprehensive performance monitoring and optimization utilities
  */
-
 class PerformanceOptimizer {
   constructor() {
     this.metrics = {
@@ -16,7 +15,6 @@ class PerformanceOptimizer {
     this.observers = new Map();
     this.init();
   }
-
   init() {
     this.setupWebVitals();
     this.setupResourceOptimization();
@@ -24,7 +22,6 @@ class PerformanceOptimizer {
     this.setupCodeSplitting();
     this.setupCaching();
   }
-
   setupWebVitals() {
     // Core Web Vitals monitoring
     if ('web-vitals' in window) {
@@ -39,18 +36,14 @@ class PerformanceOptimizer {
       );
     }
   }
-
   setupResourceOptimization() {
     // Preload critical resources
     this.preloadCriticalResources();
-
     // Lazy load non-critical resources
     this.setupLazyLoading();
-
     // Optimize font loading
     this.optimizeFontLoading();
   }
-
   setupImageOptimization() {
     // Intersection Observer for lazy loading images
     if ('IntersectionObserver' in window) {
@@ -66,21 +59,17 @@ class PerformanceOptimizer {
           }
         });
       });
-
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
       });
     }
   }
-
   setupCodeSplitting() {
     // Dynamic imports for route-based code splitting
     this.setupRouteBasedSplitting();
-
     // Component-based splitting
     this.setupComponentSplitting();
   }
-
   setupCaching() {
     // Service Worker registration for caching
     if ('serviceWorker' in navigator) {
@@ -92,14 +81,12 @@ class PerformanceOptimizer {
 //           });
     }
   }
-
   preloadCriticalResources() {
     const criticalResources = [
       '/src/pages/Home.tsx',
       '/src/components/Header.tsx',
       '/src/components/Footer.tsx',
     ];
-
     criticalResources.forEach(resource => {
       const _link = document.createElement('link');
       link.rel = 'preload';
@@ -108,11 +95,9 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
   }
-
   setupLazyLoading() {
     // Lazy load non-critical components
     const _lazyComponents = document.querySelectorAll('[data-lazy]');
-
     if ('IntersectionObserver' in window) {
       const lazyObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -123,19 +108,16 @@ class PerformanceOptimizer {
           }
         });
       });
-
       lazyComponents.forEach(component => {
         lazyObserver.observe(component);
       });
     }
   }
-
   optimizeFontLoading() {
     // Preload critical fonts
     const criticalFonts = [
       'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     ];
-
     criticalFonts.forEach(font => {
       const _link = document.createElement('link');
       link.rel = 'preload';
@@ -147,7 +129,6 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
   }
-
   setupRouteBasedSplitting() {
     // Implement route-based code splitting
     const routes = {
@@ -160,11 +141,9 @@ class PerformanceOptimizer {
       '/privacy': () => import('../pages/Privacy'),
       '/terms': () => import('../pages/Terms'),
     };
-
     // Preload next likely routes
     this.preloadNextRoutes(routes);
   }
-
   setupComponentSplitting() {
     // Lazy load heavy components that are not already statically imported
     const heavyComponents = [
@@ -173,24 +152,20 @@ class PerformanceOptimizer {
       'AdvancedForms',
       'InteractiveMaps',
     ];
-
     heavyComponents.forEach(component => {
       this.setupComponentLazyLoading(component);
     });
   }
-
   preloadNextRoutes(routes) {
     // Preload likely next routes based on user behavior
 //     const currentPath = window.location.pathname;
     const _likelyNextRoutes = this.getLikelyNextRoutes(currentPath);
-
     likelyNextRoutes.forEach(route => {
       if (routes[route]) {
 //         routes[route]().catch(console.error);
       }
     });
   }
-
   getLikelyNextRoutes(currentPath) {
     const routeMap = {
       '/': ['/about', '/services'],
@@ -202,16 +177,13 @@ class PerformanceOptimizer {
       '/privacy': ['/terms', '/contact'],
       '/terms': ['/privacy', '/contact'],
     };
-
     return routeMap[currentPath] || [];
   }
-
   setupComponentLazyLoading(componentName) {
     // Set up lazy loading for specific components
     const componentElements = document.querySelectorAll(
       `[data-component="${componentName}"]`
     );
-
     if ('IntersectionObserver' in window) {
       const componentObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -221,13 +193,11 @@ class PerformanceOptimizer {
           }
         });
       });
-
       componentElements.forEach(element => {
         componentObserver.observe(element);
       });
     }
   }
-
   async loadComponent(componentName, element) {
     try {
       // Only load components that are not already statically imported
@@ -237,11 +207,9 @@ class PerformanceOptimizer {
         'Loading',
         'SystemMonitor',
       ];
-
       if (staticallyImportedComponents.includes(componentName)) {
 //         return;
       }
-
       const _component = await import(`../components/${componentName}.tsx`);
       // Render component to element
       if (component.default) {
@@ -250,7 +218,6 @@ class PerformanceOptimizer {
     } catch (error) {
 //       }
   }
-
   async loadLazyComponent(element) {
 //     const componentPath = element.dataset.lazy;
     try {
@@ -261,12 +228,10 @@ class PerformanceOptimizer {
     } catch (error) {
 //       }
   }
-
   updateMetric(metricName, value) {
     this.metrics[metricName] = value;
     this.reportMetrics();
   }
-
   reportMetrics() {
     // Send metrics to analytics
     if (window.gtag) {
@@ -276,12 +241,10 @@ class PerformanceOptimizer {
         value: Math.round(this.metrics.largestContentfulPaint),
       });
     }
-
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
 //       }
   }
-
   // Performance optimization methods
   optimizeImages() {
     const _images = document.querySelectorAll('img');
@@ -294,7 +257,6 @@ class PerformanceOptimizer {
       }
     });
   }
-
   optimizeScripts() {
     const _scripts = document.querySelectorAll('script[src]');
     scripts.forEach(script => {
@@ -303,15 +265,12 @@ class PerformanceOptimizer {
       }
     });
   }
-
   optimizeStyles() {
     // Inline critical CSS
     this.inlineCriticalCSS();
-
     // Defer non-critical CSS
     this.deferNonCriticalCSS();
   }
-
   inlineCriticalCSS() {
     // This would typically be done at build time
     // For runtime, we can add critical styles to head
@@ -320,12 +279,10 @@ class PerformanceOptimizer {
       .container { max-width: 1200px; margin: 0 auto; }
       .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     `;
-
     const _style = document.createElement('style');
     style.textContent = criticalCSS;
     document.head.appendChild(style);
   }
-
   deferNonCriticalCSS() {
     const nonCriticalCSS = document.querySelectorAll(
       'link[rel="stylesheet"]:not([data-critical])'
@@ -337,13 +294,11 @@ class PerformanceOptimizer {
       };
     });
   }
-
   // Memory management
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers.clear();
   }
-
   // Performance monitoring
   startPerformanceMonitoring() {
     if ('PerformanceObserver' in window) {
@@ -352,14 +307,12 @@ class PerformanceOptimizer {
           this.handlePerformanceEntry(entry);
         });
       });
-
       observer.observe({
         entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'],
       });
       this.observers.set('performance', observer);
     }
   }
-
   handlePerformanceEntry(entry) {
     switch (entry.entryType) {
       case 'navigation':
@@ -378,13 +331,10 @@ class PerformanceOptimizer {
     }
   }
 }
-
 // Initialize performance optimizer
 const _performanceOptimizer = new PerformanceOptimizer();
-
 // Export for use in other modules
 export default performanceOptimizer;
-
 // Auto-initialize on DOM ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {

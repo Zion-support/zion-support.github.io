@@ -178,7 +178,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
                   <li>• 99.99% model, accurac, y</li>
                   <li>• 1, 0, B+ events, processed, per seco, n, d</li>
                   <li>• 1000x, faster, than classical, system, s</li>
-                </ul>
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-bl, u, e-300, m, b-3">💰 Cost, Optimizatio, n</h3>";

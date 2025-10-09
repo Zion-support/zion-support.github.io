@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'og-image-update-runner',
         source: event.source || 'unknown',
-        update: {
-          status: 'active',
+        update: {,
+  status: 'active',
           imagesUpdated: 0,
           lastUpdate: new Date().toISOString()}
         },

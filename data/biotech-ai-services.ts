@@ -1,5 +1,4 @@
-
-export interface BiotechAIService {id: string;
+export interface BiotechAIService {id: string;,
   name: string;
   tagline: string;
   price: string,

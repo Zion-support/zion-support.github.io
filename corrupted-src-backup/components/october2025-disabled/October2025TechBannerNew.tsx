@@ -86,7 +86,6 @@ const October2025TechBannerNe, w = () => {
                     <span, className="te, x, t-sm, fon, t-semibo, l, d">Read, Articl, e</sp, a, n>
                     <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
                   </div>
-                </div>
               </Li, n, k>
             </moti, o, n.d, i, v>
           ))}

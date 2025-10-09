@@ -143,7 +143,6 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
                   <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
                   <sp, a, n><stro, n, g>Re, a, l-Time, Market, Intelligence</stro, n, g> beats, competitor, s</sp, a, n>
                 </li>
-              </ul>
             </d, i, v>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hov, e
   r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">"

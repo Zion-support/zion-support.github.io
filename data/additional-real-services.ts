@@ -1,5 +1,4 @@
-
-export interface AdditionalRealService {id: string;
+export interface AdditionalRealService {id: string;,
   name: string;
   tagline: string,
   price: string,

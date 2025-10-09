@@ -1,5 +1,5 @@
 export type EmergingTechService2027 =
-  id: string;
+  id: string;,
   title: string;
   description: string;
   category: string;

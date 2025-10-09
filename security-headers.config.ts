@@ -2,7 +2,6 @@
  * Security Headers Configuration
  * Implements comprehensive security headers for production deployment
  */
-
 export const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
@@ -45,5 +44,4 @@ export const securityHeaders = [
     ].join('; '),
   },
 ];
-
 export default securityHeaders;

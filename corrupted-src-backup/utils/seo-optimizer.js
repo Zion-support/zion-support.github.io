@@ -2,7 +2,6 @@
  * SEO Optimizer
  * Comprehensive SEO optimization and monitoring utilities
  */
-
 class SEOOptimizer {
   constructor() {
     this.seoConfig = {
@@ -12,8 +11,8 @@ class SEOOptimizer {
       siteUrl: 'https://ziontechgroup.com',
       defaultImage: '/images/og-image.jpg',
       twitterHandle: '@ZionTechGroup',
-      structuredData: {
-        organization: {
+      structuredData: {,
+  organization: {
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'Zion Tech Group',
@@ -33,7 +32,6 @@ class SEOOptimizer {
     };
     this.init();
   }
-
   init() {
     this.setupMetaTags();
     this.setupStructuredData();
@@ -45,7 +43,6 @@ class SEOOptimizer {
     this.setupSchemaMarkup();
     this.setupPerformanceSEO();
   }
-
   setupMetaTags() {
     // Basic meta tags
     this.addMetaTag('description', this.seoConfig.siteDescription);
@@ -59,7 +56,6 @@ class SEOOptimizer {
     this.addMetaTag('language', 'en');
     this.addMetaTag('revisit-after', '7 days');
   }
-
   addMetaTag(name, content) {
     if (!document.querySelector(`meta[name="${name}"]`)) {
       const _meta = document.createElement('meta');
@@ -68,24 +64,20 @@ class SEOOptimizer {
       document.head.appendChild(meta);
     }
   }
-
   setupStructuredData() {
     // Add organization structured data
     this.addStructuredData(this.seoConfig.structuredData.organization);
   }
-
   addStructuredData(data) {
     const _script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   }
-
   setupSitemap() {
     // Generate dynamic sitemap
     this.generateSitemap();
   }
-
   generateSitemap() {
     const pages = [
       { url: '/', priority: '1.0', changefreq: 'daily' },
@@ -97,18 +89,14 @@ class SEOOptimizer {
       { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
       { url: '/terms', priority: '0.3', changefreq: 'yearly' },
     ];
-
     const _sitemap = this.buildSitemapXML(pages);
     this.createSitemapFile(sitemap);
   }
-
   buildSitemapXML(pages) {
     //     const baseUrl = this.seoConfig.siteUrl;
     //     const lastmod = new Date().toISOString().split('T')[0];
-
     let _xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
     pages.forEach(page => {
       xml += '  <url>\n';
       xml += `    <loc>${baseUrl}${page.url}</loc>\n`;
@@ -117,23 +105,18 @@ class SEOOptimizer {
       xml += `    <priority>${page.priority}</priority>\n`;
       xml += '  </url>\n';
     });
-
     xml += '</urlset>';
     return xml;
   }
-
   createSitemapFile(sitemap) {
     // In a real implementation, this would be saved to a file
     // For now, we'll store it in a data attribute for reference
     document.documentElement.setAttribute('data-sitemap', sitemap);
   }
-
   setupRobotsTxt() {
     const robotsTxt = `User-agent: *
 Allow: /
-
 Sitemap: ${this.seoConfig.siteUrl}/sitemap.xml
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
@@ -173,10 +156,8 @@ Disallow: /hooks/
 Disallow: /lib_backup/
 Disallow: /services/
 Disallow: /middleware/`;
-
     document.documentElement.setAttribute('data-robots-txt', robotsTxt);
   }
-
   setupCanonicalUrls() {
     // Add canonical URL
     const _canonical = document.createElement('link');
@@ -184,7 +165,6 @@ Disallow: /middleware/`;
     canonical.href = this.seoConfig.siteUrl + window.location.pathname;
     document.head.appendChild(canonical);
   }
-
   setupOpenGraph() {
     // Open Graph meta tags
     this.addOGTag('og:type', 'website');
@@ -195,7 +175,6 @@ Disallow: /middleware/`;
     this.addOGTag('og:image', this.getPageImage());
     this.addOGTag('og:locale', 'en_US');
   }
-
   addOGTag(property, content) {
     if (!document.querySelector(`meta[property="${property}"]`)) {
       const _meta = document.createElement('meta');
@@ -204,7 +183,6 @@ Disallow: /middleware/`;
       document.head.appendChild(meta);
     }
   }
-
   setupTwitterCards() {
     // Twitter Card meta tags
     this.addTwitterTag('twitter:card', 'summary_large_image');
@@ -214,7 +192,6 @@ Disallow: /middleware/`;
     this.addTwitterTag('twitter:description', this.getPageDescription());
     this.addTwitterTag('twitter:image', this.getPageImage());
   }
-
   addTwitterTag(name, content) {
     if (!document.querySelector(`meta[name="${name}"]`)) {
       const _meta = document.createElement('meta');
@@ -223,16 +200,13 @@ Disallow: /middleware/`;
       document.head.appendChild(meta);
     }
   }
-
   setupSchemaMarkup() {
     // Add page-specific schema markup
     this.addPageSchema();
   }
-
   addPageSchema() {
     //     const currentPath = window.location.pathname;
     let _schema = null;
-
     switch (currentPath) {
       case '/':
         schema = this.getHomePageSchema();
@@ -250,12 +224,10 @@ Disallow: /middleware/`;
         schema = this.getBlogPageSchema();
         break;
     }
-
     if (schema) {
       this.addStructuredData(schema);
     }
   }
-
   getHomePageSchema() {
     return {
       '@context': 'https://schema.org',
@@ -270,7 +242,6 @@ Disallow: /middleware/`;
       },
     };
   }
-
   getAboutPageSchema() {
     return {
       '@context': 'https://schema.org',
@@ -281,7 +252,6 @@ Disallow: /middleware/`;
       mainEntity: this.seoConfig.structuredData.organization,
     };
   }
-
   getServicesPageSchema() {
     return {
       '@context': 'https://schema.org',
@@ -293,7 +263,6 @@ Disallow: /middleware/`;
       areaServed: 'Worldwide',
     };
   }
-
   getContactPageSchema() {
     return {
       '@context': 'https://schema.org',
@@ -304,7 +273,6 @@ Disallow: /middleware/`;
       mainEntity: this.seoConfig.structuredData.organization,
     };
   }
-
   getBlogPageSchema() {
     return {
       '@context': 'https://schema.org',
@@ -315,14 +283,12 @@ Disallow: /middleware/`;
       publisher: this.seoConfig.structuredData.organization,
     };
   }
-
   setupPerformanceSEO() {
     // Optimize for Core Web Vitals
     this.optimizeImages();
     this.optimizeFonts();
     this.optimizeCriticalCSS();
   }
-
   optimizeImages() {
     const _images = document.querySelectorAll('img');
     images.forEach(img => {
@@ -330,12 +296,10 @@ Disallow: /middleware/`;
       if (!img.hasAttribute('loading')) {
         img.loading = 'lazy';
       }
-
       // Add alt text if missing
       if (!img.alt) {
         img.alt = this.generateAltText(img.src);
       }
-
       // Add width and height attributes
       if (!img.width && !img.height) {
         img.addEventListener('load', () => {
@@ -345,18 +309,15 @@ Disallow: /middleware/`;
       }
     });
   }
-
   generateAltText(src) {
     //     const filename = src.split('/').pop().split('.')[0];
     return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   }
-
   optimizeFonts() {
     // Preload critical fonts
     const criticalFonts = [
       'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     ];
-
     criticalFonts.forEach(font => {
       const _link = document.createElement('link');
       link.rel = 'preload';
@@ -368,7 +329,6 @@ Disallow: /middleware/`;
       document.head.appendChild(link);
     });
   }
-
   optimizeCriticalCSS() {
     // Inline critical CSS for above-the-fold content
     const criticalCSS = `
@@ -378,12 +338,10 @@ Disallow: /middleware/`;
       .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0; text-align: center; }
       .btn { background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; }
     `;
-
     const _style = document.createElement('style');
     style.textContent = criticalCSS;
     document.head.appendChild(style);
   }
-
   getPageTitle() {
     //     const currentPath = window.location.pathname;
     const titles = {
@@ -398,7 +356,6 @@ Disallow: /middleware/`;
     };
     return titles[currentPath] || this.seoConfig.siteName;
   }
-
   getPageDescription() {
     //     const currentPath = window.location.pathname;
     const descriptions = {
@@ -416,7 +373,6 @@ Disallow: /middleware/`;
     };
     return descriptions[currentPath] || this.seoConfig.siteDescription;
   }
-
   getPageImage() {
     //     const currentPath = window.location.pathname;
     const images = {
@@ -429,22 +385,18 @@ Disallow: /middleware/`;
     };
     return this.seoConfig.siteUrl + (images[currentPath] || this.seoConfig.defaultImage);
   }
-
   // Public methods
   updatePageSEO(title, description, image) {
     // Update page title
     document.title = title;
-
     // Update meta description
     this.updateMetaTag('description', description);
-
     // Update Open Graph tags
     this.updateOGTag('og:title', title);
     this.updateOGTag('og:description', description);
     if (image) {
       this.updateOGTag('og:image', image);
     }
-
     // Update Twitter Card tags
     this.updateTwitterTag('twitter:title', title);
     this.updateTwitterTag('twitter:description', description);
@@ -452,7 +404,6 @@ Disallow: /middleware/`;
       this.updateTwitterTag('twitter:image', image);
     }
   }
-
   updateMetaTag(name, content) {
     const _meta = document.querySelector(`meta[name="${name}"]`);
     if (meta) {
@@ -461,7 +412,6 @@ Disallow: /middleware/`;
       this.addMetaTag(name, content);
     }
   }
-
   updateOGTag(property, content) {
     const _meta = document.querySelector(`meta[property="${property}"]`);
     if (meta) {
@@ -470,7 +420,6 @@ Disallow: /middleware/`;
       this.addOGTag(property, content);
     }
   }
-
   updateTwitterTag(name, content) {
     const _meta = document.querySelector(`meta[name="${name}"]`);
     if (meta) {
@@ -479,7 +428,6 @@ Disallow: /middleware/`;
       this.addTwitterTag(name, content);
     }
   }
-
   generateBreadcrumbs(items) {
     const breadcrumbSchema = {
       '@context': 'https://schema.org',
@@ -491,10 +439,8 @@ Disallow: /middleware/`;
         item: item.url,
       })),
     };
-
     this.addStructuredData(breadcrumbSchema);
   }
-
   trackPageView() {
     // Track page view for analytics
     if (window.gtag) {
@@ -505,12 +451,9 @@ Disallow: /middleware/`;
     }
   }
 }
-
 // Initialize SEO optimizer
 // const seoOptimizer = new SEOOptimizer();
-
 // Export for use in other modules
 export default seoOptimizer;
-
 // Global SEO instance
 window.seoOptimizer = seoOptimizer;

@@ -3,7 +3,6 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock,
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AI3DGenerationPage: React.FC = () => {
   const features = [
     'Generate high-quality 3D models from text descriptions',
@@ -17,7 +16,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Physics simulation integration',
     'Export to all major 3D formats'
   ];
-
   const benefits = [
     'Reduce 3D content creation time by 90%',
     'Lower production costs by 80%',
@@ -27,7 +25,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Improve visual quality and consistency',
     'Scale content production instantly',
     'Reduce dependency on 3D artists'
-
   const applications = [
     {
       title: 'Game Development',
@@ -56,8 +53,6 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🏭',
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
-
-
     'AI-powered 3D model generation',
     'Automatic texture synthesis',
     'Real-time 3D rendering',
@@ -74,7 +69,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Color palette generation',
     'Marketing materials',
     'Educational content'
-
     'Faster 3D asset creation',
     'Reduced production costs',
     'Consistent quality output',
@@ -82,7 +76,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Real-time preview',
     'Multiple format export',
     'Batch processing capabilities'
-
   const useCases = [
       title: 'Gaming',
       description: 'Create 3D assets for games and virtual worlds',
@@ -90,20 +83,18 @@ const AI3DGenerationPage: React.FC = () => {
       title: 'Architecture',
       description: 'Generate 3D models for architectural visualization',
       examples: ['Building designs', 'Interior layouts', 'Landscape models', 'Furniture pieces']
-
   const pricing = [
       plan: 'Starter',
       price: '$199/month',
       features: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
-      popular: false
-      plan: 'Professional',
+      popular: false,
+  plan: 'Professional',
       price: '$599/month',
       features: ['Up to 50 models/month', 'Advanced textures', 'High quality', 'Animation support', 'API access'],
       popular: true
       plan: 'Enterprise',
       price: '$1,999/month',
       features: ['Unlimited models', 'Premium textures', 'Custom training', 'Priority support', 'White-label'],
-
   const technologies = [
     'Neural Radiance Fields',
     'Generative Adversarial Networks',
@@ -115,11 +106,9 @@ const AI3DGenerationPage: React.FC = () => {
     'Cloud Computing',
     'GPU Acceleration',
     'Machine Learning'
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-      
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -137,14 +126,12 @@ const AI3DGenerationPage: React.FC = () => {
               >
                 <Phone className="w-4 h-4" />
                 <span>Call (302) 464-0950</span>
-              </a>
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button-outline inline-flex items-center space-x-2"
                 <Mail className="w-4 h-4" />
                 <span>Get Quote</span>
             </div>
           </section>
-
           {/* Features Section */}
           <section id="features" className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -157,7 +144,6 @@ const AI3DGenerationPage: React.FC = () => {
                     {feature}
                   </h3>
               ))}
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -170,7 +156,6 @@ const AI3DGenerationPage: React.FC = () => {
                     <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
                     <p className="text-gray-300 text-sm">
                       Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
-
           {/* Use Cases Section */}
               Industry Applications
               {useCases.map((useCase, index) => (
@@ -182,7 +167,6 @@ const AI3DGenerationPage: React.FC = () => {
                     {useCase.examples.map((example, idx) => (
                       <li key={idx}>• {example}</li>
                   </ul>
-
           {/* Pricing Section */}
               Pricing Plans
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -204,14 +188,12 @@ const AI3DGenerationPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
-
           {/* Technologies Section */}
               Technologies Used
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {technologies.map((tech, index) => (
                 <div key={index} className="cyber-card p-4 text-center">
                   <span className="text-gray-300 font-medium">{tech}</span>
-
           {/* CTA Section */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -222,9 +204,7 @@ const AI3DGenerationPage: React.FC = () => {
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
                   Email Us
       </main>
-      
       <Footer />
   );
 };
-
 export default AI3DGenerationPage;

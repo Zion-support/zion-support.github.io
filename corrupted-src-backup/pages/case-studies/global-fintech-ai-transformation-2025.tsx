@@ -8,7 +8,6 @@ impo, r, t {
   Z, a, p,
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 const GlobalFinTechAITransformatio, n = () => { 
   return (
     <>
@@ -23,10 +22,8 @@ const GlobalFinTechAITransformatio, n = () => {
           conte, n, t='fintec, h, A, I, digital, bankin, g, fraud, detectio, n, AI, transformation, case stu, d, y, financial, services, AI'
         />
       </Helm, e, t>
-
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
-
         <article, className='container, m, x-auto, p, x-6, p, y-20'>
           <Link, t, o='/ca, s, e-studi, e, s'
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
@@ -35,14 +32,12 @@ const GlobalFinTechAITransformatio, n = () => {
             Back, to, Case Studi, e, s
               <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
             </div>
-
             <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Global, FinTech, AI Transformati, o, n:
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2'>
                 $127M, Annual, Value Creati, o, n
               </sp, a, n>
             </h1>
-
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent
               automation, and, predictive analyti, c, s.
@@ -90,7 +85,6 @@ const GlobalFinTechAITransformatio, n = () => {
                       <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>
                         {initiati, v, e.title}
                       </h3>
-                    </div>
                     <ul, className='spa, c, e-y-2'>
                       { initiati, v, e.results.m, a, p((res, u, l, t, rInd, e, x) = > (
                         <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
@@ -145,7 +139,6 @@ const GlobalFinTechAITransformatio, n = () => {
                     </div>
                   </div>
                 </div>
-
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
                     "The, fraud, detection platform, alone, paid for, the, entire

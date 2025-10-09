@@ -1,9 +1,6 @@
 #!/usr/bin/env node
-
 import https from 'https';
-
 // GitHub API configuration
-
 function makeGitHubRequest(endpoint) {
   return new Promise((resolve, reject) => {
     const options = {
@@ -16,7 +13,6 @@ function makeGitHubRequest(endpoint) {
         'Accept': 'application/vnd.github.v3+json'
       }
     };
-
     const req = https.request(options, (res) => {
       res.on('data', (chunk) => {
         data += chunk;
@@ -29,36 +25,20 @@ function makeGitHubRequest(endpoint) {
         }
       });
     });
-
     req.on('error', (error) => {
       reject(error);
     });
-
     req.end();
   });
 }
-
 async function checkOpenPRs() {
   try {
-
     // Get open pull requests
-
-
     if (prs.length === 0) {
-
       return [];
     }
-    
-    
     for (const pr of prs) {
-
-
-
-
-
-
       // Check if PR has merge conflicts
-
       prDetails.push({
         number: pr.number,
         title: pr.title,
@@ -71,20 +51,14 @@ async function checkOpenPRs() {
         mergeable_state: prDetail.mergeable_state
       });
     }
-    
     return prDetails;
-    
   } catch (error) {
-
     return [];
   }
 }
-
 // Run the check
 checkOpenPRs().then(prs => {
-
   process.exit(0);
 }).catch(error => {
-
   process.exit(1);
 });

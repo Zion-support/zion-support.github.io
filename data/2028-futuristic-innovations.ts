@@ -1,9 +1,8 @@
-
 export interface FuturisticInnovation2028
 export interface FuturisticInnovation2028 {id: string;
 export interface FuturisticInnovation2028 {  id: string;
 export interface FuturisticInnovation2028 {
-  name: string;
+  name: string;,
   tagline: string;
   price: string;
   description: string;

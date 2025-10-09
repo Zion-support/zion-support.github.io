@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
@@ -7,7 +6,6 @@ interface AccessibilityEnhancerProps {
   enableHighContrast?: boolean;
   enableReducedMotion?: boolean;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
@@ -18,33 +16,28 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [focusVisible, setFocusVisible] = useState(false);
-
   useEffect(() => {
     // Check for user preferences
     if (enableHighContrast) {
       const _mediaQuery = window.matchMedia('(prefers-contrast: high)');
       setIsHighContrast(mediaQuery.matches);
-
       const _handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
     return undefined;
   }, [enableHighContrast]);
-
   useEffect(() => {
     // Check for reduced motion preference
     if (enableReducedMotion) {
       const _mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       setIsReducedMotion(mediaQuery.matches);
-
       const _handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
     return undefined;
   }, [enableReducedMotion]);
-
   useEffect(() => {
     // Keyboard navigation support
     if (enableKeyboardNavigation) {
@@ -57,7 +50,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             e.preventDefault();
           }
         }
-
         // Escape key handling
         if (e.key === 'Escape') {
           const _activeElement = document.activeElement as HTMLElement;
@@ -66,12 +58,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         }
       };
-
       // Focus management
       const handleFocusIn = (e: FocusEvent) => {
         setFocusVisible(true);
         const _target = e.target as HTMLElement;
-
         // Announce focus changes to screen readers
         if (enableScreenReaderSupport && target.getAttribute('aria-label')) {
           const _announcement = target.getAttribute('aria-label');
@@ -80,15 +70,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         }
       };
-
       const handleFocusOut = () => {
         setFocusVisible(false);
       };
-
       document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('focusin', handleFocusIn);
       document.addEventListener('focusout', handleFocusOut);
-
       return () => {
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('focusin', handleFocusIn);
@@ -97,30 +84,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
     return undefined;
   }, [enableKeyboardNavigation, enableScreenReaderSupport]);
-
   useEffect(() => {
     // Apply accessibility styles
     const _root = document.documentElement;
-
     if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-
     if (focusVisible) {
       root.classList.add('focus-visible');
     } else {
       root.classList.remove('focus-visible');
     }
   }, [isHighContrast, isReducedMotion, focusVisible]);
-
   // Announce to screen reader
   const announceToScreenReader = (message: string) => {
     if (enableScreenReaderSupport) {
@@ -129,15 +111,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = message;
-
       document.body.appendChild(announcement);
-
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
     }
   };
-
   return (
     <div
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
@@ -159,7 +138,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       >
         Skip to main content
       </a>
-
       {/* Accessibility controls */}
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
         <button
@@ -169,7 +147,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         >
           {isHighContrast ? '🔆' : '🌙'} High Contrast
         </button>
-
         <button
           onClick={() => setIsReducedMotion(!isReducedMotion)}
           className="accessibility-toggle"
@@ -177,11 +154,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         >
           {isReducedMotion ? '🏃' : '🚶'} Motion
         </button>
-      </div>
-
       {children}
     </div>
   );
 };
-
 export default AccessibilityEnhancer;

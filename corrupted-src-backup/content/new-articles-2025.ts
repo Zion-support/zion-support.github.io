@@ -1,5 +1,5 @@
 export interface NewArticle {
-  id: string;
+  id: string;,
   title: string;
   excerpt: string;
   author: string;
@@ -9,7 +9,6 @@ export interface NewArticle {
   readTime: string;
   tags: string[];
 }
-
 export const newArticles2025: NewArticle[] = [
   {
     id: 'ai-automation-2025',

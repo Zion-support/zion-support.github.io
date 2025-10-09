@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'front-maximizer',
         source: event.source || 'unknown',
-        maximization: {
-          status: 'active',
+        maximization: {,
+  status: 'active',
           optimizations: 0,
           lastOptimization: new Date().toISOString()}
         },

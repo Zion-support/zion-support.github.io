@@ -95,7 +95,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [,
   },
 export interface NextGenInnovativeService
 export interface NextGenInnovativeService {;
-  id: string;
+  id: string;,
   name: string;
   tagline: string;
   price: string,

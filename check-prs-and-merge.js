@@ -4,7 +4,6 @@ const conflictMarkers = runGitCommand(
 if (conflictMarkers && conflictMarkers.trim()) {
 //   //   } else {
 //   }
-
 // 7. Create a summary report
 const report = {
   timestamp: new Date().toISOString(),
@@ -19,8 +18,6 @@ const report = {
   recentCommits: recentCommits?.trim().split('\n') || [],
   recentBranches: recentBranches?.trim().split('\n') || [],
 };
-
 fs.writeFileSync('merge-analysis-report.json', JSON.stringify(report, null, 2));
-
 // // // // // // // // // 8. Provide next steps
 // // // // // // // 

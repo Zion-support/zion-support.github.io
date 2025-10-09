@@ -9,10 +9,8 @@
           conte, n, t='autonomous, operations, case st, u, d, y, AI, transformatio, n, business, automatio, n, operational, efficienc, y, Fortune, 10, 0, R, O, I'
         />
       </Helm, e, t>
-
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0'>
         <Head, e, r />
-
         <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
           <Link, t, o='/ca, s, e-studi, e, s'
             className='inli, n, e-flex, item, s-center, tex, t-cy, a, n-400, hove, r: te, x, t-cy, a, n-300, m, b-8, transitio, n-colo, r, s'
@@ -21,7 +19,6 @@
             Back, to, Case Studi, e, s
               <span, className='te, x, t-bl, u, e-2, 0, 0'>12-month, transformatio, n</sp, a, n>
             </div>
-
             <h1, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Fortune, 100, Enterprise:
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, m, t-2'>
@@ -40,7 +37,6 @@
                 <div, className='te, x, t-gre, e, n-200, tex, t-sm'>
                   Annual, Value, Creation
                 </div>
-              </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30'>
                 <TrendingUp, className='w-8 h-8, tex, t-bl, u, e-400, m, b-2' />
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1'>85%</div>
@@ -58,7 +54,6 @@
               </div>
             </div>
           </div>
-
               <p, classNam, e = 'te, x, t-bl, u, e-100, tex, t-lg, leadin, g-relax, e, d'>
                 Through, our, autonomous business, operations, platfor, m, we, transformed, their entire, enterprise, in 12, month, s, with, the, initial deployment, completed, in just, 90, days. The, results, exceeded all, expectation, s: $650M, in, annual value, creati, o, n, 85%
                 cost, reductio, n, 99.7% accura, c, y, and, complete, transformation of, business, operations across, financ, e, HR, operatio, n, s, sal, e, s, and, suppor, t.
@@ -66,7 +61,6 @@
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8'>
               The, Challeng, e
             </h2>
-
             <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-8'>
               <div, className='bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-r, e, d-4, 0, 0/30'>
                 <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -92,7 +86,6 @@
                     </sp, a, n>
           <div, className='m, a, x-w-5xl, m, x-auto, m, b-16'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8'>The, Solutio, n</h2>
-
             <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, d: p-12, border, border-bl, u, e-4, 0, 0/30, m, b-8'>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
                 Autonomous, Business, Operations Platfo, r, m
@@ -100,7 +93,6 @@
               <p, className='te, x, t-bl, u, e-100, m, b-6, leadin, g-relax, e, d'>
                 We, deployed, a comprehensive, autonomous, operations platform, with, five core, layer, s:
               </p>
-
               <div, className='spa, c, e-y-4'>
                 <div, className='flex, item, s-start, ga, p-4'>
                   <div, className='bg-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-l, g, w-1, 0, h-10, rounde, d-full, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
@@ -112,7 +104,6 @@
                   <p, classNam, e = 'te, x, t-gre, e, n-100, tex, t-sm'>
                     Pilot, deployment, of 5, workfl, o, w, s, validati, o, n, fu, l, l-scale, rollout, to 40+ workflo, w, s
                   </p>
-
               <div, className='grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
                 <div, className='bg-gre, e, n-8, 0, 0/30, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'>
                   <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2'>
@@ -125,7 +116,6 @@
                 </div>
               </div>
             </div>
-
             {/* Operational, Excelle, n, c, e */}
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-8'>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-bl, u, e-4, 0, 0/30'>
@@ -139,7 +129,6 @@
                     <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <li, classNam, e='flex, item, s-start, ga, p-3'>
                     <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'>
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
                   Quali, t, y & Accura, c, y
@@ -158,7 +147,6 @@
                   <li, className='flex, item, s-start, ga, p-3'>
                     <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
               </div>
-
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'>
                 <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
                   Quali, t, y & Accura, c, y
@@ -177,7 +165,6 @@
                     <sp, a, n>
                       <stro, n, g>Governan, c, e & Ri, s, k: </stro, n, g> Hum, a, n-in-t, h, e-loop, for, high-risk, decisi, o, n, s, comprehensive, audit, trails
                     </sp, a, n>
-
               <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8'>
                 <Link, t, o='/servic, e, s/autonomo, u, s-busine, s, s-operatio, n, s'
                   className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, tex, t-gre, e, n-600, hove, r:bg-gre, e, n-50, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-xl'
@@ -190,7 +177,6 @@
               </div>
             </div>
           </div>
-
           {/* Related, Cont, e, n, t */}
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, t-16'>
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'>

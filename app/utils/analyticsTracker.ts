@@ -4,7 +4,7 @@
  * Provides comprehensive tracking for user interactions, performance metrics, and errors
  */
 interface AnalyticsEvent {
-  category: string;
+  category: string;,
   action: string;
   label?: string;
   value?: number;

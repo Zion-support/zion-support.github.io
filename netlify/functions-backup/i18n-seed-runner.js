@@ -103,8 +103,8 @@ exports.handler = async function () {const baseUrl = (
 //     const resCommit = await commitFile(path, content,
         msg);
     return {statusCode: 200,
-      body: JSON.stringify({
-        ok: true,
+      body: JSON.stringify({,
+  ok: true,
         total: Object.keys(entries).length,
         commit: resCommit}
       });

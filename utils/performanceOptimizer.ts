@@ -1,13 +1,11 @@
 /**
  * Performance Optimizer Utilities
  */
-
 export const performanceOptimizer = {
   init: () => {
     if (typeof window !== 'undefined') {
       //       }
   },
-
   getMetrics: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       return {
@@ -18,7 +16,6 @@ export const performanceOptimizer = {
     return null;
   },
 };
-
 export const lazyLoadImages = () => {
   if (typeof window !== 'undefined') {
     const _images = document.querySelectorAll('img[data-src]');
@@ -29,12 +26,10 @@ export const lazyLoadImages = () => {
     });
   }
 };
-
 export const preloadCriticalResources = () => {
   if (typeof window !== 'undefined') {
     //     }
 };
-
 export const collectPerformanceMetrics = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     //     const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;

@@ -1,7 +1,6 @@
 'use client'
 export const usePerformanceMonitoring = () => {
 import { useEffect, useCallback } from 'react';
-<<<<<<< HEAD
 export const _usePerformanceMonitoring = () => {
     // TODO: Add content
   }
@@ -41,7 +40,6 @@ const observer = new PerformanceObserver((list) => {
           reportWebVitals({
     // TODO: Add content
   }
-=======
 export const _usePerformanceMonitoring = () => {// TODO: Add content;}
 }
   const reportWebVitals = useCallback((metric: any) => {// TODO: Add content;}
@@ -70,7 +68,6 @@ const observer = new PerformanceObserver((list) => {// TODO: Add content;}
 }
           reportWebVitals({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: entry.name,
             value: entry.startTime,
             timestamp: Date.now()

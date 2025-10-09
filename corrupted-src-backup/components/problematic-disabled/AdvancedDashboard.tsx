@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 // import AdvancedCacheManager from '../utils/advancedCache';
 // import { securityAuditor } from '../utils/securityAuditor';
 // import EnhancedUXManager from '../utils/enhancedUXManager';
-
 interface DashboardData {
-  analytics: {
-    pageViews: number;
+  analytics: {,
+  pageViews: number;
     sessions: number;
     bounceRate: number;
   };
@@ -18,7 +17,5 @@ interface DashboardData {
     vulnerabilities: number;
   };
 }
-
 export default AdvancedDashboard;
-
 }

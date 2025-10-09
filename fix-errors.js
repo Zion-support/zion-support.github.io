@@ -86,7 +86,6 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 Go to Homepage
               </Link>
-            </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm font-semibold text-gray-700 hover:text-gray-900">

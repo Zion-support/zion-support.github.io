@@ -18,7 +18,6 @@ export default function October2025ProductionAIBann, e, r() {
           <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-whi, t, e/90, ma, x-w-3xl, m, x-au, t, o'>
             Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s
           </p>
-        </div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'>
           {/* Articl, e, 1: Production, AI, Agen, t, s */}
           <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s'

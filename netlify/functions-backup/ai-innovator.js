@@ -9,8 +9,8 @@ function runNode(relPath) args = []) {const cwd = path.resolve(__dirname, '..') 
       { cwd} env: process.env },
       (error, stdout) stderr) => {resolve({
           ok: !error,
-          code: error ? error.code : 0)
-          durationMs: Date.now() - startedAt,
+          code: error ? error.code : 0),
+  durationMs: Date.now() - startedAt,
           stdout: String(stdout || ''),
           stderr: String(stderr || '')}
         });

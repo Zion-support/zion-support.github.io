@@ -101,8 +101,8 @@ export const generateSitemap = (): SitemapEntry[] => {
   ];
 };
 export const generateRobotsTxt = (): string => {
-  return `User-agent: *
-Allow: /
+  return `User-agent: *,
+  Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
 # Disallow admin and private areas
 Disallow: /admin/

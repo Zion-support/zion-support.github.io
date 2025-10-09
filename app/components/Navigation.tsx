@@ -1,6 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
 const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -8,18 +7,15 @@ const Navigation: React.FC = memo(() => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
       }
     };
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -27,7 +23,6 @@ const Navigation: React.FC = memo(() => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
@@ -35,14 +30,12 @@ const Navigation: React.FC = memo(() => {
     setMicroSaasOpen(false);
     setIsOpen(false);
   };
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
     }
   };
-
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
@@ -171,7 +164,6 @@ const Navigation: React.FC = memo(() => {
       ]
     }
   ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -184,13 +176,11 @@ const Navigation: React.FC = memo(() => {
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
-            </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
-
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
@@ -199,7 +189,6 @@ const Navigation: React.FC = memo(() => {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
-
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -212,7 +201,6 @@ const Navigation: React.FC = memo(() => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6">
@@ -264,7 +252,6 @@ const Navigation: React.FC = memo(() => {
                 </div>
               )}
             </div>
-
             <Link 
               to="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
@@ -272,7 +259,6 @@ const Navigation: React.FC = memo(() => {
             >
               Case Studies
             </Link>
-
             <Link
               to="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -280,7 +266,6 @@ const Navigation: React.FC = memo(() => {
             >
               Blog
             </Link>
-
             <Link
               to="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -288,7 +273,6 @@ const Navigation: React.FC = memo(() => {
             >
               Contact
             </Link>
-
             {/* CTA Button */}
             <Link
               to="/contact"
@@ -299,7 +283,6 @@ const Navigation: React.FC = memo(() => {
               (302) 464-0950
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -311,7 +294,6 @@ const Navigation: React.FC = memo(() => {
             </button>
           </div>
         </div>
-
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
@@ -330,7 +312,6 @@ const Navigation: React.FC = memo(() => {
               >
                 About
               </Link>
-
               {/* Mobile Services */}
               <div>
                 <button
@@ -370,7 +351,6 @@ const Navigation: React.FC = memo(() => {
                   </div>
                 )}
               </div>
-
               <Link
                 to="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -378,7 +358,6 @@ const Navigation: React.FC = memo(() => {
               >
                 Case Studies
               </Link>
-
               <Link
                 to="/blog"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -386,7 +365,6 @@ const Navigation: React.FC = memo(() => {
               >
                 Blog
               </Link>
-
               <Link
                 to="/contact"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -394,7 +372,6 @@ const Navigation: React.FC = memo(() => {
               >
                 Contact
               </Link>
-
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
@@ -410,6 +387,5 @@ const Navigation: React.FC = memo(() => {
     </nav>
   );
 });
-
 Navigation.displayName = 'Navigation';
 export default Navigation;

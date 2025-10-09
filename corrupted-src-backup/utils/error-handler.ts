@@ -2,9 +2,8 @@
  * Advanced Error Handling and Reporting System
  * Captures, categorizes, and reports errors with detailed context
  */
-
 interface ErrorContext {
-  timestamp: string;
+  timestamp: string;,
   url: string;
   userAgent: string;
   userId?: string;
@@ -14,7 +13,6 @@ interface ErrorContext {
   props?: unknown;
   state?: unknown;
 }
-
 interface ErrorReport {
   id: string;
   type: 'javascript' | 'network' | 'react' | 'promise' | 'resource';
@@ -26,7 +24,6 @@ interface ErrorReport {
   lastOccurrence: string;
   resolved: boolean;
 }
-
 interface ErrorMetrics {
   totalErrors: number;
   errorsByType: Record<string, number>;
@@ -34,7 +31,6 @@ interface ErrorMetrics {
   errorRate: number;
   averageResolutionTime: number;
 }
-
 class ErrorHandler {
   private static instance: ErrorHandler;
   private errors: Map<string, ErrorReport> = new Map();
@@ -42,38 +38,30 @@ class ErrorHandler {
   private sessionId: string;
   private errorCount: number = 0;
   private maxErrors: number = 1000;
-
   private constructor() {
     this.sessionId = this.generateSessionId();
   }
-
   static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler();
     }
     return ErrorHandler.instance;
   }
-
   init(): void {
     if (this.isInitialized) {
       return;
     }
-
     this.setupGlobalErrorHandlers();
     this.setupUnhandledRejectionHandler();
     this.setupNetworkErrorHandler();
     this.setupReactErrorBoundary();
-
     this.isInitialized = true;
     //     }
-
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-
   private setupGlobalErrorHandlers(): void {
     if (typeof window === 'undefined') return;
-
     // Global JavaScript error handler
     window.addEventListener('error', event => {
       this.handleError({
@@ -85,7 +73,6 @@ class ErrorHandler {
         error: event.error,
       });
     });
-
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', event => {
       this.handleError({
@@ -95,10 +82,8 @@ class ErrorHandler {
       });
     });
   }
-
   private setupUnhandledRejectionHandler(): void {
     if (typeof window === 'undefined') return;
-
     window.addEventListener('unhandledrejection', event => {
       this.handleError({
         type: 'promise',
@@ -107,10 +92,8 @@ class ErrorHandler {
       });
     });
   }
-
   private setupNetworkErrorHandler(): void {
     if (typeof window === 'undefined') return;
-
     // Monitor fetch requests
     const _originalFetch = window.fetch;
     window.fetch = async (...args) => {
@@ -136,11 +119,9 @@ class ErrorHandler {
       }
     };
   }
-
   private setupReactErrorBoundary(): void {
     // This would integrate with React Error Boundary
     //     }
-
   handleError(errorData: {
     type: ErrorReport['type'];
     message: string;
@@ -156,7 +137,6 @@ class ErrorHandler {
   }): void {
     //     const errorId = this.generateErrorId(errorData);
     const _now = new Date().toISOString();
-
     const context: ErrorContext = {
       timestamp: now,
       url: errorData.url || window.location.href,
@@ -167,9 +147,7 @@ class ErrorHandler {
       props: errorData.props,
       state: errorData.state,
     };
-
     const _severity = this.determineSeverity(errorData);
-
     if (this.errors.has(errorId)) {
       // Update existing error
       const _existingError = this.errors.get(errorId)!;
@@ -189,54 +167,43 @@ class ErrorHandler {
         lastOccurrence: now,
         resolved: false,
       };
-
       this.errors.set(errorId, errorReport);
     }
-
     this.errorCount++;
-
     // Log error for development
     if (process.env['NODE_ENV'] === 'development') {
       //       }
-
     // Send to error reporting service in production
     if (process.env['NODE_ENV'] === 'production') {
       this.sendErrorReport(this.errors.get(errorId)!);
     }
-
     // Cleanup old errors if we exceed the limit
     if (this.errors.size > this.maxErrors) {
       this.cleanupOldErrors();
     }
   }
-
   private generateErrorId(errorData: unknown): string {
     //     const key = `${errorData.type}_${errorData.message}_${errorData.filename || ''}_${errorData.lineno || ''}`;
     return btoa(key)
       .replace(/[^a-zA-Z0-9]/g, '')
       .substr(0, 16);
   }
-
   private determineSeverity(errorData: unknown): ErrorReport['severity'] {
     // Critical: Network errors, unhandled rejections
     if (errorData.type === 'network' || errorData.type === 'promise') {
       return 'critical';
     }
-
     // High: JavaScript errors in production
     if (errorData.type === 'javascript' && process.env['NODE_ENV'] === 'production') {
       return 'high';
     }
-
     // Medium: React errors, resource loading errors
     if (errorData.type === 'react' || errorData.type === 'resource') {
       return 'medium';
     }
-
     // Low: Everything else
     return 'low';
   }
-
   private sendErrorReport(errorReport: ErrorReport): void {
     // In a real application, this would send to an error reporting service
     // like Sentry, LogRocket, or a custom API endpoint
@@ -247,34 +214,27 @@ class ErrorHandler {
     //   body: JSON.stringify(errorReport)
     // }).catch(err => // console.error('Failed to send error report:', err));
   }
-
   private cleanupOldErrors(): void {
     const _errorsArray = Array.from(this.errors.values());
     errorsArray.sort(
       (a, b) => new Date(b.lastOccurrence).getTime() - new Date(a.lastOccurrence).getTime()
     );
-
     // Keep only the most recent 500 errors
     const _errorsToKeep = errorsArray.slice(0, 500);
     this.errors.clear();
-
     errorsToKeep.forEach(error => {
       this.errors.set(error.id, error);
     });
   }
-
   getErrors(): ErrorReport[] {
     return Array.from(this.errors.values());
   }
-
   getErrorById(id: string): ErrorReport | undefined {
     return this.errors.get(id);
   }
-
   getErrorMetrics(): ErrorMetrics {
     const _errors = this.getErrors();
     //     const totalErrors = errors.length;
-
     const errorsByType = errors.reduce(
       (acc, error) => {
         acc[error.type] = (acc[error.type] || 0) + 1;
@@ -282,7 +242,6 @@ class ErrorHandler {
       },
       {} as Record<string, number>
     );
-
     const errorsBySeverity = errors.reduce(
       (acc, error) => {
         acc[error.severity] = (acc[error.severity] || 0) + 1;
@@ -290,9 +249,7 @@ class ErrorHandler {
       },
       {} as Record<string, number>
     );
-
     const errorRate = (this.errorCount / (Date.now() - new Date().getTime())) * 1000; // errors per second
-
     return {
       totalErrors,
       errorsByType,
@@ -301,7 +258,6 @@ class ErrorHandler {
       averageResolutionTime: 0, // This would be calculated based on resolution tracking
     };
   }
-
   markErrorResolved(errorId: string): void {
     const _error = this.errors.get(errorId);
     if (error) {
@@ -309,31 +265,25 @@ class ErrorHandler {
       this.errors.set(errorId, error);
     }
   }
-
   generateErrorReport(): string {
     const _metrics = this.getErrorMetrics();
     const _errors = this.getErrors();
     const _criticalErrors = errors.filter(e => e.severity === 'critical');
     const _unresolvedErrors = errors.filter(e => !e.resolved);
-
     return `
 Error Handling Report:
 Total Errors: ${metrics.totalErrors}
 Error Rate: ${metrics.errorRate.toFixed(4)} errors/second
-
 Errors by Type:
 ${Object.entries(metrics.errorsByType)
   .map(([type, count]) => `- ${type}: ${count}`)
   .join('\n')}
-
 Errors by Severity:
 ${Object.entries(metrics.errorsBySeverity)
   .map(([severity, count]) => `- ${severity}: ${count}`)
   .join('\n')}
-
 Critical Errors: ${criticalErrors.length}
 Unresolved Errors: ${unresolvedErrors.length}
-
 Recent Errors:
 ${errors
   .slice(-5)
@@ -342,17 +292,14 @@ ${errors
       `- [${error.severity.toUpperCase()}] ${error.type}: ${error.message} (${error.frequency}x)`
   )
   .join('\n')}
-
 Session ID: ${this.sessionId}
 Last Updated: ${new Date().toISOString()}
     `.trim();
   }
-
   cleanup(): void {
     this.errors.clear();
     this.isInitialized = false;
     this.errorCount = 0;
     //     }
 }
-
 export default ErrorHandler;

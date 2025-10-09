@@ -1,11 +1,9 @@
 #!/usr/bin/env node
-
 /**
  * Comprehensive Final Merge - Handles all remaining branches systematically
  * This script processes all remaining branches in batches to avoid conflicts
  */ import { execSync } from 'child_process';
 import fs from 'fs';
-
 // //Step 1: Ensure we're on main and up to date
 // try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -13,7 +11,6 @@ import fs from 'fs';
 //   } catch (error) {
 //   process.exit(1);
 }
-
 //Step 2: Get all remaining branches
 // let allBranches = [];
 try {
@@ -30,26 +27,22 @@ try {
     );
 } catch (error) {
 //   }
-
 // //Step 3: Process branches in batches to avoid conflicts
 // const BATCH_SIZE = 50;
 for (let i = 0; i < allBranches.length; i += BATCH_SIZE) {
   batches.push(allBranches.slice(i, i + BATCH_SIZE));
 }
-
 // //Step 4: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
 //   try {
     //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-
     //Check if branch exists and has commits
     try {
       execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' });
     } catch (e) {
 //       return { success: false, method: 'not_found' };
     }
-
     //Check if branch is already merged
     try {
       const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {
@@ -58,20 +51,17 @@ function resolveConflictsAndMerge(branchName) {
       const branchCommit = execSync(`git rev-parse origin/${branchName}`, {
         encoding: 'utf8',
       }).trim();
-
       if (mergeBase === branchCommit) {
 //         return { success: true, method: 'already_merged' };
       }
     } catch (e) {
       //Continue with merge attempt
     }
-
     //Try initial merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       { stdio: 'pipe' }
     );
-
 //     return { success: true, method: 'direct' };
   } catch (error) {
 //     try {
@@ -84,7 +74,6 @@ function resolveConflictsAndMerge(branchName) {
 //       return { success: true, method: 'theirs' };
     } catch (theirsError) {
 //       }
-
     try {
       //Strategy 2: Auto-resolve with ours
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
@@ -95,18 +84,15 @@ function resolveConflictsAndMerge(branchName) {
 //       return { success: true, method: 'ours' };
     } catch (oursError) {
 //       }
-
     try {
       //Strategy 3: Manual conflict resolution
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
-
       //Get conflicted files
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {
         encoding: 'utf8',
       })
         .split('\n')
         .filter(file => file.trim());
-
 //       //For each conflicted file, try to resolve
       for (const file of conflictedFiles) {
         if (file.trim()) {
@@ -118,7 +104,6 @@ function resolveConflictsAndMerge(branchName) {
 //             }
         }
       }
-
       //Complete the merge
       execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {
         stdio: 'pipe',
@@ -126,23 +111,20 @@ function resolveConflictsAndMerge(branchName) {
 //       return { success: true, method: 'manual' };
     } catch (manualError) {
 //       }
-
     //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'pipe' });
 //       } catch (abortError) {
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
     }
-
     return { success: false, method: 'failed' };
   }
 }
-
 //Step 5: Process each batch
 const results = {
   batches: [],
-  total: {
-    branches: 0,
+  total: {,
+  branches: 0,
     successful: 0,
     failed: 0,
     methods: {
@@ -156,12 +138,10 @@ const results = {
     },
   },
 };
-
 for (let i = 0; i < batches.length; i++) {
 //   // console.log(
     `\n📦 Processing Batch ${i + 1}/${batches.length} (${batch.length} branches)...`
   );
-
   const batchResults = {
     batchNumber: i + 1,
     branches: [],
@@ -177,11 +157,9 @@ for (let i = 0; i < batches.length; i++) {
       already_merged: 0,
     },
   };
-
   for (const branch of batch) {
     batchResults.branches.push({ branch, ...result });
     batchResults.totalBranches = batch.length;
-
     if (result.success) {
       batchResults.successful++;
       batchResults.methods[result.method]++;
@@ -193,12 +171,9 @@ for (let i = 0; i < batches.length; i++) {
       results.total.failed++;
       results.total.methods[result.method]++;
     }
-
     results.total.branches++;
   }
-
   results.batches.push(batchResults);
-
   //Push changes after each batch to avoid conflicts
   if (i % 5 === 0 || i === batches.length - 1) {
 //     try {
@@ -206,9 +181,7 @@ for (let i = 0; i < batches.length; i++) {
 //       } catch (error) {
 //       }
   }
-
 //   }
-
 //Step 6: Generate comprehensive report
 // results.timestamp = new Date().toISOString();
 results.summary = {
@@ -220,17 +193,14 @@ results.summary = {
     ((results.total.successful / results.total.branches) * 100).toFixed(2) +
     '%',
 };
-
 fs.writeFileSync(
   'comprehensive-final-merge-report.json',
   JSON.stringify(results, null, 2)
 );
-
 //Step 7: Display final summary
 // // // // // // // // // // // // // // // // Step 8: Final push
 // try {
   execSync('git push origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   //   }
-
 // // 

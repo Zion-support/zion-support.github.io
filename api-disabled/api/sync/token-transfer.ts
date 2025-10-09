@@ -1,29 +1,24 @@
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
-
   const _state = readState();
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: 'Sync disabled for this instance' });
   }
-
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
-    txId: string;
-    token: string;
+    txId: string;,
+  token: string;
     amount: number;
     fromSubnet: string;
     toSubnet: string;
     timestamp?: number;
   };
-
   if (!txId || !token || typeof amount !== 'number' || !fromSubnet || !toSubnet) {
     return res.status(400).json({
       error: 'txId, token, amount, fromSubnet, toSubnet required',
     });
   }
-
   //   const version = nextVersionFor(state, txId);
   const event = {
     eventId: uuidv4(),
@@ -41,15 +36,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     version,
     timestamp: Date.now(),
   };
-
   upsertEvent(state, event);
   writeState(state);
-
   //   const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   //   const sig = signPayload(body);
   if (sig) headers['x-zion-signature'] = sig;
-
   await Promise.all(
     state.config.peers
       .filter(p => !p.paused)
@@ -62,7 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
       })
   );
-
   return res.status(200).json({
     status: 'created',
     version,

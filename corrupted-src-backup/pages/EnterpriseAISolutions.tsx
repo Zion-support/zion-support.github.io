@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function EnterpriseAISolutions(): React.JSX.Element {
   const solutions = [
     {
@@ -31,7 +30,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
       ],
     },
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
@@ -41,7 +39,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
           content="Comprehensive AI solutions designed for enterprise-scale deployments."
         />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Solutions</h1>
@@ -49,8 +46,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
             Comprehensive AI solutions designed for enterprise-scale deployments and large
             organizations.
           </p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <div
@@ -61,9 +56,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900">{solution.title}</h3>
               </div>
-
               <p className="text-gray-600 mb-4">{solution.description}</p>
-
               <ul className="space-y-2">
                 {solution.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-600">

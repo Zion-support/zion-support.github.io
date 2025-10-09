@@ -2,60 +2,45 @@
  * Performance Configuration;
  * Centralized performance monitoring and optimization settings;
  */
-<<<<<<< HEAD
 export const _performanceConfig = {
     // TODO: Add content
   }
-=======
 export const _performanceConfig = {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   // Core Web Vitals thresholds,
   metrics: {// lcp: {}
 // good: 2500,
 // needsImprovement: 4000;
     },
-<<<<<<< HEAD
     fid: {
     // TODO: Add content
   }
-=======
     fid: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   good: 100,
       needsImprovement: 300;
     },
-<<<<<<< HEAD
     cls: {
     // TODO: Add content
   }
-=======
     cls: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   good: 0.1,
       needsImprovement: 0.25;
     },
-<<<<<<< HEAD
     fcp: {
     // TODO: Add content
   }
-=======
     fcp: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   good: 1800,
       needsImprovement: 3000;
     },
-<<<<<<< HEAD
     ttfb: {
     // TODO: Add content
   }
-=======
     ttfb: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   good: 800,
       needsImprovement: 1800;
     }
@@ -65,14 +50,11 @@ export const _performanceConfig = {// TODO: Add content;}
 // maxAge: 31536000, // 1 year;
 // staleWhileRevalidate: 86400, // 1 day;
     },
-<<<<<<< HEAD
     dynamic: {
     // TODO: Add content
   }
-=======
     dynamic: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   maxAge: 3600, // 1 hour,
   staleWhileRevalidate: 60, // 1 minute;
     },
@@ -107,14 +89,11 @@ export const _performanceConfig = {// TODO: Add content;}
 // priority: -10,
 // reuseExistingChunk: true;
         },
-<<<<<<< HEAD
         default: {
     // TODO: Add content
   }
-=======
         default: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   minChunks: 2,
           priority: -20,
           reuseExistingChunk: true;

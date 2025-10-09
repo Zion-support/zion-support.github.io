@@ -11,8 +11,8 @@ exports.handler = async function (event, context) {try {
         timestamp: new Date().toISOString(),
         function: 'pagespeed-insights-runner',
         source: event.source || 'unknown',
-        insights: {
-          status: 'active',
+        insights: {,
+  status: 'active',
           pagesAnalyzed: 0,
           averageScore: 0,
           lastAnalysis: new Date().toISOString()}

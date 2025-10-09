@@ -148,8 +148,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
     if (!csvText) {
       return {
         statusCode: 200,
-        body: JSON.stringify({
-          message: 'No link_report.csv found,
+        body: JSON.stringify({,
+  message: 'No link_report.csv found,
         nothing to do.'}
         });
       };

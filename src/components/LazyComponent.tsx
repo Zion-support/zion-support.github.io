@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface LazyComponentProps {
-
   // Add props here
 }
-
 const LazyComponent: React.FC<LazyComponentProps> = () => {
   return (
     <div className="lazycomponent">
@@ -13,8 +9,6 @@ const LazyComponent: React.FC<LazyComponentProps> = () => {
     </div>
   );
 };
-
-=======
 import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {// TODO: Add content;}
 };
@@ -26,14 +20,6 @@ interface LazyComponentProps {// TODO: Add content;}
 }
 // Higher-order component for lazy loading;
 export const _withLazyLoading = 
-          
-          
-          
-          
-          
-          
-          
-          
           <P extends object>()
   Component: ComponentType;
           <P>,
@@ -41,15 +27,6 @@ export const _withLazyLoading =
 ) => {// TODO: Add content;}
 }
   return (props: P) => ()
-    
-          
-          
-          
-          
-          
-          
-          
-          
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <Component {...props} />
     </Suspense>
@@ -61,14 +38,6 @@ const LazyComponent: React.FC;
 }
 //   children,
   fallback = 
-          
-          
-          
-          
-          
-          
-          
-          
           <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
@@ -107,17 +76,8 @@ const LazyComponent: React.FC;
     return () => observer.disconnect();
   }, [delay, threshold, rootMargin]);
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div ref={elementRef}>
       {isVisible ? ()}
           <Suspense fallback={fallback}>
@@ -126,15 +86,6 @@ const LazyComponent: React.FC;
       ) : ()
 // fallback,
 )}
-    
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
   );
 };
@@ -150,14 +101,6 @@ export const preloadComponent = (importFunction: () => Promise;
 };
 // Lazy load with preloading;
 export const createLazyComponent = 
-          
-          
-          
-          
-          
-          
-          
-          
           <P extends object>()
   importFunction: () => Promise;
           <{ default: ComponentType<P> }>,
@@ -166,15 +109,6 @@ export const createLazyComponent =
 }
   const LazyComponent = lazy(importFunction);
   return (props: P) => ()
-    
-          
-          
-          
-          
-          
-          
-          
-          
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
@@ -215,5 +149,4 @@ const imagePreloads = [
     document.head.appendChild(link);
   });
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default LazyComponent;

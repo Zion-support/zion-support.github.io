@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-
 //Mapping of broken imports to correct imports
 const iconMappings = {
   rrowleft: 'ArrowLeft',
@@ -28,16 +26,13 @@ const iconMappings = {
   ot: 'Bot',
   ookopen: 'BookOpen',
 };
-
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {
   try {
-
     //Fix lucide-react imports
     for (const [broken, correct] of Object.entries(iconMappings)) {
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
       //       const newImport = `lucide-react`;
-
       if (content.includes(oldImport)) {
         content = content.replace(
           new RegExp(`import ${correct} from '${oldImport}';`, 'g'),
@@ -45,28 +40,23 @@ function fixImportsInFile(filePath) {
         modified = true;
       }
     }
-
     //Fix Link imports if missing
     if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {
       content = "import Link from 'next/link';\n" + content;
       modified = true;
     }
-
     if (modified) {
       fs.writeFileSync(filePath, content);
       //       }
   } catch (error) {
     //     }
 }
-
 //Get all blog files
 // const blogDir = '/workspace/app/blog';
 const files = fs
   .readdirSync(blogDir, { recursive: true })
   .filter(file => file.endsWith('.tsx'))
   .map(file => path.join(blogDir, file));
-
 // Process each file
 files.forEach(fixImportsInFile);
-
 // 

@@ -8,7 +8,6 @@ export default function EnterpriseSolutionsBanner() {
           <p className="text-xl mb-8">
             Transform your business with our comprehensive AI and IT solutions
           </p>
-        </div>
       </div>
     </div>
   );

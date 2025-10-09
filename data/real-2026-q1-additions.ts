@@ -1,4 +1,3 @@
-
     id: 'customer - feedback - intelligence',
     name: 'Customer Feedback Intelligence',
     tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
@@ -443,8 +442,8 @@
     reviews: 6,
   },
 ];
-		integrations: ['StripePayPalGoogle Analytics'];
-		useCases: ['Partner growthAutomated payouts'];
+		integrations: ['StripePayPalGoogle Analytics'];,
+  useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 1025%'
 		competitors: ['ImpactPartnerStack'];
 		marketSize: '$5B+'

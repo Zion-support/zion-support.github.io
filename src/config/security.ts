@@ -2,14 +2,11 @@
  * Security Configuration;
  * Defines security headers and policies for the application;
  */
-<<<<<<< HEAD
 export const _securityHeaders = {
     // TODO: Add content
   }
-=======
 export const _securityHeaders = {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   // Content Security Policy,
   contentSecurityPolicy: {// directives: {}
 // defaultSrc: ["'self'"],
@@ -37,7 +34,6 @@ export const _securityHeaders = {// TODO: Add content;}
 // 'X-Content-Type-Options': 'nosniff',
 // 'Referrer-Policy': 'strict-origin-when-cross-origin',
 // 'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
-<<<<<<< HEAD
 }
  * Rate limiting configuration
 export const rateLimitConfig = {
@@ -50,7 +46,6 @@ export const rateLimitConfig = {
 export const corsConfig = {
     // TODO: Add content
   }
-=======
 };
  * Rate limiting configuration;
 export const rateLimitConfig = {// TODO: Add content;}
@@ -61,12 +56,10 @@ export const rateLimitConfig = {// TODO: Add content;}
  * CORS configuration;
 export const corsConfig = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-<<<<<<< HEAD
   maxAge: 86400, // 24 hours
  * Session configuration
 export const sessionConfig = {
@@ -86,7 +79,6 @@ maxAge: 24 * 60 * 60 * 1000, // 24 hours
 export const validationPatterns = {
     // TODO: Add content
   }
-=======
   maxAge: 86400, // 24 hours;
  * Session configuration;
 export const sessionConfig = {// TODO: Add content;}
@@ -103,36 +95,23 @@ maxAge: 24 * 60 * 60 * 1000, // 24 hours;
  * Input validation patterns;
 export const validationPatterns = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   alphanumeric: /^[a-zA-Z0-9]+$/,
   noSpecialChars: /^[a-zA-Z0-9\s]+$/
-<<<<<<< HEAD
  * Sanitize user input
 export function sanitizeInput(input: string): string {
     // TODO: Add content
   }
   return input
-=======
  * Sanitize user input;
 export function sanitizeInput(input: string): string {// TODO: Add content;}
 }
   return input;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //     .replace(/[
-          
-          
-          
-          
-          
-          
-          
-          
           <>]/g, '') // Remove;
           < and >
-<<<<<<< HEAD
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim()
@@ -162,14 +141,6 @@ export function generateSecureToken(_length: number = 32): string {
   }
     // Fallback for non-browser environments
     for (let _i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
           < length; i++) {
     // TODO: Add content
   }
@@ -177,7 +148,6 @@ export function generateSecureToken(_length: number = 32): string {
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
 export default {
 securityHeaders,
-=======
     .replace(/javascript:/gi, '') // Remove javascript: protocol;
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim();
@@ -206,7 +176,6 @@ export function generateSecureToken(_length: number = 32): string {// TODO: Add 
       array[i] = Math.floor(Math.random() * 256);
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 export default {securityHeaders,}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   rateLimitConfig,
   corsConfig,
   sessionConfig,

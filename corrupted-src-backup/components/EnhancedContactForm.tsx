@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-
 export default function EnhancedContactForm(): React.JSX.Element {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
   return (
     <form
       aria-label="Contact form"
@@ -35,6 +33,5 @@ export default function EnhancedContactForm(): React.JSX.Element {
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
         Send
       </button>
-    </form>
   );
 }

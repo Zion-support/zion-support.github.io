@@ -1,10 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const MicroSAASPage: React.FC = () => {
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -12,8 +9,6 @@ const MicroSAASPage: React.FC = () => {
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Micro SaaS Solutions
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {return (}
@@ -3693,17 +3688,8 @@ const categories = [
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
   ];
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
@@ -3715,21 +3701,15 @@ const categories = [
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
 // Micro SAAS Solutions;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
-
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
       <Footer />
-
-=======
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -3849,27 +3829,9 @@ const categories = [
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
 // Ready to Transform Your Business?
-          
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>
           <p className="text-xl text-purple-100 mb-8">
 // Get started with our micro SAAS solutions today and see the difference AI can make.
-          
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -3887,9 +3849,7 @@ const categories = [
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };
-
 export default MicroSAASPage;

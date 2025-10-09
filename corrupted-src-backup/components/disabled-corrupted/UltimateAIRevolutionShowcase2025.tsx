@@ -61,7 +61,6 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
                 <Star, className="w-4 h-4, fil, l-yell, o, w-400, tex, t-yell, o, w-4, 0, 0" />
                 <span, className="te, x, t-xs">{featu, r, e.rati, n, g}</sp, a, n>
               </div>
-            </div>
             <div, className="mt-3, tex, t-xs, opacit, y-75">{featu, r, e.reade, r, s} reade, r, s</div>
           </di, v>
         ))}

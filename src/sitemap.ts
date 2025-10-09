@@ -1,8 +1,5 @@
 import { MetadataRoute } from 'next';
-
-<<<<<<< HEAD
 export default function sitemap(): MetadataRoute.Sitemap {
-
   return [
     {
       url: 'https://ziontechgroup.com',
@@ -11,8 +8,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
   ];
-
-=======
 export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'https://ziontechgroup.com'}
   const _routes = [
     '',
@@ -57,5 +52,4 @@ export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'http
     changeFrequency: route === '' ? 'daily' : 'weekly',
     priority: route === '' ? 1 : 0.8,
   }))
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }

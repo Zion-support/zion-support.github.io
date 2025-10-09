@@ -1,21 +1,14 @@
-<<<<<<< HEAD
-
 import React from 'react';
-
 interface InteractiveAIROICalculatorProps {
   // Add props here
 }
-
 const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = () => {
   return (
     <div className="interactiveairoicalculator">
       {/* Component content */}
     </div>
-
   );
 };
-
-=======
 'use client';
 import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {return (}
@@ -37,17 +30,8 @@ const InteractiveAIROICalculator: React.FC = () => {return (}
   };
   const roi = calculateROI();
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
@@ -59,15 +43,6 @@ const InteractiveAIROICalculator: React.FC = () => {return (}
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
 // Current Annual Cost ($)
-                
-          
-          
-          
-          
-          
-          
-          
-          
           </label>
                 <input
 type='number'
@@ -75,15 +50,6 @@ type='number'
                   onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 // />
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
 Expected Efficiency Gain (%)
                   type='range'
@@ -103,7 +69,6 @@ Expected Efficiency Gain (%)
                   <option value={12}>12 months</option>
                   <option value={18}>18 months</option>
                   <option value={24}>24 months</option>
-                </select>
             <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'>
               <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
 // Your ROI Projection;
@@ -116,5 +81,4 @@ Expected Efficiency Gain (%)
                 </p>
     </section>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default InteractiveAIROICalculator;

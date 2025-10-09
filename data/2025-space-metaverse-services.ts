@@ -1,10 +1,9 @@
-
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
     ],
     realImplementation: true,
 export interface SpaceMetaverseService
 export interface SpaceMetaverseService {;
-  id: string;
+  id: string;,
   name: string;
   tagline: string;
   description: string;

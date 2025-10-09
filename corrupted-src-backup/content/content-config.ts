@@ -1,5 +1,5 @@
 export interface BlogPost {
-  id: string;
+  id: string;,
   title: string;
   excerpt: string;
   date: string;
@@ -10,7 +10,6 @@ export interface BlogPost {
   slug: string;
   tags: string[];
 }
-
 export interface CaseStudy {
   id: string;
   title: string;
@@ -25,7 +24,6 @@ export interface CaseStudy {
   slug: string;
   tags: string[];
 }
-
 export interface Service {
   id: string;
   title: string;
@@ -39,7 +37,6 @@ export interface Service {
   primary: string;
   secondary: string;
 }
-
 export const getRecentContent = (limit: number = 3) => {
   const allContent: (BlogPost | CaseStudy)[] = [
     // This would be populated with actual content arrays

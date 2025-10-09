@@ -1,5 +1,5 @@
 export interface EnhancedPromotionalBanner {
-  id: string;
+  id: string;,
   title: string;
   description: string;
   ctaText: string;
@@ -11,7 +11,6 @@ export interface EnhancedPromotionalBanner {
   category: string;
   tags: string[];
 }
-
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
     id: 'oct-01-autonomous-business-ops-2025',

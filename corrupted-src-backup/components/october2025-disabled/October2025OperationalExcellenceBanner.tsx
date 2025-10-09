@@ -60,7 +60,6 @@ const October2025OperationalExcellenceBanne, r = () => {
               Customer, Intent, Prediction (98.2% Accur, a, c, y)
             </sp, a, n>
           </p>
-        </div>
         {/* Key, Metrics, Showcase */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-12, ma, x-w-6xl, m, x-au, t, o'>
           <div, className='bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/40, t, o-emera, l, d-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-emera, l, d-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, shado, w-lg'>

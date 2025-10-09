@@ -74,7 +74,6 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
                 <li>✓ Healthcare, Io, T & remote, patient, monitoring</li>
                 <li>✓ Smart, citie, s & public, safety, analytics</li>
                 <li>✓ 80% bandwidth, cost, reduction</li>
-              </ul>
               <Li, n, k
   to="/bl, o, g/ai-ed, g, e-computi, n, g-5g-networ, k, s-20, 2, 5"
                 classNa, m, e="bg-cy, a, n-500, hove, r: bg-cy, a, n-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e

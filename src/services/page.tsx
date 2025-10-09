@@ -1,8 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -18,12 +16,9 @@ const PagePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
       </main>
       <Footer />
     </div>
-
-=======
 import SEOOptimizer from '../components/SEOOptimizer';
 const ServicesPage: React.FC = () => {import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock from 'lucide-react';}
   const _aiServices = [
@@ -44,7 +39,6 @@ const ServicesPage: React.FC = () => {import {CheckCircle, Star, Zap, Shield, Cl
       features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
       price: 'Starting at $2,000/month',
       popular: false,
-
       icon: BarChart,
       title: 'AI Data Analytics',
       description: 'Transform data into actionable insights with AI',
@@ -76,14 +70,11 @@ const ServicesPage: React.FC = () => {import {CheckCircle, Star, Zap, Shield, Cl
       icon: TrendingUp,
       title: 'Proven ROI',
       description: 'Average 300% return on investment for our clients',
-
       icon: Users,
       title: 'Expert Team',
       description: '50+ certified professionals with 10+ years experience',
-
       title: '24/7 Support',
       description: 'Round-the-clock support with guaranteed response times',
-
       icon: Clock,
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
@@ -95,17 +86,8 @@ const ServicesPage: React.FC = () => {import {CheckCircle, Star, Zap, Shield, Cl
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Services</h1>
@@ -114,8 +96,6 @@ const ServicesPage: React.FC = () => {import {CheckCircle, Star, Zap, Shield, Cl
 // Contact Us;
           </a>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
-
 export default PagePage;

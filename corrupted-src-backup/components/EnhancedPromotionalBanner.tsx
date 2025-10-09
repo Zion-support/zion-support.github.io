@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface EnhancedPromotionalBannerProps {
   banner: BannerType;
   className?: string;
 }
-
 const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
   banner,
   className = ''
@@ -34,7 +32,6 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
             <Link, classNam, e = 'w-4 h-4' />
             {banner.ctaText}
           </Link>
-        </div>
       </div>
     </div>
 }
