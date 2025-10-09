@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * Advanced Accessibility Enhancement Utility
  * Provides comprehensive accessibility improvements and monitoring

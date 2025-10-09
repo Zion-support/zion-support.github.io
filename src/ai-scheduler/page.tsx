@@ -1,4 +1,4 @@
-'use client';
+
 import React from 'react';
 import { Calendar, Clock, Users, Zap, Brain, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Target, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';

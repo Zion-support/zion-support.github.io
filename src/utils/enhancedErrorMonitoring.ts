@@ -1,4 +1,4 @@
-'use client';
+
 import React from 'react'
 /**
  * Enhanced Error Monitoring System for Zion Tech Group Website

@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks

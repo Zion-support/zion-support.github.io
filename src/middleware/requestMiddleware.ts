@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * Request Middleware System
  * Provides middleware for handling requests and responses

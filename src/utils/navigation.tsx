@@ -1,4 +1,4 @@
-'use client';
+
 import { useCallback } from 'react';
 export const useRouter = () => {
   const push = useCallback((url: string) => {

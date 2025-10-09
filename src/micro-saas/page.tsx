@@ -1,4 +1,4 @@
-'use client';
+
 import React from 'react';
 import { Code, Brain, BarChart, MessageSquare, Palette, Search, Mail, CreditCard, Headphones, Camera, Music, Gamepad2, BookOpen, ShieldCheck, Wifi, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Microphone, Speaker, Battery, Power, Wrench, Hammer, Screwdriver, Tool, Cog, Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';

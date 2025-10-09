@@ -1,4 +1,4 @@
-'use client';
+
 import React, { useEffect, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {

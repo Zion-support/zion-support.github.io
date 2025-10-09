@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * Enhanced Error Reporting Utility
  * Provides comprehensive error tracking, logging, and reporting capabilities

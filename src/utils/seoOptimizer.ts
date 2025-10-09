@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * Advanced SEO Optimization Utility
  * Provides comprehensive SEO enhancements and monitoring

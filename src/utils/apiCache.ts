@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * API Caching Utility
  * Provides caching, deduplication, and retry logic for API calls

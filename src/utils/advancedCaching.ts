@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * Advanced Caching Utility
  * Provides intelligent caching with TTL, LRU eviction, and storage options

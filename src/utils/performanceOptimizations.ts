@@ -1,4 +1,4 @@
-'use client';
+
 // Performance optimization utilities
 import { useEffect, useCallback, useMemo, useState } from 'react';
 // Debounce utility for performance

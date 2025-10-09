@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * Enhanced Error Tracking Utility
  * Provides comprehensive error tracking with detailed context

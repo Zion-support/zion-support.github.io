@@ -1,4 +1,4 @@
-'use client';
+
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -163,7 +163,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
-<<<<<<< HEAD:src/components/PerformanceOptimizer.tsx
         // Service Worker registration failed - handled silently in production
       }
     }

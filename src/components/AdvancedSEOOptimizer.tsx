@@ -1,4 +1,4 @@
-'use client';
+
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOData {

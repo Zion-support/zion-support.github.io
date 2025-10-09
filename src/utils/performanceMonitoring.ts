@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * Advanced Performance Monitoring System
  * Tracks Core Web Vitals and custom performance metrics

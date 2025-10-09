@@ -1,4 +1,4 @@
-'use client';
+
 // Enhanced Error Handler
 export class AppError extends Error {
   statusCode: number;

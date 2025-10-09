@@ -1,4 +1,4 @@
-'use client';
+
 import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
   const [currentCost, setCurrentCost] = useState(100000);

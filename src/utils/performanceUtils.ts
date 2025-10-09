@@ -1,4 +1,4 @@
-'use client';
+
 /**
  * Performance Optimization Utilities
  * Provides utilities for optimizing performance in React applications

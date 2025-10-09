@@ -1,4 +1,4 @@
-'use client';
+
 import React, { useEffect, useState, useCallback } from 'react';
 interface PerformanceMetrics {
   fcp: number | null;
