@@ -26,27 +26,6 @@ export default defineConfig({
     emptyOutDir: true,
     copyPublicDir: true,
     // Enhanced performance optimizations
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-      },
-      mangle: {
-        safari10: true,
-        toplevel: true,
-      },
-      format: {
-        comments: false,
-        ecma: 2015,
-      },
-    },
-    // Reduce memory usage during build
     rollupOptions: {
       maxParallelFileOps: 2,
       treeshake: {
@@ -88,6 +67,27 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
+      },
+    },
+    // Enhanced performance optimizations
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+      },
+      mangle: {
+        safari10: true,
+        toplevel: true,
+      },
+      format: {
+        comments: false,
+        ecma: 2015,
       },
     },
   },

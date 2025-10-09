@@ -14,45 +14,21 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import Analytics from './components/Analytics';
-
-// Lazy load components for better performance
-const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026')
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator')
-);
-=======
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-
-// Lazy load components for better performance
-// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-// const InteractiveContentShowcase2026 = lazy(
-//   () => import('./components/InteractiveContentShowcase2026')
-// );
-// const InteractiveAIROICalculator = lazy(
-//   () => import('./components/InteractiveAIROICalculator')
-// );
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
+import PerformanceMonitor from './components/PerformanceMonitor';
+import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
 // Lazy load pages for better performance
-const _HomePage = lazy(() => import('./page'));
-const _AboutPage = lazy(() => import('./about/page'));
-const _ServicesPage = lazy(() => import('./services/page'));
-const _ContactPage = lazy(() => import('./contact/page'));
-const _TeamPage = lazy(() => import('./team/page'));
-const _PrivacyPage = lazy(() => import('./privacy/page'));
-const _TermsPage = lazy(() => import('./terms/page'));
-const _EnterprisePage = lazy(() => import('./enterprise/page'));
-const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
-const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ServicesPage = lazy(() => import('./services/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const TeamPage = lazy(() => import('./team/page'));
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const EnterprisePage = lazy(() => import('./enterprise/page'));
+const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
+const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -87,43 +63,25 @@ const App: React.FC = () => {
       const metrics = performanceOptimizer.getMetrics();
       const performanceMetrics = performanceMonitor.getMetrics();
       
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
+      if (pageLoadMetrics && process.env.NODE_ENV === 'development') {
         console.log('Performance metrics collected:', pageLoadMetrics);
       }
-      if (metrics) {
-        // eslint-disable-next-line no-console
+      if (metrics && process.env.NODE_ENV === 'development') {
         console.log('Performance metrics:', metrics);
       }
-      if (performanceMetrics) {
-        // eslint-disable-next-line no-console
-<<<<<<< HEAD
+      if (performanceMetrics && process.env.NODE_ENV === 'development') {
         console.log('Core Web Vitals:', performanceMetrics);
-=======
-        console.log('Core Web Vitals:', performanceMetrics);origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
       }
     }
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
       const performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-=======
-      // const _performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
       
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
-        // eslint-disable-next-line no-console
-<<<<<<< HEAD
         console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-=======
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
       }
     }, 30000);
     
@@ -141,72 +99,14 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <AdvancedErrorBoundary
-        enableErrorReporting={true}
-        enableRetry={true}
-        onError={(error, errorInfo) => {
-          logger.error(error.message, { error, errorInfo });
-        }}
-      >
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            <SEOEnhancer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-            >
-              <AdvancedSEOOptimizer
-                config={{
-                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                  canonicalUrl: 'https://ziontechgroup.com',
-                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                  structuredData: {
-                    '@type': 'TechCompany',
-                    name: 'Zion Tech Group',
-                    description: 'Advanced AI and IT Solutions Provider',
-                    foundingDate: '2020',
-                    numberOfEmployees: '50-100',
-                    industry: 'Technology',
-                    services: [
-                      'AI Solutions',
-                      'Digital Transformation',
-                      'Cloud Services',
-                      'Automation',
-                      'Business Intelligence'
-                    ]
-                  }
-                }}
-                enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
-              />
-              <Router>
-                <div className="App">
-                  <Navigation />
-                  <main id="main-content">
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/team" element={<TeamPage />} />
-                        <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
-                        <Route path="/enterprise" element={<EnterprisePage />} />
-                        <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
-                        <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-                </div>
-              </Router>
-=======
+      <GlobalErrorBoundary>
+        <AdvancedErrorBoundary
+          enableErrorReporting={true}
+          enableRetry={true}
+          onError={(error, errorInfo) => {
+            logger.error(error.message, { error, errorInfo });
+          }}
+        >
         <AccessibilityEnhancer>
           <SEOEnhancer
             title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -242,8 +142,8 @@ const App: React.FC = () => {
             />
             <Router>
               <div className="App">
-                <Analytics trackingId="G-XXXXXXXXXX" />
                 <PerformanceOptimizer />
+                <PerformanceMonitor />
                 <Navigation />
                 <main id="main-content">
                   <Suspense fallback={<LoadingSpinner />}>
@@ -258,32 +158,14 @@ const App: React.FC = () => {
                       <Route path="/enterprise" element={<EnterprisePage />} />
                       <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      <Route path="/ai-services" element={<AIServicesPage />} />
-                      <Route path="/it-services" element={<ITServicesPage />} />
-                      <Route path="/micro-saas" element={<MicroSaasPage />} />
                     </Routes>
                   </Suspense>
                 </main>
-                <Footer />cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
-
-                  {/* Performance Dashboard */}
-                  <PerformanceDashboard />
-                  
-                  {/* Advanced Performance Monitor */}
-                  <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env['NODE_ENV'] === 'development') {
-                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
-                      }
-                    }}
-                  />
-                </div>
-              </Router>
-            </SEOEnhancer>
-          </AccessibilityEnhancer>
-        </PerformanceOptimizer>
+                <Footer />
+              </div>
+            </Router>
+          </SEOEnhancer>
+        </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
     </HelmetProvider>
   );
