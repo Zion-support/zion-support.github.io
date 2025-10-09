@@ -166,10 +166,13 @@ const AI3DGenerationPage: React.FC = () => {
                 <Phone className="w-4 h-4" />
                 <span>Call (302) 464-0950</span>
               </a>
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button-outline inline-flex items-center space-x-2"
+              >
                 <Mail className="w-4 h-4" />
                 <span>Get Quote</span>
+              </a>
             </div>
           </section>
 
@@ -184,12 +187,14 @@ const AI3DGenerationPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature}
                   </h3>
+                </div>
               ))}
 
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose Our 3D AI?
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -200,19 +205,35 @@ const AI3DGenerationPage: React.FC = () => {
                       Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
 
           {/* Use Cases Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
               Industry Applications
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
+                <div key={index} className="cyber-card p-6 text-center">
                   <div className="text-4xl mb-4">{useCase.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-4">
                     {useCase.title}
+                  </h3>
                   <p className="text-gray-300 mb-4">
                     {useCase.description}
+                  </p>
                   <ul className="text-sm text-gray-400 space-y-1">
                     {useCase.examples.map((example, idx) => (
                       <li key={idx}>• {example}</li>
+                    ))}
                   </ul>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* Pricing Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
               Pricing Plans
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>

@@ -43,12 +43,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-
- cursor/analyze-improve-and-deploy-application-cde4
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Call custom error handler if provided
@@ -56,7 +54,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
 
- cursor/analyze-improve-and-deploy-application-cde4
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
@@ -64,9 +61,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-
     // Error reporting logic would go here
-    // console.error('Error reported:', error, errorInfo);
+    console.error('Error reported:', error, errorInfo);
   };
 
   private handleRetry = () => {
@@ -78,45 +74,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         retryCount: prevState.retryCount + 1
       }));
     }
-    // Enhanced error reporting logic
-    const errorReport = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-    };
-
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.group('🚨 Error Boundary Caught Error');
-      // console.error('Error:', error);
-      // console.error('Error Info:', errorInfo);
-      // console.error('Component Stack:', errorInfo.componentStack);
-      console.groupEnd();
-    }
-
-    // Send to error reporting service (implement as needed)
-    try {
-      // In a real app, you would send this to your error reporting service
-      // For now, we'll just log it
-      // eslint-disable-next-line no-console
-      // console.log('Error Report:', errorReport);
-      // Example: Send to error reporting service
-      // await fetch('/api/errors', {
-      //   method: 'POST',
-      //   headers: {// 'Content-Type': 'application/json'},
-      //   body: JSON.stringify(errorReport)
-      // });
-    } catch (reportingError) {
-      // console.error('Failed to report error:', reportingError);
-    }
   };
   private getUserId = (): string | null => {
     // Get user ID from localStorage, cookies, or context
     return localStorage.getItem('userId') || null;
   };
+  
   private getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
@@ -124,9 +87,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       sessionStorage.setItem('sessionId', sessionId);
     }
     return sessionId;
-  };
-  private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
   private handleReload = () => {
@@ -157,8 +117,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-        // eslint-disable-next-line no-console
-        // console.warn('Failed to copy error details');
+        console.warn('Failed to copy error details');
       });
   };
 
@@ -171,26 +130,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       return (
         <div className="error-boundary">
           <h2>Something went wrong</h2>
-          <p>Error ID: {// this.state.errorId}</p>
+          <p>Error ID: {this.state.errorId}</p>
           {this.state.retryCount < this.maxRetries && (
             <button onClick={this.handleRetry}>
               Retry ({this.maxRetries - this.state.retryCount} attempts left)
             </button>
-          )}        </div>
           )}
- cursor/analyze-improve-and-deploy-application-cde4
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-      const { retryCount, error, errorId } = this.state;
-      const _canRetry = retryCount < this.maxRetries;
-      const canRetry = retryCount < this.maxRetries;
+        </div>
+      );
+    }
 
-      const canRetry = retryCount < this.maxRetries;
-      const canRetry = retryCount < this.maxRetries;
+    // Custom fallback UI
+    if (this.props.fallback) {
+      return this.props.fallback;
+    }
+    
+    const { retryCount, error, errorId } = this.state;
+    const canRetry = retryCount < this.maxRetries;
 
-      return (
+    return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="text-6xl mb-4">⚠️</div>

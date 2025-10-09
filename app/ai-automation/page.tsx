@@ -87,28 +87,20 @@ const AIAutomationPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>AI Automation - Intelligent Process Automation | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with intelligent process automation. Achieve 80% efficiency increase and 60% time savings with AI-powered automation." />
-        <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-automation" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-              AI Automation Solutions
-            </h1>
-            <p className="text-xl text-gray-600 text-center mb-12">
-              Streamline your business processes with intelligent automation
-            </p>
-          </div>
-        </main>
-        <Footer />
-    </>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold text-white mb-8 text-center">
+            AI Automation Solutions
+          </h1>
+          <p className="text-xl text-gray-300 text-center mb-12">
+            Streamline your business processes with intelligent automation
+          </p>
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 };
 
@@ -134,9 +126,12 @@ export default AIAutomationPage;
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
+                <a
                   href="/demo"
                   className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center"
+                >
                   View Demo
+                </a>
             </section>
 
             {/* Features Section */}
