@@ -238,3 +238,18 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     return `
 Performance Report:
+Score: ${score}
+Load Time: ${metrics.loadTime}ms
+Render Time: ${metrics.renderTime}ms
+Memory Usage: ${metrics.memoryUsage}MB
+Bundle Size: ${metrics.bundleSize}KB
+Cache Hit Rate: ${metrics.cacheHitRate}%
+Lazy Loading: ${metrics.lazyLoading ? 'Enabled' : 'Disabled'}
+First Contentful Paint: ${metrics.firstContentfulPaint || 'N/A'}ms
+`;
+  }
+}
+
+// Export singleton instance
+export const performanceMonitor = new PerformanceMonitor();
+export default performanceMonitor;
