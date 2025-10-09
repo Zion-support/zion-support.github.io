@@ -42,6 +42,18 @@ const Navigation: React.FC = () => {
     { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
     { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Building },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Truck },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Stethoscope },
+    { name: 'AI Education Platform', href: '/ai-education-platform', icon: GraduationCap },
+    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager', icon: Building },
+    { name: 'AI Travel Assistant', href: '/ai-travel-assistant', icon: Plane },
+    { name: 'AI Manufacturing Optimizer', href: '/ai-manufacturing-optimizer', icon: Factory },
+    { name: 'AI Energy Manager', href: '/ai-energy-manager', icon: Zap },
+    { name: 'AI Marketing Automation', href: '/ai-marketing-automation', icon: BarChart },
+    { name: 'AI Customer Experience Manager', href: '/ai-customer-experience-manager', icon: Users },
+    { name: 'AI Data Security Monitor', href: '/ai-data-security-monitor', icon: Shield },
+    { name: 'AI Sustainability Manager', href: '/ai-sustainability-manager', icon: Globe },
   ];
 
   const aiServices = [
@@ -53,6 +65,20 @@ const Navigation: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
     { name: 'AI Fraud Detection', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Car },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Cpu },
+    { name: 'AI Conversational Intelligence', href: '/ai-conversational-intelligence', icon: MessageSquare },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings },
+    { name: 'AI Digital Twin', href: '/ai-digital-twin', icon: Cube },
+    { name: 'AI Cognitive Computing', href: '/ai-cognitive-computing', icon: Brain },
+    { name: 'AI Augmented Reality', href: '/ai-augmented-reality', icon: Eye },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions', icon: Globe },
+    { name: 'AI Space Technology', href: '/ai-space-technology', icon: Plane },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions', icon: Globe },
+    { name: 'AI Neuroscience', href: '/ai-neuroscience', icon: Brain },
+    { name: 'AI Materials Science', href: '/ai-materials-science', icon: Cube },
   ];
 
   const itServices = [
@@ -68,6 +94,20 @@ const Navigation: React.FC = () => {
     { name: 'IT Support', href: '/it-support', icon: Users },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
     { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure', icon: Cpu },
+    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: Cpu },
+    { name: '5G & Wireless Solutions', href: '/5g-wireless-solutions', icon: Globe },
+    { name: 'AR/VR Infrastructure', href: '/ar-vr-infrastructure', icon: Eye },
+    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure', icon: Lock },
+    { name: 'Metaverse Development', href: '/metaverse-development', icon: Globe },
+    { name: 'Space Technology Solutions', href: '/space-technology-solutions', icon: Plane },
+    { name: 'Climate Technology Solutions', href: '/climate-technology-solutions', icon: Globe },
+    { name: 'Neuroscience Technology', href: '/neuroscience-technology', icon: Brain },
+    { name: 'Materials Science Technology', href: '/materials-science-technology', icon: Cube },
+    { name: 'Digital Transformation Consulting', href: '/digital-transformation-consulting', icon: Settings },
+    { name: 'Enterprise Architecture', href: '/enterprise-architecture', icon: Building },
+    { name: 'IT Service Management', href: '/it-service-management', icon: Settings },
+    { name: 'Technology Innovation Lab', href: '/technology-innovation-lab', icon: Cpu },
   ];
 
   return (
