@@ -578,3 +578,14 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
+- Total enhancements: ${metrics.totalEnhancements}
+- Color contrast improvements: ${metrics.colorContrastImprovements}
+- Keyboard navigation fixes: ${metrics.keyboardNavigationFixes}
+- Screen reader optimizations: ${metrics.screenReaderOptimizations}
+- Focus management improvements: ${metrics.focusManagementImprovements}
+- ARIA enhancements: ${metrics.ariaEnhancements}
+- Semantic HTML improvements: ${metrics.semanticHtmlImprovements}
+- Performance impact: ${metrics.performanceImpact}ms
+    `;
+  }
+}
