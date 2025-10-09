@@ -1,20 +1,498 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-=======
-import { ArrowRight, Star, CheckCircle, Cloud, Shield, Server, Database, Network, Monitor, Zap } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Mail, Calendar, FileText, Image, Video, Music, Globe, Smartphone, Laptop, Database, Lock, Settings, TrendingUp, Target, Rocket, Award, Clock, DollarSign, Server, Network, HardDrive, Cpu, Monitor, Wifi, Smartphone as Phone, Headphones, Printer, Camera, Wrench, Cog, Activity, Globe as Web, Mail as Email, MessageCircle, Mic, Phone as PhoneIcon } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Cloud, Server, Database, Network, Monitor, HardDrive, Settings, Wrench, Activity, Lock, DollarSign, Award, Rocket } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
     {
-<<<<<<< HEAD
+      title: 'IT Infrastructure Management',
+      description: 'Comprehensive IT infrastructure design, implementation, and management for enterprise organizations.',
+      icon: '🏗️',
+      price: '$2,000/month',
+      features: [
+        'Server Management & Monitoring',
+        'Network Design & Implementation',
+        'Storage Solutions',
+        'Backup & Disaster Recovery',
+        'Performance Optimization',
+        '24/7 Technical Support'
+      ],
+      benefits: [
+        'Achieve 99.9% uptime',
+        'Reduce IT costs by 30%',
+        'Improve system performance by 50%',
+        'Ensure business continuity'
+      ],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Infrastructure',
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'VMware', 'Docker', 'Kubernetes'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Cloud Migration & Management',
+      description: 'Seamless cloud migration services with ongoing management and optimization for maximum efficiency.',
+      icon: '☁️',
+      price: '$1,500/month',
+      features: [
+        'Cloud Strategy & Planning',
+        'Migration Execution',
+        'Cost Optimization',
+        'Security Implementation',
+        'Performance Monitoring',
+        'Multi-cloud Management'
+      ],
+      benefits: [
+        'Reduce infrastructure costs by 40%',
+        'Improve scalability by 300%',
+        'Enhance security posture',
+        'Enable remote work capabilities'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Cloud Services',
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Ansible', 'CloudFormation'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive cybersecurity services including threat detection, prevention, and incident response.',
+      icon: '🛡️',
+      price: '$2,500/month',
+      features: [
+        'Security Assessment & Auditing',
+        'Threat Detection & Prevention',
+        'Vulnerability Management',
+        'Incident Response',
+        'Security Training',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Prevent 99.9% of cyber threats',
+        'Reduce security incidents by 80%',
+        'Ensure compliance with regulations',
+        'Protect sensitive data'
+      ],
+      marketPrice: '$5,000-10,000/month',
+      category: 'Security',
+      technologies: ['SIEM', 'Firewalls', 'EDR', 'MDR', 'Penetration Testing', 'Security Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'DevOps & CI/CD Implementation',
+      description: 'Modern DevOps practices with automated CI/CD pipelines, infrastructure as code, and monitoring.',
+      icon: '🔄',
+      price: '$1,800/month',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Monitoring & Logging',
+        'Automated Testing',
+        'Deployment Automation'
+      ],
+      benefits: [
+        'Reduce deployment time by 80%',
+        'Improve code quality by 60%',
+        'Enable faster releases',
+        'Minimize deployment risks'
+      ],
+      marketPrice: '$3,500-7,000/month',
+      category: 'DevOps',
+      technologies: ['Jenkins', 'GitLab CI', 'Docker', 'Kubernetes', 'Terraform', 'Prometheus'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Database Administration & Optimization',
+      description: 'Expert database management with performance tuning, backup strategies, and security hardening.',
+      icon: '🗄️',
+      price: '$1,200/month',
+      features: [
+        'Database Design & Optimization',
+        'Performance Tuning',
+        'Backup & Recovery',
+        'Security Hardening',
+        'Monitoring & Alerting',
+        'Capacity Planning'
+      ],
+      benefits: [
+        'Improve query performance by 70%',
+        'Ensure data integrity',
+        'Reduce downtime by 90%',
+        'Optimize storage costs'
+      ],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Database',
+      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Oracle'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Network Design & Security',
+      description: 'Advanced network architecture with security implementation, monitoring, and optimization.',
+      icon: '🌐',
+      price: '$1,600/month',
+      features: [
+        'Network Architecture Design',
+        'Security Implementation',
+        'Performance Optimization',
+        'Monitoring & Management',
+        'VPN & Remote Access',
+        'Load Balancing'
+      ],
+      benefits: [
+        'Improve network performance by 50%',
+        'Enhance security posture',
+        'Enable remote connectivity',
+        'Reduce network downtime'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Networking',
+      technologies: ['Cisco', 'Juniper', 'Fortinet', 'Palo Alto', 'F5', 'Aruba'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Support & Help Desk',
+      description: 'Comprehensive IT support services with 24/7 monitoring, ticketing, and user assistance.',
+      icon: '🎧',
+      price: '$800/month',
+      features: [
+        '24/7 Technical Support',
+        'Remote Desktop Support',
+        'User Training & Education',
+        'Software Installation',
+        'Hardware Troubleshooting',
+        'Incident Management'
+      ],
+      benefits: [
+        'Reduce support tickets by 40%',
+        'Improve user satisfaction',
+        'Minimize downtime',
+        'Enable self-service options'
+      ],
+      marketPrice: '$1,500-3,000/month',
+      category: 'Support',
+      technologies: ['ServiceNow', 'Jira', 'Zendesk', 'Remote Desktop', 'TeamViewer', 'SCCM'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Data Backup & Disaster Recovery',
+      description: 'Comprehensive data protection with automated backups, disaster recovery planning, and business continuity.',
+      icon: '💾',
+      price: '$1,000/month',
+      features: [
+        'Automated Backup Solutions',
+        'Disaster Recovery Planning',
+        'Business Continuity',
+        'Data Replication',
+        'Recovery Testing',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Ensure data protection',
+        'Minimize recovery time',
+        'Meet compliance requirements',
+        'Reduce business risks'
+      ],
+      marketPrice: '$2,000-4,000/month',
+      category: 'Backup & Recovery',
+      technologies: ['Veeam', 'Commvault', 'Acronis', 'AWS Backup', 'Azure Backup', 'Google Cloud Backup'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT consulting with technology assessment, roadmap development, and digital transformation guidance.',
+      icon: '💼',
+      price: '$2,200/month',
+      features: [
+        'Technology Assessment',
+        'Strategic Planning',
+        'Digital Transformation',
+        'Vendor Management',
+        'Cost Optimization',
+        'Change Management'
+      ],
+      benefits: [
+        'Align IT with business goals',
+        'Optimize technology investments',
+        'Accelerate digital transformation',
+        'Improve operational efficiency'
+      ],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Consulting',
+      technologies: ['ITIL', 'COBIT', 'Agile', 'Scrum', 'Project Management', 'Business Analysis'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Mobile Device Management',
+      description: 'Comprehensive mobile device management with security policies, app management, and remote control.',
+      icon: '📱',
+      price: '$600/month',
+      features: [
+        'Device Enrollment',
+        'Security Policy Management',
+        'App Distribution',
+        'Remote Wipe & Lock',
+        'Compliance Monitoring',
+        'User Self-Service'
+      ],
+      benefits: [
+        'Secure mobile devices',
+        'Simplify device management',
+        'Ensure compliance',
+        'Improve productivity'
+      ],
+      marketPrice: '$1,200-2,500/month',
+      category: 'Mobile Management',
+      technologies: ['Microsoft Intune', 'VMware Workspace ONE', 'MobileIron', 'Citrix', 'Jamf', 'AirWatch'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Asset Management',
+      description: 'Complete IT asset lifecycle management with inventory tracking, license management, and cost optimization.',
+      icon: '📋',
+      price: '$500/month',
+      features: [
+        'Asset Discovery & Inventory',
+        'License Management',
+        'Lifecycle Tracking',
+        'Cost Optimization',
+        'Compliance Reporting',
+        'Procurement Management'
+      ],
+      benefits: [
+        'Reduce IT costs by 25%',
+        'Ensure license compliance',
+        'Optimize asset utilization',
+        'Improve procurement decisions'
+      ],
+      marketPrice: '$1,000-2,000/month',
+      category: 'Asset Management',
+      technologies: ['ServiceNow', 'Lansweeper', 'PDQ Inventory', 'ManageEngine', 'SCCM', 'JAMF'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Security Auditing & Compliance',
+      description: 'Comprehensive security auditing with compliance assessment, risk analysis, and remediation planning.',
+      icon: '🔍',
+      price: '$1,800/month',
+      features: [
+        'Security Risk Assessment',
+        'Compliance Auditing',
+        'Vulnerability Scanning',
+        'Penetration Testing',
+        'Remediation Planning',
+        'Security Training'
+      ],
+      benefits: [
+        'Identify security gaps',
+        'Ensure compliance',
+        'Reduce security risks',
+        'Improve security posture'
+      ],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Security Auditing',
+      technologies: ['Nessus', 'OpenVAS', 'Qualys', 'Rapid7', 'Burp Suite', 'OWASP ZAP'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Performance Monitoring',
+      description: 'Advanced IT performance monitoring with real-time analytics, alerting, and optimization recommendations.',
+      icon: '📊',
+      price: '$1,400/month',
+      features: [
+        'Real-time Monitoring',
+        'Performance Analytics',
+        'Alert Management',
+        'Capacity Planning',
+        'Trend Analysis',
+        'Optimization Recommendations'
+      ],
+      benefits: [
+        'Prevent outages proactively',
+        'Optimize performance',
+        'Reduce downtime',
+        'Improve user experience'
+      ],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Monitoring',
+      technologies: ['Nagios', 'Zabbix', 'PRTG', 'SolarWinds', 'Datadog', 'New Relic'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Training & Certification',
+      description: 'Comprehensive IT training programs with certification preparation and hands-on workshops.',
+      icon: '🎓',
+      price: '$300/month',
+      features: [
+        'Technical Training Programs',
+        'Certification Preparation',
+        'Hands-on Workshops',
+        'Online Learning Platform',
+        'Progress Tracking',
+        'Certification Vouchers'
+      ],
+      benefits: [
+        'Improve team skills',
+        'Increase productivity',
+        'Reduce support needs',
+        'Career advancement'
+      ],
+      marketPrice: '$600-1,200/month',
+      category: 'Training',
+      technologies: ['Microsoft Learn', 'AWS Training', 'Cisco Learning', 'CompTIA', 'ITIL', 'PMP'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Project Management',
+      description: 'Professional IT project management with planning, execution, and delivery of complex technology projects.',
+      icon: '📅',
+      price: '$1,500/month',
+      features: [
+        'Project Planning & Scheduling',
+        'Resource Management',
+        'Risk Assessment',
+        'Quality Assurance',
+        'Stakeholder Communication',
+        'Project Delivery'
+      ],
+      benefits: [
+        'Deliver projects on time',
+        'Control project costs',
+        'Manage project risks',
+        'Ensure quality delivery'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Project Management',
+      technologies: ['Microsoft Project', 'Jira', 'Confluence', 'Trello', 'Asana', 'Monday.com'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    }
+  ];
+
+  const categories = [...new Set(itServices.map(service => service.category))];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including infrastructure management, cloud migration, cybersecurity, DevOps, and more. Expert IT solutions for modern businesses." />
+        <meta name="keywords" content="IT services, infrastructure management, cloud migration, cybersecurity, DevOps, database administration, network security" />
+      </Helmet>
+
+      {/* Header Section */}
+      <div className="relative py-20 px-4 text-center">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            IT Services & Solutions
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+            Comprehensive IT Services for Modern Businesses
+          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12">
+            Expert IT services including infrastructure management, cloud migration, cybersecurity, DevOps, 
+            and digital transformation. Transform your technology operations with our proven solutions.
+          </p>
+          
+          {/* Contact Info */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Call: (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 flex items-center gap-2"
+            >
+              <Mail className="w-5 h-5" />
+              Email Us
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {itServices.map((service, index) => (
+            <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+              <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+              
+              <div className="mb-4">
+                <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                <div className="text-sm text-gray-400">Market Price: {service.marketPrice}</div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                <ul className="text-xs text-gray-300 space-y-1">
+                  {service.features.slice(0, 3).map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                <ul className="text-xs text-gray-300 space-y-1">
+                  {service.benefits.slice(0, 2).map((benefit, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <div className="text-xs text-gray-400">
+                  <strong>Technologies:</strong> {service.technologies.slice(0, 3).join(', ')}
+                  {service.technologies.length > 3 && '...'}
+                </div>
+              </div>
+
+              <div className="text-xs text-cyan-400 font-medium">
+                {service.contactInfo}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your IT Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Get expert IT services that will modernize your technology stack and drive business growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Get Free Consultation
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            >
+              Contact Our Experts
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ITServicesPage;
 <<<<<<< HEAD
       title: 'IT Infrastructure Management',
       description: 'Comprehensive IT infrastructure design, implementation, and management for enterprise organizations.',

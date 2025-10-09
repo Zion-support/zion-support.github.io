@@ -290,9 +290,6 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$3,000-6,000/month',
       category: 'Edge AI',
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
-<<<<<<< HEAD
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'    }
-=======
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // NEW ADVANCED AI SERVICES
@@ -625,8 +622,249 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']
+    },
+
+    // Advanced AI Services
+    {
+      title: 'AI Edge Computing Solutions',
+      description: 'Deploy AI models at the edge for real-time processing, reduced latency, and offline capabilities.',
+      icon: '⚡',
+      price: '$2,200/month',
+      features: [
+        'Edge Model Deployment',
+        'Real-time Processing',
+        'Offline AI Capabilities',
+        'Latency Optimization',
+        'Edge Security',
+        'Model Synchronization'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Enable offline AI processing',
+        'Improve data privacy',
+        'Lower bandwidth costs'
+      ],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Edge Computing',
+      technologies: ['TensorFlow Lite', 'ONNX', 'Edge TPU', 'NVIDIA Jetson', 'Docker', 'Kubernetes'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Model Optimization & MLOps',
+      description: 'Comprehensive MLOps platform for model deployment, monitoring, and continuous improvement.',
+      icon: '🔄',
+      price: '$1,800/month',
+      features: [
+        'Model Versioning',
+        'Automated Deployment',
+        'Performance Monitoring',
+        'A/B Testing',
+        'Model Retraining',
+        'CI/CD Pipelines'
+      ],
+      benefits: [
+        'Reduce deployment time by 80%',
+        'Improve model reliability',
+        'Enable continuous learning',
+        'Scale AI operations'
+      ],
+      marketPrice: '$3,500-7,000/month',
+      category: 'MLOps',
+      technologies: ['MLflow', 'Kubeflow', 'Docker', 'Kubernetes', 'Prometheus', 'Grafana'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Data Engineering & Pipeline',
+      description: 'End-to-end data engineering solutions for AI model training and production data pipelines.',
+      icon: '🔧',
+      price: '$1,600/month',
+      features: [
+        'Data Pipeline Design',
+        'ETL/ELT Automation',
+        'Data Quality Monitoring',
+        'Feature Engineering',
+        'Data Versioning',
+        'Real-time Streaming'
+      ],
+      benefits: [
+        'Accelerate data processing by 5x',
+        'Improve data quality by 95%',
+        'Enable real-time analytics',
+        'Reduce data engineering costs'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Data Engineering',
+      technologies: ['Apache Airflow', 'Apache Kafka', 'Apache Spark', 'dbt', 'Great Expectations', 'Apache Beam'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Security & Privacy Solutions',
+      description: 'Advanced AI security with federated learning, differential privacy, and adversarial defense.',
+      icon: '🔒',
+      price: '$2,500/month',
+      features: [
+        'Federated Learning',
+        'Differential Privacy',
+        'Adversarial Defense',
+        'Model Encryption',
+        'Privacy-Preserving ML',
+        'Secure Multi-party Computation'
+      ],
+      benefits: [
+        'Protect sensitive data',
+        'Ensure regulatory compliance',
+        'Prevent model attacks',
+        'Enable secure collaboration'
+      ],
+      marketPrice: '$5,000-10,000/month',
+      category: 'AI Security',
+      technologies: ['PySyft', 'TensorFlow Privacy', 'Homomorphic Encryption', 'SecureML', 'FATE', 'OpenMined'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Voice & Speech Solutions',
+      description: 'Advanced voice AI with speech recognition, synthesis, and conversational interfaces.',
+      icon: '🎤',
+      price: '$1,300/month',
+      features: [
+        'Speech Recognition',
+        'Text-to-Speech',
+        'Voice Cloning',
+        'Speaker Identification',
+        'Emotion Detection',
+        'Multi-language Support'
+      ],
+      benefits: [
+        'Improve accessibility',
+        'Enable hands-free interaction',
+        'Personalize voice experiences',
+        'Support multiple languages'
+      ],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Voice AI',
+      technologies: ['Whisper', 'Tacotron', 'WaveNet', 'Wav2Vec', 'SpeechT5', 'Coqui TTS'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Recommendation Systems',
+      description: 'Advanced recommendation engines with personalization, collaborative filtering, and content-based filtering.',
+      icon: '💡',
+      price: '$1,400/month',
+      features: [
+        'Collaborative Filtering',
+        'Content-based Filtering',
+        'Hybrid Approaches',
+        'Real-time Recommendations',
+        'A/B Testing',
+        'Cold Start Solutions'
+      ],
+      benefits: [
+        'Increase engagement by 40%',
+        'Boost conversion rates by 25%',
+        'Improve user experience',
+        'Drive revenue growth'
+      ],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Recommendation Systems',
+      technologies: ['TensorFlow', 'PyTorch', 'Apache Spark', 'Redis', 'Elasticsearch', 'Apache Kafka'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Time Series Analysis',
+      description: 'Advanced time series forecasting and analysis for financial, IoT, and business data.',
+      icon: '📈',
+      price: '$1,500/month',
+      features: [
+        'Time Series Forecasting',
+        'Anomaly Detection',
+        'Seasonality Analysis',
+        'Trend Analysis',
+        'Multi-variate Analysis',
+        'Real-time Monitoring'
+      ],
+      benefits: [
+        'Improve forecast accuracy by 50%',
+        'Detect anomalies in real-time',
+        'Optimize resource planning',
+        'Reduce operational risks'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Time Series',
+      technologies: ['Prophet', 'LSTM', 'ARIMA', 'XGBoost', 'InfluxDB', 'Grafana'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Content Generation & NLP',
+      description: 'Advanced content generation with GPT models, text summarization, and creative writing assistance.',
+      icon: '✍️',
+      price: '$1,200/month',
+      features: [
+        'Content Generation',
+        'Text Summarization',
+        'Creative Writing',
+        'Translation Services',
+        'Content Optimization',
+        'Plagiarism Detection'
+      ],
+      benefits: [
+        'Generate content 10x faster',
+        'Improve content quality',
+        'Scale content production',
+        'Maintain brand consistency'
+      ],
+      marketPrice: '$2,000-4,000/month',
+      category: 'Content AI',
+      technologies: ['GPT-4', 'Claude', 'BERT', 'T5', 'Hugging Face', 'OpenAI API'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Blockchain & Web3 Solutions',
+      description: 'AI-powered blockchain solutions with smart contracts, DeFi protocols, and NFT analytics.',
+      icon: '⛓️',
+      price: '$3,000/month',
+      features: [
+        'Smart Contract AI',
+        'DeFi Protocol Optimization',
+        'NFT Analytics',
+        'Blockchain Data Analysis',
+        'Crypto Trading Bots',
+        'Risk Assessment'
+      ],
+      benefits: [
+        'Optimize DeFi strategies',
+        'Improve trading performance',
+        'Analyze market trends',
+        'Reduce blockchain risks'
+      ],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Blockchain AI',
+      technologies: ['Ethereum', 'Solidity', 'Web3.js', 'Python', 'Machine Learning', 'TensorFlow'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Quantum Computing Integration',
+      description: 'Quantum-enhanced AI solutions for optimization, cryptography, and complex problem solving.',
+      icon: '⚛️',
+      price: '$5,000/month',
+      features: [
+        'Quantum Machine Learning',
+        'Quantum Optimization',
+        'Quantum Cryptography',
+        'Quantum Simulation',
+        'Hybrid Classical-Quantum AI',
+        'Quantum Error Correction'
+      ],
+      benefits: [
+        'Solve complex optimization problems',
+        'Enhance security with quantum crypto',
+        'Accelerate AI training',
+        'Enable breakthrough discoveries'
+      ],
+      marketPrice: '$10,000-25,000/month',
+      category: 'Quantum AI',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Hardware', 'Classical-Quantum Hybrid'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
   ];
 
   const categories = [...new Set(aiServices.map(service => service.category))];
