@@ -395,6 +395,139 @@ a {
       0 0 6px #00ffff,
       0 0 9px #00ffff;
   }
+  
+  /* Mobile Navigation */
+  .cyber-nav {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Mobile Cards */
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Mobile Text Sizes */
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .text-7xl {
+    font-size: 3.5rem;
+  }
+  
+  /* Mobile Spacing */
+  .py-16 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .py-24 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  /* Mobile Grid */
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  /* Mobile Buttons */
+  .cyber-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Mobile Hero Section */
+  .hero-section {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Mobile Service Cards */
+  .service-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .service-card p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+/* Tablet Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cyber-grid {
+    background-size: 18px 18px;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    padding: 1.5rem;
+  }
+  
+  .text-4xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-5xl {
+    font-size: 3rem;
+  }
+  
+  .text-6xl {
+    font-size: 3.5rem;
+  }
+}
+
+/* Large Desktop Design */
+@media (min-width: 1440px) {
+  .cyber-grid {
+    background-size: 25px 25px;
+  }
+  
+  .container {
+    max-width: 1400px;
+  }
+  
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    padding: 2rem;
+  }
+}
+
+/* Ultra-wide Design */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .cyber-grid {
+    background-size: 30px 30px;
+  }
 }
 
 /* Loading Animation */

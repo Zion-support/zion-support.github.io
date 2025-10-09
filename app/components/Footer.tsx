@@ -12,18 +12,27 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Cybersecurity Advanced', url: '/ai-cybersecurity-advanced', description: 'Advanced AI security' },
+    { name: 'AI Business Intelligence', url: '/ai-business-intelligence', description: 'AI business intelligence' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Email Automation', url: '/ai-email-automation', description: 'Smart email marketing' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Social media AI' },
+    { name: 'AI Customer Chatbot', url: '/ai-customer-chatbot', description: '24/7 AI support' }
   ];
 
   const itServices = [
+    { name: 'IT Services Comprehensive', url: '/it-services-comprehensive', description: 'Complete IT solutions' },
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
+    { name: 'AI Cloud Infrastructure Advanced', url: '/ai-cloud-infrastructure-advanced', description: 'Advanced AI cloud' },
     { name: 'Micro SAAS', url: '/micro-saas', description: '50+ ready-to-use apps' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
     { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
     { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
-    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
+    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' },
+    { name: 'AI Inventory Optimizer', url: '/ai-inventory-optimizer', description: 'Smart inventory management' },
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'AI project management' }
   ];
 
   const specializedServices = [

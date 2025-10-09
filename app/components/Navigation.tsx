@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Share2, MessageCircle, Package, Calendar, Server } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,11 +35,15 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
     { name: 'AI E-commerce', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI' },
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security AI' },
+    { name: 'AI Cybersecurity Advanced', href: '/ai-cybersecurity-advanced', icon: Shield, description: 'Advanced Security' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart, description: 'Business Intelligence' },
     { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' }
   ];
 
   const itServices = [
+    { name: 'IT Services Comprehensive', href: '/it-services-comprehensive', icon: Server, description: 'Complete IT Solutions' },
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
+    { name: 'AI Cloud Infrastructure Advanced', href: '/ai-cloud-infrastructure-advanced', icon: Cloud, description: 'Advanced AI Cloud' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
     { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
@@ -49,6 +53,11 @@ const Navigation: React.FC = () => {
 
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
+    { name: 'AI Email Automation', href: '/ai-email-automation', icon: Mail, description: 'Smart Email Marketing' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Share2, description: 'Social Media AI' },
+    { name: 'AI Customer Chatbot', href: '/ai-customer-chatbot', icon: MessageCircle, description: '24/7 AI Support' },
+    { name: 'AI Inventory Optimizer', href: '/ai-inventory-optimizer', icon: Package, description: 'Smart Inventory' },
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'AI Project Management' },
     { name: 'Business Apps', href: '/business-apps', icon: Users, description: 'Business Applications' },
     { name: 'Productivity Tools', href: '/productivity', icon: Zap, description: 'Productivity Suite' },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target, description: 'Marketing Suite' },
