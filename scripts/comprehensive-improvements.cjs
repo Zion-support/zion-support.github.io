@@ -48,8 +48,7 @@ class ComprehensiveImprovements {
     }
     
     // Create performance monitoring component
-    const performanceComponent = `
-'use client';
+    const performanceComponent = `'use client';
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
@@ -77,8 +76,7 @@ const PerformanceMonitor = () => {
   return null;
 };
 
-export default PerformanceMonitor;
-`;
+export default PerformanceMonitor;`;
     
     fs.writeFileSync('app/components/PerformanceMonitor.tsx', performanceComponent);
     this.improvements.push('Created enhanced performance monitoring component');
@@ -106,8 +104,7 @@ export default PerformanceMonitor;
     this.log('🔍 Enhancing SEO...');
     
     // Create enhanced SEO component
-    const seoComponent = `
-'use client';
+    const seoComponent = `'use client';
 import React from 'react';
 import Head from 'next/head';
 
@@ -174,8 +171,7 @@ const SEOOptimizer: React.FC<SEOProps> = ({
   );
 };
 
-export default SEOOptimizer;
-`;
+export default SEOOptimizer;`;
     
     fs.writeFileSync('app/components/SEOOptimizer.tsx', seoComponent);
     this.improvements.push('Created enhanced SEO component with structured data');
@@ -227,8 +223,7 @@ Disallow: /static/`;
     this.log('♿ Enhancing accessibility...');
     
     // Create accessibility component
-    const accessibilityComponent = `
-'use client';
+    const accessibilityComponent = `'use client';
 import React, { useEffect, useState } from 'react';
 
 const AccessibilityEnhancer = () => {
@@ -280,8 +275,7 @@ const AccessibilityEnhancer = () => {
   );
 };
 
-export default AccessibilityEnhancer;
-`;
+export default AccessibilityEnhancer;`;
     
     fs.writeFileSync('app/components/AccessibilityEnhancer.tsx', accessibilityComponent);
     this.improvements.push('Created accessibility enhancement component');
@@ -344,8 +338,7 @@ export default AccessibilityEnhancer;
   .neon-text {
     text-shadow: 0 0 10px #ffffff;
   }
-}
-`;
+}`;
     
     const globalCssPath = 'app/globals.css';
     const existingCss = fs.readFileSync(globalCssPath, 'utf8');
@@ -358,8 +351,7 @@ export default AccessibilityEnhancer;
     this.log('📱 Optimizing for mobile...');
     
     // Create mobile optimization component
-    const mobileComponent = `
-'use client';
+    const mobileComponent = `'use client';
 import React, { useEffect, useState } from 'react';
 
 const MobileOptimizer = () => {
@@ -391,8 +383,7 @@ const MobileOptimizer = () => {
   return null;
 };
 
-export default MobileOptimizer;
-`;
+export default MobileOptimizer;`;
     
     fs.writeFileSync('app/components/MobileOptimizer.tsx', mobileComponent);
     this.improvements.push('Created mobile optimization component');
@@ -473,8 +464,7 @@ export default MobileOptimizer;
   .hover\\:neon-glow:hover {
     box-shadow: none;
   }
-}
-`;
+}`;
     
     const globalCssPath = 'app/globals.css';
     const existingCss = fs.readFileSync(globalCssPath, 'utf8');
@@ -487,8 +477,7 @@ export default MobileOptimizer;
     this.log('🔒 Enhancing security...');
     
     // Create security headers middleware
-    const securityMiddleware = `
-import { NextResponse } from 'next/server';
+    const securityMiddleware = `import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
@@ -522,15 +511,13 @@ export const config = {
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
-};
-`;
+};`;
     
     fs.writeFileSync('middleware.ts', securityMiddleware);
     this.improvements.push('Created security middleware with comprehensive headers');
     
     // Create security component
-    const securityComponent = `
-'use client';
+    const securityComponent = `'use client';
 import React, { useEffect } from 'react';
 
 const SecurityEnhancer = () => {
@@ -547,8 +534,7 @@ const SecurityEnhancer = () => {
   return null;
 };
 
-export default SecurityEnhancer;
-`;
+export default SecurityEnhancer;`;
     
     fs.writeFileSync('app/components/SecurityEnhancer.tsx', securityComponent);
     this.improvements.push('Created security enhancement component');
@@ -597,39 +583,6 @@ export default SecurityEnhancer;
     
     fs.writeFileSync('.prettierrc', prettierConfig);
     this.improvements.push('Created Prettier configuration');
-    
-    // Create TypeScript configuration
-    const tsConfig = `{
-  "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["dom", "dom.iterable", "es6"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
-}`;
-    
-    fs.writeFileSync('tsconfig.json', tsConfig);
-    this.improvements.push('Enhanced TypeScript configuration');
   }
 
   // 7. Build and Test

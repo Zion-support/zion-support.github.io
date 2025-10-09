@@ -1,6 +1,5 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import crypto from 'crypto';
-import path from 'path';
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -108,7 +107,7 @@ const nextConfig = {
     // Module resolution optimization
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': path.resolve(process.cwd(), 'src'),
+      '@': require('path').resolve(__dirname, 'src'),
     };
 
     return config;
@@ -183,13 +182,12 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@heroicons/react'],
-  },
-  
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
       },
     },
   },
@@ -220,7 +218,8 @@ const nextConfig = {
   // Generate ETags
   generateEtags: true,
   
-  // SWC minification is enabled by default in Next.js 13+
+  // Enable SWC minification
+  swcMinify: true,
 };
 
 export default bundleAnalyzer(nextConfig);

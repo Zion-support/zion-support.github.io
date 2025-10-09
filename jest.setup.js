@@ -43,41 +43,49 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-// Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter: () => ({
+    route: '/',
+    pathname: '/',
+    query: {},
+    asPath: '/',
+    push: jest.fn(),
+    pop: jest.fn(),
+    reload: jest.fn(),
+    back: jest.fn(),
+    prefetch: jest.fn(),
+    beforePopState: jest.fn(),
+    events: {
+      on: jest.fn(),
+      off: jest.fn(),
+      emit: jest.fn(),
+    },
+  }),
+  usePathname: () => '/',
+  useSearchParams: () => new URLSearchParams(),
+}));
+
+// Mock Next.js navigation
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({
+    push: jest.fn(),
+    replace: jest.fn(),
+    prefetch: jest.fn(),
+    back: jest.fn(),
+    forward: jest.fn(),
+    refresh: jest.fn(),
+  }),
+  usePathname: () => '/',
+  useSearchParams: () => new URLSearchParams(),
+  useParams: () => ({}),
+}));
+
+// Mock Next.js Link component
+jest.mock('next/link', () => {
   const React = require('react');
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-    }),
-    useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    NavLink: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
-      const { createMemoryRouter, RouterProvider } = actual;
-      const router = createMemoryRouter([
-        {
-          path: '/',
-          element: children,
-        },
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0,
-      });
-      return React.createElement(RouterProvider, { router });
-    },
-    RouterProvider: ({ router }) => null,
+  return ({ children, href, ...props }) => {
+    return React.createElement('a', { href, ...props }, children);
   };
 });
 
