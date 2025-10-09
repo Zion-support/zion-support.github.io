@@ -1,17 +1,11 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-import { Suspense, lazy } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
-<<<<<<< HEAD
-=======
 const ServicesPage = lazy(() => import('./services/page'));
 const PricingPage = lazy(() => import('./pricing/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
@@ -21,7 +15,6 @@ const CareersPage = lazy(() => import('./careers/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
 
 // AI Services
 const AiServicesPage = lazy(() => import('./ai-services/page'));
@@ -29,8 +22,6 @@ const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
 const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
 const AiFintechPage = lazy(() => import('./ai-fintech/page'));
-<<<<<<< HEAD
-=======
 const AiContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
 const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
 const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
@@ -38,34 +29,10 @@ const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/pag
 const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
 const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
 
 // IT Services
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
-<<<<<<< HEAD
-const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
-const RoboticsPage = lazy(() => import('./robotics/page'));
-const ArVrSolutionsPage = lazy(() => import('./ar-vr-solutions/page'));
-
-import './globals.css';
-
-// Mock components for now - these will be implemented
-const PerformanceOptimizer = () => null;
-const SEOOptimizer = () => null;
-const AccessibilityEnhancer = () => null;
-const UserExperienceEnhancer = () => null;
-const SecurityEnhancer = () => null;
-
-const App: React.FC = () => {
-            <Route path="/ai-services" element={<AiServicesPage />} />
-            <Route path="/ai-marketing" element={<AiMarketingPage />} />
-            <Route path="/ai-automation" element={<AiAutomationPage />} />
-            <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-            <Route path="/ai-fintech" element={<AiFintechPage />} />
-          </Routes>
-        </Suspense>
-=======
 const ItSupportPage = lazy(() => import('./it-support/page'));
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
@@ -155,7 +122,6 @@ const App: React.FC = () => {
             </Routes>
           </Suspense>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
       </BrowserRouter>
     </HelmetProvider>
   );

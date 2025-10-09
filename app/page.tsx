@@ -11,12 +11,6 @@ const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 // Preload critical components
 const preloadComponents = () => {
-<<<<<<< HEAD
-=======
-  setTimeout(() => {
-    // Preload components after initial render
-  }, 100);
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       // Preload components after initial render

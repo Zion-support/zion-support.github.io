@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-
-=======
-import React, { useEffect } from 'react';
 import React, { useEffect, useState } from 'react';
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -10,7 +7,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor performance metrics
