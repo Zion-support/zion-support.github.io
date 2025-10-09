@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:app/pages-backup/ai-mobile-app-development/page.tsx
 import { CheckCircle } from 'lucide-react';
+=======
+import { CheckCircle, Code, Database, Cloud, Smartphone } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f6a:app/ai-mobile-app-development/page.tsx
 
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [

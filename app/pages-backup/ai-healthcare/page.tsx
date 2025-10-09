@@ -358,7 +358,11 @@ const AIHealthcarePage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:app/pages-backup/ai-healthcare/page.tsx
     </div>
+=======
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f6a:app/ai-healthcare/page.tsx
   );
 };
 

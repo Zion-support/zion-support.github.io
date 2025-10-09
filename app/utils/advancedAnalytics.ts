@@ -1,3 +1,4 @@
+import Link from 'next/link';
 'use client';
 /**
  * Advanced Analytics System for Zion Tech Group Website

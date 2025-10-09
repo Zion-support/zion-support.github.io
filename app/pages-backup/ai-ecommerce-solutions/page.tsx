@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:app/pages-backup/ai-ecommerce-solutions/page.tsx
 import { CheckCircle } from 'lucide-react';
+=======
+import { CheckCircle, Users, BarChart3, Zap, Shield } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f6a:app/ai-ecommerce-solutions/page.tsx
 
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [

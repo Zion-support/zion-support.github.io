@@ -198,7 +198,11 @@ const ITInfrastructurePage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+<<<<<<< HEAD:app/pages-backup/it-infrastructure/page.tsx
         {/* Hero Section */  }
+=======
+        {/* Hero Section */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f6a:app/it-infrastructure/page.tsx
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -434,7 +438,11 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:app/pages-backup/it-infrastructure/page.tsx
         </div>
+=======
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f6a:app/it-infrastructure/page.tsx
   );
 };
 export default ITInfrastructurePage;

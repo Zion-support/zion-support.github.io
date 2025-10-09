@@ -44,65 +44,40 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by EnhancedErrorBoundary:', error);
-      console.error('Error Info:', errorInfo);
-    }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Enhanced error reporting
+    // Report error if enabled
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
+    }
+
+    // Call onError callback if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Enhanced error reporting logic
-    const errorReport = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-    };
-
-    // Send to error monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-        },
-      });
-    }
-
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Error Report:', errorReport);
-      console.groupEnd();
-    }
+    // In a real application, you would send this to an error reporting service
+    console.error('Error caught by boundary:', error, errorInfo);
   };
 
-  handleRetry = () => {
+  private handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
+      this.setState({
         hasError: false,
         error: undefined,
         errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
+        retryCount: this.state.retryCount + 1
+      });
     }
+  };
+
+  private handleReset = () => {
+    this.setState({
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: 0
+    });
   };
 
   render() {
@@ -112,6 +87,47 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            
+            <h2 className="text-lg font-medium text-gray-900 text-center mb-2">
+              Something went wrong
+            </h2>
+            
+            <p className="text-sm text-gray-600 text-center mb-4">
+              We're sorry, but something unexpected happened. Please try again.
+            </p>
+
+            {this.state.retryCount < this.maxRetries && (
+              <button
+                onClick={this.handleRetry}
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors mb-2"
+              >
+                Try Again ({this.maxRetries - this.state.retryCount} attempts left)
+              </button>
+            )}
+
+            <button
+              onClick={this.handleReset}
+              className="w-full bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors"
+            >
+              Reset
+            </button>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4 p-4 bg-gray-100 rounded-md">
+                <summary className="cursor-pointer text-sm font-medium text-gray-700">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
               </details>
             )}
           </div>
