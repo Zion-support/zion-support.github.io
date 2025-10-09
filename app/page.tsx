@@ -73,6 +73,105 @@ const HomePage: React.FC = () => {
       category: 'Productivity'
     },
     {
+      title: 'AI Real Estate Analyzer',
+      description: 'Advanced property valuation, market analysis, and investment opportunity identification using AI',
+      icon: '🏠',
+      price: '$149/month',
+      features: ['Property valuation', 'Market trend analysis', 'Investment scoring', 'Rental yield prediction', 'Neighborhood insights', 'Risk assessment'],
+      benefits: ['95% valuation accuracy', '50% faster analysis', '30% better ROI', 'Reduced investment risk'],
+      link: '/ai-real-estate-analyzer',
+      popular: true,
+      category: 'Real Estate'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning',
+      icon: '🚚',
+      price: '$199/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management', 'Risk monitoring', 'Cost optimization'],
+      benefits: ['25% cost reduction', '40% inventory efficiency', '60% faster delivery', '99% stock accuracy'],
+      link: '/ai-supply-chain-optimizer',
+      popular: true,
+      category: 'Supply Chain'
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'Medical AI for patient monitoring, diagnosis support, and treatment recommendations',
+      icon: '🏥',
+      price: '$299/month',
+      features: ['Patient monitoring', 'Diagnosis support', 'Treatment recommendations', 'Medical imaging analysis', 'Drug interaction checking', 'Health trend analysis'],
+      benefits: ['90% diagnosis accuracy', '40% faster treatment', 'Reduced medical errors', 'Better patient outcomes'],
+      link: '/ai-healthcare-assistant',
+      popular: true,
+      category: 'Healthcare'
+    },
+    {
+      title: 'AI Legal Document Analyzer',
+      description: 'Automated legal document review, contract analysis, and compliance monitoring',
+      icon: '⚖️',
+      price: '$249/month',
+      features: ['Contract analysis', 'Legal document review', 'Compliance checking', 'Risk identification', 'Clause extraction', 'Legal research'],
+      benefits: ['80% time savings', '95% accuracy', 'Faster reviews', 'Reduced legal costs'],
+      link: '/ai-legal-analyzer',
+      popular: false,
+      category: 'Legal'
+    },
+    {
+      title: 'AI Manufacturing Optimizer',
+      description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization',
+      icon: '🏭',
+      price: '$179/month',
+      features: ['Predictive maintenance', 'Quality control', 'Production optimization', 'Equipment monitoring', 'Defect detection', 'Energy optimization'],
+      benefits: ['30% efficiency increase', '50% fewer defects', '25% energy savings', 'Reduced downtime'],
+      link: '/ai-manufacturing-optimizer',
+      popular: true,
+      category: 'Manufacturing'
+    },
+    {
+      title: 'AI Energy Management System',
+      description: 'Smart energy optimization, renewable integration, and carbon footprint tracking',
+      icon: '⚡',
+      price: '$159/month',
+      features: ['Energy optimization', 'Renewable integration', 'Carbon tracking', 'Smart grid management', 'Predictive maintenance', 'Cost analysis'],
+      benefits: ['35% energy savings', '50% carbon reduction', 'Smart grid integration', 'Cost optimization'],
+      link: '/ai-energy-management',
+      popular: false,
+      category: 'Energy'
+    },
+    {
+      title: 'AI Insurance Risk Assessor',
+      description: 'Advanced risk assessment, fraud detection, and claims processing automation',
+      icon: '🛡️',
+      price: '$189/month',
+      features: ['Risk assessment', 'Fraud detection', 'Claims processing', 'Policy analysis', 'Underwriting support', 'Customer profiling'],
+      benefits: ['60% fraud reduction', '40% faster processing', 'Better risk pricing', 'Improved accuracy'],
+      link: '/ai-insurance-risk',
+      popular: false,
+      category: 'Insurance'
+    },
+    {
+      title: 'AI Transportation Optimizer',
+      description: 'Fleet management, route optimization, and logistics intelligence for transportation companies',
+      icon: '🚛',
+      price: '$169/month',
+      features: ['Route optimization', 'Fleet management', 'Driver behavior analysis', 'Fuel optimization', 'Maintenance scheduling', 'Delivery tracking'],
+      benefits: ['25% fuel savings', '30% faster delivery', 'Reduced maintenance costs', 'Better driver safety'],
+      link: '/ai-transportation-optimizer',
+      popular: true,
+      category: 'Transportation'
+    },
+    {
+      title: 'AI Education Platform',
+      description: 'Personalized learning, automated grading, and educational content generation',
+      icon: '🎓',
+      price: '$129/month',
+      features: ['Personalized learning', 'Automated grading', 'Content generation', 'Student analytics', 'Adaptive testing', 'Progress tracking'],
+      benefits: ['40% better outcomes', '60% time savings', 'Personalized education', 'Improved engagement'],
+      link: '/ai-education-platform',
+      popular: true,
+      category: 'Education'
+    },
+    {
       title: 'AI Social Media Manager',
       description: 'Automate your social media with AI-powered content creation, smart scheduling, and audience analysis',
       icon: '📱',
@@ -482,6 +581,69 @@ const HomePage: React.FC = () => {
       features: ['Energy Optimization', 'Renewable Integration', 'Grid Management', 'Carbon Tracking', 'Predictive Maintenance', 'Smart Buildings'],
       color: 'text-yellow-500',
       category: 'Energy AI'
+    },
+    {
+      title: 'AI Quantum Computing Solutions',
+      description: 'Quantum algorithms and quantum machine learning for complex optimization problems',
+      icon: Cpu,
+      price: '$3,500/month',
+      features: ['Quantum Algorithms', 'Quantum ML', 'Optimization Problems', 'Cryptography', 'Simulation', 'Quantum AI'],
+      color: 'text-purple-600',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI Autonomous Systems',
+      description: 'Self-managing systems with autonomous decision-making and adaptive learning',
+      icon: Settings,
+      price: '$2,200/month',
+      features: ['Autonomous Decision Making', 'Adaptive Learning', 'Self-Healing Systems', 'Predictive Maintenance', 'Resource Management', 'Intelligent Automation'],
+      color: 'text-cyan-600',
+      category: 'Autonomous AI'
+    },
+    {
+      title: 'AI Blockchain Solutions',
+      description: 'Blockchain integration with AI for smart contracts, DeFi, and decentralized applications',
+      icon: Lock,
+      price: '$2,800/month',
+      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Marketplaces', 'Decentralized AI', 'Blockchain Analytics', 'Web3 Integration'],
+      color: 'text-orange-500',
+      category: 'Blockchain AI'
+    },
+    {
+      title: 'AI IoT & Edge Computing',
+      description: 'Intelligent edge computing and IoT device management with real-time processing',
+      icon: Globe,
+      price: '$1,900/month',
+      features: ['Edge AI Processing', 'IoT Device Management', 'Real-time Analytics', 'Predictive Maintenance', 'Data Streaming', 'Edge Intelligence'],
+      color: 'text-green-600',
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI Robotics Solutions',
+      description: 'Intelligent robotics with computer vision, natural language processing, and autonomous navigation',
+      icon: Settings,
+      price: '$2,500/month',
+      features: ['Computer Vision', 'Natural Language Processing', 'Autonomous Navigation', 'Manipulation', 'Human-Robot Interaction', 'Robotic Process Automation'],
+      color: 'text-blue-600',
+      category: 'Robotics AI'
+    },
+    {
+      title: 'AI Climate & Environmental',
+      description: 'Environmental monitoring, climate modeling, and sustainability solutions',
+      icon: Globe,
+      price: '$1,800/month',
+      features: ['Climate Modeling', 'Environmental Monitoring', 'Carbon Footprint Analysis', 'Sustainability Planning', 'Weather Prediction', 'Ecosystem Analysis'],
+      color: 'text-emerald-600',
+      category: 'Environmental AI'
+    },
+    {
+      title: 'AI Space & Aerospace',
+      description: 'Space exploration, satellite data analysis, and aerospace optimization',
+      icon: Globe,
+      price: '$3,200/month',
+      features: ['Satellite Data Analysis', 'Space Mission Planning', 'Aerospace Optimization', 'Orbital Mechanics', 'Space Weather', 'Satellite Communication'],
+      color: 'text-indigo-600',
+      category: 'Space AI'
     }
   ];
 
@@ -629,6 +791,87 @@ const HomePage: React.FC = () => {
       features: ['Compliance Management', 'Audit Preparation', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting', 'Governance Framework'],
       color: 'text-indigo-500',
       category: 'Compliance'
+    },
+    {
+      title: 'AI Infrastructure & MLOps',
+      description: 'AI infrastructure setup, model deployment, and machine learning operations',
+      icon: Brain,
+      price: '$2,200/month',
+      features: ['GPU Cluster Setup', 'Model Deployment', 'MLOps Pipeline', 'Model Monitoring', 'A/B Testing', 'Auto-scaling'],
+      color: 'text-purple-600',
+      category: 'AI Infrastructure'
+    },
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup, quantum algorithm development, and quantum cloud services',
+      icon: Cpu,
+      price: '$4,500/month',
+      features: ['Quantum Hardware Setup', 'Quantum Algorithm Development', 'Quantum Cloud Services', 'Quantum Simulation', 'Quantum Networking', 'Quantum Security'],
+      color: 'text-indigo-600',
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Edge computing infrastructure, edge AI deployment, and distributed computing',
+      icon: Globe,
+      price: '$1,800/month',
+      features: ['Edge Infrastructure', 'Edge AI Deployment', 'Distributed Computing', 'Edge Security', 'Real-time Processing', 'Edge Analytics'],
+      color: 'text-cyan-600',
+      category: 'Edge Computing'
+    },
+    {
+      title: '5G & Next-Gen Networks',
+      description: '5G network implementation, network slicing, and next-generation connectivity',
+      icon: Globe,
+      price: '$2,500/month',
+      features: ['5G Implementation', 'Network Slicing', 'Edge Computing', 'IoT Connectivity', 'Network Optimization', 'Security Integration'],
+      color: 'text-green-600',
+      category: '5G Networks'
+    },
+    {
+      title: 'Digital Twin Solutions',
+      description: 'Digital twin creation, simulation, and real-time monitoring of physical assets',
+      icon: Settings,
+      price: '$2,000/month',
+      features: ['Digital Twin Creation', 'Real-time Simulation', 'Asset Monitoring', 'Predictive Maintenance', 'Virtual Testing', 'Performance Optimization'],
+      color: 'text-orange-600',
+      category: 'Digital Twins'
+    },
+    {
+      title: 'AR/VR Development',
+      description: 'Augmented and virtual reality applications, immersive experiences, and spatial computing',
+      icon: Eye,
+      price: '$2,200/month',
+      features: ['AR/VR Development', 'Immersive Experiences', 'Spatial Computing', '3D Modeling', 'Interactive Design', 'Cross-platform Support'],
+      color: 'text-pink-600',
+      category: 'AR/VR'
+    },
+    {
+      title: 'Smart City Solutions',
+      description: 'Smart city infrastructure, IoT integration, and urban analytics',
+      icon: Building,
+      price: '$3,000/month',
+      features: ['Smart Infrastructure', 'IoT Integration', 'Urban Analytics', 'Traffic Management', 'Energy Management', 'Citizen Services'],
+      color: 'text-blue-600',
+      category: 'Smart Cities'
+    },
+    {
+      title: 'Cybersecurity Operations Center',
+      description: '24/7 security monitoring, threat hunting, and incident response',
+      icon: Shield,
+      price: '$2,800/month',
+      features: ['24/7 Monitoring', 'Threat Hunting', 'Incident Response', 'Security Analytics', 'Threat Intelligence', 'Compliance Monitoring'],
+      color: 'text-red-600',
+      category: 'Security Operations'
+    },
+    {
+      title: 'Data Science Platform',
+      description: 'End-to-end data science platform with advanced analytics and machine learning',
+      icon: BarChart,
+      price: '$1,900/month',
+      features: ['Data Pipeline', 'ML Platform', 'Advanced Analytics', 'Data Visualization', 'Model Management', 'Collaborative Tools'],
+      color: 'text-teal-600',
+      category: 'Data Science'
     }
   ];
 
@@ -755,7 +998,8 @@ const HomePage: React.FC = () => {
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-                Transform your business with our cutting-edge technology and achieve unprecedented growth.
+                Transform your business with our cutting-edge technology and achieve unprecedented growth. We deliver $50M+ in annual savings 
+                and 300% ROI for our enterprise clients through innovative AI and IT solutions.
               </p>
               
               {/* Key Benefits */}
@@ -997,23 +1241,45 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="cyber-card p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4 neon-text">Market-Leading Pricing</h3>
-              <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
-                Our competitive pricing starts from just $79/month for micro SAAS solutions, with enterprise AI services beginning at $1,000/month. 
-                All plans include 24/7 support, regular updates, and comprehensive training.
+              <h3 className="text-2xl font-bold text-white mb-4 neon-text">Market-Leading Pricing & Value</h3>
+              <p className="text-gray-300 mb-6 max-w-4xl mx-auto">
+                Our competitive pricing delivers exceptional value with transparent, scalable solutions. Micro SAAS solutions start from $79/month, 
+                enterprise AI services from $1,000/month, and IT services from $800/month. All plans include 24/7 support, regular updates, 
+                comprehensive training, and our 30-day money-back guarantee. Custom enterprise solutions available with volume discounts.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-cyan-400">$79</div>
-                  <div className="text-gray-300">Micro SAAS Starting</div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center mb-8">
+                <div className="cyber-card p-6">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">$79</div>
+                  <div className="text-gray-300 mb-2">Micro SAAS Starting</div>
+                  <div className="text-sm text-gray-400">Perfect for small businesses</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-purple-400">$1,000</div>
-                  <div className="text-gray-300">AI Services Starting</div>
+                <div className="cyber-card p-6">
+                  <div className="text-4xl font-bold text-purple-400 mb-2">$1,000</div>
+                  <div className="text-gray-300 mb-2">AI Services Starting</div>
+                  <div className="text-sm text-gray-400">Enterprise AI solutions</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-green-400">$800</div>
-                  <div className="text-gray-300">IT Services Starting</div>
+                <div className="cyber-card p-6">
+                  <div className="text-4xl font-bold text-green-400 mb-2">$800</div>
+                  <div className="text-gray-300 mb-2">IT Services Starting</div>
+                  <div className="text-sm text-gray-400">Comprehensive IT support</div>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                <div className="flex items-center justify-center space-x-2 text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>24/7 Support</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2 text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>30-Day Guarantee</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2 text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Free Training</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2 text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Volume Discounts</span>
                 </div>
               </div>
             </div>
@@ -1024,45 +1290,76 @@ const HomePage: React.FC = () => {
             <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Get In Touch
             </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              Ready to transform your business? Contact us today for a free consultation and discover how our AI and IT solutions 
+              can revolutionize your operations. Our experts are standing by to help you achieve unprecedented growth.
+            </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
-                <p className="text-gray-300 mb-4">+1 302 464 0950</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
+                <Phone className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Phone Support</h3>
+                <p className="text-gray-300 mb-4 text-lg">+1 302 464 0950</p>
+                <p className="text-sm text-gray-400 mb-6">Available 24/7 for urgent support and consultations</p>
                 <a 
                   href="tel:+13024640950" 
                   onClick={handlePhoneClick}
-                  className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                  className="cyber-button px-6 py-3 text-sm font-medium transition-all duration-300 hover:scale-105"
                 >
                   Call Now
                 </a>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
+              <div className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
+                <Mail className="w-16 h-16 text-pink-400 mx-auto mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Email Support</h3>
+                <p className="text-gray-300 mb-4 text-lg">kleber@ziontechgroup.com</p>
+                <p className="text-sm text-gray-400 mb-6">Get detailed proposals and technical documentation</p>
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
-                  className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
+                  className="cyber-button px-6 py-3 text-sm font-medium transition-all duration-300 hover:scale-105"
                 >
                   Send Email
                 </a>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
-                <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+              <div className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
+                <Location className="w-16 h-16 text-green-400 mx-auto mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Visit Us</h3>
+                <p className="text-gray-300 mb-4 text-lg">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                <p className="text-sm text-gray-400 mb-6">Schedule an in-person consultation at our headquarters</p>
                 <a 
                   href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-400 hover:text-green-300 font-medium transition-colors"
+                  className="cyber-button px-6 py-3 text-sm font-medium transition-all duration-300 hover:scale-105"
                 >
                   View on Map
                 </a>
+              </div>
+            </div>
+
+            {/* Additional Contact Options */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <div className="cyber-card p-6 text-center">
+                <div className="text-3xl mb-4">💬</div>
+                <h4 className="text-lg font-bold text-white mb-2">Live Chat</h4>
+                <p className="text-sm text-gray-300">Instant support via our website chat</p>
+              </div>
+              <div className="cyber-card p-6 text-center">
+                <div className="text-3xl mb-4">📅</div>
+                <h4 className="text-lg font-bold text-white mb-2">Schedule Call</h4>
+                <p className="text-sm text-gray-300">Book a free consultation call</p>
+              </div>
+              <div className="cyber-card p-6 text-center">
+                <div className="text-3xl mb-4">📋</div>
+                <h4 className="text-lg font-bold text-white mb-2">Free Audit</h4>
+                <p className="text-sm text-gray-300">Get a free business technology audit</p>
+              </div>
+              <div className="cyber-card p-6 text-center">
+                <div className="text-3xl mb-4">🎯</div>
+                <h4 className="text-lg font-bold text-white mb-2">Custom Quote</h4>
+                <p className="text-sm text-gray-300">Request a personalized solution quote</p>
               </div>
             </div>
           </section>

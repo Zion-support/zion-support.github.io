@@ -7,15 +7,114 @@ import Footer from '../components/Footer';
 const ServicesPage: React.FC = () => {
   const microSAASServices = [
     {
-      title: 'AI Project Manager',
-      description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
+      title: 'AI Project Manager Pro',
+      description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment',
       icon: BarChart,
       price: '$99/month',
-      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration'],
-      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
+      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization'],
+      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
       link: '/ai-project-manager',
       popular: true,
       category: 'Productivity'
+    },
+    {
+      title: 'AI Real Estate Analyzer',
+      description: 'Advanced property valuation, market analysis, and investment opportunity identification using AI',
+      icon: Home,
+      price: '$149/month',
+      features: ['Property valuation', 'Market trend analysis', 'Investment scoring', 'Rental yield prediction', 'Neighborhood insights', 'Risk assessment'],
+      benefits: ['95% valuation accuracy', '50% faster analysis', '30% better ROI', 'Reduced investment risk'],
+      link: '/ai-real-estate-analyzer',
+      popular: true,
+      category: 'Real Estate'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning',
+      icon: Truck,
+      price: '$199/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management', 'Risk monitoring', 'Cost optimization'],
+      benefits: ['25% cost reduction', '40% inventory efficiency', '60% faster delivery', '99% stock accuracy'],
+      link: '/ai-supply-chain-optimizer',
+      popular: true,
+      category: 'Supply Chain'
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'Medical AI for patient monitoring, diagnosis support, and treatment recommendations',
+      icon: Stethoscope,
+      price: '$299/month',
+      features: ['Patient monitoring', 'Diagnosis support', 'Treatment recommendations', 'Medical imaging analysis', 'Drug interaction checking', 'Health trend analysis'],
+      benefits: ['90% diagnosis accuracy', '40% faster treatment', 'Reduced medical errors', 'Better patient outcomes'],
+      link: '/ai-healthcare-assistant',
+      popular: true,
+      category: 'Healthcare'
+    },
+    {
+      title: 'AI Legal Document Analyzer',
+      description: 'Automated legal document review, contract analysis, and compliance monitoring',
+      icon: FileText,
+      price: '$249/month',
+      features: ['Contract analysis', 'Legal document review', 'Compliance checking', 'Risk identification', 'Clause extraction', 'Legal research'],
+      benefits: ['80% time savings', '95% accuracy', 'Faster reviews', 'Reduced legal costs'],
+      link: '/ai-legal-analyzer',
+      popular: false,
+      category: 'Legal'
+    },
+    {
+      title: 'AI Manufacturing Optimizer',
+      description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization',
+      icon: Factory,
+      price: '$179/month',
+      features: ['Predictive maintenance', 'Quality control', 'Production optimization', 'Equipment monitoring', 'Defect detection', 'Energy optimization'],
+      benefits: ['30% efficiency increase', '50% fewer defects', '25% energy savings', 'Reduced downtime'],
+      link: '/ai-manufacturing-optimizer',
+      popular: true,
+      category: 'Manufacturing'
+    },
+    {
+      title: 'AI Energy Management System',
+      description: 'Smart energy optimization, renewable integration, and carbon footprint tracking',
+      icon: Zap,
+      price: '$159/month',
+      features: ['Energy optimization', 'Renewable integration', 'Carbon tracking', 'Smart grid management', 'Predictive maintenance', 'Cost analysis'],
+      benefits: ['35% energy savings', '50% carbon reduction', 'Smart grid integration', 'Cost optimization'],
+      link: '/ai-energy-management',
+      popular: false,
+      category: 'Energy'
+    },
+    {
+      title: 'AI Insurance Risk Assessor',
+      description: 'Advanced risk assessment, fraud detection, and claims processing automation',
+      icon: Shield,
+      price: '$189/month',
+      features: ['Risk assessment', 'Fraud detection', 'Claims processing', 'Policy analysis', 'Underwriting support', 'Customer profiling'],
+      benefits: ['60% fraud reduction', '40% faster processing', 'Better risk pricing', 'Improved accuracy'],
+      link: '/ai-insurance-risk',
+      popular: false,
+      category: 'Insurance'
+    },
+    {
+      title: 'AI Transportation Optimizer',
+      description: 'Fleet management, route optimization, and logistics intelligence for transportation companies',
+      icon: Truck,
+      price: '$169/month',
+      features: ['Route optimization', 'Fleet management', 'Driver behavior analysis', 'Fuel optimization', 'Maintenance scheduling', 'Delivery tracking'],
+      benefits: ['25% fuel savings', '30% faster delivery', 'Reduced maintenance costs', 'Better driver safety'],
+      link: '/ai-transportation-optimizer',
+      popular: true,
+      category: 'Transportation'
+    },
+    {
+      title: 'AI Education Platform',
+      description: 'Personalized learning, automated grading, and educational content generation',
+      icon: GraduationCap,
+      price: '$129/month',
+      features: ['Personalized learning', 'Automated grading', 'Content generation', 'Student analytics', 'Adaptive testing', 'Progress tracking'],
+      benefits: ['40% better outcomes', '60% time savings', 'Personalized education', 'Improved engagement'],
+      link: '/ai-education-platform',
+      popular: true,
+      category: 'Education'
     },
     {
       title: 'AI Social Media Manager',
