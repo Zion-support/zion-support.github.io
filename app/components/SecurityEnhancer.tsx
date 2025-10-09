@@ -3,195 +3,168 @@ import React, { useEffect } from 'react';
 
 interface SecurityEnhancerProps {
   enableCSP?: boolean;
-  enableHTTPSRedirect?: boolean;
   enableXSSProtection?: boolean;
   enableClickjackingProtection?: boolean;
-  enableContentTypeSniffingProtection?: boolean;
+  enableHTTPSRedirect?: boolean;
+  enableSecurityHeaders?: boolean;
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   enableCSP = true,
-  enableHTTPSRedirect = true,
   enableXSSProtection = true,
   enableClickjackingProtection = true,
-  enableContentTypeSniffingProtection = true
+  enableHTTPSRedirect = true,
+  enableSecurityHeaders = true
 }) => {
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Content Security Policy
     if (enableCSP) {
-      addContentSecurityPolicy();
+      const cspMeta = document.createElement('meta');
+      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
+      cspMeta.setAttribute('content', 
+        "default-src 'self'; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; " +
+        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+        "img-src 'self' data: https: blob:; " +
+        "font-src 'self' data: https://fonts.gstatic.com; " +
+        "connect-src 'self' https://www.google-analytics.com; " +
+        "frame-ancestors 'none'; " +
+        "base-uri 'self'; " +
+        "form-action 'self';"
+      );
+      document.head.appendChild(cspMeta);
     }
-    
-    if (enableHTTPSRedirect) {
-      enforceHTTPS();
-    }
-    
+
+    // XSS Protection
     if (enableXSSProtection) {
-      addXSSProtection();
+      const xssMeta = document.createElement('meta');
+      xssMeta.setAttribute('http-equiv', 'X-XSS-Protection');
+      xssMeta.setAttribute('content', '1; mode=block');
+      document.head.appendChild(xssMeta);
     }
-    
+
+    // Clickjacking Protection
     if (enableClickjackingProtection) {
-      addClickjackingProtection();
+      const frameOptionsMeta = document.createElement('meta');
+      frameOptionsMeta.setAttribute('http-equiv', 'X-Frame-Options');
+      frameOptionsMeta.setAttribute('content', 'DENY');
+      document.head.appendChild(frameOptionsMeta);
     }
-    
-    if (enableContentTypeSniffingProtection) {
-      addContentTypeSniffingProtection();
-    }
-    
-    // Add security headers
-    addSecurityHeaders();
-    
-    // Add security event listeners
-    addSecurityEventListeners();
-  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 
-  const addContentSecurityPolicy = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "img-src 'self' data: https: blob:",
-      "font-src 'self' https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
-      "object-src 'none'",
-      "media-src 'self'",
-      "worker-src 'self'"
-    ].join('; ');
-    document.head.appendChild(meta);
-  };
-
-  const enforceHTTPS = () => {
-    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+    // HTTPS Redirect
+    if (enableHTTPSRedirect && location.protocol !== 'https:') {
       location.replace('https:' + window.location.href.substring(window.location.protocol.length));
     }
-  };
 
-  const addXSSProtection = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-XSS-Protection';
-    meta.content = '1; mode=block';
-    document.head.appendChild(meta);
-  };
+    // Security Headers
+    if (enableSecurityHeaders) {
+      // Content Type Options
+      const contentTypeMeta = document.createElement('meta');
+      contentTypeMeta.setAttribute('http-equiv', 'X-Content-Type-Options');
+      contentTypeMeta.setAttribute('content', 'nosniff');
+      document.head.appendChild(contentTypeMeta);
 
-  const addClickjackingProtection = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Frame-Options';
-    meta.content = 'DENY';
-    document.head.appendChild(meta);
-  };
+      // Referrer Policy
+      const referrerMeta = document.createElement('meta');
+      referrerMeta.setAttribute('name', 'referrer');
+      referrerMeta.setAttribute('content', 'strict-origin-when-cross-origin');
+      document.head.appendChild(referrerMeta);
 
-  const addContentTypeSniffingProtection = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Content-Type-Options';
-    meta.content = 'nosniff';
-    document.head.appendChild(meta);
-  };
+      // Permissions Policy
+      const permissionsMeta = document.createElement('meta');
+      permissionsMeta.setAttribute('http-equiv', 'Permissions-Policy');
+      permissionsMeta.setAttribute('content', 
+        'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()'
+      );
+      document.head.appendChild(permissionsMeta);
+    }
 
-  const addSecurityHeaders = () => {
-    const headers = [
-      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-      { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
-      { httpEquiv: 'Strict-Transport-Security', content: 'max-age=63072000; includeSubDomains; preload' }
-    ];
-
-    headers.forEach(header => {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = header.httpEquiv;
-      meta.content = header.content;
-      document.head.appendChild(meta);
-    });
-  };
-
-  const addSecurityEventListeners = () => {
-    // Prevent right-click context menu (optional)
-    document.addEventListener('contextmenu', (e) => {
-      // Only prevent on production
-      if (process.env.NODE_ENV === 'production') {
-        e.preventDefault();
-      }
-    });
-
-    // Prevent text selection (optional)
-    document.addEventListener('selectstart', (e) => {
-      // Only prevent on production
-      if (process.env.NODE_ENV === 'production') {
-        e.preventDefault();
-      }
-    });
-
-    // Prevent drag and drop
-    document.addEventListener('dragover', (e) => {
-      e.preventDefault();
-    });
-
-    document.addEventListener('drop', (e) => {
-      e.preventDefault();
-    });
-
-    // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
-    document.addEventListener('keydown', (e) => {
-      if (process.env.NODE_ENV === 'production') {
-        // F12
-        if (e.keyCode === 123) {
-          e.preventDefault();
-        }
-        // Ctrl+Shift+I
-        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
-          e.preventDefault();
-        }
-        // Ctrl+U
-        if (e.ctrlKey && e.keyCode === 85) {
-          e.preventDefault();
-        }
-        // Ctrl+S
-        if (e.ctrlKey && e.keyCode === 83) {
-          e.preventDefault();
-        }
-        // Ctrl+A
-        if (e.ctrlKey && e.keyCode === 65) {
-          e.preventDefault();
-        }
-      }
-    });
-
-    // Monitor for suspicious activity
-    let suspiciousActivity = 0;
-    const resetSuspiciousActivity = () => {
-      suspiciousActivity = 0;
+    // Input sanitization
+    const sanitizeInputs = () => {
+      const inputs = document.querySelectorAll('input, textarea, select');
+      inputs.forEach((input) => {
+        input.addEventListener('input', (e) => {
+          const target = e.target as HTMLInputElement;
+          // Basic XSS prevention
+          target.value = target.value
+            .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+            .replace(/<[^>]*>/g, '')
+            .replace(/javascript:/gi, '')
+            .replace(/on\w+\s*=/gi, '');
+        });
+      });
     };
 
-    // Reset suspicious activity counter every 5 minutes
-    setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
+    // Sanitize inputs when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', sanitizeInputs);
+    } else {
+      sanitizeInputs();
+    }
 
-    // Track rapid clicks (potential bot activity)
-    let clickCount = 0;
-    document.addEventListener('click', () => {
-      clickCount++;
-      if (clickCount > 10) { // More than 10 clicks in 5 minutes
-        suspiciousActivity++;
-        if (suspiciousActivity > 3) {
-          console.warn('Suspicious activity detected: Excessive clicking');
-          // Could implement additional security measures here
+    // Monitor for suspicious activity
+    const monitorSecurity = () => {
+      // Detect potential XSS attempts
+      const originalInnerHTML = Element.prototype.innerHTML;
+      Element.prototype.innerHTML = function(value: string) {
+        if (value && typeof value === 'string') {
+          // Basic XSS detection
+          if (value.includes('<script') || value.includes('javascript:')) {
+            console.warn('Potential XSS attempt detected');
+            return originalInnerHTML.call(this, '');
+          }
         }
-      }
-    });
+        return originalInnerHTML.call(this, value);
+      };
 
-    // Track rapid keyboard input
-    let keyCount = 0;
-    document.addEventListener('keydown', () => {
-      keyCount++;
-      if (keyCount > 100) { // More than 100 keystrokes in 5 minutes
-        suspiciousActivity++;
-        if (suspiciousActivity > 3) {
-          console.warn('Suspicious activity detected: Excessive keyboard input');
+      // Monitor for suspicious console usage
+      const originalConsole = console.log;
+      console.log = function(...args) {
+        const message = args.join(' ');
+        if (message.includes('eval(') || message.includes('Function(')) {
+          console.warn('Suspicious console activity detected');
         }
-      }
-    });
-  };
+        return originalConsole.apply(console, args);
+      };
+    };
+
+    monitorSecurity();
+
+    // Add security event listeners
+    const addSecurityListeners = () => {
+      // Prevent right-click context menu (optional)
+      document.addEventListener('contextmenu', (e) => {
+        // Only prevent on sensitive elements
+        const target = e.target as HTMLElement;
+        if (target.classList.contains('no-context-menu')) {
+          e.preventDefault();
+        }
+      });
+
+      // Prevent text selection on sensitive elements
+      document.addEventListener('selectstart', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.classList.contains('no-select')) {
+          e.preventDefault();
+        }
+      });
+
+      // Monitor for suspicious keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        // Prevent F12, Ctrl+Shift+I, Ctrl+U
+        if (e.key === 'F12' || 
+            (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+            (e.ctrlKey && e.key === 'u')) {
+          e.preventDefault();
+        }
+      });
+    };
+
+    addSecurityListeners();
+
+  }, [enableCSP, enableXSSProtection, enableClickjackingProtection, enableHTTPSRedirect, enableSecurityHeaders]);
 
   return null;
 };

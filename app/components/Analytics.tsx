@@ -1,187 +1,271 @@
 'use client';
 import React, { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 interface AnalyticsProps {
-  enableGoogleAnalytics?: boolean;
-  enablePerformanceMonitoring?: boolean;
-  enableErrorTracking?: boolean;
-  enableUserBehaviorTracking?: boolean;
+  gaId?: string;
+  enablePageTracking?: boolean;
+  enableEventTracking?: boolean;
+  enableEcommerce?: boolean;
+  enablePerformanceTracking?: boolean;
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({
-  enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true
+  gaId = 'G-XXXXXXXXXX', // Replace with actual GA4 ID
+  enablePageTracking = true,
+  enableEventTracking = true,
+  enableEcommerce = true,
+  enablePerformanceTracking = true
 }) => {
+  const pathname = usePathname();
+
   useEffect(() => {
-    if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics();
-    }
-    
-    if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring();
-    }
-    
-    if (enableErrorTracking) {
-      initializeErrorTracking();
-    }
-    
-    if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking();
-    }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
+    if (typeof window === 'undefined') return;
 
-  const initializeGoogleAnalytics = () => {
-    // Load Google Analytics
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-    document.head.appendChild(script);
+    // Initialize Google Analytics
+    const initGA = () => {
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+      document.head.appendChild(script);
 
-    // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
-    }
-    (window as any).gtag = gtag;
-    
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID', {
-      page_title: document.title,
-      page_location: window.location.href,
-      send_page_view: true
-    });
-  };
-
-  const initializePerformanceMonitoring = () => {
-    if ('PerformanceObserver' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));
-          } else if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
-            trackEvent('web_vitals', 'FID', Math.round(fid));
-          } else if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              trackEvent('web_vitals', 'CLS', (entry as any).value);
-            }
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-      // Monitor page load time
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));
-        }
-      });
-    }
-  };
-
-  const initializeErrorTracking = () => {
-    // Track JavaScript errors
-    window.addEventListener('error', (event) => {
-      trackEvent('error', 'javascript_error', {
-        message: event.message,
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
-        error: event.error?.stack
-      });
-    });
-
-    // Track unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      trackEvent('error', 'unhandled_promise_rejection', {
-        reason: event.reason,
-        promise: event.promise
-      });
-    });
-
-    // Track resource loading errors
-    window.addEventListener('error', (event) => {
-      if (event.target !== window) {
-        trackEvent('error', 'resource_error', {
-          type: (event.target as any).tagName,
-          src: (event.target as any).src || (event.target as any).href,
-          error: event.type
-        });
+      // Initialize gtag
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
       }
-    }, true);
-  };
+      (window as any).gtag = gtag;
 
-  const initializeUserBehaviorTracking = () => {
+      gtag('js', new Date());
+      gtag('config', gaId, {
+        page_title: document.title,
+        page_location: window.location.href,
+        send_page_view: false // We'll handle this manually
+      });
+    };
+
+    initGA();
+
     // Track page views
-    trackEvent('page_view', 'page_view', {
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname
-    });
-
-    // Track scroll depth
-    let maxScroll = 0;
-    window.addEventListener('scroll', () => {
-      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollPercent > maxScroll) {
-        maxScroll = scrollPercent;
-        if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
-          trackEvent('engagement', 'scroll_depth', maxScroll);
+    if (enablePageTracking) {
+      const trackPageView = () => {
+        if ('gtag' in window) {
+          (window as any).gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: window.location.href,
+            page_path: pathname
+          });
         }
-      }
-    });
+      };
 
-    // Track time on page
-    const startTime = Date.now();
-    window.addEventListener('beforeunload', () => {
-      const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-      trackEvent('engagement', 'time_on_page', timeOnPage);
-    });
+      // Track initial page load
+      trackPageView();
 
-    // Track clicks on important elements
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      const tagName = target.tagName.toLowerCase();
+      // Track route changes
+      const handleRouteChange = () => {
+        trackPageView();
+      };
+
+      // Listen for route changes (Next.js)
+      window.addEventListener('popstate', handleRouteChange);
       
-      if (tagName === 'a') {
-        const href = (target as HTMLAnchorElement).href;
-        trackEvent('engagement', 'link_click', {
-          link_url: href,
-          link_text: target.textContent?.trim()
-        });
-      } else if (tagName === 'button') {
-        trackEvent('engagement', 'button_click', {
-          button_text: target.textContent?.trim(),
-          button_class: target.className
+      return () => {
+        window.removeEventListener('popstate', handleRouteChange);
+      };
+    }
+  }, [gaId, enablePageTracking, pathname]);
+
+  // Track custom events
+  useEffect(() => {
+    if (!enableEventTracking || typeof window === 'undefined') return;
+
+    const trackEvent = (eventName: string, parameters: any = {}) => {
+      if ('gtag' in window) {
+        (window as any).gtag('event', eventName, {
+          event_category: parameters.category || 'General',
+          event_label: parameters.label || '',
+          value: parameters.value || 0,
+          ...parameters
         });
       }
-    });
+    };
+
+    // Track button clicks
+    const trackButtonClicks = () => {
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const button = target.closest('button, a');
+        
+        if (button) {
+          const buttonText = button.textContent?.trim() || '';
+          const buttonClass = button.className || '';
+          
+          trackEvent('button_click', {
+            category: 'Engagement',
+            label: buttonText,
+            button_class: buttonClass
+          });
+        }
+      });
+    };
 
     // Track form submissions
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      trackEvent('engagement', 'form_submit', {
-        form_id: form.id,
-        form_class: form.className,
-        form_action: form.action
+    const trackFormSubmissions = () => {
+      document.addEventListener('submit', (e) => {
+        const form = e.target as HTMLFormElement;
+        const formId = form.id || 'unknown';
+        const formClass = form.className || '';
+        
+        trackEvent('form_submit', {
+          category: 'Engagement',
+          label: formId,
+          form_class: formClass
+        });
       });
-    });
-  };
+    };
 
-  const trackEvent = (category: string, action: string, value?: any) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', action, {
-        event_category: category,
-        event_label: typeof value === 'object' ? JSON.stringify(value) : value,
-        value: typeof value === 'number' ? value : undefined
+    // Track file downloads
+    const trackDownloads = () => {
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const link = target.closest('a[href]') as HTMLAnchorElement;
+        
+        if (link && (link.href.includes('.pdf') || link.href.includes('.doc') || link.href.includes('.zip'))) {
+          const fileName = link.href.split('/').pop() || 'unknown';
+          
+          trackEvent('file_download', {
+            category: 'Engagement',
+            label: fileName,
+            file_url: link.href
+          });
+        }
       });
-    }
-  };
+    };
+
+    // Track external link clicks
+    const trackExternalLinks = () => {
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const link = target.closest('a[href]') as HTMLAnchorElement;
+        
+        if (link && link.hostname !== window.location.hostname) {
+          trackEvent('external_link_click', {
+            category: 'Engagement',
+            label: link.hostname,
+            link_url: link.href
+          });
+        }
+      });
+    };
+
+    // Track scroll depth
+    const trackScrollDepth = () => {
+      let maxScroll = 0;
+      
+      const updateScrollDepth = () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+        
+        if (scrollPercent > maxScroll) {
+          maxScroll = scrollPercent;
+          
+          // Track at 25%, 50%, 75%, 100%
+          if (maxScroll >= 25 && maxScroll < 50) {
+            trackEvent('scroll_depth', { category: 'Engagement', label: '25%' });
+          } else if (maxScroll >= 50 && maxScroll < 75) {
+            trackEvent('scroll_depth', { category: 'Engagement', label: '50%' });
+          } else if (maxScroll >= 75 && maxScroll < 100) {
+            trackEvent('scroll_depth', { category: 'Engagement', label: '75%' });
+          } else if (maxScroll >= 100) {
+            trackEvent('scroll_depth', { category: 'Engagement', label: '100%' });
+          }
+        }
+      };
+
+      window.addEventListener('scroll', updateScrollDepth, { passive: true });
+      
+      return () => {
+        window.removeEventListener('scroll', updateScrollDepth);
+      };
+    };
+
+    // Track time on page
+    const trackTimeOnPage = () => {
+      const startTime = Date.now();
+      
+      const trackTime = () => {
+        const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+        
+        if (timeOnPage >= 30) { // Track every 30 seconds
+          trackEvent('time_on_page', {
+            category: 'Engagement',
+            label: `${timeOnPage} seconds`,
+            value: timeOnPage
+          });
+        }
+      };
+
+      const interval = setInterval(trackTime, 30000);
+      
+      return () => {
+        clearInterval(interval);
+      };
+    };
+
+    // Initialize tracking
+    trackButtonClicks();
+    trackFormSubmissions();
+    trackDownloads();
+    trackExternalLinks();
+    const cleanupScroll = trackScrollDepth();
+    const cleanupTime = trackTimeOnPage();
+
+    return () => {
+      cleanupScroll?.();
+      cleanupTime?.();
+    };
+  }, [enableEventTracking]);
+
+  // Track ecommerce events
+  useEffect(() => {
+    if (!enableEcommerce || typeof window === 'undefined') return;
+
+    // Track service views
+    const trackServiceViews = () => {
+      const serviceElements = document.querySelectorAll('[data-service]');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const service = entry.target.getAttribute('data-service');
+            if (service) {
+              if ('gtag' in window) {
+                (window as any).gtag('event', 'view_item', {
+                  event_category: 'Ecommerce',
+                  item_id: service,
+                  item_name: service,
+                  item_category: 'Services'
+                });
+              }
+            }
+          }
+        });
+      });
+
+      serviceElements.forEach((element) => {
+        observer.observe(element);
+      });
+
+      return () => {
+        observer.disconnect();
+      };
+    };
+
+    const cleanup = trackServiceViews();
+    return cleanup;
+  }, [enableEcommerce]);
 
   return null;
 };
