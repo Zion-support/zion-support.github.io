@@ -57,7 +57,7 @@ const DEFAULT_ERROR_MESSAGES = {
  * Get error boundary configuration based on environment
  */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
-  const _isDevelopment = process.env['NODE_ENV'] === 'development';
+  const isDevelopment = process.env['NODE_ENV'] === 'development';
   return {
     logErrors: true,
     showDetails: isDevelopment,
