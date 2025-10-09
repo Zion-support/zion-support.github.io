@@ -1,184 +1,156 @@
-#!/usr/bin/env node;
-// Analysis of missing pages based on navigation and footer links;
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+// Analysis of missing pages based on navigation links
 
-
-// Get all existing pages;
-const appDir = '/workspace/app';
-const existingPages = [];
-
-function findPages(dir) {/* TODO: Fix JSX expression */}
-      }
-      findPages(fullPath);
-    }
-  }
-}
-
-findPages(appDir);
-
-// Links from navigation and footer;
-const referencedLinks = [
-  // Main navigation;
-  '/',
-  '/about',
-  '/contact',
-  '/blog',
-  
-  // AI Services;
+const navigationLinks = [
+  // From Header navigation
   '/ai-services',
+  '/it-services', 
+  '/cloud-infrastructure',
+  '/cybersecurity',
+  '/services',
   '/ai-marketing',
   '/ai-automation',
   '/ai-healthcare',
   '/ai-fintech',
   '/ai-content-generation',
   '/ai-data-analytics',
-  '/ai-ecommerce-solutions',
-  '/ai-cybersecurity',
-  '/ai-mobile-app-development',
-  '/ai-customer-support',
-  '/ai-sales-automation',
-  '/ai-workflow-automation',
-  '/ai-data-visualization',
-  '/ai-lead-generation',
-  '/ai-document-processing',
-  
-  // IT Services;
-  '/it-infrastructure',
-  '/devops',
-  '/database',
-  '/cybersecurity',
-  '/cloud-services',
-  '/networking',
-  '/it-consulting',
-  '/managed-it',
-  
-  // Micro SAAS;
-  '/micro-saas',
-  '/ai-writing-assistant',
-  '/smart-analytics',
-  '/ai-scheduler',
-  '/expense-tracker',
-  '/task-manager-pro',
-  '/crm-lite',
-  '/email-optimizer',
-  '/social-media-manager',
-  '/ai-design-studio',
-  '/landing-page-builder',
-  '/seo-optimizer',
-  '/ad-campaign-manager',
-  '/code-assistant',
-  '/api-builder',
-  '/bug-tracker-pro',
-  '/doc-generator',
-  
-  // Emerging Technologies;
   '/quantum-computing',
-  '/robotics',
-  '/iot-edge-computing',
-  '/blockchain-web3',
-  '/business-intelligence',
   '/autonomous-systems',
-  
-  // Company & Support;
+  '/blockchain-web3',
+  '/iot-edge-computing',
+  '/robotics',
+  '/about',
   '/team',
-  '/case-studies',
   '/careers',
-  '/news',
-  '/docs',
-  '/api-docs',
-  '/support',
-  '/status',
+  '/case-studies',
+  '/contact',
+  
+  // From Footer links
   '/privacy',
   '/terms',
   '/cookies',
-  
-  // Additional pages from main page;
-  '/ai-crm',
-  '/ai-analytics',
-  '/ai-content-studio',
-  '/ai-chatbot-builder',
-  '/ai-email-marketing',
-  '/ai-mobile-builder',
-  '/ai-seo-optimizer',
-  '/ai-invoice-generator',
-  '/cloud-migration',
-  '/cybersecurity-suite',
-  '/devops-cicd',
-  '/database-management',
-  '/network-solutions',
-  '/mobile-app-development',
-  '/it-support',
-  '/ai-customer-support',
-  '/ai-sales-automation',
-  '/ai-workflow-automation',
-  '/ai-data-visualization',
-  '/ai-lead-generation',
-  '/ai-document-processing',
-  '/robotics',
-  '/iot-edge-computing',
-  '/blockchain-web3',
-  '/business-intelligence',
-  '/devops',
-  '/ai-mobile-app-development',
-  '/database',
-  '/ai-writing-assistant',
-  '/smart-analytics',
-  '/ai-scheduler',
-  '/expense-tracker',
-  '/task-manager-pro',
-  '/crm-lite',
-  '/email-optimizer',
-  '/social-media-manager',
-  '/ai-design-studio',
-  '/landing-page-builder',
-  '/seo-optimizer',
-  '/ad-campaign-manager',
-  '/code-assistant',
-  '/api-builder',
-  '/bug-tracker-pro',
-  '/doc-generator'
+  '/pricing',
+  '/consultation',
+  '/docs',
+  '/api-docs',
+  '/support',
+  '/status'
 ];
 
-// Find missing pages;
-const missingPages = referencedLinks.filter(link => !existingPages.includes(link));
+const existingPages = [
+  '/pricing',
+  '/quantum-computing',
+  '/privacy',
+  '/robotics',
+  '/team',
+  '/services',
+  '/smart-cities',
+  '/security',
+  '/sitemap',
+  '/support',
+  '/status',
+  '/terms',
+  '/system-status',
+  '/smart-analytics',
+  '/it-services',
+  '/news',
+  '/cybersecurity-suite',
+  '/database-management',
+  '/micro-saas',
+  '/gdpr',
+  '/it-consulting',
+  '/expense-tracker',
+  '/managed-it',
+  '/iot-edge-computing',
+  '/contact',
+  '/cybersecurity',
+  '/docs',
+  '/it-support',
+  '/it-infrastructure-solutions',
+  '/cookies',
+  '/it-infrastructure',
+  '/consultation',
+  '/network-solutions',
+  '/ai-crm',
+  '/ai-music-composition',
+  '/blog',
+  '/ai-invoice-generator',
+  '/ai-chatbot-builder',
+  '/ai-business-intelligence',
+  '/ai-fashion-design',
+  '/blockchain',
+  '/ai-writing-assistant',
+  '/ai-workflow-automation',
+  '/cloud-migration',
+  '/cloud-infrastructure',
+  '/ai-image-recognition',
+  '/ai-services',
+  '/api-docs',
+  '/ai-voice-cloning',
+  '/ai-customer-support-bot',
+  '/ai-customer-service',
+  '/compliance',
+  '/ai-healthcare',
+  '/ai-fintech',
+  '/ai-social-media-manager',
+  '/ai-marketing',
+  '/ai-inventory-management',
+  '/ai-time-tracker',
+  '/ai-design-studio',
+  '/ai-data-visualization',
+  '/ai-expense-tracker',
+  '/ar-vr-solutions',
+  '/careers',
+  '/ai-financial-advisor',
+  '/case-studies',
+  '/ai-mobile-app-builder',
+  '/ai-healthcare-solutions',
+  '/ai-code-generation',
+  '/ai-sales-automation',
+  '/ai-automation',
+  '/ai-cybersecurity',
+  '/ai-analytics',
+  '/ai-content-generation',
+  '/ai-recommendation-engine',
+  '/ai-project-management',
+  '/ai-scheduler',
+  '/ai-hr-assistant',
+  '/ai-customer-support',
+  '/ai-predictive-analytics',
+  '/ai-video-generation',
+  '/ai-fitness-coach',
+  '/ai-analytics-dashboard',
+  '/ai-content-studio',
+  '/autonomous-systems',
+  '/ai-email-marketing',
+  '/ai-seo-optimizer',
+  '/ai-voice-processing',
+  '/ai-document-processor',
+  '/ai-data-analytics',
+  '/ai-cloud-infrastructure',
+  '/ai-enterprise-solutions',
+  '/ai-project-manager',
+  '/ai-3d-generation',
+  '/about'
+];
 
-console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total referenced,)`
-  links: ${referencedLinks.length}`);`
-console.log(`Total existing,)`
-  pages: ${existingPages.length}`);`
-console.log(`Missing,)`
-  pages: ${missingPages.length}`);
-console.log('\n=== MISSING PAGES ===');
-missingPages.forEach(page => console.log(page));
+// Find missing pages
+const missingPages = navigationLinks.filter(link => !existingPages.includes(link));
 
-// Group missing pages by category;
-const missingByCategory = {/* TODO: Fix JSX expression */}
-};
+console.log('Missing pages from navigation:');
+missingPages.forEach(page => console.log(`- ${page}`));
 
-missingPages.forEach(page => {/* TODO: Fix JSX expression */})
-  } else if (page.includes('/it-') || page === '/devops' || page === '/database' || page === '/cybersecurity' || page === '/cloud-services' || page === '/networking') {/* TODO: Fix JSX expression */}
-  } else if (page.includes('/ai-') && (page.includes('assistant') || page.includes('tracker') || page.includes('manager') || page.includes('builder') || page.includes('optimizer') || page.includes('generator') || page.includes('studio'))) {/* TODO: Fix JSX expression */}
-  } else if (page === '/quantum-computing' || page === '/robotics' || page === '/iot-edge-computing' || page === '/blockchain-web3' || page === '/business-intelligence' || page === '/autonomous-systems') {/* TODO: Fix JSX expression */}
-  } else if (page === '/team' || page === '/case-studies' || page === '/careers' || page === '/news') {/* TODO: Fix JSX expression */}
-  } else if (page === '/docs' || page === '/api-docs' || page === '/support' || page === '/status' || page === '/privacy' || page === '/terms' || page === '/cookies') {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
+// Find pages that exist but aren't in navigation
+const extraPages = existingPages.filter(page => !navigationLinks.includes(page));
+
+console.log('\nPages that exist but aren\'t in main navigation:');
+extraPages.forEach(page => console.log(`- ${page}`));
+
+// Check for broken links (pages that should exist based on navigation)
+const brokenLinks = missingPages.filter(page => {
+  // These are critical pages that should exist
+  const criticalPages = ['/blockchain-web3'];
+  return criticalPages.includes(page);
 });
 
-console.log('\n=== MISSING PAGES BY CATEGORY ===');
-Object.entries(missingByCategory).forEach(([category, pages]) => {/* TODO: Fix JSX expression */}`
-    console.log(`\n${category}:`);`
-    pages.forEach(page => console.log(`  - ${page}`));
-  }
-});
-
-// Write missing pages to file;
-fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({/* TODO: Fix JSX expression */})
-}, null, 2));
-
-console.log('\n=== ANALYSIS COMPLETE ===');
-console.log('Missing pages list saved,)
-  to: /workspace/missing-pages.json');`
+console.log('\nCritical missing pages (broken links):');
+brokenLinks.forEach(page => console.log(`- ${page}`));

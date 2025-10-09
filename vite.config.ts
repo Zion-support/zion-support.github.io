@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
+
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -16,25 +17,15 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
-  buil,
-  d: {/* TODO: Fix JSX expression */}
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@types': resolve(__dirname, './src/types'),
-      '@app': resolve(__dirname, './app'),
-    },
-  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'terser',
+    target: 'es2020',
+    cssTarget: 'chrome80',
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -67,27 +58,6 @@ export default defineConfig({
           if (id.includes('/app/components/')) {
             return 'components';
           }
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-    },
-  },
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          router: ['react-router-dom'],
-          utils: ['clsx', 'tailwind-merge']
-          return null;
           return 'app';
         },
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -110,13 +80,7 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true,
-      },
-      mangle: {
-        safari10: true,
-      },
-      format: {
-        comments: false,
+<<<<<<< HEAD
         drop_debugger: true
       },
       mangle: {
@@ -124,28 +88,31 @@ export default defineConfig({
       },
       format: {
         comments: false
+=======
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
       }
     },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
-    assetsInlineLimit: 4096,
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-  preview: {
-    port: 4173,
-    open: true,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
-  css: {
-    devSourcemap: true,
-  },
+<<<<<<< HEAD
     assetsInlineLimit: 4096
+=======
+    assetsInlineLimit: 4096,
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
   },
   server: {
     port: 3000,

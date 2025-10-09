@@ -56,17 +56,26 @@ const Footer: React.FC = memo(() => {
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/blog' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Case Studies', url: '/case-studies' },
     { name: 'Contact', url: '/contact' }
   ];
 
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Docs', url: '/api-docs' },
-    { name: 'Support', url: '/contact' },
+    { name: 'Support', url: '/support' },
     { name: 'Status', url: '/status' },
+    { name: 'Free Consultation', url: '/consultation' },
+    { name: 'Pricing', url: '/pricing' }
+  ];
+
+  const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' }
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' },
+    { name: 'GDPR Compliance', url: '/gdpr' },
+    { name: 'SLA', url: '/sla' }
   ];
 
   const socialLinks = [
@@ -278,7 +287,7 @@ const Footer: React.FC = memo(() => {
         </div>
 
         {/* Company Links */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
@@ -314,11 +323,28 @@ const Footer: React.FC = memo(() => {
           </div>
 
           <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Legal</h4>
+            <ul className="space-y-2">
+              {legalLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
+              <li><Link to="/ai-services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">AI Services</Link></li>
+              <li><Link to="/micro-saas" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Micro SaaS</Link></li>
               <li><Link to="/case-studies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Case Studies</Link></li>
             </ul>
           </div>
@@ -356,6 +382,9 @@ const Footer: React.FC = memo(() => {
               <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
+              <Link to="/gdpr" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                GDPR
+              </Link>
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
@@ -379,4 +408,5 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
+
 export default Footer;

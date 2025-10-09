@@ -9,30 +9,7 @@ import {
   Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, 
   Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, 
   Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, 
-  Activity, DollarSign, Zap as Lightning, Target as Crosshair, Shield as Security, 
-  Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, 
-  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Monitor, Smartphone as Mobile,
-  Laptop, Server, Wifi, Database as DB, Cpu, HardDrive, MemoryStick, Router, 
-  Headphones, Mic, Speaker, Printer, Scanner, Keyboard, Mouse, Webcam, 
-  Wrench as Tools, Settings as Config, Cog, Gear, Sliders, ToggleLeft, 
-  ToggleRight, Power, Battery, Plug, Cable, Wifi as Network, Signal, 
-  Radio, Bluetooth, Usb, Hdmi, Ethernet, WifiOff, SignalZero, SignalLow, 
-  SignalMedium, SignalHigh, SignalFull, Wifi as WifiIcon, WifiOff as WifiOffIcon,
-  Eye, Ear, Hand, Foot, Fingerprint, Scan, QrCode, Barcode, Tag, Label,
-  MessageSquare, Send, Reply, Forward, Share, Copy, Paste, Cut, Save, Download,
-  Upload, Refresh, RotateCcw, RotateCw, Maximize, Minimize, X, Plus, Minus,
-  Divide, Equal, Percent, Hash, AtSign, DollarSign as Dollar, Euro, Pound,
-  Yen, Bitcoin, CreditCard as Card, Wallet, Banknote, Coins, Receipt,
-  Package, Truck, Box, Archive, Folder, File, Image, Film, Music as MusicIcon,
-  Headphones as Headphone, Mic as Microphone, Speaker as SpeakerIcon,
-  Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, Repeat,
-  Shuffle, Radio as RadioIcon, Tv, Monitor as MonitorIcon, Laptop as LaptopIcon,
-  Smartphone as PhoneIcon, Tablet, Watch, Headphones as Headset, Gamepad2 as Gamepad,
-  Joystick, Mouse as MouseIcon, Keyboard as KeyboardIcon, Wifi as WifiSignal,
-  Bluetooth as BluetoothIcon, Usb as UsbIcon, Hdmi as HdmiIcon, Ethernet as EthernetIcon,
-  WifiOff as WifiOffSignal, Signal as SignalIcon, SignalZero as Signal0,
-  SignalLow as Signal1, SignalMedium as Signal2, SignalHigh as Signal3,
-  SignalFull as Signal4, Wifi as WifiIcon2, WifiOff as WifiOffIcon2
+  Activity, DollarSign, Eye, MessageSquare, Package, Truck, PenTool, Network
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
@@ -436,6 +413,15 @@ const AIServicesPage: React.FC = () => {
                       <p className="text-cyan-400 font-semibold text-sm">{service.price}</p>
                     </div>
                   </div>
+=======
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                   
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   

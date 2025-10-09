@@ -18,9 +18,47 @@ const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page')
 const SecurityPage = React.lazy(() => import('./app/security/page'));
 const SupportPage = React.lazy(() => import('./app/support/page'));
 
+// Additional missing pages
+const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
+const ITSupportPage = React.lazy(() => import('./app/it-support/page'));
+const DatabaseManagementPage = React.lazy(() => import('./app/database-management/page'));
+const ManagedITPage = React.lazy(() => import('./app/managed-it/page'));
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
+const TeamPage = React.lazy(() => import('./app/team/page'));
+const CareersPage = React.lazy(() => import('./app/careers/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const DocsPage = React.lazy(() => import('./app/docs/page'));
+const APIDocsPage = React.lazy(() => import('./app/api-docs/page'));
+const StatusPage = React.lazy(() => import('./app/status/page'));
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const GDPRPage = React.lazy(() => import('./app/gdpr/page'));
+const SLAPage = React.lazy(() => import('./app/sla/page'));
+const QuantumComputingPage = React.lazy(() => import('./app/quantum-computing/page'));
+const AutonomousSystemsPage = React.lazy(() => import('./app/autonomous-systems/page'));
+const BlockchainPage = React.lazy(() => import('./app/blockchain/page'));
+const IoTEdgeComputingPage = React.lazy(() => import('./app/iot-edge-computing/page'));
+const RoboticsPage = React.lazy(() => import('./app/robotics/page'));
+const ARVRSolutionsPage = React.lazy(() => import('./app/ar-vr-solutions/page'));
+const CompliancePage = React.lazy(() => import('./app/compliance/page'));
+const CybersecuritySuitePage = React.lazy(() => import('./app/cybersecurity-suite/page'));
+const ExpenseTrackerPage = React.lazy(() => import('./app/expense-tracker/page'));
+const NewsPage = React.lazy(() => import('./app/news/page'));
+const SmartAnalyticsPage = React.lazy(() => import('./app/smart-analytics/page'));
+const NetworkSolutionsPage = React.lazy(() => import('./app/network-solutions/page'));
+const SmartCitiesPage = React.lazy(() => import('./app/smart-cities/page'));
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+const SystemStatusPage = React.lazy(() => import('./app/system-status/page'));
+const ITInfrastructureSolutionsPage = React.lazy(() => import('./app/it-infrastructure-solutions/page'));
+
 // Lazy load components
 const Navigation = React.lazy(() => import('./app/components/Navigation'));
+const Sidebar = React.lazy(() => import('./app/components/Sidebar'));
 const Footer = React.lazy(() => import('./app/components/Footer'));
+const PerformanceOptimizer = React.lazy(() => import('./app/components/PerformanceOptimizer'));
+const SEOOptimizer = React.lazy(() => import('./app/components/SEOOptimizer'));
+const AccessibilityEnhancer = React.lazy(() => import('./app/components/AccessibilityEnhancer'));
 
 // Main page component
 const HomePage = React.lazy(() => import('./app/page'));
@@ -52,6 +90,7 @@ class ErrorBoundary extends React.Component<
     this.setState({ error, errorInfo });
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
@@ -88,19 +127,117 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider context={helmetContext}>
         <Helmet>
-          <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-          <meta name="description" content="Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide." />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>Zion Tech Group - Advanced AI and IT Solutions | AI Services, Cloud Infrastructure, Cybersecurity</title>
+          <meta name="description" content="Leading provider of AI-powered solutions, IT consulting, cloud infrastructure, and cybersecurity services. Transform your business with cutting-edge technology solutions. Call (302) 464-0950." />
+          <meta name="keywords" content="AI services, IT consulting, cloud infrastructure, cybersecurity, digital transformation, artificial intelligence, machine learning, business automation, Zion Tech Group" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+          <meta name="theme-color" content="#0f172a" />
+          <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
           <link rel="canonical" href="https://ziontechgroup.com" />
+          
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com/" />
+          <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+          <meta property="og:description" content="Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide." />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:site_name" content="Zion Tech Group" />
+          <meta property="og:locale" content="en_US" />
+          
+          {/* Twitter */}
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://ziontechgroup.com/" />
+          <meta property="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+          <meta property="twitter:description" content="Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide." />
+          <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+          
+          {/* Additional SEO */}
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="publisher" content="Zion Tech Group" />
+          <meta name="copyright" content="Zion Tech Group" />
+          <meta name="language" content="en-US" />
+          <meta name="revisit-after" content="7 days" />
+          <meta name="rating" content="general" />
+          <meta name="distribution" content="global" />
+          
+          {/* Preconnect to external domains */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link rel="preconnect" href="https://www.google-analytics.com" />
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+          
+          {/* DNS Prefetch */}
+          <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+          <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+          
+          {/* Structured Data */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": "Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com",
+                "availableLanguage": "English"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
+                "https://facebook.com/ziontechgroup"
+              ],
+              "foundingDate": "2020",
+              "numberOfEmployees": "10-50",
+              "industry": "Information Technology",
+              "services": [
+                "AI Services",
+                "IT Consulting", 
+                "Cloud Infrastructure",
+                "Cybersecurity",
+                "Digital Transformation",
+                "Micro SaaS Solutions"
+              ]
+            })}
+          </script>
         </Helmet>
         
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            {/* Performance and SEO optimizations */}
+            <Suspense fallback={null}>
+              <PerformanceOptimizer />
+            </Suspense>
+            <Suspense fallback={null}>
+              <SEOOptimizer />
+            </Suspense>
+            <Suspense fallback={null}>
+              <AccessibilityEnhancer />
+            </Suspense>
+            
             <Suspense fallback={<LoadingSpinner />}>
               <Navigation />
             </Suspense>
             
-            <main className="min-h-screen">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Sidebar />
+            </Suspense>
+            
+            <main id="main-content" className="min-h-screen lg:ml-80" role="main">
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
@@ -111,13 +248,82 @@ const App: React.FC = () => {
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/ai-services/business-intelligence" element={React.lazy(() => import('./app/ai-services/business-intelligence/page'))} />
+                  <Route path="/ai-services/document-processing" element={React.lazy(() => import('./app/ai-services/document-processing/page'))} />
+                  <Route path="/ai-services/customer-experience" element={React.lazy(() => import('./app/ai-services/customer-experience/page'))} />
+                  <Route path="/ai-services/marketing-automation" element={React.lazy(() => import('./app/ai-services/marketing-automation/page'))} />
+                  <Route path="/ai-services/predictive-maintenance" element={React.lazy(() => import('./app/ai-services/predictive-maintenance/page'))} />
+                  <Route path="/ai-services/supply-chain" element={React.lazy(() => import('./app/ai-services/supply-chain/page'))} />
+                  <Route path="/ai-services/fraud-detection" element={React.lazy(() => import('./app/ai-services/fraud-detection/page'))} />
+                  <Route path="/ai-services/content-generation" element={React.lazy(() => import('./app/ai-services/content-generation/page'))} />
+                  <Route path="/ai-services/hr-analytics" element={React.lazy(() => import('./app/ai-services/hr-analytics/page'))} />
+                  <Route path="/ai-services/process-automation" element={React.lazy(() => import('./app/ai-services/process-automation/page'))} />
+                  <Route path="/ai-services/quality-assurance" element={React.lazy(() => import('./app/ai-services/quality-assurance/page'))} />
+                  <Route path="/ai-services/energy-management" element={React.lazy(() => import('./app/ai-services/energy-management/page'))} />
+                  
                   <Route path="/micro-saas" element={<MicroSaasPage />} />
+                  <Route path="/micro-saas/analytics-dashboard" element={React.lazy(() => import('./app/micro-saas/analytics-dashboard/page'))} />
+                  <Route path="/micro-saas/support-bot" element={React.lazy(() => import('./app/micro-saas/support-bot/page'))} />
+                  <Route path="/micro-saas/social-manager" element={React.lazy(() => import('./app/micro-saas/social-manager/page'))} />
+                  <Route path="/micro-saas/email-marketing" element={React.lazy(() => import('./app/micro-saas/email-marketing/page'))} />
+                  <Route path="/micro-saas/inventory-management" element={React.lazy(() => import('./app/micro-saas/inventory-management/page'))} />
+                  <Route path="/micro-saas/lead-scoring" element={React.lazy(() => import('./app/micro-saas/lead-scoring/page'))} />
+                  <Route path="/micro-saas/document-processor" element={React.lazy(() => import('./app/micro-saas/document-processor/page'))} />
+                  <Route path="/micro-saas/seo-optimizer" element={React.lazy(() => import('./app/micro-saas/seo-optimizer/page'))} />
+                  <Route path="/micro-saas/appointment-scheduler" element={React.lazy(() => import('./app/micro-saas/appointment-scheduler/page'))} />
+                  <Route path="/micro-saas/chat-analytics" element={React.lazy(() => import('./app/micro-saas/chat-analytics/page'))} />
+                  <Route path="/micro-saas/expense-tracker" element={React.lazy(() => import('./app/micro-saas/expense-tracker/page'))} />
+                  <Route path="/micro-saas/content-generator" element={React.lazy(() => import('./app/micro-saas/content-generator/page'))} />
                   <Route path="/it-consulting" element={<ITConsultingPage />} />
                   <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                   <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                   <Route path="/security" element={<SecurityPage />} />
                   <Route path="/support" element={<SupportPage />} />
+                  
+                  {/* Additional IT Services */}
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/it-support" element={<ITSupportPage />} />
+                  <Route path="/database-management" element={<DatabaseManagementPage />} />
+                  <Route path="/managed-it" element={<ManagedITPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/it-infrastructure-solutions" element={<ITInfrastructureSolutionsPage />} />
+                  
+                  {/* Company Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/consultation" element={<ConsultationPage />} />
+                  
+                  {/* Documentation & Support */}
+                  <Route path="/docs" element={<DocsPage />} />
+                  <Route path="/api-docs" element={<APIDocsPage />} />
+                  <Route path="/status" element={<StatusPage />} />
+                  <Route path="/system-status" element={<SystemStatusPage />} />
+                  
+                  {/* Legal Pages */}
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/gdpr" element={<GDPRPage />} />
+                  <Route path="/sla" element={<SLAPage />} />
+                  <Route path="/compliance" element={<CompliancePage />} />
+                  
+                  {/* Emerging Technologies */}
+                  <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                  <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                  <Route path="/blockchain" element={<BlockchainPage />} />
+                  <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                  <Route path="/robotics" element={<RoboticsPage />} />
+                  <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
+                  
+                  {/* Additional Services */}
+                  <Route path="/cybersecurity-suite" element={<CybersecuritySuitePage />} />
+                  <Route path="/expense-tracker" element={<ExpenseTrackerPage />} />
+                  <Route path="/news" element={<NewsPage />} />
+                  <Route path="/smart-analytics" element={<SmartAnalyticsPage />} />
+                  <Route path="/network-solutions" element={<NetworkSolutionsPage />} />
+                  <Route path="/smart-cities" element={<SmartCitiesPage />} />
+                  <Route path="/sitemap" element={<SitemapPage />} />
                 </Routes>
               </Suspense>
             </main>
