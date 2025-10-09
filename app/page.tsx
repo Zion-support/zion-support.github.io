@@ -18,10 +18,10 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+    requestIdleCallback(() => {
+      import('./components/ContentPromotionBanner').catch(console.error);
+      import('./components/ContentCarousel').catch(console.error);
+    }, { timeout: 2000 });
   }
 };
 // Loading skeleton component
@@ -151,6 +151,8 @@ const HomePage: React.FC = () => {
               id="hero-heading" 
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
               data-text="Zion Tech Group"
+              role="heading"
+              aria-level="1"
             >
               Zion Tech Group
             </h1>
