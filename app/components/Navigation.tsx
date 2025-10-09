@@ -67,7 +67,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' }
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+        { name: 'AI Machine Learning', path: '/ai-machine-learning', description: 'Custom ML models & analytics' },
+        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Image recognition & analysis' },
+        { name: 'AI Voice & Speech', path: '/ai-voice-speech', description: 'Voice recognition & synthesis' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Forecasting & trend analysis' }
       ]
     },
     {
@@ -88,7 +92,11 @@ const Navigation: React.FC = () => {
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
         { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
         { name: 'IT Training', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' }
+        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
+        { name: 'Web Development', path: '/web-development', description: 'Modern web applications' },
+        { name: 'System Integration', path: '/system-integration', description: 'Seamless system integration' },
+        { name: 'Data Backup & Recovery', path: '/data-backup-recovery', description: 'Data protection solutions' },
+        { name: 'Performance Monitoring', path: '/performance-monitoring', description: 'Real-time system monitoring' }
       ]
     },
     {
@@ -99,17 +107,23 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-green-100',
       services: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
-        { name: 'Productivity Tools', path: '/productivity', description: 'Time management & efficiency' },
-        { name: 'HR & Recruitment', path: '/hr-recruitment-tools', description: 'Human resources solutions' },
-        { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
-        { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
-        { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
+        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'Drag-and-drop app creation' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoice creation' },
+        { name: 'AI Scheduling Assistant', path: '/ai-scheduling-assistant', description: 'Smart scheduling & coordination' },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management' },
+        { name: 'AI E-commerce Optimizer', path: '/ai-ecommerce-optimizer', description: 'Complete e-commerce optimization' },
+        { name: 'AI Password Manager', path: '/ai-password-manager', description: 'Secure password management' },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
+        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'AI-powered graphic design' },
+        { name: 'AI Financial Tracker', path: '/ai-financial-tracker', description: 'Comprehensive financial tracking' },
+        { name: 'AI HR Management', path: '/ai-hr-management', description: 'Complete HR solution' }
       ]
     },
     {
