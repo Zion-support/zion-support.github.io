@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -33,9 +32,9 @@ const GDPRPage: React.FC = () => {
       </main>
       
       <Footer />
-=======
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Download, Eye, Trash2, Edit, Lock } from 'lucide-react';
+    </div>
+  );
+};
 
 const GdprPage: React.FC = () => {
   const rights = [

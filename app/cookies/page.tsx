@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -40,11 +39,10 @@ const CookiesPage: React.FC = () => {
       </main>
       
       <Footer />
-=======
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Settings, BarChart, User } from 'lucide-react';
+    </div>
+  );
+};
 
-const CookiesPage: React.FC = () => {
   const cookieCategories = [
     {
       title: 'Essential Cookies',
@@ -282,8 +280,4 @@ const CookiesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default CookiesPage;
-=======
-export default CookiesPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
