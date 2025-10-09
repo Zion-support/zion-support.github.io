@@ -1,276 +1,368 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cpu, Sparkles } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, Bot, Database, Network, Cloud, Code, Settings, Monitor, HardDrive, Wifi, Lock } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
+    // AI Development & Implementation
+    {
+      title: 'AI Strategy & Consulting',
+      description: 'Comprehensive AI strategy development, technology assessment, and implementation roadmap for enterprise organizations.',
+      icon: '🧠',
+      price: '$3,500/month',
+      features: [
+        'AI readiness assessment',
+        'Technology stack evaluation',
+        'ROI analysis and business case development',
+        'Implementation roadmap creation',
+        'Change management planning',
+        'Vendor selection and evaluation',
+        'Compliance and ethics framework',
+        'Training and skill development'
+      ],
+      benefits: [
+        'Reduce AI implementation risks by 70%',
+        'Accelerate time-to-value by 50%',
+        'Ensure alignment with business goals',
+        'Maximize ROI on AI investments'
+      ],
+      marketPrice: '$5,000-10,000/month',
+      category: 'AI Strategy',
+      technologies: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'RPA', 'MLOps'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
     {
       title: 'Machine Learning Model Development',
-      description: 'Custom ML models for predictive analytics, classification, and regression tasks tailored to your business needs.',
-      icon: '🧠',
-      price: 'Starting at $5,000/project',
-      features: ['Custom model development', 'Data preprocessing', 'Model training & validation', 'Performance optimization', 'Deployment & monitoring'],
-      benefits: ['Improve prediction accuracy by 40%', 'Automate decision making', 'Reduce manual analysis time'],
-      marketPrice: '$8,000-25,000/project',
-      category: 'Machine Learning',
-      technologies: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas']
+      description: 'Custom machine learning models tailored to your specific business needs with end-to-end development and deployment.',
+      icon: '🤖',
+      price: '$2,800/month',
+      features: [
+        'Custom ML model development',
+        'Data preprocessing and feature engineering',
+        'Model training and optimization',
+        'Hyperparameter tuning',
+        'Model validation and testing',
+        'Model deployment and monitoring',
+        'Performance tracking and updates',
+        'Documentation and maintenance'
+      ],
+      benefits: [
+        'Improve prediction accuracy by 40%',
+        'Automate decision-making processes',
+        'Reduce manual work by 80%',
+        'Scale AI capabilities across organization'
+      ],
+      marketPrice: '$4,500-9,000/month',
+      category: 'ML Development',
+      technologies: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'MLflow'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text analysis, sentiment analysis, chatbots, and language understanding.',
+      title: 'Natural Language Processing (NLP)',
+      description: 'Advanced NLP solutions for text analysis, sentiment analysis, chatbots, and language understanding applications.',
       icon: '💬',
-      price: 'Starting at $3,500/project',
-      features: ['Text classification', 'Sentiment analysis', 'Named entity recognition', 'Language translation', 'Chatbot development'],
-      benefits: ['Process text data 100x faster', 'Improve customer service', 'Extract insights from documents'],
-      marketPrice: '$6,000-18,000/project',
-      category: 'NLP',
-      technologies: ['BERT', 'GPT', 'spaCy', 'NLTK', 'Transformers']
+      price: '$2,200/month',
+      features: [
+        'Text classification and sentiment analysis',
+        'Named entity recognition (NER)',
+        'Language translation and localization',
+        'Chatbot and conversational AI',
+        'Document processing and extraction',
+        'Text summarization and generation',
+        'Question answering systems',
+        'Multilingual support'
+      ],
+      benefits: [
+        'Process unstructured data efficiently',
+        'Improve customer service with chatbots',
+        'Extract insights from text data',
+        'Automate document processing by 90%'
+      ],
+      marketPrice: '$3,500-7,000/month',
+      category: 'NLP Services',
+      technologies: ['OpenAI GPT', 'BERT', 'Transformers', 'spaCy', 'NLTK', 'Hugging Face', 'LangChain'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
+
+    // Computer Vision & Image Processing
     {
       title: 'Computer Vision Solutions',
-      description: 'Image and video analysis, object detection, facial recognition, and visual content understanding.',
+      description: 'Advanced computer vision applications including image recognition, object detection, and visual analytics.',
       icon: '👁️',
-      price: 'Starting at $4,500/project',
-      features: ['Object detection', 'Image classification', 'Facial recognition', 'Video analysis', 'OCR & document scanning'],
-      benefits: ['Automate visual inspections', 'Improve security systems', 'Enhance user experience'],
-      marketPrice: '$7,500-20,000/project',
+      price: '$2,500/month',
+      features: [
+        'Image classification and recognition',
+        'Object detection and tracking',
+        'Facial recognition and analysis',
+        'OCR and document scanning',
+        'Medical image analysis',
+        'Quality control and inspection',
+        'Augmented reality applications',
+        'Real-time video processing'
+      ],
+      benefits: [
+        'Automate visual inspection processes',
+        'Improve accuracy in image analysis',
+        'Enable new visual-based applications',
+        'Reduce human error in visual tasks'
+      ],
+      marketPrice: '$4,000-8,000/month',
       category: 'Computer Vision',
-      technologies: ['OpenCV', 'YOLO', 'ResNet', 'EfficientNet', 'TensorFlow Lite']
+      technologies: ['OpenCV', 'YOLO', 'ResNet', 'EfficientNet', 'TensorFlow', 'PyTorch', 'CUDA'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI-Powered Chatbots & Virtual Assistants',
-      description: 'Intelligent conversational AI that understands context and provides human-like interactions.',
-      icon: '🤖',
-      price: 'Starting at $2,500/month',
-      features: ['Context-aware conversations', 'Multi-language support', 'Integration with CRM', 'Analytics & reporting', 'Voice capabilities'],
-      benefits: ['Reduce support costs by 60%', 'Provide 24/7 customer service', 'Improve response time'],
-      marketPrice: '$4,000-12,000/month',
-      category: 'Conversational AI',
-      technologies: ['Dialogflow', 'Rasa', 'Microsoft Bot Framework', 'Amazon Lex', 'OpenAI GPT']
-    },
-    {
-      title: 'Predictive Analytics & Forecasting',
-      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
-      icon: '📈',
-      price: 'Starting at $3,000/month',
-      features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],
-      benefits: ['Improve planning accuracy by 50%', 'Reduce inventory costs', 'Optimize resource allocation'],
-      marketPrice: '$5,000-15,000/month',
-      category: 'Predictive Analytics',
-      technologies: ['Prophet', 'ARIMA', 'LSTM', 'XGBoost', 'Time Series DB']
-    },
-    {
-      title: 'AI-Powered Recommendation Systems',
-      description: 'Personalized recommendation engines for e-commerce, content, and product suggestions.',
-      icon: '🎯',
-      price: 'Starting at $4,000/project',
-      features: ['Collaborative filtering', 'Content-based filtering', 'Hybrid approaches', 'Real-time recommendations', 'A/B testing'],
-      benefits: ['Increase sales by 25%', 'Improve user engagement', 'Reduce bounce rates'],
-      marketPrice: '$7,000-20,000/project',
-      category: 'Recommendation Systems',
-      technologies: ['Apache Spark', 'Mahout', 'Surprise', 'TensorFlow', 'Redis']
-    },
-    {
-      title: 'Automated Document Processing',
-      description: 'AI-powered document extraction, classification, and data entry automation for business processes.',
-      icon: '📄',
-      price: 'Starting at $2,000/month',
-      features: ['Document OCR', 'Data extraction', 'Form processing', 'Document classification', 'Workflow automation'],
-      benefits: ['Process documents 50x faster', 'Eliminate manual data entry', 'Improve accuracy to 99%'],
-      marketPrice: '$3,500-10,000/month',
-      category: 'Document AI',
-      technologies: ['Tesseract', 'AWS Textract', 'Azure Form Recognizer', 'Google Document AI', 'PyPDF2']
-    },
-    {
-      title: 'AI-Powered Business Intelligence',
-      description: 'Intelligent dashboards and analytics that automatically identify patterns and generate insights.',
+      title: 'AI-Powered Analytics & Insights',
+      description: 'Advanced analytics solutions using AI to uncover patterns, predict trends, and generate actionable business insights.',
       icon: '📊',
-      price: 'Starting at $3,500/month',
-      features: ['Automated insights', 'Anomaly detection', 'Trend analysis', 'Custom dashboards', 'Natural language queries'],
-      benefits: ['Discover hidden patterns', 'Make data-driven decisions', 'Reduce analysis time by 80%'],
-      marketPrice: '$6,000-18,000/month',
-      category: 'Business Intelligence',
-      technologies: ['Tableau', 'Power BI', 'Looker', 'Apache Superset', 'Custom ML Models']
+      price: '$1,800/month',
+      features: [
+        'Predictive analytics and forecasting',
+        'Anomaly detection and alerting',
+        'Customer behavior analysis',
+        'Market trend analysis',
+        'Risk assessment and modeling',
+        'Real-time dashboards and reporting',
+        'Automated insight generation',
+        'Data visualization and storytelling'
+      ],
+      benefits: [
+        'Make data-driven decisions faster',
+        'Identify new business opportunities',
+        'Reduce risks through early detection',
+        'Improve operational efficiency by 35%'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'AI Analytics',
+      technologies: ['Python', 'R', 'Tableau', 'Power BI', 'Apache Spark', 'Pandas', 'Scikit-learn'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
+
+    // AI Automation & Workflow
     {
-      title: 'AI-Powered Fraud Detection',
-      description: 'Advanced fraud detection systems using machine learning to identify suspicious activities in real-time.',
-      icon: '🛡️',
-      price: 'Starting at $5,500/month',
-      features: ['Real-time monitoring', 'Pattern recognition', 'Risk scoring', 'Alert systems', 'False positive reduction'],
-      benefits: ['Prevent 95% of fraud attempts', 'Reduce false positives by 70%', 'Save millions in losses'],
-      marketPrice: '$10,000-30,000/month',
-      category: 'Fraud Detection',
-      technologies: ['Isolation Forest', 'One-Class SVM', 'Autoencoders', 'XGBoost', 'Real-time Streaming']
-    },
-    {
-      title: 'AI-Powered Content Generation',
-      description: 'Automated content creation for marketing, social media, blogs, and product descriptions.',
-      icon: '✍️',
-      price: 'Starting at $1,500/month',
-      features: ['Blog post generation', 'Social media content', 'Product descriptions', 'Email campaigns', 'SEO optimization'],
-      benefits: ['Create content 10x faster', 'Maintain brand consistency', 'Improve SEO rankings'],
-      marketPrice: '$2,500-8,000/month',
-      category: 'Content Generation',
-      technologies: ['GPT-3/4', 'Claude', 'Jasper', 'Copy.ai', 'Custom Fine-tuned Models']
-    },
-    {
-      title: 'AI-Powered Process Automation',
-      description: 'Intelligent automation of business processes using AI to make decisions and take actions.',
+      title: 'Intelligent Process Automation (IPA)',
+      description: 'AI-powered automation solutions that combine RPA with machine learning to automate complex business processes.',
       icon: '⚙️',
-      price: 'Starting at $4,500/month',
-      features: ['Workflow automation', 'Decision automation', 'Exception handling', 'Process optimization', 'Integration management'],
-      benefits: ['Reduce process time by 70%', 'Eliminate human errors', 'Improve efficiency'],
-      marketPrice: '$7,500-20,000/month',
+      price: '$2,200/month',
+      features: [
+        'End-to-end process automation',
+        'Intelligent document processing',
+        'Decision-making automation',
+        'Exception handling and escalation',
+        'Process optimization and monitoring',
+        'Integration with existing systems',
+        'Compliance and audit trails',
+        'Performance analytics and reporting'
+      ],
+      benefits: [
+        'Reduce process time by 70%',
+        'Eliminate human errors',
+        'Improve process consistency',
+        'Free up staff for higher-value work'
+      ],
+      marketPrice: '$3,500-7,000/month',
       category: 'Process Automation',
-      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Custom AI Models', 'RPA Tools']
+      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'ML Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI-Powered Quality Assurance',
-      description: 'Automated testing and quality assurance using AI to identify bugs and performance issues.',
-      icon: '🔍',
-      price: 'Starting at $3,000/month',
-      features: ['Automated test generation', 'Bug prediction', 'Performance testing', 'Code quality analysis', 'Regression testing'],
-      benefits: ['Reduce testing time by 60%', 'Improve code quality', 'Catch bugs earlier'],
-      marketPrice: '$5,000-15,000/month',
-      category: 'Quality Assurance',
-      technologies: ['Selenium', 'Appium', 'TestNG', 'Custom AI Models', 'CI/CD Integration']
+      title: 'AI-Powered Customer Service',
+      description: 'Intelligent customer service solutions including chatbots, virtual assistants, and automated support systems.',
+      icon: '🎧',
+      price: '$1,500/month',
+      features: [
+        'Intelligent chatbots and virtual assistants',
+        'Multi-channel customer support',
+        'Sentiment analysis and emotion detection',
+        'Automated ticket routing and prioritization',
+        'Knowledge base management',
+        'Customer journey optimization',
+        'Real-time language translation',
+        'Performance monitoring and analytics'
+      ],
+      benefits: [
+        'Provide 24/7 customer support',
+        'Reduce support costs by 60%',
+        'Improve customer satisfaction by 40%',
+        'Handle multiple languages and channels'
+      ],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Customer Service',
+      technologies: ['Dialogflow', 'Rasa', 'OpenAI GPT', 'Microsoft Bot Framework', 'NLP', 'APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
+
+    // AI for Specific Industries
     {
-      title: 'AI-Powered Drug Discovery',
-      description: 'Machine learning models for pharmaceutical research, molecular design, and drug development optimization.',
-      icon: '💊',
-      price: 'Starting at $15,000/month',
-      features: ['Molecular property prediction', 'Drug-target interaction modeling', 'ADMET prediction', 'Compound optimization', 'Clinical trial optimization'],
-      benefits: ['Accelerate drug discovery by 40%', 'Reduce R&D costs by 30%', 'Improve success rates'],
-      marketPrice: '$25,000-75,000/month',
+      title: 'AI Healthcare Solutions',
+      description: 'Specialized AI solutions for healthcare including medical imaging, drug discovery, and patient care optimization.',
+      icon: '🏥',
+      price: '$4,500/month',
+      features: [
+        'Medical image analysis and diagnosis',
+        'Drug discovery and development',
+        'Patient risk assessment and prediction',
+        'Electronic health record analysis',
+        'Clinical decision support systems',
+        'Telemedicine and remote monitoring',
+        'Healthcare workflow optimization',
+        'Regulatory compliance (HIPAA, FDA)'
+      ],
+      benefits: [
+        'Improve diagnostic accuracy by 30%',
+        'Accelerate drug development process',
+        'Reduce healthcare costs by 25%',
+        'Enhance patient outcomes and safety'
+      ],
+      marketPrice: '$7,000-15,000/month',
       category: 'Healthcare AI',
-      technologies: ['RDKit', 'DeepChem', 'PyTorch', 'TensorFlow', 'Molecular Dynamics']
+      technologies: ['Medical Imaging AI', 'TensorFlow', 'PyTorch', 'DICOM', 'HL7', 'FHIR', 'HIPAA'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI-Powered Financial Trading',
-      description: 'Algorithmic trading systems using machine learning for market prediction and automated trading strategies.',
-      icon: '📈',
-      price: 'Starting at $8,000/month',
-      features: ['Market prediction models', 'Risk assessment', 'Portfolio optimization', 'High-frequency trading', 'Sentiment analysis'],
-      benefits: ['Increase trading profits by 25%', 'Reduce risk exposure', 'Automate trading decisions'],
-      marketPrice: '$15,000-50,000/month',
-      category: 'FinTech AI',
-      technologies: ['QuantLib', 'Zipline', 'Backtrader', 'TensorFlow', 'PyTorch']
+      title: 'AI Financial Services',
+      description: 'AI solutions for financial services including fraud detection, algorithmic trading, and risk management.',
+      icon: '💰',
+      price: '$3,200/month',
+      features: [
+        'Fraud detection and prevention',
+        'Algorithmic trading systems',
+        'Credit risk assessment',
+        'Anti-money laundering (AML)',
+        'Regulatory compliance monitoring',
+        'Portfolio optimization',
+        'Market sentiment analysis',
+        'Real-time transaction monitoring'
+      ],
+      benefits: [
+        'Detect fraud with 99% accuracy',
+        'Reduce false positives by 80%',
+        'Improve trading performance by 25%',
+        'Ensure regulatory compliance'
+      ],
+      marketPrice: '$5,000-10,000/month',
+      category: 'Fintech AI',
+      technologies: ['Machine Learning', 'Deep Learning', 'Time Series Analysis', 'Blockchain', 'APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Infrastructure & MLOps
+    {
+      title: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup with MLOps practices for model deployment, monitoring, and lifecycle management.',
+      icon: '🔧',
+      price: '$2,800/month',
+      features: [
+        'AI infrastructure design and setup',
+        'Model deployment and serving',
+        'MLOps pipeline development',
+        'Model monitoring and drift detection',
+        'A/B testing and experimentation',
+        'Model versioning and governance',
+        'Performance optimization',
+        'Security and compliance'
+      ],
+      benefits: [
+        'Deploy models 10x faster',
+        'Ensure model reliability and performance',
+        'Reduce operational overhead by 60%',
+        'Enable rapid experimentation and iteration'
+      ],
+      marketPrice: '$4,500-9,000/month',
+      category: 'AI Infrastructure',
+      technologies: ['Kubernetes', 'Docker', 'MLflow', 'Kubeflow', 'TensorFlow Serving', 'AWS SageMaker'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI-Powered Autonomous Vehicles',
-      description: 'Computer vision and sensor fusion systems for autonomous vehicle navigation and safety.',
-      icon: '🚗',
-      price: 'Starting at $20,000/month',
-      features: ['Object detection', 'Path planning', 'Sensor fusion', 'Real-time decision making', 'Safety systems'],
-      benefits: ['Improve safety by 90%', 'Reduce accidents', 'Enable autonomous driving'],
-      marketPrice: '$35,000-100,000/month',
-      category: 'Autonomous Systems',
-      technologies: ['OpenCV', 'ROS', 'TensorFlow', 'PyTorch', 'CUDA']
+      title: 'AI Data Engineering',
+      description: 'Comprehensive data engineering solutions for AI including data pipelines, feature stores, and data quality management.',
+      icon: '🗄️',
+      price: '$2,000/month',
+      features: [
+        'Data pipeline design and implementation',
+        'Feature engineering and feature stores',
+        'Data quality monitoring and validation',
+        'Real-time data processing',
+        'Data lake and warehouse optimization',
+        'ETL/ELT pipeline development',
+        'Data governance and cataloging',
+        'Performance tuning and optimization'
+      ],
+      benefits: [
+        'Improve data quality by 90%',
+        'Reduce data processing time by 70%',
+        'Enable real-time AI applications',
+        'Ensure data consistency and reliability'
+      ],
+      marketPrice: '$3,200-6,500/month',
+      category: 'Data Engineering',
+      technologies: ['Apache Spark', 'Kafka', 'Airflow', 'dbt', 'Snowflake', 'BigQuery', 'Databricks'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Content & Marketing
+    {
+      title: 'AI Content Generation',
+      description: 'AI-powered content creation solutions for marketing, documentation, and communication needs.',
+      icon: '✍️',
+      price: '$1,200/month',
+      features: [
+        'Automated content generation',
+        'Multi-language content creation',
+        'SEO-optimized content',
+        'Brand voice consistency',
+        'Content personalization',
+        'Social media content automation',
+        'Email marketing optimization',
+        'Content performance analytics'
+      ],
+      benefits: [
+        'Create content 10x faster',
+        'Maintain consistent brand voice',
+        'Improve SEO performance by 50%',
+        'Scale content production efficiently'
+      ],
+      marketPrice: '$2,000-4,000/month',
+      category: 'Content AI',
+      technologies: ['OpenAI GPT', 'Claude', 'BERT', 'T5', 'Content APIs', 'SEO Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI-Powered Climate Modeling',
-      description: 'Machine learning models for climate prediction, environmental monitoring, and sustainability optimization.',
-      icon: '🌍',
-      price: 'Starting at $6,000/month',
-      features: ['Climate prediction', 'Carbon footprint analysis', 'Renewable energy optimization', 'Environmental monitoring', 'Sustainability reporting'],
-      benefits: ['Improve climate predictions', 'Optimize energy usage', 'Reduce environmental impact'],
-      marketPrice: '$10,000-30,000/month',
-      category: 'Environmental AI',
-      technologies: ['Xarray', 'NetCDF', 'TensorFlow', 'PyTorch', 'Climate Data APIs']
-    },
-    {
-      title: 'AI-Powered Cybersecurity',
-      description: 'Advanced threat detection, vulnerability assessment, and automated security response systems.',
-      icon: '🛡️',
-      price: 'Starting at $7,500/month',
-      features: ['Threat detection', 'Malware analysis', 'Network security', 'Incident response', 'Security orchestration'],
-      benefits: ['Prevent 99% of cyber attacks', 'Reduce response time by 80%', 'Automate security operations'],
-      marketPrice: '$12,000-40,000/month',
-      category: 'Cybersecurity AI',
-      technologies: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Suricata', 'ELK Stack']
-    },
-    {
-      title: 'AI-Powered Supply Chain Optimization',
-      description: 'Machine learning models for demand forecasting, inventory optimization, and logistics planning.',
-      icon: '🚚',
-      price: 'Starting at $5,500/month',
-      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier risk assessment', 'Cost optimization'],
-      benefits: ['Reduce costs by 20%', 'Improve delivery times', 'Minimize supply disruptions'],
-      marketPrice: '$9,000-25,000/month',
-      category: 'Supply Chain AI',
-      technologies: ['Apache Spark', 'TensorFlow', 'PyTorch', 'OR-Tools', 'Gurobi']
-    },
-    {
-      title: 'AI-Powered Personalized Medicine',
-      description: 'Genomic analysis and personalized treatment recommendations using machine learning.',
-      icon: '🧬',
-      price: 'Starting at $12,000/month',
-      features: ['Genomic analysis', 'Treatment recommendation', 'Drug response prediction', 'Risk assessment', 'Clinical decision support'],
-      benefits: ['Improve treatment outcomes', 'Reduce side effects', 'Personalize healthcare'],
-      marketPrice: '$20,000-60,000/month',
-      category: 'Healthcare AI',
-      technologies: ['Biopython', 'Pandas', 'Scikit-learn', 'TensorFlow', 'PyTorch']
-    },
-    {
-      title: 'AI-Powered Smart Cities',
-      description: 'IoT data analysis and urban planning optimization for smart city infrastructure.',
-      icon: '🏙️',
-      price: 'Starting at $8,500/month',
-      features: ['Traffic optimization', 'Energy management', 'Waste management', 'Public safety', 'Urban planning'],
-      benefits: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen services'],
-      marketPrice: '$15,000-45,000/month',
-      category: 'Smart Cities AI',
-      technologies: ['Apache Kafka', 'TensorFlow', 'PyTorch', 'InfluxDB', 'Grafana']
-    },
-    {
-      title: 'AI-Powered Agricultural Optimization',
-      description: 'Precision agriculture using AI for crop monitoring, yield prediction, and resource optimization.',
-      icon: '🌾',
-      price: 'Starting at $4,500/month',
-      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Soil analysis'],
-      benefits: ['Increase crop yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use'],
-      marketPrice: '$7,500-22,000/month',
-      category: 'AgTech AI',
-      technologies: ['OpenCV', 'TensorFlow', 'PyTorch', 'Satellite Imagery', 'IoT Sensors']
-    },
-    {
-      title: 'AI-Powered Energy Grid Management',
-      description: 'Smart grid optimization, renewable energy integration, and demand response management.',
-      icon: '⚡',
-      price: 'Starting at $6,500/month',
-      features: ['Grid optimization', 'Renewable integration', 'Demand response', 'Energy storage', 'Load forecasting'],
-      benefits: ['Improve grid efficiency', 'Integrate renewables', 'Reduce energy costs'],
-      marketPrice: '$11,000-35,000/month',
-      category: 'Energy AI',
-      technologies: ['TensorFlow', 'PyTorch', 'Pandas', 'Time Series DB', 'Grid APIs']
-    },
-    {
-      title: 'AI-Powered Space Exploration',
-      description: 'Machine learning for satellite data analysis, space mission planning, and astronomical research.',
-      icon: '🚀',
-      price: 'Starting at $18,000/month',
-      features: ['Satellite data analysis', 'Mission planning', 'Astronomical research', 'Space weather prediction', 'Orbital mechanics'],
-      benefits: ['Improve mission success', 'Discover new phenomena', 'Optimize space operations'],
-      marketPrice: '$30,000-90,000/month',
-      category: 'Space AI',
-      technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
+      title: 'AI Marketing Automation',
+      description: 'Intelligent marketing automation solutions with AI-powered personalization, targeting, and campaign optimization.',
+      icon: '📢',
+      price: '$1,800/month',
+      features: [
+        'Customer segmentation and targeting',
+        'Personalized marketing campaigns',
+        'Predictive customer analytics',
+        'Automated A/B testing',
+        'Lead scoring and qualification',
+        'Email and SMS automation',
+        'Social media management',
+        'Marketing ROI optimization'
+      ],
+      benefits: [
+        'Increase conversion rates by 40%',
+        'Improve customer engagement by 60%',
+        'Reduce marketing costs by 30%',
+        'Personalize customer experiences'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Marketing AI',
+      technologies: ['Machine Learning', 'Marketing APIs', 'CRM Integration', 'Analytics Tools', 'Personalization Engines'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
-<<<<<<< HEAD
-  // const categories = [...new Set(aiServices.map(service => service.category))];
-=======
   const categories = [...new Set(aiServices.map(service => service.category))];
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
 
   return (
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including machine learning, NLP, computer vision, and automation solutions for enterprise businesses." />
-        <meta name="keywords" content="AI services, machine learning, artificial intelligence, NLP, computer vision, automation, AI consulting" />
+        <meta name="description" content="Advanced AI services including machine learning, natural language processing, computer vision, and AI automation. Transform your business with cutting-edge artificial intelligence solutions." />
+        <meta name="keywords" content="AI services, machine learning, natural language processing, computer vision, AI automation, artificial intelligence, deep learning" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
@@ -280,18 +372,24 @@ const AIServicesPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Advanced AI Services
+                AI Services & Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence solutions
+                Cutting-edge artificial intelligence solutions designed to transform your business operations and drive innovation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                  Start AI Journey
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                  View AI Solutions
-                </button>
+                <a 
+                  href="tel:+13024640950"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+                >
+                  📞 +1 302 464 0950
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  ✉️ Get Free Consultation
+                </a>
               </div>
             </div>
           </div>
@@ -305,7 +403,7 @@ const AIServicesPage: React.FC = () => {
                 Why Choose Our AI Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Cutting-edge AI solutions delivered by PhD-level experts with proven industry experience
+                Advanced AI solutions delivered by machine learning experts with proven industry experience
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -313,29 +411,29 @@ const AIServicesPage: React.FC = () => {
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Experts</h3>
-                <p className="text-gray-600">PhD-level data scientists and AI researchers</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Advanced AI</h3>
+                <p className="text-gray-600">State-of-the-art machine learning and deep learning technologies</p>
               </div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Deployment</h3>
-                <p className="text-gray-600">Deploy AI solutions in weeks, not months</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Implementation</h3>
+                <p className="text-gray-600">Deploy AI solutions quickly with minimal disruption to your business</p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3>
-                <p className="text-gray-600">Tailored AI models for your specific use case</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cost-Effective</h3>
+                <p className="text-gray-600">Save up to 50% compared to market rates while getting superior AI solutions</p>
               </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <BarChart className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven ROI</h3>
-                <p className="text-gray-600">Average 400% ROI within 12 months</p>
+                <p className="text-gray-600">Average 400% ROI within 6 months of AI implementation</p>
               </div>
             </div>
           </div>
@@ -350,7 +448,7 @@ const AIServicesPage: React.FC = () => {
                   {category} Solutions
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
+                  Advanced {category.toLowerCase()} solutions powered by cutting-edge AI technology
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -407,9 +505,24 @@ const AIServicesPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                        Get AI Consultation
-                      </button>
+                      <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                        <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
+                      </div>
+
+                      <div className="flex gap-2">
+                        <a 
+                          href="tel:+13024640950"
+                          className="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
+                        >
+                          Call Now
+                        </a>
+                        <a 
+                          href="mailto:kleber@ziontechgroup.com"
+                          className="flex-1 border border-purple-600 text-purple-600 py-2 px-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-center"
+                        >
+                          Email Us
+                        </a>
+                      </div>
                     </div>
                   ))}
               </div>
@@ -417,47 +530,55 @@ const AIServicesPage: React.FC = () => {
           </section>
         ))}
 
-        {/* AI Capabilities Showcase */}
+        {/* Pricing Comparison */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our AI Capabilities
+                Competitive Pricing
               </h2>
               <p className="text-xl text-gray-600">
-                Cutting-edge AI technologies and methodologies we use to solve complex business problems
+                Save significantly compared to market rates while getting superior AI solutions
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Deep Learning</h3>
-                <p className="text-gray-600">Neural networks, CNNs, RNNs, and transformer models</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-gray-50 rounded-lg p-8 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Market Average</h3>
+                <div className="text-4xl font-bold text-gray-600 mb-4">$4,000-8,000</div>
+                <p className="text-gray-600 mb-6">per month for similar AI services</p>
+                <ul className="text-left space-y-2 text-gray-600">
+                  <li>• Basic AI features</li>
+                  <li>• Limited customization</li>
+                  <li>• Standard support</li>
+                  <li>• Generic solutions</li>
+                </ul>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <MessageSquare className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Natural Language Processing</h3>
-                <p className="text-gray-600">Text analysis, sentiment, translation, and generation</p>
+              <div className="bg-purple-600 rounded-lg p-8 text-center text-white relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-yellow-400 text-purple-900 px-4 py-1 rounded-full text-sm font-bold">
+                    BEST VALUE
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+                <div className="text-4xl font-bold mb-4">$2,000-3,500</div>
+                <p className="text-purple-100 mb-6">per month for premium AI solutions</p>
+                <ul className="text-left space-y-2 text-purple-100">
+                  <li>• Advanced AI features</li>
+                  <li>• Full customization</li>
+                  <li>• 24/7 expert support</li>
+                  <li>• Industry-specific solutions</li>
+                </ul>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <Eye className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Computer Vision</h3>
-                <p className="text-gray-600">Image recognition, object detection, and video analysis</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Machine Learning</h3>
-                <p className="text-gray-600">Supervised, unsupervised, and reinforcement learning</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <Sparkles className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Generative AI</h3>
-                <p className="text-gray-600">Content generation, creative AI, and synthetic data</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3>
-                <p className="text-gray-600">Forecasting, trend analysis, and predictive modeling</p>
+              <div className="bg-gray-50 rounded-lg p-8 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-gray-600 mb-4">$10,000+</div>
+                <p className="text-gray-600 mb-6">per month for enterprise AI solutions</p>
+                <ul className="text-left space-y-2 text-gray-600">
+                  <li>• Complex implementations</li>
+                  <li>• High maintenance costs</li>
+                  <li>• Long deployment times</li>
+                  <li>• Vendor lock-in</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -467,12 +588,12 @@ const AIServicesPage: React.FC = () => {
         <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Harness the Power of AI?
+              Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl mb-8 text-purple-100">
-              Contact our AI experts for a free consultation and custom AI strategy development
+              Contact our AI experts for a free consultation and custom solution design
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
@@ -486,8 +607,9 @@ const AIServicesPage: React.FC = () => {
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-            <div className="mt-8 text-sm text-purple-200">
+            <div className="text-sm text-purple-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p className="mt-2">🌐 https://ziontechgroup.com</p>
             </div>
           </div>
         </section>
