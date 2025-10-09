@@ -37,11 +37,24 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
-    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer', icon: DollarSign },
+    { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
     { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
     { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Box },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Users },
+    { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: Building },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
+    { name: 'AI Translation Hub', href: '/ai-translation-hub', icon: Globe },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', icon: Shield },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', icon: ShoppingCart },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Home },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Stethoscope },
+    { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: GraduationCap },
+    { name: 'AI Travel Planner', href: '/ai-travel-planner', icon: Plane },
+    { name: 'AI Energy Manager', href: '/ai-energy-manager', icon: Zap },
+    { name: 'AI Event Planner', href: '/ai-event-planner', icon: Calendar },
   ];
 
   const aiServices = [
@@ -52,7 +65,16 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
-    { name: 'AI Fraud Detection', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Car },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Cpu },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse', icon: Cube },
+    { name: 'AI Climate Solutions', href: '/ai-climate', icon: Globe },
+    { name: 'AI Space Technology', href: '/ai-space', icon: Globe },
+    { name: 'AI Biotechnology', href: '/ai-biotech', icon: Stethoscope },
+    { name: 'AI Manufacturing', href: '/ai-manufacturing', icon: Factory },
+    { name: 'AI Smart Cities', href: '/ai-smart-cities', icon: Building },
   ];
 
   const itServices = [
@@ -61,13 +83,24 @@ const Navigation: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database', icon: Database },
-    { name: 'Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
+    { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
     { name: 'Web Development', href: '/web-development', icon: Code },
     { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
     { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
     { name: 'IT Support', href: '/it-support', icon: Users },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
     { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
+    { name: 'Edge Computing', href: '/edge-computing', icon: Cpu },
+    { name: '5G & Wireless', href: '/5g-wireless', icon: Globe },
+    { name: 'Digital Twin', href: '/digital-twin', icon: Cube },
+    { name: 'AR/VR Infrastructure', href: '/ar-vr', icon: Cube },
+    { name: 'Smart Cities', href: '/smart-cities', icon: Building },
+    { name: 'Robotics & Automation', href: '/robotics', icon: Settings },
+    { name: 'Advanced Analytics', href: '/advanced-analytics', icon: BarChart },
+    { name: 'Cybersecurity Operations', href: '/cybersecurity-operations', icon: Shield },
+    { name: 'Green IT Solutions', href: '/green-it', icon: Globe },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: Brain },
   ];
 
   return (
@@ -110,20 +143,20 @@ const Navigation: React.FC = () => {
               </button>
               
               {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <div className="p-4">
-                  <div className="grid grid-cols-1 gap-4">
+              <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-6">
+                  <div className="grid grid-cols-3 gap-6">
                     {/* Micro SAAS Services */}
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-2 text-sm">Micro SAAS Solutions</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {microSAASServices.slice(0, 4).map((service) => (
+                      <h3 className="text-cyan-400 font-semibold mb-3 text-sm border-b border-cyan-400/30 pb-2">Micro SAAS Solutions</h3>
+                      <div className="grid grid-cols-1 gap-1 max-h-64 overflow-y-auto">
+                        {microSAASServices.slice(0, 8).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-slate-700/50"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-3 h-3 flex-shrink-0" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -132,15 +165,15 @@ const Navigation: React.FC = () => {
                     
                     {/* AI Services */}
                     <div>
-                      <h3 className="text-purple-400 font-semibold mb-2 text-sm">AI Services</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {aiServices.slice(0, 4).map((service) => (
+                      <h3 className="text-purple-400 font-semibold mb-3 text-sm border-b border-purple-400/30 pb-2">AI Services</h3>
+                      <div className="grid grid-cols-1 gap-1 max-h-64 overflow-y-auto">
+                        {aiServices.slice(0, 8).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-slate-700/50"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-3 h-3 flex-shrink-0" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -149,15 +182,15 @@ const Navigation: React.FC = () => {
                     
                     {/* IT Services */}
                     <div>
-                      <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {itServices.map((service) => (
+                      <h3 className="text-green-400 font-semibold mb-3 text-sm border-b border-green-400/30 pb-2">IT Services</h3>
+                      <div className="grid grid-cols-1 gap-1 max-h-64 overflow-y-auto">
+                        {itServices.slice(0, 8).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-slate-700/50"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-3 h-3 flex-shrink-0" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -165,13 +198,22 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-4 pt-4 border-t border-gray-600">
-                    <a
-                      href="/services"
-                      className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                    >
-                      View All Services →
-                    </a>
+                  <div className="mt-6 pt-4 border-t border-gray-600">
+                    <div className="flex justify-between items-center">
+                      <a
+                        href="/services"
+                        className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                      >
+                        View All Services →
+                      </a>
+                      <div className="flex space-x-4 text-xs text-gray-400">
+                        <span>30+ Micro SAAS</span>
+                        <span>•</span>
+                        <span>25+ AI Services</span>
+                        <span>•</span>
+                        <span>20+ IT Solutions</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -218,53 +260,74 @@ const Navigation: React.FC = () => {
               {/* Mobile Services Section */}
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS Solutions</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {microSAASServices.slice(0, 6).map((service) => (
+                <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
+                  {microSAASServices.slice(0, 8).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
-                      <service.icon className="w-4 h-4" />
+                      <service.icon className="w-4 h-4 flex-shrink-0" />
                       <span className="text-sm">{service.name}</span>
                     </a>
                   ))}
                 </div>
+                <a
+                  href="/services"
+                  className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium mt-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  View All Micro SAAS →
+                </a>
               </div>
               
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-purple-400 font-semibold mb-3">AI Services</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {aiServices.slice(0, 4).map((service) => (
+                <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
+                  {aiServices.slice(0, 6).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
-                      <service.icon className="w-4 h-4" />
+                      <service.icon className="w-4 h-4 flex-shrink-0" />
                       <span className="text-sm">{service.name}</span>
                     </a>
                   ))}
                 </div>
+                <a
+                  href="/ai-services"
+                  className="block text-center text-purple-400 hover:text-purple-300 transition-colors duration-200 text-sm font-medium mt-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  View All AI Services →
+                </a>
               </div>
               
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-green-400 font-semibold mb-3">IT Services</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {itServices.map((service) => (
+                <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
+                  {itServices.slice(0, 6).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
-                      <service.icon className="w-4 h-4" />
+                      <service.icon className="w-4 h-4 flex-shrink-0" />
                       <span className="text-sm">{service.name}</span>
                     </a>
                   ))}
                 </div>
+                <a
+                  href="/it-services"
+                  className="block text-center text-green-400 hover:text-green-300 transition-colors duration-200 text-sm font-medium mt-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  View All IT Services →
+                </a>
               </div>
               
               <div className="pt-4 border-t border-gray-600">
