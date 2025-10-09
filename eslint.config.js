@@ -9,6 +9,25 @@ export default [
   // Base JavaScript configuration
   {
     files: ['**/*.{js,jsx}'],
+    ignores: [
+      '.storybook/**',
+      '__tests__/**',
+      'admin-api-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api-backup/**',
+      'accessibility-improvements.js',
+      'advanced-app-improvements.js',
+      'analyze-missing-pages.js',
+      'analyze-website-comprehensive.js',
+      '*.broken',
+      '*.temp',
+      'backup/**',
+      'backup-*/**',
+      'corrupted*/**',
+      'disabled*/**',
+      '*_disabled/**'
+    ],
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
       parserOptions: {
@@ -23,6 +42,25 @@ export default [
   // TypeScript configuration
   {
     files: ['**/*.{ts,tsx}'],
+    ignores: [
+      '.storybook/**',
+      '__tests__/**',
+      'admin-api-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api-backup/**',
+      'accessibility-improvements.js',
+      'advanced-app-improvements.js',
+      'analyze-missing-pages.js',
+      'analyze-website-comprehensive.js',
+      '*.broken',
+      '*.temp',
+      'backup/**',
+      'backup-*/**',
+      'corrupted*/**',
+      'disabled*/**',
+      '*_disabled/**'
+    ],
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
       parser: tsParser,

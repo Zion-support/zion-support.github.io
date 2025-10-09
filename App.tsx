@@ -1,4 +1,3 @@
-
 import React, { Suspense, memo, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
@@ -108,45 +107,27 @@ const UnifiedContentPromotion = memo(() => (
         <h1 className="text-5xl lg:text-7xl font-bold mb-6">
           <span className="holographic-text cyber-text">Zion Tech Group</span>
         </h1>
-        <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-          Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
-          and digital transformation services. Transform your business with cutting-edge technology.
+        <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+          Transform Your Enterprise with AI-Powered Solutions
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a
-            href="tel:+13024640950"
-            className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-          >
-            <Phone className="w-5 h-5 mr-2" />
-            (302) 464-0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-          >
-            <Mail className="w-5 h-5 mr-2" />
-            Get Quote
-          </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex items-center text-cyan-400">
+            <Brain className="w-6 h-6 mr-2" />
+            <span className="text-lg font-semibold">300% ROI</span>
+          </div>
+          <div className="flex items-center text-purple-400">
+            <Cloud className="w-6 h-6 mr-2" />
+            <span className="text-lg font-semibold">70% Cost Reduction</span>
+          </div>
+          <div className="flex items-center text-green-400">
+            <Zap className="w-6 h-6 mr-2" />
+            <span className="text-lg font-semibold">90% Efficiency Gains</span>
+          </div>
         </div>
-        
-        {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-            <div className="text-gray-300">AI Models Deployed</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-400 mb-2">300%</div>
-            <div className="text-gray-300">Average ROI</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
-            <div className="text-gray-300">Uptime Guarantee</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
-            <div className="text-gray-300">Support Available</div>
-          </div>
+        <div className="mt-12">
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            Get Started Today
+          </button>
         </div>
       </div>
     </div>
@@ -161,65 +142,23 @@ const InteractiveAIROICalculator = memo(() => (
           <span className="neon-text">AI ROI Calculator</span>
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Calculate your potential AI investment returns and see how our solutions can transform your business.
+          Calculate your potential savings and ROI with our AI solutions
         </p>
       </div>
-      
       <div className="max-w-4xl mx-auto">
-        <div className="quantum-card p-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Calculate Your AI ROI</h3>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-gray-300 mb-2">Current Monthly Revenue</label>
-                  <input
-                    type="number"
-                    placeholder="$100,000"
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-300 mb-2">Current Monthly Costs</label>
-                  <input
-                    type="number"
-                    placeholder="$60,000"
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-300 mb-2">AI Investment Level</label>
-                  <select className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400">
-                    <option>Basic ($5,000/month)</option>
-                    <option>Professional ($15,000/month)</option>
-                    <option>Enterprise ($35,000/month)</option>
-                  </select>
-                </div>
-                <button className="w-full cyber-button py-3">
-                  Calculate ROI
-                </button>
-              </div>
+        <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">$2.5M</div>
+              <div className="text-gray-300">Average Annual Savings</div>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Projected Results</h3>
-              <div className="space-y-4">
-                <div className="bg-slate-800/50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-green-400 mb-2">+300%</div>
-                  <div className="text-gray-300">Revenue Increase</div>
-                </div>
-                <div className="bg-slate-800/50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">-70%</div>
-                  <div className="text-gray-300">Cost Reduction</div>
-                </div>
-                <div className="bg-slate-800/50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">+90%</div>
-                  <div className="text-gray-300">Efficiency Gains</div>
-                </div>
-                <div className="bg-slate-800/50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">6 months</div>
-                  <div className="text-gray-300">Payback Period</div>
-                </div>
-              </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">18</div>
+              <div className="text-gray-300">Months Payback Period</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">340%</div>
+              <div className="text-gray-300">ROI Over 3 Years</div>
             </div>
           </div>
         </div>
@@ -236,42 +175,24 @@ const ContentShowcase = memo(() => (
           <span className="neon-text">Our Services</span>
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Comprehensive AI and IT solutions designed to transform your business operations and drive unprecedented growth.
+          Comprehensive AI and IT solutions for modern enterprises
         </p>
       </div>
-      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="quantum-card p-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-            <Brain className="w-8 h-8 text-white" />
-          </div>
-          <h3 className="text-xl font-bold text-white mb-3">AI Services</h3>
-          <p className="text-gray-300 mb-4">Comprehensive AI solutions including automation, analytics, and machine learning platforms.</p>
-          <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            Learn More →
-          </a>
+        <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-colors">
+          <Brain className="w-12 h-12 text-cyan-400 mb-4" />
+          <h3 className="text-xl font-bold text-white mb-3">AI Solutions</h3>
+          <p className="text-gray-300">Advanced AI-powered tools and automation</p>
         </div>
-        
-        <div className="quantum-card p-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-            <Cloud className="w-8 h-8 text-white" />
-          </div>
-          <h3 className="text-xl font-bold text-white mb-3">IT Services</h3>
-          <p className="text-gray-300 mb-4">Complete IT infrastructure, cybersecurity, and managed services for modern businesses.</p>
-          <a href="/it-services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            Learn More →
-          </a>
+        <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-colors">
+          <Cloud className="w-12 h-12 text-purple-400 mb-4" />
+          <h3 className="text-xl font-bold text-white mb-3">Cloud Infrastructure</h3>
+          <p className="text-gray-300">Scalable and secure cloud solutions</p>
         </div>
-        
-        <div className="quantum-card p-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-            <Zap className="w-8 h-8 text-white" />
-          </div>
-          <h3 className="text-xl font-bold text-white mb-3">Micro SAAS</h3>
-          <p className="text-gray-300 mb-4">AI-powered micro SAAS tools for productivity, marketing, analytics, and business automation.</p>
-          <a href="/micro-saas" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            Learn More →
-          </a>
+        <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-colors">
+          <Zap className="w-12 h-12 text-green-400 mb-4" />
+          <h3 className="text-xl font-bold text-white mb-3">IT Consulting</h3>
+          <p className="text-gray-300">Strategic technology consulting services</p>
         </div>
       </div>
     </div>
@@ -285,161 +206,84 @@ const InteractiveContentShowcase2026 = memo(() => (
         Ready to Transform Your Business?
       </h2>
       <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-        Join 500+ companies already using our AI and IT solutions to achieve unprecedented growth and efficiency.
+        Join thousands of enterprises already using our AI solutions to drive growth and innovation.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-        >
-          <Phone className="w-5 h-5 mr-2" />
-          Call (302) 464-0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-        >
-          <Mail className="w-5 h-5 mr-2" />
-          Email Us
-        </a>
+        <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105">
+          Start Free Trial
+        </button>
+        <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300">
+          Schedule Demo
+        </button>
       </div>
     </div>
   </section>
 ));
 
-// Loading component
 const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
+  <div className="flex justify-center items-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
   </div>
 ));
 
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-       
-      // // console.error('App Error Boundary caught an error:', _error, _errorInfo);
-    }
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default function App() {
-  const structuredData = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description:
-        'Leading provider of AI-powered enterprise solutions and digital transformation services',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      sameAs: ['https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
-      offers: {
-        '@type': 'Offer',
-        name: 'AI Enterprise Transformation Services',
-        description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-        price: '50000',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-    }),
-    []
+const ErrorBoundary = memo(({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="min-h-screen bg-slate-900">
+      {children}
+    </div>
   );
+});
+
+const App = memo(() => {
+  const structuredData = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Advanced AI and IT Solutions for Enterprise",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-0123",
+      "contactType": "customer service",
+      "email": "info@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup"
+    ]
+  }), []);
 
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <Helmet>
-          <title>Zion Tech Group - AI & IT Solutions</title>
-          <meta
-            name="description"
-            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
-          />
-          <meta
-            name="keywords"
-            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
-          />
-          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            property="og:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
+          <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+          <meta name="description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
+          <meta name="keywords" content="AI solutions, IT consulting, cloud infrastructure, enterprise software, automation" />
+          <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+          <meta property="og:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            name="twitter:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
+          <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+          <meta name="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <Router>
-<<<<<<< HEAD
-          <div className="min-h-screen bg-white">
+          <div className="min-h-screen bg-slate-900 cyber-grid">
             <Navigation />
             <main>
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
-                  <Route path="/" element={<HomePage />} />
+                  <Route path="/" element={
+                    <>
+                      <UnifiedContentPromotion />
+                      <InteractiveAIROICalculator />
+                      <ContentShowcase />
+                      <InteractiveContentShowcase2026 />
+                    </>
+                  } />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
@@ -523,10 +367,7 @@ export default function App() {
                   <Route path="/managed-it" element={<ManagedITPage />} />
                   <Route path="/network-solutions" element={<NetworkSolutionsPage />} />
                   
-                  {/* Micro SAAS */}
-                  <Route path="/micro-saas" element={<MicroSaasPage />} />
-                  
-                  {/* Other Pages */}
+                  {/* Additional Pages */}
                   <Route path="/api-docs" element={<APIDocsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
                   <Route path="/gdpr" element={<GDPRPage />} />
@@ -536,32 +377,14 @@ export default function App() {
                 </Routes>
               </Suspense>
             </main>
-=======
-          <div className="min-h-screen bg-slate-900 cyber-grid">
-            <Navigation />
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={
-                  <>
-                    <UnifiedContentPromotion />
-                    <InteractiveAIROICalculator />
-                    <ContentShowcase />
-                    <InteractiveContentShowcase2026 />
-                  </>
-                } />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/ai-services" element={<AIServicesPage />} />
-                <Route path="/it-services" element={<ITServicesPage />} />
-                <Route path="/micro-saas" element={<MicroSaasPage />} />
-              </Routes>
-            </Suspense>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e055
             <Footer />
           </div>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+});
+
+App.displayName = 'App';
+
+export default App;

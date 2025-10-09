@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -786,15 +785,6 @@ const AIServicesPage: React.FC = () => {
     </div>
   );
 };
-=======
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
-  Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
-  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
-} from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e055
 
 export default function AIServicesPage() {
   const [activeTab, setActiveTab] = useState('overview');

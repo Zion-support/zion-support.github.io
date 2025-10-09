@@ -1,0 +1,18 @@
+# Ignore problematic files
+.storybook/
+__tests__/
+admin-api-disabled/
+api-disabled/
+api.disabled/
+api-backup/
+accessibility-improvements.js
+advanced-app-improvements.js
+analyze-missing-pages.js
+analyze-website-comprehensive.js
+*.broken
+*.temp
+backup/
+backup-*/
+corrupted*/
+disabled*/
+*_disabled/

@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -800,16 +799,6 @@ const ITServicesPage: React.FC = () => {
     </div>
   );
 };
-=======
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, 
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, 
-  HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, 
-  Monitor, Network, RefreshCw, AlertTriangle, Headphones, FileText
-} from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e055
 
 export default function ITServicesPage() {
   const [isVisible, setIsVisible] = useState(false);
