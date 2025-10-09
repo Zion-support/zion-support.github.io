@@ -84,11 +84,13 @@ const Navigation: React.FC = memo(() => {
       ]
     },
     {
-      title: 'Micro SaaS',
+      title: 'Solutions',
       icon: Code,
       color: 'text-green-400',
       services: [
-        { name: 'Micro SaaS Solutions', path: '/micro-saas', description: 'Custom SaaS applications' }
+        { name: 'Micro SaaS', path: '/micro-saas', description: 'Custom SaaS applications' },
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories' },
+        { name: 'Pricing', path: '/pricing', description: 'Service packages' }
       ]
     }
   ];

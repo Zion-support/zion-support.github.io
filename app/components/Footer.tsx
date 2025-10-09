@@ -40,23 +40,31 @@ const Footer: React.FC = memo(() => {
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/blog' },
+    { name: 'Case Studies', url: '/case-studies' },
     { name: 'Contact', url: '/contact' }
   ];
 
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Docs', url: '/api-docs' },
-    { name: 'Support', url: '/contact' },
+    { name: 'Support', url: '/support' },
     { name: 'Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
   ];
 
+  const resourcesLinks = [
+    { name: 'Blog', url: '/blog' },
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'Services', url: '/services' },
+    { name: 'AI Services', url: '/ai-services' },
+    { name: 'IT Services', url: '/it-services' }
+  ];
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -121,11 +129,28 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-          {/* Company & Support */}
+          {/* Company */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
-            <ul className="space-y-2 mb-6">
+            <ul className="space-y-2">
               {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources & Support */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h4>
+            <ul className="space-y-2 mb-6">
+              {resourcesLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.url}

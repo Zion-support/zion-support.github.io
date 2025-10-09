@@ -17,6 +17,11 @@ const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastruct
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
 const SecurityPage = React.lazy(() => import('./app/security/page'));
 const SupportPage = React.lazy(() => import('./app/support/page'));
+const TeamPage = React.lazy(() => import('./app/team/page'));
+const AutonomousSystemsPage = React.lazy(() => import('./app/autonomous-systems/page'));
+const BlockchainPage = React.lazy(() => import('./app/blockchain/page'));
+const IotEdgeComputingPage = React.lazy(() => import('./app/iot-edge-computing/page'));
+const RoboticsPage = React.lazy(() => import('./app/robotics/page'));
 
 // Lazy load components
 const Navigation = React.lazy(() => import('./app/components/Navigation'));
@@ -120,6 +125,11 @@ const App: React.FC = () => {
                   <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                   <Route path="/security" element={<SecurityPage />} />
                   <Route path="/support" element={<SupportPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                  <Route path="/blockchain" element={<BlockchainPage />} />
+                  <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} />
+                  <Route path="/robotics" element={<RoboticsPage />} />
                 </Routes>
               </Suspense>
             </main>
