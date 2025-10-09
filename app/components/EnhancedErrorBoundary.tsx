@@ -72,7 +72,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      // eslint-disable-next-line no-console
+       
 
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
@@ -127,7 +127,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-        // eslint-disable-next-line no-console
+         
 
       });
   };
