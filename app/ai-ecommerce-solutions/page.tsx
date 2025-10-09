@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Shield, Users, Zap } from 'lucide-react';;
+import { BarChart3, CheckCircle, Shield, Users, Zap } from 'lucide-react';;;
 
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [

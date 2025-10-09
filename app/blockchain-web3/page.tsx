@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import React from 'react';
-import { Brain, CheckCircle, Database, Globe, Shield, Star, Zap } from 'lucide-react';;
+import { Brain, CheckCircle, Database, Globe, Shield, Star, Zap } from 'lucide-react';;;
 
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [

@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import React from 'react';
-import { BarChart, Brain, CheckCircle, Cpu, Shield, Star, Target, Zap } from 'lucide-react';;
+import { BarChart, Brain, CheckCircle, Cpu, Shield, Star, Target, Zap } from 'lucide-react';;;
 
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
