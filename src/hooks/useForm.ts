@@ -36,14 +36,8 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   validateField: (field: keyof T) => void;
   validateAllFields: () => boolean;
 }
-<<<<<<< HEAD
-export function useForm<T extends Record<string, unknown>>({
-  initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true
-}: UseFormConfig<T>): UseFormReturn<T> {
-=======
 export function useForm<T extends Record<string, unknown>>(config: UseFormConfig<T>): UseFormReturn<T> {
   const { initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true } = config;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6fc5
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);

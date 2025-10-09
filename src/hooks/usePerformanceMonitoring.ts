@@ -11,11 +11,7 @@ export const usePerformanceMonitoring = () => {
   const { trackEvent } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
-<<<<<<< HEAD
-      trackPerformance(name, value, 'performance');
-=======
       trackEvent(name, { value });
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6fc5
     },
     [trackEvent]
   );
