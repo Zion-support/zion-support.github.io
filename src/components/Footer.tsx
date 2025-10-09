@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Phone, Mail, MapPin, Brain, Cloimport { Phone, Mail, MapPin, Brain, Cloud, Code, Zap, ArrowRight, Database, Bot } from 'lucide-react';;st microSaasServices = [
+import { Phone, Mail, MapPin, Brain, Cloud, Code, Zap, ArrowRight, Database, Bot } from 'lucide-react';
+
+const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
@@ -98,6 +100,7 @@ import { Phone, Mail, MapPin, Brain, Cloimport { Phone, Mail, MapPin, Brain, Clo
     { name: 'Compliance', url: '/compliance' }
   ];
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">

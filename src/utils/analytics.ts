@@ -25,9 +25,7 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
-=======
   public config: Record<string, any> = {}
->>>>>>> cursor/fix-errors-and-merge-to-main-4e88
   /**
    * Initialize analytics service
    */

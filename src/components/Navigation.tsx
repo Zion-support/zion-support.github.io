@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Smartphone, TrendingUp, Truck } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Building, Factory, Home, Heart, Stethoscope, GraduationCap, Briefcase, Calculator, Calendar, Navigation as NavIcon, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, Smartphone, TrendingUp, Truck } from 'lucide-react';;
->>>>>>> cursor/fix-errors-and-merge-to-main-4e88
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

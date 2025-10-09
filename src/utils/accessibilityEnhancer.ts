@@ -591,9 +591,6 @@ Headings Without Content: ${metrics.headingsWithoutContent}
 Color Contrast Issues: ${metrics.colorContrastIssues}
 Keyboard Navigation Score: ${metrics.keyboardNavigationScore}
 Screen Reader Score: ${metrics.screenReaderScore}
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4e88
 `;
   }
 }
