@@ -80,4 +80,5 @@ export default function AI2026FebruaryMegaBreakthroughRevolution() {
         </div>
       </div>
     </div>
+  );
 };

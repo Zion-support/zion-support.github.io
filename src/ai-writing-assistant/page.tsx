@@ -14,4 +14,4 @@ const AIWritingAssistantPage: React.FC = () => {
   );
 };
 
-export default AiWritingAssistant;
+export default AIWritingAssistantPage;
