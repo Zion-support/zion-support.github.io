@@ -7,6 +7,7 @@ const Footer: React.FC = () => {
 
   const quickLinks = [
     { name: 'Home', href: '/' },
+<<<<<<< HEAD
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'AI Solutions', href: '/ai-services' },
@@ -15,6 +16,11 @@ const Footer: React.FC = () => {
     { name: 'Pricing', href: '/pricing' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+=======
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Services', href: '/services' },
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -76,6 +82,7 @@ const Footer: React.FC = () => {
     { name: 'AI Automation', href: '/ai-automation' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
+<<<<<<< HEAD
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
     { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
     { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
@@ -88,6 +95,11 @@ const Footer: React.FC = () => {
     { name: 'AI Biotechnology', href: '/ai-biotechnology' },
     { name: 'AI Robotics', href: '/ai-robotics' },
     { name: 'AI Digital Twin', href: '/ai-digital-twin' },
+=======
+    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis' },
+    { name: 'AI Content Writer', href: '/ai-content-writer' },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
   ];
 
   const itServices = [

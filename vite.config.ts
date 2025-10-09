@@ -4,15 +4,15 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  root: 'src',
+  root: 'app',
   publicDir: '../public',
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@types': resolve(__dirname, './src/types'),
+      '@': resolve(__dirname, './app'),
+      '@components': resolve(__dirname, './app/components'),
+      '@utils': resolve(__dirname, './app/utils'),
+      '@hooks': resolve(__dirname, './app/hooks'),
+      '@types': resolve(__dirname, './app/types'),
     },
   },
   build: {
@@ -39,16 +39,16 @@ export default defineConfig({
             return 'vendor';
           }
           // Page chunks - group similar pages
-          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
+          if (id.includes('/app/ai-') || id.includes('/app/machine-learning') || id.includes('/app/nlp') || id.includes('/app/computer-vision')) {
             return 'pages-ai';
           }
-          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops')) {
+          if (id.includes('/app/it-') || id.includes('/app/cloud-') || id.includes('/app/cybersecurity') || id.includes('/app/devops')) {
             return 'pages-it';
           }
-          if (id.includes('/src/blog/')) {
+          if (id.includes('/app/blog/')) {
             return 'pages-blog';
           }
-          if (id.includes('/src/')) {
+          if (id.includes('/app/')) {
             return 'pages-other';
           }
         },

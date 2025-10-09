@@ -1,232 +1,267 @@
 'use client';
-import React, { useState, useEffect, useMemo } from 'react';
-import ContentPreviewCard from '../components/ContentPreviewCard';
-interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured: boolean;
-  stats?: {
-    views: number;
-    engagement: number;
-  };
-}
-export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const blogPosts: BlogPost[] = useMemo(() => [
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Calendar, User, ArrowRight, Search, Tag, Clock } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+
+const BlogPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const blogPosts = [
     {
-      id: 'ai-enterprise-transformation-2025',
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
-      category: 'Success Story',
-      readTime: '50 min read',
-      date: '2025-01-28',
-      path: '/blog/ai-enterprise-transformation-2025',
-      image: '💰',
-      featured: true,
-      stats: { views: 18750, engagement: 97 }
+      id: 1,
+      title: "The Future of AI in Enterprise: 2024 Trends and Predictions",
+      excerpt: "Discover the latest AI trends shaping enterprise technology in 2024, from quantum computing to autonomous systems.",
+      content: "Artificial Intelligence continues to revolutionize enterprise operations, with 2024 bringing unprecedented advancements in quantum computing, autonomous systems, and machine learning applications. Companies are seeing 300% ROI on AI investments...",
+      author: "Dr. Sarah Chen",
+      date: "2024-01-15",
+      category: "AI Technology",
+      tags: ["AI", "Enterprise", "Machine Learning", "Quantum Computing"],
+      readTime: "8 min read",
+      image: "/api/placeholder/600/400",
+      featured: true
     },
     {
-      id: 'ai-2025-2026-mega-trends-breakthrough',
-      title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
-      description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
-      category: 'Mega Trends',
-      readTime: '15 min read',
-      date: '2025-01-15',
-      path: '/blog/ai-2025-2026-mega-trends-breakthrough',
-      image: '🚀',
-      featured: true,
-      stats: { views: 12500, engagement: 94 }
+      id: 2,
+      title: "How AI-Powered Automation is Transforming Business Operations",
+      excerpt: "Learn how businesses are achieving 70% cost reduction and 95% process automation with AI solutions.",
+      content: "AI-powered automation is no longer a luxury but a necessity for competitive businesses. Our latest case studies show companies achieving remarkable efficiency gains...",
+      author: "Michael Rodriguez",
+      date: "2024-01-10",
+      category: "Automation",
+      tags: ["Automation", "Business Process", "Efficiency", "ROI"],
+      readTime: "6 min read",
+      image: "/api/placeholder/600/400",
+      featured: false
     },
     {
-      id: 'ai-2026-autonomous-enterprise-architecture',
-      title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
-      description: 'Revolutionary autonomous enterprise architecture transforming business operations with self-healing systems and predictive infrastructure.',
-      category: 'Architecture',
-      readTime: '12 min read',
-      date: '2026-01-15',
-      path: '/blog/ai-2026-autonomous-enterprise-architecture',
-      image: '🏗️',
-      featured: true,
-      stats: { views: 8900, engagement: 91 }
+      id: 3,
+      title: "Quantum Computing: The Next Frontier in AI Development",
+      excerpt: "Explore how quantum computing is revolutionizing AI algorithms and enabling breakthrough applications.",
+      content: "Quantum computing represents a paradigm shift in computational power, enabling AI algorithms to solve problems previously considered impossible...",
+      author: "Dr. Emily Watson",
+      date: "2024-01-05",
+      category: "Quantum Computing",
+      tags: ["Quantum Computing", "AI", "Technology", "Innovation"],
+      readTime: "10 min read",
+      image: "/api/placeholder/600/400",
+      featured: true
     },
     {
-      id: 'ai-2026-autonomous-agent-factories',
-      title: 'AI 2026: Autonomous Agent Factories Revolution',
-      description: 'Revolutionary autonomous agent factories transforming business operations with self-managing AI systems.',
-      category: 'AI Agents',
-      readTime: '18 min read',
-      date: '2026-02-01',
-      path: '/blog/ai-2026-autonomous-agent-factories',
-      image: '🤖',
-      featured: false,
-      stats: { views: 7200, engagement: 88 }
+      id: 4,
+      title: "Building Secure AI Systems: Best Practices for Enterprise",
+      excerpt: "Essential security considerations for implementing AI solutions in enterprise environments.",
+      content: "Security is paramount when implementing AI systems in enterprise environments. This comprehensive guide covers best practices for data protection...",
+      author: "James Thompson",
+      date: "2024-01-01",
+      category: "Security",
+      tags: ["Security", "AI", "Enterprise", "Data Protection"],
+      readTime: "7 min read",
+      image: "/api/placeholder/600/400",
+      featured: false
     },
     {
-      id: 'ai-2026-consensus-intelligence-breakthrough',
-      title: 'AI 2026: Consensus Intelligence Breakthrough',
-      description: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
-      category: 'Intelligence',
-      readTime: '14 min read',
-      date: '2026-02-15',
-      path: '/blog/ai-2026-consensus-intelligence-breakthrough',
-      image: '🧠',
-      featured: false,
-      stats: { views: 6500, engagement: 85 }
+      id: 5,
+      title: "The ROI of AI Implementation: Real-World Case Studies",
+      excerpt: "Discover how companies achieved 300% ROI with strategic AI implementation across different industries.",
+      content: "Real-world case studies demonstrate the tangible benefits of AI implementation. From healthcare to finance, companies are seeing unprecedented returns...",
+      author: "Lisa Park",
+      date: "2023-12-28",
+      category: "Case Studies",
+      tags: ["ROI", "Case Studies", "AI Implementation", "Business Value"],
+      readTime: "9 min read",
+      image: "/api/placeholder/600/400",
+      featured: false
     },
     {
-      id: 'ai-cost-optimization-breakthrough-2026',
-      title: 'AI Cost Optimization Breakthrough 2026',
-      description: 'Revolutionary cost optimization strategies delivering 90% reduction in operational expenses through intelligent AI systems.',
-      category: 'Cost Optimization',
-      readTime: '20 min read',
-      date: '2026-03-01',
-      path: '/blog/ai-cost-optimization-breakthrough-2026',
-      image: '💡',
-      featured: false,
-      stats: { views: 9800, engagement: 92 }
-    },
-    {
-      id: 'ai-2026-hyperconscious-computing-revolution',
-      title: 'AI 2026: Hyperconscious Computing Revolution',
-      description: 'Revolutionary hyperconscious computing systems delivering unprecedented AI capabilities and enterprise transformation.',
-      category: 'Computing',
-      readTime: '16 min read',
-      date: '2026-03-15',
-      path: '/blog/ai-2026-hyperconscious-computing-revolution',
-      image: '⚡',
-      featured: false,
-      stats: { views: 5800, engagement: 87 }
-    },
-    {
-      id: 'ai-enterprise-transformation-ultimate-guide-2025',
-      title: 'AI Enterprise Transformation: Ultimate Guide 2025',
-      description: 'The complete guide to AI enterprise transformation with proven frameworks, implementation strategies, and success metrics.',
-      category: 'Transformation',
-      readTime: '45 min read',
-      date: '2025-02-10',
-      path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
-      image: '📚',
-      featured: false,
-      stats: { views: 11200, engagement: 93 }
+      id: 6,
+      title: "Autonomous Systems: The Future of Business Intelligence",
+      excerpt: "How autonomous systems are creating self-managing business processes and intelligent decision-making.",
+      content: "Autonomous systems represent the pinnacle of AI development, creating self-managing processes that adapt and optimize in real-time...",
+      author: "Dr. Robert Kim",
+      date: "2023-12-20",
+      category: "Autonomous Systems",
+      tags: ["Autonomous Systems", "Business Intelligence", "AI", "Future Tech"],
+      readTime: "8 min read",
+      image: "/api/placeholder/600/400",
+      featured: true
     }
-  ], []);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const filteredPosts = selectedCategory === 'all' 
-    ? posts 
-    : posts.filter(post => post.category === selectedCategory);
-  const featuredPosts = posts.filter(post => post.featured);
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-12">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
+  ];
+
+  const categories = ['all', 'AI Technology', 'Automation', 'Quantum Computing', 'Security', 'Case Studies', 'Autonomous Systems'];
+
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const featuredPosts = blogPosts.filter(post => post.featured);
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Latest insights on AI, enterprise automation, and digital transformation from our expert team
-          </p>
-        </header>
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === category
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
-              }`}
-            >
-              {category === 'all' ? 'All Articles' : category}
-            </button>
-          ))}
-        </div>
-        {/* Featured Posts */}
-        {selectedCategory === 'all' && (
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              🌟 Featured Articles
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post) => (
-                <ContentPreviewCard
-                  key={post.id}
-                  {...post}
+    <>
+      <SEOOptimizer
+        title="AI & Technology Blog - Zion Tech Group"
+        description="Stay updated with the latest AI trends, enterprise solutions, and technology insights from Zion Tech Group's expert team."
+        keywords={['AI blog', 'technology insights', 'enterprise AI', 'machine learning', 'quantum computing', 'automation']}
+        canonicalUrl="https://ziontechgroup.com/blog"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+              AI & Technology Blog
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Stay updated with the latest AI trends, enterprise solutions, and technology insights from our expert team.
+            </p>
+          </div>
+
+          {/* Search and Filter */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex-1 relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
+              </div>
+              <div className="sm:w-48">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                >
+                  {categories.map(category => (
+                    <option key={category} value={category} className="bg-slate-800">
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Posts */}
+          {selectedCategory === 'all' && searchTerm === '' && (
+            <section className="mb-16">
+              <h2 className="text-2xl font-bold text-white mb-8 neon-text">Featured Articles</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {featuredPosts.slice(0, 2).map((post) => (
+                  <article key={post.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                    <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg mb-4 flex items-center justify-center">
+                      <div className="text-6xl">📊</div>
+                    </div>
+                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {new Date(post.date).toLocaleDateString()}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {post.readTime}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <User className="w-4 h-4" />
+                        {post.author}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
+                      <Link to={`/blog/${post.id}`}>{post.title}</Link>
+                    </h3>
+                    <p className="text-gray-300 mb-4">{post.excerpt}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap gap-2">
+                        {post.tags.slice(0, 2).map((tag, index) => (
+                          <span key={index} className="px-2 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <Link 
+                        to={`/blog/${post.id}`}
+                        className="text-cyan-400 hover:text-white transition-colors flex items-center gap-1"
+                      >
+                        Read More <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* All Posts */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-8 neon-text">
+              {selectedCategory === 'all' && searchTerm === '' ? 'All Articles' : 'Search Results'}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredPosts.map((post) => (
+                <article key={post.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                  <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg mb-4 flex items-center justify-center">
+                    <div className="text-4xl">📊</div>
+                  </div>
+                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      {new Date(post.date).toLocaleDateString()}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {post.readTime}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
+                    <Link to={`/blog/${post.id}`}>{post.title}</Link>
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">{post.excerpt}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap gap-1">
+                      {post.tags.slice(0, 2).map((tag, index) => (
+                        <span key={index} className="px-2 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <Link 
+                      to={`/blog/${post.id}`}
+                      className="text-cyan-400 hover:text-white transition-colors flex items-center gap-1 text-sm"
+                    >
+                      Read <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </article>
               ))}
             </div>
+            
+            {filteredPosts.length === 0 && (
+              <div className="text-center py-12">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
+                <p className="text-gray-400">Try adjusting your search terms or category filter.</p>
+              </div>
+            )}
           </section>
-        )}
-        {/* All Posts */}
-        <section>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post) => (
-              <ContentPreviewCard
-                key={post.id}
-                {...post}
-              />
-            ))}
-          </div>
-        </section>
-        {/* Newsletter CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Never Miss an Update
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
-              and breakthrough content delivered directly to your inbox.
-            </p>
-            <a
-              href="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-            >
-              Subscribe to Newsletter
-            </a>
-          </div>
-        </div>
+        </main>
+
+        <Footer />
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default BlogPage;
