@@ -1,11 +1,29 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap } from 'lucide-react';
-import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const ITConsultingPage: React.FC = () => {
+  const consultingServices = [
+    {
+      icon: Target,
+      title: 'Strategic IT Planning',
+      description: 'Comprehensive IT strategy development and roadmap creation',
+      features: ['Technology assessment', 'Digital transformation planning', 'ROI analysis', 'Risk evaluation'],
+      benefits: ['Clear technology direction', 'Cost optimization', 'Competitive advantage', 'Future-proof solutions'],
+      price: 'Starting at $2,500'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud platforms with zero downtime',
+      features: ['Infrastructure assessment', 'Migration planning', 'Data security', 'Performance optimization'],
+      benefits: ['Reduced costs', 'Improved scalability', 'Enhanced security', 'Better performance'],
+      price: 'Starting at $5,000'
+    }
+  ];
 
   return (
     <>

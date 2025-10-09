@@ -27,6 +27,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Improve visual quality and consistency',
     'Scale content production instantly',
     'Reduce dependency on 3D artists'
+  ];
 
   const applications = [
     {
@@ -35,29 +36,39 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🎮',
       examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models']
     },
+    {
       title: 'Architecture & Real Estate',
       description: 'Create 3D visualizations and virtual tours',
       icon: '🏗️',
       examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
+    },
+    {
       title: 'E-commerce',
       description: 'Generate product visualizations and AR experiences',
       icon: '🛒',
       examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
+    },
+    {
       title: 'Education & Training',
       description: 'Create interactive 3D learning materials',
       icon: '📚',
       examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
+    },
+    {
       title: 'Entertainment & Media',
       description: 'Produce 3D content for films and animations',
       icon: '🎬',
       examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
+    },
+    {
       title: 'Manufacturing',
       description: 'Design and prototype products in 3D',
       icon: '🏭',
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
+  ];
 
-
+  const capabilities = [
     'AI-powered 3D model generation',
     'Automatic texture synthesis',
     'Real-time 3D rendering',
@@ -74,7 +85,9 @@ const AI3DGenerationPage: React.FC = () => {
     'Color palette generation',
     'Marketing materials',
     'Educational content'
+  ];
 
+  const advantages = [
     'Faster 3D asset creation',
     'Reduced production costs',
     'Consistent quality output',
@@ -82,27 +95,41 @@ const AI3DGenerationPage: React.FC = () => {
     'Real-time preview',
     'Multiple format export',
     'Batch processing capabilities'
+  ];
 
   const useCases = [
+    {
       title: 'Gaming',
       description: 'Create 3D assets for games and virtual worlds',
       examples: ['Character models', 'Environment assets', 'Weapons and tools', 'Vehicles and props']
+    },
+    {
       title: 'Architecture',
       description: 'Generate 3D models for architectural visualization',
       examples: ['Building designs', 'Interior layouts', 'Landscape models', 'Furniture pieces']
+    }
+  ];
 
   const pricing = [
+    {
       plan: 'Starter',
       price: '$199/month',
       features: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
       popular: false
+    },
+    {
       plan: 'Professional',
       price: '$599/month',
       features: ['Up to 50 models/month', 'Advanced textures', 'High quality', 'Animation support', 'API access'],
       popular: true
+    },
+    {
       plan: 'Enterprise',
       price: '$1,999/month',
       features: ['Unlimited models', 'Premium textures', 'Custom training', 'Priority support', 'White-label'],
+      popular: false
+    }
+  ];
 
   const technologies = [
     'Neural Radiance Fields',
@@ -138,10 +165,13 @@ const AI3DGenerationPage: React.FC = () => {
                 <Phone className="w-4 h-4" />
                 <span>Call (302) 464-0950</span>
               </a>
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button-outline inline-flex items-center space-x-2"
+              >
                 <Mail className="w-4 h-4" />
                 <span>Get Quote</span>
+              </a>
             </div>
           </section>
 
@@ -156,12 +186,16 @@ const AI3DGenerationPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature}
                   </h3>
+                </div>
               ))}
+            </div>
+          </section>
 
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose Our 3D AI?
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -170,21 +204,43 @@ const AI3DGenerationPage: React.FC = () => {
                     <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
                     <p className="text-gray-300 text-sm">
                       Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* Use Cases Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
               Industry Applications
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
+                <div key={index} className="cyber-card p-6 text-center">
                   <div className="text-4xl mb-4">{useCase.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
                     {useCase.title}
+                  </h3>
                   <p className="text-gray-300 mb-4">
                     {useCase.description}
+                  </p>
                   <ul className="text-sm text-gray-400 space-y-1">
                     {useCase.examples.map((example, idx) => (
                       <li key={idx}>• {example}</li>
+                    ))}
                   </ul>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* Pricing Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
               Pricing Plans
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
@@ -193,34 +249,57 @@ const AI3DGenerationPage: React.FC = () => {
                       <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
+                    </div>
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
                     <p className="text-gray-300">per month</p>
+                  </div>
                   <ul className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* Technologies Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
               Technologies Used
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {technologies.map((tech, index) => (
                 <div key={index} className="cyber-card p-4 text-center">
                   <span className="text-gray-300 font-medium">{tech}</span>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* CTA Section */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Create in 3D?
+              </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Transform your ideas into stunning 3D reality with our AI-powered generation tools.
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-                  Email Us
+              </p>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Email Us
+              </a>
+            </div>
+          </section>
       </main>
       
       <Footer />

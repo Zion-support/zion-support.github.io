@@ -11,25 +11,36 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption',
       benefits: ['Zero downtime', 'Data integrity', 'Rollback capability']
     },
+    {
       icon: Database,
       title: 'Data Migration',
       description: 'Secure and efficient migration of databases and data warehouses',
       benefits: ['Data validation', 'Incremental sync', 'Backup & recovery']
+    },
+    {
       icon: Server,
       title: 'Infrastructure Setup',
       description: 'Complete cloud infrastructure setup and configuration',
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
+    },
+    {
       title: 'Seamless Cloud Migration',
       description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
       benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']
+    },
+    {
       icon: Shield,
       title: 'Security First',
       description: 'Enterprise-grade security throughout the migration process',
       benefits: ['Data encryption', 'Access controls', 'Compliance']
+    },
+    {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
       benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']
+    },
+    {
       icon: Target,
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
@@ -38,32 +49,39 @@ const CloudMigrationPage: React.FC = () => {
   ];
 
   const migrationSteps = [
-      title: 'Assessment & Planning',
-      description: 'Comprehensive analysis of current infrastructure and migration strategy',
-      icon: CheckCircle,
-      features: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
-      step: '2',
-      title: 'Planning',
-      description: 'Create detailed migration plan with timelines and rollback strategies'
-      title: 'Optimization & Support',
-      description: 'Post-migration optimization and ongoing support',
-      features: ['Performance tuning', 'Cost optimization', '24/7 support']
+    {
       step: '01',
+      title: 'Assessment & Planning',
       description: 'Comprehensive analysis of your current infrastructure and migration requirements.',
-      duration: '1-2 weeks'
+      icon: CheckCircle,
+      duration: '1-2 weeks',
+      features: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
+    },
+    {
       step: '02',
       title: 'Architecture Design',
       description: 'Design optimal cloud architecture tailored to your business needs.',
+      icon: Target,
+      duration: '1-2 weeks'
+    },
+    {
       step: '03',
       title: 'Migration Execution',
       description: 'Execute the migration with minimal downtime and maximum data integrity.',
+      icon: Zap,
       duration: '2-4 weeks'
+    },
+    {
       step: '04',
+      title: 'Optimization & Support',
       description: 'Optimize performance and provide ongoing support and monitoring.',
       icon: TrendingUp,
-      duration: 'Ongoing'
+      duration: 'Ongoing',
+      features: ['Performance tuning', 'Cost optimization', '24/7 support']
+    }
 
   const pricingPlans = [
+    {
       name: 'Small Business',
       price: '$2,500',
       period: 'one-time',
@@ -77,9 +95,13 @@ const CloudMigrationPage: React.FC = () => {
         'Basic monitoring'
       ],
       popular: false
+    },
+    {
       name: 'Professional',
       price: '$7,500',
+      period: 'one-time',
       description: 'Ideal for growing businesses with complex requirements',
+      features: [
         'Up to 50 servers',
         'Comprehensive migration planning',
         'Advanced security configuration',
@@ -88,11 +110,15 @@ const CloudMigrationPage: React.FC = () => {
         'Advanced monitoring',
         'Performance optimization',
         'Cost optimization'
+      ],
       popular: true
+    },
+    {
       name: 'Enterprise',
       price: 'Custom',
       period: 'pricing',
       description: 'Comprehensive solution for large organizations',
+      features: [
         'Unlimited servers',
         'Custom migration strategy',
         'Enterprise security',
@@ -102,20 +128,31 @@ const CloudMigrationPage: React.FC = () => {
         'Multi-cloud architecture',
         'Dedicated account manager',
         'Custom integrations'
+      ],
+      popular: false
+    }
 
   const benefits = [
+    {
       title: 'Cost Reduction',
       description: 'Reduce infrastructure costs by up to 40% with cloud optimization.',
       percentage: '40%'
+    },
+    {
       title: 'Improved Performance',
       description: 'Achieve 99.9% uptime with cloud infrastructure.',
       percentage: '99.9%'
+    },
+    {
       title: 'Enhanced Security',
       description: 'Enterprise-grade security with automated updates and monitoring.',
       percentage: '100%'
+    },
+    {
       title: 'Scalability',
       description: 'Scale resources up or down based on demand automatically.',
       percentage: 'Unlimited'
+    }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
