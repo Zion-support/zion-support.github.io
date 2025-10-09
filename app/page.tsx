@@ -185,6 +185,149 @@ const HomePage: React.FC = () => {
               Get Free Consultation
             </a>
           </div>
+
+          {/* Pricing Overview Section */}
+          <div className="mt-16 mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center neon-text cyber-text-enhanced">
+              Transparent Pricing
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              No hidden fees, no surprises. Choose the plan that fits your business needs.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Starter Plan */}
+              <div className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
+                <h3 className="text-2xl font-bold text-white mb-4 neon-text">Starter</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">$199</div>
+                <div className="text-gray-400 mb-6">per month</div>
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    AI Marketing Tools
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Basic Analytics
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Email Support
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Up to 5 Users
+                  </li>
+                </ul>
+                <a href="/contact" className="cyber-button-enhanced w-full text-center block">
+                  Get Started
+                </a>
+              </div>
+
+              {/* Professional Plan */}
+              <div className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300 border-2 border-cyan-500/50 relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  Most Popular
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 neon-text">Professional</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">$1,499</div>
+                <div className="text-gray-400 mb-6">per month</div>
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Full AI Suite
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Advanced Analytics
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Priority Support
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Up to 25 Users
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Custom Integrations
+                  </li>
+                </ul>
+                <a href="/contact" className="cyber-button-enhanced w-full text-center block">
+                  Get Started
+                </a>
+              </div>
+
+              {/* Enterprise Plan */}
+              <div className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
+                <h3 className="text-2xl font-bold text-white mb-4 neon-text">Enterprise</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">Custom</div>
+                <div className="text-gray-400 mb-6">pricing</div>
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Everything in Professional
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Dedicated Support
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Custom Development
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Unlimited Users
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="text-green-400 mr-2">✓</span>
+                    SLA Guarantee
+                  </li>
+                </ul>
+                <a href="/contact" className="cyber-button-enhanced w-full text-center block">
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Why Choose Us Section */}
+          <div className="mt-16 mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center neon-text cyber-text-enhanced">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              We deliver results that matter to your business success.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-4">🚀</div>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text">Fast Implementation</h3>
+                <p className="text-gray-300 text-sm">Get your AI solutions up and running in 2-4 weeks, not months.</p>
+              </div>
+              
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-4">💰</div>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text">Proven ROI</h3>
+                <p className="text-gray-300 text-sm">Our clients see an average 300% ROI within the first year.</p>
+              </div>
+              
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-4">🔒</div>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text">Enterprise Security</h3>
+                <p className="text-gray-300 text-sm">Bank-level security with SOC 2 compliance and data encryption.</p>
+              </div>
+              
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-4">🌍</div>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text">Global Support</h3>
+                <p className="text-gray-300 text-sm">24/7 support across all time zones with dedicated account managers.</p>
+              </div>
+            </div>
+          </div>
         </div>
         </section>
         {/* Services Section */}

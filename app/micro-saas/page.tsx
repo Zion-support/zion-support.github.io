@@ -86,10 +86,209 @@ const MicroSAASPage: React.FC = () => {
       category: 'Support Tools',
       technologies: ['OpenAI GPT', 'Custom AI Models', 'React', 'Node.js', 'WebSocket'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    // New Innovative Micro SAAS Services
+    {
+      title: 'AI Video Editor Pro',
+      description: 'Revolutionary AI-powered video editing with automatic cuts, transitions, and content optimization.',
+      icon: '🎬',
+      price: '$299/month',
+      features: ['Auto video editing', 'Smart transitions', 'Content optimization', 'Voice-over generation', 'Subtitle generation', 'Multi-format export'],
+      benefits: ['Edit videos 10x faster', 'Professional quality output', 'Save 40+ hours/week', 'Increase engagement by 120%'],
+      marketPrice: '$500-1000/month',
+      category: 'Content Tools',
+      technologies: ['FFmpeg', 'OpenAI Whisper', 'Custom AI Models', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'Smart Invoice Generator',
+      description: 'AI-powered invoice generation with automated billing, payment tracking, and financial analytics.',
+      icon: '💰',
+      price: '$79/month',
+      features: ['Auto invoice generation', 'Payment tracking', 'Financial analytics', 'Multi-currency support', 'Tax calculations', 'Client management'],
+      benefits: ['Reduce billing time by 90%', 'Improve cash flow', 'Save 15+ hours/week', 'Reduce payment delays by 60%'],
+      marketPrice: '$150-300/month',
+      category: 'Business Tools',
+      technologies: ['Stripe API', 'QuickBooks API', 'Custom AI Models', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Social Media Manager',
+      description: 'Intelligent social media management with automated posting, engagement, and content optimization.',
+      icon: '📱',
+      price: '$199/month',
+      features: ['Auto posting', 'Content optimization', 'Engagement tracking', 'Hashtag research', 'Analytics dashboard', 'Multi-platform support'],
+      benefits: ['Increase followers by 200%', 'Improve engagement by 150%', 'Save 25+ hours/week', 'Boost brand awareness'],
+      marketPrice: '$300-600/month',
+      category: 'Marketing Tools',
+      technologies: ['Social Media APIs', 'Custom AI Models', 'React', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'Smart Project Manager',
+      description: 'AI-powered project management with automated task assignment, progress tracking, and resource optimization.',
+      icon: '📋',
+      price: '$149/month',
+      features: ['Auto task assignment', 'Progress tracking', 'Resource optimization', 'Team collaboration', 'Deadline management', 'Performance analytics'],
+      benefits: ['Improve project success rate by 80%', 'Reduce project delays by 70%', 'Save 20+ hours/week', 'Increase team productivity'],
+      marketPrice: '$250-500/month',
+      category: 'Productivity Tools',
+      technologies: ['Jira API', 'Slack API', 'Custom AI Models', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Data Scraper Pro',
+      description: 'Advanced web scraping with AI-powered data extraction, cleaning, and analysis capabilities.',
+      icon: '🕷️',
+      price: '$129/month',
+      features: ['Smart data extraction', 'Data cleaning', 'Format conversion', 'API integration', 'Scheduled scraping', 'Data validation'],
+      benefits: ['Extract data 50x faster', 'Improve data accuracy', 'Save 30+ hours/week', 'Reduce manual errors by 95%'],
+      marketPrice: '$200-400/month',
+      category: 'Data Tools',
+      technologies: ['Puppeteer', 'Beautiful Soup', 'Custom AI Models', 'Python', 'React'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Smart Password Manager',
+      description: 'AI-enhanced password management with security analysis, breach monitoring, and auto-generation.',
+      icon: '🔐',
+      price: '$49/month',
+      features: ['Password generation', 'Security analysis', 'Breach monitoring', 'Auto-fill', 'Multi-device sync', 'Team sharing'],
+      benefits: ['Improve security by 90%', 'Reduce password-related issues', 'Save 5+ hours/week', 'Prevent data breaches'],
+      marketPrice: '$100-200/month',
+      category: 'Security Tools',
+      technologies: ['Encryption', 'Custom AI Models', 'React', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Meeting Assistant',
+      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+      icon: '🎤',
+      price: '$199/month',
+      features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Calendar integration', 'Follow-up automation', 'Multi-language support'],
+      benefits: ['Improve meeting efficiency by 60%', 'Never miss action items', 'Save 15+ hours/week', 'Increase meeting productivity'],
+      marketPrice: '$300-600/month',
+      category: 'Productivity Tools',
+      technologies: ['OpenAI Whisper', 'Google Calendar API', 'Custom AI Models', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'Smart Expense Tracker',
+      description: 'AI-powered expense tracking with receipt scanning, categorization, and financial insights.',
+      icon: '🧾',
+      price: '$79/month',
+      features: ['Receipt scanning', 'Auto categorization', 'Expense analytics', 'Budget tracking', 'Tax preparation', 'Multi-currency support'],
+      benefits: ['Track expenses automatically', 'Save 10+ hours/month', 'Improve financial visibility', 'Reduce tax preparation time'],
+      marketPrice: '$150-300/month',
+      category: 'Finance Tools',
+      technologies: ['OCR Technology', 'Custom AI Models', 'React', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Website Builder',
+      description: 'Revolutionary AI-powered website creation with automatic design, content generation, and optimization.',
+      icon: '🌐',
+      price: '$299/month',
+      features: ['Auto design generation', 'Content creation', 'SEO optimization', 'Mobile responsiveness', 'E-commerce integration', 'Analytics dashboard'],
+      benefits: ['Build websites 20x faster', 'Professional design quality', 'Save 50+ hours per site', 'Improve conversion rates by 80%'],
+      marketPrice: '$500-1200/month',
+      category: 'Web Development',
+      technologies: ['React', 'Next.js', 'Custom AI Models', 'Tailwind CSS', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'Smart Inventory Manager',
+      description: 'AI-powered inventory management with demand forecasting, automated reordering, and optimization.',
+      icon: '📦',
+      price: '$199/month',
+      features: ['Demand forecasting', 'Auto reordering', 'Inventory optimization', 'Multi-location support', 'Supplier management', 'Analytics dashboard'],
+      benefits: ['Reduce inventory costs by 30%', 'Prevent stockouts by 90%', 'Save 25+ hours/week', 'Improve cash flow'],
+      marketPrice: '$300-600/month',
+      category: 'Business Tools',
+      technologies: ['Machine Learning', 'Custom AI Models', 'React', 'Node.js', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Email Assistant',
+      description: 'Intelligent email management with smart replies, scheduling, and priority classification.',
+      icon: '📧',
+      price: '$99/month',
+      features: ['Smart replies', 'Email scheduling', 'Priority classification', 'Auto categorization', 'Follow-up reminders', 'Template library'],
+      benefits: ['Respond to emails 5x faster', 'Never miss important emails', 'Save 20+ hours/week', 'Improve email productivity'],
+      marketPrice: '$150-300/month',
+      category: 'Productivity Tools',
+      technologies: ['Gmail API', 'Outlook API', 'Custom AI Models', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Smart HR Assistant',
+      description: 'AI-powered human resources management with recruitment, onboarding, and employee analytics.',
+      icon: '👥',
+      price: '$249/month',
+      features: ['Resume screening', 'Interview scheduling', 'Onboarding automation', 'Employee analytics', 'Performance tracking', 'Compliance monitoring'],
+      benefits: ['Reduce hiring time by 70%', 'Improve candidate quality', 'Save 30+ hours/week', 'Increase employee satisfaction'],
+      marketPrice: '$400-800/month',
+      category: 'HR Tools',
+      technologies: ['ATS Integration', 'Custom AI Models', 'React', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'AI Legal Document Analyzer',
+      description: 'Advanced legal document analysis with contract review, risk assessment, and compliance checking.',
+      icon: '⚖️',
+      price: '$399/month',
+      features: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],
+      benefits: ['Review contracts 10x faster', 'Reduce legal risks by 80%', 'Save 40+ hours/week', 'Improve compliance accuracy'],
+      marketPrice: '$600-1200/month',
+      category: 'Legal Tools',
+      technologies: ['NLP Models', 'Custom AI Models', 'React', 'Node.js', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Smart Fitness Coach',
+      description: 'AI-powered personal fitness coaching with workout plans, nutrition tracking, and progress monitoring.',
+      icon: '💪',
+      price: '$149/month',
+      features: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Form analysis', 'Community features'],
+      benefits: ['Achieve fitness goals 3x faster', 'Personalized guidance', 'Save 10+ hours/week', 'Improve workout effectiveness'],
+      marketPrice: '$200-400/month',
+      category: 'Health & Fitness',
+      technologies: ['Computer Vision', 'Custom AI Models', 'React Native', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Real Estate Analyzer',
+      description: 'Intelligent real estate analysis with market trends, property valuation, and investment recommendations.',
+      icon: '🏠',
+      price: '$199/month',
+      features: ['Property valuation', 'Market analysis', 'Investment recommendations', 'Rental yield calculation', 'Neighborhood insights', 'Trend forecasting'],
+      benefits: ['Make better investment decisions', 'Save 25+ hours on research', 'Increase ROI by 40%', 'Reduce investment risks'],
+      marketPrice: '$300-600/month',
+      category: 'Real Estate',
+      technologies: ['Real Estate APIs', 'Custom AI Models', 'React', 'Node.js', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Smart Learning Management System',
+      description: 'AI-powered educational platform with personalized learning paths, progress tracking, and content generation.',
+      icon: '🎓',
+      price: '$299/month',
+      features: ['Personalized learning', 'Progress tracking', 'Content generation', 'Assessment tools', 'Gamification', 'Analytics dashboard'],
+      benefits: ['Improve learning outcomes by 60%', 'Personalize education', 'Save 30+ hours on content creation', 'Increase student engagement'],
+      marketPrice: '$500-1000/month',
+      category: 'Education',
+      technologies: ['Machine Learning', 'Custom AI Models', 'React', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
     }
   ], []);
 
-  const categories = ['All', 'Developer Tools', 'Marketing Tools', 'Analytics Tools', 'Content Tools', 'Support Tools'];
+  const categories = ['All', 'Developer Tools', 'Marketing Tools', 'Analytics Tools', 'Content Tools', 'Support Tools', 'Business Tools', 'Productivity Tools', 'Data Tools', 'Security Tools', 'Finance Tools', 'Web Development', 'HR Tools', 'Legal Tools', 'Health & Fitness', 'Real Estate', 'Education'];
 
   const filteredServices = useMemo(() => {
     return microSAASServices.filter(service => {

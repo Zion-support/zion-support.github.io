@@ -43,7 +43,6 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
     { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
     { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
-<<<<<<< HEAD
     { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
     { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
     { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
@@ -54,12 +53,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
     { name: 'API Builder', url: '/api-builder', description: 'API development' },
     { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
-=======
-    { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
-    { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
-    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
-    { name: 'Developer Tools', url: '/developer-tools', description: 'Development Tools' }
->>>>>>> cursor/website-audit-and-update-with-deployment-6266
   ];
 
   const emergingTech = [
@@ -113,17 +106,17 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network floating-particles quantum-field data-stream">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center cyber-glow">
+                <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-2xl font-bold text-white neon-text cyber-text-enhanced">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
@@ -132,7 +125,7 @@ const Footer: React.FC = memo(() => {
             {/* Achievements */}
             <div className="space-y-3 mb-6">
               {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-center space-x-2">
+                <div key={index} className="flex items-center space-x-2 cyber-scan-line">
                   <achievement.icon className="w-4 h-4 text-cyan-400" />
                   <span className="text-sm text-gray-300">{achievement.text}</span>
                 </div>
@@ -147,10 +140,10 @@ const Footer: React.FC = memo(() => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300 group"
+                  className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-all duration-300 group cyber-card"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400" />
+                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 group-hover:neon-glow" />
                 </a>
               ))}
             </div>
@@ -158,13 +151,13 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text cyber-scan-line">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <a 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-sm group flex items-center cyber-scan-line"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
@@ -175,7 +168,7 @@ const Footer: React.FC = memo(() => {
               <li>
                 <a 
                   href="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium cyber-scan-line"
                 >
                   View All AI Services →
                 </a>
@@ -185,13 +178,13 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text cyber-scan-line">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <a 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-sm group flex items-center cyber-scan-line"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
@@ -202,7 +195,7 @@ const Footer: React.FC = memo(() => {
               <li>
                 <a 
                   href="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium cyber-scan-line"
                 >
                   View All IT Services →
                 </a>
@@ -212,17 +205,19 @@ const Footer: React.FC = memo(() => {
 
           {/* Micro SAAS & Emerging Tech */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Solutions</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text cyber-scan-line">Solutions</h3>
             <div className="space-y-4">
               <div>
-                <h4 className="text-sm font-medium text-white mb-2">Micro SAAS</h4>
+                <h4 className="text-sm font-medium text-white mb-2 flex items-center">
+                  <Code className="w-4 h-4 mr-2 text-green-400" />
+                  Micro SAAS
+                </h4>
                 <ul className="space-y-2">
-                  {microSaasServices.slice(0, 3).map((service, index) => (
+                  {microSaasServices.slice(0, 4).map((service, index) => (
                     <li key={index}>
                       <a 
                         href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                        className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-sm group flex items-center cyber-scan-line"
                       >
                         <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                         {service.name}
@@ -231,126 +226,55 @@ const Footer: React.FC = memo(() => {
                   ))}
                 </ul>
               </div>
-=======
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Code className="w-5 h-5 mr-2" />
-              Micro SAAS
-            </h3>
-            <ul className="space-y-2">
-              {microSaasServices.slice(0, 8).map((service, index) => (
-                <li key={index}>
-                  <a 
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {service.name}
-                  </a>
-                </li>
-              ))}
-              <li>
-                <a 
-                  href="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
-                  View All Micro SAAS →
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* Emerging Technologies */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Zap className="w-5 h-5 mr-2" />
-              Emerging Tech
-            </h3>
-            <ul className="space-y-2">
-              {emergingTech.map((service, index) => (
-                <li key={index}>
-                  <a 
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {service.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Users className="w-5 h-5 mr-2" />
-              Company
-            </h3>
-            <ul className="space-y-2 mb-6">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
-            <ul className="space-y-2 mb-6">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-gray-300">
-                <Phone className="w-4 h-4 mr-2" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-400 transition-colors">
-                  {contactInfo.phone}
-                </a>
->>>>>>> cursor/website-audit-and-update-with-deployment-6266
-              </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <Mail className="w-4 h-4 mr-2" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors">
-                  {contactInfo.email}
-                </a>
+              <div>
+                <h4 className="text-sm font-medium text-white mb-2 flex items-center">
+                  <Zap className="w-4 h-4 mr-2 text-orange-400" />
+                  Emerging Tech
+                </h4>
+                <ul className="space-y-2">
+                  {emergingTech.slice(0, 4).map((service, index) => (
+                    <li key={index}>
+                      <a 
+                        href={service.url}
+                        className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-sm group flex items-center cyber-scan-line"
+                      >
+                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        {service.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
         </div>
 
         {/* Contact Information */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
-          <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
+        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card hologram-card">
+          <h3 className="text-xl font-bold text-white mb-4 text-center neon-text cyber-text-enhanced">Get In Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 cyber-scan-line">
               <Phone className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">{contactInfo.phone}</div>
                 <div className="text-gray-400 text-sm">Call us anytime</div>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 cyber-scan-line">
               <Mail className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">{contactInfo.email}</div>
                 <div className="text-gray-400 text-sm">Email us</div>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 cyber-scan-line">
               <MapPin className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">Middletown, DE</div>
                 <div className="text-gray-400 text-sm">{contactInfo.address}</div>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 cyber-scan-line">
               <Clock className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">{contactInfo.hours}</div>
@@ -363,13 +287,13 @@ const Footer: React.FC = memo(() => {
         {/* Company Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
+            <h4 className="text-sm font-semibold text-white mb-4 neon-text">Company</h4>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <a 
                     href={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-cyan-400 transition-all duration-300 text-sm cyber-scan-line"
                   >
                     {link.name}
                   </a>
@@ -378,13 +302,13 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Support</h4>
+            <h4 className="text-sm font-semibold text-white mb-4 neon-text">Support</h4>
             <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <a 
                     href={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-cyan-400 transition-all duration-300 text-sm cyber-scan-line"
                   >
                     {link.name}
                   </a>
@@ -393,24 +317,24 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-sm font-semibold text-white mb-4 neon-text">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</a></li>
-              <li><a href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</a></li>
-              <li><a href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</a></li>
-              <li><a href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</a></li>
+              <li><a href="/services" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 text-sm cyber-scan-line">All Services</a></li>
+              <li><a href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 text-sm cyber-scan-line">Pricing</a></li>
+              <li><a href="/demo" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 text-sm cyber-scan-line">Request Demo</a></li>
+              <li><a href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 text-sm cyber-scan-line">Free Consultation</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Newsletter</h4>
+            <h4 className="text-sm font-semibold text-white mb-4 neon-text">Newsletter</h4>
             <p className="text-gray-400 text-sm mb-4">Stay updated with our latest news and offers.</p>
             <div className="flex space-x-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400"
+                className="flex-1 px-3 py-2 bg-slate-800/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 cyber-card"
               />
-              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
+              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all text-sm cyber-button-enhanced">
                 Subscribe
               </button>
             </div>
@@ -419,20 +343,20 @@ const Footer: React.FC = memo(() => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700/50">
+      <div className="border-t border-cyan-500/20">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-gray-400 cyber-scan-line">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors cyber-scan-line">
                 Privacy Policy
               </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors cyber-scan-line">
                 Terms of Service
               </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors cyber-scan-line">
                 Cookie Policy
               </a>
             </div>
