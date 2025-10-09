@@ -4,6 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -52,14 +56,22 @@ const AICustomerSupportPage: React.FC = () => {
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ];
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
     { number: '24/7', label: 'Availability' },
     { number: '50+', label: 'Languages Supported' }
   ];
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   return (
     <>
       <SEOOptimizer
@@ -112,6 +124,7 @@ const AICustomerSupportPage: React.FC = () => {
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -142,8 +155,11 @@ const AICustomerSupportPage: React.FC = () => {
               >
                 Learn More
               </a>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
             </div>
           </section>
+
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -167,20 +183,21 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
+
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
+              {pricing.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+                    index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
                 >
-                  {plan.popular && (
+                  {index === 1 && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular
@@ -208,6 +225,7 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
+
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
