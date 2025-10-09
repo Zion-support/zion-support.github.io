@@ -1,267 +1,260 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
 
-interface UserExperienceEnhancerProps {
-  enableSmoothScrolling?: boolean;
-  enableLoadingStates?: boolean;
-  enableErrorBoundaries?: boolean;
-  enableAnalytics?: boolean;
-  enableNotifications?: boolean;
+import React, { useEffect, useState, useCallback } from 'react';
+import { logger } from '../utils/logger';
+
+interface UserPreferences {
+  theme: 'light' | 'dark' | 'auto';
+  language: string;
+  notifications: boolean;
+  analytics: boolean;
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  enableSmoothScrolling = true,
-  enableLoadingStates = true,
-  enableErrorBoundaries = true,
-  enableAnalytics = true,
-  enableNotifications = true
-}) => {
-  const [isOnline, setIsOnline] = useState(true);
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
+export const UserExperienceEnhancer: React.FC = () => {
+  const [preferences, setPreferences] = useState<UserPreferences>({
+    theme: 'auto',
+    language: 'en',
+    notifications: true,
+    analytics: true,
+  });
 
-  // Handle online/offline status
+  const [isLoading, setIsLoading] = useState(true);
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  // Load user preferences
   useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
+    const savedPreferences = localStorage.getItem('user-preferences');
+    if (savedPreferences) {
+      try {
+        const parsed = JSON.parse(savedPreferences);
+        setPreferences(parsed);
+      } catch (error) {
+        logger.error('Failed to parse user preferences', error);
+      }
+    }
 
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
+    // Check if first visit
+    const isFirstVisit = !localStorage.getItem('has-visited');
+    if (isFirstVisit) {
+      setShowWelcome(true);
+      localStorage.setItem('has-visited', 'true');
+    }
 
-    return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
+    setIsLoading(false);
+  }, []);
+
+  // Apply theme
+  const applyTheme = useCallback((theme: 'light' | 'dark' | 'auto') => {
+    const root = document.documentElement;
+    
+    if (theme === 'auto') {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      root.classList.toggle('dark', prefersDark);
+    } else {
+      root.classList.toggle('dark', theme === 'dark');
+    }
+
+    // Update meta theme-color
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', theme === 'dark' ? '#0f172a' : '#ffffff');
+    }
+  }, []);
+
+  // Apply preferences
+  useEffect(() => {
+    if (isLoading) return;
+
+    applyTheme(preferences.theme);
+    
+    // Store preferences
+    localStorage.setItem('user-preferences', JSON.stringify(preferences));
+    
+    logger.info('User preferences applied', preferences);
+  }, [preferences, isLoading, applyTheme]);
+
+  // Handle theme change
+  const handleThemeChange = useCallback((theme: 'light' | 'dark' | 'auto') => {
+    setPreferences(prev => ({ ...prev, theme }));
+    applyTheme(theme);
+  }, [applyTheme]);
+
+  // Handle language change
+  const handleLanguageChange = useCallback((language: string) => {
+    setPreferences(prev => ({ ...prev, language }));
+    // In a real app, you would implement i18n here
+    logger.info('Language changed', { language });
+  }, []);
+
+  // Handle notification preference
+  const handleNotificationChange = useCallback((notifications: boolean) => {
+    setPreferences(prev => ({ ...prev, notifications }));
+    
+    if (notifications && 'Notification' in window) {
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          logger.info('Notification permission granted');
+        }
+      });
+    }
+  }, []);
+
+  // Show notification
+  const showNotification = useCallback((title: string, body: string) => {
+    if (!preferences.notifications || !('Notification' in window)) return;
+    
+    if (Notification.permission === 'granted') {
+      new Notification(title, { body, icon: '/logo.png' });
+    }
+  }, [preferences.notifications]);
+
+  // Track user interactions
+  const trackInteraction = useCallback((action: string, element: string) => {
+    if (!preferences.analytics) return;
+    
+    logger.info('User interaction tracked', { action, element });
+    
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', action, {
+        event_category: 'User Interaction',
+        event_label: element,
+      });
+    }
+  }, [preferences.analytics]);
+
+  // Add click tracking to interactive elements
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const element = target.tagName.toLowerCase();
+      const text = target.textContent?.slice(0, 50) || '';
+      
+      trackInteraction('click', `${element}: ${text}`);
     };
-  }, []);
 
-  // Smooth scrolling
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, [trackInteraction]);
+
+  // Show welcome message for new users
   useEffect(() => {
-    if (enableSmoothScrolling) {
-      const style = document.createElement('style');
-      style.textContent = `
-        html {
-          scroll-behavior: smooth;
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-          html {
-            scroll-behavior: auto;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }, [enableSmoothScrolling]);
-
-  // Loading states management
-  const setLoading = useCallback((key: string, loading: boolean) => {
-    setLoadingStates(prev => ({ ...prev, [key]: loading }));
-  }, []);
-
-  // Global loading state
-  useEffect(() => {
-    if (enableLoadingStates) {
-      // Add loading state to all links
-      const links = document.querySelectorAll('a[href]');
-      links.forEach(link => {
-        link.addEventListener('click', (e) => {
-          const href = link.getAttribute('href');
-          if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
-            setLoading(`link-${href}`, true);
-          }
-        });
-      });
-    }
-  }, [enableLoadingStates, setLoading]);
-
-  // Error boundary enhancement
-  useEffect(() => {
-    if (enableErrorBoundaries) {
-      const handleError = (event: ErrorEvent) => {
-        // console.error('Global error caught:', event.error);
-        
-        // Send error to analytics if available
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'exception', {
-            description: event.error?.message || 'Unknown error',
-            fatal: false
-          });
-        }
-      };
-
-      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        // console.error('Unhandled promise rejection:', event.reason);
-        
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'exception', {
-            description: event.reason?.message || 'Unhandled promise rejection',
-            fatal: false
-          });
-        }
-      };
-
-      window.addEventListener('error', handleError);
-      window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
-      return () => {
-        window.removeEventListener('error', handleError);
-        window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-      };
-    }
-  }, [enableErrorBoundaries]);
-
-  // Analytics enhancement
-  useEffect(() => {
-    if (enableAnalytics && typeof window !== 'undefined') {
-      // Track page visibility changes
-      const handleVisibilityChange = () => {
-        if (document.hidden) {
-          if ('gtag' in window) {
-            (window as any).gtag('event', 'page_hidden', {
-              event_category: 'engagement'
-            });
-          }
-        } else {
-          if ('gtag' in window) {
-            (window as any).gtag('event', 'page_visible', {
-              event_category: 'engagement'
-            });
-          }
-        }
-      };
-
-      // Track scroll depth
-      let maxScrollDepth = 0;
-      const handleScroll = () => {
-        const scrollDepth = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+    if (showWelcome) {
+      setTimeout(() => {
+        showNotification(
+          'Welcome to Zion Tech Group!',
+          'Discover our advanced AI and IT solutions.'
         );
+        setShowWelcome(false);
+      }, 2000);
+    }
+  }, [showWelcome, showNotification]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Ctrl/Cmd + K for search
+      if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+        event.preventDefault();
+        const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+
+      // Ctrl/Cmd + D for theme toggle
+      if ((event.ctrlKey || event.metaKey) && event.key === 'd') {
+        event.preventDefault();
+        const currentTheme = preferences.theme;
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        handleThemeChange(newTheme);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [preferences.theme, handleThemeChange]);
+
+  if (isLoading) return null;
+
+  return (
+    <>
+      {/* Theme Toggle Button */}
+      <button
+        onClick={() => {
+          const newTheme = preferences.theme === 'dark' ? 'light' : 'dark';
+          handleThemeChange(newTheme);
+          trackInteraction('theme_toggle', newTheme);
+        }}
+        className="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors z-40"
+        aria-label={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
+        title={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
+      >
+        {preferences.theme === 'dark' ? '☀️' : '🌙'}
+      </button>
+
+      {/* User Preferences Panel */}
+      <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
+        <h3 className="text-sm font-bold mb-3">Preferences</h3>
         
-        if (scrollDepth > maxScrollDepth) {
-          maxScrollDepth = scrollDepth;
-          
-          // Track milestone scroll depths
-          if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 25
-              });
-            }
-          } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 50
-              });
-            }
-          } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 75
-              });
-            }
-          } else if (maxScrollDepth >= 90) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 90
-              });
-            }
-          }
-        }
-      };
+        <div className="space-y-2 text-sm">
+          <div>
+            <label className="block text-xs text-gray-300 mb-1">Theme</label>
+            <select
+              value={preferences.theme}
+              onChange={(e) => handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}
+              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"
+            >
+              <option value="auto">Auto</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
 
-      // Track time on page
-      const startTime = Date.now();
-      const handleBeforeUnload = () => {
-        const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-        if ('gtag' in window) {
-          (window as any).gtag('event', 'timing_complete', {
-            name: 'time_on_page',
-            value: timeOnPage,
-            event_category: 'engagement'
-          });
-        }
-      };
+          <div>
+            <label className="block text-xs text-gray-300 mb-1">Language</label>
+            <select
+              value={preferences.language}
+              onChange={(e) => handleLanguageChange(e.target.value)}
+              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"
+            >
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </div>
 
-      document.addEventListener('visibilitychange', handleVisibilityChange);
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      window.addEventListener('beforeunload', handleBeforeUnload);
+          <div className="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              id="notifications"
+              checked={preferences.notifications}
+              onChange={(e) => handleNotificationChange(e.target.checked)}
+              className="rounded"
+            />
+            <label htmlFor="notifications" className="text-xs">Notifications</label>
+          </div>
 
-      return () => {
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
-        window.removeEventListener('scroll', handleScroll);
-        window.removeEventListener('beforeunload', handleBeforeUnload);
-      };
-    }
-  }, [enableAnalytics]);
+          <div className="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              id="analytics"
+              checked={preferences.analytics}
+              onChange={(e) => setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}
+              className="rounded"
+            />
+            <label htmlFor="analytics" className="text-xs">Analytics</label>
+          </div>
+        </div>
 
-  // Notifications
-  useEffect(() => {
-    if (enableNotifications && !isOnline) {
-      // Show offline notification
-      const notification = document.createElement('div');
-      notification.className = 'fixed top-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded-lg shadow-lg z-50';
-      notification.textContent = 'You are currently offline. Some features may not be available.';
-      document.body.appendChild(notification);
-
-      const timer = setTimeout(() => {
-        notification.remove();
-      }, 5000);
-
-      return () => {
-        clearTimeout(timer);
-        notification.remove();
-      };
-    }
-  }, [isOnline, enableNotifications]);
-
-  // Performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Performance'
-              });
-            }
-          } else if (entry.entryType === 'first-input') {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'FID',
-                value: Math.round(entry.processingStart - entry.startTime),
-                event_category: 'Performance'
-              });
-            }
-          } else if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              if ('gtag' in window) {
-                (window as any).gtag('event', 'web_vitals', {
-                  name: 'CLS',
-                  value: Math.round((entry as any).value * 1000),
-                  event_category: 'Performance'
-                });
-              }
-            }
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-      return () => {
-        observer.disconnect();
-      };
-    }
-  }, []);
-
-  return null;
+        <div className="mt-3 pt-2 border-t border-gray-700">
+          <p className="text-xs text-gray-400">
+            Shortcuts: Ctrl+K (search), Ctrl+D (theme)
+          </p>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default UserExperienceEnhancer;

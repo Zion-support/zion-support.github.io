@@ -37,9 +37,6 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-<<<<<<< HEAD
-export default HomePage;
-=======
 
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -383,4 +380,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
->>>>>>> origin/comprehensive-improvements-final

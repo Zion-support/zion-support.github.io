@@ -27,6 +27,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Improve visual quality and consistency',
     'Scale content production instantly',
     'Reduce dependency on 3D artists'
+  ];
 
   const applications = [
     {
@@ -35,29 +36,39 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🎮',
       examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models']
     },
+    {
       title: 'Architecture & Real Estate',
       description: 'Create 3D visualizations and virtual tours',
       icon: '🏗️',
       examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
+    },
+    {
       title: 'E-commerce',
       description: 'Generate product visualizations and AR experiences',
       icon: '🛒',
       examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
+    },
+    {
       title: 'Education & Training',
       description: 'Create interactive 3D learning materials',
       icon: '📚',
       examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
+    },
+    {
       title: 'Entertainment & Media',
       description: 'Produce 3D content for films and animations',
       icon: '🎬',
       examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
+    },
+    {
       title: 'Manufacturing',
       description: 'Design and prototype products in 3D',
       icon: '🏭',
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
+  ];
 
-
+  const features = [
     'AI-powered 3D model generation',
     'Automatic texture synthesis',
     'Real-time 3D rendering',
@@ -74,7 +85,9 @@ const AI3DGenerationPage: React.FC = () => {
     'Color palette generation',
     'Marketing materials',
     'Educational content'
+  ];
 
+  const benefits = [
     'Faster 3D asset creation',
     'Reduced production costs',
     'Consistent quality output',
@@ -82,27 +95,41 @@ const AI3DGenerationPage: React.FC = () => {
     'Real-time preview',
     'Multiple format export',
     'Batch processing capabilities'
+  ];
 
   const useCases = [
+    {
       title: 'Gaming',
       description: 'Create 3D assets for games and virtual worlds',
       examples: ['Character models', 'Environment assets', 'Weapons and tools', 'Vehicles and props']
+    },
+    {
       title: 'Architecture',
       description: 'Generate 3D models for architectural visualization',
       examples: ['Building designs', 'Interior layouts', 'Landscape models', 'Furniture pieces']
+    }
+  ];
 
   const pricing = [
+    {
       plan: 'Starter',
       price: '$199/month',
       features: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
       popular: false
+    },
+    {
       plan: 'Professional',
       price: '$599/month',
       features: ['Up to 50 models/month', 'Advanced textures', 'High quality', 'Animation support', 'API access'],
       popular: true
+    },
+    {
       plan: 'Enterprise',
       price: '$1,999/month',
       features: ['Unlimited models', 'Premium textures', 'Custom training', 'Priority support', 'White-label'],
+      popular: false
+    }
+  ];
 
   const technologies = [
     'Neural Radiance Fields',
@@ -115,6 +142,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Cloud Computing',
     'GPU Acceleration',
     'Machine Learning'
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
