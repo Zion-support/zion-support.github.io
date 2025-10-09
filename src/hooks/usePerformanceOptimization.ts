@@ -21,7 +21,7 @@ export const usePerformanceOptimization = () => {
         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
       firstContentfulPaint:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+        _paintEntries.find(entry => entry.name === 'first-contentful-paint')
           ?.startTime || 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
@@ -30,9 +30,9 @@ export const usePerformanceOptimization = () => {
     // Measure LCP
     const lcpObserver = new PerformanceObserver(list => {
       const _entries = list.getEntries();
-      const _lastEntry = entries[entries.length - 1];
-      if (lastEntry) {
-        metrics.largestContentfulPaint = lastEntry.startTime;
+      const _lastEntry = _entries[_entries.length - 1];
+      if (_lastEntry) {
+        metrics.largestContentfulPaint = _lastEntry.startTime;
       }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -45,10 +45,10 @@ export const usePerformanceOptimization = () => {
           value?: number;
         };
         if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value || 0;
+          _clsValue += layoutShiftEntry.value || 0;
         }
       }
-      metrics.cumulativeLayoutShift = clsValue;
+      metrics.cumulativeLayoutShift = _clsValue;
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
     // Measure FID
@@ -76,32 +76,32 @@ export const usePerformanceOptimization = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const _img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
+          _img.src = _img.dataset.src || '';
+          _img.classList.remove('lazy');
+          imageObserver.unobserve(_img);
         }
       });
     });
-    images.forEach(img => imageObserver.observe(img));
+    _images.forEach(img => imageObserver.observe(img));
   }, []);
   const preloadCriticalResources = useCallback(() => {
     const _criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
-    criticalResources.forEach(resource => {
+    _criticalResources.forEach(resource => {
       const _link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
+      _link.rel = 'preload';
+      _link.href = resource;
+      _link.as = resource.endsWith('.woff2') ? 'font' : 'style';
       if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+        _link.crossOrigin = 'anonymous';
       }
-      document.head.appendChild(link);
+      document.head.appendChild(_link);
     });
   }, []);
   useEffect(() => {
     // Measure performance after page load
     const timer = setTimeout(() => {
       const _metrics = measurePerformance();
-      if (metrics) {
+      if (_metrics) {
         // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {
           // Track metrics in production
