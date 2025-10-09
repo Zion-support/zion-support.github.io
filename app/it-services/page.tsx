@@ -5,12 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
   const itServices = [
     // Infrastructure & Cloud Services
-=======
-  const services = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
     {
       icon: Cloud,
       title: 'IT Infrastructure',
@@ -33,24 +29,22 @@ const ITServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
     },
     {
-<<<<<<< HEAD
-      title: 'Data Center Services',
-      description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
-      icon: <HardDrive className="w-8 h-8" />,
-      features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Backup solutions', 'Monitoring', '24/7 support'],
-      price: 'Starting at $800/month',
-      category: 'Infrastructure',
-      benefits: ['Reliable infrastructure', 'Reduced capital costs', 'Expert management', 'Compliance support'],
-      technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Database,
+      title: 'Database Services',
+      price: '$499/month',
+      description: 'Database design, optimization, and management services',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration Services', '24/7 Monitoring', 'Expert Support'],
+      category: 'Data Management',
+      benefits: ['Optimized Performance', 'Data Security', 'Scalability', 'Expert Management']
     },
-    // Cybersecurity Services
     {
-      title: 'Advanced Threat Protection',
-      description: 'Comprehensive cybersecurity solutions with AI-powered threat detection, prevention, and response capabilities.',
-      icon: <Shield className="w-8 h-8" />,
-      features: ['AI threat detection', 'Behavioral analysis', 'Incident response', 'Security monitoring', 'Vulnerability scanning', 'Penetration testing'],
-      price: 'Starting at $2,500/month',
+      icon: Shield,
+      title: 'Cybersecurity Services',
+      price: '$799/month',
+      description: 'Comprehensive security solutions with threat detection and prevention',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Compliance Support', '24/7 Security'],
+      category: 'Security',
+      benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance', 'Peace of Mind']
       category: 'Security',
       benefits: ['Prevent 99.9% of threats', 'Reduce response time by 80%', 'Compliance assurance', '24/7 monitoring'],
       technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'AI/ML', 'Threat Intelligence'],
@@ -260,11 +254,9 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-<<<<<<< HEAD
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -361,7 +353,6 @@ const ITServicesPage: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-<<<<<<< HEAD
                 {service.benefits && (
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h4>
