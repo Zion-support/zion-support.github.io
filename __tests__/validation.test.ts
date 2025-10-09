@@ -7,9 +7,21 @@ import {
   isValidPhone,
   isValidUrl,
   isRequired,
-  isValidPassword,
+  isStrongPassword as isValidPassword,
+  sanitizeHtml,
   sanitizeInput,
-} from '../app/utils/validators';
+  validateEmail,
+  validateURL,
+  validateLength,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateComposite,
+  validateAsync,
+  validateRequired,
+} from '../src/utils/validators';
 
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {
