@@ -16,10 +16,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
-<<<<<<< HEAD
-=======
-  structuredData,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-39c9
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   twitterCard = 'summary_large_image',
   structuredData,
@@ -29,96 +25,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
   useEffect(() => {
     // Update document title
     document.title = fullTitle;
-<<<<<<< HEAD
-
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
-    }
-
-    // Update canonical URL
-    const canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalLink) {
-      canonicalLink.setAttribute('href', canonicalUrl);
-    } else {
-      const link = document.createElement('link');
-      link.rel = 'canonical';
-      link.href = canonicalUrl;
-      document.head.appendChild(link);
-    }
-
-    // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', fullTitle);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = fullTitle;
-      document.head.appendChild(meta);
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      ogUrl.setAttribute('content', canonicalUrl);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:url');
-      meta.content = canonicalUrl;
-      document.head.appendChild(meta);
-    }
-
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', ogImage);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
-
-    // Add structured data
-    if (structuredData) {
-      const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript) {
-        existingScript.textContent = JSON.stringify(structuredData);
-      } else {
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(structuredData);
-        document.head.appendChild(script);
-      }
-    }
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, fullTitle]);
-=======
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -198,7 +104,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
       document.head.appendChild(script);
     }
   }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-39c9
 
   return null;
 });

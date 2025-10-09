@@ -2022,10 +2022,7 @@ const HomePage: React.FC = () => {
                 </Suspense>
               ))}
             </div>
-<<<<<<< HEAD
           </section>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-39c9
 
           {/* IT Services & Infrastructure */}
           <div className="mb-12">
@@ -2650,14 +2647,6 @@ const HomePage: React.FC = () => {
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
         </Suspense>
-<<<<<<< HEAD
-
-
-
-
-
-
-      
       </main>
 
       <Footer />
@@ -2665,17 +2654,5 @@ const HomePage: React.FC = () => {
     </>
   );
 };
-
-=======
-      </main>
-      </div>
-
-      {/* Enhanced Components */}
-      <EnhancedPerformanceMonitor />
-      <EnhancedAccessibility />
-    </>
-  );
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-39c9
 
 export default HomePage;

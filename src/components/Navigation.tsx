@@ -48,11 +48,6 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
-<<<<<<< HEAD
-            <Link to="/services" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Services
-=======
-
             {/* Services Dropdown */}
             <div className="relative group">
               <button className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white">
@@ -109,7 +104,7 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
 
             <Link 
@@ -118,7 +113,6 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               Case Studies
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-39c9
             </Link>
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
