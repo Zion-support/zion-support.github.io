@@ -1,11 +1,6 @@
-'use client';
-
-import React, { useState, useEffect, useCallback, lazy, memo, Suspense } from 'react';
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import ErrorBoundary from './components/ErrorBoundary';
-import LoadingSpinner from './components/LoadingSpinner';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -27,16 +22,16 @@ const preloadComponents = () => {
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="quantum-card p-4 sm:p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-700 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-700 rounded mb-2"></div>
-    <div className="h-4 bg-gray-700 rounded w-5/6"></div>
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
+    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 ));
 
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
-export default function HomePage() {
+const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -59,24 +54,10 @@ export default function HomePage() {
     }
   }, []);
 
-  if (!isLoaded) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-white text-xl">Loading...</div>
-      </div>
-    );
-  }
-
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Navigation */}
       <Navigation />
-=======
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-        {/* Navigation */}
-        <Navigation />
       
       {/* Skip to main content for accessibility */}
       <a
@@ -85,20 +66,22 @@ export default function HomePage() {
       >
         Skip to main content
       </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
 
-      <main className="relative z-10">
+      {/* Content Promotion Banner */}
+      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+        <ContentPromotionBanner />
+      </Suspense>
+
+      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
-        <section 
-          className="relative py-20 px-4 text-center overflow-hidden"
+        <section
+          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+            isLoaded && isVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
-          <div className="max-w-6xl mx-auto">
-            <h1 
-              id="hero-heading" 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
-=======
           <h1 
             id="hero-heading" 
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
@@ -139,54 +122,19 @@ export default function HomePage() {
               onClick={handlePhoneClick}
               className="cyber-button w-full sm:w-auto text-center"
               aria-label="Call us at (302) 464-0950"
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
             >
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow" role="doc-subtitle">
-              Advanced AI and IT Solutions
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-            </p>
-            
-            {/* Key Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 max-w-4xl mx-auto">
-              <div className="cyber-card hologram-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-3xl mb-3">💰</div>
-                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-              </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-                <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-              </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-                <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Rapid Deployment</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Get your AI solutions up and running in weeks, not months</p>
-              </div>
-            </div>
+              📞 Call Now: (302) 464-0950
+            </a>
+            <a
+              href="/contact"
+              className="cyber-button w-full sm:w-auto text-center"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              Get Free Consultation
+            </a>
+          </div>
+        </section>
 
-<<<<<<< HEAD
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13026009898"
-                onClick={handlePhoneClick}
-                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
-                Call: (302) 600-9898
-              </a>
-              <a 
-                href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              >
-                Get Free Consultation
-              </a>
-            </div>
-=======
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -394,7 +342,6 @@ export default function HomePage() {
                 <li>• Disaster Recovery</li>
               </ul>
             </article>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
           </div>
         </section>
 
@@ -419,12 +366,10 @@ export default function HomePage() {
         </Suspense>
       </main>
 
-        {/* Footer */}
-        <Footer />
-        
-        {/* Scroll to Top Button */}
-        <ScrollToTop />
-      </div>
-    </ErrorBoundary>
+      {/* Footer */}
+      <Footer />
+    </div>
   );
-}
+};
+
+export default HomePage;
