@@ -2,9 +2,11 @@ import React, { Suspense, lazy, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load pages for better performance
+const HomePage = React.lazy(() => import('./app/page'));
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
+const ServicesPage = React.lazy(() => import('./app/services/page'));
 const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
@@ -21,6 +23,11 @@ const SupportPage = React.lazy(() => import('./app/support/page'));
 const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+
+// AI Service Pages
+const AIMarketingPage = React.lazy(() => import('./app/ai-marketing/page'));
+const BlockchainPage = React.lazy(() => import('./app/blockchain/page'));
+const AutonomousSystemsPage = React.lazy(() => import('./app/autonomous-systems/page'));
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -122,10 +129,11 @@ const App: React.FC = () => {
         <div className="App">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
-              <Route path="/" element={<div>Home Page</div>} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/services" element={<ServicesPage />} />
               <Route path="/ai-services" element={<AIServicesPage />} />
               <Route path="/it-services" element={<ITServicesPage />} />
               <Route path="/micro-saas" element={<MicroSaasPage />} />
@@ -142,6 +150,11 @@ const App: React.FC = () => {
               <Route path="/status" element={<StatusPage />} />
               <Route path="/demo" element={<DemoPage />} />
               <Route path="/consultation" element={<ConsultationPage />} />
+              
+              {/* AI Service Pages */}
+              <Route path="/ai-marketing" element={<AIMarketingPage />} />
+              <Route path="/blockchain" element={<BlockchainPage />} />
+              <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
             </Routes>
           </Suspense>
         </div>
