@@ -506,6 +506,9 @@ const Navigation: React.FC = () => {
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
+            <Link href="/services-advertising" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Services & Pricing
+            </Link>
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
@@ -751,6 +754,9 @@ const Navigation: React.FC = () => {
               </div>
               <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
+              </Link>
+              <Link href="/services-advertising" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Services & Pricing
               </Link>
               <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact

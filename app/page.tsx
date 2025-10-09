@@ -228,7 +228,10 @@ const HomePage: React.FC = () => {
               Our Services
             </h2>
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Comprehensive AI and IT solutions designed to transform your business operations
+              Comprehensive AI and IT solutions designed to transform your business operations. 
+              <a href="/services-advertising" className="text-cyan-400 hover:text-cyan-300 transition-colors ml-2">
+                View all services and pricing →
+              </a>
             </p>
             {/* Primary Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
