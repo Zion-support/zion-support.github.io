@@ -241,6 +241,100 @@ body {
   }
 }
 
+@keyframes matrix-rain {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes hologram-flicker {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes data-stream {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes cyber-scan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes neural-network {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes hologram-glitch {
+  0%, 100% {
+    transform: translateX(0);
+    filter: hue-rotate(0deg);
+  }
+  10% {
+    transform: translateX(-2px);
+    filter: hue-rotate(90deg);
+  }
+  20% {
+    transform: translateX(2px);
+    filter: hue-rotate(180deg);
+  }
+  30% {
+    transform: translateX(-1px);
+    filter: hue-rotate(270deg);
+  }
+  40% {
+    transform: translateX(1px);
+    filter: hue-rotate(360deg);
+  }
+}
+
 @keyframes neural-network {
   0% {
     background-position: 0% 0%;
@@ -301,10 +395,28 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
-  animation: cyber-scan 3s linear infinite;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  animation: cyber-scan 4s linear infinite;
+}
+
+.quantum-card {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 50%, rgba(236, 72, 153, 0.15) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  backdrop-filter: blur(15px);
+  animation: quantum-float 6s ease-in-out infinite;
+  position: relative;
+}
+
+.quantum-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
+  animation: neural-network 8s linear infinite;
+  pointer-events: none;
 }
 
 .cyber-scan-line {
@@ -320,7 +432,7 @@ body {
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
-  animation: cyber-scan 2s linear infinite;
+  animation: cyber-scan 3s linear infinite;
 }
 
 .energy-gradient {
@@ -339,26 +451,10 @@ body {
 }
 
 .particle-bg::before {
-=======
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
-  animation: cyber-scan 4s linear infinite;
-}
-
-.quantum-card {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 50%, rgba(236, 72, 153, 0.15) 100%);
-  border: 1px solid rgba(139, 92, 246, 0.4);
-  backdrop-filter: blur(15px);
-  animation: quantum-float 6s ease-in-out infinite;
-  position: relative;
-}
-
-.quantum-card::after {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-<<<<<<< HEAD
   width: 100%;
   height: 100%;
   background-image: 
@@ -366,21 +462,10 @@ body {
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
   animation: particle-float 4s ease-in-out infinite;
-=======
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
-  animation: neural-network 8s linear infinite;
-  pointer-events: none;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
-=======
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
-  animation: cyber-scan 3s linear infinite;
 }
 
 .hologram-card:hover {
   animation: hologram-glitch 0.5s ease-in-out;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
 }
 
 .glass-morphism {
@@ -404,15 +489,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-<<<<<<< HEAD
-  background: linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.05) 50%, transparent 52%);
-  animation: neural-network 10s linear infinite;
-=======
   background: linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.1) 49%, rgba(0, 255, 255, 0.1) 51%, transparent 52%);
   background-size: 40px 40px;
   animation: energy-flow 4s linear infinite;
   pointer-events: none;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
 }
 
 .data-stream {
@@ -546,10 +626,29 @@ body {
   background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
 }
 
-/* Responsive Design */
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+  .quantum-card {
+    padding: 1.5rem;
+  }
+  
+  .cyber-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  
+  .neon-text {
+    font-size: 2.5rem;
+  }
+  
+  .cyber-text {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .cyber-card {
-    padding: 16px;
+  .cyber-card, .quantum-card {
+    padding: 1rem;
   }
   
   .cyber-button {
@@ -572,6 +671,62 @@ body {
   .cyber-grid::before {
     background-size: 20px 20px;
   }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  /* Improve mobile navigation */
+  .quantum-card p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  .quantum-card h3 {
+    font-size: 1.125rem;
+  }
+  
+  /* Better mobile spacing */
+  .grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .neon-text {
+    font-size: 1.75rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.75rem;
+  }
+  
+  .cyber-card, .quantum-card {
+    padding: 0.75rem;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  /* Stack mobile elements better */
+  .flex-col {
+    gap: 0.5rem;
+  }
+  
+  /* Improve mobile text readability */
+  .quantum-card p {
+    font-size: 0.8rem;
+  }
+  
+  .quantum-card h3 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -588,12 +743,25 @@ body {
     font-size: 1.5rem;
   }
   
-  .cyber-card {
-    padding: 12px;
+  .cyber-card, .quantum-card {
+    padding: 0.5rem;
   }
   
   .container {
     padding: 0 0.5rem;
+  }
+  
+  /* Ultra-mobile optimizations */
+  .grid {
+    gap: 0.75rem;
+  }
+  
+  .quantum-card p {
+    font-size: 0.75rem;
+  }
+  
+  .quantum-card h3 {
+    font-size: 0.9rem;
   }
 }
 
@@ -602,13 +770,36 @@ body {
     max-width: 1400px;
   }
   
-  .cyber-card {
-    padding: 32px;
+  .cyber-card, .quantum-card {
+    padding: 2rem;
   }
   
   .cyber-button {
     padding: 16px 32px;
     font-size: 16px;
+  }
+  
+  .neon-text {
+    font-size: 3rem;
+  }
+  
+  .cyber-text {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .cyber-card, .quantum-card {
+    padding: 2.5rem;
+  }
+  
+  .cyber-button {
+    padding: 18px 36px;
+    font-size: 18px;
   }
 }
 
