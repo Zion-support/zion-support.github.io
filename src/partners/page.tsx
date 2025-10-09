@@ -1,11 +1,15 @@
 'use client';
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
+import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const PartnersPage: React.FC = () => {
-  const partnerTypes = [
+  const _partnerTypes = [
     {
       title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',

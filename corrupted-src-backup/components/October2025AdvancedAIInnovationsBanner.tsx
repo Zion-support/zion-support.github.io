@@ -1,4 +1,3 @@
-import React from "react";
 const, October2025AdvancedAIInnovationsBanne, r = () => {
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">
@@ -7,7 +6,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0"></d, i, v>
-import React from "react";';
 const, October2025AdvancedAIInnovationsBanne, r = () => {
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">";

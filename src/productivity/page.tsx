@@ -2,9 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+import {CheckCircle, Star} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const ProductivityPage: React.FC = () => {
-  const productivityTools = [
+  const _productivityTools = [
     {
       title: 'AI Task Management Pro',
       description: 'Intelligent task management with AI-powered prioritization, automated scheduling, and smart reminders.',

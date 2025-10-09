@@ -1,8 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const AIEmailMarketingPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Mail,
       title: 'AI Content Generation',

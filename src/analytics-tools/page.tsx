@@ -1,7 +1,12 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 const AnalyticsToolsPage: React.FC = () => {
-  const analyticsTools = [
+  const _analyticsTools = [
     {
       title: 'AI Business Intelligence',
       price: '$399/month',

@@ -1,10 +1,15 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIServicesPage: React.FC = () => {
-  const services = [
+  const _services = [
     {
       title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',

@@ -1,6 +1,10 @@
 'use client';
 <<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -8,7 +12,7 @@ const MarketplacePage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const categories = [
+  const _categories = [
     {
       id: 'products',
       name: 'Products',

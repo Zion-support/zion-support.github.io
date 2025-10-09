@@ -3,6 +3,7 @@ import React from 'react';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
+<<<<<<< HEAD
 =======
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -12,6 +13,62 @@ import Footer from '../components/Footer';
 >>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AboutPage: React.FC = () => {
+=======
+import Footer from '../components/Footer';
+
+const AboutPage: React.FC = () => {
+  const _team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      image: '/images/team/kleber.jpg',
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.',
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      image: '/images/team/sarah.jpg',
+      bio: 'Technical expert specializing in machine learning and cloud architecture.',
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Lead AI Engineer',
+      image: '/images/team/michael.jpg',
+      bio: 'AI researcher and developer with expertise in deep learning and NLP.',
+    },
+  ];
+
+  const values = [
+    {
+      icon: Brain,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Your data and systems are protected with enterprise-grade security measures.',
+    },
+    {
+      icon: Target,
+      title: 'Results',
+      description: 'We focus on delivering measurable business outcomes and ROI.',
+    },
+    {
+      icon: Users,
+      title: 'Partnership',
+      description: 'We work closely with our clients as strategic technology partners.',
+    },
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '150+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '99%', label: 'Client Satisfaction' },
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
   return (
 <<<<<<< HEAD
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
@@ -206,3 +263,5 @@ const AboutPage: React.FC = () => {
     </div>
   );
 };
+
+export default AboutPage;

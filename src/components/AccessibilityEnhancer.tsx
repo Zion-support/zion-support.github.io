@@ -24,7 +24,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Check for user preferences
     if (typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+      const _prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       
       setIsHighContrast(prefersHighContrast);

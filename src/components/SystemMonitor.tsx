@@ -4,8 +4,14 @@
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 import React, { useState, useEffect, useCallback } from 'react';
+<<<<<<< HEAD
 // Collect basic performance metrics
 const collectPerformanceMetrics = () => {
+=======
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+// Collect basic performance metrics
+const __collectPerformanceMetrics = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
   if (typeof window === 'undefined' || !window.performance) return null;
   const navigation = window.performance.timing;
   const paint = window.performance.getEntriesByType('paint');
@@ -18,7 +24,7 @@ const collectPerformanceMetrics = () => {
 const calculatePerformanceScore = () => {
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
-  let _score = 100;
+  let __score = 100;
   // Deduct points for slow load times
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
@@ -98,8 +104,13 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get memory info
       const memoryInfo = getMemoryInfo();
       // Get network info
+<<<<<<< HEAD
       const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {
+=======
+      const _networkInfo = getNetworkInfo();
+      const _newMetrics: SystemMetrics = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
         performance: {
           score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,

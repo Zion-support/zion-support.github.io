@@ -9,15 +9,20 @@ export interface UseEnhancedPerformanceOptions {
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true
   } = _options;
+<<<<<<< HEAD
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
+=======
+  const __mountTimeRef = useRef<number>(0);
+  const _renderCountRef = useRef<number>(0);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
   useEffect(() => {
     mountTimeRef.current = performance.now();
     renderCountRef.current = 0;

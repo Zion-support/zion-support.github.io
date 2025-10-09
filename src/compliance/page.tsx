@@ -1,11 +1,16 @@
 'use client';
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const CompliancePage: React.FC = () => {
-  const certifications = [
+  const _certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },

@@ -2,9 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+import {ShoppingCart, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const AIEcommerceOptimizerPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: ShoppingCart,
       title: 'E-commerce Optimization',

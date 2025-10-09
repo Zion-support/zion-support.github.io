@@ -18,7 +18,7 @@ export const Link: React.FC<LinkProps> = ({
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const _handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
       onClick();
     }

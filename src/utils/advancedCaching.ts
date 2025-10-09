@@ -19,7 +19,7 @@ class AdvancedCache<T = unknown> {
   private accessOrder: string[] = [];
   private options: Required<CacheOptions>;
   private storageKey = 'advanced-cache';
-  constructor(options: CacheOptions = {}) {
+  constructor(_options: CacheOptions = {}) {
     this.options = {
       ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
       storage: options.storage || 'memory',
@@ -43,7 +43,7 @@ class AdvancedCache<T = unknown> {
   private loadFromStorage(): void {
     if (typeof window === 'undefined') return;
     try {
-      const storage = this.getStorage();
+      const _storage = this.getStorage();
       const data = storage?.getItem(this.storageKey);
       if (data) {
         const parsed = JSON.parse(data);
@@ -176,7 +176,7 @@ class AdvancedCache<T = unknown> {
     }>;
   } {
     const entries: Array<{ key: string; hits: number; age: number }> = [];
-    let totalHits = 0;
+    let _totalHits = 0;
     const now = Date.now();
     this.cache.forEach((entry, key) => {
       totalHits += entry.hits;

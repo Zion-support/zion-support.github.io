@@ -45,7 +45,7 @@ class EnhancedErrorTracker {
       });
     }
   }
-  public trackError(error: Error, context: ErrorContext = {}): void {
+  public trackError(error: Error, _context: ErrorContext = {}): void {
     if (typeof window === 'undefined') return;
     const trackedError: TrackedError = {
       message: error.message,
@@ -103,7 +103,7 @@ class EnhancedErrorTracker {
   } {
     const byComponent: Record<string, number> = {};
     this.errors.forEach(error => {
-      const component = error.context.component || 'Unknown';
+      const _component = error.context.component || 'Unknown';
       byComponent[component] = (byComponent[component] || 0) + 1;
     });
     return {

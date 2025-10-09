@@ -9,6 +9,7 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // eslint-disable-next-line no-console
 >>>>>>> cursor/fix-errors-and-merge-to-main-1907
@@ -17,6 +18,9 @@ const originalConsoleError = console.error;
 =======
 const originalConsoleError = console.error;
 >>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
+=======
+const __originalConsoleError = console.error;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 

@@ -2,9 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+import {Bot, Cpu, Settings, Shield, CheckCircle, Star} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const AIRoboticsPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Bot,
       title: 'Intelligent Robotics',

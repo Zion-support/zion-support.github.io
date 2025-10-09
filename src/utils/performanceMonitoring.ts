@@ -25,7 +25,7 @@ export interface CustomMetric {
 }
 class PerformanceMonitoringService {
   private static instance: PerformanceMonitoringService;
-  private webVitals: WebVitals = {};
+  private _webVitals: WebVitals = {};
   private customMetrics: CustomMetric[] = [];
   private observers: PerformanceObserver[] = [];
   private maxMetrics = 1000;
@@ -47,7 +47,7 @@ class PerformanceMonitoringService {
     }
     try {
       // Observe paint metrics (FCP)
-      const paintObserver = new PerformanceObserver((list) => {
+      const _paintObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.recordWebVital('FCP', entry.startTime);
@@ -67,7 +67,7 @@ class PerformanceMonitoringService {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
       this.observers.push(lcpObserver);
       // Observe CLS
-      let clsValue = 0;
+      let _clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {

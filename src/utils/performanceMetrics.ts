@@ -33,7 +33,7 @@ export interface PerformanceReport {
 export class PerformanceMetrics {
   private static instance: PerformanceMetrics;
   private metrics: PerformanceMetric[] = [];
-  private webVitals: WebVitalsMetrics = {};
+  private _webVitals: WebVitalsMetrics = {};
   private observers: PerformanceObserver[] = [];
   constructor() {
     if (typeof window !== 'undefined') {
@@ -54,7 +54,7 @@ export class PerformanceMetrics {
     if ('PerformanceObserver' in window) {
       try {
         // Navigation timing
-        const navObserver = new PerformanceObserver(list => {
+        const _navObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming;
@@ -110,7 +110,7 @@ export class PerformanceMetrics {
         this.observers.push(lcpObserver);
         // Layout Shift
         const clsObserver = new PerformanceObserver(list => {
-          let clsValue = 0;
+          let _clsValue = 0;
           for (const entry of list.getEntries()) {
             if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;

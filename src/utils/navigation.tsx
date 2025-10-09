@@ -1,5 +1,10 @@
 'use client';
+<<<<<<< HEAD
 export const useRouter = () => {
+=======
+import { useCallback } from 'react';
+export const _useRouter = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
   const push = useCallback((url: string) => {
     window.location.href = url;
   }, []);

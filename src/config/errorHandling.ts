@@ -29,7 +29,7 @@ export interface ErrorConfig {
   ignoreErrors: RegExp[];
   severityThreshold: ErrorSeverity;
 }
-export const errorHandlingConfig: ErrorConfig = {
+export const _errorHandlingConfig: ErrorConfig = {
   enabled: true,
   logToConsole: process.env['NODE_ENV'] !== 'production',
   sendToServer: process.env['NODE_ENV'] === 'production',
@@ -42,7 +42,7 @@ export const errorHandlingConfig: ErrorConfig = {
   ],
   severityThreshold: ErrorSeverity.LOW
 };
-export const errorMessages = {
+export const _errorMessages = {
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
     timeout: 'Request timed out. Please try again.',

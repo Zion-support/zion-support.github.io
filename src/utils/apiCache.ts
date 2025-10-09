@@ -20,7 +20,7 @@ export class ApiCache {
   private cache: CacheManager<unknown>;
   private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
   private config: Required<ApiCacheConfig>;
-  constructor(config: ApiCacheConfig = {}) {
+  constructor(_config: ApiCacheConfig = {}) {
     this.cache = new CacheManager({
       maxSize: 500,
       defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
@@ -46,7 +46,7 @@ export class ApiCache {
     options: RequestInit = {},
     cacheConfig?: Partial<ApiCacheConfig>
   ): Promise<T> {
-    const cacheKey = this.getCacheKey(url, options);
+    const _cacheKey = this.getCacheKey(url, options);
     const mergedConfig = { ...this.config, ...cacheConfig };
     // Check cache first
     if (this.cache.has(cacheKey)) {

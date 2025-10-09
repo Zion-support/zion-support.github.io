@@ -44,7 +44,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     addSecurityEventListeners();
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 
-  const addContentSecurityPolicy = () => {
+  const _addContentSecurityPolicy = () => {
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = [
@@ -159,7 +159,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     });
 
     // Monitor for suspicious activity
-    let suspiciousActivity = 0;
+    let _suspiciousActivity = 0;
     const resetSuspiciousActivity = () => {
       suspiciousActivity = 0;
     };

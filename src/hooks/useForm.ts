@@ -3,6 +3,7 @@
  * useForm Hook
  * Provides form state management and validation
  */
+<<<<<<< HEAD
 // import { logger } from '../utils/logger';
 import {
   ValidationRule,
@@ -176,3 +177,6 @@ export function useForm<T extends Record<string, unknown>>({
     validateAllFields
   };
 }
+=======
+// import { logger } from '../utils/logger';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933

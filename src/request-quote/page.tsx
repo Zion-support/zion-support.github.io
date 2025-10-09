@@ -21,7 +21,7 @@ const RequestQuotePage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const serviceTypes = [
+  const _serviceTypes = [
     'AI Services',
     'IT Infrastructure',
     'Cybersecurity',

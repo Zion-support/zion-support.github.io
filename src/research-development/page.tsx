@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 const ResearchDevelopmentPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-  const researchAreas = [
+  const _researchAreas = [
     {
       id: 'ai',
       name: 'Artificial Intelligence',

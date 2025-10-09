@@ -43,7 +43,7 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
 
   // Load settings from localStorage
   useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibility-settings');
+    const _savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
@@ -216,7 +216,7 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
 
   // Reset all settings
   const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
+    const _defaultSettings: AccessibilitySettings = {
       highContrast: false,
       largeText: false,
       reducedMotion: false,

@@ -13,7 +13,7 @@ interface PerformanceMetrics {
   customMetrics: Record<string, number>;
 }
 class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {
+  private _metrics: PerformanceMetrics = {
     customMetrics: {}
   };
   private observers: PerformanceObserver[] = [];
@@ -42,7 +42,7 @@ class PerformanceMonitor {
         });
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', entries => {
-          const lastEntry = entries[entries.length - 1];
+          const _lastEntry = entries[entries.length - 1];
           if (lastEntry) {
             this.recordMetric(
               'LCP',
@@ -60,7 +60,7 @@ class PerformanceMonitor {
         });
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {
-          let clsValue = 0;
+          let _clsValue = 0;
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value;

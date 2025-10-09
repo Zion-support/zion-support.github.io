@@ -2,10 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
 
 const AIABTestingPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: TestTube,
       title: 'A/B Testing',

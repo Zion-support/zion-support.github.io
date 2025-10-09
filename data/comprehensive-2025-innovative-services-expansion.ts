@@ -561,7 +561,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     benefits: [;
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking'
     ],
-import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveInnovativeService {;
   id: string;
   name: string;
@@ -662,7 +661,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ];
 export default comprehensiveInnovativeServices;
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveInnovativeService {;
   id: string;
   name: string;

@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap } from 'lucide-react';
+=======
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

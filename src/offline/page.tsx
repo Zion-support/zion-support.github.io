@@ -3,6 +3,7 @@ import React from 'react';
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Offline Page
@@ -10,8 +11,10 @@ import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
  */
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1907
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 const OfflinePage: React.FC = () => {
-  const handleRetry = () => {
+  const _handleRetry = () => {
     window.location.reload();
   };
 

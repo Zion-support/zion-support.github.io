@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
+import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Share2,
       title: 'AI Content Creation',

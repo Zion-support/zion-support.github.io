@@ -107,7 +107,7 @@ class Logger {
     if (level < this.logLevel) {
       return;
     }
-    const logEntry: LogMetadata = {
+    const _logEntry: LogMetadata = {
       timestamp: new Date().toISOString(),
       level,
       message,
@@ -115,7 +115,7 @@ class Logger {
       ...metadata
     };
     // Format the log entry
-    const formattedMessage = this.formatLogEntry(logEntry);
+    const _formattedMessage = this.formatLogEntry(logEntry);
     // Output to console in development
     if (this.isDevelopment && typeof console !== 'undefined') {
       this.outputToConsole(level, formattedMessage, logEntry);

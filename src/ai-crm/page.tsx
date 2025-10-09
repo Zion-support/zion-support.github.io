@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 const AICRMPage: React.FC = () => {
 =======
 

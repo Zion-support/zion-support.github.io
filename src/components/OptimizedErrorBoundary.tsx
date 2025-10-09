@@ -56,7 +56,7 @@ class OptimizedErrorBoundary extends Component<
     const { hasError } = this.state;
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
-        const hasResetKeyChanged = resetKeys.some(
+        const _hasResetKeyChanged = resetKeys.some(
           (key, index) => key !== prevProps.resetKeys?.[index]
         );
         if (hasResetKeyChanged) {

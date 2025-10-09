@@ -1,6 +1,4 @@
-import { execSync } from 'child_process';
 import fs from 'fs';
-import path from 'path';
 
 // // 1. Fix test imports properly
 // // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';

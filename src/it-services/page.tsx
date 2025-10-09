@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const ITServicesPage: React.FC = () => {
-  const itServices = [
+  const _itServices = [
     {
       title: 'Cloud Services',
       description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',

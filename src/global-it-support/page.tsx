@@ -2,9 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+import {Globe, Headphones, Shield, Zap, CheckCircle, Star} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const GlobalITSupportPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Globe,
       title: 'Global Coverage',

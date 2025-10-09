@@ -51,7 +51,7 @@ class SEOEnhancer {
   }
 
   private setTitle(): void {
-    const title = this.config.title || 'Zion Tech Group - Advanced AI and IT Solutions';
+    const _title = this.config.title || 'Zion Tech Group - Advanced AI and IT Solutions';
     document.title = title;
     
     // Update meta title
@@ -213,7 +213,7 @@ class SEOEnhancer {
 
   private updateOrCreateMetaTag(attribute: 'name' | 'property', value: string, content: string): void {
     const selector = `meta[${attribute}="${value}"]`;
-    let meta = document.querySelector(selector) as HTMLMetaElement;
+    let _meta = document.querySelector(selector) as HTMLMetaElement;
 
     if (meta) {
       meta.content = content;

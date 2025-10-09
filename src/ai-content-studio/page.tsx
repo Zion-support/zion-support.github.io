@@ -2,9 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+import {FileText, Target, Zap, Settings, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const AIContentStudioPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: FileText,
       title: 'Content Creation',

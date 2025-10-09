@@ -27,7 +27,7 @@ export class SecurityManager {
    */
   sanitizeUrl(url: string): string {
     try {
-      const parsed = new URL(url);
+      const _parsed = new URL(url);
       if (!['http:', 'https:'].includes(parsed.protocol)) {
         throw new Error('Invalid protocol');
       }
@@ -39,7 +39,7 @@ export class SecurityManager {
   /**
    * Generate secure random token
    */
-  generateSecureToken(length: number = 32): string {
+  generateSecureToken(_length: number = 32): string {
     const array = new Uint8Array(length);
     if (typeof window !== 'undefined' && window.crypto) {
       window.crypto.getRandomValues(array);

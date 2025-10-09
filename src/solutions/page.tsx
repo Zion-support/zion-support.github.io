@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 const SolutionsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-  const solutionCategories = [
+  const _solutionCategories = [
     {
       id: 'ai',
       name: 'AI Solutions',

@@ -1,12 +1,16 @@
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
+=======
+import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIAutomationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Settings,
       title: 'Process Automation',

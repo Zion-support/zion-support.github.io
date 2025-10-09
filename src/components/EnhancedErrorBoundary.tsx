@@ -55,7 +55,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport = {
+    const _errorReport = {
       errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
@@ -101,7 +101,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private getSessionId = (): string => {
-    let sessionId = sessionStorage.getItem('sessionId');
+    let _sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);

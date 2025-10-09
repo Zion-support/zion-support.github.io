@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const DeveloperToolsPage: React.FC = () => {
-  const devTools = [
+  const _devTools = [
     {
       title: 'AI Code Generator',
       description: 'Generate high-quality code using advanced AI models',

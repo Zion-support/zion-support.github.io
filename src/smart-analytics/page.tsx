@@ -1,8 +1,13 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
+import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const SmartAnalyticsPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: BarChart,
       title: 'Real-time Dashboards',

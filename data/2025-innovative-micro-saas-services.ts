@@ -894,7 +894,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.8,
     reviews: 45;
 ],
-import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasService2025 {;
   id: string;
   name: string;
@@ -1342,7 +1341,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 ;
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasService2025 {;
   id: string;
   name: string;

@@ -2,7 +2,7 @@
  * Security Configuration
  * Defines security headers and policies for the application
  */
-export const securityHeaders = {
+export const _securityHeaders = {
   // Content Security Policy
   contentSecurityPolicy: {
     directives: {
@@ -101,13 +101,18 @@ export function validateUrl(url: string): boolean {
 /**
  * Generate secure token
  */
+<<<<<<< HEAD
 export function generateSecureToken(length: number = 32): string {
   const array = new Uint8Array(length);
+=======
+export function generateSecureToken(_length: number = 32): string {
+  const _array = new Uint8Array(length);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   } else {
     // Fallback for non-browser environments
-    for (let i = 0; i < length; i++) {
+    for (let _i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
     }
   }

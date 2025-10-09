@@ -2,9 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+import {Cpu, Zap, Globe, Shield, CheckCircle, Star} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const AIEdgeComputingPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Cpu,
       title: 'Edge AI Processing',

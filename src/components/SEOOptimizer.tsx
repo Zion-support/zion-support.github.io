@@ -20,7 +20,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   twitterCard = 'summary_large_image',
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 
   useEffect(() => {
     // Update document title

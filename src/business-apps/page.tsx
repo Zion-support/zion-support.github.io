@@ -2,9 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+import {CheckCircle, Star} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const BusinessAppsPage: React.FC = () => {
-  const businessApps = [
+  const _businessApps = [
     {
       title: 'AI-Powered CRM System',
       description: 'Intelligent customer relationship management with AI-driven insights, automated follow-ups, and predictive analytics.',
