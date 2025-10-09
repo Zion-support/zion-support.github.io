@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Settings, Workflow, Zap, Clock, Users } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
   const automationServices = [
     {
@@ -157,8 +156,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
       marketPrice: '$500-1,200/month',
       category: 'Financial Automation',
       technologies: ['QuickBooks', 'Xero', 'Python', 'Machine Learning', 'React', 'PostgreSQL'],
-      useCases: ['Accounting Firms', 'Small Business', 'Enterprise Finance', 'Non-profits']
-    }
+      useCases: ['Accounting Firms', 'Small Business', 'Enterprise Finance', 'Non-profits']  }
   ];
   const automationFeatures = [
     {
@@ -179,8 +177,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
     {
       title: 'Real-Time Analytics',
       description: 'Monitor and optimize your automated processes in real-time',
-      icon: <TrendingUp className="w-8 h-8 text-orange-600" />
-    }
+      icon: <TrendingUp className="w-8 h-8 text-orange-600" />  }
   ];
   const processSteps = [
     {
@@ -201,8 +198,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
     {
       step: '4',
       title: 'Monitor & Optimize',
-      description: 'Continuously monitor performance and optimize for better results'
-    }
+      description: 'Continuously monitor performance and optimize for better results'  }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
@@ -211,7 +207,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
         <meta name="description" content="Intelligent workflow automation solutions that streamline business processes, reduce costs, and improve efficiency. AI-powered automation for every industry." />
         <meta name="keywords" content="workflow automation, business process automation, RPA, AI automation, process optimization, digital transformation" />
       </Helmet>
-      {/* Hero Section */}
+      {/* Hero Section */  }
       <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -239,7 +235,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Process Steps */}
+      {/* Process Steps */  }
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -254,16 +250,16 @@ const AIWorkflowAutomationPage: React.FC = () => {
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {step.step}
+                  {step.step  }
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
-            ))}
+            ))  }
           </div>
         </div>
       </section>
-      {/* Services Grid */}
+      {/* Services Grid */  }
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -286,22 +282,22 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 </div>
                 <div className="mb-4">
                   <span className="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">
-                    {service.category}
+                    {service.category  }
                   </span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature  }
                     </li>
-                  ))}
+                  ))  }
                 </ul>
                 <div className="space-y-2 mb-6">
                   <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
-                  ))}
+                  ))  }
                 </div>
                 <a 
                   href="/contact"
@@ -311,11 +307,11 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
-            ))}
+            ))  }
           </div>
         </div>
       </section>
-      {/* Features Section */}
+      {/* Features Section */  }
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -330,16 +326,16 @@ const AIWorkflowAutomationPage: React.FC = () => {
             {automationFeatures.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
-                  {feature.icon}
+                  {feature.icon  }
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
-            ))}
+            ))  }
           </div>
         </div>
       </section>
-      {/* ROI Section */}
+      {/* ROI Section */  }
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -366,7 +362,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Contact Section */}
+      {/* Contact Section */  }
       <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -394,7 +390,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
   );
 };
 export default AIWorkflowAutomationPage;

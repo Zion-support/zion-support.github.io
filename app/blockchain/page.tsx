@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
@@ -133,19 +132,12 @@ const BlockchainPage: React.FC = () => {
       benefits: ['Create Web3 experiences', 'Engage crypto users', 'Build decentralized apps'],
       marketPrice: '$30,000-100,000/project',
       category: 'Web3 Apps',
-      technologies: ['React', 'Next.js', 'Node.js', 'Web3.js', 'Ethers.js']
-    }
+      technologies: ['React', 'Next.js', 'Node.js', 'Web3.js', 'Ethers.js']  }
   ];
   const categories = [...new Set(blockchainServices.map(service => service.category))];
   return (
-    <>
-      <Helmet>
-        <title>Blockchain & Web3 Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced blockchain and Web3 services including smart contracts, DeFi, NFTs, and enterprise blockchain solutions." />
-        <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, Web3, cryptocurrency, token development" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
-        {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
+        {/* Hero Section */  }
         <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 to-red-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +159,7 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Key Benefits */}
+        {/* Key Benefits */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -210,7 +202,7 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Services by Category */}
+        {/* Services by Category */  }
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -245,9 +237,9 @@ const BlockchainPage: React.FC = () => {
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
+                              {feature  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <div className="mb-4">
@@ -255,9 +247,9 @@ const BlockchainPage: React.FC = () => {
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
                             <span key={techIndex} className="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">
-                              {tech}
+                              {tech  }
                             </span>
-                          ))}
+                          ))  }
                         </div>
                       </div>
                       <div className="mb-6">
@@ -266,21 +258,21 @@ const BlockchainPage: React.FC = () => {
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
+                              {benefit  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <button className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
                         Get Blockchain Consultation
                       </button>
                     </div>
-                  ))}
+                  ))  }
               </div>
             </div>
           </section>
-        ))}
-        {/* Blockchain Capabilities Showcase */}
+        ))  }
+        {/* Blockchain Capabilities Showcase */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -325,7 +317,7 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Contact Section */}
+        {/* Contact Section */  }
         <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -353,8 +345,7 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+        </div>
   );
 };
 export default BlockchainPage;

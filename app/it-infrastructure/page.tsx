@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
@@ -185,8 +184,7 @@ const ITInfrastructurePage: React.FC = () => {
       ],
       marketPrice: '$1200-2500/month',
       technologies: ['Microsoft 365', 'Google Workspace', 'Exchange Server', 'Postfix', 'SpamAssassin', 'MDM'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'  }
   ];
   const infrastructureStats = [
     { metric: '99.9%', description: 'Uptime Guarantee' },
@@ -194,17 +192,11 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: '50+', description: 'Enterprise Clients' },
     { metric: '24/7', description: 'Support Available' },
     { metric: '< 1hr', description: 'Response Time' },
-    { metric: '100%', description: 'Security Compliance' }
+    { metric: '100%', description: 'Security Compliance'  }
   ];
   return (
-    <>
-      <Helmet>
-        <title>IT Infrastructure Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
-        <meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */  }
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,7 +224,7 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Infrastructure Statistics */}
+        {/* Infrastructure Statistics */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -249,11 +241,11 @@ const ITInfrastructurePage: React.FC = () => {
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.metric}</div>
                   <div className="text-lg font-semibold text-gray-900 mb-1">{stat.description}</div>
                 </div>
-              ))}
+              ))  }
             </div>
           </div>
         </section>
-        {/* Key Benefits */}
+        {/* Key Benefits */  }
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -296,7 +288,7 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Services Grid */}
+        {/* Services Grid */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -328,9 +320,9 @@ const ITInfrastructurePage: React.FC = () => {
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
+                          {feature  }
                         </li>
-                      ))}
+                      ))  }
                     </ul>
                   </div>
                   <div className="mb-4">
@@ -338,9 +330,9 @@ const ITInfrastructurePage: React.FC = () => {
                     <div className="flex flex-wrap gap-2">
                       {service.technologies.map((tech, techIndex) => (
                         <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                          {tech}
+                          {tech  }
                         </span>
-                      ))}
+                      ))  }
                     </div>
                   </div>
                   <div className="mb-6">
@@ -349,9 +341,9 @@ const ITInfrastructurePage: React.FC = () => {
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                           <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                          {benefit}
+                          {benefit  }
                         </li>
-                      ))}
+                      ))  }
                     </ul>
                   </div>
                   <div className="mb-4 p-3 bg-gray-50 rounded-lg">
@@ -372,11 +364,11 @@ const ITInfrastructurePage: React.FC = () => {
                     </a>
                   </div>
                 </div>
-              ))}
+              ))  }
             </div>
           </div>
         </section>
-        {/* Process Section */}
+        {/* Process Section */  }
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -411,7 +403,7 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Contact Section */}
+        {/* Contact Section */  }
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -440,8 +432,7 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+        </div>
   );
 };
 export default ITInfrastructurePage;

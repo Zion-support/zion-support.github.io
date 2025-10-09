@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
+import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database, Cloud } from 'lucide-react';
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
     {
@@ -133,19 +132,12 @@ const IoTEdgeComputingPage: React.FC = () => {
       benefits: ['Navigate IoT landscape', 'Make informed decisions', 'Maximize IoT investment'],
       marketPrice: '$500-1,200/hour',
       category: 'Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']
-    }
+      technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']  }
   ];
-  const _categories = [...new Set(iotServices.map(service => service.category))];
+  const categories = [...new Set(iotServices.map(service => service.category))];
   return (
-    <>
-      <Helmet>
-        <title>IoT & Edge Computing Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced IoT and edge computing solutions for smart cities, industrial automation, and connected devices." />
-        <meta name="keywords" content="IoT services, edge computing, smart cities, industrial IoT, sensor networks, connected devices" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
-        {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
+        {/* Hero Section */  }
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +159,7 @@ const IoTEdgeComputingPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Key Benefits */}
+        {/* Key Benefits */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -210,7 +202,7 @@ const IoTEdgeComputingPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Services by Category */}
+        {/* Services by Category */  }
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -245,9 +237,9 @@ const IoTEdgeComputingPage: React.FC = () => {
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
+                              {feature  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <div className="mb-4">
@@ -255,9 +247,9 @@ const IoTEdgeComputingPage: React.FC = () => {
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
                             <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
-                              {tech}
+                              {tech  }
                             </span>
-                          ))}
+                          ))  }
                         </div>
                       </div>
                       <div className="mb-6">
@@ -266,21 +258,21 @@ const IoTEdgeComputingPage: React.FC = () => {
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
+                              {benefit  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
                         Get IoT Consultation
                       </button>
                     </div>
-                  ))}
+                  ))  }
               </div>
             </div>
           </section>
-        ))}
-        {/* IoT Capabilities Showcase */}
+        ))  }
+        {/* IoT Capabilities Showcase */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -325,7 +317,7 @@ const IoTEdgeComputingPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Contact Section */}
+        {/* Contact Section */  }
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -353,8 +345,7 @@ const IoTEdgeComputingPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+        </div>
   );
 };
 export default IoTEdgeComputingPage;

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
+import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Key, Globe } from 'lucide-react';
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
     {
@@ -133,18 +132,12 @@ const CybersecurityPage: React.FC = () => {
       benefits: ['Minimize breach impact', 'Preserve evidence', 'Accelerate recovery'],
       marketPrice: '$10,000-50,000/incident',
       category: 'Incident Response',
-      technologies: ['Forensic Tools', 'Incident Management', 'Evidence Collection', 'Recovery Tools']
-    }
+      technologies: ['Forensic Tools', 'Incident Management', 'Evidence Collection', 'Recovery Tools']  }
   ];
   const categories = [...new Set(securityServices.map(service => service.category))];
   return (
-    <>
-      <Helmet>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity services including threat detection, penetration testing, zero trust security, and comprehensive security solutions." />
-        <meta name="keywords" content="cybersecurity services, threat detection, penetration testing, zero trust, security consulting, SOC services" />      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
-        {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
+        {/* Hero Section */  }
         <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,7 +158,7 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Key Benefits */}
+        {/* Key Benefits */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -205,7 +198,7 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Services by Category */}
+        {/* Services by Category */  }
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +211,7 @@ const CybersecurityPage: React.FC = () => {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {cyberServices
+                {securityServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -239,9 +232,9 @@ const CybersecurityPage: React.FC = () => {
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
+                              {feature  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <div className="mb-4">
@@ -249,9 +242,9 @@ const CybersecurityPage: React.FC = () => {
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
                             <span key={techIndex} className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
-                              {tech}
+                              {tech  }
                             </span>
-                          ))}
+                          ))  }
                         </div>
                       </div>
                       <div className="mb-6">
@@ -259,20 +252,20 @@ const CybersecurityPage: React.FC = () => {
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
+                              {benefit  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <button className="w-full bg-red-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors">
                         Get Security Consultation
                       </button>
                     </div>
-                  ))}
+                  ))  }
               </div>
             </div>
           </section>
-        ))}
+        ))  }
         {/* Cybersecurity Capabilities Showcase */}        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -315,7 +308,7 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Contact Section */}
+        {/* Contact Section */  }
         <section className="py-16 bg-gradient-to-r from-red-600 to-orange-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -343,8 +336,7 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+        </div>
   );
 };
 export default CybersecurityPage;

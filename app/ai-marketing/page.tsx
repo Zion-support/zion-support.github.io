@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react';
 const AIMarketingPage: React.FC = () => {
   const aiMarketingServices = [
@@ -133,19 +132,12 @@ const AIMarketingPage: React.FC = () => {
       benefits: ['Increase conversion by 45%', 'Improve user experience', 'Boost customer engagement'],
       marketPrice: '$500-1,500/month',
       category: 'Personalization',
-      technologies: ['Customer Data Platform', 'Real-time APIs', 'Machine Learning', 'A/B Testing Tools']
-    }
+      technologies: ['Customer Data Platform', 'Real-time APIs', 'Machine Learning', 'A/B Testing Tools']  }
   ];
   const categories = [...new Set(aiMarketingServices.map(service => service.category))];
   return (
-    <>
-      <Helmet>
-        <title>AI Marketing Services - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered marketing solutions including ad optimization, content generation, social media management, and customer journey mapping." />
-        <meta name="keywords" content="AI marketing, marketing automation, ad optimization, content generation, social media AI, email marketing AI" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
-        {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
+        {/* Hero Section */  }
         <section className="relative overflow-hidden bg-gradient-to-r from-pink-600 to-rose-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +159,7 @@ const AIMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Key Benefits */}
+        {/* Key Benefits */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -210,7 +202,7 @@ const AIMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Services by Category */}
+        {/* Services by Category */  }
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -245,9 +237,9 @@ const AIMarketingPage: React.FC = () => {
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
+                              {feature  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <div className="mb-4">
@@ -255,9 +247,9 @@ const AIMarketingPage: React.FC = () => {
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
                             <span key={techIndex} className="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded">
-                              {tech}
+                              {tech  }
                             </span>
-                          ))}
+                          ))  }
                         </div>
                       </div>
                       <div className="mb-6">
@@ -266,21 +258,21 @@ const AIMarketingPage: React.FC = () => {
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
+                              {benefit  }
                             </li>
-                          ))}
+                          ))  }
                         </ul>
                       </div>
                       <button className="w-full bg-pink-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
                         Get Marketing Consultation
                       </button>
                     </div>
-                  ))}
+                  ))  }
               </div>
             </div>
           </section>
-        ))}
-        {/* AI Marketing Capabilities */}
+        ))  }
+        {/* AI Marketing Capabilities */  }
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -325,7 +317,7 @@ const AIMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Contact Section */}
+        {/* Contact Section */  }
         <section className="py-16 bg-gradient-to-r from-pink-600 to-rose-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -353,8 +345,7 @@ const AIMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+        </div>
   );
 };
 export default AIMarketingPage;

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Heart } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
     // AI-Powered Developer Tools
@@ -1717,8 +1716,7 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['AI Design', 'React', 'Node.js', 'SEO Tools', 'E-commerce APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/website-builder',
-      popular: true
-    }
+      popular: true  }
   ];
   const categories = [
     { name: 'All', count: microSAASServices.length },
@@ -1732,16 +1730,11 @@ const MicroSAASPage: React.FC = () => {
     { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
     { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
     { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length }
+    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length  }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
-        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
-      </Helmet>
-      {/* Hero Section */}
+      {/* Hero Section */  }
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
@@ -1750,7 +1743,7 @@ const MicroSAASPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
           </p>
-          {/* Stats */}
+          {/* Stats */  }
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
@@ -1769,7 +1762,7 @@ const MicroSAASPage: React.FC = () => {
               <div className="text-gray-300">Uptime</div>
             </div>
           </div>
-          {/* Contact Info */}
+          {/* Contact Info */  }
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
@@ -1788,7 +1781,7 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Services Grid */}
+      {/* Services Grid */  }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -1808,7 +1801,7 @@ const MicroSAASPage: React.FC = () => {
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
-                    {service.category}
+                    {service.category  }
                   </div>
                 </div>
                 <div className="mb-6">
@@ -1817,14 +1810,14 @@ const MicroSAASPage: React.FC = () => {
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
+                        {feature  }
                       </li>
-                    ))}
+                    ))  }
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
                         +{service.features.length - 4} more features
                       </li>
-                    )}
+                    )  }
                   </ul>
                 </div>
                 <div className="mb-6">
@@ -1833,9 +1826,9 @@ const MicroSAASPage: React.FC = () => {
                     {service.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-                        {benefit}
+                        {benefit  }
                       </li>
-                    ))}
+                    ))  }
                   </ul>
                 </div>
                 <div className="mb-6">
@@ -1843,28 +1836,28 @@ const MicroSAASPage: React.FC = () => {
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                        {tech}
+                        {tech  }
                       </span>
-                    ))}
+                    ))  }
                   </div>
                 </div>
                 <div className="text-center">
                   <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`  }
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started Now
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
-                    {service.contactInfo}
+                    {service.contactInfo  }
                   </p>
                 </div>
               </div>
-            ))}
+            ))  }
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA Section */  }
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -1889,7 +1882,7 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
   );
 };
 export default MicroSAASPage;
