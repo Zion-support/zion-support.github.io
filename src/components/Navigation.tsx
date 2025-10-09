@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Smartphone, TrendingUp } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Smartphone, TrendingUp, Truck } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,7 +76,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone },
     { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
+    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check },
     { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator },
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot },
     { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3 },
@@ -110,7 +110,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText },
     { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home },
     { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory },
-    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck },
+    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Car },
     { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap },
     { name: 'AI Energy Management', href: '/ai-energy', icon: Zap },
     { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield },
