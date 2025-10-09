@@ -79,7 +79,14 @@ const Navigation: React.FC = () => {
     { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
     { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator }
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
+    { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Music },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
+    { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
+    { name: 'AI 3D Model Generator', href: '/ai-3d-generation', icon: Camera }
   ];
 
   const aiServices = [
@@ -88,7 +95,11 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
     { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield }
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart3 }
   ];
 
   const itServices = [
@@ -97,7 +108,10 @@ const Navigation: React.FC = () => {
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database-services', icon: Database },
     { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users }
+    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Code },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
+    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cpu }
   ];
 
   const specializedServices = [

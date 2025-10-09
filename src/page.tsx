@@ -189,6 +189,83 @@ const HomePage: React.FC = () => {
       link: '/ai-financial-analyzer',
       popular: false,
       category: 'Finance'
+    },
+    {
+      title: 'AI Video Generator',
+      description: 'Create professional videos with AI-powered editing and generation',
+      icon: '🎬',
+      price: '$249/month',
+      features: ['AI video creation', 'Auto-editing', 'Voice synthesis', 'Text-to-video', 'Template library', 'Brand customization'],
+      benefits: ['80% faster video production', 'Professional quality', 'Cost-effective', 'Scalable content'],
+      link: '/ai-video-generation',
+      popular: true,
+      category: 'Content'
+    },
+    {
+      title: 'AI Voice Cloning',
+      description: 'Create realistic voice clones for content and communication',
+      icon: '🎤',
+      price: '$199/month',
+      features: ['Voice synthesis', 'Multi-language support', 'Emotion control', 'Real-time generation', 'API integration', 'Custom voices'],
+      benefits: ['Natural voice quality', 'Time savings', 'Consistent branding', 'Accessibility'],
+      link: '/ai-voice-cloning',
+      popular: false,
+      category: 'Content'
+    },
+    {
+      title: 'AI Workflow Automation',
+      description: 'Automate complex business workflows with intelligent AI agents',
+      icon: '⚙️',
+      price: '$299/month',
+      features: ['Process automation', 'Smart routing', 'Exception handling', 'Integration APIs', 'Custom workflows', 'Analytics'],
+      benefits: ['90% process reduction', 'Error elimination', '24/7 operation', 'Cost savings'],
+      link: '/ai-workflow-automation',
+      popular: true,
+      category: 'Automation'
+    },
+    {
+      title: 'AI Fashion Design Assistant',
+      description: 'AI-powered fashion design and trend analysis platform',
+      icon: '👗',
+      price: '$179/month',
+      features: ['Design generation', 'Trend analysis', 'Color matching', 'Pattern creation', 'Size optimization', 'Market insights'],
+      benefits: ['Faster design cycles', 'Trend prediction', 'Cost reduction', 'Market intelligence'],
+      link: '/ai-fashion-design',
+      popular: false,
+      category: 'Design'
+    },
+    {
+      title: 'AI Fitness Coach',
+      description: 'Personalized fitness training with AI-powered workout optimization',
+      icon: '💪',
+      price: '$99/month',
+      features: ['Personalized workouts', 'Form analysis', 'Progress tracking', 'Nutrition guidance', 'Goal setting', 'Community features'],
+      benefits: ['Better results', 'Motivation boost', 'Time efficiency', 'Health optimization'],
+      link: '/ai-fitness-coach',
+      popular: true,
+      category: 'Health'
+    },
+    {
+      title: 'AI Music Composer',
+      description: 'Create original music with AI-powered composition and arrangement',
+      icon: '🎵',
+      price: '$149/month',
+      features: ['Music generation', 'Style adaptation', 'Instrument selection', 'Mood matching', 'Royalty-free', 'Export options'],
+      benefits: ['Unlimited music', 'Professional quality', 'Time savings', 'Creative inspiration'],
+      link: '/ai-music-composition',
+      popular: false,
+      category: 'Creative'
+    },
+    {
+      title: 'AI 3D Model Generator',
+      description: 'Generate 3D models and assets with AI-powered creation tools',
+      icon: '🎨',
+      price: '$299/month',
+      features: ['3D model generation', 'Texture creation', 'Animation tools', 'Export formats', 'Custom parameters', 'Quality optimization'],
+      benefits: ['Rapid prototyping', 'Cost reduction', 'Professional quality', 'Creative freedom'],
+      link: '/ai-3d-generation',
+      popular: false,
+      category: 'Design'
     }
   ];
 
@@ -246,6 +323,42 @@ const HomePage: React.FC = () => {
       features: ['Threat Detection', 'Anomaly Detection', 'Behavioral Analysis', 'Incident Response', 'Risk Assessment', 'Compliance Monitoring'],
       color: 'text-red-400',
       benefits: ['99.9% threat detection', 'Real-time monitoring', 'Automated response', 'Reduced false positives']
+    },
+    {
+      title: 'AI Data Analytics',
+      description: 'Advanced data analytics and business intelligence with AI insights',
+      icon: BarChart,
+      price: '$2,200/month',
+      features: ['Predictive Analytics', 'Data Mining', 'Pattern Recognition', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
+      color: 'text-indigo-400',
+      benefits: ['50% faster insights', 'Better decision making', 'Automated analysis', 'Competitive advantage']
+    },
+    {
+      title: 'AI Customer Support',
+      description: 'Intelligent customer service solutions with AI-powered automation',
+      icon: Users,
+      price: '$1,600/month',
+      features: ['Chatbot Development', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Management', 'Multi-channel Support', 'Performance Analytics'],
+      color: 'text-pink-400',
+      benefits: ['90% query resolution', '24/7 availability', 'Cost reduction', 'Customer satisfaction']
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Intelligent sales process automation and optimization',
+      icon: Target,
+      price: '$2,000/month',
+      features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Management', 'Customer Profiling', 'Automated Follow-ups', 'Performance Tracking'],
+      color: 'text-orange-400',
+      benefits: ['40% more conversions', 'Faster sales cycles', 'Better lead quality', 'Revenue growth']
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Advanced data visualization and interactive dashboards',
+      icon: BarChart3,
+      price: '$1,400/month',
+      features: ['Interactive Dashboards', 'Real-time Visualization', 'Custom Charts', 'Data Storytelling', 'Mobile Responsive', 'Export Options'],
+      color: 'text-teal-400',
+      benefits: ['Better data understanding', 'Faster insights', 'Improved communication', 'Decision support']
     }
   ];
 
@@ -303,6 +416,42 @@ const HomePage: React.FC = () => {
       features: ['24/7 Support', 'Remote Assistance', 'Ticket Management', 'Knowledge Base', 'User Training', 'System Maintenance'],
       color: 'text-orange-400',
       benefits: ['Instant response', '95% satisfaction', 'Proactive monitoring', 'User empowerment']
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting and digital transformation services',
+      icon: Code,
+      price: '$1,500/month',
+      features: ['Technology Assessment', 'Digital Strategy', 'Architecture Design', 'Process Optimization', 'Change Management', 'ROI Analysis'],
+      color: 'text-indigo-400',
+      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
+    },
+    {
+      title: 'Cloud Migration',
+      description: 'Seamless cloud migration and modernization services',
+      icon: Cloud,
+      price: '$2,200/month',
+      features: ['Migration Planning', 'Data Transfer', 'Application Modernization', 'Security Migration', 'Performance Optimization', 'Training & Support'],
+      color: 'text-sky-400',
+      benefits: ['Zero-downtime migration', 'Cost savings', 'Improved performance', 'Scalability']
+    },
+    {
+      title: 'IT Infrastructure',
+      description: 'Complete IT infrastructure design, implementation, and management',
+      icon: Cpu,
+      price: '$1,800/month',
+      features: ['Server Management', 'Storage Solutions', 'Virtualization', 'Backup Systems', 'Monitoring', 'Maintenance'],
+      color: 'text-emerald-400',
+      benefits: ['Reliable infrastructure', 'Cost efficiency', 'Scalable solutions', '24/7 support']
+    },
+    {
+      title: 'Database Services',
+      description: 'Comprehensive database management and optimization services',
+      icon: Database,
+      price: '$1,400/month',
+      features: ['Database Administration', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Data Migration', 'Query Optimization'],
+      color: 'text-violet-400',
+      benefits: ['Optimized performance', 'Data security', 'Automated backups', 'Expert support']
     }
   ];
 

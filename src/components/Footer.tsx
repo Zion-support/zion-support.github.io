@@ -9,7 +9,11 @@ const Footer: React.FC = () => {
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' }
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
+    { name: 'AI Video Generator', url: '/ai-video-generation', description: 'AI-powered video creation' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Intelligent automation' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness training' },
+    { name: 'AI 3D Model Generator', url: '/ai-3d-generation', description: 'AI 3D model creation' }
   ];
 
   const aiServices = [
@@ -18,7 +22,11 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'Quantum AI Computing', url: '/quantum-ai', description: 'Next-gen algorithms' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced analytics' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'Intelligent support' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Sales optimization' },
+    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Interactive dashboards' }
   ];
 
   const itServices = [
@@ -27,7 +35,10 @@ const Footer: React.FC = () => {
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
     { name: 'Database Services', url: '/database-services', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking' },
-    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' }
+    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT guidance' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless cloud migration' },
+    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Complete infrastructure' }
   ];
 
   const specializedServices = [
