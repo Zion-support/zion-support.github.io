@@ -84,36 +84,11 @@ const AboutPage: React.FC = () => {
               to deliver solutions that drive real business value.
             </p>
           </div>
-<<<<<<< HEAD
         </div>
-<<<<<<< HEAD
       </div>
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5cff
-=======
-          <div className='prose prose-lg max-w-none'>
-            <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                Our Mission
-              </h2>
-              <p className='text-gray-600 mb-4'>
-                At Zion Tech Group, we are dedicated to transforming
-                businesses through cutting-edge AI and IT solutions. Our
-                mission is to empower organizations with the technology they
-                need to thrive in the digital age.
-              </p>
-              <p className='text-gray-600'>
-                We combine deep technical expertise with innovative thinking
-                to deliver solutions that drive real business value.
-              </p>
-            </div>
-          </div>
-      </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-5599
 
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
+    {/* Stats Section */}
+    <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (

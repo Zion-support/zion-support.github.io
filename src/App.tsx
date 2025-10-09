@@ -260,7 +260,6 @@ const App: React.FC = () => {
 
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
         // Reports are available but not logged to console
         performanceEnhancer.getMetrics();
         accessibilityEnhancer.generateReport();
@@ -269,18 +268,9 @@ const App: React.FC = () => {
       }
 
       setIsInitialized(true);
-    } catch (error) {
+    } catch {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-=======
-        // Reports generated silently in development
-      }
-
-      setIsInitialized(true);
-    } catch {
-      // Continue even if enhancers fail
-      setIsInitialized(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-5cff
     }
   };
 

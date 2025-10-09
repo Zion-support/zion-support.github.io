@@ -120,35 +120,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
 
-    const faqData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
-          },
-        },
-      ],
+    return {
+      'twitter:card': 'summary_large_image',
+      'twitter:title': seoData.twitterTitle || seoData.title,
+      'twitter:description': seoData.twitterDescription || seoData.description,
+      'twitter:image': seoData.twitterImage || seoData.ogImage || '/twitter-image.jpg',
+      'twitter:site': '@ZionTechGroup',
+      'twitter:creator': '@ZionTechGroup',
     };
   }, [seoData, enableTwitterCards]);
 
@@ -296,3 +274,5 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 };
 
 export default AdvancedSEOOptimizer;
+}
+
