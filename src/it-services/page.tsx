@@ -1,4 +1,8 @@
 import React from 'react';
+import { Cloud, Shield, Server, Database, BarChart, Users, CheckCircle, ArrowRight, Phone } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -28,82 +32,47 @@ const ITServicesPage: React.FC = () => {
       title: 'IT Infrastructure',
       description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
       icon: Server,
-      features: ['Server management', 'Network setup', 'Security hardening', 'Backup solutions', 'Performance monitoring', 'Disaster recovery'],
-      price: 'Starting at $999/month',
-      category: 'Infrastructure',
-      benefits: ['High availability', 'Scalable solutions', 'Cost efficiency', 'Expert support'],
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
-      color: 'text-green-400'
-    },
-    {
-      title: 'DevOps & CI/CD',
-      description: 'Streamline development workflows with automated testing, deployment, and monitoring solutions.',
-      icon: Settings,
-      features: ['CI/CD pipelines', 'Automated testing', 'Infrastructure as Code', 'Monitoring', 'Deployment automation', 'Performance optimization'],
+      features: ['Network setup', 'Server management', 'Backup solutions', 'Disaster recovery', 'Performance monitoring', '24/7 support'],
       price: 'Starting at $1,200/month',
-      category: 'Development',
-      benefits: ['Faster deployments', 'Reduced errors', 'Improved collaboration', 'Better quality'],
-      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Docker', 'Kubernetes', 'Terraform'],
+      category: 'Infrastructure',
+      benefits: ['Reliable infrastructure', 'Reduced downtime', 'Improved efficiency', 'Cost savings'],
+      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'Database Management',
-      description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
+      description: 'Expert database administration, optimization, and migration services for all major database platforms.',
       icon: Database,
       features: ['Database design', 'Performance tuning', 'Migration services', 'Backup & recovery', 'Security hardening', 'Monitoring'],
       price: 'Starting at $800/month',
-      category: 'Data',
-      benefits: ['Optimized performance', 'Data security', 'Reduced downtime', 'Cost efficiency'],
-      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Oracle'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications with modern UI/UX and backend integration.',
-      icon: Smartphone,
-      features: ['Native iOS/Android', 'Cross-platform development', 'UI/UX design', 'Backend integration', 'App store deployment', 'Maintenance'],
-      price: 'Starting at $3,000/month',
-      category: 'Development',
-      benefits: ['Modern mobile experience', 'Cross-platform compatibility', 'Scalable architecture', 'User engagement'],
-      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Node.js', 'Firebase'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Network Security',
-      description: 'Comprehensive network security solutions including firewall management, VPN setup, and monitoring.',
-      icon: Lock,
-      features: ['Firewall management', 'VPN setup', 'Network monitoring', 'Intrusion detection', 'Access control', 'Security auditing'],
-      price: 'Starting at $1,000/month',
-      category: 'Security',
-      benefits: ['Secure network infrastructure', 'Threat prevention', 'Compliance', '24/7 monitoring'],
-      technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'OpenVPN', 'WireGuard', 'SNMP'],
+      category: 'Data Management',
+      benefits: ['Optimized performance', 'Data security', 'Reduced costs', 'Improved reliability'],
+      technologies: ['SQL Server', 'MySQL', 'PostgreSQL', 'Oracle', 'MongoDB', 'Redis'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'Business Intelligence',
-      description: 'Data analytics and business intelligence solutions to drive informed decision-making.',
+      description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
       icon: BarChart,
-      features: ['Data visualization', 'Dashboard creation', 'Report automation', 'Predictive analytics', 'KPI tracking', 'Data integration'],
-      price: 'Starting at $1,800/month',
+      features: ['Data visualization', 'Report generation', 'Dashboard creation', 'Data warehousing', 'ETL processes', 'Predictive analytics'],
+      price: 'Starting at $1,000/month',
       category: 'Analytics',
-      benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost savings'],
-      technologies: ['Power BI', 'Tableau', 'QlikView', 'Python', 'R', 'SQL Server'],
+      benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost optimization'],
+      technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'IT Consulting',
-      description: 'Strategic IT consulting to align technology with business objectives and drive digital transformation.',
+      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
       icon: Users,
-      features: ['Technology assessment', 'Strategic planning', 'Digital transformation', 'Process optimization', 'Change management', 'Training'],
+      features: ['Technology assessment', 'Strategic planning', 'Vendor evaluation', 'Cost analysis', 'Implementation guidance', 'Training'],
       price: 'Starting at $150/hour',
       category: 'Consulting',
-      benefits: ['Strategic alignment', 'Technology roadmap', 'Process improvement', 'Competitive advantage'],
-      technologies: ['Enterprise Architecture', 'ITIL', 'Agile', 'DevOps', 'Cloud Strategy', 'Security Frameworks'],
+      benefits: ['Strategic guidance', 'Cost optimization', 'Risk mitigation', 'Technology alignment'],
+      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-
-  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Data', 'Analytics', 'Consulting'];
 
   return (
     <>
@@ -179,8 +148,7 @@ const ITServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
           {/* Contact Section */}
           <section className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -214,7 +182,6 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-      <Footer />
     </>
   );
 };

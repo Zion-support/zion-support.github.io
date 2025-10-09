@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;
-  fid: number | null;
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
@@ -12,7 +11,6 @@ interface PerformanceMetrics {
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
-    fid: null,
     fcp: null,
     lcp: null,
     ttfb: null,
@@ -20,7 +18,7 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Measure Core Web Vitals
-    getCLS((metric) => {
+    onCLS((metric) => {
       setMetrics(prev => ({ ...prev, cls: metric.value }));
       // Send to analytics
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -32,18 +30,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
-    getFID((metric) => {
-      setMetrics(prev => ({ ...prev, fid: metric.value }));
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'FID',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-
-    getFCP((metric) => {
+    onFCP((metric) => {
       setMetrics(prev => ({ ...prev, fcp: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
@@ -54,7 +41,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
-    getLCP((metric) => {
+    onLCP((metric) => {
       setMetrics(prev => ({ ...prev, lcp: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
@@ -65,7 +52,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
-    getTTFB((metric) => {
+    onTTFB((metric) => {
       setMetrics(prev => ({ ...prev, ttfb: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
