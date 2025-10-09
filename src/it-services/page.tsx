@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -438,10 +438,10 @@ const ITServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <div className={`text-lg font-bold ${service.color} mb-2`}>{service.price}</div>
+                  <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
                   <a
                     href="/contact"
-                    className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
+                    className="inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
@@ -577,18 +577,11 @@ const ITServicesPage: React.FC = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
       </main>
 
       <Footer />
     </div>
-=======
-          </section>
-        </main>
-        <Footer />
-      </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-eb01
   );
 };
 
