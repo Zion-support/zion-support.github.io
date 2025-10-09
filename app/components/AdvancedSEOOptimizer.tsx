@@ -167,6 +167,38 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return metaTags;
   }, [seoData]);
 
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!seoData.breadcrumbs) return null;
+    
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: seoData.breadcrumbs.map((crumb: any, index: number) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: crumb.name,
+        item: crumb.url
+      }))
+    };
+  }, [seoData.breadcrumbs]);
+
+  const generateFAQStructuredData = useCallback(() => {
+    if (!seoData.faq) return null;
+    
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: seoData.faq.map((faq: any) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    };
+  }, [seoData.faq]);
+
   const structuredData = generateStructuredData();
   const breadcrumbData = generateBreadcrumbStructuredData();
   const faqData = generateFAQStructuredData();
@@ -207,7 +239,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
 
   useEffect(() => {
     if (structuredData) {

@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb42
 
 export default function HomePage() {
   return (
