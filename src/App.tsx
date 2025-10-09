@@ -50,6 +50,7 @@ const App: React.FC = () => {
       });
       setIsInitialized(true);
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('Failed to initialize enhancers:', error);
       setIsInitialized(true);
     }

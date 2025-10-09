@@ -1,7 +1,7 @@
 'use client';
+import React, { useState, useEffect, useCallback } from 'react';
+
 interface PerformanceMetrics {
-  // TODO: Add content
-}
   fcp: number | null;
   lcp: number | null;
   fid: number | null;
@@ -9,23 +9,16 @@ interface PerformanceMetrics {
   ttfb: number | null;
   memory: number | null;
 }
+
 interface PerformanceMonitorProps {
-  // TODO: Add content
-}
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
 }
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  // TODO: Add content
-}
-//   onMetricsUpdate,
+  onMetricsUpdate,
   enableRealTimeMonitoring = true
 }) => {
-  // TODO: Add content
-}
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-  // TODO: Add content
-}
     fcp: null,
     lcp: null,
     fid: null,

@@ -1,25 +1,22 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface ErrorBoundaryState {
-  // TODO: Add content
-}
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
+
 interface ErrorBoundaryProps {
-  // TODO: Add content
-}
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
 }
+
 interface ErrorReport {
-  // TODO: Add content
-}
   errorId: string | null;
   error: Error;
   errorInfo: ErrorInfo;
@@ -33,20 +30,15 @@ interface ErrorReport {
   sessionId: string;
 }
 class AdvancedErrorBoundary extends Component<
-//   ErrorBoundaryProps,
-//   ErrorBoundaryState
+  ErrorBoundaryProps,
+  ErrorBoundaryState
 > {
-  // TODO: Add content
-}
   private retryCount = 0;
   private maxRetries = 3;
+
   constructor(props: ErrorBoundaryProps) {
-  // TODO: Add content
-}
     super(props);
     this.state = {
-  // TODO: Add content
-}
       hasError: false,
       error: null,
       errorInfo: null,
@@ -54,59 +46,42 @@ class AdvancedErrorBoundary extends Component<
     };
   }
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-  // TODO: Add content
-}
     return {
-  // TODO: Add content
-}
       hasError: true,
-//       error,
+      error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
     this.setState({
-  // TODO: Add content
-}
-//       error,
-//       errorInfo
+      error,
+      errorInfo
     });
+    
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
-      logger.error('Error Boundary caught an error', {
-  // TODO: Add content
-}
+      console.error('Error Boundary caught an error', {
         context: 'ErrorBoundary',
         error: error.message,
-//         errorInfo
+        errorInfo
       });
     }
+    
     // Call custom error handler
     if (this.props.onError) {
-  // TODO: Add content
-}
       this.props.onError(error, errorInfo);
     }
+    
     // Report error to external service
     if (this.props.enableErrorReporting) {
-  // TODO: Add content
-}
       this.reportError(error, errorInfo);
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-  // TODO: Add content
-}
-    const _errorReport: ErrorReport = {
-  // TODO: Add content
-}
+    const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
-//       error,
-//       errorInfo,
+      error,
+      errorInfo,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -120,84 +95,52 @@ class AdvancedErrorBoundary extends Component<
     this.sendErrorReport(errorReport);
   };
   private getUserId = (): string | null => {
-  // TODO: Add content
-}
     // Try to get user ID from localStorage or other sources
     try {
-  // TODO: Add content
-}
       return localStorage.getItem('userId') || null;
     } catch {
-  // TODO: Add content
-}
       return null;
     }
   };
+
   private getSessionId = (): string => {
-  // TODO: Add content
-}
     // Generate or retrieve session ID
     try {
-  // TODO: Add content
-}
-      let _sessionId = sessionStorage.getItem('sessionId');
+      let sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
-  // TODO: Add content
-}
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
       }
       return sessionId;
     } catch {
-  // TODO: Add content
-}
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
   };
   private generateErrorId = (): string => {
-  // TODO: Add content
-}
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
+
   private sendErrorReport = async (errorReport: ErrorReport) => {
-  // TODO: Add content
-}
     try {
-  // TODO: Add content
-}
       // Send to your error reporting service
       await fetch('/api/errors', {
-  // TODO: Add content
-}
         method: 'POST',
         headers: {
-  // TODO: Add content
-}
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(errorReport)
       });
     } catch (reportError) {
-  // TODO: Add content
-}
-      logger.error('Failed to send error report', {
-  // TODO: Add content
-}
+      console.error('Failed to send error report', {
         context: 'ErrorReporting',
         error: reportError
       });
     }
   };
   private handleRetry = () => {
-  // TODO: Add content
-}
     if (this.retryCount < this.maxRetries) {
-  // TODO: Add content
-}
       this.retryCount++;
       this.setState({
-  // TODO: Add content
-}
         hasError: false,
         error: null,
         errorInfo: null,
@@ -205,26 +148,18 @@ class AdvancedErrorBoundary extends Component<
       });
     }
   };
+
   private handleReload = () => {
-  // TODO: Add content
-}
     window.location.reload();
   };
+
   private handleGoHome = () => {
-  // TODO: Add content
-}
     window.location.href = '/';
   };
   render() {
-  // TODO: Add content
-}
     if (this.state.hasError) {
-  // TODO: Add content
-}
       // Custom fallback UI
       if (this.props.fallback) {
-  // TODO: Add content
-}
         return this.props.fallback;
       }
       // Default error UI
@@ -261,34 +196,46 @@ class AdvancedErrorBoundary extends Component<
               )}
               <div className='mt-6 space-y-3'>
                 {this.props.enableRetry &&
-//                   this.retryCount < this.maxRetries && (
-  // TODO: Add parameters,
-)
+                  this.retryCount < this.maxRetries && (
                     <button
-onClick={this.handleRetry} className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      onClick={this.handleRetry} 
+                      className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     >
-                      Try Again ({this.maxRetries - this.retryCount} attempts
-//                       left)
+                      Try Again ({this.maxRetries - this.retryCount} attempts left)
                     </button>
                   )}
                 <button
-onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                  onClick={this.handleReload} 
+                  className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
                   Reload Page
-                </button><button
-                  onClick={this.handleGoHome} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                </button>
+                <button
+                  onClick={this.handleGoHome} 
+                  className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
                   Go to Homepage
-                </button></div><div className='mt-6 text-center'><p className='text-xs text-gray-500'>
+                </button>
+              </div>
+              <div className='mt-6 text-center'>
+                <p className='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
                   at&nbsp;
                   <a
-                    href='mailto:kleber@ziontechgroup.com' className='text-indigo-600 hover:text-indigo-500'
+                    href='mailto:kleber@ziontechgroup.com' 
+                    className='text-indigo-600 hover:text-indigo-500'
                   >
                     kleber@ziontechgroup.com
-                  </a></p></div></div></div></div>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       );
     }
     return this.props.children;
   }
 }
+
+export default AdvancedErrorBoundary;
