@@ -128,7 +128,7 @@ export class CacheManager {
       try {
         localStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
       } catch (error) {
-        logger.error('Failed to set localStorage cache', error);
+        logger.error('Failed to set localStorage cache', error as Error, { component: 'CacheManager' });
         // Fallback to memory cache
         this.memoryCache.set(key, entry);
       }
@@ -257,7 +257,7 @@ export class CacheManager {
       }
       keysToRemove.forEach(key => sessionStorage.removeItem(key));
     }
-    logger.info('Cache cleared', 'CacheManager', { storage: this.storage });
+    logger.info('Cache cleared', { component: 'CacheManager', storage: this.storage });
   }
   /**
    * Get or set with function (handles both sync and async)
