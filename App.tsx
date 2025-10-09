@@ -1,7 +1,9 @@
 
-import React, { Suspense, memo, useMemo } from 'react';
+import React, { Suspense, memo, useMemo, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -188,20 +190,56 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 }
 
 export default function App() {
+  // Performance monitoring
+  useEffect(() => {
+    // Web Vitals tracking
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
+      
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      
+      return () => observer.disconnect();
+    }
+  }, []);
+
   const structuredData = useMemo(
     () => ({
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
+      alternateName: 'Zion Tech',
       description:
-        'Leading provider of AI-powered enterprise solutions and digital transformation services',
+        'Leading provider of AI-powered enterprise solutions and digital transformation services achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
       url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://ziontechgroup.com/logo.png',
+        width: 200,
+        height: 200
+      },
+      image: 'https://ziontechgroup.com/og-image.jpg',
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+1-302-464-0950',
         contactType: 'customer service',
         email: 'kleber@ziontechgroup.com',
+        availableLanguage: 'English',
+        areaServed: 'US',
+        hoursAvailable: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '09:00',
+          closes: '18:00'
+        }
       },
       address: {
         '@type': 'PostalAddress',
@@ -211,16 +249,77 @@ export default function App() {
         postalCode: '19709',
         addressCountry: 'US',
       },
-      sameAs: ['https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
-      offers: {
-        '@type': 'Offer',
-        name: 'AI Enterprise Transformation Services',
-        description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-        price: '50000',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup',
+        'https://facebook.com/ziontechgroup',
+        'https://instagram.com/ziontechgroup',
+        'https://youtube.com/@ziontechgroup',
+        'https://github.com/ziontechgroup'
+      ],
+      foundingDate: '2020',
+      numberOfEmployees: '50-100',
+      industry: 'Information Technology',
+      offers: [
+        {
+          '@type': 'Offer',
+          name: 'AI Enterprise Transformation Services',
+          description: 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
+          price: '50000',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          category: 'AI Services'
+        },
+        {
+          '@type': 'Offer',
+          name: 'AI Marketing Solutions',
+          description: 'AI-powered marketing automation and optimization',
+          price: '199',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          category: 'AI Marketing'
+        },
+        {
+          '@type': 'Offer',
+          name: 'Micro SaaS Solutions',
+          description: 'Affordable AI-driven tools for modern businesses',
+          price: '79',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          category: 'Micro SaaS'
+        }
+      ],
+      serviceArea: {
+        '@type': 'GeoCircle',
+        geoMidpoint: {
+          '@type': 'GeoCoordinates',
+          latitude: 39.4496,
+          longitude: -75.7163
+        },
+        geoRadius: '1000000'
       },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'AI and IT Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'AI Services',
+              description: 'Comprehensive AI solutions'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'IT Services',
+              description: 'Enterprise IT solutions'
+            }
+          }
+        ]
+      }
     }),
     []
   );
@@ -255,6 +354,8 @@ export default function App() {
         </Helmet>
         <Router>
           <div className="min-h-screen bg-white">
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />

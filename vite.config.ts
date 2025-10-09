@@ -10,6 +10,7 @@ export default defineConfig({
       '@utils': resolve(__dirname, 'src/utils'),
       '@hooks': resolve(__dirname, 'src/hooks'),
       '@types': resolve(__dirname, 'src/types'),
+      '@app': resolve(__dirname, 'app'),
     },
   },
   build: {
@@ -18,13 +19,37 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          analytics: ['web-vitals'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('web-vitals')) {
+              return 'vendor-analytics';
+            }
+            return 'vendor-misc';
+          }
+          
+          // App chunks
+          if (id.includes('/app/ai-')) {
+            return 'ai-services';
+          }
+          if (id.includes('/app/it-')) {
+            return 'it-services';
+          }
+          if (id.includes('/app/components/')) {
+            return 'components';
+          }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

@@ -5,21 +5,11 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 // Dynamically import heavy components for better performance
-<<<<<<< HEAD
-const ContentPromotionBanner = lazy(() => import('../src/components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('../src/components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('../src/components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('../src/components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
-const Navigation = lazy(() => import('../src/components/Navigation'));
-const Footer = lazy(() => import('../src/components/Footer'));
-=======
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
->>>>>>> cursor/website-audit-and-update-with-deployment-deb9
 
 // Preload critical components with better timing
 const preloadComponents = () => {
@@ -49,10 +39,6 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-deb9
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
