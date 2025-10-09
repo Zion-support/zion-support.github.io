@@ -137,6 +137,105 @@ const ServicesPage: React.FC = () => {
       link: '/ai-fitness-coach',
       popular: false,
       category: 'Health & Fitness'
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Boost sales with AI-powered lead generation and conversion optimization',
+      icon: TrendingUp,
+      price: '$199/month',
+      features: ['Lead scoring', 'Automated follow-ups', 'Sales forecasting', 'CRM integration'],
+      benefits: ['35% more leads', '50% conversion increase', '25% revenue growth'],
+      link: '/ai-sales-automation',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Transform complex data into interactive visualizations',
+      icon: BarChart,
+      price: '$139/month',
+      features: ['Interactive dashboards', 'Real-time visualization', 'Custom charts', 'Data storytelling'],
+      benefits: ['Faster insights', 'Better decisions', 'Stunning presentations'],
+      link: '/ai-data-visualization',
+      popular: false,
+      category: 'Analytics'
+    },
+    {
+      title: 'AI 3D Generation',
+      description: 'Create 3D models and environments with AI technology',
+      icon: Cube,
+      price: '$249/month',
+      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
+      benefits: ['Professional 3D content', 'Time savings', 'Creative freedom'],
+      link: '/ai-3d-generation',
+      popular: false,
+      category: '3D & Graphics'
+    },
+    {
+      title: 'AI Customer Support',
+      description: 'Advanced customer support with AI-powered ticket management',
+      icon: Headphones,
+      price: '$169/month',
+      features: ['Ticket automation', 'Sentiment analysis', 'Knowledge base', 'Multi-channel support'],
+      benefits: ['Faster resolution', 'Higher satisfaction', '24/7 availability'],
+      link: '/ai-customer-support',
+      popular: true,
+      category: 'Customer Service'
+    },
+    {
+      title: 'AI Content Writer',
+      description: 'Generate high-quality content with AI-powered writing assistance',
+      icon: FileText,
+      price: '$79/month',
+      features: ['Blog posts', 'Social media content', 'Product descriptions', 'SEO optimization'],
+      benefits: ['10x content output', 'SEO optimized', 'Brand voice consistency'],
+      link: '/ai-content-writer',
+      popular: true,
+      category: 'Content Creation'
+    },
+    {
+      title: 'AI Inventory Manager',
+      description: 'Optimize inventory with AI-powered demand forecasting',
+      icon: Package,
+      price: '$149/month',
+      features: ['Demand forecasting', 'Stock optimization', 'Reorder alerts', 'Analytics dashboard'],
+      benefits: ['30% inventory reduction', '99% stock accuracy', 'Zero stockouts'],
+      link: '/ai-inventory-manager',
+      popular: false,
+      category: 'Operations'
+    },
+    {
+      title: 'AI HR Assistant',
+      description: 'Streamline HR processes with AI-powered recruitment and management',
+      icon: Users,
+      price: '$189/month',
+      features: ['Resume screening', 'Interview scheduling', 'Employee analytics', 'Performance tracking'],
+      benefits: ['50% faster hiring', 'Better candidate matching', 'Reduced bias'],
+      link: '/ai-hr-assistant',
+      popular: false,
+      category: 'Human Resources'
+    },
+    {
+      title: 'AI Financial Advisor',
+      description: 'Personalized financial planning with AI-powered investment advice',
+      icon: DollarSign,
+      price: '$299/month',
+      features: ['Portfolio analysis', 'Risk assessment', 'Tax optimization', 'Retirement planning'],
+      benefits: ['Better returns', 'Risk management', 'Tax savings'],
+      link: '/ai-financial-advisor',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Legal Assistant',
+      description: 'Legal document analysis and contract review with AI technology',
+      icon: Scale,
+      price: '$399/month',
+      features: ['Contract analysis', 'Legal research', 'Document generation', 'Compliance checking'],
+      benefits: ['Faster reviews', 'Risk identification', 'Cost savings'],
+      link: '/ai-legal-assistant',
+      popular: false,
+      category: 'Legal'
     }
   ];
 
@@ -194,6 +293,60 @@ const ServicesPage: React.FC = () => {
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
       color: 'text-pink-400',
       category: '3D & Graphics'
+    },
+    {
+      title: 'AI Voice Synthesis',
+      description: 'Advanced voice cloning and text-to-speech solutions',
+      icon: Mic,
+      price: '$1,300/month',
+      features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
+      color: 'text-indigo-400',
+      category: 'Voice Technology'
+    },
+    {
+      title: 'AI Content Generation',
+      description: 'Automated content creation for marketing and communication',
+      icon: FileText,
+      price: '$1,000/month',
+      features: ['Blog Writing', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'],
+      color: 'text-yellow-400',
+      category: 'Content AI'
+    },
+    {
+      title: 'AI Predictive Analytics',
+      description: 'Advanced forecasting and trend analysis with machine learning',
+      icon: TrendingUp,
+      price: '$1,700/month',
+      features: ['Sales Forecasting', 'Demand Prediction', 'Risk Assessment', 'Trend Analysis'],
+      color: 'text-red-400',
+      category: 'Analytics'
+    },
+    {
+      title: 'AI Recommendation Engine',
+      description: 'Personalized recommendation systems for e-commerce and content',
+      icon: Target,
+      price: '$1,400/month',
+      features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A/B Testing'],
+      color: 'text-teal-400',
+      category: 'Personalization'
+    },
+    {
+      title: 'AI Fraud Detection',
+      description: 'Advanced fraud prevention and security monitoring',
+      icon: Shield,
+      price: '$1,900/month',
+      features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System'],
+      color: 'text-red-500',
+      category: 'Security'
+    },
+    {
+      title: 'AI Document Processing',
+      description: 'Intelligent document analysis and data extraction',
+      icon: Search,
+      price: '$1,200/month',
+      features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
+      color: 'text-gray-400',
+      category: 'Document AI'
     }
   ];
 
@@ -251,10 +404,64 @@ const ServicesPage: React.FC = () => {
       features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring'],
       color: 'text-indigo-400',
       category: 'Infrastructure'
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile application development',
+      icon: Smartphone,
+      price: '$1,500/month',
+      features: ['iOS/Android Apps', 'Cross-platform Development', 'UI/UX Design', 'App Store Optimization'],
+      color: 'text-pink-400',
+      category: 'Mobile Development'
+    },
+    {
+      title: 'Web Development',
+      description: 'Modern web applications with cutting-edge technologies',
+      icon: Code,
+      price: '$1,200/month',
+      features: ['Frontend Development', 'Backend Development', 'API Integration', 'Performance Optimization'],
+      color: 'text-cyan-400',
+      category: 'Web Development'
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Business intelligence and data analytics solutions',
+      icon: BarChart,
+      price: '$1,300/month',
+      features: ['Data Warehousing', 'Business Intelligence', 'Reporting Dashboards', 'Data Mining'],
+      color: 'text-orange-400',
+      category: 'Analytics'
+    },
+    {
+      title: 'IT Support & Maintenance',
+      description: 'Comprehensive IT support and system maintenance services',
+      icon: Wrench,
+      price: '$800/month',
+      features: ['24/7 Support', 'System Maintenance', 'Software Updates', 'Hardware Management'],
+      color: 'text-gray-400',
+      category: 'Support'
+    },
+    {
+      title: 'Blockchain Solutions',
+      description: 'Blockchain development and cryptocurrency solutions',
+      icon: Lock,
+      price: '$2,000/month',
+      features: ['Smart Contracts', 'DApp Development', 'Token Creation', 'DeFi Solutions'],
+      color: 'text-yellow-500',
+      category: 'Blockchain'
+    },
+    {
+      title: 'IoT Solutions',
+      description: 'Internet of Things development and implementation',
+      icon: Cpu,
+      price: '$1,600/month',
+      features: ['IoT Device Development', 'Sensor Integration', 'Data Collection', 'Real-time Monitoring'],
+      color: 'text-green-500',
+      category: 'IoT'
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness'];
+  const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness', 'Sales', 'Operations', 'Human Resources', 'Finance', 'Legal', '3D & Graphics', 'Voice Technology', 'Content AI', 'Personalization', 'Security', 'Document AI', 'Cloud Computing', 'Data Management', 'Consulting', 'Infrastructure', 'Mobile Development', 'Web Development', 'Support', 'Blockchain', 'IoT'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
@@ -280,7 +487,7 @@ const ServicesPage: React.FC = () => {
             Powerful, affordable AI-powered tools designed for modern businesses
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {microSAASServices.map((service, index) => (
               <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
@@ -346,7 +553,7 @@ const ServicesPage: React.FC = () => {
             Advanced artificial intelligence solutions for enterprise applications
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {aiServices.map((service, index) => (
               <a
                 key={index}
@@ -385,7 +592,7 @@ const ServicesPage: React.FC = () => {
             Comprehensive IT solutions for modern enterprises
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {itServices.map((service, index) => (
               <a
                 key={index}
