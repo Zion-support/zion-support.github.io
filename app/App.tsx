@@ -41,11 +41,16 @@ const _AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/pa
 const _AICloudInfrastructurePage = lazy(() => import('./ai-cloud-infrastructure/page'));
 const _AIEcommerceSolutionsPage = lazy(() => import('./ai-ecommerce-solutions/page'));
 const _AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
+const _AIContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
+const _AICustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
+const _AIDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
+const _AISalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 
 // IT Services Pages
 const _ITServicesPage = lazy(() => import('./it-services/page'));
 const _MicroSAASPage = lazy(() => import('./micro-saas/page'));
 const _CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+const _ITInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
 
 // Specialized Technology Pages
 const _QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
@@ -53,6 +58,9 @@ const _AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const _BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
 const _BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
 const _IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const _BlockchainPage = lazy(() => import('./blockchain/page'));
+const _IoTEdgePage = lazy(() => import('./iot-edge/page'));
+const _RoboticsPage = lazy(() => import('./robotics/page'));
 
 // Additional Pages
 const _BlogPage = lazy(() => import('./blog-index'));
@@ -101,12 +109,6 @@ const App: React.FC = () => {
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
-      // const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
@@ -171,11 +173,16 @@ const App: React.FC = () => {
                         <Route path="/ai-cloud-infrastructure" element={<_AICloudInfrastructurePage />} />
                         <Route path="/ai-ecommerce-solutions" element={<_AIEcommerceSolutionsPage />} />
                         <Route path="/ai-mobile-app-development" element={<_AIMobileAppDevelopmentPage />} />
+                        <Route path="/ai-content-generation" element={<_AIContentGenerationPage />} />
+                        <Route path="/ai-customer-support" element={<_AICustomerSupportPage />} />
+                        <Route path="/ai-data-visualization" element={<_AIDataVisualizationPage />} />
+                        <Route path="/ai-sales-automation" element={<_AISalesAutomationPage />} />
                         
                         {/* IT Services Routes */}
                         <Route path="/it-services" element={<_ITServicesPage />} />
                         <Route path="/micro-saas" element={<_MicroSAASPage />} />
                         <Route path="/cybersecurity" element={<_CybersecurityPage />} />
+                        <Route path="/it-infrastructure" element={<_ITInfrastructurePage />} />
                         
                         {/* Specialized Technology Routes */}
                         <Route path="/quantum-computing" element={<_QuantumComputingPage />} />
@@ -183,6 +190,9 @@ const App: React.FC = () => {
                         <Route path="/business-intelligence" element={<_BusinessIntelligencePage />} />
                         <Route path="/blockchain-web3" element={<_BlockchainWeb3Page />} />
                         <Route path="/iot-edge-computing" element={<_IoTEdgeComputingPage />} />
+                        <Route path="/blockchain" element={<_BlockchainPage />} />
+                        <Route path="/iot-edge" element={<_IoTEdgePage />} />
+                        <Route path="/robotics" element={<_RoboticsPage />} />
                         
                         {/* Additional Routes */}
                         <Route path="/blog" element={<_BlogPage />} />
