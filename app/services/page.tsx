@@ -17,37 +17,54 @@ const ServicesPage: React.FC = () => {
     {
       title: 'AI Automation',
       description: 'Streamline business processes with intelligent automation solutions.',
-      icon: Zap,
-      features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
+      icon: Settings,
+      features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Data Processing'],
       path: '/ai-automation'
     },
     {
-      title: 'AI Healthcare',
-      description: 'Transform healthcare with AI-powered diagnostic and treatment solutions.',
-      icon: Stethoscope,
-      features: ['Medical Diagnosis', 'Treatment Planning', 'Patient Monitoring', 'Drug Discovery'],
-      path: '/ai-healthcare'
-    },
-    {
-      title: 'AI Fintech',
-      description: 'Revolutionize financial services with AI-driven solutions.',
-      icon: CreditCard,
-      features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring'],
-      path: '/ai-fintech'
-    },
-    {
-      title: 'AI Content Generation',
-      description: 'Create compelling content at scale with AI-powered tools.',
-      icon: FileText,
-      features: ['Content Writing', 'Image Generation', 'Video Creation', 'SEO Optimization'],
-      path: '/ai-content-generation'
-    },
-    {
-      title: 'AI Data Analytics',
-      description: 'Unlock insights from your data with advanced AI analytics.',
+      title: 'AI Analytics',
+      description: 'Transform data into actionable insights with advanced AI analytics.',
       icon: BarChart,
-      features: ['Predictive Modeling', 'Data Visualization', 'Business Intelligence', 'Real-time Analytics'],
-      path: '/ai-data-analytics'
+      features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Data Visualization'],
+      path: '/ai-analytics'
+    },
+    {
+      title: 'AI Customer Service',
+      description: 'Enhance customer experience with intelligent support solutions.',
+      icon: Bot,
+      features: ['Chatbot Integration', 'Sentiment Analysis', 'Automated Responses', '24/7 Support'],
+      path: '/ai-customer-service'
+    }
+  ];
+
+  const microSaasServices = [
+    {
+      title: 'Analytics Dashboard',
+      description: 'Real-time business intelligence with customizable dashboards.',
+      icon: BarChart,
+      features: ['Real-time Data', 'Custom Dashboards', 'Export Reports', 'Mobile Access'],
+      path: '/micro-saas/analytics-dashboard'
+    },
+    {
+      title: 'Email Marketing Suite',
+      description: 'AI-powered email marketing with advanced automation.',
+      icon: Mail,
+      features: ['Email Automation', 'A/B Testing', 'Analytics', 'Template Library'],
+      path: '/micro-saas/email-marketing'
+    },
+    {
+      title: 'Project Management',
+      description: 'Streamlined project management with AI assistance.',
+      icon: Calendar,
+      features: ['Task Management', 'Team Collaboration', 'Progress Tracking', 'Resource Planning'],
+      path: '/micro-saas/project-management'
+    },
+    {
+      title: 'Inventory Management',
+      description: 'Smart inventory tracking and optimization.',
+      icon: Package,
+      features: ['Stock Tracking', 'Demand Forecasting', 'Automated Reordering', 'Analytics'],
+      path: '/micro-saas/inventory-management'
     }
   ];
 
@@ -56,7 +73,7 @@ const ServicesPage: React.FC = () => {
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions for modern businesses.',
       icon: Cloud,
-      features: ['AWS/Azure/GCP Migration', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization'],
+      features: ['Cloud Migration', 'Infrastructure Setup', 'Security Implementation', '24/7 Monitoring'],
       path: '/cloud-infrastructure'
     },
     {
@@ -68,220 +85,243 @@ const ServicesPage: React.FC = () => {
     },
     {
       title: 'IT Support',
-      description: '24/7 technical support and maintenance services.',
-      icon: Settings,
-      features: ['Remote Support', 'System Monitoring', 'Proactive Maintenance', 'Help Desk'],
+      description: 'Professional IT support and maintenance services.',
+      icon: Headphones,
+      features: ['24/7 Support', 'Remote Assistance', 'Hardware Maintenance', 'Software Updates'],
       path: '/it-support'
     },
     {
       title: 'Database Management',
-      description: 'Optimize and secure your database infrastructure.',
+      description: 'Expert database design, optimization, and management.',
       icon: Database,
-      features: ['Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Migration Services'],
+      features: ['Database Design', 'Performance Tuning', 'Backup Solutions', 'Data Migration'],
       path: '/database-management'
-    }
-  ];
-
-  const microSaasServices = [
-    {
-      title: 'Custom Micro SAAS',
-      description: 'Build tailored software solutions for your specific business needs.',
-      icon: Code,
-      features: ['Custom Development', 'User Management', 'Payment Integration', 'Analytics Dashboard'],
-      path: '/micro-saas'
     }
   ];
 
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
     address: 'Middletown, DE 19709'
+=======
+    address: '364 E Main St STE 1008, Middletown DE 19709'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-462c
   };
 
   return (
     <>
       <Helmet>
-        <title>Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including automation, cloud infrastructure, cybersecurity, and custom development solutions." />
-        <meta name="keywords" content="AI services, IT consulting, cloud infrastructure, cybersecurity, automation, custom development" />
+        <title>Services - Zion Tech Group | AI, Micro SAAS, IT Solutions</title>
+        <meta name="description" content="Comprehensive technology services including AI solutions, Micro SAAS applications, and IT consulting. Call (302) 464-0950 for custom solutions." />
+        <meta name="keywords" content="AI services, micro saas, IT consulting, cloud infrastructure, cybersecurity, technology solutions" />
       </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Header />
-        <main className="pt-24">
+        
+        <main>
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
+          <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid neural-network-bg">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
+            <div className="relative z-10 max-w-7xl mx-auto text-center">
+              <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-6">
+                <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider cyber-text">
+                  🚀 Comprehensive Technology Solutions
+                </span>
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse">
+                Our <span className="holographic-text">Services</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive AI and IT solutions designed to accelerate your business growth and digital transformation.
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
+                Transform your business with our comprehensive suite of AI, Micro SAAS, and IT solutions designed to drive growth and innovation.
               </p>
-            </div>
-          </section>
-
-          {/* AI Services */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4 flex items-center justify-center">
-                <Brain className="w-10 h-10 text-cyan-400 mr-3" />
-                AI Services
-              </h2>
-              <p className="text-xl text-gray-300">Cutting-edge artificial intelligence solutions</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
-                    <service.icon className="w-12 h-12" />
+              
+              {/* Contact Info Banner */}
+              <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                  <div className="flex items-center justify-center space-x-2">
+                    <Phone className="w-5 h-5 text-cyan-400" />
+                    <div>
+                      <div className="text-white font-medium">{contactInfo.phone}</div>
+                      <div className="text-gray-400 text-sm">Call for consultation</div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={service.path}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* IT Services */}
-          <section className="container mx-auto px-4 py-16 bg-white/5">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4 flex items-center justify-center">
-                <Cloud className="w-10 h-10 text-blue-400 mr-3" />
-                IT Services
-              </h2>
-              <p className="text-xl text-gray-300">Reliable and scalable technology infrastructure</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group">
-                  <div className="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
-                    <service.icon className="w-12 h-12" />
+                  <div className="flex items-center justify-center space-x-2">
+                    <Mail className="w-5 h-5 text-cyan-400" />
+                    <div>
+                      <div className="text-white font-medium">{contactInfo.email}</div>
+                      <div className="text-gray-400 text-sm">Email for quotes</div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={service.path}
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Micro SAAS Services */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4 flex items-center justify-center">
-                <Code className="w-10 h-10 text-green-400 mr-3" />
-                Micro SAAS Solutions
-              </h2>
-              <p className="text-xl text-gray-300">Custom software solutions for your business</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300 group">
-                  <div className="text-green-400 mb-4 group-hover:text-green-300 transition-colors">
-                    <service.icon className="w-12 h-12" />
+                  <div className="flex items-center justify-center space-x-2">
+                    <MapPin className="w-5 h-5 text-cyan-400" />
+                    <div>
+                      <div className="text-white font-medium text-sm">{contactInfo.address}</div>
+                      <div className="text-gray-400 text-sm">Visit our office</div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={service.path}
-                    className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Why Choose Us */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-300">The advantages that set us apart</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <Star className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Proven Expertise</h3>
-                <p className="text-gray-300">20+ years of experience in AI and IT solutions</p>
-              </div>
-              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <Shield className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
-                <p className="text-gray-300">Bank-level security and compliance standards</p>
-              </div>
-              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <TrendingUp className="w-16 h-16 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Proven ROI</h3>
-                <p className="text-gray-300">300% average ROI for our implementations</p>
-              </div>
-              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <Clock className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">24/7 Support</h3>
-                <p className="text-gray-300">Round-the-clock support and monitoring</p>
               </div>
             </div>
           </section>
 
-          {/* Contact CTA */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
+          {/* AI Services Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-400/30 mb-6">
+                  <span className="text-purple-400 font-semibold text-sm uppercase tracking-wider cyber-text">
+                    🤖 AI Services
+                  </span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text">
+                  Artificial <span className="holographic-text">Intelligence</span>
+                </h2>
+                <p className="text-xl text-cyan-400 max-w-3xl mx-auto neon-glow">
+                  Harness the power of AI to automate processes, gain insights, and transform your business operations.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {aiServices.map((service, index) => (
+                  <div key={index} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
+                    <div className="text-purple-400 mb-4 group-hover:text-purple-300 transition-colors animate-float">
+                      <service.icon className="w-12 h-12" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.title}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <a
+                      href={service.path}
+                      className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors font-semibold"
+                    >
+                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Micro SAAS Services Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 neural-pattern">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full border border-green-400/30 mb-6">
+                  <span className="text-green-400 font-semibold text-sm uppercase tracking-wider cyber-text">
+                    ⚡ Micro SAAS Solutions
+                  </span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text">
+                  Micro <span className="holographic-text">SAAS</span>
+                </h2>
+                <p className="text-xl text-cyan-400 max-w-3xl mx-auto neon-glow">
+                  Powerful, focused applications that solve specific business challenges with minimal complexity.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {microSaasServices.map((service, index) => (
+                  <div key={index} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
+                    <div className="text-green-400 mb-4 group-hover:text-green-300 transition-colors animate-float">
+                      <service.icon className="w-12 h-12" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.title}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <a
+                      href={service.path}
+                      className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors font-semibold"
+                    >
+                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* IT Services Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">
+                  <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider cyber-text">
+                    💻 IT Services
+                  </span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text">
+                  IT <span className="holographic-text">Solutions</span>
+                </h2>
+                <p className="text-xl text-cyan-400 max-w-3xl mx-auto neon-glow">
+                  Comprehensive IT services to optimize your infrastructure, enhance security, and support your business growth.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {itServices.map((service, index) => (
+                  <div key={index} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
+                    <div className="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors animate-float">
+                      <service.icon className="w-12 h-12" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.title}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <a
+                      href={service.path}
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+                    >
+                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+                Ready to Get <span className="holographic-text">Started?</span>
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our services can help transform your business. 
-                Get a free consultation and custom solution recommendation.
+              <p className="text-xl text-cyan-400 mb-8 neon-glow">
+                Let's discuss how our services can transform your business and drive real results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                  href="tel:+13024640950"
+                  className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
-                  Call {contactInfo.phone}
+                  Call (302) 464-0950
                 </a>
                 <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow"
                 >
                   <Mail className="w-5 h-5" />
                   Email Us
@@ -290,10 +330,15 @@ const ServicesPage: React.FC = () => {
             </div>
           </section>
         </main>
+        
         <Footer />
       </div>
     </>
   );
 };
 
+<<<<<<< HEAD
 export default ServicesPage;
+=======
+export default ServicesPage;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-462c
