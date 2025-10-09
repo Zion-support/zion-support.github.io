@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
@@ -152,11 +151,11 @@ const AIContentGenerationPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <head>
         <title>AI Content Generation Services - Zion Tech Group</title>
         <meta name="description" content="Transform your content strategy with our AI-powered content generation services. Create blog posts, social media content, and marketing copy 10x faster." />
         <meta name="keywords" content="AI content generation, automated content creation, blog writing, social media content, marketing copy" />
-      </Helmet>
+      </head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
