@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight } from 'lucide-react';
 
@@ -50,9 +49,8 @@ const AIContentGenerationPage: React.FC = () => {
       marketPrice: '$300-600/month',
       technologies: ['OpenAI GPT-4', 'DALL-E', 'Instagram API', 'Twitter API', 'LinkedIn API'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Users, Clock, Shield } from 'lucide-react';
+    }
+  ];
 
 const AIContentGenerationPage: React.FC = () => {
   const features = [
@@ -154,12 +152,10 @@ const AIContentGenerationPage: React.FC = () => {
       company: 'GlobalBrand',
       content: 'The multi-language support is game-changing. We can now create localized content for all our markets without hiring translators.',
       rating: 5
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
     }
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Content Generation Services - Zion Tech Group</title>
@@ -254,9 +250,6 @@ const AIContentGenerationPage: React.FC = () => {
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                           <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -337,15 +330,11 @@ const AIContentGenerationPage: React.FC = () => {
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-
-                  <div className="mb-4 p-3 bg-gray-50 rounded-lg">
                     <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
                   </div>
 
@@ -404,9 +393,6 @@ const AIContentGenerationPage: React.FC = () => {
 };
 
 export default AIContentGenerationPage;
-=======
-                </div>
-              </div>
             ))}
           </div>
         </div>
@@ -533,4 +519,3 @@ export default AIContentGenerationPage;
 };
 
 export default AIContentGenerationPage;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
