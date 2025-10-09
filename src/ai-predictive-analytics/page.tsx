@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { TrendingUp, Target, Zap, Settings, CheckCircle, ArrowRight, Star, Cpu, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+
 
 const AIPredictiveAnalyticsPage: React.FC = () => {
   const features = [
