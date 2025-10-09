@@ -52,7 +52,7 @@ class ErrorBoundary extends React.Component<
     this.setState({ error, errorInfo });
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // Error caught by boundary - could be logged to error reporting service
     }
   }
 

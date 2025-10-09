@@ -1,360 +1,401 @@
 'use client';
 /**
- * Accessibility Checker Utility;
- *
- * Provides tools for checking and improving accessibility (a11y) in React applications.
- * Helps ensure WCAG 2.1 AA compliance.
- *
- * @module accessibilityChecker;
- * @author Zion Tech Group;
- * @version 1.0.0;
+ * Advanced Accessibility Checker
+ * Comprehensive WCAG 2.1 compliance validation
+ * @version 1.0.0
  */
-/**
- * Accessibility issue severity levels;
- */
-export enum A11ySeverity {/* TODO: Fix JSX expression */}
-}
-/**
- * WCAG success criteria levels;
- */
-export enum WCAGLevel {/* TODO: Fix JSX expression */}
-}
-/**
- * Accessibility issue interface;
- */
-export interface A11yIssue {/* TODO: Fix JSX expression */}
-}
-/**
- * Accessibility check result;
- */
-export interface A11yCheckResult {/* TODO: Fix JSX expression */}
-}
-/**
- * Accessibility Checker class;
- *
- * Provides comprehensive accessibility checking and reporting;
- *
- * @example;
- * ```typescript;
- * const checker = new AccessibilityChecker();
- * const result = checker.checkElement(document.getElementById('main'));
- * if (import.meta.env.DEV) { }`
- * ```
- */
-export class AccessibilityChecker {/* TODO: Fix JSX expression */}
-    };
-  }
-  /**
-   * Check entire document for accessibility issues;
-   *
-   * @returns Accessibility check result;
-   */
-  public checkDocument(): A11yCheckResult {/* TODO: Fix JSX expression */}
-      };
-    }
-    return this.checkElement(document.body);
-  }
-  /**
-   * Check images for alt text;
-   *
-   * @private;
-   * @param element - Root element to check;
-   */
-  private checkImages(elemen,)
-  t: Element): void {/* TODO: Fix JSX expression */}`
-  e: `Image ${index + 1} is missing alt text`,
-          elemen,`
-  t: `img[src="${img['src']}"]`,
-          fi,
-  x: 'Add descriptive alt text to the image',
-          codeExampl,"
-  e: '<img src="..." alt="Description of image" />'
-        });
-      }
-      // Check for empty alt on decorative images without role;
-      if (alt === '' && role !== 'presentation') {/* TODO: Fix JSX expression */}"`
-  e: `Image ${index + 1} has empty alt without role="presentation"`,
-          elemen,"`
-  t: `img[src="${img['src']}"]`,
-          fi,"
-  x: 'Add role="presentation" to decorative images',
-          codeExampl,"
-  e: '<img src="..." alt="" role="presentation" />'
-        });
-      }
-    });
-  }
-  /**
-   * Check heading hierarchy;
-   *
-   * @private;
-   * @param element - Root element to check;
-   */
-  private checkHeadings(elemen,)
-  t: Element): void {/* TODO: Fix JSX expression */}`
-  e: `Heading level skipped from h${previousLevel} to h${level}`,
-          elemen,
-  t: heading.tagName.toLowerCase(),
-          fi,
-  x: 'Maintain sequential heading hierarchy',
-          codeExampl,`
-  e: `Use h${previousLevel + 1} instead of h${level}`
-        });
-      }
-      // Check for empty headings;
-      if (!heading.textContent?.trim()) {/* TODO: Fix JSX expression */}`
-  e: `Empty ${heading.tagName} at position ${index + 1}`,
-          elemen,
-  t: heading.tagName.toLowerCase(),
-          fi,
-  x: 'Add descriptive text to the heading'
-        });
-      }
-      previousLevel = level;
-    });
-    // Check for multiple h1s;
-    const h1Count = element.querySelectorAll('h1').length;
-    if (h1Count > 1) {/* TODO: Fix JSX expression */}`
-  e: `Found ${h1Count} h1 elements (should have only one)`,
-        elemen,
-  t: 'h1',
-        fi,
-  x: 'Use only one h1 per page for the main heading'
-      });
-    }
-  }
-  /**
-   * Check links for accessibility;
-   *
-   * @private;
-   * @param element - Root element to check;
-   */
-  private checkLinks(elemen,)
-  t: Element): void {/* TODO: Fix JSX expression */}`
-  e: `Link ${index + 1} has no accessible text`,
-          elemen,"`
-  t: `a[to="${link.getAttribute('href')}"]`,
-          fi,
-  x: 'Add descriptive text or aria-label to the link',
-          codeExampl,"
-  e: '<Link to="..." aria-label="Description">...</Link>'
-        });
-      }
-      // Check for generic link text;
-      if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}`
-  e: `Link ${index + 1} has generic,"`
-  text: "${text}"`,
-          elemen,"`
-  t: `a[to="${link.getAttribute('href')}"]`,
-          fi,
-  x: 'Use descriptive link text that explains the destination',
-          codeExampl,"
-  e: 'Use "Read full article" instead of "Read more"'
-        });
-      }
-      // Check for links opening in new window without warning;
-      const target = link.getAttribute('target');
-      if (target === '_blank' &&)
-        !ariaLabel?.includes('new window') &&
-        !text?.includes('(opens in new window)')
-      ) {/* TODO: Fix JSX expression */}`
-  e: `Link ${index + 1} opens in new window without warning`,
-          elemen,"`
-  t: `a[to="${link.getAttribute('href')}"]`,
-          fi,
-  x: 'Add indication that link opens in new window',
-          codeExampl,
-  e:"
-            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
-        });
-      }
-    });
-  }
-  /**
-   * Check buttons for accessibility;
-   *
-   * @private;
-   * @param element - Root element to check;
-   */
-  private checkButtons(elemen,)
-  t: Element): void {/* TODO: Fix JSX expression */}`
-  e: `Button ${index + 1} has no accessible text`,
-          elemen,
-  t: 'button',
-          fi,
-  x: 'Add text content or aria-label to the button',
-          codeExampl,"
-  e: '<button aria-label="Close dialog">×</button>'
-        });
-      }
-    });
-  }
-  /**
-   * Check form elements for accessibility;
-   *
-   * @private;
-   * @param element - Root element to check;
-   */
-  private checkForms(elemen,)
-  t: Element): void {/* TODO: Fix JSX expression */}"`
-      const label = id ? element.querySelector(`label[for="${id}"]`) : null;
-      const type = input.getAttribute('type');
-      // Skip hidden and submit inputs;
-      if (type === 'hidden' || type === 'submit' || type === 'button') return;
-      // Check for form controls without labels;
-      if (!label && !ariaLabel && !ariaLabelledBy) {/* TODO: Fix JSX expression */}`
-  e: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
-          elemen,"`
-  t: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
-          fi,
-  x: 'Associate a label with the form control',
-          codeExampl,"
-  e: '<label for="email">Emai,"
-  l:</label><input id="email" name="email" />'
-        });
-      }
-    });
-  }
-  /**
-   * Check color contrast (basic check)
-   *
-   * @private;
-   * @param element - Root element to check;
-   */
-  private checkColors(elemen,)
-  t: Element): void {/* TODO: Fix JSX expression */}
-        });
-      }
-    });
-  }
-  /**
-   * Check keyboard accessibility;
-   *
-   * @private;
-   * @param element - Root element to check;
-   */
-  private checkKeyboardAccess(elemen,)
-  t: Element): void {/* TODO: Fix JSX expression */}`
-  e: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
-          elemen,
-  t: el.tagName.toLowerCase(),
-          fi,"
-  x: 'Remove tabindex="-1" or use tabindex="0"',
-          codeExampl,"
-  e: '<button tabindex="0">Accessible button</button>'
-        });
-      }
-    });
-    // Check for divs/spans with onclick but no keyboard handler;
-    const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
-    clickableNonInteractive.forEach(el => {/* TODO: Fix JSX expression */})`
-  e: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
-          elemen,
-  t: el.tagName.toLowerCase(),
-          fi,
-  x: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExampl,
-  e: '<button onClick={handleClick}>Click me</button>'
-        });
-      }
-    });
-  }
-  /**
-   * Check ARIA usage;
-   *
-   * @private;
-   * @param element - Root element to check;
-   */
-  private checkARIA(elemen,)
-  t: Element): void {/* TODO: Fix JSX expression */}"`
-  role: "${role}"`,
-          elemen,
-  t: el.tagName.toLowerCase(),
-          fi,
-  x: 'Use a valid ARIA role or remove the role attribute'
-        });
-      }
-      // Check aria-labelledby references;
-      const labelledBy = el.getAttribute('aria-labelledby');
-      if (labelledBy) {/* TODO: Fix JSX expression */}"`
-  element: "${labelledBy}"`,
-            elemen,
-  t: el.tagName.toLowerCase(),
-            fi,
-  x: 'Ensure the referenced element exists'
-          });
-        }
-      }
-    });
-  }
-  /**
-   * Check for proper use of landmark regions;
-   *
-   * @private;
-   * @param element - Root element to check;
-   */
-  private checkLandmarks(elemen,)
-  t: Element): void {/* TODO: Fix JSX expression */}
-      });
-    }
-  }
-  /**
-   * Add an issue to the list;
-   *
-   * @private;
-   * @param issue - Partial issue object;
-   */
-  private addIssue(issu,)
-  e: Omit<A11yIssue, 'id'>): void {/* TODO: Fix JSX expression */}
-    });
-  }
-  /**
-   * Generate unique issue ID;
-   *
-   * @private;
-   * @returns Unique identifier;
-   */
-  private generateIssueId(): string {/* TODO: Fix JSX expression */}`
-    return `a11y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-  /**
-   * Calculate accessibility score based on issues;
-   *
-   * @private;
-   * @returns Score from 0-100;
-   */
-  private calculateScore(): number {/* TODO: Fix JSX expression */}
-    };
-    const totalPenalty = this.issues.reduce((sum, issue) => {/* TODO: Fix JSX expression */}
-    }, 0);
-    // Score decreases with more/severe issues;
-    const score = Math.max(0, 100 - totalPenalty);
-    return Math.round(score);
-  }
-  /**
-   * Get issues by severity;
-   *
-   * @param severity - Severity level to filter by;
-   * @returns Array of issues with the specified severity;
-   */
-  public getIssuesBySeverity(severit,)
-  y: A11ySeverity): A11yIssue[] {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Get issues by WCAG level;
-   *
-   * @param level - WCAG level to filter by;
-   * @returns Array of issues that violate the specified WCAG level;
-   */
-  public getIssuesByWCAGLevel(leve,)
-  l: WCAGLevel): A11yIssue[] {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Generate accessibility report;
-   *
-   * @returns Formatted report string;
-   */
-  public generateReport(): string {/* TODO: Fix JSX expression */}
-    }
 
-}}"`
+/**
+ * Accessibility issue severity levels
+ */
+export enum A11ySeverity {
+  ERROR = 'error',
+  WARNING = 'warning',
+  INFO = 'info'
+}
+
+/**
+ * WCAG success criteria levels
+ */
+export enum WCAGLevel {
+  A = 'A',
+  AA = 'AA',
+  AAA = 'AAA'
+}
+
+/**
+ * Accessibility issue interface
+ */
+export interface A11yIssue {
+  id: string;
+  type: string;
+  severity: A11ySeverity;
+  message: string;
+  element: HTMLElement | null;
+  wcagCriterion: string;
+  suggestion: string;
+  line?: number;
+  column?: number;
+}
+
+/**
+ * Accessibility checker configuration
+ */
+export interface A11yConfig {
+  level: WCAGLevel;
+  includeWarnings: boolean;
+  includeInfo: boolean;
+  customRules?: A11yRule[];
+}
+
+/**
+ * Custom accessibility rule
+ */
+export interface A11yRule {
+  name: string;
+  check: (element: HTMLElement) => A11yIssue[];
+}
+
+/**
+ * Main accessibility checker class
+ */
+export class AccessibilityChecker {
+  private config: A11yConfig;
+  private issues: A11yIssue[] = [];
+
+  constructor(config: Partial<A11yConfig> = {}) {
+    this.config = {
+      level: WCAGLevel.AA,
+      includeWarnings: true,
+      includeInfo: false,
+      ...config
+    };
+  }
+
+  /**
+   * Run comprehensive accessibility check
+   */
+  public async check(): Promise<A11yIssue[]> {
+    this.issues = [];
+    
+    // Run all checks
+    this.checkImages();
+    this.checkHeadings();
+    this.checkLinks();
+    this.checkForms();
+    this.checkButtons();
+    this.checkColorContrast();
+    this.checkKeyboardNavigation();
+    this.checkARIA();
+    this.checkFocusManagement();
+    
+    // Run custom rules
+    if (this.config.customRules) {
+      this.runCustomRules();
+    }
+    
+    return this.issues;
+  }
+
+  /**
+   * Check image accessibility
+   */
+  private checkImages(): void {
+    const images = document.querySelectorAll('img');
+    images.forEach((img, index) => {
+      if (!img.alt) {
+        this.addIssue({
+          id: `img-alt-${index}`,
+          type: 'missing-alt-text',
+          severity: A11ySeverity.ERROR,
+          message: 'Image missing alt text',
+          element: img,
+          wcagCriterion: '1.1.1',
+          suggestion: 'Add descriptive alt text to image'
+        });
+      }
+      
+      if (img.alt === '') {
+        this.addIssue({
+          id: `img-empty-alt-${index}`,
+          type: 'empty-alt-text',
+          severity: A11ySeverity.WARNING,
+          message: 'Image has empty alt text',
+          element: img,
+          wcagCriterion: '1.1.1',
+          suggestion: 'Decorative images should have alt="" or be background images'
+        });
+      }
+    });
+  }
+
+  /**
+   * Check heading structure
+   */
+  private checkHeadings(): void {
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let lastLevel = 0;
+    
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      
+      if (level > lastLevel + 1) {
+        this.addIssue({
+          id: `heading-skip-${index}`,
+          type: 'heading-skip',
+          severity: A11ySeverity.WARNING,
+          message: 'Heading level skipped',
+          element: heading as HTMLElement,
+          wcagCriterion: '1.3.1',
+          suggestion: 'Don\'t skip heading levels'
+        });
+      }
+      
+      lastLevel = level;
+    });
+  }
+
+  /**
+   * Check link accessibility
+   */
+  private checkLinks(): void {
+    const links = document.querySelectorAll('a');
+    links.forEach((link, index) => {
+      if (!link.textContent?.trim() && !link.querySelector('img')) {
+        this.addIssue({
+          id: `link-empty-${index}`,
+          type: 'empty-link',
+          severity: A11ySeverity.ERROR,
+          message: 'Link has no accessible text',
+          element: link,
+          wcagCriterion: '2.4.4',
+          suggestion: 'Add text content or aria-label to link'
+        });
+      }
+      
+      if (link.getAttribute('href') === '#') {
+        this.addIssue({
+          id: `link-placeholder-${index}`,
+          type: 'placeholder-link',
+          severity: A11ySeverity.WARNING,
+          message: 'Link points to placeholder',
+          element: link,
+          wcagCriterion: '2.4.4',
+          suggestion: 'Replace placeholder href with actual URL'
+        });
+      }
+    });
+  }
+
+  /**
+   * Check form accessibility
+   */
+  private checkForms(): void {
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach((input, index) => {
+      const id = input.getAttribute('id');
+      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
+      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+      
+      if (!label && !ariaLabel && !ariaLabelledBy) {
+        this.addIssue({
+          id: `form-label-${index}`,
+          type: 'missing-label',
+          severity: A11ySeverity.ERROR,
+          message: 'Form control missing label',
+          element: input as HTMLElement,
+          wcagCriterion: '1.3.1',
+          suggestion: 'Add a label element or aria-label attribute'
+        });
+      }
+    });
+  }
+
+  /**
+   * Check button accessibility
+   */
+  private checkButtons(): void {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button, index) => {
+      if (!button.textContent?.trim() && !button.querySelector('img')) {
+        this.addIssue({
+          id: `button-empty-${index}`,
+          type: 'empty-button',
+          severity: A11ySeverity.ERROR,
+          message: 'Button has no accessible text',
+          element: button,
+          wcagCriterion: '2.4.4',
+          suggestion: 'Add text content or aria-label to button'
+        });
+      }
+    });
+  }
+
+  /**
+   * Check color contrast
+   */
+  private checkColorContrast(): void {
+    // This is a simplified version - in practice, you'd use a library like color-contrast
+    const elements = document.querySelectorAll('*');
+    elements.forEach((element, index) => {
+      const styles = window.getComputedStyle(element);
+      const color = styles.color;
+      const backgroundColor = styles.backgroundColor;
+      
+      if (color && backgroundColor && color !== backgroundColor) {
+        // Simplified contrast check - in practice, use a proper contrast calculation
+        this.addIssue({
+          id: `contrast-${index}`,
+          type: 'color-contrast',
+          severity: A11ySeverity.WARNING,
+          message: 'Color contrast may be insufficient',
+          element: element as HTMLElement,
+          wcagCriterion: '1.4.3',
+          suggestion: 'Ensure sufficient color contrast ratio (4.5:1 for normal text)'
+        });
+      }
+    });
+  }
+
+  /**
+   * Check keyboard navigation
+   */
+  private checkKeyboardNavigation(): void {
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    if (focusableElements.length === 0) {
+      this.addIssue({
+        id: 'no-focusable-elements',
+        type: 'no-focusable-elements',
+        severity: A11ySeverity.ERROR,
+        message: 'No focusable elements found',
+        element: null,
+        wcagCriterion: '2.1.1',
+        suggestion: 'Ensure page has focusable elements for keyboard navigation'
+      });
+    }
+  }
+
+  /**
+   * Check ARIA usage
+   */
+  private checkARIA(): void {
+    const elementsWithAria = document.querySelectorAll('[aria-*]');
+    elementsWithAria.forEach((element, index) => {
+      const ariaLabel = element.getAttribute('aria-label');
+      const ariaLabelledBy = element.getAttribute('aria-labelledby');
+      
+      if (ariaLabel && ariaLabelledBy) {
+        this.addIssue({
+          id: `aria-conflict-${index}`,
+          type: 'aria-conflict',
+          severity: A11ySeverity.WARNING,
+          message: 'Element has both aria-label and aria-labelledby',
+          element: element as HTMLElement,
+          wcagCriterion: '4.1.2',
+          suggestion: 'Use either aria-label or aria-labelledby, not both'
+        });
+      }
+    });
+  }
+
+  /**
+   * Check focus management
+   */
+  private checkFocusManagement(): void {
+    // Check for focus traps
+    const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
+    modals.forEach((modal, index) => {
+      const focusableElements = modal.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      
+      if (focusableElements.length === 0) {
+        this.addIssue({
+          id: `modal-no-focus-${index}`,
+          type: 'modal-no-focus',
+          severity: A11ySeverity.ERROR,
+          message: 'Modal dialog has no focusable elements',
+          element: modal as HTMLElement,
+          wcagCriterion: '2.1.1',
+          suggestion: 'Add focusable elements to modal or implement focus trap'
+        });
+      }
+    });
+  }
+
+  /**
+   * Run custom accessibility rules
+   */
+  private runCustomRules(): void {
+    if (!this.config.customRules) return;
+    
+    const allElements = document.querySelectorAll('*');
+    allElements.forEach(element => {
+      this.config.customRules!.forEach(rule => {
+        const issues = rule.check(element as HTMLElement);
+        issues.forEach(issue => this.addIssue(issue));
+      });
+    });
+  }
+
+  /**
+   * Add issue to the list
+   */
+  private addIssue(issue: A11yIssue): void {
+    if (issue.severity === A11ySeverity.ERROR) {
+      this.issues.push(issue);
+    } else if (issue.severity === A11ySeverity.WARNING && this.config.includeWarnings) {
+      this.issues.push(issue);
+    } else if (issue.severity === A11ySeverity.INFO && this.config.includeInfo) {
+      this.issues.push(issue);
+    }
+  }
+
+  /**
+   * Get accessibility score
+   */
+  public getScore(): number {
+    const errors = this.issues.filter(issue => issue.severity === A11ySeverity.ERROR).length;
+    const warnings = this.issues.filter(issue => issue.severity === A11ySeverity.WARNING).length;
+    
+    return Math.max(0, 100 - (errors * 10) - (warnings * 5));
+  }
+
+  /**
+   * Generate accessibility report
+   */
+  public generateReport(): {
+    score: number;
+    level: WCAGLevel;
+    issues: A11yIssue[];
+    summary: {
+      errors: number;
+      warnings: number;
+      info: number;
+    };
+  } {
+    const errors = this.issues.filter(issue => issue.severity === A11ySeverity.ERROR).length;
+    const warnings = this.issues.filter(issue => issue.severity === A11ySeverity.WARNING).length;
+    const info = this.issues.filter(issue => issue.severity === A11ySeverity.INFO).length;
+    
+    const score = this.getScore();
+    const level = score >= 90 ? WCAGLevel.AAA : score >= 80 ? WCAGLevel.AA : WCAGLevel.A;
+    
+    return {
+      score,
+      level,
+      issues: this.issues,
+      summary: {
+        errors,
+        warnings,
+        info
+      }
+    };
+  }
+}
+
+export default AccessibilityChecker;

@@ -2,110 +2,114 @@
 import React, { memo } from 'react';
 import { LucideIcon, ArrowRight } from 'lucide-react';
 
-interface ServiceCardProps {/* TODO: Fix JSX expression */}
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  color?: 'blue' | 'green' | 'purple' | 'orange' | 'red' | 'cyan';
+  href?: string;
+  features?: string[];
 }
 
-const,
-  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+const ServiceCard: React.FC<ServiceCardProps> = memo(({
+  title,
+  description,
+  icon: Icon,
+  color = 'blue',
+  href,
+  features = []
+}) => {
+  const bgColorClasses = {
+    blue: 'bg-blue-500',
+    green: 'bg-green-500',
+    purple: 'bg-purple-500',
+    orange: 'bg-orange-500',
+    red: 'bg-red-500',
+    cyan: 'bg-cyan-500'
   };
 
-  const bgColorClasses = {/* TODO: Fix JSX expression */}
+  const textColorClasses = {
+    blue: 'text-blue-600',
+    green: 'text-green-600',
+    purple: 'text-purple-600',
+    orange: 'text-orange-600',
+    red: 'text-red-600',
+    cyan: 'text-cyan-600'
   };
 
-  return (<article></article>
-      className="quantum-card p-4,"
-  sm:p-6 energy-pulse group relative""
-      role="article")
-      aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
-    >
-      {/* TODO: Fix JSX expression */}
+  const borderColorClasses = {
+    blue: 'border-blue-200',
+    green: 'border-green-200',
+    purple: 'border-purple-200',
+    orange: 'border-orange-200',
+    red: 'border-red-200',
+    cyan: 'border-cyan-200'
+  };
+
+  const currentBgColor = bgColorClasses[color];
+  const currentTextColor = textColorClasses[color];
+  const currentBorderColor = borderColorClasses[color];
+
+  const CardContent = () => (
+    <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-gray-300 overflow-hidden">
+      {/* Header */}
+      <div className="p-6">
+        <div className={`w-12 h-12 ${currentBgColor} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+          <Icon className="w-6 h-6 text-white" />
+        </div>
+        
+        <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+          {title}
+        </h3>
+        
+        <p className="text-gray-600 leading-relaxed">
+          {description}
+        </p>
+      </div>
+
+      {/* Features */}
+      {features.length > 0 && (
+        <div className="px-6 pb-4">
+          <ul className="space-y-2">
+            {features.slice(0, 3).map((feature, index) => (
+              <li key={index} className="flex items-center text-sm text-gray-600">
+                <div className={`w-1.5 h-1.5 ${currentBgColor} rounded-full mr-3 flex-shrink-0`}></div>
+                {feature}
+              </li>
+            ))}
+            {features.length > 3 && (
+              <li className="text-sm text-gray-500 ml-4">
+                +{features.length - 3} more features
+              </li>
+            )}
+          </ul>
+        </div>
       )}
-      "
-      <div className="text-4xl,
-  sm:text-5xl mb-4,"
-  sm:mb-6 text-center cyber-scan-line" aria-hidden="true"></div>"
-        {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
-      </div>
-      
-      <h3></h3>`
-        id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}"
-        className="text-xl,
-  sm:text-2xl font-bold text-white mb-3,"
-  sm:mb-4 text-center neon-text"
-      >
-        {title}
-      </h3>
-      "
-      <p className="text-gray-300 mb-4,
-  sm:mb-6 text-center leading-relaxed text-sm,"
-  sm:text-base"></p>
-        {description}
-      </p>
-      "
-      <div className="mb-4"></div>"
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
-  Features:</h4>"
-        <ul className="text-sm text-gray-300 space-y-1"></ul>
-          {/* TODO: Fix JSX expression */}"
-            <li key={idx} className="flex items-center"></li>"
-              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" /></div>
-              {feature}
-            </li>
-          ))}
-          {/* TODO: Fix JSX expression */}
-              +{features.length - 3} more features;
-            </li>
-          )}
-        </ul>
-      </div>
-      "
-      <div className="mb-4"></div>"
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologie,
-  s:</h4>"
-        <div className="flex flex-wrap gap-1"></div>
-          {/* TODO: Fix JSX expression */}
-              key={idx} `
-              className={`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}
-            >
-              {tech}
-            </span>
-          ))}
-          {/* TODO: Fix JSX expression */}
-              +{technologies.length - 4}
-            </span>
-          )}
+
+      {/* Footer */}
+      <div className="px-6 pb-6">
+        <div className={`inline-flex items-center ${currentTextColor} font-medium group-hover:gap-2 transition-all duration-300`}>
+          Learn More
+          <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
         </div>
       </div>
-      "
-      <div className="text-center mb-4"></div>"
-        <div className="text-lg,"
-  sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price"></div>
-          {price}
-        </div>"
-        <div className="text-xs text-gray-400">Categor,
-  y: {category}</div>
-      </div>
-      
-      <a></a>
-        href={href}`
-        className={`${colorClasses[color as keyof typeof colorClasses]} font-medium text-sm,
-  sm:text-base transition-all duration-300,
-  hover:neon-glow,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-cyan-400,
-  focus:ring-offset-2,`
-  focus:ring-offset-slate-900 rounded inline-flex items-center justify-center w-full py-2`}`
-        aria-label={`Learn more about ${title}`}
-      >
-        Learn More;"
-        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
-      </a>
-    </article>
+
+      {/* Hover Effect */}
+      <div className={`absolute inset-0 ${currentBgColor} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+    </div>
   );
+
+  if (href) {
+    return (
+      <a href={href} className="block">
+        <CardContent />
+      </a>
+    );
+  }
+
+  return <CardContent />;
 });
 
 ServiceCard.displayName = 'ServiceCard';
 
-export default ServiceCard;"`
+export default ServiceCard;
