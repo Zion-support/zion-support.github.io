@@ -6,67 +6,6 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'build/**',
-      'dist/**',
-      'next-env.d.ts',
-      '**/zion-website_disabled/**',
-      '_app_disabled/**',
-      'app_disabled/**',
-      '_conflicted_disabled/**',
-      '_pages_api_disabled/**',
-      '_pages_disabled/**',
-      'admin-api-disabled/**',
-      'api-disabled/**',
-      'api.disabled/**',
-      'api.disabled.temp/**',
-      'api-backup/**',
-      'apps.backup/**',
-      'automation_backup/**',
-      'ai-optimization-backups/**',
-      'automation_logs/**',
-      'all-automations-reports/**',
-      'accessibility-reports/**',
-      'corrupted-files-backup/**',
-      'corrupted_backup/**',
-      'corrupted_files_backup_2/**',
-      'content/**',
-      'contracts/**',
-      'components_backup/**',
-      'data/**',
-      'data_backup/**',
-      'dao/**',
-      'deployments/**',
-      'disabled-api/**',
-      'e2e/**',
-      'factories/**',
-      'hooks/**',
-      'lib_backup/**',
-      'services/**',
-      'middleware/**',
-      'automation/**',
-      '**/*.test.js.skip',
-      '**/*.broken',
-      '**/*.bak',
-      '**/*.backup',
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/corrupted-src-backup/**',
-      '**/temp-files/**',
-      '*.cjs',
-      '*.js',
-      '*.mjs',
-      '*.test.tsx',
-      '*.test.ts',
-      '*.test.js',
-      '*.test.jsx',
-      '__tests__/**'
-    ]
-  },
   // Base JavaScript configuration
   {
     files: ['**/*.{js,jsx}'],
@@ -75,15 +14,10 @@ export default [
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
       },
     },
     rules: {
       ...js.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
     },
   },
   // TypeScript configuration
@@ -107,7 +41,8 @@ export default [
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

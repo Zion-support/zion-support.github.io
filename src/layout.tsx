@@ -1,27 +1,49 @@
+
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const SrcPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Src</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced src solutions</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-};
+import Analytics from './components/Analytics';
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+
+  const address = {
+    '@type': 'PostalAddress',
+    streetAddress: '364 E Main St STE 1008',
+    addressLocality: 'Middletown',
+    addressRegion: 'DE',
+    postalCode: '19709',
+    addressCountry: 'US',
+    offers: [
+  // TODO: Add items,
+]
+      {// TODO: Add content;}
+}
+        '@type': 'Offer',
+        category: 'AI Solutions',
+        description: 'Enterprise AI solutions, digital transformation, and cloud services',
+        price: '1500',
+        priceCurrency: 'USD',
+        priceSpecification: {// TODO: Add content;}
+}
+          '@type': 'PriceSpecification',
+          billingIncrement: 'P1M'
+        };
+  itemOffered: {// TODO: Add content;}
+}
+            '@type': 'Service',
+            name: 'AI Enterprise Transformation',
+            description: 'Comprehensive AI implementation strategies for enterprise organizations'
+
+
 
 export default SrcPage;
+
+

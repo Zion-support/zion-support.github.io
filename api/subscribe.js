@@ -2,26 +2,18 @@ const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+async function handler(req, res) {/* TODO: Fix JSX expression */}
   }
 
   const { email, name, source = 'website' } = req.body || {};
 
-  if (!email) {
-    res.statusCode = 400;
-    res.json({ error: 'Email is required' });
+  if (!email) {/* TODO: Fix JSX expression */}
+  r: 'Email is required' });
     return;
   }
 
-  try {
-    if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.json({ error: 'Invalid email' });
+  try {/* TODO: Fix JSX expression */}
+  r: 'Invalid email' });
       return;
     }
 
@@ -29,26 +21,19 @@ async function handler(req, res) {
 
     let existing = [];
 
-    try {
-      existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-      if (!Array.isArray(existing)) existing = [];
-    } catch {
-      // File doesn't exist or is invalid, use empty array
+    try {/* TODO: Fix JSX expression */}
+    } catch {/* TODO: Fix JSX expression */}
     }
 
-    existing.push({
-      email,
-      name: name || '',
-      source,
-      subscribedAt: new Date().toISOString(),
+    existing.push({/* TODO: Fix JSX expression */})
     });
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
-    res.json({ success: true });
-  } catch (err) {
-    res.statusCode = 500;
-    res.json({ error: err.message || 'Subscription failed' });
+    res.json({/* TODO: Fix JSX expression */})
+  s: true });
+  } catch (err) {/* TODO: Fix JSX expression */}
+  r: err.message || 'Subscription failed' });
   }
 }
 

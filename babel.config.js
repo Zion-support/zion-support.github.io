@@ -1,11 +1,13 @@
-export default {
-  presets: [
-    ['@babel/preset-env', { targets: { node: 'current' } }],
-    ['@babel/preset-react', { runtime: 'automatic' }],
+export default {/* TODO: Fix JSX expression */}
+  e: 'current' } }],
+    ['@babel/preset-react', {/* TODO: Fix JSX expression */}
+  e: 'automatic' }],
     '@babel/preset-typescript',
   ],
-  plugins: [
-    ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+  plugin,
+  s: [
+    ['@babel/plugin-proposal-decorators', {/* TODO: Fix JSX expression */}
+  t: true }],
     '@babel/plugin-transform-class-properties',
   ],
 };

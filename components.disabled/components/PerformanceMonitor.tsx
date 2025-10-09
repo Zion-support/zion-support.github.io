@@ -1,9 +1,7 @@
 'use client'
-interface PerformanceMetrics {fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null}
-  loadTime: number | null}
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+  b: number | null}
+  loadTim,
+  e: number | null}
 }
 export default PerformanceMonitor;

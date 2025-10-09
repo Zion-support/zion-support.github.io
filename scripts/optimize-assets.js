@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,18 +6,11 @@ import { fileURLToPath } from 'url';
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
-// // Optimize CSS
-function optimizeCSS() {
+// // Optimize CSS;
+function optimizeCSS() {/* TODO: Fix JSX expression */}
+}
 //   const cssPath = path.join(process.cwd(), '.next/static/css');
-  if (fs.existsSync(cssPath)) {
-    const _files = fs.readdirSync(cssPath);
-    files.forEach(file => {
-      if (file.endsWith('.css')) {
-//         const filePath = path.join(cssPath, file);
-        let _content = fs.readFileSync(filePath, 'utf8');
-        
-        // Remove unnecessary whitespace
-        content = content.replace(/\s+/g, ' ');
+  if (fs.existsSync(cssPath)) {/* TODO: Fix JSX expression */}
         content = content.replace(/;\s*}/g, '}');
         content = content.replace(/,\s+/g, ',');
         
@@ -28,21 +20,11 @@ function optimizeCSS() {
 //     }
 }
 
-// Optimize JavaScript bundles
-function optimizeJS() {
+// Optimize JavaScript bundles;
+function optimizeJS() {/* TODO: Fix JSX expression */}
+}
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks');
-  if (fs.existsSync(jsPath)) {
-    const _files = fs.readdirSync(jsPath);
-    files.forEach(file => {
-      if (file.endsWith('.js')) {
-//         const filePath = path.join(jsPath, file);
-        let _content = fs.readFileSync(filePath, 'utf8');
-        
-        // Remove console.log statements in production
-        if (process.env.NODE_ENV === 'production') {
-          content = content.replace(/console\.log\([^)]*\);?/g, '');
-          content = content.replace(/console\.warn\([^)]*\);?/g, '');
-          content = content.replace(/console\.info\([^)]*\);?/g, '');
+  if (fs.existsSync(jsPath)) {/* TODO: Fix JSX expression */}
         }
         
         fs.writeFileSync(filePath, content);

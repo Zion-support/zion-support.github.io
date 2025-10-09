@@ -1,11 +1,10 @@
-// Cn utility
-// This file contains utility functions and configurations
 
-export const cn = {
-  // Add utility functions here
-  init: () => {
-    console.log('cn initialized');
-  }
-};
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
-export default cn;
+export function cn(...inputs: ClassValue[]) {// TODO: Add content;}
+}
+  return twMerge(clsx(inputs));
+}
+
+

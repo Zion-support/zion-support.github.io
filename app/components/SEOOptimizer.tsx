@@ -1,91 +1,102 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { logger } from '../utils/logger';
 
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonical: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  structuredData: object;
+interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 
-interface SEOOptimizerProps {
-  seoData?: Partial<SEOData>;
-  page?: string;
-}
+const,
+  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+    }
+    
+    // Add breadcrumb structured data;
+    addBreadcrumbStructuredData();
+    
+    // Add FAQ structured data;
+    addFAQStructuredData();
+    
+    // Add organization structured data;
+    addOrganizationStructuredData();
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 
-export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
-  seoData = {}, 
-  page = 'home' 
-}) => {
-  const defaultSEOData: SEOData = {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.',
-    keywords: [
-      'AI solutions',
-      'artificial intelligence',
-      'cybersecurity',
-      'cloud computing',
-      'digital transformation',
-      'machine learning',
-      'quantum computing',
-      'IT services',
-      'automation',
-      'Zion Tech Group'
-    ],
-    canonical: 'https://ziontechgroup.com',
-    ogImage: 'https://ziontechgroup.com/og-image.svg',
-    ogType: 'website',
-    twitterCard: 'summary_large_image',
-    structuredData: {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Technology Drive',
-        addressLocality: 'Wilmington',
-        addressRegion: 'DE',
-        postalCode: '19801',
-        addressCountry: 'US'
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        availableLanguage: 'English'
-      },
-      sameAs: [
-        'https://linkedin.com/company/ziontechgroup',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/ziontechgroup'
-      ],
-      service: [
-        {
-          '@type': 'Service',
-          name: 'AI Solutions',
-          description: 'Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.'
-        },
-        {
-          '@type': 'Service',
-          name: 'Cybersecurity',
-          description: 'Comprehensive cybersecurity solutions to protect your business from threats and ensure compliance.'
-        },
-        {
-          '@type': 'Service',
-          name: 'Cloud Infrastructure',
-          description: 'Scalable and secure cloud infrastructure solutions for modern businesses.'
+  const updateMetaTag = (nam,
+  e: string, conten,
+  t: string, attribut,)
+  e: string = 'name') => {/* TODO: Fix JSX expression */}
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    if (!meta) {/* TODO: Fix JSX expression */}
+    }
+    meta.setAttribute('content', content);
+  };
+
+  const updateCanonicalUrl = (ur,)
+  l: string) => {/* TODO: Fix JSX expression */}
+    }
+    canonical.setAttribute('href', url);
+  };
+
+  const addStructuredData = (dat,)
+  a: any) => {/* TODO: Fix JSX expression */}
+    }
+    document.head.appendChild(script);
+  };
+
+  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
       ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(breadcrumbData);
+    script.id = 'breadcrumb-structured-data';
+    // Remove existing breadcrumb data;
+    const existing = document.getElementById('breadcrumb-structured-data');
+    if (existing) {/* TODO: Fix JSX expression */}
+    }
+    document.head.appendChild(script);
+  };
+
+  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
+          }
+        },
+        {/* TODO: Fix JSX expression */}
+          }
+        },
+        {/* TODO: Fix JSX expression */}
+          }
+        }
+      ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(faqData);
+    script.id = 'faq-structured-data';
+    // Remove existing FAQ data;
+    const existing = document.getElementById('faq-structured-data');
+    if (existing) {/* TODO: Fix JSX expression */}
+    }
+    document.head.appendChild(script);
+  };
+
+  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
+      },
+      'address': {/* TODO: Fix JSX expression */}
+      },
+      'sameAs': [
+        'http,
+  s://twitter.com/ziontechgroup',
+        'http,
+  s://linkedin.com/company/ziontechgroup'
+      ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(organizationData);
+    script.id = 'organization-structured-data';
+    // Remove existing organization data;
+    const existing = document.getElementById('organization-structured-data');
+    if (existing) {/* TODO: Fix JSX expression */}
+
     }
   };
 
@@ -224,4 +235,8 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   );
 };
 
-export default SEOOptimizer;
+
+SEOOptimizer.displayName = 'SEOOptimizer';
+export default SEOOptimizer;"`
+
+

@@ -1,52 +1,41 @@
 const { withSentry } = require('./withSentry.cjs');
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+async function handler(req, res) {/* TODO: Fix JSX expression */}
   }
 
-  try {
+  try {/* TODO: Fix JSX expression */}
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
 
-    if (!apiKey) {
-      res.statusCode = 500;
-      res.json({ error: 'EasyPost API key not configured' });
+    if (!apiKey) {/* TODO: Fix JSX expression */}
+  r: 'EasyPost API key not configured' });
       return;
     }
 
-    const response = await fetch('https://api.easypost.com/v2/shipments', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
+    const response = await fetch('http,
+  s://api.easypost.com/v2/shipments', {/* TODO: Fix JSX expression */}
+  n: `Bearer ${apiKey}`,
       },
-      body: JSON.stringify({
-        shipment: {
-          to_address: toAddress,
-          from_address: fromAddress,
-          parcel,
-        },
+      bod,
+  y: JSON.stringify({/* TODO: Fix JSX expression */}
+        },)
       }),
     });
 
     const data = await response.json();
 
-    if (!response.ok) {
-      res.statusCode = 500;
-      res.json({ error: data.error || 'Failed to fetch rates' });
+    if (!response.ok) {/* TODO: Fix JSX expression */}
+  r: data.error || 'Failed to fetch rates' });
       return;
     }
 
     res.statusCode = 200;
-    res.json({ rates: data.rates });
-  } catch (err) {
-    //     res.statusCode = 500;
-    res.json({ error: err.message });
+    res.json({/* TODO: Fix JSX expression */})
+  s: data.rates });
+  } catch (err) {/* TODO: Fix JSX expression */}
+  r: err.message });
   }
 }
 
 module.exports = withSentry(handler);
+`

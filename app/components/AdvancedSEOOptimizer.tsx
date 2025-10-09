@@ -2,216 +2,110 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+interface SEOData {/* TODO: Fix JSX expression */}
 }
 
-interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableOpenGraph?: boolean;
-  enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;
+interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
-  enableStructuredData = true,
-  enableOpenGraph = true,
-  enableTwitterCards = true,
-  enableSchemaMarkup = true,
-}) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-  
-  const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.structuredData) {
-      return null;
+const,
+  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
     }
 
-    const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'TechCompany',
-      name: 'Zion Tech Group',
-      description: seoData.description,
-      url: seoData.canonicalUrl,
-      logo: 'https://ziontechgroup.com/logo.png',
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/zion-tech-group',
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-ZION-TECH',
-        contactType: 'customer service',
-        availableLanguage: 'English',
+    const baseStructuredData = {/* TODO: Fix JSX expression */}
       },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Tech Innovation Drive',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US',
+      addres,
+  s: {/* TODO: Fix JSX expression */}
       },
       ...seoData.structuredData,
     };
 
-    if (seoData.author) {
-      baseStructuredData.author = {
-        '@type': 'Person',
-        name: seoData.author,
+    if (seoData.author) {/* TODO: Fix JSX expression */}
       };
     }
 
-    if (seoData.publishedTime) {
-      baseStructuredData.datePublished = seoData.publishedTime;
+    if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
     }
 
-    if (seoData.modifiedTime) {
-      baseStructuredData.dateModified = seoData.modifiedTime;
+    if (seoData.modifiedTime) {/* TODO: Fix JSX expression */}
     }
 
-    if (seoData.section) {
-      baseStructuredData.articleSection = seoData.section;
+    if (seoData.section) {/* TODO: Fix JSX expression */}
     }
 
-    if (seoData.tags && seoData.tags.length > 0) {
-      baseStructuredData.keywords = seoData.tags.join(', ');
+    if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
     }
 
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
 
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.breadcrumbs) {
-      return null;
+  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
 
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
-        item: breadcrumb.url
+    return {/* TODO: Fix JSX expression */}
       }))
     };
   }, [seoData, enableStructuredData]);
 
-  const generateFAQStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.faqs) {
-      return null;
+  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
 
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: seoData.faqs.map((faq: any) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
+    return {/* TODO: Fix JSX expression */}
         }
       }))
     };
   }, [seoData, enableStructuredData]);
 
-  // Generate Open Graph data
-  const generateOpenGraphData = useCallback(() => {
+  // Generate Open Graph data;
+  const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {};
 
-    return {
-      'og:title': seoData.ogTitle || seoData.title,
-      'og:description': seoData.ogDescription || seoData.description,
-      'og:url': seoData.canonicalUrl,
-      'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.jpg',
-      'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US',
+    return {/* TODO: Fix JSX expression */}
     };
   }, [seoData, enableOpenGraph]);
 
-  // Generate Twitter Card data
-  const generateTwitterCardData = useCallback(() => {
+  // Generate Twitter Card data;
+  const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {};
 
-    return {
-      'twitter:card': 'summary_large_image',
-      'twitter:title': seoData.ogTitle || seoData.title,
-      'twitter:description': seoData.ogDescription || seoData.description,
-      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg',
-      'twitter:site': '@ziontechgroup',
-      'twitter:creator': '@ziontechgroup',
+    return {/* TODO: Fix JSX expression */}
     };
   }, [seoData, enableTwitterCards]);
 
-  // Generate meta tags
-  const generateMetaTags = useCallback(() => {
-    const metaTags = [
-      { name: 'description', content: seoData.description },
-      { name: 'keywords', content: seoData.keywords.join(', ') },
-      { name: 'author', content: seoData.author || 'Zion Tech Group' },
-      { name: 'robots', content: seoData.robots || 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3B82F6' },
-      { name: 'msapplication-TileColor', content: '#3B82F6' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' },
+  // Generate meta tags;
+  const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
+  t: seoData.description },
+      {/* TODO: Fix JSX expression */}
+  t: seoData.keywords.join(', ') },
+      {/* TODO: Fix JSX expression */}
+  t: seoData.author || 'Zion Tech Group' },
+      {/* TODO: Fix JSX expression */}
+  t: seoData.robots || 'index, follow' },
+      {/* TODO: Fix JSX expression */}
+  t: 'width=device-width, initial-scale=1.0' },
+      {/* TODO: Fix JSX expression */}
+  t: '#3B82F6' },
+      {/* TODO: Fix JSX expression */}
+  t: '#3B82F6' },
+      {/* TODO: Fix JSX expression */}
+  t: '/browserconfig.xml' },
     ];
     return metaTags;
   }, [seoData]);
 
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!seoData.breadcrumbs || seoData.breadcrumbs.length === 0) {
-      return null;
+  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
 
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
-        item: breadcrumb.url
+    return {/* TODO: Fix JSX expression */}
       }))
     };
   }, [seoData.breadcrumbs]);
 
-  const generateFAQStructuredData = useCallback(() => {
-    if (!seoData.faqs || seoData.faqs.length === 0) {
-      return null;
+  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
 
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: seoData.faqs.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
+    return {/* TODO: Fix JSX expression */}
         }
       }))
     };
@@ -222,34 +116,20 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const twitterCardData = generateTwitterCardData();
   const metaTags = generateMetaTags();
 
-  useEffect(() => {
-    // Update page title and meta description for better SEO
-    if (typeof document !== 'undefined') {
-      document.title = seoData.title;
-      
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
+  useEffect(() => {/* TODO: Fix JSX expression */}
       }
       metaDescription.setAttribute('content', seoData.description);
 
-      // Update canonical URL
+      // Update canonical URL;
       let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
+      if (!canonicalLink) {/* TODO: Fix JSX expression */}
       }
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
 
-  const addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data
-    if (structuredDataRef.current) {
-      structuredDataRef.current.remove();
+  const addStructuredData = (dat,)
+  a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
     }
     
     const script = document.createElement('script');
@@ -259,79 +139,72 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     structuredDataRef.current = script;
   };
 
-  useEffect(() => {
-    if (structuredData) {
-      addStructuredData(structuredData);
+  useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [structuredData]);
 
 
-  useEffect(() => {
-    // Track page performance
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData) {
-        // Track performance metrics
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+  useEffect(() => {/* TODO: Fix JSX expression */}
           });
         }
       }
     }
   }, []);
 
-  return (
-    <Helmet>
+  return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
-      {metaTags.map((tag, index) => (
-        <meta key={index} name={tag.name} content={tag.content} />
+      {/* TODO: Fix JSX expression */}
+        <meta key={index} name={tag.name} content={tag.content} /></meta>)
       ))}
 
       {/* Canonical URL */}
-      {seoData.canonicalUrl && (
-        <link rel="canonical" href={seoData.canonicalUrl} />
+      {/* TODO: Fix JSX expression */}"
+        <link rel="canonical" href={seoData.canonicalUrl} /></link>
       )}
 
       {/* Open Graph Tags */}
-      {Object.entries(openGraphData).map(([property, content]) => (
-        <meta key={property} property={property} content={content} />
+      {/* TODO: Fix JSX expression */}
+        <meta key={property} property={property} content={content} /></meta>
       ))}
 
       {/* Twitter Card Tags */}
-      {Object.entries(twitterCardData).map(([name, content]) => (
-        <meta key={name} name={name} content={content} />
+      {/* TODO: Fix JSX expression */}
+        <meta key={name} name={name} content={content} /></meta>
       ))}
 
-      {/* Additional SEO Tags */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      {/* Additional SEO Tags */}"
+      <meta name="format-detection" content="telephone=no" /></meta>"
+      <meta name="mobile-web-app-capable" content="yes" /></meta>"
+      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>"
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
+      {/* Favicon and Icons */}"
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
+      <link rel="manifest" href="/site.webmanifest" /></link>
+      {/* Preconnect to external domains */}"
+      <link rel="preconnect" href="http,"
+  s://fonts.googleapis.com" /></link>"
+      <link rel="preconnect" href="http,"
+  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
+      <link rel="preconnect" href="http,"
+  s://www.google-analytics.com" /></link>"
+      <link rel="preconnect" href="http,"
+  s://www.googletagmanager.com" /></link>
+      {/* DNS Prefetch */}"
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
     </Helmet>
   );
 };
 
+
 export default AdvancedSEOOptimizer;
+
+}"
+
+

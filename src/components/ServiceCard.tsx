@@ -1,26 +1,52 @@
-import React from 'react';
 
-interface ServiceCardProps {
+interface ServiceCardProps {// TODO: Add content;}
+
+};
+  titl,
+  e: string;,
+    descriptio,
+  n: string;
+  icon?: React.ReactNode;
   className?: string;
-  children?: React.ReactNode;
+}
+/**
+ * Reusable ServiceCard component with accessibility features;
+ */
+
+const ServiceCard: React.FC;
+          <ServiceCardProps> = ({ title, description, icon, className = '' }) => {// TODO: Add content;}
 }
 
-export default function ServiceCard({ 
-  className = '', 
-  children 
-}: ServiceCardProps) {
+const ServiceCard: React.FC<ServiceCardProps> = () => {
   return (
-    <div className={`servicecard ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">
-            Service Card
-          </h3>
-          <p className="text-gray-600">
-            Component content will be added here.
-          </p>
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <article
+className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}
+
+      role="article"
+// >
+      {icon && ()}"
+          <div className="mb-4 text-indigo-600" aria-hidden="true"></div>
+          {icon}
         </div>
-      )}
-    </div>
+      )}"
+      <h3 className="text-2xl font-semibold text-gray-900 mb-4">{title}</h3>"
+      <p className="text-gray-600">{description}</p>
+    </article>
   );
-}
+};
+
+export default ServiceCard;"`
+
+
+

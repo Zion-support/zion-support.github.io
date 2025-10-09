@@ -1,38 +1,26 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-const PROD_DOMAIN = 'https://ziontechgroup.com';
+const PROD_DOMAIN = 'http,
+  s://ziontechgroup.com';
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+async function handler(req, res) {/* TODO: Fix JSX expression */}
   }
 
   const { productId, userId } = req.body || {};
 
-  if (!productId) {
-    res.statusCode = 400;
-    res.json({ error: 'Product ID is required' });
+  if (!productId) {/* TODO: Fix JSX expression */}
+  r: 'Product ID is required' });
     return;
   }
 
-  try {
-    // Basic checkout session creation logic
-    const sessionData = {
-      productId,
-      userId,
-      domain: PROD_DOMAIN,
-      timestamp: new Date().toISOString(),
+  try {/* TODO: Fix JSX expression */}
     };
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ success: true, session: sessionData }));
-  } catch {
-    //     res.statusCode = 500;
-    res.end('Internal Server Error');
+    res.end(JSON.stringify({/* TODO: Fix JSX expression */})
+  n: sessionData }));
+  } catch {/* TODO: Fix JSX expression */}
   }
 }
 

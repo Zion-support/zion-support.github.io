@@ -1,4 +1,5 @@
 
+
                       <span className="text-gray-700">{detail}</span>
                     </li>
                   ))}
@@ -8,8 +9,13 @@
           </div>
         </section>
       </div>
-    );
-  };
+    </div>
+
+  );
+};
+
 
 export default SecurityPage;
+
+"
 
