@@ -5,8 +5,7 @@ import { DollarSign, TrendingUp, Shield, BarChart, Target, CheckCircle, ArrowRig
 
 const AIFinancialAdvisorPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Financial Advisor - Zion Tech Group</title>
         <meta name="description" content="Personalized financial planning and investment recommendations powered by AI. Get 25% better returns with our intelligent financial advisory platform." />
         <meta name="keywords" content="AI financial advisor, investment recommendations, financial planning, portfolio optimization, risk assessment" />
@@ -131,7 +130,7 @@ const AIFinancialAdvisorPage: React.FC = () => {
           </section>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

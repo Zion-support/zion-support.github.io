@@ -118,8 +118,7 @@ const AICRMPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI-Powered CRM - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered CRM system with intelligent lead scoring, predictive analytics, and automated follow-ups. Increase conversions by 40% and save 15 hours per week." />
         <meta name="keywords" content="AI CRM, customer relationship management, lead scoring, predictive analytics, sales automation" />
@@ -333,7 +332,7 @@ const AICRMPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

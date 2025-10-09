@@ -103,8 +103,7 @@ const AIWritingAssistantPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Writing Assistant - Zion Tech Group</title>
         <meta name="description" content="AI-powered writing assistant for content creation, SEO optimization, and brand consistency. Generate high-quality content 10x faster with advanced AI tools." />
         <meta name="keywords" content="AI writing assistant, content generation, SEO writing, blog writing, copywriting, content marketing" />
@@ -314,7 +313,7 @@ const AIWritingAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

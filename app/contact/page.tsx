@@ -122,8 +122,7 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, project inquiries, and expert advice. Call (302) 464-0950."
         keywords={['contact us', 'get in touch', 'consultation', 'AI services', 'IT solutions', 'project inquiry']}
@@ -339,15 +338,13 @@ const ContactPage: React.FC = () => {
                         className="w-full cyber-button flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isSubmitting ? (
-                          <>
-                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                             <span>Sending...</span>
-                          </>
+                          </div>
                         ) : (
-                          <>
-                            <Send className="w-5 h-5" />
+                          <div><Send className="w-5 h-5" />
                             <span>Send Message</span>
-                          </>
+                          
                         )}
                       </button>
                     </form>
@@ -424,7 +421,7 @@ const ContactPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

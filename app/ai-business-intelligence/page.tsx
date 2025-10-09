@@ -116,8 +116,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Business Intelligence - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered business intelligence platform. Real-time analytics, predictive insights, and custom dashboards." />
         <meta name="keywords" content="AI business intelligence, data analytics, business intelligence, predictive analytics, data visualization, BI platform" />
@@ -273,7 +272,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

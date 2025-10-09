@@ -119,8 +119,7 @@ const AI3DGenerationPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Transform your ideas into stunning 3D models with our AI-powered 3D generation technology." />
       </Helmet>
@@ -225,7 +224,7 @@ const AI3DGenerationPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

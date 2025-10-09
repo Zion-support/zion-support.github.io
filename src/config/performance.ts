@@ -5,9 +5,9 @@
 export const performanceConfig = {
   // Core Web Vitals thresholds
   metrics: {
-    lcp: {
-      good: 2500,
-      needsImprovement: 4000
+// lcp: {
+// good: 2500,
+// needsImprovement: 4000
     },
     fid: {
       good: 100,
@@ -28,17 +28,17 @@ export const performanceConfig = {
   },
   // Cache strategies
   cache: {
-    static: {
-      maxAge: 31536000, // 1 year
-      staleWhileRevalidate: 86400, // 1 day
+// static: {
+// maxAge: 31536000, // 1 year
+// staleWhileRevalidate: 86400, // 1 day
     },
     dynamic: {
       maxAge: 3600, // 1 hour
       staleWhileRevalidate: 60, // 1 minute
     },
     api: {
-      maxAge: 300, // 5 minutes
-      staleWhileRevalidate: 30, // 30 seconds
+// maxAge: 300, // 5 minutes
+// staleWhileRevalidate: 30, // 30 seconds
     }
   },
   // Resource hints
@@ -51,22 +51,22 @@ export const performanceConfig = {
   ],
   // Image optimization
   images: {
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: false
+// deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+// imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+// formats: ['image/avif', 'image/webp'],
+// minimumCacheTTL: 60,
+// dangerouslyAllowSVG: false
   },
   // Bundle optimization
   bundle: {
-    minChunkSize: 20000,
-    maxChunkSize: 244000,
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          reuseExistingChunk: true
+// minChunkSize: 20000,
+// maxChunkSize: 244000,
+// splitChunks: {
+// cacheGroups: {
+// vendor: {
+// test: /[\\/]node_modules[\\/]/,
+// priority: -10,
+// reuseExistingChunk: true
         },
         default: {
           minChunks: 2,
@@ -78,11 +78,11 @@ export const performanceConfig = {
   },
   // Performance monitoring
   monitoring: {
-    enabled: true,
-    sampleRate: 1.0, // 100% in production
-    reportInterval: 30000, // 30 seconds
-    sendToAnalytics: true,
-    logThreshold: 'needsImprovement'
+// enabled: true,
+// sampleRate: 1.0, // 100% in production
+// reportInterval: 30000, // 30 seconds
+// sendToAnalytics: true,
+// logThreshold: 'needsImprovement'
   }
 };
 export type PerformanceConfig = typeof performanceConfig;

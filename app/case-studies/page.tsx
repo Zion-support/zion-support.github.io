@@ -150,8 +150,7 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="Case Studies - Zion Tech Group"
         description="Explore our successful case studies and client success stories. See how we've helped businesses achieve remarkable results with AI and IT solutions."
         keywords={['case studies', 'success stories', 'client results', 'AI solutions', 'IT projects', 'business transformation']}
@@ -392,7 +391,7 @@ const CaseStudiesPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

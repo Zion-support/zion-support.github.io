@@ -33,7 +33,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      // console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Report error to analytics
@@ -89,7 +89,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   private sendToErrorService = (errorReport: any) => {
     // In a real application, you would send this to your error tracking service
-    console.log('Error report:', errorReport);
+    // console.log('Error report:', errorReport);
     
     // Example: Send to your API endpoint
     // fetch('/api/errors', {

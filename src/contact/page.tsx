@@ -1,9 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -30,7 +26,7 @@ const ContactPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
+    // // console.log('Form submitted:', formData);
     setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {

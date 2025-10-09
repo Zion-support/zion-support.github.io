@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -60,8 +55,7 @@ const DeveloperToolsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
         <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
@@ -206,7 +200,7 @@ const DeveloperToolsPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

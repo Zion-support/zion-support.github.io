@@ -131,8 +131,7 @@ const AICybersecurityPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered cybersecurity solutions with real-time threat detection, zero trust security, and 24/7 monitoring. Protect your business from evolving cyber threats." />
         <meta name="keywords" content="AI cybersecurity, threat detection, security monitoring, zero trust, vulnerability management, compliance, SOC 2, GDPR" />
@@ -295,7 +294,7 @@ const AICybersecurityPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

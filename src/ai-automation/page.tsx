@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
-=======
-import { CheckCircle, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -93,8 +89,7 @@ const AIAutomationPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Automation - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with intelligent process automation. Achieve 80% efficiency increase and 60% time savings with AI-powered automation." />
         <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation" />
@@ -261,7 +256,7 @@ const AIAutomationPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

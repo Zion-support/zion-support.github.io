@@ -135,12 +135,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console
-      console.log('Slow resources:', slowResources.map(r => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize
-        }))
-      );
+      // console.log('Slow resources:', slowResources.map(r => ({
+      //   name: r.name,
+      //   duration: r.duration,
+      //   size: r.transferSize
+      // })));
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {
@@ -258,7 +257,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               Recommendations:
             </h4>
             <ul className='text-xs text-red-600'>
-              {_recommendations.map((rec, index) => (
+              {recommendations.map((rec, index) => (
                 <li key={index}>• {rec}</li>
               ))}
             </ul>

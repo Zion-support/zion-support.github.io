@@ -102,8 +102,7 @@ const AITimeTrackerPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Time Tracker - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered time tracking and productivity management platform. Automate time tracking, analyze productivity, and optimize your workflow with intelligent insights." />
         <meta name="keywords" content="AI time tracker, productivity management, time tracking, work analytics, team management, AI insights" />
@@ -275,7 +274,7 @@ const AITimeTrackerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -56,9 +56,9 @@ const config: AppConfig = {
     cacheMaxAge: 3600000, // 1 hour in milliseconds
   },
   security: {
-    enableCSP: true,
-    enableHSTS: true,
-    enableXSSProtection: true
+// enableCSP: true,
+// enableHSTS: true,
+// enableXSSProtection: true
   }
 };
 /**

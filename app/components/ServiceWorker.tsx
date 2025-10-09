@@ -10,7 +10,7 @@ const ServiceWorker: React.FC = () => {
             scope: '/',
           });
 
-          console.log('Service Worker registered successfully:', registration);
+          // console.log('Service Worker registered successfully:', registration);
 
           // Handle updates
           registration.addEventListener('updatefound', () => {
@@ -30,12 +30,12 @@ const ServiceWorker: React.FC = () => {
           // Handle service worker messages
           navigator.serviceWorker.addEventListener('message', (event) => {
             if (event.data && event.data.type === 'CACHE_UPDATED') {
-              console.log('Cache updated:', event.data.payload);
+              // console.log('Cache updated:', event.data.payload);
             }
           });
 
         } catch (error) {
-          console.error('Service Worker registration failed:', error);
+          // console.error('Service Worker registration failed:', error);
         }
       };
 

@@ -6,8 +6,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
 const SLAPage: React.FC = () => {
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="Service Level Agreement (SLA) - Zion Tech Group"
         description="Our comprehensive Service Level Agreement outlining uptime guarantees, response times, and service commitments for all Zion Tech Group services."
         keywords={['SLA', 'service level agreement', 'uptime guarantee', 'response time', 'support commitment', 'Zion Tech Group']}
@@ -138,7 +137,7 @@ const SLAPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

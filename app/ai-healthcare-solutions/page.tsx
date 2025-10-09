@@ -161,8 +161,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Healthcare Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI healthcare solutions for hospitals, clinics, and medical practices. Diagnostic assistance, patient monitoring, drug discovery, and more." />
         <meta name="keywords" content="AI healthcare, medical AI, diagnostic assistance, patient monitoring, drug discovery, healthcare automation" />
@@ -334,7 +333,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

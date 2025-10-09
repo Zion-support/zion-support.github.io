@@ -29,7 +29,7 @@ const ConsultationPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Consultation form submitted:', formData);
+    // console.log('Consultation form submitted:', formData);
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
@@ -124,8 +124,7 @@ const ConsultationPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="Free Consultation - Zion Tech Group"
         description="Get a free consultation with our AI and IT experts. Discover how our solutions can transform your business. No obligation, just expert advice."
         keywords={['free consultation', 'AI consultation', 'IT consultation', 'expert advice', 'business transformation', 'technology assessment']}
@@ -447,7 +446,7 @@ const ConsultationPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

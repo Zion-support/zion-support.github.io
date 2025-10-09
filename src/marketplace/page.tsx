@@ -1,9 +1,5 @@
 'use client';
-import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import { ShoppingCart, Search, Filter, Star, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
+import React, { useState, Fragment } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -235,7 +231,7 @@ const MarketplacePage: React.FC = () => {
   ];
 
   return (
-    <>
+    <Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -353,8 +349,7 @@ const MarketplacePage: React.FC = () => {
                   )}
 
                   {activeCategory === 'talent' && (
-                    <>
-                      <div className="mb-4">
+                    <div><div className="mb-4">
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:</h4>
                         <div className="flex flex-wrap gap-1">
                           {item.expertise.map((skill, index) => (
@@ -380,12 +375,11 @@ const MarketplacePage: React.FC = () => {
                           {item.available ? 'Available' : 'Busy'}
                         </span>
                       </div>
-                    </>
+                    </div>
                   )}
 
                   {activeCategory === 'equipment' && (
-                    <>
-                      <div className="mb-4">
+                    <div><div className="mb-4">
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Specifications:</h4>
                         <ul className="space-y-1">
                           {item.features.map((feature, index) => (
@@ -412,7 +406,7 @@ const MarketplacePage: React.FC = () => {
                           {item.inStock ? 'In Stock' : 'Out of Stock'}
                         </span>
                       </div>
-                    </>
+                    </div>
                   )}
 
                   <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
@@ -478,7 +472,7 @@ const MarketplacePage: React.FC = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </Fragment>
   );
 };
 

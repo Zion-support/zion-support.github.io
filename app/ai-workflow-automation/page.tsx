@@ -7,8 +7,7 @@ import { Workflow, Zap, Settings, Clock, Users, CheckCircle, Phone, Mail } from 
 
 const AIWorkflowAutomationPage: React.FC = () => {
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="AI Workflow Automation Solutions - Zion Tech Group"
         description="Streamline your business processes with AI-powered workflow automation. Reduce manual work by 90% and increase efficiency."
         keywords={['AI workflow automation', 'process automation', 'business process optimization', 'workflow management', 'automation tools']}
@@ -132,7 +131,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -114,8 +114,7 @@ const AIImageRecognitionPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Image Recognition - Zion Tech Group</title>
         <meta name="description" content="Advanced AI image recognition solutions with 99.5% accuracy. Object detection, facial recognition, content moderation, and visual search for businesses." />
         <meta name="keywords" content="AI image recognition, computer vision, object detection, facial recognition, image classification, visual search" />
@@ -320,7 +319,7 @@ const AIImageRecognitionPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

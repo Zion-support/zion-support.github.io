@@ -1,9 +1,5 @@
 'use client';
 import React, { memo } from 'react';
-<<<<<<< HEAD
-=======
-import { Phone, Star, Eye, CheckCircle, Calculator, Receipt } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
@@ -158,8 +154,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
@@ -420,7 +415,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 });
 

@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -92,8 +87,7 @@ const AIMLPlatformPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Machine Learning Platform - Complete ML Solution | Zion Tech Group</title>
         <meta name="description" content="Complete machine learning platform with model development, training, and deployment. Achieve 95% model accuracy and 70% faster development." />
         <meta name="keywords" content="machine learning platform, ML platform, AI development, model training, data science" />
@@ -260,7 +254,7 @@ const AIMLPlatformPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

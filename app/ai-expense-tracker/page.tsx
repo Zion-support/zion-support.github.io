@@ -102,8 +102,7 @@ const AIExpenseTrackerPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered expense tracking and management platform. Automate receipt scanning, categorize expenses, and optimize your budget with intelligent insights." />
         <meta name="keywords" content="AI expense tracker, receipt scanning, expense management, budget optimization, financial tracking, AI analytics" />
@@ -275,7 +274,7 @@ const AIExpenseTrackerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

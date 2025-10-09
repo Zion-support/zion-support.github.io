@@ -167,8 +167,7 @@ const ServicesPage: React.FC = () => {
 
 const ServicesPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Professional AI and IT services for your business transformation." />
         <meta name="keywords" content="AI services, IT solutions, business transformation" />
@@ -310,7 +309,7 @@ const ServicesPage: React.FC = () => {
           </section>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

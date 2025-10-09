@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -92,8 +87,7 @@ const AIProjectManagerPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Project Manager - Intelligent Project Planning | Zion Tech Group</title>
         <meta name="description" content="Transform your project management with AI-powered planning, smart task management, and predictive analytics. Achieve 40% productivity increase and 70% time savings." />
         <meta name="keywords" content="AI project management, intelligent planning, project automation, team collaboration, predictive analytics" />
@@ -260,7 +254,7 @@ const AIProjectManagerPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

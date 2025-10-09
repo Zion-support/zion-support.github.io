@@ -94,8 +94,7 @@ const AIMobileAppBuilderPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Mobile App Builder - Zion Tech Group</title>
         <meta name="description" content="Build mobile apps without coding using our AI-powered drag-and-drop builder. Deploy to iOS and Android with advanced features and analytics." />
         <meta name="keywords" content="mobile app builder, no-code app development, iOS app builder, Android app builder, app development platform" />
@@ -278,7 +277,7 @@ const AIMobileAppBuilderPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

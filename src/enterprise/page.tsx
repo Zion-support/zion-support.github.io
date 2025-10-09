@@ -1,8 +1,7 @@
 import React from 'react';
 const EnterprisePage: React.FC = () => {
   return (
-    <>
-      <div className="min-h-screen bg-slate-50 py-16">
+    <div><div className="min-h-screen bg-slate-50 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -106,7 +105,7 @@ const EnterprisePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 export default EnterprisePage;

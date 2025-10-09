@@ -3,10 +3,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-=======
-import { CheckCircle, Eye, Phone, Navigation } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 const ServicesPage: React.FC = () => {
   const aiServices = [

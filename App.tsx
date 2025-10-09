@@ -78,7 +78,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
        
-      // console.error('App Error Boundary caught an error:', _error, _errorInfo);
+      // // console.error('App Error Boundary caught an error:', _error, _errorInfo);
     }
   }
 

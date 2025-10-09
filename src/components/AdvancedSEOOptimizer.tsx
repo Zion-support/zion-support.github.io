@@ -7,7 +7,7 @@ interface AdvancedSEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -20,8 +20,8 @@ interface AdvancedSEOOptimizerProps {
   nofollow?: boolean;
   breadcrumbs?: { name: string; url: string }[];
   faqData?: { question: string; answer: string }[];
-  organizationData?: any;
-  websiteData?: any;
+  organizationData?: unknown;
+  websiteData?: unknown;
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({

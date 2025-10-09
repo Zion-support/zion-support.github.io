@@ -115,8 +115,7 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Predictive Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI predictive analytics solutions with 95%+ accuracy. Real-time forecasting, custom models, and multi-source data integration for businesses of all sizes." />
         <meta name="keywords" content="AI predictive analytics, machine learning, forecasting, data science, business intelligence, predictive modeling" />
@@ -321,7 +320,7 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

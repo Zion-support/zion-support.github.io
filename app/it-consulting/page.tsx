@@ -58,8 +58,7 @@ const ITConsultingPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>IT Consulting Services - Zion Tech Group</title>
         <meta name="description" content="Strategic IT consulting services including digital transformation, cloud strategy, cybersecurity, and technology integration. Expert guidance for your IT initiatives." />
         <meta name="keywords" content="IT consulting, digital transformation, cloud strategy, cybersecurity consulting, IT governance, technology integration" />
@@ -204,7 +203,7 @@ const ITConsultingPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

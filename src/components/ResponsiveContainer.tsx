@@ -64,12 +64,12 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
 
 // Hook for responsive values
 export const useResponsiveValue = <T,>(values: {
-  sm?: T;
-  md?: T;
-  lg?: T;
-  xl?: T;
-  '2xl'?: T;
-  default?: T;
+// sm?: T;
+// md?: T;
+// lg?: T;
+// xl?: T;
+// '2xl'?: T;
+// default?: T;
 }): T => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });

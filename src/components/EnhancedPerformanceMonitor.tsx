@@ -243,7 +243,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Callback for custom handling
     onMetricsUpdate?.(metrics);
 
-    console.log('Performance Report:', report);
+    // console.log('Performance Report:', report);
   }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfo, onMetricsUpdate]);
 
   useEffect(() => {

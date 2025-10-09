@@ -152,8 +152,7 @@ const AIFintechPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Fintech Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered fintech solutions including algorithmic trading, fraud detection, payment processing, and regulatory compliance. Transform your financial services." />
         <meta name="keywords" content="AI fintech, algorithmic trading, fraud detection, payment processing, financial AI, regtech, digital banking, investment analytics" />
@@ -320,7 +319,7 @@ const AIFintechPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

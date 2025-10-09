@@ -109,8 +109,7 @@ const BlogPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="Blog - Zion Tech Group"
         description="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends. Expert articles and industry analysis from Zion Tech Group."
         keywords={['AI blog', 'technology blog', 'cloud computing', 'cybersecurity', 'machine learning', 'tech insights', 'industry trends']}
@@ -372,7 +371,7 @@ const BlogPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

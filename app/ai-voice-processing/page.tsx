@@ -114,8 +114,7 @@ const AIVoiceProcessingPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Voice Processing - Zion Tech Group</title>
         <meta name="description" content="Advanced AI voice processing solutions with 99%+ accuracy. Speech recognition, text-to-speech, voice analytics, and real-time translation for businesses." />
         <meta name="keywords" content="AI voice processing, speech recognition, text-to-speech, voice analytics, voice translation, speech synthesis" />
@@ -320,7 +319,7 @@ const AIVoiceProcessingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

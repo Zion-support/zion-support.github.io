@@ -109,17 +109,17 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           cumulativeLayoutShift: 0, // Not available in current metrics
         },
         errors: {
-          total: errorStats.totalErrors,
-          byType: errorStats.errorsByType,
-          byCategory: errorStats.errorsByCategory,
-          bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
-            id: error.id,
-            message: error.message,
-            type: error.type,
-            severity: error.severity,
-            timestamp: error.context.timestamp
-          }))
+// total: errorStats.totalErrors,
+// byType: errorStats.errorsByType,
+// byCategory: errorStats.errorsByCategory,
+// bySeverity: errorStats.errorsBySeverity,
+// recent: errorStats.recentErrors.map(error => ({
+//   id: error.id,
+//   message: error.message,
+//   type: error.type,
+//   severity: error.severity,
+//   timestamp: error.context.timestamp
+// }))
         },
         memory: memoryInfo,
         network: networkInfo
@@ -152,9 +152,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const getMemoryInfo = () => {
     if ('memory' in performance) {
       const _memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-      const total = memory.totalJSHeapSize / 1024 / 1024; // MB
-      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
+      const used = _memory.usedJSHeapSize / 1024 / 1024; // MB
+      const total = _memory.totalJSHeapSize / 1024 / 1024; // MB
+      const limit = _memory.jsHeapSizeLimit / 1024 / 1024; // MB
       const _percentage = (used / limit) * 100;
       return { used, total, limit, percentage };
     }

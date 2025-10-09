@@ -70,8 +70,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -452,7 +451,7 @@ const HomePage: React.FC = () => {
         {/* Footer */}
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

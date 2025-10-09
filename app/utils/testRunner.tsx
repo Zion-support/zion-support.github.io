@@ -193,7 +193,7 @@ export class TestRunner {
       // Measure memory usage if available
       let memoryUsage = 0;
       if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as { memory?: {// usedJSHeapSize: number} }).memory;
         if (memory) {
           memoryUsage = memory.usedJSHeapSize;
         }
@@ -690,7 +690,7 @@ export class TestRunner {
         default:
           result = { passed: false, error: 'Unknown test type' };
       }
-    const results: any[] = [];
+    const results: unknown[] = [];
       results.push({ ...result, name: test.name, type: test.type });
     }
     const passed = results.every(result => result.passed);

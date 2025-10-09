@@ -82,7 +82,7 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        // console.error('Error setting up performance observers:', error);
+        // // console.error('Error setting up performance observers:', error);
       }
     }
   }
@@ -91,10 +91,10 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            console.warn('Long task detected:', {
-              duration: entry.duration,
-              startTime: entry.startTime
-            });
+            // console.warn('Long task detected:', {
+            //   duration: entry.duration,
+            //   startTime: entry.startTime
+            // });
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -110,17 +110,17 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
-              console.warn('Slow resource detected:', {
-                name: entry.name,
-                duration: entry.duration,
-                type: entry.initiatorType
-              });
+              // console.warn('Slow resource detected:', {
+              //   name: entry.name,
+              //   duration: entry.duration,
+              //   type: entry.initiatorType
+              // });
             }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
-        console.error('Error monitoring resources:', _error);
+        // console.error('Error monitoring resources:', _error);
       }
     }
   }
@@ -153,11 +153,11 @@ class MonitoringService {
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-      console.log(`[Performance] ${name}:`, {
-        value,
-        rating,
-        unit: name === 'cls' ? 'score' : 'ms'
-      });
+      // console.log(`[Performance] ${name}:`, {
+      //   value,
+      //   rating,
+      //   unit: name === 'cls' ? 'score' : 'ms'
+      // });
     }
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
@@ -173,7 +173,7 @@ class MonitoringService {
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
-    // console.error('[Error]', error)
+    // // console.error('[Error]', error)
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {
@@ -189,11 +189,11 @@ class MonitoringService {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-        console.log('[Memory]', {
-          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
-          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
-          limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
-        });
+        // console.log('[Memory]', {
+        //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+        //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
+        //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
+        // });
       }
     }
   }
@@ -201,15 +201,15 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
-        console.log('[Navigation Timing]', {
-          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
-          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
-          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
-          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
-          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
-          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
-          'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        });
+        // console.log('[Navigation Timing]', {
+        //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
+        //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
+        //   'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
+        //   'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
+        //   'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
+        //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
+        //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
+        // });
       }
     }
   }

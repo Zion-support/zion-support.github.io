@@ -209,8 +209,7 @@ const AIEnterpriseSolutionsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Enterprise Solutions - Zion Tech Group</title>
         <meta name="description" content="Transform your enterprise with AI-powered solutions. Advanced business intelligence, customer experience, supply chain optimization, and more." />
         <meta name="keywords" content="AI enterprise solutions, business intelligence, customer experience, supply chain optimization, AI consulting" />
@@ -390,7 +389,7 @@ const AIEnterpriseSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

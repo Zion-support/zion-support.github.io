@@ -43,7 +43,7 @@ export const useErrorMonitoring = () => {
     // Expose React error handler globally for error boundaries
     (
       window as Window & {
-        __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
+        _REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
       }
     ).__REACT_ERROR_HANDLER__ = handleReactError;
     // Cleanup

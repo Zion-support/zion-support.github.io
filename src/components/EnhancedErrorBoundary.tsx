@@ -42,7 +42,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
+      // console.error('Error Boundary caught an error:', error, errorInfo);
     }
 
     // Report error to monitoring service
@@ -85,12 +85,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private sendErrorReport = (errorReport: any) => {
     // In a real application, you would send this to your error reporting service
     // For now, we'll just log it
-    console.log('Error Report:', errorReport);
+    // console.log('Error Report:', errorReport);
 
     // Example: Send to Sentry, LogRocket, or custom endpoint
     // fetch('/api/errors', {
     //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
+    //   headers: {// 'Content-Type': 'application/json'},
     //   body: JSON.stringify(errorReport),
     // }).catch(console.error);
   };

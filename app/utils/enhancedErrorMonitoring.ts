@@ -16,7 +16,7 @@ interface ErrorContext {
   filename?: string;
   lineno?: number;
   colno?: number;
-  reason?: any;
+  reason?: unknown;
   resource?: string;
   status?: number;
   statusText?: string;

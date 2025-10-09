@@ -114,8 +114,7 @@ const AIRecommendationEnginePage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Recommendation Engine - Zion Tech Group</title>
         <meta name="description" content="Advanced AI recommendation engine with 95%+ accuracy. Personalized recommendations, machine learning models, and behavioral analysis for businesses." />
         <meta name="keywords" content="AI recommendation engine, personalized recommendations, machine learning, collaborative filtering, content-based filtering" />
@@ -320,7 +319,7 @@ const AIRecommendationEnginePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

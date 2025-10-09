@@ -5,17 +5,17 @@
  */
 // Generate meta tags
 export const generateMetaTags = (data: {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
+// title: string;
+// description: string;
+// keywords?: string;
+// canonical?: string;
+// ogTitle?: string;
+// ogDescription?: string;
+// ogImage?: string;
+// twitterCard?: string;
+// twitterTitle?: string;
+// twitterDescription?: string;
+// twitterImage?: string;
 }) => {
   const tags = [
     { name: 'title', content: data.title },
@@ -91,13 +91,13 @@ const defaultSEOConfig: SEOConfig = {
 };
 // Generate structured data
 export const generateStructuredData = (data: {
-  type: 'Organization' | 'WebSite' | 'Article' | 'Service';
-  name: string;
-  description: string;
-  url?: string;
-  logo?: string;
-  sameAs?: string[];
-  [key: string]: unknown;
+// type: 'Organization' | 'WebSite' | 'Article' | 'Service';
+// name: string;
+// description: string;
+// url?: string;
+// logo?: string;
+// sameAs?: string[];
+// [key: string]: unknown;
 }) => {
   const baseStructure = {
     '@context': 'https://schema.org',
@@ -289,13 +289,13 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
 }
 // Generate structured data with type-specific properties
 export const generateAdvancedStructuredData = (data: {
-  type: 'Organization' | 'WebSite' | 'Article' | 'Service';
-  name: string;
-  description: string;
-  url?: string;
-  logo?: string;
-  sameAs?: string[];
-  [key: string]: unknown;
+// type: 'Organization' | 'WebSite' | 'Article' | 'Service';
+// name: string;
+// description: string;
+// url?: string;
+// logo?: string;
+// sameAs?: string[];
+// [key: string]: unknown;
 }) => {
   const baseStructure = {
     '@context': 'https://schema.org',
@@ -311,8 +311,8 @@ export const generateAdvancedStructuredData = (data: {
     return {
       ...baseStructure,
       address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'US'
+// '@type': 'PostalAddress',
+// addressCountry: 'US'
       },
       contactPoint: {
         '@type': 'ContactPoint',
@@ -384,7 +384,7 @@ ${disallowRules}
 Sitemap: ${sitemapUrl}`;
 };
 // SEO validation
-export const validateSEOData = (data: { title: string; description: string; url: string }) => {
+export const validateSEOData = (data: {// title: string; description: string; url: string}) => {
   const issues: string[] = [];
   // Check title length
   if (data.title.length < 30) {

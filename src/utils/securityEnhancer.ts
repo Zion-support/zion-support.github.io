@@ -150,7 +150,7 @@ class SecurityEnhancer {
   private setupSecurityHeaders(): void {
     // Note: In a real application, these headers would be set by the server
     // This is for demonstration purposes
-    console.log('Security headers configured:', this.headers);
+    // console.log('Security headers configured:', this.headers);
   }
 
   private setupCSP(): void {

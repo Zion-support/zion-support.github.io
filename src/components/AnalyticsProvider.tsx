@@ -29,7 +29,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     const initAnalytics = () => {
       if (!trackingId || trackingId === 'G-XXXXXXXXXX') {
         if (enableDebug) {
-          console.warn('Analytics: No valid tracking ID provided');
+          // console.warn('Analytics: No valid tracking ID provided');
         }
         return;
       }
@@ -55,7 +55,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       setIsInitialized(true);
 
       if (enableDebug) {
-        console.log('Analytics initialized with tracking ID:', trackingId);
+        // console.log('Analytics initialized with tracking ID:', trackingId);
       }
     };
 
@@ -66,7 +66,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      console.log('Analytics Event:', eventName, parameters);
+      // console.log('Analytics Event:', eventName, parameters);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
@@ -78,7 +78,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      console.log('Analytics Page View:', pageName, pagePath);
+      // console.log('Analytics Page View:', pageName, pagePath);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
@@ -112,7 +112,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     if (enableDebug) {
       // eslint-disable-next-line no-console
-      console.error('Analytics Error:', error, context);
+      // console.error('Analytics Error:', error, context);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {

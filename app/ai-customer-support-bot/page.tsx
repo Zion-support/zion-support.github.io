@@ -119,8 +119,7 @@ const AICustomerSupportBotPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Customer Support Bot - Zion Tech Group</title>
         <meta name="description" content="Provide 24/7 intelligent customer support with AI-powered chatbot. Achieve 90% response time reduction and 45% satisfaction increase." />
         <meta name="keywords" content="AI chatbot, customer support, 24/7 support, natural language processing, customer service automation" />
@@ -360,7 +359,7 @@ const AICustomerSupportBotPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

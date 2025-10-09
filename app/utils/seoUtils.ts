@@ -8,19 +8,11 @@ export interface SEOData {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
 
 export const generateMetaTags = (data: SEOData): string => {
-  const {
-    title,
-    description,
-    keywords,
-    canonicalUrl,
-    ogImage = 'https://ziontechgroup.com/og-image.jpg',
-    ogType = 'website',
-    twitterCard = 'summary_large_image'
-  } = data;
+  const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
 
   return `
     <title>${title}</title>
@@ -48,7 +40,7 @@ export const generateMetaTags = (data: SEOData): string => {
   `;
 };
 
-export const generateStructuredData = (type: string, data: any): string => {
+export const generateStructuredData = (type: string, data: unknown): string => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': type,
@@ -352,7 +344,7 @@ const updateCanonicalUrl = (url: string): void => {
   canonical.setAttribute('href', url);
 };
 
-const addStructuredData = (data: any): void => {
+const addStructuredData = (data: unknown): void => {
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data);

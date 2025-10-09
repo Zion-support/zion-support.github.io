@@ -7,8 +7,7 @@ import { TrendingUp, Target, Users, BarChart, CheckCircle, Phone, Mail } from 'l
 
 const AISalesAutomationPage: React.FC = () => {
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="AI Sales Automation Solutions - Zion Tech Group"
         description="Revolutionize your sales process with AI-powered automation, lead scoring, and intelligent customer insights. Increase sales by 300%."
         keywords={['AI sales automation', 'lead scoring', 'sales intelligence', 'CRM automation', 'sales optimization']}
@@ -132,7 +131,7 @@ const AISalesAutomationPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

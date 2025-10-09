@@ -6,8 +6,7 @@ import Footer from '../components/Footer';
 
 export default function AIDataVisualizationPage() {
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." />
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" />
@@ -181,6 +180,6 @@ export default function AIDataVisualizationPage() {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

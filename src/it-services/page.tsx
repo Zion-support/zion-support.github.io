@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Cloud, CheckCircle, ArrowRight, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -78,8 +74,7 @@ const ITServicesPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="IT Services - Zion Tech Group"
         description="Comprehensive IT services including cloud migration, cybersecurity, DevOps, database management, and business intelligence solutions."
         keywords={['IT services', 'cloud migration', 'cybersecurity', 'DevOps', 'database management', 'business intelligence', 'IT consulting']}
@@ -185,7 +180,7 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

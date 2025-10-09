@@ -109,8 +109,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics dashboard with real-time insights, predictive analytics, and custom reporting. Transform your data into actionable business intelligence." />
         <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, real-time dashboards" />
@@ -315,7 +314,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -16,7 +16,7 @@ interface ErrorContext {
   filename?: string;
   lineno?: number;
   colno?: number;
-  reason?: any;
+  reason?: unknown;
   resource?: string;
   status?: number;
   statusText?: string;
@@ -201,7 +201,7 @@ class EnhancedErrorMonitoring {
     }
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      // console.error('Error captured:', errorReport)
+      // // console.error('Error captured:', errorReport)
     }
   }
   /**

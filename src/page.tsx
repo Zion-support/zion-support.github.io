@@ -1,10 +1,5 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { Phone, Mail, Globe, BarChart, Sparkles, CheckCircle, TrendingUp, Smartphone, Settings, Navigation, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -480,8 +475,7 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -1202,7 +1196,7 @@ const HomePage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

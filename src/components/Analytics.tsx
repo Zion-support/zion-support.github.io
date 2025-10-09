@@ -107,7 +107,7 @@ const Analytics: React.FC = () => {
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: unknown[];
     gtag: (...args: any[]) => void;
   }
 }

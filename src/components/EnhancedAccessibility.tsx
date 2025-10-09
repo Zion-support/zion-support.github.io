@@ -48,7 +48,7 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
-        console.error('Failed to load accessibility settings:', error);
+        // console.error('Failed to load accessibility settings:', error);
       }
     }
   }, []);

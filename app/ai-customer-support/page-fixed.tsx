@@ -56,8 +56,7 @@ const AICustomerSupportPage: React.FC = () => {
   ];
   
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="AI Customer Support Solutions - Zion Tech Group"
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
         keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
@@ -201,7 +200,7 @@ const AICustomerSupportPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

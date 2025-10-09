@@ -52,8 +52,7 @@ const AIAutomationPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Automation - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI-powered automation solutions. Reduce manual work, increase efficiency, and scale your operations." />
         <meta name="keywords" content="AI automation, business process automation, workflow automation, AI solutions" />
@@ -73,7 +72,7 @@ const AIAutomationPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

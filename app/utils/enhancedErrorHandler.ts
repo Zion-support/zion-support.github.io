@@ -219,21 +219,21 @@ class EnhancedErrorHandler {
    * Handle error with comprehensive processing
    */
   private handleError(errorData: {
-    type: ErrorReport['type'];
-    message: string;
-    stack?: string;
-    filename?: string;
-    lineno?: number;
-    colno?: number;
-    error?: Error;
-    reason?: unknown;
-    element?: string;
-    src?: string;
-    url?: string;
-    status?: number;
-    statusText?: string;
-    duration?: number;
-    category?: string;
+// type: ErrorReport['type'];
+// message: string;
+// stack?: string;
+// filename?: string;
+// lineno?: number;
+// colno?: number;
+// error?: Error;
+// reason?: unknown;
+// element?: string;
+// src?: string;
+// url?: string;
+// status?: number;
+// statusText?: string;
+// duration?: number;
+// category?: string;
   }): void {
     // Rate limiting
     if (!this.checkRateLimit()) {
@@ -246,21 +246,21 @@ class EnhancedErrorHandler {
    * Create comprehensive error report
    */
   private createErrorReport(errorData: {
-    type: ErrorReport['type'];
-    message: string;
-    stack?: string;
-    filename?: string;
-    lineno?: number;
-    colno?: number;
-    error?: Error;
-    reason?: unknown;
-    element?: string;
-    src?: string;
-    url?: string;
-    status?: number;
-    statusText?: string;
-    duration?: number;
-    category?: string;
+// type: ErrorReport['type'];
+// message: string;
+// stack?: string;
+// filename?: string;
+// lineno?: number;
+// colno?: number;
+// error?: Error;
+// reason?: unknown;
+// element?: string;
+// src?: string;
+// url?: string;
+// status?: number;
+// statusText?: string;
+// duration?: number;
+// category?: string;
   }): ErrorReport {
     const context = this.getErrorContext();
     const severity = this.determineSeverity(errorData);

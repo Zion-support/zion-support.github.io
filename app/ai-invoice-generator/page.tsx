@@ -102,8 +102,7 @@ const AIInvoiceGeneratorPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Invoice Generator - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered invoice generation and payment processing platform. Automate invoicing, track payments, and get paid faster with intelligent features." />
         <meta name="keywords" content="AI invoice generator, automated invoicing, payment processing, financial automation, invoice management, AI billing" />
@@ -275,7 +274,7 @@ const AIInvoiceGeneratorPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

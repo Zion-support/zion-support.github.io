@@ -92,8 +92,7 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <div><SEOOptimizer
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions. Discover our story and values."
         keywords={['about us', 'company', 'team', 'mission', 'values', 'AI company', 'IT solutions']}
@@ -304,7 +303,7 @@ const AboutPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

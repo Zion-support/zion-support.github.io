@@ -206,7 +206,7 @@ class UserExperienceEnhancer {
   }
 
   private handleError(error: Error, type: string): void {
-    console.error(`${type}:`, error);
+    // console.error(`${type}:`, error);
     
     // Store error
     this.errorBoundaries.set(type, error);
@@ -352,9 +352,9 @@ class UserExperienceEnhancer {
     });
   }
 
-  private sendAnalytics(event: string, data: any): void {
+  private sendAnalytics(event: string, data: unknown): void {
     // In a real application, this would send data to your analytics service
-    console.log('Analytics:', event, data);
+    // console.log('Analytics:', event, data);
     
     // Example: Send to Google Analytics
     if (typeof gtag !== 'undefined') {
@@ -432,17 +432,17 @@ class UserExperienceEnhancer {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
+            // console.log('SW registered: ', registration);
           })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
+            // console.log('SW registration failed: ', registrationError);
           });
       });
     }
   }
 
   private setupInstallPrompt(): void {
-    let deferredPrompt: any;
+    let deferredPrompt: unknown;
     
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
@@ -453,7 +453,7 @@ class UserExperienceEnhancer {
     });
   }
 
-  private showInstallButton(deferredPrompt: any): void {
+  private showInstallButton(deferredPrompt: unknown): void {
     const installButton = document.createElement('button');
     installButton.textContent = 'Install App';
     installButton.className = 'fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50';
@@ -462,7 +462,7 @@ class UserExperienceEnhancer {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult: any) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
+          // console.log('User accepted the install prompt');
         }
         deferredPrompt = null;
         installButton.remove();
@@ -524,10 +524,10 @@ class UserExperienceEnhancer {
       userVisibleOnly: true,
       applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key
     }).then((subscription) => {
-      console.log('Push subscription:', subscription);
+      // console.log('Push subscription:', subscription);
       // Send subscription to server
     }).catch((error) => {
-      console.log('Push subscription failed:', error);
+      // console.log('Push subscription failed:', error);
     });
   }
 

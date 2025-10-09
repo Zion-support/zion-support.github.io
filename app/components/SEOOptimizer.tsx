@@ -7,7 +7,7 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({

@@ -94,8 +94,7 @@ const AIDesignStudioPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Design Studio - Zion Tech Group</title>
         <meta name="description" content="AI-powered design studio for logo creation, brand identity, and marketing materials. Create professional designs in seconds with advanced AI tools." />
         <meta name="keywords" content="AI design studio, logo generator, brand identity, graphic design, marketing materials, design automation" />
@@ -279,7 +278,7 @@ const AIDesignStudioPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

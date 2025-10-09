@@ -5,9 +5,9 @@
  */
 // Simple logger for performance optimizer
 const logger = {
-  info: (message: string, context?: string) => console.log('[INFO]', message, context),
-  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
-  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+  info: (message: string, context?: string) => // console.log('[INFO]', message, context),
+  performance: (message: string, data: Record<string, unknown>, context?: string) => // console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => // console.error('[ERROR]', message, error)
 };
 interface PerformanceMetrics {
   loadTime: number;
@@ -191,7 +191,7 @@ class PerformanceOptimizer {
   }
   private observeMemory() {
     if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory
       if (memory) {
         this.metrics.memoryUsage = memory.usedJSHeapSize
       }

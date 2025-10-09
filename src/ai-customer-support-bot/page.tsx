@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -92,8 +87,7 @@ const AICustomerSupportBotPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Customer Support Bot - 24/7 Intelligent Support | Zion Tech Group</title>
         <meta name="description" content="Provide 24/7 intelligent customer support with AI-powered chatbot. Achieve 90% response time reduction and 45% satisfaction increase." />
         <meta name="keywords" content="AI chatbot, customer support, 24/7 support, natural language processing, customer service automation" />
@@ -260,7 +254,7 @@ const AICustomerSupportBotPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -6,8 +6,7 @@ import Footer from '../components/Footer';
 
 export default function AIProjectManagementPage() {
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Project Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." />
         <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" />
@@ -181,6 +180,6 @@ export default function AIProjectManagementPage() {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

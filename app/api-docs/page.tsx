@@ -131,7 +131,7 @@ const result = await client.ai.predict({
   inputData: { text: 'I love this product!' }
 });
 
-console.log(result.predictions);`,
+// console.log(result.predictions);`,
       description: 'JavaScript/Node.js SDK example'
     },
     {

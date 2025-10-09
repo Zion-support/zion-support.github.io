@@ -219,21 +219,21 @@ class EnhancedErrorHandler {
    * Handle error with comprehensive processing
    */
   private handleError(errorData: {
-    type: ErrorReport['type'];
-    message: string;
-    stack?: string;
-    filename?: string;
-    lineno?: number;
-    colno?: number;
-    error?: Error;
-    reason?: unknown;
-    element?: string;
-    src?: string;
-    url?: string;
-    status?: number;
-    statusText?: string;
-    duration?: number;
-    category?: string;
+// type: ErrorReport['type'];
+// message: string;
+// stack?: string;
+// filename?: string;
+// lineno?: number;
+// colno?: number;
+// error?: Error;
+// reason?: unknown;
+// element?: string;
+// src?: string;
+// url?: string;
+// status?: number;
+// statusText?: string;
+// duration?: number;
+// category?: string;
   }): void {
     // Rate limiting
     if (!this.checkRateLimit()) {
@@ -246,21 +246,21 @@ class EnhancedErrorHandler {
    * Create comprehensive error report
    */
   private createErrorReport(errorData: {
-    type: ErrorReport['type'];
-    message: string;
-    stack?: string;
-    filename?: string;
-    lineno?: number;
-    colno?: number;
-    error?: Error;
-    reason?: unknown;
-    element?: string;
-    src?: string;
-    url?: string;
-    status?: number;
-    statusText?: string;
-    duration?: number;
-    category?: string;
+// type: ErrorReport['type'];
+// message: string;
+// stack?: string;
+// filename?: string;
+// lineno?: number;
+// colno?: number;
+// error?: Error;
+// reason?: unknown;
+// element?: string;
+// src?: string;
+// url?: string;
+// status?: number;
+// statusText?: string;
+// duration?: number;
+// category?: string;
   }): ErrorReport {
     const context = this.getErrorContext();
     const severity = this.determineSeverity(errorData);
@@ -464,14 +464,14 @@ class EnhancedErrorHandler {
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity);
     console.group(`${emoji} Error Report: ${errorReport.id}`);
-    // console.error('Message:', errorReport.message);
-    // console.error('Type:', errorReport.type);
-    // console.error('Severity:', errorReport.severity);
-    // console.error('Category:', errorReport.category);
-    // console.error('Context:', errorReport.context);
-    // console.error('Metadata:', errorReport.metadata);
+    // // console.error('Message:', errorReport.message);
+    // // console.error('Type:', errorReport.type);
+    // // console.error('Severity:', errorReport.severity);
+    // // console.error('Category:', errorReport.category);
+    // // console.error('Context:', errorReport.context);
+    // // console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {
-      // console.error('Stack:', errorReport.stack);
+      // // console.error('Stack:', errorReport.stack);
     }
     console.groupEnd();
   }

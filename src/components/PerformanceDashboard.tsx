@@ -36,7 +36,7 @@ const PerformanceDashboard: React.FC = () => {
       let _memoryUsage = 0;
       if ('memory' in performance) {
         const _memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
+        _memoryUsage = _memory?.usedJSHeapSize || 0;
       }
       // Measure FPS (simplified)
       let _fps = 0;

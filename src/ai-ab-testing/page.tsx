@@ -1,11 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
-=======
-import { TestTube, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 const AIABTestingPage: React.FC = () => {
   const features = [

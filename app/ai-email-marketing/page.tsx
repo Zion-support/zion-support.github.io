@@ -120,8 +120,7 @@ const AIEmailMarketingPage: React.FC = () => {
 
 export default function AIEmailMarketingPage() {
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Email Marketing - Zion Tech Group</title>
         <meta name="description" content="Transform your email marketing with AI-powered content generation, smart segmentation, and automation. Start at $99/month." />
         <meta name="keywords" content="AI email marketing, email automation, content generation, email analytics, marketing automation" />
@@ -361,6 +360,6 @@ export default function AIEmailMarketingPage() {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

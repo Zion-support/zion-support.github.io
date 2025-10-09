@@ -5,8 +5,7 @@ import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, 
 
 const AIHRAssistantPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI HR Assistant - Zion Tech Group</title>
         <meta name="description" content="Streamline HR processes with AI-powered recruitment and employee management. 50% faster hiring with 30% better candidate matches." />
         <meta name="keywords" content="AI HR assistant, recruitment automation, employee management, HR software, talent acquisition" />
@@ -131,7 +130,7 @@ const AIHRAssistantPage: React.FC = () => {
           </section>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
