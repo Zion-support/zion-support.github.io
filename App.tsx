@@ -1,21 +1,8 @@
-import React, { Suspense, lazy, memo, useMemo } from 'react';
+import React, { Suspense, lazy, memo, useMemo, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// Lazy load pages for better performance;
-
-=======
-import React, { Suspense, memo, useMemo, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
 // Lazy load pages for better performance
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
@@ -23,7 +10,7 @@ const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
-<<<<<<< HEAD
+const HomePage = React.lazy(() => import('./app/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const TeamPage = React.lazy(() => import('./app/team/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
@@ -36,13 +23,7 @@ const SupportPage = React.lazy(() => import('./app/support/page'));
 const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-=======
-const CareersPage = React.lazy(() => import('./app/careers/page'));
-const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
-const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-const DocsPage = React.lazy(() => import('./app/docs/page'));
 const NewsPage = React.lazy(() => import('./app/news/page'));
-const HomePage = React.lazy(() => import('./app/page'));
 
 // AI Service Pages
 const AI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'));
@@ -93,6 +74,9 @@ const AIVoiceCloningPage = React.lazy(() => import('./app/ai-voice-cloning/page'
 const AIVoiceProcessingPage = React.lazy(() => import('./app/ai-voice-processing/page'));
 const AIWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'));
 const AIWritingAssistantPage = React.lazy(() => import('./app/ai-writing-assistant/page'));
+const AIVideoEditorPage = React.lazy(() => import('./app/ai-video-editor/page'));
+const AIWebsiteBuilderPage = React.lazy(() => import('./app/ai-website-builder/page'));
+const AIDataAnalyticsPlatformPage = React.lazy(() => import('./app/ai-data-analytics-platform/page'));
 
 // IT Service Pages
 const ARVRSolutionsPage = React.lazy(() => import('./app/ar-vr-solutions/page'));
@@ -111,46 +95,16 @@ const NetworkSolutionsPage = React.lazy(() => import('./app/network-solutions/pa
 
 // Other Pages
 const APIDocsPage = React.lazy(() => import('./app/api-docs/page'));
-const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const GDPRPage = React.lazy(() => import('./app/gdpr/page'));
 const AIMarketingPage = React.lazy(() => import('./app/ai-marketing/page'));
 const QuantumComputingPage = React.lazy(() => import('./app/quantum-computing/page'));
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-
-// Memoized components for better performance;
-const UnifiedContentPromotion = memo(() => (<div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16"></div>"
-    <div className="container mx-auto px-4 text-center"></div>"
-      <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>"
-=======
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./src/page'));
-const AboutPage = lazy(() => import('./src/about/page'));
-const ContactPage = lazy(() => import('./src/contact/page'));
-const PricingPage = lazy(() => import('./src/pricing/page'));
-const AIServicesPage = lazy(() => import('./src/ai-services/page'));
-const ITServicesPage = lazy(() => import('./src/it-services/page'));
-const MicroSaasPage = lazy(() => import('./src/micro-saas/page'));
-const BlogPage = lazy(() => import('./src/blog-index'));
-const CaseStudiesPage = lazy(() => import('./src/case-studies/page'));
-const TeamPage = lazy(() => import('./src/team/page'));
-const CareersPage = lazy(() => import('./src/careers/page'));
-const PrivacyPage = lazy(() => import('./src/privacy/page'));
-const TermsPage = lazy(() => import('./src/terms/page'));
-const CookiesPage = lazy(() => import('./src/cookies/page'));
-const DocsPage = lazy(() => import('./src/docs/page'));
-const ApiDocsPage = lazy(() => import('./src/api-docs/page'));
-const SupportPage = lazy(() => import('./src/support/page'));
-const StatusPage = lazy(() => import('./src/status/page'));
-const DemoPage = lazy(() => import('./src/demo/page'));
-const ConsultationPage = lazy(() => import('./src/consultation/page'));
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
->>>>>>> cursor/website-audit-and-update-with-deployment-307a
       <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
     </div>
   </div>
@@ -236,41 +190,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function App() {/* TODO: Fix JSX expression */}
-}
-  const structuredData = useMemo()
-    () => ({/* TODO: Fix JSX expression */}
-=======
-export default function App() {
-  const structuredData = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      description: 'Leading provider of AI-powered enterprise solutions and digital transformation services',
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'US',
->>>>>>> cursor/website-audit-and-update-with-deployment-307a
-      },
-      sameAs: ['https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
-      offers: {
-        '@type': 'Offer',
-        description: 'AI and IT Solutions',
-      },
-<<<<<<< HEAD
-      sameA,
-  s: ['http,
-  s://linkedin.com/company/zion-tech-group', 'http,
-  s://twitter.com/ziontechgroup'],
-      offer,
-  s: {/* TODO: Fix JSX expression */}
-      },)
-=======
 export default function App() {
   // Performance monitoring
   useEffect(() => {
@@ -402,9 +321,6 @@ export default function App() {
           }
         ]
       }
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-307a
     }),
     []
   );
@@ -437,34 +353,14 @@ export default function App() {
           />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
-<<<<<<< HEAD
-
         <Router>
           <div className="min-h-screen bg-white">
             <Suspense fallback={<LoadingSpinner />}>
-<<<<<<< HEAD
-              <Routes></Routes>"
-                <Route path="/" element={/* TODO: Fix JSX expression */}
-                } />"
-                <Route path="/about" element={<AboutPage />} />"
-                <Route path="/contact" element={<ContactPage />} />"
-                <Route path="/pricing" element={<PricingPage />} />"
-                <Route path="/ai-services" element={<AIServicesPage />} />"
-                <Route path="/it-services" element={<ITServicesPage />} />"
-=======
-        <Router>
-          <div className="min-h-screen bg-white">
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
-            <Suspense fallback={<LoadingSpinner />}>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-307a
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/pricing" element={<PricingPage />} />
-<<<<<<< HEAD
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/case-studies" element={<CaseStudiesPage />} />
@@ -522,6 +418,9 @@ export default function App() {
                 <Route path="/ai-voice-processing" element={<AIVoiceProcessingPage />} />
                 <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
                 <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} />
+                <Route path="/ai-video-editor" element={<AIVideoEditorPage />} />
+                <Route path="/ai-website-builder" element={<AIWebsiteBuilderPage />} />
+                <Route path="/ai-data-analytics-platform" element={<AIDataAnalyticsPlatformPage />} />
                 
                 {/* IT Services */}
                 <Route path="/it-services" element={<ITServicesPage />} />
@@ -540,7 +439,6 @@ export default function App() {
                 <Route path="/network-solutions" element={<NetworkSolutionsPage />} />
                 
                 {/* Micro SAAS */}
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
                 
                 {/* Other Pages */}
@@ -550,24 +448,12 @@ export default function App() {
                 <Route path="/ai-marketing" element={<AIMarketingPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
-=======
-                <Route path="/ai-services" element={<AIServicesPage />} />
-                <Route path="/it-services" element={<ITServicesPage />} />
-                <Route path="/micro-saas" element={<MicroSaasPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/case-studies" element={<CaseStudiesPage />} />
                 <Route path="/team" element={<TeamPage />} />
-                <Route path="/careers" element={<CareersPage />} />
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
-                <Route path="/cookies" element={<CookiesPage />} />
-                <Route path="/docs" element={<DocsPage />} />
-                <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
                 <Route path="/demo" element={<DemoPage />} />
-                <Route path="/consultation" element={<ConsultationPage />} />
->>>>>>> cursor/website-audit-and-update-with-deployment-307a
               </Routes>
             </Suspense>
           </div>

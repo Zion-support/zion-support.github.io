@@ -1,52 +1,13 @@
 'use client';
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Rocket, Code, Database, Smartphone, Lock, Settings, Calendar, FileText, Image, Video, Music, Palette, ShoppingCart, CreditCard, PieChart, LineChart, Activity, Zap as Lightning, Globe as World, Shield as Security, Users as Team, Clock as Time, Star as Rating, TrendingUp as Growth, BarChart as Analytics, MessageSquare as Chat, Eye as View, Sparkles as Magic, ArrowRight as Arrow, Phone as Call, Mail as Email, MapPin as Location, CheckCircle as Check, DollarSign as Money, Award as Trophy, Rocket as Launch, Code as Dev, Database as Data, Smartphone as Mobile, Lock as Secure, Settings as Config, Calendar as Schedule, FileText as Document, Image as Photo, Video as Media, Music as Audio, Palette as Design, ShoppingCart as Cart, CreditCard as Payment, PieChart as Pie, LineChart as Line, Activity as ActivityIcon } from 'lucide-react';
-=======
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Search as SearchIcon, FileText as FileTextIcon } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
+import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation as NavIcon, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Grid, Megaphone, Package } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const microSaasServices = useMemo(() => [
-    {
-      id: 'ai-project-manager',
-      name: 'AI Project Manager Pro',
-      description: 'Intelligent project management with AI-powered insights, automated scheduling, and real-time collaboration tools.',
-      category: 'productivity',
-      price: 29,
-      priceType: 'month',
-      features: [
-        'AI-powered task prioritization',
-        'Automated resource allocation',
-        'Real-time progress tracking',
-        'Smart deadline predictions',
-        'Team collaboration tools',
-        'Integration with 50+ tools',
-        'Custom reporting dashboard',
-        'Mobile app access'
-      ],
-      benefits: [
-        'Increase productivity by 40%',
-        'Reduce project delays by 60%',
-        'Save 15 hours per week',
-        'Improve team collaboration'
-      ],
-      icon: BarChart,
-      color: 'blue',
-      popular: true,
-      rating: 4.9,
-      users: 12500,
-      launchDate: '2024-01-15',
-      tags: ['AI', 'Project Management', 'Productivity', 'Collaboration']
-=======
   const [sortBy, setSortBy] = useState('popular');
 
   const microSaasServices = [
@@ -74,40 +35,10 @@ const MicroSAASPage: React.FC = () => {
       stats: { users: '10K+', rating: 4.9, uptime: '99.9%' },
       demo: 'https://demo.ziontechgroup.com/ai-project-manager',
       docs: 'https://docs.ziontechgroup.com/ai-project-manager'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
     },
     {
       id: 'ai-social-media-manager',
       name: 'AI Social Media Manager',
-<<<<<<< HEAD
-      description: 'Automated social media management with AI content creation, scheduling, and analytics across all platforms.',
-      category: 'marketing',
-      price: 49,
-      priceType: 'month',
-      features: [
-        'AI content generation',
-        'Multi-platform posting',
-        'Optimal timing suggestions',
-        'Hashtag optimization',
-        'Engagement analytics',
-        'Competitor analysis',
-        'Auto-responder',
-        'Content calendar'
-      ],
-      benefits: [
-        'Increase engagement by 300%',
-        'Save 20 hours per week',
-        'Grow followers by 150%',
-        'Boost brand awareness'
-      ],
-      icon: MessageSquare,
-      color: 'purple',
-      popular: true,
-      rating: 4.8,
-      users: 8900,
-      launchDate: '2024-02-01',
-      tags: ['AI', 'Social Media', 'Marketing', 'Automation']
-=======
       category: 'marketing',
       description: 'Automated social media content creation, scheduling, and engagement optimization across all platforms.',
       features: [
@@ -128,7 +59,6 @@ const MicroSAASPage: React.FC = () => {
       stats: { users: '25K+', rating: 4.8, uptime: '99.8%' },
       demo: 'https://demo.ziontechgroup.com/ai-social-manager',
       docs: 'https://docs.ziontechgroup.com/ai-social-manager'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
     },
     {
       id: 'ai-analytics-dashboard',
