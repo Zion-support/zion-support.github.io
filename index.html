@@ -4,11 +4,57 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zion Tech Group - AI & IT Solutions</title>
-    <meta name="description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services." />
+    <meta name="description" content="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology." />
+    <meta name="keywords" content="AI solutions, enterprise AI, quantum computing, autonomous systems, digital transformation, automation, cloud services, AI consulting, business intelligence, machine learning" />
+    <meta name="author" content="Zion Tech Group" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com/" />
+    <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+    <meta property="og:description" content="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology." />
+    <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ziontechgroup.com/" />
+    <meta property="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+    <meta property="twitter:description" content="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology." />
+    <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#4f46e5" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/app/main.tsx" as="script" />
+    <link rel="preload" href="/app/globals.css" as="style" />
+    
+    <title>Zion Tech Group - Advanced AI and IT Solutions</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/app/main.tsx"></script>
+    
+    <!-- Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
