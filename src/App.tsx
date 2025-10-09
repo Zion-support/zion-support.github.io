@@ -12,8 +12,6 @@ import AccessibilityEnhancer from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 
-// Import components
-
 // Loading component
 const LoadingSpinner: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -50,6 +48,7 @@ import CloudMigrationPage from './cloud-migration/page';
 import DevOpsPage from './devops/page';
 import DatabasePage from './database/page';
 import NetworkingPage from './networking/page';
+<<<<<<< HEAD
 // Micro SAAS Pages
 import AICRMPage from './ai-crm/page';
 import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
@@ -99,6 +98,8 @@ import AISalesAutomationPage from './ai-sales-automation/page';
 import AIDataVisualizationPage from './ai-data-visualization/page';
 import AILeadGenerationPage from './ai-lead-generation/page';
 import AIDocumentProcessingPage from './ai-document-processing/page';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 // Additional AI Services
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
@@ -107,15 +108,7 @@ import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIWritingAssistantPage from './ai-writing-assistant/page';
 import AICRMPage from './ai-crm/page';
-
-// IT Services
-import ITServicesPage from './it-services/page';
-import ITInfrastructurePage from './it-infrastructure/page';
-import CybersecurityPage from './cybersecurity/page';
-import CloudMigrationPage from './cloud-migration/page';
-import DevOpsPage from './devops/page';
-import DatabasePage from './database/page';
-import NetworkingPage from './networking/page';
+import AIMLPlatformPage from './ai-ml-platform/page';
 
 // Specialized Solutions
 import QuantumComputingPage from './quantum-computing/page';
@@ -133,15 +126,40 @@ import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
+<<<<<<< HEAD
 // Support Pages
 // AI Services Pages
 import AIProjectManagerPage from './ai-project-manager/page';
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
 import AIAutomationPage from './ai-automation/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
+=======
+// Support Pages - These are imported but not used in routes yet
+// import SupportPage from './support/page';
+// import DocsPage from './docs/page';
+// import APIDocsPage from './api-docs/page';
+// import StatusPage from './status/page';
+// import PrivacyPage from './privacy/page';
+// import TermsPage from './terms/page';
+// import CookiesPage from './cookies/page';
+
+// Additional Pages
+import AboutPage from './about/page';
+import ServicesPage from './services/page';
+import ContactPage from './contact/page';
+import BlogPage from './blog/page';
+import CaseStudiesPage from './case-studies/page';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
+  const [, setEnhancers] = useState<{
+    performance: unknown;
+    seo: unknown;
+    accessibility: unknown;
+    security: unknown;
+    ux: unknown;
+  } | null>(null);
 
   useEffect(() => {
     initializeEnhancers();

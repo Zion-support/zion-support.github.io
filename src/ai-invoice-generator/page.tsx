@@ -1,5 +1,9 @@
 'use client';
 import React, { memo } from 'react';
+<<<<<<< HEAD
+=======
+import { Phone, Star, Eye, CheckCircle, Calculator, Receipt } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';

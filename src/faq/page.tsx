@@ -1,5 +1,9 @@
 'use client';
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

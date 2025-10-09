@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [

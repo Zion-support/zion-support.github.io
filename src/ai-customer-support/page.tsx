@@ -12,4 +12,10 @@ export default function AICustomerSupportPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default AICustomerSupportPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9296

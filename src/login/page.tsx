@@ -1,5 +1,9 @@
 'use client';
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

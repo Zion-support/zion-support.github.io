@@ -1,5 +1,10 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { Phone, Mail, Globe, BarChart, Sparkles, CheckCircle, TrendingUp, Smartphone, Settings, Navigation, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9296
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
