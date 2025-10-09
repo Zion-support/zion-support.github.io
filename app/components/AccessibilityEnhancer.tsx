@@ -1,122 +1,226 @@
 import React, { useEffect, useState } from 'react';
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  focusVisible: boolean;
-}
-
 const AccessibilityEnhancer: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    reducedMotion: false,
-    fontSize: 'medium',
-    focusVisible: false,
-  });
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
 
   useEffect(() => {
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     
-    setSettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast,
-    }));
+    setIsReducedMotion(prefersReducedMotion);
+    setIsHighContrast(prefersHighContrast);
 
     // Apply accessibility settings
-    const root = document.documentElement;
-    if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
+    if (prefersReducedMotion) {
+      document.documentElement.classList.add('reduced-motion');
     }
 
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
+    if (prefersHighContrast) {
+      document.documentElement.classList.add('high-contrast');
     }
 
-    // Font size
-    root.classList.remove('font-small', 'font-medium', 'font-large');
-    root.classList.add(`font-${settings.fontSize}`);
+    // Add skip navigation link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded z-50';
+    skipLink.style.position = 'absolute';
+    skipLink.style.left = '-9999px';
+    skipLink.style.zIndex = '9999';
+    
+    skipLink.addEventListener('focus', () => {
+      skipLink.style.left = '1rem';
+      skipLink.style.top = '1rem';
+    });
+    
+    skipLink.addEventListener('blur', () => {
+      skipLink.style.left = '-9999px';
+    });
 
-    // Focus visible
-    if (settings.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
+    document.body.insertBefore(skipLink, document.body.firstChild);
 
-    // Add accessibility enhancements
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach((button, index) => {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', `Button ${index + 1}`);
-        }
-      });
-    };
-
-    const addFocusManagement = () => {
-      // Add focus management for better keyboard navigation
-      const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      focusableElements.forEach((element) => {
-        element.addEventListener('focus', (e) => {
-          (e.target as HTMLElement).style.outline = '2px solid #06b6d4';
-        });
-        element.addEventListener('blur', (e) => {
-          (e.target as HTMLElement).style.outline = 'none';
-        });
-      });
-    };
-
-    // Add keyboard navigation support
+    // Add focus management
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Add ARIA live region for announcements
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.id = 'live-region';
+    document.body.appendChild(liveRegion);
+
+    // Add color blind support
+    const colorBlindSupport = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .color-blind-protanopia {
+          filter: hue-rotate(90deg) saturate(1.2);
+        }
+        .color-blind-deuteranopia {
+          filter: hue-rotate(180deg) saturate(1.2);
+        }
+        .color-blind-tritanopia {
+          filter: hue-rotate(270deg) saturate(1.2);
+        }
+      `;
+      document.head.appendChild(style);
+    };
+
+    colorBlindSupport();
+
+    // Add screen reader announcements
+    const announceToScreenReader = (message: string) => {
+      const liveRegion = document.getElementById('live-region');
+      if (liveRegion) {
+        liveRegion.textContent = message;
+      }
+    };
+
+    // Make announcements available globally
+    (window as any).announceToScreenReader = announceToScreenReader;
+
+    // Add keyboard shortcuts
+    const handleKeyboardShortcuts = (e: KeyboardEvent) => {
+      // Alt + 1: Skip to main content
+      if (e.altKey && e.key === '1') {
+        e.preventDefault();
         const mainContent = document.querySelector('main, [role="main"]');
         if (mainContent) {
           (mainContent as HTMLElement).focus();
-          e.preventDefault();
+          mainContent.scrollIntoView();
         }
       }
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
+
+      // Alt + 2: Skip to navigation
+      if (e.altKey && e.key === '2') {
+        e.preventDefault();
+        const navigation = document.querySelector('nav, [role="navigation"]');
+        if (navigation) {
+          (navigation as HTMLElement).focus();
+          navigation.scrollIntoView();
+        }
+      }
+
+      // Alt + 3: Skip to footer
+      if (e.altKey && e.key === '3') {
+        e.preventDefault();
+        const footer = document.querySelector('footer, [role="contentinfo"]');
+        if (footer) {
+          (footer as HTMLElement).focus();
+          footer.scrollIntoView();
         }
       }
     };
 
-    addAriaLabels();
-    addFocusManagement();
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyboardShortcuts);
 
-    // Re-run on DOM changes
-    const observer = new MutationObserver(() => {
-      addAriaLabels();
-      addFocusManagement();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
+    // Cleanup
     return () => {
-      observer.disconnect();
       document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('keydown', handleKeyboardShortcuts);
+      
+      const skipLink = document.querySelector('a[href="#main-content"]');
+      if (skipLink) {
+        skipLink.remove();
+      }
+      
+      const liveRegion = document.getElementById('live-region');
+      if (liveRegion) {
+        liveRegion.remove();
+      }
     };
-  }, [settings]);
+  }, []);
 
-  return null;
+  // Font size controls
+  const increaseFontSize = () => {
+    const sizes = ['normal', 'large', 'larger'];
+    const currentIndex = sizes.indexOf(fontSize);
+    const newIndex = Math.min(currentIndex + 1, sizes.length - 1);
+    setFontSize(sizes[newIndex]);
+    
+    document.documentElement.style.fontSize = 
+      fontSize === 'normal' ? '16px' : 
+      fontSize === 'large' ? '18px' : '20px';
+  };
+
+  const decreaseFontSize = () => {
+    const sizes = ['normal', 'large', 'larger'];
+    const currentIndex = sizes.indexOf(fontSize);
+    const newIndex = Math.max(currentIndex - 1, 0);
+    setFontSize(sizes[newIndex]);
+    
+    document.documentElement.style.fontSize = 
+      fontSize === 'normal' ? '14px' : 
+      fontSize === 'large' ? '16px' : '18px';
+  };
+
+  const toggleHighContrast = () => {
+    setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast');
+  };
+
+  const toggleReducedMotion = () => {
+    setIsReducedMotion(!isReducedMotion);
+    document.documentElement.classList.toggle('reduced-motion');
+  };
+
+  return (
+    <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
+      <h3 className="text-white text-sm font-semibold mb-2">Accessibility</h3>
+      <div className="space-y-2">
+        <button
+          onClick={increaseFontSize}
+          className="block w-full text-left text-cyan-400 hover:text-cyan-300 text-sm"
+          aria-label="Increase font size"
+        >
+          A+ Larger Text
+        </button>
+        <button
+          onClick={decreaseFontSize}
+          className="block w-full text-left text-cyan-400 hover:text-cyan-300 text-sm"
+          aria-label="Decrease font size"
+        >
+          A- Smaller Text
+        </button>
+        <button
+          onClick={toggleHighContrast}
+          className={`block w-full text-left text-sm ${
+            isHighContrast ? 'text-yellow-400' : 'text-cyan-400 hover:text-cyan-300'
+          }`}
+          aria-label="Toggle high contrast mode"
+        >
+          {isHighContrast ? '✓' : ''} High Contrast
+        </button>
+        <button
+          onClick={toggleReducedMotion}
+          className={`block w-full text-left text-sm ${
+            isReducedMotion ? 'text-yellow-400' : 'text-cyan-400 hover:text-cyan-300'
+          }`}
+          aria-label="Toggle reduced motion"
+        >
+          {isReducedMotion ? '✓' : ''} Reduced Motion
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;
