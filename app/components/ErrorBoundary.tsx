@@ -1,10 +1,8 @@
+'use client';
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-import { FileWarning } from 'lucide-react';
-=======
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
 
 interface Props {
   children: ReactNode;
@@ -28,35 +26,12 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Send error to analytics/monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_stack: error.stack || '',
-          error_info: errorInfo.componentStack || ''
-        }
-      });
-    }
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({ error, errorInfo });
   }
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  handleGoHome = () => {
-    window.location.href = '/';
   };
 
   render() {
@@ -67,56 +42,54 @@ class ErrorBoundary extends Component<Props, State> {
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
+          <div className="max-w-md w-full bg-slate-800 rounded-lg p-8 text-center">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
-                <AlertTriangle className="w-8 h-8 text-red-400" />
-              </div>
+              <AlertTriangle className="h-16 w-16 text-red-400" />
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
+              Something went wrong
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              We apologize for the inconvenience. An unexpected error has occurred.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-gray-900 rounded-lg text-left">
-                <h3 className="text-sm font-semibold text-red-400 mb-2">Error Details:</h3>
-                <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-32">
+              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <p className="text-red-300 text-sm font-mono">
                   {this.state.error.message}
-                </pre>
+                </p>
               </div>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
+                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-medium transition-colors"
               >
-                <RefreshCw className="w-4 h-4 mr-2" />
+                <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
-<<<<<<< HEAD
+              
               <Link
                 href="/"
-                className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
-=======
-              
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors"
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
+                className="flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-medium transition-colors"
               >
-                <Home className="w-4 h-4 mr-2" />
+                <Home className="h-4 w-4 mr-2" />
                 Go Home
-              </button>
+              </Link>
             </div>
 
             <div className="mt-6 text-sm text-gray-400">
-              If this problem persists, please contact our support team.
+              <p>If the problem persists, please contact our support team:</p>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-cyan-400 hover:text-cyan-300"
+              >
+                kleber@ziontechgroup.com
+              </a>
             </div>
           </div>
         </div>

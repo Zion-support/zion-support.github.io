@@ -1,15 +1,164 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star } from 'lucide-react';
-
+import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star, Phone, Mail, MapPin, Award, Shield, Brain, BarChart, DollarSign, Clock, Globe, MessageSquare } from 'lucide-react';
 
 export default function ServicesAdvertisingPage() {
+  const advertisingServices = [
+    {
+      title: 'AI-Powered Ad Campaign Optimization',
+      description: 'Revolutionary AI technology that automatically optimizes your ad campaigns for maximum ROI and performance.',
+      icon: '🎯',
+      price: '$1,999/month',
+      features: [
+        'Real-time campaign optimization',
+        'AI-driven audience targeting',
+        'Automated A/B testing',
+        'Performance prediction',
+        'Cost reduction by 60%',
+        'ROI increase by 300%'
+      ],
+      benefits: [
+        'Increase conversion rates by 150%',
+        'Reduce cost per acquisition by 60%',
+        'Improve ad relevance scores',
+        'Maximize return on ad spend'
+      ],
+      marketPrice: '$3,000-5,000/month',
+      technologies: ['Google Ads API', 'Facebook Ads API', 'Machine Learning', 'Python', 'React'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464-0950'
+    },
+    {
+      title: 'AI Content Generation for Ads',
+      description: 'Generate high-converting ad copy, headlines, and creative content using advanced AI technology.',
+      icon: '✍️',
+      price: '$799/month',
+      features: [
+        'AI-generated ad copy',
+        'Multiple headline variations',
+        'Creative content generation',
+        'Brand voice consistency',
+        'Multi-platform optimization',
+        'Performance tracking'
+      ],
+      benefits: [
+        'Create content 10x faster',
+        'Improve click-through rates by 45%',
+        'Maintain brand consistency',
+        'Scale content production'
+      ],
+      marketPrice: '$1,200-2,000/month',
+      technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464-0950'
+    },
+    {
+      title: 'AI Audience Intelligence Platform',
+      description: 'Advanced audience analysis and targeting using AI to identify high-value prospects and optimize reach.',
+      icon: '👥',
+      price: '$1,499/month',
+      features: [
+        'AI audience segmentation',
+        'Behavioral analysis',
+        'Lookalike audience creation',
+        'Predictive targeting',
+        'Cross-platform insights',
+        'Real-time optimization'
+      ],
+      benefits: [
+        'Improve targeting accuracy by 95%',
+        'Increase audience engagement by 80%',
+        'Reduce wasted ad spend by 50%',
+        'Identify high-value prospects'
+      ],
+      marketPrice: '$2,000-4,000/month',
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464-0950'
+    },
+    {
+      title: 'AI Social Media Advertising Manager',
+      description: 'Comprehensive social media advertising management with AI-powered optimization across all platforms.',
+      icon: '📱',
+      price: '$1,299/month',
+      features: [
+        'Multi-platform management',
+        'AI content scheduling',
+        'Engagement optimization',
+        'Influencer identification',
+        'Hashtag optimization',
+        'Performance analytics'
+      ],
+      benefits: [
+        'Increase social engagement by 120%',
+        'Reduce management time by 70%',
+        'Improve brand awareness',
+        'Optimize posting times'
+      ],
+      marketPrice: '$1,800-3,000/month',
+      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464-0950'
+    },
+    {
+      title: 'AI Email Marketing Automation',
+      description: 'Intelligent email marketing campaigns with personalization, segmentation, and automated optimization.',
+      icon: '📧',
+      price: '$899/month',
+      features: [
+        'AI-powered personalization',
+        'Automated segmentation',
+        'Send time optimization',
+        'Subject line testing',
+        'Drip campaign automation',
+        'Performance analytics'
+      ],
+      benefits: [
+        'Increase open rates by 35%',
+        'Boost click-through rates by 50%',
+        'Reduce unsubscribe rates by 40%',
+        'Improve email deliverability'
+      ],
+      marketPrice: '$1,500-2,500/month',
+      technologies: ['Email APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464-0950'
+    },
+    {
+      title: 'AI Search Engine Marketing (SEM)',
+      description: 'Advanced SEM management with AI-powered keyword research, bid optimization, and performance tracking.',
+      icon: '🔍',
+      price: '$1,799/month',
+      features: [
+        'AI keyword research',
+        'Automated bid management',
+        'Landing page optimization',
+        'Competitor analysis',
+        'Performance tracking',
+        'ROI optimization'
+      ],
+      benefits: [
+        'Increase qualified traffic by 200%',
+        'Reduce cost per click by 45%',
+        'Improve quality scores',
+        'Maximize search visibility'
+      ],
+      marketPrice: '$2,500-4,500/month',
+      technologies: ['Google Ads API', 'Bing Ads API', 'Machine Learning', 'Python', 'React'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464-0950'
+    }
+  ];
+
+  const stats = [
+    { number: '300%', label: 'Average ROI Increase', icon: TrendingUp },
+    { number: '60%', label: 'Cost Reduction', icon: DollarSign },
+    { number: '95%', label: 'Targeting Accuracy', icon: Target },
+    { number: '500+', label: 'Happy Clients', icon: Users },
+    { number: '24/7', label: 'AI Optimization', icon: Clock },
+    { number: '50+', label: 'Platforms Supported', icon: Globe }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+          <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
@@ -17,338 +166,229 @@ export default function ServicesAdvertisingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
-              <Target className="w-4 h-4 mr-2" />
-              AI-Powered Advertising Solutions
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Advertising Services
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Revolutionize Your Marketing with 300% ROI Guaranteed
-            </p>
-            
-            <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
-              methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
-                Start Free Consultation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-              <Link 
-                href="#services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
-                View Our Services
-              </Link>
-            </div>
+      <section className="relative overflow-hidden py-20 px-4">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-600/20 text-cyan-400 text-sm font-semibold mb-6">
+            <Target className="w-4 h-4 mr-2" />
+            AI-Powered Advertising Solutions
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI Advertising Services
+          </h1>
+          
+          <p className="text-xl md:text-2xl mb-8 text-cyan-400 max-w-3xl mx-auto">
+            Revolutionize Your Marketing with 300% ROI Guaranteed
+          </p>
+          
+          <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
+            Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
+            60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
+            methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+            >
+              Start Free Consultation
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+            >
+              Call (302) 464-0950
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Proven Advertising Results
-            </h2>
-            <p className="text-xl text-gray-600">
-              Our AI-powered advertising delivers measurable business impact
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
-              <div className="text-gray-600">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
-              <div className="text-gray-600">Targeting Accuracy</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
-              <div className="text-gray-600">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-              <div className="text-gray-600">Campaign Optimization</div>
-            </div>
+      {/* Stats Section */}
+      <section className="py-16 px-4 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-600/20 rounded-full mb-4">
+                    <IconComponent className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-sm text-gray-300">{stat.label}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI Advertising Solutions
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our AI Advertising Services
             </h2>
-            <p className="text-xl text-gray-600">
-              Comprehensive AI-powered advertising services for maximum impact
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI-powered advertising solutions designed to maximize your ROI and transform your marketing performance.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-blue-600 text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>
-              <p className="text-gray-600 mb-4">
-                Advanced machine learning algorithms that identify and target your ideal customers with 95% accuracy.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Behavioral analysis</li>
-                <li>• Predictive modeling</li>
-                <li>• Real-time optimization</li>
-                <li>• Lookalike audience creation</li>
-                <li>• Cross-platform targeting</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,000-5,000/month | Our Price: $1,200/month
+            {advertisingServices.map((service, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                  <div className="text-sm text-gray-400">Market Price: {service.marketPrice}</div>
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold text-white mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-white mb-2">Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="text-center">
+                  <a
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
+                    className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-700 hover:to-blue-700 transition-all inline-block"
+                  >
+                    Get Started Now
+                  </a>
+                  <p className="text-xs text-gray-500 mt-2">
+                    {service.contactInfo}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-green-600 text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold mb-3">Campaign Optimization</h3>
-              <p className="text-gray-600 mb-4">
-                Continuous AI-driven optimization that maximizes performance and minimizes costs across all channels.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• A/B testing automation</li>
-                <li>• Budget allocation</li>
-                <li>• Performance monitoring</li>
-                <li>• Bid optimization</li>
-                <li>• Landing page optimization</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $3,000-7,000/month | Our Price: $1,800/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-purple-600 text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold mb-3">Creative Generation</h3>
-              <p className="text-gray-600 mb-4">
-                AI-generated ad creatives that adapt to audience preferences and platform requirements in real-time.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Dynamic creative optimization</li>
-                <li>• Personalization at scale</li>
-                <li>• Multi-platform adaptation</li>
-                <li>• Video ad generation</li>
-                <li>• Brand consistency maintenance</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,500-6,000/month | Our Price: $1,500/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-orange-600 text-4xl mb-4">📱</div>
-              <h3 className="text-xl font-semibold mb-3">Social Media Advertising</h3>
-              <p className="text-gray-600 mb-4">
-                Comprehensive social media advertising management across all major platforms with AI optimization.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Facebook & Instagram ads</li>
-                <li>• LinkedIn advertising</li>
-                <li>• TikTok & Snapchat ads</li>
-                <li>• Twitter advertising</li>
-                <li>• Cross-platform analytics</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,000-5,000/month | Our Price: $1,200/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-red-600 text-4xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold mb-3">Search Engine Marketing</h3>
-              <p className="text-gray-600 mb-4">
-                AI-powered Google Ads and Bing advertising with intelligent keyword optimization and bid management.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Google Ads management</li>
-                <li>• Bing advertising</li>
-                <li>• Keyword research & optimization</li>
-                <li>• Ad copy generation</li>
-                <li>• Performance tracking</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $1,500-4,000/month | Our Price: $900/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-indigo-600 text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold mb-3">Analytics & Reporting</h3>
-              <p className="text-gray-600 mb-4">
-                Advanced analytics and reporting with AI insights and automated performance recommendations.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Real-time dashboards</li>
-                <li>• AI-powered insights</li>
-                <li>• Automated reporting</li>
-                <li>• ROI optimization</li>
-                <li>• Competitive analysis</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $1,000-3,000/month | Our Price: $600/month
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Transparent Pricing
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our AI Advertising Services?
             </h2>
-            <p className="text-xl text-gray-600">
-              Choose the plan that fits your advertising needs
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              We combine cutting-edge AI technology with proven marketing expertise to deliver exceptional results.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span></div>
-              <div className="text-sm text-green-600 font-semibold mb-6">Save 40% vs market rates</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Up to $10K ad spend</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>AI targeting optimization</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Basic reporting & analytics</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Email support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>2 platforms included</span>
-                </li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Get Started
-              </button>
-            </div>
-            <div className="bg-blue-600 text-white rounded-lg p-8 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-600/20 rounded-full mb-4">
+                <Brain className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Professional</h3>
-              <div className="text-4xl font-bold mb-2">$2,500<span className="text-lg text-blue-200">/month</span></div>
-              <div className="text-sm text-green-300 font-semibold mb-6">Save 50% vs market rates</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Up to $50K ad spend</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Advanced AI optimization</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Creative generation</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Priority support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Custom reporting</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>All platforms included</span>
-                </li>
-              </ul>
-              <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Get Started
-              </button>
+              <h3 className="text-xl font-bold text-white mb-3">Advanced AI Technology</h3>
+              <p className="text-gray-300">
+                Our proprietary AI algorithms continuously learn and optimize your campaigns for maximum performance.
+              </p>
             </div>
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span></div>
-              <div className="text-sm text-green-600 font-semibold mb-6">Save 60% vs market rates</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Unlimited ad spend</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Full AI suite</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Dedicated account manager</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>24/7 support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Custom integrations</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>White-label options</span>
-                </li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Contact Sales
-              </button>
+
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-600/20 rounded-full mb-4">
+                <BarChart className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Proven Results</h3>
+              <p className="text-gray-300">
+                We've helped 500+ businesses achieve an average 300% ROI increase and 60% cost reduction.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-600/20 rounded-full mb-4">
+                <Shield className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
+              <p className="text-gray-300">
+                Bank-level security and compliance ensure your data and campaigns are always protected.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-600/20 rounded-full mb-4">
+                <Clock className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">24/7 Optimization</h3>
+              <p className="text-gray-300">
+                Our AI works around the clock to optimize your campaigns and maximize performance.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-600/20 rounded-full mb-4">
+                <Globe className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Multi-Platform Support</h3>
+              <p className="text-gray-300">
+                Manage campaigns across 50+ advertising platforms from a single, unified dashboard.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-600/20 rounded-full mb-4">
+                <MessageSquare className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Dedicated Support</h3>
+              <p className="text-gray-300">
+                Get dedicated support from our team of AI and marketing experts whenever you need it.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-20 px-4 bg-gradient-to-r from-cyan-600 to-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Advertising?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Get a free AI advertising assessment and discover how we can boost your ROI by 300%
+          <p className="text-xl text-cyan-100 mb-8">
+            Get started with our AI advertising services today and see the difference intelligent automation can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Free Assessment
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <Link 
-              href="/case-studies"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              Call (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
             >
-              View Success Stories
-            </Link>
+              Email Us
+            </a>
           </div>
         </div>
       </section>
