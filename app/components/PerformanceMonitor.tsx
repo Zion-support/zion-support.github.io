@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { X } from 'lucide-react';
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -32,42 +33,269 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [, setPerformanceScore] = useState(0);
 
   useEffect(() => {
+    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
+    //   // Log to console in development (only on client side)
+    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
+    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
+    //   }
+    // };
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
     const updateMetrics = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-        
-        const newMetrics: PerformanceMetrics = {
-          lcp: null,
-          fid: null,
-          cls: null,
-          fcp: null,
-          ttfb: navigation ? navigation.responseStart - navigation.requestStart : null,
-          memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
-        };
+      const currentMetrics: PerformanceMetrics = {
+        lcp: null,
+        fid: null,
+        cls: null,
+        fcp: null,
+        ttfb: null,
+        memoryUsage: 0,
+      };
 
-        // Get FCP
-        const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-          newMetrics.fcp = fcpEntry.startTime;
-        }
+      // Get Core Web Vitals
+      if ('web-vitals' in window) {
+        // This would be imported from web-vitals library
+        // For now, we'll simulate the metrics
+        currentMetrics.lcp = Math.random() * 4000 + 1000;
+        currentMetrics.fid = Math.random() * 100 + 10;
+        currentMetrics.cls = Math.random() * 0.3;
+        currentMetrics.fcp = Math.random() * 2000 + 500;
+        currentMetrics.ttfb = Math.random() * 800 + 200;
+      }
 
-        setMetrics(newMetrics);
-        
-        if (enableConsoleLogging) {
-          console.log('Performance Metrics:', newMetrics);
-        }
+      // Get memory usage if available
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        currentMetrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      }
+
+      setMetrics(currentMetrics);
+
+      // Calculate performance score
+      const score = calculatePerformanceScore(currentMetrics);
+      setPerformanceScore(score);
+
+      // Log metrics if enabled
+      if (enableConsoleLogging && typeof window !== 'undefined') {
+        // eslint-disable-next-line no-console
+        console.log('Performance Metrics:', currentMetrics);
+        // eslint-disable-next-line no-console
+        console.log('Performance Score:', score);
+      }
+
+      // Report metrics if enabled
+      if (enableReporting) {
+        reportMetrics(currentMetrics, score);
       }
     };
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
+    const metrics: PerformanceMetrics = {
+      lcp: null,
+      fid: null,
+      cls: null,
+      fcp: null,
+      if (currentMetrics.renderTime > 1500) score -= 15;
+      if (currentMetrics.loadTime > 3000) score -= 20;
+      if (currentMetrics.memoryUsage > 50) score -= 10;
+      return Math.max(0, score);
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
+      ttfb: null,
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
+    };
+
+      if ('PerformanceObserver' in window) {
+        try {
+          const lcpObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            const lastEntry = entries[entries.length - 1] as any;
+            if (lastEntry) {
+              setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+            }
+          });
+          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        } catch {
+          // LCP observer not supported
+        }
+
+        // FID - First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry: any) => {
+            metrics.fid = entry.processingStart - entry.startTime;
+        // FID - First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry: PerformanceEntry & { processingStart: number; startTime: number }) => {
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          });
+        });
+        
+        // Observe FID
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
+        try {
+          const fidObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry: any) => {
+              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            });
+          });
+          fidObserver.observe({ entryTypes: ['first-input'] });
+        } catch {
+          // FID observer not supported
+        }
+
+        // Observe CLS
+        try {
+          let clsValue = 0;
+          const clsObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry: any) => {
+              if (!entry.hadRecentInput) {
+                clsValue += entry.value;
+                setMetrics(prev => ({ ...prev, cls: clsValue }));
+              }
+            });
+          });
+          clsObserver.observe({ entryTypes: ['layout-shift'] });
+        } catch {
+          // CLS observer not supported
+        }
+
+        // Observe FCP
+        try {
+          const fcpObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry: any) => {
+              if (entry.name === 'first-contentful-paint') {
+                setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+              }
+            });
+          });
+          fcpObserver.observe({ entryTypes: ['paint'] });
+        } catch {
+          // FCP observer not supported
+        }
+
+      });
+    });
+
+    try {
+      fidObserver.observe({ entryTypes: ['first-input'] });
+    } catch (error) {
+      console.warn('FID observer not supported:', error);
+    }
+
+        try {
+          const ttfbObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry: any) => {
+              if (entry.entryType === 'navigation') {
+                setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));
+              }
+            });
+          });
+          ttfbObserver.observe({ entryTypes: ['navigation'] });
+        } catch {
+          // TTFB observer not supported
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
+        }
+      });
+      metrics.cls = clsValue;
+    });
+
+    try {
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      console.warn('CLS observer not supported:', error);
+    }
+
+    // Monitor memory usage
+    const memory = (
+      performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }
+    ).memory;
+
+    if (memory) {
+      const usedMemory = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      const totalMemory = memory.totalJSHeapSize / 1024 / 1024; // Convert to MB
+      
+      if (usedMemory > 50) {
+        console.warn(`High memory usage detected: ${usedMemory.toFixed(2)}MB / ${totalMemory.toFixed(2)}MB`);
+      }
+    }
+
+    return () => {
+      try {
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      } catch (error) {
+        console.warn('Error disconnecting performance observers:', error);
+      }
+    };
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
+    // Initial metrics update
     updateMetrics();
-    
-    const interval = setInterval(updateMetrics, reportInterval);
-    
-    return () => clearInterval(interval);
-  }, [enableConsoleLogging, reportInterval]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
+
+    // Set up interval for continuous monitoring
+    const interval = setInterval(updateMetrics, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [enabled, collectPerformanceMetrics]);
+
+    setupPerformanceObservers();
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [enableConsoleLogging, enableReporting, reportInterval, calculatePerformanceScore, reportMetrics]);
+
+  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
+    let score = 100;
+
+    // LCP scoring (0-100)
+    if (metrics.lcp !== null) {
+      if (metrics.lcp <= 2500) score -= 0;
+      else if (metrics.lcp <= 4000) score -= 10;
+      else score -= 20;
+    }
+
+    // FID scoring (0-100)
+    if (metrics.fid !== null) {
+      if (metrics.fid <= 100) score -= 0;
+      else if (metrics.fid <= 300) score -= 10;
+      else score -= 20;
+    }
+
+    // CLS scoring (0-100)
+    if (metrics.cls !== null) {
+      if (metrics.cls <= 0.1) score -= 0;
+      else if (metrics.cls <= 0.25) score -= 10;
+      else score -= 20;
+    }
+
+    // FCP scoring (0-100)
+    if (metrics.fcp !== null) {
+      if (metrics.fcp <= 1800) score -= 0;
+      else if (metrics.fcp <= 3000) score -= 10;
+      else score -= 20;
+    }
+
+    // TTFB scoring (0-100)
+    if (metrics.ttfb !== null) {
+      if (metrics.ttfb <= 800) score -= 0;
+      else if (metrics.ttfb <= 1800) score -= 10;
+      else score -= 20;
+    }
+
+    return Math.max(0, score);
+  }, []);
 
   return null; // This component doesn't render anything
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
 };
 
 export default PerformanceMonitor;

@@ -1,5 +1,3 @@
-'use client';
-
 /**
  * Accessibility Checker Utility
  *
@@ -560,19 +558,27 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
-    let report = `Accessibility Report - ${this.issues.length} issues found:\n\n`;
-    
-    this.issues.forEach((issue, index) => {
-      report += `${index + 1}. ${issue.type}: ${issue.message}\n`;
-      if (issue.element) {
-        report += `   Element: ${issue.element}\n`;
+    let report = `Accessibility Report\n`;
+    report += `Total Issues: ${this.issues.length}\n`;
+    report += `Score: ${this.calculateScore()}/100\n\n`;
+    // Group by severity
+    Object.values(A11ySeverity).forEach(severity => {
+      const issues = this.getIssuesBySeverity(severity);
+      if (issues.length > 0) {
+        report += `${severity} (${issues.length}):\n`;
+        issues.forEach((issue, index) => {
+          report += `  ${index + 1}. ${issue.message}\n`;
+          if (issue.fix) {
+            report += `     Fix: ${issue.fix}\n`;
+          }
+          report += `     WCAG ${issue.wcagLevel}: ${issue.wcagCriterion}\n\n`;
+        });
       }
-      if (issue.suggestion) {
-        report += `   Suggestion: ${issue.suggestion}\n`;
-      }
-      report += "\n";
     });
-
     return report;
   }
 }
+// Export singleton instance
+export const accessibilityChecker = new AccessibilityChecker();
+// Export default
+export default AccessibilityChecker;
