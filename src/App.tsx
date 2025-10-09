@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
-import LoadingSpinner from './components/LoadingSpinner';
+import LoadingSpinner, { LoadingStates } from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
 
 // Lazy load components for better performance
@@ -137,11 +137,7 @@ const BlogAIPoweredAutonomousBusinessProcesses2026Page = lazy(() => import('./bl
 const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./blog/ai-trends-2026-future-enterprise-transformation/page'));
 
 // Main loading component
-const MainLoadingSpinner = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
-  </div>
-);
+const MainLoadingSpinner = () => <LoadingStates.Page />;
 
 const App: React.FC = () => {
   // Initialize performance monitoring
