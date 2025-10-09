@@ -15,7 +15,13 @@ const ServicesPage: React.FC = () => {
         { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding' },
         { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition' },
         { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities' },
-        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support' }
+        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support' },
+        { name: 'AI Voice Synthesis', price: '$1,200/month', description: 'Professional voice synthesis with 200+ voices and emotion control' },
+        { name: 'AI Translation Services', price: '$900/month', description: 'Advanced translation with context awareness and cultural adaptation' },
+        { name: 'AI Data Science', price: '$2,200/month', description: 'Automated data analysis, model building, and insights generation' },
+        { name: 'AI Legal Assistant', price: '$3,200/month', description: 'Intelligent legal document analysis and compliance monitoring' },
+        { name: 'AI Healthcare Solutions', price: '$4,000/month', description: 'Medical AI with symptom analysis and patient monitoring' },
+        { name: 'AI Financial Advisor', price: '$1,800/month', description: 'Personalized financial planning and investment analysis' }
       ]
     },
     {
@@ -29,7 +35,13 @@ const ServicesPage: React.FC = () => {
         { name: 'Cybersecurity', price: '$1,599/month', description: 'Advanced security solutions with threat detection and prevention' },
         { name: 'DevOps & CI/CD', price: '$1,199/month', description: 'Streamlined development workflows with automated testing and deployment' },
         { name: 'Database Services', price: '$899/month', description: 'Database design, optimization, and management with AI-powered tuning' },
-        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions' }
+        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions' },
+        { name: 'AI Quality Assurance', price: '$1,500/month', description: 'Automated quality testing and bug detection for software development' },
+        { name: 'AI DevOps Automation', price: '$2,000/month', description: 'Intelligent DevOps pipeline with automated deployment and monitoring' },
+        { name: 'Mobile App Development', price: '$1,800/month', description: 'No-code mobile app development with AI-powered design' },
+        { name: 'Blockchain Solutions', price: '$2,500/month', description: 'Decentralized solutions, smart contracts, and Web3 applications' },
+        { name: 'IoT & Edge Computing', price: '$1,800/month', description: 'Connected devices and edge computing solutions' },
+        { name: 'API Development', price: '$1,200/month', description: 'RESTful and GraphQL API development with documentation' }
       ]
     },
     {
@@ -43,7 +55,13 @@ const ServicesPage: React.FC = () => {
         { name: 'AI Analytics Dashboard', price: '$399/month', description: 'Business intelligence and analytics with AI insights' },
         { name: 'AI Marketing Tools', price: '$249/month', description: 'Marketing automation and campaign optimization tools' },
         { name: 'AI Document Processing', price: '$179/month', description: 'Intelligent document analysis and data extraction' },
-        { name: 'AI Customer Support', price: '$149/month', description: 'Automated customer support and ticket management' }
+        { name: 'AI Customer Support', price: '$149/month', description: 'Automated customer support and ticket management' },
+        { name: 'AI Content Writer Pro', price: '$29/month', description: 'Advanced AI-powered content creation in 50+ languages' },
+        { name: 'AI Image Generator Studio', price: '$49/month', description: 'Professional AI image generation with commercial licensing' },
+        { name: 'AI Video Editor Pro', price: '$79/month', description: 'Intelligent video editing with automatic scene detection' },
+        { name: 'AI Music Composer', price: '$39/month', description: 'Create original music tracks using advanced AI algorithms' },
+        { name: 'AI Meeting Transcriber', price: '$39/month', description: 'Intelligent meeting transcription with speaker identification' },
+        { name: 'AI Task Automator', price: '$69/month', description: 'Intelligent task automation with workflow creation' }
       ]
     },
     {
@@ -57,7 +75,13 @@ const ServicesPage: React.FC = () => {
         { name: 'Blockchain & Web3', price: '$1,999/month', description: 'Decentralized solutions, smart contracts, and Web3 applications' },
         { name: 'IoT & Edge Computing', price: '$1,499/month', description: 'Connected devices and edge computing solutions' },
         { name: 'Business Intelligence', price: '$1,799/month', description: 'Data-driven insights and predictive analytics for decision-making' },
-        { name: 'Robotics', price: 'Custom', description: 'Intelligent robotic solutions for manufacturing and service industries' }
+        { name: 'Robotics', price: 'Custom', description: 'Intelligent robotic solutions for manufacturing and service industries' },
+        { name: 'AI Healthcare Assistant', price: '$4,000/month', description: 'Medical AI platform with symptom analysis and patient monitoring' },
+        { name: 'AI Education Platform', price: '$1,200/month', description: 'Personalized learning with adaptive content and intelligent tutoring' },
+        { name: 'AI Real Estate Analyzer', price: '$1,600/month', description: 'Property analysis with market predictions and investment recommendations' },
+        { name: 'AI Logistics Optimizer', price: '$2,400/month', description: 'Smart logistics with route optimization and fleet management' },
+        { name: 'AI Energy Manager', price: '$2,000/month', description: 'Smart energy management with consumption optimization' },
+        { name: 'AI Fitness Coach', price: '$600/month', description: 'Personalized fitness platform with workout generation and nutrition planning' }
       ]
     }
   ];
