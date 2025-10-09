@@ -22,6 +22,8 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'terser',
+    target: 'es2020',
+    cssTarget: 'chrome80',
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -77,12 +79,18 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
       },
       mangle: {
         safari10: true,
+        properties: {
+          regex: /^_/
+        }
       },
       format: {
-        comments: false
+        comments: false,
+        ascii_only: true
       }
     },
     chunkSizeWarningLimit: 500,
