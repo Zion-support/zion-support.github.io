@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 import Link from 'next/link';
 import { ArrowLeft, Shield, Lock, Eye, CheckCircle, AlertTriangle, FileText, Users } from 'lucide-react';
@@ -100,14 +98,10 @@ const SecurityPage: React.FC = () => {
       title: 'Business Continuity Plan',
       description: 'Disaster recovery and business continuity procedures',
       lastUpdated: '2024-08-15'
-
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
     }
   ];
 
   return (
-<<<<<<< HEAD
-=======
 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -184,15 +178,13 @@ const SecurityPage: React.FC = () => {
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{detail}</span>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
 
         </div>
       </section>
@@ -338,13 +330,11 @@ const SecurityPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
 export default SecurityPage;
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4

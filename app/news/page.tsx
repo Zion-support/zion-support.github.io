@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 import Link from 'next/link';
 import { Calendar, ArrowRight, ExternalLink } from 'lucide-react';
@@ -281,13 +279,11 @@ const NewsPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
 export default NewsPage;
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4

@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
@@ -43,13 +41,11 @@ const SystemStatusPage: React.FC = () => {
         </div>
       </div>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
 export default SystemStatusPage;
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4

@@ -289,9 +289,7 @@ const AIServicesPage: React.FC = () => {
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Edge AI',
-<<<<<<< HEAD
-      technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing']
-=======
+
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
@@ -625,7 +623,6 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
     }
   ];
 

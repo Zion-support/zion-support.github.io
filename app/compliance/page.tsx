@@ -248,18 +248,14 @@ const CompliancePage: React.FC = () => {
                       </span>
                     ))}
                   </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
                 </div>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
         </div>
       </section>
 
@@ -369,10 +365,8 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };

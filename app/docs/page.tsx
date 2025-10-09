@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 'use client';
 
 import React, { useState } from 'react';
@@ -300,13 +299,11 @@ const DocsPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
 export default DocsPage;
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4

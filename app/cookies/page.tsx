@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 import Link from 'next/link';
 import { ArrowLeft, Shield, Settings, BarChart, User } from 'lucide-react';
@@ -239,12 +237,10 @@ const CookiesPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
 export default CookiesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4

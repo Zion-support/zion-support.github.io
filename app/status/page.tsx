@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -102,15 +101,11 @@ const StatusPage: React.FC = () => {
         }
       ]
     }
-
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
   ];
 
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
-<<<<<<< HEAD
-=======
 
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded':
@@ -259,13 +254,11 @@ const StatusPage: React.FC = () => {
                     {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
                   </span>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
                 </div>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
 
         </div>
       </section>
@@ -348,13 +341,11 @@ const StatusPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
 export default StatusPage;
 
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
+ cursor/analyze-improve-and-deploy-application-cde4
