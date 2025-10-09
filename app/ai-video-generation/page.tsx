@@ -26,7 +26,7 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
     'Reduce time-to-market for campaigns',
     'Enable non-designers to create videos'
   ]
-  const videoTypes = [}
+  const videoTypes = [
     { name: 'Marketing Videos', description: 'Promotional and advertising content', icon: '📢' },
     { name: 'Social Media', description: 'Short-form content for platforms', icon: '📱' },
     { name: 'Explainer Videos', description: 'Educational and how-to content', icon: '🎓' },

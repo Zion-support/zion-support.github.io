@@ -8,7 +8,7 @@ interface SEOEnhancerProps {
   ogImage?: string
   ogType?: string
   twitterCard?: string
-  structuredData?: object;}
+  structuredData?: object
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,

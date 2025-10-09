@@ -2,14 +2,14 @@
 interface LoadingSkeletonProps {
   className?: string
   lines?: number
-  height?: string;}
+  height?: string
 }
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
   className = '', 
   lines = 1, 
-  height = 'h-4' }
+  height = 'h-4' 
 }) => {
-  return (}
+  return (
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <div

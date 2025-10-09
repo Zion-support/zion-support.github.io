@@ -16,25 +16,25 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI Content Creation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI',
-      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']}
+      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']
     },
     {
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-optimized posting times for maximum reach and engagement',
-      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']}
+      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']
     },
     {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics with AI-powered performance predictions',
-      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']}
+      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']
     },
     {
       icon: Users,
       title: 'Audience Intelligence',
       description: 'AI-driven audience analysis and targeting recommendations',
-      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']}
+      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']
     }
   ]
   const platforms = [

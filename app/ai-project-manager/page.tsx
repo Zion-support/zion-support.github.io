@@ -16,25 +16,25 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with resource optimization and timeline prediction',
-      benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']}
+      benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']
     },
     {
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment, priority setting, and progress tracking',
-      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']}
+      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']
     },
     {
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'AI-driven insights for project success prediction and risk management',
-      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']}
+      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']
     },
     {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team communication and collaboration with AI assistance',
-      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']}
+      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']
     }
   ]
   const pricingPlans = [

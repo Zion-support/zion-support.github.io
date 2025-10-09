@@ -112,6 +112,8 @@ class SecurityEnhancer {
       info: console.info.bind(console)
     };
     // Override console methods to detect debugging
+    Object.keys(originalConsole).forEach(key => {
+      (console as any)[key] = originalConsole[key as keyof Console];
     });
   }
   private monitorDOMManipulation(): void {

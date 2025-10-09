@@ -110,12 +110,11 @@ class MonitoringService {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-              // console.warn('Slow resource detected:', {
-              //   name: resourceEntry.name,
-              //   duration: resourceEntry.duration,
-              //   type: resourceEntry.initiatorType
-              // })
-            }
+            // console.warn('Slow resource detected:', {
+            //   name: entry.name,
+            //   duration: entry.duration,
+            //   type: (entry as any).initiatorType
+            // });
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });

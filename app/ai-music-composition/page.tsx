@@ -26,7 +26,7 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
     'Scale music production instantly',
     'Enable non-musicians to create professional tracks'
   ]
-  const genres = [}
+  const genres = [
     { name: 'Classical', description: 'Symphonic and orchestral compositions', icon: '🎼' },
     { name: 'Jazz', description: 'Improvisational and complex harmonies', icon: '🎷' },
     { name: 'Rock', description: 'Electric guitars and powerful rhythms', icon: '🎸' },

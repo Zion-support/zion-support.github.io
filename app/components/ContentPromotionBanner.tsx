@@ -4,7 +4,7 @@ import { Sparkles, ArrowRight, Star } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = React.memo((props) => {
   return (
-    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">}
+    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
       

@@ -26,7 +26,7 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
     'Enable personalized fashion design',
     'Accelerate time-to-market for collections'
   ]
-  const designTypes = [}
+  const designTypes = [
     { name: 'Casual Wear', description: 'Everyday clothing and street fashion', icon: '👕' },
     { name: 'Formal Wear', description: 'Business attire and evening wear', icon: '👔' },
     { name: 'Activewear', description: 'Sports and fitness clothing', icon: '🏃' },

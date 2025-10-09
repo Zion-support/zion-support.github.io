@@ -10,25 +10,25 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
       icon: Cloud,
       title: 'Seamless Cloud Migration',
       description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
-      benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']}
+      benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']
     },
     {
       icon: Shield,
       title: 'Security-First Approach',
       description: 'Ensure your cloud infrastructure meets the highest security standards and compliance requirements.',
-      benefits: ['End-to-end encryption', 'Compliance management', 'Security monitoring', 'Access controls']}
+      benefits: ['End-to-end encryption', 'Compliance management', 'Security monitoring', 'Access controls']
     },
     {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
-      benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']}
+      benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']
     },
     {
       icon: Target,
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
-      benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']}
+      benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
     }
   ]
   const migrationSteps = [

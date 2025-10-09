@@ -10,25 +10,25 @@ const AICustomerSupportPage: React.FC = React.memo((props) => {
       icon: MessageCircle,
       title: '24/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
-      benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']}
+      benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
     },
     {
       icon: Users,
       title: 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
-      benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']}
+      benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
     },
     {
       icon: Clock,
       title: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
-      benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']}
+      benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
     },
     {
       icon: Shield,
       title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
-      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']}
+      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
     }
   ]
   const pricing = [

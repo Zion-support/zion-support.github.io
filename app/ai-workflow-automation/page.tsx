@@ -9,7 +9,7 @@ const AiWorkflowAutomationPage: React.FC = React.memo((props) => {
     <>
       <SEOOptimizer
         title="AiWorkflowAutomation - Zion Tech Group"
-        description="Professional AI and IT ai-workflow-automations for your business transformation."}
+        description="Professional AI and IT ai-workflow-automations for your business transformation."
         keywords={['AI services', 'IT solutions', 'business transformation']}
         canonicalUrl="https://ziontechgroup.com/service"
       />

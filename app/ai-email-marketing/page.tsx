@@ -16,25 +16,25 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI Content Generation',
       description: 'Generate compelling email content with AI-powered writing assistance',
-      benefits: ['Personalized content', 'A/B testing', 'Subject line optimization', 'Call-to-action suggestions']}
+      benefits: ['Personalized content', 'A/B testing', 'Subject line optimization', 'Call-to-action suggestions']
     },
     {
       icon: Target,
       title: 'Smart Segmentation',
       description: 'Automatically segment your audience based on behavior and preferences',
-      benefits: ['Behavioral targeting', 'Demographic segmentation', 'Engagement-based groups', 'Predictive segments']}
+      benefits: ['Behavioral targeting', 'Demographic segmentation', 'Engagement-based groups', 'Predictive segments']
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Track performance with detailed analytics and AI-powered insights',
-      benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']}
+      benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']
     },
     {
       icon: Send,
       title: 'Automated Campaigns',
       description: 'Set up sophisticated email sequences that work around the clock',
-      benefits: ['Welcome series', 'Abandoned cart recovery', 'Re-engagement campaigns', 'Birthday/anniversary emails']}
+      benefits: ['Welcome series', 'Abandoned cart recovery', 'Re-engagement campaigns', 'Birthday/anniversary emails']
     }
   ]
   const campaignTypes = [

@@ -9,6 +9,6 @@ const ContentStatistics: React.FC = React.memo((props) => {
         </div>
       </div>
     </div>
-  );}
+  );
 }
 export default ContentStatistics

@@ -31,7 +31,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
       title: 'Game Development',
       description: 'Generate characters, environments, and props for games',
       icon: '🎮',
-      examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models']}
+      examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models']
     },
     {
       title: 'Architecture & Real Estate',

@@ -17,7 +17,7 @@ export enum LogLevel {
   INFO = 1,
   WARN = 2,
   ERROR = 3,
-  FATAL = 4}
+  FATAL = 4
 }
 /**
  * Log entry interface
@@ -42,7 +42,7 @@ export interface LogEntry {
   /** Session ID if available */
   sessionId?: string
   /** Environment (development, production, etc.) */
-  environment?: string;}
+  environment?: string
 }
 /**
  * Logger configuration interface
@@ -63,7 +63,7 @@ export interface LoggerConfig {
   /** Enable performance tracking */
   enablePerformance: boolean
   /** Environment name */
-  environment: string;}
+  environment: string
 }
 /**
  * Default logger configuration
@@ -75,7 +75,7 @@ const defaultConfig: LoggerConfig = {
   enableStructured: true,
   maxLogs: 1000,
   enablePerformance: true,
-  environment: process.env['NODE_ENV'] || 'development'}
+  environment: process.env['NODE_ENV'] || 'development'
 }
 /**
  * Enhanced Logger class
@@ -94,8 +94,9 @@ export class EnhancedLogger {
   private static instance: EnhancedLogger
   private config: LoggerConfig
   private logs: LogEntry[] = []
-  private performanceMarks: Map<string, number> = new Map();}
-  private constructor(config: Partial<LoggerConfig> = {}) {}
+  private performanceMarks: Map<string, number> = new Map();
+  
+  private constructor(config: Partial<LoggerConfig> = {}) {
     this.config = { ...defaultConfig, ...config }
   }
   /**
@@ -119,7 +120,7 @@ export class EnhancedLogger {
    * @internal
    */
   public static resetInstance(): void {
-    EnhancedLogger.instance = undefined as unknown as EnhancedLogger;}
+    EnhancedLogger.instance = undefined as unknown as EnhancedLogger;
   }
   /**
    * Log a debug message
@@ -133,7 +134,7 @@ export class EnhancedLogger {
    * ``
    */
   public debug(message: string, data?: Record<string, unknown>, source?: string): void {
-    this.log(LogLevel.DEBUG, message, data, source);}
+    this.log(LogLevel.DEBUG, message, data, source);
   }
   /**
    * Log an info message
@@ -147,7 +148,7 @@ export class EnhancedLogger {
    * ``
    */
   public info(message: string, data?: Record<string, unknown>, source?: string): void {
-    this.log(LogLevel.INFO, message, data, source);}
+    this.log(LogLevel.INFO, message, data, source);
   }
   /**
    * Log a warning message
@@ -161,7 +162,7 @@ export class EnhancedLogger {
    * ``
    */
   public warn(message: string, data?: Record<string, unknown>, source?: string): void {
-    this.log(LogLevel.WARN, message, data, source);}
+    this.log(LogLevel.WARN, message, data, source);
   }
   /**
    * Log an error message
@@ -184,13 +185,13 @@ export class EnhancedLogger {
     data?: Record<string, unknown>,
     error?: Error,
     source?: string
-  ): void {}
+  ): void {
     const logData = { ...data }
     if (error) {
       logData.error = {
         name: error.name,
         message: error.message,
-        stack: error.stack}
+        stack: error.stack
       }
     }
     this.log(LogLevel.ERROR, message, logData, source, error?.stack)
@@ -208,13 +209,13 @@ export class EnhancedLogger {
     data?: Record<string, unknown>,
     error?: Error,
     source?: string
-  ): void {}
+  ): void {
     const logData = { ...data }
     if (error) {
       logData.error = {
         name: error.name,
         message: error.message,
-        stack: error.stack}
+        stack: error.stack
       }
     }
     this.log(LogLevel.FATAL, message, logData, source, error?.stack)
@@ -502,7 +503,7 @@ export class EnhancedLogger {
    *
    * @param config - Partial configuration to merge
    */
-  public configure(config: Partial<LoggerConfig>): void {}
+  public configure(config: Partial<LoggerConfig>): void {
     this.config = { ...this.config, ...config }
   }
   /**
