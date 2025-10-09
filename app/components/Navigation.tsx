@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Brain, Home, Settings, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Cube, Shield, Database, Cloud, Smartphone, Lock, X, Menu } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,14 +63,14 @@ const Navigation: React.FC = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20 cyber-scan-line' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center neon-pulse">
               <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
@@ -82,38 +82,40 @@ const Navigation: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1 group"
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1 group relative"
               >
                 <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 <span>{item.name}</span>
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></div>
               </a>
             ))}
             
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1 relative">
                 <Settings className="w-4 h-4" />
                 <span>Services</span>
                 <svg className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></div>
               </button>
               
               {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 cyber-card">
                 <div className="p-4">
                   <div className="grid grid-cols-1 gap-4">
                     {/* Micro SAAS Services */}
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-2 text-sm">Micro SAAS Solutions</h3>
+                      <h3 className="text-cyan-400 font-semibold mb-2 text-sm neon-text">Micro SAAS Solutions</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {microSAASServices.slice(0, 4).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50 group"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-200" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -122,15 +124,15 @@ const Navigation: React.FC = () => {
                     
                     {/* AI Services */}
                     <div>
-                      <h3 className="text-purple-400 font-semibold mb-2 text-sm">AI Services</h3>
+                      <h3 className="text-purple-400 font-semibold mb-2 text-sm neon-text">AI Services</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {aiServices.slice(0, 4).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50 group"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-200" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -139,15 +141,15 @@ const Navigation: React.FC = () => {
                     
                     {/* IT Services */}
                     <div>
-                      <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
+                      <h3 className="text-green-400 font-semibold mb-2 text-sm neon-text">IT Services</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {itServices.map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50 group"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-200" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -158,7 +160,7 @@ const Navigation: React.FC = () => {
                   <div className="mt-4 pt-4 border-t border-gray-600">
                     <a
                       href="/services"
-                      className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                      className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium group"
                     >
                       View All Services →
                     </a>
@@ -172,7 +174,7 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+13024640950"
-              className="flex items-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 cyber-button"
             >
               <Phone className="w-4 h-4" />
               <span>Call Now</span>
@@ -182,7 +184,7 @@ const Navigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative z-50"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -191,32 +193,32 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-400/20">
+          <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-400/20 cyber-card">
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 group"
                   onClick={() => setIsOpen(false)}
                 >
-                  <item.icon className="w-5 h-5" />
+                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                   <span>{item.name}</span>
                 </a>
               ))}
               
               {/* Mobile Services Section */}
               <div className="pt-4 border-t border-gray-600">
-                <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS Solutions</h3>
+                <h3 className="text-cyan-400 font-semibold mb-3 neon-text">Micro SAAS Solutions</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {microSAASServices.slice(0, 6).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50 group"
                       onClick={() => setIsOpen(false)}
                     >
-                      <service.icon className="w-4 h-4" />
+                      <service.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
                       <span className="text-sm">{service.name}</span>
                     </a>
                   ))}
@@ -224,16 +226,16 @@ const Navigation: React.FC = () => {
               </div>
               
               <div className="pt-4 border-t border-gray-600">
-                <h3 className="text-purple-400 font-semibold mb-3">AI Services</h3>
+                <h3 className="text-purple-400 font-semibold mb-3 neon-text">AI Services</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {aiServices.slice(0, 4).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50 group"
                       onClick={() => setIsOpen(false)}
                     >
-                      <service.icon className="w-4 h-4" />
+                      <service.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
                       <span className="text-sm">{service.name}</span>
                     </a>
                   ))}
@@ -241,16 +243,16 @@ const Navigation: React.FC = () => {
               </div>
               
               <div className="pt-4 border-t border-gray-600">
-                <h3 className="text-green-400 font-semibold mb-3">IT Services</h3>
+                <h3 className="text-green-400 font-semibold mb-3 neon-text">IT Services</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {itServices.map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50 group"
                       onClick={() => setIsOpen(false)}
                     >
-                      <service.icon className="w-4 h-4" />
+                      <service.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
                       <span className="text-sm">{service.name}</span>
                     </a>
                   ))}
@@ -260,7 +262,7 @@ const Navigation: React.FC = () => {
               <div className="pt-4 border-t border-gray-600">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-3 rounded-lg transition-all duration-300"
+                  className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-4 py-3 rounded-lg transition-all duration-300 cyber-button"
                   onClick={() => setIsOpen(false)}
                 >
                   <Phone className="w-5 h-5" />
