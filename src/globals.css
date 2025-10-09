@@ -23,6 +23,9 @@
   src: url('https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQDBWGbfyE.woff2') format('woff2');
 }
 
+/* Import Futuristic Design System */
+@import './styles/futuristic.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
