@@ -1,6 +1,6 @@
-import React from 'react';
 
-import { Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone, Shield } from 'lucide-react';
+
+
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [];
@@ -194,7 +194,7 @@ Most Popular;
   );
 };
 
-export default PagePage;"`
 
+export default ExpenseTrackerPage;
 
 

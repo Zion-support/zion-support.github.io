@@ -1,11 +1,13 @@
 
-'use client';
 
-interface Props {// TODO: Add content;}
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+interface State {
+  // TODO: Add content
+}
+  hasError: boolean;
 
-};
-  hasErro,
-  r: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -174,6 +176,7 @@ class GlobalErrorBoundary extends Component;
 }
 
 export default GlobalErrorBoundary;"
+
 
 
 

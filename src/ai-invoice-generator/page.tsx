@@ -1,128 +1,9 @@
 
-import { Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building } from 'lucide-react';
 
-'use client';
-import React, { memo } from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import SEOOptimizer from '../../components/SEOOptimizer';
-const,
-  AIInvoiceGeneratorPage: React.FC = memo(() => {const features = [}
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  ico,
-  n: Brain,
-      titl,
-  e: 'AI-Powered Invoice Generation',
-      descriptio,
-  n: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
-      benefit,
-  s: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency'];
-    },
-      ico,
-  n: Zap,
-      titl,
-  e: 'Instant Processing',
-      descriptio,
-  n: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
-      benefit,
-  s: ['Real-time generation', 'Batch processing', 'Template optimization', 'Error reduction']
-      ico,
-  n: BarChart,
-      titl,
-  e: 'Analytics & Insights',
-      descriptio,
-  n: 'Track payment patterns, identify trends, and get AI-powered insights to improve your cash flow.',
-      benefit,
-  s: ['Payment analytics', 'Trend analysis', 'Cash flow predictions', 'Client insights']
-      ico,
-  n: Smartphone,
-      titl,
-  e: 'Mobile Optimized',
-      descriptio,
-  n: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
-      benefit,
-  s: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
-    }
-  ];
-  const pricingPlans = [
-      nam,
-  e: 'Professional',
-      pric,
-  e: '$79',
-      descriptio,
-  n: 'Ideal for growing businesses',
-      titl,
-  e: 'E-commerce Businesses',
-      descriptio,
-  n: 'Automate invoice generation for online sales with AI-powered order processing.',
-      ico,
-  n: ShoppingCart,
-      benefit,
-  s: ['Order integration', 'Inventory tracking', 'Tax calculations', 'Customer management'];
-      titl,
-  e: 'Agencies & Studios',
-      descriptio,
-  n: 'Manage complex client billing with AI that handles multiple projects and billing structures.',
-      ico,
-  n: Building,
-      benefit,
-  s: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
-  return (<div>Coming Soon</div>)
-  )
-    
-          <>
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-      <SEOOptimizer
-        title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group" description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
-        keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
-        canonicalUrl="https:// ziontechgroup.com/ai-invoice-generator"
-
-//       />
-      
-          
-          
-          
-          
-          
-          
-          
-          "
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation /></Navigation>"
-        <main className="pt-24"></main>
-          {/* Hero Section */}"
-          <section className="container mx-auto px-4 py-16"></section>"
-            <div className="text-center max-w-4xl mx-auto"></div>"
-              <div className="inline-flex items-center bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6"></div>"
-                <Receipt className="w-5 h-5 text-purple-400 mr-2" /></Receipt>"
-                <span className="text-purple-400 text-sm font-medium">AI Invoice Generator</span>
-              </div>"
-              <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-                Generate Professional Invoices with{' '}"
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"></span>
-// AI Intelligence;
-          </span>
-              </h1>"
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
-// Transform your invoicing process with AI-powered automation. Create, send, and track invoices;
-                effortlessly while gaining valuable insights into your business performance.
-              
-          
-          
-          
-          
-          
-          
-          
-          
-
-          </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <a
-                  href="#pricing" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
 
 // >
                   
@@ -277,7 +158,7 @@ Most Popular;
   );
 };
 
-export default PagePage;"`
 
+export default PagePage;
 
 

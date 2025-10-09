@@ -1,14 +1,7 @@
 
-'use client';
-/**
- * Improved Error Boundary;
- * Enhanced error handling with recovery mechanisms and user-friendly fallbacks;
- */
-interface Props {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  childre,
-  n: ReactNode;
+
+  children: ReactNode;
+
   fallback?: ReactNode;
   onError?: (erro,
   r: Error, errorInf,)
@@ -468,6 +461,7 @@ const styles = {// TODO: Add content;}
   r: '#999'
   }
 };
+
 
 
 

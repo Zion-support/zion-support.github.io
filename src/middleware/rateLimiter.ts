@@ -155,3 +155,10 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
 return null;
 
 
+
+    // Request allowed - headers can be added to response later
+    return null;
+  };
+}
+
+

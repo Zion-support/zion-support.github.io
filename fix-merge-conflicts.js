@@ -3,29 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Remove merge conflict markers and keep the content after     const lines = content.split('
-');
-    const resolvedLines = [];
-    let inConflict = false;
-    let keepContent = false;
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.startsWith('<<<<<<<')) {
-        inConflict = true;
-        keepContent = false;
-        continue;
-      }
-      
-      if (line.startsWith('=======')) {
+')) {
         keepContent = true;
         continue;
       }
@@ -47,54 +25,102 @@ function resolveMergeConflicts(filePath) {
     if (content !== resolvedContent) {
       fs.writeFileSync(filePath, resolvedContent, 'utf8');
       console.log(`Fixed merge conflicts in: ${filePath}`);
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflict markers
+    if (!content.includes(')
+    const parts = content.split('=======');
+    
+    if (parts.length >= 2) {
+      // Take the second part and remove the 
+      let fixedContent = parts[1];
+      
+      // Remove the 
+      const lines = fixedContent.split('
+');
+      const filteredLines = lines.filter(line => !line.trim().startsWith('>>>>>>>'));
+      
+      fixedContent = filteredLines.join('
+');
+      
+      // Write the fixed content back to the file
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
+    console.error(`Error fixing ${filePath}:`, error.message);
+
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript files with merge conflicts
-function findFilesWithConflicts() {
-  try {
-    const result = execSync('grep -r -l "<<<<<<<" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" 2>/dev/null || true', { encoding: 'utf8' });
-    return result.trim().split('
-').filter(file => file.length > 0);
-  } catch (error) {
-    console.error('Error finding files with conflicts:', error.message);
-    return [];
+
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other irrelevant directories
+        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        // Check for TypeScript/JavaScript files
+        if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
+          files.push(fullPath);
+        }
+      }
+    }
+
   }
 }
 
 // Main execution
 console.log('Starting merge conflict resolution...');
 
-const filesWithConflicts = findFilesWithConflicts();
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const srcDir = path.join(__dirname, 'src');
+const files = findSourceFiles(srcDir);
 
 let fixedCount = 0;
-for (const file of filesWithConflicts) {
-  if (resolveMergeConflicts(file)) {
-    fixedCount++;
+let totalConflicts = 0;
+
+for (const file of files) {
+  const content = fs.readFileSync(file, 'utf8');
+  if (content.includes('    totalConflicts++;
+    if (fixMergeConflicts(file)) {
+      fixedCount++;
+    }
   }
 }
 
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console.log(`
+Merge conflict resolution complete!`);
+console.log(`Files with conflicts: ${totalConflicts}`);
+console.log(`Files fixed: ${fixedCount}`);
 
-// Verify no more conflicts exist
-try {
-  const remainingConflicts = execSync('grep -r "<<<<<<<" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" 2>/dev/null | wc -l', { encoding: 'utf8' });
-  const count = parseInt(remainingConflicts.trim());
-  if (count === 0) {
-    console.log('✅ All merge conflicts resolved!');
-  } else {
-    console.log(`⚠️  ${count} merge conflicts still remain`);
-  }
-} catch (error) {
-  console.log('✅ No merge conflicts found');
+// Also check for any remaining conflicts
+console.log('
+Checking for remaining conflicts...');
+const remainingConflicts = execSync('grep -r "if (remainingConflicts.trim()) {
+  console.log('Warning: Some conflicts may still exist:');
+  console.log(remainingConflicts);
+} else {
+  console.log('No remaining conflicts found!');
 }
 
 

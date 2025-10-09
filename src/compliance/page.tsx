@@ -1,4 +1,6 @@
-import React from 'react';
+
+
+
 import { Link } from 'react-router-dom';
 
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
@@ -153,7 +155,7 @@ Compliance Areas;"
   );
 };
 
-export default PagePage;"
 
+export default CompliancePage;
 
 

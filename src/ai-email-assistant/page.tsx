@@ -1,9 +1,9 @@
 
 
-'use client';
-export default function AIEmailAssistantPage() {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 
   return (
 
@@ -260,7 +260,6 @@ export default function AIEmailAssistantPage() {/* TODO: Fix JSX expression */}
 };
 
 
-export default PagePage;"
-
+export default PagePage;
 
 

@@ -1,8 +1,7 @@
 
-import { ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award, Users } from 'lucide-react';
 
-'use client';
-import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

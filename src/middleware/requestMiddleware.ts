@@ -169,6 +169,8 @@ export default {MiddlewareExecutor,}
   timeoutMiddleware,
   transformRequestMiddleware,
   transformResponseMiddleware,
-  createDefaultMiddlewareChain;
+
+  createDefaultMiddlewareChain
+};
 
 

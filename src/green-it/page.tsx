@@ -1,8 +1,7 @@
 
-import { Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp, Cloud, Code, Factory, Building } from 'lucide-react';
 
-'use client';
-import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -452,7 +451,6 @@ Benefits of Green IT;"
 };
 
 
-export default PagePage;"`
-
+export default GreenItPage;
 
 

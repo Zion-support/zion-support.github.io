@@ -1,3 +1,6 @@
+
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Phone } from 'lucide-react';
@@ -119,7 +122,6 @@ Ready to Transform Your Business?"
 };
 
 
-export default ServiceTemplatePage;"
-
+export default ServicePage;
 
 

@@ -83,8 +83,7 @@ View Success Stories;
       <Footer />
     </div>
   );
-};
 
-export default PageOptimizedPage;
+}
 
 

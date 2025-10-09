@@ -1,9 +1,7 @@
-import React from 'react';
 
 
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart, Star } from 'lucide-react';
-import { Bot } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -164,7 +162,6 @@ Most Popular;
 };
 
 
-export default PagePage;"`
-
+export default PagePage;
 
 

@@ -1,11 +1,6 @@
-import React from 'react';
 
 
-interface Props {// TODO: Add content;}
-
-};
-  childre,
-  n: ReactNode;
+  children: ReactNode;
 
   fallback?: ReactNode;
   onError?: (erro,
@@ -380,6 +375,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 }
 
 export default EnhancedErrorBoundary;"`
+
 
 
 

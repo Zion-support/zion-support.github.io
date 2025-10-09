@@ -1,3 +1,6 @@
+
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -38,5 +41,9 @@ export default function RootLayout({
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
+
+
+
+export default SrcPage;
 
 

@@ -1,13 +1,14 @@
 
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+interface State {
+  // TODO: Add content
+}
+  hasError: boolean;
 
-interface Props {// TODO: Add content;}
-
-};
-  hasErro,
-  r: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -295,6 +296,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {/
 }
 
 export default ErrorBoundary;"
+
 
 
 

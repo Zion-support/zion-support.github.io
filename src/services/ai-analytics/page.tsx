@@ -1,9 +1,6 @@
 
-import { BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award,  Brain,  BarChart,  Target,  Zap,  TrendingUp,  Star,  Award } from 'lucide-react';
 
-'use client';
 
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -199,7 +196,6 @@ ico,
 };
 
 
-export default AIAnalyticsPage;"`
-
+export default AiAnalyticsPage;
 
 

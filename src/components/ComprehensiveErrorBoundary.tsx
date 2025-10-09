@@ -1,11 +1,6 @@
 
-'use client';
-import ModernLoadingSpinner from './ModernLoadingSpinner';
-interface Props {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  childre,
-  n: ReactNode;
+
+  children: ReactNode;
 
   fallback?: ReactNode;
   onError?: (erro,
@@ -303,6 +298,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 }
 
 export default ComprehensiveErrorBoundary;"`
+
 
 
 

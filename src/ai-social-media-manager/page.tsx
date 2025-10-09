@@ -1,24 +1,6 @@
-import React from 'react';
 
-import { Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare } from 'lucide-react';
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [];
-  return (
-    {// TODO: Add content;}
 
-};
-  ico,
-  n: Share2,
-      titl,
-  e: 'AI Content Creation',
-      descriptio,
-  n: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
-    },
-
-icon: TrendingUp,
-      title: 'Trend Analysis',
-      description: 'Real-time trend monitoring and content suggestions based on viral topics',
-
+import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -130,7 +112,7 @@ Ready to Get Started?"
   );
 };
 
-export default PagePage;"
 
+export default AiSocialMediaManagerPage;
 
 

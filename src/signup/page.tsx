@@ -1,8 +1,7 @@
 
-import { Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe, Globe } from 'lucide-react';
 
-'use client';
-import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -242,7 +241,6 @@ Join thousands of businesses already using our AI and IT solutions;
 };
 
 
-export default PagePage;"
-
+export default SignupPage;
 
 

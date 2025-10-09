@@ -1,10 +1,9 @@
-import React from 'react';
 
-import { CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
-const IoTEdgePage: React.FC = () => {
-  const iotServices = [];
-  return (
-    {// TODO: Add content;}
+
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 
 };
   titl,
@@ -322,7 +321,7 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-whi
   );
 };
 
-export default PagePage;"
 
+export default IotEdgePage;
 
 

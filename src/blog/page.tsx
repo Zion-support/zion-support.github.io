@@ -1,4 +1,8 @@
-import React from 'react';
+
+
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 
 'use client';
@@ -88,5 +92,9 @@ export default function BlogPage() {/* TODO: Fix JSX expression */}
       readTime: '14 min read',
       date: '2026-02-15',
       path: '/blog/ai-2026-consensus-intelligence-breakthrough',
+
+
+
+export default BlogPage;
 
 

@@ -1,34 +1,6 @@
-import React from 'react';
 
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain } from 'lucide-react';
-const AnalyticsToolsPage: React.FC = () => {
-  const analyticsTools = [];
-  return (
-    {// TODO: Add content;}
 
-};
-  titl,
-  e: 'AI Business Intelligence',
-      pric,
-  e: '$399/month',
-      descriptio,
-  n: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
-      feature,
-  s: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
-      ico,
-  n: '',
-      categor,
-  y: 'Business Intelligence'
-    },
-
-      title: 'AI Web Analytics',
-      price: '$299/month',
-      description: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.',
-      features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
-      icon: '',
-      category: 'Web Analytics',
-
+import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -162,7 +134,7 @@ Call (302) 464-0950;
   );
 };
 
-export default PagePage;"`
 
+export default AnalyticsToolsPage;
 
 

@@ -1,5 +1,10 @@
 
 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Home, Phone } from 'lucide-react';
+
+
 export default function NotFound() {return (}
     <div></div>
       <div></div>
@@ -66,8 +71,9 @@ export default function NotFound() {return (}
             <Phone className="w-4 h-4 mr-2" />Contact Support</Link>
         </div>
       </div>
-    </div>)
-}
 
+    </div>
+  );
+}
 
 

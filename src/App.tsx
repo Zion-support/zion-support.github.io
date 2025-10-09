@@ -1,4 +1,7 @@
-import React, { useEffect, useState, lazy, Suspense } from 'react';
+
+
+import React, { useEffect, useState, lazy } from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
@@ -48,5 +51,6 @@ const App: React.FC = () => {
 };
 
 export default App;
+
 
 

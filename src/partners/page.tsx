@@ -1,8 +1,7 @@
 
-import { Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users,  Star,  CheckCircle } from 'lucide-react';
 
-'use client';
-import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -218,7 +217,6 @@ const PagePage: React.FC = () => {
 };
 
 
-export default PagePage;"`
-
+export default PartnersPage;
 
 

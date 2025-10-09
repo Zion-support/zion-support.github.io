@@ -1,9 +1,7 @@
-import React from 'react';
 
 
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone, Star } from 'lucide-react';
-import { BarChart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -119,7 +117,7 @@ Learn More;
   );
 };
 
-export default PagePage;"
 
+export default AiProjectManagerPage;
 
 

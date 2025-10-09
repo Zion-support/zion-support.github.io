@@ -1,6 +1,7 @@
-import React from 'react';
 
-import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
@@ -277,5 +278,9 @@ type="text" placeholder="Search FAQs..."
     </>
 export default FAQPage;
 
+
+
+
+export default FaqPage;
 
 

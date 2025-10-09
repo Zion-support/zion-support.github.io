@@ -1,6 +1,6 @@
-import React from 'react';
 
-import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users, Shield } from 'lucide-react';
+
+
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [];
@@ -126,7 +126,7 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;"`
 
+export default SmartAnalyticsPage;
 
 

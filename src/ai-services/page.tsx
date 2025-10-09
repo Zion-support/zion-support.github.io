@@ -1,6 +1,5 @@
-import React from 'react';
 
-import { Brain, Zap, Shield, BarChart, BarChart } from 'lucide-react';
+
 
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -79,7 +78,7 @@ Learn More;
   );
 };
 
-export default PagePage;"
 
+export default AiServicesPage;
 
 

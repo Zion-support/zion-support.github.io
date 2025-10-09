@@ -1,8 +1,9 @@
-import React from 'react';
 
-const AICustomerSupportPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 
   )
     
@@ -20,5 +21,9 @@ const AICustomerSupportPage: React.FC = () => {
 export default AiCustomerSupportPage;
 export default AICustomerSupportPage;
 
+
+
+
+export default PagePage;
 
 
