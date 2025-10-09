@@ -1,11 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -15,13 +9,8 @@ import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Dynamically import heavy components for better performance
-<<<<<<< HEAD
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-<<<<<<< HEAD
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-=======
-const _ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
@@ -29,12 +18,10 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-=======
 // const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 // const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 // const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 // const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 
 // Preload critical components
 const preloadComponents = () => {
@@ -70,11 +57,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
       (window as unknown as { gtag: (event: string, data: Record<string, string>) => void }).gtag('event', 'phone_click', {
-=======
-      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
@@ -1227,6 +1210,4 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-=======
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

@@ -1,11 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -151,6 +145,4 @@ const CompliancePage: React.FC = () => {
 };
 
 export default CompliancePage;
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

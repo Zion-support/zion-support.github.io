@@ -101,13 +101,8 @@ export function validateUrl(url: string): boolean {
 /**
  * Generate secure token
  */
-<<<<<<< HEAD
 export function generateSecureToken(length: number = 32): string {
   const array = new Uint8Array(length);
-=======
-export function generateSecureToken(_length: number = 32): string {
-  const _array = new Uint8Array(length);
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   } else {

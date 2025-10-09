@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {Star, Phone} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -73,6 +67,4 @@ const ApiDocs: React.FC = () => {
 };
 
 export default ApiDocs;
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

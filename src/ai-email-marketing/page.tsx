@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const AIEmailMarketingPage: React.FC = () => {
   const _features = [
@@ -44,16 +39,15 @@ const AIEmailMarketingPage: React.FC = () => {
     'Boost click-through rates by 150%',
     'Reduce unsubscribe rates by 60%',
     'Improve conversion rates by 180%',
-    'Save 15+ hours per week'
-  ];
+    'Save 15+ hours per week';  ];
 
   const emailTypes = [
-    { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers' },
-    { name: 'Newsletter', icon: '📰', description: 'Regular updates and content' },
-    { name: 'Promotional', icon: '🎯', description: 'Sales and special offers' },
-    { name: 'Transactional', icon: '📧', description: 'Order confirmations and receipts' },
-    { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
-    { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
+    { name: 'Welcome Series', icon: '', description: 'Onboard new subscribers' },
+    { name: 'Newsletter', icon: '', description: 'Regular updates and content' },
+    { name: 'Promotional', icon: '', description: 'Sales and special offers' },
+    { name: 'Transactional', icon: '', description: 'Order confirmations and receipts' },
+    { name: 'Re-engagement', icon: '', description: 'Win back inactive subscribers' },
+    { name: 'Educational', icon: '', description: 'Value-driven content series' }
   ];
 
   const pricing = [
@@ -105,21 +99,18 @@ const AIEmailMarketingPage: React.FC = () => {
       popular: false
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiEmailMarketingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Ai Email Marketing</h1>
+        <h1 className="text-4xl font-bold text-white mb-4">Ai Email Marketing}</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ai email marketing solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+        }<a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us
         </a>
       </div>
-    </div>
-  );
+    }</div>;  );
 };
 
 export default AiEmailMarketingPage;

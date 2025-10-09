@@ -2,7 +2,6 @@
 /**
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
-<<<<<<< HEAD
  */
 import React from 'react'
 export interface HealthStatus {
@@ -315,6 +314,3 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck
-=======
- */
->>>>>>> cursor/fix-errors-and-merge-to-main-d933

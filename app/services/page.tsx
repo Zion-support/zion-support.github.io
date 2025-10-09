@@ -140,9 +140,7 @@ const ServicesPage: React.FC = () => {
   ];
 
   const benefits = [
-=======
   const additionalServices = [
->>>>>>> main
     {
       icon: Brain,
       title: 'AI-Powered Solutions',

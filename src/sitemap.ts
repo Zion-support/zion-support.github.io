@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
@@ -47,5 +46,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }))
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d933

@@ -1,12 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
-=======
-import {Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const AIComputerVisionPage: React.FC = () => {
   const _features = [
@@ -282,6 +277,4 @@ const AIComputerVisionPage: React.FC = () => {
 };
 
 export default AIComputerVisionPage;
-=======
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

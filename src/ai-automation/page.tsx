@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
-=======
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -91,8 +86,6 @@ const AIAutomationPage: React.FC = () => {
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiAutomationPage: React.FC = () => {
   return (
@@ -100,12 +93,11 @@ const AiAutomationPage: React.FC = () => {
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Ai Automation</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ai automation solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+        }<a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us
         </a>
       </div>
-    </div>
-  );
+    }</div>;  );
 };
 
 export default AiAutomationPage;

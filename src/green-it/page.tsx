@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -507,6 +502,4 @@ const GreenITPage: React.FC = () => {
 };
 
 export default GreenITPage;
-=======
 import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

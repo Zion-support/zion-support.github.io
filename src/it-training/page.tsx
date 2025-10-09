@@ -1,11 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const ITTrainingPage: React.FC = () => {
   const _features = [
@@ -106,6 +101,4 @@ const ITTrainingPage: React.FC = () => {
 };
 
 export default ITTrainingPage;
-=======
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

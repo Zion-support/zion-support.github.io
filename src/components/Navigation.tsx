@@ -1,9 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {Menu, X, Phone, MapPin, Home} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

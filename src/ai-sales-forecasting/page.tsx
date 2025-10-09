@@ -1,11 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {TrendingUp, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const AISalesForecastingPage: React.FC = () => {
   const _features = [
@@ -106,6 +101,4 @@ const AISalesForecastingPage: React.FC = () => {
 };
 
 export default AISalesForecastingPage;
-=======
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

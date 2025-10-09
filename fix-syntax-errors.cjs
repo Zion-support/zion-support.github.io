@@ -1,123 +1,87 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
-const path = require('path');
 
-// Fix App.tsx - remove duplicate }, []);
-function fixAppTsx() {
-  const filePath = path.join(__dirname, 'App.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Find and fix duplicate }, []);
-  content = content.replace(/    \[\]\s+\);\s+  }, \[\]\);/g, '    []\n  );');
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed App.tsx');
-}
+// Files with syntax errors
+const filesToFix = [
+  '/workspace/src/ai-crm/page.tsx',
+  '/workspace/src/ai-customer-support-bot/page.tsx',
+  '/workspace/src/ai-email-marketing/page.tsx',
+  '/workspace/src/ai-ml-platform/page.tsx',
+  '/workspace/src/ai-project-manager/page.tsx',
+  '/workspace/src/ai-services/page.tsx',
+  '/workspace/src/it-services/page.tsx',
+  '/workspace/src/page-minimal.tsx',
+  '/workspace/src/services/page.tsx'
+];
 
-// Fix api/shipping-rates.js - remove duplicate module.exports and closing braces
-function fixShippingRates() {
-  const filePath = path.join(__dirname, 'api', 'shipping-rates.js');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove all lines after the first module.exports
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    const fixedLines = lines.slice(0, firstExportIndex + 1);
-    content = fixedLines.join('\n') + '\n';
-  }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/shipping-rates.js');
-}
-
-// Fix api/subscribe.js - remove duplicate catch blocks and module.exports
-function fixSubscribe() {
-  const filePath = path.join(__dirname, 'api', 'subscribe.js');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove duplicate catch blocks and trailing content
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    // Find the line just before the duplicate catches
-    let lastGoodLine = firstExportIndex;
-    for (let i = firstExportIndex - 1; i >= 0; i--) {
-      if (lines[i].trim() === '}' && i > 0 && lines[i-1].includes('catch')) {
-        // Found legitimate closing brace for a catch block
-        lastGoodLine = i + 1;
-        break;
-      }
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    console.log(`Fixing ${filePath}...`);
+    
+    // Fix stray ]; characters
+    if (content.includes('};  ];')) {
+      content = content.replace(/};\s*];/g, '}\n  ];');
+      modified = true;
+      console.log(`  Fixed stray ]; characters`);
     }
     
-    // Re-read and fix more carefully
-    content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove lines with duplicate catch blocks
-    content = content.replace(/  } catch \(err\) {\s+console\.error\('Subscribe API error:', err\);\s+  } catch \(error\) {[\s\S]*?  } catch \(error\) {[\s\S]*?  } catch \(error\) {/g, '');
-    
-    // Keep only content up to first module.exports
-    const parts = content.split('module.exports = withSentry(handler);');
-    content = parts[0] + 'module.exports = withSentry(handler);\n';
-  }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/subscribe.js');
-}
-
-// Fix app/components/ErrorBoundary.tsx - add missing closing paren
-function fixErrorBoundary() {
-  const filePath = path.join(__dirname, 'app', 'components', 'ErrorBoundary.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Find line 112 and add missing )
-  const lines = content.split('\n');
-  if (lines.length > 112) {
-    // Look for the missing closing paren context
-    for (let i = 110; i < 115 && i < lines.length; i++) {
-      if (lines[i].includes('      );') && !lines[i].includes(');')) {
-        lines[i] = lines[i].replace('      );', '      ));');
-        break;
+    // Fix missing closing braces in object literals
+    content = content.replace(/(\w+):\s*'([^']*)'\s*(\];)/g, (match, key, value, closing) => {
+      if (!match.includes('}')) {
+        return `${key}: '${value}'\n    }${closing}`;
       }
+      return match;
+    });
+    
+    // Fix missing closing braces in array elements
+    content = content.replace(/(\w+):\s*\[([^\]]*)\]\s*(\];)/g, (match, key, value, closing) => {
+      if (!match.includes('}')) {
+        return `${key}: [${value}]\n    }${closing}`;
+      }
+      return match;
+    });
+    
+    // Fix property assignment syntax errors
+    content = content.replace(/(\w+)\s*=\s*(\w+)\s*:/g, '$1: $2,');
+    
+    // Fix missing closing braces in JSX expressions
+    content = content.replace(/\{([^}]*?)(\s*)(<\/[^>]*>)/g, (match, expr, whitespace, closingTag) => {
+      if (!expr.includes('}') && !expr.trim().endsWith(';')) {
+        return `{${expr}}${whitespace}${closingTag}`;
+      }
+      return match;
+    });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`  Fixed syntax errors in ${filePath}`);
+      return true;
+    } else {
+      console.log(`  No syntax issues found in ${filePath}`);
+      return false;
     }
-    content = lines.join('\n');
-  }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed app/components/ErrorBoundary.tsx');
-}
-
-// Fix src/utils/analytics.ts - close comment and add method
-function fixAnalytics() {
-  const filePath = path.join(__dirname, 'src', 'utils', 'analytics.ts');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Fix unclosed comment
-  content = content.replace(/  \/\*\*\s+\* Update user properties\s+  }\s+  \/\*\*\s+\* Update user properties\s+export default analytics;/g, 
-    `  /**
-   * Update user properties
-   */
-  updateUserProperties(properties: Record<string, any>) {
-    this.userProperties = { ...this.userProperties, ...properties };
+    
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-export default analytics;`);
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed src/utils/analytics.ts');
+console.log('🔧 Fixing syntax errors...\n');
+
+let fixedCount = 0;
+for (const file of filesToFix) {
+  if (fs.existsSync(file)) {
+    if (fixSyntaxErrors(file)) {
+      fixedCount++;
+    }
+  } else {
+    console.log(`File not found: ${file}`);
+  }
 }
 
-// Run all fixes
-try {
-  fixAppTsx();
-  fixShippingRates();
-  fixSubscribe();
-  fixErrorBoundary();
-  fixAnalytics();
-  console.log('\nAll syntax errors fixed!');
-} catch (error) {
-  console.error('Error fixing files:', error);
-  process.exit(1);
-}
+console.log(`\n✅ Fixed syntax errors in ${fixedCount} files.`);

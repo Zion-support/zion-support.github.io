@@ -2,7 +2,6 @@
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
-<<<<<<< HEAD
  */
 import React from 'react'
 export interface PerformanceMetrics {
@@ -218,6 +217,3 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
-=======
- */
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
