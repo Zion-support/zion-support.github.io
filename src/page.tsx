@@ -72,7 +72,10 @@ const HomePage: React.FC = () => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'
+      category: 'Productivity',
+      marketPrice: '$299/month',
+      savings: '$100/month',
+      demoUrl: 'https://demo.ziontechgroup.com/ai-project-manager'
     },
     {
       title: 'AI Social Media Manager',
@@ -436,7 +439,7 @@ const HomePage: React.FC = () => {
       />
       <Analytics />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain-enhanced particle-field">
         {/* Navigation */}
         <Navigation />
         
@@ -522,6 +525,86 @@ const HomePage: React.FC = () => {
             </div>
           </section>
 
+          {/* Service Categories Overview */}
+          <section className="mb-16" aria-labelledby="services-overview-heading">
+            <h2 id="services-overview-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              Our Comprehensive Service Portfolio
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-4xl mx-auto px-4">
+              From micro SAAS tools to enterprise AI solutions, we provide everything you need to transform your business
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              <a href="/micro-saas" className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text">Micro SAAS</h3>
+                <p className="text-gray-300 text-sm mb-4">16+ AI-powered tools starting at $99/month</p>
+                <div className="text-cyan-400 font-semibold">Save up to $2,400/month</div>
+              </a>
+              
+              <a href="/ai-services" className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text">AI Services</h3>
+                <p className="text-gray-300 text-sm mb-4">Advanced AI solutions for enterprise applications</p>
+                <div className="text-purple-400 font-semibold">Save up to $12,000/month</div>
+              </a>
+              
+              <a href="/it-services" className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💻</div>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text">IT Services</h3>
+                <p className="text-gray-300 text-sm mb-4">Comprehensive IT infrastructure and support</p>
+                <div className="text-blue-400 font-semibold">Save up to $15,000/month</div>
+              </a>
+              
+              <a href="/specialized-services" className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text">Specialized</h3>
+                <p className="text-gray-300 text-sm mb-4">Quantum computing, blockchain, AR/VR solutions</p>
+                <div className="text-yellow-400 font-semibold">Custom pricing available</div>
+              </a>
+            </div>
+          </section>
+
+          {/* Service Categories Overview */}
+          <section className="mb-16" aria-labelledby="services-overview-heading">
+            <h2 id="services-overview-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              Our Comprehensive Service Portfolio
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-4xl mx-auto px-4">
+              From micro SAAS tools to enterprise AI solutions, we provide everything you need to transform your business
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              <a href="/micro-saas" className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text">Micro SAAS</h3>
+                <p className="text-gray-300 text-sm mb-4">16+ AI-powered tools starting at $99/month</p>
+                <div className="text-cyan-400 font-semibold">Save up to $2,400/month</div>
+              </a>
+              
+              <a href="/ai-services" className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text">AI Services</h3>
+                <p className="text-gray-300 text-sm mb-4">Advanced AI solutions for enterprise applications</p>
+                <div className="text-purple-400 font-semibold">Save up to $12,000/month</div>
+              </a>
+              
+              <a href="/it-services" className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💻</div>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text">IT Services</h3>
+                <p className="text-gray-300 text-sm mb-4">Comprehensive IT infrastructure and support</p>
+                <div className="text-blue-400 font-semibold">Save up to $15,000/month</div>
+              </a>
+              
+              <a href="/specialized-services" className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text">Specialized</h3>
+                <p className="text-gray-300 text-sm mb-4">Quantum computing, blockchain, AR/VR solutions</p>
+                <div className="text-yellow-400 font-semibold">Custom pricing available</div>
+              </a>
+            </div>
+          </section>
+
           {/* Micro SAAS Services Section */}
           <section className="mb-16" aria-labelledby="micro-saas-heading">
             <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -572,7 +655,15 @@ const HomePage: React.FC = () => {
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <span className="text-lg font-bold text-cyan-400 neon-text">{service.price}</span>
+                      {service.marketPrice && (
+                        <span className="text-sm text-gray-400 line-through">{service.marketPrice}</span>
+                      )}
+                    </div>
+                    {service.savings && (
+                      <div className="text-sm text-green-400 font-semibold mb-3">Save {service.savings}</div>
+                    )}
                     <a 
                       href={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
