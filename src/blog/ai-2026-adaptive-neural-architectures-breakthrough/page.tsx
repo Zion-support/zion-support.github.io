@@ -1,4 +1,3 @@
-import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AdaptiveNeuralArchitecturesPage() {
@@ -127,4 +126,5 @@ export default function AdaptiveNeuralArchitecturesPage() {
         </div>
       </div>
     </div>
+  );
 };

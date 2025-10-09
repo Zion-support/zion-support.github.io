@@ -1,4 +1,3 @@
-import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function April2026UltimateBreakthroughRevolution() {
@@ -109,4 +108,5 @@ export default function April2026UltimateBreakthroughRevolution() {
         </div>
       </div>
     </div>
+  );
 };

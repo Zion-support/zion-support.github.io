@@ -3,7 +3,6 @@
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-import React from 'react'
 import { performanceConfig } from '../../performance.config'
 export interface PerformanceMetrics {
   lcp?: number;

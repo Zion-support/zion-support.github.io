@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Award, Target, Globe, Brain, Shield, Code, BarChart } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import { Users, Target, Brain, Shield } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const team = [
@@ -86,7 +83,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
 
         {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -234,7 +230,8 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        <Footer />
       </div>
   );
 };
+
+export default AboutPage;

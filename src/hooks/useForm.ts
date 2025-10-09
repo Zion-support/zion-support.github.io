@@ -5,7 +5,6 @@
  */
 import { useState, useCallback, ChangeEvent } from 'react';
 // import { logger } from '../utils/logger';
-import {
   ValidationRule,
   validateField,
   validateForm,

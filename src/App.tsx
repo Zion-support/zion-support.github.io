@@ -1,7 +1,6 @@
 'use client';
-import React, { useEffect, useState, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { useEffect, useState, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('../app/page'));
@@ -14,15 +13,6 @@ import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 
 // Import components
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancerComponent from './components/AccessibilityEnhancer';
-import SecurityEnhancerComponent from './components/SecurityEnhancer';
-import UserExperienceEnhancerComponent from './components/UserExperienceEnhancer';
-import Analytics from './components/Analytics';
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -60,60 +50,6 @@ import CloudMigrationPage from './cloud-migration/page';
 import DevOpsPage from './devops/page';
 import DatabasePage from './database/page';
 import NetworkingPage from './networking/page';
-import ITConsultingPage from './it-consulting/page';
-
-// Micro SAAS Pages
-import MicroSAASPage from './micro-saas/page';
-import AICRMPage from './ai-crm/page';
-import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
-import AIChatbotBuilderPage from './ai-chatbot-builder/page';
-import AIEmailMarketingPage from './ai-email-marketing/page';
-import AIWritingAssistantPage from './ai-writing-assistant/page';
-
-// Specialized Solutions Pages
-import QuantumComputingPage from './quantum-computing/page';
-import AutonomousSystemsPage from './autonomous-systems/page';
-import BlockchainWeb3Page from './blockchain-web3/page';
-import IoTEdgeComputingPage from './iot-edge-computing/page';
-import BusinessIntelligencePage from './business-intelligence/page';
-import RoboticsPage from './robotics/page';
-
-// Company Pages
-import TeamPage from './team/page';
-import CareersPage from './careers/page';
-import NewsPage from './news/page';
-
-// Support Pages
-import DocsPage from './docs/page';
-import APIDocsPage from './api-docs/page';
-import SupportPage from './support/page';
-import StatusPage from './status/page';
-import PrivacyPage from './privacy/page';
-import TermsPage from './terms/page';
-import CookiesPage from './cookies/page';
-
-// Additional Pages
-import PricingPage from './pricing/page';
-import DemoPage from './demo/page';
-import ConsultationPage from './consultation/page';
-
-// AI Services
-import AIServicesPage from './ai-services/page';
-import AIMarketingPage from './ai-marketing/page';
-import AIAutomationPage from './ai-automation/page';
-import AIHealthcarePage from './ai-healthcare/page';
-import AIFintechPage from './ai-fintech/page';
-import AIContentGenerationPage from './ai-content-generation/page';
-import AIDataAnalyticsPage from './ai-data-analytics/page';
-import AICybersecurityPage from './ai-cybersecurity/page';
-import AIWorkflowAutomationPage from './ai-workflow-automation/page';
-import AIMobileAppDevelopmentPage from './ai-mobile-app-development/page';
-import AIEcommerceSolutionsPage from './ai-ecommerce-solutions/page';
-import AICustomerSupportPage from './ai-customer-support/page';
-import AISalesAutomationPage from './ai-sales-automation/page';
-import AIDataVisualizationPage from './ai-data-visualization/page';
-import AILeadGenerationPage from './ai-lead-generation/page';
-import AIDocumentProcessingPage from './ai-document-processing/page';
 
 // Micro SAAS Solutions
 import AIProjectManagerPage from './ai-project-manager/page';
@@ -125,15 +61,6 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIWritingAssistantPage from './ai-writing-assistant/page';
 import AICRMPage from './ai-crm/page';
-
-// IT Services
-import ITServicesPage from './it-services/page';
-import ITInfrastructurePage from './it-infrastructure/page';
-import CybersecurityPage from './cybersecurity/page';
-import CloudMigrationPage from './cloud-migration/page';
-import DevOpsPage from './devops/page';
-import DatabasePage from './database/page';
-import NetworkingPage from './networking/page';
 
 // Specialized Solutions
 import QuantumComputingPage from './quantum-computing/page';
@@ -152,29 +79,12 @@ import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
 // Support Pages
-import SupportPage from './support/page';
-import DocsPage from './docs/page';
-import APIDocsPage from './api-docs/page';
-import StatusPage from './status/page';
-import PrivacyPage from './privacy/page';
-import TermsPage from './terms/page';
-import CookiesPage from './cookies/page';
 
-// AI Services Pages
-import AIProjectManagerPage from './ai-project-manager/page';
-import AICustomerSupportBotPage from './ai-customer-support-bot/page';
-import AIAutomationPage from './ai-automation/page';
+// Additional AI Services
 import AIMLPlatformPage from './ai-ml-platform/page';
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-  const [enhancers, setEnhancers] = useState<{
-    performance?: PerformanceEnhancer;
-    seo?: SEOEnhancer;
-    accessibility?: AccessibilityEnhancer;
-    security?: SecurityEnhancer;
-    ux?: UserExperienceEnhancer;
-  }>({});
 
   useEffect(() => {
     initializeEnhancers();
@@ -182,8 +92,8 @@ const App: React.FC = () => {
 
   const initializeEnhancers = async () => {
     try {
-      // Initialize performance enhancer
-      const performanceEnhancer = new PerformanceEnhancer({
+      // Initialize enhancers
+      new PerformanceEnhancer({
         enableImageOptimization: true,
         enableLazyLoading: true,
         enableCodeSplitting: true,
@@ -194,7 +104,6 @@ const App: React.FC = () => {
         enableCaching: true
       });
 
-      // Initialize SEO enhancer
       const seoEnhancer = new SEOEnhancer({
         title: 'Zion Tech Group - Advanced AI and IT Solutions',
         description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
@@ -243,8 +152,7 @@ const App: React.FC = () => {
         publisher: 'Zion Tech Group'
       });
 
-      // Initialize accessibility enhancer
-      const accessibilityEnhancer = new AccessibilityEnhancer({
+      new AccessibilityEnhancer({
         enableKeyboardNavigation: true,
         enableScreenReader: true,
         enableHighContrast: true,
@@ -254,8 +162,7 @@ const App: React.FC = () => {
         enableVoiceControl: true
       });
 
-      // Initialize security enhancer
-      const securityEnhancer = new SecurityEnhancer({
+      new SecurityEnhancer({
         enableCSP: true,
         enableHSTS: true,
         enableXSSProtection: true,
@@ -267,8 +174,7 @@ const App: React.FC = () => {
         enableSecureCookies: true
       });
 
-      // Initialize UX enhancer
-      const uxEnhancer = new UserExperienceEnhancer({
+      new UserExperienceEnhancer({
         enableSmoothScrolling: true,
         enableLoadingStates: true,
         enableErrorBoundaries: true,
@@ -281,28 +187,11 @@ const App: React.FC = () => {
         enableAnimations: true
       });
 
-      setEnhancers({
-        performance: performanceEnhancer,
-        seo: seoEnhancer,
-        accessibility: accessibilityEnhancer,
-        security: securityEnhancer,
-        ux: uxEnhancer
-      });
-
       // Optimize for Core Web Vitals
       seoEnhancer.optimizeForCoreWebVitals();
 
-      // Generate reports (for development)
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Report:', performanceEnhancer.getMetrics());
-        console.log('Accessibility Report:', accessibilityEnhancer.generateReport());
-        console.log('Security Report:', securityEnhancer.generateSecurityReport());
-        console.log('UX Report:', uxEnhancer.generateUXReport());
-      }
-
       setIsInitialized(true);
-    } catch (error) {
-      console.error('Failed to initialize enhancers:', error);
+    } catch {
       setIsInitialized(true); // Continue even if enhancers fail
     }
   };

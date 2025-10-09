@@ -1,4 +1,3 @@
-import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AI2026AutonomousEnterpriseArchitecture() {
@@ -94,4 +93,5 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
         </div>
       </div>
     </div>
+  );
 };

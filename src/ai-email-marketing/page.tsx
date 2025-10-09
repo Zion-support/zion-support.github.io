@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, Zap, Clock, Award, TrendingUp } from 'lucide-react';
+import { Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, TrendingUp } from 'lucide-react';
 
 const AIEmailMarketingPage: React.FC = () => {
   const features = [

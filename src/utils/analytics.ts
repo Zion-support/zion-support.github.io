@@ -1,5 +1,4 @@
 'use client';
-import React from 'react'
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling

@@ -1,4 +1,3 @@
-import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function January2025CuttingEdgeTrendsBreakthrough() {
@@ -131,4 +130,5 @@ export default function January2025CuttingEdgeTrendsBreakthrough() {
         </div>
       </div>
     </div>
+  );
 };
