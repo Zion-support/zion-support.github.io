@@ -162,10 +162,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
+<<<<<<< HEAD
+        } catch (error) {
+          // Service Worker registration failed - handled silently in production
+        }
+=======
       } catch (error) {
-<<<<<<< HEAD:src/components/PerformanceOptimizer.tsx
         // Service Worker registration failed - handled silently in production
       }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
     }
   };
 

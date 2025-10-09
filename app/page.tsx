@@ -9,6 +9,11 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+import EnhancedSEO from '../src/components/EnhancedSEO';
+import EnhancedPerformanceMonitor from '../src/components/EnhancedPerformanceMonitor';
+import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
+import EnhancedAccessibility from '../src/components/EnhancedAccessibility';
+import ResponsiveContainer from '../src/components/ResponsiveContainer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -58,9 +63,142 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
+  const microSAASServices = [
+    {
+      title: 'AI Project Manager',
+      description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
+      icon: '📊',
+      price: '$99/month',
+      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration'],
+      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
+      link: '/ai-project-manager',
+      popular: true
+    },
+    {
+      title: 'AI Social Media Manager',
+      description: 'Automate your social media with AI-powered content creation and smart scheduling',
+      icon: '📱',
+      price: '$79/month',
+      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence'],
+      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
+      link: '/ai-social-media-manager',
+      popular: true
+    },
+    {
+      title: 'AI Analytics Dashboard',
+      description: 'Transform your data into actionable insights with AI-powered analytics',
+      icon: '📈',
+      price: '$149/month',
+      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
+      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
+      link: '/ai-analytics-dashboard',
+      popular: true
+    },
+    {
+      title: 'AI Email Marketing',
+      description: 'Transform your email marketing with AI-powered content generation and automation',
+      icon: '📧',
+      price: '$99/month',
+      features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns'],
+      benefits: ['65% open rate increase', '40% revenue growth', '80% time saved'],
+      link: '/ai-email-marketing',
+      popular: true
+    },
+    {
+      title: 'AI Customer Support Bot',
+      description: 'Provide 24/7 intelligent customer support with AI-powered chatbot',
+      icon: '🤖',
+      price: '$149/month',
+      features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights'],
+      benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically'],
+      link: '/ai-customer-support-bot',
+      popular: true
+    },
+    {
+      title: 'AI Code Review Assistant',
+      description: 'Advanced automated code analysis with AI-powered bug detection and optimization',
+      icon: '🔍',
+      price: '$89/month',
+      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration'],
+      benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
+      link: '/ai-code-generation',
+      popular: false
+    }
+  ];
+
+  const aiServices = [
+    {
+      title: 'Machine Learning Solutions',
+      description: 'Custom ML models for predictive analytics and decision-making',
+      icon: Brain,
+      price: '$1,500/month',
+      features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'],
+      color: 'text-purple-400'
+    },
+    {
+      title: 'Natural Language Processing',
+      description: 'Advanced NLP solutions for text analysis and language understanding',
+      icon: MessageSquare,
+      price: '$1,200/month',
+      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
+      color: 'text-blue-400'
+    },
+    {
+      title: 'Computer Vision',
+      description: 'Image and video analysis solutions for object detection and recognition',
+      icon: Eye,
+      price: '$1,800/month',
+      features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'],
+      color: 'text-green-400'
+    },
+    {
+      title: 'AI Automation',
+      description: 'Intelligent process automation with decision-making capabilities',
+      icon: Zap,
+      price: '$1,400/month',
+      features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
+      color: 'text-cyan-400'
+    }
+  ];
+
+  const itServices = [
+    {
+      title: 'Cloud Services',
+      description: 'Cloud migration, setup, and optimization services',
+      icon: Cloud,
+      price: '$1,299/month',
+      features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration'],
+      color: 'text-blue-400'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions with threat detection and prevention',
+      icon: Shield,
+      price: '$1,599/month',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'],
+      color: 'text-red-400'
+    },
+    {
+      title: 'DevOps & CI/CD',
+      description: 'Streamlined development workflows with automated testing and deployment',
+      icon: Settings,
+      price: '$1,199/month',
+      features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'],
+      color: 'text-green-400'
+    },
+    {
+      title: 'Database Services',
+      description: 'Database design, optimization, and management with AI-powered tuning',
+      icon: Database,
+      price: '$899/month',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
+      color: 'text-purple-400'
+    }
+  ];
+
   return (
-    <>
-      <SEOOptimizer
+    <EnhancedErrorBoundary>
+      <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -615,7 +753,11 @@ const HomePage: React.FC = () => {
         {/* Footer */}
         <Footer />
       </div>
-    </>
+      
+      {/* Enhanced Components */}
+      <EnhancedPerformanceMonitor />
+      <EnhancedAccessibility />
+    </EnhancedErrorBoundary>
   );
 };
 
