@@ -1,7 +1,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, CheckCircle, Award } from 'lucide-react';
+import Link from 'next/link';
+import { Shield, CheckCircle, Award, ArrowLeft } from 'lucide-react';
 
 const CompliancePage: React.FC = () => {
   const certifications = [
@@ -19,7 +20,7 @@ const CompliancePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center">
             <Link 
-              to="/privacy" 
+              href="/privacy" 
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -47,7 +48,7 @@ const CompliancePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact"
+                href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Request Compliance Report

@@ -143,7 +143,7 @@ const DocsPage: React.FC = () => {
                 Get up and running with our AI platform in just 5 minutes.
               </p>
               <Link 
-                to="/docs/quick-start"
+                href="/docs/quick-start"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
               >
                 Start Here
@@ -159,7 +159,7 @@ const DocsPage: React.FC = () => {
                 Complete API documentation with examples and code snippets.
               </p>
               <Link 
-                to="/docs/api"
+                href="/docs/api"
                 className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold"
               >
                 View API Docs
@@ -175,7 +175,7 @@ const DocsPage: React.FC = () => {
                 Client libraries for Python, JavaScript, Java, and more.
               </p>
               <Link 
-                to="/docs/sdk"
+                href="/docs/sdk"
                 className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold"
               >
                 Browse SDKs
@@ -209,7 +209,7 @@ const DocsPage: React.FC = () => {
                   {category.docs.map((doc, docIndex) => (
                     <Link 
                       key={docIndex}
-                      to={doc.link}
+                      href={doc.link}
                       className="block p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                     >
                       <div className="flex items-center justify-between">
@@ -240,7 +240,7 @@ const DocsPage: React.FC = () => {
                   <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                     <div>
                       <Link 
-                        to={doc.link}
+                        href={doc.link}
                         className="font-medium text-gray-900 hover:text-blue-600"
                       >
                         {doc.title}
@@ -298,18 +298,8 @@ const DocsPage: React.FC = () => {
           </p>
         </div>
       </section>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-03be
     </div>
   );
 };
 
 export default DocsPage;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-03be

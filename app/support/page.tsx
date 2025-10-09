@@ -128,7 +128,6 @@ const SupportPage: React.FC = () => {
   ];
 
   return (
-
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -244,7 +243,7 @@ const SupportPage: React.FC = () => {
             {resources.map((resource, index) => (
               <Link 
                 key={index}
-                to={resource.link}
+                href={resource.link}
                 className="bg-white border border-gray-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow group"
               >
                 <div className="text-center">
@@ -275,7 +274,7 @@ const SupportPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact"
+              href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Contact Support
@@ -292,17 +291,9 @@ const SupportPage: React.FC = () => {
             <p>🕒 Available 24/7 for all support requests</p>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
     </div>
   );
 };
 
 export default SupportPage;
-=======
-      </section>    </div>
-  );
-};
-
-export default SupportPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-03be

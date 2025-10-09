@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { MapPin, Clock, CheckCircle } from 'lucide-react';
@@ -28,12 +27,10 @@ const CareersPage: React.FC = () => {
       title: 'Cybersecurity Specialist',
       location: 'Delaware, USA',
       type: 'Full-time',
-      description: 'Analyze data and build predictive models'
       description: 'Protect and secure our clients digital assets'
     }
   ];
 
-  return (
   const benefits = [
     'Competitive Salary',
     'Health Insurance',
@@ -42,8 +39,6 @@ const CareersPage: React.FC = () => {
     'Flexible Hours',
     'Stock Options'
   ];
-
-  return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />

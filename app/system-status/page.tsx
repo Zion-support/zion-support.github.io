@@ -9,7 +9,7 @@ const SystemStatusPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
           <Link 
-            to="/status" 
+            href="/status" 
             className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -32,28 +32,16 @@ const SystemStatusPage: React.FC = () => {
               please visit our main status page.
             </p>
             <Link 
-              to="/status"
+              href="/status"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
             >
               View Status Page
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
-
-
     </div>
   );
 };
 
 export default SystemStatusPage;
-
-
-=======
-      </div>    </div>
-  );
-};
-
-export default SystemStatusPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-03be
