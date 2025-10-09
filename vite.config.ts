@@ -4,13 +4,15 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  root: 'src',
+  publicDir: '../public',
   resolve: {
     alias: {
-      '@': resolve(__dirname, './app'),
-      '@components': resolve(__dirname, './app/components'),
-      '@utils': resolve(__dirname, './app/utils'),
-      '@hooks': resolve(__dirname, './app/hooks'),
-      '@types': resolve(__dirname, './app/types'),
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@utils': resolve(__dirname, './src/utils'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@types': resolve(__dirname, './src/types'),
     },
   },
   build: {
@@ -67,7 +69,7 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion'],
+    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom'],
   },
   css: {
     postcss: './postcss.config.js',

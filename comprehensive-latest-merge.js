@@ -130,7 +130,7 @@ for (let i = 0; i < branches.length; i += batchSize) {
 
 for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
   const _batch = batches[batchIndex];
-  console.log(
+  // console.log(
     `\n🔄 Processing batch ${batchIndex + 1}/${batches.length} (${batch.length} branches)...`
   );
 
@@ -172,7 +172,7 @@ fs.writeFileSync('comprehensive-latest-merge-report.json', JSON.stringify(result
 
 if (results.failed.length > 0) {
 
-  results.failed.forEach(result => console.log(`  - ${result.branch}`));
+  results.failed.forEach(result => // console.log(`  - ${result.branch}`));
 }
 
 // Step 7: Push changes

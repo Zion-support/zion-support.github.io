@@ -22,19 +22,19 @@ function removeConsoleStatements(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
-      console.log(`✓ Removed console statements from: ${filePath}`);
+      // console.log(`✓ Removed console statements from: ${filePath}`);
     }
     
     return modified;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Main function
 async function main() {
-  console.log('🧹 Removing console statements from production code...\n');
+  // console.log('🧹 Removing console statements from production code...\n');
   
   // Get all TypeScript and JavaScript files in the app directory
   const patterns = [
@@ -60,15 +60,15 @@ async function main() {
     }
   }
   
-  console.log(`\n📊 Summary:`);
-  console.log(`   Total files processed: ${totalFiles}`);
-  console.log(`   Files modified: ${modifiedFiles}`);
-  console.log(`   Console statements removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
+  // console.log(`\n📊 Summary:`);
+  // console.log(`   Total files processed: ${totalFiles}`);
+  // console.log(`   Files modified: ${modifiedFiles}`);
+  // console.log(`   Console statements removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
   
   if (modifiedFiles > 0) {
-    console.log('\n✅ Console statements cleanup completed successfully!');
+    // console.log('\n✅ Console statements cleanup completed successfully!');
   } else {
-    console.log('\n✅ No console statements found to remove.');
+    // console.log('\n✅ No console statements found to remove.');
   }
 }
 

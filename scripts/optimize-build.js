@@ -6,31 +6,31 @@ import { glob } from 'glob';
 
 // Function to optimize images
 function optimizeImages() {
-  console.log('🖼️  Optimizing images...');
+  // console.log('🖼️  Optimizing images...');
   // This would typically use sharp or imagemin
   // For now, we'll just log the process
-  console.log('✓ Image optimization completed');
+  // console.log('✓ Image optimization completed');
 }
 
 // Function to optimize CSS
 function optimizeCSS() {
-  console.log('🎨 Optimizing CSS...');
+  // console.log('🎨 Optimizing CSS...');
   // This would typically use postcss and purgecss
   // For now, we'll just log the process
-  console.log('✓ CSS optimization completed');
+  // console.log('✓ CSS optimization completed');
 }
 
 // Function to optimize JavaScript bundles
 function optimizeJS() {
-  console.log('📦 Optimizing JavaScript bundles...');
+  // console.log('📦 Optimizing JavaScript bundles...');
   // This would typically use webpack-bundle-analyzer or similar
   // For now, we'll just log the process
-  console.log('✓ JavaScript optimization completed');
+  // console.log('✓ JavaScript optimization completed');
 }
 
 // Function to generate sitemap
 function generateSitemap() {
-  console.log('🗺️  Generating sitemap...');
+  // console.log('🗺️  Generating sitemap...');
   
   const pages = [
     { url: '/', priority: 1.0, changefreq: 'daily' },
@@ -53,12 +53,12 @@ ${pages.map(page => `  <url>
 </urlset>`;
 
   fs.writeFileSync('public/sitemap.xml', sitemap);
-  console.log('✓ Sitemap generated');
+  // console.log('✓ Sitemap generated');
 }
 
 // Function to generate robots.txt
 function generateRobots() {
-  console.log('🤖 Generating robots.txt...');
+  // console.log('🤖 Generating robots.txt...');
   
   const robots = `User-agent: *
 Allow: /
@@ -69,12 +69,12 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Crawl-delay: 1`;
 
   fs.writeFileSync('public/robots.txt', robots);
-  console.log('✓ Robots.txt generated');
+  // console.log('✓ Robots.txt generated');
 }
 
 // Function to check for performance issues
 async function checkPerformance() {
-  console.log('⚡ Checking for performance issues...');
+  // console.log('⚡ Checking for performance issues...');
   
   const issues = [];
   
@@ -88,16 +88,16 @@ async function checkPerformance() {
   }
   
   if (issues.length > 0) {
-    console.log('⚠️  Performance issues found:');
-    issues.forEach(issue => console.log(`   - ${issue}`));
+    // console.log('⚠️  Performance issues found:');
+    issues.forEach(issue => // console.log(`   - ${issue}`));
   } else {
-    console.log('✓ No major performance issues detected');
+    // console.log('✓ No major performance issues detected');
   }
 }
 
 // Main optimization function
 async function optimize() {
-  console.log('🚀 Starting build optimization...\n');
+  // console.log('🚀 Starting build optimization...\n');
   
   try {
     // Create public directory if it doesn't exist
@@ -112,16 +112,16 @@ async function optimize() {
     generateSitemap();
     generateRobots();
     
-    console.log('\n✅ Build optimization completed successfully!');
-    console.log('\n📊 Optimization Summary:');
-    console.log('   - Images optimized');
-    console.log('   - CSS optimized');
-    console.log('   - JavaScript bundles optimized');
-    console.log('   - Sitemap generated');
-    console.log('   - Robots.txt generated');
+    // console.log('\n✅ Build optimization completed successfully!');
+    // console.log('\n📊 Optimization Summary:');
+    // console.log('   - Images optimized');
+    // console.log('   - CSS optimized');
+    // console.log('   - JavaScript bundles optimized');
+    // console.log('   - Sitemap generated');
+    // console.log('   - Robots.txt generated');
     
   } catch (error) {
-    console.error('❌ Optimization failed:', error.message);
+    // console.error('❌ Optimization failed:', error.message);
     process.exit(1);
   }
 }

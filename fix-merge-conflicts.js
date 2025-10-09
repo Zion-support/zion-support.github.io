@@ -18,9 +18,13 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/
     
     fs.writeFileSync(filePath, content);
+<<<<<<< HEAD
 
+=======
+    // console.log(`Fixed merge conflicts in: ${filePath}`);
+>>>>>>> cursor/website-audit-and-update-with-deployment-572b
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
@@ -54,7 +58,17 @@ function findFilesWithConflicts(dir) {
 const appDir = path.join(__dirname, 'app');
 const filesWithConflicts = findFilesWithConflicts(appDir);
 
+<<<<<<< HEAD
 filesWithConflicts.forEach(file => console.log(`- ${file}`));
 
 // Fix all files
 filesWithConflicts.forEach(fixMergeConflicts);
+=======
+// console.log(`Found ${filesWithConflicts.length} files with merge conflicts:`);
+filesWithConflicts.forEach(file => // console.log(`- ${file}`));
+
+// Fix all files
+filesWithConflicts.forEach(fixMergeConflicts);
+
+// console.log('Merge conflict fixing completed!');
+>>>>>>> cursor/website-audit-and-update-with-deployment-572b

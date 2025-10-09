@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'security_audit_runner'}
       });
     };
-//   } catch (error) {console.error('❌ security_audit_runner function failed: ') error
+//   } catch (error) {// console.error('❌ security_audit_runner function failed: ') error
       }
     return {
       statusCode: 500,

@@ -161,7 +161,7 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-//     }).catch(error => console.error('Performance reporting error:', error));
+//     }).catch(error => // console.error('Performance reporting error:', error));
   }
     });
   }
@@ -297,7 +297,7 @@ export function generatePerformanceReport(): PerformanceReport {
   }
 
   if (process.env['NODE_ENV'] === 'development') {
-//     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
   // Monitor Core Web Vitals
@@ -358,7 +358,7 @@ export function measurePerformance(name: string, startTime: number): number {
   if (process.env['NODE_ENV'] === 'development') {
      
     // eslint-disable-next-line no-console
-//     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
   return duration;

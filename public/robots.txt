@@ -8,6 +8,7 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+<<<<<<< HEAD
 
 # Allow important pages
 Allow: /
@@ -16,3 +17,13 @@ Allow: /services
 Allow: /contact
 Allow: /ai-services
 Allow: /it-services
+=======
+Disallow: /static/
+
+# Allow important pages
+Allow: /ai-services
+Allow: /contact
+Allow: /about
+Allow: /pricing
+Allow: /blog
+>>>>>>> cursor/website-audit-and-update-with-deployment-572b

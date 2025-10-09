@@ -161,7 +161,7 @@ fs.writeFileSync('targeted-latest-merge-report.json', JSON.stringify(results, nu
 
 if (results.failed.length > 0) {
 
-  results.failed.forEach(result => console.log(`  - ${result.branch}`));
+  results.failed.forEach(result => // console.log(`  - ${result.branch}`));
 }
 
 // Step 7: Push changes

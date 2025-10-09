@@ -2,8 +2,11 @@ import React from 'react';
 <<<<<<< HEAD:app/guides/page.tsx
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { BookOpen, ArrowRight, Clock, User, Tag } from 'lucide-react';
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-572b
 
 const GuidesPage: React.FC = () => {
   const guides = [
@@ -25,6 +28,7 @@ const GuidesPage: React.FC = () => {
       description: 'Step-by-step guide to implementing autonomous business processes',
       url: '/guides/autonomous-business-processes-implementation-guide-2026',
       category: 'Process Automation'
+<<<<<<< HEAD
       id: 'ai-2026-implementation-roadmap',
       title: 'AI 2026 Implementation Roadmap',
       description: 'Comprehensive guide to implementing AI solutions in 2026 with cutting-edge strategies and best practices.',
@@ -53,6 +57,8 @@ const GuidesPage: React.FC = () => {
       tags: ['Automation', 'Business Processes', '2026', 'Implementation'],
       href: '/guides/autonomous-business-processes-implementation-guide-2026',
       featured: false
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-572b
     }
   ];
 
@@ -129,6 +135,7 @@ const GuidesPage: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       {/* Header */}
       <div className="bg-white shadow-sm">
@@ -291,6 +298,8 @@ const GuidesPage: React.FC = () => {
         </div>
       </div>
     </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-572b
   );
 };
 
