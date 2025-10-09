@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
 

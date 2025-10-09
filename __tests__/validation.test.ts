@@ -10,17 +10,12 @@ import {
   isValidPassword,
   sanitizeInput,
   isStrongPassword,
-<<<<<<< HEAD
   isValidCreditCard,
   sanitizeHtml,
-=======
-  sanitizeHtml,
-  isValidCreditCard,
->>>>>>> cursor/fix-errors-and-merge-to-main-d397
   validateEmail,
   validateURL,
   validateLength,
-  validatePassword,
+  isValidPassword,
   sanitizeHTML,
   validateDate,
   validateCreditCard,
@@ -124,17 +119,17 @@ describe('Password Validation', () => {
   });
 
   test('rejects weak passwords', () => {
-    expect(validatePassword('short').isValid).toBe(false);
-    expect(validatePassword('').isValid).toBe(false);
-    expect(validatePassword('alllowercase123!').isValid).toBe(false);
-    expect(validatePassword('ALLUPPERCASE123!').isValid).toBe(false);
-    expect(validatePassword('NoNumbers!').isValid).toBe(false);
-    expect(validatePassword('NoSpecialChar123').isValid).toBe(false);
+    expect(isValidPassword('short')).toBe(false);
+    expect(isValidPassword('')).toBe(false);
+    expect(isValidPassword('alllowercase123!')).toBe(false);
+    expect(isValidPassword('ALLUPPERCASE123!')).toBe(false);
+    expect(isValidPassword('NoNumbers!')).toBe(false);
+    expect(isValidPassword('NoSpecialChar123')).toBe(false);
   });
 
   test('rejects passwords that are too long', () => {
     const longPassword = 'A'.repeat(129) + 'a1!';
-    expect(validatePassword(longPassword).isValid).toBe(false);
+    expect(isValidPassword(longPassword)).toBe(false);
   });
 });
 
