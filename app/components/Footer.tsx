@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
+import { ArrowRight, Award, BarChart, Brain, Clock, Cloud, Code, Globe, Mail, MapPin, Phone, Shield, Users, Zap } from 'lucide-react';;
 
 const Footer: React.FC = memo(() => {
   const aiServices = [

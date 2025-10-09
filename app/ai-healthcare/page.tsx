@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, Heart, Brain, Shield, Zap, Target, Users } from 'lucide-react';
+import { Brain, CheckCircle, Heart, Shield, Star, Target, Users, Zap } from 'lucide-react';;
 
 const AIHealthcarePage: React.FC = () => {
   const aiHealthcareServices = [

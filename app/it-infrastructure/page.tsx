@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
+import { ArrowRight, BarChart, Brain, CheckCircle, Clock, Cloud, Cpu, Database, Eye, Globe, Lock, MessageSquare, Monitor, Server, Settings, Shield, Sparkles, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';;
 
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [

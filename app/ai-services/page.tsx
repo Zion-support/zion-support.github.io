@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, Mail, MapPin, Phone, TrendingUp } from 'lucide-react';;
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [

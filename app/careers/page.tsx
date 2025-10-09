@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
+import { ArrowRight, Award, Clock, MapPin, Users, Zap } from 'lucide-react';;
 
 const CareersPage: React.FC = () => {
   const openPositions = [

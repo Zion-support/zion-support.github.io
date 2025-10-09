@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Zap, Shield, Clock, TrendingUp } from 'lucide-react';
+import { CheckCircle, Clock, Shield, TrendingUp, Zap } from 'lucide-react';;
 
 const AICloudInfrastructurePage: React.FC = () => {
   const cloudServices = [

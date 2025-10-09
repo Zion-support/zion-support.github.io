@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
+import { ArrowRight, BarChart, Brain, CheckCircle, Eye, Globe, MessageSquare, Star, Target, Zap } from 'lucide-react';;
 
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [

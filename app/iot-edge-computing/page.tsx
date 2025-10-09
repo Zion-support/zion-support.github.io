@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
+import { BarChart, Brain, CheckCircle, Cpu, Database, Globe, Settings, Shield, Star, Target, Wifi, Zap } from 'lucide-react';;
 
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [

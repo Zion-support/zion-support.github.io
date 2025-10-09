@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+import { BarChart3, CheckCircle, Eye, PieChart, Star, TrendingUp } from 'lucide-react';;
 
 const AIDataVisualizationPage: React.FC = () => {
   const features = [

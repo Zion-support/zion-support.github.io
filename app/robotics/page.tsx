@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog } from 'lucide-react';
+import { BarChart, Bot, Brain, CheckCircle, Cog, Cpu, Settings, Shield, Star, Target, Zap } from 'lucide-react';;
 
 const RoboticsPage: React.FC = () => {
   const roboticsServices = [

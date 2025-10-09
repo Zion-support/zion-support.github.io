@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Settings, TrendingUp } from 'lucide-react';;
 
 const AIWorkflowAutomationPage: React.FC = () => {
   const automationServices = [

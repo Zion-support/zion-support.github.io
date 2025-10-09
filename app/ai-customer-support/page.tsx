@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
+import { CheckCircle, Clock, MessageCircle, Shield, Star, Users } from 'lucide-react';;
 
 const AICustomerSupportPage: React.FC = () => {
   const features = [

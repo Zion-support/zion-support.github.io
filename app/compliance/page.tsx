@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
+import { ArrowLeft, Award, CheckCircle, FileText, Lock, Shield, Users } from 'lucide-react';;
 
 const CompliancePage: React.FC = () => {
   const complianceFrameworks = [

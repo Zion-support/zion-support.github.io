@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
+import { Brain, CheckCircle, DollarSign, Shield, Star, Target, TrendingUp, Zap } from 'lucide-react';;
 
 const AIFintechPage: React.FC = () => {
   const aiFintechServices = [

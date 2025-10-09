@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, Zap, Settings, Clock, Shield, Brain, Target } from 'lucide-react';
+import { Brain, CheckCircle, Clock, Settings, Shield, Star, Target, Zap } from 'lucide-react';;
 
 const AIAutomationPage: React.FC = () => {
   const aiAutomationServices = [
