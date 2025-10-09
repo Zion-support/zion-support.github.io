@@ -106,15 +106,62 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
+            // Send to analytics
+            if ('gtag' in window) {
+              (window as any).gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'LCP',
+                value: Math.round(entry.startTime)
+              });
+            }
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            const fid = entry.processingStart - entry.startTime;
+            console.log('FID:', fid);
+            // Send to analytics
+            if ('gtag' in window) {
+              (window as any).gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'FID',
+                value: Math.round(fid)
+              });
+            }
+          }
+          if (entry.entryType === 'layout-shift') {
+            const cls = (entry as any).value;
+            console.log('CLS:', cls);
+            // Send to analytics
+            if ('gtag' in window) {
+              (window as any).gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'CLS',
+                value: Math.round(cls * 1000)
+              });
+            }
           }
         });
       });
 
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     }
+
+    // Resource hints for better performance
+    const addResourceHint = (href: string, rel: string, as?: string) => {
+      const existingLink = document.querySelector(`link[href="${href}"]`);
+      if (!existingLink) {
+        const link = document.createElement('link');
+        link.rel = rel;
+        link.href = href;
+        if (as) link.setAttribute('as', as);
+        document.head.appendChild(link);
+      }
+    };
+
+    // Preload critical resources
+    addResourceHint('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap', 'preload', 'style');
+    addResourceHint('/services', 'prefetch');
+    addResourceHint('/contact', 'prefetch');
+    addResourceHint('/ai-services', 'prefetch');
   }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enablePrefetching, enableCriticalCSS, enableResourceHints]);
 
   return null;

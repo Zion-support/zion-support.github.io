@@ -27,7 +27,16 @@ const preloadComponents = () => {
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
+      import('./components/DynamicContentShowcase');
+      import('./components/ContentStatistics');
     }, 100);
+    
+    // Preload next likely pages
+    setTimeout(() => {
+      import('./contact/page');
+      import('./services/page');
+      import('./ai-services/page');
+    }, 1000);
   }
 };
 

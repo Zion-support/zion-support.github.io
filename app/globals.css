@@ -676,6 +676,88 @@ body {
   }
 }
 
+/* High contrast mode */
+.high-contrast {
+  --neon-cyan: #00ffff;
+  --neon-purple: #ff00ff;
+  --neon-pink: #ff0080;
+  --neon-green: #00ff00;
+  --neon-blue: #0080ff;
+  --neon-orange: #ff8000;
+  --neon-red: #ff0000;
+  
+  --cyber-bg: #000000;
+  --cyber-surface: #111111;
+  --cyber-border: #ffffff;
+  --cyber-text: #ffffff;
+  --cyber-text-secondary: #cccccc;
+}
+
+.high-contrast .cyber-card {
+  border: 2px solid var(--neon-cyan);
+  background: var(--cyber-bg);
+}
+
+.high-contrast .neon-text {
+  color: var(--neon-cyan);
+  text-shadow: none;
+}
+
+/* Reduced motion */
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Focus indicators */
+.focus-visible:focus {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--neon-cyan);
+  color: var(--cyber-bg);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .cyber-card {
