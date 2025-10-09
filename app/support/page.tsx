@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -29,9 +30,8 @@ const SupportPage: React.FC = () => {
       title: 'Email Support',
       description: 'Send us a detailed message',
       action: 'Send Email'
-=======
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Search, MessageCircle, Phone, Mail, Clock, CheckCircle, ArrowRight, HelpCircle, FileText, Video, BookOpen } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
@@ -153,12 +153,10 @@ const SupportPage: React.FC = () => {
       description: 'Real-time status of all our services',
       icon: CheckCircle,
       link: '/status'
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -189,7 +187,6 @@ const SupportPage: React.FC = () => {
       </main>
       
       <Footer />
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -354,13 +351,9 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default SupportPage;
-=======
 export default SupportPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb

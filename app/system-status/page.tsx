@@ -1,9 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const System-statusPage: React.FC = () => {
+const SystemstatusPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -24,8 +23,7 @@ const System-statusPage: React.FC = () => {
       </main>
       
       <Footer />
-=======
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 const SystemStatusPage: React.FC = () => {
@@ -65,13 +63,9 @@ const SystemStatusPage: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default System-statusPage;
-=======
 export default SystemStatusPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb

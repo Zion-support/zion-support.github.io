@@ -23,8 +23,7 @@ const NewsPage: React.FC = () => {
       </main>
       
       <Footer />
-=======
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Calendar, ArrowRight, ExternalLink } from 'lucide-react';
 
 const NewsPage: React.FC = () => {
@@ -302,13 +301,9 @@ const NewsPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default NewsPage;
-=======
 export default NewsPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb

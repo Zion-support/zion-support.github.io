@@ -23,7 +23,6 @@ const DeveloperToolsPage: React.FC = () => {
       </main>
       
       <Footer />
-=======
 import { ArrowRight, Star, CheckCircle, Code, Zap, Shield, Clock, Users } from 'lucide-react';
 
 const DeveloperToolsPage: React.FC = () => {
@@ -319,13 +318,9 @@ const DeveloperToolsPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Developer-toolsPage;
-=======
 export default DeveloperToolsPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80

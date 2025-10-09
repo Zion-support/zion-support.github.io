@@ -32,8 +32,7 @@ const GDPRPage: React.FC = () => {
       </main>
       
       <Footer />
-=======
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowLeft, Shield, Download, Eye, Trash2, Edit, Lock } from 'lucide-react';
 
 const GdprPage: React.FC = () => {
@@ -258,13 +257,9 @@ const GdprPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default GDPRPage;
-=======
 export default GdprPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb

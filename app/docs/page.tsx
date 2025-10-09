@@ -25,9 +25,8 @@ const DocsPage: React.FC = () => {
       </main>
       
       <Footer />
-=======
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
@@ -323,13 +322,9 @@ const DocsPage: React.FC = () => {
           </p>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default DocsPage;
-=======
 export default DocsPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
