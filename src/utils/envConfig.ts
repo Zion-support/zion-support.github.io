@@ -22,7 +22,7 @@ class EnvironmentConfig {
   }
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults
-    const _nodeEnv = (process.env['NODE_ENV'] || 'development') as EnvConfig['nodeEnv'];
+    
     return {
       nodeEnv,
       apiUrl:
@@ -125,3 +125,6 @@ export const isDevelopment = () => envConfig.isDevelopment();
 export const isTest = () => envConfig.isTest();
 export const getConfig = () => envConfig.getConfig();
 export const getApiHeaders = () => envConfig.getApiHeaders();
+
+
+export default _nodeEnv;

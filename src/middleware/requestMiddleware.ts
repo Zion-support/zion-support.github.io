@@ -53,13 +53,8 @@ export class MiddlewareExecutor {
 /**
  * Logging middleware
  */
-<<<<<<< HEAD
 export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
-=======
-export const _loggingMiddleware: Middleware = async (context, next) => {
-  const _startTime = Date.now();
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
     method: context.request.method,

@@ -2,11 +2,7 @@
  * Preload Optimizer
  * Optimizes resource loading for better performance
  */
-export const _preloadCriticalResources = () => {
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
-  const fontPreloads = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+export 500;600;700&display=swap',
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
   ];
   fontPreloads.forEach(href => {
@@ -16,7 +12,7 @@ export const _preloadCriticalResources = () => {
     link.href = href
     link.crossOrigin = 'anonymous'
     document.head.appendChild(link)
-  })
+  ) => {$3};)
   // Preload critical images
   const criticalImages = [
     '/images/hero-bg.jpg',
@@ -49,13 +45,13 @@ export const preloadRoute = (route: string) => {
     })
   }
 }
-export const optimizeImages = () => {
+export const optimizeImages = (
   if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {
     img.setAttribute('loading', 'lazy')
-  })
+  ) => {$3};)
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries) => {
@@ -74,13 +70,13 @@ export const optimizeImages = () => {
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
-export const optimizeThirdPartyScripts = () => {
+export const optimizeThirdPartyScripts = (
   if (typeof window === 'undefined') return
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {
     script.setAttribute('defer', '')
-  })
+  ) => {$3};)
   // Load analytics after page load
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
@@ -90,10 +86,12 @@ export const optimizeThirdPartyScripts = () => {
     loadAnalytics()
   }
 }
-const loadAnalytics = () => {
+const loadAnalytics = (
   // Load Google Analytics after page load
   const gaScript = document.createElement('script')
   gaScript.async = true
   gaScript['src'] = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
   document.head.appendChild(gaScript)
-}
+) => {$3};
+
+export default _preloadCriticalResources;

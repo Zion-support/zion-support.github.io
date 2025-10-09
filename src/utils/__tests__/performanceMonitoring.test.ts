@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   recordMetric,
   getMetrics,
@@ -79,11 +78,11 @@ describe('performanceMonitoring', () => {
   });
   describe('measureFunction', () => {
     it('should measure synchronous function execution time', () => {
-      const testFn = () => {
+      const testFn = (
         let sum = 0;
         for (let i = 0; i < 1000; i++) {
           sum += i;
-        }
+        ) => {$3};
         return sum;
       };
       const result = measureFunction('test-function', testFn);
@@ -202,5 +201,6 @@ describe('performanceMonitoring', () => {
     });
   });
 });
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+
+
+export default testFn;

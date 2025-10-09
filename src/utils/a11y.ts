@@ -17,7 +17,7 @@ export function announceToScreenReader(
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
   if (typeof document === 'undefined') return;
-  const _announcement = document.createElement('div');
+  
   announcement.setAttribute('role', 'status');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
@@ -45,14 +45,14 @@ export function trapFocus(element: HTMLElement): () => void {
   );
   const firstFocusable = focusableElements[0];
   const lastFocusable = focusableElements[focusableElements.length - 1];
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = (
     if (e.key !== 'Tab') return;
     if (e.shiftKey) {
       // Shift + Tab
       if (document.activeElement === firstFocusable) {
         e.preventDefault();
         lastFocusable?.focus();
-      }
+      ) => {$3};
     } else {
       // Tab
       if (document.activeElement === lastFocusable) {
@@ -98,11 +98,11 @@ export function makeKeyboardAccessible(
   const { role = 'button', tabindex = 0 } = options;
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = (
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       onClick(e);
-    }
+    ) => {$3};
   };
   element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
@@ -220,12 +220,12 @@ export function createAccessibleTooltip(
   tooltip.style.display = 'none';
   document.body.appendChild(tooltip);
   trigger.setAttribute('aria-describedby', tooltipId);
-  const showTooltip = () => {
+  const showTooltip = (
     tooltip.style.display = 'block';
     const triggerRect = trigger.getBoundingClientRect();
     switch (placement) {
       case 'top':
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2) => {$3};px`;
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
         break;
       case 'bottom':
@@ -278,3 +278,6 @@ export class FocusManager {
     focusable?.focus();
   }
 }
+
+
+export default handleKeyDown;

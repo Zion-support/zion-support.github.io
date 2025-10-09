@@ -7,8 +7,7 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-export const _usePerformance = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+export 
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -22,13 +21,13 @@ export const _usePerformance = () => {
       const largestContentfulPaint =
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
-      let __cumulativeLayoutShift = 0;
+      
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (
               entry.entryType === 'layout-shift' &&
-              !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput
+              !(entry as unknown as { hadRecentInput: boolean ) => {$3};).hadRecentInput
             ) {
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
             }
@@ -37,7 +36,7 @@ export const _usePerformance = () => {
         observer.observe({ entryTypes: ['layout-shift'] });
       }
       // Measure FID (First Input Delay)
-      let _firstInputDelay = 0;
+      
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
@@ -94,3 +93,6 @@ export const _usePerformance = () => {
   }, []);
   return { metrics, isMonitoring };
 };
+
+
+export default _usePerformance;

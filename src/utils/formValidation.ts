@@ -17,20 +17,7 @@ export interface FieldValidation {
 /**
  * Common validation rules
  */
-export const _validationRules = {
-  /**
-   * Validate required field
-   */
-  required: (message = 'This field is required'): ValidationRule<string> => ({
-    validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
-    message
-  }),
-  /**
-   * Validate email format
-   */
-  email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({
-    validate: (value: string) => {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+export 
       return emailRegex.test(value);
     },
     message
@@ -216,3 +203,6 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
     timeout = setTimeout(later, wait);
   };
 }
+
+
+export default later;
