@@ -224,13 +224,8 @@ const GdprPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-    </div>
+      </section>    </div>
   );
 };
 
 export default GdprPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

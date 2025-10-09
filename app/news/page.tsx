@@ -279,11 +279,8 @@ const NewsPage: React.FC = () => {
         </div>
       </section>
 
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default NewsPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

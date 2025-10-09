@@ -112,7 +112,7 @@ const CookiesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center">
             <Link 
-              to="/privacy" 
+              href="/privacy" 
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -237,10 +237,8 @@ const CookiesPage: React.FC = () => {
         </div>
       </section>
 
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default CookiesPage;
- cursor/analyze-improve-and-deploy-application-cde4
