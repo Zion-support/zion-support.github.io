@@ -20,12 +20,12 @@ const PerformanceMonitor: React.FC = () => {
     const loadTime = performance.now();
 
     // Get memory usage (if available)
-    const memoryUsage = (performance as any).memory 
-      ? Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024)
+    const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory 
+      ? Math.round((performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize / 1024 / 1024)
       : 0;
 
     // Estimate connection speed
-    const connection = (navigator as any).connection;
+    const connection = (navigator as Navigator & { connection?: { downlink: number } }).connection;
     const connectionSpeed = connection 
       ? `${connection.downlink}Mbps`
       : 'Unknown';

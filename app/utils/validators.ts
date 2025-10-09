@@ -477,79 +477,82 @@ export async function validateAsync(validator: (val: string) => Promise<Validati
   } catch (error) {
     return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' };
   }
-<<<<<<< HEAD
-}
-=======
-  if (!isValidUrl(url)) {/* TODO: Fix JSX expression */}
-  r: 'Invalid URL format' };
+  if (!isValidUrl(url)) {
+    return { valid: false, error: 'Invalid URL format' };
   }
-  return {/* TODO: Fix JSX expression */}
-  d: true };
+  return { valid: true };
 }
 
 /**
  * Validate string length with detailed result;
  */
-export function validateLength(valu,
-  e: string, mi,
-  n: number, ma,
-  x: number, fieldNam,)
-  e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} is required` };
+export function validateLength(
+  value: string,
+  min: number,
+  max: number,
+  fieldName: string = 'Field'
+): ValidationResult {
+  if (!value) {
+    return { isValid: false, error: `${fieldName} is required` };
   }
-  if (value.length < min) {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} must be at least ${min} characters` };
+  if (value.length < min) {
+    return { isValid: false, error: `${fieldName} must be at least ${min} characters` };
   }
-  if (value.length > max) {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} must be no more than ${max} characters` };
+  if (value.length > max) {
+    return { isValid: false, error: `${fieldName} must be no more than ${max} characters` };
   }
-  return {/* TODO: Fix JSX expression */}
-  d: true };
+  return { isValid: true };
 }
 
 /**
  * Validate password with detailed result;
  */
-export function validatePassword(passwor,)
-  d: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Password is required' };
+export function validatePassword(password: string): ValidationResult {
+  if (!password) {
+    return { isValid: false, error: 'Password is required' };
   }
-  if (password.length < 8) {/* TODO: Fix JSX expression */}
-  r: 'Password must be at least 8 characters' };
+  if (password.length < 8) {
+    return { isValid: false, error: 'Password must be at least 8 characters' };
   }
-  if (password.length > 128) {/* TODO: Fix JSX expression */}
-  r: 'Password must be no more than 128 characters' };
+  if (password.length > 128) {
+    return { isValid: false, error: 'Password must be no more than 128 characters' };
   }
-  if (!isValidPassword(password)) {/* TODO: Fix JSX expression */}
-  r: 'Password must contain uppercase, lowercase, number, and special character' };
+  if (!isValidPassword(password)) {
+    return { isValid: false, error: 'Password must contain uppercase, lowercase, number, and special character' };
   }
-  return {/* TODO: Fix JSX expression */}
-  d: true };
+  return { isValid: true };
 }
 
 /**
  * Sanitize HTML with detailed result;
  */
-export function sanitizeHTML(htm,)
-  l: string): string {/* TODO: Fix JSX expression */}
+export function sanitizeHTML(html: string): string {
+  if (!html) return '';
+  return html
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;')
+    .replace(/\//g, '&#x2F;');
 }
 
 /**
  * Validate date with detailed result;
  */
-export function validateDate(dateStrin,)
-  g: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Date is required' };
+export function validateDate(dateString: string): ValidationResult {
+  if (!dateString) {
+    return { isValid: false, error: 'Date is required' };
   }
   
   // Check if it's a valid ISO date format (YYYY-MM-DD)
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {/* TODO: Fix JSX expression */}
-  r: 'Date must be in YYYY-MM-DD format' };
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
+    return { isValid: false, error: 'Date must be in YYYY-MM-DD format' };
   }
   
   const date = new Date(dateString);
-  if (isNaN(date.getTime())) {/* TODO: Fix JSX expression */}
-  r: 'Invalid date format' };
+  if (isNaN(date.getTime())) {
+    return { isValid: false, error: 'Invalid date format' };
   }
   
   // Check if the date is actually valid (e.g., 2025-02-30 should be invalid)
@@ -557,85 +560,87 @@ export function validateDate(dateStrin,)
   const actualDate = new Date(year, month - 1, day);
   if (actualDate.getFullYear() !== year || 
       actualDate.getMonth() !== month - 1 || 
-      actualDate.getDate() !== day) {/* TODO: Fix JSX expression */}
-  r: 'Invalid date' };
+      actualDate.getDate() !== day) {
+    return { isValid: false, error: 'Invalid date' };
   }
   
-  return {/* TODO: Fix JSX expression */}
-  d: true };
+  return { isValid: true };
 }
 
 /**
  * Validate credit card with detailed result;
  */
-export function validateCreditCard(cardNumbe,)
-  r: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Credit card number is required' };
+export function validateCreditCard(cardNumber: string): ValidationResult {
+  if (!cardNumber) {
+    return { isValid: false, error: 'Credit card number is required' };
   }
   
-  // Remove all non-digit characters for validation;
+  // Remove all non-digit characters for validation
   const cleanedNumber = cardNumber.replace(/\D/g, '');
   
-  if (!isValidCreditCard(cleanedNumber)) {/* TODO: Fix JSX expression */}
-  r: 'Invalid credit card number' };
+  if (!isValidCreditCard(cleanedNumber)) {
+    return { isValid: false, error: 'Invalid credit card number' };
   }
-  return {/* TODO: Fix JSX expression */}
-  d: true };
+  return { isValid: true };
 }
 
 /**
  * Validate JSON with detailed result;
  */
-export function validateJSON(jsonStrin,)
-  g: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'JSON is required' };
+export function validateJSON(jsonString: string): ValidationResult {
+  if (!jsonString) {
+    return { isValid: false, error: 'JSON is required' };
   }
-  try {/* TODO: Fix JSX expression */}
-  d: true };
-  } catch (error) {/* TODO: Fix JSX expression */}
-  r: 'Invalid JSON format' };
+  try {
+    JSON.parse(jsonString);
+    return { isValid: true };
+  } catch (error) {
+    return { isValid: false, error: 'Invalid JSON format' };
   }
 }
 
 /**
  * Validate required field with detailed result;
  */
-export function validateRequired(valu,
-  e: unknown, fieldNam,)
-  e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} is required` };
+export function validateRequired(
+  value: unknown, 
+  fieldName: string = 'Field'
+): ValidationResult {
+  if (!value) {
+    return { isValid: false, error: `${fieldName} is required` };
   }
-  if (typeof value === 'string' && value.trim().length === 0) {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} is required` };
+  if (typeof value === 'string' && value.trim().length === 0) {
+    return { isValid: false, error: `${fieldName} is required` };
   }
-  return {/* TODO: Fix JSX expression */}
-  d: true };
+  return { isValid: true };
 }
 
 /**
  * Composite validation;
  */
-export function validateComposite(valu,
-  e: unknown, validator,
-  s: Array<(va,)
-  l: unknown) => ValidationResult>): ValidationResult {/* TODO: Fix JSX expression */}
+export function validateComposite(
+  value: unknown, 
+  validators: Array<(val: unknown) => ValidationResult>
+): ValidationResult {
+  for (const validator of validators) {
+    const result = validator(value);
+    if (!result.isValid) {
+      return result;
     }
   }
-  return {/* TODO: Fix JSX expression */}
-  d: true };
+  return { isValid: true };
 }
 
 /**
  * Async validation;
  */
-export async function validateAsync(validato,
-  r: (va,)
-  l: unknown) => Promise<ValidationResult>,
-  valu,
-  e: unknown;
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
-  r: error instanceof Error ? error.message : 'Validation failed' };
+export async function validateAsync(
+  validator: (val: unknown) => Promise<ValidationResult>,
+  value: unknown
+): Promise<ValidationResult> {
+  try {
+    return await validator(value);
+  } catch (error) {
+    return { isValid: false, error: error instanceof Error ? error.message : 'Validation failed' };
   }
-}"`
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
+}

@@ -477,54 +477,6 @@ const AIServicesPage: React.FC = () => {
   });
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse">
-            Advanced <span className="holographic-text">AI Services</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
-            Transform your business with cutting-edge artificial intelligence solutions. 
-            From predictive analytics to intelligent automation, we deliver enterprise-grade AI services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            >
-              <Phone className="w-5 h-5 inline mr-2" />
-              Call (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            >
-              <Mail className="w-5 h-5 inline mr-2" />
-              Get AI Consultation
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Search and Filter Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 mb-8">
-            {/* Search */}
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search AI services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                />
-=======
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
@@ -560,28 +512,46 @@ const AIServicesPage: React.FC = () => {
                 >
                   View All Services
                 </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
               </div>
             </div>
-            
-            {/* Category Filter */}
-            <div className="lg:w-64">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              >
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-                    {category.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
+          </section>
 
-          {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8">
+          {/* Search and Filter Section */}
+          <section className="py-8 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+                {/* Search */}
+                <div className="flex-1">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+                      type="text"
+                      placeholder="Search AI services..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                    />
+                  </div>
+                </div>
+                
+                {/* Category Filter */}
+                <div className="lg:w-64">
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                  >
+                    {categories.map((category) => (
+                      <option key={category.id} value={category.id}>
+                        {category.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Category Pills */}
+              <div className="flex flex-wrap gap-2 mb-8 mt-6">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -630,11 +600,8 @@ const AIServicesPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
                   
                   <p className="text-gray-300 mb-4">{tech.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
                   
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
@@ -654,12 +621,6 @@ const AIServicesPage: React.FC = () => {
                     <span className="text-gray-400">Setup Time:</span>
                     <span className="text-white">{service.setupTime}</span>
                   </div>
-<<<<<<< HEAD
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Free Trial:</span>
-                    <span className="text-green-400">{service.freeTrial}</span>
-=======
-=======
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
@@ -681,7 +642,6 @@ const AIServicesPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400">Target:</span>
@@ -712,17 +672,11 @@ const AIServicesPage: React.FC = () => {
                     Get Demo
                   </a>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-=======
-              ))}
             </div>
-          </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
+          </div>
+        </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
@@ -752,12 +706,12 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+        </main>
+        
+        <Footer />
+      </div>
+    </>
   );
 };
 
-<<<<<<< HEAD
 export default AIServicesPage;
-=======
-export default AIServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
