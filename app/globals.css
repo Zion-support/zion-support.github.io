@@ -497,6 +497,410 @@ body {
   background: linear-gradient(45deg, var(--primary-purple), var(--primary-pink));
 }
 
+/* Enhanced Futuristic Effects */
+.futuristic-glow {
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.futuristic-glow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  animation: futuristicRotate 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes futuristicRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.neural-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  position: relative;
+}
+
+.neural-pattern::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300ffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  animation: neuralPulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Enhanced Cyber Text Effects */
+.cyber-text-3d {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 
+    0 0 5px var(--primary-cyan),
+    0 0 10px var(--primary-cyan),
+    0 0 15px var(--primary-cyan),
+    0 0 20px var(--primary-cyan),
+    0 0 35px var(--primary-cyan),
+    0 0 40px var(--primary-cyan);
+  animation: cyberText3D 3s ease-in-out infinite alternate;
+}
+
+@keyframes cyberText3D {
+  0% {
+    text-shadow: 
+      0 0 5px var(--primary-cyan),
+      0 0 10px var(--primary-cyan),
+      0 0 15px var(--primary-cyan),
+      0 0 20px var(--primary-cyan),
+      0 0 35px var(--primary-cyan),
+      0 0 40px var(--primary-cyan);
+    transform: perspective(500px) rotateX(0deg);
+  }
+  100% {
+    text-shadow: 
+      0 0 2px var(--primary-cyan),
+      0 0 5px var(--primary-cyan),
+      0 0 8px var(--primary-cyan),
+      0 0 12px var(--primary-cyan),
+      0 0 18px var(--primary-cyan),
+      0 0 22px var(--primary-cyan);
+    transform: perspective(500px) rotateX(5deg);
+  }
+}
+
+/* Enhanced Neon Pulse */
+.neon-pulse {
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% {
+    text-shadow: 
+      0 0 5px var(--primary-cyan),
+      0 0 10px var(--primary-cyan),
+      0 0 15px var(--primary-cyan),
+      0 0 20px var(--primary-cyan);
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 
+      0 0 2px var(--primary-cyan),
+      0 0 5px var(--primary-cyan),
+      0 0 8px var(--primary-cyan),
+      0 0 12px var(--primary-cyan);
+    opacity: 0.8;
+  }
+}
+
+/* Cyber Scan Effect */
+.cyber-scan-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+  animation: cyberScan 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes cyberScan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Particle Field Effect */
+.particle-field {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-field::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2300ffff' fill-opacity='0.1'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3Ccircle cx='80' cy='20' r='1'/%3E%3Ccircle cx='20' cy='80' r='1'/%3E%3Ccircle cx='80' cy='80' r='1'/%3E%3Ccircle cx='50' cy='50' r='1'/%3E%3C/g%3E%3C/svg%3E");
+  animation: particleFloat 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0px) translateX(0px); }
+  25% { transform: translateY(-10px) translateX(5px); }
+  50% { transform: translateY(0px) translateX(10px); }
+  75% { transform: translateY(10px) translateX(5px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+/* Enhanced Quantum Cards */
+.quantum-card {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+  animation: quantumRotate 4s linear infinite;
+  pointer-events: none;
+}
+
+.quantum-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.quantum-card:hover::after {
+  opacity: 1;
+}
+
+.quantum-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(139, 92, 246, 0.3),
+    0 0 20px rgba(0, 255, 255, 0.2);
+  border-color: rgba(139, 92, 246, 0.6);
+}
+
+/* Enhanced Energy Pulse */
+.energy-pulse {
+  animation: energyPulse 2s ease-in-out infinite;
+  position: relative;
+}
+
+.energy-pulse::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.3), transparent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: energyRipple 2s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes energyRipple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+
+/* Enhanced Cyber Scan Line */
+.cyber-scan-line {
+  position: relative;
+}
+
+.cyber-scan-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-cyan), transparent);
+  animation: scanLine 3s linear infinite;
+}
+
+.cyber-scan-line::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
+  animation: scanLine 3s linear infinite reverse;
+}
+
+/* Enhanced Glitch Effect */
+.glitch {
+  position: relative;
+  animation: glitch 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: var(--primary-cyan);
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: var(--primary-pink);
+  z-index: -2;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+  .cyber-grid {
+    background-size: 40px 40px;
+  }
+  
+  .neon-text {
+    font-size: 2rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .quantum-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cyber-grid {
+    background-size: 25px 25px;
+  }
+  
+  .neon-text {
+    font-size: 1.5rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  
+  .cyber-card {
+    padding: 1rem;
+  }
+  
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .quantum-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-grid {
+    background-size: 20px 20px;
+  }
+  
+  .neon-text {
+    font-size: 1.2rem;
+  }
+  
+  .cyber-text {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .cyber-card {
+    padding: 0.75rem;
+  }
+  
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  
+  .quantum-card {
+    padding: 0.75rem;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .neon-text,
+  .cyber-text-3d,
+  .neon-pulse,
+  .energy-pulse,
+  .quantum-card::before,
+  .futuristic-glow::before,
+  .cyber-scan-line::after,
+  .cyber-scan-line::before,
+  .glitch,
+  .glitch::before,
+  .glitch::after {
+    animation: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .neon-text,
+  .cyber-text-3d {
+    text-shadow: 
+      0 0 2px var(--primary-cyan),
+      0 0 4px var(--primary-cyan),
+      0 0 6px var(--primary-cyan);
+  }
+  
+  .cyber-card,
+  .quantum-card,
+  .futuristic-glow {
+    border-width: 2px;
+    border-color: var(--primary-cyan);
+  }
+}
+
 /* Selection Styling */
 ::selection {
   background: rgba(0, 255, 255, 0.3);

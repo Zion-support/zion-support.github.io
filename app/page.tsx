@@ -233,46 +233,61 @@ const HomePage: React.FC = () => {
             {/* Primary Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+                    Comprehensive AI solutions including machine learning, computer vision, NLP, and intelligent automation.
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
                     <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
-                      Learn More →
+                      Explore AI Services →
                     </a>
                   </div>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>
+                <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">💻</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">IT Services</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Revolutionary AI-powered marketing automation, ad optimization, and content generation.
+                    Enterprise-grade IT infrastructure, cybersecurity, cloud migration, and comprehensive IT support.
                   </p>
                   <div className="text-center">
-                    <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
-                    <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
-                      Learn More →
+                    <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $999/month</div>
+                    <a href="/it-services" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                      Explore IT Services →
                     </a>
                   </div>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
+                <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚡</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">Micro SAAS</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Intelligent automation of business processes with decision-making capabilities and exception handling.
+                    Powerful micro SAAS solutions including AI tools, automation platforms, and business applications.
                   </p>
                   <div className="text-center">
-                    <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
-                    <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
-                      Learn More →
+                    <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2 neon-text">Starting at $99/month</div>
+                    <a href="/micro-saas" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                      Explore Micro SAAS →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🚀</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">Specialized Tech</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Cutting-edge solutions including quantum computing, robotics, blockchain, and emerging technologies.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2 neon-text">Custom Pricing</div>
+                    <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                      Explore Specialized Tech →
                     </a>
                   </div>
                 </article>

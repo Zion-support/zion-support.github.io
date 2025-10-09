@@ -48,110 +48,120 @@ const Navigation: React.FC = () => {
     {
       title: 'AI Services',
       icon: Brain,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      hoverColor: 'hover:bg-purple-100',
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      hoverColor: 'hover:bg-purple-500/20',
+      borderColor: 'border-purple-500/30',
       services: [
-        { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
-        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
-        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
-        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
-        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
-        { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
-        { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
-        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
+        { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions', price: 'Starting at $1,500/month' },
+        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation', price: 'Starting at $199/month' },
+        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation', price: 'Starting at $399/month' },
+        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions', price: 'Starting at $1,999/month' },
+        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications', price: 'Starting at $2,200/month' },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation', price: 'Starting at $1,100/month' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights', price: 'Starting at $1,600/month' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions', price: 'Starting at $1,599/month' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization', price: 'Starting at $1,400/month' },
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications', price: 'Starting at $2,500/month' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms', price: 'Starting at $1,800/month' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service', price: 'Starting at $800/month' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes', price: 'Starting at $399/month' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization', price: 'Starting at $299/month' },
+        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation', price: 'Starting at $349/month' },
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing', price: 'Starting at $179/month' },
+        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', price: 'Starting at $1,500/month' },
+        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision', price: 'Starting at $1,800/month' },
+        { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions', price: 'Starting at $1,200/month' },
+        { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics', price: 'Starting at $3,500/month' },
+        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D', price: 'Custom pricing' },
+        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge', price: 'Starting at $1,499/month' }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      hoverColor: 'hover:bg-blue-100',
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      hoverColor: 'hover:bg-blue-500/20',
+      borderColor: 'border-blue-500/30',
       services: [
-        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
-        { name: 'Database Management', path: '/database-management', description: 'Database management' },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-administration', description: 'System management' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' },
-        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
-        { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring' },
-        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
-        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
-        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
+        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support', price: 'Starting at $999/month' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure', price: 'Starting at $999/month' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions', price: 'Starting at $1,599/month' },
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup', price: 'Starting at $1,299/month' },
+        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation', price: 'Starting at $1,199/month' },
+        { name: 'Database Management', path: '/database-management', description: 'Database management', price: 'Starting at $899/month' },
+        { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure', price: 'Starting at $1,099/month' },
+        { name: 'System Administration', path: '/system-administration', description: 'System management', price: 'Starting at $799/month' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning', price: 'Starting at $1,499/month' },
+        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management', price: 'Starting at $799/month' },
+        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development', price: 'Starting at $599/month' },
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure', price: 'Starting at $1,299/month' },
+        { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring', price: 'Starting at $699/month' },
+        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery', price: 'Starting at $699/month' },
+        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation', price: 'Starting at $1,199/month' },
+        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support', price: 'Starting at $1,499/month' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      hoverColor: 'hover:bg-green-100',
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      hoverColor: 'hover:bg-green-500/20',
+      borderColor: 'border-green-500/30',
       services: [
-        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
-        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
-        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'AI-assisted app development' },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
-        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
-        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
-        { name: 'AI Sales Forecasting', path: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
-        { name: 'AI E-commerce Optimizer', path: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
-        { name: 'AI Design Assistant', path: '/ai-design-assistant', description: 'AI-powered design tool' },
-        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
-        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring' },
-        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media' },
-        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management' },
-        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management' },
-        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
-        { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: 'Comprehensive micro SAAS suite', price: 'Starting at $99/month' },
+        { name: 'AI Code Review Assistant', path: '/ai-code-review', description: 'Automated code analysis', price: 'Starting at $199/month' },
+        { name: 'AI SEO Optimizer Pro', path: '/ai-seo-optimizer', description: 'AI-powered SEO analysis', price: 'Starting at $299/month' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence', price: 'Starting at $399/month' },
+        { name: 'AI Marketing Automation', path: '/ai-marketing-automation', description: 'Marketing automation suite', price: 'Starting at $249/month' },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing', price: 'Starting at $179/month' },
+        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 automated support', price: 'Starting at $149/month' },
+        { name: 'AI Content Generator Pro', path: '/ai-content-generator', description: 'AI content creation', price: 'Starting at $199/month' },
+        { name: 'AI Data Visualization Studio', path: '/ai-data-visualization', description: 'Advanced data visualization', price: 'Starting at $299/month' },
+        { name: 'AI Email Assistant', path: '/ai-email-assistant', description: 'Smart email management', price: 'Starting at $99/month' },
+        { name: 'AI Lead Generation Engine', path: '/ai-lead-generation', description: 'Automated lead generation', price: 'Starting at $349/month' },
+        { name: 'AI Sales Automation Platform', path: '/ai-sales-automation', description: 'Intelligent sales automation', price: 'Starting at $399/month' },
+        { name: 'AI E-commerce Optimizer', path: '/ai-ecommerce-optimizer', description: 'E-commerce optimization', price: 'Starting at $499/month' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation', price: 'Starting at $199/month' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns', price: 'Starting at $149/month' },
+        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'AI-assisted app development', price: 'Starting at $299/month' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing', price: 'Starting at $99/month' },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification', price: 'Starting at $199/month' },
+        { name: 'AI Sales Forecasting', path: '/ai-sales-forecasting', description: 'Advanced sales predictions', price: 'Starting at $299/month' },
+        { name: 'AI Design Assistant', path: '/ai-design-assistant', description: 'AI-powered design tool', price: 'Starting at $199/month' },
+        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring', price: 'Starting at $399/month' },
+        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking', price: 'Starting at $249/month' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants', price: 'Starting at $299/month' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media', price: 'Starting at $199/month' },
+        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management', price: 'Starting at $299/month' },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management', price: 'Starting at $199/month' },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights', price: 'Starting at $349/month' },
+        { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing', price: 'Starting at $199/month' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions', price: 'Starting at $399/month' }
       ]
     },
     {
       title: 'Specialized',
       icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      hoverColor: 'hover:bg-orange-100',
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      hoverColor: 'hover:bg-orange-500/20',
+      borderColor: 'border-orange-500/30',
       services: [
-        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
-        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
-        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
-        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
-        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
-        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
+        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing', price: 'Custom pricing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', price: 'Custom pricing' },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', price: 'Starting at $1,999/month' },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', price: 'Starting at $1,499/month' },
+        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights', price: 'Starting at $1,799/month' },
+        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots', price: 'Custom pricing' },
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', price: 'Starting at $2,999/month' },
+        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', price: 'Custom pricing' },
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', price: 'Starting at $2,500/month' },
+        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', price: 'Custom pricing' },
+        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions', price: 'Starting at $1,999/month' },
+        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions', price: 'Custom pricing' }
       ]
     }
   ];
@@ -192,51 +202,78 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
-                  <div className="grid grid-cols-2 gap-6 px-6">
+                <div className="absolute top-full left-0 mt-2 w-[900px] bg-slate-900/95 backdrop-blur-xl rounded-xl shadow-2xl border border-cyan-500/30 py-6 z-50 cyber-card">
+                  <div className="grid grid-cols-2 gap-8 px-6">
                     {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-3">
-                        <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
+                      <div key={index} className="space-y-4">
+                        <div className="flex items-center space-x-3 mb-4">
+                          <div className={`w-10 h-10 ${category.bgColor} rounded-xl flex items-center justify-center border ${category.borderColor}`}>
+                            <category.icon className={`w-5 h-5 ${category.color}`} />
                           </div>
-                          <h3 className="font-semibold text-white text-sm">{category.title}</h3>
+                          <div>
+                            <h3 className="font-bold text-white text-lg neon-text">{category.title}</h3>
+                            <p className="text-xs text-gray-400">Comprehensive solutions</p>
+                          </div>
                         </div>
                         <div className="space-y-2">
-                          {category.services.slice(0, 5).map((service, serviceIndex) => (
+                          {category.services.slice(0, 6).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               href={service.path}
-                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
+                              className="block px-4 py-3 text-sm text-gray-300 hover:bg-white/10 hover:text-cyan-400 rounded-lg transition-all duration-300 group border border-transparent hover:border-cyan-500/30"
                               onClick={closeAllMenus}
                             >
-                              <div className="font-medium">{service.name}</div>
-                              <div className="text-xs text-gray-500 group-hover:text-purple-500">
+                              <div className="flex items-center justify-between mb-1">
+                                <div className="font-medium group-hover:text-cyan-400 transition-colors">{service.name}</div>
+                                <div className="text-xs text-cyan-400 font-semibold">{service.price}</div>
+                              </div>
+                              <div className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors">
                                 {service.description}
                               </div>
                             </Link>
                           ))}
-                          {category.services.length > 5 && (
+                          {category.services.length > 6 && (
                             <Link
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                              className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
+                              className="block px-4 py-3 text-sm text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 font-medium border border-cyan-500/30 hover:border-cyan-500/50"
                               onClick={closeAllMenus}
                             >
-                              View All →
+                              <div className="flex items-center justify-center">
+                                View All {category.title} →
+                              </div>
                             </Link>
                           )}
                         </div>
                       </div>
                     ))}
                   </div>
-                  <div className="border-t border-gray-700 mt-6 pt-4 px-6">
-                    <Link
-                      href="/services"
-                      className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services
-                    </Link>
+                  <div className="border-t border-gray-700/50 mt-6 pt-6 px-6">
+                    <div className="grid grid-cols-3 gap-4">
+                      <Link
+                        href="/ai-services"
+                        className="text-center bg-gradient-to-r from-purple-600/20 to-purple-800/20 text-purple-300 py-3 px-4 rounded-lg font-medium hover:from-purple-600/30 hover:to-purple-800/30 transition-all border border-purple-500/30"
+                        onClick={closeAllMenus}
+                      >
+                        <Brain className="w-5 h-5 mx-auto mb-2" />
+                        AI Services
+                      </Link>
+                      <Link
+                        href="/it-services"
+                        className="text-center bg-gradient-to-r from-blue-600/20 to-blue-800/20 text-blue-300 py-3 px-4 rounded-lg font-medium hover:from-blue-600/30 hover:to-blue-800/30 transition-all border border-blue-500/30"
+                        onClick={closeAllMenus}
+                      >
+                        <Cloud className="w-5 h-5 mx-auto mb-2" />
+                        IT Services
+                      </Link>
+                      <Link
+                        href="/micro-saas"
+                        className="text-center bg-gradient-to-r from-green-600/20 to-green-800/20 text-green-300 py-3 px-4 rounded-lg font-medium hover:from-green-600/30 hover:to-green-800/30 transition-all border border-green-500/30"
+                        onClick={closeAllMenus}
+                      >
+                        <Code className="w-5 h-5 mx-auto mb-2" />
+                        Micro SAAS
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
