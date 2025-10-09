@@ -1,5 +1,6 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   ChevronDown, 
   Phone, 
@@ -121,7 +122,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg neon-border' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -131,10 +132,10 @@ const Navigation: React.FC = () => {
             className="flex items-center space-x-2 text-2xl font-bold"
             onClick={closeAllMenus}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center neon-glow">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+            <span className={`transition-colors neon-glow ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               Zion Tech Group
             </span>
           </Link>
@@ -143,7 +144,7 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex space-x-8">
             <Link 
               to="/" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
+              className={`font-medium transition-colors hover:text-purple-600 hover:neon-glow ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
               onClick={closeAllMenus}
@@ -153,7 +154,7 @@ const Navigation: React.FC = () => {
             
             <Link 
               to="/about" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
+              className={`font-medium transition-colors hover:text-purple-600 hover:neon-glow ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
               onClick={closeAllMenus}
@@ -165,7 +166,7 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
+                className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 hover:neon-glow ${
                   isScrolled ? 'text-gray-700' : 'text-white'
                 }`}
                 aria-expanded={servicesOpen}
@@ -176,22 +177,22 @@ const Navigation: React.FC = () => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/30 py-6 z-50 neon-border">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
                         <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
+                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center neon-glow`}>
                             <category.icon className={`w-4 h-4 ${category.color}`} />
                           </div>
-                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
+                          <h3 className="font-semibold text-white text-sm neon-glow">{category.title}</h3>
                         </div>
                         <div className="space-y-2">
                           {category.services.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               to={service.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors"
+                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 hover:neon-glow rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
                               {service.name}
@@ -202,10 +203,10 @@ const Navigation: React.FC = () => {
                     ))}
                   </div>
                   
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                  <div className="border-t border-cyan-400/30 mt-6 pt-4 px-6">
                     <Link
                       to="/services"
-                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
+                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all neon-glow"
                       onClick={closeAllMenus}
                     >
                       View All Services
@@ -217,7 +218,7 @@ const Navigation: React.FC = () => {
 
             <Link 
               to="/case-studies" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
+              className={`font-medium transition-colors hover:text-purple-600 hover:neon-glow ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
               onClick={closeAllMenus}
@@ -227,7 +228,7 @@ const Navigation: React.FC = () => {
 
             <Link
               to="/blog"
-              className={`font-medium transition-colors hover:text-purple-600 ${
+              className={`font-medium transition-colors hover:text-purple-600 hover:neon-glow ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
               onClick={closeAllMenus}
@@ -237,7 +238,7 @@ const Navigation: React.FC = () => {
 
             <Link
               to="/contact"
-              className={`font-medium transition-colors hover:text-purple-600 ${
+              className={`font-medium transition-colors hover:text-purple-600 hover:neon-glow ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
               onClick={closeAllMenus}
@@ -254,7 +255,7 @@ const Navigation: React.FC = () => {
             </div>
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl neon-glow"
               onClick={closeAllMenus}
             >
               Get Started
@@ -272,70 +273,70 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
+          <div className="lg:hidden bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 p-4 neon-border">
             <div className="space-y-4">
               <Link
                 to="/"
-                className="block text-white hover:text-cyan-400 transition-colors font-medium py-2"
+                className="block text-white hover:text-cyan-400 hover:neon-glow transition-colors font-medium py-2"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               
-              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors font-medium py-2">
+              <Link to="/about" className="block text-white hover:text-cyan-400 hover:neon-glow transition-colors font-medium py-2">
                 About
               </Link>
               
-              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors font-medium py-2">
+              <Link to="/blog" className="block text-white hover:text-cyan-400 hover:neon-glow transition-colors font-medium py-2">
                 Blog
               </Link>
               
-              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors font-medium py-2">
+              <Link to="/contact" className="block text-white hover:text-cyan-400 hover:neon-glow transition-colors font-medium py-2">
                 Contact
               </Link>
               
               {/* Mobile Services */}
               <div className="space-y-2">
-                <div className="text-cyan-300 font-semibold text-lg">Services</div>
+                <div className="text-cyan-300 font-semibold text-lg neon-glow">Services</div>
                 <div className="ml-4 space-y-2">
-                  <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                  <Link to="/services" className="block text-gray-300 hover:text-cyan-400 hover:neon-glow transition-colors">
                     All Services
                   </Link>
-                  <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                  <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 hover:neon-glow transition-colors">
                     Micro SAAS Solutions
                   </Link>
-                  <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                  <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 hover:neon-glow transition-colors">
                     AI Services
                   </Link>
-                  <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                  <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 hover:neon-glow transition-colors">
                     IT Services
                   </Link>
-                  <Link to="/quantum-computing" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                  <Link to="/quantum-computing" className="block text-gray-300 hover:text-cyan-400 hover:neon-glow transition-colors">
                     Quantum Computing
                   </Link>
-                  <Link to="/autonomous-systems" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                  <Link to="/autonomous-systems" className="block text-gray-300 hover:text-cyan-400 hover:neon-glow transition-colors">
                     Autonomous Systems
                   </Link>
-                  <Link to="/blockchain" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                  <Link to="/blockchain" className="block text-gray-300 hover:text-cyan-400 hover:neon-glow transition-colors">
                     Blockchain & Web3
                   </Link>
-                  <Link to="/cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                  <Link to="/cybersecurity" className="block text-gray-300 hover:text-cyan-400 hover:neon-glow transition-colors">
                     Cybersecurity
                   </Link>
                 </div>
               </div>
               
               {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-gray-700">
-                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
+              <div className="pt-4 border-t border-cyan-400/30">
+                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2 neon-glow">
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
+                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2 neon-glow">
                   <Mail className="w-4 h-4" />
                   <span>kleber@ziontechgroup.com</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
+                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2 neon-glow">
                   <MapPin className="w-4 h-4" />
                   <span>Middletown, DE</span>
                 </div>
@@ -344,7 +345,7 @@ const Navigation: React.FC = () => {
               {/* Mobile CTA */}
               <Link
                 to="/contact"
-                className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 mt-4"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 mt-4 neon-glow"
                 onClick={closeAllMenus}
               >
                 <Phone className="w-4 h-4 inline mr-2" />
