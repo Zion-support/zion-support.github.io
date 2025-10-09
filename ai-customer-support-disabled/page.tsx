@@ -240,20 +240,13 @@ const AICustomerSupportPage2: React.FC = () => {
                   <span>Schedule Demo</span>
                 </a>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
             </div>
           </section>
         </main>
         <Footer />
       </div>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
   );
 };
 
