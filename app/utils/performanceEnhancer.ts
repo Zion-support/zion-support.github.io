@@ -1,18 +1,21 @@
 'use client';
 /**
- * Performance Enhancement Utilities;
- * Advanced performance optimization tools for the application;
+ * Performance Enhancement Utilities
+ * Advanced performance optimization tools for the application
  */
 import React from 'react';
-// Debounce function for performance optimization;
-export const debounce = <T extends (...arg,)
-  s: unknown[]) => unknown>(fun,
-  c: T,
-  wai,
-  t: number;)
-): ((...arg,)
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+
+// Debounce function for performance optimization
+export const debounce = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
   };
+};
 };
 // Throttle function for performance optimization;
 export const throttle = <T extends (...arg,)

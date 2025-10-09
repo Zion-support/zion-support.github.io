@@ -7,10 +7,7 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-18a0
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
