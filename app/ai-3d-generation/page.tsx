@@ -67,6 +67,35 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🏭',
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
+<<<<<<< HEAD
+=======
+  ];
+
+import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const AI3DGenerationPage: React.FC = () => {
+  const features = [
+    'AI-powered 3D model generation',
+    'Automatic texture synthesis',
+    'Real-time 3D rendering',
+    'Multiple format support',
+    'Custom model training',
+    'Batch processing',
+    'API integration',
+    'Cloud-based processing',
+    'High-resolution output',
+    'Animation support',
+    'Lighting optimization',
+    'Material generation',
+    'Shape optimization',
+    'Color palette generation',
+    'Marketing materials',
+    'Educational content'
+>>>>>>> cursor/fix-errors-and-merge-to-main-19c2
   ];
 
   const pricing = [

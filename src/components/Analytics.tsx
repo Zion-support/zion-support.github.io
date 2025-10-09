@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
 
 const Analytics: React.FC = () => {
   const pathname = usePathname();
