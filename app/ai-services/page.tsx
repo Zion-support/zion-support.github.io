@@ -289,231 +289,191 @@ const AIServicesPage: React.FC = () => {
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Edge AI',
-<<<<<<< HEAD
-
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // NEW ADVANCED AI SERVICES
+
+    // Advanced AI Services
     {
       title: 'AI-Powered Voice Cloning & Synthesis',
       description: 'Advanced voice synthesis technology for creating realistic voice clones and personalized speech systems.',
       icon: '🎤',
       price: 'Starting at $2,500/month',
-      features: ['Voice cloning', 'Text-to-speech synthesis', 'Voice conversion', 'Emotion control', 'Multi-language support'],
-      benefits: ['Create personalized voice assistants', 'Improve accessibility', 'Enhance user experience'],
+      features: ['Voice cloning', 'Text-to-speech synthesis', 'Voice conversion', 'Emotion control', 'Multi-language support', 'Real-time processing'],
+      benefits: ['Create personalized voice assistants', 'Improve accessibility', 'Enhance user experience', 'Reduce voice production costs'],
       marketPrice: '$4,000-12,000/month',
       category: 'Voice AI',
-      technologies: ['Tacotron', 'WaveNet', 'MelGAN', 'Real-time Voice Cloning', 'Custom Neural Networks']
+      technologies: ['Tacotron', 'WaveNet', 'MelGAN', 'Real-time Voice Cloning', 'Custom Neural Networks'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered 3D Model Generation',
       description: 'Intelligent 3D model creation and optimization for gaming, VR, and architectural visualization.',
       icon: '🎮',
       price: 'Starting at $3,500/month',
-      features: ['3D model generation', 'Texture synthesis', 'Animation creation', 'LOD optimization', 'VR/AR integration'],
-      benefits: ['Accelerate 3D content creation', 'Reduce production costs', 'Improve visual quality'],
+      features: ['3D model generation', 'Texture synthesis', 'Animation creation', 'LOD optimization', 'VR/AR integration', 'Custom asset creation'],
+      benefits: ['Accelerate 3D content creation', 'Reduce production costs', 'Improve visual quality', 'Enable rapid prototyping'],
       marketPrice: '$6,000-18,000/month',
       category: '3D AI',
-      technologies: ['NeRF', '3D GANs', 'Blender API', 'Unity Integration', 'Custom 3D Models']
+      technologies: ['NeRF', '3D GANs', 'Blender API', 'Unity Integration', 'Custom 3D Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Music Composition',
       description: 'Intelligent music generation and composition with style transfer and emotional analysis.',
       icon: '🎵',
       price: 'Starting at $1,800/month',
-      features: ['Music composition', 'Style transfer', 'Emotional analysis', 'Instrument synthesis', 'Lyrics generation'],
-      benefits: ['Create original music', 'Reduce composition time', 'Explore new musical styles'],
+      features: ['Music composition', 'Style transfer', 'Emotional analysis', 'Instrument synthesis', 'Lyrics generation', 'Multi-genre support'],
+      benefits: ['Create original music', 'Reduce composition time', 'Explore new musical styles', 'Enable creative collaboration'],
       marketPrice: '$3,000-8,000/month',
       category: 'Creative AI',
-      technologies: ['MuseNet', 'Jukebox', 'Magenta', 'MIDI Processing', 'Custom Music Models']
+      technologies: ['MuseNet', 'Jukebox', 'Magenta', 'MIDI Processing', 'Custom Music Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Video Generation',
       description: 'Advanced video creation and editing using AI for content production and marketing.',
       icon: '🎬',
       price: 'Starting at $4,500/month',
-      features: ['Video generation', 'Scene synthesis', 'Motion transfer', 'Style transfer', 'Automated editing'],
-      benefits: ['Create professional videos', 'Reduce production time', 'Lower video production costs'],
+      features: ['Video generation', 'Scene synthesis', 'Motion transfer', 'Style transfer', 'Automated editing', 'Real-time processing'],
+      benefits: ['Create professional videos', 'Reduce production time', 'Lower video production costs', 'Enable rapid content creation'],
       marketPrice: '$7,500-20,000/month',
       category: 'Video AI',
-      technologies: ['DALL-E Video', 'Runway ML', 'Stable Video Diffusion', 'OpenCV', 'Custom Video Models']
+      technologies: ['DALL-E Video', 'Runway ML', 'Stable Video Diffusion', 'OpenCV', 'Custom Video Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Code Generation',
       description: 'Intelligent code generation and completion for multiple programming languages and frameworks.',
       icon: '💻',
       price: 'Starting at $2,200/month',
-      features: ['Code generation', 'Bug fixing', 'Code optimization', 'Documentation generation', 'Multi-language support'],
-      benefits: ['Accelerate development', 'Reduce coding errors', 'Improve code quality'],
+      features: ['Code generation', 'Bug fixing', 'Code optimization', 'Documentation generation', 'Multi-language support', 'IDE integration'],
+      benefits: ['Accelerate development', 'Reduce coding errors', 'Improve code quality', 'Enable rapid prototyping'],
       marketPrice: '$3,500-10,000/month',
       category: 'Development AI',
-      technologies: ['GitHub Copilot', 'CodeT5', 'CodeBERT', 'Custom Code Models', 'IDE Integration']
+      technologies: ['GitHub Copilot', 'CodeT5', 'CodeBERT', 'Custom Code Models', 'IDE Integration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Game Development',
       description: 'Intelligent game asset generation, level design, and NPC behavior creation.',
       icon: '🎮',
       price: 'Starting at $3,000/month',
-      features: ['Asset generation', 'Level design', 'NPC behavior', 'Procedural content', 'Game balancing'],
-      benefits: ['Accelerate game development', 'Create unique content', 'Improve player experience'],
+      features: ['Asset generation', 'Level design', 'NPC behavior', 'Procedural content', 'Game balancing', 'AI-driven gameplay'],
+      benefits: ['Accelerate game development', 'Create unique content', 'Improve player experience', 'Reduce development costs'],
       marketPrice: '$5,000-15,000/month',
       category: 'Gaming AI',
-      technologies: ['Unity ML-Agents', 'Unreal Engine AI', 'Procedural Generation', 'Custom Game AI', 'Reinforcement Learning']
+      technologies: ['Unity ML-Agents', 'Unreal Engine AI', 'Procedural Generation', 'Custom Game AI', 'Reinforcement Learning'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Fashion Design',
       description: 'Intelligent fashion design and trend prediction with virtual try-on capabilities.',
       icon: '👗',
       price: 'Starting at $2,800/month',
-      features: ['Fashion design', 'Trend prediction', 'Virtual try-on', 'Color matching', 'Size optimization'],
-      benefits: ['Accelerate design process', 'Predict fashion trends', 'Improve customer experience'],
+      features: ['Fashion design', 'Trend prediction', 'Virtual try-on', 'Color matching', 'Size optimization', 'Style recommendations'],
+      benefits: ['Accelerate design process', 'Predict fashion trends', 'Improve customer experience', 'Reduce return rates'],
       marketPrice: '$4,500-12,000/month',
       category: 'Fashion AI',
-      technologies: ['FashionGAN', 'Virtual Try-On', 'Trend Analysis', 'Computer Vision', 'Custom Fashion Models']
+      technologies: ['FashionGAN', 'Virtual Try-On', 'Trend Analysis', 'Computer Vision', 'Custom Fashion Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Interior Design',
       description: 'Intelligent interior design and space optimization with virtual room planning.',
       icon: '🏠',
       price: 'Starting at $2,500/month',
-      features: ['Room design', 'Furniture placement', 'Color schemes', 'Space optimization', '3D visualization'],
-      benefits: ['Improve space utilization', 'Accelerate design process', 'Enhance customer satisfaction'],
+      features: ['Room design', 'Furniture placement', 'Color schemes', 'Space optimization', '3D visualization', 'Style matching'],
+      benefits: ['Improve space utilization', 'Accelerate design process', 'Enhance customer satisfaction', 'Reduce design costs'],
       marketPrice: '$4,000-10,000/month',
       category: 'Design AI',
-      technologies: ['3D Reconstruction', 'Interior Design AI', 'Space Planning', 'Custom Design Models', 'VR Integration']
+      technologies: ['3D Reconstruction', 'Interior Design AI', 'Space Planning', 'Custom Design Models', 'VR Integration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Language Learning',
       description: 'Personalized language learning with adaptive curriculum and pronunciation analysis.',
       icon: '🗣️',
       price: 'Starting at $1,500/month',
-      features: ['Adaptive learning', 'Pronunciation analysis', 'Conversation practice', 'Progress tracking', 'Multi-language support'],
-      benefits: ['Accelerate language learning', 'Personalize education', 'Improve retention rates'],
+      features: ['Adaptive learning', 'Pronunciation analysis', 'Conversation practice', 'Progress tracking', 'Multi-language support', 'Cultural context'],
+      benefits: ['Accelerate language learning', 'Personalize education', 'Improve retention rates', 'Enable global communication'],
       marketPrice: '$2,500-6,000/month',
       category: 'Education AI',
-      technologies: ['Speech Recognition', 'NLP', 'Adaptive Learning', 'Custom Language Models', 'Mobile Integration']
+      technologies: ['Speech Recognition', 'NLP', 'Adaptive Learning', 'Custom Language Models', 'Mobile Integration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Mental Health Assistant',
       description: 'Intelligent mental health monitoring and support with mood analysis and intervention recommendations.',
       icon: '🧠',
       price: 'Starting at $3,200/month',
-      features: ['Mood analysis', 'Crisis detection', 'Intervention recommendations', 'Progress tracking', 'Privacy protection'],
-      benefits: ['Improve mental health outcomes', 'Provide 24/7 support', 'Reduce healthcare costs'],
+      features: ['Mood analysis', 'Crisis detection', 'Intervention recommendations', 'Progress tracking', 'Privacy protection', 'Professional referrals'],
+      benefits: ['Improve mental health outcomes', 'Provide 24/7 support', 'Reduce healthcare costs', 'Enable early intervention'],
       marketPrice: '$5,000-15,000/month',
       category: 'Healthcare AI',
-      technologies: ['Sentiment Analysis', 'NLP', 'Privacy-Preserving ML', 'Custom Health Models', 'HIPAA Compliance']
+      technologies: ['Sentiment Analysis', 'NLP', 'Privacy-Preserving ML', 'Custom Health Models', 'HIPAA Compliance'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Fitness Coaching',
       description: 'Personalized fitness coaching with form analysis and workout optimization.',
       icon: '💪',
       price: 'Starting at $1,200/month',
-      features: ['Form analysis', 'Workout optimization', 'Progress tracking', 'Injury prevention', 'Nutrition guidance'],
-      benefits: ['Improve workout effectiveness', 'Prevent injuries', 'Personalize fitness plans'],
+      features: ['Form analysis', 'Workout optimization', 'Progress tracking', 'Injury prevention', 'Nutrition guidance', 'Wearable integration'],
+      benefits: ['Improve workout effectiveness', 'Prevent injuries', 'Personalize fitness plans', 'Enhance motivation'],
       marketPrice: '$2,000-5,000/month',
       category: 'Fitness AI',
-      technologies: ['Computer Vision', 'Motion Analysis', 'Wearable Integration', 'Custom Fitness Models', 'Mobile Apps']
+      technologies: ['Computer Vision', 'Motion Analysis', 'Wearable Integration', 'Custom Fitness Models', 'Mobile Apps'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Sleep Analysis',
       description: 'Intelligent sleep monitoring and optimization with personalized recommendations.',
       icon: '😴',
       price: 'Starting at $800/month',
-      features: ['Sleep monitoring', 'Sleep quality analysis', 'Optimization recommendations', 'Sleep disorder detection', 'Progress tracking'],
-      benefits: ['Improve sleep quality', 'Identify sleep issues', 'Optimize sleep patterns'],
+      features: ['Sleep monitoring', 'Sleep quality analysis', 'Optimization recommendations', 'Sleep disorder detection', 'Progress tracking', 'Wearable sync'],
+      benefits: ['Improve sleep quality', 'Identify sleep issues', 'Optimize sleep patterns', 'Enhance overall health'],
       marketPrice: '$1,500-4,000/month',
       category: 'Health AI',
-      technologies: ['Sleep Analysis', 'Wearable Data', 'Custom Sleep Models', 'Mobile Integration', 'Health APIs']
+      technologies: ['Sleep Analysis', 'Wearable Data', 'Custom Sleep Models', 'Mobile Integration', 'Health APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Nutrition Planning',
       description: 'Personalized nutrition planning with meal optimization and dietary analysis.',
       icon: '🥗',
       price: 'Starting at $1,000/month',
-      features: ['Meal planning', 'Nutritional analysis', 'Dietary optimization', 'Allergy management', 'Shopping lists'],
-      benefits: ['Improve nutrition', 'Simplify meal planning', 'Optimize health outcomes'],
+      features: ['Meal planning', 'Nutritional analysis', 'Dietary optimization', 'Allergy management', 'Shopping lists', 'Recipe generation'],
+      benefits: ['Improve nutrition', 'Simplify meal planning', 'Optimize health outcomes', 'Enable dietary compliance'],
       marketPrice: '$1,800-4,500/month',
       category: 'Health AI',
-      technologies: ['Nutrition Analysis', 'Meal Planning AI', 'Custom Diet Models', 'Mobile Apps', 'Health APIs']
+      technologies: ['Nutrition Analysis', 'Meal Planning AI', 'Custom Diet Models', 'Mobile Apps', 'Health APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Pet Care',
       description: 'Intelligent pet health monitoring and care recommendations with behavior analysis.',
       icon: '🐕',
       price: 'Starting at $1,500/month',
-      features: ['Health monitoring', 'Behavior analysis', 'Care recommendations', 'Veterinary integration', 'Emergency alerts'],
-      benefits: ['Improve pet health', 'Early problem detection', 'Reduce vet costs'],
+      features: ['Health monitoring', 'Behavior analysis', 'Care recommendations', 'Veterinary integration', 'Emergency alerts', 'Activity tracking'],
+      benefits: ['Improve pet health', 'Early problem detection', 'Reduce vet costs', 'Enhance pet wellbeing'],
       marketPrice: '$2,500-6,000/month',
       category: 'Pet AI',
-      technologies: ['Computer Vision', 'Pet Health Models', 'IoT Integration', 'Mobile Apps', 'Veterinary APIs']
+      technologies: ['Computer Vision', 'Pet Health Models', 'IoT Integration', 'Mobile Apps', 'Veterinary APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered Home Automation',
       description: 'Intelligent home automation with predictive control and energy optimization.',
       icon: '🏡',
       price: 'Starting at $2,000/month',
-      features: ['Predictive control', 'Energy optimization', 'Security monitoring', 'Comfort management', 'IoT integration'],
-      benefits: ['Reduce energy costs', 'Improve comfort', 'Enhance security'],
-      marketPrice: '$3,500-8,000/month',
+      features: ['Predictive control', 'Energy optimization', 'Security monitoring', 'Climate control', 'Appliance management', 'Voice integration'],
+      benefits: ['Reduce energy costs', 'Improve comfort', 'Enhance security', 'Enable smart living'],
+      marketPrice: '$3,000-8,000/month',
       category: 'Smart Home AI',
-      technologies: ['IoT Integration', 'Predictive Control', 'Energy Management', 'Custom Home Models', 'Mobile Apps']
-    },
-    {
-      title: 'AI-Powered Travel Planning',
-      description: 'Intelligent travel planning with personalized recommendations and real-time optimization.',
-      icon: '✈️',
-      price: 'Starting at $1,800/month',
-      features: ['Trip planning', 'Personalized recommendations', 'Real-time optimization', 'Budget management', 'Travel alerts'],
-      benefits: ['Optimize travel experiences', 'Save time planning', 'Reduce travel costs'],
-      marketPrice: '$3,000-7,000/month',
-      category: 'Travel AI',
-      technologies: ['Travel APIs', 'Recommendation Systems', 'Real-time Optimization', 'Custom Travel Models', 'Mobile Apps']
-    },
-    {
-      title: 'AI-Powered Event Planning',
-      description: 'Intelligent event planning and management with automated coordination and optimization.',
-      icon: '🎉',
-      price: 'Starting at $2,200/month',
-      features: ['Event planning', 'Vendor coordination', 'Budget optimization', 'Guest management', 'Timeline automation'],
-      benefits: ['Streamline event planning', 'Reduce coordination time', 'Improve event success'],
-      marketPrice: '$3,500-9,000/month',
-      category: 'Event AI',
-      technologies: ['Event Management', 'Coordination AI', 'Custom Event Models', 'Mobile Apps', 'Vendor APIs']
-    },
-    {
-      title: 'AI-Powered Dating Assistant',
-      description: 'Intelligent dating assistance with compatibility analysis and conversation coaching.',
-      icon: '💕',
-      price: 'Starting at $1,200/month',
-      features: ['Compatibility analysis', 'Conversation coaching', 'Profile optimization', 'Date planning', 'Safety monitoring'],
-      benefits: ['Improve dating success', 'Enhance safety', 'Optimize matches'],
-      marketPrice: '$2,000-5,000/month',
-      category: 'Social AI',
-      technologies: ['Compatibility Analysis', 'NLP', 'Custom Dating Models', 'Mobile Apps', 'Safety APIs']
-    },
-    {
-      title: 'AI-Powered Parenting Assistant',
-      description: 'Intelligent parenting support with child development monitoring and activity recommendations.',
-      icon: '👶',
-      price: 'Starting at $1,500/month',
-      features: ['Development monitoring', 'Activity recommendations', 'Safety alerts', 'Progress tracking', 'Expert guidance'],
-      benefits: ['Support child development', 'Improve parenting confidence', 'Ensure child safety'],
-      marketPrice: '$2,500-6,000/month',
-      category: 'Family AI',
-      technologies: ['Child Development Models', 'Safety Monitoring', 'Custom Family Models', 'Mobile Apps', 'Expert Systems']
-    },
-    {
-      title: 'AI-Powered Elderly Care',
-      description: 'Intelligent elderly care monitoring with health tracking and safety assistance.',
-      icon: '👴',
-      price: 'Starting at $2,500/month',
-      features: ['Health monitoring', 'Safety assistance', 'Medication reminders', 'Emergency alerts', 'Family communication'],
-      benefits: ['Improve elderly care', 'Ensure safety', 'Reduce care costs'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Elderly Care AI',
-      technologies: ['Health Monitoring', 'Safety Systems', 'Custom Care Models', 'IoT Integration', 'Mobile Apps']
+      technologies: ['IoT', 'Machine Learning', 'Voice Recognition', 'Custom Home Models', 'Smart Device APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    }
     },
     {
       title: 'AI-Powered Accessibility Assistant',
