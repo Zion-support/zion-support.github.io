@@ -104,14 +104,14 @@ export function validateUrl(url: string): boolean {
 export function generateSecureToken(length: number = 32): string {
   const _array = new Uint8Array(length);
   if (typeof window !== 'undefined' && window.crypto) {
-    window.crypto.getRandomValues(array);
+    window.crypto.getRandomValues(_array);
   } else {
     // Fallback for non-browser environments
     for (let i = 0; i < length; i++) {
-      array[i] = Math.floor(Math.random() * 256);
+      _array[i] = Math.floor(Math.random() * 256);
     }
   }
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(_array, (byte: number) => byte.toString(16).padStart(2, '0')).join('');
 }
 export default {
   securityHeaders,
