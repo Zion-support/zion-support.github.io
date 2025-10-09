@@ -341,10 +341,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-d8c8
       <Footer />
     </div>
   );
