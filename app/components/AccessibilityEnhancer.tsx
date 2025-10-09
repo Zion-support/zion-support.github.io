@@ -25,6 +25,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       announcement.className = 'sr-only';
       announcement.textContent = `Navigated to ${title}`;
       document.body.appendChild(announcement);
+    }
+  };
+
   // Check for user preferences
   useEffect(() => {
     if (typeof window === 'undefined') return;
