@@ -67,6 +67,7 @@ class PerformanceMonitoringService {
     }
     try {
       // Observe paint metrics (FCP)
+      const paintObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.recordWebVital('FCP', entry.startTime);
