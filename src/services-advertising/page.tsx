@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 export default function ServicesAdvertisingPage() {
   return (
@@ -343,6 +342,3 @@ export default function ServicesAdvertisingPage() {
     </div>
   );
 };
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

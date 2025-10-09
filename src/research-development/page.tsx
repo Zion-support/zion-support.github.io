@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -440,6 +439,3 @@ const ResearchDevelopmentPage: React.FC = () => {
 };
 
 export default ResearchDevelopmentPage;
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

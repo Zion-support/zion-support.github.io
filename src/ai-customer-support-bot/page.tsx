@@ -1,5 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -85,21 +86,103 @@ const AICustomerSupportBotPage: React.FC = () => {
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
-const AiCustomerSupportBotPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Ai Customer Support Bot</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ai customer support bot solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Customer Support Bot | Zion Tech Group</title>
+        <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
+            natural language and escalates complex issues to human agents seamlessly.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+              <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300 mb-4">{feature.description}</p>
+              <ul className="space-y-2">
+                {feature.benefits.map((benefit, benefitIndex) => (
+                  <li key={benefitIndex} className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {plan.popular && (
+                  <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                    Most Popular
+                  </div>
+                )}
+                <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
+                <div className="text-3xl font-bold text-white mb-1">
+                  {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
+                </div>
+                <p className="text-gray-300 mb-6">{plan.description}</p>
+                <ul className="space-y-3 mb-6">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact our experts to discuss your support needs and get a custom AI solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+              Schedule Demo
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+              View Case Studies
+            </button>
+          </div>
+        </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
 
-export default AiCustomerSupportBotPage;
+export default AICustomerSupportBotPage;

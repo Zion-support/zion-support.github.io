@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
@@ -161,13 +162,4 @@ export default function AICostOptimizationBreakthrough2026() {
   );
 };
 
-<<<<<<< HEAD
 export default AICostOptimizationBreakthrough2026Page;
-=======
-}
-
-export default AICostOptimizationBreakthrough2026;
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
-=======
-export default AICostOptimizationBreakthrough2026Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 
 const TaskManagerProPage: React.FC = () => {
@@ -320,6 +319,3 @@ const TaskManagerProPage: React.FC = () => {
 };
 
 export default TaskManagerProPage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
