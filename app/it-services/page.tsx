@@ -673,6 +673,397 @@ const ITServicesPage: React.FC = () => {
         'Performance optimization',
         'Cost reduction'
       ]
+    },
+    // Additional IT Services
+    {
+      id: 'it-consulting',
+      name: 'IT Strategy Consulting',
+      category: 'consulting',
+      description: 'Comprehensive IT strategy development, technology assessment, and digital transformation roadmap for enterprise organizations.',
+      features: [
+        'IT strategy development',
+        'Technology assessment',
+        'Digital transformation roadmap',
+        'Cost optimization analysis',
+        'Risk assessment and mitigation',
+        'Implementation planning'
+      ],
+      pricing: { hourly: 250, project: 75000, retainer: 15000 },
+      popular: true,
+      icon: '💼',
+      color: 'from-blue-500 to-cyan-500',
+      bgColor: 'bg-blue-500/10',
+      borderColor: 'border-blue-500/30',
+      textColor: 'text-blue-400',
+      stats: { projects: '300+', rating: 4.9, clients: '200+' },
+      demo: 'https://demo.ziontechgroup.com/it-consulting',
+      docs: 'https://docs.ziontechgroup.com/it-consulting',
+      benefits: [
+        'Reduce IT costs by 40%',
+        'Improve efficiency by 60%',
+        'Enhance security posture',
+        'Future-proof technology stack'
+      ]
+    },
+    {
+      id: 'cloud-infrastructure',
+      name: 'Cloud Infrastructure Solutions',
+      category: 'infrastructure',
+      description: 'Comprehensive cloud infrastructure design, migration, and management with AWS, Azure, and Google Cloud expertise.',
+      features: [
+        'Cloud architecture design',
+        'Multi-cloud migration',
+        'Infrastructure as Code',
+        'Auto-scaling and load balancing',
+        'Disaster recovery planning',
+        'Cost optimization'
+      ],
+      pricing: { monthly: 2000, yearly: 20000, setup: 10000 },
+      popular: true,
+      icon: '☁️',
+      color: 'from-cyan-500 to-blue-500',
+      bgColor: 'bg-cyan-500/10',
+      borderColor: 'border-cyan-500/30',
+      textColor: 'text-cyan-400',
+      stats: { uptime: '99.9%', savings: '50%', migrations: '150+' },
+      demo: 'https://demo.ziontechgroup.com/cloud-infrastructure',
+      docs: 'https://docs.ziontechgroup.com/cloud-infrastructure',
+      benefits: [
+        '50% cost reduction',
+        '99.9% uptime guarantee',
+        'Scalable infrastructure',
+        'Enhanced security'
+      ]
+    },
+    {
+      id: 'cybersecurity-suite',
+      name: 'Cybersecurity Suite',
+      category: 'security',
+      description: 'Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, and incident response.',
+      features: [
+        'Threat detection and prevention',
+        'Vulnerability assessment',
+        'Security monitoring',
+        'Incident response',
+        'Compliance management',
+        'Security training'
+      ],
+      pricing: { monthly: 3000, yearly: 30000, setup: 20000 },
+      popular: true,
+      icon: '🛡️',
+      color: 'from-red-500 to-orange-500',
+      bgColor: 'bg-red-500/10',
+      borderColor: 'border-red-500/30',
+      textColor: 'text-red-400',
+      stats: { threats: '1M+', accuracy: '99.5%', response: '<5min' },
+      demo: 'https://demo.ziontechgroup.com/cybersecurity',
+      docs: 'https://docs.ziontechgroup.com/cybersecurity',
+      benefits: [
+        '99.5% threat detection accuracy',
+        'Sub-5-minute response time',
+        'Compliance assurance',
+        '24/7 monitoring'
+      ]
+    },
+    {
+      id: 'network-solutions',
+      name: 'Network Solutions',
+      category: 'networking',
+      description: 'Advanced network design, implementation, and management with SD-WAN, wireless, and security integration.',
+      features: [
+        'Network design and planning',
+        'SD-WAN implementation',
+        'Wireless network setup',
+        'Network security',
+        'Performance monitoring',
+        'Troubleshooting and support'
+      ],
+      pricing: { monthly: 1500, yearly: 15000, setup: 8000 },
+      popular: true,
+      icon: '🌐',
+      color: 'from-green-500 to-emerald-500',
+      bgColor: 'bg-green-500/10',
+      borderColor: 'border-green-500/30',
+      textColor: 'text-green-400',
+      stats: { uptime: '99.8%', speed: '10Gbps', sites: '500+' },
+      demo: 'https://demo.ziontechgroup.com/network-solutions',
+      docs: 'https://docs.ziontechgroup.com/network-solutions',
+      benefits: [
+        'High-speed connectivity',
+        '99.8% uptime guarantee',
+        'Scalable architecture',
+        'Enhanced security'
+      ]
+    },
+    {
+      id: 'database-management',
+      name: 'Database Management',
+      category: 'database',
+      description: 'Comprehensive database administration, optimization, and management for SQL, NoSQL, and cloud databases.',
+      features: [
+        'Database administration',
+        'Performance optimization',
+        'Backup and recovery',
+        'Security hardening',
+        'Monitoring and alerting',
+        'Migration services'
+      ],
+      pricing: { monthly: 1200, yearly: 12000, setup: 6000 },
+      popular: true,
+      icon: '🗄️',
+      color: 'from-purple-500 to-indigo-500',
+      bgColor: 'bg-purple-500/10',
+      borderColor: 'border-purple-500/30',
+      textColor: 'text-purple-400',
+      stats: { databases: '200+', uptime: '99.9%', performance: '95%' },
+      demo: 'https://demo.ziontechgroup.com/database-management',
+      docs: 'https://docs.ziontechgroup.com/database-management',
+      benefits: [
+        '99.9% database uptime',
+        '95% performance improvement',
+        'Automated backups',
+        'Security compliance'
+      ]
+    },
+    {
+      id: 'devops-cicd',
+      name: 'DevOps & CI/CD',
+      category: 'devops',
+      description: 'Complete DevOps implementation with CI/CD pipelines, infrastructure automation, and monitoring solutions.',
+      features: [
+        'CI/CD pipeline setup',
+        'Infrastructure automation',
+        'Container orchestration',
+        'Monitoring and logging',
+        'Security integration',
+        'Performance optimization'
+      ],
+      pricing: { monthly: 1800, yearly: 18000, setup: 10000 },
+      popular: true,
+      icon: '⚙️',
+      color: 'from-orange-500 to-red-500',
+      bgColor: 'bg-orange-500/10',
+      borderColor: 'border-orange-500/30',
+      textColor: 'text-orange-400',
+      stats: { deployments: '1000+', efficiency: '80%', uptime: '99.9%' },
+      demo: 'https://demo.ziontechgroup.com/devops-cicd',
+      docs: 'https://docs.ziontechgroup.com/devops-cicd',
+      benefits: [
+        '80% faster deployments',
+        '99.9% deployment success rate',
+        'Automated testing',
+        'Continuous monitoring'
+      ]
+    },
+    {
+      id: 'it-support',
+      name: '24/7 IT Support',
+      category: 'support',
+      description: 'Comprehensive IT support services with 24/7 monitoring, helpdesk, and technical assistance.',
+      features: [
+        '24/7 monitoring',
+        'Helpdesk support',
+        'Remote assistance',
+        'Hardware maintenance',
+        'Software updates',
+        'User training'
+      ],
+      pricing: { monthly: 800, yearly: 8000, setup: 2000 },
+      popular: false,
+      icon: '🆘',
+      color: 'from-yellow-500 to-orange-500',
+      bgColor: 'bg-yellow-500/10',
+      borderColor: 'border-yellow-500/30',
+      textColor: 'text-yellow-400',
+      stats: { response: '<15min', resolution: '95%', satisfaction: '98%' },
+      demo: 'https://demo.ziontechgroup.com/it-support',
+      docs: 'https://docs.ziontechgroup.com/it-support',
+      benefits: [
+        'Sub-15-minute response time',
+        '95% first-call resolution',
+        '98% customer satisfaction',
+        'Proactive monitoring'
+      ]
+    },
+    {
+      id: 'system-administration',
+      name: 'System Administration',
+      category: 'administration',
+      description: 'Comprehensive system administration services for Windows, Linux, and cloud environments.',
+      features: [
+        'Server administration',
+        'User management',
+        'Security configuration',
+        'Performance monitoring',
+        'Backup management',
+        'Patch management'
+      ],
+      pricing: { monthly: 1000, yearly: 10000, setup: 5000 },
+      popular: false,
+      icon: '🖥️',
+      color: 'from-slate-500 to-gray-500',
+      bgColor: 'bg-slate-500/10',
+      borderColor: 'border-slate-500/30',
+      textColor: 'text-slate-400',
+      stats: { servers: '100+', uptime: '99.9%', efficiency: '90%' },
+      demo: 'https://demo.ziontechgroup.com/system-administration',
+      docs: 'https://docs.ziontechgroup.com/system-administration',
+      benefits: [
+        '99.9% server uptime',
+        '90% efficiency improvement',
+        'Automated management',
+        'Proactive maintenance'
+      ]
+    },
+    {
+      id: 'cloud-migration',
+      name: 'Cloud Migration Services',
+      category: 'migration',
+      description: 'Seamless cloud migration services with minimal downtime and maximum data integrity.',
+      features: [
+        'Migration planning',
+        'Data migration',
+        'Application migration',
+        'Testing and validation',
+        'Go-live support',
+        'Post-migration optimization'
+      ],
+      pricing: { project: 50000, hourly: 300, retainer: 10000 },
+      popular: false,
+      icon: '🚀',
+      color: 'from-violet-500 to-purple-500',
+      bgColor: 'bg-violet-500/10',
+      borderColor: 'border-violet-500/30',
+      textColor: 'text-violet-400',
+      stats: { migrations: '100+', downtime: '<2hrs', success: '99%' },
+      demo: 'https://demo.ziontechgroup.com/cloud-migration',
+      docs: 'https://docs.ziontechgroup.com/cloud-migration',
+      benefits: [
+        'Less than 2 hours downtime',
+        '99% migration success rate',
+        'Zero data loss',
+        'Cost optimization'
+      ]
+    },
+    {
+      id: 'it-training',
+      name: 'IT Training & Certification',
+      category: 'training',
+      description: 'Comprehensive IT training programs and certification preparation for technical teams.',
+      features: [
+        'Technical training programs',
+        'Certification preparation',
+        'Hands-on labs',
+        'Instructor-led training',
+        'Online learning platform',
+        'Progress tracking'
+      ],
+      pricing: { monthly: 500, yearly: 5000, setup: 1000 },
+      popular: false,
+      icon: '🎓',
+      color: 'from-emerald-500 to-green-500',
+      bgColor: 'bg-emerald-500/10',
+      borderColor: 'border-emerald-500/30',
+      textColor: 'text-emerald-400',
+      stats: { students: '1000+', passrate: '95%', courses: '50+' },
+      demo: 'https://demo.ziontechgroup.com/it-training',
+      docs: 'https://docs.ziontechgroup.com/it-training',
+      benefits: [
+        '95% certification pass rate',
+        '50+ technical courses',
+        'Hands-on experience',
+        'Industry-recognized certifications'
+      ]
+    },
+    {
+      id: 'disaster-recovery',
+      name: 'Disaster Recovery Solutions',
+      category: 'recovery',
+      description: 'Comprehensive disaster recovery planning and implementation with automated backup and recovery systems.',
+      features: [
+        'Disaster recovery planning',
+        'Automated backups',
+        'Recovery testing',
+        'Business continuity planning',
+        'Data replication',
+        'Recovery time optimization'
+      ],
+      pricing: { monthly: 1500, yearly: 15000, setup: 8000 },
+      popular: false,
+      icon: '🔄',
+      color: 'from-amber-500 to-yellow-500',
+      bgColor: 'bg-amber-500/10',
+      borderColor: 'border-amber-500/30',
+      textColor: 'text-amber-400',
+      stats: { rto: '<1hr', rpo: '<15min', tests: '100+' },
+      demo: 'https://demo.ziontechgroup.com/disaster-recovery',
+      docs: 'https://docs.ziontechgroup.com/disaster-recovery',
+      benefits: [
+        'Less than 1 hour RTO',
+        'Less than 15 minutes RPO',
+        'Automated testing',
+        'Business continuity assurance'
+      ]
+    },
+    {
+      id: 'it-automation',
+      name: 'IT Process Automation',
+      category: 'automation',
+      description: 'Intelligent automation of IT processes including provisioning, monitoring, and maintenance tasks.',
+      features: [
+        'Process automation',
+        'Workflow optimization',
+        'Task scheduling',
+        'Error handling',
+        'Performance monitoring',
+        'Integration capabilities'
+      ],
+      pricing: { monthly: 1200, yearly: 12000, setup: 6000 },
+      popular: false,
+      icon: '🤖',
+      color: 'from-pink-500 to-rose-500',
+      bgColor: 'bg-pink-500/10',
+      borderColor: 'border-pink-500/30',
+      textColor: 'text-pink-400',
+      stats: { processes: '200+', efficiency: '85%', errors: '95%' },
+      demo: 'https://demo.ziontechgroup.com/it-automation',
+      docs: 'https://docs.ziontechgroup.com/it-automation',
+      benefits: [
+        '85% process efficiency improvement',
+        '95% error reduction',
+        'Automated task execution',
+        'Cost savings'
+      ]
+    },
+    {
+      id: 'compliance-management',
+      name: 'Compliance Management',
+      category: 'compliance',
+      description: 'Comprehensive compliance management for GDPR, HIPAA, SOX, and other regulatory requirements.',
+      features: [
+        'Compliance assessment',
+        'Policy development',
+        'Audit preparation',
+        'Risk management',
+        'Training programs',
+        'Monitoring and reporting'
+      ],
+      pricing: { monthly: 2000, yearly: 20000, setup: 10000 },
+      popular: false,
+      icon: '📋',
+      color: 'from-indigo-500 to-blue-500',
+      bgColor: 'bg-indigo-500/10',
+      borderColor: 'border-indigo-500/30',
+      textColor: 'text-indigo-400',
+      stats: { compliance: '100%', audits: '50+', violations: '0' },
+      demo: 'https://demo.ziontechgroup.com/compliance-management',
+      docs: 'https://docs.ziontechgroup.com/compliance-management',
+      benefits: [
+        '100% compliance rate',
+        'Zero regulatory violations',
+        'Automated monitoring',
+        'Audit readiness'
+      ]
     }
   ];
 
@@ -1043,7 +1434,6 @@ const ITServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default function ITServicesPage() {
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -1716,6 +2106,5 @@ export default function ITServicesPage() {
     </div>
   );
 }
-=======
+
 export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21

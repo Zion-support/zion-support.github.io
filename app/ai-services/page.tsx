@@ -267,8 +267,6 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-
 const AIServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -621,6 +619,239 @@ const AIServicesPage: React.FC = () => {
       color: 'from-violet-500 to-purple-500',
       popular: false,
       link: '/ai-voice-processing'
+    },
+    // Additional AI Services
+    {
+      id: 'ai-chatbot-builder',
+      name: 'AI Chatbot Builder',
+      category: 'conversational',
+      description: 'Build intelligent chatbots with natural language processing and seamless human handoff.',
+      features: [
+        'Drag-and-drop Builder',
+        'Natural Language Processing',
+        'Multi-platform Integration',
+        'Analytics Dashboard',
+        'Custom Training',
+        'API Integration'
+      ],
+      pricing: {
+        starter: { price: '$99', period: 'month', description: 'Up to 1,000 conversations' },
+        professional: { price: '$299', period: 'month', description: 'Up to 10,000 conversations' },
+        enterprise: { price: '$999', period: 'month', description: 'Unlimited conversations' }
+      },
+      benefits: [
+        '95% customer satisfaction',
+        '80% reduction in support tickets',
+        '24/7 availability',
+        'Multi-language support'
+      ],
+      icon: MessageSquare,
+      color: 'from-blue-500 to-cyan-500',
+      popular: true,
+      link: '/ai-chatbot-builder'
+    },
+    {
+      id: 'ai-3d-generation',
+      name: 'AI 3D Generation',
+      category: 'media',
+      description: 'Create 3D models and animations with AI-powered generation for games, AR/VR, and marketing content.',
+      features: [
+        '3D Model Generation',
+        'Animation Creation',
+        'AR/VR Support',
+        'Texture Generation',
+        'Export Options',
+        'Collaboration Tools'
+      ],
+      pricing: {
+        starter: { price: '$199', period: 'month', description: 'Up to 100 models' },
+        professional: { price: '$499', period: 'month', description: 'Up to 1,000 models' },
+        enterprise: { price: '$1,999', period: 'month', description: 'Unlimited models' }
+      },
+      benefits: [
+        '80% faster 3D creation',
+        'Professional quality',
+        '400% cost savings',
+        'AR/VR ready'
+      ],
+      icon: Box,
+      color: 'from-cyan-500 to-blue-500',
+      popular: false,
+      link: '/ai-3d-generation'
+    },
+    {
+      id: 'ai-music-composition',
+      name: 'AI Music Composer',
+      category: 'media',
+      description: 'AI-powered music composition for background music, jingles, and custom audio content creation.',
+      features: [
+        'Music Generation',
+        'Style Adaptation',
+        'Instrument Selection',
+        'Tempo Control',
+        'Export Options',
+        'Royalty-free License'
+      ],
+      pricing: {
+        starter: { price: '$79', period: 'month', description: 'Up to 50 tracks' },
+        professional: { price: '$199', period: 'month', description: 'Up to 500 tracks' },
+        enterprise: { price: '$799', period: 'month', description: 'Unlimited tracks' }
+      },
+      benefits: [
+        '100% original music',
+        '90% time savings',
+        'Professional quality',
+        'Royalty-free'
+      ],
+      icon: Music,
+      color: 'from-purple-500 to-pink-500',
+      popular: false,
+      link: '/ai-music-composition'
+    },
+    {
+      id: 'ai-video-generation',
+      name: 'AI Video Generator',
+      category: 'media',
+      description: 'Create professional videos with AI-powered editing, voice synthesis, and automated content generation.',
+      features: [
+        'Video Generation',
+        'Voice Synthesis',
+        'Auto-editing',
+        'Template Library',
+        'Multi-format Export',
+        'Collaboration Tools'
+      ],
+      pricing: {
+        starter: { price: '$129', period: 'month', description: 'Up to 100 videos' },
+        professional: { price: '$399', period: 'month', description: 'Up to 1,000 videos' },
+        enterprise: { price: '$1,599', period: 'month', description: 'Unlimited videos' }
+      },
+      benefits: [
+        '95% faster video creation',
+        'Professional quality',
+        '300% cost savings',
+        'Multi-format support'
+      ],
+      icon: Video,
+      color: 'from-red-500 to-orange-500',
+      popular: false,
+      link: '/ai-video-generation'
+    },
+    {
+      id: 'ai-fashion-design',
+      name: 'AI Fashion Designer',
+      category: 'design',
+      description: 'AI-powered fashion design tool for creating clothing designs, patterns, and style recommendations.',
+      features: [
+        'Clothing Design Generation',
+        'Pattern Creation',
+        'Style Recommendations',
+        'Color Matching',
+        'Size Optimization',
+        'Trend Analysis'
+      ],
+      pricing: {
+        starter: { price: '$149', period: 'month', description: 'Up to 200 designs' },
+        professional: { price: '$399', period: 'month', description: 'Up to 1,000 designs' },
+        enterprise: { price: '$1,599', period: 'month', description: 'Unlimited designs' }
+      },
+      benefits: [
+        '90% faster design creation',
+        'Trend-aware designs',
+        'Size optimization',
+        'Cost reduction'
+      ],
+      icon: Palette,
+      color: 'from-pink-500 to-rose-500',
+      popular: false,
+      link: '/ai-fashion-design'
+    },
+    {
+      id: 'ai-fitness-coach',
+      name: 'AI Fitness Coach',
+      category: 'healthcare',
+      description: 'Personalized fitness coaching with AI-powered workout plans, nutrition advice, and progress tracking.',
+      features: [
+        'Personalized Workouts',
+        'Nutrition Planning',
+        'Progress Tracking',
+        'Form Analysis',
+        'Goal Setting',
+        'Motivation System'
+      ],
+      pricing: {
+        starter: { price: '$29', period: 'month', description: 'Basic coaching' },
+        professional: { price: '$79', period: 'month', description: 'Advanced coaching' },
+        enterprise: { price: '$299', period: 'month', description: 'Team coaching' }
+      },
+      benefits: [
+        'Personalized approach',
+        'Better results',
+        'Cost effective',
+        '24/7 availability'
+      ],
+      icon: Heart,
+      color: 'from-green-500 to-emerald-500',
+      popular: false,
+      link: '/ai-fitness-coach'
+    },
+    {
+      id: 'ai-financial-advisor',
+      name: 'AI Financial Advisor',
+      category: 'fintech',
+      description: 'Intelligent financial planning and investment advice with AI-powered market analysis and risk assessment.',
+      features: [
+        'Investment Analysis',
+        'Risk Assessment',
+        'Portfolio Optimization',
+        'Market Predictions',
+        'Tax Planning',
+        'Retirement Planning'
+      ],
+      pricing: {
+        starter: { price: '$99', period: 'month', description: 'Basic advice' },
+        professional: { price: '$299', period: 'month', description: 'Advanced advice' },
+        enterprise: { price: '$999', period: 'month', description: 'Full service' }
+      },
+      benefits: [
+        'Data-driven decisions',
+        'Risk reduction',
+        'Better returns',
+        '24/7 monitoring'
+      ],
+      icon: DollarSign,
+      color: 'from-yellow-500 to-orange-500',
+      popular: false,
+      link: '/ai-financial-advisor'
+    },
+    {
+      id: 'ai-scheduler',
+      name: 'AI Scheduler',
+      category: 'productivity',
+      description: 'Intelligent scheduling assistant that optimizes your calendar and manages appointments automatically.',
+      features: [
+        'Smart Scheduling',
+        'Conflict Resolution',
+        'Time Optimization',
+        'Calendar Integration',
+        'Meeting Suggestions',
+        'Automated Reminders'
+      ],
+      pricing: {
+        starter: { price: '$24', period: 'month', description: 'Personal use' },
+        professional: { price: '$79', period: 'month', description: 'Team use' },
+        enterprise: { price: '$299', period: 'month', description: 'Organization' }
+      },
+      benefits: [
+        'Time savings',
+        'Better scheduling',
+        'Reduced conflicts',
+        'Automation'
+      ],
+      icon: Calendar,
+      color: 'from-indigo-500 to-purple-500',
+      popular: false,
+      link: '/ai-scheduler'
     }
   ], []);
 
@@ -1491,6 +1722,5 @@ export default function AIServicesPage() {
     </div>
   );
 }
-=======
+
 export default AIServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
