@@ -1,6 +1,8 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOEnhancerProps {
-  // TODO: Add content
-}
   title?: string;
   description?: string;
   keywords?: string;
@@ -8,16 +10,16 @@ interface SEOEnhancerProps {
   url?: string;
   children: React.ReactNode;
 }
+
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  // TODO: Add content
-}
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.jpg",
   url = "https://ziontechgroup.com",
-//   children
+  children
 }) => {
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "TechCompany",
     "name": "Zion Tech Group",
@@ -28,19 +30,15 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "numberOfEmployees": "50-100",
     "industry": "Technology",
     "services": [
-  // TODO: Add items,
-]
-//       "AI Solutions",
-//       "Quantum Computing",
-//       "Autonomous Systems",
-//       "Digital Transformation",
-//       "Cloud Services",
-//       "Automation",
-//       "Business Intelligence"
-//     ],
+      "AI Solutions",
+      "Quantum Computing",
+      "Autonomous Systems",
+      "Digital Transformation",
+      "Cloud Services",
+      "Automation",
+      "Business Intelligence"
+    ],
     "contactPoint": {
-  // TODO: Add content
-}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "Customer Service",
@@ -48,14 +46,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "availableLanguage": "en"
     },
     "sameAs": [
-  // TODO: Add items,
-]
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup"
-//     ],
+    ],
     "address": {
-  // TODO: Add content
-}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -64,33 +58,23 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "addressCountry": "US"
     },
     "offers": [
-  // TODO: Add items,
-]
       {
-  // TODO: Add content
-}
         "@type": "Offer",
         "category": "AI Solutions",
         "description": "Enterprise AI solutions, digital transformation, and cloud services",
         "price": "1500",
         "priceCurrency": "USD",
         "priceSpecification": {
-  // TODO: Add content
-}
           "@type": "PriceSpecification",
           "price": "1500",
           "priceCurrency": "USD",
           "billingIncrement": "P1M"
         }
       }
-//     ],
+    ],
     "serviceArea": {
-  // TODO: Add content
-}
       "@type": "GeoCircle",
       "geoMidpoint": {
-  // TODO: Add content
-}
         "@type": "GeoCoordinates",
         "latitude": "39.8283",
         "longitude": "-75.5795"
@@ -98,12 +82,42 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "geoRadius": "1000000"
     }
   };
+
   return (
-  // TODO: Add parameters,
-)
     <>
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <link rel="canonical" href={url} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+
+        {/* Additional Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#00ffff" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
       {children}
     </>
   );
 };
+
 export default SEOEnhancer;

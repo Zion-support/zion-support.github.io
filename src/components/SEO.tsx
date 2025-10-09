@@ -1,11 +1,12 @@
 'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
 export interface SEOProps {
-  // TODO: Add content
-}
   title?: string;
   description?: string;
   keywords?: string[];
@@ -22,69 +23,60 @@ export interface SEOProps {
   locale?: string;
   alternateLocales?: { locale: string; url: string }[];
 }
+
+const defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
-//     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
-  // TODO: Add items,
-]
-//     'AI',
-//     'artificial intelligence',
-//     'enterprise solutions',
-//     'digital transformation',
-//     'IT services',
-//   ],
+    'AI',
+    'artificial intelligence',
+    'enterprise solutions',
+    'digital transformation',
+    'IT services',
+  ],
   image: 'https://ziontechgroup.com/og-image.jpg',
   url: 'https://ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
   twitterCard: 'summary_large_image' as const,
 };
+
 export const SEO: React.FC<SEOProps> = ({
-  // TODO: Add content
-}
-//   title,
-//   description,
-//   keywords,
-//   image,
-//   url,
+  title,
+  description,
+  keywords,
+  image,
+  url,
   type = defaultSEO.type,
-//   author,
-//   publishDate,
-//   modifiedDate,
-//   canonical,
+  author,
+  publishDate,
+  modifiedDate,
+  canonical,
   noIndex = false,
-//   structuredData,
+  structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
   alternateLocales = [],
 }) => {
-  // TODO: Add content
-}
   const seo = {
-  // TODO: Add content
-}
     title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
     keywords: keywords || defaultSEO.keywords,
     image: image || defaultSEO.image,
     url: url || defaultSEO.url,
-//     type,
-//     twitterCard,
-//     locale,
+    type,
+    twitterCard,
+    locale,
   };
-  // Generate structured data;
-const generateStructuredData = () => {
-  // TODO: Add content
-}
+
+  // Generate structured data
+  const generateStructuredData = () => {
     if (structuredData) {
-  // TODO: Add content
-}
       return structuredData;
     }
+
     const baseStructuredData: Record<string, unknown> = {
-  // TODO: Add content
-}
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
@@ -92,28 +84,63 @@ const generateStructuredData = () => {
       url: seo.url,
       image: seo.image,
     };
+
     if (author) {
-  // TODO: Add content
-}
       baseStructuredData.author = {
-  // TODO: Add content
-}
         '@type': 'Person',
         name: author,
       };
     }
+
     if (publishDate) {
-  // TODO: Add content
-}
       baseStructuredData.datePublished = publishDate;
     }
+
     if (modifiedDate) {
-  // TODO: Add content
-}
       baseStructuredData.dateModified = modifiedDate;
     }
+
     return baseStructuredData;
   };
-  return null;
+
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="keywords" content={seo.keywords.join(', ')} />
+      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+      <link rel="canonical" href={canonical || seo.url} />
+
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:type" content={seo.type} />
+      <meta property="og:locale" content={seo.locale} />
+
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={seo.twitterCard} />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#00ffff" />
+
+      {/* Alternate Locales */}
+      {alternateLocales.map(({ locale, url }) => (
+        <link key={locale} rel="alternate" hrefLang={locale} href={url} />
+      ))}
+
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(generateStructuredData())}
+      </script>
+    </Helmet>
+  );
 };
+
 export default SEO;
