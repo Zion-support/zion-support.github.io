@@ -4,34 +4,13 @@ const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-  }
-
-  const { name, email, company, message } = req.body || {};
-
-  if (!name || !email) {
-    res.status(400).json({ error: 'Name and email are required' });
-    return;
-=======
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const {
-    name,
-    email,
-    company,
-    phone,
-    message,
-    serviceType,
-    budget,
-    timeline
-  } = req.body || {};
+  const { name, email, company, phone, message } = req.body || {};
 
   if (!name || !email) {
     return res.status(400).json({ error: 'Name and email are required' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
   }
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
@@ -46,22 +25,8 @@ async function handler(req, res) {
   try {
     const data = fs.readFileSync(file, 'utf8');
     existing = JSON.parse(data);
-<<<<<<< HEAD
   } catch (err) {
     // File doesn't exist or is invalid, start with empty array
-    console.log('No existing data found, starting fresh:', err.message);
-  }
-
-  const newRequest = {
-    name,
-    email,
-    company,
-    message,
-    timestamp: new Date().toISOString()
-=======
-  } catch (error) {
-    // File doesn't exist or is invalid, start with empty array
-    existing = [];
   }
 
   const newRequest = {
@@ -71,24 +36,14 @@ async function handler(req, res) {
     company,
     phone,
     message,
-    serviceType,
-    budget,
-    timeline,
     createdAt: new Date().toISOString()
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
   };
 
   existing.push(newRequest);
 
   fs.writeFileSync(file, JSON.stringify(existing, null, 2));
   res.statusCode = 200;
-<<<<<<< HEAD
-  res.json({ success: true });
-=======
-  res.json({ success: true, message: 'Request submitted successfully' });
-  res.json({/* TODO: Fix JSX expression */})
-  s: true });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
+  res.json({ success: true, request: newRequest });
 }
 
 module.exports = withSentry(handler);

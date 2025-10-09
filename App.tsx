@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, memo, useMemo } from 'react';
+import React, { Suspense, memo, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
@@ -54,7 +54,7 @@ class ErrorBoundary extends React.Component<
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     this.setState({ error, errorInfo });
     // Log error to monitoring service in production
-    if (process.env.NODE_ENV === 'development') {
+    if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
       // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
     }
@@ -67,7 +67,7 @@ class ErrorBoundary extends React.Component<
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
             <button
               onClick={() => window.location.reload()}
