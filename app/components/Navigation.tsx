@@ -198,6 +198,7 @@ const,
     }
   ];
 
+<<<<<<< HEAD
 
   return (<nav className={/* TODO: Fix JSX expression */}
     }`}></nav>
@@ -209,6 +210,19 @@ const,
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hove,"
   r:scale-110 transition-transform duration-300"></div>"
 
+=======
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
+        : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f6e9
               <span className="text-white font-bold text-lg">Z</span>
             </div>"
             <div className="hidden,"
@@ -303,12 +317,26 @@ const,
               )}
             </div>
 
+<<<<<<< HEAD
 
             <Link></Link>"
               to="/case-studies" "
               className="font-medium transition-colors,"
   hover:text-cyan-400 text-white"
 
+=======
+            <Link 
+              to="/pricing" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
+              onClick={closeAllMenus}
+            >
+              Pricing
+            </Link>
+
+            <Link 
+              to="/case-studies" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f6e9
               onClick={closeAllMenus}
             >
               Case Studies;
@@ -383,6 +411,14 @@ const,
               >
                 All Services
               </Link>
+              <Link
+                to="/pricing"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+
               <Link
                 to="/pricing"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"

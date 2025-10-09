@@ -1367,31 +1367,55 @@ export default function AIServicesPage() {
 
   const aiServices = [
     {
-      category: 'AI Automation',
+      category: 'AI Automation & Workflow',
       icon: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
       services: [
         {
           name: 'AI Workflow Automation',
-          description: 'Automate complex business processes with intelligent workflows',
-          features: ['Process Optimization', 'Error Reduction', 'Cost Savings', 'Scalability'],
+          description: 'Automate complex business processes with intelligent workflows and decision trees',
+          features: ['Process Optimization', 'Error Reduction', 'Cost Savings', 'Scalability', 'Custom Logic', 'Integration APIs'],
           pricing: 'Starting at $5,000/month',
-          roi: '200-400% ROI'
+          roi: '200-400% ROI',
+          timeline: '4-8 weeks',
+          popular: true
         },
         {
           name: 'AI Customer Support',
-          description: '24/7 intelligent customer support with natural language processing',
-          features: ['24/7 Availability', 'Multi-language Support', 'Sentiment Analysis', 'Escalation Management'],
+          description: '24/7 intelligent customer support with natural language processing and sentiment analysis',
+          features: ['24/7 Availability', 'Multi-language Support', 'Sentiment Analysis', 'Escalation Management', 'Knowledge Base', 'Voice Integration'],
           pricing: 'Starting at $3,000/month',
-          roi: '150-300% ROI'
+          roi: '150-300% ROI',
+          timeline: '2-4 weeks',
+          popular: true
         },
         {
           name: 'AI Sales Automation',
-          description: 'Intelligent sales processes and lead qualification',
-          features: ['Lead Scoring', 'Automated Follow-ups', 'Sales Forecasting', 'CRM Integration'],
+          description: 'Intelligent sales processes with predictive analytics and automated lead nurturing',
+          features: ['Lead Scoring', 'Automated Follow-ups', 'Sales Forecasting', 'CRM Integration', 'Pipeline Management', 'Performance Analytics'],
           pricing: 'Starting at $4,000/month',
-          roi: '250-500% ROI'
+          roi: '250-500% ROI',
+          timeline: '3-6 weeks',
+          popular: true
+        },
+        {
+          name: 'AI Document Processing',
+          description: 'Intelligent document analysis, extraction, and automated processing workflows',
+          features: ['OCR Technology', 'Data Extraction', 'Classification', 'Validation', 'Workflow Automation', 'Compliance Tracking'],
+          pricing: 'Starting at $2,500/month',
+          roi: '300-600% ROI',
+          timeline: '2-4 weeks',
+          popular: false
+        },
+        {
+          name: 'AI Email Automation',
+          description: 'Smart email campaigns with personalization, timing optimization, and performance tracking',
+          features: ['Personalization', 'Send Time Optimization', 'A/B Testing', 'Performance Analytics', 'Segmentation', 'Drip Campaigns'],
+          pricing: 'Starting at $1,500/month',
+          roi: '200-400% ROI',
+          timeline: '1-2 weeks',
+          popular: false
         }
       ]
     },
@@ -1403,24 +1427,48 @@ export default function AIServicesPage() {
       services: [
         {
           name: 'AI Data Analytics',
-          description: 'Advanced analytics and insights from your data',
-          features: ['Predictive Analytics', 'Real-time Insights', 'Data Visualization', 'Custom Dashboards'],
+          description: 'Advanced analytics and insights from your data with machine learning algorithms',
+          features: ['Predictive Analytics', 'Real-time Insights', 'Data Visualization', 'Custom Dashboards', 'Anomaly Detection', 'Trend Analysis'],
           pricing: 'Starting at $6,000/month',
-          roi: '300-600% ROI'
+          roi: '300-600% ROI',
+          timeline: '6-10 weeks',
+          popular: true
         },
         {
           name: 'AI Business Intelligence',
-          description: 'Transform data into actionable business insights',
-          features: ['KPI Tracking', 'Trend Analysis', 'Performance Metrics', 'Strategic Planning'],
+          description: 'Transform data into actionable business insights with AI-powered recommendations',
+          features: ['KPI Tracking', 'Trend Analysis', 'Performance Metrics', 'Strategic Planning', 'Competitive Analysis', 'ROI Optimization'],
           pricing: 'Starting at $7,000/month',
-          roi: '400-700% ROI'
+          roi: '400-700% ROI',
+          timeline: '8-12 weeks',
+          popular: true
         },
         {
           name: 'AI Predictive Analytics',
-          description: 'Forecast future trends and outcomes',
-          features: ['Demand Forecasting', 'Risk Assessment', 'Market Analysis', 'Scenario Planning'],
+          description: 'Forecast future trends and outcomes with advanced machine learning models',
+          features: ['Demand Forecasting', 'Risk Assessment', 'Market Analysis', 'Scenario Planning', 'Customer Lifetime Value', 'Churn Prediction'],
           pricing: 'Starting at $8,000/month',
-          roi: '500-800% ROI'
+          roi: '500-800% ROI',
+          timeline: '10-16 weeks',
+          popular: true
+        },
+        {
+          name: 'AI Real-time Monitoring',
+          description: 'Continuous monitoring and alerting with intelligent anomaly detection',
+          features: ['Real-time Alerts', 'Anomaly Detection', 'Performance Monitoring', 'Predictive Maintenance', 'Custom Thresholds', 'Automated Responses'],
+          pricing: 'Starting at $4,000/month',
+          roi: '250-500% ROI',
+          timeline: '4-6 weeks',
+          popular: false
+        },
+        {
+          name: 'AI Market Intelligence',
+          description: 'Comprehensive market analysis and competitive intelligence powered by AI',
+          features: ['Competitor Analysis', 'Market Trends', 'Price Optimization', 'Customer Sentiment', 'Brand Monitoring', 'Opportunity Identification'],
+          pricing: 'Starting at $5,500/month',
+          roi: '350-650% ROI',
+          timeline: '6-8 weeks',
+          popular: false
         }
       ]
     },
@@ -1432,24 +1480,48 @@ export default function AIServicesPage() {
       services: [
         {
           name: 'AI Content Generation',
-          description: 'Create high-quality content at scale',
-          features: ['Blog Posts', 'Social Media', 'Email Campaigns', 'Product Descriptions'],
+          description: 'Create high-quality content at scale with advanced language models',
+          features: ['Blog Posts', 'Social Media', 'Email Campaigns', 'Product Descriptions', 'Video Scripts', 'Ad Copy'],
           pricing: 'Starting at $2,000/month',
-          roi: '100-300% ROI'
+          roi: '100-300% ROI',
+          timeline: '2-4 weeks',
+          popular: true
         },
         {
           name: 'AI Email Marketing',
-          description: 'Intelligent email campaigns and personalization',
-          features: ['Personalization', 'A/B Testing', 'Send Time Optimization', 'Performance Analytics'],
+          description: 'Intelligent email campaigns with advanced personalization and automation',
+          features: ['Personalization', 'A/B Testing', 'Send Time Optimization', 'Performance Analytics', 'Segmentation', 'Drip Campaigns'],
           pricing: 'Starting at $3,500/month',
-          roi: '200-400% ROI'
+          roi: '200-400% ROI',
+          timeline: '3-5 weeks',
+          popular: true
         },
         {
           name: 'AI SEO Optimization',
-          description: 'Automated SEO analysis and optimization',
-          features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis'],
+          description: 'Automated SEO analysis and optimization with machine learning',
+          features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis', 'Link Building', 'Rank Tracking'],
           pricing: 'Starting at $4,500/month',
-          roi: '250-500% ROI'
+          roi: '250-500% ROI',
+          timeline: '4-6 weeks',
+          popular: true
+        },
+        {
+          name: 'AI Social Media Management',
+          description: 'Automated social media posting, engagement, and analytics',
+          features: ['Content Scheduling', 'Engagement Automation', 'Analytics Dashboard', 'Hashtag Optimization', 'Influencer Identification', 'Crisis Management'],
+          pricing: 'Starting at $2,500/month',
+          roi: '200-400% ROI',
+          timeline: '2-3 weeks',
+          popular: false
+        },
+        {
+          name: 'AI Video Marketing',
+          description: 'AI-powered video creation, editing, and optimization for marketing campaigns',
+          features: ['Video Generation', 'Auto-editing', 'Thumbnail Creation', 'Caption Generation', 'Performance Analytics', 'A/B Testing'],
+          pricing: 'Starting at $3,000/month',
+          roi: '250-500% ROI',
+          timeline: '4-6 weeks',
+          popular: false
         }
       ]
     },
@@ -1461,24 +1533,136 @@ export default function AIServicesPage() {
       services: [
         {
           name: 'AI Healthcare Solutions',
-          description: 'AI-powered healthcare and medical solutions',
-          features: ['Medical Imaging', 'Diagnosis Support', 'Patient Monitoring', 'Drug Discovery'],
+          description: 'AI-powered healthcare and medical solutions with advanced diagnostics',
+          features: ['Medical Imaging', 'Diagnosis Support', 'Patient Monitoring', 'Drug Discovery', 'Treatment Planning', 'Clinical Trials'],
           pricing: 'Starting at $15,000/month',
-          roi: '400-800% ROI'
+          roi: '400-800% ROI',
+          timeline: '12-20 weeks',
+          popular: true
         },
         {
           name: 'AI Fintech Solutions',
-          description: 'Financial technology and banking AI solutions',
-          features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring'],
+          description: 'Financial technology and banking AI solutions with fraud prevention',
+          features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring', 'Regulatory Compliance', 'Anti-Money Laundering'],
           pricing: 'Starting at $12,000/month',
-          roi: '300-600% ROI'
+          roi: '300-600% ROI',
+          timeline: '10-16 weeks',
+          popular: true
         },
         {
           name: 'AI E-commerce Solutions',
-          description: 'E-commerce optimization and personalization',
-          features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'],
+          description: 'E-commerce optimization and personalization with advanced recommendation engines',
+          features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights', 'Dynamic Pricing', 'Supply Chain Optimization'],
           pricing: 'Starting at $5,000/month',
-          roi: '200-500% ROI'
+          roi: '200-500% ROI',
+          timeline: '6-10 weeks',
+          popular: true
+        },
+        {
+          name: 'AI Manufacturing Solutions',
+          description: 'Smart manufacturing with predictive maintenance and quality control',
+          features: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Energy Management', 'Safety Monitoring', 'Process Optimization'],
+          pricing: 'Starting at $8,000/month',
+          roi: '300-700% ROI',
+          timeline: '8-14 weeks',
+          popular: false
+        },
+        {
+          name: 'AI Retail Solutions',
+          description: 'Retail intelligence with customer behavior analysis and inventory optimization',
+          features: ['Customer Behavior Analysis', 'Inventory Optimization', 'Demand Forecasting', 'Price Optimization', 'Store Layout Optimization', 'Staff Scheduling'],
+          pricing: 'Starting at $6,000/month',
+          roi: '250-550% ROI',
+          timeline: '6-12 weeks',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'AI Innovation & Emerging Tech',
+      icon: Sparkles,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      services: [
+        {
+          name: 'AI Computer Vision',
+          description: 'Advanced computer vision solutions for image and video analysis',
+          features: ['Object Detection', 'Facial Recognition', 'Quality Inspection', 'Motion Analysis', '3D Reconstruction', 'Augmented Reality'],
+          pricing: 'Starting at $7,000/month',
+          roi: '400-800% ROI',
+          timeline: '8-16 weeks',
+          popular: false
+        },
+        {
+          name: 'AI Natural Language Processing',
+          description: 'Advanced NLP solutions for text analysis and language understanding',
+          features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Document Processing', 'Voice Recognition'],
+          pricing: 'Starting at $5,500/month',
+          roi: '300-600% ROI',
+          timeline: '6-12 weeks',
+          popular: false
+        },
+        {
+          name: 'AI Robotics & Automation',
+          description: 'Intelligent robotics solutions for industrial and service applications',
+          features: ['Autonomous Navigation', 'Object Manipulation', 'Human-Robot Interaction', 'Predictive Maintenance', 'Safety Systems', 'Integration APIs'],
+          pricing: 'Starting at $20,000/month',
+          roi: '500-1000% ROI',
+          timeline: '16-24 weeks',
+          popular: false
+        },
+        {
+          name: 'AI Edge Computing',
+          description: 'AI solutions optimized for edge devices and real-time processing',
+          features: ['Real-time Processing', 'Low Latency', 'Offline Capability', 'Resource Optimization', 'Security', 'Scalability'],
+          pricing: 'Starting at $6,500/month',
+          roi: '350-700% ROI',
+          timeline: '10-18 weeks',
+          popular: false
+        },
+        {
+          name: 'AI Quantum Computing',
+          description: 'Quantum-enhanced AI solutions for complex optimization problems',
+          features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation', 'Machine Learning', 'Research Support'],
+          pricing: 'Starting at $25,000/month',
+          roi: '600-1200% ROI',
+          timeline: '20-32 weeks',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'AI Security & Compliance',
+      icon: Shield,
+      color: 'text-red-400',
+      bgColor: 'bg-red-500/10',
+      services: [
+        {
+          name: 'AI Cybersecurity Suite',
+          description: 'Advanced AI-powered cybersecurity solutions for threat detection and prevention',
+          features: ['Threat Detection', 'Incident Response', 'Vulnerability Assessment', 'Behavioral Analysis', 'Compliance Monitoring', 'Security Analytics'],
+          pricing: 'Starting at $10,000/month',
+          roi: '400-800% ROI',
+          timeline: '8-14 weeks',
+          popular: true
+        },
+        {
+          name: 'AI Privacy Protection',
+          description: 'AI solutions for data privacy, anonymization, and compliance management',
+          features: ['Data Anonymization', 'Privacy Compliance', 'Consent Management', 'Data Discovery', 'Risk Assessment', 'Audit Support'],
+          pricing: 'Starting at $8,000/month',
+          roi: '300-600% ROI',
+          timeline: '6-12 weeks',
+          popular: false
+        },
+        {
+          name: 'AI Regulatory Compliance',
+          description: 'Automated compliance monitoring and reporting for various regulations',
+          features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'PCI DSS', 'Automated Reporting', 'Risk Management'],
+          pricing: 'Starting at $12,000/month',
+          roi: '350-700% ROI',
+          timeline: '10-16 weeks',
+          popular: false
         }
       ]
     }
@@ -1649,21 +1833,31 @@ export default function AIServicesPage() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
-                      <p className="text-gray-300 mb-4">{service.description}</p>
+                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 group relative">
+                      {service.popular && (
+                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                          Popular
+                        </div>
+                      )}
+                      <h4 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h4>
+                      <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                       <div className="space-y-3 mb-6">
                         <h5 className="text-sm font-semibold text-cyan-400">Key Features:</h5>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span>{feature}</span>
-                            </li>
+                        <div className="grid grid-cols-2 gap-2">
+                          {service.features.slice(0, 4).map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center space-x-2 text-xs text-gray-300">
+                              <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                              <span className="truncate">{feature}</span>
+                            </div>
                           ))}
-                        </ul>
+                          {service.features.length > 4 && (
+                            <div className="text-xs text-gray-400 col-span-2">
+                              +{service.features.length - 4} more features
+                            </div>
+                          )}
+                        </div>
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-2 mb-6">
                         <div className="flex justify-between items-center">
                           <span className="text-sm text-gray-400">Pricing:</span>
                           <span className="text-sm font-medium text-white">{service.pricing}</span>
@@ -1672,10 +1866,19 @@ export default function AIServicesPage() {
                           <span className="text-sm text-gray-400">Expected ROI:</span>
                           <span className="text-sm font-medium text-green-400">{service.roi}</span>
                         </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-400">Timeline:</span>
+                          <span className="text-sm font-medium text-cyan-400">{service.timeline}</span>
+                        </div>
                       </div>
-                      <button className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
-                        Learn More
-                      </button>
+                      <div className="flex gap-2">
+                        <button className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all text-sm">
+                          Learn More
+                        </button>
+                        <button className="flex-1 border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-slate-900 transition-all text-sm">
+                          Demo
+                        </button>
+                      </div>
                     </div>
                   ))}
                 </div>
