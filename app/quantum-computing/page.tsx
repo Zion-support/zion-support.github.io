@@ -1,5 +1,54 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cpu as Processor, Brain as Mind, Target as Aim, BarChart as Analytics, TrendingUp as Growth, Shield as Security, Lock as Secure, Database as Storage, Cloud as CloudStorage, Code as Programming, Smartphone as Mobile, Settings as Config, FileText as Document, Search as Find, Bot as Robot, Palette as Colors, Camera as Photo, Music as Audio, Video as Movie, Gamepad2 as Gaming, ShoppingCart as Cart, CreditCard as Payment, Building as Office, Factory as Industrial, Car as Vehicle, Plane as Aircraft, Ship as Vessel, Train as Railway, Home as House, Heart as Love, Stethoscope as Medical, GraduationCap as Education, Briefcase as Business, Wrench as Tools, Hammer as Construction, Paintbrush as Art, Scissors as CutTool, BookOpen as Book, Calculator as Math, Calendar as Schedule, Clock3 as Time, Compass as Direction, Navigation as Nav, PieChart as Chart, TrendingDown as Decline, Activity as Stats, Atom, Zap as Flash, Brain as Mind, Cpu as Processor, Shield as Protection, Globe as World, Users as Team, Award as Trophy, Lock as Secure, Database as Storage, Cloud as CloudStorage, Code as Programming, Smartphone as Mobile, Settings as Config, FileText as Document, Search as Find, Bot as Robot, Palette as Colors, Camera as Photo, Music as Audio, Video as Movie, Gamepad2 as Gaming, ShoppingCart as Cart, CreditCard as Payment, Building as Office, Factory as Industrial, Car as Vehicle, Plane as Aircraft, Ship as Vessel, Train as Railway, Home as House, Heart as Love, Stethoscope as Medical, GraduationCap as Education, Briefcase as Business, Wrench as Tools, Hammer as Construction, Paintbrush as Art, Scissors as CutTool, BookOpen as Book, Calculator as Math, Calendar as Schedule, Clock3 as Time, Compass as Direction, Navigation as Nav, PieChart as Chart, TrendingDown as Decline, Activity as Stats } from 'lucide-react';
+import React, { Suspense, lazy } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft, Atom, Zap, Brain } from 'lucide-react';
+
+// Lazy load components
+const Navigation = lazy(() => import('../components/Navigation'));
+const Footer = lazy(() => import('../components/Footer'));
+
+const QuantumComputingPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+        <Navigation />
+      </Suspense>
+
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <div className="text-center">
+          <div className="text-6xl mb-6">⚛️</div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            Quantum Computing
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Next-generation quantum computing capabilities and solutions
+          </p>
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            This page is currently under development. Please contact us for more information about our quantum computing services.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button inline-flex items-center"
+            >
+              Call (302) 464-0950
+            </a>
+            <Link
+              to="/services"
+              className="cyber-button inline-flex items-center"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </main>
+
+      <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse"></div>}>
+        <Footer />
+      </Suspense>
+    </div>
+  );
+};
 
 export default QuantumComputingPage;

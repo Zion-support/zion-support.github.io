@@ -1,13 +1,13 @@
 'use client';
 import React, { Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Map, Globe, Link as LinkIcon } from 'lucide-react';
+import { ArrowLeft, BookOpen, Calendar, User } from 'lucide-react';
 
 // Lazy load components
 const Navigation = lazy(() => import('../components/Navigation'));
 const Footer = lazy(() => import('../components/Footer'));
 
-const SitemapPage: React.FC = () => {
+const BlogPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
@@ -16,15 +16,15 @@ const SitemapPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="text-center">
-          <div className="text-6xl mb-6">🗺️</div>
+          <div className="text-6xl mb-6">📝</div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-            Sitemap
+            Blog
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Navigate our website easily
+            Insights, news, and updates from Zion Tech Group
           </p>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Our sitemap is currently under development. Please use the navigation menu to explore our services and pages.
+            Our blog is currently under development. Please check back soon for the latest insights on AI, technology, and business innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -51,4 +51,4 @@ const SitemapPage: React.FC = () => {
   );
 };
 
-export default SitemapPage;
+export default BlogPage;

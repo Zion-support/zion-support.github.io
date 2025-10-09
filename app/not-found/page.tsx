@@ -1,44 +1,45 @@
 'use client';
 import React, { Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Map, Globe, Link as LinkIcon } from 'lucide-react';
+import { Home, ArrowLeft, Search } from 'lucide-react';
 
 // Lazy load components
 const Navigation = lazy(() => import('../components/Navigation'));
 const Footer = lazy(() => import('../components/Footer'));
 
-const SitemapPage: React.FC = () => {
+const NotFoundPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <Navigation />
       </Suspense>
 
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main className="container mx-auto px-4 py-16 pt-24 flex items-center justify-center min-h-[80vh]">
         <div className="text-center">
-          <div className="text-6xl mb-6">🗺️</div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-            Sitemap
+          <div className="text-9xl font-bold text-cyan-400 mb-8 neon-text">404</div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Page Not Found
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Navigate our website easily
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            The page you're looking for doesn't exist or has been moved. 
+            Let's get you back on track.
           </p>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Our sitemap is currently under development. Please use the navigation menu to explore our services and pages.
-          </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
+            <Link
+              to="/"
               className="cyber-button inline-flex items-center"
             >
-              Call (302) 464-0950
-            </a>
+              <Home className="w-5 h-5 mr-2" />
+              Go Home
+            </Link>
             <Link
               to="/services"
               className="cyber-button inline-flex items-center"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
-              View Our Services
+              <Search className="w-5 h-5 mr-2" />
+              Browse Services
             </Link>
           </div>
         </div>
@@ -51,4 +52,4 @@ const SitemapPage: React.FC = () => {
   );
 };
 
-export default SitemapPage;
+export default NotFoundPage;
