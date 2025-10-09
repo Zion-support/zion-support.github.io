@@ -1,24 +1,48 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {/* TODO: Fix JSX expression */}
-        },
-      },
-    },
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
   },
-  compile,
-  r: {/* TODO: Fix JSX expression */}
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
-  image,
-  s: {/* TODO: Fix JSX expression */}
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  async headers() {/* TODO: Fix JSX expression */}
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
           },
-          {/* TODO: Fix JSX expression */}
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
-          {/* TODO: Fix JSX expression */}
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
           },
         ],
       },
-      {/* TODO: Fix JSX expression */}
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600',
           },
         ],
       },

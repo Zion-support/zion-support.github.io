@@ -1,8 +1,16 @@
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+'use client';
+import React, { useState, useEffect, useCallback, lazy, Suspense, memo } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Phone, Mail, MapPin, ArrowRight, CheckCircle, Star, Users, Globe, Brain, Zap, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Header from './components/Header';
+import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
+import Header from './components/Header';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import { useAnalytics } from './hooks/useAnalytics';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -33,45 +41,43 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const { trackEvent, trackPageView } = useAnalytics();
 
   useEffect(() => {
+    // Track page view
+    trackPageView(window.location.pathname, 'Zion Tech Group - Home');
+    
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
       preloadComponents();
     }, 1000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [trackPageView]);
 
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number',
-      });
-    }
-  }, []);
+    trackEvent('phone_click', {
+      event_category: 'engagement',
+      event_label: 'main_phone_number',
+    });
+  }, [trackEvent]);
 
   // Analytics tracking for email clicks
   const handleEmailClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'email_click', {
-        event_category: 'engagement',
-        event_label: 'main_email_address',
-      });
-    }
-  }, []);
+    trackEvent('email_click', {
+      event_category: 'engagement',
+      event_label: 'main_email_address',
+    });
+  }, [trackEvent]);
 
   // Analytics tracking for CTA clicks
   const handleCTAClick = useCallback((ctaType: string) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'cta_click', {
-        event_category: 'engagement',
-        event_label: ctaType,
-      });
-    }
-  }, []);
+    trackEvent('cta_click', {
+      event_category: 'engagement',
+      event_label: ctaType,
+    });
+  }, [trackEvent]);
 
   // Testimonials data
   const testimonials = [
@@ -95,48 +101,85 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  // Services data
+  // Services data with enhanced features
   const services = [
     {
       icon: Brain,
-      title: "AI Solutions",
-      description: "Cutting-edge artificial intelligence services to transform your business operations.",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
+      title: 'AI-Powered Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
-      icon: Cloud,
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions for modern businesses.",
-      features: ["AWS/Azure/GCP", "Cloud Migration", "DevOps", "Containerization"]
+      icon: Zap,
+      title: 'Rapid Implementation',
+      description: 'Get up and running quickly with our streamlined deployment and integration processes.',
+      features: ['Quick Setup', 'Seamless Integration', 'Fast Deployment', 'Minimal Downtime']
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets.",
-      features: ["Security Audits", "Threat Detection", "Compliance", "Incident Response"]
+      title: 'Enterprise Security',
+      description: 'Bank-grade security and compliance to protect your most sensitive data and operations.',
+      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', 'Data Protection']
     },
     {
-      icon: Code,
-      title: "Custom Development",
-      description: "Tailored software solutions built to meet your specific needs.",
-      features: ["Web Applications", "Mobile Apps", "API Development", "Database Design"]
+      icon: Users,
+      title: 'Expert Support',
+      description: '24/7 support from our team of certified professionals and industry experts.',
+      features: ['24/7 Availability', 'Expert Team', 'Proactive Monitoring', 'Quick Response']
     }
   ];
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold text-white">Loading Zion Tech Group...</h2>
-        </div>
-      </div>
-    );
-  }
+  const stats = [
+    { number: '10,000+', label: 'Happy Customers' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '50+', label: 'Countries Served' },
+    { number: '4.9/5', label: 'Customer Rating' }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Header />
+    <>
+      <SEOHead 
+        title="Zion Tech Group - Advanced AI & IT Solutions"
+        description="Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services."
+        keywords="AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation"
+        canonical="https://ziontechgroup.com"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/zion-tech-group",
+            "https://twitter.com/ziontechgroup"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI and IT Solutions",
+              "description": "Comprehensive AI and IT services for business transformation"
+            }
+          }
+        }}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Header />
       {/* Hero Section */}
       <section 
         className="relative min-h-screen flex items-center justify-center overflow-hidden cyber-grid neural-network-bg"
@@ -232,7 +275,7 @@ const HomePage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2" role="list">
-                  {service.features.map((feature, idx) => (
+                  {service.features?.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" aria-hidden="true" />
                       <span>{feature}</span>
@@ -320,8 +363,14 @@ const HomePage: React.FC = () => {
       <Suspense fallback={<ServiceCardSkeleton />}>
         <ContentNewsletterSignup />
       </Suspense>
-      <Footer />
-    </div>
+        <Footer />
+        
+        {/* Performance and SEO Components */}
+        <PerformanceMonitor />
+        <SEOOptimizer />
+        <AccessibilityEnhancer />
+      </div>
+    </>
   );
 };
 

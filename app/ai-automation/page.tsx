@@ -1,4 +1,9 @@
+'use client';
 import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone, ArrowRight, Brain, Target, BarChart } from 'lucide-react';
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -8,6 +13,7 @@ import Footer from '../components/Footer';
 
 =======
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -15,24 +21,29 @@ const AIAutomationPage: React.FC = () => {
   const automationServices = [
     {
       title: 'Process Automation',
-      description: 'Streamline repetitive tasks with intelligent automation',
+      description: 'Automate repetitive tasks and workflows with intelligent AI systems',
       icon: Zap,
-      features: ['Task scheduling', 'Data processing', 'Report generation', 'Email automation']
-    },
-    {
-      title: 'Workflow Optimization',
-      description: 'Optimize business processes for maximum efficiency',
-      icon: Settings,
-      features: ['Process mapping', 'Bottleneck identification', 'Performance metrics', 'Continuous improvement']
+      features: ['Workflow automation', 'Task scheduling', 'Data processing', 'Error handling'],
+      benefits: ['80% time savings', 'Reduced errors', '24/7 operation', 'Cost reduction'],
+      price: 'Starting at $299/month'
     },
     {
       title: 'Customer Service Automation',
-      description: 'Enhance customer experience with AI-powered support',
+      description: 'AI-powered chatbots and support systems for enhanced customer experience',
       icon: Users,
-      features: ['Chatbots', 'Ticket routing', 'Response templates', 'Sentiment analysis']
+      features: ['Chatbot integration', 'Ticket routing', 'Response generation', 'Sentiment analysis'],
+      benefits: ['Instant responses', '24/7 availability', 'Consistent service', 'Scalable support'],
+      price: 'Starting at $199/month'
     },
     {
       title: 'Data Analysis Automation',
+<<<<<<< HEAD
+      description: 'Automated data processing, analysis, and reporting with AI insights',
+      icon: BarChart,
+      features: ['Data collection', 'Pattern recognition', 'Report generation', 'Trend analysis'],
+      benefits: ['Faster insights', 'Accurate predictions', 'Automated reporting', 'Data-driven decisions'],
+      price: 'Starting at $399/month'
+=======
       description: 'Automate data collection, processing, and insights generation',
       icon: TrendingUp,
       features: ['Data extraction', 'Pattern recognition', 'Predictive analytics', 'Automated reporting']
@@ -137,111 +148,67 @@ const AIAutomationPage: React.FC = () => {
       title: "Workflow Optimization",
       description: "AI-powered workflow analysis and optimization for maximum productivity",
       benefits: ["60% time savings", "Smart routing", "Dynamic optimization"]
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
     },
     {
-      icon: Shield,
-      title: "Decision Trees",
-      description: "Advanced decision-making algorithms for complex business scenarios",
-      benefits: ["Consistent decisions", "Risk mitigation", "Compliance assurance"]
-    },
-    {
-      icon: Clock,
-      title: "Exception Handling",
-      description: "Intelligent handling of exceptions and edge cases in automated processes",
-      benefits: ["Smart escalation", "Context awareness", "Learning capabilities"]
-    }
-  ];
-
-  const automationTypes = [
-    {
-      title: "Process Automation",
-      description: "Automate repetitive tasks and workflows",
-      examples: ["Data entry", "Email processing", "Report generation", "File management"]
-    },
-    {
-      title: "Decision Automation",
-      description: "AI-powered decision making for complex scenarios",
-      examples: ["Approval workflows", "Risk assessment", "Resource allocation", "Quality control"]
-    },
-    {
-      title: "Customer Service Automation",
-      description: "Intelligent customer support and engagement",
-      examples: ["Chatbots", "Ticket routing", "Response generation", "Sentiment analysis"]
-    }
-  ];
-
-  const benefits = [
-    "80% efficiency increase",
-    "60% time savings",
-    "Zero human error",
-    "24/7 operation",
-    "Scalable solutions",
-    "Cost reduction"
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$1,400',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 10 automated processes',
-        'Basic AI decision making',
-        'Email support',
-        'Standard integrations',
-        'Basic analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$2,800',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Up to 50 automated processes',
-        'Advanced AI decision making',
-        'Priority support',
-        'Custom integrations',
-        'Advanced analytics',
-        'Workflow optimization'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$5,600',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited processes',
-        'Premium AI features',
-        '24/7 support',
-        'Custom development',
-        'White-label options',
-        'API access',
-        'Dedicated support'
-      ],
-      popular: false
+      title: 'Marketing Automation',
+      description: 'Intelligent marketing campaigns and customer engagement automation',
+      icon: Target,
+      features: ['Campaign optimization', 'Personalization', 'A/B testing', 'Performance tracking'],
+      benefits: ['Higher conversion', 'Better targeting', 'Reduced manual work', 'ROI optimization'],
+      price: 'Starting at $249/month'
     }
   ];
 
   const stats = [
-    { value: '500+', label: 'Automated Processes' },
-    { value: '80%', label: 'Efficiency Increase' },
-    { value: '60%', label: 'Time Saved' },
-    { value: '4.9/5', label: 'Client Rating' }
+    { icon: TrendingUp, value: '300%', label: 'ROI Increase' },
+    { icon: Clock, value: '80%', label: 'Time Savings' },
+    { icon: Shield, value: '99.9%', label: 'Reliability' },
+    { icon: Users, value: '10K+', label: 'Processes Automated' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AI Automation - Intelligent Process Automation | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with intelligent process automation. Achieve 80% efficiency increase and 60% time savings with AI-powered automation." />
-        <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-automation" />
+        <title>AI Automation Services - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with AI automation solutions. Automate processes, reduce costs, and increase efficiency with our intelligent automation services." />
+        <meta name="keywords" content="AI automation, process automation, business automation, intelligent workflows, AI chatbots" />
       </Helmet>
+<<<<<<< HEAD
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <Navigation />
+        
+        <main className="pt-20">
+          {/* Hero Section */}
+          <section className="container mx-auto px-4 py-16 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                AI <span className="text-blue-600">Automation</span> Services
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Transform your business with intelligent automation solutions
+              </p>
+              <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+                Automate repetitive tasks, streamline workflows, and boost productivity with our 
+                cutting-edge AI automation services designed for modern businesses.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="#services"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+                >
+                  Explore Services
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+                <a
+                  href="/contact"
+                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center"
+                >
+                  Get Started
+                </a>
+=======
       <Header />
       
       {/* Hero Section */}
@@ -287,12 +254,22 @@ const AIAutomationPage: React.FC = () => {
                 <div className="text-xl font-semibold text-white mb-2">
                   {stat.label}
                 </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
+<<<<<<< HEAD
+          {/* Stats Section */}
+          <section className="bg-blue-600 py-16">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-white">
+                    <stat.icon className="w-12 h-12 mx-auto mb-4" />
+                    <div className="text-4xl font-bold mb-2">{stat.value}</div>
+                    <div className="text-xl">{stat.label}</div>
+=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -310,19 +287,65 @@ const AIAutomationPage: React.FC = () => {
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-6 h-6 text-white" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Services Section */}
+          <section id="services" className="container mx-auto px-4 py-16">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Automation Services
+              </h2>
+              <p className="text-xl text-gray-600">
+                Comprehensive AI automation solutions tailored to your business needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {automationServices.map((service, index) => (
+                <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <service.icon className="w-12 h-12 text-blue-600 mr-4" />
+                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <Star className="w-4 h-4 text-yellow-500 mr-2" />
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
+                  
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-blue-600 mb-4">{service.price}</p>
+                    <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      Learn More
+                    </button>
+=======
                 </div>
               </div>
             ))}
@@ -411,57 +434,99 @@ const AIAutomationPage: React.FC = () => {
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
                     <span className="text-gray-300 ml-1">{plan.period}</span>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
                   </div>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              ))}
+            </div>
+          </section>
+
+          {/* Process Section */}
+          <section className="bg-gray-100 py-16">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Our Automation Process
+                </h2>
+                <p className="text-xl text-gray-600">
+                  How we implement AI automation in your business
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    1
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Analysis</h3>
+                  <p className="text-gray-600">We analyze your current processes and identify automation opportunities</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    2
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Design</h3>
+                  <p className="text-gray-600">We design custom automation solutions tailored to your needs</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    3
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Implementation</h3>
+                  <p className="text-gray-600">We implement and test the automation solutions</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    4
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Optimization</h3>
+                  <p className="text-gray-600">We monitor and optimize performance for maximum efficiency</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="bg-blue-600 py-16">
+            <div className="container mx-auto px-4 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Automate Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let our AI automation experts help you identify opportunities and implement 
+                solutions that drive real business value.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-700 hover:to-purple-700'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                  }`}
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
                 >
-                  Get Started
+                  <Phone className="w-5 h-5 mr-2" />
+                  Contact Us
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center"
+                >
+                  Call (302) 464-0950
                 </a>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 border border-white/20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join hundreds of businesses already using AI Automation to achieve unprecedented efficiency and growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
-              >
-                Start Free Trial
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950
-              </a>
             </div>
+<<<<<<< HEAD
+          </section>
+        </main>
+        
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default AIAutomationPage;
+=======
             <div className="mt-8 text-sm text-gray-400">
               <p>📧 info@ziontechgroup.com | 📍 Middletown, DE 19709</p>
             </div>
@@ -590,3 +655,4 @@ export default AIAutomationPage;
 =======
 export default AIAutomationPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4

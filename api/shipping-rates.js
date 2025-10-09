@@ -3,11 +3,15 @@ const { withSentry } = require('./withSentry.cjs');
 async function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+    return res.status(405).json({ error: 'Method not allowed' });
+=======
+<<<<<<< HEAD
     res.status(405).json({ error: 'Method not allowed' });
     return;
 =======
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
   }
 
   try {
@@ -16,11 +20,15 @@ async function handler(req, res) {
 
     if (!apiKey) {
 <<<<<<< HEAD
+      return res.status(500).json({ error: 'EasyPost API key not configured' });
+=======
+<<<<<<< HEAD
       res.status(500).json({ error: 'EasyPost API key not configured' });
       return;
 =======
       return res.status(500).json({ error: 'Shipping API key not configured' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
     }
 
     const response = await fetch('https://api.easypost.com/v2/shipments', {
@@ -42,17 +50,25 @@ async function handler(req, res) {
 
     if (!response.ok) {
 <<<<<<< HEAD
+      return res.status(400).json({ error: data.error || 'Failed to fetch rates' });
+=======
+<<<<<<< HEAD
       res.status(400).json({ error: data.error || 'Failed to fetch rates' });
       return;
 =======
       return res.status(400).json({ error: 'Failed to get shipping rates' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
     }
 
     res.statusCode = 200;
     res.json({ success: true, rates: data.rates });
   } catch (err) {
+<<<<<<< HEAD
+    console.error('Shipping rates error:', err);
+=======
     console.error('Error fetching shipping rates:', err);
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
     res.status(500).json({ error: err.message });
   }
 }

@@ -992,11 +992,25 @@ body {
 .font-large {
   font-size: 1.125rem;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-0761
 .focus-visible *:focus {
   outline: 3px solid #00ffff;
   outline-offset: 2px;
 }
 
+<<<<<<< HEAD
+=======
+/* High Contrast Mode */
+.high-contrast {
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-green: #00ff00;
+}
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-0761
 /* Performance Optimizations */
 .will-change-transform {
   will-change: transform;

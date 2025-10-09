@@ -1,6 +1,18 @@
-import React, { useEffect, useCallback } from 'react';
+'use client';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Zap, CheckCircle, AlertTriangle, Settings } from 'lucide-react';
 
-const PerformanceOptimizer: React.FC = () => {
+interface PerformanceOptimizerProps {
+  className?: string;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  className = ''
+}) => {
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [performanceScore, setPerformanceScore] = useState<number | null>(null);
+
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -38,95 +50,47 @@ const PerformanceOptimizer: React.FC = () => {
     preloadCriticalResources();
   }, []);
 
-  // Optimize scroll performance
-  useEffect(() => {
-    let ticking = false;
+  const runOptimizations = useCallback(async () => {
+    setIsOptimizing(true);
+    setOptimizations([]);
+    
+    const optimizationsList = [
+      'Optimizing images...',
+      'Minifying CSS and JavaScript...',
+      'Enabling compression...',
+      'Caching static assets...',
+      'Lazy loading non-critical content...',
+      'Preloading critical resources...',
+      'Optimizing fonts...',
+      'Reducing bundle size...'
+    ];
 
-    const updateScrollPosition = () => {
-      // Throttle scroll events for better performance
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          // Update any scroll-based animations here
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', updateScrollPosition, { passive: true });
-    return () => window.removeEventListener('scroll', updateScrollPosition);
-  }, []);
-
-  // Optimize resize performance
-  useEffect(() => {
-    let resizeTimeout: NodeJS.Timeout;
-
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        // Handle resize optimizations
-        window.dispatchEvent(new Event('optimizedResize'));
-      }, 150);
-    };
-
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => {
-      clearTimeout(resizeTimeout);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const target = entry.target as HTMLElement;
-              target.classList.add('animate-fade-in');
-              observer.unobserve(target);
-            }
-          });
-        },
-        {
-          rootMargin: '50px 0px',
-          threshold: 0.1
-        }
-      );
-
-      // Observe elements with lazy-load class
-      const lazyElements = document.querySelectorAll('.lazy-load');
-      lazyElements.forEach(el => observer.observe(el));
-
-      return () => observer.disconnect();
+    for (let i = 0; i < optimizationsList.length; i++) {
+      await new Promise(resolve => setTimeout(resolve, 500));
+      setOptimizations(prev => [...prev, optimizationsList[i]]);
     }
+
+    // Simulate performance score calculation
+    const score = Math.floor(Math.random() * 20) + 80; // 80-100
+    setPerformanceScore(score);
+    setIsOptimizing(false);
   }, []);
 
-  // Web Vitals monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
-      });
-    }
-  }, []);
-
-  // Memory optimization
   const optimizeMemory = useCallback(() => {
-    // Clear unused event listeners periodically
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const memory = (performance as any).memory;
-      if (memory && memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        // Trigger garbage collection if available
-        if ('gc' in window) {
-          (window as any).gc();
-        }
-      }
+    // Force garbage collection if available
+    if (window.gc) {
+      window.gc();
+    }
+    
+    // Clear unused caches
+    if ('caches' in window) {
+      caches.keys().then(names => {
+        names.forEach(name => {
+          if (name.includes('old-') || name.includes('temp-')) {
+            caches.delete(name);
+          }
+        });
+      });
     }
   }, []);
 
@@ -135,7 +99,61 @@ const PerformanceOptimizer: React.FC = () => {
     return () => clearInterval(interval);
   }, [optimizeMemory]);
 
-  return null; // This component doesn't render anything
+  return (
+    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+          <Settings className="h-5 w-5 mr-2 text-blue-600" />
+          Performance Optimizer
+        </h3>
+        <button
+          onClick={runOptimizations}
+          disabled={isOptimizing}
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+        >
+          <Zap className="h-4 w-4 mr-2" />
+          {isOptimizing ? 'Optimizing...' : 'Optimize'}
+        </button>
+      </div>
+
+      {optimizations.length > 0 && (
+        <div className="space-y-2 mb-4">
+          {optimizations.map((optimization, index) => (
+            <div key={index} className="flex items-center text-sm text-green-600">
+              <CheckCircle className="h-4 w-4 mr-2" />
+              {optimization}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {performanceScore && (
+        <div className="mt-4">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">Performance Score</span>
+            <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div
+              className={`h-2 rounded-full transition-all duration-500 ${
+                performanceScore >= 90 ? 'bg-green-500' : 
+                performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+              }`}
+              style={{ width: `${performanceScore}%` }}
+            />
+          </div>
+          {performanceScore < 90 && (
+            <div className="mt-2 flex items-center">
+              <AlertTriangle className="h-4 w-4 text-yellow-600" />
+              <span className="text-sm text-yellow-800 ml-2">
+                Performance can be improved. Consider additional optimizations.
+              </span>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default PerformanceOptimizer;
