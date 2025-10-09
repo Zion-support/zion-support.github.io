@@ -148,51 +148,6 @@ const Navigation: React.FC = () => {
               </div>
             </div>
 
-            {/* IT Services Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center space-x-1 text-white hover:text-purple-400 transition-colors duration-300"
-                onMouseEnter={() => setActiveDropdown('it')}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <Code className="w-4 h-4" />
-                <span>IT Services</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {activeDropdown === 'it' && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-900/95 backdrop-blur-lg rounded-lg shadow-xl border border-purple-400/20 p-4 z-50">
-                  <div className="grid grid-cols-1 gap-2">
-                    {itServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        to={service.url}
-                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
-                      >
-                        <service.icon className="w-5 h-5 text-purple-400" />
-                        <div className="flex-1">
-                          <div className="flex items-center space-x-2">
-                            <span className="text-white text-sm font-medium">{service.name}</span>
-                            {service.popular && <Star className="w-3 h-3 text-yellow-400" />}
-                          </div>
-                          <p className="text-xs text-gray-400">{service.description}</p>
-                        </div>
-                        <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-purple-400 transition-colors" />
-                      </Link>
-                    ))}
-                    <div className="border-t border-gray-700 pt-2 mt-2">
-                      <Link
-                        to="/it-services"
-                        className="flex items-center justify-center space-x-2 text-purple-400 hover:text-purple-300 text-sm font-medium py-2"
-                      >
-                        <span>View All IT Services</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <Link 
               to="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
@@ -242,8 +197,8 @@ const Navigation: React.FC = () => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+            <div className="px-4 py-6 space-y-6">
               <Link
                 to="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -299,9 +254,9 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <Link
-                to="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+              <a
+                href="tel:+13024640950"
+                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
               >
                 Case Studies
@@ -353,6 +308,7 @@ const Navigation: React.FC = () => {
             </div>
           </div>
         )}
+
       </div>
     </nav>
   );
