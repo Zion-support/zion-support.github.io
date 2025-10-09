@@ -16,7 +16,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Infrastructure',
       benefits: ['Reliable infrastructure', 'Reduced capital costs', 'Expert management', 'Compliance support'],
       technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'Cloud Infrastructure & Migration',
@@ -438,10 +439,10 @@ const ITServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <div className={`text-lg font-bold ${service.color} mb-2`}>{service.price}</div>
+                  <div className={`text-lg font-bold ${(service as any).color || 'text-cyan-400'} mb-2`}>{service.price}</div>
                   <a
                     href="/contact"
-                    className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
+                    className={`inline-flex items-center text-sm font-medium ${(service as any).color || 'text-cyan-400'} hover:opacity-80 transition-opacity`}
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
