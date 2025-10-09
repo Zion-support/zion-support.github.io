@@ -50,7 +50,18 @@ const ServicesPage: React.FC = () => {
         { name: 'AI Email Assistant', price: '$99/month', description: 'Smart email management and response suggestions', features: ['Email Classification', 'Response Suggestions', 'Scheduling', 'Follow-up Reminders'] },
         { name: 'AI Lead Generation', price: '$349/month', description: 'Automated lead generation and qualification system', features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration'] },
         { name: 'AI Sales Automation', price: '$399/month', description: 'Intelligent sales process automation and optimization', features: ['Sales Pipeline Management', 'Deal Tracking', 'Forecasting', 'Performance Analytics'] },
-        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] }
+        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] },
+        { name: 'AI Social Media Manager', price: '$179/month', description: 'Automated social media content creation and scheduling', features: ['Content Generation', 'Post Scheduling', 'Engagement Analytics', 'Trend Analysis'] },
+        { name: 'AI Video Editor', price: '$299/month', description: 'Automated video editing and content creation platform', features: ['Auto-Editing', 'Template Library', 'Brand Consistency', 'Export Options'] },
+        { name: 'AI Voice Assistant Builder', price: '$199/month', description: 'Custom voice assistant development for businesses', features: ['Voice Recognition', 'Custom Commands', 'Integration APIs', 'Multi-language Support'] },
+        { name: 'AI Legal Document Analyzer', price: '$399/month', description: 'Intelligent legal document review and analysis', features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Summary Generation'] },
+        { name: 'AI HR Recruiter', price: '$249/month', description: 'Automated candidate screening and recruitment', features: ['Resume Analysis', 'Skill Matching', 'Interview Scheduling', 'Candidate Scoring'] },
+        { name: 'AI Financial Advisor', price: '$349/month', description: 'Personalized financial planning and investment advice', features: ['Portfolio Analysis', 'Risk Assessment', 'Goal Planning', 'Market Insights'] },
+        { name: 'AI Inventory Optimizer', price: '$199/month', description: 'Smart inventory management and demand forecasting', features: ['Demand Forecasting', 'Reorder Alerts', 'Cost Optimization', 'Supplier Management'] },
+        { name: 'AI Meeting Transcriber', price: '$99/month', description: 'Real-time meeting transcription and note-taking', features: ['Live Transcription', 'Speaker Identification', 'Action Items', 'Search Functionality'] },
+        { name: 'AI Website Builder', price: '$199/month', description: 'AI-powered website creation and optimization', features: ['Auto-Design', 'Content Generation', 'SEO Optimization', 'Mobile Responsive'] },
+        { name: 'AI Email Marketing Pro', price: '$149/month', description: 'Advanced email marketing automation and personalization', features: ['Segmentation', 'A/B Testing', 'Personalization', 'Analytics'] },
+        { name: 'AI Project Manager', price: '$299/month', description: 'Intelligent project planning and resource management', features: ['Task Automation', 'Resource Allocation', 'Timeline Optimization', 'Risk Management'] }
       ]
     },
     {
@@ -65,6 +76,48 @@ const ServicesPage: React.FC = () => {
         { name: 'IoT & Edge Computing', price: '$1,499/month', description: 'Connected devices and edge computing solutions', features: ['Device Management', 'Edge Analytics', 'Real-time Processing', 'Security Implementation'] },
         { name: 'Business Intelligence', price: '$1,799/month', description: 'Data-driven insights and predictive analytics for decision-making', features: ['Data Warehousing', 'ETL Processes', 'Advanced Analytics', 'Executive Dashboards'] },
         { name: 'Robotics Solutions', price: 'Custom', description: 'Intelligent robotic solutions for manufacturing and service industries', features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems'] }
+      ]
+    },
+    {
+      title: 'Advanced AI Solutions',
+      icon: Brain,
+      color: 'text-pink-600',
+      bgColor: 'bg-pink-50',
+      services: [
+        { name: 'AI-Powered Predictive Analytics', price: '$1,999/month', description: 'Advanced predictive modeling for business forecasting', features: ['Demand Forecasting', 'Risk Prediction', 'Market Analysis', 'Trend Detection'] },
+        { name: 'AI Content Moderation', price: '$799/month', description: 'Automated content moderation and safety systems', features: ['Image Recognition', 'Text Analysis', 'Video Processing', 'Real-time Filtering'] },
+        { name: 'AI Fraud Detection', price: '$1,299/month', description: 'Advanced fraud detection and prevention systems', features: ['Transaction Monitoring', 'Pattern Recognition', 'Risk Scoring', 'Alert System'] },
+        { name: 'AI Recommendation Engine', price: '$899/month', description: 'Personalized recommendation systems for any industry', features: ['User Profiling', 'Content Matching', 'A/B Testing', 'Performance Analytics'] },
+        { name: 'AI Sentiment Analysis', price: '$599/month', description: 'Real-time sentiment analysis for social media and reviews', features: ['Multi-language Support', 'Emotion Detection', 'Trend Analysis', 'Custom Models'] },
+        { name: 'AI Voice Synthesis', price: '$699/month', description: 'High-quality voice synthesis and cloning technology', features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language'] }
+      ]
+    },
+    {
+      title: 'Enterprise IT Solutions',
+      icon: Building,
+      color: 'text-indigo-600',
+      bgColor: 'bg-indigo-50',
+      services: [
+        { name: 'Enterprise Resource Planning (ERP)', price: '$2,999/month', description: 'Comprehensive ERP solutions with AI integration', features: ['Financial Management', 'Supply Chain', 'Human Resources', 'Customer Relations'] },
+        { name: 'Customer Relationship Management (CRM)', price: '$1,499/month', description: 'AI-powered CRM with advanced analytics', features: ['Lead Management', 'Sales Automation', 'Customer Insights', 'Marketing Integration'] },
+        { name: 'Enterprise Data Warehouse', price: '$1,799/month', description: 'Scalable data warehousing with real-time analytics', features: ['Data Integration', 'ETL Processes', 'Real-time Analytics', 'Data Governance'] },
+        { name: 'API Management Platform', price: '$1,199/month', description: 'Comprehensive API lifecycle management', features: ['API Gateway', 'Rate Limiting', 'Analytics', 'Security'] },
+        { name: 'Enterprise Security Suite', price: '$2,499/month', description: 'Comprehensive security solutions for large organizations', features: ['Threat Detection', 'Vulnerability Management', 'Compliance', 'Incident Response'] },
+        { name: 'Cloud Migration Services', price: '$1,599/month', description: 'Complete cloud migration and optimization', features: ['Assessment', 'Migration Planning', 'Data Transfer', 'Optimization'] }
+      ]
+    },
+    {
+      title: 'Industry-Specific Solutions',
+      icon: Target,
+      color: 'text-emerald-600',
+      bgColor: 'bg-emerald-50',
+      services: [
+        { name: 'Healthcare AI Platform', price: '$2,299/month', description: 'AI solutions for healthcare providers and patients', features: ['Medical Imaging', 'Diagnostic Support', 'Patient Monitoring', 'Drug Discovery'] },
+        { name: 'FinTech Solutions', price: '$1,899/month', description: 'Financial technology and payment processing', features: ['Payment Processing', 'Risk Assessment', 'Compliance', 'Fraud Prevention'] },
+        { name: 'EdTech Platform', price: '$1,399/month', description: 'Educational technology and learning management', features: ['Learning Analytics', 'Personalized Learning', 'Assessment Tools', 'Content Management'] },
+        { name: 'Retail AI Solutions', price: '$1,699/month', description: 'AI-powered retail and e-commerce solutions', features: ['Inventory Management', 'Customer Analytics', 'Price Optimization', 'Supply Chain'] },
+        { name: 'Manufacturing AI', price: '$2,199/month', description: 'AI for manufacturing and industrial processes', features: ['Predictive Maintenance', 'Quality Control', 'Supply Chain', 'Process Optimization'] },
+        { name: 'Real Estate AI', price: '$1,299/month', description: 'AI solutions for real estate professionals', features: ['Property Valuation', 'Market Analysis', 'Lead Generation', 'Virtual Tours'] }
       ]
     }
   ];
@@ -111,7 +164,7 @@ const ServicesPage: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">80+</div>
               <div className="text-gray-300">Services</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">

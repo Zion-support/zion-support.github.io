@@ -32,6 +32,14 @@
   --shadow-neon: 0 0 20px rgba(0, 255, 255, 0.5);
   --shadow-purple: 0 0 20px rgba(139, 92, 246, 0.5);
   --shadow-pink: 0 0 20px rgba(236, 72, 153, 0.5);
+  
+  /* Enhanced futuristic variables */
+  --neon-glow: 0 0 30px rgba(0, 255, 255, 0.8);
+  --neon-glow-purple: 0 0 30px rgba(139, 92, 246, 0.8);
+  --neon-glow-pink: 0 0 30px rgba(236, 72, 153, 0.8);
+  --cyber-grid: linear-gradient(90deg, transparent 98%, rgba(0, 255, 255, 0.1) 100%);
+  --cyber-grid-vertical: linear-gradient(0deg, transparent 98%, rgba(0, 255, 255, 0.1) 100%);
+  --hologram-bg: linear-gradient(45deg, rgba(0, 255, 255, 0.1), rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
 }
 
 /* Base Styles */
@@ -93,6 +101,78 @@ body {
 @keyframes neuralPulse {
   0%, 100% { opacity: 0.1; }
   50% { opacity: 0.3; }
+}
+
+/* Enhanced futuristic animations */
+@keyframes neonPulse {
+  0%, 100% { 
+    text-shadow: 0 0 5px var(--primary-cyan), 0 0 10px var(--primary-cyan), 0 0 15px var(--primary-cyan);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  50% { 
+    text-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-cyan), 0 0 30px var(--primary-cyan);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+  }
+}
+
+@keyframes cyberGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.1);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.6), inset 0 0 40px rgba(0, 255, 255, 0.2);
+  }
+}
+
+@keyframes hologram {
+  0%, 100% { 
+    opacity: 0.8;
+    transform: translateY(0px) rotateX(0deg);
+  }
+  50% { 
+    opacity: 1;
+    transform: translateY(-5px) rotateX(5deg);
+  }
+}
+
+@keyframes matrixRain {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes scanLine {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes dataStream {
+  0% { transform: translateX(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(100vw); opacity: 0; }
+}
+
+@keyframes quantumFlicker {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.8; }
+  50% { opacity: 0.9; }
+  75% { opacity: 0.7; }
+}
+
+@keyframes energyWave {
+  0% { transform: scale(0) rotate(0deg); opacity: 1; }
+  100% { transform: scale(1) rotate(360deg); opacity: 0; }
+}
+
+@keyframes neuralPulse {
+  0%, 100% { 
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  }
+  50% { 
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
+  }
 }
 
 /* Matrix Rain Effect */
@@ -219,6 +299,90 @@ body {
     0 0 20px rgba(0, 255, 255, 0.3),
     inset 0 0 20px rgba(0, 255, 255, 0.1);
   transform: translateY(-2px);
+}
+
+/* Enhanced futuristic utility classes */
+.neon-pulse {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+.cyber-glow-enhanced {
+  animation: cyberGlow 3s ease-in-out infinite;
+}
+
+.hologram-effect {
+  animation: hologram 4s ease-in-out infinite;
+}
+
+.quantum-flicker {
+  animation: quantumFlicker 0.5s ease-in-out infinite;
+}
+
+.energy-wave {
+  animation: energyWave 2s ease-out infinite;
+}
+
+.neural-pulse-bg {
+  animation: neuralPulse 4s ease-in-out infinite;
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-image: 
+    var(--cyber-grid),
+    var(--cyber-grid-vertical);
+  background-size: 50px 50px;
+  background-position: 0 0, 0 0;
+}
+
+.neural-network-bg {
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  background-size: 100% 100%, 100% 100%, 100% 100%;
+  animation: neuralPulse 8s ease-in-out infinite;
+}
+
+/* Scan Line Effect */
+.scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-cyan), transparent);
+  animation: scanLine 3s linear infinite;
+}
+
+/* Data Stream Effect */
+.data-stream {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-stream::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 255, 0.1) 2px,
+    rgba(0, 255, 255, 0.1) 4px
+  );
+  animation: dataStream 4s linear infinite;
+  pointer-events: none;
 }
 
 /* Hologram Cards */
