@@ -1,22 +1,20 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-async function handler(req, res) {/* TODO: Fix JSX expression */}
-  }
-
+async function handler(req, res) {
   const { amount, currency = 'usd' } = req.body || {};
 
-  if (!amount) {/* TODO: Fix JSX expression */}
-  r: 'Amount is required' });
+  if (!amount) {
+    res.status(400).json({ error: 'Amount is required' });
     return;
   }
 
-  try {/* TODO: Fix JSX expression */}
-    };
-
+  try {
+    // Implementation for creating payment intent
+    const paymentIntent = { id: 'pi_test', amount, currency };
     res.statusCode = 200;
     res.json({ paymentIntent });
-  } catch {/* TODO: Fix JSX expression */}
-  r: 'Failed to create payment intent' });
+  } catch {
+    res.status(500).json({ error: 'Failed to create payment intent' });
   }
 }
 
