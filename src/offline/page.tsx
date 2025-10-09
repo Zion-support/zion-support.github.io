@@ -6,8 +6,6 @@ import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
  * Offline Page
  * Displayed when the user is offline and tries to access a page
  */
-<<<<<<< HEAD
-=======
 const OfflinePage: React.FC = () => {
   const handleRetry = () => {
     window.location.reload();

@@ -8,12 +8,8 @@ import '@testing-library/jest-dom';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
-const originalConsoleError = console.error;
-<<<<<<< HEAD
-=======
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
