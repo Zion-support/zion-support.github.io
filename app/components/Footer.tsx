@@ -1,6 +1,5 @@
 'use client';
 import React, { memo } from 'react';
-import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
@@ -299,12 +298,12 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2 mb-6">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <a 
                     href={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
