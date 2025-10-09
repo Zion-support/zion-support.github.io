@@ -1,9 +1,63 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, createContext, useContext, useCallback } from 'react';
 
 const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
 
+interface AnalyticsContextType {
+  trackEvent: (action: string, category: string, label?: string, value?: number) => void;
+  trackPageView: (path: string) => void;
+  trackError: (error: Error, context?: string) => void;
+  trackPerformance: (metric: string, value: number) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
+
+export const useAnalytics = (): AnalyticsContextType => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const trackEvent = useCallback((action: string, category: string, label?: string, value?: number) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', action, {
+        event_category: category,
+        event_label: label,
+        value: value,
+      });
+    }
+  }, []);
+
+  const trackPageView = useCallback((path: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', GA_TRACKING_ID, {
+        page_path: path,
+      });
+    }
+  }, []);
+
+  const trackError = useCallback((error: Error, context?: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_parameter: context,
+      });
+    }
+  }, []);
+
+  const trackPerformance = useCallback((metric: string, value: number) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'timing_complete', {
+        name: metric,
+        value: Math.round(value),
+      });
+    }
+  }, []);
+
   useEffect(() => {
     // Initialize Google Analytics
     const initAnalytics = () => {
@@ -96,6 +150,18 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, []);
-  return <>{children}</>;
+
+  const contextValue: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+    trackError,
+    trackPerformance,
+  };
+
+  return (
+    <AnalyticsContext.Provider value={contextValue}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
 };
 export default AnalyticsProvider;
