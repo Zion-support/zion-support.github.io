@@ -3,7 +3,6 @@
  * Data Validation Utility
  * Provides comprehensive data validation with type safety
  */
-import { errorTracking, ErrorCategory, ErrorSeverity } from './errorTracking';
 export interface ValidationRule<T = unknown> {
   validate: (value: T) => boolean;
   message: string;

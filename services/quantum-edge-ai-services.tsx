@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Quantum Edge Ai Services | Zion Tech Group',

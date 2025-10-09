@@ -1,5 +1,4 @@
 import React, { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
 // Lazy load pages for better performance

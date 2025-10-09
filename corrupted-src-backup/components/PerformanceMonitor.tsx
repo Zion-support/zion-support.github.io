@@ -1,6 +1,5 @@
 :src/components/PerformanceMonitor.tsx
 import React, { useEffect, useState } from 'react';
-import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
 
 interface PerformanceMonitorProps {
   children: React.ReactNode;
@@ -112,7 +111,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   return <>{children}</>;
 import React, { useEffect, useState, useCallback } from 'react';
-import performanceOptimizer, { WebVitalsMetrics, PerformanceBudget } from '../utils/performanceOptimizer';
 
 interface PerformanceMonitorProps {
   enabled?: boolean;

@@ -4,7 +4,6 @@
  * Comprehensive tests for the EnhancedLogger utility
  */
 
-import { EnhancedLogger, LogLevel, LogEntry } from '../app/utils/enhancedLogger';
 
 describe('EnhancedLogger', () => {
   let logger: EnhancedLogger;

@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import './app/globals.css';
 
 const root = document.getElementById('root');

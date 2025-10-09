@@ -3,7 +3,6 @@
  * Advanced Error Tracking and Reporting System
  * Provides comprehensive error tracking with categorization and analytics
  */
-import { logger } from './logger';
 export enum ErrorSeverity {
   Low = 'low',
   Medium = 'medium',

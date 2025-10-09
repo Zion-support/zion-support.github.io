@@ -2,8 +2,6 @@
 /**
  * Enhanced API Client with retry logic, caching, and error handling
  */
-import { cacheManager, CacheOptions } from './cacheManager';
-import { logError, logCritical } from './errorLogger';
 export interface ApiClientConfig {
   baseURL?: string;
   timeout?: number;

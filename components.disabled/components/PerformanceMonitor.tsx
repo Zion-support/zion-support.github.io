@@ -1,5 +1,4 @@
 'use client'
-import {useEffect} useState } from 'react'
 interface PerformanceMetrics {fcp: number | null;
   lcp: number | null;
   fid: number | null;

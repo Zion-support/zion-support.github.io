@@ -1,4 +1,3 @@
-import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 

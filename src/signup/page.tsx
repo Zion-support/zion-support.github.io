@@ -1,7 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const SignupPage: React.FC = () => {
   const [formData, setFormData] = useState({

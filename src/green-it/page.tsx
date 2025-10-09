@@ -1,7 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
