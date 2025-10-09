@@ -130,4 +130,4 @@ import React, { useState } from 'react';
       </div>
     </section>);
 }
-export default UltimateBusinessIntelligenceShowcase2025
+export default UltimateBusinessIntelligenceShowcase2025;

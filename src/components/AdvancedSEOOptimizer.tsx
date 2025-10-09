@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useEffect } from 'react';
+
 interface AdvancedSEOOptimizerProps {
   title?: string;
   description?: string;
@@ -45,6 +47,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   organizationData,
   websiteData
 }) => {
+  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attribute, name);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  };
+
   useEffect(() => {
     // Update page title
     document.title = title;
@@ -189,8 +201,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const addAdditionalSEOTags = () => {
     // Add viewport meta tag if not present
-    if (!document.querySelector('meta[name="viewport"]')) {}
-
+    if (!document.querySelector('meta[name="viewport"]')) {
       const viewport = document.createElement('meta');
       viewport.name = 'viewport';
       viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
@@ -215,7 +226,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     // Add content security policy
     updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
-  };
+    
+    // Add additional SEO tags
+    addAdditionalSEOTags();
+  }, [title, description, keywords, canonicalUrl, ogImage, author, robots, noindex, locale, publishedTime, modifiedTime, section, tags]);
 
   return null;
 };
