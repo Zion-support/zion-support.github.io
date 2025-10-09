@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-
-
-import React, { useEffect, useState, lazy } from 'react';
-
-=======
 import React, { useEffect, useState, lazy, Suspense } from 'react';
->>>>>>> cursor/website-audit-and-update-with-deployment-d6fe
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -73,39 +66,17 @@ const LoadingSpinner: React.FC = () => (
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-<<<<<<< HEAD
-
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsInitialized(true);
-    }, 1000);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
-
-=======
 
   useEffect(() => {
     // Initialize app
     setIsInitialized(true);
   }, []);
-
->>>>>>> cursor/website-audit-and-update-with-deployment-d6fe
   if (!isInitialized) {
     return <LoadingSpinner />;
   }
 
   return (
     <div className="App">
-<<<<<<< HEAD
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </Suspense>
-=======
       <Navigation />
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
@@ -164,7 +135,6 @@ const App: React.FC = () => {
         </Routes>
       </Suspense>
       <Footer />
->>>>>>> cursor/website-audit-and-update-with-deployment-d6fe
     </div>
   );
 };
