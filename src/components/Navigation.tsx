@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -75,7 +76,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone },
     { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
+    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check },
     { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator },
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot },
     { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3 },
@@ -274,7 +275,7 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
             </Link>
             <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
@@ -368,7 +369,7 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
               </Link>
               <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
