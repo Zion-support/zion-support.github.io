@@ -51,6 +51,8 @@ const HomePage: React.FC = () => {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
+    }
+  };
 
   const microSAASServices = [
     {
@@ -64,6 +66,7 @@ const HomePage: React.FC = () => {
       popular: true,
       category: 'Productivity'
     },
+    {
       title: 'AI Social Media Manager',
       description: 'Transform your social media presence with our cutting-edge AI platform that creates engaging content, optimizes posting schedules, and provides deep audience insights to maximize your brand impact across all platforms.',
       icon: '📱',
@@ -72,6 +75,8 @@ const HomePage: React.FC = () => {
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '60% better content performance'],
       link: '/ai-social-media-manager',
       category: 'Marketing'
+    },
+    {
       title: 'AI Analytics Dashboard',
       description: 'Unlock the power of your data with our intelligent analytics platform that uses machine learning to identify patterns, predict trends, and provide actionable insights that drive business growth and competitive advantage.',
       icon: '📈',

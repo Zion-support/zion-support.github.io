@@ -1665,7 +1665,7 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
   
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   const realEstateSaaS = [
     {
       title: 'AI Property Valuation Platform',
@@ -3371,7 +3371,7 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   const categories = [
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
