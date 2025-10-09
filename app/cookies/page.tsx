@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Shield, Settings, BarChart, Eye } from 'lucide-react';
 
 const CookiesPage: React.FC = () => {
   return (

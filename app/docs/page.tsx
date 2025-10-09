@@ -1,7 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Search, Book, Code, Zap, Brain, Shield, BarChart, Globe, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
   return (

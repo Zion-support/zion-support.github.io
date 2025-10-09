@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Eye, FileText, Shield, Lock, CheckCircle, AlertTriangle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 const GDPRPage: React.FC = () => {
   return (
