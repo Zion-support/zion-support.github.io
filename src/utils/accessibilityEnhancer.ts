@@ -20,6 +20,9 @@ interface AccessibilityMetrics {
   keyboardNavigationScore: number;
   screenReaderScore: number;
   overallScore: number;
+  score?: number;
+  issues?: number;
+  recommendations?: number;
 }
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
