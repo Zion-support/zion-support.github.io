@@ -439,22 +439,14 @@ body {
   }
 }
 
-<<<<<<< HEAD
-@media (max-width: 480px) {
-=======
 /* Enhanced Responsive Design */
 @media (max-width: 640px) {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   .cyber-grid {
     background-size: 20px 20px;
   }
   
   .neon-text {
-<<<<<<< HEAD
-    font-size: 1.2rem;
-=======
     font-size: 1.25rem;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   }
   
   .cyber-text {
@@ -464,17 +456,13 @@ body {
   
   .cyber-card {
     padding: 0.75rem;
-<<<<<<< HEAD
-=======
     margin: 0.5rem;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   }
   
   .cyber-button {
     padding: 8px 16px;
     font-size: 0.8rem;
   }
-<<<<<<< HEAD
 }
 
 /* Loading Animations */
@@ -846,7 +834,7 @@ body {
   
   .quantum-field {
     animation-duration: 3s;
-=======
+  }
   
   .holographic-text {
     font-size: 2rem;
@@ -858,47 +846,11 @@ body {
   
   .hologram-card {
     padding: 0.75rem;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   }
 }
 
 @media (max-width: 480px) {
   .cyber-grid {
-<<<<<<< HEAD
-    background-size: 10px 10px;
-  }
-  
-  .neon-text {
-    text-shadow: 
-      0 0 2px #00ffff,
-      0 0 4px #00ffff,
-      0 0 6px #00ffff;
-  }
-  
-  .cyber-text-3d {
-    transform: perspective(300px) rotateX(5deg);
-  }
-}
-
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  .cyber-text-3d {
-    transform: none;
-  }
-  
-  .quantum-field {
-    animation: none;
-  }
-}
-=======
     background-size: 15px 15px;
   }
   
@@ -1040,4 +992,291 @@ body {
   }
 }
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
+/* Advanced Futuristic Effects */
+.cyber-glow-advanced {
+  position: relative;
+  background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  animation: cyber-glow-pulse 3s ease-in-out infinite;
+}
+
+.cyber-glow-advanced::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+  background-size: 400% 400%;
+  animation: cyber-glow-rotate 3s linear infinite;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+@keyframes cyber-glow-pulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.3),
+      inset 0 0 20px rgba(0, 255, 255, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 40px rgba(0, 255, 255, 0.6),
+      0 0 80px rgba(0, 255, 255, 0.3),
+      inset 0 0 30px rgba(0, 255, 255, 0.2);
+  }
+}
+
+@keyframes cyber-glow-rotate {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.neural-network-advanced {
+  position: relative;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  animation: neural-network-pulse 4s ease-in-out infinite;
+}
+
+@keyframes neural-network-pulse {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.holographic-advanced {
+  background: linear-gradient(45deg, 
+    rgba(0, 255, 255, 0.1) 0%, 
+    rgba(255, 0, 255, 0.1) 25%, 
+    rgba(255, 255, 0, 0.1) 50%, 
+    rgba(0, 255, 0, 0.1) 75%, 
+    rgba(0, 255, 255, 0.1) 100%);
+  background-size: 400% 400%;
+  animation: holographic-shift 4s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    transparent 100%);
+  animation: holographic-sweep 3s linear infinite;
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes holographic-sweep {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.quantum-field-advanced {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.1) 0%, 
+    rgba(236, 72, 153, 0.1) 50%, 
+    rgba(59, 130, 246, 0.1) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  animation: quantum-vibration-advanced 2s ease-in-out infinite;
+}
+
+@keyframes quantum-vibration-advanced {
+  0%, 100% { 
+    transform: translateZ(0) rotateX(0deg);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  25% { 
+    transform: translateZ(1px) rotateX(1deg);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+  }
+  50% { 
+    transform: translateZ(2px) rotateX(0deg);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  }
+  75% { 
+    transform: translateZ(1px) rotateX(-1deg);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+  }
+}
+
+.cyber-text-advanced {
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: cyber-text-flow-advanced 3s ease-in-out infinite;
+  text-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(255, 0, 255, 0.3),
+    0 0 30px rgba(255, 255, 0, 0.2);
+  transform: perspective(1000px) rotateX(15deg);
+  position: relative;
+}
+
+.cyber-text-advanced::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: cyber-text-flow-advanced 3s ease-in-out infinite reverse;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@keyframes cyber-text-flow-advanced {
+  0%, 100% { 
+    background-position: 0% 50%;
+    transform: perspective(1000px) rotateX(15deg) scale(1);
+  }
+  50% { 
+    background-position: 100% 50%;
+    transform: perspective(1000px) rotateX(15deg) scale(1.05);
+  }
+}
+
+.particle-field-advanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-field-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #00ffff, transparent),
+    radial-gradient(1px 1px at 40px 70px, #ff00ff, transparent),
+    radial-gradient(1px 1px at 90px 40px, #ffff00, transparent),
+    radial-gradient(1px 1px at 130px 80px, #00ff00, transparent),
+    radial-gradient(1px 1px at 160px 20px, #ff8000, transparent),
+    radial-gradient(1px 1px at 200px 60px, #8000ff, transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: particle-drift-advanced 20s linear infinite;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@keyframes particle-drift-advanced {
+  0% { 
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.4;
+  }
+  25% { 
+    transform: translateY(-50px) rotate(90deg) scale(1.1);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-100px) rotate(180deg) scale(1);
+    opacity: 0.4;
+  }
+  75% { 
+    transform: translateY(-150px) rotate(270deg) scale(0.9);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: translateY(-200px) rotate(360deg) scale(1);
+    opacity: 0.4;
+  }
+}
+
+/* Enhanced Cyber Grid */
+.cyber-grid-advanced {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255, 0, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  animation: cyber-grid-pulse 4s ease-in-out infinite;
+}
+
+@keyframes cyber-grid-pulse {
+  0%, 100% { 
+    opacity: 0.3;
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  }
+  50% { 
+    opacity: 0.6;
+    background-size: 60px 60px, 60px 60px, 15px 15px, 15px 15px;
+  }
+}
+
+/* Matrix Rain Advanced */
+.matrix-rain-advanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 255, 0.02) 2px,
+      rgba(0, 255, 255, 0.02) 4px
+    );
+  animation: matrix-fall-advanced 15s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes matrix-fall-advanced {
+  0% { 
+    transform: translateY(-100%) translateX(0);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateY(-50%) translateX(10px);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: translateY(100%) translateX(0);
+    opacity: 0.3;
+  }
+}
