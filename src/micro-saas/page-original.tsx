@@ -1663,7 +1663,7 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
   
-  const realEstateSaaS = [
+  // const realEstateSaaS = [
     {
       title: 'AI Property Valuation Platform',
       description: 'Advanced property valuation using machine learning and real estate data analysis.',

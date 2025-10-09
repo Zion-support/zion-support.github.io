@@ -9,8 +9,8 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
-console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
+console.error = (...args: unknown[]) => {
+  const message = args[0]?.toString?.() || (args[0] as { message?: string })?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;
@@ -60,7 +60,7 @@ global.fetch = jest.fn();
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 // eslint-disable-next-line no-console
-console.warn = (...args) => {
+console.warn = (...args: unknown[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
@@ -68,7 +68,7 @@ console.warn = (...args) => {
   originalConsoleWarn(...args);
 };
 // eslint-disable-next-line no-console
-console.info = (...args) => {
+console.info = (...args: unknown[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
@@ -87,8 +87,8 @@ global.PerformanceObserver = class MockPerformanceObserver {
 };
 // Suppress JSDOM navigation warnings
 // eslint-disable-next-line no-console
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
+console.error = (...args: unknown[]) => {
+  if (args[0] && (args[0] as { type?: string; message?: string }).type === 'not implemented' && (args[0] as { message?: string }).message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
   originalConsoleError.apply(console, args);
