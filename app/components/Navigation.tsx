@@ -149,17 +149,17 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg shadow-purple-500/20 border-b border-purple-500/30' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-nav ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-pulse' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 neon-cyan">
-              <Zap className="w-5 h-5 text-white" />
+          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center cyber-pulse quantum-fluctuation">
+              <Zap className="w-5 h-5 text-white neural-sync" />
             </div>
-            <span className="text-white font-bold text-xl group-hover:text-cyan-400 transition-colors duration-300 gradient-text-cyan">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl neon-text holographic-shimmer">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}

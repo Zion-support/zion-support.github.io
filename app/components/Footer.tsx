@@ -79,51 +79,33 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
-
+<<<<<<< HEAD
+=======
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid cyber-pulse energy-wave">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center neon-cyan">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center cyber-pulse quantum-fluctuation">
+                <Brain className="w-5 h-5 text-white neural-sync" />
               </div>
-              <span className="text-2xl font-bold gradient-text-cyan">Zion Tech Group</span>
+              <span className="text-2xl font-bold text-white neon-text holographic-shimmer">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
             
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400 transition-colors">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-cyan-400" />
-                <span className="text-gray-300">
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </span>
-              </div>
+            {/* Achievements */}
+            <div className="space-y-3 mb-6">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="flex items-center space-x-2 cyber-pulse">
+                  <achievement.icon className="w-4 h-4 text-cyan-400 quantum-fluctuation" />
+                  <span className="text-sm text-gray-300 hologram-flicker">{achievement.text}</span>
+                </div>
+              ))}
             </div>
 
             {/* Social Links */}
