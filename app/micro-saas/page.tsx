@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -27,19 +26,16 @@ import {
   Compass as CompassIcon, PieChart as PieChartIcon,
   TrendingDown as TrendingDownIcon, Activity as ActivityIcon
 } from 'lucide-react';
-=======
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Package, Mic, PenTool, Box, Shirt, Wifi, Link, Atom } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
 
 const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-<<<<<<< HEAD
   const microSaasServices = [
     // AI-Powered Business Tools
     {
@@ -572,7 +568,6 @@ const MicroSaasPage: React.FC = () => {
               <Mail className="w-5 h-5 inline mr-2" />
               Get Free Consultation
             </a>
-=======
   const microSAASServices = [
     {
       id: 'ai-project-manager',
@@ -685,12 +680,10 @@ const MicroSaasPage: React.FC = () => {
             <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
               Discover our collection of specialized micro SAAS applications designed to solve specific business challenges with AI-powered intelligence.
             </p>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -823,7 +816,6 @@ const MicroSaasPage: React.FC = () => {
                 </div>
               </div>
             ))}
-=======
         {/* Search and Filter Section */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -930,12 +922,10 @@ const MicroSaasPage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
         <div className="max-w-4xl mx-auto text-center">
@@ -969,7 +959,6 @@ const MicroSaasPage: React.FC = () => {
 };
 
 export default MicroSaasPage;
-=======
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1007,4 +996,3 @@ export default MicroSaasPage;
 };
 
 export default MicroSAASPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-0761

@@ -29,12 +29,8 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ session: sessionData }));
-  } catch (err) {
-<<<<<<< HEAD
-    console.error('Checkout session error:', err);
-=======
-    console.error('Error creating checkout session:', err);
->>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+  } catch (error) {
+    console.error('Error creating checkout session:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));

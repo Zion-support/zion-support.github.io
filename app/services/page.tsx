@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Clock, Phone, Mail, MapPin, Target, Globe, Database, Smartphone, Lock, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Link } from 'lucide-react';
-=======
-import { Brain, Zap, Globe, ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -34,56 +30,6 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const itServices = [
-    {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for modern businesses.',
-      icon: Cloud,
-      features: ['AWS/Azure/GCP Migration', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization'],
-      path: '/cloud-infrastructure'
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      icon: Shield,
-      features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
-      path: '/cybersecurity'
-    },
-    {
-      title: 'IT Support',
-      description: '24/7 technical support and maintenance services.',
-      icon: Settings,
-      features: ['Remote Support', 'System Monitoring', 'Proactive Maintenance', 'Help Desk'],
-      path: '/it-support'
-    },
-    {
-      title: 'Database Management',
-      description: 'Optimize and secure your database infrastructure.',
-      icon: Database,
-      features: ['Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Migration Services'],
-      path: '/database-management'
-    }
-  ];
-
-  const microSaasServices = [
-    {
-      title: 'Custom Micro SAAS',
-      description: 'Build tailored software solutions for your specific business needs.',
-      icon: Code,
-      features: ['Custom Development', 'User Management', 'Payment Integration', 'Analytics Dashboard'],
-      path: '/micro-saas'
-    }
-  ];
-
-  const contactInfo = {
-    phone: '(302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: 'Middletown, DE 19709'
-  };
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
   return (
     <>
       <Helmet>

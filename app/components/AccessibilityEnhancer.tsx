@@ -28,17 +28,16 @@ const AccessibilityEnhancer: React.FC = () => {
       });
     };
 
-<<<<<<< HEAD
-    // Apply focus trapping to modals
-    const modals = document.querySelectorAll('[role="dialog"], [role="modal"]');
-    modals.forEach(modal => trapFocus(modal as HTMLElement));
-=======
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
     };
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
+
+    // Apply focus trapping to modals
+    const modals = document.querySelectorAll('[role="dialog"], [role="modal"]');
+    modals.forEach(modal => trapFocus(modal as HTMLElement));
 
     // Add ARIA live region for announcements
     const liveRegion = document.createElement('div');
@@ -129,7 +128,6 @@ const AccessibilityEnhancer: React.FC = () => {
         liveRegion.remove();
       }
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-1917
   }, []);
 
   const addKeyboardNavigation = useCallback(() => {
