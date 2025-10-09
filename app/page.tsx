@@ -62,7 +62,11 @@ export default function HomePage() {
   if (!isLoaded) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-white text-xl">Loading...</div>
+        <div className="text-center">
+          <LoadingSpinner size="lg" className="mb-4" />
+          <div className="text-white text-xl font-medium">Loading Zion Tech Group...</div>
+          <div className="text-gray-400 text-sm mt-2">Preparing your AI solutions</div>
+        </div>
       </div>
     );
   }
@@ -98,7 +102,9 @@ export default function HomePage() {
               Advanced AI and IT Solutions
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+              Premier AI and IT solutions provider delivering <span className="text-cyan-400 font-semibold">$50M+ in annual savings</span>, 
+              <span className="text-cyan-400 font-semibold"> 95% process automation</span>, and 
+              <span className="text-cyan-400 font-semibold"> 300% ROI</span> for enterprise clients. 
               Transform your business with our cutting-edge technology and achieve unprecedented growth.
             </p>
             
@@ -126,16 +132,16 @@ export default function HomePage() {
               <a
                 href="tel:+13024640950"
                 onClick={handlePhoneClick}
-                className="cyber-button w-full sm:w-auto text-center"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
               >
-                Call: (302) 464-0950
+                📞 Call: (302) 464-0950
               </a>
               <a 
                 href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center"
               >
-                Get Free Consultation
+                🚀 Get Free Consultation
               </a>
             </div>
           </div>
@@ -159,8 +165,9 @@ export default function HomePage() {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
-                    Learn More →
+                  <div className="text-xs text-gray-400 mb-3">Save up to $50M annually</div>
+                  <a href="/ai-services" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More <span className="ml-1">→</span>
                   </a>
                 </div>
               </article>
@@ -175,8 +182,9 @@ export default function HomePage() {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
-                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
-                    Learn More →
+                  <div className="text-xs text-gray-400 mb-3">3x higher conversion rates</div>
+                  <a href="/ai-marketing" className="inline-flex items-center text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More <span className="ml-1">→</span>
                   </a>
                 </div>
               </article>

@@ -175,6 +175,12 @@ const nextConfig = {
     '@heroicons/react': {
       transform: '@heroicons/react/{{member}}',
     },
+    'framer-motion': {
+      transform: 'framer-motion/dist/es/{{member}}',
+    },
+    'recharts': {
+      transform: 'recharts/es6/{{member}}',
+    },
   },
 
   // Compiler optimizations
