@@ -1,32 +1,19 @@
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
-
-const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-import React, { useState } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
+
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
   };
+
   const apiEndpoints = [
     {
       title: 'AI Services',
@@ -34,77 +21,197 @@ const ApiDocsPage: React.FC = () => {
       endpoints: [
         {
           method: 'POST',
-          path: '/api/ai/analyze',
-          description: 'Analyze text using AI',
-          example: `curl -X POST https://api.ziontechgroup.com/ai/analyze \\
-  -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -d '{"text": "Your text to analyze"}'`
+          path: '/api/ai/content-generation',
+          description: 'Generate AI-powered content',
+          parameters: [
+            { name: 'prompt', type: 'string', required: true, description: 'Content prompt' },
+            { name: 'style', type: 'string', required: false, description: 'Content style' },
+            { name: 'length', type: 'number', required: false, description: 'Content length' }
+          ],
+          example: {
+            request: {
+              prompt: 'Write a blog post about AI trends',
+              style: 'professional',
+              length: 500
+            },
+            response: {
+              content: 'AI is transforming industries...',
+              wordCount: 487,
+              confidence: 0.95
+            }
+          }
         },
         {
-          method: 'GET',
-          path: '/api/ai/status',
-          description: 'Check AI service status',
-          example: `curl -X GET https://api.ziontechgroup.com/ai/status \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
+          method: 'POST',
+          path: '/api/ai/data-analytics',
+          description: 'Analyze data with AI insights',
+          parameters: [
+            { name: 'data', type: 'array', required: true, description: 'Data to analyze' },
+            { name: 'analysisType', type: 'string', required: true, description: 'Type of analysis' }
+          ],
+          example: {
+            request: {
+              data: [1, 2, 3, 4, 5],
+              analysisType: 'trend'
+            },
+            response: {
+              trend: 'increasing',
+              confidence: 0.87,
+              insights: ['Data shows upward trend']
+            }
+          }
         }
       ]
     },
     {
-      title: 'Data Analytics',
-      description: 'Retrieve and analyze your data',
+      title: 'Authentication',
+      description: 'Secure API access with JWT tokens',
       endpoints: [
         {
-          method: 'GET',
-          path: '/api/analytics/dashboard',
-          description: 'Get dashboard data',
-          example: `curl -X GET https://api.ziontechgroup.com/analytics/dashboard \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
+          method: 'POST',
+          path: '/api/auth/login',
+          description: 'Authenticate and get access token',
+          parameters: [
+            { name: 'email', type: 'string', required: true, description: 'User email' },
+            { name: 'password', type: 'string', required: true, description: 'User password' }
+          ],
+          example: {
+            request: {
+              email: 'user@example.com',
+              password: 'password123'
+            },
+            response: {
+              token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
+              expiresIn: 3600
+            }
+          }
         }
       ]
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
+      
       <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             API Documentation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive API documentation for integrating with Zion Tech Group's AI and IT services
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Integrate with our AI services using our comprehensive RESTful API. 
+            Get started with our detailed documentation and code examples.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="cyber-button inline-flex items-center"
+            >
+              Get API Access
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+            <Link
+              href="/api"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            >
+              Try API Explorer
+            </Link>
+          </div>
         </section>
+
+        {/* API Overview */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">API Endpoints</h2>
-          <div className="space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+            API Overview
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="cyber-card p-6 text-center">
+              <Code className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">RESTful API</h3>
+              <p className="text-gray-300">Standard HTTP methods and status codes</p>
+            </div>
+            
+            <div className="cyber-card p-6 text-center">
+              <Key className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">JWT Authentication</h3>
+              <p className="text-gray-300">Secure token-based authentication</p>
+            </div>
+            
+            <div className="cyber-card p-6 text-center">
+              <Zap className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Real-time Updates</h3>
+              <p className="text-gray-300">WebSocket support for live data</p>
+            </div>
+          </div>
+        </section>
+
+        {/* API Endpoints */}
+        <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+            API Endpoints
+          </h2>
+          
+          <div className="space-y-12">
             {apiEndpoints.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="cyber-card hologram-card p-6">
+              <div key={categoryIndex} className="cyber-card p-8">
                 <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                <p className="text-gray-300 mb-6">{category.description}</p>
-                <div className="space-y-4">
+                <p className="text-gray-300 mb-8">{category.description}</p>
+                
+                <div className="space-y-6">
                   {category.endpoints.map((endpoint, endpointIndex) => (
-                    <div key={endpointIndex} className="bg-gray-800 rounded-lg p-4">
-                      <div className="flex items-center mb-2">
-                        <span className={`px-3 py-1 rounded text-sm font-bold mr-4 ${
-                          endpoint.method === 'GET' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
-                        }`}>
-                          {endpoint.method}
-                        </span>
-                        <code className="text-cyan-400 font-mono">{endpoint.path}</code>
+                    <div key={endpointIndex} className="border border-gray-700 rounded-lg p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center space-x-4">
+                          <span className={`px-3 py-1 rounded text-sm font-bold ${
+                            endpoint.method === 'POST' ? 'bg-green-500' : 
+                            endpoint.method === 'GET' ? 'bg-blue-500' : 
+                            'bg-yellow-500'
+                          }`}>
+                            {endpoint.method}
+                          </span>
+                          <code className="text-cyan-400 font-mono">{endpoint.path}</code>
+                        </div>
                       </div>
-                      <p className="text-gray-300 mb-3">{endpoint.description}</p>
-                      <div className="bg-gray-900 rounded p-4 relative">
-                        <button
-                          onClick={() => copyToClipboard(endpoint.example, `${categoryIndex}-${endpointIndex}`)}
-                          className="absolute top-2 right-2 p-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                        </button>
-                        <pre className="text-sm text-gray-300 overflow-x-auto">
-                          <code>{endpoint.example}</code>
-                        </pre>
+                      
+                      <p className="text-gray-300 mb-4">{endpoint.description}</p>
+                      
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-3">Parameters</h4>
+                          <div className="space-y-2">
+                            {endpoint.parameters.map((param, paramIndex) => (
+                              <div key={paramIndex} className="flex items-center justify-between text-sm">
+                                <div>
+                                  <code className="text-cyan-400">{param.name}</code>
+                                  <span className="text-gray-400 ml-2">({param.type})</span>
+                                  {param.required && <span className="text-red-400 ml-2">*</span>}
+                                </div>
+                                <span className="text-gray-500">{param.description}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-3">Example</h4>
+                          <div className="bg-gray-800 rounded p-4">
+                            <div className="mb-4">
+                              <h5 className="text-sm font-semibold text-gray-400 mb-2">Request:</h5>
+                              <pre className="text-sm text-gray-300 overflow-x-auto">
+                                {JSON.stringify(endpoint.example.request, null, 2)}
+                              </pre>
+                            </div>
+                            <div>
+                              <h5 className="text-sm font-semibold text-gray-400 mb-2">Response:</h5>
+                              <pre className="text-sm text-gray-300 overflow-x-auto">
+                                {JSON.stringify(endpoint.example.response, null, 2)}
+                              </pre>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -113,49 +220,90 @@ const ApiDocsPage: React.FC = () => {
             ))}
           </div>
         </section>
+
+        {/* Getting Started */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Authentication</h3>
-              <p className="text-gray-300 mb-4">
-                All API requests require authentication using your API key. Include it in the Authorization header:
-              </p>
-              <code className="bg-gray-800 text-cyan-400 p-2 rounded block">
-                Authorization: Bearer YOUR_API_KEY
-              </code>
-            </div>
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Rate Limits</h3>
-              <p className="text-gray-300 mb-4">
-                API requests are limited to 1000 requests per hour per API key. Contact us for higher limits.
-              </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+            Getting Started
+          </h2>
+          
+          <div className="cyber-card p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-4">1. Get API Key</h3>
+                <p className="text-gray-300 mb-4">
+                  Sign up for an account and generate your API key from the dashboard.
+                </p>
+                
+                <h3 className="text-xl font-bold text-white mb-4">2. Make Your First Request</h3>
+                <p className="text-gray-300 mb-4">
+                  Use your API key to authenticate and make requests to our endpoints.
+                </p>
+                
+                <h3 className="text-xl font-bold text-white mb-4">3. Explore Examples</h3>
+                <p className="text-gray-300">
+                  Check out our code examples and SDKs for popular programming languages.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-bold text-white mb-4">Quick Start Code</h3>
+                <div className="bg-gray-800 rounded p-4">
+                  <pre className="text-sm text-gray-300 overflow-x-auto">
+{`// JavaScript Example
+const response = await fetch('/api/ai/content-generation', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_API_KEY'
+  },
+  body: JSON.stringify({
+    prompt: 'Write about AI trends',
+    style: 'professional'
+  })
+});
+
+const data = await response.json();
+console.log(data.content);`}
+                  </pre>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
+        {/* Support */}
         <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>
-          <p className="text-gray-300 mb-8">
-            Contact our developer support team for assistance with API integration
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:dev@ziontechgroup.com"
-              className="cyber-button"
-            >
-              Email Support
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button"
-            >
-              Contact Us
-            </a>
+          <div className="cyber-card p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Need Help?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Our developer support team is here to help you integrate with our APIs. 
+              Get personalized assistance and code reviews.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="cyber-button inline-flex items-center"
+              >
+                Contact Support
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              >
+                📞 Call: (302) 464-0950
+              </a>
+            </div>
           </div>
         </section>
       </main>
+      
       <Footer />
     </div>
   );
 };
+
 export default ApiDocsPage;
