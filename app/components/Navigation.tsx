@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, Cloud, Database, Smartphone, Lock, X, Menu, Users, Palette, Music, Heart, Globe, Building } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, Cloud, Database, Smartphone, Lock, X, Menu, Users, Palette, Music, Heart, Globe, Building, Scale, Search, ShoppingCart, Stethoscope, GraduationCap, Truck, Sprout, Factory } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +42,20 @@ const Navigation: React.FC = () => {
     { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
     { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Box },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Users },
+    { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: Scale },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
+    { name: 'AI Translation Hub', href: '/ai-translation-hub', icon: Globe },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', icon: Shield },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', icon: ShoppingCart },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Home },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Stethoscope },
+    { name: 'AI Education Platform', href: '/ai-education-platform', icon: GraduationCap },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Truck },
+    { name: 'AI Energy Management', href: '/ai-energy-management', icon: Zap },
+    { name: 'AI Agriculture Assistant', href: '/ai-agriculture-assistant', icon: Sprout },
+    { name: 'AI Manufacturing Optimizer', href: '/ai-manufacturing-optimizer', icon: Factory },
   ];
 
   const aiServices = [
@@ -110,20 +124,20 @@ const Navigation: React.FC = () => {
               </button>
               
               {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <div className="p-4">
-                  <div className="grid grid-cols-1 gap-4">
+              <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-6">
+                  <div className="grid grid-cols-3 gap-6">
                     {/* Micro SAAS Services */}
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-2 text-sm">Micro SAAS Solutions</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {microSAASServices.slice(0, 4).map((service) => (
+                      <h3 className="text-cyan-400 font-semibold mb-3 text-sm border-b border-cyan-400/30 pb-1">Micro SAAS Solutions</h3>
+                      <div className="grid grid-cols-1 gap-1 max-h-64 overflow-y-auto">
+                        {microSAASServices.slice(0, 8).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-2 px-2 rounded hover:bg-slate-700/50"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-4 h-4 flex-shrink-0" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -132,15 +146,15 @@ const Navigation: React.FC = () => {
                     
                     {/* AI Services */}
                     <div>
-                      <h3 className="text-purple-400 font-semibold mb-2 text-sm">AI Services</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {aiServices.slice(0, 4).map((service) => (
+                      <h3 className="text-purple-400 font-semibold mb-3 text-sm border-b border-purple-400/30 pb-1">AI Services</h3>
+                      <div className="grid grid-cols-1 gap-1 max-h-64 overflow-y-auto">
+                        {aiServices.slice(0, 8).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-2 px-2 rounded hover:bg-slate-700/50"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-4 h-4 flex-shrink-0" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -149,15 +163,15 @@ const Navigation: React.FC = () => {
                     
                     {/* IT Services */}
                     <div>
-                      <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {itServices.map((service) => (
+                      <h3 className="text-green-400 font-semibold mb-3 text-sm border-b border-green-400/30 pb-1">IT Services</h3>
+                      <div className="grid grid-cols-1 gap-1 max-h-64 overflow-y-auto">
+                        {itServices.slice(0, 8).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-2 px-2 rounded hover:bg-slate-700/50"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-4 h-4 flex-shrink-0" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -165,13 +179,20 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-4 pt-4 border-t border-gray-600">
+                  <div className="mt-6 pt-4 border-t border-gray-600 flex justify-between items-center">
                     <a
                       href="/services"
-                      className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                      className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                     >
                       View All Services →
                     </a>
+                    <div className="flex space-x-4 text-xs text-gray-400">
+                      <span>30+ Micro SAAS</span>
+                      <span>•</span>
+                      <span>15+ AI Services</span>
+                      <span>•</span>
+                      <span>12+ IT Services</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -218,52 +239,79 @@ const Navigation: React.FC = () => {
               {/* Mobile Services Section */}
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS Solutions</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {microSAASServices.slice(0, 6).map((service) => (
+                <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
+                  {microSAASServices.slice(0, 10).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-2 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
-                      <service.icon className="w-4 h-4" />
+                      <service.icon className="w-4 h-4 flex-shrink-0" />
                       <span className="text-sm">{service.name}</span>
                     </a>
                   ))}
+                </div>
+                <div className="mt-2 text-center">
+                  <a
+                    href="/services"
+                    className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    View All 30+ Services →
+                  </a>
                 </div>
               </div>
               
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-purple-400 font-semibold mb-3">AI Services</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {aiServices.slice(0, 4).map((service) => (
+                <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
+                  {aiServices.slice(0, 6).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-2 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
-                      <service.icon className="w-4 h-4" />
+                      <service.icon className="w-4 h-4 flex-shrink-0" />
                       <span className="text-sm">{service.name}</span>
                     </a>
                   ))}
+                </div>
+                <div className="mt-2 text-center">
+                  <a
+                    href="/ai-services"
+                    className="text-purple-400 hover:text-purple-300 text-sm font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    View All 15+ AI Services →
+                  </a>
                 </div>
               </div>
               
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-green-400 font-semibold mb-3">IT Services</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {itServices.map((service) => (
+                <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
+                  {itServices.slice(0, 6).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-2 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
-                      <service.icon className="w-4 h-4" />
+                      <service.icon className="w-4 h-4 flex-shrink-0" />
                       <span className="text-sm">{service.name}</span>
                     </a>
                   ))}
+                </div>
+                <div className="mt-2 text-center">
+                  <a
+                    href="/it-services"
+                    className="text-green-400 hover:text-green-300 text-sm font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    View All 12+ IT Services →
+                  </a>
                 </div>
               </div>
               

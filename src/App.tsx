@@ -5,7 +5,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./page'));
+const HomePage = lazy(() => import('../app/page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const ServicesPage = lazy(() => import('./services/page'));
