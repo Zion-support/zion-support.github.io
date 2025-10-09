@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 
 const OperationalTrustScorecardsPage: React.FC = () => {
@@ -8,7 +8,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
 
     <>
 
-      <Helmet>
+      <Head>
 
         <title>Operational Trust Scorecards v3</title>
 
@@ -16,7 +16,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
 
         <meta property="og:type" content="article" />
 
-      </Helmet>
+      </Head>
 
       <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Settings } from 'lucide-react';
 
 const AIWorkflowAutomationPage: React.FC = () => {
   const automationServices = [

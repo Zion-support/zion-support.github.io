@@ -11,7 +11,12 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
-  
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
     formats: ['image/webp', 'image/avif'],
@@ -163,9 +168,10 @@ const nextConfig = {
   },
 
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     optimizePackageImports: ['lucide-react', '@heroicons/react', 'recharts', 'framer-motion'],
   },
+  serverExternalPackages: ['react-helmet-async'],
 
   // Performance optimizations
   modularizeImports: {

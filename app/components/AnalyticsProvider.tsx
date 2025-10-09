@@ -1,4 +1,6 @@
 
+import React, { useEffect } from 'react';
+
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -35,6 +37,11 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
           send_page_view: true
         });
       }
+    };
+
+    // Handle route changes
+    const handleRouteChange = () => {
+      trackPageView();
     };
 
     // Track user interactions
