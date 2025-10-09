@@ -540,6 +540,188 @@ const MicroSAASPage: React.FC = () => {
       category: 'Contract Management',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Sales & CRM Tools
+    {
+      title: 'AI Sales Pipeline Optimizer',
+      description: 'Intelligent sales pipeline management with predictive analytics, lead scoring, and automated follow-ups.',
+      icon: '📈',
+      price: '$179/month',
+      features: ['Pipeline analytics', 'Lead scoring', 'Automated follow-ups', 'Deal prediction', 'Sales forecasting', 'Performance tracking'],
+      benefits: ['Increase close rates by 35%', 'Reduce sales cycle time', 'Improve forecasting accuracy', 'Boost team productivity'],
+      marketPrice: '$300-600/month',
+      category: 'Sales & CRM',
+      technologies: ['Machine Learning', 'Salesforce API', 'HubSpot API', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Customer Success Platform',
+      description: 'Proactive customer success management with churn prediction, health scoring, and automated interventions.',
+      icon: '🎯',
+      price: '$199/month',
+      features: ['Churn prediction', 'Health scoring', 'Automated interventions', 'Success metrics', 'Customer journey mapping', 'Retention campaigns'],
+      benefits: ['Reduce churn by 40%', 'Increase customer lifetime value', 'Improve satisfaction scores', 'Scale customer success'],
+      marketPrice: '$350-700/month',
+      category: 'Customer Success',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Supply Chain & Logistics
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with demand forecasting, route optimization, and inventory management.',
+      icon: '🚚',
+      price: '$299/month',
+      features: ['Demand forecasting', 'Route optimization', 'Inventory management', 'Supplier analytics', 'Risk assessment', 'Cost optimization'],
+      benefits: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],
+      marketPrice: '$500-1000/month',
+      category: 'Supply Chain',
+      technologies: ['Machine Learning', 'Python', 'PostgreSQL', 'Optimization Algorithms', 'React'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Fleet Management System',
+      description: 'Smart fleet management with predictive maintenance, fuel optimization, and driver behavior analysis.',
+      icon: '🚛',
+      price: '$249/month',
+      features: ['Predictive maintenance', 'Fuel optimization', 'Driver analytics', 'Route planning', 'Vehicle tracking', 'Performance metrics'],
+      benefits: ['Reduce maintenance costs by 30%', 'Improve fuel efficiency', 'Enhance driver safety', 'Optimize fleet utilization'],
+      marketPrice: '$400-800/month',
+      category: 'Fleet Management',
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Energy & Sustainability
+    {
+      title: 'AI Energy Management Platform',
+      description: 'Smart energy optimization with consumption analysis, renewable integration, and cost reduction strategies.',
+      icon: '⚡',
+      price: '$199/month',
+      features: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Carbon footprint tracking', 'Predictive maintenance', 'Smart grid integration'],
+      benefits: ['Reduce energy costs by 35%', 'Improve sustainability', 'Optimize renewable usage', 'Meet carbon goals'],
+      marketPrice: '$350-700/month',
+      category: 'Energy Management',
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Energy APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Carbon Footprint Tracker',
+      description: 'Comprehensive carbon footprint monitoring with reduction recommendations and sustainability reporting.',
+      icon: '🌱',
+      price: '$149/month',
+      features: ['Carbon tracking', 'Reduction recommendations', 'Sustainability reporting', 'Compliance monitoring', 'Goal setting', 'Industry benchmarking'],
+      benefits: ['Achieve carbon neutrality', 'Improve sustainability', 'Meet compliance requirements', 'Enhance brand reputation'],
+      marketPrice: '$250-500/month',
+      category: 'Sustainability',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Carbon APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Agriculture & Food
+    {
+      title: 'AI Precision Agriculture Platform',
+      description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
+      icon: '🌾',
+      price: '$299/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Resource optimization', 'Pest detection', 'Weather analysis', 'Soil health tracking'],
+      benefits: ['Increase crop yields by 20%', 'Reduce resource waste', 'Improve sustainability', 'Optimize farming practices'],
+      marketPrice: '$500-1000/month',
+      category: 'Agriculture',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Food Safety Monitor',
+      description: 'Intelligent food safety monitoring with contamination detection, quality control, and compliance tracking.',
+      icon: '🍎',
+      price: '$199/month',
+      features: ['Contamination detection', 'Quality control', 'Compliance tracking', 'Temperature monitoring', 'Traceability', 'Alert system'],
+      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Improve quality', 'Reduce waste'],
+      marketPrice: '$300-600/month',
+      category: 'Food Safety',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Gaming & Entertainment
+    {
+      title: 'AI Game Analytics Platform',
+      description: 'Advanced gaming analytics with player behavior analysis, monetization optimization, and engagement tracking.',
+      icon: '🎮',
+      price: '$249/month',
+      features: ['Player behavior analysis', 'Monetization optimization', 'Engagement tracking', 'A/B testing', 'Churn prediction', 'Performance metrics'],
+      benefits: ['Increase player retention', 'Optimize monetization', 'Improve game design', 'Boost engagement'],
+      marketPrice: '$400-800/month',
+      category: 'Gaming',
+      technologies: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'Analytics APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Content Moderation Suite',
+      description: 'Intelligent content moderation with automated detection of inappropriate content, hate speech, and spam.',
+      icon: '🛡️',
+      price: '$179/month',
+      features: ['Content filtering', 'Hate speech detection', 'Spam prevention', 'Image moderation', 'Video analysis', 'Real-time monitoring'],
+      benefits: ['Maintain platform safety', 'Reduce moderation costs', 'Improve user experience', 'Ensure compliance'],
+      marketPrice: '$300-600/month',
+      category: 'Content Moderation',
+      technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Travel & Hospitality
+    {
+      title: 'AI Travel Recommendation Engine',
+      description: 'Personalized travel recommendations with price optimization, itinerary planning, and booking automation.',
+      icon: '✈️',
+      price: '$199/month',
+      features: ['Personalized recommendations', 'Price optimization', 'Itinerary planning', 'Booking automation', 'Travel alerts', 'Loyalty management'],
+      benefits: ['Increase bookings by 30%', 'Improve customer satisfaction', 'Optimize pricing', 'Enhance personalization'],
+      marketPrice: '$350-700/month',
+      category: 'Travel & Hospitality',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Travel APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Hotel Revenue Optimizer',
+      description: 'Dynamic pricing and revenue management for hotels with demand forecasting and competitor analysis.',
+      icon: '🏨',
+      price: '$299/month',
+      features: ['Dynamic pricing', 'Demand forecasting', 'Competitor analysis', 'Revenue optimization', 'Occupancy prediction', 'Rate management'],
+      benefits: ['Increase revenue by 25%', 'Optimize occupancy rates', 'Stay competitive', 'Maximize profitability'],
+      marketPrice: '$500-1000/month',
+      category: 'Hospitality',
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Revenue Management'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Insurance & Risk Management
+    {
+      title: 'AI Insurance Claims Processor',
+      description: 'Automated insurance claims processing with fraud detection, damage assessment, and settlement optimization.',
+      icon: '🛡️',
+      price: '$299/month',
+      features: ['Claims automation', 'Fraud detection', 'Damage assessment', 'Settlement optimization', 'Risk scoring', 'Compliance monitoring'],
+      benefits: ['Process claims 5x faster', 'Reduce fraud by 60%', 'Improve accuracy', 'Lower operational costs'],
+      marketPrice: '$500-1000/month',
+      category: 'Insurance',
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'Insurance APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Risk Assessment Platform',
+      description: 'Comprehensive risk analysis with predictive modeling, scenario planning, and mitigation strategies.',
+      icon: '⚠️',
+      price: '$249/month',
+      features: ['Risk modeling', 'Scenario planning', 'Mitigation strategies', 'Compliance tracking', 'Alert system', 'Reporting dashboard'],
+      benefits: ['Identify risks early', 'Reduce losses', 'Improve decision making', 'Ensure compliance'],
+      marketPrice: '$400-800/month',
+      category: 'Risk Management',
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Risk Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
