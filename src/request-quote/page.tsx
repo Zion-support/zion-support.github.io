@@ -124,10 +124,12 @@ const RequestQuotePage: React.FC = () => {
     return (
       <>
         <Navigation />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div
+          </div>
           <div className="container mx-auto px-4 py-16 pt-24">
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div
+              </div>
+          <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-green-400" />
               </div>
               <h1 className="text-4xl font-bold text-white mb-6 neon-text">
@@ -139,17 +141,20 @@ const RequestQuotePage: React.FC = () => {
               </p>
               <div className="bg-slate-800/50 rounded-lg p-6 mb-8">
                 <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center">
+                <div
+                  </div>
+          <div className="flex items-center">
                     <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1</div>
                     <span className="text-gray-300">Our team will review your requirements</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2</div>
+                  <div
+                    </div>
+          <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2</div>
                     <span className="text-gray-300">We'll prepare a detailed quote and proposal</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>
+                  <div
+                    </div>
+          <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
                   </div>
                 </div>
@@ -181,8 +186,9 @@ const RequestQuotePage: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div
+        </div>
+          <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -194,15 +200,17 @@ const RequestQuotePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div
             {/* Quote Form */}
-            <div className="lg:col-span-2">
+            </div>
+          <div className="lg:col-span-2">
               <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
                 <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  <div
+                    </div>
+          <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
                       </label>
@@ -232,8 +240,9 @@ const RequestQuotePage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  <div
+                    </div>
+          <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Company Name
                       </label>
@@ -280,8 +289,9 @@ const RequestQuotePage: React.FC = () => {
                     </select>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  <div
+                    </div>
+          <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Project Size
                       </label>
@@ -367,8 +377,9 @@ const RequestQuotePage: React.FC = () => {
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
-                      <div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      <div
+                        </div>
+          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Submitting...
                       </div>
                     ) : (
@@ -380,13 +391,15 @@ const RequestQuotePage: React.FC = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="space-y-8">
+            <div
               {/* Benefits */}
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
+              </div>
+          <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>
-                <div className="space-y-4">
+                <div
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start">
+                    </div>
+          <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <benefit.icon className="w-4 h-4 text-cyan-400" />
                       </div>
@@ -402,9 +415,10 @@ const RequestQuotePage: React.FC = () => {
               {/* Why Choose Us */}
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
-                <div className="space-y-4">
+                <div
                   {whyChooseUs.map((item, index) => (
-                    <div key={index} className="flex items-start">
+                    </div>
+          <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <item.icon className="w-4 h-4 text-purple-400" />
                       </div>

@@ -23,7 +23,7 @@ const MarketplacePage: React.FC = () => {
       icon: Users,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      description: 'Expert professionals and consultants'
+      description: 'Expert professionals and consultants',
       id: 'equipment',
       name: 'Equipment',
       icon: Wrench,
@@ -140,13 +140,13 @@ const MarketplacePage: React.FC = () => {
   const stats = [
       value: '500+',
       label: 'Products Available',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
       value: '200+',
       label: 'Expert Professionals',
-      color: 'text-green-400'
+      color: 'text-green-400',
       value: '100+',
       label: 'Equipment Solutions',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
       icon: Star,
       value: '4.8',
       label: 'Average Rating',
@@ -155,13 +155,13 @@ const MarketplacePage: React.FC = () => {
   const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
-      description: 'All vendors are thoroughly vetted and verified'
+      description: 'All vendors are thoroughly vetted and verified',
       icon: Shield,
       title: 'Secure Transactions',
-      description: 'Bank-level security for all marketplace transactions'
+      description: 'Bank-level security for all marketplace transactions',
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support for all marketplace activities'
+      description: 'Round-the-clock support for all marketplace activities',
       icon: Award,
       title: 'Quality Guarantee',
       description: '100% satisfaction guarantee on all purchases'
@@ -169,8 +169,9 @@ const MarketplacePage: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div
+        </div>
+          <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -183,9 +184,10 @@ const MarketplacePage: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              </div>
+          <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
@@ -193,8 +195,9 @@ const MarketplacePage: React.FC = () => {
             ))}
 
           {/* Search and Filters */}
-          <div className="mb-12">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
+          <div
+            </div>
+          <div className="flex flex-col md:flex-row gap-4 mb-8">
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -229,13 +232,16 @@ const MarketplacePage: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-8">
               {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
               {filteredItems.map((item) => (
-                <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className="text-4xl mr-4">{item.image}</div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
+                </div>
+          <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                  <div
+                    </div>
+          <div className="text-4xl mr-4">{item.image}</div>
+                    <div
+                      </div>
+          <div className="flex items-center justify-between mb-2">
                         <h3 className="text-lg font-semibold text-white">{item.name}</h3>
                         {item.verified && (
                           <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
@@ -256,8 +262,9 @@ const MarketplacePage: React.FC = () => {
                               {feature}
                             </li>
                         </ul>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center">
+                      <div
+                        </div>
+          <div className="flex items-center">
                           <Star className="w-4 h-4 text-yellow-400 mr-1" />
                           <span className="text-sm text-white font-medium">{item.rating}</span>
                           <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
@@ -293,9 +300,10 @@ const MarketplacePage: React.FC = () => {
           {/* Benefits */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Choose Our Marketplace?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
               {benefits.map((benefit, index) => (
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  </div>
+          <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
@@ -304,10 +312,11 @@ const MarketplacePage: React.FC = () => {
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Find Your Perfect Solution?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p
               Browse our marketplace to discover the tools, talent, and equipment you need 
               to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"

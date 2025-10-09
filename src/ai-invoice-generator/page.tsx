@@ -14,6 +14,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
       benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']
     },
+    {
       icon: Zap,
       title: 'Instant Processing',
       description: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
@@ -51,7 +52,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         'PDF export'
       ],
       popular: false,
-      color: 'blue'
+      color: 'blue',
       name: 'Professional',
       price: '$79',
       description: 'Ideal for growing businesses',
@@ -64,7 +65,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         'Multi-user accounts',
         'Automated reminders'
       popular: true,
-      color: 'purple'
+      color: 'purple',
       name: 'Enterprise',
       price: '$199',
       description: 'For large organizations',
@@ -84,12 +85,12 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       company: 'Creative Studio',
       content: 'AI Invoice Generator has saved me 10+ hours per week. The AI understands my clients and creates perfect invoices every time.',
       rating: 5,
-      avatar: '👩‍🎨'
+      avatar: '👩‍🎨',
       name: 'Michael Chen',
       role: 'CEO',
       company: 'TechStart Inc.',
       content: 'The analytics insights helped us identify payment patterns and improve our cash flow by 40%. Game changer!',
-      avatar: '👨‍💼'
+      avatar: '👨‍💼',
       name: 'Emily Rodriguez',
       role: 'Accountant',
       company: 'Finance Pro',
@@ -129,8 +130,9 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         <main className="pt-24">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
-            <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6">
+            <div
+              </div>
+          <div className="inline-flex items-center bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6">
                 <Receipt className="w-5 h-5 text-purple-400 mr-2" />
                 <span className="text-purple-400 text-sm font-medium">AI Invoice Generator</span>
               </div>
@@ -161,8 +163,9 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                   Watch Demo
               
               {/* Key Stats */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-                <div className="text-center">
+              <div
+                </div>
+          <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
                   <div className="text-gray-300">Time Saved</div>
                   <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>
@@ -173,18 +176,21 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
 
           {/* Features Section */}
           <section className="py-16 bg-slate-800/30">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
+            <div
+              </div>
+          <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   Powerful AI Features
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p
                   Our AI invoice generator combines cutting-edge technology with user-friendly design 
                   to revolutionize your billing process.
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              </p>
+          <div
                 {features.map((feature, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+                  </div>
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                     <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                       <feature.icon className="w-6 h-6 text-purple-400" />
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -204,9 +210,10 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                   Whether you're a freelancer or a large enterprise, our AI invoice generator 
                   adapts to your specific needs and industry requirements.
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div
                 {useCases.map((useCase, index) => (
-                  <div key={index} className="text-center group">
+                  </div>
+          <div key={index} className="text-center group">
                     <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <useCase.icon className="w-8 h-8 text-white" />
                     <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
@@ -220,9 +227,10 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                   Choose the plan that fits your business needs. All plans include our core AI features 
                   with no hidden fees or setup costs.
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div
                 {pricingPlans.map((plan, index) => (
-                  <div key={index} className={`relative rounded-lg p-8 ${
+                  </div>
+          <div key={index} className={`relative rounded-lg p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400' 
                       : 'bg-slate-800/50 border border-slate-700'
@@ -256,13 +264,16 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                   Loved by Businesses Worldwide
                   See how our AI invoice generator is transforming businesses across industries.
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="text-2xl mr-3">{testimonial.avatar}</div>
-                      <div>
-                        <div className="font-semibold text-white">{testimonial.name}</div>
+                  </div>
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+                    <div
+                      </div>
+          <div className="text-2xl mr-3">{testimonial.avatar}</div>
+                      <div
+                        </div>
+          <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
@@ -273,10 +284,11 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           <section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
             <div className="container mx-auto px-4 text-center">
                 Ready to Transform Your Invoicing?
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              <p
                 Join thousands of businesses already using AI to streamline their invoicing process. 
                 Start your free trial today and experience the difference.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   href="/contact"
                   <Phone className="w-5 h-5 mr-2" />
                   Get Free Consultation

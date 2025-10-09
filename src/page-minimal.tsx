@@ -13,7 +13,8 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          </div>
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold text-gray-900">
@@ -62,18 +63,21 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Zion Tech Group?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p
                 We deliver measurable results through innovative AI solutions
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-lg">
+            </p>
+          <div
+              </div>
+          <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                   <CheckCircle className="w-6 h-6 text-blue-600" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Proven Results
                 </h3>
-                <p className="text-gray-600">
+                <p
                   Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                </p>
+          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                   <Star className="w-6 h-6 text-green-600" />
                   Expert Team
                   Our team of AI experts and engineers brings decades of experience in enterprise transformation.
@@ -97,9 +101,10 @@ export default function HomePage() {
       <footer className="bg-gray-900 text-white py-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400 mb-6">
+            <p
               Advanced AI and IT Solutions for Enterprise Transformation
-            <div className="flex justify-center space-x-6">
+            </p>
+          <div className="flex justify-center space-x-6">
               <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
               <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
               <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>

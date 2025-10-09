@@ -12,22 +12,23 @@ const ExpenseTrackerPage: React.FC = () => {
       description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefit: 'Save 8+ hours per month'
     },
+    {
       icon: TrendingUp,
       title: 'Real-time Analytics',
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
-      benefit: 'Reduce expenses by 25%'
+      benefit: 'Reduce expenses by 25%',
       icon: Brain,
       title: 'AI Categorization',
       description: 'Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.',
-      benefit: '99% accurate categorization'
+      benefit: '99% accurate categorization',
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
-      benefit: 'Process expenses 5x faster'
+      benefit: 'Process expenses 5x faster',
       icon: Target,
       title: 'Budget Management',
       description: 'Create and track budgets with AI-powered alerts and recommendations for better financial control.',
-      benefit: 'Stay within budget 90% of the time'
+      benefit: 'Stay within budget 90% of the time',
       icon: Shield,
       title: 'Compliance & Security',
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
@@ -102,7 +103,8 @@ const ExpenseTrackerPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
+        <div
+          </div>
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
             <Receipt className="w-10 h-10 text-white" />
           </div>
@@ -112,10 +114,11 @@ const ExpenseTrackerPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
             Smart Financial Management
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p
             Transform your expense management with AI-powered receipt scanning, automated categorization, 
             and intelligent financial insights. Save time, reduce errors, and gain complete control 
             over your business finances.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
@@ -131,7 +134,8 @@ const ExpenseTrackerPage: React.FC = () => {
             </Link>
 
         {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+        <div
+          </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">8+</div>
             <div className="text-white font-semibold mb-2">Hours Saved</div>
@@ -151,9 +155,10 @@ const ExpenseTrackerPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Powerful Expense Management Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+              </div>
+          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
@@ -163,18 +168,20 @@ const ExpenseTrackerPage: React.FC = () => {
 
         {/* Integrations Section */}
             Integrates with Your Tools
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div
             {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
+              </div>
+          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
 
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
+              </div>
+          <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular 
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
@@ -203,15 +210,17 @@ const ExpenseTrackerPage: React.FC = () => {
 
         {/* Testimonials */}
             What Our Customers Say
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+              </div>
+          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
+                <div
+                  </div>
+          <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
 

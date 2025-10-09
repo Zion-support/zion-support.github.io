@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const HomePage = lazy(() => import('./page'));
 
 // Import enhancement utilities
-import {Routes, Route} from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -18,7 +17,6 @@ import CloudMigrationPage from './cloud-migration/page';
 import DevOpsPage from './devops/page';
 import DatabasePage from './database/page';
 import NetworkingPage from './networking/page';
-import AICRMPage from './ai-crm/page';
 import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIEmailMarketingPage from './ai-email-marketing/page';
@@ -36,8 +34,6 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
-'use client';
-
 const _HomePage = lazy(() => import('../app/page'));
 
 
@@ -48,6 +44,7 @@ const LoadingSpinner: React.FC = () => (
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
     </div>
+  </div>
 );
 
 // AI Services Pages
@@ -117,123 +114,17 @@ const App: React.FC = () => {
 
   const initializeEnhancers = async () => {
     try {
-      // Initialize performance enhancer
-      const performanceEnhancer = new PerformanceEnhancer({
-        enableImageOptimization: true,
-        enableLazyLoading: true,
-        enableCodeSplitting: true,
-        enablePrefetching: true,
-        enableServiceWorker: true,
-        enableResourceHints: true,
-        enableCompression: true,
-        enableCaching: true
-      });
-
-      // Initialize SEO enhancer
-      const seoEnhancer = new SEOEnhancer({
-        title: 'Zion Tech Group - Advanced AI and IT Solutions',
-        description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-        keywords: ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
-        canonicalUrl: 'https://ziontechgroup.com',
-        ogImage: 'https://ziontechgroup.com/og-image.jpg',
-        ogType: 'website',
-        twitterCard: 'summary_large_image',
-        structuredData: {
-          '@context': 'https://schema.org',
-          '@type': 'TechCompany',
-          name: 'Zion Tech Group',
-          url: 'https://ziontechgroup.com',
-          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-          foundingDate: '2020',
-          numberOfEmployees: '50-100',
-          industry: 'Technology',
-          services: [
-            'AI Solutions',
-            'Quantum Computing',
-            'Autonomous Systems',
-            'Digital Transformation',
-            'Cloud Services',
-            'Automation',
-            'Business Intelligence'
-          ],
-          contactPoint: {
-            '@type': 'ContactPoint',
-            telephone: '+1-302-464-0950',
-            contactType: 'Customer Service',
-            areaServed: 'US',
-            availableLanguage: 'en'
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'
-          }
-        robots: 'index, follow',
-        language: 'en',
-        author: 'Zion Tech Group',
-        publisher: 'Zion Tech Group'
-
-      // Initialize accessibility enhancer
-      const accessibilityEnhancer = new AccessibilityEnhancer({
-        enableKeyboardNavigation: true,
-        enableScreenReader: true,
-        enableHighContrast: true,
-        enableFocusManagement: true,
-        enableReducedMotion: true,
-        enableColorBlindSupport: true,
-        enableVoiceControl: true
-
-      // Initialize security enhancer
-      const securityEnhancer = new SecurityEnhancer({
-        enableCSP: true,
-        enableHSTS: true,
-        enableXSSProtection: true,
-        enableClickjackingProtection: true,
-        enableContentTypeOptions: true,
-        enableReferrerPolicy: true,
-        enablePermissionsPolicy: true,
-        enableCORS: true,
-        enableSecureCookies: true
-
-      // Initialize UX enhancer
-      const uxEnhancer = new UserExperienceEnhancer({
-        enableSmoothScrolling: true,
-        enableLoadingStates: true,
-        enableErrorBoundaries: true,
-        enableAnalytics: true,
-        enableNotifications: true,
-        enableProgressiveWebApp: true,
-        enableOfflineSupport: true,
-        enablePushNotifications: false,
-        enableDarkMode: true,
-        enableAnimations: true
-
-      setEnhancers({
-        performance: performanceEnhancer,
-        seo: seoEnhancer,
-        accessibility: accessibilityEnhancer,
-        security: securityEnhancer,
-        ux: uxEnhancer
-
-      // Optimize for Core Web Vitals
-      seoEnhancer.optimizeForCoreWebVitals();
-
-      // Generate reports (for development)
-      if (process.env.NODE_ENV === 'development') {
-        // Reports generated silently in development
-
+      // Temporarily disabled enhancers for debugging
       setIsInitialized(true);
-    } catch {
+    } catch (error) {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-      // Continue even if enhancers fail
+    }
   };
 
   if (!isInitialized) {
     return <LoadingSpinner />;
+  }
 
   return (
     <Router>
@@ -310,6 +201,8 @@ const App: React.FC = () => {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
+  );
+};
 
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
@@ -323,5 +216,7 @@ const NotFoundPage: React.FC = () => (
       >
         Go Home
       </a>
+    </div>
+);
 
 export default App;

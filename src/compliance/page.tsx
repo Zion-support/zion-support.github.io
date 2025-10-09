@@ -23,6 +23,7 @@ const CompliancePage: React.FC = () => {
       description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
       features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
     },
+    {
       icon: FileText,
       title: 'Regulatory Compliance',
       description: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
@@ -43,8 +44,9 @@ const CompliancePage: React.FC = () => {
         
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex items-center">
+          <div
+            </div>
+          <div className="flex items-center">
               <Link 
                 to="/privacy" 
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
@@ -70,9 +72,10 @@ const CompliancePage: React.FC = () => {
               </p>
 
             {/* Certifications Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div
               {certifications.map((cert, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
+                </div>
+          <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
                   <div className="flex items-center justify-between">
                     <h3 className="text-lg font-semibold text-gray-900">{cert.name}</h3>
                     <div className="flex items-center text-green-600">
@@ -83,11 +86,13 @@ const CompliancePage: React.FC = () => {
           {/* Compliance Areas */}
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
               Compliance Areas
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
               {complianceAreas.map((area, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-8">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                </div>
+          <div key={index} className="bg-white rounded-lg shadow-md p-8">
+                  <div
+                    </div>
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
                       <area.icon className="w-6 h-6 text-blue-600" />
                     <h3 className="text-xl font-semibold text-gray-900">{area.title}</h3>
                   <p className="text-gray-600 mb-4">{area.description}</p>

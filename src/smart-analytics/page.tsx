@@ -11,22 +11,23 @@ const SmartAnalyticsPage: React.FC = () => {
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefit: 'Make decisions 10x faster'
     },
+    {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
-      benefit: 'Discover hidden opportunities'
+      benefit: 'Discover hidden opportunities',
       icon: Target,
       title: 'Custom Metrics',
       description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
-      benefit: 'Focus on what drives growth'
+      benefit: 'Focus on what drives growth',
       icon: Zap,
       title: 'Automated Alerts',
       description: 'Get instant notifications when important metrics change or when action is needed.',
-      benefit: 'Never miss critical changes'
+      benefit: 'Never miss critical changes',
       icon: Users,
       title: 'Team Collaboration',
       description: 'Share insights and reports with your team with role-based access and collaborative features.',
-      benefit: 'Align your entire organization'
+      benefit: 'Align your entire organization',
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
@@ -71,8 +72,9 @@ const SmartAnalyticsPage: React.FC = () => {
         'SLA guarantee'
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div
+      </div>
+          <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -101,9 +103,10 @@ const SmartAnalyticsPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Powerful Analytics Features
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+              </div>
+          <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
@@ -113,9 +116,10 @@ const SmartAnalyticsPage: React.FC = () => {
 
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid md:grid-cols-3 gap-8">
+          <div
             {pricingPlans.map((plan, index) => (
-              <div
+              </div>
+          <div
                 key={index}
                 className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${
                   plan.popular ? 'border-cyan-500' : 'border-gray-600'
@@ -159,8 +163,9 @@ const SmartAnalyticsPage: React.FC = () => {
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-            <div className="grid md:grid-cols-3 gap-6 text-gray-300">
-              <div className="flex items-center justify-center">
+            <div
+              </div>
+          <div className="flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="tel:+13024640950" className="hover:text-white transition-colors">
                   +1 (302) 464-0950

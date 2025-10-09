@@ -12,6 +12,7 @@ const SmartCitiesPage: React.FC = () => {
       description: 'Intelligent city infrastructure and management systems',
       benefits: ['Traffic management', 'Energy optimization', 'Waste management']
     },
+    {
       icon: Target,
       title: 'IoT Integration',
       description: 'Internet of Things solutions for urban environments',
@@ -39,10 +40,11 @@ const SmartCitiesPage: React.FC = () => {
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
             Intelligent Urban Solutions
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p
             Build the cities of the future with our smart city solutions. From intelligent infrastructure to citizen services, 
             we help create sustainable, efficient, and connected urban environments.
           
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -62,9 +64,10 @@ const SmartCitiesPage: React.FC = () => {
             Smart City Solutions
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
             {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+              </div>
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">

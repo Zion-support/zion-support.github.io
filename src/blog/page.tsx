@@ -123,15 +123,18 @@ export default function BlogPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-12">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
+      <div
+        </div>
+          <div className="container mx-auto px-4 py-8">
+          <div
+            </div>
+          <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
             <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
             {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
+              </div>
+          <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
                 <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
                 <div className="h-6 bg-gray-200 rounded mb-2"></div>
                 <div className="h-4 bg-gray-200 rounded mb-2"></div>
@@ -140,8 +143,9 @@ export default function BlogPage() {
     );
 
 const BlogPage: React.FC = () => {
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
+    <div
+      </div>
+          <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced blog solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">

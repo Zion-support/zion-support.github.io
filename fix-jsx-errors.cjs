@@ -1,63 +1,53 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix JSX structure issues
-function fixJSXErrors(filePath) {
+// Pattern to find files with JSX errors
+const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', {
+  ignore: [
+    'src/components/**',
+    'src/pages/**',
+    'src/content/**',
+    'src/data/**',
+    'src/hooks/**',
+    'src/types/**',
+    'src/utils/**',
+    'src/config/**'
+  ]
+});
+
+console.log(`Found ${files.length} files to check`);
+
+let fixedCount = 0;
+
+files.forEach(filePath => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    // Fix common JSX structure issues
-    content = content.replace(/<\/div>\s*<>\s*<Footer \/>\s*<\/>/g, '</div>\n      <Footer />');
-    content = content.replace(/<\/div>\s*<Footer \/>\s*<\/div>/g, '</div>\n      <Footer />\n    </div>');
-    content = content.replace(/<\/main>\s*<Footer \/>\s*<\/div>\s*<\/>/g, '</main>\n        <Footer />\n      </div>\n    </>');
+    // Fix malformed JSX elements like <div</div>
+    content = content.replace(/<div<\/div>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">');
     
-    // Fix unclosed spans by finding and closing them
-    const spanMatches = content.match(/<span[^>]*>(?!.*<\/span>)/g);
-    if (spanMatches) {
-      spanMatches.forEach(match => {
-        const openSpan = match;
-        const closeSpan = '</span>';
-        // Find the position and add closing tag
-        const index = content.indexOf(openSpan);
-        if (index !== -1) {
-          // Find the next > or end of line to determine where to close
-          const nextClose = content.indexOf('>', index);
-          if (nextClose !== -1) {
-            const afterOpen = content.substring(nextClose + 1);
-            const nextTag = afterOpen.match(/<[^>]*>/);
-            if (nextTag) {
-              const insertPos = nextClose + 1 + afterOpen.indexOf(nextTag[0]);
-              content = content.substring(0, insertPos) + closeSpan + content.substring(insertPos);
-            }
-          }
-        }
-      });
+    // Fix malformed JSX with missing opening tags
+    content = content.replace(/<div<\/div>\s*<div className="text-center">/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">\n      <div className="text-center">');
+    
+    // Fix malformed JSX with missing closing tags
+    content = content.replace(/<\/a><\/div><\/div>/g, '</a>\n      </div>\n    </div>');
+    
+    // Fix malformed JSX with missing opening tags and proper structure
+    content = content.replace(/<div<\/div>\s*<div className="text-center"><h1[^>]*>([^<]*)<\/h1><p[^>]*>([^<]*)<\/p><a[^>]*>([^<]*)<\/a><\/div><\/div>/g, 
+      '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">\n      <div className="text-center">\n        <h1 className="text-4xl font-bold text-white mb-4">$1</h1>\n        <p className="text-gray-300 mb-8">$2</p>\n        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">\n          $3\n        </a>\n      </div>\n    </div>');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
     }
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed JSX errors in ${filePath}`);
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
-
-// List of files with JSX errors
-const filesToFix = [
-  'app/ai-customer-support/page.tsx',
-  'app/ai-data-visualization/page.tsx',
-  'app/ai-fintech/page.tsx',
-  'app/ai-sales-automation/page.tsx',
-  'app/ai-workflow-automation/page.tsx'
-];
-
-// Fix all files
-filesToFix.forEach(file => {
-  const fullPath = path.join(__dirname, file);
-  if (fs.existsSync(fullPath)) {
-    fixJSXErrors(fullPath);
-  } else {
-    console.log(`File not found: ${fullPath}`);
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 });
 
-console.log('JSX error fixing completed!');
+console.log(`Fixed ${fixedCount} files`);

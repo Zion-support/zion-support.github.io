@@ -46,10 +46,11 @@ const BusinessAppsPage: React.FC = () => {
         {categories.map(category => (
           <section key={category} className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>
-            <div>{businessApps
+            <div{businessApps
                 .filter(app => app.category === category)
                 .map((app, index) => (
-                    <div className="text-4xl mb-4 text-center">{app.icon}</div>
+                    </div>
+          <div className="text-4xl mb-4 text-center">{app.icon}</div>
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{app.title}</h4>
                     <p className="text-gray-300 mb-4 text-sm text-center">{app.description}</p>
                     

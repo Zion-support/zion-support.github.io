@@ -22,6 +22,7 @@ const PartnersPage: React.FC = () => {
         { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }
       ]
     },
+    {
       title: 'Solution Partners',
       description: 'Specialized solution providers that complement our offerings',
       icon: Handshake,
@@ -50,13 +51,13 @@ const PartnersPage: React.FC = () => {
   const benefits = [
       icon: Globe,
       title: 'Global Reach',
-      description: 'Access to worldwide markets and customers through our partner network'
+      description: 'Access to worldwide markets and customers through our partner network',
       icon: Users,
       title: 'Expertise Sharing',
-      description: 'Collaborative knowledge sharing and best practices across industries'
+      description: 'Collaborative knowledge sharing and best practices across industries',
       icon: Star,
       title: 'Innovation',
-      description: 'Joint innovation initiatives and cutting-edge technology development'
+      description: 'Joint innovation initiatives and cutting-edge technology development',
       icon: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
@@ -73,7 +74,7 @@ const PartnersPage: React.FC = () => {
         'Custom pricing and terms'
       ],
       color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
+      bgColor: 'bg-yellow-500/10',
       name: 'Solution Partners',
       level: 'Gold',
       description: 'Technology integration and solution delivery partnerships',
@@ -83,7 +84,7 @@ const PartnersPage: React.FC = () => {
         'Training and certification',
         'Preferred pricing'
       color: 'text-gray-400',
-      bgColor: 'bg-gray-500/10'
+      bgColor: 'bg-gray-500/10',
       name: 'Channel Partners',
       level: 'Silver',
       description: 'Reseller and referral partnerships for market expansion',
@@ -98,8 +99,9 @@ const PartnersPage: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div
+        </div>
+          <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -112,19 +114,22 @@ const PartnersPage: React.FC = () => {
           </div>
 
           {/* Partner Types */}
-          <div className="mb-16">
+          <div
             {partnerTypes.map((type, index) => (
-              <div key={index} className="mb-12">
-                <div className="flex items-center mb-8">
-                  <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}>
+              </div>
+          <div key={index} className="mb-12">
+                <div
+                  </div>
+          <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}>
                     <type.icon className={`w-6 h-6 ${type.color}`} />
                   <div>
                     <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>
                     <p className="text-gray-300">{type.description}</p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
                   {type.partners.map((partner, partnerIndex) => (
-                    <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                    </div>
+          <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                       <div className="text-3xl mb-3">{partner.logo}</div>
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>
                       <p className="text-gray-300 text-sm">{partner.description}</p>
@@ -134,9 +139,10 @@ const PartnersPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Partner With Us?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
+                </div>
+          <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -144,11 +150,13 @@ const PartnersPage: React.FC = () => {
 
           {/* Partnership Tiers */}
               Partnership Tiers
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
               {partnershipTiers.map((tier, index) => (
-                <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}>
-                  <div className="text-center mb-6">
-                    <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}</div>
+                </div>
+          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}>
+                  <div
+                    </div>
+          <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}</div>
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
                     <p className="text-gray-300 text-sm">{tier.description}</p>
                   <ul className="space-y-3">
@@ -163,10 +171,11 @@ const PartnersPage: React.FC = () => {
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Become Our Partner
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success. 
               Let's build the future together.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"

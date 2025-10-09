@@ -14,6 +14,7 @@ const AIMLPlatformPage: React.FC = () => {
       description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
     },
+    {
       icon: TrendingUp,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics and monitoring for machine learning models',
@@ -78,8 +79,9 @@ const AIMLPlatformPage: React.FC = () => {
       
       <Navigation />
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
+      <div
+        </div>
+          <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI ML platform solutions that will transform your business.

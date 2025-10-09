@@ -204,8 +204,9 @@ const SolutionsPage: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div
+        </div>
+          <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -218,8 +219,9 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           {/* Solution Categories Tabs */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div
+            </div>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
               {solutionCategories.map((category) => (
                 <button
                   key={category.id}
@@ -244,11 +246,13 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           {/* Solutions Grid */}
-          <div className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {solutions[activeTab as keyof typeof solutions].map((solution, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
+                <div
+                  </div>
+          <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <solution.icon className={`w-6 h-6 ${solution.color}`} />
                     </div>
@@ -270,8 +274,9 @@ const SolutionsPage: React.FC = () => {
                     </ul>
                   </div>
                   
-                  <div className="flex items-center justify-between">
-                    <div className={`text-lg font-bold ${solution.color}`}>
+                  <div
+                    </div>
+          <div className={`text-lg font-bold ${solution.color}`}>
                       {solution.pricing}
                     </div>
                     <a
@@ -292,9 +297,10 @@ const SolutionsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Choose Our Solutions?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
+                </div>
+          <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>

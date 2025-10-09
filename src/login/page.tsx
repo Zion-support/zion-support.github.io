@@ -51,11 +51,13 @@ const LoginPage: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div
+        </div>
+          <div className="max-w-6xl mx-auto px-4">
+          <div
             {/* Left Side - Login Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
+            </div>
+          <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
                   Welcome Back
@@ -134,8 +136,9 @@ const LoginPage: React.FC = () => {
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    <div
+                      </div>
+          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Signing In...
                     </div>
                   ) : (
@@ -181,8 +184,9 @@ const LoginPage: React.FC = () => {
             </div>
 
             {/* Right Side - Features */}
-            <div className="space-y-8">
-              <div>
+            <div
+              </div>
+          <div>
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
                   Access Your AI & IT Services
                 </h2>
@@ -192,9 +196,10 @@ const LoginPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div
                 {features.map((feature, index) => (
-                  <div key={index} className="flex items-start">
+                  </div>
+          <div key={index} className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
                     </div>

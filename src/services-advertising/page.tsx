@@ -17,7 +17,8 @@ export default function ServicesAdvertisingPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          </div>
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
               <Target className="w-4 h-4 mr-2" />
@@ -28,11 +29,12 @@ export default function ServicesAdvertisingPage() {
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
               Revolutionize Your Marketing with 300% ROI Guaranteed
             </p>
-            <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
+            <p
               Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
@@ -45,15 +47,18 @@ export default function ServicesAdvertisingPage() {
       </section>
       {/* Key Metrics */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          </div>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Proven Advertising Results
             </h2>
-            <p className="text-xl text-gray-600">
+            <p
               Our AI-powered advertising delivers measurable business impact
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
+          </p>
+          <div
+              </div>
+          <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
               <div className="text-gray-600">Average ROI</div>
               <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
               <div className="text-gray-600">Targeting Accuracy</div>
@@ -65,8 +70,9 @@ export default function ServicesAdvertisingPage() {
       <section id="services" className="py-16 bg-gray-50">
               AI Advertising Solutions
               Comprehensive AI-powered advertising services for maximum impact
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+          <div
+            </div>
+          <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-blue-600 text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>
               <p className="text-gray-600 mb-4">
@@ -78,9 +84,10 @@ export default function ServicesAdvertisingPage() {
                 <li>• Lookalike audience creation</li>
                 <li>• Cross-platform targeting</li>
               </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
+              <div
                 Market Price: $2,000-5,000/month | Our Price: $1,200/month
-              <div className="text-green-600 text-4xl mb-4">📊</div>
+              </div>
+          <div className="text-green-600 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold mb-3">Campaign Optimization</h3>
                 Continuous AI-driven optimization that maximizes performance and minimizes costs across all channels.
                 <li>• A/B testing automation</li>
@@ -127,8 +134,9 @@ export default function ServicesAdvertisingPage() {
       {/* Pricing Section */}
               Transparent Pricing
               Choose the plan that fits your advertising needs
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
+          <div
+            </div>
+          <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
               <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span></div>
               <div className="text-sm text-green-600 font-semibold mb-6">Save 40% vs market rates</div>
@@ -144,8 +152,9 @@ export default function ServicesAdvertisingPage() {
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Get Started
               </button>
-            <div className="bg-blue-600 text-white rounded-lg p-8 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <div
+              </div>
+          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
               <h3 className="text-2xl font-bold mb-4">Professional</h3>
               <div className="text-4xl font-bold mb-2">$2,500<span className="text-lg text-blue-200">/month</span></div>

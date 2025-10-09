@@ -25,8 +25,9 @@ const preloadComponents = () => {
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+  <div
+    </div>
+          <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
@@ -64,6 +65,7 @@ const HomePage: React.FC = () => {
       popular: true,
       category: 'Productivity'
     },
+    {
       title: 'AI Social Media Manager',
       description: 'Transform your social media presence with our cutting-edge AI platform that creates engaging content, optimizes posting schedules, and provides deep audience insights to maximize your brand impact across all platforms.',
       icon: '📱',
@@ -71,7 +73,7 @@ const HomePage: React.FC = () => {
       features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence', 'Multi-platform management', 'Trend analysis'],
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '60% better content performance'],
       link: '/ai-social-media-manager',
-      category: 'Marketing'
+      category: 'Marketing',
       title: 'AI Analytics Dashboard',
       description: 'Unlock the power of your data with our intelligent analytics platform that uses machine learning to identify patterns, predict trends, and provide actionable insights that drive business growth and competitive advantage.',
       icon: '📈',
@@ -79,7 +81,7 @@ const HomePage: React.FC = () => {
       features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking', 'Predictive modeling', 'Custom reporting'],
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', '90% faster decision making'],
       link: '/ai-analytics-dashboard',
-      category: 'Analytics'
+      category: 'Analytics',
       title: 'AI Email Marketing',
       description: 'Revolutionize your email marketing strategy with our AI-powered platform that creates personalized, high-converting email campaigns, optimizes send times, and delivers exceptional ROI through intelligent automation and segmentation.',
       icon: '📧',
@@ -92,7 +94,7 @@ const HomePage: React.FC = () => {
       features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights', 'Multi-language support', 'Integration APIs'],
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically', '60% cost savings'],
       link: '/ai-customer-support-bot',
-      category: 'Support'
+      category: 'Support',
       title: 'AI Code Review Assistant',
       description: 'Advanced automated code analysis with AI-powered bug detection, security scanning, and optimization',
       icon: '🔍',
@@ -202,7 +204,7 @@ const HomePage: React.FC = () => {
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'AutoML', 'MLOps'],
       benefits: ['40% better predictions', '60% faster model deployment', 'Reduced manual work', 'Higher accuracy'],
       color: 'text-purple-400',
-      category: 'Core AI'
+      category: 'Core AI',
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis, language understanding, and conversational AI',
       icon: MessageSquare,
@@ -210,7 +212,7 @@ const HomePage: React.FC = () => {
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Document Processing', 'Voice Recognition'],
       benefits: ['90% accuracy in text analysis', 'Multi-language support', 'Real-time processing', 'Cost effective'],
       color: 'text-blue-400',
-      category: 'Language AI'
+      category: 'Language AI',
       title: 'Computer Vision',
       description: 'Image and video analysis solutions for object detection, recognition, and visual intelligence',
       icon: Eye,
@@ -218,54 +220,54 @@ const HomePage: React.FC = () => {
       features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition', 'OCR', 'Medical Imaging'],
       benefits: ['95% accuracy in detection', 'Real-time processing', 'Multi-format support', 'Industry specific'],
       color: 'text-green-400',
-      category: 'Visual AI'
+      category: 'Visual AI',
       title: 'AI Automation',
       description: 'Intelligent process automation with decision-making capabilities and workflow optimization',
       icon: Zap,
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis, treatment planning, and patient care optimization',
       icon: Heart,
       price: '$2,500/month',
       features: ['Medical Imaging AI', 'Diagnostic Assistance', 'Treatment Planning', 'Patient Monitoring'],
-      color: 'text-red-400'
+      color: 'text-red-400',
       title: 'AI Financial Services',
       description: 'Fintech AI solutions for fraud detection, risk assessment, and trading',
       icon: CreditCard,
       price: '$2,200/month',
       features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring'],
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
       title: 'AI Cybersecurity',
       description: 'Advanced AI security solutions for threat detection and prevention',
       icon: Shield,
       features: ['Threat Detection', 'Anomaly Detection', 'Security Analytics', 'Incident Response'],
-      color: 'text-orange-400'
+      color: 'text-orange-400',
       title: 'AI Content Generation',
       description: 'AI-powered content creation for marketing, blogs, and social media',
       icon: FileText,
       price: '$1,100/month',
       features: ['Content Writing', 'SEO Optimization', 'Social Media Posts', 'Video Scripts'],
-      color: 'text-pink-400'
+      color: 'text-pink-400',
       title: 'AI Data Analytics',
       description: 'Advanced data analysis with AI insights and predictive modeling',
       icon: BarChart,
       price: '$1,600/month',
       features: ['Data Mining', 'Predictive Modeling', 'Business Intelligence', 'Real-time Analytics'],
-      color: 'text-indigo-400'
+      color: 'text-indigo-400',
       title: 'AI Voice & Speech',
       description: 'Voice recognition, synthesis, and conversational AI solutions',
       icon: Music,
       price: '$1,300/month',
       features: ['Speech Recognition', 'Voice Synthesis', 'Conversational AI', 'Multi-language Support'],
-      color: 'text-teal-400'
+      color: 'text-teal-400',
       title: 'AI Robotics',
       description: 'Intelligent robotics solutions for manufacturing and automation',
       icon: Settings,
       price: '$3,000/month',
       features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems'],
-      color: 'text-gray-400'
+      color: 'text-gray-400',
       title: 'AI Edge Computing',
       description: 'AI solutions optimized for edge devices and IoT applications',
       icon: Smartphone,
@@ -280,26 +282,26 @@ const HomePage: React.FC = () => {
       price: '$1,299/month',
       features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration', 'Auto-scaling', 'Disaster Recovery'],
       benefits: ['50% cost reduction', '99.9% uptime', 'Faster deployment', 'Scalable infrastructure'],
-      category: 'Cloud'
+      category: 'Cloud',
       title: 'Cybersecurity Suite',
       description: 'Advanced security solutions with threat detection, prevention, and incident response',
       price: '$1,599/month',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Penetration Testing', 'Compliance'],
       benefits: ['99.9% threat detection', 'Real-time protection', 'Reduced security risks', 'Compliance ready'],
       color: 'text-red-400',
-      category: 'Security'
+      category: 'Security',
       title: 'DevOps & CI/CD',
       description: 'Streamlined development workflows with automated testing, deployment, and monitoring',
       price: '$1,199/month',
       features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup', 'Infrastructure as Code', 'GitOps'],
       benefits: ['80% faster deployment', 'Reduced errors', 'Better collaboration', 'Automated processes'],
-      category: 'DevOps'
+      category: 'DevOps',
       title: 'Database Management',
       description: 'Database design, optimization, and management with AI-powered tuning and monitoring',
       icon: Database,
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
-      color: 'text-purple-400'
+      color: 'text-purple-400',
       title: 'IT Infrastructure',
       description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee',
       icon: Cpu,
@@ -364,8 +366,8 @@ const HomePage: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
-          address: {
+            availableLanguage: 'en',
+      address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
@@ -427,13 +429,15 @@ const HomePage: React.FC = () => {
               <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-6 sm:mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
                 Advanced AI and IT Solutions
               </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-4">
+              <p
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               
               {/* Key Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12">
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              </p>
+          <div
+                </div>
+          <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
                   <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
@@ -465,27 +469,31 @@ const HomePage: React.FC = () => {
             <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               Micro SAAS Solutions
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
+            <p
               Powerful, affordable AI-powered tools designed for modern businesses
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+            </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'cyber-glow-advanced ring-2 ring-cyan-400' : 'holographic-card-advanced'}`}>
                   {service.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                      <div className="bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                    <div
+                      </div>
+          <div className="bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
                         Popular
                   )}
                   
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-3">{service.icon}</div>
+                  <div
+                    </div>
+          <div className="text-4xl mb-3">{service.icon}</div>
                     <div className="inline-block bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-3 py-1 rounded-full text-xs font-medium text-cyan-400 mb-2">
                       {service.category}
                     <h3 className="text-lg font-bold text-white mb-2 neon-text">{service.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    <p
                       {service.description}
                   
-                  <div className="mb-4">
+                  </p>
+          <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
@@ -505,8 +513,9 @@ const HomePage: React.FC = () => {
                           <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
                           {benefit}
                   
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                  <div
+                    </div>
+          <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
                       to={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
                       Learn More
@@ -560,8 +569,9 @@ const HomePage: React.FC = () => {
             <h2 id="stats-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Our Impact
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+            <div
+              </div>
+          <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="text-3xl font-bold text-cyan-400 mb-2 neon-text">500+</div>
                 <div className="text-sm text-gray-300">Clients Served</div>
                 <div className="text-3xl font-bold text-purple-400 mb-2 neon-text">$50M+</div>
@@ -575,10 +585,11 @@ const HomePage: React.FC = () => {
           <section className="mb-16" aria-labelledby="specialized-heading">
             <h2 id="specialized-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               Specialized Solutions
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            <p
               Cutting-edge technologies for next-generation business solutions
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                   <Sparkles className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Quantum Computing</h3>
@@ -663,8 +674,9 @@ const HomePage: React.FC = () => {
               Get In Touch
               Ready to transform your business? Contact us for a free consultation and discover how our solutions can drive your success.
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="cyber-glow-advanced p-6 text-center hover:scale-105 transition-all duration-300">
+            <div
+              </div>
+          <div className="cyber-glow-advanced p-6 text-center hover:scale-105 transition-all duration-300">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
                 <p className="text-gray-300 mb-4">+1 302 464 0950</p>

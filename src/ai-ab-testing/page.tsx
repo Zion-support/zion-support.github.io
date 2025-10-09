@@ -12,14 +12,19 @@ const AIABTestingPage: React.FC = () => {
       description: 'AI-powered A/B testing and experimentation',
       benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
     },
+    {
       icon: Target,
       title: 'Multivariate Testing',
       description: 'Advanced multivariate testing capabilities',
       benefits: ['Multiple variants', 'Complex testing', 'Interaction analysis']
+    },
+    {
       icon: Zap,
       title: 'Automated Optimization',
       description: 'Intelligent test optimization and recommendations',
       benefits: ['Auto-optimization', 'Performance tuning', 'Conversion improvement']
+    },
+    {
       icon: Settings,
       title: 'Analytics & Reporting',
       description: 'Comprehensive testing analytics and reporting',
@@ -42,6 +47,7 @@ const AIABTestingPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Optimize your digital experiences with AI-powered A/B testing. 
             Test, learn, and improve with intelligent experimentation and analysis.
+          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -62,7 +68,7 @@ const AIABTestingPage: React.FC = () => {
             A/B Testing Features
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -72,6 +78,7 @@ const AIABTestingPage: React.FC = () => {
                 </h3>
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
+                </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
@@ -80,6 +87,10 @@ const AIABTestingPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <Footer />

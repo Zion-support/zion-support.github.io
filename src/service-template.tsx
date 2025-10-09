@@ -49,9 +49,10 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
 
         {/* Services Grid */}
         <section className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div
             {services.map((service, index) => (
-              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+              </div>
+          <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-6">
                   <service.icon className="w-12 h-12 text-cyan-400 mr-4" />
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
@@ -72,9 +73,10 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
             Why Choose Our {title}?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
+              </div>
+          <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-2">{benefit}</h3>

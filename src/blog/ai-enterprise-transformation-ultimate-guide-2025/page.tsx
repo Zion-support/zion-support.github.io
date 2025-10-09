@@ -1,7 +1,9 @@
 // Metadata removed for Vite compatibility
 export default function AIEnterpriseTransformationUltimateGuide2025() {
   return (
-    <div className="min-h-screen bg-gray-50"><div className="max-w-4xl mx-auto px-4 py-8"><div className="bg-white rounded-lg shadow-lg p-8"><div className="text-center mb-8"><span className="inline-block bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="max-w-4xl mx-auto px-4 py-8"><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center mb-8"><span className="inline-block bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               🚀 Ultimate Guide
             </span><h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies
@@ -11,7 +13,10 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
               This comprehensive guide reveals how Fortune 500 companies achieve <strong>$2B+ ROI</strong> through 
               strategic AI enterprise transformation. Learn the proven methodologies, frameworks, and implementation 
               strategies that deliver breakthrough results.
-            </p><div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div className="bg-indigo-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-indigo-600 mb-2">$2B+</div><div className="text-gray-700">ROI Achieved</div></div><div className="bg-green-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-green-600 mb-2">95%</div><div className="text-gray-700">Process Automation</div></div><div className="bg-purple-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-purple-600 mb-2">500+</div><div className="text-gray-700">Companies Transformed</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🏢 Enterprise Transformation Framework</h2><p className="text-gray-700 mb-6">
+            </p><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="bg-indigo-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-indigo-600 mb-2">$2B+</div><div className="text-gray-700">ROI Achieved</div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-3xl font-bold text-green-600 mb-2">95%</div><div className="text-gray-700">Process Automation</div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-3xl font-bold text-purple-600 mb-2">500+</div><div className="text-gray-700">Companies Transformed</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🏢 Enterprise Transformation Framework</h2><p className="text-gray-700 mb-6">
               Our proven 6-phase transformation framework has guided 500+ enterprises to successful AI adoption:
             </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: Strategic Foundation</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• Executive leadership alignment and vision setting</li><li>• Comprehensive AI readiness assessment</li><li>• Data strategy and governance framework</li><li>• Change management and culture transformation</li></ul><h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Quick Wins & Pilots</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• Deploy AI solutions in high-impact, low-risk areas</li><li>• Demonstrate immediate value and ROI</li><li>• Build organizational confidence and momentum</li><li>• Establish AI center of excellence</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">🤖 Advanced AI Technologies</h2><p className="text-gray-700 mb-6">
               The transformation leverages cutting-edge AI technologies for maximum impact:
@@ -27,6 +32,8 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
                 </a><a 
                   href="/services" className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </a></div></div></div></div></div></div>
+                </a>
+      </div>
+    </div></div></div></div></div>
   );
 };

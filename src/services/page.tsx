@@ -15,6 +15,7 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       price: 'Starting at $1,500/month',
       popular: true
     },
+    {
       icon: Zap,
       title: 'AI Automation',
       description: 'Intelligent process automation and workflow optimization',
@@ -79,12 +80,12 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
   const benefits = [
       icon: TrendingUp,
       title: 'Proven ROI',
-      description: 'Average 300% return on investment for our clients'
+      description: 'Average 300% return on investment for our clients',
       icon: Users,
       title: 'Expert Team',
-      description: '50+ certified professionals with 10+ years experience'
+      description: '50+ certified professionals with 10+ years experience',
       title: '24/7 Support',
-      description: 'Round-the-clock support with guaranteed response times'
+      description: 'Round-the-clock support with guaranteed response times',
       icon: Clock,
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
@@ -96,8 +97,9 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
     { number: '24/7', label: 'Support Available' }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
+    <div
+      </div>
+          <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Services</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced services solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">

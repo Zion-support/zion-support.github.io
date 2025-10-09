@@ -12,6 +12,7 @@ const AIComputerVisionPage: React.FC = () => {
       description: 'Advanced object detection and recognition with high accuracy',
       benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
     },
+    {
       icon: Camera,
       title: 'Image Classification',
       description: 'Automated image categorization and content analysis',
@@ -87,10 +88,11 @@ const AIComputerVisionPage: React.FC = () => {
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
             Advanced Visual Intelligence Solutions
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p
             Transform your business with cutting-edge computer vision technology. From object detection to facial recognition, 
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
           
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -111,9 +113,10 @@ const AIComputerVisionPage: React.FC = () => {
             Core Capabilities
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
             {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+              </div>
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
@@ -133,17 +136,20 @@ const AIComputerVisionPage: React.FC = () => {
         {/* Applications Section */}
             Industry Applications
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
             {applications.map((application, index) => (
-              <div key={index} className="quantum-card p-8 hover:scale-105 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
+              </div>
+          <div key={index} className="quantum-card p-8 hover:scale-105 transition-all duration-300">
+                <div
+                  </div>
+          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
                     <application.icon className="w-6 h-6 text-white" />
                   <h3 className="text-xl font-bold text-white neon-text">
                     {application.title}
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p
                   {application.description}
-                <div className="space-y-2">
+                </p>
+          <div className="space-y-2">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Use Cases:</h4>
                   {application.useCases.map((useCase, useCaseIndex) => (
                     <div key={useCaseIndex} className="flex items-center text-sm text-gray-300">
@@ -153,12 +159,14 @@ const AIComputerVisionPage: React.FC = () => {
         {/* Pricing Section */}
             Choose Your Plan
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
             {pricing.map((plan, index) => (
-              <div key={index} className={`cyber-card p-8 hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              </div>
+          <div key={index} className={`cyber-card p-8 hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
+                  <div
+                    </div>
+          <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
                       Most Popular
                 )}
                 <div className="text-center mb-6">

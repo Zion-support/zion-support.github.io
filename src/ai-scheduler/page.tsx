@@ -12,22 +12,23 @@ const AISchedulerPage: React.FC = () => {
       description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
       benefit: 'Save 5+ hours per week'
     },
+    {
       icon: Users,
       title: 'Team Coordination',
       description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
-      benefit: 'Eliminate scheduling conflicts'
+      benefit: 'Eliminate scheduling conflicts',
       icon: Brain,
       title: 'Predictive Planning',
       description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
-      benefit: '95% accuracy in predictions'
+      benefit: '95% accuracy in predictions',
       icon: Zap,
       title: 'Automated Reminders',
       description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
-      benefit: 'Reduce no-shows by 60%'
+      benefit: 'Reduce no-shows by 60%',
       icon: Target,
       title: 'Meeting Optimization',
       description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
-      benefit: 'Improve meeting ROI by 40%'
+      benefit: 'Improve meeting ROI by 40%',
       icon: Shield,
       title: 'Privacy & Security',
       description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
@@ -102,7 +103,8 @@ const AISchedulerPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
+        <div
+          </div>
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
             <Calendar className="w-10 h-10 text-white" />
           </div>
@@ -112,10 +114,11 @@ const AISchedulerPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
             Intelligent Meeting & Event Scheduling
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p
             Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
             the best meeting times, coordinate complex team schedules, and optimize your calendar 
             for maximum productivity.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
@@ -131,7 +134,8 @@ const AISchedulerPage: React.FC = () => {
             </Link>
 
         {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+        <div
+          </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">5+</div>
             <div className="text-white font-semibold mb-2">Hours Saved</div>
@@ -151,9 +155,10 @@ const AISchedulerPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Smart Scheduling Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+              </div>
+          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
@@ -163,18 +168,20 @@ const AISchedulerPage: React.FC = () => {
 
         {/* Integrations Section */}
             Works with Your Favorite Tools
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div
             {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
+              </div>
+          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
 
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
+              </div>
+          <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular 
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
@@ -203,15 +210,17 @@ const AISchedulerPage: React.FC = () => {
 
         {/* Testimonials */}
             What Our Users Say
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+              </div>
+          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
+                <div
+                  </div>
+          <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
 

@@ -1,7 +1,8 @@
 export default function NotFound() {
     return (
-    <div>
-      <div>
+    <div
+      </div>
+          <div>
         {/* Error Code */}
         <div>
           <h1 className="text-9xl font-bold text-white/20 mb-4">404</h1>

@@ -15,6 +15,7 @@ const IoTEdgePage: React.FC = () => {
       category: 'Device Management',
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT']
     },
+    {
       title: 'Edge Computing Solutions',
       description: 'Real-time data processing at the edge with low latency and high performance.',
       icon: '⚡',
@@ -121,8 +122,9 @@ const IoTEdgePage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
+          <div
+            </div>
+          <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 IoT & Edge Computing Services
               </h1>
@@ -140,15 +142,18 @@ const IoTEdgePage: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+          <div
+            </div>
+          <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our IoT & Edge Services?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p
                 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            </p>
+          <div
+                </div>
+          <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-cyan-600" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Experts</h3>
                 <p className="text-gray-600">Certified engineers with deep expertise in IoT and edge computing</p>
@@ -170,17 +175,19 @@ const IoTEdgePage: React.FC = () => {
           <section key={category} className="py-16 bg-gray-50">
                   {category} Solutions
                   Specialized {category.toLowerCase()} services for connected and intelligent systems
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div
                 {iotServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    </div>
+          <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
                       
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between mb-2">
+                      <div
+                        </div>
+          <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-cyan-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         <div className="text-sm text-green-600 font-semibold">

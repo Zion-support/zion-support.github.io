@@ -1,7 +1,9 @@
 // Metadata removed for Vite compatibility
 export default function AITrends2026FutureEnterpriseTransformation() {
   return (
-    <div className="min-h-screen bg-gray-50"><div className="max-w-4xl mx-auto px-4 py-8"><div className="bg-white rounded-lg shadow-lg p-8"><div className="text-center mb-8"><span className="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="max-w-4xl mx-auto px-4 py-8"><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center mb-8"><span className="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               🔮 AI TRENDS 2026 • May 1, 2026
             </span><h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence
@@ -11,7 +13,10 @@ export default function AITrends2026FutureEnterpriseTransformation() {
               The year 2026 marks a pivotal moment in AI evolution, with breakthrough technologies 
               transforming how enterprises operate. From <strong>quantum intelligence</strong> to 
               <strong>conscious computing</strong>, these trends are reshaping the future of business.
-            </p><div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div className="bg-purple-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-purple-600 mb-2">Quantum</div><div className="text-gray-700">Intelligence</div></div><div className="bg-blue-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-blue-600 mb-2">Conscious</div><div className="text-gray-700">Computing</div></div><div className="bg-green-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-green-600 mb-2">Autonomous</div><div className="text-gray-700">Operations</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🧠 Top AI Trends 2026</h2><p className="text-gray-700 mb-6">
+            </p><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="bg-purple-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-purple-600 mb-2">Quantum</div><div className="text-gray-700">Intelligence</div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-3xl font-bold text-blue-600 mb-2">Conscious</div><div className="text-gray-700">Computing</div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-3xl font-bold text-green-600 mb-2">Autonomous</div><div className="text-gray-700">Operations</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🧠 Top AI Trends 2026</h2><p className="text-gray-700 mb-6">
               Here are the revolutionary AI trends that will define enterprise transformation in 2026:
             </p><h3 className="text-xl font-semibold text-gray-800 mb-4">1. Quantum Intelligence</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• Quantum-enhanced machine learning algorithms</li><li>• Exponential processing power for complex problems</li><li>• Breakthrough optimization capabilities</li><li>• Revolutionary data analysis methods</li></ul><h3 className="text-xl font-semibold text-gray-800 mb-4">2. Conscious Computing</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• AI systems with self-awareness capabilities</li><li>• Autonomous decision-making with ethical reasoning</li><li>• Human-like cognitive processing</li><li>• Advanced emotional intelligence in AI</li></ul><h3 className="text-xl font-semibold text-gray-800 mb-4">3. Neuromorphic Architectures</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• Brain-inspired computing systems</li><li>• Ultra-low power consumption</li><li>• Real-time learning and adaptation</li><li>• Parallel processing capabilities</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Enterprise Impact</h2><p className="text-gray-700 mb-6">
               These AI trends are transforming enterprise operations across all industries:
@@ -44,6 +49,8 @@ export default function AITrends2026FutureEnterpriseTransformation() {
                 </a><a 
                   href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
-                </a></div></div></div></div></div></div>
+                </a>
+      </div>
+    </div></div></div></div></div>
   );
 };

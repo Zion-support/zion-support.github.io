@@ -9,18 +9,19 @@ const AISocialMediaManagerPage: React.FC = () => {
       title: 'AI Content Creation',
       description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
     },
+    {
       icon: TrendingUp,
       title: 'Trend Analysis',
-      description: 'Real-time trend monitoring and content suggestions based on viral topics'
+      description: 'Real-time trend monitoring and content suggestions based on viral topics',
       icon: Users,
       title: 'Audience Insights',
-      description: 'Deep analytics on your audience behavior and engagement patterns'
+      description: 'Deep analytics on your audience behavior and engagement patterns',
       icon: Calendar,
       title: 'Smart Scheduling',
-      description: 'AI-optimized posting times for maximum engagement across all platforms'
+      description: 'AI-optimized posting times for maximum engagement across all platforms',
       icon: BarChart,
       title: 'Performance Analytics',
-      description: 'Comprehensive reporting with actionable insights and ROI tracking'
+      description: 'Comprehensive reporting with actionable insights and ROI tracking',
       icon: MessageSquare,
       title: 'Auto-Responses',
       description: 'Intelligent chatbot responses and comment management'
@@ -78,7 +79,8 @@ const AISocialMediaManagerPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+        <div
+          </div>
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-pink-500/10 rounded-full text-pink-400 text-sm font-medium mb-6">
               <Share2 className="w-4 h-4 mr-2" />
@@ -105,12 +107,14 @@ const AISocialMediaManagerPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               All Platforms, One Solution
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p
               Manage all your social media accounts from a single, intelligent dashboard
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          </p>
+          <div
             {platforms.map((platform, index) => (
-              <div key={index} className="text-center">
+              </div>
+          <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-slate-800/50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">{platform.icon}</span>
                 <h3 className={`font-semibold ${platform.color}`}>
@@ -123,23 +127,26 @@ const AISocialMediaManagerPage: React.FC = () => {
               Powerful AI Features
               Leverage cutting-edge AI technology to streamline your social media management
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300">
+              </div>
+          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-pink-400" />
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
-                <p className="text-gray-300">
+                <p
                   {feature.description}
 
       {/* Benefits Section */}
               Proven Results
               Join thousands of brands who have transformed their social media presence
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
+          </p>
+          <div
             {benefits.map((benefit, index) => (
-                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                </div>
+          <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 <p className="text-white font-semibold">{benefit}</p>
 
@@ -155,9 +162,10 @@ const AISocialMediaManagerPage: React.FC = () => {
               Simple, Transparent Pricing
               Choose the plan that fits your social media needs
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
             {pricing.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${
+              </div>
+          <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${
                 plan.popular 
                   ? 'border-pink-400/60 ring-2 ring-pink-400/20' 
                   : 'border-slate-700/50'

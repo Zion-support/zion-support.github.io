@@ -21,12 +21,12 @@ const HelpPage: React.FC = () => {
       name: 'Troubleshooting',
       icon: HelpCircle,
       color: 'text-red-400',
-      bgColor: 'bg-red-500/10'
+      bgColor: 'bg-red-500/10',
       id: 'billing',
       name: 'Billing & Account',
       icon: CheckCircle,
       color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
+      bgColor: 'bg-green-500/10',
       id: 'technical',
       name: 'Technical Support',
       icon: MessageSquare,
@@ -42,8 +42,8 @@ const HelpPage: React.FC = () => {
         category: 'Getting Started',
         readTime: '5 min read',
         difficulty: 'Beginner',
-        color: 'text-blue-400'
-        title: 'Setting Up Your First Dashboard',
+        color: 'text-blue-400',
+      title: 'Setting Up Your First Dashboard',
         description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
         readTime: '3 min read',
         title: 'Understanding AI Pricing Models',
@@ -58,8 +58,8 @@ const HelpPage: React.FC = () => {
         title: 'Common Login Issues and Solutions',
         description: 'Troubleshoot common authentication problems and access issues',
         category: 'Troubleshooting',
-        color: 'text-red-400'
-        title: 'API Connection Problems',
+        color: 'text-red-400',
+      title: 'API Connection Problems',
         description: 'Resolve API connectivity issues and authentication errors',
         title: 'Performance Optimization',
         description: 'Improve system performance and resolve slow response times',
@@ -71,8 +71,8 @@ const HelpPage: React.FC = () => {
         title: 'Understanding Your Bill',
         description: 'Learn how to read and understand your monthly billing statement',
         category: 'Billing',
-        color: 'text-green-400'
-        title: 'Upgrading or Downgrading Plans',
+        color: 'text-green-400',
+      title: 'Upgrading or Downgrading Plans',
         description: 'How to change your subscription plan and what to expect',
         title: 'Payment Methods and Billing',
         description: 'Manage your payment methods and billing information',
@@ -83,8 +83,8 @@ const HelpPage: React.FC = () => {
         description: 'Complete API reference with code examples and best practices',
         category: 'Technical',
         readTime: '10 min read',
-        color: 'text-purple-400'
-        title: 'Security Best Practices',
+        color: 'text-purple-400',
+      title: 'Security Best Practices',
         description: 'Implement security measures to protect your data and systems',
         readTime: '8 min read',
         title: 'Custom Integration Guide',
@@ -99,13 +99,13 @@ const HelpPage: React.FC = () => {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
-      count: '50+ videos'
+      count: '50+ videos',
       title: 'Documentation',
       description: 'Comprehensive technical documentation and guides',
-      count: '200+ articles'
+      count: '200+ articles',
       title: 'API Reference',
       description: 'Complete API documentation with examples',
-      count: '100+ endpoints'
+      count: '100+ endpoints',
       title: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
@@ -116,16 +116,16 @@ const HelpPage: React.FC = () => {
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
       availability: '24/7',
-      responseTime: 'Instant'
+      responseTime: 'Instant',
       title: 'Email Support',
       description: 'Send us a detailed message and we\'ll respond quickly',
       icon: Mail,
-      responseTime: 'Within 4 hours'
+      responseTime: 'Within 4 hours',
       title: 'Phone Support',
       description: 'Speak directly with our technical experts',
       icon: Phone,
       availability: 'Mon-Fri 9AM-6PM EST',
-      responseTime: 'Immediate'
+      responseTime: 'Immediate',
       title: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
@@ -135,11 +135,11 @@ const HelpPage: React.FC = () => {
       question: 'How quickly can I get started with your AI services?',
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
       question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs including online courses, live workshops, and one-on-one sessions to help your team master our platform.'
+      answer: 'Yes, we provide comprehensive training programs including online courses, live workshops, and one-on-one sessions to help your team master our platform.',
       question: 'What kind of support do you provide?',
-      answer: 'We offer 24/7 support through multiple channels including live chat, email, phone, and our community forum. Our response times vary by channel but we aim to respond within 4 hours for most inquiries.'
+      answer: 'We offer 24/7 support through multiple channels including live chat, email, phone, and our community forum. Our response times vary by channel but we aim to respond within 4 hours for most inquiries.',
       question: 'Can I integrate your services with my existing systems?',
-      answer: 'Absolutely! We provide extensive APIs, webhooks, and integration tools to seamlessly connect with your existing business systems and workflows.'
+      answer: 'Absolutely! We provide extensive APIs, webhooks, and integration tools to seamlessly connect with your existing business systems and workflows.',
       question: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
 
@@ -154,8 +154,9 @@ const HelpPage: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div
+        </div>
+          <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -168,8 +169,9 @@ const HelpPage: React.FC = () => {
           </div>
 
           {/* Search */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <div className="relative">
+          <div
+            </div>
+          <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -180,8 +182,9 @@ const HelpPage: React.FC = () => {
               />
 
           {/* Categories */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div
+            </div>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
               {categories.map((category) => (
                 <button
                   key={category.id}
@@ -202,11 +205,13 @@ const HelpPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-8">
               {categories.find(cat => cat.id === activeCategory)?.name} Articles
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
               {filteredArticles.map((article, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className={`w-10 h-10 ${article.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-lg flex items-center justify-center mr-3`}>
+                </div>
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                  <div
+                    </div>
+          <div className={`w-10 h-10 ${article.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-lg flex items-center justify-center mr-3`}>
                       <article.icon className={`w-5 h-5 ${article.color}`} />
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-white mb-2">{article.title}</h3>
@@ -229,9 +234,10 @@ const HelpPage: React.FC = () => {
           {/* Resources */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Additional Resources
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
               {resources.map((resource, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
+                </div>
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
                   <div className={`w-16 h-16 ${resource.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <resource.icon className={`w-8 h-8 ${resource.color}`} />
                   <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
@@ -245,16 +251,18 @@ const HelpPage: React.FC = () => {
                     <channel.icon className={`w-8 h-8 ${channel.color}`} />
                   <h3 className="text-lg font-semibold text-white mb-2">{channel.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{channel.description}</p>
-                  <div className="text-sm text-gray-400 mb-2">
-                    <div className="font-medium">Availability: {channel.availability}</div>
+                  <div
+                    </div>
+          <div className="font-medium">Availability: {channel.availability}</div>
                     <div>Response: {channel.responseTime}</div>
                   <button className="w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors text-sm font-medium">
                     Contact Now
 
           {/* FAQ */}
               Frequently Asked Questions
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-6">
+            <div
+              </div>
+          <div className="space-y-6">
                 {faqs.map((faq, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                     <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
@@ -264,10 +272,11 @@ const HelpPage: React.FC = () => {
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Need Help?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p
               Can't find what you're looking for? Our support team is here to help you 
               with any questions or issues you might have.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"

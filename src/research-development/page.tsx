@@ -246,8 +246,9 @@ const ResearchDevelopmentPage: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div
+        </div>
+          <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -260,8 +261,9 @@ const ResearchDevelopmentPage: React.FC = () => {
           </div>
 
           {/* Research Areas Tabs */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div
+            </div>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
               {researchAreas.map((area) => (
                 <button
                   key={area.id}
@@ -290,11 +292,13 @@ const ResearchDevelopmentPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Current Research Projects
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
+                </div>
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                  <div
+                    </div>
+          <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <project.icon className={`w-6 h-6 ${project.color}`} />
                     </div>
                     <div className="flex-1">
@@ -303,8 +307,9 @@ const ResearchDevelopmentPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div>
+                  <div
+                    </div>
+          <div>
                       <div className="text-sm text-gray-400 mb-1">Status</div>
                       <div className={`text-sm font-medium ${
                         project.status === 'Completed' ? 'text-green-400' : 
@@ -313,22 +318,26 @@ const ResearchDevelopmentPage: React.FC = () => {
                         {project.status}
                       </div>
                     </div>
-                    <div>
-                      <div className="text-sm text-gray-400 mb-1">Timeline</div>
+                    <div
+                      </div>
+          <div className="text-sm text-gray-400 mb-1">Timeline</div>
                       <div className="text-sm text-white">{project.timeline}</div>
                     </div>
-                    <div>
-                      <div className="text-sm text-gray-400 mb-1">Team</div>
+                    <div
+                      </div>
+          <div className="text-sm text-gray-400 mb-1">Team</div>
                       <div className="text-sm text-white">{project.team}</div>
                     </div>
-                    <div>
-                      <div className="text-sm text-gray-400 mb-1">Funding</div>
+                    <div
+                      </div>
+          <div className="text-sm text-gray-400 mb-1">Funding</div>
                       <div className="text-sm text-white">{project.funding}</div>
                     </div>
                   </div>
                   
-                  <div>
-                    <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
+                  <div
+                    </div>
+          <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
                     <ul className="space-y-1">
                       {project.outcomes.map((outcome, outcomeIndex) => (
                         <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start">
@@ -348,14 +357,16 @@ const ResearchDevelopmentPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Recent Publications
             </h2>
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-6">
+            <div
+              </div>
+          <div className="space-y-6">
                 {publications.map((pub, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                     <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>
                     <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div
+                      </div>
+          <div className="flex items-center space-x-4 text-sm text-gray-400">
                         <span>{pub.journal}</span>
                         <span>•</span>
                         <span>{pub.year}</span>
@@ -383,9 +394,10 @@ const ResearchDevelopmentPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Research Achievements
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
               {achievements.map((achievement, index) => (
-                <div key={index} className="text-center">
+                </div>
+          <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <achievement.icon className="w-8 h-8 text-cyan-400" />
                   </div>

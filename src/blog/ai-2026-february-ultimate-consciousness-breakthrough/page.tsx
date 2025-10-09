@@ -4,7 +4,8 @@ import { Star } from 'lucide-react';
 // Metadata removed for Vite compatibility
 export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16"><h1 className="text-5xl font-bold text-white mb-6">
             AI 2026 February Ultimate Consciousness Breakthrough
@@ -12,7 +13,8 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
             Mind-Expanding Technology with Revolutionary AI Consciousness
           </p><div className="flex items-center justify-center gap-2 text-yellow-400"><Star className="w-6 h-6 fill-current" /><span className="text-lg font-semibold">Ultimate Consciousness</span></div></div>
         {/* Content Sections */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16"><div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"><h2 className="text-3xl font-bold text-white mb-6">Consciousness Features</h2><ul className="space-y-4 text-gray-300"><li className="flex items-center gap-3"><Star className="w-5 h-5 text-cyan-400" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"><h2 className="text-3xl font-bold text-white mb-6">Consciousness Features</h2><ul className="space-y-4 text-gray-300"><li className="flex items-center gap-3"><Star className="w-5 h-5 text-cyan-400" />
                 Mind-Expanding Technology
               </li><li className="flex items-center gap-3"><Star className="w-5 h-5 text-cyan-400" />
                 Advanced Cognitive Systems
@@ -26,7 +28,8 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
                 Ultimate Consciousness
               </li></ul></div></div>
         {/* CTA Section */}
-        <div className="text-center"><div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-8"><h2 className="text-3xl font-bold text-white mb-4">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-8"><h2 className="text-3xl font-bold text-white mb-4">
               Experience Ultimate Consciousness
             </h2><p className="text-gray-300 mb-6">
               Join the AI 2026 February ultimate consciousness breakthrough.

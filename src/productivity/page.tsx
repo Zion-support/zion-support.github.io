@@ -46,10 +46,11 @@ const ProductivityPage: React.FC = () => {
         {categories.map(category => (
           <section key={category} className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
-            <div>{productivityTools
+            <div{productivityTools
                 .filter(tool => tool.category === category)
                 .map((tool, index) => (
-                    <div className="text-4xl mb-4 text-center">{tool.icon}</div>
+                    </div>
+          <div className="text-4xl mb-4 text-center">{tool.icon}</div>
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{tool.title}</h4>
                     <p className="text-gray-300 mb-4 text-sm text-center">{tool.description}</p>
                     

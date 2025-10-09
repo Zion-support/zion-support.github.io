@@ -12,6 +12,7 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Digital transformation strategy and roadmap development',
       benefits: ['Strategic planning', 'Technology assessment', 'Change management']
     },
+    {
       icon: Zap,
       title: 'Process Automation',
       description: 'Automate and optimize business processes',
@@ -39,10 +40,11 @@ const DigitalTransformationPage: React.FC = () => {
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
             Transform Your Business for the Digital Age
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p
             Accelerate your digital transformation journey with our comprehensive solutions. From strategy development to implementation, 
             we help you modernize your business and stay competitive in the digital economy.
           
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -62,9 +64,10 @@ const DigitalTransformationPage: React.FC = () => {
             Transformation Services
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
             {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+              </div>
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">

@@ -16,6 +16,7 @@ const AiProjectManagerPage: React.FC = () => {
       description: 'Intelligent project planning with predictive analytics and resource optimization',
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
     },
+    {
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment and priority management based on AI insights',
@@ -80,8 +81,9 @@ const AiProjectManagerPage: React.FC = () => {
       
       <Navigation />
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
+      <div
+        </div>
+          <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI project management solutions that will transform your business.

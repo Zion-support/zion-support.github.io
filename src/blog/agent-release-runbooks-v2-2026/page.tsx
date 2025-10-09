@@ -2,7 +2,8 @@ export default function Page() {
   return (
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
-        <div>
+        <div
+          </div>
           <div>
             <ListChecks />
             <span className='text-sm font-semibold'>Agent Ops • 2026</span>
@@ -13,8 +14,9 @@ export default function Page() {
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
             canaries, approvals and one‑click rollback.
           </p>
+          <div
+            </div>
           <div>
-            <div>
               <Calendar />
               <span>Jan 30, 2026</span>
             </div>
@@ -42,23 +44,27 @@ export default function Page() {
         </div>
       </section>
       <section className='py-12 bg-white'>
-        <div>
+        <div
+          </div>
           <div>
             <div>Budgets</div>
             <div className='text-slate-600'>Max cost, time, scope per release</div>
           </div>
-          <div>
-            <div>Canaries</div>
+          <div
+            </div>
+          <div>Canaries</div>
             <div>KPI-linked checks in CI and live</div>
           </div>
-          <div>
-            <div>Rollback</div>
+          <div
+            </div>
+          <div>Rollback</div>
             <div className='text-slate-600'>One click, under 60s MTR</div>
           </div>
         </div>
       </section>
       <section className='py-16'>
-        <div>
+        <div
+          </div>
           <div>
             <div>
               <h3 className='text-2xl font-bold flex items-center gap-2'>

@@ -55,9 +55,10 @@ const SignupPage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance'
     },
+    {
       icon: Award,
       title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients'
+      description: '300% average ROI and 95% process automation for our clients',
       icon: Globe,
       title: 'Global Support',
       description: '24/7 support and services across multiple time zones'
@@ -74,11 +75,13 @@ const SignupPage: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div
+        </div>
+          <div className="max-w-6xl mx-auto px-4">
+          <div
             {/* Left Side - Signup Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
+            </div>
+          <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
                   Create Your Account
@@ -89,8 +92,9 @@ const SignupPage: React.FC = () => {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
+                <div
+                  </div>
+          <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       First Name
                     </label>
@@ -178,8 +182,9 @@ const SignupPage: React.FC = () => {
                   disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    <div
+                      </div>
+          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Creating Account...
                   ) : (
                     'Create Account'
@@ -198,13 +203,15 @@ const SignupPage: React.FC = () => {
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
                   Transform Your Business Today
                 </h2>
-                <p className="text-xl text-gray-300 mb-8">
+                <p
                   Join thousands of businesses already using our AI and IT solutions 
                   to achieve unprecedented growth and efficiency.
 
-              <div className="space-y-6">
+              </p>
+          <div
                 {features.map((feature, index) => (
-                  <div key={index} className="flex items-start">
+                  </div>
+          <div key={index} className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
@@ -215,17 +222,20 @@ const SignupPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-4">
                   What You Get:
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center text-sm text-gray-300">
+                    </div>
+          <div key={index} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
 
               <div className="text-center">
-                <p className="text-gray-400 text-sm mb-4">
+                <p
                   Trusted by 1000+ companies worldwide
-                <div className="flex justify-center items-center space-x-6 opacity-60">
-                  <div className="text-2xl font-bold text-white">Microsoft</div>
+                </p>
+          <div
+                  </div>
+          <div className="text-2xl font-bold text-white">Microsoft</div>
                   <div className="text-2xl font-bold text-white">Google</div>
                   <div className="text-2xl font-bold text-white">Amazon</div>
       <Footer />

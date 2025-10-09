@@ -11,18 +11,19 @@ const AIEmailMarketingPage: React.FC = () => {
       title: 'AI Content Generation',
       description: 'Automatically create compelling email content that resonates with your audience'
     },
+    {
       icon: Target,
       title: 'Smart Segmentation',
-      description: 'AI-powered audience segmentation for highly targeted campaigns'
+      description: 'AI-powered audience segmentation for highly targeted campaigns',
       icon: Send,
       title: 'Optimal Send Times',
-      description: 'AI determines the best time to send emails for maximum engagement'
+      description: 'AI determines the best time to send emails for maximum engagement',
       icon: BarChart,
       title: 'Predictive Analytics',
-      description: 'Forecast campaign performance and optimize for better results'
+      description: 'Forecast campaign performance and optimize for better results',
       icon: Users,
       title: 'Behavioral Triggers',
-      description: 'Automated email sequences based on user behavior and actions'
+      description: 'Automated email sequences based on user behavior and actions',
       icon: TrendingUp,
       title: 'A/B Testing',
       description: 'Intelligent A/B testing with AI-powered optimization'
@@ -93,8 +94,9 @@ import Footer from '../components/Footer';
       
       <Navigation />
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
+      <div
+        </div>
+          <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Email Marketing</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI email marketing solutions that will transform your business.

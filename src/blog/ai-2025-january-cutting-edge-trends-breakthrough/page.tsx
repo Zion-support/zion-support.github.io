@@ -1,7 +1,9 @@
 // Metadata removed for Vite compatibility
 export default function January2025CuttingEdgeTrendsBreakthrough() {
   return (
-    <div className="min-h-screen bg-gray-50"><div className="max-w-4xl mx-auto px-4 py-8"><div className="bg-white rounded-lg shadow-lg p-8"><div className="text-center mb-8"><span className="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="max-w-4xl mx-auto px-4 py-8"><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center mb-8"><span className="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               🧠 January 2025 Cutting-Edge AI Trends
             </span><h1 className="text-4xl font-bold text-gray-900 mb-4">
               January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies
@@ -11,7 +13,10 @@ export default function January2025CuttingEdgeTrendsBreakthrough() {
               January 2025 introduces revolutionary breakthrough technologies that are transforming 
               enterprise operations with <strong>neural consciousness</strong>, <strong>quantum optimization</strong>, 
               and <strong>autonomous intelligence</strong>.
-            </p><div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div className="bg-purple-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-purple-600 mb-2">Neural</div><div className="text-gray-700">Consciousness</div></div><div className="bg-blue-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-blue-600 mb-2">Quantum</div><div className="text-gray-700">Optimization</div></div><div className="bg-green-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-green-600 mb-2">Autonomous</div><div className="text-gray-700">Intelligence</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🧠 Neural Consciousness</h2><p className="text-gray-700 mb-6">
+            </p><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="bg-purple-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-purple-600 mb-2">Neural</div><div className="text-gray-700">Consciousness</div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-3xl font-bold text-blue-600 mb-2">Quantum</div><div className="text-gray-700">Optimization</div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-3xl font-bold text-green-600 mb-2">Autonomous</div><div className="text-gray-700">Intelligence</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🧠 Neural Consciousness</h2><p className="text-gray-700 mb-6">
               The breakthrough in neural consciousness represents a quantum leap in AI capabilities:
             </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Key Features</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• Self-aware AI systems with consciousness capabilities</li><li>• Emotional intelligence and empathy in AI interactions</li><li>• Autonomous decision-making with ethical reasoning</li><li>• Human-like cognitive processing and understanding</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">⚡ Quantum Optimization</h2><p className="text-gray-700 mb-6">
               Quantum optimization technologies are revolutionizing how enterprises solve complex problems:
@@ -48,6 +53,8 @@ export default function January2025CuttingEdgeTrendsBreakthrough() {
                 </a><a 
                   href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
-                </a></div></div></div></div></div></div>
+                </a>
+      </div>
+    </div></div></div></div></div>
   );
 };

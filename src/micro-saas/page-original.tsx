@@ -3411,27 +3411,32 @@ const MicroSAASPage: React.FC = () => {
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
           </p>
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div
+            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
               <div className="text-gray-300">Applications</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$49</div>
+            <div
+              </div>
+          <div className="text-3xl font-bold text-green-400 mb-2">$49</div>
               <div className="text-gray-300">Starting Price</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+            <div
+              </div>
+          <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
               <div className="text-gray-300">Support</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
+            <div
+              </div>
+          <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
               <div className="text-gray-300">Uptime</div>
             </div>
           </div>
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+          <div
+            </div>
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span className="text-white font-medium">+1 302 464 0950</span>
@@ -3454,16 +3459,19 @@ const MicroSAASPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Choose Your Perfect AI Tools
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
             {microSAASServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}</div>
+              </div>
+          <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <div
+                  </div>
+          <div className="text-5xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
+                <div
+                  </div>
+          <div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-green-600">{service.price}</span>
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>

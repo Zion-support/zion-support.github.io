@@ -16,7 +16,8 @@ const CookiesPage: React.FC = () => {
                 They help us provide you with a better experience by remembering your preferences and enabling certain functionality.
               </p></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Settings className="w-6 h-6 mr-3 text-cyan-400" />
                 Types of Cookies We Use
-              </h2><div className="space-y-6"><div><h3 className="text-lg font-semibold text-white mb-2">Essential Cookies</h3><p className="text-gray-300">
+              </h2><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div><h3 className="text-lg font-semibold text-white mb-2">Essential Cookies</h3><p className="text-gray-300">
                     These cookies are necessary for the website to function properly. They enable basic functions like page 
                     navigation and access to secure areas of the website.
                   </p></div><div><h3 className="text-lg font-semibold text-white mb-2">Analytics Cookies</h3><p className="text-gray-300">

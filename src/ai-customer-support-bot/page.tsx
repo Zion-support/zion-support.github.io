@@ -13,6 +13,7 @@ const AICustomerSupportBotPage: React.FC = () => {
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
+    {
       icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
@@ -77,8 +78,9 @@ const AICustomerSupportBotPage: React.FC = () => {
       
       <Navigation />
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+      <div
+        </div>
+          <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
@@ -86,17 +88,19 @@ const AICustomerSupportBotPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
+            </div>
+          <div key={index} className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
           ))}
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div
           {features.map((feature, index) => (
-            <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+            </div>
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6">
               <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -109,9 +113,10 @@ const AICustomerSupportBotPage: React.FC = () => {
               </ul>
 
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              </div>
+          <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     Most Popular
@@ -130,8 +135,9 @@ const AICustomerSupportBotPage: React.FC = () => {
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p
             Contact our experts to discuss your support needs and get a custom AI solution.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Schedule Demo

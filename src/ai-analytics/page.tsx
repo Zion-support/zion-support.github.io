@@ -12,14 +12,19 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Live data visualization and insights',
       benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
     },
+    {
       icon: Target,
       title: 'Predictive Analytics',
       description: 'AI-powered predictions and forecasting',
       benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
+    },
+    {
       icon: Zap,
       title: 'Automated Reporting',
       description: 'Intelligent report generation and distribution',
       benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
+    },
+    {
       icon: Settings,
       title: 'Custom Metrics',
       description: 'Customizable metrics and KPIs',
@@ -42,7 +47,7 @@ const AIAnalyticsPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Transform your data into actionable insights with our AI-powered analytics platform. 
             Get real-time visibility into your business performance and make data-driven decisions.
-          
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -62,7 +67,7 @@ const AIAnalyticsPage: React.FC = () => {
             Analytics Features
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">

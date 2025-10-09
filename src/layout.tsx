@@ -59,7 +59,7 @@ export default function RootLayout({
       geoMidpoint: {
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
-        longitude: '-75.5795'
+        longitude: '-75.5795',
       geoRadius: '1000000'
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -68,10 +68,10 @@ export default function RootLayout({
           itemOffered: {
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
-            name: 'Digital Automation',
-            description: 'Process automation and workflow optimization services'
-            name: 'Cloud Infrastructure',
+            description: 'Comprehensive AI implementation strategies for enterprise organizations',
+      name: 'Digital Automation',
+            description: 'Process automation and workflow optimization services',
+      name: 'Cloud Infrastructure',
             description: 'Cloud migration and infrastructure optimization services'
       ]
   };
