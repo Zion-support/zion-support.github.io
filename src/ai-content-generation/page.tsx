@@ -1,19 +1,4 @@
+import React from 'react';
+import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
 
-
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
-          Contact Us;
-        </a></div></div>)
-  );
-};
-export default AiContentGenerationPage;
-
-
-
-
-export default PagePage;
-
-
+export default AIContentGenerationPage;

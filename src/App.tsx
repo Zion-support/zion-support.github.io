@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -13,6 +14,41 @@ import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 
 // Import components
+=======
+import React, { Suspense, lazy, useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const BlogPage = lazy(() => import('./blog/page'));
+
+// AI Services
+const AiServicesPage = lazy(() => import('./ai-services/page'));
+const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
+const AiAutomationPage = lazy(() => import('./ai-automation/page'));
+const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const AiFintechPage = lazy(() => import('./ai-fintech/page'));
+
+// IT Services
+const ItServicesPage = lazy(() => import('./it-services/page'));
+const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
+const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+
+// Specialized Solutions
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const MicroSaasPage = lazy(() => import('./micro-saas/page'));
+
+// Additional pages
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const CookiesPage = lazy(() => import('./cookies/page'));
+const NotFoundPage = lazy(() => import('./not-found'));
+>>>>>>> cursor/website-audit-and-update-with-deployment-73fd
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -57,6 +93,7 @@ import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIEmailMarketingPage from './ai-email-marketing/page';
 import AIWritingAssistantPage from './ai-writing-assistant/page';
 
+<<<<<<< HEAD
 // Specialized Solutions Pages
 import QuantumComputingPage from './quantum-computing/page';
 import AutonomousSystemsPage from './autonomous-systems/page';
@@ -64,6 +101,11 @@ import BlockchainWeb3Page from './blockchain-web3/page';
 import IoTEdgeComputingPage from './iot-edge-computing/page';
 import BusinessIntelligencePage from './business-intelligence/page';
 import RoboticsPage from './robotics/page';
+=======
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+>>>>>>> cursor/website-audit-and-update-with-deployment-73fd
 
 // Company Pages
 import TeamPage from './team/page';
@@ -279,6 +321,7 @@ const App: React.FC = () => {
   }
 
   return (
+<<<<<<< HEAD
     <Router>
       <Routes>
         {/* Main Pages */}
@@ -356,6 +399,48 @@ const App: React.FC = () => {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
+=======
+    <ErrorBoundary>
+      <div className="App">
+        <Navigation />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
+            {/* Main Pages */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            
+            {/* AI Services */}
+            <Route path="/ai-services" element={<AiServicesPage />} />
+            <Route path="/ai-marketing" element={<AiMarketingPage />} />
+            <Route path="/ai-automation" element={<AiAutomationPage />} />
+            <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+            <Route path="/ai-fintech" element={<AiFintechPage />} />
+            
+            {/* IT Services */}
+            <Route path="/it-services" element={<ItServicesPage />} />
+            <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
+            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+            
+            {/* Specialized Solutions */}
+            <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+            <Route path="/micro-saas" element={<MicroSaasPage />} />
+            
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/cookies" element={<CookiesPage />} />
+            
+            {/* Catch all route */}
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+        <Footer />
+      </div>
+    </ErrorBoundary>
+>>>>>>> cursor/website-audit-and-update-with-deployment-73fd
   );
 };
 

@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
@@ -24,24 +25,25 @@ export default defineConfig({
 <<<<<<< HEAD
   buil,
   d: {/* TODO: Fix JSX expression */}
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-73fd
 export default defineConfig({
   plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@app': resolve(__dirname, 'app'),
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@utils': resolve(__dirname, './src/utils'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@types': resolve(__dirname, './src/types'),
+      '@app': resolve(__dirname, './app'),
     },
   },
   build: {
-    target: 'esnext',
-    minify: 'terser',
+    outDir: 'dist',
+    assetsDir: 'assets',
     sourcemap: false,
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -75,6 +77,7 @@ export default defineConfig({
           if (id.includes('/app/components/')) {
             return 'components';
           }
+<<<<<<< HEAD
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -100,6 +103,9 @@ export default defineConfig({
           router: ['react-router-dom'],
           utils: ['clsx', 'tailwind-merge']
 >>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
+=======
+          return null;
+>>>>>>> cursor/website-audit-and-update-with-deployment-73fd
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

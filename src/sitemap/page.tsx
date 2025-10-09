@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, Home, Users, Briefcase, FileText, Phone, Mail, Globe } from 'lucide-react';
 
-
 const SitemapPage: React.FC = () => {
   const mainPages = [
     { name: 'Home', path: '/', description: 'Main landing page' },
@@ -240,6 +239,4 @@ const SitemapPage: React.FC = () => {
   );
 };
 export default SitemapPage;
-
-
 
