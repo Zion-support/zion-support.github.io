@@ -559,7 +559,6 @@ export class AccessibilityChecker {
       return 'No accessibility issues found. Great job!';
     }
     let report = `Accessibility Report\n`;
-    report += `===================\n\n`;
     report += `Total Issues: ${this.issues.length}\n`;
     report += `Score: ${this.calculateScore()}/100\n\n`;
     // Group by severity

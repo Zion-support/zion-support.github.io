@@ -24,6 +24,7 @@ export const usePerformance = () => {
         }
       };
     }
+    return undefined;
   }, []);
 };
 
