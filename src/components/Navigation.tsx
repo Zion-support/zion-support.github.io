@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, Check } from 'lucide-react';
-=======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, DollarSign } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-cee5
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,96 +43,40 @@ const Navigation: React.FC = () => {
     }
   };
 
-  const toggleAI = () => {
-    setIsAIOpen(!isAIOpen);
-    if (isAIOpen) {
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleIT = () => {
-    setIsITOpen(!isITOpen);
-    if (isITOpen) {
-      setIsAIOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleSpecialized = () => {
-    setIsSpecializedOpen(!isSpecializedOpen);
-    if (isSpecializedOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-    }
-  };
-
   const microSAASServices = [
-<<<<<<< HEAD
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText },
-    { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users },
-    { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart },
-    { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard },
-    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone },
-    { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check },
-    { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot },
-    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3 },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
-=======
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart, category: 'Productivity' },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText, category: 'Content' },
-    { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users, category: 'Sales' },
-    { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart, category: 'Healthcare' },
-    { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard, category: 'Finance' },
-    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone, category: 'Development' },
-    { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield, category: 'Security' },
-    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, category: 'Marketing' },
     { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check, category: 'Productivity' },
-    { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator, category: 'Finance' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot, category: 'Communication' },
-    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity' },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity' },
+    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText, category: 'Content' },
+    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, category: 'Content' },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing' },
     { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, category: 'Marketing' },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, category: 'Support' },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, category: 'Development' },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, category: 'Content' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, category: 'Sales' },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, category: 'Productivity' },
+    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, category: 'Marketing' },
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing' },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, category: 'E-commerce' },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, category: 'Marketing' },
+    { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users, category: 'Business' },
+    { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard, category: 'Finance' },
     { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance' },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Media' },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music, category: 'Media' },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music, category: 'Media' },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette, category: 'Design' },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, category: 'Health' },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, category: 'Automation' },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, category: 'Sales' },
+    { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator, category: 'Finance' },
+    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, category: 'Business' },
+    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, category: 'Support' },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot, category: 'Support' },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, category: 'Support' },
+    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, category: 'Development' },
+    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone, category: 'Development' },
+    { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield, category: 'Security' },
+    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, category: 'Development' },
+    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, category: 'Analytics' },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera, category: 'Design' }
->>>>>>> cursor/website-audit-and-update-with-deployment-cee5
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative' },
+    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music, category: 'Creative' },
+    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music, category: 'Creative' },
+    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette, category: 'Creative' },
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera, category: 'Creative' },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart, category: 'Health' },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, category: 'Health' },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, category: 'Sales' }
   ];
 
   const aiServices = [
@@ -211,7 +151,6 @@ const Navigation: React.FC = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
@@ -219,7 +158,6 @@ const Navigation: React.FC = () => {
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <div className="relative group">
               <button
@@ -239,19 +177,19 @@ const Navigation: React.FC = () => {
                         Micro SAAS
                       </h3>
                       <div className="space-y-3">
-                        {['Productivity', 'Marketing', 'Analytics', 'Content'].map((category) => (
+                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance'].map(category => (
                           <div key={category}>
                             <h4 className="text-xs font-medium text-purple-400 mb-2 uppercase tracking-wide">{category}</h4>
                             <div className="space-y-1">
-                              {microSAASServices.filter(service => service.category === category).slice(0, 3).map((service) => (
-                                <a key={service.name}
-                                  href={service.href}
-                                  className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                              {microSAASServices.filter(service => service.category === category).slice(0, 2).map((service) => (
+                                <Link key={service.name}
+                                  to={service.href}
+                                  className="flex items-center space-x-2 text-xs text-gray-300 hover:text-cyan-400 transition-colors"
                                   onClick={closeAllMenus}
                                 >
                                   <service.icon className="w-3 h-3" />
                                   <span>{service.name}</span>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>
@@ -265,14 +203,14 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {aiServices.slice(0, 8).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                          <Link key={service.name}
+                            to={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -283,72 +221,64 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {itServices.slice(0, 8).map((service) => (
-                          <a
+                          <Link
                             key={service.name}
-                            href={service.href}
+                            to={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Globe className="w-4 h-4 mr-2" />
+                        <Cpu className="w-4 h-4 mr-2" />
                         Specialized
                       </h3>
                       <div className="space-y-2">
                         {specializedServices.slice(0, 8).map((service) => (
-                          <a
+                          <Link
                             key={service.name}
-                            href={service.href}
+                            to={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
-                  <div className="mt-4 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-2 gap-4">
+                  <div className="mt-6 pt-4 border-t border-gray-700">
+                    <div className="grid grid-cols-3 gap-4">
                       <Link
                         to="/services"
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-=======
-                  <div className="mt-6 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-3 gap-4">
-                      <a
-                        href="/services"
-                        className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors py-2 px-4 rounded-lg hover:bg-cyan-400/10"
->>>>>>> cursor/website-audit-and-update-with-deployment-cee5
                         onClick={closeAllMenus}
                       >
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-                      <a
-                        href="/pricing"
-                        className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors py-2 px-4 rounded-lg hover:bg-purple-400/10"
+                      <Link
+                        to="/specialized-services"
+                        className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        <span>Specialized Solutions</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                      <Link
+                        to="/pricing"
+                        className="flex items-center justify-center space-x-2 text-green-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
                         <span>View Pricing</span>
-                        <DollarSign className="w-4 h-4" />
-                      </a>
-                      <a
-                        href="/contact"
-                        className="flex items-center justify-center space-x-2 text-green-400 hover:text-white transition-colors py-2 px-4 rounded-lg hover:bg-green-400/10"
-                        onClick={closeAllMenus}
-                      >
-                        <span>Get Started</span>
                         <ArrowRight className="w-4 h-4" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -366,6 +296,9 @@ const Navigation: React.FC = () => {
             </Link>
             <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
+            </Link>
+            <Link to="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
+              Enterprise
             </Link>
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
@@ -387,7 +320,6 @@ const Navigation: React.FC = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors"
@@ -396,7 +328,6 @@ const Navigation: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
@@ -415,13 +346,13 @@ const Navigation: React.FC = () => {
                       <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
                       <div className="space-y-2">
                         {microSAASServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                          <Link key={service.name}
+                            to={service.href}
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             {service.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -429,13 +360,13 @@ const Navigation: React.FC = () => {
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
                       <div className="space-y-2">
                         {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                          <Link key={service.name}
+                            to={service.href}
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             {service.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -468,7 +399,7 @@ const Navigation: React.FC = () => {
               <div className="pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-4"
                 >
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
