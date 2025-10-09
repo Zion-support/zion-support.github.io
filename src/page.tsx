@@ -12,10 +12,10 @@ import {
   ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, 
   Rocket, Microscope, Layers, Database as DbIcon, Server, Network, Cpu as Processor, 
   HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Router, 
-  Switch, Backup, Recovery, Migration, Integration, Consulting, 
-  Support, Maintenance, Upgrade, Security, Compliance, Audit, Training, Documentation, 
-  Testing, Quality, Performance, Scalability, Reliability, Availability, Monitoring, 
-  Alerting, Logging, Analytics, Reporting, Dashboard
+  RotateCcw, RefreshCw, Move, Link, 
+  HelpCircle, ShieldCheck, FileCheck, 
+  TestTube, BarChart3, 
+  Bell, FileBarChart, LayoutDashboard
 } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';

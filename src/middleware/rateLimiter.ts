@@ -142,7 +142,7 @@ export function getClientIdentifier(request: Request): string {
  */
 export function createRateLimitMiddleware(limiter: RateLimiter) {
   return async (request: Request): Promise<Response | null> => {
-    const _identifier = getClientIdentifier(request);
+    const identifier = getClientIdentifier(request);
     const { allowed, remaining, resetTime } = limiter.check(identifier);
     if (!allowed) {
       return new Response(
