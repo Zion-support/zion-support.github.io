@@ -32,49 +32,102 @@ const ContactPage: React.FC = () => {
                     United States
                   </p>
                 </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                    Phone
+                  </h3>
+                  <p className='text-gray-600'>
+                    <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800">
+                      +1 (302) 464-0950
+                    </a>
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                    Email
+                  </h3>
+                  <p className='text-gray-600'>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
+                      kleber@ziontechgroup.com
+                    </a>
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                    Business Hours
+                  </h3>
+                  <p className='text-gray-600'>
+                    Monday - Friday: 9:00 AM - 6:00 PM EST<br />
+                    Saturday: 10:00 AM - 4:00 PM EST<br />
+                    Sunday: Closed
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Send us a Message
-            </h2>
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Send us a Message
+              </h2>
+              <form className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Service Interest
+                  </label>
+                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option>AI Services</option>
+                    <option>AI Marketing</option>
+                    <option>IT Services</option>
+                    <option>Micro SAAS</option>
+                    <option>Quantum Computing</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    rows={4}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Tell us about your project and how we can help..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
