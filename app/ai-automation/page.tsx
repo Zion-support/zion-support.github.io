@@ -79,7 +79,8 @@ const AIAutomationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+
+
 
   const stats = [
     { icon: Users, value: '200+', label: 'Automated Processes' },
@@ -115,4 +116,5 @@ const AIAutomationPage: React.FC = () => {
 };
 
 export default AIAutomationPage;
+
 

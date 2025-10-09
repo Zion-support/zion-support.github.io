@@ -23,7 +23,6 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Complete cloud infrastructure setup and configuration',
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
 
-    },
 
     },
     {
@@ -54,28 +53,19 @@ const CloudMigrationPage: React.FC = () => {
   const migrationSteps = [
     {
 
-      description: 'Create detailed migration plan with timelines and rollback strategies'
-    },
-    {
-      title: 'Optimization & Support',
-      description: 'Post-migration optimization and ongoing support',
-      features: ['Performance tuning', 'Cost optimization', '24/7 support']
-    },
-
-    {
-      step: '01',
-      title: 'Assessment',
       step: '01',
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of your current infrastructure and migration requirements.',
       icon: CheckCircle,
-      duration: '1-2 weeks'
+      duration: '1-2 weeks',
+      features: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
+
     },
     {
       step: '02',
       title: 'Architecture Design',
 
-      description: 'Design optimal cloud architecture tailored to your business needs.'
+      description: 'Design optimal cloud architecture tailored to your business needs.',
 
       icon: Target,
       duration: '1-2 weeks'
@@ -91,12 +81,12 @@ const CloudMigrationPage: React.FC = () => {
       step: '04',
 
       title: 'Optimization & Support',
-
       description: 'Optimize performance and provide ongoing support and monitoring.',
       icon: TrendingUp,
-      duration: 'Ongoing'
+      duration: 'Ongoing',
+      features: ['Performance tuning', 'Cost optimization', '24/7 support']
     }
-  ];
+
 
   const pricingPlans = [
     {
@@ -149,7 +139,8 @@ const CloudMigrationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+
+
 
   const benefits = [
     {
@@ -172,7 +163,8 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Scale resources up or down based on demand automatically.',
       percentage: 'Unlimited'
     }
-  ];
+
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -404,4 +396,5 @@ const CloudMigrationPage: React.FC = () => {
 };
 
 export default CloudMigrationPage;
+
 
