@@ -523,10 +523,6 @@ body {
     border: 1px solid #000 !important;
     background: #fff !important;
   }
-<<<<<<< HEAD
-}
-=======
-
   h1,
   h2,
   h3,
@@ -548,97 +544,37 @@ body {
   }
 }
 
-/* Additional Futuristic Styles */
-/* Energy Pulse Animation */
-.energy-pulse {
-  animation: energy-pulse 2s ease-in-out infinite;
-}
-
-@keyframes energy-pulse {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(236, 72, 153, 0.4);
-  }
-}
-
-/* Cyber Scan Line */
-.cyber-scan-line {
+/* Cyber Button Secondary */
+.cyber-button-secondary {
+  background: linear-gradient(45deg, #8b5cf6, #ec4899);
+  border: 2px solid #8b5cf6;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.cyber-scan-line::after {
+.cyber-button-secondary::before {
   content: '';
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
-  animation: scan-line 3s linear infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
 }
 
-@keyframes scan-line {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
+.cyber-button-secondary:hover::before {
+  left: 100%;
 }
 
-/* Neural Network Background */
-.neural-network-bg {
-  position: relative;
-}
-
-.neural-network-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-  animation: neural-pulse 8s ease-in-out infinite;
-}
-
-@keyframes neural-pulse {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.6;
-  }
-}
-
-/* Cyber Glow Effect */
-.cyber-glow {
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
-/* Cyber Text Effect */
-.cyber-text {
-  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 3s ease-in-out infinite;
-}
-
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+.cyber-button-secondary:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+  transform: translateY(-2px);
 }
 
 /* Screen Reader Only */
@@ -664,4 +600,3 @@ body {
   clip: auto;
   white-space: normal;
 }
->>>>>>> origin/comprehensive-improvements-final

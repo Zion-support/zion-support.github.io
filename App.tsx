@@ -1,4 +1,8 @@
 
+import React, { Suspense, memo, useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
