@@ -44,7 +44,10 @@ function removeUnusedImports(filePath) {
       
       const unusedVars = lintResults[0].messages
         .filter(msg => msg.ruleId === '@typescript-eslint/no-unused-vars' && msg.message.includes('is defined but never used'))
-        .map(msg => msg.message.match(/'([^']+)'/)?.[1])
+        .map(msg => {
+          const match = msg.message.match(/'([^']+)'/);
+          return match ? match[1] : null;
+        })
         .filter(Boolean);
       
       if (unusedVars.length === 0) return;
@@ -97,8 +100,14 @@ console.log('Starting to fix unused imports...');
 const files = getAllFiles('./src');
 console.log(`Found ${files.length} files to process`);
 
-files.forEach(file => {
-  removeUnusedImports(file);
-});
+// Process files in batches to avoid overwhelming the system
+const batchSize = 10;
+for (let i = 0; i < files.length; i += batchSize) {
+  const batch = files.slice(i, i + batchSize);
+  batch.forEach(file => {
+    removeUnusedImports(file);
+  });
+  console.log(`Processed batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(files.length / batchSize)}`);
+}
 
 console.log('Finished fixing unused imports');
