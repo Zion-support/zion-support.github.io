@@ -1,218 +1,270 @@
 import React from 'react';
-
-import Link from 'next/link';
-import { ArrowLeft, Shield, Lock, Eye, CheckCircle, AlertTriangle, FileText, Users } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Shield, Lock, Eye, AlertTriangle, CheckCircle, Server, Key, Database, Globe, Users } from 'lucide-react';
 
 const SecurityPage: React.FC = () => {
-  const securityMeasures = [
+  const securityFeatures = [
     {
-      icon: Lock,
-      title: 'Data Encryption',
+      title: 'End-to-End Encryption',
       description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols.',
+      icon: Lock,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
       details: [
-        'AES-256 encryption for data at rest',
         'TLS 1.3 for data in transit',
-        'End-to-end encryption for sensitive communications',
-        'Encrypted database backups'
+        'AES-256 encryption for data at rest',
+        'Perfect Forward Secrecy',
+        'Certificate pinning'
       ]
     },
     {
-      icon: Shield,
+      title: 'Multi-Factor Authentication',
+      description: 'Enhanced security with multiple authentication factors for all user accounts.',
+      icon: Key,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
+      details: [
+        'SMS and email verification',
+        'Authenticator app support',
+        'Hardware security keys',
+        'Biometric authentication'
+      ]
+    },
+    {
       title: 'Access Controls',
-      description: 'Multi-layered access controls ensure only authorized personnel can access your data.',
+      description: 'Granular access controls ensure only authorized personnel can access sensitive data.',
+      icon: Users,
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
       details: [
         'Role-based access control (RBAC)',
-        'Multi-factor authentication (MFA)',
-        'Regular access reviews and audits',
-        'Principle of least privilege'
+        'Principle of least privilege',
+        'Regular access reviews',
+        'Automated access provisioning'
       ]
     },
     {
+      title: 'Network Security',
+      description: 'Advanced network security measures protect against external threats.',
+      icon: Globe,
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
+      details: [
+        'Firewall protection',
+        'DDoS mitigation',
+        'Intrusion detection systems',
+        'Network segmentation'
+      ]
+    },
+    {
+      title: 'Data Monitoring',
+      description: 'Continuous monitoring and logging of all data access and modifications.',
       icon: Eye,
-      title: 'Monitoring & Logging',
-      description: 'Comprehensive monitoring and logging to detect and prevent security threats.',
+      color: 'text-red-600',
+      bgColor: 'bg-red-50',
       details: [
-        '24/7 security monitoring',
-        'Real-time threat detection',
+        'Real-time security monitoring',
         'Comprehensive audit logs',
-        'Automated incident response'
+        'Anomaly detection',
+        'Automated threat response'
       ]
     },
     {
-      icon: Users,
-      title: 'Security Training',
-      description: 'Regular security training for all employees to maintain the highest security standards.',
+      title: 'Infrastructure Security',
+      description: 'Secure infrastructure with regular updates and vulnerability management.',
+      icon: Server,
+      color: 'text-indigo-600',
+      bgColor: 'bg-indigo-50',
       details: [
-        'Annual security awareness training',
-        'Phishing simulation exercises',
-        'Secure coding practices',
-        'Incident response training'
+        'Regular security updates',
+        'Vulnerability scanning',
+        'Penetration testing',
+        'Secure configuration management'
       ]
     }
   ];
 
-  const certifications = [
+  const complianceStandards = [
     {
       name: 'SOC 2 Type II',
-      description: 'Audited controls for security, availability, and confidentiality',
+      description: 'Comprehensive security and availability controls',
       status: 'Certified',
-      validUntil: '2025-12-31'
+      icon: Shield,
+      color: 'text-green-600'
     },
     {
       name: 'ISO 27001',
-      description: 'Information security management system certification',
+      description: 'Information security management system',
       status: 'Certified',
-      validUntil: '2025-08-15'
+      icon: Database,
+      color: 'text-blue-600'
     },
     {
-      name: 'GDPR Compliance',
-      description: 'Full compliance with EU data protection regulations',
+      name: 'GDPR',
+      description: 'General Data Protection Regulation compliance',
       status: 'Compliant',
-      validUntil: 'Ongoing'
+      icon: Lock,
+      color: 'text-purple-600'
     },
     {
-      name: 'CCPA Compliance',
+      name: 'CCPA',
       description: 'California Consumer Privacy Act compliance',
       status: 'Compliant',
-      validUntil: 'Ongoing'
+      icon: Eye,
+      color: 'text-orange-600'
     }
   ];
 
-  const securityPolicies = [
+  const securityIncidents = [
     {
-      title: 'Information Security Policy',
-      description: 'Comprehensive security framework and guidelines',
-      lastUpdated: '2024-09-15'
+      year: '2024',
+      incidents: 0,
+      description: 'Zero security incidents reported',
+      status: 'Excellent'
     },
     {
-      title: 'Data Protection Policy',
-      description: 'Guidelines for handling and protecting personal data',
-      lastUpdated: '2024-09-10'
+      year: '2023',
+      incidents: 0,
+      description: 'Zero security incidents reported',
+      status: 'Excellent'
     },
     {
-      title: 'Incident Response Plan',
-      description: 'Procedures for handling security incidents',
-      lastUpdated: '2024-08-20'
+      year: '2022',
+      incidents: 0,
+      description: 'Zero security incidents reported',
+      status: 'Excellent'
+    }
+  ];
+
+  const securityMeasures = [
+    {
+      category: 'Physical Security',
+      measures: [
+        '24/7 monitored data centers',
+        'Biometric access controls',
+        'Video surveillance',
+        'Environmental monitoring',
+        'Secure disposal of hardware'
+      ]
     },
     {
-      title: 'Business Continuity Plan',
-      description: 'Disaster recovery and business continuity procedures',
-      lastUpdated: '2024-08-15'
+      category: 'Application Security',
+      measures: [
+        'Secure coding practices',
+        'Regular security testing',
+        'Dependency vulnerability scanning',
+        'Input validation and sanitization',
+        'Output encoding'
+      ]
+    },
+    {
+      category: 'Data Protection',
+      measures: [
+        'Data classification and labeling',
+        'Data loss prevention (DLP)',
+        'Backup and recovery procedures',
+        'Data retention policies',
+        'Secure data destruction'
+      ]
+    },
+    {
+      category: 'Incident Response',
+      measures: [
+        '24/7 security operations center',
+        'Incident response procedures',
+        'Forensic analysis capabilities',
+        'Communication protocols',
+        'Recovery procedures'
+      ]
     }
   ];
 
   return (
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <section className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center">
-            <Link 
-              to="/privacy" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Privacy Policy
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Security</h1>
-              <p className="text-gray-600 mt-1">
-                How we protect your data and maintain security
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Security - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, compliance certifications, and data protection practices." />
+        <meta name="keywords" content="security, data protection, encryption, compliance, SOC 2, ISO 27001, cybersecurity" />
+      </Helmet>
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Security First
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              We implement industry-leading security measures to protect your data and ensure the highest levels of security.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                Report Security Issue
-              </Link>
-              <Link 
-                to="/privacy"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Privacy Policy
-              </Link>
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            Security & Compliance
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Your data security is our top priority. We implement industry-leading security measures and maintain the highest compliance standards.
+          </p>
+          
+          {/* Security Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-green-400 mb-2">0</div>
+              <div className="text-gray-300">Security Incidents</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-purple-400 mb-2">256-bit</div>
+              <div className="text-gray-300">Encryption</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">Monitoring</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Security Measures */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Security Measures
-            </h2>
-            <p className="text-xl text-gray-600">
-              Multi-layered security approach to protect your data
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityMeasures.map((measure, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-8">
-                <div className="flex items-center mb-6">
-                  <measure.icon className="w-8 h-8 text-blue-600 mr-4" />
-                  <h3 className="text-2xl font-semibold text-gray-900">{measure.title}</h3>
+      {/* Security Features */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Security Features</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {securityFeatures.map((feature, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className={`w-12 h-12 ${feature.bgColor} rounded-lg flex items-center justify-center mr-4`}>
+                    <feature.icon className={`w-6 h-6 ${feature.color}`} />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
                 </div>
-                <p className="text-gray-600 mb-6">{measure.description}</p>
-                <ul className="space-y-3">
-                  {measure.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{detail}</span>
+                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-start text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      {detail}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Security Certifications
-            </h2>
-            <p className="text-xl text-gray-600">
-              Third-party verified security and compliance standards
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
+      {/* Compliance Standards */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Compliance & Certifications</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {complianceStandards.map((standard, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <standard.icon className={`w-8 h-8 ${standard.color}`} />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{cert.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{cert.description}</p>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-center">
-                    <span className="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">
-                      {cert.status}
-                    </span>
-                  </div>
-                  <p className="text-xs text-gray-500">Valid until: {cert.validUntil}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{standard.name}</h3>
+                <p className="text-gray-600 mb-4">{standard.description}</p>
+                <div className={`inline-flex px-3 py-1 rounded-full text-sm font-medium ${
+                  standard.status === 'Certified' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                }`}>
+                  {standard.status}
                 </div>
               </div>
             ))}
@@ -220,116 +272,90 @@ const SecurityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Security Policies */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Security Policies
-            </h2>
-            <p className="text-xl text-gray-600">
-              Our comprehensive security documentation
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {securityPolicies.map((policy, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center">
-                    <FileText className="w-6 h-6 text-blue-600 mr-3" />
-                    <h3 className="text-lg font-semibold text-gray-900">{policy.title}</h3>
-                  </div>
-                  <span className="text-xs text-gray-500">Updated: {policy.lastUpdated}</span>
-                </div>
-                <p className="text-gray-600 mb-4">{policy.description}</p>
-                <button className="text-blue-600 hover:text-blue-800 font-semibold text-sm">
-                  View Policy →
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Incident Response */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Security Incident Response
-            </h2>
-            <p className="text-xl text-gray-600">
-              How we handle security incidents and data breaches
-            </p>
-          </div>
-          <div className="bg-white rounded-lg shadow-lg p-8">
+      {/* Security Track Record */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Security Track Record</h2>
+          
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="text-center mb-8">
+              <div className="text-4xl font-bold text-green-600 mb-2">Zero Security Incidents</div>
+              <p className="text-gray-600">Since our founding in 2020</p>
+            </div>
+            
             <div className="space-y-6">
-              <div className="flex items-start">
-                <AlertTriangle className="w-6 h-6 text-yellow-500 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Immediate Response</h3>
-                  <p className="text-gray-600">
-                    Upon detection of a security incident, our team immediately activates our incident response plan 
-                    to contain the threat and assess the impact.
-                  </p>
+              {securityIncidents.map((year, index) => (
+                <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                  <div>
+                    <div className="font-semibold text-gray-900">{year.year}</div>
+                    <div className="text-sm text-gray-600">{year.description}</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-green-600">{year.incidents}</div>
+                    <div className="text-sm text-green-600">{year.status}</div>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security Measures */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Comprehensive Security Measures</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {securityMeasures.map((category, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>
+                <ul className="space-y-3">
+                  {category.measures.map((measure, measureIndex) => (
+                    <li key={measureIndex} className="flex items-start text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      {measure}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="flex items-start">
-                <Shield className="w-6 h-6 text-blue-500 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Investigation & Analysis</h3>
-                  <p className="text-gray-600">
-                    We conduct a thorough investigation to understand the scope and impact of the incident, 
-                    working with security experts and forensic specialists as needed.
-                  </p>
-                </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Security Contact */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Security Contact</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Report security vulnerabilities or concerns to our security team.
+          </p>
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">Security Team</h3>
+                <p className="text-gray-600">Zion Tech Group Security</p>
               </div>
-              <div className="flex items-start">
-                <Users className="w-6 h-6 text-green-500 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Notification & Communication</h3>
-                  <p className="text-gray-600">
-                    We notify affected users and relevant authorities within 72 hours of discovering a data breach, 
-                    as required by applicable laws and regulations.
-                  </p>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>Email: <a href="mailto:security@ziontechgroup.com" className="text-purple-600 hover:underline">security@ziontechgroup.com</a></p>
+                <p>Phone: <a href="tel:+13024640950" className="text-purple-600 hover:underline">+1 (302) 464-0950</a></p>
+                <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+              </div>
+              <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                <div className="flex items-center">
+                  <AlertTriangle className="w-5 h-5 text-yellow-600 mr-2" />
+                  <span className="text-sm text-yellow-800">
+                    For security vulnerabilities, please use our responsible disclosure process.
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Report Security Issue */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Report a Security Issue
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            If you discover a security vulnerability, please report it to us immediately
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="mailto:security@ziontechgroup.com"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              security@ziontechgroup.com
-            </a>
-            <a 
-              href="tel:+13024640950"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              Call: (302) 464-0950
-            </a>
-          </div>
-          <div className="mt-8 text-sm text-blue-200">
-            <p>We appreciate responsible disclosure and will respond within 24 hours</p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
-
 
 export default SecurityPage;

@@ -1,225 +1,350 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Shield, Download, Eye, Trash2, Edit, Lock, CheckCircle, AlertCircle, Clock, User } from 'lucide-react';
 
-import Link from 'next/link';
-import { ArrowLeft, Shield, Download, Eye, Trash2, Edit, Lock } from 'lucide-react';
-
-const GdprPage: React.FC = () => {
+const GDPRCompliancePage: React.FC = () => {
   const rights = [
     {
-      icon: Eye,
       title: 'Right to Access',
-      description: 'You have the right to request access to your personal data and receive a copy of the data we hold about you.'
+      description: 'You have the right to know what personal data we process about you and how we use it.',
+      icon: Eye,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
+      details: [
+        'Request a copy of your personal data',
+        'Information about processing purposes',
+        'Data retention periods',
+        'Third parties with access to your data'
+      ]
     },
     {
-      icon: Edit,
       title: 'Right to Rectification',
-      description: 'You have the right to request correction of inaccurate or incomplete personal data.'
+      description: 'You can request correction of inaccurate or incomplete personal data.',
+      icon: Edit,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
+      details: [
+        'Update incorrect information',
+        'Complete incomplete data',
+        'Verify data accuracy',
+        'Request confirmation of changes'
+      ]
     },
     {
-      icon: Trash2,
       title: 'Right to Erasure',
-      description: 'You have the right to request deletion of your personal data under certain circumstances.'
+      description: 'You can request deletion of your personal data under certain circumstances.',
+      icon: Trash2,
+      color: 'text-red-600',
+      bgColor: 'bg-red-50',
+      details: [
+        'Data no longer necessary',
+        'Withdrawal of consent',
+        'Unlawful processing',
+        'Objection to processing'
+      ]
     },
     {
-      icon: Lock,
-      title: 'Right to Restrict Processing',
-      description: 'You have the right to request restriction of processing of your personal data.'
-    },
-    {
+      title: 'Right to Portability',
+      description: 'You can receive your data in a structured, machine-readable format.',
       icon: Download,
-      title: 'Right to Data Portability',
-      description: 'You have the right to receive your personal data in a structured, machine-readable format.'
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
+      details: [
+        'Export your data',
+        'Transfer to another service',
+        'Structured format (JSON, CSV)',
+        'Direct transmission when possible'
+      ]
     },
     {
-      icon: Shield,
+      title: 'Right to Restrict Processing',
+      description: 'You can limit how we process your personal data.',
+      icon: Lock,
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
+      details: [
+        'Dispute data accuracy',
+        'Unlawful processing objection',
+        'Retention period extension',
+        'Processing limitation'
+      ]
+    },
+    {
       title: 'Right to Object',
-      description: 'You have the right to object to processing of your personal data for certain purposes.'
+      description: 'You can object to processing based on legitimate interests or for marketing.',
+      icon: AlertCircle,
+      color: 'text-yellow-600',
+      bgColor: 'bg-yellow-50',
+      details: [
+        'Marketing communications',
+        'Profiling for marketing',
+        'Legitimate interest processing',
+        'Scientific research processing'
+      ]
     }
   ];
 
   const dataTypes = [
     {
-      category: 'Identity Information',
-      data: ['Name', 'Email address', 'Phone number', 'Mailing address', 'Date of birth']
+      category: 'Identity Data',
+      examples: ['Name', 'Email address', 'Username', 'Account ID'],
+      purpose: 'Account creation and management',
+      legalBasis: 'Contract performance',
+      retention: 'Account lifetime + 7 years'
     },
     {
-      category: 'Technical Information',
-      data: ['IP address', 'Browser type', 'Device information', 'Operating system', 'Website usage data']
+      category: 'Contact Data',
+      examples: ['Email address', 'Phone number', 'Mailing address', 'Social media profiles'],
+      purpose: 'Communication and support',
+      legalBasis: 'Contract performance and legitimate interests',
+      retention: 'Account lifetime + 3 years'
     },
     {
-      category: 'Business Information',
-      data: ['Company name', 'Job title', 'Industry', 'Project requirements', 'Communication history']
+      category: 'Technical Data',
+      examples: ['IP address', 'Browser type', 'Device information', 'Cookies'],
+      purpose: 'Website functionality and analytics',
+      legalBasis: 'Legitimate interests',
+      retention: '2 years'
     },
     {
-      category: 'Marketing Information',
-      data: ['Marketing preferences', 'Newsletter subscriptions', 'Communication preferences', 'Survey responses']
+      category: 'Usage Data',
+      examples: ['Page views', 'Click patterns', 'Session duration', 'Feature usage'],
+      purpose: 'Service improvement and analytics',
+      legalBasis: 'Legitimate interests',
+      retention: '2 years'
+    },
+    {
+      category: 'Marketing Data',
+      examples: ['Communication preferences', 'Marketing responses', 'Survey responses'],
+      purpose: 'Marketing and communication',
+      legalBasis: 'Consent',
+      retention: 'Until consent withdrawn'
+    }
+  ];
+
+  const securityMeasures = [
+    {
+      title: 'Encryption',
+      description: 'All data is encrypted in transit and at rest using industry-standard encryption.',
+      icon: Lock,
+      details: ['TLS 1.3 for data in transit', 'AES-256 for data at rest', 'End-to-end encryption for sensitive data']
+    },
+    {
+      title: 'Access Controls',
+      description: 'Strict access controls ensure only authorized personnel can access personal data.',
+      icon: User,
+      details: ['Role-based access control', 'Multi-factor authentication', 'Regular access reviews', 'Principle of least privilege']
+    },
+    {
+      title: 'Data Minimization',
+      description: 'We only collect and process data that is necessary for our legitimate purposes.',
+      icon: CheckCircle,
+      details: ['Purpose limitation', 'Data minimization', 'Storage limitation', 'Accuracy maintenance']
+    },
+    {
+      title: 'Regular Audits',
+      description: 'Regular security audits and assessments ensure ongoing compliance.',
+      icon: Shield,
+      details: ['Annual security audits', 'Penetration testing', 'Vulnerability assessments', 'Compliance monitoring']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <section className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center">
-            <Link 
-              to="/privacy" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Privacy Policy
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">GDPR Compliance</h1>
-              <p className="text-gray-600 mt-1">
-                Your rights under the General Data Protection Regulation
-              </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>GDPR Compliance - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's GDPR compliance, your data protection rights, and how we handle your personal information." />
+        <meta name="keywords" content="GDPR, data protection, privacy rights, personal data, compliance, EU regulation" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            GDPR Compliance
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We are committed to protecting your privacy and ensuring full compliance with the General Data Protection Regulation (GDPR).
+          </p>
+          <div className="text-sm text-gray-400">
+            Last updated: December 15, 2024
+          </div>
+        </div>
+      </section>
+
+      {/* Your Rights */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Your Data Protection Rights</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {rights.map((right, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className={`w-12 h-12 ${right.bgColor} rounded-lg flex items-center justify-center mr-4`}>
+                    <right.icon className={`w-6 h-6 ${right.color}`} />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">{right.title}</h3>
+                </div>
+                <p className="text-gray-600 mb-4">{right.description}</p>
+                <ul className="space-y-2">
+                  {right.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-start text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Data We Collect */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Personal Data We Process</h2>
+          
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data Category</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Examples</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Purpose</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Legal Basis</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Retention</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {dataTypes.map((data, index) => (
+                    <tr key={index} className="hover:bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        {data.category}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-500">
+                        {data.examples.join(', ')}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-500">
+                        {data.purpose}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-500">
+                        {data.legalBasis}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-500">
+                        {data.retention}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="prose max-w-none">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">What is GDPR?</h2>
-              <p className="text-gray-600 mb-6">
-                The General Data Protection Regulation (GDPR) is a comprehensive data protection law that gives you 
-                control over your personal data. At Zion Tech Group, we are committed to protecting your privacy and 
-                ensuring full compliance with GDPR requirements.
-              </p>
-
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Your Rights Under GDPR</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                {rights.map((right, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6">
-                    <div className="flex items-center mb-4">
-                      <right.icon className="w-6 h-6 text-blue-600 mr-3" />
-                      <h3 className="text-lg font-semibold text-gray-900">{right.title}</h3>
-                    </div>
-                    <p className="text-gray-600 text-sm">{right.description}</p>
+      {/* Security Measures */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Data Security Measures</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {securityMeasures.map((measure, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <measure.icon className="w-6 h-6 text-purple-600" />
                   </div>
-                ))}
+                  <h3 className="text-xl font-bold text-gray-900">{measure.title}</h3>
+                </div>
+                <p className="text-gray-600 mb-4">{measure.description}</p>
+                <ul className="space-y-2">
+                  {measure.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-start text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Personal Data We Collect</h2>
-              <p className="text-gray-600 mb-6">
-                We collect and process the following categories of personal data:
-              </p>
-              <div className="space-y-6">
-                {dataTypes.map((type, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">{type.category}</h3>
-                    <ul className="list-disc list-inside text-gray-600 space-y-1">
-                      {type.data.map((item, itemIndex) => (
-                        <li key={itemIndex}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 mt-12">Legal Basis for Processing</h2>
-              <p className="text-gray-600 mb-4">
-                We process your personal data based on the following legal grounds:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li><strong>Consent:</strong> When you have given clear consent for us to process your data</li>
-                <li><strong>Contract:</strong> When processing is necessary for the performance of a contract</li>
-                <li><strong>Legal Obligation:</strong> When we are required to process data to comply with legal obligations</li>
-                <li><strong>Legitimate Interest:</strong> When we have a legitimate business interest that doesn't override your rights</li>
-              </ul>
-
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Data Retention</h2>
-              <p className="text-gray-600 mb-6">
-                We retain your personal data only for as long as necessary to fulfill the purposes outlined in our 
-                Privacy Policy or as required by law. Generally:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>Account data: Until you delete your account or request deletion</li>
-                <li>Marketing data: Until you unsubscribe or withdraw consent</li>
-                <li>Technical data: Up to 2 years for analytics purposes</li>
-                <li>Legal compliance data: As required by applicable laws</li>
-              </ul>
-
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Data Security</h2>
-              <p className="text-gray-600 mb-6">
-                We implement appropriate technical and organizational measures to protect your personal data against:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>Unauthorized access, alteration, or disclosure</li>
-                <li>Accidental loss or destruction</li>
-                <li>Malicious attacks and data breaches</li>
-                <li>Unauthorized processing or use</li>
-              </ul>
-
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Exercising Your Rights</h2>
-              <p className="text-gray-600 mb-6">
-                To exercise any of your GDPR rights, please contact us using the information below. We will respond 
-                to your request within 30 days of receipt.
-              </p>
-              
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">How to Submit a Request</h3>
-                <p className="text-blue-800 mb-4">
-                  You can submit a GDPR request by:
+      {/* How to Exercise Rights */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">How to Exercise Your Rights</h2>
+          
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Making a Request</h3>
+                <p className="text-gray-700 mb-4">
+                  To exercise any of your data protection rights, you can contact us using any of the methods below:
                 </p>
-                <ul className="list-disc list-inside text-blue-800 space-y-1">
-                  <li>Emailing us at privacy@ziontechgroup.com</li>
-                  <li>Calling us at +1 302 464 0950</li>
-                  <li>Using our online contact form</li>
-                  <li>Writing to us at our physical address</li>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Email: <a href="mailto:privacy@ziontechgroup.com" className="text-purple-600 hover:underline">privacy@ziontechgroup.com</a></li>
+                  <li>• Phone: <a href="tel:+13024640950" className="text-purple-600 hover:underline">+1 (302) 464-0950</a></li>
+                  <li>• Mail: 364 E Main St STE 1008, Middletown, DE 19709</li>
                 </ul>
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Data Protection Officer</h2>
-              <p className="text-gray-600 mb-6">
-                We have appointed a Data Protection Officer (DPO) to oversee our data protection practices and 
-                ensure compliance with GDPR. You can contact our DPO at:
-              </p>
-              <div className="bg-gray-50 rounded-lg p-6 mb-6">
-                <p className="text-gray-700 mb-2">
-                  <strong>Email:</strong> dpo@ziontechgroup.com
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">What We Need</h3>
+                <p className="text-gray-700 mb-4">
+                  To process your request, we may need to verify your identity. Please provide:
                 </p>
-                <p className="text-gray-700 mb-2">
-                  <strong>Phone:</strong> +1 302 464 0950
-                </p>
-                <p className="text-gray-700">
-                  <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
-                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Your full name and email address</li>
+                  <li>• Description of the right you wish to exercise</li>
+                  <li>• Any specific information you're looking for</li>
+                  <li>• Proof of identity (if required)</li>
+                </ul>
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Complaints</h2>
-              <p className="text-gray-600 mb-6">
-                If you believe we have not handled your personal data in accordance with GDPR, you have the right 
-                to lodge a complaint with your local data protection authority or the relevant supervisory authority.
-              </p>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Response Time</h3>
+                <p className="text-gray-700 mb-4">
+                  We will respond to your request within one month of receipt. In complex cases, we may extend this period by up to two additional months.
+                </p>
+                <div className="flex items-center text-sm text-gray-600">
+                  <Clock className="w-4 h-4 mr-2" />
+                  <span>Standard response time: 30 days</span>
+                </div>
+              </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Updates to This Notice</h2>
-              <p className="text-gray-600 mb-6">
-                We may update this GDPR compliance notice from time to time to reflect changes in our practices or 
-                applicable laws. We will notify you of any significant changes by posting the updated notice on our website.
-              </p>
-
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
-              <p className="text-gray-600 mb-6">
-                If you have any questions about our GDPR compliance or your data protection rights, please contact us:
-              </p>
-              <div className="bg-gray-50 rounded-lg p-6">
-                <p className="text-gray-700 mb-2">
-                  <strong>Email:</strong> privacy@ziontechgroup.com
-                </p>
-                <p className="text-gray-700 mb-2">
-                  <strong>Phone:</strong> +1 302 464 0950
-                </p>
-                <p className="text-gray-700 mb-2">
-                  <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
-                </p>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">No Cost</h3>
                 <p className="text-gray-700">
-                  <strong>Data Protection Officer:</strong> dpo@ziontechgroup.com
+                  Exercising your data protection rights is free of charge. We will not charge you for responding to your request unless it is manifestly unfounded or excessive.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact DPO */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Data Protection Officer</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            For any questions about our data processing activities or to exercise your rights, contact our Data Protection Officer.
+          </p>
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">Data Protection Officer</h3>
+                <p className="text-gray-600">Zion Tech Group</p>
+              </div>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>Email: <a href="mailto:dpo@ziontechgroup.com" className="text-purple-600 hover:underline">dpo@ziontechgroup.com</a></p>
+                <p>Phone: <a href="tel:+13024640950" className="text-purple-600 hover:underline">+1 (302) 464-0950</a></p>
+                <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
               </div>
             </div>
           </div>
@@ -229,5 +354,4 @@ const GdprPage: React.FC = () => {
   );
 };
 
-
-export default GdprPage;
+export default GDPRCompliancePage;
