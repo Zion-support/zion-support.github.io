@@ -67,14 +67,23 @@ import RoboticsPage from './robotics/page';
 import TeamPage from './team/page';
 import CareersPage from './careers/page';
 import NewsPage from './news/page';
+<<<<<<< HEAD
 import AboutPage from './about/page';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1907
 import ContactPage from './contact/page';
 import ServicesPage from './services/page';
 import BlogPage from './blog/page';
 import CaseStudiesPage from './case-studies/page';
+<<<<<<< HEAD
 
 // Support Pages
 
+=======
+import AboutPage from './about/page';
+
+// Support Pages
+>>>>>>> cursor/fix-errors-and-merge-to-main-1907
 // Additional Pages
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
@@ -263,8 +272,13 @@ const App: React.FC = () => {
 
       setIsInitialized(true);
     } catch {
+<<<<<<< HEAD
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
+=======
+      // Continue even if enhancers fail
+      setIsInitialized(true);
+>>>>>>> cursor/fix-errors-and-merge-to-main-1907
     }
   };
 

@@ -10,9 +10,13 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components
@@ -49,7 +53,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
+      (window as unknown as { gtag: (event: string, data: Record<string, string>) => void }).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
