@@ -112,12 +112,21 @@ class SecurityEnhancer {
       info: console.info.bind(console)
     };
     // Override console methods to detect debugging
+<<<<<<< HEAD
     ['log', 'warn', 'error', 'info'].forEach(method => {
       const originalMethod = originalConsole[method as keyof typeof originalConsole];
       (console as any)[method] = (...args: unknown[]) => {
         this.metrics.suspiciousActivity++;
         originalMethod(...args);
       };
+=======
+    const methods = ['log', 'warn', 'error', 'info'] as const;
+    methods.forEach(method => {
+      (console as any)[method] = (...args: unknown[]) => {
+        this.metrics.suspiciousActivity++;
+        (originalConsole as any)[method](...args);
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
     });
   }
   private monitorDOMManipulation(): void {

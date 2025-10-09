@@ -137,6 +137,7 @@ class HealthCheckService {
       };
     }
     try {
+<<<<<<< HEAD
       const memory = (performance as any).memory;
       if (!memory) {
         return {
@@ -146,6 +147,10 @@ class HealthCheckService {
         };
       }
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+=======
+      const memoryInfo = (performance as any).memory;
+      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {
@@ -179,8 +184,13 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
+<<<<<<< HEAD
       const coreWebVitals = performanceMonitor.getCoreWebVitals()
       const metrics = performanceMonitor.getMetrics()
+=======
+      const report = performanceMonitor.getReport()
+      const reportData = JSON.parse(report)
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Performance metrics available: ${Object.keys(coreWebVitals).length} vitals`
       
@@ -206,6 +216,7 @@ class HealthCheckService {
         details: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           metrics: reportData,
           summary: { good: 0, needsImprovement: 0, poor: 0 }
 =======
@@ -217,6 +228,10 @@ class HealthCheckService {
 =======
           coreWebVitals
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4846
+=======
+          metrics: reportData,
+          summary: { good: 0, needsImprovement: 0, poor: 0 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
         }
       }
     } catch (error) {
