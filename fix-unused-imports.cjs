@@ -2,98 +2,126 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { execSync } = require('child_process');
 
-// Files to fix
-const filesToFix = [
-  'app/blog/ai-2025-january-cutting-edge-trends-breakthrough/page.tsx',
-  'app/blog/ai-2025-march-autonomous-enterprise-operations-revolution/page.tsx',
-  'app/blog/ai-2026-adaptive-neural-architectures-breakthrough/page.tsx',
-  'app/blog/ai-2026-advanced-neural-optimization-revolution/page.tsx',
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-april-ultimate-breakthrough-revolution/page.tsx',
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
-  'app/blog/ai-2026-autonomous-business-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx',
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-breakthrough/page.tsx',
-  'app/blog/ai-2026-february-mega-breakthrough-revolution/page.tsx',
-  'app/blog/ai-2026-february-ultimate-consciousness-breakthrough/page.tsx',
-  'app/blog/ai-2026-hyperconscious-computing-revolution/page.tsx',
-  'app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx',
-  'app/blog/ai-trends-2026-future-enterprise-transformation/page.tsx',
-  'app/contact/page.tsx',
-  'app/privacy/page.tsx',
-  'app/team/page.tsx',
-  'app/terms/page.tsx'
-];
-
-// Fix unused Link imports
-filesToFix.forEach(filePath => {
-  try {
-    const fullPath = path.join(__dirname, filePath);
-    if (fs.existsSync(fullPath)) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      
-      // Remove unused Link import
-      content = content.replace(/import { Link } from 'react-router-dom';\n/g, '');
-      content = content.replace(/import { Link } from 'react-router-dom';\r\n/g, '');
-      content = content.replace(/import { Link } from 'react-router-dom';\n\n/g, '');
-      
-      // Remove unused Link from multi-import
-      content = content.replace(/import { [^}]*Link[^}]* } from 'react-router-dom';\n/g, '');
-      content = content.replace(/import { [^}]*Link[^}]* } from 'react-router-dom';\r\n/g, '');
-      
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
+// Get all TypeScript/JavaScript files in src directory
+function getAllFiles(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      getAllFiles(filePath, fileList);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      fileList.push(filePath);
     }
+  });
+  
+  return fileList;
+}
+
+// Fix unused imports in a file
+function fixUnusedImports(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Get ESLint output for this specific file
+    const eslintOutput = execSync(`npx eslint "${filePath}" --format=json`, { 
+      encoding: 'utf8',
+      stdio: 'pipe'
+    }).trim();
+    
+    if (!eslintOutput) return false;
+    
+    const results = JSON.parse(eslintOutput);
+    
+    if (results.length === 0) return false;
+    
+    const file = results[0];
+    if (!file.messages) return false;
+    
+    // Group warnings by line number
+    const lineWarnings = {};
+    file.messages.forEach(message => {
+      if (message.ruleId === '@typescript-eslint/no-unused-vars' && message.message.includes('is defined but never used')) {
+        if (!lineWarnings[message.line]) {
+          lineWarnings[message.line] = [];
+        }
+        lineWarnings[message.line].push(message);
+      }
+    });
+    
+    // Process each line with unused imports
+    const lines = content.split('\n');
+    
+    Object.keys(lineWarnings).forEach(lineNum => {
+      const lineIndex = parseInt(lineNum) - 1;
+      const line = lines[lineIndex];
+      
+      if (!line) return;
+      
+      // Check if this is an import statement
+      if (line.trim().startsWith('import ')) {
+        const warnings = lineWarnings[lineNum];
+        const unusedVars = warnings.map(w => {
+          const match = w.message.match(/'([^']+)' is defined but never used/);
+          return match ? match[1] : null;
+        }).filter(Boolean);
+        
+        if (unusedVars.length > 0) {
+          // Parse the import statement
+          const importMatch = line.match(/import\s+{([^}]+)}\s+from\s+['"]([^'"]+)['"]/);
+          if (importMatch) {
+            const [, imports, source] = importMatch;
+            const importList = imports.split(',').map(imp => imp.trim());
+            
+            // Remove unused imports
+            const usedImports = importList.filter(imp => !unusedVars.includes(imp));
+            
+            if (usedImports.length === 0) {
+              // Remove the entire import line
+              lines[lineIndex] = '';
+            } else {
+              // Update the import statement
+              lines[lineIndex] = line.replace(
+                /import\s+{[^}]+}\s+from\s+['"][^'"]+['"]/,
+                `import { ${usedImports.join(', ')} } from '${source}'`
+              );
+            }
+            modified = true;
+          }
+        }
+      }
+    });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, lines.join('\n'));
+      console.log(`Fixed unused imports in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Main execution
+console.log('Starting to fix unused imports...');
+
+const srcDir = path.join(__dirname, 'src');
+const files = getAllFiles(srcDir);
+
+let fixedCount = 0;
+
+files.forEach(file => {
+  if (fixUnusedImports(file)) {
+    fixedCount++;
   }
 });
 
-// Fix other common issues
-const otherFiles = [
-  'app/not-found.tsx',
-  'app/guides/ai-2026-implementation-roadmap/page.tsx',
-  'app/guides/ai-2027-implementation-roadmap/page.tsx'
-];
-
-otherFiles.forEach(filePath => {
-  try {
-    const fullPath = path.join(__dirname, filePath);
-    if (fs.existsSync(fullPath)) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      
-      // Remove unused icon imports
-      if (filePath.includes('not-found.tsx')) {
-        content = content.replace(/import { [^}]*ArrowLeft[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Search[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*BookOpen[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Users[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      if (filePath.includes('ai-2026-implementation-roadmap')) {
-        content = content.replace(/import { [^}]*Target[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*CheckCircle[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      if (filePath.includes('ai-2027-implementation-roadmap')) {
-        content = content.replace(/import { [^}]*Calendar[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*User[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Tag[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Cpu[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-});
-
-console.log('Fixed unused imports!');
+console.log(`Fixed unused imports in ${fixedCount} files.`);

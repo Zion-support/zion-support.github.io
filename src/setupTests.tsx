@@ -2,21 +2,19 @@
 /**
  * Jest setup file for testing environment
  */
-import React from 'react';
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
-const _originalConsoleError = console.error;
 console.error = (...args) => {
   const _message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;
   }
-  originalConsoleError(...args);
+  console.error(...args);
 };
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -65,14 +63,14 @@ console.warn = (...args) => {
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
-  originalConsoleWarn(...args);
+  console.warn(...args);
 };
 console.info = (...args) => {
   const _message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
   }
-  originalConsoleInfo(...args);
+  console.info(...args);
 };
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
@@ -89,7 +87,7 @@ console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
-  originalConsoleError.apply(console, args);
+  console.error.apply(console, args);
 };
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;

@@ -1,24 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, BarChart, Users, ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
+import { CheckCircle, Star, Phone } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 interface ServicePageProps {
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
   services: Array<{
     title: string;
     description: string;
-    icon: React.ComponentType<any>;
+    icon: React.ComponentType<{ className?: string }>;
     features: string[];
     price: string;
   }>;
   benefits: string[];
 }
 
-const ServicePage: React.FC<ServicePageProps> = ({ title, description, icon: Icon, services, benefits }) => {
+const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
