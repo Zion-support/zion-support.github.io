@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -7,7 +6,6 @@ interface Props {
   enableErrorReporting?: boolean;
   maxRetries?: number;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
@@ -15,10 +13,8 @@ interface State {
   errorId?: string;
   retryCount: number;
 }
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   private maxRetries: number;
-
   constructor(props: Props) {
     super(props);
     this.state = { 
@@ -28,7 +24,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
     this.maxRetries = props.maxRetries || 3;
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { 
       hasError: true, 
@@ -37,29 +32,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       retryCount: 0
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-    
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
+      }
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
   }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Enhanced error reporting logic
     const errorReport = {
@@ -70,22 +59,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       userAgent: navigator.userAgent,
       url: window.location.href,
     };
-
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Component Stack:', errorInfo.componentStack);
       console.groupEnd();
     }
-
     // Send to error reporting service (implement as needed)
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       // eslint-disable-next-line no-console
-      console.log('Error Report:', errorReport);
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -93,8 +76,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
-    }
+      }
   };
   private getUserId = (): string | null => {
     // Get user ID from localStorage, cookies, or context
@@ -111,7 +93,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
-
   private handleReload = () => {
     window.location.reload();
   };
@@ -141,26 +122,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
       .catch(() => {
         // eslint-disable-next-line no-console
-<<<<<<< HEAD
-        console.warn('Failed to copy error details');
-      });
+        });
   };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
-        console.error('Failed to copy error details');
-      });
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -168,29 +131,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
       const canRetry = retryCount < this.maxRetries;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
       const canRetry = retryCount < this.maxRetries;
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
       const canRetry = retryCount < this.maxRetries;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -245,9 +188,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;

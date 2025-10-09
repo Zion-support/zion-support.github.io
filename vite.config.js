@@ -18,9 +18,9 @@ export default defineConfig({
     target: 'es2015',
     minify: 'terser',
     sourcemap: false,
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 1000,
     cssCodeSplit: true,
-    assetsInlineLimit: 2048,
+    assetsInlineLimit: 4096,
     reportCompressedSize: true,
     // Optimize build performance
     emptyOutDir: true,
@@ -31,15 +31,15 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn', 'console.error'],
-        passes: 5,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_arrows: true,
-        unsafe_methods: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
+        passes: 3,
+        unsafe: false,
+        unsafe_comps: false,
+        unsafe_math: false,
+        unsafe_proto: false,
+        unsafe_arrows: false,
+        unsafe_methods: false,
+        unsafe_regexp: false,
+        unsafe_undefined: false,
         collapse_vars: true,
         sequences: true,
         dead_code: true,
@@ -71,6 +71,9 @@ export default defineConfig({
       mangle: {
         safari10: true,
         toplevel: true,
+        properties: {
+          regex: /^_/
+        }
       },
       format: {
         comments: false,

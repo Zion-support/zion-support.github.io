@@ -1,13 +1,10 @@
 import React from 'react';
-
-
 interface ServiceCardProps {
   title: string;
   description: string;
   icon?: React.ReactNode;
   className?: string;
 }
-
 /**
  * Reusable ServiceCard component with accessibility features
  */
@@ -27,5 +24,4 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, cla
     </article>
   );
 };
-
 export default ServiceCard;

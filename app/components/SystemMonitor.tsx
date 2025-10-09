@@ -1,47 +1,35 @@
 'use client';
-
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
  */
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
-
 import { errorHandler } from '../utils/enhancedErrorHandler';
-
 // Collect basic performance metrics
 const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
-  
   const _navigation = window.performance.timing;
   const _paint = window.performance.getEntriesByType('paint');
-  
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
   };
 };
-
 // Helper functions
 const calculatePerformanceScore = () => {
   const _metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
-  
   let _score = 100;
-  
   // Deduct points for slow load times
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
-  
   // Deduct points for slow paint times
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
-  
   return Math.max(0, score);
 };
-
 // Network connection interface
 interface NetworkConnection {
   effectiveType?: string;
@@ -49,13 +37,11 @@ interface NetworkConnection {
   rtt?: number;
   saveData?: boolean;
 }
-
 interface NavigatorWithConnection extends Navigator {
   connection?: NetworkConnection;
   mozConnection?: NetworkConnection;
   webkitConnection?: NetworkConnection;
 }
-
 interface SystemMetrics {
   performance: {
     score: number;
@@ -91,37 +77,31 @@ interface SystemMetrics {
     saveData: boolean;
   };
 }
-
 interface SystemMonitorProps {
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
   className?: string;
 }
-
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
   refreshInterval = 5000,
   showDetails = true,
   enableExport = true,
-  className = '',
+  className = ''
 }) => {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
-
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
       const _performanceMetrics = performanceOptimizer.getMetrics();
       const _performanceScore = calculatePerformanceScore();
       const _errorStats = errorHandler.getErrorStatistics();
-
       // Get memory info
       const _memoryInfo = getMemoryInfo();
-
       // Get network info
       const _networkInfo = getNetworkInfo();
-
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
@@ -141,20 +121,17 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             message: error.message,
             type: error.type,
             severity: error.severity,
-            timestamp: error.context.timestamp,
-          })),
+            timestamp: error.context.timestamp
+          }))
         },
         memory: memoryInfo,
-        network: networkInfo,
+        network: networkInfo
       };
-
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-
     }
   }, []);
-
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
@@ -162,23 +139,18 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setIsMonitoring(true);
       updateMetrics();
     };
-
     initializeMonitoring();
-
     return () => {
       // Stop monitoring (placeholder - implement as needed)
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
-
   // Update metrics periodically
   useEffect(() => {
     if (!isMonitoring) return;
-
     const _interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
-
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {
@@ -187,13 +159,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
       const _percentage = (used / limit) * 100;
-
       return { used, total, limit, percentage };
     }
-
     return { used: 0, total: 0, limit: 0, percentage: 0 };
   };
-
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
@@ -203,31 +172,27 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
         rtt: connection?.rtt || 0,
-        saveData: connection?.saveData || false,
+        saveData: connection?.saveData || false
       };
     }
-
     return {
       effectiveType: 'unknown',
       downlink: 0,
       rtt: 0,
-      saveData: false,
+      saveData: false
     };
   };
-
   // Export data
   const handleExport = () => {
     if (!metrics) return;
-
     const exportData = {
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()
     };
-
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json',
+      type: 'application/json'
     });
     const _url = URL.createObjectURL(blob);
     const _a = document.createElement('a');
@@ -238,14 +203,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-
   // Get performance score color
   const getPerformanceScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
   };
-
   // Get severity color
   const getSeverityColor = (severity: string) => {
     switch (severity) {
@@ -256,7 +219,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   if (!metrics) {
     return (
       <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
@@ -267,7 +229,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       </div>
     );
   }
-
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
@@ -289,13 +250,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           )}
         </div>
       </div>
-
       {lastUpdate && (
         <p className="text-sm text-gray-500 mb-4">
           Last updated: {lastUpdate.toLocaleTimeString()}
         </p>
       )}
-
       {/* Performance Metrics */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
@@ -350,7 +309,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           </div>
         </div>
       </div>
-
       {/* Error Metrics */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
@@ -389,7 +347,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           </div>
         </div>
       </div>
-
       {/* Memory and Network */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
@@ -443,7 +400,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           </div>
         </div>
       </div>
-
       {/* Recent Errors */}
       {showDetails && metrics.errors.recent.length > 0 && (
         <div className="mb-8">
@@ -466,7 +422,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           </div>
         </div>
       )}
-
       {/* Error Distribution */}
       {showDetails && (
         <div className="mb-8">
@@ -500,5 +455,4 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     </div>
   );
 };
-
 export default SystemMonitor;

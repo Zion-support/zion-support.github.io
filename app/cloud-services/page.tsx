@@ -1,8 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Cloud, Shield, Zap, BarChart, Users, CheckCircle } from 'lucide-react';
-
+import { Cloud, Shield, Zap, BarChart, CheckCircle } from 'lucide-react';
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -30,7 +29,6 @@ const CloudServicesPage: React.FC = () => {
       features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
   ];
-
   const benefits = [
     '99.9% Uptime Guarantee',
     '24/7 Expert Support',
@@ -39,11 +37,9 @@ const CloudServicesPage: React.FC = () => {
     'Enhanced Security',
     'Global CDN'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -69,7 +65,6 @@ const CloudServicesPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Cloud Services</h2>
@@ -91,7 +86,6 @@ const CloudServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>
@@ -106,7 +100,6 @@ const CloudServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -131,10 +124,8 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default CloudServicesPage;

@@ -1,8 +1,8 @@
+'use client';
 /**
  * Advanced SEO Optimization Utility
  * Provides comprehensive SEO enhancements and monitoring
  */
-
 interface SEOConfig {
   siteName: string;
   siteUrl: string;
@@ -14,7 +14,6 @@ interface SEOConfig {
   googleAnalyticsId?: string;
   googleTagManagerId?: string;
 }
-
 interface PageSEOData {
   title: string;
   description: string;
@@ -30,15 +29,12 @@ interface PageSEOData {
   noindex?: boolean;
   nofollow?: boolean;
 }
-
 class SEOOptimizer {
   private config: SEOConfig;
   private currentPageData: PageSEOData | null = null;
-
   constructor(config: SEOConfig) {
     this.config = config;
   }
-
   /**
    * Initialize SEO optimization
    */
@@ -48,7 +44,6 @@ class SEOOptimizer {
     // Meta tags are set individually
     this.setupPerformanceMonitoring();
   }
-
   /**
    * Set page-specific SEO data
    */
@@ -57,7 +52,6 @@ class SEOOptimizer {
     this.updateMetaTags();
     this.updateStructuredData();
   }
-
   /**
    * Generate optimized title
    */
@@ -67,7 +61,6 @@ class SEOOptimizer {
       ? title 
       : `${title} | ${this.config.siteName}`;
   }
-
   /**
    * Generate optimized description
    */
@@ -77,7 +70,6 @@ class SEOOptimizer {
       ? description.substring(0, 157) + '...' 
       : description;
   }
-
   /**
    * Generate keywords string
    */
@@ -85,28 +77,23 @@ class SEOOptimizer {
     const keywords = pageKeywords || this.currentPageData?.keywords || [];
     return keywords.join(', ');
   }
-
   /**
    * Update meta tags
    */
   private updateMetaTags(): void {
     if (!this.currentPageData) return;
-
     const title = this.generateTitle();
     const description = this.generateDescription();
     const keywords = this.generateKeywords();
     const image = this.currentPageData.image || this.config.defaultImage;
     const url = this.currentPageData.url || window.location.href;
-
     // Update title
     document.title = title;
-
     // Update or create meta tags
     this.setMetaTag('description', description);
     this.setMetaTag('keywords', keywords);
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName);
     this.setMetaTag('robots', this.getRobotsContent());
-
     // Open Graph tags
     this.setMetaTag('og:title', title, 'property');
     this.setMetaTag('og:description', description, 'property');
@@ -114,7 +101,6 @@ class SEOOptimizer {
     this.setMetaTag('og:url', url, 'property');
     this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property');
     this.setMetaTag('og:site_name', this.config.siteName, 'property');
-
     // Twitter Card tags
     if (this.config.twitterHandle) {
       this.setMetaTag('twitter:card', 'summary_large_image');
@@ -123,49 +109,39 @@ class SEOOptimizer {
       this.setMetaTag('twitter:description', description);
       this.setMetaTag('twitter:image', image);
     }
-
     // Additional meta tags
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
     this.setMetaTag('msapplication-TileColor', '#1e40af');
   }
-
   /**
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
     }
-    
     meta.content = content;
   }
-
   /**
    * Get robots content
    */
   private getRobotsContent(): string {
     if (!this.currentPageData) return 'index, follow';
-    
     const directives = [];
-    
     if (!this.currentPageData.noindex) {
       directives.push('noindex');
     }
-    
     if (!this.currentPageData.nofollow) {
       directives.push('follow');
     } else {
       directives.push('nofollow');
     }
-    
     return directives.join(', ');
   }
-
   /**
    * Setup structured data
    */
@@ -181,16 +157,13 @@ class SEOOptimizer {
         'query-input': 'required name=search_term_string'
       }
     };
-
     this.addStructuredData(structuredData);
   }
-
   /**
    * Update structured data for current page
    */
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
-
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
@@ -204,7 +177,6 @@ class SEOOptimizer {
         url: this.config.siteUrl
       }
     };
-
     // Add article-specific properties
     if (this.currentPageData.type === 'article') {
       Object.assign(structuredData, {
@@ -218,10 +190,8 @@ class SEOOptimizer {
         keywords: this.generateKeywords()
       });
     }
-
     this.addStructuredData(structuredData);
   }
-
   /**
    * Add structured data to page
    */
@@ -231,7 +201,6 @@ class SEOOptimizer {
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   }
-
   /**
    * Setup canonical URLs
    */
@@ -241,7 +210,6 @@ class SEOOptimizer {
     canonical.href = window.location.href;
     document.head.appendChild(canonical);
   }
-
   /**
    * Setup performance monitoring for SEO
    */
@@ -252,12 +220,10 @@ class SEOOptimizer {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        
         if (lastEntry.startTime > 4000) { // Poor LCP
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);
         }
       }).observe({ entryTypes: ['largest-contentful-paint'] });
-
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0;
       new PerformanceObserver((list) => {
@@ -266,14 +232,12 @@ class SEOOptimizer {
             clsValue += (entry as any).value;
           }
         }
-        
         if (clsValue > 0.25) { // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue);
         }
       }).observe({ entryTypes: ['layout-shift'] });
     }
   }
-
   /**
    * Track SEO-related metrics
    */
@@ -286,7 +250,6 @@ class SEOOptimizer {
       });
     }
   }
-
   /**
    * Generate sitemap data
    */
@@ -301,16 +264,13 @@ class SEOOptimizer {
       }
     ];
   }
-
   /**
    * Generate robots.txt content
    */
   generateRobotsTxt(): string {
     return `User-agent: *
 Allow: /
-
 Sitemap: ${this.config.siteUrl}/sitemap.xml
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
@@ -318,13 +278,11 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /static/`;
   }
-
   /**
    * Check for SEO issues
    */
   checkSEOIssues(): string[] {
     const issues: string[] = [];
-    
     // Check title length
     const title = document.title;
     if (title.length < 30) {
@@ -332,7 +290,6 @@ Disallow: /static/`;
     } else if (title.length > 60) {
       issues.push('Title is too long (more than 60 characters)');
     }
-
     // Check description length
     const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
     if (!description) {
@@ -342,7 +299,6 @@ Disallow: /static/`;
     } else if (description.length > 160) {
       issues.push('Description is too long (more than 160 characters)');
     }
-
     // Check for images without alt text
     const images = document.querySelectorAll('img');
     images.forEach((img, index) => {
@@ -350,7 +306,6 @@ Disallow: /static/`;
         issues.push(`Image ${index + 1} is missing alt text`);
       }
     });
-
     // Check for heading structure
     const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {
@@ -358,10 +313,8 @@ Disallow: /static/`;
     } else if (h1s.length > 1) {
       issues.push('Page has multiple H1 tags');
     }
-
     return issues;
   }
-
   /**
    * Get SEO score
    */
@@ -372,7 +325,6 @@ Disallow: /static/`;
     return Math.round(score);
   }
 }
-
 // Default configuration
 const defaultConfig: SEOConfig = {
   siteName: 'Zion Tech Group',
@@ -384,6 +336,5 @@ const defaultConfig: SEOConfig = {
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
 };
-
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;

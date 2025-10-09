@@ -1,11 +1,8 @@
 'use client';
-
 import React, { useState } from 'react';
 import Link from 'next/link';
-
 const UltimateBusinessIntelligenceShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -59,18 +56,15 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
   ];
-
   const categories = [
     { id: 'all', name: 'All Content' },
     { id: 'blog', name: 'Blog Posts' },
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
   ];
-
   const filteredContent = selectedCategory === 'all' 
     ? content 
     : content.filter(item => item.category === selectedCategory);
-
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -85,7 +79,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           style={{ animationDelay: '1s' }}
         ></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="text-center mb-16">
@@ -96,7 +89,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </span>
             <span className="text-2xl">⚡</span>
           </div>
-
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             Revolutionary Content
             <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -108,7 +100,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             content that&apos;s transforming enterprises worldwide
           </p>
         </div>
-
         {/* Category Filter */}
         <div className="flex justify-center gap-4 mb-12 flex-wrap">
           {categories.map((category) => (
@@ -125,7 +116,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </button>
           ))}
         </div>
-
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredContent.map((item) => (
@@ -141,17 +131,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 </span>
                 <span className="text-gray-400 text-sm">{item.type}</span>
               </div>
-
               {/* Title */}
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                 {item.title}
               </h3>
-
               {/* Description */}
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 {item.description}
               </p>
-
               {/* Metrics */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center">
@@ -167,7 +154,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   <div className="text-gray-400 text-xs">Timeline</div>
                 </div>
               </div>
-
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -179,7 +165,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   </span>
                 ))}
               </div>
-
               {/* CTA */}
               <Link
                 href={item.url}
@@ -191,7 +176,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8">
@@ -229,5 +213,4 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     </section>
   );
 };
-
 export default UltimateBusinessIntelligenceShowcase2025;

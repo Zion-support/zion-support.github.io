@@ -1,14 +1,13 @@
+'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-// import { Link } from 'react-router-dom';
+// import Link from 'next/link';
 import { logger } from '../utils/logger';
-
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
-
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
@@ -16,7 +15,6 @@ interface ErrorBoundaryProps {
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
 }
-
 interface ErrorReport {
   errorId: string | null;
   error: Error;
@@ -30,38 +28,33 @@ interface ErrorReport {
   userId: string | null;
   sessionId: string;
 }
-
 class AdvancedErrorBoundary extends Component<
   ErrorBoundaryProps,
   ErrorBoundaryState
 > {
   private retryCount = 0;
   private maxRetries = 3;
-
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null,
+      errorId: null
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       logger.error('Error Boundary caught an error', { 
@@ -70,18 +63,15 @@ class AdvancedErrorBoundary extends Component<
         errorInfo 
       });
     }
-
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Report error to external service
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
   }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
@@ -94,13 +84,11 @@ class AdvancedErrorBoundary extends Component<
       userAgent: navigator.userAgent,
       url: window.location.href,
       userId: this.getUserId(),
-      sessionId: this.getSessionId(),
+      sessionId: this.getSessionId()
     };
-
     // Send to error reporting service
     this.sendErrorReport(errorReport);
   };
-
   private getUserId = (): string | null => {
     // Try to get user ID from localStorage or other sources
     try {
@@ -109,7 +97,6 @@ class AdvancedErrorBoundary extends Component<
       return null;
     }
   };
-
   private getSessionId = (): string => {
     // Generate or retrieve session ID
     try {
@@ -123,20 +110,18 @@ class AdvancedErrorBoundary extends Component<
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
   };
-
   private generateErrorId = (): string => {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
-
   private sendErrorReport = async (errorReport: ErrorReport) => {
     try {
       // Send to your error reporting service
       await fetch('/api/errors', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(errorReport),
+        body: JSON.stringify(errorReport)
       });
     } catch (reportError) {
       logger.error('Failed to send error report', { 
@@ -145,7 +130,6 @@ class AdvancedErrorBoundary extends Component<
       });
     }
   };
-
   private handleRetry = () => {
     if (this.retryCount < this.maxRetries) {
       this.retryCount++;
@@ -153,26 +137,22 @@ class AdvancedErrorBoundary extends Component<
         hasError: false,
         error: null,
         errorInfo: null,
-        errorId: null,
+        errorId: null
       });
     }
   };
-
   private handleReload = () => {
     window.location.reload();
   };
-
   private handleGoHome = () => {
     window.location.href = '/';
   };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       // Default error UI
       return (
         <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
@@ -202,7 +182,6 @@ class AdvancedErrorBoundary extends Component<
                   has been notified.
                 </p>
               </div>
-
               {process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
                   <h3 className='text-sm font-medium text-red-800'>
@@ -234,7 +213,6 @@ class AdvancedErrorBoundary extends Component<
                   </div>
                 </div>
               )}
-
               <div className='mt-6 space-y-3'>
                 {this.props.enableRetry &&
                   this.retryCount < this.maxRetries && (
@@ -246,14 +224,12 @@ class AdvancedErrorBoundary extends Component<
                       left)
                     </button>
                   )}
-
                 <button
                   onClick={this.handleReload}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
                   Reload Page
                 </button>
-
                 <button
                   onClick={this.handleGoHome}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
@@ -261,7 +237,6 @@ class AdvancedErrorBoundary extends Component<
                   Go to Homepage
                 </button>
               </div>
-
               <div className='mt-6 text-center'>
                 <p className='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
@@ -279,9 +254,7 @@ class AdvancedErrorBoundary extends Component<
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default AdvancedErrorBoundary;

@@ -46,7 +46,6 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
-  const React = require('react');
   return {
     ...actual,
     useNavigate: () => jest.fn(),

@@ -1,8 +1,8 @@
+'use client';
 /**
  * Advanced Analytics System for Zion Tech Group Website
  * Provides comprehensive user behavior tracking and insights
  */
-
 interface UserEvent {
   id: string;
   type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';
@@ -16,7 +16,6 @@ interface UserEvent {
   url: string;
   metadata?: Record<string, unknown>;
 }
-
 interface UserSession {
   id: string;
   startTime: string;
@@ -32,7 +31,6 @@ interface UserSession {
   country?: string;
   city?: string;
 }
-
 interface AnalyticsConfig {
   enableTracking: boolean;
   enableHeatmaps: boolean;
@@ -43,7 +41,6 @@ interface AnalyticsConfig {
   enableErrorTracking: boolean;
   enableUserJourneyTracking: boolean;
 }
-
 class AdvancedAnalytics {
   private static instance: AdvancedAnalytics;
   private config: AnalyticsConfig;
@@ -51,7 +48,6 @@ class AdvancedAnalytics {
   private eventQueue: UserEvent[] = [];
   private maxQueueSize = 1000;
   private isOnline = true;
-
   private constructor() {
     this.config = {
       enableTracking: true,
@@ -61,55 +57,43 @@ class AdvancedAnalytics {
       enableConversionTracking: true,
       enablePerformanceTracking: true,
       enableErrorTracking: true,
-      enableUserJourneyTracking: true,
+      enableUserJourneyTracking: true
     };
-
     this.currentSession = this.createNewSession();
     this.initializeTracking();
   }
-
   static getInstance(): AdvancedAnalytics {
     if (!AdvancedAnalytics.instance) {
       AdvancedAnalytics.instance = new AdvancedAnalytics();
     }
     return AdvancedAnalytics.instance;
   }
-
   /**
    * Initialize comprehensive analytics tracking
    */
   private initializeTracking(): void {
     if (typeof window === 'undefined' || !this.config.enableTracking) return;
-
     // Track page views
     this.trackPageView();
-
     // Track clicks
     this.trackClicks();
-
     // Track scrolls
     this.trackScrolls();
-
     // Track form submissions
     this.trackFormSubmissions();
-
     // Track downloads
     this.trackDownloads();
-
     // Track performance
     if (this.config.enablePerformanceTracking) {
       this.trackPerformance();
     }
-
     // Track user journey
     if (this.config.enableUserJourneyTracking) {
       this.trackUserJourney();
     }
-
     // Setup network monitoring
     this.setupNetworkMonitoring();
   }
-
   /**
    * Create new user session
    */
@@ -123,10 +107,9 @@ class AdvancedAnalytics {
       device: this.detectDevice(),
       browser: this.detectBrowser(),
       os: this.detectOS(),
-      referrer: document.referrer,
+      referrer: document.referrer
     };
   }
-
   /**
    * Track page views
    */
@@ -145,15 +128,13 @@ class AdvancedAnalytics {
         referrer: document.referrer,
         viewport: {
           width: window.innerWidth,
-          height: window.innerHeight,
-        },
-      },
+          height: window.innerHeight
+        }
+      }
     };
-
     this.trackEvent(event);
     this.currentSession.pageViews++;
   }
-
   /**
    * Track clicks
    */
@@ -161,7 +142,6 @@ class AdvancedAnalytics {
     document.addEventListener('click', event => {
       const target = event.target as HTMLElement;
       const element = this.getElementInfo(target);
-
       const clickEvent: UserEvent = {
         id: this.generateEventId(),
         type: 'click',
@@ -179,21 +159,18 @@ class AdvancedAnalytics {
           text: element.text?.substring(0, 100),
           position: {
             x: event.clientX,
-            y: event.clientY,
-          },
-        },
+            y: event.clientY
+          }
+        }
       };
-
       this.trackEvent(clickEvent);
     });
   }
-
   /**
    * Track scrolls
    */
   private trackScrolls(): void {
     let scrollTimeout: NodeJS.Timeout;
-
     window.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
@@ -213,15 +190,13 @@ class AdvancedAnalytics {
             scrollY: window.scrollY,
             scrollPercentage: Math.round(
               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-            ),
-          },
+            )
+          }
         };
-
         this.trackEvent(scrollEvent);
       }, 100);
     });
   }
-
   /**
    * Track form submissions
    */
@@ -230,7 +205,6 @@ class AdvancedAnalytics {
       const form = event.target as HTMLFormElement;
       const formData = new FormData(form);
       const formFields = Array.from(formData.keys());
-
       const submitEvent: UserEvent = {
         id: this.generateEventId(),
         type: 'form_submit',
@@ -246,14 +220,12 @@ class AdvancedAnalytics {
           formClass: form.className,
           formAction: form.action,
           formMethod: form.method,
-          fields: formFields,
-        },
+          fields: formFields
+        }
       };
-
       this.trackEvent(submitEvent);
     });
   }
-
   /**
    * Track downloads
    */
@@ -261,7 +233,6 @@ class AdvancedAnalytics {
     document.addEventListener('click', event => {
       const target = event.target as HTMLElement;
       const link = target.closest('a');
-
       if (link && this.isDownloadLink(link)) {
         const downloadEvent: UserEvent = {
           id: this.generateEventId(),
@@ -275,15 +246,13 @@ class AdvancedAnalytics {
           url: window.location.href,
           metadata: {
             downloadUrl: link.href,
-            downloadText: link.textContent?.substring(0, 100),
-          },
+            downloadText: link.textContent?.substring(0, 100)
+          }
         };
-
         this.trackEvent(downloadEvent);
       }
     });
   }
-
   /**
    * Track performance metrics
    */
@@ -305,21 +274,18 @@ class AdvancedAnalytics {
               url: window.location.href,
               metadata: {
                 metric: entry.name,
-                value: entry.startTime,
-              },
+                value: entry.startTime
+              }
             };
-
             this.trackEvent(paintEvent);
           }
         }
       }).observe({ entryTypes: ['paint'] });
-
       // Track navigation timing
       window.addEventListener('load', () => {
         const navigation = performance.getEntriesByType(
           'navigation'
         )[0] as PerformanceNavigationTiming;
-
         const performanceEvent: UserEvent = {
           id: this.generateEventId(),
           type: 'custom',
@@ -334,35 +300,30 @@ class AdvancedAnalytics {
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded:
               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            firstByte: navigation.responseStart - navigation.requestStart,
-          },
+            firstByte: navigation.responseStart - navigation.requestStart
+          }
         };
-
         this.trackEvent(performanceEvent);
       });
     }
   }
-
   /**
    * Track user journey
    */
   private trackUserJourney(): void {
     // Track page transitions
     let lastUrl = window.location.href;
-
     const observer = new MutationObserver(() => {
       if (window.location.href !== lastUrl) {
         this.trackPageView();
         lastUrl = window.location.href;
       }
     });
-
     observer.observe(document.body, {
       childList: true,
-      subtree: true,
+      subtree: true
     });
   }
-
   /**
    * Setup network monitoring
    */
@@ -371,30 +332,25 @@ class AdvancedAnalytics {
       this.isOnline = true;
       this.flushEventQueue();
     });
-
     window.addEventListener('offline', () => {
       this.isOnline = false;
     });
   }
-
   /**
    * Track custom event
    */
   trackEvent(event: UserEvent): void {
     this.currentSession.events.push(event);
     this.eventQueue.push(event);
-
     // Keep queue size manageable
     if (this.eventQueue.length > this.maxQueueSize) {
       this.eventQueue.shift();
     }
-
     // Send to analytics service
     if (this.isOnline) {
       this.sendEvent(event);
     }
   }
-
   /**
    * Send event to analytics service
    */
@@ -403,28 +359,24 @@ class AdvancedAnalytics {
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(event),
+        body: JSON.stringify(event)
       });
     } catch (error) {
       }
   }
-
   /**
    * Flush event queue when back online
    */
   private async flushEventQueue(): Promise<void> {
     if (!this.isOnline) return;
-
     const eventsToSend = [...this.eventQueue];
     this.eventQueue = [];
-
     for (const event of eventsToSend) {
       await this.sendEvent(event);
     }
   }
-
   /**
    * Get element information for tracking
    */
@@ -440,7 +392,6 @@ class AdvancedAnalytics {
     const id = element.id || '';
     const className = element.className || '';
     const text = element.textContent?.trim();
-
     // Determine category based on element type
     let category = 'interaction';
     if (tagName === 'button' || element.closest('button')) {
@@ -450,20 +401,17 @@ class AdvancedAnalytics {
     } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {
       category = 'form';
     }
-
     // Create label
     let label = id || className || text?.substring(0, 50) || tagName;
-
     return {
       category,
       label,
       tagName,
       id,
       className,
-      text,
+      text
     };
   }
-
   /**
    * Check if link is a download
    */
@@ -474,7 +422,6 @@ class AdvancedAnalytics {
       link.getAttribute('data-download') === 'true'
     );
   }
-
   /**
    * Detect device type
    */
@@ -484,7 +431,6 @@ class AdvancedAnalytics {
     if (width < 1024) return 'tablet';
     return 'desktop';
   }
-
   /**
    * Detect browser
    */
@@ -496,7 +442,6 @@ class AdvancedAnalytics {
     if (userAgent.includes('Edge')) return 'Edge';
     return 'Unknown';
   }
-
   /**
    * Detect operating system
    */
@@ -509,21 +454,18 @@ class AdvancedAnalytics {
     if (userAgent.includes('iOS')) return 'iOS';
     return 'Unknown';
   }
-
   /**
    * Generate session ID
    */
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-
   /**
    * Generate event ID
    */
   private generateEventId(): string {
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-
   /**
    * Get user ID from storage or generate one
    */
@@ -535,7 +477,6 @@ class AdvancedAnalytics {
     }
     return userId;
   }
-
   /**
    * Get analytics summary
    */
@@ -549,7 +490,6 @@ class AdvancedAnalytics {
   } {
     const events = this.currentSession.events;
     const totalEvents = events.length;
-
     const eventsByType = events.reduce(
       (acc, event) => {
         acc[event.type] = (acc[event.type] || 0) + 1;
@@ -557,7 +497,6 @@ class AdvancedAnalytics {
       },
       {} as Record<string, number>
     );
-
     const eventsByCategory = events.reduce(
       (acc, event) => {
         acc[event.category] = (acc[event.category] || 0) + 1;
@@ -565,7 +504,6 @@ class AdvancedAnalytics {
       },
       {} as Record<string, number>
     );
-
     const pageViews = events.filter(e => e.type === 'page_view');
     const topPages = pageViews
       .reduce(
@@ -581,20 +519,17 @@ class AdvancedAnalytics {
         [] as Array<{ url: string; views: number }>
       )
       .sort((a, b) => b.views - a.views);
-
     const conversions = events.filter(e => e.category === 'conversion').length;
     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
-
     return {
       session: this.currentSession,
       totalEvents,
       eventsByType,
       eventsByCategory,
       topPages: topPages.slice(0, 10),
-      conversionRate,
+      conversionRate
     };
   }
-
   /**
    * Send session data to analytics service
    */
@@ -603,14 +538,13 @@ class AdvancedAnalytics {
       await fetch('/api/analytics/session', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(session),
+        body: JSON.stringify(session)
       });
     } catch (error) {
       }
   }
-
   /**
    * End current session
    */
@@ -619,17 +553,14 @@ class AdvancedAnalytics {
     this.currentSession.duration =
       new Date(this.currentSession.endTime).getTime() -
       new Date(this.currentSession.startTime).getTime();
-
     // Send session data
     if (this.isOnline) {
       this.sendSessionData(this.currentSession);
     }
-
     // Create new session
     this.currentSession = this.createNewSession();
   }
 }
-
 // Export singleton instance
 export const advancedAnalytics = AdvancedAnalytics.getInstance();
 export default advancedAnalytics;
