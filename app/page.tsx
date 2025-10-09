@@ -55,11 +55,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid particle-bg">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid cyber-matrix-bg neural-network-bg">
       {/* Navigation */}
       <Navigation />
       
@@ -79,7 +75,7 @@ const HomePage: React.FC = () => {
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
-          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line quantum-entanglement ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
@@ -88,19 +84,11 @@ const HomePage: React.FC = () => {
         >
           <h1 
             id="hero-heading" 
-<<<<<<< HEAD
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-glow quantum-tunnel"
           >
             Zion Tech Group
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium" role="doc-subtitle">
-=======
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
-          >
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow" role="doc-subtitle">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow energy-field" role="doc-subtitle">
             Advanced AI and IT Solutions
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -110,19 +98,19 @@ const HomePage: React.FC = () => {
           
           {/* Key Benefits */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">🚀</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
+            <div className="holographic-card quantum-entanglement p-4 sm:p-6 energy-field">
+              <div className="text-2xl sm:text-3xl mb-3 cyber-scan-line quantum-tunnel">🚀</div>
+              <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text cyber-glow">AI-Powered Solutions</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
+            <div className="holographic-card quantum-entanglement p-4 sm:p-6 energy-field">
+              <div className="text-2xl sm:text-3xl mb-3 cyber-scan-line quantum-tunnel">⚡</div>
+              <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text cyber-glow">Proven Results</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-              <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
+            <div className="holographic-card quantum-entanglement p-4 sm:p-6 sm:col-span-2 lg:col-span-1 energy-field">
+              <div className="text-2xl sm:text-3xl mb-3 cyber-scan-line quantum-tunnel">🔒</div>
+              <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text cyber-glow">Enterprise Security</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
             </div>
           </div>
@@ -132,14 +120,14 @@ const HomePage: React.FC = () => {
             <a
               href="tel:+13024640950"
               onClick={handlePhoneClick}
-              className="cyber-button w-full sm:w-auto text-center"
+              className="cyber-button cyber-pulse w-full sm:w-auto text-center quantum-entanglement"
               aria-label="Call us at (302) 464-0950"
             >
               📞 Call Now: (302) 464-0950
             </a>
             <a
               href="/contact"
-              className="cyber-button w-full sm:w-auto text-center"
+              className="cyber-button cyber-pulse w-full sm:w-auto text-center quantum-entanglement"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
               Get Free Consultation
@@ -149,25 +137,19 @@ const HomePage: React.FC = () => {
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text cyber-glow quantum-tunnel">
             Our Services
           </h2>
-          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4 energy-field">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
           
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-<<<<<<< HEAD
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Services</h3>
-=======
-              <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">🤖</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Services</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
@@ -181,15 +163,9 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-<<<<<<< HEAD
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📢</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Marketing</h3>
-=======
-              <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">📢</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Marketing</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Revolutionary AI-powered marketing automation, ad optimization, and content generation.
                 </p>
@@ -203,15 +179,9 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-<<<<<<< HEAD
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚙️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Automation</h3>
-=======
-              <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">⚙️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Automation</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Intelligent automation of business processes with decision-making capabilities and exception handling.
                 </p>
@@ -279,31 +249,112 @@ const HomePage: React.FC = () => {
           {/* Micro SAAS Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Micro SAAS Solutions</h3>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">💻</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $79/month</div>
-                  <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2 neon-text">Starting at $79/month</div>
+                  <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
               </article>
             </Suspense>
 
+            {/* New Real Micro SAAS Services */}
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Generation</h3>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">🔍</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Code Review Pro</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Advanced automated code analysis with AI-powered bug detection, security scanning, and performance optimization.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2 neon-text">$89/month</div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base hover:neon-glow">
+                    Get Started →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">🎯</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI SEO Optimizer</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Advanced SEO analysis and optimization with AI-driven content suggestions and competitor analysis.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2 neon-text">$199/month</div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base hover:neon-glow">
+                    Get Started →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">📊</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Analytics Dashboard</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Real-time business intelligence with predictive analytics, automated insights, and custom reporting.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">$199/month</div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base hover:neon-glow">
+                    Get Started →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">📧</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Email Marketing</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Intelligent email campaigns with personalization, A/B testing, and send time optimization.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">$149/month</div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base hover:neon-glow">
+                    Get Started →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">💬</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Customer Support</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Provide 24/7 intelligent customer support with AI that never sleeps and learns from every interaction.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">$199/month</div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base hover:neon-glow">
+                    Get Started →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">✍️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Content Generation</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Revolutionary AI-powered content creation for blogs, social media, emails, and marketing materials.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-content-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
+                  <a href="/ai-content-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
@@ -311,16 +362,65 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">☁️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">IT Infrastructure</h3>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">☁️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">IT Infrastructure</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Enterprise-grade IT infrastructure with 99.9% uptime guarantee and 24/7 expert support.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $999/month</div>
-                  <a href="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $999/month</div>
+                  <a href="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base hover:neon-glow">
                     Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            {/* Additional New Micro SAAS Services */}
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">🧪</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Test Generation</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Intelligent automated test generation with coverage analysis, performance testing, and regression testing.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2 neon-text">$149/month</div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base hover:neon-glow">
+                    Get Started →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">📚</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Documentation</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  AI-powered API documentation with interactive examples, code snippets, and automatic updates.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2 neon-text">$79/month</div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base hover:neon-glow">
+                    Get Started →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="holographic-card quantum-entanglement p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-field">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line quantum-tunnel">📱</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text cyber-glow">AI Social Media</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Automated social media content creation, scheduling, engagement optimization, and analytics.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2 neon-text">$129/month</div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base hover:neon-glow">
+                    Get Started →
                   </a>
                 </div>
               </article>
@@ -329,9 +429,9 @@ const HomePage: React.FC = () => {
 
           {/* Additional Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Solutions</h3>
+            <article className="holographic-card quantum-entanglement p-4 sm:p-6 energy-field">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 cyber-scan-line quantum-tunnel">🤖</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4 neon-text cyber-glow">AI Solutions</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                 Harness the power of artificial intelligence to drive innovation and efficiency in
                 your organization.
@@ -344,9 +444,9 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
 
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Digital Transformation</h3>
+            <article className="holographic-card quantum-entanglement p-4 sm:p-6 energy-field">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 cyber-scan-line quantum-tunnel">🔄</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4 neon-text cyber-glow">Digital Transformation</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                 Transform your business processes with cutting-edge technology and expert
                 consultation.
@@ -359,9 +459,9 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
 
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Services</h3>
+            <article className="holographic-card quantum-entanglement p-4 sm:p-6 energy-field">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 cyber-scan-line quantum-tunnel">☁️</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4 neon-text cyber-glow">Cloud Services</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                 Scale your infrastructure with secure, reliable, and efficient cloud solutions.
               </p>
