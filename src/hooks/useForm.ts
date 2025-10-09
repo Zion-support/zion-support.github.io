@@ -15,7 +15,7 @@ import {
 } from '../utils/formValidation';
 export interface UseFormConfig<T extends Record<string, unknown>> {
   initialValues: T;
-  validationSchema?: Partial<Record<keyof T, ValidationRule[]>>;
+  validationSchema?: Record<keyof T, ValidationRule<T[keyof T]>[]>;
   onSubmit: (values: T) => void | Promise<void>;
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
@@ -36,14 +36,8 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   validateField: (field: keyof T) => void;
   validateAllFields: () => boolean;
 }
-<<<<<<< HEAD
-export function useForm<T extends Record<string, unknown>>({
-  initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true
-}: UseFormConfig<T>): UseFormReturn<T> {
-=======
 export function useForm<T extends Record<string, unknown>>(config: UseFormConfig<T>): UseFormReturn<T> {
-  const { initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true } = config;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6fc5
+  const { initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true } = config;
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
@@ -51,7 +45,12 @@ export function useForm<T extends Record<string, unknown>>(config: UseFormConfig
   // Validate a single field
   const validateSingleField = useCallback(
     (field: keyof T): void => {
+<<<<<<< HEAD
       const fieldRules = validationSchema?.[field as keyof typeof validationSchema];
+=======
+      if (!validationSchema) return;
+      const fieldRules = validationSchema[field];
+>>>>>>> cursor/fix-errors-and-merge-to-main-2481
       if (!fieldRules) return;
       const fieldValue = values[field];
       const rules = fieldRules as ValidationRule<T[keyof T]>[];
@@ -124,7 +123,7 @@ export function useForm<T extends Record<string, unknown>>(config: UseFormConfig
       }
       setIsSubmitting(true);
       try {
-        await onSubmit(values);
+        await config.onSubmit(values);
       } catch (error) {
       } finally {
         setIsSubmitting(false);
