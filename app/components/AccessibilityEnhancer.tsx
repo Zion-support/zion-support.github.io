@@ -26,6 +26,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             e.preventDefault();
           }
         }
+
+        // Escape key handling
+        if (e.key === 'Escape') {
+          const modals = document.querySelectorAll('[role="dialog"]');
+          modals.forEach(modal => {
+            const closeButton = modal.querySelector('[aria-label="Close"], [data-close]') as HTMLElement;
+            if (closeButton) {
+              closeButton.focus();
+            }
+          });
+        }
       };
 
       document.addEventListener('keydown', handleKeyDown);

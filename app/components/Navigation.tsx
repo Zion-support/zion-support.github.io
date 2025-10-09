@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, MessageSquare, Eye, Bot, Share2, Mail as EmailIcon, BarChart3, Projector, Headphones } from 'lucide-react';
 
 const Navigation: React.FC = () => {
-=======
-'use client';
-import React, { useState, useEffect, memo } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
-const Navigation: React.FC = memo(() => {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -30,6 +23,22 @@ const Navigation: React.FC = memo(() => {
     };
 
     window.addEventListener('resize', handleResize);
+=======
+import { Link } from 'react-router-dom';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -55,29 +64,6 @@ const Navigation: React.FC = memo(() => {
   const serviceCategories = [
     {
 <<<<<<< HEAD
-=======
-      title: 'AI Services',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      hoverColor: 'hover:bg-purple-500/20',
-      services: [
-        { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions', icon: '🤖', popular: true },
-        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation', icon: '📢', popular: true },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation', icon: '⚙️', popular: true },
-        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions', icon: '🏥', popular: true },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications', icon: '💰', popular: true },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights', icon: '📊', popular: true },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions', icon: '🔐', popular: true },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization', icon: '🔄', popular: false },
-        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service', icon: '💬', popular: false },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes', icon: '📈', popular: false },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization', icon: '📊', popular: false },
-        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation', icon: '🎯', popular: false }
-      ]
-    },
-    {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
       title: 'Micro SAAS Solutions',
       icon: Zap,
       color: 'text-cyan-400',
@@ -91,7 +77,6 @@ const Navigation: React.FC = memo(() => {
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
         { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
         { name: 'AI Content Generator', path: '/ai-content-generation', description: 'AI-powered content creation', icon: '✍️', popular: false },
-<<<<<<< HEAD
         { name: 'AI SEO Optimizer', path: '/ai-marketing', description: 'AI-driven SEO optimization', icon: '🎯', popular: false }
       ]
     },
@@ -126,13 +111,6 @@ const Navigation: React.FC = memo(() => {
         { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Intelligent scheduling' },
         { name: 'AI Fitness Coach', path: '/ai-fitness-coach', description: 'AI fitness training' },
         { name: 'AI Email Assistant', path: '/ai-email-assistant', description: 'AI email management' }
-=======
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-driven SEO optimization', icon: '🎯', popular: false },
-        { name: 'AI Writing Assistant', path: '/ai-writing-assistant', description: 'AI-powered writing tool', icon: '✍️', popular: false },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-assisted app development', icon: '📱', popular: false },
-        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'AI-powered design tool', icon: '🎨', popular: false },
-        { name: 'AI Voice Cloning', path: '/ai-voice-cloning', description: 'AI voice synthesis', icon: '🎤', popular: false }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
       ]
     },
     {
@@ -142,7 +120,6 @@ const Navigation: React.FC = memo(() => {
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
       services: [
-<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
@@ -161,16 +138,6 @@ const Navigation: React.FC = memo(() => {
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
-=======
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and optimization', icon: Cloud },
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions', icon: Shield },
-        { name: 'DevOps & CI/CD', path: '/devops', description: 'Streamlined development workflows', icon: Settings },
-        { name: 'Database Services', path: '/database', description: 'Database design and optimization', icon: Database },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise IT infrastructure', icon: Cpu },
-        { name: 'Network Services', path: '/networking', description: 'Network design and management', icon: Globe },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights', icon: BarChart },
-        { name: 'Compliance', path: '/compliance', description: 'Regulatory compliance solutions', icon: CheckSquare }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
 =======
         { name: 'Cybersecurity Suite', path: '/cybersecurity-suite', description: 'Advanced security solutions' },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
@@ -214,7 +181,6 @@ const Navigation: React.FC = memo(() => {
       services: [
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
@@ -238,53 +204,6 @@ const Navigation: React.FC = memo(() => {
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
         { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
-=======
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ AI-powered tools' },
-        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Business intelligence' },
-        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Content creation suite' },
-        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'Drag-and-drop app builder' },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
-        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
-        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Social media automation' },
-        { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-assistant', description: 'E-commerce optimization' },
-        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
-        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'AI-powered design tools' },
-        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring' },
-        { name: 'AI Financial Planner', path: '/ai-financial-planner', description: 'Financial planning & analysis' },
-        { name: 'AI Writing Assistant', path: '/ai-writing-assistant', description: 'AI writing tools' },
-        { name: 'AI Code Generator', path: '/ai-code-generator', description: 'AI-assisted coding' },
-        { name: 'AI Video Creator', path: '/ai-video-creator', description: 'Automated video production' },
-        { name: 'AI Music Composer', path: '/ai-music-composition', description: 'AI music generation' },
-        { name: 'AI App Builder', path: '/ai-app-builder', description: 'Native app development' },
-        { name: 'AI Market Research', path: '/ai-market-research', description: 'Automated market analysis' },
-        { name: 'AI Store Optimizer', path: '/ai-store-optimizer', description: 'E-commerce optimization' },
-        { name: 'AI Data Pipeline', path: '/ai-data-pipeline', description: 'Automated data processing' },
-        { name: 'AI A/B Testing', path: '/ai-ab-testing', description: 'Intelligent testing' },
-        { name: 'AI Website Builder', path: '/ai-website-builder', description: 'AI website creation' },
-        { name: 'AI Live Chat', path: '/ai-live-chat', description: 'Intelligent customer chat' },
-        { name: 'AI Growth Hacker', path: '/ai-growth-hacker', description: 'Automated growth strategies' },
-        { name: 'AI Password Manager', path: '/ai-password-manager', description: 'Secure password management' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants' },
-        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management' },
-        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management' },
-        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
-        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' },
-        { name: 'AI Health Tracker', path: '/ai-health-tracker', description: 'Personal health monitoring' },
-        { name: 'AI Learning Platform', path: '/ai-learning-platform', description: 'Personalized learning' },
-        { name: 'AI Task Manager Pro', path: '/task-manager-pro', description: 'Intelligent task management' },
-        { name: 'AI Expense Tracker', path: '/expense-tracker', description: 'Smart expense management' },
-        { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Intelligent scheduling' },
-        { name: 'AI Business Apps', path: '/business-apps', description: 'Business applications' },
-        { name: 'AI Productivity Tools', path: '/productivity', description: 'Productivity suite' },
-        { name: 'AI Marketing Tools', path: '/marketing-tools', description: 'Marketing suite' },
-        { name: 'AI Developer Tools', path: '/developer-tools', description: 'Development tools' },
-        { name: 'AI Analytics Tools', path: '/analytics-tools', description: 'Analytics suite' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
       ]
     },
     {
@@ -308,24 +227,6 @@ const Navigation: React.FC = memo(() => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-<<<<<<< HEAD
-=======
-        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-generation quantum algorithms', icon: '⚛️' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices and edge solutions', icon: '🌐' },
-        { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent robotic solutions', icon: '🦾' },
-        { name: 'Business Apps', path: '/business-apps', description: 'Custom business applications', icon: '📱' }
-=======
-        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing', icon: '⚛️', popular: true },
-        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖', popular: true },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️', popular: true },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '🌐', popular: true },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data insights', icon: '📊', popular: false },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robotics', icon: '🤖', popular: false },
-        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: false },
-        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: false }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
       ]
     }
   ];
@@ -334,12 +235,10 @@ const Navigation: React.FC = memo(() => {
     { name: 'Home', path: '/', icon: '🏠' },
     { name: 'About', path: '/about', icon: '👥' },
     { name: 'Services', path: '/services', icon: '⚙️' },
-<<<<<<< HEAD
     { name: 'Pricing', path: '/pricing', icon: '💰' },
     { name: 'Case Studies', path: '/case-studies', icon: '📊' },
     { name: 'Blog', path: '/blog', icon: '📝' },
     { name: 'Contact', path: '/contact', icon: '📞' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 =======
@@ -358,11 +257,7 @@ const Navigation: React.FC = memo(() => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-<<<<<<< HEAD
           <Link href="/" className="flex items-center space-x-2 group">
-=======
-          <a href="/" className="flex items-center space-x-2 group">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
@@ -370,7 +265,6 @@ const Navigation: React.FC = memo(() => {
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
-<<<<<<< HEAD
           </Link>
 
           {/* Desktop Menu */}
@@ -384,21 +278,6 @@ const Navigation: React.FC = memo(() => {
 
             {/* Services Dropdown */}
             <div className="relative">
-=======
-          </a>
-
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </a>
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-            </a>
-
-            {/* Services Dropdown */}
-            <div className="relative group">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
@@ -408,48 +287,18 @@ const Navigation: React.FC = memo(() => {
                 <Brain className="w-4 h-4" />
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-<<<<<<< HEAD
-=======
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {mainNavItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.path}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1 group"
-              >
-                <span className="text-sm">{item.icon}</span>
-                <span className="font-medium">{item.name}</span>
-                <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </Link>
-            ))}
-
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1">
-                <span className="text-sm">⚙️</span>
-                <span className="font-medium">Services</span>
-                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
               </button>
-<<<<<<< HEAD
               
               <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
                   <div className="grid grid-cols-2 gap-4">
-=======
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[900px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
-                  <div className="grid grid-cols-2 gap-6 px-6">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-2">
                         <div className="flex items-center space-x-2 mb-2">
                           <category.icon className={`w-4 h-4 ${category.color}`} />
                           <span className="text-sm font-semibold text-white">{category.title}</span>
                         </div>
-<<<<<<< HEAD
                         <div className="space-y-2">
                           {category.services.slice(0, 6).map((service, serviceIndex) => (
                             <Link
@@ -485,122 +334,187 @@ const Navigation: React.FC = memo(() => {
                     >
                       View All Services
                     </Link>
+                  </div>
 =======
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    if (isOpen) {
+      setServicesOpen(false);
+      setAiServicesOpen(false);
+    }
+  };
+
+  const closeAllMenus = () => {
+    setIsOpen(false);
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+  };
+
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
+    setAiServicesOpen(false);
+  };
+
+  const toggleAiServices = () => {
+    setAiServicesOpen(!aiServicesOpen);
+    setServicesOpen(false);
+  };
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
+            </div>
+            <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+              Zion Tech Group
+            </span>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link 
+              to="/" 
+              className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-cyan-400'}`}
+              onClick={closeAllMenus}
+            >
+              Home
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleServices}
+                className={`flex items-center space-x-1 font-medium transition-colors ${
+                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-cyan-400'
+                }`}
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
-                    <div className="grid grid-cols-2 gap-4">
-                      {serviceCategories.map((category, index) => (
-                        <div key={index} className="space-y-2">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                            <span className="text-sm font-semibold text-white">{category.title}</span>
-                          </div>
-                          <div className="space-y-2">
-                            {category.services.slice(0, 6).map((service, serviceIndex) => (
-                              <a
-                                key={serviceIndex}
-                                href={service.path}
-                                className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
-                                onClick={closeAllMenus}
-                              >
-                                <div className="font-medium">{service.name}</div>
-                                <div className="text-xs text-gray-500">
-                                  {service.description}
-                                </div>
-                              </a>
-                            ))}
-                            {category.services.length > 6 && (
-                              <a
-                                href={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                                className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
-                                onClick={closeAllMenus}
-                              >
-                                View All →
-                              </a>
-                            )}
-                          </div>
-                        </div>
-                      ))}
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                  <Link
+                    to="/ai-services"
+                    className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                    onClick={closeAllMenus}
+                  >
+                    <Brain className="w-5 h-5 text-blue-600" />
+                    <div>
+                      <div className="font-medium">AI Services</div>
+                      <div className="text-sm text-gray-500">Machine Learning & AI Solutions</div>
                     </div>
-                    <div className="border-t border-gray-700 mt-6 pt-4">
-                      <a
-                        href="/services"
-                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                        onClick={closeAllMenus}
-                      >
-                        View All Services
-                      </a>
+                  </Link>
+                  <Link
+                    to="/ai-automation"
+                    className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                    onClick={closeAllMenus}
+                  >
+                    <Zap className="w-5 h-5 text-purple-600" />
+                    <div>
+                      <div className="font-medium">AI Automation</div>
+                      <div className="text-sm text-gray-500">Process Automation & Workflow</div>
                     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
-                  </div>
+                  </Link>
+                  <Link
+                    to="/ai-marketing"
+                    className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                    onClick={closeAllMenus}
+                  >
+                    <BarChart className="w-5 h-5 text-green-600" />
+                    <div>
+                      <div className="font-medium">AI Marketing</div>
+                      <div className="text-sm text-gray-500">Marketing Automation & Analytics</div>
+                    </div>
+                  </Link>
+                  <Link
+                    to="/it-infrastructure"
+                    className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                    onClick={closeAllMenus}
+                  >
+                    <Cloud className="w-5 h-5 text-blue-600" />
+                    <div>
+                      <div className="font-medium">IT Infrastructure</div>
+                      <div className="text-sm text-gray-500">Cloud & Infrastructure Solutions</div>
+                    </div>
+                  </Link>
+                  <Link
+                    to="/cybersecurity"
+                    className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                    onClick={closeAllMenus}
+                  >
+                    <Shield className="w-5 h-5 text-red-600" />
+                    <div>
+                      <div className="font-medium">Cybersecurity</div>
+                      <div className="text-sm text-gray-500">Security & Compliance</div>
+                    </div>
+                  </Link>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
                 </div>
               )}
             </div>
 
 <<<<<<< HEAD
             <Link 
-=======
-            <a 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
               href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
+=======
+            <Link 
+              to="/about" 
+              className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-cyan-400'}`}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
               onClick={closeAllMenus}
             >
               Case Studies
-<<<<<<< HEAD
             </Link>
+<<<<<<< HEAD
 
             <Link
-=======
-            </a>
-
-            <a
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+=======
+            
+            <Link 
+              to="/contact" 
+              className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-cyan-400'}`}
+              onClick={closeAllMenus}
+            >
+              Contact
+            </Link>
+            
+            <Link 
+              to="/blog" 
+              className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-cyan-400'}`}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
               onClick={closeAllMenus}
             >
               Blog
-<<<<<<< HEAD
             </Link>
+<<<<<<< HEAD
 
             <Link
-=======
-            </a>
-
-            <a
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
               Contact
-<<<<<<< HEAD
             </Link>
 
             {/* CTA Button */}
             <Link
-=======
-            </a>
-
-            {/* CTA Button */}
-            <a
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
               href="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
-<<<<<<< HEAD
             </Link>
-=======
-            </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
           </div>
 
           {/* Mobile Menu Button */}
@@ -617,7 +531,6 @@ const Navigation: React.FC = memo(() => {
 
         {/* Mobile menu */}
         {isOpen && (
-<<<<<<< HEAD
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
               <Link
@@ -634,25 +547,6 @@ const Navigation: React.FC = memo(() => {
               >
                 About
               </Link>
-=======
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-6">
-              {/* Main Navigation */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
-                {mainNavItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.path}
-                    onClick={closeAllMenus}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="font-medium">{item.name}</span>
-                  </a>
-                ))}
-              </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
 
               {/* Mobile Services */}
               <div>
@@ -672,10 +566,6 @@ const Navigation: React.FC = memo(() => {
                       <div key={categoryIndex}>
                         <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
                         <div className="ml-4 space-y-1">
-<<<<<<< HEAD
-=======
-                        <div className="space-y-1">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
                           {category.services.slice(0, 3).map((service, serviceIndex) => (
                             <Link
 =======
@@ -686,39 +576,23 @@ const Navigation: React.FC = memo(() => {
                               href={service.path}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
                             >
-<<<<<<< HEAD
                               {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
                             </Link>
                           ))}
                           <Link
-=======
-                              {service.icon} {service.name}
-                            </a>
-                          ))}
-                          <a
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
                             href="/services"
                             className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                           >
                             View All →
-<<<<<<< HEAD
                           </Link>
-=======
-                          </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
                         </div>
                       </div>
                     ))}
                   </div>
-<<<<<<< HEAD
                 </div>
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-            </div>
-          </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 
@@ -743,6 +617,20 @@ const Navigation: React.FC = memo(() => {
               className="cyber-button px-4 py-2 text-sm font-medium"
             >
               Get Started
+=======
+
+            {/* CTA Button */}
+            <a
+              href="tel:+13024640950"
+              className={`inline-flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                isScrolled 
+                  ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                  : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
+              }`}
+            >
+              <Phone className="w-4 h-4" />
+              <span>(302) 464-0950</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
             </a>
           </div>
 
@@ -777,11 +665,6 @@ const Navigation: React.FC = memo(() => {
               </div>
 
 <<<<<<< HEAD
-=======
-                )}
-              </div>
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
@@ -791,82 +674,117 @@ const Navigation: React.FC = memo(() => {
                 (302) 464-0950
               </a>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              {/* Services */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Services</h3>
-                {serviceCategories.map((category, index) => (
-                  <div key={index} className="space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <category.icon className={`w-4 h-4 ${category.color}`} />
-                      <span className="text-sm font-semibold text-white">{category.title}</span>
-                    </div>
-                    <div className="ml-6 space-y-1">
-                      {category.services.slice(0, 4).map((service, serviceIndex) => (
-                        <Link
-                          key={serviceIndex}
-                          href={service.path}
-                          onClick={closeAllMenus}
-                          className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
-                        >
-                          {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-2" />} {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Contact Info */}
-              <div className="space-y-4 pt-4 border-t border-gray-700">
-                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3>
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-3 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-3 text-pink-400 hover:text-pink-300 transition-colors duration-300 py-2"
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>kleber@ziontechgroup.com</span>
-                </a>
-                <div className="flex items-center space-x-3 text-green-400 py-2">
-                  <MapPin className="w-5 h-5" />
-                  <span className="text-sm">364 E Main St STE 1008<br />Middletown, DE 19709</span>
-                </div>
-                <a
-                  href="/contact"
-                  onClick={closeAllMenus}
-                  className="cyber-button px-6 py-3 text-center block w-full"
-                >
-                  Get Started
-                </a>
-              </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
+=======
+          <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
+            <div className="px-4 py-6 space-y-4">
+              <Link
+                to="/"
+                className="block text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Home
+              </Link>
+              
+              {/* Mobile Services */}
+              <div>
+                <button
+                  onClick={toggleServices}
+                  className="flex items-center justify-between w-full text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors"
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`w-5 h-5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {servicesOpen && (
+                  <div className="mt-2 ml-4 space-y-3">
+                    <Link
+                      to="/ai-services"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                      onClick={closeAllMenus}
+                    >
+                      AI Services
+                    </Link>
+                    <Link
+                      to="/ai-automation"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                      onClick={closeAllMenus}
+                    >
+                      AI Automation
+                    </Link>
+                    <Link
+                      to="/ai-marketing"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                      onClick={closeAllMenus}
+                    >
+                      AI Marketing
+                    </Link>
+                    <Link
+                      to="/it-infrastructure"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                      onClick={closeAllMenus}
+                    >
+                      IT Infrastructure
+                    </Link>
+                    <Link
+                      to="/cybersecurity"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                      onClick={closeAllMenus}
+                    >
+                      Cybersecurity
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
+              <Link
+                to="/about"
+                className="block text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                About
+              </Link>
+              
+              <Link
+                to="/contact"
+                className="block text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Contact
+              </Link>
+              
+              <Link
+                to="/blog"
+                className="block text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+
+              {/* Mobile CTA */}
+              <a
+                href="tel:+13024640950"
+                className="flex items-center space-x-2 w-full justify-center px-4 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                <span>(302) 464-0950</span>
+              </a>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
             </div>
           </div>
         )}
       </div>
     </nav>
   );
-<<<<<<< HEAD
 };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Navigation;
-=======
-export default Navigation;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
 =======
 export default Navigation;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
@@ -876,3 +794,6 @@ export default Navigation;
 Navigation.displayName = 'Navigation';
 export default Navigation;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
+=======
+export default Navigation;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65

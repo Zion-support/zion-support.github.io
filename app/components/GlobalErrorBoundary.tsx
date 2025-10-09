@@ -65,12 +65,12 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 onClick={() => window.location.reload()}
                 className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
-                Refresh Page
+                Reload Page
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4">
-                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 text-xs text-gray-600 bg-gray-100 p-2 rounded overflow-auto">

@@ -8,6 +8,7 @@ interface BeforeInstallPromptEvent extends Event {
 const PWAInstaller: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e: Event) => {
@@ -17,10 +18,15 @@ const PWAInstaller: React.FC = () => {
     };
 
     const handleAppInstalled = () => {
+      setIsInstalled(true);
       setShowInstallButton(false);
       setDeferredPrompt(null);
     };
 
+    // Check installation status
+    checkIfInstalled();
+
+    // Add event listeners
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
 
@@ -46,7 +52,15 @@ const PWAInstaller: React.FC = () => {
     setShowInstallButton(false);
   };
 
-  if (!showInstallButton) return null;
+  const handleDismiss = () => {
+    setShowInstallButton(false);
+    setDeferredPrompt(null);
+  };
+
+  // Don't show if already installed or not available
+  if (isInstalled || !showInstallButton) {
+    return null;
+  }
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
