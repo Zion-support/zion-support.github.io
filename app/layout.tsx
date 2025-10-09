@@ -113,9 +113,62 @@ export default function RootLayout({
             name: 'Cloud Infrastructure',
             description: 'Cloud migration and infrastructure optimization services'
           }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'AI Marketing Solutions',
+            description: 'AI-powered marketing automation and optimization'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'AI Healthcare Solutions',
+            description: 'AI applications for healthcare and medical technology'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Quantum Computing Services',
+            description: 'Next-generation quantum computing solutions'
+          }
         }
       ]
-    }
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '127',
+      bestRating: '5',
+      worstRating: '1'
+    },
+    foundingDate: '2020',
+    numberOfEmployees: '50-100',
+    employee: [
+      {
+        '@type': 'Person',
+        name: 'Kleber Santos',
+        jobTitle: 'CEO & Founder',
+        email: 'kleber@ziontechgroup.com'
+      }
+    ],
+    knowsAbout: [
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Quantum Computing',
+      'Cloud Computing',
+      'Cybersecurity',
+      'Digital Transformation',
+      'Blockchain Technology',
+      'IoT Solutions',
+      'Edge Computing',
+      'Business Intelligence'
+    ]
   };
 
   return (
@@ -124,13 +177,14 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
+        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology and achieve unprecedented growth." />
+        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, AI marketing, AI healthcare, AI fintech, micro SAAS, IT infrastructure, cybersecurity, DevOps, blockchain, Web3, IoT, edge computing" />
         <meta name="theme-color" content="#4f46e5" />
         <meta name="color-scheme" content="dark light" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow" />
         
         {/* Favicons */}
         <link rel='icon' href='/favicon.ico' />
@@ -156,6 +210,25 @@ export default function RootLayout({
         <meta name='msapplication-config' content='/browserconfig.xml' />
         <link rel='canonical' href='https://ziontechgroup.com' />
         <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
+        
+        {/* Additional SEO meta tags */}
+        <meta name='geo.region' content='US-DE' />
+        <meta name='geo.placename' content='Middletown, Delaware' />
+        <meta name='geo.position' content='39.8283;-75.5795' />
+        <meta name='ICBM' content='39.8283, -75.5795' />
+        <meta name='DC.title' content='Zion Tech Group - Advanced AI and IT Solutions' />
+        <meta name='DC.creator' content='Zion Tech Group' />
+        <meta name='DC.subject' content='AI Solutions, Quantum Computing, Digital Transformation' />
+        <meta name='DC.description' content='Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.' />
+        <meta name='DC.publisher' content='Zion Tech Group' />
+        <meta name='DC.contributor' content='Kleber Santos' />
+        <meta name='DC.date' content='2024-01-01' />
+        <meta name='DC.type' content='Service' />
+        <meta name='DC.format' content='text/html' />
+        <meta name='DC.identifier' content='https://ziontechgroup.com' />
+        <meta name='DC.language' content='en' />
+        <meta name='DC.coverage' content='United States' />
+        <meta name='DC.rights' content='© 2024 Zion Tech Group. All rights reserved.' />
         
         {/* Resource hints for better performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
