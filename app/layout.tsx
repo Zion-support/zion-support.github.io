@@ -1,5 +1,4 @@
 import './globals.css';
-<<<<<<< HEAD
 =======
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -205,12 +204,6 @@ export default function RootLayout({
       <body className='antialiased'>
 <<<<<<< HEAD
         {children}
-=======
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          {children}
-        </ErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
       </body>
     </html>
   );
