@@ -1,14 +1,8 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -22,7 +16,13 @@ const ServicesPage: React.FC = () => {
         { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding', features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'] },
         { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },
         { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },
-        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] }
+        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] },
+        { name: 'AI Content Generation', price: '$299/month', description: 'AI-powered content creation for blogs, social media, and marketing', features: ['Blog Writing', 'Social Media Posts', 'Email Templates', 'Ad Copy Generation'] },
+        { name: 'AI Data Analytics', price: '$1,199/month', description: 'Advanced data analytics with AI-powered insights and predictions', features: ['Predictive Analytics', 'Real-time Dashboards', 'Anomaly Detection', 'Custom Reports'] },
+        { name: 'AI Customer Support', price: '$599/month', description: 'Intelligent customer support automation and ticket management', features: ['Auto Ticket Routing', 'Sentiment Analysis', 'Knowledge Base', 'Escalation Management'] },
+        { name: 'AI Lead Generation', price: '$799/month', description: 'Automated lead generation and qualification using AI', features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration'] },
+        { name: 'AI Sales Automation', price: '$999/month', description: 'Intelligent sales process automation and optimization', features: ['Sales Pipeline Management', 'Deal Tracking', 'Forecasting', 'Performance Analytics'] },
+        { name: 'AI Marketing Automation', price: '$699/month', description: 'AI-powered marketing campaigns and optimization', features: ['Campaign Optimization', 'A/B Testing', 'Audience Targeting', 'Performance Tracking'] }
       ]
     },
     {
@@ -36,7 +36,11 @@ const ServicesPage: React.FC = () => {
         { name: 'Cybersecurity', price: '$1,599/month', description: 'Advanced security solutions with threat detection and prevention', features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'] },
         { name: 'DevOps & CI/CD', price: '$1,199/month', description: 'Streamlined development workflows with automated testing and deployment', features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'] },
         { name: 'Database Services', price: '$899/month', description: 'Database design, optimization, and management with AI-powered tuning', features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'] },
-        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions', features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'] }
+        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions', features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'] },
+        { name: 'Mobile App Development', price: '$1,799/month', description: 'Native and cross-platform mobile application development', features: ['iOS Development', 'Android Development', 'Cross-platform', 'App Store Optimization'] },
+        { name: 'Web Development', price: '$1,399/month', description: 'Modern web applications with responsive design and optimization', features: ['Frontend Development', 'Backend Development', 'API Integration', 'Performance Optimization'] },
+        { name: 'API Development', price: '$1,099/month', description: 'RESTful and GraphQL API development and integration', features: ['API Design', 'Documentation', 'Testing', 'Rate Limiting'] },
+        { name: 'System Integration', price: '$1,499/month', description: 'Integration of disparate systems and data sources', features: ['Data Integration', 'System Connectivity', 'Workflow Automation', 'Error Handling'] }
       ]
     },
     {
@@ -48,15 +52,18 @@ const ServicesPage: React.FC = () => {
         { name: 'AI Code Review Assistant', price: '$199/month', description: 'Automated code analysis and quality improvement suggestions', features: ['Code Quality Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practice Recommendations'] },
         { name: 'AI SEO Optimizer', price: '$299/month', description: 'AI-powered SEO analysis and optimization recommendations', features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis'] },
         { name: 'AI Analytics Dashboard', price: '$399/month', description: 'Business intelligence and analytics with AI insights', features: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Automated Reports'] },
-        { name: 'AI Marketing Automation', price: '$249/month', description: 'Marketing automation and campaign optimization tools', features: ['Email Campaigns', 'Social Media Management', 'Lead Scoring', 'A/B Testing'] },
         { name: 'AI Document Processing', price: '$179/month', description: 'Intelligent document analysis and data extraction', features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'] },
-        { name: 'AI Customer Support Bot', price: '$149/month', description: 'Automated customer support and ticket management', features: ['24/7 Support', 'Ticket Routing', 'Knowledge Base', 'Escalation Management'] },
-        { name: 'AI Content Generator', price: '$199/month', description: 'AI-powered content creation for blogs, social media, and marketing', features: ['Blog Writing', 'Social Media Posts', 'Email Templates', 'Ad Copy Generation'] },
-        { name: 'AI Data Visualization', price: '$299/month', description: 'Advanced data visualization and reporting tools', features: ['Interactive Charts', 'Custom Dashboards', 'Real-time Updates', 'Export Options'] },
         { name: 'AI Email Assistant', price: '$99/month', description: 'Smart email management and response suggestions', features: ['Email Classification', 'Response Suggestions', 'Scheduling', 'Follow-up Reminders'] },
-        { name: 'AI Lead Generation', price: '$349/month', description: 'Automated lead generation and qualification system', features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration'] },
-        { name: 'AI Sales Automation', price: '$399/month', description: 'Intelligent sales process automation and optimization', features: ['Sales Pipeline Management', 'Deal Tracking', 'Forecasting', 'Performance Analytics'] },
-        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] }
+        { name: 'AI Data Visualization', price: '$299/month', description: 'Advanced data visualization and reporting tools', features: ['Interactive Charts', 'Custom Dashboards', 'Real-time Updates', 'Export Options'] },
+        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] },
+        { name: 'AI Scheduler', price: '$149/month', description: 'Intelligent scheduling and calendar management system', features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Integration APIs'] },
+        { name: 'AI Writing Assistant', price: '$199/month', description: 'AI-powered writing and content creation tools', features: ['Grammar Checking', 'Style Suggestions', 'Content Generation', 'Plagiarism Detection'] },
+        { name: 'AI Workflow Automation', price: '$399/month', description: 'Automated business process workflows with AI decision making', features: ['Process Automation', 'Decision Trees', 'Exception Handling', 'Performance Monitoring'] },
+        { name: 'AI CRM System', price: '$599/month', description: 'AI-powered customer relationship management platform', features: ['Lead Management', 'Sales Tracking', 'Customer Insights', 'Automation Rules'] },
+        { name: 'AI Expense Tracker', price: '$99/month', description: 'Intelligent expense tracking and financial management', features: ['Receipt Scanning', 'Category Classification', 'Budget Tracking', 'Report Generation'] },
+        { name: 'AI Task Manager Pro', price: '$199/month', description: 'Advanced task management with AI-powered prioritization', features: ['Smart Prioritization', 'Time Tracking', 'Team Collaboration', 'Progress Analytics'] },
+        { name: 'AI Marketing Tools', price: '$299/month', description: 'Comprehensive marketing automation and analytics suite', features: ['Campaign Management', 'Social Media Automation', 'Email Marketing', 'Performance Analytics'] },
+        { name: 'AI Productivity Suite', price: '$399/month', description: 'Complete productivity enhancement with AI assistance', features: ['Smart Notifications', 'Focus Management', 'Habit Tracking', 'Goal Setting'] }
       ]
     },
     {
@@ -70,14 +77,13 @@ const ServicesPage: React.FC = () => {
         { name: 'Blockchain & Web3', price: '$1,999/month', description: 'Decentralized solutions, smart contracts, and Web3 applications', features: ['Smart Contract Development', 'DApp Creation', 'Token Economics', 'DeFi Solutions'] },
         { name: 'IoT & Edge Computing', price: '$1,499/month', description: 'Connected devices and edge computing solutions', features: ['Device Management', 'Edge Analytics', 'Real-time Processing', 'Security Implementation'] },
         { name: 'Business Intelligence', price: '$1,799/month', description: 'Data-driven insights and predictive analytics for decision-making', features: ['Data Warehousing', 'ETL Processes', 'Advanced Analytics', 'Executive Dashboards'] },
-        { name: 'Robotics Solutions', price: 'Custom', description: 'Intelligent robotic solutions for manufacturing and service industries', features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems'] }
+        { name: 'Robotics Solutions', price: 'Custom', description: 'Intelligent robotic solutions for manufacturing and service industries', features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems'] },
+        { name: 'Smart Analytics', price: '$1,299/month', description: 'Advanced analytics with machine learning and predictive modeling', features: ['Predictive Modeling', 'Real-time Analytics', 'Custom Algorithms', 'Data Visualization'] },
+        { name: 'Enterprise Solutions', price: 'Custom', description: 'Comprehensive enterprise-grade solutions for large organizations', features: ['Scalable Architecture', 'Enterprise Security', 'Custom Development', '24/7 Support'] }
       ]
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   const benefits = [
     {
       icon: TrendingUp,
@@ -108,36 +114,39 @@ const ServicesPage: React.FC = () => {
         <meta name="description" content="Comprehensive AI and IT services including machine learning, automation, cloud infrastructure, and specialized solutions. Starting at $99/month." />
         <meta name="keywords" content="ai services, it services, machine learning, automation, cloud services, cybersecurity, micro saas, specialized solutions" />
       </Helmet>
+      
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text glitch">
             Our Services
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business operations and drive innovation.
           </p>
+          
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card energy-pulse">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">60+</div>
               <div className="text-gray-300">Services</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card energy-pulse">
               <div className="text-3xl font-bold text-green-400 mb-2">$99</div>
               <div className="text-gray-300">Starting Price</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card energy-pulse">
               <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
               <div className="text-gray-300">Average ROI</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card energy-pulse">
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-gray-300">Support</div>
             </div>
           </div>
+          
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12 cyber-card">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12 cyber-card hologram-card">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
@@ -155,32 +164,29 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
       {/* Service Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text cyber-text">
             Service Categories
           </h2>
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 cyber-card">
+              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 cyber-card hologram-card">
                 <div className="flex items-center mb-8">
-                  <div className={`w-16 h-16 ${category.bgColor} rounded-xl flex items-center justify-center mr-6`}>
+                  <div className={`w-16 h-16 ${category.bgColor} rounded-xl flex items-center justify-center mr-6 energy-pulse`}>
                     <category.icon className={`w-8 h-8 ${category.color}`} />
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
+                    <h3 className="text-3xl font-bold text-white mb-2 neon-text">{category.title}</h3>
                     <p className="text-gray-300">Comprehensive solutions for your business needs</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
-                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
+                    <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card energy-pulse hover:scale-105">
+                      <h4 className="text-xl font-bold text-white mb-3 neon-text">{service.name}</h4>
                       <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                       
                       {/* Features */}
@@ -197,10 +203,10 @@ const ServicesPage: React.FC = () => {
                       </div>
                       
                       <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                        <span className="text-2xl font-bold text-cyan-400 neon-text">{service.price}</span>
                         <a
                           href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.name}`}
-                          className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                          className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all cyber-button"
                         >
                           Get Started
                         </a>
@@ -213,35 +219,29 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
       {/* Benefits Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text cyber-text">
             Why Choose Our Services?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 cyber-card">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 cyber-card energy-pulse hover:scale-105">
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
@@ -250,13 +250,13 @@ const ServicesPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors cyber-button"
             >
               Call (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors cyber-button"
             >
               Email Us
             </a>
