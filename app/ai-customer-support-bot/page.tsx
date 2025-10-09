@@ -1,44 +1,41 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+'use client'
+import React, { useState, useEffect } from 'react'
 import { CheckCircle, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
-const AICustomerSupportBotPage: React.FC = () => {
-  // const [isLoaded] = useState(false);
-
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
+const AICustomerSupportBotPage: React.FC = React.memo((props) => {
+  // const [isLoaded] = useState(false)
   // useEffect(() => {
-//     // Component loaded
-//   }, []);
-
+//     // Component loaded}
+//   }, [])
   const features = [
     {
       icon: Brain,
       title: 'Natural Language Processing',
       description: 'Understand customer queries in natural language with advanced NLP',
-      benefits: ['Context understanding', 'Intent recognition', 'Sentiment analysis', 'Multi-language support']
+      benefits: ['Context understanding', 'Intent recognition', 'Sentiment analysis', 'Multi-language support']}
     },
     {
       icon: MessageSquare,
       title: '24/7 Availability',
       description: 'Provide instant support around the clock without human intervention',
-      benefits: ['Instant responses', 'No waiting time', 'Consistent service', 'Scalable support']
+      benefits: ['Instant responses', 'No waiting time', 'Consistent service', 'Scalable support']}
     },
     {
       icon: Users,
       title: 'Human Handoff',
       description: 'Seamlessly transfer complex queries to human agents when needed',
-      benefits: ['Smart escalation', 'Context preservation', 'Agent efficiency', 'Customer satisfaction']
+      benefits: ['Smart escalation', 'Context preservation', 'Agent efficiency', 'Customer satisfaction']}
     },
     {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Track performance and gain insights into customer behavior',
-      benefits: ['Response analytics', 'Customer insights', 'Performance metrics', 'Improvement suggestions']
+      benefits: ['Response analytics', 'Customer insights', 'Performance metrics', 'Improvement suggestions']}
     }
-  ];
-
+  ]
   const capabilities = [
     { name: 'FAQ Automation', icon: '❓', description: 'Answer common questions instantly' },
     { name: 'Order Tracking', icon: '📦', description: 'Provide real-time order status updates' },
@@ -46,8 +43,7 @@ const AICustomerSupportBotPage: React.FC = () => {
     { name: 'Billing Inquiries', icon: '💳', description: 'Handle payment and billing questions' },
     { name: 'Appointment Booking', icon: '📅', description: 'Schedule appointments and meetings' },
     { name: 'Complaint Resolution', icon: '😊', description: 'Resolve customer complaints effectively' }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -60,7 +56,7 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Standard integrations',
         'Basic analytics'
       ],
-      popular: false
+      popular: false}
     },
     {
       name: 'Professional',
@@ -74,7 +70,7 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Detailed analytics',
         'Custom training'
       ],
-      popular: true
+      popular: true}
     },
     {
       name: 'Enterprise',
@@ -89,31 +85,29 @@ const AICustomerSupportBotPage: React.FC = () => {
         'API access',
         'On-premise deployment'
       ],
-      popular: false
+      popular: false}
     }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Amanda Rodriguez',
       role: 'Customer Service Manager, TechCorp',
       content: 'AI Customer Support Bot reduced our response time by 90% and increased customer satisfaction by 45%.',
-      rating: 5
+      rating: 5}
     },
     {
       name: 'Kevin Park',
       role: 'CEO, E-commerceStore',
       content: 'The bot handles 80% of our customer queries automatically. Our team can now focus on complex issues.',
-      rating: 5
+      rating: 5}
     },
     {
       name: 'Lisa Chen',
       role: 'Operations Director, ServiceCo',
       content: 'Implementation was seamless and the results were immediate. Our customers love the instant responses.',
-      rating: 5
+      rating: 5}
     }
-  ];
-
+  ]
   return (
     <>
       <SEOOptimizer
@@ -144,13 +138,17 @@ const AICustomerSupportBotPage: React.FC = () => {
                 <a
                   href="#pricing"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="
+                  Start Free Trial
+                ">
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
                   className="border-2 border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
-                >
+                 aria-label="
+                  Watch Demo
+                ">
                   Watch Demo
                 </a>
               </div>
@@ -198,7 +196,7 @@ const AICustomerSupportBotPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2" role="list">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-orange-400">
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -256,15 +254,15 @@ const AICustomerSupportBotPage: React.FC = () => {
                       <div className="bg-orange-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>
+                    </div>}
                   )}
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="text-4xl font-bold text-orange-400 mb-2">{plan.price}</div>
-                    <div className="text-gray-400">per month</div>
+                    <div className="text-gray-400" style={{ color: "#9CA3AF" }}>per month</div>
                   </div>
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-4 mb-8" role="list">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -277,7 +275,7 @@ const AICustomerSupportBotPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-orange-400 text-slate-900 hover:bg-orange-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                        : 'bg-slate-700 text-white hover:bg-slate-600'`}
                     }`}
                   >
                     Get Started
@@ -332,7 +330,9 @@ const AICustomerSupportBotPage: React.FC = () => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Customer Support Bot Free Trial Request"
                 className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+               aria-label="
+                Start Free Trial
+              ">
                 Start Free Trial
               </a>
               <a
@@ -352,7 +352,6 @@ const AICustomerSupportBotPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-
-export default AICustomerSupportBotPage;
+  )
+}
+export default AICustomerSupportBotPage

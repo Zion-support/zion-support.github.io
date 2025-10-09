@@ -1,76 +1,74 @@
 'use client';
-import React from 'react';
-import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React, { lazy } from 'react';
+import { CheckCircle, Users, Target, Zap, Shield, BarChart, Award, ArrowRight, Brain, Cloud, Database, Globe, Smartphone, TrendingUp, Calendar, CheckSquare, Phone, Mail } from 'lucide-react';
 
-const ITConsultingPage: React.FC = () => {
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const ITConsultingPage: React.FC = React.memo((props) => {
   const services = [
     {
       icon: Brain,
       title: 'Strategic IT Planning',
       description: 'Comprehensive IT strategy development and digital transformation roadmaps',
-      features: ['Technology Assessment', 'Digital Roadmap', 'ROI Analysis', 'Risk Management']
+      features: ['Technology Assessment', 'Digital Roadmap', 'ROI Analysis', 'Risk Management']}
     },
     {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Design and implement scalable cloud solutions for modern businesses',
-      features: ['AWS/Azure/GCP', 'Migration Planning', 'Cost Optimization', 'Security Design']
+      features: ['AWS/Azure/GCP', 'Migration Planning', 'Cost Optimization', 'Security Design']}
     },
     {
       icon: Shield,
       title: 'Cybersecurity Strategy',
       description: 'Comprehensive security assessments and implementation strategies',
-      features: ['Security Audits', 'Compliance Planning', 'Incident Response', 'Training Programs']
+      features: ['Security Audits', 'Compliance Planning', 'Incident Response', 'Training Programs']}
     },
     {
       icon: Database,
       title: 'Data Management',
       description: 'Optimize data architecture and implement modern data solutions',
-      features: ['Data Strategy', 'Database Design', 'Analytics Setup', 'Governance Planning']
+      features: ['Data Strategy', 'Database Design', 'Analytics Setup', 'Governance Planning']}
     },
     {
       icon: Globe,
       title: 'Infrastructure Design',
       description: 'Design robust and scalable IT infrastructure solutions',
-      features: ['Network Design', 'Server Architecture', 'Disaster Recovery', 'Performance Tuning']
+      features: ['Network Design', 'Server Architecture', 'Disaster Recovery', 'Performance Tuning']}
     },
     {
       icon: Smartphone,
       title: 'Digital Transformation',
       description: 'Guide organizations through complete digital transformation',
-      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training Programs']
+      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training Programs']}
     }
-  ];
-
+  ]
   const processSteps = [
     {
       step: '01',
       title: 'Discovery & Assessment',
       description: 'Comprehensive analysis of current IT landscape, processes, and business requirements',
-      icon: Target
+      icon: Target}
     },
     {
       step: '02',
       title: 'Strategy Development',
       description: 'Create tailored IT strategy aligned with business goals and industry best practices',
-      icon: BarChart
+      icon: BarChart}
     },
     {
       step: '03',
       title: 'Implementation Planning',
       description: 'Detailed roadmap with timelines, resources, and milestones for successful execution',
-      icon: Calendar
+      icon: Calendar}
     },
     {
       step: '04',
       title: 'Execution & Support',
       description: 'Ongoing support and guidance throughout the implementation process',
-      icon: CheckSquare
+      icon: CheckSquare}
     }
-  ];
-
+  ]
   const benefits = [
     { icon: TrendingUp, title: 'Cost Reduction', description: 'Optimize IT spending and reduce operational costs' },
     { icon: Zap, title: 'Efficiency Gains', description: 'Streamline processes and improve productivity' },
@@ -78,8 +76,7 @@ const ITConsultingPage: React.FC = () => {
     { icon: BarChart, title: 'Better Performance', description: 'Improve system performance and reliability' },
     { icon: Users, title: 'Team Empowerment', description: 'Train and empower your IT team' },
     { icon: Award, title: 'Competitive Advantage', description: 'Gain strategic advantage through technology' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -89,7 +86,7 @@ const ITConsultingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">IT Consulting</span>
+              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500"><span className="sr-only">Screen reader: </span>IT Consulting</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with expert IT consulting services. We provide strategic guidance, 
@@ -138,9 +135,9 @@ const ITConsultingPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2" role="list">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-400" style={{ color: "#9CA3AF" }}>
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                       {feature}
                     </li>
@@ -236,7 +233,6 @@ const ITConsultingPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default ITConsultingPage;
+  )
+}
+export default ITConsultingPage

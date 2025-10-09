@@ -12,10 +12,13 @@ global.TextDecoder = TextDecoder as any;
 const originalConsoleError = console.error;
 console.error = (...args) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const _message = args[0]?.toString?.() || args[0]?.message || '';
   if (_message.includes('Not implemented: navigation') || 
       _message.includes('navigation (except hash changes)')) {
 =======
+>>>>>>> origin/main
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
@@ -68,9 +71,12 @@ const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 console.warn = (...args) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const _message = args[0]?.toString?.() || '';
   if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
 =======
+>>>>>>> origin/main
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-aa19
@@ -80,9 +86,12 @@ console.warn = (...args) => {
 };
 console.info = (...args) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const _message = args[0]?.toString?.() || '';
   if (_message.includes('ReactDOM.render is no longer supported')) {
 =======
+>>>>>>> origin/main
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-aa19

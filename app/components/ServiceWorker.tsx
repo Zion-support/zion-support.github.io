@@ -1,23 +1,20 @@
 'use client';
-import { useEffect } from 'react';
-
-const ServiceWorker: React.FC = () => {
+import React, { lazy } from 'react';
+import { useEffect } from 'react'
+const ServiceWorker: React.FC = React.memo((props) => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       const registerSW = async () => {
         try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('Service Worker registered successfully:', registration);
+          const registration = await navigator.serviceWorker.register('/sw.js')
+}
         } catch (error) {
-          console.log('Service Worker registration failed:', error);
+}
         }
-      };
-
-      registerSW();
+      }
+      registerSW()
     }
-  }, []);
-
-  return null;
-};
-
-export default ServiceWorker;
+  }, [])
+  return null
+}
+export default ServiceWorker

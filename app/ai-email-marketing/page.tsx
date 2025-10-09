@@ -1,45 +1,42 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-// import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React, { useState, useEffect } from 'react'
+// import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 
-const AIEmailMarketingPage: React.FC = () => {
-  // const [isLoaded, setIsLoaded] = useState(false);
-
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
+const AIEmailMarketingPage: React.FC = React.memo((props) => {
+  // const [isLoaded, setIsLoaded] = useState(false)
   // useEffect(() => {
-//     setIsLoaded(true);
-//   }, []);
-
+//     setIsLoaded(true);}
+//   }, [])
   const features = [
     {
       icon: Brain,
       title: 'AI Content Generation',
       description: 'Generate compelling email content with AI-powered writing assistance',
-      benefits: ['Personalized content', 'A/B testing', 'Subject line optimization', 'Call-to-action suggestions']
+      benefits: ['Personalized content', 'A/B testing', 'Subject line optimization', 'Call-to-action suggestions']}
     },
     {
       icon: Target,
       title: 'Smart Segmentation',
       description: 'Automatically segment your audience based on behavior and preferences',
-      benefits: ['Behavioral targeting', 'Demographic segmentation', 'Engagement-based groups', 'Predictive segments']
+      benefits: ['Behavioral targeting', 'Demographic segmentation', 'Engagement-based groups', 'Predictive segments']}
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Track performance with detailed analytics and AI-powered insights',
-      benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']
+      benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']}
     },
     {
       icon: Send,
       title: 'Automated Campaigns',
       description: 'Set up sophisticated email sequences that work around the clock',
-      benefits: ['Welcome series', 'Abandoned cart recovery', 'Re-engagement campaigns', 'Birthday/anniversary emails']
+      benefits: ['Welcome series', 'Abandoned cart recovery', 'Re-engagement campaigns', 'Birthday/anniversary emails']}
     }
-  ];
-
+  ]
   const campaignTypes = [
     { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers with engaging sequences' },
     { name: 'Product Launch', icon: '🚀', description: 'Build excitement and drive sales for new products' },
@@ -47,8 +44,7 @@ const AIEmailMarketingPage: React.FC = () => {
     { name: 'Re-engagement', icon: '💤', description: 'Win back inactive subscribers' },
     { name: 'Newsletter', icon: '📰', description: 'Keep subscribers engaged with regular updates' },
     { name: 'Promotional', icon: '🎯', description: 'Drive sales with special offers and discounts' }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -61,7 +57,7 @@ const AIEmailMarketingPage: React.FC = () => {
         'Email support',
         'Basic analytics'
       ],
-      popular: false
+      popular: false}
     },
     {
       name: 'Professional',
@@ -75,7 +71,7 @@ const AIEmailMarketingPage: React.FC = () => {
         'A/B testing',
         'Priority support'
       ],
-      popular: true
+      popular: true}
     },
     {
       name: 'Enterprise',
@@ -90,31 +86,29 @@ const AIEmailMarketingPage: React.FC = () => {
         'Dedicated support',
         'API access'
       ],
-      popular: false
+      popular: false}
     }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Jennifer Lee',
       role: 'Marketing Manager, E-commerceCo',
-      content: 'AI Email Marketing increased our open rates by 65% and revenue by 40%. The AI content suggestions are spot-on!',
-      rating: 5
+      content: 'AI Email Marketing increased our open rates by 65% and revenue by 40%. The AI content suggestions are spot-on as any',
+      rating: 5}
     },
     {
       name: 'Mark Thompson',
       role: 'CEO, SaaSStartup',
       content: 'The automated campaigns have been a game changer. We set it up once and it works 24/7 to nurture our leads.',
-      rating: 5
+      rating: 5}
     },
     {
       name: 'Sarah Davis',
       role: 'Director of Marketing, RetailBrand',
       content: 'The segmentation features are incredible. We can now send highly targeted emails that actually convert.',
-      rating: 5
+      rating: 5}
     }
-  ];
-
+  ]
   return (
     <>
       <SEOOptimizer
@@ -145,13 +139,17 @@ const AIEmailMarketingPage: React.FC = () => {
                 <a
                   href="#pricing"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="
+                  Start Free Trial
+                ">
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
                   className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
-                >
+                 aria-label="
+                  Watch Demo
+                ">
                   Watch Demo
                 </a>
               </div>
@@ -199,7 +197,7 @@ const AIEmailMarketingPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2" role="list">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-green-400">
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -257,15 +255,15 @@ const AIEmailMarketingPage: React.FC = () => {
                       <div className="bg-green-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>
+                    </div>}
                   )}
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
-                    <div className="text-gray-400">per month</div>
+                    <div className="text-gray-400" style={{ color: "#9CA3AF" }}>per month</div>
                   </div>
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-4 mb-8" role="list">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -278,7 +276,7 @@ const AIEmailMarketingPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-green-400 text-slate-900 hover:bg-green-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                        : 'bg-slate-700 text-white hover:bg-slate-600'`}
                     }`}
                   >
                     Get Started
@@ -333,7 +331,9 @@ const AIEmailMarketingPage: React.FC = () => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Email Marketing Free Trial Request"
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+               aria-label="
+                Start Free Trial
+              ">
                 Start Free Trial
               </a>
               <a
@@ -353,7 +353,6 @@ const AIEmailMarketingPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-
-export default AIEmailMarketingPage;
+  )
+}
+export default AIEmailMarketingPage

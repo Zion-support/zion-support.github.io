@@ -1,7 +1,5 @@
-'use client';
-import React from 'react';
-
-const ContentStatistics: React.FC = () => {
+'use client'
+const ContentStatistics: React.FC = React.memo((props) => {
   return (
     <div className="py-8">
       <div className="container mx-auto px-4">
@@ -11,7 +9,6 @@ const ContentStatistics: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContentStatistics;
+  );}
+}
+export default ContentStatistics
