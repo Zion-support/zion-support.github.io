@@ -17,6 +17,15 @@ const Footer: React.FC = () => {
 
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager' },
+    { name: 'AI Quantum Analytics', href: '/ai-quantum-analytics' },
+    { name: 'AI Autonomous BI', href: '/ai-autonomous-bi' },
+    { name: 'AI Neural Designer', href: '/ai-neural-designer' },
+    { name: 'AI Blockchain Suite', href: '/ai-blockchain-suite' },
+    { name: 'AI Metaverse Studio', href: '/ai-metaverse-studio' },
+    { name: 'AI Quantum Security', href: '/ai-quantum-security' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing' },
+    { name: 'AI Energy Optimizer', href: '/ai-energy-optimizer' },
+    { name: 'AI Space Technology', href: '/ai-space-technology' },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics' },
     { name: 'AI Email Marketing', href: '/ai-email-marketing' },
@@ -33,6 +42,15 @@ const Footer: React.FC = () => {
   ];
 
   const aiServices = [
+    { name: 'Quantum Machine Learning', href: '/quantum-ml' },
+    { name: 'Autonomous AI Agents', href: '/autonomous-ai' },
+    { name: 'Neural Architecture Search', href: '/neural-search' },
+    { name: 'Federated Learning', href: '/federated-learning' },
+    { name: 'Explainable AI', href: '/explainable-ai' },
+    { name: 'Reinforcement Learning', href: '/reinforcement-learning' },
+    { name: 'Generative AI Studio', href: '/generative-ai' },
+    { name: 'Edge AI Deployment', href: '/edge-ai' },
+    { name: 'AI Ethics & Governance', href: '/ai-ethics' },
     { name: 'Machine Learning', href: '/machine-learning' },
     { name: 'Natural Language Processing', href: '/nlp' },
     { name: 'Computer Vision', href: '/computer-vision' },
@@ -44,6 +62,11 @@ const Footer: React.FC = () => {
   ];
 
   const itServices = [
+    { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud' },
+    { name: 'Autonomous IT Operations', href: '/autonomous-it' },
+    { name: 'Edge Computing Network', href: '/edge-computing' },
+    { name: 'Zero-Trust Security', href: '/zero-trust-security' },
+    { name: 'AI-Powered DevOps', href: '/ai-devops' },
     { name: 'Cloud Migration', href: '/cloud-migration' },
     { name: 'IT Consulting', href: '/it-consulting' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
@@ -68,7 +91,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-cyan-400/20">
+    <footer className="bg-slate-900 border-t border-cyan-400/20 neural-network particle-system">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Company Info */}
@@ -77,7 +100,7 @@ const Footer: React.FC = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white neon-text holographic-text">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.

@@ -27,6 +27,15 @@ const Navigation: React.FC = () => {
 
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
+    { name: 'AI Quantum Analytics', href: '/ai-quantum-analytics', icon: Cpu },
+    { name: 'AI Autonomous BI', href: '/ai-autonomous-bi', icon: Brain },
+    { name: 'AI Neural Designer', href: '/ai-neural-designer', icon: Settings },
+    { name: 'AI Blockchain Suite', href: '/ai-blockchain-suite', icon: Lock },
+    { name: 'AI Metaverse Studio', href: '/ai-metaverse-studio', icon: Globe },
+    { name: 'AI Quantum Security', href: '/ai-quantum-security', icon: Shield },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Cpu },
+    { name: 'AI Energy Optimizer', href: '/ai-energy-optimizer', icon: Zap },
+    { name: 'AI Space Technology', href: '/ai-space-technology', icon: Building },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: PieChart },
     { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
@@ -45,6 +54,15 @@ const Navigation: React.FC = () => {
   ];
 
   const aiServices = [
+    { name: 'Quantum Machine Learning', href: '/quantum-ml', icon: Brain },
+    { name: 'Autonomous AI Agents', href: '/autonomous-ai', icon: Bot },
+    { name: 'Neural Architecture Search', href: '/neural-search', icon: Cpu },
+    { name: 'Federated Learning', href: '/federated-learning', icon: Globe },
+    { name: 'Explainable AI', href: '/explainable-ai', icon: Eye },
+    { name: 'Reinforcement Learning', href: '/reinforcement-learning', icon: Target },
+    { name: 'Generative AI Studio', href: '/generative-ai', icon: Palette },
+    { name: 'Edge AI Deployment', href: '/edge-ai', icon: Smartphone },
+    { name: 'AI Ethics & Governance', href: '/ai-ethics', icon: Shield },
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain },
     { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
@@ -56,6 +74,11 @@ const Navigation: React.FC = () => {
   ];
 
   const itServices = [
+    { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud', icon: Cloud },
+    { name: 'Autonomous IT Operations', href: '/autonomous-it', icon: Settings },
+    { name: 'Edge Computing Network', href: '/edge-computing', icon: Cpu },
+    { name: 'Zero-Trust Security', href: '/zero-trust-security', icon: Shield },
+    { name: 'AI-Powered DevOps', href: '/ai-devops', icon: Code },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
     { name: 'IT Consulting', href: '/it-consulting', icon: Settings },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
@@ -83,7 +106,7 @@ const Navigation: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white neon-text holographic-text">Zion Tech Group</span>
           </div>
 
           {/* Desktop Navigation */}
