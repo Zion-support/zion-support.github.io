@@ -5,9 +5,7 @@ import {Target, BarChart, Zap, Settings, CheckCircle, Star,  Target,  BarChart, 
 const AILeadScoringPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Target,
+      icon: Target,
       title: 'Intelligent Scoring',
       description: 'AI-powered lead scoring and qualification',
       benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking'];

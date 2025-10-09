@@ -5,9 +5,7 @@ import {Shield, Target, Zap, Settings, CheckCircle, Star,  Shield,  Target,  Set
 const AISecurityMonitorPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Shield,
+      icon: Shield,
       title: 'Threat Detection',
       description: 'AI-powered threat detection and monitoring',
       benefits: ['Real-time monitoring', 'Threat analysis', 'Incident response'];

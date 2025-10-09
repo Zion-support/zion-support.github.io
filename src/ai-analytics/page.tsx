@@ -1,21 +1,22 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Target,  BarChart,  Target,  Settings from 'lucide-react';
+import { Target, BarChart, Settings } from 'lucide-react';
 const AIAnalyticsPage: React.FC = () => {
-const features = [
+  const features = [
     {
-  // TODO: Add content
-};
-  icon: BarChart,
+      icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Live data visualization and insights',
-      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights'];
+      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
     },
+    {
       icon: Target,
       title: 'Predictive Analytics',
       description: 'AI-powered predictions and forecasting',
       benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
+    },
+    {
       icon: Settings,
       title: 'Custom Metrics',
       description: 'Customizable metrics and KPIs',
@@ -32,9 +33,12 @@ const features = [
           
           
           <div>Coming Soon</div>
-  )
-    
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  );
+};
+
+const AIAnalyticsPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -80,12 +84,14 @@ const features = [
           
           
           
+          <a
+            href="tel:+13024640950"
+            className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+          >
+            <BarChart className="w-5 h-5" />
+            +1 302 464 0950
           </a>
-              href="tel:+13024640950"
-              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-<BarChart className="w-5 h-5" />
-              +1 302 464 0950
-          </div>
+        </div>
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">

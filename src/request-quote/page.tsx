@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div>Coming Soon
+    </div>
   );
 };
   const [formData, setFormData] = useState({

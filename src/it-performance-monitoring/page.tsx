@@ -5,9 +5,7 @@ import {BarChart, Zap, Shield, Settings, CheckCircle, Star,  BarChart,  Zap,  Se
 const ITPerformanceMonitoringPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: BarChart,
+      icon: BarChart,
       title: 'Real-time Monitoring',
       description: 'Comprehensive real-time system performance monitoring',
       benefits: ['Live dashboards', 'Performance metrics', 'Alerting'];

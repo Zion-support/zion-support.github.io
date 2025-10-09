@@ -5,9 +5,7 @@ import {Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Targe
 const ITInfrastructureDesignPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Settings,
+      icon: Settings,
       title: 'Infrastructure Design',
       description: 'Custom IT infrastructure design and architecture',
       benefits: ['Scalable design', 'High availability', 'Performance optimization'];

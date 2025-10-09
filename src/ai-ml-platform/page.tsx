@@ -1,16 +1,14 @@
 import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star ,  Brain,  TrendingUp,  Users,  Clock,  Star from 'lucide-react';
+import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star, Star from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone } from 'lucide-react';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIMLPlatformPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
-  icon: Brain,
+      icon: Brain,
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment'];

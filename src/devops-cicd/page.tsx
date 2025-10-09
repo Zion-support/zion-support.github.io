@@ -5,9 +5,7 @@ import {Settings, Zap, Shield, BarChart, CheckCircle, Star, Code,  Settings,  Za
 const DevOpsCICDPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Settings,
+      icon: Settings,
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment pipelines',
       benefits: ['Automated testing', 'Continuous deployment', 'Quality gates'];

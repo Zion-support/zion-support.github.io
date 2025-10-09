@@ -5,9 +5,7 @@ import {TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Targ
 const AISalesForecastingPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: TrendingUp,
+      icon: TrendingUp,
       title: 'Predictive Forecasting',
       description: 'AI-powered sales forecasting and prediction',
       benefits: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting'];

@@ -5,9 +5,7 @@ import {Database, Shield, BarChart, Settings, CheckCircle, Star,  Database,  Shi
 const DatabaseManagementPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Database,
+      icon: Database,
       title: 'Database Administration',
       description: 'Comprehensive database management and optimization',
       benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening'];

@@ -5,9 +5,7 @@ import {Package, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  S
 const AIInventoryManagerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Package,
+      icon: Package,
       title: 'Inventory Tracking',
       description: 'AI-powered inventory tracking and management',
       benefits: ['Real-time tracking', 'Stock monitoring', 'Automated alerts'];

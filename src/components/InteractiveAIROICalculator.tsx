@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div>Coming Soon
+    </div>
   );
 };
   const [currentCost, setCurrentCost] = useState(100000);

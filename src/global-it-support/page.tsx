@@ -5,9 +5,7 @@ import {Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones, 
 const GlobalITSupportPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Globe,
+      icon: Globe,
       title: 'Global Coverage',
       description: '24/7 IT support across multiple time zones',
       benefits: ['Worldwide coverage', 'Local expertise', 'Multi-language support'];

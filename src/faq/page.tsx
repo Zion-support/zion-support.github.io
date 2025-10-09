@@ -1,11 +1,12 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
+import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div>Coming Soon
+    </div>
   );
 };
   const [searchTerm, setSearchTerm] = useState('');

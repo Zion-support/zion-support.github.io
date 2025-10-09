@@ -5,9 +5,7 @@ import {Headphones, Shield, Zap, Settings, CheckCircle, Star,  Headphones,  Shie
 const ITSupportPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Headphones,
+      icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
       benefits: ['24/7 availability', 'Fast response times', 'Expert technicians'];

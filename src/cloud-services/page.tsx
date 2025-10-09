@@ -1,10 +1,11 @@
 import React from 'react';
-import {  Cloud,  Shield,  Zap,  BarChart } from 'lucide-react';
+import { Cloud, Shield, Zap, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div>Coming Soon
+    </div>
   );
 };
   const _services = [

@@ -5,9 +5,7 @@ import {FlaskConical, Target, Zap, Settings, CheckCircle, Star,  FlaskConical,  
 const InnovationLabsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: FlaskConical,
+      icon: FlaskConical,
       title: 'Research & Development',
       description: 'Cutting-edge research and development projects',
       benefits: ['Technology research', 'Prototype development', 'Innovation projects'];

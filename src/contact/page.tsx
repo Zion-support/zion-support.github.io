@@ -6,7 +6,8 @@ import Footer from '../components/Footer';
 import React from 'react';
 const ContactPage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div>Coming Soon
+    </div>
   );
 };
   const [formData, setFormData] = useState({

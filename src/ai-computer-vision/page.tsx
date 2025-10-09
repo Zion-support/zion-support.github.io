@@ -1,21 +1,22 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Target, Shield,  Eye,  Camera,  Target,  Shield,  Settings from 'lucide-react';
+import { Target, Shield, Eye, Camera, Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
-  icon: Eye,
+      icon: Eye,
       title: 'Object Detection',
       description: 'Advanced object detection and recognition with high accuracy',
-      benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training'];
+      benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
     },
+    {
       icon: Camera,
       title: 'Image Classification',
       description: 'Automated image categorization and content analysis',
       benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories']
+    },
+    {
       icon: Target,
       title: 'Facial Recognition',
       description: 'Secure and accurate facial recognition technology',
@@ -23,46 +24,60 @@ const features = [
     }
   ];
   const applications = [
+    {
       title: 'Security & Surveillance',
       description: 'Intelligent security monitoring and threat detection systems',
       icon: Shield,
-      useCases: ['Intrusion detection', 'Person tracking', 'Anomaly detection'];
+      useCases: ['Intrusion detection', 'Person tracking', 'Anomaly detection']
+    },
+    {
       title: 'Manufacturing',
       description: 'Quality control and automated inspection systems',
       icon: Settings,
       useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
+    }
+  ];
+  
   const pricing = [
+    {
       name: 'Starter',
       price: '$499/month',
       description: 'Perfect for small projects',
       features: [
-  // TODO: Add items,
-];
-//         'Up to 1,000 images/month',
-//         'Basic models',
-//         'Email support',
-//         'Standard API'
-//       ],
-      popular: false,
-
+        'Up to 1,000 images/month',
+        'Basic models',
+        'Email support',
+        'Standard API'
+      ],
+      popular: false
+    },
+    {
       name: 'Professional',
       price: '$1,999/month',
       description: 'Ideal for growing businesses',
+      features: [
         'Up to 10,000 images/month',
         'Advanced models',
         'Priority support',
         'Custom training',
         'API access'
+      ],
       popular: true,
 
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large organizations',
+      features: [
         'Unlimited images',
         'Custom models',
         'Dedicated support',
         'On-premise deployment',
         'White-label solutions'
+      ],
+      popular: false
+    }
+  ];
+  
   return (
     
           
@@ -73,9 +88,12 @@ const features = [
           
           
           <div>Coming Soon</div>
-  )
-    
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  );
+};
+
+const AIComputerVisionPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}

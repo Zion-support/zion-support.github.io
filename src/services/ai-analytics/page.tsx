@@ -6,9 +6,7 @@ import Footer from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Brain,
+      icon: Brain,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefits: [

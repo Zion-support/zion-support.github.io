@@ -5,9 +5,7 @@ import {Target, Zap, Settings, BarChart, CheckCircle, Star,  Target,  Zap,  BarC
 const DigitalTransformationPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Target,
+      icon: Target,
       title: 'Strategy Development',
       description: 'Digital transformation strategy and roadmap development',
       benefits: ['Strategic planning', 'Technology assessment', 'Change management'];

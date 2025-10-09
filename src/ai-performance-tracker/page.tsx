@@ -5,9 +5,7 @@ import {BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target, 
 const AIPerformanceTrackerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: BarChart,
+      icon: BarChart,
       title: 'Performance Monitoring',
       description: 'Comprehensive performance tracking and analysis',
       benefits: ['Real-time metrics', 'Performance alerts', 'Trend analysis'];

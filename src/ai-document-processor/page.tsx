@@ -5,17 +5,17 @@ import {FileText, Target, Zap, Settings, CheckCircle, Star,  FileText,  Target, 
 const AIDocumentProcessorPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: FileText,
+      icon: FileText,
       title: 'Document Processing',
       description: 'AI-powered document processing and analysis',
-      benefits: ['OCR processing', 'Text extraction', 'Data validation'];
+      benefits: ['OCR processing', 'Text extraction', 'Data validation']
     },
       icon: Target,
       title: 'Intelligent Classification',
       description: 'Automated document classification and sorting',
       benefits: ['Auto categorization', 'Smart routing', 'Metadata extraction']
+    },
+    {
       icon: Settings,
       title: 'Document Analytics',
       description: 'Comprehensive document analytics and insights',

@@ -5,9 +5,7 @@ import {Globe, Shield, Zap, Settings, CheckCircle, Star,  Globe,  Shield,  Setti
 const NetworkSolutionsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Globe,
+      icon: Globe,
       title: 'Network Design',
       description: 'Custom network architecture design and implementation',
       benefits: ['Scalable design', 'High availability', 'Performance optimization'];

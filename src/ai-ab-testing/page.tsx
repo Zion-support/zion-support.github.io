@@ -1,15 +1,15 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { TestTube, Target, Settings, CheckCircle ,  TestTube,  Target,  Settings from 'lucide-react';
+import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
 
 const AIABTestingPage: React.FC = () => {
   const features = [
-    {,
- icon: TestTube,
+    {
+      icon: TestTube,
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
-      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation'];
+      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
     },
     {
       icon: Target,

@@ -5,9 +5,7 @@ import {Leaf, Target, Zap, Settings, CheckCircle, Star,  Leaf,  Target,  Setting
 const SustainabilityTechPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Leaf,
+      icon: Leaf,
       title: 'Green Technology',
       description: 'Sustainable technology solutions for environmental impact',
       benefits: ['Carbon reduction', 'Energy efficiency', 'Waste reduction'];

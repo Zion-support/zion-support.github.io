@@ -5,17 +5,17 @@ import {FileText, Target, Zap, Settings, CheckCircle,  FileText,  Target,  Setti
 const AIContentStudioPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: FileText,
+      icon: FileText,
       title: 'Content Creation',
       description: 'AI-powered content generation and optimization',
-      benefits: ['Auto content', 'SEO optimization', 'Multi-format support'];
+      benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
     },
       icon: Target,
       title: 'Content Strategy',
       description: 'Intelligent content planning and strategy',
       benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
+    },
+    {
       icon: Settings,
       title: 'Content Analytics',
       description: 'Comprehensive content performance analytics',

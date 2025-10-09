@@ -1,7 +1,7 @@
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, Star} from 'lucide-react';
+import { CheckCircle, Star } from 'lucide-react';
 const BusinessAppsPage: React.FC = () => {
       return (
     <div>

@@ -1,8 +1,9 @@
 import React from 'react';
-import {  Zap,  Brain,  Cloud } from 'lucide-react';
+import { Zap, Brain, Cloud } from 'lucide-react';
 const PricingPage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div>Coming Soon
+    </div>
   );
 };
   const _plans = [

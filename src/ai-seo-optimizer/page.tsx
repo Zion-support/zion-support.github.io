@@ -5,9 +5,7 @@ import {Search, Target, Zap, Settings, CheckCircle, Star,  Search,  Target,  Set
 const AISEOOptimizerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Search,
+      icon: Search,
       title: 'SEO Analysis',
       description: 'Comprehensive SEO analysis and optimization',
       benefits: ['Keyword research', 'On-page optimization', 'Technical SEO'];

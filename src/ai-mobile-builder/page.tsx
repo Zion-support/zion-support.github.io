@@ -5,9 +5,7 @@ import {Smartphone, Target, Zap, Settings, CheckCircle, Star, Code,  Smartphone,
 const AIMobileBuilderPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Smartphone,
+      icon: Smartphone,
       title: 'AI-Assisted Development',
       description: 'Intelligent mobile app development with AI assistance',
       benefits: ['Code generation', 'UI/UX optimization', 'Performance tuning'];

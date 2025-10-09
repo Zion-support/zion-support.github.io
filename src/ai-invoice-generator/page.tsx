@@ -1,4 +1,4 @@
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon,  Brain,  Zap,  BarChart,  Smartphone,  ShoppingCart,  Building from 'lucide-react';
+import { Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
@@ -7,9 +7,7 @@ import SEOOptimizer from '../../components/SEOOptimizer';
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Brain,
+      icon: Brain,
       title: 'AI-Powered Invoice Generation',
       description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
       benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency'];

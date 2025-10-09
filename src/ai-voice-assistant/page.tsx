@@ -5,9 +5,7 @@ import {Mic, Target, Zap, Settings, CheckCircle, Star,  Mic,  Target,  Settings 
 const AIVoiceAssistantPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Mic,
+      icon: Mic,
       title: 'Voice Recognition',
       description: 'Advanced voice recognition and processing',
       benefits: ['Speech-to-text', 'Voice commands', 'Multi-language support'];

@@ -1,10 +1,11 @@
 import React from 'react';
-import { Mail, Target, Send, BarChart, Users, TrendingUp ,  Mail,  Target,  Send,  BarChart,  Users,  TrendingUp from 'lucide-react';
+import { Mail, Target, Send, BarChart, Users, TrendingUp, TrendingUp from 'lucide-react';
 const AiEmailMarketingPage: React.FC = () => {
-import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
+import {Mail, CheckCircle, ArrowRight, Star } from 'lucide-react';
 const AIEmailMarketingPage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div>Coming Soon
+    </div>
   );
 };
   const _features = [

@@ -5,9 +5,7 @@ import {Settings, Shield, BarChart, Zap, CheckCircle, Star,  Settings,  Shield, 
 const SystemAdministrationPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Settings,
+      icon: Settings,
       title: 'System Management',
       description: 'Comprehensive system administration and maintenance',
       benefits: ['Server management', 'User administration', 'System monitoring'];

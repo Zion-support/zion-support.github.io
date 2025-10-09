@@ -5,17 +5,17 @@ import {Palette, Target, Zap, Settings, CheckCircle, Star,  Palette,  Target,  S
 const AIDesignAssistantPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Palette,
+      icon: Palette,
       title: 'AI Design Generation',
       description: 'AI-powered design creation and optimization',
-      benefits: ['Auto design', 'Style optimization', 'Brand consistency'];
+      benefits: ['Auto design', 'Style optimization', 'Brand consistency']
     },
       icon: Target,
       title: 'Design Recommendations',
       description: 'Intelligent design suggestions and improvements',
       benefits: ['Layout optimization', 'Color suggestions', 'Typography advice']
+    },
+    {
       icon: Settings,
       title: 'Design Analytics',
       description: 'Comprehensive design performance analytics',

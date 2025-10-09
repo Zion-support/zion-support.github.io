@@ -5,9 +5,7 @@ import {Settings, Zap, Shield, BarChart, CheckCircle, Star,  Settings,  Zap,  Ba
 const ITAutomationPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Settings,
+      icon: Settings,
       title: 'Process Automation',
       description: 'Automate repetitive IT processes and workflows',
       benefits: ['Workflow automation', 'Task scheduling', 'Process optimization'];

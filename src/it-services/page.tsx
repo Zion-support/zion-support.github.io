@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Cloud ,  Shield,  Server,  BarChart,  Users from 'lucide-react';
+import { Cloud, Shield, Server, BarChart, Users from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
 const ItServicesPage: React.FC = () => {,

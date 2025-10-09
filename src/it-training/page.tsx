@@ -5,9 +5,7 @@ import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap
 const ITTrainingPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: GraduationCap,
+      icon: GraduationCap,
       title: 'Certification Programs',
       description: 'Industry-recognized IT certification training programs',
       benefits: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications'];

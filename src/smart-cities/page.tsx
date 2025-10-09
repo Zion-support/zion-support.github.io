@@ -5,9 +5,7 @@ import {Building, Target, Zap, Settings, CheckCircle, Star,  Building,  Target, 
 const SmartCitiesPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Building,
+      icon: Building,
       title: 'Smart Infrastructure',
       description: 'Intelligent city infrastructure and management systems',
       benefits: ['Traffic management', 'Energy optimization', 'Waste management'];

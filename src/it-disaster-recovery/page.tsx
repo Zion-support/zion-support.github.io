@@ -5,9 +5,7 @@ import {Shield, Zap, Settings, BarChart, CheckCircle, Star,  Shield,  Zap,  BarC
 const ITDisasterRecoveryPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Shield,
+      icon: Shield,
       title: 'Backup Solutions',
       description: 'Comprehensive backup and recovery solutions',
       benefits: ['Automated backups', 'Data protection', 'Recovery testing'];

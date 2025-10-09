@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div>Coming Soon
+    </div>
   );
 };
   const [activeTab, setActiveTab] = useState('ai');

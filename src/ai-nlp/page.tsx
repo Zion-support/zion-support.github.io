@@ -5,9 +5,7 @@ import {MessageSquare, Brain, FileText, Globe, CheckCircle, Star,  MessageSquare
 const AINLPPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: MessageSquare,
+      icon: MessageSquare,
       title: 'Text Analysis',
       description: 'Advanced text processing and sentiment analysis',
       benefits: ['Sentiment detection', 'Entity extraction', 'Language detection'];

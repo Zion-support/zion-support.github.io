@@ -1,5 +1,7 @@
 import React from 'react';
-const AICRMPage: React.FC = () => {
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const AiCrmPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -10,16 +12,8 @@ const AiCrmPage: React.FC = () => {
           Contact Us
         </a>
       </div>
+    </div>
   );
 };
-}
-const AiCrmPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-  );
-};
-const AICRMPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-  );
-};
+
+export default AiCrmPage;

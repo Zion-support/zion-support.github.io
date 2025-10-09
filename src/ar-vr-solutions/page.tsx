@@ -5,9 +5,7 @@ import {Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings 
 const ARVRSolutionsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Eye,
+      icon: Eye,
       title: 'AR Development',
       description: 'Augmented reality applications and experiences',
       benefits: ['AR apps', '3D visualization', 'Interactive experiences'];

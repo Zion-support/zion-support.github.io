@@ -5,9 +5,7 @@ import {Brain, Code, FlaskConical, Target, CheckCircle, Star,  Brain,  Code,  Ta
 const AIResearchDevelopmentPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Brain,
+      icon: Brain,
       title: 'Custom AI Research',
       description: 'Tailored AI research solutions for your specific needs',
       benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs'];

@@ -5,9 +5,7 @@ import {Bot, Cpu, Settings, Shield, CheckCircle, Star,  Bot,  Cpu,  Shield from 
 const AIRoboticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Bot,
+      icon: Bot,
       title: 'Intelligent Robotics',
       description: 'AI-powered robots that learn and adapt to their environment',
       benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior'];

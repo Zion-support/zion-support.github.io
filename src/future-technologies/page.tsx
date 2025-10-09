@@ -5,9 +5,7 @@ import {Rocket, Target, Zap, Settings, CheckCircle, Star,  Rocket,  Target,  Set
 const FutureTechnologiesPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Rocket,
+      icon: Rocket,
       title: 'Emerging Technologies',
       description: 'Cutting-edge technologies and future innovations',
       benefits: ['AI advancement', 'Quantum computing', 'Blockchain'];

@@ -1,7 +1,8 @@
 import React from 'react';
 const CareersPage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div>Coming Soon
+    </div>
   );
 };
   const _openPositions = [

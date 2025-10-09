@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone,  CheckSquare,  Users,  Zap,  BarChart from 'lucide-react';
+import { CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone, BarChart from 'lucide-react';
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
   const features = [
