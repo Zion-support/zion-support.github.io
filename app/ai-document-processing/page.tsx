@@ -3,93 +3,93 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
+import { FileText, Eye, Zap, Brain, BarChart, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings, FileImage, Search } from 'lucide-react';
 
-const AISalesAutomationPage: React.FC = () => {
+const AIDocumentProcessingPage: React.FC = () => {
   const features = [
     {
+      icon: Eye,
+      title: 'Advanced OCR',
+      description: 'State-of-the-art optical character recognition that extracts text from any document with 99.9% accuracy.',
+      benefits: ['99.9% accuracy', 'Multi-language support', 'Handwriting recognition']
+    },
+    {
       icon: Brain,
-      title: 'AI Lead Scoring',
-      description: 'Intelligent lead scoring using machine learning to identify high-value prospects and prioritize sales efforts.',
-      benefits: ['95% accuracy', 'Real-time scoring', 'Behavioral analysis']
-    },
-    {
-      icon: Target,
-      title: 'Automated Outreach',
-      description: 'AI-powered email sequences, follow-ups, and personalized messaging that converts prospects into customers.',
-      benefits: ['3x higher open rates', 'Personalized content', 'Perfect timing']
-    },
-    {
-      icon: Users,
-      title: 'CRM Integration',
-      description: 'Seamless integration with popular CRMs like Salesforce, HubSpot, and Pipedrive for unified sales management.',
-      benefits: ['One-click sync', 'Real-time updates', 'Unified pipeline']
-    },
-    {
-      icon: BarChart,
-      title: 'Sales Analytics',
-      description: 'Advanced analytics and reporting to track performance, identify trends, and optimize sales strategies.',
-      benefits: ['Real-time insights', 'Predictive analytics', 'ROI tracking']
+      title: 'AI Data Extraction',
+      description: 'Intelligent data extraction that understands document structure and extracts relevant information automatically.',
+      benefits: ['Smart parsing', 'Context understanding', 'Field mapping']
     },
     {
       icon: Zap,
-      title: 'Workflow Automation',
-      description: 'Automate repetitive sales tasks, follow-ups, and administrative work to focus on closing deals.',
-      benefits: ['80% time savings', 'Consistent processes', 'Error reduction']
+      title: 'Automated Processing',
+      description: 'Fully automated document processing workflows that handle large volumes of documents without human intervention.',
+      benefits: ['Batch processing', 'Real-time processing', 'Error handling']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics & Insights',
+      description: 'Comprehensive analytics on document processing performance, accuracy rates, and processing times.',
+      benefits: ['Performance metrics', 'Accuracy tracking', 'Cost analysis']
     },
     {
       icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Built-in compliance with GDPR, CAN-SPAM, and other regulations to protect your business and customers.',
-      benefits: ['Legal compliance', 'Data protection', 'Audit trails']
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption, audit logs, and compliance with GDPR, HIPAA, and other standards.',
+      benefits: ['Data encryption', 'Audit trails', 'Compliance ready']
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Collaborative features that allow teams to review, approve, and manage document processing workflows.',
+      benefits: ['Review workflows', 'Approval processes', 'Team management']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$149',
       period: '/month',
-      description: 'Perfect for small sales teams',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 leads/month',
-        'Basic AI lead scoring',
-        'Email automation',
-        'CRM integration',
-        'Standard analytics',
-        'Email support'
+        'Up to 1,000 pages/month',
+        'Basic OCR',
+        'Standard templates',
+        'Email support',
+        'Basic analytics',
+        'Standard security'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$799',
+      price: '$399',
       period: '/month',
-      description: 'Ideal for growing sales teams',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 leads/month',
-        'Advanced AI algorithms',
-        'Multi-channel automation',
-        'Advanced CRM features',
-        'Custom reporting',
+        'Up to 10,000 pages/month',
+        'Advanced AI extraction',
+        'Custom templates',
         'Priority support',
-        'A/B testing'
+        'Advanced analytics',
+        'Enhanced security',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$999',
       period: '/month',
-      description: 'For large sales organizations',
+      description: 'For large organizations',
       features: [
-        'Unlimited leads',
+        'Unlimited pages',
         'Custom AI models',
-        'All channels + voice',
-        'Custom integrations',
-        'Real-time dashboard',
-        'Dedicated account manager',
+        'All features',
+        'Dedicated support',
         'Custom development',
+        'Advanced compliance',
+        'On-premise option',
         'SLA guarantee'
       ],
       popular: false
@@ -97,42 +97,42 @@ const AISalesAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '300%', label: 'Increase in Sales' },
-    { number: '80%', label: 'Time Savings' },
-    { number: '95%', label: 'Lead Accuracy' },
-    { number: '50+', label: 'CRM Integrations' }
+    { number: '99.9%', label: 'Accuracy Rate' },
+    { number: '90%', label: 'Time Savings' },
+    { number: '50+', label: 'Document Types' },
+    { number: '24/7', label: 'Processing' }
   ];
 
   const useCases = [
     {
-      title: 'B2B Lead Generation',
-      description: 'Automatically identify and score high-value B2B prospects using AI-powered analysis of company data, website behavior, and engagement patterns.',
-      icon: Building
+      title: 'Invoice Processing',
+      description: 'Automatically extract data from invoices, validate information, and integrate with accounting systems.',
+      icon: FileText
     },
     {
-      title: 'E-commerce Upselling',
-      description: 'Intelligent product recommendations and automated follow-up sequences to increase average order value and customer lifetime value.',
-      icon: ShoppingCart
+      title: 'Contract Analysis',
+      description: 'Analyze contracts to extract key terms, dates, and clauses with AI-powered natural language processing.',
+      icon: FileImage
     },
     {
-      title: 'SaaS Trial Conversion',
-      description: 'Automated onboarding sequences and personalized engagement to convert free trial users into paying customers.',
-      icon: Cloud
+      title: 'Form Processing',
+      description: 'Process application forms, surveys, and other structured documents with intelligent data extraction.',
+      icon: Search
     },
     {
-      title: 'Real Estate Lead Nurturing',
-      description: 'AI-powered lead nurturing for real estate agents with automated follow-ups, market updates, and personalized property recommendations.',
-      icon: Home
+      title: 'Medical Records',
+      description: 'Extract patient information from medical records while maintaining HIPAA compliance and data security.',
+      icon: Shield
     }
   ];
 
   return (
     <>
       <SEOOptimizer
-        title="AI Sales Automation Platform - Zion Tech Group"
-        description="Revolutionary AI sales automation that increases revenue by 300% and saves 80% of sales time. Lead scoring, automated outreach, and CRM integration."
-        keywords={['AI sales automation', 'lead scoring', 'sales CRM', 'automated outreach', 'sales analytics']}
-        canonicalUrl="https://ziontechgroup.com/ai-sales-automation"
+        title="AI Document Processing Platform - Zion Tech Group"
+        description="Automate document processing with AI-powered OCR and data extraction. 99.9% accuracy, 90% time savings, and 50+ document types supported."
+        keywords={['AI document processing', 'OCR', 'data extraction', 'document automation', 'AI parsing']}
+        canonicalUrl="https://ziontechgroup.com/ai-document-processing"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -142,14 +142,14 @@ const AISalesAutomationPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Sales Automation Platform
+                AI Document Processing Platform
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Boost sales by 300% with intelligent automation
+                Automate document processing with 99.9% accuracy
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered sales automation platform combines intelligent lead scoring, automated outreach, 
-                and advanced analytics to help sales teams close more deals in less time.
+                Our AI-powered document processing platform automatically extracts, analyzes, and processes 
+                documents with advanced OCR and intelligent data extraction capabilities.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -187,7 +187,7 @@ const AISalesAutomationPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Sales Automation Features
+              Powerful Document Processing Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -211,7 +211,7 @@ const AISalesAutomationPage: React.FC = () => {
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Perfect for Every Industry
+              Perfect for Every Document Type
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
@@ -279,10 +279,10 @@ const AISalesAutomationPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to 3x Your Sales Performance?
+                Ready to Automate Your Documents?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 1,000+ sales teams already using our AI automation platform
+                Join 1,800+ companies already using our document processing platform
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -311,4 +311,4 @@ const AISalesAutomationPage: React.FC = () => {
   );
 };
 
-export default AISalesAutomationPage;
+export default AIDocumentProcessingPage;

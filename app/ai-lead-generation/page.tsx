@@ -3,9 +3,9 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
+import { Target, Users, Mail, Phone, BarChart, Zap, Brain, CheckCircle, Phone as PhoneIcon, Mail as MailIcon, ArrowRight, TrendingUp, Globe, Database, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
 
-const AISalesAutomationPage: React.FC = () => {
+const AILeadGenerationPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -15,81 +15,81 @@ const AISalesAutomationPage: React.FC = () => {
     },
     {
       icon: Target,
-      title: 'Automated Outreach',
-      description: 'AI-powered email sequences, follow-ups, and personalized messaging that converts prospects into customers.',
-      benefits: ['3x higher open rates', 'Personalized content', 'Perfect timing']
+      title: 'Smart Prospecting',
+      description: 'AI-powered prospecting that finds ideal customers based on your ideal customer profile and market data.',
+      benefits: ['Automated research', 'Contact discovery', 'Intent signals']
     },
     {
-      icon: Users,
-      title: 'CRM Integration',
-      description: 'Seamless integration with popular CRMs like Salesforce, HubSpot, and Pipedrive for unified sales management.',
-      benefits: ['One-click sync', 'Real-time updates', 'Unified pipeline']
+      icon: Mail,
+      title: 'Email Sequences',
+      description: 'Personalized email sequences that automatically follow up with prospects and nurture leads through the sales funnel.',
+      benefits: ['Personalization', 'A/B testing', 'Auto-optimization']
     },
     {
       icon: BarChart,
-      title: 'Sales Analytics',
-      description: 'Advanced analytics and reporting to track performance, identify trends, and optimize sales strategies.',
-      benefits: ['Real-time insights', 'Predictive analytics', 'ROI tracking']
+      title: 'Lead Analytics',
+      description: 'Comprehensive analytics on lead quality, conversion rates, and campaign performance to optimize your strategy.',
+      benefits: ['Conversion tracking', 'ROI analysis', 'Performance insights']
     },
     {
       icon: Zap,
-      title: 'Workflow Automation',
-      description: 'Automate repetitive sales tasks, follow-ups, and administrative work to focus on closing deals.',
-      benefits: ['80% time savings', 'Consistent processes', 'Error reduction']
+      title: 'CRM Integration',
+      description: 'Seamless integration with popular CRMs to automatically sync leads and track the entire sales process.',
+      benefits: ['Auto-sync', 'Real-time updates', 'Pipeline management']
     },
     {
-      icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Built-in compliance with GDPR, CAN-SPAM, and other regulations to protect your business and customers.',
-      benefits: ['Legal compliance', 'Data protection', 'Audit trails']
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Collaborative features that allow your team to work together on lead generation and follow-up activities.',
+      benefits: ['Team workflows', 'Lead assignment', 'Activity tracking']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$199',
       period: '/month',
-      description: 'Perfect for small sales teams',
+      description: 'Perfect for small businesses',
       features: [
         'Up to 1,000 leads/month',
-        'Basic AI lead scoring',
-        'Email automation',
+        'Basic AI scoring',
+        'Email sequences',
         'CRM integration',
-        'Standard analytics',
-        'Email support'
+        'Email support',
+        'Basic analytics'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$799',
+      price: '$499',
       period: '/month',
-      description: 'Ideal for growing sales teams',
+      description: 'Ideal for growing companies',
       features: [
         'Up to 10,000 leads/month',
         'Advanced AI algorithms',
-        'Multi-channel automation',
-        'Advanced CRM features',
-        'Custom reporting',
+        'Multi-channel outreach',
+        'Advanced analytics',
         'Priority support',
-        'A/B testing'
+        'A/B testing',
+        'Team collaboration'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$1,299',
       period: '/month',
-      description: 'For large sales organizations',
+      description: 'For large organizations',
       features: [
         'Unlimited leads',
         'Custom AI models',
-        'All channels + voice',
+        'All channels',
         'Custom integrations',
-        'Real-time dashboard',
-        'Dedicated account manager',
+        'Dedicated support',
         'Custom development',
+        'Advanced compliance',
         'SLA guarantee'
       ],
       popular: false
@@ -97,8 +97,8 @@ const AISalesAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '300%', label: 'Increase in Sales' },
-    { number: '80%', label: 'Time Savings' },
+    { number: '300%', label: 'More Qualified Leads' },
+    { number: '85%', label: 'Time Savings' },
     { number: '95%', label: 'Lead Accuracy' },
     { number: '50+', label: 'CRM Integrations' }
   ];
@@ -106,22 +106,22 @@ const AISalesAutomationPage: React.FC = () => {
   const useCases = [
     {
       title: 'B2B Lead Generation',
-      description: 'Automatically identify and score high-value B2B prospects using AI-powered analysis of company data, website behavior, and engagement patterns.',
+      description: 'Generate high-quality B2B leads using AI-powered company research, contact discovery, and intent signals.',
       icon: Building
     },
     {
-      title: 'E-commerce Upselling',
-      description: 'Intelligent product recommendations and automated follow-up sequences to increase average order value and customer lifetime value.',
+      title: 'E-commerce Prospecting',
+      description: 'Find and engage potential customers for e-commerce businesses with personalized outreach and retargeting.',
       icon: ShoppingCart
     },
     {
       title: 'SaaS Trial Conversion',
-      description: 'Automated onboarding sequences and personalized engagement to convert free trial users into paying customers.',
+      description: 'Convert free trial users into paying customers with intelligent lead nurturing and personalized follow-ups.',
       icon: Cloud
     },
     {
-      title: 'Real Estate Lead Nurturing',
-      description: 'AI-powered lead nurturing for real estate agents with automated follow-ups, market updates, and personalized property recommendations.',
+      title: 'Real Estate Leads',
+      description: 'Generate qualified real estate leads with AI-powered market analysis and automated follow-up sequences.',
       icon: Home
     }
   ];
@@ -129,10 +129,10 @@ const AISalesAutomationPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="AI Sales Automation Platform - Zion Tech Group"
-        description="Revolutionary AI sales automation that increases revenue by 300% and saves 80% of sales time. Lead scoring, automated outreach, and CRM integration."
-        keywords={['AI sales automation', 'lead scoring', 'sales CRM', 'automated outreach', 'sales analytics']}
-        canonicalUrl="https://ziontechgroup.com/ai-sales-automation"
+        title="AI Lead Generation Platform - Zion Tech Group"
+        description="Generate 300% more qualified leads with AI-powered prospecting, lead scoring, and automated outreach. 85% time savings and 95% accuracy."
+        keywords={['AI lead generation', 'lead scoring', 'prospecting', 'sales automation', 'lead nurturing']}
+        canonicalUrl="https://ziontechgroup.com/ai-lead-generation"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -142,14 +142,14 @@ const AISalesAutomationPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Sales Automation Platform
+                AI Lead Generation Platform
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Boost sales by 300% with intelligent automation
+                Generate 300% more qualified leads with AI
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered sales automation platform combines intelligent lead scoring, automated outreach, 
-                and advanced analytics to help sales teams close more deals in less time.
+                Our AI-powered lead generation platform helps businesses find, score, and nurture high-quality leads 
+                with intelligent automation and personalized outreach.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -157,7 +157,7 @@ const AISalesAutomationPage: React.FC = () => {
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
-                  <Phone className="w-5 h-5" />
+                  <PhoneIcon className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -165,7 +165,7 @@ const AISalesAutomationPage: React.FC = () => {
                   className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className="w-5 h-5" />
+                  <MailIcon className="w-5 h-5" />
                   <span>Get Free Demo</span>
                 </a>
               </div>
@@ -187,7 +187,7 @@ const AISalesAutomationPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Sales Automation Features
+              Powerful Lead Generation Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -279,17 +279,17 @@ const AISalesAutomationPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to 3x Your Sales Performance?
+                Ready to 3x Your Lead Generation?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 1,000+ sales teams already using our AI automation platform
+                Join 2,500+ companies already using our AI lead generation platform
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
-                  <Phone className="w-5 h-5" />
+                  <PhoneIcon className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -297,7 +297,7 @@ const AISalesAutomationPage: React.FC = () => {
                   className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className="w-5 h-5" />
+                  <MailIcon className="w-5 h-5" />
                   <span>Schedule Demo</span>
                 </a>
               </div>
@@ -311,4 +311,4 @@ const AISalesAutomationPage: React.FC = () => {
   );
 };
 
-export default AISalesAutomationPage;
+export default AILeadGenerationPage;
