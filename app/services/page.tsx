@@ -11,104 +11,194 @@ const ServicesPage: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description: 'Cutting-edge artificial intelligence solutions',
       services: [
+        {
           name: 'Machine Learning Solutions',
           description: 'Custom ML models for predictive analytics and decision-making',
           price: 'Starting at $1,500/month',
           features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring']
         },
+        {
           name: 'Natural Language Processing',
           description: 'Advanced NLP solutions for text analysis and language understanding',
           price: 'Starting at $1,200/month',
           features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development']
+        },
+        {
           name: 'Computer Vision',
           description: 'Image and video analysis solutions for object detection and recognition',
           price: 'Starting at $1,800/month',
           features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition']
+        },
+        {
           name: 'AI Automation',
           description: 'Intelligent process automation with decision-making capabilities',
           price: 'Starting at $1,400/month',
           features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling']
         }
       ]
+    },
+    {
       title: 'IT Services',
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description: 'Comprehensive IT infrastructure and support',
+      services: [
+        {
           name: 'Cloud Migration & Management',
           description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee',
           price: 'Starting at $1,299/month',
           features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring']
+        },
+        {
           name: 'Cybersecurity',
           description: 'Advanced security solutions with threat detection and prevention',
           price: 'Starting at $1,599/month',
           features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response']
+        },
+        {
           name: 'DevOps & CI/CD',
           description: 'Streamlined development workflows with automated testing and deployment',
           price: 'Starting at $1,199/month',
           features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup']
-          name: 'Database Management',
-          description: 'Database design, optimization, and management with AI-powered tuning',
-          price: 'Starting at $899/month',
-          features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
-      title: 'Micro SAAS',
-      icon: Zap,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
-      description: 'Ready-to-use AI-powered applications',
-          name: 'AI Project Manager',
-          description: 'Intelligent project planning with AI-powered resource optimization',
-          price: '$99/month',
-          features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration']
-          name: 'AI Social Media Manager',
-          description: 'Automate your social media with AI-powered content creation',
-          price: '$79/month',
-          features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence']
-          name: 'AI Analytics Dashboard',
-          description: 'Real-time business intelligence with AI-powered insights',
-          price: '$149/month',
-          features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking']
-          name: 'AI Email Marketing',
-          description: 'Transform your email marketing with AI-powered content generation',
-          features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns']
+        }
+      ]
+    },
+    {
+      title: 'Web Development',
+      icon: Code,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      description: 'Modern web applications and digital experiences',
+      services: [
+        {
+          name: 'Frontend Development',
+          description: 'React, Vue, Angular applications with modern UI/UX',
+          price: 'Starting at $999/month',
+          features: ['Responsive Design', 'Performance Optimization', 'Cross-browser Compatibility', 'Accessibility']
+        },
+        {
+          name: 'Backend Development',
+          description: 'Scalable APIs and server-side applications',
+          price: 'Starting at $1,299/month',
+          features: ['RESTful APIs', 'Database Design', 'Authentication', 'Performance Optimization']
+        },
+        {
+          name: 'Full-Stack Development',
+          description: 'Complete web applications from frontend to backend',
+          price: 'Starting at $1,799/month',
+          features: ['End-to-End Development', 'Database Integration', 'Deployment', 'Maintenance']
+        }
+      ]
+    }
   ];
 
+  const microSaasServices = [
+    {
+      name: 'Database Management',
+      description: 'Database design, optimization, and management with AI-powered tuning',
+      price: 'Starting at $899/month',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
+    }
+  ];
+
+  const microSaas = {
+    title: 'Micro SAAS',
+    icon: Zap,
+    color: 'text-cyan-400',
+    bgColor: 'bg-cyan-500/10',
+    description: 'Ready-to-use AI-powered applications',
+    services: [
+      {
+        name: 'AI Project Manager',
+        description: 'Intelligent project planning with AI-powered resource optimization',
+        price: '$99/month',
+        features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration']
+      },
+      {
+        name: 'AI Social Media Manager',
+        description: 'Automate your social media with AI-powered content creation',
+        price: '$79/month',
+        features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence']
+      },
+      {
+        name: 'AI Analytics Dashboard',
+        description: 'Real-time business intelligence with AI-powered insights',
+        price: '$149/month',
+        features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking']
+      },
+      {
+        name: 'AI Email Marketing',
+        description: 'Transform your email marketing with AI-powered content generation',
+        price: '$89/month',
+        features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns']
+      }
+    ]
+  };
+
   const processSteps = [
+    {
       step: '01',
       title: 'Discovery & Analysis',
       description: 'We analyze your business needs, current systems, and goals to create a tailored solution strategy.',
       icon: Target
+    },
+    {
       step: '02',
       title: 'Solution Design',
       description: 'Our experts design a comprehensive solution architecture that aligns with your business objectives.',
       icon: Code
+    },
+    {
       step: '03',
       title: 'Implementation',
       description: 'We implement the solution with minimal disruption to your operations and maximum efficiency.',
       icon: Zap
+    },
+    {
       step: '04',
       title: 'Optimization & Support',
       description: 'Continuous monitoring, optimization, and 24/7 support to ensure peak performance.',
       icon: TrendingUp
+    }
+  ];
 
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '24/7', label: 'Support Available', icon: Users },
     { number: '50+', label: 'Expert Engineers', icon: Award }
+  ];
 
   const benefits = [
+    'Expert Team',
+    'Proven Track Record',
+    '24/7 Support',
+    'Scalable Solutions',
+    'Cost-Effective',
+    'Latest Technologies'
+  ];
+
   const additionalServices = [
+    {
       title: 'AI-Powered Solutions',
       description: 'Leverage cutting-edge artificial intelligence to automate processes and gain insights'
+    },
+    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security measures to protect your critical data and systems'
+    },
+    {
       title: 'Rapid Deployment',
       description: 'Get your solutions up and running quickly with our proven methodologies'
+    },
+    {
       icon: BarChart,
       title: 'Measurable Results',
       description: 'Track performance with detailed analytics and reporting dashboards'
+    }
+  ];
 
   return (
     <>
@@ -134,6 +224,7 @@ const ServicesPage: React.FC = () => {
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
                 From artificial intelligence and machine learning to cloud migration and cybersecurity, 
                 we provide end-to-end technology solutions that transform businesses and drive growth.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
@@ -142,11 +233,15 @@ const ServicesPage: React.FC = () => {
                   <Phone className="w-5 h-5" />
                   <span>Get Free Consultation</span>
                 </a>
+                <a
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                >
                   <Phone className="w-4 h-4 mr-2" />
                   (302) 464-0950
+                </a>
               </div>
+            </div>
           </section>
 
           {/* Service Categories */}
@@ -202,13 +297,30 @@ const ServicesPage: React.FC = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
+              </h2>
               <p className="text-xl text-purple-100 mb-8">
                 Get started with our services today and see the difference AI and IT solutions can make.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                >
                   Call (302) 464-0950
+                </a>
+                <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+                >
                   Email Us
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+        
+        <Footer />
+      </div>
     </>
   );
 };
