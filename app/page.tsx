@@ -11,6 +11,7 @@ const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components
+<<<<<<< HEAD
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
@@ -20,6 +21,12 @@ const preloadComponents = () => {
     }, 100);
   }
 };
+=======
+if (typeof window !== 'undefined') {
+  import('./components/ContentPromotionBanner');
+  import('./components/ContentCarousel');
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc4a
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -47,12 +54,53 @@ const HomePage: React.FC = () => {
 
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number',
       });
+=======
+    if (typeof window !== 'undefined') {
+      // Google Analytics tracking
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'phone_click', {
+          event_category: 'engagement',
+          event_label: 'main_phone_number',
+        });
+      }
+      
+      // Custom analytics tracking
+      if ((window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: 'phone_click',
+          phone_number: '+13026009898',
+          page: 'homepage'
+        });
+      }
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc4a
     }
+  }, []);
+
+  // Track scroll depth for analytics
+  useEffect(() => {
+    let maxScroll = 0;
+    const trackScrollDepth = () => {
+      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      if (scrollPercent > maxScroll) {
+        maxScroll = scrollPercent;
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'scroll_depth', {
+            event_category: 'engagement',
+            event_label: `${scrollPercent}%`,
+            value: scrollPercent
+          });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', trackScrollDepth, { passive: true });
+    return () => window.removeEventListener('scroll', trackScrollDepth);
   }, []);
 
   return (
@@ -76,12 +124,17 @@ const HomePage: React.FC = () => {
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
+<<<<<<< HEAD
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
           }`}
+=======
+          className={`text-center mb-16 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc4a
           aria-labelledby="hero-heading"
+          data-lazy
         >
           <h1 
             id="hero-heading" 
@@ -138,6 +191,7 @@ const HomePage: React.FC = () => {
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
+<<<<<<< HEAD
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
           </h2>
@@ -305,6 +359,17 @@ const HomePage: React.FC = () => {
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Solutions</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+=======
+          <h2 id="services-heading" className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Our Core Services
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
+              <p className="text-gray-600 mb-4">
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc4a
                 Harness the power of artificial intelligence to drive innovation and efficiency in
                 your organization.
               </p>
@@ -344,6 +409,7 @@ const HomePage: React.FC = () => {
                 <li>• 24/7 Monitoring</li>
               </ul>
             </article>
+<<<<<<< HEAD
           </div>
           
           <div className="text-center mt-8">
@@ -353,6 +419,8 @@ const HomePage: React.FC = () => {
             >
               View All Services
             </a>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc4a
           </div>
         </section>
 
@@ -438,8 +506,13 @@ const HomePage: React.FC = () => {
           <h2 id="cta-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 neon-text">
             Ready to Transform Your Business?
           </h2>
+<<<<<<< HEAD
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Join thousands of enterprises that have already transformed their operations with our AI solutions.
+=======
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies already using our AI solutions to drive growth and efficiency.
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc4a
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
