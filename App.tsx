@@ -28,6 +28,7 @@ const CloudMigrationPage = lazy(() => import('./app/cloud-migration/page'));
 const SecurityPage = lazy(() => import('./app/security/page'));
 const SupportPage = lazy(() => import('./app/support/page'));
 
+<<<<<<< HEAD
 // Lazy load components
 const Navigation = React.lazy(() => import('./app/components/Navigation'));
 const Footer = React.lazy(() => import('./app/components/Footer'));
@@ -35,6 +36,42 @@ const PerformanceMonitor = React.lazy(() => import('./app/components/Performance
 const AccessibilityEnhancer = React.lazy(() => import('./app/components/AccessibilityEnhancer'));
 
 // Error Boundary Component
+=======
+// AI Services
+const AiServicesPage = lazy(() => import('./app/ai-services/page'));
+const AiMarketingPage = lazy(() => import('./app/ai-marketing/page'));
+const AiAutomationPage = lazy(() => import('./app/ai-automation/page'));
+const AiHealthcarePage = lazy(() => import('./app/ai-healthcare/page'));
+const AiFintechPage = lazy(() => import('./app/ai-fintech/page'));
+
+// IT Services
+const ItServicesPage = lazy(() => import('./app/it-services/page'));
+const ItInfrastructurePage = lazy(() => import('./app/it-infrastructure/page'));
+const ItSupportPage = lazy(() => import('./app/it-support/page'));
+const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+
+// Emerging Technologies
+const QuantumComputingPage = lazy(() => import('./app/quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./app/autonomous-systems/page'));
+const BlockchainPage = lazy(() => import('./app/blockchain/page'));
+const IotEdgeComputingPage = lazy(() => import('./app/iot-edge-computing/page'));
+const RoboticsPage = lazy(() => import('./app/robotics/page'));
+
+// Micro SaaS
+const MicroSaasPage = lazy(() => import('./app/micro-saas/page'));
+
+// Loading component
+const LoadingSpinner = memo(() => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
+  </div>
+));
+
+LoadingSpinner.displayName = 'LoadingSpinner';
+
+// Error boundary component
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode },
   { hasError: boolean; error?: Error }
@@ -56,11 +93,11 @@ class ErrorBoundary extends React.Component<
     // Log error to monitoring service in production
     // In production, this should be sent to an error tracking service
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-      // Error logging would be handled by error tracking service in production
-=======
       console.error('Error caught by boundary:', error, errorInfo);
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
     }
   }
 

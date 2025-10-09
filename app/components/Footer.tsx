@@ -26,7 +26,9 @@ const Footer: React.FC = memo(() => {
 <<<<<<< HEAD
     { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
     { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
-    { name: 'AI Project Management', url: '/ai-project-management', description: 'AI-powered project management' }
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'AI-powered project management' },
+    { name: 'AI Voice Processing', url: '/ai-voice-processing', description: 'Voice AI solutions' },
+    { name: 'AI Image Recognition', url: '/ai-image-recognition', description: 'Computer vision AI' }
   ];
 
   const itServices = [
@@ -100,10 +102,15 @@ const Footer: React.FC = memo(() => {
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'News', url: '/blog' },
 =======
     { name: 'News', url: '/news' },
 >>>>>>> cursor/website-audit-and-update-with-deployment-73fd
+=======
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Blog', url: '/blog' },
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
     { name: 'Contact', url: '/contact' }
   ];
 
@@ -116,8 +123,16 @@ const Footer: React.FC = memo(() => {
     { name: 'Support', url: '/support' },
 >>>>>>> cursor/website-audit-and-update-with-deployment-73fd
     { name: 'Status', url: '/status' },
+    { name: 'Consultation', url: '/consultation' },
+    { name: 'Pricing', url: '/pricing' }
+  ];
+
+  const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' }
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' },
+    { name: 'GDPR', url: '/gdpr' },
+    { name: 'Compliance', url: '/compliance' }
   ];
 
 <<<<<<< HEAD
@@ -309,6 +324,7 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
     <footer className="bg-slate-900/50 backdrop-blur-lg border-t border-white/10">
@@ -435,12 +451,32 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 >>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
+=======
+
+          {/* Legal & Compliance */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Legal</h4>
+            <ul className="space-y-2">
+              {legalLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
         </div>
         
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -554,6 +590,8 @@ const Footer: React.FC = memo(() => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-6747
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
         </div>
       </div>
     </footer>
@@ -561,6 +599,7 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -576,3 +615,7 @@ export default Footer;
 =======
 export default Footer;
 >>>>>>> cursor/website-audit-and-update-with-deployment-73fd
+=======
+
+export default Footer;
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409

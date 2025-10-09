@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 
 const PricingPage: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [billingPeriod, setBillingPeriod] = useState<'month' | 'year'>('month');
 
@@ -206,6 +207,8 @@ const PricingPage: React.FC = () => {
               </div>
             </div>
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
   const plans = [
     {
       name: 'Starter',
@@ -379,7 +382,6 @@ export default function PricingPage() {
               Choose the perfect plan for your business needs. All plans include our core AI and IT services 
               with no hidden fees or surprises.
             </p>
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
           </div>
         </section>
 
@@ -420,128 +422,6 @@ export default function PricingPage() {
                   ))}
                 </ul>
 
-<<<<<<< HEAD
-                {/* Pricing */}
-                <div className="mb-6 p-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-lg">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-2">
-                      {formatPrice(service.pricing)}
-                    </div>
-                    {service.marketPrice && (
-                      <div className="text-sm text-gray-400 mb-2">
-                        Market: ${service.marketPrice.min.toLocaleString()}-${service.marketPrice.max.toLocaleString()}
-                      </div>
-                    )}
-                    {billingPeriod === 'year' && service.pricing.period === 'month' && (
-                      <div className="text-sm text-green-400 font-medium">
-                        Save 20% with annual billing
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Key Features */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-3 flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-2" />
-                    Key Features
-                  </h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, idx) => (
-                      <li key={idx} className="text-xs text-gray-300 flex items-center">
-                        <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Benefits */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-green-400 mb-3 flex items-center">
-                    <Award className="w-4 h-4 mr-2" />
-                    Key Benefits
-                  </h4>
-                  <div className="grid grid-cols-1 gap-2">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
-                      <div key={idx} className="text-xs text-gray-300 bg-slate-800/50 rounded px-2 py-1">
-                        {benefit}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Contact Actions */}
-                <div className="space-y-3">
-                  <a
-                    href={`tel:${contactInfo.phone}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
-                  >
-                    <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                    Call Now
-                  </a>
-                  <div className="grid grid-cols-2 gap-2">
-                    <a
-                      href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                      className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group"
-                    >
-                      <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-                      Email
-                    </a>
-                    <a
-                      href={service.contact.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-                      Demo
-                    </a>
-                  </div>
-                </div>
-
-                {/* Use Cases */}
-                <div className="mt-4 pt-4 border-t border-slate-700">
-                  <h4 className="text-xs font-semibold text-gray-400 mb-2">Perfect For:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {service.useCases.slice(0, 2).map((useCase, idx) => (
-                      <span key={idx} className="text-xs bg-slate-700/50 text-gray-300 px-2 py-1 rounded">
-                        {useCase}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Enterprise CTA */}
-        <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card">
-          <h3 className="text-3xl font-bold text-white mb-4 neon-text">
-            Need Custom Solutions?
-          </h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            We offer custom enterprise solutions tailored to your specific needs. 
-            Contact us for a personalized quote and consultation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={`tel:${contactInfo.phone}`}
-              className="cyber-button-advanced inline-flex items-center justify-center px-8 py-3"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call {contactInfo.phone}
-            </a>
-            <a
-              href={`mailto:${contactInfo.email}?subject=Custom Enterprise Solution Inquiry`}
-              className="cyber-button-advanced inline-flex items-center justify-center px-8 py-3"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Get Custom Quote
-            </a>
-=======
                 <a
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center ${
@@ -555,7 +435,6 @@ export default function PricingPage() {
                 </a>
               </div>
             ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
           </div>
         </section>
 

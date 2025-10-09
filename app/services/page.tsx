@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const ServicesPage: React.FC = () => {
   return (
@@ -64,6 +65,8 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
 import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Clock, Phone, Mail, MapPin, Target, Globe, Database, Smartphone, Lock, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Link } from 'lucide-react';
 import Header from '../components/Header';
 =======
@@ -463,9 +466,12 @@ const ServicesPage: React.FC = () => {
 
         <Footer />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-6747
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
       </div>
     </>
   );
@@ -473,8 +479,11 @@ const ServicesPage: React.FC = () => {
 
 export default ServicesPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default ServicesPage;
 >>>>>>> cursor/website-audit-and-update-with-deployment-6747
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409

@@ -2,6 +2,7 @@
 import React, { memo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 =======
 import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Zap } from 'lucide-react';
@@ -15,6 +16,9 @@ const Navigation: React.FC = memo(() => {
 import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+=======
+import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Mail, Briefcase } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
 
 const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);

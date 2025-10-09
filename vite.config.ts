@@ -4,9 +4,12 @@ import { resolve } from 'path';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -22,6 +25,7 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   buil,
   d: {/* TODO: Fix JSX expression */}
@@ -39,6 +43,8 @@ export default defineConfig({
       '@app': resolve(__dirname, './app'),
     },
   },
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -78,6 +84,7 @@ export default defineConfig({
             return 'components';
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -106,6 +113,9 @@ export default defineConfig({
 =======
           return null;
 >>>>>>> cursor/website-audit-and-update-with-deployment-73fd
+=======
+          return 'app';
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -135,6 +145,7 @@ export default defineConfig({
       },
       format: {
         comments: false,
+<<<<<<< HEAD
 =======
         drop_debugger: true
       },
@@ -144,6 +155,8 @@ export default defineConfig({
       },
       format: {
         comments: false
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f409
       }
     },
     chunkSizeWarningLimit: 500,
