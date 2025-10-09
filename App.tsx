@@ -1,47 +1,61 @@
-import React, { memo, useMemo, Suspense } from 'react';
+import React, { memo, useMemo, Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
-// Memoized components for better performance
-const UnifiedContentPromotion = memo(() => (
-  <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
-      <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
-    </div>
-  </div>
-));
+// Lazy load components for better performance
+const HomePage = lazy(() => import('./app/page'));
+const AboutPage = lazy(() => import('./app/about/page'));
+const ContactPage = lazy(() => import('./app/contact/page'));
+const AIServicesPage = lazy(() => import('./app/ai-services/page'));
+const ITServicesPage = lazy(() => import('./app/it-services/page'));
+const MicroSaasPage = lazy(() => import('./app/micro-saas/page'));
+const BlogPage = lazy(() => import('./app/blog/page'));
+const PricingPage = lazy(() => import('./app/pricing/page'));
+const TeamPage = lazy(() => import('./app/team/page'));
+const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
+const CareersPage = lazy(() => import('./app/careers/page'));
+const SupportPage = lazy(() => import('./app/support/page'));
+const PrivacyPage = lazy(() => import('./app/privacy/page'));
+const TermsPage = lazy(() => import('./app/terms/page'));
+const NotFoundPage = lazy(() => import('./app/not-found'));
 
-const InteractiveAIROICalculator = memo(() => (
-  <div className="bg-gray-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
-      <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
-    </div>
-  </div>
-));
+// AI Services Pages
+const AIMarketingPage = lazy(() => import('./app/ai-marketing/page'));
+const AIAutomationPage = lazy(() => import('./app/ai-automation/page'));
+const AIHealthcarePage = lazy(() => import('./app/ai-healthcare/page'));
+const AIFintechPage = lazy(() => import('./app/ai-fintech/page'));
+const AIContentGenerationPage = lazy(() => import('./app/ai-content-generation/page'));
+const AIDataAnalyticsPage = lazy(() => import('./app/ai-data-analytics/page'));
+const AICybersecurityPage = lazy(() => import('./app/ai-cybersecurity/page'));
+const AIWorkflowAutomationPage = lazy(() => import('./app/ai-workflow-automation/page'));
+const AICustomerSupportPage = lazy(() => import('./app/ai-customer-support/page'));
+const AISalesAutomationPage = lazy(() => import('./app/ai-sales-automation/page'));
+const AIDataVisualizationPage = lazy(() => import('./app/ai-data-visualization/page'));
+const AILeadGenerationPage = lazy(() => import('./app/ai-lead-generation/page'));
+const AIDocumentProcessingPage = lazy(() => import('./app/ai-document-processing/page'));
+const AIMobileAppDevelopmentPage = lazy(() => import('./app/ai-mobile-app-development/page'));
+const AIEcommerceSolutionsPage = lazy(() => import('./app/ai-ecommerce-solutions/page'));
 
-const ContentShowcase = memo(() => (
-  <div className="py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
-      <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
-    </div>
-  </div>
-));
+// IT Services Pages
+const ITInfrastructurePage = lazy(() => import('./app/it-infrastructure/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const CloudServicesPage = lazy(() => import('./app/cloud-services/page'));
+const DevOpsPage = lazy(() => import('./app/devops/page'));
+const DatabasePage = lazy(() => import('./app/database/page'));
+const NetworkingPage = lazy(() => import('./app/networking/page'));
 
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className="bg-blue-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
-      <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
-    </div>
-  </div>
-));
+// Emerging Tech Pages
+const QuantumComputingPage = lazy(() => import('./app/quantum-computing/page'));
+const RoboticsPage = lazy(() => import('./app/robotics/page'));
+const IoTEdgeComputingPage = lazy(() => import('./app/iot-edge-computing/page'));
+const BlockchainWeb3Page = lazy(() => import('./app/blockchain-web3/page'));
+const BusinessIntelligencePage = lazy(() => import('./app/business-intelligence/page'));
+const AutonomousSystemsPage = lazy(() => import('./app/autonomous-systems/page'));
 
 // Loading component
 const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
   </div>
 ));
 
@@ -66,9 +80,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
       console.error('App Error Boundary caught an error:', error, errorInfo);
     }
   }
@@ -163,20 +175,65 @@ export default function App() {
           />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
-        <div className="min-h-screen bg-white">
+        <Router>
           <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
+            <Routes>
+              {/* Main Pages */}
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/team" element={<TeamPage />} />
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+
+              {/* Service Categories */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/micro-saas" element={<MicroSaasPage />} />
+
+              {/* AI Services */}
+              <Route path="/ai-marketing" element={<AIMarketingPage />} />
+              <Route path="/ai-automation" element={<AIAutomationPage />} />
+              <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
+              <Route path="/ai-fintech" element={<AIFintechPage />} />
+              <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+              <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
+              <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
+              <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+              <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
+              <Route path="/ai-sales-automation" element={<AISalesAutomationPage />} />
+              <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
+              <Route path="/ai-lead-generation" element={<AILeadGenerationPage />} />
+              <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} />
+              <Route path="/ai-mobile-app-development" element={<AIMobileAppDevelopmentPage />} />
+              <Route path="/ai-ecommerce-solutions" element={<AIEcommerceSolutionsPage />} />
+
+              {/* IT Services */}
+              <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
+              <Route path="/cybersecurity" element={<CybersecurityPage />} />
+              <Route path="/cloud-services" element={<CloudServicesPage />} />
+              <Route path="/devops" element={<DevOpsPage />} />
+              <Route path="/database" element={<DatabasePage />} />
+              <Route path="/networking" element={<NetworkingPage />} />
+
+              {/* Emerging Technologies */}
+              <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+              <Route path="/robotics" element={<RoboticsPage />} />
+              <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+              <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+              <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+              <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+
+              {/* 404 Page */}
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
           </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </div>
+        </Router>
       </HelmetProvider>
     </ErrorBoundary>
   );

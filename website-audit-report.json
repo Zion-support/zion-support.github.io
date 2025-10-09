@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-10-09T03:12:02.165Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "totalUrls": 1,
+  "workingLinks": [
+    {
+      "url": "https://ziontechgroup.com",
+      "statusCode": 200,
+      "title": "No title found"
+    }
+  ],
+  "brokenLinks": [],
+  "allLinks": []
+}
