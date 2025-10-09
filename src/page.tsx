@@ -72,7 +72,9 @@ const HomePage: React.FC = () => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'
+      category: 'Productivity',
+      marketPrice: '$299-499',
+      savings: 'Save $100-300/month'
     },
     {
       title: 'AI Social Media Manager',
@@ -83,7 +85,9 @@ const HomePage: React.FC = () => {
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '50% better ROI'],
       link: '/ai-social-media-manager',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing',
+      marketPrice: '$299-599',
+      savings: 'Save $150-450/month'
     },
     {
       title: 'AI Analytics Dashboard',
@@ -94,7 +98,9 @@ const HomePage: React.FC = () => {
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', '25% faster decisions'],
       link: '/ai-analytics-dashboard',
       popular: true,
-      category: 'Analytics'
+      category: 'Analytics',
+      marketPrice: '$599-999',
+      savings: 'Save $300-700/month'
     },
     {
       title: 'AI Email Marketing Suite',
@@ -105,7 +111,9 @@ const HomePage: React.FC = () => {
       benefits: ['65% open rate increase', '40% revenue growth', '80% time saved', '35% higher click rates'],
       link: '/ai-email-marketing',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing',
+      marketPrice: '$399-799',
+      savings: 'Save $200-600/month'
     },
     {
       title: 'AI Customer Support Bot',
@@ -116,7 +124,9 @@ const HomePage: React.FC = () => {
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically', '60% cost savings'],
       link: '/ai-customer-support-bot',
       popular: true,
-      category: 'Support'
+      category: 'Support',
+      marketPrice: '$499-999',
+      savings: 'Save $250-750/month'
     },
     {
       title: 'AI Code Review Assistant',
@@ -127,7 +137,9 @@ const HomePage: React.FC = () => {
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality', 'Faster deployment'],
       link: '/ai-code-generation',
       popular: false,
-      category: 'Development'
+      category: 'Development',
+      marketPrice: '$299-599',
+      savings: 'Save $120-420/month'
     },
     {
       title: 'AI Content Generator',
@@ -138,7 +150,9 @@ const HomePage: React.FC = () => {
       benefits: ['10x content output', '50% time savings', '40% better engagement', 'SEO-optimized content'],
       link: '/ai-content-generation',
       popular: true,
-      category: 'Content'
+      category: 'Content',
+      marketPrice: '$199-399',
+      savings: 'Save $70-270/month'
     },
     {
       title: 'AI Lead Generation System',
@@ -149,7 +163,9 @@ const HomePage: React.FC = () => {
       benefits: ['300% more qualified leads', '60% conversion rate', '80% time savings', 'ROI tracking'],
       link: '/ai-lead-generation',
       popular: true,
-      category: 'Sales'
+      category: 'Sales',
+      marketPrice: '$599-1299',
+      savings: 'Save $250-950/month'
     },
     {
       title: 'AI Document Processor',
@@ -160,7 +176,9 @@ const HomePage: React.FC = () => {
       benefits: ['95% accuracy', '90% time savings', 'Error reduction', 'Scalable processing'],
       link: '/ai-document-processing',
       popular: false,
-      category: 'Automation'
+      category: 'Automation',
+      marketPrice: '$399-799',
+      savings: 'Save $200-600/month'
     },
     {
       title: 'AI SEO Optimizer',
@@ -171,7 +189,9 @@ const HomePage: React.FC = () => {
       benefits: ['50% better rankings', '40% more organic traffic', 'ROI tracking', 'Automated reports'],
       link: '/ai-seo-optimizer',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing',
+      marketPrice: '$299-599',
+      savings: 'Save $120-420/month'
     },
     {
       title: 'AI E-commerce Assistant',
@@ -182,7 +202,9 @@ const HomePage: React.FC = () => {
       benefits: ['35% increase in sales', '25% higher AOV', '40% better conversion', 'Reduced cart abandonment'],
       link: '/ai-ecommerce-solutions',
       popular: true,
-      category: 'E-commerce'
+      category: 'E-commerce',
+      marketPrice: '$799-1499',
+      savings: 'Save $400-1100/month'
     },
     {
       title: 'AI Financial Analyzer',
@@ -193,7 +215,113 @@ const HomePage: React.FC = () => {
       benefits: ['30% better financial decisions', '25% cost reduction', 'Risk mitigation', 'Automated reporting'],
       link: '/ai-financial-analyzer',
       popular: false,
-      category: 'Finance'
+      category: 'Finance',
+      marketPrice: '$599-999',
+      savings: 'Save $300-700/month'
+    },
+    {
+      title: 'AI Video Generator',
+      description: 'Create professional videos with AI-powered editing and generation',
+      icon: '🎬',
+      price: '$249/month',
+      features: ['AI video creation', 'Auto-editing', 'Voice synthesis', 'Text-to-video', 'Template library', 'Brand customization'],
+      benefits: ['90% time savings', 'Professional quality', 'Unlimited videos', 'No editing skills needed'],
+      link: '/ai-video-generation',
+      popular: true,
+      category: 'Content',
+      marketPrice: '$499-999',
+      savings: 'Save $250-750/month'
+    },
+    {
+      title: 'AI Voice Cloning',
+      description: 'Create realistic voice clones for content and presentations',
+      icon: '🎤',
+      price: '$199/month',
+      features: ['Voice cloning', 'Text-to-speech', 'Multiple languages', 'Emotion control', 'Voice training', 'API integration'],
+      benefits: ['Natural sounding voices', 'Multiple voice options', 'Cost-effective', 'Scalable solution'],
+      link: '/ai-voice-cloning',
+      popular: false,
+      category: 'Content',
+      marketPrice: '$399-799',
+      savings: 'Save $200-600/month'
+    },
+    {
+      title: 'AI Music Composer',
+      description: 'Generate royalty-free music and soundtracks with AI',
+      icon: '🎵',
+      price: '$149/month',
+      features: ['AI music generation', 'Multiple genres', 'Custom length', 'Royalty-free', 'Commercial use', 'High quality audio'],
+      benefits: ['Unlimited music', 'No copyright issues', 'Custom compositions', 'Professional quality'],
+      link: '/ai-music-composition',
+      popular: false,
+      category: 'Content',
+      marketPrice: '$299-599',
+      savings: 'Save $150-450/month'
+    },
+    {
+      title: 'AI Fashion Designer',
+      description: 'AI-powered fashion design and trend analysis platform',
+      icon: '👗',
+      price: '$299/month',
+      features: ['AI design generation', 'Trend analysis', 'Color matching', 'Size optimization', 'Fabric suggestions', 'Market insights'],
+      benefits: ['Faster design process', 'Trend prediction', 'Cost reduction', 'Market intelligence'],
+      link: '/ai-fashion-design',
+      popular: false,
+      category: 'Design',
+      marketPrice: '$599-1299',
+      savings: 'Save $300-1000/month'
+    },
+    {
+      title: 'AI Fitness Coach',
+      description: 'Personalized AI fitness training and nutrition planning',
+      icon: '💪',
+      price: '$99/month',
+      features: ['Personalized workouts', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Motivation coaching'],
+      benefits: ['Personalized training', '24/7 availability', 'Better results', 'Cost-effective'],
+      link: '/ai-fitness-coach',
+      popular: true,
+      category: 'Health',
+      marketPrice: '$199-399',
+      savings: 'Save $100-300/month'
+    },
+    {
+      title: 'AI Workflow Automation',
+      description: 'Automate complex business workflows with intelligent AI agents',
+      icon: '⚙️',
+      price: '$399/month',
+      features: ['Workflow automation', 'AI agents', 'Process optimization', 'Integration APIs', 'Custom triggers', 'Analytics dashboard'],
+      benefits: ['80% process reduction', 'Error elimination', 'Scalable automation', 'ROI tracking'],
+      link: '/ai-workflow-automation',
+      popular: true,
+      category: 'Automation',
+      marketPrice: '$799-1499',
+      savings: 'Save $400-1100/month'
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Transform complex data into stunning visual insights with AI',
+      icon: '📊',
+      price: '$199/month',
+      features: ['AI-powered charts', 'Interactive dashboards', 'Data storytelling', 'Custom templates', 'Real-time updates', 'Export options'],
+      benefits: ['Better insights', 'Faster analysis', 'Professional visuals', 'Easy sharing'],
+      link: '/ai-data-visualization',
+      popular: false,
+      category: 'Analytics',
+      marketPrice: '$399-799',
+      savings: 'Save $200-600/month'
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Intelligent sales process automation and optimization',
+      icon: '💼',
+      price: '$349/month',
+      features: ['Sales pipeline management', 'Deal tracking', 'Forecasting', 'Performance analytics', 'Lead scoring', 'CRM integration'],
+      benefits: ['Higher conversion rates', 'Better forecasting', 'Automated follow-ups', 'Sales insights'],
+      link: '/ai-sales-automation',
+      popular: true,
+      category: 'Sales',
+      marketPrice: '$599-1299',
+      savings: 'Save $250-950/month'
     }
   ];
 
@@ -572,7 +700,9 @@ const HomePage: React.FC = () => {
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                    <div className="text-lg font-bold text-cyan-400 mb-1 neon-text">{service.price}</div>
+                    <div className="text-xs text-gray-400 mb-1">Market: {service.marketPrice}</div>
+                    <div className="text-xs text-green-400 font-semibold mb-3">{service.savings}</div>
                     <a 
                       href={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
