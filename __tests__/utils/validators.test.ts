@@ -17,7 +17,7 @@ import {
   isValidZipCode,
   validateForm,
   validators,
-} from '../../app/utils/validators';
+} from '../../src/utils/validators';
 
 describe('Validation Utilities', () => {
   describe('isValidEmail', () => {

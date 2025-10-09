@@ -17,7 +17,7 @@ import {
   validateJSON,
   validateComposite,
   validateAsync,
-} from '../app/utils/dataValidator';
+} from '../src/utils/dataValidator';
 
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {

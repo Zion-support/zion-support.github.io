@@ -1,23 +1,23 @@
 'use client';
-import React, { lazy } from 'react';
+import React from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // Fallback component
-const EmptyComponent = (): JSX.Element => <div />;
+// const EmptyComponent = (): JSX.Element => <div />;
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = lazy(() =>
-  import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent }))
-);
-const ContentPromotion = lazy(() =>
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent }))
-);
-const ContentShowcase = lazy(() =>
-  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent }))
-);
+// const UnifiedBanner = lazy(() =>
+//   import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent }))
+// );
+// const ContentPromotion = lazy(() =>
+//   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent }))
+// );
+// const ContentShowcase = lazy(() =>
+//   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent }))
+// );
 
-function OptimizedHomePage() {
-  return (
+// function OptimizedHomePage() {
+  // return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
       <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks>
@@ -61,5 +61,5 @@ function OptimizedHomePage() {
         </section>
       </main>
     </div>
-  );
-};
+  // );
+// };

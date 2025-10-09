@@ -5,8 +5,8 @@ export const metadata = {
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
 
-function HomePage() {
-  return (
+// function HomePage() {
+  // return (
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
@@ -159,5 +159,5 @@ function HomePage() {
         </div>
       </footer>
     </div>
-  );
-};
+  // );
+// };
