@@ -1,18 +1,18 @@
 'use client';
 import React from 'react';
-import { Zap, Settings, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { MessageSquare, Brain, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOEnhancer from '../components/SEOEnhancer';
 
-const AIAutomationPage: React.FC = () => {
+const NLPPage: React.FC = () => {
   return (
     <>
       <SEOEnhancer
-        title="AI Automation Solutions - Intelligent Process Automation | Zion Tech Group"
-        description="Intelligent process automation with AI-powered decision-making capabilities and workflow optimization. Automate complex business processes with our advanced AI solutions."
-        keywords={['ai automation', 'process automation', 'workflow automation', 'intelligent automation', 'business process automation', 'ai workflow']}
-        canonicalUrl="https://ziontechgroup.com/ai-automation"
+        title="Natural Language Processing - NLP Solutions | Zion Tech Group"
+        description="Advanced NLP solutions for text analysis, language understanding, and conversational AI. Transform text data into actionable insights."
+        keywords={['natural language processing', 'nlp', 'text analysis', 'language understanding', 'conversational ai', 'sentiment analysis']}
+        canonicalUrl="https://ziontechgroup.com/nlp"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -22,11 +22,11 @@ const AIAutomationPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Automation Solutions
+              Natural Language Processing
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Intelligent process automation with AI-powered decision-making capabilities and workflow optimization. 
-              Automate complex business processes with our advanced AI solutions.
+              Advanced NLP solutions for text analysis, language understanding, and conversational AI. 
+              Transform text data into actionable insights with our cutting-edge language processing technology.
             </p>
           </section>
 
@@ -35,27 +35,27 @@ const AIAutomationPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Process Automation</h3>
-                <p className="text-gray-300">Automate complex business processes with AI intelligence</p>
+                <h3 className="text-xl font-bold text-white mb-3">Text Analysis</h3>
+                <p className="text-gray-300">Advanced text analysis and sentiment detection</p>
               </div>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Settings className="w-8 h-8 text-white" />
+                  <Brain className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Workflow Optimization</h3>
-                <p className="text-gray-300">Optimize workflows for maximum efficiency and productivity</p>
+                <h3 className="text-xl font-bold text-white mb-3">Language Understanding</h3>
+                <p className="text-gray-300">Deep language understanding and comprehension</p>
               </div>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                  <Globe className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Smart Decision Making</h3>
-                <p className="text-gray-300">AI-powered decision trees and exception handling</p>
+                <h3 className="text-xl font-bold text-white mb-3">Multi-language Support</h3>
+                <p className="text-gray-300">Support for 100+ languages and dialects</p>
               </div>
             </div>
           </section>
@@ -64,28 +64,28 @@ const AIAutomationPage: React.FC = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Pricing</h2>
             <div className="cyber-card p-8 max-w-2xl mx-auto text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$1,400/month</div>
-              <p className="text-gray-300 mb-6">AI Automation Solutions</p>
+              <div className="text-4xl font-bold text-blue-400 mb-4">$1,200/month</div>
+              <p className="text-gray-300 mb-6">NLP Solutions</p>
               <ul className="space-y-3 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Process automation
+                  Text analysis
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Workflow optimization
+                  Sentiment analysis
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Decision trees
+                  Language translation
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Exception handling
+                  Chatbot development
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  RPA integration
+                  Named entity recognition
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -104,9 +104,9 @@ const AIAutomationPage: React.FC = () => {
           {/* Contact CTA */}
           <section className="text-center">
             <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Automate Your Processes?</h2>
+              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Process Language Data?</h2>
               <p className="text-gray-300 mb-8 text-lg">
-                Let our AI automation experts help you streamline your business processes.
+                Let our NLP experts help you extract insights from text data.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -133,4 +133,4 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
-export default AIAutomationPage;
+export default NLPPage;

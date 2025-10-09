@@ -1,18 +1,18 @@
 'use client';
 import React from 'react';
-import { Zap, Settings, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { Code, Settings, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOEnhancer from '../components/SEOEnhancer';
 
-const AIAutomationPage: React.FC = () => {
+const DeveloperToolsPage: React.FC = () => {
   return (
     <>
       <SEOEnhancer
-        title="AI Automation Solutions - Intelligent Process Automation | Zion Tech Group"
-        description="Intelligent process automation with AI-powered decision-making capabilities and workflow optimization. Automate complex business processes with our advanced AI solutions."
-        keywords={['ai automation', 'process automation', 'workflow automation', 'intelligent automation', 'business process automation', 'ai workflow']}
-        canonicalUrl="https://ziontechgroup.com/ai-automation"
+        title="Developer Tools - Advanced Development Tools | Zion Tech Group"
+        description="Professional developer tools and utilities for modern software development. Boost your productivity with our comprehensive development toolkit."
+        keywords={['developer tools', 'development tools', 'programming tools', 'code tools', 'dev utilities', 'software development']}
+        canonicalUrl="https://ziontechgroup.com/developer-tools"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -22,11 +22,11 @@ const AIAutomationPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Automation Solutions
+              Developer Tools
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Intelligent process automation with AI-powered decision-making capabilities and workflow optimization. 
-              Automate complex business processes with our advanced AI solutions.
+              Professional developer tools and utilities for modern software development. 
+              Boost your productivity with our comprehensive development toolkit.
             </p>
           </section>
 
@@ -36,26 +36,74 @@ const AIAutomationPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-white" />
+                  <Code className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Process Automation</h3>
-                <p className="text-gray-300">Automate complex business processes with AI intelligence</p>
+                <h3 className="text-xl font-bold text-white mb-3">Code Analysis</h3>
+                <p className="text-gray-300">Advanced code analysis and quality tools</p>
               </div>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Settings className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Workflow Optimization</h3>
-                <p className="text-gray-300">Optimize workflows for maximum efficiency and productivity</p>
+                <h3 className="text-xl font-bold text-white mb-3">Development Environment</h3>
+                <p className="text-gray-300">Complete development environment setup</p>
               </div>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Smart Decision Making</h3>
-                <p className="text-gray-300">AI-powered decision trees and exception handling</p>
+                <h3 className="text-xl font-bold text-white mb-3">Testing Tools</h3>
+                <p className="text-gray-300">Comprehensive testing and debugging tools</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Tools */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Available Tools</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="cyber-card p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Code Quality Tools</h3>
+                <p className="text-gray-300 mb-4">
+                  Advanced tools for code quality analysis and improvement.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    Static code analysis
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    Code coverage tools
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    Performance profiling
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="cyber-card p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Development Utilities</h3>
+                <p className="text-gray-300 mb-4">
+                  Essential utilities for modern software development.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    API testing tools
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    Database management
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    Version control tools
+                  </li>
+                </ul>
               </div>
             </div>
           </section>
@@ -64,28 +112,28 @@ const AIAutomationPage: React.FC = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Pricing</h2>
             <div className="cyber-card p-8 max-w-2xl mx-auto text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$1,400/month</div>
-              <p className="text-gray-300 mb-6">AI Automation Solutions</p>
+              <div className="text-4xl font-bold text-cyan-400 mb-4">$1,200/month</div>
+              <p className="text-gray-300 mb-6">Developer Tools</p>
               <ul className="space-y-3 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Process automation
+                  Code analysis tools
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Workflow optimization
+                  Development environment
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Decision trees
+                  Testing tools
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Exception handling
+                  API testing
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  RPA integration
+                  Database tools
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -104,9 +152,9 @@ const AIAutomationPage: React.FC = () => {
           {/* Contact CTA */}
           <section className="text-center">
             <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Automate Your Processes?</h2>
+              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Boost Your Development?</h2>
               <p className="text-gray-300 mb-8 text-lg">
-                Let our AI automation experts help you streamline your business processes.
+                Let our developer tools help you build better software faster.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -133,4 +181,4 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
-export default AIAutomationPage;
+export default DeveloperToolsPage;
