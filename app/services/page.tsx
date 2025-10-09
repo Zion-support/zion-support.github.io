@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -99,14 +101,14 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
 
-const ServicessPage: React.FC = () => {
+const ServicesPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="Service - Zion Tech Group"
-        description="Professional AI and IT servicess for your business transformation."
+        title="Services - Zion Tech Group"
+        description="Professional AI and IT services for your business transformation."
         keywords={['AI services', 'IT solutions', 'business transformation']}
-        canonicalUrl="https://ziontechgroup.com/service"
+        canonicalUrl="https://ziontechgroup.com/services"
       />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
         <Navigation />
@@ -117,7 +119,7 @@ const ServicessPage: React.FC = () => {
             <div className="relative z-10 py-16 px-4">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Service
+                  Our Services
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -138,143 +140,111 @@ const ServicessPage: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Service Categories */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Service Categories
-          </h2>
-          <div className="space-y-16">
-            {serviceCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 cyber-card">
-                <div className="flex items-center mb-8">
-                  <div className={`w-16 h-16 ${category.bgColor} rounded-xl flex items-center justify-center mr-6`}>
-                    <category.icon className={`w-8 h-8 ${category.color}`} />
-                  </div>
-                  <div>
-                    <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
-                    <p className="text-gray-300">Comprehensive solutions for your business needs</p>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
-                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
-                      <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                      
-                      {/* Features */}
-                      <div className="mb-4">
-                        <h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                              <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
+          {/* Service Categories */}
+          <section className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+                Service Categories
+              </h2>
+              <div className="space-y-16">
+                {serviceCategories.map((category, categoryIndex) => (
+                  <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 cyber-card">
+                    <div className="flex items-center mb-8">
+                      <div className={`w-16 h-16 ${category.bgColor} rounded-xl flex items-center justify-center mr-6`}>
+                        <category.icon className={`w-8 h-8 ${category.color}`} />
                       </div>
-                      
-                      <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                        <a
-                          href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.name}`}
-                          className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                        >
-                          Get Started
-                        </a>
+                      <div>
+                        <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
+                        <p className="text-gray-300">Comprehensive solutions for your business needs</p>
                       </div>
                     </div>
-                  ))}
-                </div>
-=======
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {category.services.map((service, serviceIndex) => (
+                        <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
+                          <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
+                          <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                          
+                          {/* Features */}
+                          <div className="mb-4">
+                            <h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
+                            <ul className="space-y-1">
+                              {service.features.map((feature, featureIndex) => (
+                                <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                                  <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          <div className="flex items-center justify-between">
+                            <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                            <a
+                              href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.name}`}
+                              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                            >
+                              Get Started
+                            </a>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Benefits Section */}
+          <section className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+                Why Choose Our Services?
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 cyber-card">
+                    <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                    <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </section>
 
           {/* CTA Section */}
-          <section className="text-center py-16">
-            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Contact us for a free consultation and discover how our services can help your business.
+          <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8">
+                Get started with our services today and see the difference AI and IT solutions can make.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
                 >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
+                  Call (302) 464-0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  <Mail className="w-5 h-5" />
-                  kleber@ziontechgroup.com
+                  Email Us
                 </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
               </div>
             </div>
           </section>
         </div>
-<<<<<<< HEAD
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our Services?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 cyber-card">
-                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Get started with our services today and see the difference AI and IT solutions can make.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
-              Call (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Email Us
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-=======
       </div>
       <Footer />
     </>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
   );
 };
 
-export default PageComponent;
+export default ServicesPage;
