@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'front_ads_promoter'}
       });
     };
-//   } catch (error) {console.error('❌ front_ads_promoter function failed: ') error
+//   } catch (error) {// console.error('❌ front_ads_promoter function failed: ') error
       }
     return {
       statusCode: 500,

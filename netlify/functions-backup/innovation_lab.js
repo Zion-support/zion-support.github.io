@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'innovation_lab'}
       });
     };
-//   } catch (error) {console.error('❌ innovation_lab function failed: ') error
+//   } catch (error) {// console.error('❌ innovation_lab function failed: ') error
       }
     return {
       statusCode: 500,

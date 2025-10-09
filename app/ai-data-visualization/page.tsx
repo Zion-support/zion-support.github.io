@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
 
 const AIDataVisualizationPage: React.FC = () => {

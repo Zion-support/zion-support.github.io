@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'front_index_orchestrator'}
       });
     };
-//   } catch (error) {console.error('❌ front_index_orchestrator function failed: ') error
+//   } catch (error) {// console.error('❌ front_index_orchestrator function failed: ') error
       }
     return {
       statusCode: 500,

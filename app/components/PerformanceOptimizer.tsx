@@ -7,10 +7,9 @@ const PerformanceOptimizer: React.FC = () => {
       const criticalResources = [
         '/fonts/inter-var.woff2',
         '/images/hero-bg.webp',
-        '/images/logo.svg'
       ];
 
-      criticalResources.forEach(resource => {
+      criticalResources.forEach((resource) => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
@@ -26,7 +25,7 @@ const PerformanceOptimizer: React.FC = () => {
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
@@ -36,47 +35,52 @@ const PerformanceOptimizer: React.FC = () => {
         });
       });
 
-      images.forEach(img => imageObserver.observe(img));
+      images.forEach((img) => imageObserver.observe(img));
     };
 
-    // Defer non-critical JavaScript
-    const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
-        newScript.async = true;
-        script.parentNode?.replaceChild(newScript, script);
+    // Add loading states
+    const addLoadingStates = () => {
+      const lazyElements = document.querySelectorAll('[data-lazy]');
+      const lazyObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            lazyObserver.unobserve(entry.target);
+          }
+        });
       });
+
+      lazyElements.forEach((el) => lazyObserver.observe(el));
     };
 
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-    deferNonCriticalJS();
+    addLoadingStates();
 
-    // Performance monitoring
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported');
+    // Add CSS for animations
+    const style = document.createElement('style');
+    style.textContent = `
+      .lazy {
+        opacity: 0;
+        transition: opacity 0.3s;
       }
-    }
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    `;
+    document.head.appendChild(style);
 
     return () => {
-      // Cleanup if needed
+      // Cleanup observers
+      const observers = document.querySelectorAll('[data-observer]');
+      observers.forEach((el) => {
+        // Remove any custom observers if needed
+      });
     };
   }, []);
 

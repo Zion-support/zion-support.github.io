@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import EnhancedLoadingSpinner from './components/EnhancedLoadingSpinner';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -39,7 +42,6 @@ const HomePage: React.FC = () => {
     setIsLoaded(true);
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
-    // Preload components
     preloadComponents();
     return () => clearTimeout(timer);
   }, []);
@@ -54,25 +56,36 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
+  const services = [
+    {
+      title: 'AI Services',
+      description: 'Comprehensive AI solutions including machine learning, natural language processing, and computer vision.',
+      icon: '🤖',
+      href: '/ai-services',
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      title: 'IT Services',
+      description: 'Full-stack IT solutions including cloud infrastructure, cybersecurity, and system integration.',
+      icon: '☁️',
+      href: '/it-services',
+      features: ['Cloud Infrastructure', 'Cybersecurity', 'DevOps', 'System Integration']
+    },
+    {
+      title: 'Micro SAAS',
+      description: 'Scalable software-as-a-service solutions designed for modern businesses.',
+      icon: '⚡',
+      href: '/micro-saas',
+      features: ['Scalable Architecture', 'API Integration', 'User Management', 'Analytics']
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Navigation */}
       <Navigation />
       
-      {/* Skip to main content for accessibility */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-      >
-        Skip to main content
-      </a>
-
-      {/* Content Promotion Banner */}
-      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
-        <ContentPromotionBanner />
-      </Suspense>
-
-      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+      <main className="pt-16">
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
@@ -80,7 +93,6 @@ const HomePage: React.FC = () => {
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
           }`}
-          aria-labelledby="hero-heading"
         >
           <h1 
             id="hero-heading" 
@@ -103,40 +115,32 @@ const HomePage: React.FC = () => {
               <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
+                <div className="text-gray-300 text-sm">Expert Team</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-sm">Uptime</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+                <div className="text-gray-300 text-sm">Support</div>
+              </div>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-              <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-            </div>
-          </div>
-          
-          {/* CTA Buttons */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              onClick={handlePhoneClick}
-              className="cyber-button w-full sm:w-auto text-center"
-              aria-label="Call us at (302) 464-0950"
-            >
-              📞 Call Now: (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button w-full sm:w-auto text-center"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
-              Get Free Consultation
-            </a>
           </div>
         </section>
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
+<<<<<<< HEAD
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
           </h2>
@@ -342,31 +346,143 @@ const HomePage: React.FC = () => {
                 <li>• Disaster Recovery</li>
               </ul>
             </article>
+=======
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              Our Services
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+              Comprehensive AI and IT solutions designed to transform your business operations
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
+                >
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <svg className="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={service.href}
+                    className="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold transition-colors"
+                  >
+                    Learn More
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              ))}
+            </div>
+>>>>>>> 3a546f71081d091e63bfabaaee358c59507b300b
           </div>
         </section>
 
-        {/* Statistics Section */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <ContentStatistics />
-        </Suspense>
+        {/* Features Section */}
+        <section className="mb-16 bg-gray-800/50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
+              Why Choose Zion Tech Group?
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <article className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Lightning Fast</h3>
+                <p className="text-gray-300">
+                  Optimized solutions that deliver exceptional performance and speed.
+                </p>
+              </article>
+              
+              <article className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Reliable & Secure</h3>
+                <p className="text-gray-300">
+                  Enterprise-grade security and 99.9% uptime guarantee.
+                </p>
+              </article>
+              
+              <article className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">24/7 Support</h3>
+                <p className="text-gray-300">
+                  Round-the-clock support from our expert team.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
 
-        {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
+        {/* CTA Section */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
+              Join thousands of enterprises that have already transformed their operations with our AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex items-center justify-center"
+              >
+                <span>Start Your Project</span>
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a
+                href="/services"
+                className="group bg-white hover:bg-gray-100 text-gray-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex items-center justify-center"
+              >
+                <span>View All Services</span>
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Lazy loaded components */}
+        <Suspense fallback={<EnhancedLoadingSpinner />}>
+          <ContentPromotionBanner />
           <ContentCarousel />
-        </Suspense>
-
-        {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <DynamicContentShowcase />
-        </Suspense>
-
-        {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentStatistics />
           <ContentNewsletterSignup />
         </Suspense>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
