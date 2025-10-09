@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-react';
@@ -40,6 +41,9 @@ const Navigation: React.FC = () => {
 =======
 import { ChevronDown, Phone, Mail, Menu, X, Brain, Code } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -142,6 +146,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Automation', href: '/ai-services', icon: Zap },
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: Cloud },
@@ -175,6 +180,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -183,6 +190,7 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -203,6 +211,8 @@ const Navigation: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
           <Link 
             to="/" 
             className="flex items-center space-x-2 text-2xl font-bold"
@@ -239,6 +249,7 @@ const Navigation: React.FC = () => {
               <Brain className="w-5 h-5 text-white" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
@@ -278,6 +289,14 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Menu */}
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+            <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+              Zion Tech Group
+            </span>
+          </Link>
+
+          {/* Desktop Menu */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
@@ -320,6 +339,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"              >
 =======
 =======
@@ -336,6 +356,8 @@ const Navigation: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
                 className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
                   isScrolled ? 'text-gray-700' : 'text-white'
                 }`}
@@ -358,13 +380,17 @@ const Navigation: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
               </button>
               
 <<<<<<< HEAD
               {servicesOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -425,6 +451,8 @@ const Navigation: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
@@ -479,11 +507,15 @@ const Navigation: React.FC = () => {
                       View All Services
                     </Link>
                   </div>
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* IT Services Dropdown */}
             <div className="relative group">
@@ -553,6 +585,8 @@ const Navigation: React.FC = () => {
               to="/about"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
             <Link 
               to="/case-studies" 
               className={`font-medium transition-colors hover:text-purple-600 ${
@@ -573,6 +607,7 @@ const Navigation: React.FC = () => {
               to="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               Contact
             </Link>
@@ -1059,6 +1094,11 @@ const Navigation: React.FC = () => {
             </Link>
 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+              Team
+            </Link>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
             {/* Contact Button */}
             <Link 
               to="/contact" 
@@ -1160,6 +1200,7 @@ const Navigation: React.FC = () => {
     </nav>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
@@ -1171,10 +1212,13 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 export default Navigation;
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
   );
 };
 
 export default Navigation;
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-14d1
 =======
 export default Navigation;
@@ -1191,3 +1235,5 @@ export default Navigation;
 
 export default Navigation;
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152

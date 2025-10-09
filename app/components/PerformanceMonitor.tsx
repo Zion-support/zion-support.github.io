@@ -38,6 +38,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // const _reportWebVitals = (_metric: { name: string; value: number }) => {
     //   // Log to console in development (only on client side)
     //   if (typeof window !== 'undefined' && enableConsoleLogging) {
@@ -47,6 +48,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
     const updateMetrics = () => {
       const currentMetrics: PerformanceMetrics = {
         lcp: null,
@@ -98,6 +101,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const getPerformanceScore = (currentMetrics: PerformanceMetrics): number => {
       let score = 100;
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (metrics.renderTime > 1500) score -= 15;
       if (metrics.loadTime > 3000) score -= 20;
       if (metrics.memoryUsage > 50) score -= 10;
@@ -116,16 +120,21 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       ttfb: null
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
       if (currentMetrics.renderTime > 1500) score -= 15;
       if (currentMetrics.loadTime > 3000) score -= 20;
       if (currentMetrics.memoryUsage > 50) score -= 10;
       return Math.max(0, score);
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
 =======
       ttfb: null,
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
     };
 
 <<<<<<< HEAD
@@ -161,6 +170,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       setMetrics(currentMetrics);
 
       const score = getPerformanceScore();
@@ -180,15 +190,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             metrics.fid = entry.processingStart - entry.startTime;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
         // FID - First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry: PerformanceEntry & { processingStart: number; startTime: number }) => {
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
           });
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
         });
         
 =======
@@ -395,6 +403,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, updateInterval);
 =======
@@ -420,11 +429,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
   }, []);
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
+=======
+    // Initial metrics update
+    updateMetrics();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
 
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, 5000);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     return () => {
       clearInterval(interval);
     };
@@ -479,6 +491,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return Math.max(0, score);
   }, []);
 
+<<<<<<< HEAD
   const reportMetrics = useCallback((metrics: PerformanceMetrics, score: number) => {
     // In a real application, you would send this data to your analytics service
     // For now, we'll just store it in localStorage for debugging
@@ -524,6 +537,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
   return null; // This component doesn't render anything
+=======
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
 };
 
 export default PerformanceMonitor;

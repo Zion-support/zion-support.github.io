@@ -245,6 +245,7 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           </div>
 
@@ -317,6 +318,8 @@ const HomePage: React.FC = () => {
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
           </div>
 
           {/* Additional Services Grid */}
