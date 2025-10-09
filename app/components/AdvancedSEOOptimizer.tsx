@@ -120,7 +120,38 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
 
-    const faqData = {
+    return {
+      'twitter:card': seoData.twitterCard || 'summary_large_image',
+      'twitter:title': seoData.twitterTitle || seoData.title,
+      'twitter:description': seoData.twitterDescription || seoData.description,
+      'twitter:image': seoData.twitterImage || '/twitter-image.jpg',
+      'twitter:site': '@ziontechgroup',
+      'twitter:creator': '@ziontechgroup',
+    };
+  }, [seoData, enableTwitterCards]);
+
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!seoData.canonicalUrl) return null;
+    
+    const pathSegments = seoData.canonicalUrl.split('/').filter(Boolean);
+    const breadcrumbItems = pathSegments.map((segment, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+      item: `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`
+    }));
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbItems
+    };
+  }, [seoData.canonicalUrl]);
+
+  const generateFAQStructuredData = useCallback(() => {
+    // This would typically come from props or a data source
+    // For now, return a basic FAQ structure
+    return {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
@@ -129,28 +160,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
-          },
-        },
-      ],
+            text: 'Zion Tech Group offers comprehensive AI and IT solutions including custom software development, AI integration, cloud services, and digital transformation consulting.'
+          }
+        }
+      ]
     };
-  }, [seoData, enableTwitterCards]);
+  }, []);
 
   // Generate meta tags
   const generateMetaTags = useCallback(() => {
@@ -170,6 +185,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const structuredData = generateStructuredData();
   const breadcrumbData = generateBreadcrumbStructuredData();
   const faqData = generateFAQStructuredData();
+  const metaTags = generateMetaTags();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -205,9 +223,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
 
   useEffect(() => {
     if (structuredData) {
