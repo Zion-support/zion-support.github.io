@@ -52,4 +52,13 @@ export const HeroSkeleton: React.FC = () => (
   </div>
 );
 
+export const HeroSkeleton: React.FC = () => (
+  <div className="animate-pulse">
+    <div className="h-16 bg-gray-200 rounded mb-4"></div>
+    <div className="h-8 bg-gray-200 rounded mb-2"></div>
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4 mx-auto"></div>
+    <div className="h-12 bg-gray-200 rounded w-48 mx-auto"></div>
+  </div>
+);
+
 export default LoadingSkeleton;
