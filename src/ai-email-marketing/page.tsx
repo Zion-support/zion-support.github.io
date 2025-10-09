@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 
 const AIEmailMarketingPage: React.FC = () => {
@@ -101,6 +102,9 @@ const AIEmailMarketingPage: React.FC = () => {
       popular: false
     }
   ];
+=======
+import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 
 const AiEmailMarketingPage: React.FC = () => {
   return (

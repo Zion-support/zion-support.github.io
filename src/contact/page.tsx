@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
+=======
+'use client';
+import React, { useState } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({

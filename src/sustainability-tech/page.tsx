@@ -1,6 +1,9 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+<<<<<<< HEAD
 import {Leaf, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Footer from '../components/Footer';
 
 

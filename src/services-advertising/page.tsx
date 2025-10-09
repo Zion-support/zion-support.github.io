@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {ArrowLeft, ArrowRight, Target, CheckCircle, Star} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import React from 'react';
 
 export default function ServicesAdvertisingPage() {

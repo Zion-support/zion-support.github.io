@@ -55,11 +55,25 @@ const LoadingSpinner: React.FC = () => (
 // Specialized Solutions Pages
 
 // Company Pages
+<<<<<<< HEAD
 
 // Support Pages
 
 
 // Support Pages
+=======
+import TeamPage from './team/page';
+import CareersPage from './careers/page';
+import NewsPage from './news/page';
+import AboutPage from './about/page';
+import ContactPage from './contact/page';
+import ServicesPage from './services/page';
+import BlogPage from './blog/page';
+import CaseStudiesPage from './case-studies/page';
+
+// Support Pages
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 // Additional Pages
 
 // AI Services
@@ -209,8 +223,11 @@ const App: React.FC = () => {
     } catch {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
+<<<<<<< HEAD
       // Continue even if enhancers fail
       setIsInitialized(true);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
     }
   };
 

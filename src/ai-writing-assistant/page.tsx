@@ -12,6 +12,12 @@ const AiWritingAssistantPage: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default AiWritingAssistantPage;
+=======
+}
+
+export default AiWritingAssistantPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03

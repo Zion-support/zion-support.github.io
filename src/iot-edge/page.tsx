@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import React from 'react';
 
 

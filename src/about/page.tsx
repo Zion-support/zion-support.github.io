@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
@@ -23,10 +24,23 @@ const AboutPage: React.FC = () => {
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
     },
+=======
+import { Link } from 'react-router-dom';
+import { Users, Target, Brain, Shield } from 'lucide-react';
+import Footer from '../components/Footer';
+
+const AboutPage: React.FC = () => {
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '99%', label: 'Client Satisfaction' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
   ];
 
   const values = [
     {
+<<<<<<< HEAD
       icon: Brain,
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
@@ -53,6 +67,45 @@ const AboutPage: React.FC = () => {
     { number: '150+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' },
+=======
+      icon: Target,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+    },
+    {
+      icon: Brain,
+      title: 'Excellence',
+      description: 'We deliver solutions that exceed expectations and drive real business value.'
+    },
+    {
+      icon: Shield,
+      title: 'Integrity',
+      description: 'We maintain the highest ethical standards in all our business practices.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We work closely with our clients as partners in their success.'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      bio: 'Technical expert specializing in machine learning and cloud architecture.'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Lead Developer',
+      bio: 'Full-stack developer passionate about creating scalable solutions.'
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
   ];
 
   return (
@@ -231,6 +284,7 @@ const AboutPage: React.FC = () => {
         </section>
 
       <Footer />
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">About</h1>
@@ -241,6 +295,9 @@ const AboutPage: React.FC = () => {
       </div>
     </div>
     </div>
+=======
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a03
     </div>
   );
 };
