@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, Target, CheckCircle, ArrowRight, Phone, Mail, Star, Award, Globe, Database, Smartphone, Settings, Lock, TrendingUp, MessageSquare, Eye, Sparkles, Cpu, HardDrive, Wifi, Server, Globe as World, Phone as PhoneIcon, Mail as MailIcon } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -168,12 +165,13 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
+const ServicesPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="Our Services - Zion Tech Group"
-        description="Comprehensive AI and IT services including machine learning, cloud migration, cybersecurity, DevOps, and micro SAAS solutions. Expert technology services for modern businesses."
-        keywords={['AI services', 'IT services', 'cloud migration', 'cybersecurity', 'DevOps', 'machine learning', 'micro SAAS', 'technology solutions']}
+        title="Services - Zion Tech Group"
+        description="Professional AI and IT services for your business transformation."
+        keywords={['AI services', 'IT solutions', 'business transformation']}
         canonicalUrl="https://ziontechgroup.com/services"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -181,10 +179,13 @@ const ServicesPage: React.FC = () => {
         
         <main className="pt-16">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                Our Services
+          <section className="text-center mb-16 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
+            <div className="relative z-10 py-16 px-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Services
+                </span>
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Comprehensive AI and IT Solutions
