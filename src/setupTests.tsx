@@ -11,18 +11,12 @@ global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
 console.error = (...args) => {
-<<<<<<< HEAD
-  const _message = args[0]?.toString?.() || args[0]?.message || '';
-  if (_message.includes('Not implemented: navigation') || 
-      _message.includes('navigation (except hash changes)')) {
-=======
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     return;
   }
-  _originalConsoleError(...args);
+  originalConsoleError(...args);
 };
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {

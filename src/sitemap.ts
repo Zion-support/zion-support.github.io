@@ -1,14 +1,8 @@
 interface SitemapEntry {
   url: string;
-<<<<<<< HEAD
-  lastModified: Date;
-  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority: number;
-=======
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
 }
 
 export default function sitemap(): SitemapEntry[] {

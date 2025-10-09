@@ -34,11 +34,7 @@ export class ApiCache {
     };
     // Auto-cleanup every 5 minutes
     setInterval(() => {
-<<<<<<< HEAD
       // Cache cleanup is handled automatically
-=======
-      // Cache cleanup is handled internally by CacheManager
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
       this.cleanupPendingRequests();
     }, 5 * 60 * 1000);
   }
@@ -138,11 +134,7 @@ export class ApiCache {
    * Invalidate cache entries matching a pattern
    */
   invalidate(pattern: string | RegExp): number {
-<<<<<<< HEAD
     // Pattern-based invalidation not supported, clear all
-=======
-    // CacheManager doesn't have invalidate method, so we clear all cache
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     this.cache.clear();
     return 0;
   }
@@ -158,11 +150,7 @@ export class ApiCache {
    */
   getStats() {
     return {
-<<<<<<< HEAD
       ...this.cache.getStats(),
-=======
-      ...this.cache.getStatistics(),
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
       pendingRequests: this.pendingRequests.size
     };
   }
