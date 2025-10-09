@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React from 'react';
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
