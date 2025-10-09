@@ -22,21 +22,37 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
+    <nav 
+      className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
-            <span className="text-3xl mr-2">⚡</span>
-            Zion Tech Group
+          <Link 
+            to="/" 
+            className="text-2xl font-bold text-cyan-400 neon-text flex items-center focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md"
+            aria-label="Zion Tech Group - Home"
+          >
+            <span className="text-3xl mr-2" aria-hidden="true">⚡</span>
+            <span>Zion Tech Group</span>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+          <div className="hidden lg:flex items-center space-x-8" role="menubar">
+            <Link 
+              to="/" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+              role="menuitem"
+            >
               Home
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+            <Link 
+              to="/about" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+              role="menuitem"
+            >
               About
             </Link>
             

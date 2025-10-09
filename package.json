@@ -28,7 +28,7 @@
     "build:clean": "node scripts/optimize-build.js",
     "build:final": "npm run build:clean && npm run build:production",
     "prebuild": "",
-    "postbuild": "echo \"Build completed successfully\"",
+    "postbuild": "node scripts/performance-optimizer.js && echo \"Build completed successfully\"",
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
     "optimize": "node scripts/optimize-performance.js",
@@ -89,8 +89,9 @@
     "predeploy": "pnpm run deploy:check",
     "audit:all-comprehensive": "pnpm run type-check && pnpm run lint && pnpm run test && pnpm run build",
     "check:performance": "pnpm run build && du -sh dist",
-    "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096 --no-warnings\" vite build --mode production --minify terser",
-    "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild"
+    "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096 --no-warnings\" vite build --mode production --minify terser && node scripts/performance-optimizer.js",
+    "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild && node scripts/performance-optimizer.js",
+    "optimize:performance": "node scripts/performance-optimizer.js"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

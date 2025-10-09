@@ -70,6 +70,7 @@ const HomePage: React.FC = () => {
           <h1 
             id="hero-heading" 
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
+            style={{fontSize: 'clamp(2.5rem, 8vw, 4.5rem)'}}
           >
             Zion Tech Group
           </h1>
