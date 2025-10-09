@@ -285,6 +285,362 @@ a {
       0 0 6px #00ffff,
       0 0 9px #00ffff;
   }
+
+  .holographic-text {
+    font-size: 2.5rem;
+  }
+
+  .cyber-text {
+    font-size: 2.5rem;
+  }
+
+  .glitch {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .holographic-text {
+    font-size: 2rem;
+  }
+
+  .cyber-text {
+    font-size: 2rem;
+  }
+
+  .glitch {
+    font-size: 2rem;
+  }
+
+  .cyber-card {
+    padding: 1rem;
+  }
+
+  .hologram-card {
+    padding: 1rem;
+  }
+
+  .quantum-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .holographic-text {
+    font-size: 1.75rem;
+  }
+
+  .cyber-text {
+    font-size: 1.75rem;
+  }
+
+  .glitch {
+    font-size: 1.75rem;
+  }
+
+  .cyber-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Enhanced Responsive Utilities */
+.responsive-text {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.responsive-heading {
+  font-size: clamp(1.5rem, 6vw, 3rem);
+}
+
+.responsive-subheading {
+  font-size: clamp(1.25rem, 5vw, 2rem);
+}
+
+.responsive-padding {
+  padding: clamp(1rem, 4vw, 3rem);
+}
+
+.responsive-margin {
+  margin: clamp(0.5rem, 2vw, 2rem);
+}
+
+/* Mobile-First Grid System */
+.responsive-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .text-responsive-xs {
+    font-size: 0.75rem;
+  }
+  
+  .text-responsive-sm {
+    font-size: 0.875rem;
+  }
+  
+  .text-responsive-base {
+    font-size: 1rem;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.125rem;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 1.875rem;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 2.25rem;
+  }
+}
+
+/* Responsive Spacing */
+@media (max-width: 640px) {
+  .space-y-responsive > * + * {
+    margin-top: 0.5rem;
+  }
+  
+  .space-x-responsive > * + * {
+    margin-left: 0.5rem;
+  }
+  
+  .gap-responsive {
+    gap: 0.5rem;
+  }
+}
+
+/* Responsive Containers */
+.responsive-container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .responsive-container {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .responsive-container {
+    max-width: 1536px;
+  }
+}
+
+/* Responsive Flexbox */
+.responsive-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .responsive-flex {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+/* Responsive Cards */
+.responsive-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .responsive-card {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-card {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+}
+
+/* Responsive Buttons */
+.responsive-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .responsive-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+  }
+}
+
+/* Responsive Images */
+.responsive-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .responsive-image {
+    border-radius: 0.75rem;
+  }
+}
+
+/* Responsive Navigation */
+@media (max-width: 1024px) {
+  .responsive-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .responsive-nav-item {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+  .responsive-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Responsive Forms */
+@media (max-width: 640px) {
+  .responsive-form {
+    padding: 1rem;
+  }
+  
+  .responsive-form input,
+  .responsive-form textarea,
+  .responsive-form select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  .responsive-form button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Responsive Modals */
+@media (max-width: 640px) {
+  .responsive-modal {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+    max-height: calc(100% - 2rem);
+  }
+}
+
+/* Responsive Animations */
+@media (prefers-reduced-motion: reduce) {
+  .responsive-animation {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .responsive-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .cyber-grid,
+  .neural-network-bg,
+  .particle-bg {
+    background: none;
+  }
+  
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+  }
+  
+  .neon-text,
+  .cyber-text,
+  .holographic-text {
+    color: #000;
+    text-shadow: none;
+  }
 }
 
 /* Loading Animation */
@@ -416,11 +772,266 @@ a {
   left: -100%;
   width: 100%;
   height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transition: left 0.5s;
 }
 
 .cyber-button:hover::before {
   left: 100%;
+}
+
+/* Holographic Text Effect */
+.holographic-text {
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ff00, #00ffff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographic-shift 4s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes holographic-shift {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    background-position: 100% 50%;
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    background-position: 100% 50%;
+    filter: hue-rotate(270deg);
+  }
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  animation: glitch 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: #ff00ff;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: #00ffff;
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, -2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(-2px, 2px); }
+}
+
+/* Cyber Card Enhanced */
+.cyber-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.cyber-card:hover::before {
+  left: 100%;
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Neon Glow Effect */
+.neon-glow {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+  animation: neon-flicker 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 100% { 
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+  }
+  50% { 
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      0 0 12px currentColor;
+  }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 255, 0, 0.1), transparent);
+  animation: matrix-fall 3s linear infinite;
+}
+
+@keyframes matrix-fall {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* Cyber Grid Enhanced */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: grid-pulse 4s ease-in-out infinite;
+}
+
+@keyframes grid-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* Particle System */
+.particle-system {
+  position: relative;
+}
+
+.particle-system::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #00ffff, transparent),
+    radial-gradient(2px 2px at 40px 70px, #ff00ff, transparent),
+    radial-gradient(1px 1px at 90px 40px, #ffff00, transparent),
+    radial-gradient(1px 1px at 130px 80px, #00ff00, transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: particle-float 20s linear infinite;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@keyframes particle-float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-200px) rotate(360deg); }
+}
+
+/* Cyber Scan Lines */
+.cyber-scan-line {
+  position: relative;
+}
+
+.cyber-scan-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: scan-line 2s linear infinite;
+  z-index: 1;
+}
+
+@keyframes scan-line {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Hologram Flicker */
+.hologram-flicker {
+  animation: hologram-flicker 3s ease-in-out infinite;
+}
+
+@keyframes hologram-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  75% { opacity: 0.9; }
+}
+
+/* Energy Field */
+.energy-field {
+  position: relative;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  animation: energy-pulse 3s ease-in-out infinite;
+}
+
+@keyframes energy-pulse {
+  0%, 100% { 
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  }
+  50% { 
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
+  }
 }
 
 /* Reduced Motion */
