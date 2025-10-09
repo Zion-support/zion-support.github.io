@@ -1,42 +1,69 @@
 import React, { memo, useMemo, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
-// Memoized components for better performance
-const UnifiedContentPromotion = memo(() => (
-  <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
-      <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
-    </div>
-  </div>
-));
+// Import pages
+import HomePage from './src/page';
+import AboutPage from './src/about/page';
+import ContactPage from './src/contact/page';
+import ServicesPage from './src/services/page';
+import PricingPage from './src/pricing/page';
+import BlogPage from './src/blog/page';
+import CaseStudiesPage from './src/case-studies/page';
+import TeamPage from './src/team/page';
+import CareersPage from './src/careers/page';
+import PrivacyPage from './src/privacy/page';
+import TermsPage from './src/terms/page';
+import CookiesPage from './src/cookies/page';
+import GDPRPage from './src/gdpr/page';
+import SecurityPage from './src/security/page';
+import CompliancePage from './src/compliance/page';
+import SupportPage from './src/support/page';
+import DocsPage from './src/docs/page';
+import APIDocsPage from './src/api-docs/page';
+import StatusPage from './src/status/page';
+import SystemStatusPage from './src/system-status/page';
+import DemoPage from './src/demo/page';
+import ConsultationPage from './src/consultation/page';
+import EnterprisePage from './src/enterprise/page';
 
-const InteractiveAIROICalculator = memo(() => (
-  <div className="bg-gray-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
-      <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
-    </div>
-  </div>
-));
+// Import AI service pages
+import AIProjectManagerPage from './src/ai-project-manager/page';
+import AISocialMediaManagerPage from './src/ai-social-media-manager/page';
+import AIAnalyticsDashboardPage from './src/ai-analytics-dashboard/page';
+import AIEmailMarketingPage from './src/ai-email-marketing/page';
+import AICustomerSupportBotPage from './src/ai-customer-support-bot/page';
+import AICodeGenerationPage from './src/ai-code-generation/page';
+import AIContentGenerationPage from './src/ai-content-generation/page';
+import AILeadGenerationPage from './src/ai-lead-generation/page';
+import AIDocumentProcessingPage from './src/ai-document-processing/page';
+import AISEOOptimizerPage from './src/ai-seo-optimizer/page';
+import AIEcommerceSolutionsPage from './src/ai-ecommerce-solutions/page';
+import AIFinancialAnalyzerPage from './src/ai-financial-analyzer/page';
 
-const ContentShowcase = memo(() => (
-  <div className="py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
-      <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
-    </div>
-  </div>
-));
+// Import AI services pages
+import MachineLearningPage from './src/machine-learning/page';
+import NLPPage from './src/nlp/page';
+import ComputerVisionPage from './src/computer-vision/page';
+import AIAutomationPage from './src/ai-automation/page';
+import QuantumAIPage from './src/quantum-ai/page';
+import AICybersecurityPage from './src/ai-cybersecurity/page';
 
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className="bg-blue-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
-      <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
-    </div>
-  </div>
-));
+// Import IT services pages
+import CloudServicesPage from './src/cloud-services/page';
+import CybersecurityPage from './src/cybersecurity/page';
+import DevOpsPage from './src/devops/page';
+import DatabaseServicesPage from './src/database-services/page';
+import NetworkInfrastructurePage from './src/network-infrastructure/page';
+import ITSupportPage from './src/it-support/page';
+
+// Import specialized services pages
+import QuantumComputingPage from './src/quantum-computing/page';
+import AutonomousSystemsPage from './src/autonomous-systems/page';
+import BlockchainPage from './src/blockchain/page';
+import IoTEdgePage from './src/iot-edge/page';
+import BusinessIntelligencePage from './src/business-intelligence/page';
+import RoboticsPage from './src/robotics/page';
 
 // Loading component
 const LoadingSpinner = memo(() => (
@@ -163,20 +190,76 @@ export default function App() {
           />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </div>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
+            {/* Main Pages */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/demo" element={<DemoPage />} />
+            <Route path="/consultation" element={<ConsultationPage />} />
+            <Route path="/enterprise" element={<EnterprisePage />} />
+            
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/cookies" element={<CookiesPage />} />
+            <Route path="/gdpr" element={<GDPRPage />} />
+            <Route path="/security" element={<SecurityPage />} />
+            <Route path="/compliance" element={<CompliancePage />} />
+            
+            {/* Support Pages */}
+            <Route path="/support" element={<SupportPage />} />
+            <Route path="/docs" element={<DocsPage />} />
+            <Route path="/api-docs" element={<APIDocsPage />} />
+            <Route path="/status" element={<StatusPage />} />
+            <Route path="/system-status" element={<SystemStatusPage />} />
+            
+            {/* Micro SAAS Services */}
+            <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+            <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+            <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+            <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} />
+            <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
+            <Route path="/ai-code-generation" element={<AICodeGenerationPage />} />
+            <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+            <Route path="/ai-lead-generation" element={<AILeadGenerationPage />} />
+            <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} />
+            <Route path="/ai-seo-optimizer" element={<AISEOOptimizerPage />} />
+            <Route path="/ai-ecommerce-solutions" element={<AIEcommerceSolutionsPage />} />
+            <Route path="/ai-financial-analyzer" element={<AIFinancialAnalyzerPage />} />
+            
+            {/* AI Services */}
+            <Route path="/machine-learning" element={<MachineLearningPage />} />
+            <Route path="/nlp" element={<NLPPage />} />
+            <Route path="/computer-vision" element={<ComputerVisionPage />} />
+            <Route path="/ai-automation" element={<AIAutomationPage />} />
+            <Route path="/quantum-ai" element={<QuantumAIPage />} />
+            <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
+            
+            {/* IT Services */}
+            <Route path="/cloud-services" element={<CloudServicesPage />} />
+            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+            <Route path="/devops" element={<DevOpsPage />} />
+            <Route path="/database-services" element={<DatabaseServicesPage />} />
+            <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+            <Route path="/it-support" element={<ITSupportPage />} />
+            
+            {/* Specialized Services */}
+            <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+            <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+            <Route path="/blockchain" element={<BlockchainPage />} />
+            <Route path="/iot-edge" element={<IoTEdgePage />} />
+            <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+            <Route path="/robotics" element={<RoboticsPage />} />
+          </Routes>
+        </Suspense>
       </HelmetProvider>
     </ErrorBoundary>
   );

@@ -1,0 +1,289 @@
+{
+  "baseUrl": "https://ziontechgroup.com",
+  "analysisDate": "2025-10-09T21:03:37.782Z",
+  "summary": {
+    "totalUrls": 11,
+    "validLinks": 11,
+    "brokenLinks": 0,
+    "internalLinks": 30,
+    "externalLinks": 15,
+    "missingPages": 0
+  },
+  "brokenLinks": [],
+  "missingPages": [],
+  "validLinks": [
+    {
+      "url": "https://ziontechgroup.com",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "statusCode": 200
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "statusCode": 200
+    }
+  ],
+  "internalLinks": [
+    {
+      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+      "type": "script",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+      "type": "script",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+      "type": "script",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "type": "stylesheet",
+      "isExternal": false
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "type": "stylesheet",
+      "isExternal": false
+    }
+  ],
+  "externalLinks": [
+    {
+      "url": "https://fonts.googleapis.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/",
+      "type": "stylesheet",
+      "isExternal": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
+      "type": "stylesheet",
+      "isExternal": true
+    }
+  ]
+}
