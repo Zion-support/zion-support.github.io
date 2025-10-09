@@ -106,11 +106,11 @@ class AccessibilityEnhancer {
       
       if (e.shiftKey) {
         this.currentFocusIndex = this.currentFocusIndex > 0 
-//           ? this.currentFocusIndex - 1 
+          ? this.currentFocusIndex - 1 
           : this.focusableElements.length - 1;
       } else {
         this.currentFocusIndex = this.currentFocusIndex < this.focusableElements.length - 1 
-//           ? this.currentFocusIndex + 1 
+          ? this.currentFocusIndex + 1 
           : 0;
       }
 
@@ -406,7 +406,7 @@ class AccessibilityEnhancer {
     const imagesWithAlt = document.querySelectorAll('img[alt]:not([alt=""])');
     
     this.metrics.altTextCoverage = images.length > 0 
-//       ? (imagesWithAlt.length / images.length) * 100 
+      ? (imagesWithAlt.length / images.length) * 100 
       : 100;
   }
 
@@ -418,7 +418,7 @@ class AccessibilityEnhancer {
     });
 
     this.metrics.keyboardAccessibility = interactiveElements.length > 0 
-//       ? (accessibleElements.length / interactiveElements.length) * 100 
+      ? (accessibleElements.length / interactiveElements.length) * 100 
       : 100;
   }
 
@@ -427,7 +427,7 @@ class AccessibilityEnhancer {
     const elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby], [aria-describedby], [role]');
     
     this.metrics.screenReaderCompatibility = elements.length > 0 
-//       ? (elementsWithAria.length / elements.length) * 100 
+      ? (elementsWithAria.length / elements.length) * 100 
       : 0;
   }
 

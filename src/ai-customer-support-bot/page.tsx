@@ -41,12 +41,12 @@ const AICustomerSupportBotPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-//         'Up to 1,000 conversations/month',
-//         'Basic AI responses',
-//         'Email support',
-//         'Basic analytics',
-//         'Standard integrations'
-//       ],
+        'Up to 1,000 conversations/month',
+        'Basic AI responses',
+        'Email support',
+        'Basic analytics',
+        'Standard integrations'
+      ],
       popular: false
     },
     {
@@ -55,13 +55,13 @@ const AICustomerSupportBotPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-//         'Up to 10,000 conversations/month',
-//         'Advanced AI responses',
-//         'Priority support',
-//         'Advanced analytics',
-//         'Custom integrations',
-//         'Multi-language support'
-//       ],
+        'Up to 10,000 conversations/month',
+        'Advanced AI responses',
+        'Priority support',
+        'Advanced analytics',
+        'Custom integrations',
+        'Multi-language support'
+      ],
       popular: true
     },
     {
@@ -70,14 +70,14 @@ const AICustomerSupportBotPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-//         'Unlimited conversations',
-//         'Premium AI features',
-//         '24/7 support',
-//         'Custom analytics',
-//         'White-label options',
-//         'API access',
-//         'Custom training'
-//       ],
+        'Unlimited conversations',
+        'Premium AI features',
+        '24/7 support',
+        'Custom analytics',
+        'White-label options',
+        'API access',
+        'Custom training'
+      ],
       popular: false
     }
   ];
@@ -187,7 +187,4 @@ const AICustomerSupportBotPage: React.FC = () => {
   );
 };
 
-}
-
-export default AiCustomerSupportBotPage;
 export default AICustomerSupportBotPage;

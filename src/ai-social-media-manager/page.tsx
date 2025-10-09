@@ -60,12 +60,12 @@ const AISocialMediaManagerPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-//         '3 social media accounts',
-//         '50 posts per month',
-//         'Basic AI content generation',
-//         'Standard analytics',
-//         'Email support'
-//       ],
+        '3 social media accounts',
+        '50 posts per month',
+        'Basic AI content generation',
+        'Standard analytics',
+        'Email support'
+      ],
       popular: false
     },
     {
@@ -74,13 +74,13 @@ const AISocialMediaManagerPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing brands',
       features: [
-//         '10 social media accounts',
-//         'Unlimited posts',
-//         'Advanced AI features',
-//         'Detailed analytics',
-//         'Priority support',
-//         'Team collaboration'
-//       ],
+        '10 social media accounts',
+        'Unlimited posts',
+        'Advanced AI features',
+        'Detailed analytics',
+        'Priority support',
+        'Team collaboration'
+      ],
       popular: true
     },
     {
@@ -89,13 +89,13 @@ const AISocialMediaManagerPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-//         'Unlimited accounts',
-//         'Unlimited posts',
-//         'Full AI suite',
-//         'Custom analytics',
-//         '24/7 support',
-//         'White-label options'
-//       ],
+        'Unlimited accounts',
+        'Unlimited posts',
+        'Full AI suite',
+        'Custom analytics',
+        '24/7 support',
+        'White-label options'
+      ],
       popular: false
     }
   ];
@@ -239,13 +239,13 @@ const AISocialMediaManagerPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${
-//                 plan.popular 
-//                   ? 'border-pink-400/60 ring-2 ring-pink-400/20' 
+                plan.popular 
+                  ? 'border-pink-400/60 ring-2 ring-pink-400/20' 
                   : 'border-slate-700/50'
               }`}>
                 {plan.popular && (
                   <div className="bg-pink-500 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
-//                     Most Popular
+                    Most Popular
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -263,7 +263,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                   ))}
                 </ul>
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-//                   plan.popular
+                  plan.popular
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                     : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
                 }`}>
