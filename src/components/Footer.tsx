@@ -14,7 +14,27 @@ const Footer: React.FC = () => {
     { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
     { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
     { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
-    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' },
+    { name: 'AI Legal Document Analyzer', url: '/ai-legal-analyzer', description: 'Legal document analysis' },
+    { name: 'AI Real Estate Assistant', url: '/ai-real-estate', description: 'Property analysis & valuation' },
+    { name: 'AI Supply Chain Optimizer', url: '/ai-supply-chain', description: 'Supply chain optimization' },
+    { name: 'AI HR Recruiter Pro', url: '/ai-hr-recruiter', description: 'Intelligent recruitment' },
+    { name: 'AI Energy Management', url: '/ai-energy-management', description: 'Smart energy optimization' },
+    { name: 'AI Travel Planner', url: '/ai-travel-planner', description: 'Intelligent travel planning' },
+    { name: 'AI Event Management', url: '/ai-event-management', description: 'AI-powered event planning' },
+    { name: 'AI Inventory Tracker', url: '/ai-inventory-tracker', description: 'Smart inventory management' },
+    { name: 'AI Customer Feedback Analyzer', url: '/ai-feedback-analyzer', description: 'Sentiment analysis' },
+    { name: 'AI Compliance Monitor', url: '/ai-compliance-monitor', description: 'Regulatory compliance' },
+    { name: 'AI Translation Pro', url: '/ai-translation-pro', description: 'Advanced translation' },
+    { name: 'AI Weather Predictor', url: '/ai-weather-predictor', description: 'Weather forecasting' },
+    { name: 'AI Tax Optimizer', url: '/ai-tax-optimizer', description: 'Tax planning & optimization' },
+    { name: 'AI Learning Management', url: '/ai-learning-management', description: 'Personalized education' },
+    { name: 'AI Restaurant Manager', url: '/ai-restaurant-manager', description: 'Restaurant operations' },
+    { name: 'AI Fleet Management', url: '/ai-fleet-management', description: 'Fleet optimization' },
+    { name: 'AI Insurance Analyzer', url: '/ai-insurance-analyzer', description: 'Insurance analysis' },
+    { name: 'AI Construction Manager', url: '/ai-construction-manager', description: 'Construction project management' },
+    { name: 'AI Healthcare Assistant', url: '/ai-healthcare-assistant', description: 'Medical AI assistance' },
+    { name: 'AI Agriculture Optimizer', url: '/ai-agriculture-optimizer', description: 'Smart farming solutions' }
   ];
 
   const aiServices = [
@@ -29,7 +49,18 @@ const Footer: React.FC = () => {
     { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Smart mobile apps' },
     { name: 'AI CRM Solutions', url: '/ai-crm', description: 'Intelligent customer management' },
     { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
-    { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+    { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' },
+    { name: 'AI Research & Development', url: '/ai-research', description: 'Cutting-edge AI research' },
+    { name: 'AI Ethics & Governance', url: '/ai-ethics', description: 'Responsible AI deployment' },
+    { name: 'AI Edge Computing', url: '/ai-edge', description: 'Edge AI deployment' },
+    { name: 'AI Data Engineering', url: '/ai-data-engineering', description: 'AI data pipelines' },
+    { name: 'AI Model Operations (MLOps)', url: '/ai-mlops', description: 'ML model management' },
+    { name: 'AI Conversational Intelligence', url: '/ai-conversational', description: 'Advanced chatbots' },
+    { name: 'AI Predictive Maintenance', url: '/ai-predictive-maintenance', description: 'Equipment monitoring' },
+    { name: 'AI Fraud Detection', url: '/ai-fraud-detection', description: 'Fraud prevention' },
+    { name: 'AI Recommendation Engine', url: '/ai-recommendations', description: 'Personalized recommendations' },
+    { name: 'AI Time Series Analysis', url: '/ai-time-series', description: 'Forecasting & analysis' },
+    { name: 'AI Image Recognition', url: '/ai-image-recognition', description: 'Advanced image processing' }
   ];
 
   const itServices = [
@@ -44,7 +75,18 @@ const Footer: React.FC = () => {
     { name: 'Compliance & Governance', url: '/compliance', description: 'Regulatory compliance' },
     { name: 'Developer Tools', url: '/developer-tools', description: 'Advanced dev tools' },
     { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' },
-    { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
+    { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' },
+    { name: 'AI-Powered Infrastructure', url: '/ai-infrastructure', description: 'Intelligent infrastructure' },
+    { name: 'Quantum-Safe Security', url: '/quantum-security', description: 'Future-proof security' },
+    { name: 'Edge Computing Solutions', url: '/edge-computing', description: 'Distributed computing' },
+    { name: 'Hybrid Cloud Management', url: '/hybrid-cloud', description: 'Multi-cloud orchestration' },
+    { name: 'AI DevOps Platform', url: '/ai-devops', description: 'Intelligent DevOps' },
+    { name: 'Zero-Trust Architecture', url: '/zero-trust', description: 'Zero-trust security' },
+    { name: 'Data Center Modernization', url: '/data-center', description: 'Infrastructure transformation' },
+    { name: 'Network Security Operations Center', url: '/soc', description: '24/7 security monitoring' },
+    { name: 'API Management Platform', url: '/api-management', description: 'API lifecycle management' },
+    { name: 'Disaster Recovery as a Service', url: '/draas', description: 'Business continuity' },
+    { name: 'IT Service Management', url: '/itsm', description: 'Comprehensive ITSM' }
   ];
 
   const specializedServices = [
@@ -59,7 +101,22 @@ const Footer: React.FC = () => {
     { name: 'Business Apps', url: '/business-apps', description: 'Custom business apps' },
     { name: 'Expense Tracker Pro', url: '/expense-tracker', description: 'AI expense management' },
     { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'AI task management' },
-    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
+    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' },
+    { name: 'Neural Interface Technology', url: '/neural-interface', description: 'Brain-computer interfaces' },
+    { name: 'Space Technology Solutions', url: '/space-tech', description: 'Satellite & space systems' },
+    { name: 'Biometric Security Systems', url: '/biometric-security', description: 'Advanced authentication' },
+    { name: 'Digital Twin Technology', url: '/digital-twin', description: 'Virtual system replicas' },
+    { name: 'Augmented Reality Solutions', url: '/ar-solutions', description: 'Immersive AR applications' },
+    { name: 'Virtual Reality Platforms', url: '/vr-platforms', description: 'VR experiences' },
+    { name: '5G Network Solutions', url: '/5g-networks', description: 'Next-gen connectivity' },
+    { name: 'Smart City Solutions', url: '/smart-city', description: 'Urban infrastructure' },
+    { name: 'Autonomous Vehicle Systems', url: '/autonomous-vehicles', description: 'Self-driving technology' },
+    { name: 'Precision Medicine Platform', url: '/precision-medicine', description: 'Personalized healthcare' },
+    { name: 'Climate Tech Solutions', url: '/climate-tech', description: 'Environmental technology' },
+    { name: 'Advanced Robotics', url: '/advanced-robotics', description: 'Next-gen robotics' },
+    { name: 'Metaverse Development', url: '/metaverse', description: 'Virtual world creation' },
+    { name: 'Advanced Materials AI', url: '/materials-ai', description: 'AI materials discovery' },
+    { name: 'Synthetic Biology Platform', url: '/synthetic-biology', description: 'AI-driven biotechnology' }
   ];
 
   const additionalServices = [

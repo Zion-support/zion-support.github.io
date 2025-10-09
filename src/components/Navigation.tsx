@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Smartphone, Truck, Package, Utensils, Sprout } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,7 +87,27 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera },
+    { name: 'AI Legal Document Analyzer', href: '/ai-legal-analyzer', icon: FileText },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate', icon: Home },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain', icon: Truck },
+    { name: 'AI HR Recruiter Pro', href: '/ai-hr-recruiter', icon: Users },
+    { name: 'AI Energy Management', href: '/ai-energy-management', icon: Zap },
+    { name: 'AI Travel Planner', href: '/ai-travel-planner', icon: Plane },
+    { name: 'AI Event Management', href: '/ai-event-management', icon: Calendar },
+    { name: 'AI Inventory Tracker', href: '/ai-inventory-tracker', icon: Package },
+    { name: 'AI Customer Feedback Analyzer', href: '/ai-feedback-analyzer', icon: MessageSquare },
+    { name: 'AI Compliance Monitor', href: '/ai-compliance-monitor', icon: Shield },
+    { name: 'AI Translation Pro', href: '/ai-translation-pro', icon: Globe },
+    { name: 'AI Weather Predictor', href: '/ai-weather-predictor', icon: Cloud },
+    { name: 'AI Tax Optimizer', href: '/ai-tax-optimizer', icon: Calculator },
+    { name: 'AI Learning Management', href: '/ai-learning-management', icon: GraduationCap },
+    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager', icon: Utensils },
+    { name: 'AI Fleet Management', href: '/ai-fleet-management', icon: Truck },
+    { name: 'AI Insurance Analyzer', href: '/ai-insurance-analyzer', icon: Shield },
+    { name: 'AI Construction Manager', href: '/ai-construction-manager', icon: Hammer },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Stethoscope },
+    { name: 'AI Agriculture Optimizer', href: '/ai-agriculture-optimizer', icon: Sprout }
   ];
 
   const aiServices = [
@@ -137,16 +157,17 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
-    }`}>
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20 shadow-2xl' : 'bg-transparent'
+    } cyber-nav`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+          <a href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
+              <Brain className="w-5 h-5 text-white relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white neon-text cyber-text-3d" data-text="Zion Tech Group">Zion Tech Group</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -161,7 +182,7 @@ const Navigation: React.FC = () => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+                <div className="absolute top-full left-0 mt-2 w-[900px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl p-6 cyber-card">
                   <div className="grid grid-cols-3 gap-6">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
@@ -206,37 +227,37 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {itServices.slice(0, 6).map((service) => (
-                          <Link
+                          <a
                             key={service.name}
-                            to={service.href}
+                            href={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="grid grid-cols-2 gap-4">
-                      <Link
-                        to="/services"
+                      <a
+                        href="/services"
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
-                      </Link>
-                      <Link
-                        to="/specialized-services"
+                      </a>
+                      <a
+                        href="/specialized-services"
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
                         <span>Specialized Solutions</span>
                         <ArrowRight className="w-4 h-4" />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -286,7 +307,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20 cyber-card">
             <div className="px-4 py-6 space-y-4">
               <div>
                 <button
