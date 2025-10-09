@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const HomePage = lazy(() => import('./page'));
 
 // Import enhancement utilities
-import {Routes, Route} from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';

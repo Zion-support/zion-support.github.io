@@ -11,6 +11,7 @@ const AboutPage: React.FC = () => {
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.',
     },
+    {
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',

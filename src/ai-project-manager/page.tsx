@@ -1,14 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
-import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIProjectManagerPage: React.FC = () => {
-  const _features = [
-
-const AiProjectManagerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,

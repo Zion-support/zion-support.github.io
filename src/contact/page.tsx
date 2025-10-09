@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import React from 'react';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -34,7 +33,15 @@ const ContactPage: React.FC = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
     }, 3000);
+  };
 
   const services = [
     'AI Services',
@@ -54,6 +61,7 @@ const ContactPage: React.FC = () => {
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -64,6 +72,8 @@ const ContactPage: React.FC = () => {
           Contact Us
         </a>
       </div>
+    </div>
   );
+};
 
 export default ContactPage;

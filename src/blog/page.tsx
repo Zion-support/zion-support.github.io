@@ -1,6 +1,4 @@
-import React from 'react';
 'use client';
-
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import ContentPreviewCard from '../components/ContentPreviewCard';
@@ -39,6 +37,7 @@ export default function BlogPage() {
       featured: true,
       stats: { views: 18750, engagement: 97 }
     },
+    {
       id: 'ai-2025-2026-mega-trends-breakthrough',
       title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
       description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
