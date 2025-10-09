@@ -29,8 +29,7 @@ class ErrorLogger {
     message: string,
     _severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
-    context?: Record<string, unknown>
-  ): void {
+    context?: Record<string, <unknown>): void {
     const entry: ErrorLogEntry = {
       timestamp: new Date().toISOString(),
       severity,
@@ -44,41 +43,41 @@ class ErrorLogger {
     // Add to internal log
     this.logs.push(entry);
     if (this.logs.length > this.maxLogs) {
-      this.logs.shift();
+      this.logs.shift(</div>);
     }
     // Console logging in development
     if (process.env['NODE_ENV'] === 'development') {
-      this.logToConsole(entry);
+      this.logToConsole(entry</unknown>);
     }
     // Send to external logging service in production
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
-      this.sendToExternalService(entry);
+      this.sendToExternalService(entry</string>);
     }
   }
   /**
    * Log to console with appropriate styling
    */
   private logToConsole(entry: ErrorLogEntry): void {
-    const styles: Record<ErrorSeverity, string> = {
+    const styles: Record<ErrorSeverity, <string>= {
       [ErrorSeverity.LOW]: 'color: #4ade80',
       [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
       [ErrorSeverity.HIGH]: 'color: #fb923c',
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'
     };
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
+    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]</div>);
     if (entry.error) {
-      // // console.error('Error:', entry.error);
+      // // console.error('Error:', entry.error</string>);
     }
     if (entry.context) {
       }
     if (entry.stackTrace) {
       }
-    console.groupEnd();
+    console.groupEnd(</ErrorSeverity>);
   }
   /**
    * Send error to external logging service
    */
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
+  private async sendToExternalService(entry: ErrorLogEntry): Promise<void>{
     try {
       // In production, you would send to a service like Sentry, LogRocket, etc.
       if (!endpoint) {
@@ -115,7 +114,7 @@ class ErrorLogger {
    * Get logs by severity
    */
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
-    return this.logs.filter(log => log.severity === severity);
+    return this.logs.filter(log <=>log.severity === severity</div>);
   }
   /**
    * Clear all logs
@@ -127,18 +126,18 @@ class ErrorLogger {
    * Export logs as JSON
    */
   exportLogs(): string {
-    return JSON.stringify(this.logs, null, 2);
+    return JSON.stringify(this.logs, null, 2</=>);
   }
 }
 // Singleton instance
-const errorLogger = new ErrorLogger();
+const errorLogger = new ErrorLogger(</void>);
 // Convenience functions
 export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
+  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context</string>);
 export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
+  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context</string>);
 export const logWarning = (message: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
+  errorLogger.log(message, ErrorSeverity.LOW, undefined, context</string>);
 export const logInfo = (message: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
+  errorLogger.log(message, ErrorSeverity.LOW, undefined, context</string>);
 export default errorLogger;

@@ -40,7 +40,7 @@ class PerformanceReporter {
     this.monitorResourceTiming()
     // Setup periodic reporting
     if (config?.reportInterval) {
-      this.reportingInterval = setInterval(() => {
+      this.reportingInterval = setInterval(() <=>{
         this.report()
       }, config.reportInterval)
     }
@@ -74,7 +74,7 @@ class PerformanceReporter {
         entries.forEach((entry) => {
           if ('processingStart' in entry && 'startTime' in entry) {
             const value = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
-            this.addMetric('FID', value, this.getRating('fid', value));
+            this.addMetric('FID', value, this.getRating('fid', value)</div>);
           }
         })
       })
@@ -148,7 +148,7 @@ class PerformanceReporter {
             name: resource.name,
             duration: resource.duration,
             type: resource.initiatorType
-          });
+          }</=>);
         })
       }, 0)
     })

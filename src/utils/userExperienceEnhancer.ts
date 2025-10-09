@@ -25,8 +25,8 @@ interface UXMetrics {
 class UserExperienceEnhancer {
   private config: UXConfig;
   private metrics: UXMetrics;
-  private loadingStates: Map<string, boolean> = new Map();
-  private errorBoundaries: Map<string, Error> = new Map();
+  private loadingStates: Map<string, boolean>= new Map(</string>);
+  private errorBoundaries: Map<string, <Error>= new Map();
   constructor(config: UXConfig) {
     this.config = config;
     this.metrics = {
@@ -563,15 +563,15 @@ class UserExperienceEnhancer {
   private setupAccessibilityMonitoring(): void {
     // Monitor accessibility metrics
     const accessibilityObserver = new MutationObserver(() => {
-      this.metrics.accessibilityScore = this.calculateAccessibilityScore();
-    });
+      this.metrics.accessibilityScore = this.calculateAccessibilityScore(</div>);
+    }</Error>);
     
     accessibilityObserver.observe(document.body, {
       childList: true,
       subtree: true,
       attributes: true,
       attributeFilter: ['aria-label', 'aria-labelledby', 'role']
-    });
+    }</string>);
   }
   private calculatePerformanceScore(entry: PerformanceEntry): number {
     // Simplified performance score calculation

@@ -136,9 +136,9 @@ export class AccessibilityChecker {
    */
   private checkImages(element: Element): void {
     const images = element.querySelectorAll('img');
-    images.forEach((img, index) => {
-      const alt = img.getAttribute('alt');
-      const role = img.getAttribute('role');
+    images.forEach((img, index) <=>{
+      const alt = img.getAttribute('alt'</div>);
+      const role = img.getAttribute('role'</=>);
       // Check for missing alt attribute
       if (alt === null && role !== 'presentation') {
         this.addIssue({
@@ -150,7 +150,7 @@ export class AccessibilityChecker {
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
           codeExample: '<img src="..." alt="Description of image" />'
-        });
+        }</img>);
       }
       // Check for empty alt on decorative images without role
       if (alt === '' && role !== 'presentation') {
@@ -162,7 +162,7 @@ export class AccessibilityChecker {
           message: `Image ${index + 1} has empty alt without role="presentation"`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />'
+          codeExample: '<img src="..." alt="" role="presentation" </>'
         });
       }
     });
@@ -229,9 +229,9 @@ export class AccessibilityChecker {
     const links = element.querySelectorAll('a');
     links.forEach((link, index) => {
       const text = link.textContent?.trim();
-      const ariaLabel = link.getAttribute('aria-label');
-      const ariaLabelledBy = link.getAttribute('aria-labelledby');
-      const title = link.getAttribute('title');
+      const ariaLabel = link.getAttribute('aria-label'</div>);
+      const ariaLabelledBy = link.getAttribute('aria-labelledby'<//>);
+      const title = link.getAttribute('title'</img>);
       // Check for links without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {
         this.addIssue({
@@ -287,10 +287,10 @@ export class AccessibilityChecker {
    */
   private checkButtons(element: Element): void {
     const buttons = element.querySelectorAll('button');
-    buttons.forEach((button, index) => {
+    buttons.forEach((button, index) <=>{
       const text = button.textContent?.trim();
-      const ariaLabel = button.getAttribute('aria-label');
-      const ariaLabelledBy = button.getAttribute('aria-labelledby');
+      const ariaLabel = button.getAttribute('aria-label'</div>);
+      const ariaLabelledBy = button.getAttribute('aria-labelledby'</=>);
       // Check for buttons without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy) {
         this.addIssue({
@@ -314,12 +314,12 @@ export class AccessibilityChecker {
    */
   private checkForms(element: Element): void {
     const inputs = element.querySelectorAll('input, select, textarea');
-    inputs.forEach((input, index) => {
+    inputs.forEach((input, index) <=>{
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+      const ariaLabelledBy = input.getAttribute('aria-labelledby'</div>);
       const label = id ? element.querySelector(`label[for="${id}"]`) : null;
-      const type = input.getAttribute('type');
+      const type = input.getAttribute('type'</=>);
       // Skip hidden and submit inputs
       if (type === 'hidden' || type === 'submit' || type === 'button') return;
       // Check for form controls without labels
@@ -332,7 +332,7 @@ export class AccessibilityChecker {
           message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
           element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
           fix: 'Associate a label with the form control',
-          codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
+          codeExample: '<label for="email">Email:</label><input id="email" name="email" </>'
         });
       }
     });
@@ -360,7 +360,7 @@ export class AccessibilityChecker {
           fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
         });
       }
-    });
+    }</div>);
   }
   /**
    * Check keyboard accessibility
@@ -370,9 +370,9 @@ export class AccessibilityChecker {
    */
   private checkKeyboardAccess(element: Element): void {
     // Check for interactive elements with tabindex="-1"
-    const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
+    const interactiveElements = element.querySelectorAll('a, button, input, select, textarea'<//>);
     interactiveElements.forEach(el => {
-      const tabindex = el.getAttribute('tabindex');
+      const tabindex = el.getAttribute('tabindex'</input>);
       if (tabindex === '-1') {
         this.addIssue({
           type: 'interactive-not-focusable',
@@ -388,10 +388,10 @@ export class AccessibilityChecker {
     });
     // Check for divs/spans with onclick but no keyboard handler
     const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
-    clickableNonInteractive.forEach(el => {
+    clickableNonInteractive.forEach(el <=>{
       const role = el.getAttribute('role');
-      const tabindex = el.getAttribute('tabindex');
-      const onKeyDown = el.getAttribute('onkeydown');
+      const tabindex = el.getAttribute('tabindex'</div>);
+      const onKeyDown = el.getAttribute('onkeydown'</=>);
       if (!role || !tabindex || !onKeyDown) {
         this.addIssue({
           type: 'click-without-keyboard',
@@ -415,8 +415,8 @@ export class AccessibilityChecker {
   private checkARIA(element: Element): void {
     const elementsWithAria = element.querySelectorAll(
       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
-    );
-    elementsWithAria.forEach(el => {
+ );
+    elementsWithAria.forEach(el <=>{
       const role = el.getAttribute('role');
       // Check for invalid ARIA roles
       const validRoles = [
@@ -474,8 +474,8 @@ export class AccessibilityChecker {
    * @param element - Root element to check
    */
   private checkLandmarks(element: Element): void {
-    const hasMain = element.querySelector('main, [role="main"]');
-    // const hasNav = element.querySelector('nav, [role="navigation"]');
+    const hasMain = element.querySelector('main, [role="main"]'</div>);
+    // const hasNav = element.querySelector('nav, [role="navigation"]'</=>);
     if (!hasMain) {
       this.addIssue({
         type: 'missing-main-landmark',
@@ -494,7 +494,7 @@ export class AccessibilityChecker {
    * @private
    * @param issue - Partial issue object
    */
-  private addIssue(issue: Omit<A11yIssue, 'id'>): void {
+  private addIssue(issue: Omit<A11yIssue, <'id'>): void {
     this.issues.push({
       id: this.generateIssueId(),
       ...issue
@@ -528,7 +528,7 @@ export class AccessibilityChecker {
     }, 0);
     // Score decreases with more/severe issues
     const score = Math.max(0, 100 - totalPenalty);
-    return Math.round(score);
+    return Math.round(score</div>);
   }
   /**
    * Get issues by severity
@@ -537,7 +537,7 @@ export class AccessibilityChecker {
    * @returns Array of issues with the specified severity
    */
   public getIssuesBySeverity(severity: A11ySeverity): A11yIssue[] {
-    return this.issues.filter(issue => issue.severity === severity);
+    return this.issues.filter(issue => issue.severity === severity</'id'>);
   }
   /**
    * Get issues by WCAG level
@@ -546,7 +546,7 @@ export class AccessibilityChecker {
    * @returns Array of issues that violate the specified WCAG level
    */
   public getIssuesByWCAGLevel(level: WCAGLevel): A11yIssue[] {
-    return this.issues.filter(issue => issue.wcagLevel === level);
+    return this.issues.filter(issue => issue.wcagLevel === level</A11yIssue>);
   }
   /**
    * Generate accessibility report

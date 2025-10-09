@@ -5,8 +5,9 @@ import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings,
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
-      title: 'IoT Device Management Platform',
-      description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
+      title: description,
+
+      $4: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
       icon: '📱',
       price: 'Starting at $3,500/month',
       features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Security management'],
@@ -15,8 +16,9 @@ const IoTEdgePage: React.FC = () => {
       category: 'Device Management',
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT']
     },
-      title: 'Edge Computing Solutions',
-      description: 'Real-time data processing at the edge with low latency and high performance.',
+      title: description,
+
+      $4: 'Real-time data processing at the edge with low latency and high performance.',
       icon: '⚡',
       price: 'Starting at $4,500/month',
       features: ['Edge analytics', 'Real-time processing', 'Local data storage', 'Offline capabilities', 'Edge AI'],
@@ -24,8 +26,9 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$7,000-20,000/month',
       category: 'Edge Computing',
       technologies: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'OpenVINO', 'Edge TPU']
-      title: 'Industrial IoT (IIoT) Systems',
-      description: 'Smart manufacturing and industrial automation with predictive maintenance.',
+      title: description,
+
+      $4: 'Smart manufacturing and industrial automation with predictive maintenance.',
       icon: '🏭',
       price: 'Starting at $8,000/month',
       features: ['Sensor integration', 'Predictive maintenance', 'Process optimization', 'Quality control', 'Safety monitoring'],
@@ -33,8 +36,9 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$15,000-40,000/month',
       category: 'Industrial IoT',
       technologies: ['OPC UA', 'Modbus', 'MQTT', 'Time Series DB', 'Machine Learning']
-      title: 'Smart City Solutions',
-      description: 'Comprehensive smart city infrastructure with traffic, energy, and environmental monitoring.',
+      title: description,
+
+      $4: 'Comprehensive smart city infrastructure with traffic, energy, and environmental monitoring.',
       icon: '🏙️',
       price: 'Starting at $12,000/month',
       features: ['Traffic management', 'Energy monitoring', 'Environmental sensors', 'Public safety', 'Citizen services'],
@@ -42,8 +46,9 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$20,000-60,000/month',
       category: 'Smart Cities',
       technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Big Data', 'AI Analytics']
-      title: 'IoT Security & Compliance',
-      description: 'Comprehensive security solutions for IoT devices and networks with compliance management.',
+      title: description,
+
+      $4: 'Comprehensive security solutions for IoT devices and networks with compliance management.',
       icon: '🔒',
       price: 'Starting at $2,800/month',
       features: ['Device authentication', 'Encryption', 'Vulnerability scanning', 'Compliance monitoring', 'Incident response'],
@@ -51,16 +56,18 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$4,500-12,000/month',
       category: 'Security',
       technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Compliance Tools']
-      title: 'Real-Time Data Analytics',
-      description: 'Streaming analytics for IoT data with real-time insights and alerting.',
+      title: description,
+
+      $4: 'Streaming analytics for IoT data with real-time insights and alerting.',
       icon: '📊',
       price: 'Starting at $3,200/month',
       features: ['Stream processing', 'Real-time dashboards', 'Anomaly detection', 'Predictive analytics', 'Alert systems'],
       benefits: ['Make faster decisions', 'Identify issues early', 'Optimize operations'],
       category: 'Analytics',
       technologies: ['Apache Kafka', 'Apache Flink', 'Apache Spark', 'InfluxDB', 'Grafana']
-      title: 'IoT Integration Services',
-      description: 'Connect existing systems with IoT devices and cloud platforms seamlessly.',
+      title: description,
+
+      $4: 'Connect existing systems with IoT devices and cloud platforms seamlessly.',
       icon: '🔗',
       price: 'Starting at $2,500/month',
       features: ['Legacy system integration', 'API development', 'Data transformation', 'Protocol conversion', 'Cloud connectivity'],
@@ -68,8 +75,9 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$4,000-10,000/month',
       category: 'Integration',
       technologies: ['REST APIs', 'GraphQL', 'Message Queues', 'ETL Tools', 'Cloud Platforms']
-      title: 'Predictive Maintenance Systems',
-      description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
+      title: description,
+
+      $4: 'AI-powered predictive maintenance for industrial equipment and machinery.',
       icon: '🔧',
       price: 'Starting at $5,500/month',
       features: ['Vibration analysis', 'Temperature monitoring', 'Performance tracking', 'Failure prediction', 'Maintenance scheduling'],
@@ -77,8 +85,9 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$8,000-25,000/month',
       category: 'Predictive Maintenance',
       technologies: ['Machine Learning', 'Time Series Analysis', 'Vibration Sensors', 'Thermal Cameras', 'AI Models']
-      title: 'Environmental Monitoring',
-      description: 'Comprehensive environmental monitoring with air quality, water, and soil sensors.',
+      title: description,
+
+      $4: 'Comprehensive environmental monitoring with air quality, water, and soil sensors.',
       icon: '🌍',
       price: 'Starting at $2,200/month',
       features: ['Air quality monitoring', 'Water quality sensors', 'Soil analysis', 'Weather stations', 'Compliance reporting'],
@@ -86,8 +95,9 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$3,500-10,000/month',
       category: 'Environmental',
       technologies: ['Environmental Sensors', 'Data Loggers', 'Satellite Data', 'GIS', 'Compliance Systems']
-      title: 'Smart Agriculture Solutions',
-      description: 'Precision agriculture with IoT sensors, drones, and AI-powered crop management.',
+      title: description,
+
+      $4: 'Precision agriculture with IoT sensors, drones, and AI-powered crop management.',
       icon: '🌾',
       price: 'Starting at $4,000/month',
       features: ['Soil monitoring', 'Crop health analysis', 'Weather tracking', 'Irrigation control', 'Yield optimization'],
@@ -95,8 +105,9 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$6,000-18,000/month',
       category: 'Agriculture',
       technologies: ['Soil Sensors', 'Drones', 'Satellite Imagery', 'Machine Learning', 'Precision Agriculture']
-      title: 'IoT Device Development',
-      description: 'Custom IoT device design and development for specific business requirements.',
+      title: description,
+
+      $4: 'Custom IoT device design and development for specific business requirements.',
       icon: '⚙️',
       price: 'Starting at $15,000/project',
       features: ['Hardware design', 'Firmware development', 'Prototyping', 'Testing & validation', 'Manufacturing support'],
@@ -104,14 +115,15 @@ const IoTEdgePage: React.FC = () => {
       marketPrice: '$25,000-100,000/project',
       category: 'Device Development',
       technologies: ['Arduino', 'Raspberry Pi', 'ESP32', 'ARM Cortex', 'Custom PCBs']
-      title: 'IoT Data Management',
-      description: 'Comprehensive data management for IoT with storage, processing, and analytics.',
+      title: description,
+
+      $4: 'Comprehensive data management for IoT with storage, processing, and analytics.',
       icon: '🗄️',
       features: ['Data ingestion', 'Storage optimization', 'Data processing', 'Quality management', 'Analytics'],
       benefits: ['Handle massive data volumes', 'Ensure data quality', 'Enable advanced analytics'],
       category: 'Data Management',
-      technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
-    }
+      technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools'],
+ }
   ];
 
   const categories = [...new Set(iotServices.map(service => service.category))];
@@ -259,7 +271,7 @@ const IoTEdgePage: React.FC = () => {
                 ✉️ kleber@ziontechgroup.com
             <div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-  );
+ );
 };
 
 export default IoTEdgePage;

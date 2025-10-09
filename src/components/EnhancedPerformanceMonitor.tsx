@@ -38,7 +38,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     // First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
+    const fcpObserver = new PerformanceObserver((list) <=>{
       for (const entry of list.getEntries()) {
         if (entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
@@ -271,12 +271,12 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
 
     window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, []);
+    return () => window.removeEventListener('keydown', handleKeyPress</div>);
+  }, []</=>);
 
   if (!isVisible) return null;
 
-  const performanceScore = calculatePerformanceScore(metrics);
+  const performanceScore = calculatePerformanceScore(metrics</PerformanceMetrics>);
 
   return (
     <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm">
@@ -337,8 +337,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       <div className="mt-2 text-gray-400 text-xs">
         Press Ctrl+Shift+P to toggle
       </div>
-    </div>
-  );
+    </div> </div>);
 };
 
 export default EnhancedPerformanceMonitor;

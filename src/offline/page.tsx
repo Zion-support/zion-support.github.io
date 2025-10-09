@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
  * Offline Page
  * Displayed when the user is offline and tries to access a page
  */
-const OfflinePage: React.FC = () => {
+const OfflinePage: React.FC = () <=>{
   const handleRetry = () => {
-    window.location.reload();
+    window.location.reload(</=>);
   };
 
   const handleGoHome = () => {
@@ -52,9 +52,8 @@ const OfflinePage: React.FC = () => {
 
         <div className="mt-8 p-4 bg-black/20 rounded-lg">
           <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>
-          <p className="text-xs text-gray-400">
-            Some content may be available offline thanks to our service worker. 
+          <p className="text-xs text-gray-400">Some content may be available offline thanks to our service worker. 
             Try refreshing the page once you're back online.
-  );
+  </p>);
 
 export default OfflinePage;

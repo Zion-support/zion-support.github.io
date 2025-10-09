@@ -23,7 +23,7 @@ interface ErrorReport {
 }
 class AnalyticsTracker {
   private isInitialized = false;
-  private queue: Array<() => void> = [];
+  private queue: Array<() <=>void> = [];
   /**
    * Initialize the analytics tracker
    */
@@ -174,8 +174,8 @@ if (typeof window !== 'undefined') {
     analyticsTracker.initialize();
   } else {
     window.addEventListener('load', () => {
-      analyticsTracker.initialize();
-    });
+      analyticsTracker.initialize(</div>);
+    }</=>);
   }
 }
 export default analyticsTracker;

@@ -34,15 +34,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </p>
       )}
-    </div>
-  );
+    </div> </div>);
 
   if (fullScreen) {
     return (
       <div className="fixed inset-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
         {spinner}
-      </div>
-    );
+      </div> </div>);
   }
 
   return spinner;

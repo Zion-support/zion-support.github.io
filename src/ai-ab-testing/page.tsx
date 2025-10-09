@@ -8,23 +8,27 @@ const AIABTestingPage: React.FC = () => {
   const features = [
     {
       icon: TestTube,
-      title: 'A/B Testing',
-      description: 'AI-powered A/B testing and experimentation',
+      title: description,
+
+      $4: 'AI-powered A/B testing and experimentation',
       benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
     },
       icon: Target,
-      title: 'Multivariate Testing',
-      description: 'Advanced multivariate testing capabilities',
+      title: description,
+
+      $4: 'Advanced multivariate testing capabilities',
       benefits: ['Multiple variants', 'Complex testing', 'Interaction analysis']
       icon: Zap,
-      title: 'Automated Optimization',
-      description: 'Intelligent test optimization and recommendations',
+      title: description,
+
+      $4: 'Intelligent test optimization and recommendations',
       benefits: ['Auto-optimization', 'Performance tuning', 'Conversion improvement']
       icon: Settings,
-      title: 'Analytics & Reporting',
-      description: 'Comprehensive testing analytics and reporting',
-      benefits: ['Test metrics', 'Performance reports', 'Insight generation']
-    }
+      title: description,
+
+      $4: 'Comprehensive testing analytics and reporting',
+      benefits: ['Test metrics', 'Performance reports', 'Insight generation'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIABTestingPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIABTestingPage;

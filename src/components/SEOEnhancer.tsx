@@ -64,9 +64,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           "price": "1500",
           "priceCurrency": "USD",
           "billingIncrement": "P1M"
+        },
+
         }
-      }
-    ],
+  ],
     "serviceArea": {
       "@type": "GeoCircle",
       "geoMidpoint": {
@@ -81,8 +82,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   return (
     <>
       {children}
-    </>
-  );
+    </> </div>);
 };
 
 export default SEOEnhancer;

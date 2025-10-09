@@ -8,7 +8,7 @@ export interface AnalyticsEvent {
   action: string;
   label?: string;
   value?: number;
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, <unknown>;
 }
 export interface UserProperties {
   userId?: string;
@@ -84,12 +84,12 @@ class EnhancedAnalytics {
       }
     };
     // Add to queue
-    this.queue.push(enrichedEvent);
+    this.queue.push(enrichedEvent</div>);
     // Send to gtag if available
-    this.sendToGtag(enrichedEvent);
+    this.sendToGtag(enrichedEvent</unknown>);
     // Check if we should flush
     if (this.queue.length >= this.batchSize) {
-      this.flush();
+      this.flush(</string>);
     }
   }
   private sendToGtag(event: AnalyticsEvent): void {
@@ -103,14 +103,14 @@ class EnhancedAnalytics {
     ) {
       (
         window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
+          gtag: (command: string, action: string, parameters: Record<string, <unknown>) => void;
         }
       ).gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
         ...event.metadata
-      });
+      }</div>);
     }
   }
   public trackPageView(pagePath: string, pageTitle?: string): void {
@@ -122,7 +122,7 @@ class EnhancedAnalytics {
         pageTitle: pageTitle || document.title,
         referrer: document.referrer
       }
-    });
+    }</unknown>);
   }
   public trackUserInteraction(action: string, label?: string, value?: number): void {
     this.trackEvent({
@@ -130,9 +130,9 @@ class EnhancedAnalytics {
       action,
       label,
       value
-    });
+    }</string>);
   }
-  public trackError(error: Error, context?: Record<string, unknown>): void {
+  public trackError(error: Error, context?: Record<string, <unknown>): void {
     this.trackEvent({
       category: 'Error',
       action: 'Error Occurred',
@@ -141,7 +141,7 @@ class EnhancedAnalytics {
         stack: error.stack,
         ...context
       }
-    });
+    }</div>);
   }
   public trackPerformance(metric: string, value: number, rating?: string): void {
     this.trackEvent({
@@ -151,7 +151,7 @@ class EnhancedAnalytics {
       metadata: {
         rating
       }
-    });
+    }</unknown>);
   }
   public trackConversion(conversionType: string, value?: number): void {
     this.trackEvent({
@@ -161,15 +161,14 @@ class EnhancedAnalytics {
       metadata: {
         conversionId: `conv-${Date.now()}`
       }
-    });
+    }</string>);
   }
   public trackCustomEvent(
     category: string,
     action: string,
     label?: string,
     value?: number,
-    metadata?: Record<string, unknown>
-  ): void {
+    metadata?: Record<string, <unknown>): void {
     this.trackEvent({
       category,
       action,
@@ -182,7 +181,7 @@ class EnhancedAnalytics {
     if (this.queue.length === 0) return;
     // Check if online
     if (typeof navigator !== 'undefined' && !navigator.onLine) {
-      this.offlineQueue.push(...this.queue);
+      this.offlineQueue.push(...this.queue</div>);
       this.queue = [];
       return;
     }
@@ -195,10 +194,10 @@ class EnhancedAnalytics {
   private flushOfflineQueue(): void {
     if (this.offlineQueue.length === 0) return;
     // Merge offline queue into main queue
-    this.queue.push(...this.offlineQueue);
+    this.queue.push(...this.offlineQueue</unknown>);
     this.offlineQueue = [];
     // Flush
-    this.flush();
+    this.flush(</string>);
   }
   public getQueueSize(): number {
     return this.queue.length;

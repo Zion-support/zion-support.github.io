@@ -23,7 +23,7 @@ interface AdvancedSEOOptimizerProps {
   websiteData?: unknown;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -44,7 +44,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   faqData = [],
   organizationData,
   websiteData
-}) => {
+}) <=>{
   useEffect(() => {
     // Update page title
     document.title = title;
@@ -208,13 +208,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
     
     // Add format detection
-    updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
+    updateMetaTag('format-detection', 'telephone=no,address=no,email=no'</div>);
     
     // Add referrer policy
-    updateMetaTag('referrer', 'strict-origin-when-cross-origin');
+    updateMetaTag('referrer', 'strict-origin-when-cross-origin'</=>);
     
     // Add content security policy
-    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
+    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"</AdvancedSEOOptimizerProps>);
   };
 
   return null;

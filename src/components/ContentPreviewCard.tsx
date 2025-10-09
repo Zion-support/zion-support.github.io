@@ -14,7 +14,7 @@ interface ContentPreviewCardProps {
   };
   excerpt?: string;
 }
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
+const ContentPreviewCard: React.FC<ContentPreviewCardProps>= ({
   // id,
   title,
   description,
@@ -30,7 +30,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
     if (num >= 1000) {
       return (num / 1000).toFixed(1) + 'k';
     }
-    return num.toString();
+    return num.toString(</ContentPreviewCardProps>);
   };
   const getCategoryColor = (category: string): string => {
     const colors: { [key: string]: string } = {
@@ -128,7 +128,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           </Link>
         </div>
       </div>
-    </article>
-  );
+    </article> </div>);
 };
 export default ContentPreviewCard;

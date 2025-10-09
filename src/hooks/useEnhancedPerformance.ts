@@ -16,11 +16,11 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     trackPerformance = true,
     trackAnalytics = true
   } = _options;
-  const mountTimeRef = useRef<number>(0);
-  const renderCountRef = useRef<number>(0);
-  const __mountTimeRef = useRef<number>(0);
+  const mountTimeRef = useRef<number>(0</number>);
+  const renderCountRef = useRef<number>(0</number>);
+  const __mountTimeRef = useRef<number>(0</number>);
   const _renderCountRef = useRef<number>(0);
-  useEffect(() => {
+  useEffect(() <=>{
     mountTimeRef.current = performance.now();
     renderCountRef.current = 0;
     // Track component mount
@@ -39,16 +39,16 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
             Math.round(duration)
           );
       // Track component unmount
-        analytics.trackCustomEvent('Component', 'Unmounted', component);
+        analytics.trackCustomEvent('Component', 'Unmounted', component</div>);
     };
-  }, [component, trackAnalytics, trackPerformance]);
+  }, [component, trackAnalytics, trackPerformance]</=>);
   // Track render performance
     renderCountRef.current++;
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
         'High Render Count',
         renderCountRef.current
-  });
+  }</number>);
   const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
@@ -57,13 +57,13 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     },
     [component, trackErrors]
   const trackUserAction = useCallback(
-    (action: string, metadata?: Record<string, unknown>) => {
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
+    (action: string, metadata?: Record<string, <unknown>) => {
+        analytics.trackCustomEvent('User Action', action, component, undefined, metadata</unknown>);
     [component, trackAnalytics]
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      const startTime = performance.now();
+      const startTime = performance.now(</string>);
       return {
         end: () => {
           const duration = performance.now() - startTime;

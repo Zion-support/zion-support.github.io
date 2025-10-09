@@ -13,7 +13,7 @@ export function validateEmail(email: string): ValidationResult {
     return { isValid: false, error: 'Email is required' };
   }
   
-  if (email.length > 254) {
+  if <(email.length>254) {
     return { isValid: false, error: 'Email is too long' };
   }
   
@@ -32,7 +32,7 @@ export function validateURL(url: string): ValidationResult {
   }
   
   try {
-    new URL(url);
+    new URL(url</(email.length>);
     return { isValid: true };
   } catch {
     return { isValid: false, error: 'Invalid URL format' };
@@ -71,13 +71,13 @@ export function validatePassword(password: string): ValidationResult {
     return { isValid: false, error: 'Password must be at least 8 characters long' };
   }
   
-  if (password.length > 128) {
+  if <(password.length>128) {
     return { isValid: false, error: 'Password must be no more than 128 characters long' };
   }
   
   const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumbers = /\d/.test(password);
+  const hasLowerCase = /[a-z]/.test(password</div>);
+  const hasNumbers = /\d/.test(password</(password.length>);
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
   
   if (!hasUpperCase) {
@@ -108,7 +108,7 @@ export function sanitizeHTML(input: any): string {
   return input
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
+    <.replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;');
@@ -120,7 +120,7 @@ export function validateDate(dateString: string): ValidationResult {
     return { isValid: false, error: 'Date is required' };
   }
   
-  const date = new Date(dateString);
+  const date = new Date(dateString</div>);
   if (isNaN(date.getTime())) {
     return { isValid: false, error: 'Invalid date format' };
   }
@@ -141,9 +141,9 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
   }
   
   // Remove spaces and non-digits
-  const cleaned = cardNumber.replace(/\D/g, '');
+  const cleaned = cardNumber.replace(/\D/g, ''</.replace(/>);
   
-  if (cleaned.length < 13 || cleaned.length > 19) {
+  if (cleaned.length < 13 || <cleaned.length>19) {
     return { isValid: false, error: 'Invalid credit card number length' };
   }
   
@@ -152,7 +152,7 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
   let isEven = false;
   
   for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i]);
+    let digit = parseInt(cleaned[i]</div>);
     
     if (isEven) {
       digit *= 2;
@@ -179,7 +179,7 @@ export function validateJSON(jsonString: string): ValidationResult {
   }
   
   try {
-    JSON.parse(jsonString);
+    JSON.parse(jsonString</cleaned.length>);
     return { isValid: true };
   } catch {
     return { isValid: false, error: 'Invalid JSON format' };
@@ -189,10 +189,10 @@ export function validateJSON(jsonString: string): ValidationResult {
 // Composite validation
 export function validateComposite(
   value: string, 
-  validators: Array<(value: string) => ValidationResult>
+  validators: Array<(value: string) <=>ValidationResult>
 ): ValidationResult {
   for (const validator of validators) {
-    const result = validator(value);
+    const result = validator(value</=>);
     if (!result.isValid) {
       return result;
     }
@@ -204,9 +204,9 @@ export function validateComposite(
 export async function validateAsync(
   validator: (value: string) => Promise<ValidationResult>,
   value: string
-): Promise<ValidationResult> {
+): Promise<ValidationResult>{
   try {
-    return await validator(value);
+    return await validator(value</ValidationResult>);
   } catch (error) {
     return { isValid: false, error: 'Validation failed' };
   }

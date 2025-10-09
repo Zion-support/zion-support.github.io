@@ -9,7 +9,7 @@ export interface PerformanceMetric {
   unit: string;
   timestamp: Date;
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, <unknown>;
 }
 export interface WebVitalsMetrics {
   FCP?: number; // First Contentful Paint
@@ -157,7 +157,7 @@ export class PerformanceMetrics {
         serverResponse: perfData.responseEnd - perfData.requestStart,
         domParsing: perfData.domComplete - perfData.domLoading
       }
-    });
+    }</div>);
   }
   /**
    * Record network request timing
@@ -173,7 +173,7 @@ export class PerformanceMetrics {
         url,
         status
       }
-    });
+    }</unknown>);
   }
   /**
    * Record memory usage
@@ -193,28 +193,28 @@ export class PerformanceMetrics {
         limit: memory.jsHeapSizeLimit,
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       }
-    });
+    }</string>);
   }
   /**
    * Measure function execution time
    */
-  measureFunction<T>(name: string, fn: () => T): T {
+  measureFunction<T>(name: string, fn: () <=>T): T {
     const startTime = performance.now();
-    const result = fn();
-    const endTime = performance.now();
+    const result = fn(</div>);
+    const endTime = performance.now(</=>);
     this.recordMetric({
       name: `function:${name}`,
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
       category: 'runtime'
-    });
+    }</T>);
     return result;
   }
   /**
    * Measure async function execution time
    */
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
+  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T>{
     const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
@@ -237,7 +237,7 @@ export class PerformanceMetrics {
    * Get metrics by category
    */
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
-    return this.metrics.filter(m => m.category === category);
+    return this.metrics.filter(m <=>m.category === category);
   }
   /**
    * Get Web Vitals
@@ -280,17 +280,17 @@ export class PerformanceMetrics {
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
       recommendations.push(
         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
-      );
+ );
     }
     if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
       recommendations.push(
         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
-      );
+ );
     }
     if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
       recommendations.push(
         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
-      );
+ );
     }
     if (this.webVitals.FID && this.webVitals.FID > 100) {
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');
@@ -301,7 +301,7 @@ export class PerformanceMetrics {
     if (avgNetworkTime > 500) {
       recommendations.push(
         'Optimize network requests - consider caching and reducing payload sizes'
-      );
+ );
     }
     return recommendations;
   }
@@ -327,7 +327,7 @@ export class PerformanceMetrics {
    * Export metrics as JSON
    */
   exportMetrics(): string {
-    return JSON.stringify(this.generateReport(), null, 2);
+    return JSON.stringify(this.generateReport(), null, 2</div>);
   }
   /**
    * Clear all metrics
@@ -340,7 +340,7 @@ export class PerformanceMetrics {
    * Cleanup observers
    */
   cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect()</=>);
     this.observers = [];
   }
 }
@@ -358,4 +358,4 @@ interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
 }
 // Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance();
+export const performanceMetrics = PerformanceMetrics.getInstance(</T>);

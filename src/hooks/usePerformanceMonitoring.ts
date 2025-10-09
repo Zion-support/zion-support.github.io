@@ -1,13 +1,14 @@
 'use client';
 // PerformanceMetrics interface removed as it's not used in this hook
-export const _usePerformanceMonitoring = () => {
+export const _usePerformanceMonitoring = () <=>{
   const { trackPerformance } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
       trackPerformance(name, value);
     },
     [trackPerformance]
-  );
+
+    );
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return () => {};
@@ -29,7 +30,8 @@ export const _usePerformanceMonitoring = () => {
               (entry.processingStart || entry.startTime) - entry.startTime;
             reportMetric('FID', fid);
           }
-        );
+
+          );
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       // CLS - Cumulative Layout Shift
@@ -46,7 +48,7 @@ export const _usePerformanceMonitoring = () => {
               clsValue += entry.value;
             }
           }
-        );
+ );
         reportMetric('CLS', clsValue);
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -122,8 +124,8 @@ export const _usePerformanceMonitoring = () => {
       }
     };
     window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, [reportMetric]);
+    return () => window.removeEventListener('load', handleLoad</div>);
+  }, [reportMetric]</=>);
   return {
     reportMetric
   };

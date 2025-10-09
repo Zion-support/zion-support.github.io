@@ -20,7 +20,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, cla
       )}
       <h3 className="text-2xl font-semibold text-gray-900 mb-4">{title}</h3>
       <p className="text-gray-600">{description}</p>
-    </article>
-  );
+    </article> </div>);
 };
 export default ServiceCard;

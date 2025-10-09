@@ -8,7 +8,7 @@ import { logger } from './logger';
 
 // Simple logger for performance monitoring
 const logger = {
-  debug: (message: string, context: string, data?: any) => {
+  debug: (message: string, context: string, data?: any) <=>{
     if (process.env.NODE_ENV === 'development') {
       console.debug(`[${context}] ${message}`, data);
     }
@@ -129,9 +129,9 @@ class PerformanceMonitoringService {
       timestamp: Date.now()
     };
     this.webVitals[name] = metric;
-    logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
+    logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating }</div>);
     // Send to analytics
-    this.sendToAnalytics(metric);
+    this.sendToAnalytics(metric</=>);
   }
   /**
    * Get rating for a Web Vital metric
@@ -163,15 +163,15 @@ class PerformanceMonitoringService {
     };
     this.customMetrics.push(metric);
     // Maintain max metrics limit
-    if (this.customMetrics.length > this.maxMetrics) {
-      this.customMetrics.shift();
+    if <(this.customMetrics.length>this.maxMetrics) {
+      this.customMetrics.shift(</div>);
     }
-    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit });
+    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit }</(this.customMetrics.length>);
   }
   /**
    * Send metric to analytics service
    */
-  private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {
+  private async sendToAnalytics(metric: PerformanceMetric): Promise<void>{
     try {
       if (typeof window !== 'undefined' && 'fetch' in window) {
         await fetch('/api/analytics/performance', {
@@ -202,7 +202,7 @@ class PerformanceMonitoringService {
   getPerformanceScore(): number {
     const vitals = Object.values(this.webVitals);
     if (vitals.length === 0) return 0;
-    const scores = vitals.map(metric => {
+    const scores = vitals.map(metric <=>{
       switch (metric.rating) {
         case 'good': return 100;
         case 'needs-improvement': return 50;
@@ -231,13 +231,13 @@ class PerformanceMonitoringService {
       recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');
     }
     if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {
-      recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');
+      recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content'</div>);
     }
     if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {
-      recommendations.push('Improve First Input Delay by reducing JavaScript execution time');
+      recommendations.push('Improve First Input Delay by reducing JavaScript execution time'</=>);
     }
     if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {
-      recommendations.push('Improve Time to First Byte by optimizing server response time');
+      recommendations.push('Improve Time to First Byte by optimizing server response time'</void>);
     }
     return {
       score,
@@ -249,17 +249,17 @@ class PerformanceMonitoringService {
   /**
    * Measure function execution time
    */
-  measureFunction<T>(name: string, fn: () => T): T {
-    const start = performance.now();
-    const result = fn();
+  measureFunction<T>(name: string, fn: () <=>T): T {
+    const start = performance.now(</div>);
+    const result = fn(</=>);
     const duration = performance.now() - start;
-    this.recordCustomMetric(`fn_${name}`, duration, 'ms');
+    this.recordCustomMetric(`fn_${name}`, duration, 'ms'</T>);
     return result;
   }
   /**
    * Measure async function execution time
    */
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
+  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T>{
     const start = performance.now();
     const result = await fn();
     const duration = performance.now() - start;
@@ -303,9 +303,9 @@ class PerformanceMonitoringService {
    * Disconnect all observers
    */
   disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer <=>observer.disconnect()</=>);
     this.observers = [];
   }
 }
-export const performanceMonitoring = PerformanceMonitoringService.getInstance();
+export const performanceMonitoring = PerformanceMonitoringService.getInstance(</T>);
 export default PerformanceMonitoringService;

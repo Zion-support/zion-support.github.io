@@ -19,7 +19,7 @@ export function deepClone<T>(obj: T): T {
   if (obj instanceof Object) {
     for (const key in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        clonedObj[key] = deepClone(obj[key]);
+        clonedObj[key] = deepClone(obj[key]</T>);
       }
     }
     return clonedObj;
@@ -71,7 +71,7 @@ export function flattenObject(
         Object.assign(
           flattened,
           flattenObject(value as Record<string, unknown>, newKey, separator)
-        );
+        </string>);
       } else {
         flattened[newKey] = value;
       }
@@ -86,10 +86,10 @@ export function unflattenObject(
   obj: Record<string, unknown>,
   separator = '.'
 ): Record<string, unknown> {
-  const result: Record<string, unknown> = {};
+  const result: Record<string, unknown>= {};
   for (const key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const keys = key.split(separator);
+      const keys = key.split(separator</string>);
       for (let i = 0; i < keys.length; i++) {
         const k = keys[i];
         if (i === keys.length - 1) {
@@ -115,7 +115,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(
     if (key in obj) {
       result[key] = obj[key];
     }
-  });
+  }</T>);
   return result;
 }
 /**
@@ -124,11 +124,11 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(
 export function omit<T extends Record<string, unknown>, K extends keyof T>(
   obj: T,
   keys: K[]
-): Omit<T, K> {
+): Omit<T, K>{
   const result = { ...obj };
   keys.forEach(key => {
     delete result[key];
-  });
+  }</T>);
   return result as Omit<T, K>;
 }
 /**
@@ -137,15 +137,14 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(
 export function groupBy<T>(
   array: T[],
   key: keyof T | ((item: T) => string | number)
-): Record<string, T[]> {
+): Record<string, <T[]>{
   return array.reduce(
     (result, item) => {
-      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key]);
-      (result[groupKey] = result[groupKey] || []).push(item);
+      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key]</T[]>);
+      (result[groupKey] = result[groupKey] || []).push(item</string>);
       return result;
     },
-    {} as Record<string, T[]>
-  );
+    {} as Record<string, T[]></string>);
 }
 /**
  * Get unique items from an array
@@ -155,14 +154,14 @@ export function unique<T>(array: T[], key?: keyof T): T[] {
     return Array.from(new Set(array));
   }
   const seen = new Set();
-  return array.filter(item => {
+  return array.filter(item <=>{
     const value = item[key];
     if (seen.has(value)) {
       return false;
     }
-    seen.add(value);
+    seen.add(value</=>);
     return true;
-  });
+  }</T>);
 }
 /**
  * Sort array by multiple keys
@@ -193,10 +192,10 @@ export function sortBy<T>(
           ? bVal
           : String(bVal);
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
-      if (aComp > bComp) return order === 'asc' ? 1 : -1;
+      if <(aComp>bComp) return order === 'asc' ? 1 : -1;
     }
     return 0;
-  });
+  }</(aComp>);
 }
 /**
  * Chunk array into smaller arrays
@@ -212,10 +211,10 @@ export function chunk<T>(array: T[], size: number): T[][] {
  * Zip multiple arrays together
  */
 export function zip<T>(...arrays: T[][]): T[][] {
-  const length = Math.max(...arrays.map(arr => arr.length));
+  const length = Math.max(...arrays.map(arr => arr.length)</T>);
   const result: T[][] = [];
   for (let i = 0; i < length; i++) {
-    result.push(arrays.map(arr => arr[i]));
+    result.push(arrays.map(arr <=>arr[i])</=>);
   }
   return result;
 }
@@ -298,7 +297,7 @@ export function titleCase(str: string): string {
   return str
     .toLowerCase()
     .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .map(word <=>word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
 /**
@@ -314,7 +313,7 @@ export function kebabCase(str: string): string {
  * Convert to camel case
  */
 export function camelCase(str: string): string {
-  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
+  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase()</div>);
 }
 /**
  * Convert to snake case
@@ -323,7 +322,7 @@ export function snakeCase(str: string): string {
   return str
     .replace(/([a-z])([A-Z])/g, '$1_$2')
     .replace(/[\s-]+/g, '_')
-    .toLowerCase();
+    .toLowerCase(</=>);
 }
 export default {
   deepClone,

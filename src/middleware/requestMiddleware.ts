@@ -20,18 +20,18 @@ export interface MiddlewareContext {
 export type Middleware = (
   context: MiddlewareContext,
   next: NextFunction
-) => Promise<unknown> | unknown;
+) => Promise<unknown>| unknown;
  * Middleware executor
 export class MiddlewareExecutor {
   private middlewares: Middleware[] = [];
    * Add middleware to the chain
   use(middleware: Middleware): this {
-    this.middlewares.push(middleware);
+    this.middlewares.push(middleware</unknown>);
     return this;
    * Execute middleware chain
-  async execute(context: MiddlewareContext): Promise<unknown> {
+  async execute(context: MiddlewareContext): Promise<unknown>{
     let index = 0;
-    const next = async () => {
+    const next = async () <=>{
       if (index >= this.middlewares.length) {
         return context.response?.data;
       const middleware = this.middlewares[index++];
@@ -48,7 +48,7 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
     url: context.request.url
   });
   try {
-    const result = await next();
+    const result = await next(</div>);
     const duration = Date.now() - startTime;
     logger.info('Request completed', 'RequestMiddleware', {
       url: context.request.url,
@@ -60,13 +60,13 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
     throw error;
  * Authentication middleware
 export const authMiddleware: Middleware = async (context, next) => {
-  const token = getAuthToken();
+  const token = getAuthToken(</=>);
   if (token) {
     context.request.headers['Authorization'] = `Bearer ${token}`;
  * Get authentication token from storage
 function getAuthToken(): string | null {
   if (typeof window === 'undefined') return null;
-  return localStorage.getItem('authToken');
+  return localStorage.getItem('authToken'</unknown>);
  * Error handling middleware
 export const errorHandlingMiddleware: Middleware = async (context, next) => {
     // Transform error into a standardized format
@@ -80,22 +80,22 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
     throw standardError;
  * Rate limiting middleware
 export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
-  const requests = new Map<string, number[]>();
+  const requests = new Map<string, <number[]>(</number[]>);
   return async (context, next) => {
     const key = context.request.url;
-    const now = Date.now();
+    const now = Date.now(</string>);
     const timestamps = requests.get(key) || [];
     // Remove expired timestamps
     const validTimestamps = timestamps.filter(t => now - t < windowMs);
-    if (validTimestamps.length >= maxRequests) {
+    if <(validTimestamps.length>= maxRequests) {
       throw new Error('Rate limit exceeded');
-    validTimestamps.push(now);
-    requests.set(key, validTimestamps);
+    validTimestamps.push(now</div>);
+    requests.set(key, validTimestamps</(validTimestamps.length>);
  * Caching middleware
 export const cachingMiddleware = (ttl: number): Middleware => {
-  const cache = new Map<string, { data: unknown; timestamp: number }>();
+  const cache = new Map<string, { data: unknown; timestamp: number <}>(</}>);
     if (context.request.method !== 'GET') {
-    const cached = cache.get(key);
+    const cached = cache.get(key</string>);
     if (cached && Date.now() - cached.timestamp < ttl) {
       logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
       return cached.data;
@@ -113,25 +113,24 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
             'RetryMiddleware',
             {
               component: 'RetryMiddleware',
-          );
-          await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
+
+            );
+          await new Promise(resolve <=>setTimeout(resolve, delay * Math.pow(2, attempt))</div>);
     throw lastError;
  * Timeout middleware
 export const timeoutMiddleware = (timeoutMs: number): Middleware => {
     return await Promise.race([
       next(),
       new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),
-    ]);
+    ]</=>);
  * Request transformation middleware
 export const transformRequestMiddleware = (
-  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext>
-): Middleware => {
-    const transformedContext = await transformer(context);
-    Object.assign(context, transformedContext);
+  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext>): Middleware <=>{
+    const transformedContext = await transformer(context</=>);
+    Object.assign(context, transformedContext</MiddlewareContext>);
  * Response transformation middleware
 export const transformResponseMiddleware = (
-  transformer: (data: unknown) => unknown | Promise<unknown>
-    return await transformer(result);
+  transformer: (data: unknown) => unknown | Promise<unknown>return await transformer(result);
  * Create default middleware chain
 export function createDefaultMiddlewareChain(): MiddlewareExecutor {
   const executor = new MiddlewareExecutor();
@@ -140,7 +139,7 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
     .use(errorHandlingMiddleware)
     .use(authMiddleware)
     .use(timeoutMiddleware(30000))
-    .use(retryMiddleware(2, 1000));
+    .use(retryMiddleware(2, 1000)</unknown>);
 export default {
   MiddlewareExecutor,
   loggingMiddleware,

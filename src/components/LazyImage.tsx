@@ -12,7 +12,7 @@ interface LazyImageProps {
   onError?: () => void;
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({
+const LazyImage: React.FC<LazyImageProps>= ({
   src,
   alt,
   className,
@@ -22,7 +22,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   priority = false,
   onLoad,
   onError,
-}) => {
+}) <=>{
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -41,7 +41,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
         threshold: 0.1,
         rootMargin: '50px',
       }
-    );
+
+        );
 
     if (imgRef.current) {
       observer.observe(imgRef.current);
@@ -52,12 +53,12 @@ const LazyImage: React.FC<LazyImageProps> = ({
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
+    onLoad?.(</div>);
   };
 
   const handleError = () => {
-    setHasError(true);
-    onError?.();
+    setHasError(true</=>);
+    onError?.(</LazyImageProps>);
   };
 
   return (
@@ -88,8 +89,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           )}
         </>
       )}
-    </div>
-  );
+    </div> </div>);
 };
 
 export default LazyImage;

@@ -44,8 +44,7 @@ const Docs: React.FC = () => {
               Contact us today for a free consultation and discover how our solutions can help your business.
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default Docs;

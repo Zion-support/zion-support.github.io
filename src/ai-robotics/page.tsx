@@ -8,23 +8,27 @@ const AIRoboticsPage: React.FC = () => {
   const features = [
     {
       icon: Bot,
-      title: 'Intelligent Robotics',
-      description: 'AI-powered robots that learn and adapt to their environment',
+      title: description,
+
+      $4: 'AI-powered robots that learn and adapt to their environment',
       benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior']
     },
       icon: Cpu,
-      title: 'Advanced Control Systems',
-      description: 'Sophisticated control algorithms for precise robot movement',
+      title: description,
+
+      $4: 'Sophisticated control algorithms for precise robot movement',
       benefits: ['Precision control', 'Real-time processing', 'Safety systems']
       icon: Settings,
-      title: 'Automated Workflows',
-      description: 'Streamlined robotic processes for maximum efficiency',
+      title: description,
+
+      $4: 'Streamlined robotic processes for maximum efficiency',
       benefits: ['Process optimization', 'Error reduction', '24/7 operation']
       icon: Shield,
-      title: 'Safety & Security',
-      description: 'Built-in safety protocols and security measures',
-      benefits: ['Collision avoidance', 'Emergency stops', 'Data protection']
-    }
+      title: description,
+
+      $4: 'Built-in safety protocols and security measures',
+      benefits: ['Collision avoidance', 'Emergency stops', 'Data protection'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIRoboticsPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIRoboticsPage;

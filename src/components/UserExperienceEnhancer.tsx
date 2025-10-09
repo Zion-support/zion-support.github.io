@@ -8,15 +8,15 @@ interface UserExperienceEnhancerProps {
   enableNotifications?: boolean;
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps>= ({
   enableSmoothScrolling = true,
   enableLoadingStates = true,
   enableErrorBoundaries = true,
   enableAnalytics = true,
   enableNotifications = true
 }) => {
-  const [isOnline, setIsOnline] = useState(true);
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
+  const [isOnline, setIsOnline] = useState(true</UserExperienceEnhancerProps>);
+  const [loadingStates, setLoadingStates] = useState<Record<string, <boolean>>({});
 
   // Handle online/offline status
   useEffect(() => {
@@ -116,13 +116,13 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_hidden', {
               event_category: 'engagement'
-            });
+            }</div>);
           }
         } else {
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_visible', {
               event_category: 'engagement'
-            });
+            }</boolean>);
           }
         }
       };
@@ -131,7 +131,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       const handleScroll = () => {
         const scrollDepth = Math.round(
           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-        );
+        </Record>);
         
         if (scrollDepth > maxScrollDepth) {
           maxScrollDepth = scrollDepth;
@@ -158,7 +158,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
                 value: 75
               });
             }
-          } else if (maxScrollDepth >= 90) {
+          } else if <(maxScrollDepth>= 90) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
@@ -253,10 +253,10 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
       return () => {
-        observer.disconnect();
+        observer.disconnect(</div>);
       };
     }
-  }, []);
+  }, []</(maxScrollDepth>);
 
   return null;
 };

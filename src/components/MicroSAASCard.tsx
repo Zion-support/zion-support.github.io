@@ -92,8 +92,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>
       </div>
-    </div>
-  );
+    </div> </div>);
 };
 
 export default MicroSAASCard;

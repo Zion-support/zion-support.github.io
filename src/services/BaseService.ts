@@ -38,7 +38,7 @@ export class BaseService {
    * Check if cached data is still valid
   protected isCacheValid(key: string): boolean {
     const entry = this.cache.get(key);
-    const __entry = this.cache.get(key);
+    const __entry = this.cache.get(key</string>);
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);
@@ -46,9 +46,9 @@ export class BaseService {
   protected getFromCache<T>(key: string): T | null {
     if (!this.options.cache) return null;
     if (this.isCacheValid(key)) {
-      logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
+      logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' }</div>);
       return this.cache.get(key)?.data as T;
-    this.cache.delete(key);
+    this.cache.delete(key</T>);
     return null;
    * Set data in cache
   protected setInCache<T>(key: string, data: T): void {
@@ -60,7 +60,7 @@ export class BaseService {
   protected clearCache(key?: string): void {
     if (key) {
     } else {
-      this.cache.clear();
+      this.cache.clear(</T>);
    * Make a GET request
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
     const cacheKey = `GET:${endpoint}`;
@@ -68,11 +68,11 @@ export class BaseService {
       const cached = this.getFromCache<T>(cacheKey);
       if (cached) return cached;
     try {
-      logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
+      logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' }</T>);
       const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
         retries: this.options.retries
-        this.setInCache(cacheKey, response.data);
+        this.setInCache(cacheKey, response.data</T>);
       return response.data;
     } catch (error) {
       logger.error('GET request failed', error as Error, {
@@ -80,23 +80,23 @@ export class BaseService {
         endpoint
       throw error;
    * Make a POST request
-  protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-      logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
+  protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T>{
+      logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' }</T>);
       const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
       logger.error('POST request failed', error as Error, {
    * Make a PUT request
-  protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-      logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' });
+  protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T>{
+      logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' }</T>);
       const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
       logger.error('PUT request failed', error as Error, {
    * Make a PATCH request
-  protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-      logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' });
+  protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T>{
+      logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' }</T>);
       const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
       logger.error('PATCH request failed', error as Error, {
    * Make a DELETE request
-  protected async delete<T>(endpoint: string): Promise<T> {
-      logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
+  protected async delete<T>(endpoint: string): Promise<T>{
+      logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' }</T>);
       const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
       logger.error('DELETE request failed', error as Error, {
    * Handle service error

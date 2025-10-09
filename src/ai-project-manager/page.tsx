@@ -12,23 +12,27 @@ const AiProjectManagerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'AI-Powered Planning',
-      description: 'Intelligent project planning with predictive analytics and resource optimization',
+      title: description,
+
+      $4: 'Intelligent project planning with predictive analytics and resource optimization',
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
     },
       icon: Target,
-      title: 'Smart Task Management',
-      description: 'Automated task assignment and priority management based on AI insights',
+      title: description,
+
+      $4: 'Automated task assignment and priority management based on AI insights',
       benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
       icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'Advanced analytics to predict project outcomes and identify potential risks',
+      title: description,
+
+      $4: 'Advanced analytics to predict project outcomes and identify potential risks',
       benefits: ['90% risk reduction', 'Data-driven decisions', 'Proactive problem solving']
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Enhanced team collaboration with AI-powered communication and coordination',
-      benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
-    }
+      title: description,
+
+      $4: 'Enhanced team collaboration with AI-powered communication and coordination',
+      benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning'],
+ }
   ];
 
   const pricingPlans = [
@@ -94,8 +98,7 @@ const AiProjectManagerPage: React.FC = () => {
               Learn More
           </div>
       
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 

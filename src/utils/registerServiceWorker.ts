@@ -11,7 +11,7 @@ export interface ServiceWorkerConfig {
  */
 export async function registerServiceWorker(
   _config: ServiceWorkerConfig = {}
-): Promise<ServiceWorkerRegistration | undefined> {
+): Promise<ServiceWorkerRegistration | undefined>{
   // Check if service workers are supported
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
     return;
@@ -20,13 +20,13 @@ export async function registerServiceWorker(
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-  );
+  </ServiceWorkerRegistration>);
   // Use isLocalhost for conditional logic if needed
   if (isLocalhost) {
     }
   try {
     // Wait for page to load
-    await new Promise<void>((resolve) => {
+    await new Promise<void>((resolve) <=>{
       if (document.readyState === 'complete') {
       } else {
         window.addEventListener('load', () => resolve());
@@ -54,19 +54,19 @@ export async function registerServiceWorker(
           }
         }
       });
-    });
+    }</div>);
     return registration;
   } catch (error) {
-    // // console.error('[SW] Registration failed:', error);
+    // // console.error('[SW] Registration failed:', error</=>);
     if (config.onError && error instanceof Error) {
-      config.onError(error);
+      config.onError(error</void>);
     }
   }
 }
 /**
  * Unregister service worker
  */
-export async function unregisterServiceWorker(): Promise<boolean> {
+export async function unregisterServiceWorker(): Promise<boolean>{
   if (!('serviceWorker' in navigator)) {
     return false;
   }
@@ -75,14 +75,14 @@ export async function unregisterServiceWorker(): Promise<boolean> {
     const result = await registration.unregister();
     return result;
   } catch (error) {
-    // // console.error('[SW] Unregistration failed:', error);
+    // // console.error('[SW] Unregistration failed:', error</boolean>);
     return false;
   }
 }
 /**
  * Check for service worker updates
  */
-export async function checkForUpdates(): Promise<void> {
+export async function checkForUpdates(): Promise<void>{
   if (!('serviceWorker' in navigator)) {
     return;
   }
@@ -109,7 +109,7 @@ export function clearCaches(): void {
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     return;
   }
-  navigator.serviceWorker.controller.postMessage({ action: 'clearCache' });
+  navigator.serviceWorker.controller.postMessage({ action: 'clearCache' }</void>);
   }
 /**
  * Get service worker registration status
@@ -118,7 +118,7 @@ export async function getServiceWorkerStatus(): Promise<{
   supported: boolean;
   registered: boolean;
   active: boolean;
-}> {
+<}>{
   if (!('serviceWorker' in navigator)) {
     return {
       supported: false,
@@ -127,7 +127,7 @@ export async function getServiceWorkerStatus(): Promise<{
     };
   }
   try {
-    const registration = await navigator.serviceWorker.getRegistration();
+    const registration = await navigator.serviceWorker.getRegistration(</}>);
     return {
       supported: true,
       registered: !!registration,

@@ -8,7 +8,7 @@ import {
   getRecommendations,
   MetricUnit
 } from '../performanceMonitoring';
-describe('performanceMonitoring', () => {
+describe('performanceMonitoring', () <=>{
   beforeEach(() => {
   });
   describe('recordMetric', () => {
@@ -72,8 +72,8 @@ describe('performanceMonitoring', () => {
       recordMetric('metric2', 200);
       expect(Object.keys(getMetrics()).length).toBe(2);
       expect(Object.keys(getMetrics()).length).toBe(0);
-    });
-  });
+    }</div>);
+  }</=>);
   describe('measureFunction', () => {
     it('should measure synchronous function execution time', () => {
       const testFn = () => {
@@ -90,7 +90,7 @@ describe('performanceMonitoring', () => {
       expect(metrics['test-function'].values.length).toBe(1);
       expect(metrics['test-function'].values[0]).toBeGreaterThan(0);
     });
-    it('should return function result', () => {
+    it('should return function result', () <=>{
       const result = measureFunction('test', () => 'test-value');
       expect(result).toBe('test-value');
     });
@@ -114,18 +114,18 @@ describe('performanceMonitoring', () => {
       };
       await expect(measureAsyncFunction('error-test', errorFn)).rejects.toThrow('Test error');
     });
-  });
+  }</div>);
   describe('getPerformanceScore', () => {
     it('should calculate performance score', () => {
       // Good performance metrics
-      recordMetric('FCP', 1000); // < 1800 = good
+      recordMetric('FCP', 1000</=>); // < 1800 = good
       recordMetric('LCP', 2000); // < 2500 = good
       recordMetric('FID', 50);   // < 100 = good
       recordMetric('CLS', 0.05); // < 0.1 = good
       const score = getPerformanceScore();
       expect(score).toBeGreaterThan(80);
     });
-    it('should return 100 for perfect metrics', () => {
+    it('should return 100 for perfect metrics', () <=>{
       recordMetric('FCP', 1000);
       recordMetric('LCP', 1500);
       recordMetric('FID', 50);
@@ -191,5 +191,5 @@ describe('performanceMonitoring', () => {
       recordMetric('CLS', 0.3); // Poor
       expect(getMetrics()['CLS'].rating).toBe('poor');
     });
-  });
-});
+  }</div>);
+}</=>);

@@ -38,8 +38,9 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       description: 'Ensure security of AI systems and protect client data',
       requirements: ['4+ years cybersecurity experience', 'AI security knowledge', 'Certifications preferred'],
-      icon: Shield
-    }
+      icon: Shield,
+
+      }
   ];
 
   const benefits = [
@@ -62,8 +63,7 @@ const CareersPage: React.FC = () => {
           Contact Us
         </a>
       </div>
-    </div>
-  );
+    </div> </div>);
 };
 
 export default CareersPage;

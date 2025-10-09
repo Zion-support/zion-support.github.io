@@ -11,7 +11,7 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 const __originalConsoleError = console.error;
-console.error = (...args) => {
+console.error = (...args) <=>{
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
@@ -56,10 +56,10 @@ const originalConsoleInfo = console.info;
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
-  originalConsoleWarn(...args);
+  originalConsoleWarn(...args</div>);
 console.info = (...args) => {
   if (message.includes('ReactDOM.render is no longer supported')) {
-  originalConsoleInfo(...args);
+  originalConsoleInfo(...args</=>);
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];

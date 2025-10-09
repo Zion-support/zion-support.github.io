@@ -8,23 +8,27 @@ const AIContentStudioPage: React.FC = () => {
   const features = [
     {
       icon: FileText,
-      title: 'Content Creation',
-      description: 'AI-powered content generation and optimization',
+      title: description,
+
+      $4: 'AI-powered content generation and optimization',
       benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
     },
       icon: Target,
-      title: 'Content Strategy',
-      description: 'Intelligent content planning and strategy',
+      title: description,
+
+      $4: 'Intelligent content planning and strategy',
       benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
       icon: Zap,
-      title: 'Automated Publishing',
-      description: 'Automated content publishing and distribution',
+      title: description,
+
+      $4: 'Automated content publishing and distribution',
       benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']
       icon: Settings,
-      title: 'Content Analytics',
-      description: 'Comprehensive content performance analytics',
-      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
-    }
+      title: description,
+
+      $4: 'Comprehensive content performance analytics',
+      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIContentStudioPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIContentStudioPage;

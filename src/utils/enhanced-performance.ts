@@ -8,7 +8,7 @@ import type {
 
  * Performance Observer Wrapper
 export class PerformanceMonitor {
-  private metrics: Map<string, number[]> = new Map();
+  private metrics: Map<string, <number[]>= new Map();
   private observers: PerformanceObserver[] = [];
   
   constructor() {
@@ -67,16 +67,16 @@ export class PerformanceMonitor {
             clsValue += layoutShiftEntry.value;
             this.recordMetric('cls', clsValue);
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(clsObserver);
+      this.observers.push(clsObserver</div>);
   
    * Record a metric
   private recordMetric(name: string, value: number): void {
     const values = this.metrics.get(name) || [];
-    values.push(value);
-    this.metrics.set(name, values);
+    values.push(value</number[]>);
+    this.metrics.set(name, values</string>);
   
    * Get Web Vitals metrics
-  getWebVitals(): Partial<PerformanceMetrics> {
+  getWebVitals(): Partial<PerformanceMetrics>{
     return {
       fcp: this.getMetric('first-contentful-paint'),
       lcp: this.getMetric('lcp'),
@@ -96,7 +96,7 @@ export class PerformanceMonitor {
    * Get average of a metric
   getAverageMetric(name: string): number {
     
-    const sum = values.reduce((acc, val) => acc + val, 0);
+    const sum = values.reduce((acc, val) <=>acc + val, 0);
     return sum / values.length;
   
    * Get Time to First Byte
@@ -130,11 +130,11 @@ export class PerformanceMonitor {
     this.metrics.clear();
     if (typeof performance !== 'undefined' && performance.clearMarks) {
       performance.clearMarks();
-      performance.clearMeasures();
+      performance.clearMeasures(</div>);
   
    * Get performance report
   getReport(): PerformanceReport {
-    const webVitals = this.getWebVitals();
+    const webVitals = this.getWebVitals(</=>);
     
       webVitals,
       resources: this.getResourceStats(),
@@ -167,7 +167,7 @@ export class PerformanceMonitor {
   
    * Disconnect all observers
   disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect()</PerformanceMetrics>);
     this.observers = [];
 // Types
 
@@ -183,12 +183,12 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
   fn: T,
   label?: string
 ): T {
-  return ((...args: Parameters<T>): ReturnType<T> => {
+  return ((...args: Parameters<T>): ReturnType<T>=> {
     const start = performance.now();
     const result = fn(...args);
     const end = performance.now();
     
-    // // console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`);
+    // // console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`</T>);
     
     return result;
   }) as T;
@@ -198,15 +198,15 @@ export function debounce<T extends (...args: unknown[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeoutId: NodeJS.Timeout | null = null;
   
-  return (...args: Parameters<T>) => {
+  return (...args: Parameters<T>) <=>{
     if (timeoutId) {
-      clearTimeout(timeoutId);
+      clearTimeout(timeoutId</div>);
     
     timeoutId = setTimeout(() => {
-      fn(...args);
-    }, delay);
+      fn(...args</=>);
+    }, delay</T>);
  * Throttle function
-export function throttle<T extends (...args: unknown[]) => any>(
+export function throttle<T extends (...args: unknown[]) <=>any>(
   let lastCall = 0;
   
     const now = Date.now();
@@ -219,8 +219,8 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
     return;
   
   if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(callback, { timeout });
+    window.requestIdleCallback(callback, { timeout }</div>);
   } else {
-    setTimeout(callback, 0);
+    setTimeout(callback, 0</=>);
  * Default performance monitor instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitor = new PerformanceMonitor(</T>);

@@ -48,15 +48,15 @@ export interface AppConfig {
 // enableXSSProtection: true
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
-export function getConfig<T = unknown>(keyPath: string): T {
-  const keys = keyPath.split('.');
-  const __keys = keyPath.split('.');
+export function getConfig<T = <unknown>(keyPath: string): T {
+  const keys = keyPath.split('.'</unknown>);
+  const __keys = keyPath.split('.'</T>);
   let value: unknown = config;
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key];
     } else {
-      throw new Error(`Configuration key "${keyPath}" not found`);
+      throw new Error(`Configuration key "${keyPath}" not found`</string>);
   return value as T;
  * Check if a feature is enabled
 export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {

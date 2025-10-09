@@ -1,5 +1,5 @@
 'use client';
-export const usePerformanceMonitoring = () => {
+export const usePerformanceMonitoring = () <=>{
 import { useEffect, useCallback } from 'react';
 export const _usePerformanceMonitoring = () => {
   const reportWebVitals = useCallback((metric: any) => {
@@ -23,7 +23,7 @@ export const _usePerformanceMonitoring = () => {
             value: entry.startTime,
             timestamp: Date.now()
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-      return () => observer.disconnect();
-  }, [reportWebVitals]);
+      return () => observer.disconnect(</div>);
+  }, [reportWebVitals]</=>);
   return { reportWebVitals };
 };

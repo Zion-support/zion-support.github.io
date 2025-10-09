@@ -8,23 +8,27 @@ const FutureTechnologiesPage: React.FC = () => {
   const features = [
     {
       icon: Rocket,
-      title: 'Emerging Technologies',
-      description: 'Cutting-edge technologies and future innovations',
+      title: description,
+
+      $4: 'Cutting-edge technologies and future innovations',
       benefits: ['AI advancement', 'Quantum computing', 'Blockchain']
     },
       icon: Target,
-      title: 'Technology Forecasting',
-      description: 'Predict and prepare for future technology trends',
+      title: description,
+
+      $4: 'Predict and prepare for future technology trends',
       benefits: ['Trend analysis', 'Market prediction', 'Strategic planning']
       icon: Zap,
-      title: 'Innovation Labs',
-      description: 'Research and development of next-gen technologies',
+      title: description,
+
+      $4: 'Research and development of next-gen technologies',
       benefits: ['R&D projects', 'Prototype development', 'Testing']
       icon: Settings,
-      title: 'Technology Integration',
-      description: 'Integrate emerging technologies with existing systems',
-      benefits: ['System integration', 'Migration support', 'Compatibility']
-    }
+      title: description,
+
+      $4: 'Integrate emerging technologies with existing systems',
+      benefits: ['System integration', 'Migration support', 'Compatibility'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const FutureTechnologiesPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default FutureTechnologiesPage;

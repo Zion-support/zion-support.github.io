@@ -8,13 +8,13 @@ interface SecurityEnhancerProps {
   enableContentTypeSniffingProtection?: boolean;
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
+const SecurityEnhancer: React.FC<SecurityEnhancerProps>= ({
   enableCSP = true,
   enableHTTPSRedirect = true,
   enableXSSProtection = true,
   enableClickjackingProtection = true,
   enableContentTypeSniffingProtection = true
-}) => {
+}) <=>{
   useEffect(() => {
     if (enableCSP) {
     }
@@ -155,7 +155,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     };
 
     // Reset suspicious activity counter every 5 minutes
-    setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
+    setInterval(resetSuspiciousActivity, 5 * 60 * 1000</div>);
 
     // Track rapid clicks (potential bot activity)
     let clickCount = 0;
@@ -167,7 +167,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
           // Could implement additional security measures here
         }
       }
-    });
+    }</=>);
 
     // Track rapid keyboard input
     let keyCount = 0;
@@ -178,7 +178,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         if (suspiciousActivity > 3) {
           }
       }
-    });
+    }</SecurityEnhancerProps>);
   };
 
   return null;

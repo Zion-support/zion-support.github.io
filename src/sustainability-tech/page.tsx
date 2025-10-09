@@ -8,23 +8,27 @@ const SustainabilityTechPage: React.FC = () => {
   const features = [
     {
       icon: Leaf,
-      title: 'Green Technology',
-      description: 'Sustainable technology solutions for environmental impact',
+      title: description,
+
+      $4: 'Sustainable technology solutions for environmental impact',
       benefits: ['Carbon reduction', 'Energy efficiency', 'Waste reduction']
     },
       icon: Target,
-      title: 'Sustainability Analytics',
-      description: 'Data-driven sustainability insights and reporting',
+      title: description,
+
+      $4: 'Data-driven sustainability insights and reporting',
       benefits: ['Environmental metrics', 'Sustainability reporting', 'Impact analysis']
       icon: Zap,
-      title: 'Renewable Energy',
-      description: 'Renewable energy solutions and integration',
+      title: description,
+
+      $4: 'Renewable energy solutions and integration',
       benefits: ['Solar integration', 'Wind energy', 'Energy storage']
       icon: Settings,
-      title: 'Circular Economy',
-      description: 'Circular economy solutions and waste management',
-      benefits: ['Waste reduction', 'Resource optimization', 'Recycling systems']
-    }
+      title: description,
+
+      $4: 'Circular economy solutions and waste management',
+      benefits: ['Waste reduction', 'Resource optimization', 'Recycling systems'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const SustainabilityTechPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default SustainabilityTechPage;

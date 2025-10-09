@@ -11,7 +11,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props, <State>{
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -95,15 +95,15 @@ class ErrorBoundary extends Component<Props, State> {
     //     'Content-Type': 'application/json',
     //   },
     //   body: JSON.stringify(errorReport)
-    // }).catch(console.error);
+    // }).catch(console.error</div>);
   };
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined }</State>);
   };
 
   private handleReload = () => {
-    window.location.reload();
+    window.location.reload(</Props>);
   };
 
   private handleGoHome = () => {
@@ -190,8 +190,7 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
             </div>
           </div>
-        </div>
-      );
+        </div> </div>);
     }
 
     return this.props.children;

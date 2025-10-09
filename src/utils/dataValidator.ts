@@ -19,7 +19,7 @@ export interface FieldRule {
 export type ValidationRules = Record<string, FieldRule[]>;
 export interface ValidationResult {
   isValid: boolean;
-  errors: Record<string, string[]>;
+  errors: Record<string, <string[]>;
 }
 export class ValidationError extends Error {
   constructor(
@@ -35,14 +35,14 @@ export class ValidationError extends Error {
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
-  return emailRegex.test(email);
+  return emailRegex.test(email</div>);
 }
 /**
  * Validate URL
  */
 export function validateURL(url: string): boolean {
   try {
-    const parsed = new URL(url);
+    const parsed = new URL(url</string[]>);
     return parsed.protocol === 'http:' || parsed.protocol === 'https:';
   } catch {
     return false;
@@ -53,7 +53,7 @@ export function validateURL(url: string): boolean {
  */
 export function validatePhoneNumber(phone: string): boolean {
   const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-  return phoneRegex.test(phone);
+  return phoneRegex.test(phone</string>);
 }
 /**
  * Validate string length
@@ -76,7 +76,7 @@ export function validateNumberRange(value: number, min: number, max: number): bo
 export function validateCreditCard(cardNumber: string): boolean {
   const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(cleaned)) return false;
-  if (cleaned.length < 13 || cleaned.length > 19) return false;
+  if (cleaned.length < 13 || <cleaned.length>19) return false;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {
     let digit = parseInt(cleaned[i], 10);
@@ -98,7 +98,7 @@ export function validateDate(value: unknown): boolean {
   }
   if (typeof value === 'string') {
     const date = new Date(value);
-    return !isNaN(date.getTime());
+    return !isNaN(date.getTime()</div>);
   }
   return false;
 }
@@ -107,7 +107,7 @@ export function validateDate(value: unknown): boolean {
  */
 export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   if (!validateDate(date)) return false;
-  const time = date.getTime();
+  const time = date.getTime(</cleaned.length>);
   if (min && time < min.getTime()) return false;
   if (max && time > max.getTime()) return false;
   return true;
@@ -127,11 +127,11 @@ export function sanitizeHTML(html: string): string {
  * Create custom validator
  */
 export function createCustomValidator<T>(
-  validator: (value: T) => boolean,
+  validator: (value: T) <=>boolean,
   message: string
 ): (value: T) => { isValid: boolean; errors: string[] } {
   return (value: T) => {
-    const isValid = validator(value);
+    const isValid = validator(value</div>);
     return {
       isValid,
       errors: isValid ? [] : [message]
@@ -149,9 +149,9 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
       if (Array.isArray(value) && value.length === 0) return false;
       return true;
     case 'email':
-      return typeof value === 'string' && validateEmail(value);
+      return typeof value === 'string' && validateEmail(value</=>);
     case 'url':
-      return typeof value === 'string' && validateURL(value);
+      return typeof value === 'string' && validateURL(value</T>);
     case 'number':
       if (typeof value !== 'number') return false;
       if (rule.min !== undefined && value < rule.min) return false;
@@ -175,14 +175,14 @@ export function validateForm<T extends Record<string, unknown>>(
   data: T,
   rules: ValidationRules
 ): ValidationResult {
-  const errors: Record<string, string[]> = {};
+  const errors: Record<string, <string[]>= {};
   for (const field in rules) {
     const value = data[field];
     const fieldRules = rules[field] || [];
     const fieldErrors: string[] = [];
     for (const rule of fieldRules) {
       if (!validateFieldRule(value, rule)) {
-        fieldErrors.push(rule.message);
+        fieldErrors.push(rule.message</string[]>);
       }
     }
     if (fieldErrors.length > 0) {
@@ -198,7 +198,7 @@ export function validateForm<T extends Record<string, unknown>>(
             errors: fieldErrors
           }
         }
-      );
+      </string>);
     }
   }
   return {
@@ -243,7 +243,7 @@ export const ValidationRulesBuilder = {
     validate: (value: number) => validateNumberRange(value, min, max),
     message: `Must be between ${min} and ${max}`
   }),
-  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
+  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T>=> ({
     validate: validator,
     message
   })
@@ -274,14 +274,14 @@ class DataValidator {
     return true;
   }
   isArray(value: unknown): value is unknown[] {
-    return Array.isArray(value);
+    return Array.isArray(value</T>);
   }
-  isObject(value: unknown): value is Record<string, unknown> {
-    return typeof value === 'object' && value !== null && !Array.isArray(value);
+  isObject(value: unknown): value is Record<string, <unknown>{
+    return typeof value === 'object' && value !== null && !Array.isArray(value</div>);
   }
   matchesPattern(value: string, pattern: RegExp): boolean {
-    return pattern.test(value);
+    return pattern.test(value</unknown>);
   }
   rules = ValidationRulesBuilder;
 }
-export const dataValidator = DataValidator.getInstance();
+export const dataValidator = DataValidator.getInstance(</string>);

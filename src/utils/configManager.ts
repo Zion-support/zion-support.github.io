@@ -179,7 +179,7 @@ export class ConfigManager {
   private static instance: ConfigManager;
   private config: AppConfig;
   private environment: Environment;
-  private overrides: Partial<AppConfig> = {};
+  private overrides: Partial<AppConfig>= {};
   constructor() {
     this.environment = this.detectEnvironment();
     this.config = this.loadConfig();
@@ -224,7 +224,7 @@ export class ConfigManager {
         break;
     }
     // Apply overrides
-    config = this.mergeConfig(config, this.overrides);
+    config = this.mergeConfig(config, this.overrides</AppConfig>);
     return config;
   }
   /**
@@ -251,7 +251,7 @@ export class ConfigManager {
           }
         }
       }
-    );
+    </K>);
     return result;
   }
   /**
@@ -297,7 +297,7 @@ export class ConfigManager {
         }) as AppConfig[K];
       } else {
         // If current value is not an object, create a new object by merging with default
-        const defaultValue = this.getDefaultForKey(key);
+        const defaultValue = this.getDefaultForKey(key</K>);
         this.config[key] = Object.assign({}, defaultValue, {
           [nestedKeyOrValue]: value
         }) as AppConfig[K];
@@ -444,7 +444,7 @@ export class ConfigManager {
     const errors: string[] = [];
     // Validate API configuration
     if (!this.config.api.baseURL) {
-      errors.push('API baseURL is required');
+      errors.push('API baseURL is required'</AppConfig>);
     }
     if (this.config.api.timeout < 1000) {
       errors.push('API timeout must be at least 1000ms');

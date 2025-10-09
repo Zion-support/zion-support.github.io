@@ -5,8 +5,9 @@ const MicroSAASPage: React.FC = () => {
   const _microSAASServices = [
     // AI-Powered Developer Tools
     {
-      title: 'AI Code Review Assistant Pro',
-      description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
+      title: description,
+
+      $4: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
       icon: '🔍',
       price: '$89/month',
       features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
@@ -19,8 +20,9 @@ const MicroSAASPage: React.FC = () => {
       popular: true
     },
     {
-      title: 'AI Test Generation Suite',
-      description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
+      title: description,
+
+      $4: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
       icon: '🧪',
       price: '$149/month',
       features: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI/CD integration', 'Custom test frameworks'],
@@ -31,8 +33,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'Smart API Documentation Generator',
-      description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
+      title: description,
+
+      $4: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
       icon: '📚',
       price: '$79/month',
       features: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],
@@ -44,8 +47,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Marketing & SEO Tools
     {
-      title: 'AI SEO Optimizer Pro',
-      description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
+      title: description,
+
+      $4: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
       icon: '🎯',
       price: '$199/month',
       features: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],
@@ -56,8 +60,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Social Media Manager',
-      description: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
+      title: description,
+
+      $4: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
       icon: '📱',
       price: '$129/month',
       features: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],
@@ -68,8 +73,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Email Marketing Platform',
-      description: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.',
+      title: description,
+
+      $4: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.',
       icon: '📧',
       price: '$149/month',
       features: ['Smart segmentation', 'A/B testing automation', 'Send time optimization', 'Content personalization', 'Performance analytics', 'Drip campaigns'],
@@ -80,8 +86,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Content Generator Pro',
-      description: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
+      title: description,
+
+      $4: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
       icon: '✍️',
       price: '$119/month',
       features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],
@@ -93,8 +100,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Business Intelligence & Analytics
     {
-      title: 'AI Analytics Dashboard Pro',
-      description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
+      title: description,
+
+      $4: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
       icon: '📊',
       price: '$199/month',
       features: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],
@@ -105,8 +113,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Lead Scoring Engine',
-      description: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
+      title: description,
+
+      $4: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
       icon: '🎯',
       price: '$139/month',
       features: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],
@@ -117,8 +126,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Customer Insights Platform',
-      description: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
+      title: description,
+
+      $4: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
       icon: '👥',
       price: '$179/month',
       features: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],
@@ -130,8 +140,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Finance & Accounting Tools
     {
-      title: 'AI Invoice Generator Pro',
-      description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
+      title: description,
+
+      $4: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
       icon: '💰',
       price: '$79/month',
       features: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],
@@ -142,8 +153,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Financial Planning Assistant',
-      description: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
+      title: description,
+
+      $4: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
       icon: '📈',
       price: '$89/month',
       features: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],
@@ -154,8 +166,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Expense Management System',
-      description: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
+      title: description,
+
+      $4: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
       icon: '🧾',
       price: '$99/month',
       features: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app'],
@@ -167,8 +180,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Healthcare & Wellness
     {
-      title: 'AI Health Monitoring Platform',
-      description: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
+      title: description,
+
+      $4: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
       icon: '🏥',
       price: '$99/month',
       features: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync'],
@@ -179,8 +193,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Fitness Coach Pro',
-      description: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.',
+      title: description,
+
+      $4: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.',
       icon: '💪',
       price: '$49/month',
       features: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration'],
@@ -191,8 +206,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Mental Health Assistant',
-      description: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.',
+      title: description,
+
+      $4: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.',
       icon: '🧠',
       price: '$79/month',
       features: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals'],
@@ -204,8 +220,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Education & Learning
     {
-      title: 'AI Language Learning Platform',
-      description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
+      title: description,
+
+      $4: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
       icon: '🌍',
       price: '$79/month',
       features: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context'],
@@ -216,8 +233,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Study Assistant Pro',
-      description: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.',
+      title: description,
+
+      $4: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.',
       icon: '📚',
       price: '$59/month',
       features: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis'],
@@ -228,8 +246,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Skill Assessment Platform',
-      description: 'Automated skill testing and certification with adaptive questioning and performance analytics.',
+      title: description,
+
+      $4: 'Automated skill testing and certification with adaptive questioning and performance analytics.',
       icon: '🎓',
       price: '$149/month',
       features: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards'],
@@ -241,8 +260,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI E-commerce & Retail
     {
-      title: 'AI Inventory Optimizer Pro',
-      description: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
+      title: description,
+
+      $4: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
       icon: '📦',
       price: '$299/month',
       features: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments'],
@@ -253,8 +273,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Product Recommendation Engine',
-      description: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.',
+      title: description,
+
+      $4: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.',
       icon: '🛍️',
       price: '$199/month',
       features: ['Personalized recommendations', 'Cross-selling', 'Upselling', 'A/B testing', 'Real-time updates', 'Performance analytics'],
@@ -265,8 +286,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Price Optimization Tool',
-      description: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.',
+      title: description,
+
+      $4: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.',
       icon: '💲',
       price: '$249/month',
       features: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', 'A/B testing', 'Market analysis'],
@@ -278,8 +300,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Legal & Compliance
     {
-      title: 'AI Legal Document Analyzer',
-      description: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
+      title: description,
+
+      $4: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
       icon: '⚖️',
       price: '$399/month',
       features: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],
@@ -291,8 +314,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Real Estate & Property Management
     {
-      title: 'AI Property Valuation Engine',
-      description: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
+      title: description,
+
+      $4: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
       icon: '🏠',
       price: '$199/month',
       features: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations'],
@@ -304,8 +328,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI HR & Recruitment
     {
-      title: 'AI Resume Parser & Matcher',
-      description: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
+      title: description,
+
+      $4: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
       icon: '👥',
       price: '$149/month',
       features: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection'],
@@ -316,8 +341,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Interview Scheduler Pro',
-      description: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.',
+      title: description,
+
+      $4: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.',
       icon: '📅',
       price: '$79/month',
       features: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection'],
@@ -328,8 +354,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Employee Performance Tracker',
-      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
+      title: description,
+
+      $4: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
       icon: '📈',
       price: '$199/month',
       features: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
@@ -341,8 +368,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Finance & Accounting
     {
-      title: 'AI Expense Tracker & Categorizer',
-      description: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
+      title: description,
+
+      $4: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
       icon: '💰',
       price: '$99/month',
       features: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection'],
@@ -353,8 +381,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Invoice Processing System',
-      description: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.',
+      title: description,
+
+      $4: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.',
       icon: '🧾',
       price: '$179/month',
       features: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks'],
@@ -365,8 +394,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Financial Forecasting Tool',
-      description: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.',
+      title: description,
+
+      $4: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.',
       icon: '📊',
       price: '$299/month',
       features: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports'],
@@ -378,8 +408,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Project Management
     {
-      title: 'AI Project Manager Assistant',
-      description: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
+      title: description,
+
+      $4: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
       icon: '📋',
       price: '$149/month',
       features: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management'],
@@ -390,8 +421,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Time Tracking & Analytics',
-      description: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.',
+      title: description,
+
+      $4: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.',
       icon: '⏰',
       price: '$79/month',
       features: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting'],
@@ -403,8 +435,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Customer Service
     {
-      title: 'AI Live Chat Assistant',
-      description: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.',
+      title: description,
+
+      $4: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.',
       icon: '💬',
       price: '$129/month',
       features: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics'],
@@ -415,8 +448,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Ticket Classification System',
-      description: 'Automated ticket routing and prioritization with intelligent categorization and escalation.',
+      title: description,
+
+      $4: 'Automated ticket routing and prioritization with intelligent categorization and escalation.',
       icon: '🎫',
       price: '$99/month',
       features: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs'],
@@ -428,8 +462,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Sales & CRM
     {
-      title: 'AI Lead Scoring Engine',
-      description: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
+      title: description,
+
+      $4: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
       icon: '🎯',
       price: '$199/month',
       features: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', 'A/B testing', 'ROI analysis'],
@@ -440,8 +475,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Sales Forecasting Platform',
-      description: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.',
+      title: description,
+
+      $4: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.',
       icon: '📈',
       price: '$249/month',
       features: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting'],
@@ -453,8 +489,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Healthcare & Wellness
     {
-      title: 'AI Symptom Checker Pro',
-      description: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.',
+      title: description,
+
+      $4: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.',
       icon: '🏥',
       price: '$299/month',
       features: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts'],
@@ -465,8 +502,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Fitness Coach Platform',
-      description: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.',
+      title: description,
+
+      $4: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.',
       icon: '💪',
       price: '$149/month',
       features: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features'],
@@ -478,8 +516,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Security & Compliance
     {
-      title: 'AI Security Monitoring System',
-      description: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
+      title: description,
+
+      $4: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
       icon: '🛡️',
       price: '$399/month',
       features: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics'],
@@ -490,8 +529,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Compliance Checker',
-      description: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.',
+      title: description,
+
+      $4: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.',
       icon: '📋',
       price: '$249/month',
       features: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting'],
@@ -503,8 +543,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Productivity & Automation
     {
-      title: 'AI Meeting Assistant Pro',
-      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+      title: description,
+
+      $4: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
       icon: '🎤',
       price: '$129/month',
       features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
@@ -515,8 +556,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Email Management System',
-      description: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.',
+      title: description,
+
+      $4: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.',
       icon: '📧',
       price: '$99/month',
       features: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics'],
@@ -527,8 +569,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Document Management Platform',
-      description: 'Intelligent document organization with search, version control, and collaboration features.',
+      title: description,
+
+      $4: 'Intelligent document organization with search, version control, and collaboration features.',
       icon: '📄',
       price: '$149/month',
       features: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls'],
@@ -540,8 +583,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Analytics & Reporting
     {
-      title: 'AI Business Intelligence Suite',
-      description: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
+      title: description,
+
+      $4: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
       icon: '📊',
       price: '$299/month',
       features: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access'],
@@ -552,8 +596,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Social Media Analytics',
-      description: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.',
+      title: description,
+
+      $4: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.',
       icon: '📱',
       price: '$179/month',
       features: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis'],
@@ -565,8 +610,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Development & DevOps
     {
-      title: 'AI Code Quality Monitor',
-      description: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
+      title: description,
+
+      $4: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
       icon: '🔍',
       price: '$199/month',
       features: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules'],
@@ -577,8 +623,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Deployment Automation',
-      description: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.',
+      title: description,
+
+      $4: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.',
       icon: '🚀',
       price: '$249/month',
       features: ['Automated testing', 'Smart deployments', 'Rollback automation', 'Performance monitoring', 'Environment management', 'Security scanning'],
@@ -590,8 +637,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Communication & Collaboration
     {
-      title: 'AI Team Collaboration Hub',
-      description: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
+      title: description,
+
+      $4: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
       icon: '👥',
       price: '$199/month',
       features: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access'],
@@ -602,8 +650,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Video Conferencing Assistant',
-      description: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.',
+      title: description,
+
+      $4: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.',
       icon: '📹',
       price: '$149/month',
       features: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics'],
@@ -615,8 +664,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Marketing & Advertising
     {
-      title: 'AI Ad Campaign Optimizer',
-      description: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.',
+      title: description,
+
+      $4: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.',
       icon: '📢',
       price: '$299/month',
       features: ['Campaign optimization', 'A/B testing', 'Performance analytics', 'Budget management', 'Audience targeting', 'ROI tracking'],
@@ -627,8 +677,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Influencer Marketing Platform',
-      description: 'Smart influencer discovery and management with performance tracking and campaign optimization.',
+      title: description,
+
+      $4: 'Smart influencer discovery and management with performance tracking and campaign optimization.',
       icon: '⭐',
       price: '$199/month',
       features: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing'],
@@ -640,8 +691,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI E-commerce & Retail
     {
-      title: 'AI Customer Behavior Analyzer',
-      description: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
+      title: description,
+
+      $4: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
       icon: '🛒',
       price: '$249/month',
       features: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine'],
@@ -652,8 +704,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Supply Chain Optimizer',
-      description: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.',
+      title: description,
+
+      $4: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.',
       icon: '🚚',
       price: '$399/month',
       features: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking'],
@@ -665,8 +718,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Education & Training
     {
-      title: 'AI Corporate Training Platform',
-      description: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
+      title: description,
+
+      $4: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
       icon: '🎓',
       price: '$199/month',
       features: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics'],
@@ -677,8 +731,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Knowledge Management System',
-      description: 'Smart knowledge base with intelligent search, content organization, and automated updates.',
+      title: description,
+
+      $4: 'Smart knowledge base with intelligent search, content organization, and automated updates.',
       icon: '📚',
       price: '$149/month',
       features: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics'],
@@ -690,8 +745,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Legal & Compliance
     {
-      title: 'AI Contract Management System',
-      description: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
+      title: description,
+
+      $4: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
       icon: '📋',
       price: '$299/month',
       features: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation'],
@@ -702,8 +758,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Privacy Compliance Monitor',
-      description: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.',
+      title: description,
+
+      $4: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.',
       icon: '🔒',
       price: '$199/month',
       features: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection'],
@@ -715,8 +772,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Real Estate & Property
     {
-      title: 'AI Property Management Suite',
-      description: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
+      title: description,
+
+      $4: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
       icon: '🏢',
       price: '$249/month',
       features: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics'],
@@ -727,8 +785,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Market Research Platform',
-      description: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.',
+      title: description,
+
+      $4: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.',
       icon: '🔍',
       price: '$179/month',
       features: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system'],
@@ -740,8 +799,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Agriculture & Environment
     {
-      title: 'AI Crop Monitoring System',
-      description: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
+      title: description,
+
+      $4: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
       icon: '🌾',
       price: '$299/month',
       features: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning'],
@@ -752,8 +812,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Environmental Monitoring',
-      description: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.',
+      title: description,
+
+      $4: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.',
       icon: '🌍',
       price: '$199/month',
       features: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking'],
@@ -765,8 +826,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Transportation & Logistics
     {
-      title: 'AI Fleet Management System',
-      description: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
+      title: description,
+
+      $4: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
       icon: '🚛',
       price: '$349/month',
       features: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics'],
@@ -777,8 +839,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Logistics Optimizer',
-      description: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.',
+      title: description,
+
+      $4: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.',
       icon: '📦',
       price: '$299/month',
       features: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics'],
@@ -790,8 +853,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Entertainment & Media
     {
-      title: 'AI Content Moderation Platform',
-      description: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
+      title: description,
+
+      $4: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
       icon: '🎬',
       price: '$199/month',
       features: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics'],
@@ -802,8 +866,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Video Production Assistant',
-      description: 'Intelligent video production with automated editing, subtitle generation, and content optimization.',
+      title: description,
+
+      $4: 'Intelligent video production with automated editing, subtitle generation, and content optimization.',
       icon: '🎥',
       price: '$249/month',
       features: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics'],
@@ -815,8 +880,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Gaming & Entertainment
     {
-      title: 'AI Game Development Platform',
-      description: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
+      title: description,
+
+      $4: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
       icon: '🎮',
       price: '$299/month',
       features: ['Procedural generation', 'AI NPCs', 'Automated testing', 'Balance optimization', 'Player analytics', 'Content creation'],
@@ -827,8 +893,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Player Behavior Analytics',
-      description: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.',
+      title: description,
+
+      $4: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.',
       icon: '📊',
       price: '$199/month',
       features: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', 'A/B testing', 'Real-time analytics'],
@@ -840,8 +907,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Research & Development
     {
-      title: 'AI Research Assistant Pro',
-      description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
+      title: description,
+
+      $4: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
       icon: '🔬',
       price: '$299/month',
       features: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
@@ -852,8 +920,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Patent Analysis Tool',
-      description: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.',
+      title: description,
+
+      $4: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.',
       icon: '📋',
       price: '$399/month',
       features: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking'],
@@ -865,8 +934,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Energy & Utilities
     {
-      title: 'AI Energy Management System',
-      description: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
+      title: description,
+
+      $4: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
       icon: '⚡',
       price: '$249/month',
       features: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting'],
@@ -877,8 +947,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Smart Grid Optimizer',
-      description: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.',
+      title: description,
+
+      $4: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.',
       icon: '🔌',
       price: '$399/month',
       features: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance'],
@@ -890,8 +961,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Manufacturing & Industrial
     {
-      title: 'AI Quality Control System',
-      description: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
+      title: description,
+
+      $4: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
       icon: '🏭',
       price: '$349/month',
       features: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system'],
@@ -902,8 +974,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Production Planning Optimizer',
-      description: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.',
+      title: description,
+
+      $4: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.',
       icon: '📊',
       price: '$299/month',
       features: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking'],
@@ -915,8 +988,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Insurance & Risk Management
     {
-      title: 'AI Risk Assessment Platform',
-      description: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
+      title: description,
+
+      $4: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
       icon: '🛡️',
       price: '$399/month',
       features: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring'],
@@ -927,8 +1001,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Claims Processing System',
-      description: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.',
+      title: description,
+
+      $4: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.',
       icon: '📋',
       price: '$299/month',
       features: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics'],
@@ -940,8 +1015,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Government & Public Sector
     {
-      title: 'AI Citizen Services Platform',
-      description: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
+      title: description,
+
+      $4: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
       icon: '🏛️',
       price: '$499/month',
       features: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics'],
@@ -952,8 +1028,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Public Safety System',
-      description: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.',
+      title: description,
+
+      $4: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.',
       icon: '🚨',
       price: '$599/month',
       features: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools'],
@@ -965,8 +1042,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Non-Profit & Social Impact
     {
-      title: 'AI Donor Management System',
-      description: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.',
+      title: description,
+
+      $4: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.',
       icon: '❤️',
       price: '$199/month',
       features: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics'],
@@ -977,8 +1055,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Volunteer Matching Platform',
-      description: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.',
+      title: description,
+
+      $4: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.',
       icon: '🤝',
       price: '$149/month',
       features: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system'],
@@ -990,8 +1069,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Travel & Hospitality
     {
-      title: 'AI Travel Planning Assistant',
-      description: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
+      title: description,
+
+      $4: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
       icon: '✈️',
       price: '$179/month',
       features: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking'],
@@ -1002,8 +1082,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Hotel Revenue Optimizer',
-      description: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.',
+      title: description,
+
+      $4: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.',
       icon: '🏨',
       price: '$299/month',
       features: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation'],
@@ -1015,8 +1096,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Sports & Fitness
     {
-      title: 'AI Sports Performance Analyzer',
-      description: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
+      title: description,
+
+      $4: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
       icon: '⚽',
       price: '$249/month',
       features: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling'],
@@ -1027,8 +1109,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Fitness Nutrition Coach',
-      description: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.',
+      title: description,
+
+      $4: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.',
       icon: '🥗',
       price: '$149/month',
       features: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting'],
@@ -1040,8 +1123,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Beauty & Fashion
     {
-      title: 'AI Virtual Try-On Platform',
-      description: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
+      title: description,
+
+      $4: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
       icon: '👗',
       price: '$299/month',
       features: ['Virtual try-on', 'Size recommendations', 'Style matching', 'AR integration', 'Color analysis', 'Outfit suggestions'],
@@ -1052,8 +1136,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Beauty Analysis Tool',
-      description: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.',
+      title: description,
+
+      $4: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.',
       icon: '💄',
       price: '$199/month',
       features: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking'],
@@ -1065,8 +1150,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Home & Lifestyle
     {
-      title: 'AI Smart Home Controller',
-      description: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
+      title: description,
+
+      $4: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
       icon: '🏠',
       price: '$199/month',
       features: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics'],
@@ -1077,8 +1163,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Personal Assistant Platform',
-      description: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.',
+      title: description,
+
+      $4: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.',
       icon: '🤖',
       price: '$149/month',
       features: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities'],
@@ -1090,8 +1177,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Pets & Animals
     {
-      title: 'AI Pet Health Monitor',
-      description: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
+      title: description,
+
+      $4: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
       icon: '🐕',
       price: '$99/month',
       features: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts'],
@@ -1102,8 +1190,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Pet Training Assistant',
-      description: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.',
+      title: description,
+
+      $4: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.',
       icon: '🐱',
       price: '$79/month',
       features: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features'],
@@ -1115,8 +1204,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Education & Learning
     {
-      title: 'AI Tutoring Platform',
-      description: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
+      title: description,
+
+      $4: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
       icon: '🎓',
       price: '$199/month',
       features: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics'],
@@ -1127,8 +1217,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Homework Helper',
-      description: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.',
+      title: description,
+
+      $4: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.',
       icon: '📝',
       price: '$99/month',
       features: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard'],
@@ -1140,8 +1231,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Music & Audio
     {
-      title: 'AI Music Composition Tool',
-      description: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
+      title: description,
+
+      $4: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
       icon: '🎵',
       price: '$149/month',
       features: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options'],
@@ -1152,8 +1244,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Audio Enhancement Platform',
-      description: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.',
+      title: description,
+
+      $4: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.',
       icon: '🎧',
       price: '$199/month',
       features: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion'],
@@ -1165,8 +1258,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Art & Design
     {
-      title: 'AI Design Assistant Pro',
-      description: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
+      title: description,
+
+      $4: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
       icon: '🎨',
       price: '$199/month',
       features: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options'],
@@ -1177,8 +1271,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Logo Generator Platform',
-      description: 'Intelligent logo creation with brand analysis, style matching, and customization options.',
+      title: description,
+
+      $4: 'Intelligent logo creation with brand analysis, style matching, and customization options.',
       icon: '🏷️',
       price: '$149/month',
       features: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system'],
@@ -1190,8 +1285,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Dating & Relationships
     {
-      title: 'AI Dating Assistant',
-      description: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
+      title: description,
+
+      $4: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
       icon: '💕',
       price: '$99/month',
       features: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking'],
@@ -1202,8 +1298,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Relationship Counselor',
-      description: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.',
+      title: description,
+
+      $4: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.',
       icon: '💑',
       price: '$149/month',
       features: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities'],
@@ -1215,8 +1312,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Parenting & Family
     {
-      title: 'AI Parenting Assistant',
-      description: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
+      title: description,
+
+      $4: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
       icon: '👶',
       price: '$199/month',
       features: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support'],
@@ -1227,8 +1325,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Family Organizer',
-      description: 'Smart family management with scheduling, task coordination, and communication tools.',
+      title: description,
+
+      $4: 'Smart family management with scheduling, task coordination, and communication tools.',
       icon: '👨‍👩‍👧‍👦',
       price: '$149/month',
       features: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing'],
@@ -1240,8 +1339,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Senior Care & Aging
     {
-      title: 'AI Senior Care Monitor',
-      description: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
+      title: description,
+
+      $4: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
       icon: '👴',
       price: '$299/month',
       features: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response'],
@@ -1252,8 +1352,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Memory Assistant',
-      description: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.',
+      title: description,
+
+      $4: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.',
       icon: '🧠',
       price: '$149/month',
       features: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance'],
@@ -1265,8 +1366,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Accessibility & Inclusion
     {
-      title: 'AI Accessibility Assistant',
-      description: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
+      title: description,
+
+      $4: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
       icon: '♿',
       price: '$199/month',
       features: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization'],
@@ -1277,8 +1379,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Language Translation Pro',
-      description: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.',
+      title: description,
+
+      $4: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.',
       icon: '🌐',
       price: '$149/month',
       features: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration'],
@@ -1290,8 +1393,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Emergency & Crisis Management
     {
-      title: 'AI Emergency Response System',
-      description: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
+      title: description,
+
+      $4: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
       icon: '🚨',
       price: '$499/month',
       features: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization'],
@@ -1302,8 +1406,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Crisis Communication Platform',
-      description: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.',
+      title: description,
+
+      $4: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.',
       icon: '📢',
       price: '$299/month',
       features: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking'],
@@ -1315,8 +1420,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Space & Astronomy
     {
-      title: 'AI Space Mission Planner',
-      description: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
+      title: description,
+
+      $4: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
       icon: '🚀',
       price: '$599/month',
       features: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools'],
@@ -1327,8 +1433,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Astronomical Data Analyzer',
-      description: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.',
+      title: description,
+
+      $4: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.',
       icon: '🔭',
       price: '$399/month',
       features: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support'],
@@ -1340,8 +1447,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Ocean & Marine
     {
-      title: 'AI Marine Life Tracker',
-      description: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
+      title: description,
+
+      $4: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
       icon: '🐋',
       price: '$299/month',
       features: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support'],
@@ -1352,8 +1460,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Ocean Current Predictor',
-      description: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.',
+      title: description,
+
+      $4: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.',
       icon: '🌊',
       price: '$399/month',
       features: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools'],
@@ -1365,8 +1474,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Archaeology & History
     {
-      title: 'AI Archaeological Site Analyzer',
-      description: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
+      title: description,
+
+      $4: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
       icon: '🏛️',
       price: '$299/month',
       features: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration'],
@@ -1377,8 +1487,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Historical Document Processor',
-      description: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.',
+      title: description,
+
+      $4: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.',
       icon: '📜',
       price: '$199/month',
       features: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools'],
@@ -1390,8 +1501,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Psychology & Mental Health
     {
-      title: 'AI Mental Health Tracker',
-      description: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
+      title: description,
+
+      $4: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
       icon: '🧘',
       price: '$149/month',
       features: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support'],
@@ -1402,8 +1514,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Therapy Assistant',
-      description: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.',
+      title: description,
+
+      $4: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.',
       icon: '💬',
       price: '$299/month',
       features: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction'],
@@ -1415,8 +1528,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Philosophy & Ethics
     {
-      title: 'AI Ethical Decision Maker',
-      description: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
+      title: description,
+
+      $4: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
       icon: '⚖️',
       price: '$199/month',
       features: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation'],
@@ -1427,8 +1541,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Philosophy Research Assistant',
-      description: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.',
+      title: description,
+
+      $4: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.',
       icon: '🤔',
       price: '$149/month',
       features: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis'],
@@ -1440,8 +1555,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Spirituality & Religion
     {
-      title: 'AI Spiritual Guidance Platform',
-      description: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
+      title: description,
+
+      $4: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
       icon: '🙏',
       price: '$99/month',
       features: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring'],
@@ -1452,8 +1568,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Religious Text Analyzer',
-      description: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.',
+      title: description,
+
+      $4: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.',
       icon: '📖',
       price: '$149/month',
       features: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools'],
@@ -1465,8 +1582,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Future & Innovation
     {
-      title: 'AI Innovation Predictor',
-      description: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
+      title: description,
+
+      $4: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
       icon: '🔮',
       price: '$399/month',
       features: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights'],
@@ -1477,8 +1595,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Future Scenario Generator',
-      description: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.',
+      title: description,
+
+      $4: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.',
       icon: '🌐',
       price: '$299/month',
       features: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support'],
@@ -1490,8 +1609,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Consciousness & AI Ethics
     {
-      title: 'AI Consciousness Monitor',
-      description: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
+      title: description,
+
+      $4: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
       icon: '🤖',
       price: '$499/month',
       features: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy'],
@@ -1502,8 +1622,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Rights Management System',
-      description: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.',
+      title: description,
+
+      $4: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.',
       icon: '⚖️',
       price: '$399/month',
       features: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training'],
@@ -1515,8 +1636,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Time & Space
     {
-      title: 'AI Time Management Master',
-      description: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
+      title: description,
+
+      $4: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
       icon: '⏰',
       price: '$149/month',
       features: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics'],
@@ -1527,8 +1649,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Space-Time Analyzer',
-      description: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.',
+      title: description,
+
+      $4: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.',
       icon: '🌌',
       price: '$599/month',
       features: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research'],
@@ -1540,8 +1663,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Quantum & Advanced Physics
     {
-      title: 'AI Quantum Simulator Pro',
-      description: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
+      title: description,
+
+      $4: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
       icon: '⚛️',
       price: '$799/month',
       features: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration'],
@@ -1552,8 +1676,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Physics Research Assistant',
-      description: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.',
+      title: description,
+
+      $4: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.',
       icon: '🔬',
       price: '$399/month',
       features: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support'],
@@ -1565,8 +1690,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Multiverse & Parallel Realities
     {
-      title: 'AI Multiverse Explorer',
-      description: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
+      title: description,
+
+      $4: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
       icon: '🌌',
       price: '$999/month',
       features: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration'],
@@ -1577,8 +1703,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Reality Manipulation Tool',
-      description: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.',
+      title: description,
+
+      $4: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.',
       icon: '🌀',
       price: '$1299/month',
       features: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration'],
@@ -1590,8 +1717,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Transcendence & Enlightenment
     {
-      title: 'AI Enlightenment Assistant',
-      description: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.',
+      title: description,
+
+      $4: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.',
       icon: '🧘‍♂️',
       price: '$599/month',
       features: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support'],
@@ -1602,8 +1730,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Transcendence Platform',
-      description: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.',
+      title: description,
+
+      $4: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.',
       icon: '🌟',
       price: '$999/month',
       features: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support'],
@@ -1615,8 +1744,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Universal Consciousness
     {
-      title: 'AI Universal Consciousness Connector',
-      description: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.',
+      title: description,
+
+      $4: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.',
       icon: '🌌',
       price: '$1999/month',
       features: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection'],
@@ -1627,8 +1757,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Cosmic Intelligence Platform',
-      description: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.',
+      title: description,
+
+      $4: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.',
       icon: '🌠',
       price: '$2999/month',
       features: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection'],
@@ -1640,8 +1771,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Infinite Possibilities
     {
-      title: 'AI Infinite Possibility Generator',
-      description: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
+      title: description,
+
+      $4: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
       icon: '♾️',
       price: '$4999/month',
       features: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth'],
@@ -1652,8 +1784,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Ultimate Reality Creator',
-      description: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.',
+      title: description,
+
+      $4: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.',
       icon: '🌌',
       price: '$9999/month',
       features: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power'],
@@ -1661,14 +1794,16 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$20000-50000/month',
       category: 'Ultimate Reality',
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+
+      }
   ];
   
   const realEstateSaaS = [
     {
-      title: 'AI Property Valuation Platform',
-      description: 'Advanced property valuation using machine learning and real estate data analysis.',
+      title: description,
+
+      $4: 'Advanced property valuation using machine learning and real estate data analysis.',
       icon: '🏠',
       price: '$299/month',
       features: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
@@ -1679,8 +1814,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Tenant Screening Platform',
-      description: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
+      title: description,
+
+      $4: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
       icon: '🔍',
       price: '$149/month',
       features: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],
@@ -1692,8 +1828,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Agriculture & Food Tech
     {
-      title: 'AI Crop Monitoring System',
-      description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
+      title: description,
+
+      $4: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
       icon: '🌾',
       price: '$299/month',
       features: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics'],
@@ -1704,8 +1841,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Food Safety Inspector',
-      description: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.',
+      title: description,
+
+      $4: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.',
       icon: '🍎',
       price: '$199/month',
       features: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system'],
@@ -1717,8 +1855,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Transportation & Logistics
     {
-      title: 'AI Route Optimization Pro',
-      description: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
+      title: description,
+
+      $4: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
       icon: '🚛',
       price: '$249/month',
       features: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis'],
@@ -1729,8 +1868,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Fleet Maintenance Predictor',
-      description: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.',
+      title: description,
+
+      $4: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.',
       icon: '🔧',
       price: '$179/month',
       features: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management'],
@@ -1742,8 +1882,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Energy & Sustainability
     {
-      title: 'AI Energy Management System',
-      description: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
+      title: description,
+
+      $4: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
       icon: '⚡',
       price: '$199/month',
       features: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid'],
@@ -1754,8 +1895,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Carbon Footprint Tracker',
-      description: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.',
+      title: description,
+
+      $4: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.',
       icon: '🌱',
       price: '$99/month',
       features: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification'],
@@ -1767,8 +1909,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Entertainment & Media
     {
-      title: 'AI Content Moderation Suite',
-      description: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
+      title: description,
+
+      $4: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
       icon: '🛡️',
       price: '$299/month',
       features: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules'],
@@ -1779,8 +1922,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Video Editor Pro',
-      description: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.',
+      title: description,
+
+      $4: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.',
       icon: '🎬',
       price: '$149/month',
       features: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization'],
@@ -1792,8 +1936,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Security & Surveillance
     {
-      title: 'AI Security Camera System',
-      description: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
+      title: description,
+
+      $4: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
       icon: '📹',
       price: '$199/month',
       features: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app'],
@@ -1804,8 +1949,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Fraud Detection Engine',
-      description: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.',
+      title: description,
+
+      $4: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.',
       icon: '🔒',
       price: '$249/month',
       features: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning'],
@@ -1817,8 +1963,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Research & Development
     {
-      title: 'AI Research Assistant Pro',
-      description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
+      title: description,
+
+      $4: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
       icon: '🔬',
       price: '$199/month',
       features: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
@@ -1829,8 +1976,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Patent Search Engine',
-      description: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.',
+      title: description,
+
+      $4: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.',
       icon: '📋',
       price: '$299/month',
       features: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking'],
@@ -1841,8 +1989,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Compliance Monitoring Suite',
-      description: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
+      title: description,
+
+      $4: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
       icon: '📜',
       price: '$299/month',
       features: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting'],
@@ -1854,8 +2003,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Real Estate & Property
     {
-      title: 'AI Real Estate Analyzer Pro',
-      description: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
+      title: description,
+
+      $4: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
       icon: '🏠',
       price: '$199/month',
       features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis'],
@@ -1866,8 +2016,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Property Management System',
-      description: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.',
+      title: description,
+
+      $4: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.',
       icon: '🏢',
       price: '$149/month',
       features: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools'],
@@ -1879,8 +2030,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI HR & Recruitment
     {
-      title: 'AI HR Recruitment Suite',
-      description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
+      title: description,
+
+      $4: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
       icon: '👥',
       price: '$179/month',
       features: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks'],
@@ -1891,8 +2043,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Employee Performance Tracker',
-      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
+      title: description,
+
+      $4: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
       icon: '📈',
       price: '$129/month',
       features: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
@@ -1904,8 +2057,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Project Management
     {
-      title: 'AI Project Manager Pro',
-      description: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
+      title: description,
+
+      $4: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
       icon: '📋',
       price: '$199/month',
       features: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting'],
@@ -1916,8 +2070,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Task Automation Suite',
-      description: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.',
+      title: description,
+
+      $4: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.',
       icon: '⚡',
       price: '$99/month',
       features: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications'],
@@ -1929,8 +2084,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Supply Chain & Logistics
     {
-      title: 'AI Supply Chain Optimizer',
-      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
+      title: description,
+
+      $4: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
       icon: '🚚',
       price: '$399/month',
       features: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking'],
@@ -1941,8 +2097,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Warehouse Management System',
-      description: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.',
+      title: description,
+
+      $4: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.',
       icon: '🏭',
       price: '$299/month',
       features: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard'],
@@ -1954,8 +2111,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Agriculture & Food Tech
     {
-      title: 'AI Precision Agriculture Platform',
-      description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
+      title: description,
+
+      $4: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
       icon: '🌾',
       price: '$199/month',
       features: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization'],
@@ -1966,8 +2124,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Food Safety Monitor',
-      description: 'Automated food safety inspection with contamination detection and quality control.',
+      title: description,
+
+      $4: 'Automated food safety inspection with contamination detection and quality control.',
       icon: '🥗',
       price: '$249/month',
       features: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system'],
@@ -1979,8 +2138,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Energy & Sustainability
     {
-      title: 'AI Energy Management System',
-      description: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
+      title: description,
+
+      $4: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
       icon: '⚡',
       price: '$179/month',
       features: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking'],
@@ -1991,8 +2151,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Carbon Footprint Tracker',
-      description: 'Automated carbon footprint monitoring and reduction recommendations for businesses.',
+      title: description,
+
+      $4: 'Automated carbon footprint monitoring and reduction recommendations for businesses.',
       icon: '🌱',
       price: '$99/month',
       features: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement'],
@@ -2004,8 +2165,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Gaming & Entertainment
     {
-      title: 'AI Game Development Suite',
-      description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
+      title: description,
+
+      $4: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
       icon: '🎮',
       price: '$299/month',
       features: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization'],
@@ -2016,8 +2178,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Content Moderation Platform',
-      description: 'Automated content moderation with toxicity detection, spam filtering, and community management.',
+      title: description,
+
+      $4: 'Automated content moderation with toxicity detection, spam filtering, and community management.',
       icon: '🛡️',
       price: '$199/month',
       features: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring'],
@@ -2029,8 +2192,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Transportation & Mobility
     {
-      title: 'AI Fleet Management System',
-      description: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
+      title: description,
+
+      $4: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
       icon: '🚛',
       price: '$349/month',
       features: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],
@@ -2041,8 +2205,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Traffic Management Platform',
-      description: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.',
+      title: description,
+
+      $4: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.',
       icon: '🚦',
       price: '$499/month',
       features: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts'],
@@ -2054,8 +2219,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Research & Development
     {
-      title: 'AI Research Assistant Pro',
-      description: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
+      title: description,
+
+      $4: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
       icon: '🔬',
       price: '$199/month',
       features: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking'],
@@ -2066,8 +2232,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Patent Analysis Tool',
-      description: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.',
+      title: description,
+
+      $4: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.',
       icon: '📋',
       price: '$299/month',
       features: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment'],
@@ -2079,8 +2246,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Personal Productivity
     {
-      title: 'AI Personal Assistant Pro',
-      description: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
+      title: description,
+
+      $4: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
       icon: '👤',
       price: '$49/month',
       features: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights'],
@@ -2091,8 +2259,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Meeting Assistant',
-      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+      title: description,
+
+      $4: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
       icon: '📹',
       price: '$79/month',
       features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
@@ -2103,8 +2272,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Insurance Underwriting Assistant',
-      description: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.',
+      title: description,
+
+      $4: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.',
       icon: '🛡️',
       price: '$179/month',
       features: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard'],
@@ -2114,8 +2284,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Onboarding Platform',
-      description: 'Automated customer onboarding with identity verification, document processing, and compliance checking.',
+      title: description,
+
+      $4: 'Automated customer onboarding with identity verification, document processing, and compliance checking.',
       icon: '👤',
       price: '$149/month',
       features: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard'],
@@ -2125,8 +2296,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Retention Manager',
-      description: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.',
+      title: description,
+
+      $4: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.',
       icon: '💝',
       price: '$129/month',
       features: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard'],
@@ -2136,8 +2308,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Support Optimizer',
-      description: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.',
+      title: description,
+
+      $4: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.',
       icon: '🎧',
       price: '$119/month',
       features: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard'],
@@ -2147,8 +2320,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Feedback Analyzer',
-      description: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.',
+      title: description,
+
+      $4: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.',
       icon: '💬',
       price: '$99/month',
       features: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard'],
@@ -2158,8 +2332,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Journey Mapper',
-      description: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.',
+      title: description,
+
+      $4: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.',
       icon: '🗺️',
       price: '$149/month',
       features: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard'],
@@ -2169,8 +2344,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Lifetime Value Predictor',
-      description: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.',
+      title: description,
+
+      $4: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.',
       icon: '💎',
       price: '$139/month',
       features: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard'],
@@ -2180,8 +2356,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Segmentation Engine',
-      description: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.',
+      title: description,
+
+      $4: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.',
       icon: '👥',
       price: '$119/month',
       features: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard'],
@@ -2191,8 +2368,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Personalization Engine',
-      description: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.',
+      title: description,
+
+      $4: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.',
       icon: '🎯',
       price: '$159/month',
       features: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard'],
@@ -2202,8 +2380,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Data Platform',
-      description: 'Unified customer data management with integration, cleansing, and analytics capabilities.',
+      title: description,
+
+      $4: 'Unified customer data management with integration, cleansing, and analytics capabilities.',
       icon: '🗄️',
       price: '$199/month',
       features: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard'],
@@ -2213,8 +2392,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Privacy Manager',
-      description: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.',
+      title: description,
+
+      $4: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.',
       icon: '🔒',
       price: '$149/month',
       features: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard'],
@@ -2224,8 +2404,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Communication Manager',
-      description: 'Smart communication management with channel optimization, message personalization, and engagement tracking.',
+      title: description,
+
+      $4: 'Smart communication management with channel optimization, message personalization, and engagement tracking.',
       icon: '📢',
       price: '$129/month',
       features: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard'],
@@ -2235,8 +2416,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Experience Optimizer',
-      description: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.',
+      title: description,
+
+      $4: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.',
       icon: '⭐',
       price: '$159/month',
       features: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard'],
@@ -2246,8 +2428,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Success Manager',
-      description: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.',
+      title: description,
+
+      $4: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.',
       icon: '🎯',
       price: '$179/month',
       features: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard'],
@@ -2257,8 +2440,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Advocacy Platform',
-      description: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.',
+      title: description,
+
+      $4: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.',
       icon: '🌟',
       price: '$139/month',
       features: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard'],
@@ -2268,8 +2452,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Insights Platform',
-      description: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.',
+      title: description,
+
+      $4: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.',
       icon: '🔍',
       price: '$149/month',
       features: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard'],
@@ -2279,8 +2464,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI Customer Intelligence Suite',
-      description: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.',
+      title: description,
+
+      $4: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.',
       icon: '🧠',
       price: '$299/month',
       features: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard'],
@@ -2291,8 +2477,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES
     {
-      title: 'AI-Powered Meeting Transcriber',
-      description: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
+      title: description,
+
+      $4: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
       icon: '🎙️',
       price: '$79/month',
       features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars'],
@@ -2302,8 +2489,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
     },
     {
-      title: 'Smart Expense Tracker AI',
-      description: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.',
+      title: description,
+
+      $4: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.',
       icon: '💳',
       price: '$99/month',
       features: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support'],
@@ -2313,8 +2501,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
     },
     {
-      title: 'AI-Powered Password Manager',
-      description: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.',
+      title: description,
+
+      $4: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.',
       icon: '🔐',
       price: '$49/month',
       features: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration'],
@@ -2324,8 +2513,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
     },
     {
-      title: 'Smart Time Tracking Assistant',
-      description: 'AI-powered time tracking with automatic project detection and productivity insights.',
+      title: description,
+
+      $4: 'AI-powered time tracking with automatic project detection and productivity insights.',
       icon: '⏰',
       price: '$69/month',
       features: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools'],
@@ -2335,8 +2525,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Logo Generator',
-      description: 'Professional logo creation with brand analysis and unlimited variations using AI.',
+      title: description,
+
+      $4: 'Professional logo creation with brand analysis and unlimited variations using AI.',
       icon: '🎨',
       price: '$89/month',
       features: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines'],
@@ -2346,8 +2537,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
     },
     {
-      title: 'Smart Invoice Generator',
-      description: 'Automated invoice creation with payment tracking, reminders, and financial analytics.',
+      title: description,
+
+      $4: 'Automated invoice creation with payment tracking, reminders, and financial analytics.',
       icon: '📄',
       price: '$59/month',
       features: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support'],
@@ -2357,8 +2549,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
     },
     {
-      title: 'AI-Powered Website Builder',
-      description: 'Intelligent website creation with content generation, SEO optimization, and responsive design.',
+      title: description,
+
+      $4: 'Intelligent website creation with content generation, SEO optimization, and responsive design.',
       icon: '🌐',
       price: '$199/month',
       features: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard'],
@@ -2368,8 +2561,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
     },
     {
-      title: 'Smart Contract Generator',
-      description: 'AI-powered legal document creation with template customization and compliance checking.',
+      title: description,
+
+      $4: 'AI-powered legal document creation with template customization and compliance checking.',
       icon: '📋',
       price: '$149/month',
       features: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control'],
@@ -2379,8 +2573,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Email Signature Generator',
-      description: 'Professional email signature creation with brand consistency and contact management.',
+      title: description,
+
+      $4: 'Professional email signature creation with brand consistency and contact management.',
       icon: '✍️',
       price: '$39/month',
       features: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking'],
@@ -2390,8 +2585,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
     },
     {
-      title: 'Smart QR Code Generator',
-      description: 'Advanced QR code creation with analytics, customization, and dynamic content management.',
+      title: description,
+
+      $4: 'Advanced QR code creation with analytics, customization, and dynamic content management.',
       icon: '📱',
       price: '$49/month',
       features: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration'],
@@ -2401,8 +2597,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
     {
-      title: 'AI-Powered Color Palette Generator',
-      description: 'Intelligent color scheme creation with accessibility checking and brand analysis.',
+      title: description,
+
+      $4: 'Intelligent color scheme creation with accessibility checking and brand analysis.',
       icon: '🎨',
       price: '$59/month',
       features: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis'],
@@ -2412,8 +2609,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
     {
-      title: 'Smart Business Card Designer',
-      description: 'AI-powered business card creation with professional templates and contact management.',
+      title: description,
+
+      $4: 'AI-powered business card creation with professional templates and contact management.',
       icon: '💼',
       price: '$79/month',
       features: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions'],
@@ -2423,8 +2621,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
     },
     {
-      title: 'AI-Powered Newsletter Generator',
-      description: 'Automated newsletter creation with content curation and subscriber analytics.',
+      title: description,
+
+      $4: 'Automated newsletter creation with content curation and subscriber analytics.',
       icon: '📰',
       price: '$99/month',
       features: ['Content curation', 'AI writing', 'Subscriber analytics', 'A/B testing', 'Multi-platform publishing'],
@@ -2434,8 +2633,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
     },
     {
-      title: 'Smart PDF Converter Pro',
-      description: 'Advanced PDF conversion with OCR, form filling, and document optimization.',
+      title: description,
+
+      $4: 'Advanced PDF conversion with OCR, form filling, and document optimization.',
       icon: '📄',
       price: '$89/month',
       features: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing'],
@@ -2445,8 +2645,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Video Thumbnail Generator',
-      description: 'Intelligent thumbnail creation with A/B testing and performance optimization.',
+      title: description,
+
+      $4: 'Intelligent thumbnail creation with A/B testing and performance optimization.',
       icon: '🎬',
       price: '$79/month',
       features: ['AI thumbnail generation', 'A/B testing', 'Performance analytics', 'Brand customization', 'Bulk creation'],
@@ -2456,8 +2657,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
     },
     {
-      title: 'Smart Social Media Scheduler',
-      description: 'AI-powered social media scheduling with optimal timing and content optimization.',
+      title: description,
+
+      $4: 'AI-powered social media scheduling with optimal timing and content optimization.',
       icon: '📅',
       price: '$119/month',
       features: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research'],
@@ -2467,8 +2669,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
     {
-      title: 'AI-Powered Hashtag Generator',
-      description: 'Intelligent hashtag research and generation for maximum social media reach.',
+      title: description,
+
+      $4: 'Intelligent hashtag research and generation for maximum social media reach.',
       icon: '#️⃣',
       price: '$49/month',
       features: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation'],
@@ -2478,8 +2681,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
     {
-      title: 'Smart Email Template Builder',
-      description: 'AI-powered email template creation with responsive design and A/B testing.',
+      title: description,
+
+      $4: 'AI-powered email template creation with responsive design and A/B testing.',
       icon: '📧',
       price: '$89/month',
       features: ['AI template generation', 'Responsive design', 'A/B testing', 'Brand customization', 'Performance analytics'],
@@ -2489,8 +2693,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Competitor Analysis Tool',
-      description: 'Comprehensive competitor research with pricing analysis and market insights.',
+      title: description,
+
+      $4: 'Comprehensive competitor research with pricing analysis and market insights.',
       icon: '🔍',
       price: '$199/month',
       features: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system'],
@@ -2500,8 +2705,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
     {
-      title: 'Smart Customer Feedback Analyzer',
-      description: 'AI-powered sentiment analysis and feedback categorization for customer insights.',
+      title: description,
+
+      $4: 'AI-powered sentiment analysis and feedback categorization for customer insights.',
       icon: '💬',
       price: '$129/month',
       features: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics'],
@@ -2511,8 +2717,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Landing Page Optimizer',
-      description: 'Intelligent landing page testing and optimization for maximum conversion rates.',
+      title: description,
+
+      $4: 'Intelligent landing page testing and optimization for maximum conversion rates.',
       icon: '🚀',
       price: '$149/month',
       features: ['A/B testing', 'Conversion optimization', 'Heatmap analysis', 'AI recommendations', 'Performance tracking'],
@@ -2522,8 +2729,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'Smart Inventory Photo Manager',
-      description: 'AI-powered product photo organization, editing, and optimization for e-commerce.',
+      title: description,
+
+      $4: 'AI-powered product photo organization, editing, and optimization for e-commerce.',
       icon: '📸',
       price: '$99/month',
       features: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing'],
@@ -2533,8 +2741,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Price Monitoring Tool',
-      description: 'Automated price tracking and alerts for competitive pricing strategies.',
+      title: description,
+
+      $4: 'Automated price tracking and alerts for competitive pricing strategies.',
       icon: '💰',
       price: '$79/month',
       features: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization'],
@@ -2544,8 +2753,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
     },
     {
-      title: 'Smart Appointment Scheduler',
-      description: 'AI-powered scheduling with time zone handling and automated reminders.',
+      title: description,
+
+      $4: 'AI-powered scheduling with time zone handling and automated reminders.',
       icon: '📅',
       price: '$69/month',
       features: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing'],
@@ -2555,8 +2765,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Resume Builder',
-      description: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
+      title: description,
+
+      $4: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
       icon: '📝',
       price: '$59/month',
       features: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export'],
@@ -2566,8 +2777,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
     },
     {
-      title: 'Smart Weather API Service',
-      description: 'Advanced weather data with AI-powered forecasts and business impact analysis.',
+      title: description,
+
+      $4: 'Advanced weather data with AI-powered forecasts and business impact analysis.',
       icon: '🌤️',
       price: '$89/month',
       features: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts'],
@@ -2577,8 +2789,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Translation Service',
-      description: 'Real-time translation with context awareness and industry-specific terminology.',
+      title: description,
+
+      $4: 'Real-time translation with context awareness and industry-specific terminology.',
       icon: '🌍',
       price: '$99/month',
       features: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration'],
@@ -2588,8 +2801,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
     {
-      title: 'Smart Data Backup Service',
-      description: 'Automated data backup with AI-powered deduplication and recovery optimization.',
+      title: description,
+
+      $4: 'Automated data backup with AI-powered deduplication and recovery optimization.',
       icon: '💾',
       price: '$79/month',
       features: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption'],
@@ -2599,8 +2813,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Form Builder',
-      description: 'Intelligent form creation with conditional logic and response analysis.',
+      title: description,
+
+      $4: 'Intelligent form creation with conditional logic and response analysis.',
       icon: '📋',
       price: '$89/month',
       features: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling'],
@@ -2610,8 +2825,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'Smart Uptime Monitor',
-      description: 'AI-powered website monitoring with predictive alerts and performance optimization.',
+      title: description,
+
+      $4: 'AI-powered website monitoring with predictive alerts and performance optimization.',
       icon: '📊',
       price: '$69/month',
       features: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports'],
@@ -2621,8 +2837,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Survey Creator',
-      description: 'Intelligent survey design with question optimization and response analysis.',
+      title: description,
+
+      $4: 'Intelligent survey design with question optimization and response analysis.',
       icon: '📊',
       price: '$79/month',
       features: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics'],
@@ -2632,8 +2849,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'Smart File Converter',
-      description: 'AI-powered file conversion with format optimization and quality enhancement.',
+      title: description,
+
+      $4: 'AI-powered file conversion with format optimization and quality enhancement.',
       icon: '🔄',
       price: '$59/month',
       features: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access'],
@@ -2643,8 +2861,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered QR Code Scanner',
-      description: 'Advanced QR code scanning with analytics, customization, and business intelligence.',
+      title: description,
+
+      $4: 'Advanced QR code scanning with analytics, customization, and business intelligence.',
       icon: '📱',
       price: '$49/month',
       features: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration'],
@@ -2654,8 +2873,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
     {
-      title: 'Smart Password Generator',
-      description: 'AI-powered password creation with security analysis and breach monitoring.',
+      title: description,
+
+      $4: 'AI-powered password creation with security analysis and breach monitoring.',
       icon: '🔑',
       price: '$39/month',
       features: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs'],
@@ -2665,8 +2885,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Color Picker',
-      description: 'Intelligent color selection with accessibility checking and brand analysis.',
+      title: description,
+
+      $4: 'Intelligent color selection with accessibility checking and brand analysis.',
       icon: '🎨',
       price: '$49/month',
       features: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options'],
@@ -2676,8 +2897,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
     },
     {
-      title: 'Smart Text Summarizer',
-      description: 'AI-powered text summarization with key point extraction and multi-language support.',
+      title: description,
+
+      $4: 'AI-powered text summarization with key point extraction and multi-language support.',
       icon: '📝',
       price: '$69/month',
       features: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration'],
@@ -2687,8 +2909,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Image Resizer',
-      description: 'Intelligent image resizing with quality optimization and batch processing.',
+      title: description,
+
+      $4: 'Intelligent image resizing with quality optimization and batch processing.',
       icon: '🖼️',
       price: '$59/month',
       features: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration'],
@@ -2698,8 +2921,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
     {
-      title: 'Smart URL Shortener',
-      description: 'AI-powered URL shortening with analytics, customization, and link management.',
+      title: description,
+
+      $4: 'AI-powered URL shortening with analytics, customization, and link management.',
       icon: '🔗',
       price: '$39/month',
       features: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access'],
@@ -2709,8 +2933,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
     },
     {
-      title: 'AI-Powered Favicon Generator',
-      description: 'Intelligent favicon creation with brand analysis and multiple format generation.',
+      title: description,
+
+      $4: 'Intelligent favicon creation with brand analysis and multiple format generation.',
       icon: '🌟',
       price: '$49/month',
       features: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization'],
@@ -2720,8 +2945,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
     },
     {
-      title: 'Smart Meta Tag Generator',
-      description: 'AI-powered SEO meta tag creation with optimization and performance tracking.',
+      title: description,
+
+      $4: 'AI-powered SEO meta tag creation with optimization and performance tracking.',
       icon: '🏷️',
       price: '$59/month',
       features: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs'],
@@ -2731,8 +2957,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Sitemap Generator',
-      description: 'Intelligent sitemap creation with SEO optimization and search engine submission.',
+      title: description,
+
+      $4: 'Intelligent sitemap creation with SEO optimization and search engine submission.',
       icon: '🗺️',
       price: '$69/month',
       features: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration'],
@@ -2742,8 +2969,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
     },
     {
-      title: 'Smart Robots.txt Generator',
-      description: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.',
+      title: description,
+
+      $4: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.',
       icon: '🤖',
       price: '$39/month',
       features: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates'],
@@ -2753,8 +2981,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Schema Markup Generator',
-      description: 'Intelligent schema markup creation for enhanced search engine visibility.',
+      title: description,
+
+      $4: 'Intelligent schema markup creation for enhanced search engine visibility.',
       icon: '📋',
       price: '$79/month',
       features: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs'],
@@ -2764,8 +2993,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
     {
-      title: 'Smart Alt Text Generator',
-      description: 'AI-powered alt text creation for images with SEO optimization and accessibility.',
+      title: description,
+
+      $4: 'AI-powered alt text creation for images with SEO optimization and accessibility.',
       icon: '🖼️',
       price: '$49/month',
       features: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring'],
@@ -2775,8 +3005,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Internal Link Optimizer',
-      description: 'Intelligent internal linking strategy with SEO optimization and performance tracking.',
+      title: description,
+
+      $4: 'Intelligent internal linking strategy with SEO optimization and performance tracking.',
       icon: '🔗',
       price: '$99/month',
       features: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration'],
@@ -2786,8 +3017,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'Smart Keyword Density Analyzer',
-      description: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.',
+      title: description,
+
+      $4: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.',
       icon: '🔍',
       price: '$79/month',
       features: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting'],
@@ -2797,8 +3029,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Page Speed Optimizer',
-      description: 'Intelligent page speed optimization with performance monitoring and recommendations.',
+      title: description,
+
+      $4: 'Intelligent page speed optimization with performance monitoring and recommendations.',
       icon: '⚡',
       price: '$149/month',
       features: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting'],
@@ -2808,8 +3041,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'Smart Core Web Vitals Monitor',
-      description: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.',
+      title: description,
+
+      $4: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.',
       icon: '📊',
       price: '$99/month',
       features: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting'],
@@ -2819,8 +3053,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Mobile Optimization Tool',
-      description: 'Intelligent mobile optimization with responsive design analysis and performance improvements.',
+      title: description,
+
+      $4: 'Intelligent mobile optimization with responsive design analysis and performance improvements.',
       icon: '📱',
       price: '$119/month',
       features: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing'],
@@ -2830,8 +3065,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
     },
     {
-      title: 'Smart Local SEO Optimizer',
-      description: 'AI-powered local SEO optimization with Google My Business management and review monitoring.',
+      title: description,
+
+      $4: 'AI-powered local SEO optimization with Google My Business management and review monitoring.',
       icon: '📍',
       price: '$129/month',
       features: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting'],
@@ -2841,8 +3077,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Competitor SEO Analyzer',
-      description: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.',
+      title: description,
+
+      $4: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.',
       icon: '🔍',
       price: '$199/month',
       features: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting'],
@@ -2852,8 +3089,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'Smart Backlink Analyzer',
-      description: 'AI-powered backlink analysis with quality assessment and link building recommendations.',
+      title: description,
+
+      $4: 'AI-powered backlink analysis with quality assessment and link building recommendations.',
       icon: '🔗',
       price: '$149/month',
       features: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring'],
@@ -2863,8 +3101,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Content Gap Analyzer',
-      description: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.',
+      title: description,
+
+      $4: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.',
       icon: '📝',
       price: '$179/month',
       features: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning'],
@@ -2874,8 +3113,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {
-      title: 'Smart Technical SEO Auditor',
-      description: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.',
+      title: description,
+
+      $4: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.',
       icon: '🔧',
       price: '$199/month',
       features: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting'],
@@ -2885,8 +3125,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered E-commerce SEO Optimizer',
-      description: 'Intelligent e-commerce SEO optimization with product page optimization and category management.',
+      title: description,
+
+      $4: 'Intelligent e-commerce SEO optimization with product page optimization and category management.',
       icon: '🛒',
       price: '$249/month',
       features: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking'],
@@ -2896,8 +3137,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
     },
     {
-      title: 'Smart Voice Search Optimizer',
-      description: 'AI-powered voice search optimization with conversational content and featured snippet optimization.',
+      title: description,
+
+      $4: 'AI-powered voice search optimization with conversational content and featured snippet optimization.',
       icon: '🎤',
       price: '$149/month',
       features: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics'],
@@ -2907,8 +3149,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Video SEO Optimizer',
-      description: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.',
+      title: description,
+
+      $4: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.',
       icon: '🎬',
       price: '$179/month',
       features: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking'],
@@ -2918,8 +3161,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
     },
     {
-      title: 'Smart Featured Snippet Optimizer',
-      description: 'AI-powered featured snippet optimization with content analysis and ranking improvements.',
+      title: description,
+
+      $4: 'AI-powered featured snippet optimization with content analysis and ranking improvements.',
       icon: '📋',
       price: '$129/month',
       features: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring'],
@@ -2929,8 +3173,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered Image SEO Optimizer',
-      description: 'Intelligent image SEO optimization with alt text generation and image performance analysis.',
+      title: description,
+
+      $4: 'Intelligent image SEO optimization with alt text generation and image performance analysis.',
       icon: '🖼️',
       price: '$99/month',
       features: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring'],
@@ -2940,8 +3185,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
     },
     {
-      title: 'Smart International SEO Manager',
-      description: 'AI-powered international SEO management with hreflang optimization and multi-language content.',
+      title: description,
+
+      $4: 'AI-powered international SEO management with hreflang optimization and multi-language content.',
       icon: '🌍',
       price: '$199/month',
       features: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking'],
@@ -2951,8 +3197,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
     },
     {
-      title: 'AI-Powered SEO Reporting Dashboard',
-      description: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.',
+      title: description,
+
+      $4: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.',
       icon: '📊',
       price: '$149/month',
       features: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis'],
@@ -2964,8 +3211,9 @@ const MicroSAASPage: React.FC = () => {
     // NEW COMPREHENSIVE MICRO SAAS SERVICES
     // AI Productivity & Time Management
     {
-      title: 'AI Time Tracking & Productivity Analyzer',
-      description: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
+      title: description,
+
+      $4: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
       icon: '⏰',
       price: '$79/month',
       features: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics'],
@@ -2976,8 +3224,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Task Management & Prioritization',
-      description: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.',
+      title: description,
+
+      $4: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.',
       icon: '✅',
       price: '$89/month',
       features: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools'],
@@ -2988,8 +3237,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Email Management & Prioritization',
-      description: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.',
+      title: description,
+
+      $4: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.',
       icon: '📧',
       price: '$69/month',
       features: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection'],
@@ -3001,8 +3251,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI HR & Recruitment
     {
-      title: 'AI Resume Parser & Candidate Matcher',
-      description: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
+      title: description,
+
+      $4: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
       icon: '👔',
       price: '$199/month',
       features: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation'],
@@ -3013,8 +3264,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Employee Performance Tracker',
-      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
+      title: description,
+
+      $4: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
       icon: '📊',
       price: '$149/month',
       features: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
@@ -3025,8 +3277,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Workplace Safety Monitor',
-      description: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.',
+      title: description,
+
+      $4: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.',
       icon: '🛡️',
       price: '$299/month',
       features: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system'],
@@ -3038,8 +3291,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Customer Service & Support
     {
-      title: 'AI Customer Support Ticket Router',
-      description: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
+      title: description,
+
+      $4: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
       icon: '🎫',
       price: '$129/month',
       features: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics'],
@@ -3050,8 +3304,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Customer Feedback Analyzer',
-      description: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.',
+      title: description,
+
+      $4: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.',
       icon: '💬',
       price: '$99/month',
       features: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting'],
@@ -3062,8 +3317,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Live Chat Assistant',
-      description: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.',
+      title: description,
+
+      $4: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.',
       icon: '💬',
       price: '$79/month',
       features: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics'],
@@ -3075,8 +3331,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Sales & CRM
     {
-      title: 'AI Sales Pipeline Optimizer',
-      description: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
+      title: description,
+
+      $4: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
       icon: '📈',
       price: '$199/month',
       features: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration'],
@@ -3087,8 +3344,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Sales Call Analyzer',
-      description: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.',
+      title: description,
+
+      $4: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.',
       icon: '📞',
       price: '$149/month',
       features: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics'],
@@ -3099,8 +3357,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Proposal Generator Pro',
-      description: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.',
+      title: description,
+
+      $4: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.',
       icon: '📋',
       price: '$119/month',
       features: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow'],
@@ -3112,8 +3371,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Project Management
     {
-      title: 'AI Project Risk Predictor',
-      description: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
+      title: description,
+
+      $4: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
       icon: '⚠️',
       price: '$179/month',
       features: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization'],
@@ -3124,8 +3384,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Resource Allocation Optimizer',
-      description: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.',
+      title: description,
+
+      $4: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.',
       icon: '👥',
       price: '$199/month',
       features: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis'],
@@ -3136,8 +3397,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Project Timeline Predictor',
-      description: 'Accurate project timeline prediction with milestone tracking and delay prevention.',
+      title: description,
+
+      $4: 'Accurate project timeline prediction with milestone tracking and delay prevention.',
       icon: '📅',
       price: '$149/month',
       features: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning'],
@@ -3149,8 +3411,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Security & Compliance
     {
-      title: 'AI Security Threat Detector',
-      description: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
+      title: description,
+
+      $4: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
       icon: '🔒',
       price: '$299/month',
       features: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics'],
@@ -3161,8 +3424,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Compliance Monitor',
-      description: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.',
+      title: description,
+
+      $4: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.',
       icon: '📋',
       price: '$249/month',
       features: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting'],
@@ -3173,8 +3437,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Data Privacy Manager',
-      description: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.',
+      title: description,
+
+      $4: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.',
       icon: '🔐',
       price: '$199/month',
       features: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification'],
@@ -3186,8 +3451,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Quality Assurance & Testing
     {
-      title: 'AI Automated Testing Suite',
-      description: 'Comprehensive automated testing with test generation, execution, and maintenance.',
+      title: description,
+
+      $4: 'Comprehensive automated testing with test generation, execution, and maintenance.',
       icon: '🧪',
       price: '$179/month',
       features: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing'],
@@ -3198,8 +3464,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Bug Prediction & Prevention',
-      description: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.',
+      title: description,
+
+      $4: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.',
       icon: '🐛',
       price: '$149/month',
       features: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights'],
@@ -3210,8 +3477,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Performance Monitoring Pro',
-      description: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.',
+      title: description,
+
+      $4: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.',
       icon: '⚡',
       price: '$199/month',
       features: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics'],
@@ -3223,8 +3491,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Content & Media
     {
-      title: 'AI Video Content Generator',
-      description: 'Intelligent video creation with script generation, editing, and optimization for social media.',
+      title: description,
+
+      $4: 'Intelligent video creation with script generation, editing, and optimization for social media.',
       icon: '🎬',
       price: '$299/month',
       features: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export'],
@@ -3235,8 +3504,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Podcast Production Suite',
-      description: 'Complete podcast production with audio editing, transcription, and show notes generation.',
+      title: description,
+
+      $4: 'Complete podcast production with audio editing, transcription, and show notes generation.',
       icon: '🎙️',
       price: '$199/month',
       features: ['Audio editing', 'Transcription', 'Show notes generation', 'Intro/outro creation', 'Publishing automation', 'Analytics'],
@@ -3247,8 +3517,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Image & Design Generator',
-      description: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.',
+      title: description,
+
+      $4: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.',
       icon: '🎨',
       price: '$149/month',
       features: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing'],
@@ -3260,8 +3531,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Research & Development
     {
-      title: 'AI Research Assistant Pro',
-      description: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
+      title: description,
+
+      $4: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
       icon: '🔬',
       price: '$199/month',
       features: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools'],
@@ -3272,8 +3544,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Patent Analyzer & Generator',
-      description: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.',
+      title: description,
+
+      $4: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.',
       icon: '📜',
       price: '$399/month',
       features: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management'],
@@ -3284,8 +3557,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Innovation Tracker',
-      description: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.',
+      title: description,
+
+      $4: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.',
       icon: '💡',
       price: '$149/month',
       features: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system'],
@@ -3297,8 +3571,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Personal & Lifestyle
     {
-      title: 'AI Personal Finance Manager',
-      description: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
+      title: description,
+
+      $4: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
       icon: '💰',
       price: '$79/month',
       features: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking'],
@@ -3309,8 +3584,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Personal Assistant Pro',
-      description: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.',
+      title: description,
+
+      $4: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.',
       icon: '🤖',
       price: '$99/month',
       features: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands'],
@@ -3321,8 +3597,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Home Energy Optimizer',
-      description: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.',
+      title: description,
+
+      $4: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.',
       icon: '🏠',
       price: '$89/month',
       features: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis'],
@@ -3334,8 +3611,9 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Gaming & Entertainment
     {
-      title: 'AI Game Development Assistant',
-      description: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
+      title: description,
+
+      $4: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
       icon: '🎮',
       price: '$299/month',
       features: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation'],
@@ -3346,8 +3624,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Music Composition Studio',
-      description: 'Intelligent music creation with composition assistance, style transfer, and production tools.',
+      title: description,
+
+      $4: 'Intelligent music creation with composition assistance, style transfer, and production tools.',
       icon: '🎵',
       price: '$199/month',
       features: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration'],
@@ -3358,8 +3637,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      title: 'AI Streaming Content Optimizer',
-      description: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.',
+      title: description,
+
+      $4: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.',
       icon: '📺',
       price: '$249/month',
       features: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform'],
@@ -3367,8 +3647,9 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$350-700/month',
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+
+      }
   ];
   const categories = [
     { name: 'All', count: microSAASServices.length },
@@ -3549,7 +3830,6 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div> </div>);
 };
 export default MicroSAASPage;

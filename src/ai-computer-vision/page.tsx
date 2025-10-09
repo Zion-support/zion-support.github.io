@@ -8,40 +8,48 @@ const AIComputerVisionPage: React.FC = () => {
   const features = [
     {
       icon: Eye,
-      title: 'Object Detection',
-      description: 'Advanced object detection and recognition with high accuracy',
+      title: description,
+
+      $4: 'Advanced object detection and recognition with high accuracy',
       benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
     },
       icon: Camera,
-      title: 'Image Classification',
-      description: 'Automated image categorization and content analysis',
+      title: description,
+
+      $4: 'Automated image categorization and content analysis',
       benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories']
       icon: Video,
-      title: 'Video Analysis',
-      description: 'Real-time video processing and analysis capabilities',
+      title: description,
+
+      $4: 'Real-time video processing and analysis capabilities',
       benefits: ['Live streaming', 'Motion detection', 'Activity recognition']
       icon: Target,
-      title: 'Facial Recognition',
-      description: 'Secure and accurate facial recognition technology',
-      benefits: ['Identity verification', 'Access control', 'Privacy protection']
-    }
+      title: description,
+
+      $4: 'Secure and accurate facial recognition technology',
+      benefits: ['Identity verification', 'Access control', 'Privacy protection'],
+ }
   ];
 
   const applications = [
-      title: 'Retail & E-commerce',
-      description: 'Automated inventory management, customer behavior analysis, and checkout optimization',
+      title: description,
+
+      $4: 'Automated inventory management, customer behavior analysis, and checkout optimization',
       icon: ShoppingCart,
       useCases: ['Smart checkout', 'Inventory tracking', 'Customer analytics']
-      title: 'Security & Surveillance',
-      description: 'Intelligent security monitoring and threat detection systems',
+      title: description,
+
+      $4: 'Intelligent security monitoring and threat detection systems',
       icon: Shield,
       useCases: ['Intrusion detection', 'Person tracking', 'Anomaly detection']
-      title: 'Healthcare',
-      description: 'Medical image analysis and diagnostic assistance',
+      title: description,
+
+      $4: 'Medical image analysis and diagnostic assistance',
       icon: Stethoscope,
       useCases: ['X-ray analysis', 'MRI interpretation', 'Symptom detection']
-      title: 'Manufacturing',
-      description: 'Quality control and automated inspection systems',
+      title: description,
+
+      $4: 'Quality control and automated inspection systems',
       icon: Settings,
       useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
 
@@ -190,8 +198,7 @@ const AIComputerVisionPage: React.FC = () => {
                 Request Demo
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIComputerVisionPage;

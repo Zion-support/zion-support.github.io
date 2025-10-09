@@ -24,8 +24,8 @@ ${pages.map(page => `  <url>
 </urlset>`;
   return sitemap;
 
-const Sitemap: React.FC = () => {
-  const _sitemap = generateSitemap(getAllPages());
+const Sitemap: React.FC = () <=>{
+  const _sitemap = generateSitemap(getAllPages()</=>);
   <url>
     <loc>https://ziontechgroup.com/</loc>
     <priority>1.0</priority>
@@ -43,7 +43,6 @@ const Sitemap: React.FC = () => {
   return (
     <div>
       <pre>{sitemap}</pre>
-    </div>
-  );
+    </div> </div>);
 
 export default Sitemap;

@@ -5,16 +5,16 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const FAQPage: React.FC = () <=>{
+  const [searchTerm, setSearchTerm] = useState(''</=>);
   const [openItems, setOpenItems] = useState<number[]>([]);
 
-  const toggleItem = (index: number) => {
+  const toggleItem = (index: number) <=>{
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
-    );
+    </=>);
   };
 
   const faqData = [
@@ -29,9 +29,9 @@ const FAQPage: React.FC = () => {
           question: 'How can I get started?',
           answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.'
           question: 'Do you offer custom solutions?',
-          answer: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
-        }
-      ]
+          answer: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.',
+ }
+  ]
       category: 'AI Services',
           question: 'What AI services do you provide?',
           answer: 'We provide comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, AI fintech applications, and custom AI development.'
@@ -85,7 +85,7 @@ const FAQPage: React.FC = () => {
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
-  })).filter(category => category.questions.length > 0);
+  })).filter(category => category.questions.length > 0</number>);
 
   return (
     <>
@@ -120,10 +120,9 @@ const FAQPage: React.FC = () => {
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
                 </h2>
-                <div className="space-y-4">
-                  {category.questions.map((item, itemIndex) => {
+                <div className="space-y-4">{category.questions.map((item, itemIndex) => {
                     const globalIndex = categoryIndex * 100 + itemIndex;
-                    const isOpen = openItems.includes(globalIndex);
+                    const isOpen = openItems.includes(globalIndex</div>);
                     
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button

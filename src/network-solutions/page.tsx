@@ -8,23 +8,27 @@ const NetworkSolutionsPage: React.FC = () => {
   const features = [
     {
       icon: Globe,
-      title: 'Network Design',
-      description: 'Custom network architecture design and implementation',
+      title: description,
+
+      $4: 'Custom network architecture design and implementation',
       benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
       icon: Shield,
-      title: 'Network Security',
-      description: 'Comprehensive network security solutions',
+      title: description,
+
+      $4: 'Comprehensive network security solutions',
       benefits: ['Firewall management', 'Intrusion detection', 'VPN solutions']
       icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Network performance monitoring and optimization',
+      title: description,
+
+      $4: 'Network performance monitoring and optimization',
       benefits: ['Bandwidth management', 'Traffic analysis', 'QoS implementation']
       icon: Settings,
-      title: 'Network Management',
-      description: '24/7 network monitoring and management',
-      benefits: ['Proactive monitoring', 'Issue resolution', 'Performance reporting']
-    }
+      title: description,
+
+      $4: '24/7 network monitoring and management',
+      benefits: ['Proactive monitoring', 'Issue resolution', 'Performance reporting'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const NetworkSolutionsPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default NetworkSolutionsPage;

@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const SignupPage: React.FC = () => {
+const SignupPage: React.FC = () <=>{
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -18,10 +18,10 @@ const SignupPage: React.FC = () => {
     subscribeNewsletter: false
   });
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false</div>);
+  const [isLoading, setIsLoading] = useState(false</=>);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) <=>{
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -40,27 +40,30 @@ const SignupPage: React.FC = () => {
     if (!formData.agreeToTerms) {
       alert('Please agree to the terms and conditions');
     
-    setIsLoading(true);
+    setIsLoading(true</div>);
     
     // Simulate signup process
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)</=>);
     
-    setIsLoading(false);
+    setIsLoading(false</HTMLInputElement>);
     // Redirect to dashboard or home page
     window.location.href = '/';
 
   const features = [
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance'
+      title: description,
+
+      $4: 'Bank-level security with advanced encryption and compliance'
     },
       icon: Award,
-      title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients'
+      title: description,
+
+      $4: '300% average ROI and 95% process automation for our clients'
       icon: Globe,
-      title: 'Global Support',
-      description: '24/7 support and services across multiple time zones'
+      title: description,
+
+      $4: '24/7 support and services across multiple time zones'
   ];
 
   const benefits = [
@@ -229,7 +232,6 @@ const SignupPage: React.FC = () => {
                   <div className="text-2xl font-bold text-white">Google</div>
                   <div className="text-2xl font-bold text-white">Amazon</div>
       <Footer />
-    </>
-  );
+    </> </div>);
 
 export default SignupPage;

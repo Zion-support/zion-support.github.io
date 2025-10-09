@@ -8,23 +8,27 @@ const AIPerformanceTrackerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'Performance Monitoring',
-      description: 'Comprehensive performance tracking and analysis',
+      title: description,
+
+      $4: 'Comprehensive performance tracking and analysis',
       benefits: ['Real-time metrics', 'Performance alerts', 'Trend analysis']
     },
       icon: Target,
-      title: 'Goal Tracking',
-      description: 'Intelligent goal setting and progress monitoring',
+      title: description,
+
+      $4: 'Intelligent goal setting and progress monitoring',
       benefits: ['Smart goals', 'Progress tracking', 'Achievement metrics']
       icon: Zap,
-      title: 'Automated Insights',
-      description: 'AI-powered performance insights and recommendations',
+      title: description,
+
+      $4: 'AI-powered performance insights and recommendations',
       benefits: ['Performance insights', 'Optimization tips', 'Action recommendations']
       icon: Settings,
-      title: 'Custom Dashboards',
-      description: 'Customizable performance dashboards and reports',
-      benefits: ['Custom metrics', 'Visualization', 'Reporting']
-    }
+      title: description,
+
+      $4: 'Customizable performance dashboards and reports',
+      benefits: ['Custom metrics', 'Visualization', 'Reporting'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIPerformanceTrackerPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIPerformanceTrackerPage;

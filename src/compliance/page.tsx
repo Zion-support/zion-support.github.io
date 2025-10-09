@@ -19,21 +19,25 @@ const CompliancePage: React.FC = () => {
   const complianceAreas = [
     {
       icon: Shield,
-      title: 'Data Protection',
-      description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
+      title: description,
+
+      $4: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
       features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
     },
       icon: FileText,
-      title: 'Regulatory Compliance',
-      description: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
+      title: description,
+
+      $4: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
       features: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
       icon: Lock,
-      title: 'Security Standards',
-      description: 'Implementation of industry-leading security standards and best practices for data protection.',
+      title: description,
+
+      $4: 'Implementation of industry-leading security standards and best practices for data protection.',
       features: ['ISO 27001', 'SOC 2 Type II', 'NIST Framework', 'OWASP Guidelines', 'Security Audits', 'Penetration Testing']
       icon: Users,
-      title: 'Privacy Rights',
-      description: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
+      title: description,
+
+      $4: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
       features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
 
@@ -115,8 +119,7 @@ const CompliancePage: React.FC = () => {
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         
-        <Footer />
-  );
+        <Footer /></Footer>);
 };
 
 export default CompliancePage;

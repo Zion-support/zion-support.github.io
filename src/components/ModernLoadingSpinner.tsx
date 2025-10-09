@@ -45,7 +45,6 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
         )}
       </div>
       <span className="sr-only">Loading content, please wait...</span>
-    </div>
-  );
+    </div> </div>);
 };
 export default ModernLoadingSpinner;

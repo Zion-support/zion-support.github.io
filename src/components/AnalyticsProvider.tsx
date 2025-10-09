@@ -13,11 +13,11 @@ interface AnalyticsProviderProps {
   enableDebug?: boolean;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps>= ({
   children,
   trackingId = 'G-XXXXXXXXXX',
   enableDebug = false,
-}) => {
+}) <=>{
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
@@ -50,16 +50,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_location: window.location.href,
       });
 
-      setIsInitialized(true);
+      setIsInitialized(true</div>);
 
       if (enableDebug) {
-        // console.log('Analytics initialized with tracking ID:', trackingId);
+        // console.log('Analytics initialized with tracking ID:', trackingId</=>);
       }
     };
 
-  }, [trackingId, enableDebug]);
+  }, [trackingId, enableDebug]</AnalyticsProviderProps>);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+  const trackEvent = (eventName: string, parameters?: Record<string, <unknown>) => {
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
@@ -75,14 +75,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      // console.log('Analytics Page View:', pageName, pagePath);
+      // console.log('Analytics Page View:', pageName, pagePath</div>);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'page_view', {
         page_title: pageName,
         page_location: pagePath || window.location.href,
-      });
+      }</unknown>);
     }
   };
 
@@ -92,15 +92,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', trackingId, {
         user_id: userId,
-      });
+      }</string>);
     }
   };
 
-  const setUserProperties = (properties: Record<string, unknown>) => {
+  const setUserProperties = (properties: Record<string, <unknown>) => {
     if (!isInitialized || typeof window === 'undefined') return;
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('set', properties);
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('set', properties</div>);
     }
   };
 
@@ -109,7 +109,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     if (enableDebug) {
       // eslint-disable-next-line no-console
-      // console.error('Analytics Error:', error, context);
+      // console.error('Analytics Error:', error, context</unknown>);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
@@ -119,7 +119,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         custom_map: {
           context: context || 'unknown',
         },
-      });
+      }</string>);
     }
   };
 
@@ -132,14 +132,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   return (
     <AnalyticsContext.Provider value={contextValue}>
       {children}
-    </AnalyticsContext.Provider>
-  );
+    </AnalyticsContext.Provider> </div>);
 };
 
-export const useAnalytics = (): AnalyticsContextType => {
-  const context = useContext(AnalyticsContext);
+export const useAnalytics = (): AnalyticsContextType <=>{
+  const context = useContext(AnalyticsContext</div>);
   if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error('useAnalytics must be used within an AnalyticsProvider'</=>);
   }
   return context;
 };

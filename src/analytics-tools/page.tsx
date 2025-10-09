@@ -41,22 +41,27 @@ const AnalyticsToolsPage: React.FC = () => {
       description: 'Financial performance analytics with AI-powered insights and risk assessment.',
       features: ['Financial reporting', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling'],
       icon: '💳',
-      category: 'Financial Analytics'
-    }
+      category: 'Financial Analytics',
+
+      }
   ];
   const benefits = [
       icon: TrendingUp,
-      title: 'Data-Driven Decisions',
-      description: 'Make informed decisions with comprehensive analytics and AI insights'
+      title: description,
+
+      $4: 'Make informed decisions with comprehensive analytics and AI insights'
       icon: Target,
-      title: 'Predictive Insights',
-      description: 'Anticipate trends and opportunities with AI-powered predictions'
+      title: description,
+
+      $4: 'Anticipate trends and opportunities with AI-powered predictions'
       icon: BarChart,
-      title: 'Real-Time Monitoring',
-      description: 'Track performance in real-time with live dashboards and alerts'
+      title: description,
+
+      $4: 'Track performance in real-time with live dashboards and alerts'
       icon: Brain,
-      title: 'AI-Powered',
-      description: 'Leverage advanced AI algorithms for deeper insights and automation'
+      title: description,
+
+      $4: 'Leverage advanced AI algorithms for deeper insights and automation'
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -144,13 +149,12 @@ const AnalyticsToolsPage: React.FC = () => {
             Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              href="tel:+13024640950"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
               Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
-  );
+  </div>);
 };
 export default AnalyticsToolsPage;

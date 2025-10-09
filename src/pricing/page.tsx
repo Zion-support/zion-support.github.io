@@ -8,8 +8,9 @@ const PricingPage: React.FC = () => {
       name: 'Starter',
       price: '$299',
       period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      icon: Zap,
+      description: icon,
+
+      $4: Zap,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       features: [
@@ -25,8 +26,9 @@ const PricingPage: React.FC = () => {
       name: 'Professional',
       price: '$799',
       period: '/month',
-      description: 'Ideal for growing businesses with advanced AI needs',
-      icon: Brain,
+      description: icon,
+
+      $4: Brain,
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10',
       features: [
@@ -44,8 +46,9 @@ const PricingPage: React.FC = () => {
       name: 'Enterprise',
       price: '$1,999',
       period: '/month',
-      description: 'Complete AI solution for large organizations',
-      icon: Cloud,
+      description: icon,
+
+      $4: Cloud,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       features: [
@@ -59,29 +62,35 @@ const PricingPage: React.FC = () => {
         'On-site Training',
         'SLA Guarantee'
       ],
-      popular: false
-    }
+      popular: false,
+
+      }
   ];
 
   const addOns = [
     {
       name: 'AI Security Suite',
       price: '$199/month',
-      description: 'Advanced security monitoring and compliance',
-      icon: Shield
+      description: icon,
+
+      $4: Shield
     },
     {
       name: 'Custom AI Development',
       price: '$150/hour',
-      description: 'Bespoke AI solutions for unique requirements',
-      icon: Brain
+      description: icon,
+
+      $4: Brain
     },
     {
       name: 'Priority Support',
       price: '$99/month',
-      description: '24/7 priority support and faster response times',
-      icon: Phone
-    }
+      description: icon,
+
+      $4: Phone,
+
+
+      }
   ];
 
   return (
@@ -93,8 +102,7 @@ const PricingPage: React.FC = () => {
           Contact Us
         </a>
       </div>
-    </div>
-  );
+    </div> </div>);
 };
 
 export default PricingPage;

@@ -10,23 +10,27 @@ const AIMLPlatformPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Complete ML Platform',
-      description: 'End-to-end machine learning platform with model development, training, and deployment',
+      title: description,
+
+      $4: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
     },
       icon: TrendingUp,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics and monitoring for machine learning models',
+      title: description,
+
+      $4: 'Comprehensive analytics and monitoring for machine learning models',
       benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for your machine learning infrastructure',
+      title: description,
+
+      $4: 'Bank-level security and compliance for your machine learning infrastructure',
       benefits: ['Data encryption', 'Access controls', 'Audit trails']
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Collaborative tools for data scientists and ML engineers',
-      benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
-    }
+      title: description,
+
+      $4: 'Collaborative tools for data scientists and ML engineers',
+      benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing'],
+ }
   ];
 
   const pricingPlans = [
@@ -92,8 +96,7 @@ const AIMLPlatformPage: React.FC = () => {
               Learn More
           </div>
       
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 

@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
 
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC = () <=>{
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,11 +13,11 @@ const ContactPage: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
+  }</div>);
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false</=>);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | <HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -29,12 +29,12 @@ const ContactPage: React.FC = () => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     // console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    setIsSubmitted(true</div>);
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitted(false</HTMLSelectElement>);
       setFormData({
-    }, 3000);
+    }, 3000</HTMLInputElement>);
 
   const services = [
     'AI Services',
@@ -63,7 +63,6 @@ const ContactPage: React.FC = () => {
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us
         </a>
-      </div>
-  );
+      </div> </div>);
 
 export default ContactPage;

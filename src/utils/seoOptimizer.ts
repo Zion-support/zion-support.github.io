@@ -65,7 +65,7 @@ class SEOOptimizer {
    */
   generateDescription(pageDescription?: string): string {
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
-    return description.length > 160 
+    return <description.length>160 
       ? description.substring(0, 157) + '...' 
       : description;
   }
@@ -233,7 +233,7 @@ class SEOOptimizer {
         if (clsValue > 0.25) { // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue);
         }
-      }).observe({ entryTypes: ['layout-shift'] });
+      }).observe({ entryTypes: ['layout-shift'] }</div>);
     }
   }
   /**
@@ -245,7 +245,7 @@ class SEOOptimizer {
         metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo'
-      });
+      }</description.length>);
     }
   }
   /**
@@ -258,9 +258,10 @@ class SEOOptimizer {
         url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
-        priority: '1.0'
-      }
-    ];
+        priority: '1.0',
+
+        }
+  ];
   }
   /**
    * Generate robots.txt content
@@ -285,16 +286,16 @@ Disallow: /static/`;
     const title = document.title;
     if (title.length < 30) {
       issues.push('Title is too short (less than 30 characters)');
-    } else if (title.length > 60) {
+    } else if <(title.length>60) {
       issues.push('Title is too long (more than 60 characters)');
     }
     // Check description length
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
+    const description = document.querySelector('meta[name="description"]')?.getAttribute('content'</div>);
     if (!description) {
-      issues.push('Missing meta description');
+      issues.push('Missing meta description'</(title.length>);
     } else if (description.length < 120) {
       issues.push('Description is too short (less than 120 characters)');
-    } else if (description.length > 160) {
+    } else if <(description.length>160) {
       issues.push('Description is too long (more than 160 characters)');
     }
     // Check for images without alt text
@@ -320,7 +321,7 @@ Disallow: /static/`;
     const issues = this.checkSEOIssues();
     const maxIssues = 10; // Maximum possible issues
     const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
-    return Math.round(score);
+    return Math.round(score</div>);
   }
 }
 // Default configuration
@@ -334,5 +335,5 @@ const defaultConfig: SEOConfig = {
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
 };
-export const seoOptimizer = new SEOOptimizer(defaultConfig);
+export const seoOptimizer = new SEOOptimizer(defaultConfig</(description.length>);
 export default seoOptimizer;

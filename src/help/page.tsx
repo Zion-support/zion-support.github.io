@@ -5,129 +5,158 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const HelpPage: React.FC = () => {
+const HelpPage: React.FC = () <=>{
   const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
+  const [activeCategory, setActiveCategory] = useState('getting-started'</div>);
 
   const categories = [
     {
       id: 'getting-started',
-      name: 'Getting Started',
-      icon: BookOpen,
+      name: icon,
+
+      $4: BookOpen,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10'
     },
       id: 'troubleshooting',
-      name: 'Troubleshooting',
-      icon: HelpCircle,
+      name: icon,
+
+      $4: HelpCircle,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10'
       id: 'billing',
-      name: 'Billing & Account',
-      icon: CheckCircle,
+      name: icon,
+
+      $4: CheckCircle,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10'
       id: 'technical',
-      name: 'Technical Support',
-      icon: MessageSquare,
+      name: icon,
+
+      $4: MessageSquare,
       color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10'
-    }
+      bgColor: 'bg-purple-500/10',
+
+      }
   ];
 
   const helpArticles = {
     'getting-started': [
-        title: 'How to Get Started with AI Services',
-        description: 'Complete guide to setting up your AI services and making the most of our platform',
+        title: description,
+
+        $4: 'Complete guide to setting up your AI services and making the most of our platform',
         category: 'Getting Started',
         readTime: '5 min read',
         difficulty: 'Beginner',
         color: 'text-blue-400'
-        title: 'Setting Up Your First Dashboard',
-        description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
+        title: description,
+
+        $4: 'Step-by-step instructions for creating and customizing your analytics dashboard',
         readTime: '3 min read',
-        title: 'Understanding AI Pricing Models',
-        description: 'Learn about our different pricing tiers and how to choose the right one for your needs',
+        title: description,
+
+        $4: 'Learn about our different pricing tiers and how to choose the right one for your needs',
         readTime: '4 min read',
-        title: 'Integration with Existing Systems',
-        description: 'How to integrate our AI services with your current business systems',
+        title: description,
+
+        $4: 'How to integrate our AI services with your current business systems',
         readTime: '7 min read',
         difficulty: 'Intermediate',
     ],
     'troubleshooting': [
-        title: 'Common Login Issues and Solutions',
-        description: 'Troubleshoot common authentication problems and access issues',
+        title: description,
+
+        $4: 'Troubleshoot common authentication problems and access issues',
         category: 'Troubleshooting',
         color: 'text-red-400'
-        title: 'API Connection Problems',
-        description: 'Resolve API connectivity issues and authentication errors',
-        title: 'Performance Optimization',
-        description: 'Improve system performance and resolve slow response times',
+        title: description,
+
+        $4: 'Resolve API connectivity issues and authentication errors',
+        title: description,
+
+        $4: 'Improve system performance and resolve slow response times',
         readTime: '6 min read',
         difficulty: 'Advanced',
-        title: 'Data Import/Export Issues',
-        description: 'Fix problems with data migration and file uploads',
+        title: description,
+
+        $4: 'Fix problems with data migration and file uploads',
     'billing': [
-        title: 'Understanding Your Bill',
-        description: 'Learn how to read and understand your monthly billing statement',
+        title: description,
+
+        $4: 'Learn how to read and understand your monthly billing statement',
         category: 'Billing',
         color: 'text-green-400'
-        title: 'Upgrading or Downgrading Plans',
-        description: 'How to change your subscription plan and what to expect',
-        title: 'Payment Methods and Billing',
-        description: 'Manage your payment methods and billing information',
-        title: 'Refund and Cancellation Policy',
-        description: 'Understand our refund policy and how to cancel your subscription',
+        title: description,
+
+        $4: 'How to change your subscription plan and what to expect',
+        title: description,
+
+        $4: 'Manage your payment methods and billing information',
+        title: description,
+
+        $4: 'Understand our refund policy and how to cancel your subscription',
     'technical': [
-        title: 'API Documentation and Examples',
-        description: 'Complete API reference with code examples and best practices',
+        title: description,
+
+        $4: 'Complete API reference with code examples and best practices',
         category: 'Technical',
         readTime: '10 min read',
         color: 'text-purple-400'
-        title: 'Security Best Practices',
-        description: 'Implement security measures to protect your data and systems',
+        title: description,
+
+        $4: 'Implement security measures to protect your data and systems',
         readTime: '8 min read',
-        title: 'Custom Integration Guide',
-        description: 'Build custom integrations with our platform using webhooks and APIs',
+        title: description,
+
+        $4: 'Build custom integrations with our platform using webhooks and APIs',
         readTime: '12 min read',
-        title: 'Monitoring and Logging',
-        description: 'Set up monitoring and logging for your AI services and applications',
+        title: description,
+
+        $4: 'Set up monitoring and logging for your AI services and applications',
     ]
   };
 
   const resources = [
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides for all our services',
+      title: description,
+
+      $4: 'Step-by-step video guides for all our services',
       icon: Video,
       count: '50+ videos'
-      title: 'Documentation',
-      description: 'Comprehensive technical documentation and guides',
+      title: description,
+
+      $4: 'Comprehensive technical documentation and guides',
       count: '200+ articles'
-      title: 'API Reference',
-      description: 'Complete API documentation with examples',
+      title: description,
+
+      $4: 'Complete API documentation with examples',
       count: '100+ endpoints'
-      title: 'Download Center',
-      description: 'SDKs, tools, and resources for developers',
+      title: description,
+
+      $4: 'SDKs, tools, and resources for developers',
       icon: Download,
       count: '25+ downloads'
 
   const supportChannels = [
-      title: 'Live Chat',
-      description: 'Get instant help from our support team',
+      title: description,
+
+      $4: 'Get instant help from our support team',
       color: 'text-cyan-400',
       availability: '24/7',
       responseTime: 'Instant'
-      title: 'Email Support',
-      description: 'Send us a detailed message and we\'ll respond quickly',
+      title: description,
+
+      $4: 'Send us a detailed message and we\'ll respond quickly',
       icon: Mail,
       responseTime: 'Within 4 hours'
-      title: 'Phone Support',
-      description: 'Speak directly with our technical experts',
+      title: description,
+
+      $4: 'Speak directly with our technical experts',
       icon: Phone,
       availability: 'Mon-Fri 9AM-6PM EST',
       responseTime: 'Immediate'
-      title: 'Community Forum',
-      description: 'Connect with other users and share knowledge',
+      title: description,
+
+      $4: 'Connect with other users and share knowledge',
       icon: Users,
       responseTime: 'Community driven'
 
@@ -149,7 +178,7 @@ const HelpPage: React.FC = () => {
   const filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  </=>);
 
   return (
     <>

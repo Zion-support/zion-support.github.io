@@ -7,45 +7,52 @@ import Footer from '../components/Footer';
 
   const _teamMembers = [
     {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
-      image: '/api/placeholder/300/300',
+      name: role,
+
+      $4: 'CEO & Founder',
+      bio: image,
+
+      $4: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/kleber-santos',
       email: 'kleber@ziontechgroup.com',
       expertise: ['AI Strategy', 'Leadership', 'Innovation']
     },
-      name: 'Dr. Sarah Chen',
-      role: 'Chief AI Officer',
+      name: role,
+
+      $4: 'Chief AI Officer',
       bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
       linkedin: 'https://linkedin.com/in/sarah-chen-ai',
       email: 'sarah@ziontechgroup.com',
       expertise: ['Machine Learning', 'Deep Learning', 'Research']
-      name: 'Michael Rodriguez',
-      role: 'CTO',
+      name: role,
+
+      $4: 'CTO',
       bio: 'Technology architect with expertise in scalable systems and cloud infrastructure',
       linkedin: 'https://linkedin.com/in/michael-rodriguez-cto',
       email: 'michael@ziontechgroup.com',
       expertise: ['Cloud Architecture', 'DevOps', 'Security']
-      name: 'Dr. Emily Watson',
-      role: 'Head of Data Science',
+      name: role,
+
+      $4: 'Head of Data Science',
       bio: 'Data science expert specializing in predictive analytics and business intelligence',
       linkedin: 'https://linkedin.com/in/emily-watson-data',
       email: 'emily@ziontechgroup.com',
       expertise: ['Data Science', 'Analytics', 'Statistics']
-      name: 'James Kim',
-      role: 'Lead AI Engineer',
+      name: role,
+
+      $4: 'Lead AI Engineer',
       bio: 'Full-stack AI engineer with expertise in natural language processing and computer vision',
       linkedin: 'https://linkedin.com/in/james-kim-ai',
       email: 'james@ziontechgroup.com',
       expertise: ['NLP', 'Computer Vision', 'AI Engineering']
-      name: 'Lisa Thompson',
-      role: 'Head of Client Success',
+      name: role,
+
+      $4: 'Head of Client Success',
       bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
       linkedin: 'https://linkedin.com/in/lisa-thompson-success',
       email: 'lisa@ziontechgroup.com',
-      expertise: ['Client Relations', 'Project Management', 'Customer Success']
-    }
+      expertise: ['Client Relations', 'Project Management', 'Customer Success'],
+ }
   ];
 
   const stats = [
@@ -62,8 +69,7 @@ import Footer from '../components/Footer';
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us
         </a>
-      </div>
-  );
+      </div> </div>);
 };
 
 export default TeamPage;

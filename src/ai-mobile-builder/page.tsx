@@ -8,23 +8,27 @@ const AIMobileBuilderPage: React.FC = () => {
   const features = [
     {
       icon: Smartphone,
-      title: 'AI-Assisted Development',
-      description: 'Intelligent mobile app development with AI assistance',
+      title: description,
+
+      $4: 'Intelligent mobile app development with AI assistance',
       benefits: ['Code generation', 'UI/UX optimization', 'Performance tuning']
     },
       icon: Target,
-      title: 'Cross-Platform Support',
-      description: 'Build for iOS and Android with a single codebase',
+      title: description,
+
+      $4: 'Build for iOS and Android with a single codebase',
       benefits: ['iOS development', 'Android development', 'Unified codebase']
       icon: Zap,
-      title: 'Rapid Prototyping',
-      description: 'Fast prototyping and MVP development',
+      title: description,
+
+      $4: 'Fast prototyping and MVP development',
       benefits: ['Quick iteration', 'MVP development', 'Testing']
       icon: Settings,
-      title: 'App Analytics',
-      description: 'Comprehensive app performance and user analytics',
-      benefits: ['User behavior', 'Performance metrics', 'Crash reporting']
-    }
+      title: description,
+
+      $4: 'Comprehensive app performance and user analytics',
+      benefits: ['User behavior', 'Performance metrics', 'Crash reporting'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIMobileBuilderPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIMobileBuilderPage;

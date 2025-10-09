@@ -15,7 +15,7 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const OptimizedImage: React.FC<OptimizedImageProps>= ({
   src,
   alt,
   width,
@@ -29,7 +29,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   loading = 'lazy',
   onLoad,
   onError,
-}) => {
+}) <=>{
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -51,7 +51,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         rootMargin: '50px',
         threshold: 0.1,
       }
-    );
+
+      );
 
     if (imgRef.current) {
       observer.observe(imgRef.current);
@@ -71,12 +72,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
+    onLoad?.(</div>);
   };
 
   const handleError = () => {
-    setHasError(true);
-    onError?.();
+    setHasError(true</=>);
+    onError?.(</OptimizedImageProps>);
   };
 
   return (
@@ -123,8 +124,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           }}
         />
       )}
-    </div>
-  );
+    </div> </div>);
 };
 
 export default OptimizedImage;

@@ -67,12 +67,15 @@ export default function RootLayout({
       itemListElement: [
           itemOffered: {
             '@type': 'Service',
-            name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
-            name: 'Digital Automation',
-            description: 'Process automation and workflow optimization services'
-            name: 'Cloud Infrastructure',
-            description: 'Cloud migration and infrastructure optimization services'
+            name: description,
+
+            $4: 'Comprehensive AI implementation strategies for enterprise organizations'
+            name: description,
+
+            $4: 'Process automation and workflow optimization services'
+            name: description,
+
+            $4: 'Cloud migration and infrastructure optimization services'
       ]
   };
   return (
@@ -146,7 +149,6 @@ export default function RootLayout({
           {children}
         </ErrorBoundary>
       </body>
-    </html>
-  );
+    </html> </div>);
 
 export default RootLayout;

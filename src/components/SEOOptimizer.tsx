@@ -10,7 +10,7 @@ interface SEOOptimizerProps {
   twitterCard?: string;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
+const SEOOptimizer: React.FC<SEOOptimizerProps>= memo(({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -18,7 +18,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
   structuredData,
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   twitterCard = 'summary_large_image',
-}) => {
+}) <=>{
 
   useEffect(() => {
     // Update document title
@@ -99,12 +99,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+      document.head.appendChild(script</div>);
     }
-  }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]);
+  }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]</=>);
 
   return null;
-});
+}</SEOOptimizerProps>);
 
 SEOOptimizer.displayName = 'SEOOptimizer';
 

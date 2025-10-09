@@ -1,49 +1,55 @@
 'use client';
 import React, { useState } from 'react';
 
-const ResearchDevelopmentPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+const ResearchDevelopmentPage: React.FC = () <=>{
+  const [activeTab, setActiveTab] = useState('ai'</=>);
 
   const _researchAreas = [
     {
       id: 'ai',
-      name: 'Artificial Intelligence',
-      icon: Brain,
+      name: icon,
+
+      $4: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       description: 'Advancing the frontiers of AI and machine learning'
     },
     {
       id: 'quantum',
-      name: 'Quantum Computing',
-      icon: Atom,
+      name: icon,
+
+      $4: Atom,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description: 'Exploring quantum algorithms and quantum advantage'
     },
     {
       id: 'autonomous',
-      name: 'Autonomous Systems',
-      icon: Rocket,
+      name: icon,
+
+      $4: Rocket,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       description: 'Developing self-managing and intelligent systems'
     },
     {
       id: 'emerging',
-      name: 'Emerging Technologies',
-      icon: Lightbulb,
+      name: icon,
+
+      $4: Lightbulb,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description: 'Researching next-generation technologies'
-    }
+      description: 'Researching next-generation technologies',
+
+      }
   ];
 
   const researchProjects = {
     ai: [
       {
-        title: 'Consensus Intelligence Framework',
-        description: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',
+        title: description,
+
+        $4: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',
         status: 'In Progress',
         timeline: '2025-2026',
         team: '12 Researchers',
@@ -57,8 +63,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-purple-400'
       },
       {
-        title: 'Autonomous Business Intelligence',
-        description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
+        title: description,
+
+        $4: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
         status: 'Completed',
         timeline: '2024-2025',
         team: '8 Researchers',
@@ -72,8 +79,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-green-400'
       },
       {
-        title: 'Neural Architecture Search for Enterprise',
-        description: 'Developing automated neural architecture search specifically optimized for enterprise applications',
+        title: description,
+
+        $4: 'Developing automated neural architecture search specifically optimized for enterprise applications',
         status: 'In Progress',
         timeline: '2025-2027',
         team: '15 Researchers',
@@ -84,13 +92,15 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Open-source framework released'
         ],
         icon: Microscope,
-        color: 'text-blue-400'
-      }
-    ],
+        color: 'text-blue-400',
+
+        }
+  ],
     quantum: [
       {
-        title: 'Quantum Machine Learning Algorithms',
-        description: 'Developing quantum algorithms for machine learning that leverage quantum advantage',
+        title: description,
+
+        $4: 'Developing quantum algorithms for machine learning that leverage quantum advantage',
         status: 'In Progress',
         timeline: '2025-2028',
         team: '10 Researchers',
@@ -104,8 +114,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-blue-400'
       },
       {
-        title: 'Quantum Error Correction for Business Applications',
-        description: 'Researching practical quantum error correction methods for commercial quantum computing',
+        title: description,
+
+        $4: 'Researching practical quantum error correction methods for commercial quantum computing',
         status: 'Planning',
         timeline: '2026-2029',
         team: '12 Researchers',
@@ -116,13 +127,15 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Industry collaboration established'
         ],
         icon: Zap,
-        color: 'text-yellow-400'
-      }
-    ],
+        color: 'text-yellow-400',
+
+        }
+  ],
     autonomous: [
       {
-        title: 'Autonomous Enterprise Operations',
-        description: 'Developing fully autonomous systems for enterprise operations and decision-making',
+        title: description,
+
+        $4: 'Developing fully autonomous systems for enterprise operations and decision-making',
         status: 'In Progress',
         timeline: '2025-2027',
         team: '20 Researchers',
@@ -136,8 +149,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-green-400'
       },
       {
-        title: 'Multi-Agent Coordination Systems',
-        description: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',
+        title: description,
+
+        $4: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',
         status: 'Completed',
         timeline: '2023-2024',
         team: '6 Researchers',
@@ -148,13 +162,15 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Published in Nature Communications'
         ],
         icon: Users,
-        color: 'text-purple-400'
-      }
-    ],
+        color: 'text-purple-400',
+
+        }
+  ],
     emerging: [
       {
-        title: 'Neuromorphic Computing for AI',
-        description: 'Exploring brain-inspired computing architectures for more efficient AI processing',
+        title: description,
+
+        $4: 'Exploring brain-inspired computing architectures for more efficient AI processing',
         status: 'In Progress',
         timeline: '2025-2028',
         team: '14 Researchers',
@@ -168,8 +184,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-yellow-400'
       },
       {
-        title: 'Edge AI for IoT Systems',
-        description: 'Developing ultra-efficient AI systems for edge computing and IoT applications',
+        title: description,
+
+        $4: 'Developing ultra-efficient AI systems for edge computing and IoT applications',
         status: 'Completed',
         timeline: '2024-2025',
         team: '8 Researchers',
@@ -180,9 +197,10 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Commercial product launched'
         ],
         icon: Globe,
-        color: 'text-blue-400'
-      }
-    ]
+        color: 'text-blue-400',
+
+        }
+  ]
   };
 
   const publications = [
@@ -216,31 +234,38 @@ const ResearchDevelopmentPage: React.FC = () => {
       journal: 'Nature Communications',
       year: '2024',
       impact: 'High',
-      link: '#'
-    }
+      link: '#',
+
+      }
   ];
 
   const achievements = [
     {
       icon: Award,
-      title: '50+ Research Papers',
-      description: 'Published in top-tier conferences and journals'
+      title: description,
+
+      $4: 'Published in top-tier conferences and journals'
     },
     {
       icon: Users,
-      title: '100+ Researchers',
-      description: 'World-class research team across multiple disciplines'
+      title: description,
+
+      $4: 'World-class research team across multiple disciplines'
     },
     {
       icon: Target,
-      title: '15+ Patents',
-      description: 'Innovative technologies and methodologies'
+      title: description,
+
+      $4: 'Innovative technologies and methodologies'
     },
     {
       icon: Globe,
-      title: 'Global Collaborations',
-      description: 'Partnerships with leading universities and research institutions'
-    }
+      title: description,
+
+      $4: 'Partnerships with leading universities and research institutions',
+
+
+      }
   ];
 
   return (
@@ -432,8 +457,7 @@ const ResearchDevelopmentPage: React.FC = () => {
         </div>
       </div>
       <Footer />
-    </>
-  );
+    </> </div>);
 };
 
 export default ResearchDevelopmentPage;

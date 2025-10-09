@@ -7,7 +7,7 @@ interface LinkProps {
   onClick?: () => void;
   'aria-label'?: string;
 }
-export const Link: React.FC<LinkProps> = ({
+export const Link: React.FC<LinkProps>= ({
   href,
   children,
   className,
@@ -21,7 +21,7 @@ export const Link: React.FC<LinkProps> = ({
     }
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {
-      e.preventDefault();
+      e.preventDefault(</LinkProps>);
       window.location.href = href;
     }
   };
@@ -36,7 +36,6 @@ export const Link: React.FC<LinkProps> = ({
       {...props}
     >
       {children}
-    </a>
-  );
+    </a> </div>);
 };
 export default Link;

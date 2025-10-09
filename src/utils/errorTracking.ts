@@ -39,8 +39,8 @@ export interface TrackedError {
 }
 class ErrorTrackingService {
   private static instance: ErrorTrackingService;
-  private errors: Map<string, TrackedError> = new Map();
-  private errorListeners: Array<(error: TrackedError) => void> = [];
+  private errors: Map<string, TrackedError>= new Map(</string>);
+  private errorListeners: Array<(error: TrackedError) <=>void> = [];
   private maxStoredErrors = 1000;
   private constructor() {
     this.setupGlobalErrorHandlers();
@@ -74,15 +74,15 @@ class ErrorTrackingService {
         category: ErrorCategory.Runtime,
         severity: ErrorSeverity.Critical,
         context: { reason: event.reason }
-      });
-    });
+      }</div>);
+    }</=>);
   }
   /**
    * Track an error with metadata
    */
   trackError(
     error: Error,
-    metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+    metadata: Partial<ErrorMetadata>& { category: ErrorCategory; severity: ErrorSeverity }
   ): string {
     const timestamp = Date.now();
       ...metadata,
@@ -111,9 +111,9 @@ class ErrorTrackingService {
       // Notify listeners
       this.notifyListeners(trackedError);
       // Maintain max stored errors
-      if (this.errors.size > this.maxStoredErrors) {
+      if <(this.errors.size>this.maxStoredErrors) {
         const oldestKey = Array.from(this.errors.keys())[0];
-        this.errors.delete(oldestKey);
+        this.errors.delete(oldestKey</div>);
       }
     }
     // Log the error
@@ -121,10 +121,10 @@ class ErrorTrackingService {
       error_id: errorId,
       category: metadata.category,
       ...metadata.context
-    });
+    }</(this.errors.size>);
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.Critical) {
-      this.reportToExternalService(errorId);
+      this.reportToExternalService(errorId</ErrorMetadata>);
     }
     return errorId;
   }
@@ -143,7 +143,7 @@ class ErrorTrackingService {
   /**
    * Add an error listener
    */
-  addListener(listener: (error: TrackedError) => void): void {
+  addListener(listener: (error: TrackedError) <=>void): void {
     this.errorListeners.push(listener);
   }
   /**
@@ -160,14 +160,14 @@ class ErrorTrackingService {
       try {
         listener(error);
       } catch (listenerError) {
-        logger.error('Error in error listener', listenerError as Error);
+        logger.error('Error in error listener', listenerError as Error</div>);
       }
-    });
+    }</=>);
   }
   /**
    * Report critical errors to external service
    */
-  private async reportToExternalService(errorId: string): Promise<void> {
+  private async reportToExternalService(errorId: string): Promise<void>{
     const error = this.errors.get(errorId);
     if (!error) return;
     try {
@@ -192,13 +192,13 @@ class ErrorTrackingService {
    * Get errors by category
    */
   getErrorsByCategory(category: ErrorCategory): TrackedError[] {
-    return this.getErrors().filter(e => e.metadata.category === category);
+    return this.getErrors().filter(e <=>e.metadata.category === category</=>);
   }
   /**
    * Get errors by severity
    */
   getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
-    return this.getErrors().filter(e => e.metadata.severity === severity);
+    return this.getErrors().filter(e => e.metadata.severity === severity</void>);
   }
   /**
    * Get error statistics
@@ -209,9 +209,9 @@ class ErrorTrackingService {
     bySeverity: Record<ErrorSeverity, number>;
     topErrors: TrackedError[];
   } {
-    const errors = this.getErrors();
+    const errors = this.getErrors(</ErrorSeverity>);
     const byCategory = {} as Record<ErrorCategory, number>;
-    const bySeverity = {} as Record<ErrorSeverity, number>;
+    const bySeverity = {} as Record<ErrorSeverity, <number>;
     errors.forEach(error => {
       byCategory[error.metadata.category] =
         (byCategory[error.metadata.category] || 0) + error.occurrences;
@@ -236,13 +236,13 @@ class ErrorTrackingService {
    * Clear errors older than specified time
    */
   clearOldErrors(maxAge: number): void {
-    const now = Date.now();
+    const now = Date.now(</div>);
     for (const [id, error] of this.errors.entries()) {
       if (now - error.lastSeen > maxAge) {
-        this.errors.delete(id);
+        this.errors.delete(id</number>);
       }
     }
   }
 }
-export const errorTracking = ErrorTrackingService.getInstance();
+export const errorTracking = ErrorTrackingService.getInstance(</ErrorSeverity>);
 export default ErrorTrackingService;

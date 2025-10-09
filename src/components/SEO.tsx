@@ -24,8 +24,10 @@ export interface SEOProps {
   alternateLocales?: { locale: string; url: string }[];
 }
 
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description:
+  title: description,
+
+
+  $4:
     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
     'AI',

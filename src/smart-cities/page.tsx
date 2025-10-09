@@ -8,23 +8,27 @@ const SmartCitiesPage: React.FC = () => {
   const features = [
     {
       icon: Building,
-      title: 'Smart Infrastructure',
-      description: 'Intelligent city infrastructure and management systems',
+      title: description,
+
+      $4: 'Intelligent city infrastructure and management systems',
       benefits: ['Traffic management', 'Energy optimization', 'Waste management']
     },
       icon: Target,
-      title: 'IoT Integration',
-      description: 'Internet of Things solutions for urban environments',
+      title: description,
+
+      $4: 'Internet of Things solutions for urban environments',
       benefits: ['Sensor networks', 'Data collection', 'Real-time monitoring']
       icon: Zap,
-      title: 'Energy Management',
-      description: 'Smart energy systems and renewable energy integration',
+      title: description,
+
+      $4: 'Smart energy systems and renewable energy integration',
       benefits: ['Smart grids', 'Energy storage', 'Renewable integration']
       icon: Settings,
-      title: 'Citizen Services',
-      description: 'Digital services and citizen engagement platforms',
-      benefits: ['Mobile apps', 'Digital services', 'Citizen engagement']
-    }
+      title: description,
+
+      $4: 'Digital services and citizen engagement platforms',
+      benefits: ['Mobile apps', 'Digital services', 'Citizen engagement'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const SmartCitiesPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default SmartCitiesPage;

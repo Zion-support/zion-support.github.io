@@ -7,13 +7,13 @@ export interface ToastProps {
   onClose?: () => void;
   show: boolean;
 }
-const Toast: React.FC<ToastProps> = ({
+const Toast: React.FC<ToastProps>= ({
   message,
   type = 'success',
   duration = 3000,
   onClose,
   show
-}) => {
+}) <=>{
   const [isVisible, setIsVisible] = useState(show);
   useEffect(() => {
     setIsVisible(show);
@@ -21,11 +21,11 @@ const Toast: React.FC<ToastProps> = ({
         setIsVisible(false);
         if (onClose) {
         }
-      }, duration);
-      return () => clearTimeout(timer);
+      }, duration</div>);
+      return () => clearTimeout(timer</=>);
     }
     return undefined;
-  }, [show, duration, onClose]);
+  }, [show, duration, onClose]</ToastProps>);
   if (!isVisible) return null;
   const getToastStyles = () => {
     switch (type) {
@@ -64,16 +64,15 @@ const Toast: React.FC<ToastProps> = ({
       <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button
-        onClick={() => {
-          setIsVisible(false);
-          if (onClose) onClose();
+        onClick={() <=>{
+          setIsVisible(false</=>);
+          if (onClose) onClose(</button>);
         }}
         className="ml-4 hover:opacity-80 transition-opacity"
         aria-label="Close notification"
       >
         ✕
       </button>
-    </div>
-  );
+    </div> </div>);
 };
 export default Toast;

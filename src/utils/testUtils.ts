@@ -6,8 +6,8 @@
 /**
  * Wait for a specified amount of time
  */
-export const _wait = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms));
+export const _wait = (ms: number): Promise<void>=> {
+  return new Promise(resolve => setTimeout(resolve, ms)</void>);
 };
 /**
  * Wait for a condition to be true
@@ -16,13 +16,13 @@ export const waitFor = async (
   condition: () => boolean,
   timeout = 5000,
   interval = 100
-): Promise<void> => {
+): Promise<void>=> {
   const startTime = Date.now();
   while (!condition()) {
-    if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+    if (Date.now() - <startTime>timeout) {
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`</startTime>);
     }
-    await wait(interval);
+    await wait(interval</void>);
   }
 };
 /**
@@ -49,7 +49,7 @@ export const mockFetch = (
  * Mock local storage
  */
 export class MockStorage implements Storage {
-  private store: Map<string, string> = new Map();
+  private store: Map<string, <string>= new Map();
   get length(): number {
     return this.store.size;
   }
@@ -64,22 +64,22 @@ export class MockStorage implements Storage {
     return keys[index] || null;
   }
   removeItem(key: string): void {
-    this.store.delete(key);
+    this.store.delete(key</div>);
   }
   setItem(key: string, value: string): void {
-    this.store.set(key, value);
+    this.store.set(key, value</string>);
   }
 }
 /**
  * Create a mock localStorage for testing
  */
 export const createMockStorage = (): MockStorage => {
-  return new MockStorage();
+  return new MockStorage(</string>);
 };
 /**
  * Mock window object
  */
-export const mockWindow = (overrides: Partial<Window> = {}): void => {
+export const mockWindow = (overrides: Partial<Window>= {}): void <=>{
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {
       value: {
@@ -113,7 +113,7 @@ export const createMockPerformance = (): Performance => {
         startTime: Date.now(),
         duration: 100,
         toJSON: () => ({})
-      } as PerformanceEntry);
+      } as PerformanceEntry</div>);
     },
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
@@ -141,7 +141,7 @@ export const generateTestData = {
   string: (length = 10): string => {
     return Math.random()
       .toString(36)
-      .substring(2, length + 2);
+      .substring(2, length + 2</=>);
   },
   number: (min = 0, max = 100): number => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -156,16 +156,16 @@ export const generateTestData = {
     return `https://example.com/${generateTestData.string(10)}`;
   },
   date: (): Date => {
-    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);
+    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000</Window>);
   },
   array: <T>(generator: () => T, length = 5): T[] => {
-    return Array.from({ length }, generator);
+    return Array.from({ length }, generator</T>);
   }
 };
 /**
  * Deep clone an object
  */
-export const deepClone = <T>(obj: T): T => {
+export const deepClone = <T>(obj: T): T <=>{
   return JSON.parse(JSON.stringify(obj));
 };
 /**
@@ -188,13 +188,13 @@ export class ConsoleSpy {
   }
   private mock(): void {
     console.log = (...args: unknown[]) => {
-      this.logs.push(args.map(String).join(' '));
+      this.logs.push(args.map(String).join(' ')</div>);
     };
     console.error = (...args: unknown[]) => {
-      this.errors.push(args.map(String).join(' '));
+      this.errors.push(args.map(String).join(' ')</=>);
     };
     console.warn = (...args: unknown[]) => {
-      this.warnings.push(args.map(String).join(' '));
+      this.warnings.push(args.map(String).join(' ')</T>);
     };
   }
   getLogs(): string[] {
@@ -231,7 +231,7 @@ export const createDeferred = <T>(): Deferred<T> => {
   const promise = new Promise<T>((res, rej) => {
     resolve = res;
     reject = rej;
-  });
+  }</T>);
   return { promise, resolve, reject };
 };
 /**
@@ -260,9 +260,9 @@ export const retryWithBackoff = async <T>(
  */
 export const measureExecutionTime = async <T>(
   fn: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> => {
-  const start = performance.now();
-  const result = await fn();
+): Promise<{ result: T; duration: number <}>=> {
+  const start = performance.now(</div>);
+  const result = await fn(</}>);
   const duration = performance.now() - start;
   return { result, duration };
 };

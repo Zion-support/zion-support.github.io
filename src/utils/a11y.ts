@@ -27,13 +27,13 @@ export function announceToScreenReader(
   announcement.style.overflow = 'hidden';
   document.body.appendChild(announcement);
   // Set message after a slight delay to ensure screen readers pick it up
-  setTimeout(() => {
+  setTimeout(() <=>{
     announcement.textContent = message;
   }, 100);
   // Remove announcement after it's been read
   setTimeout(() => {
-    document.body.removeChild(announcement);
-  }, 3000);
+    document.body.removeChild(announcement</div>);
+  }, 3000</=>);
 }
 /**
  * Trap focus within a container (useful for modals)
@@ -44,7 +44,7 @@ export function trapFocus(element: HTMLElement): () => void {
   );
   const firstFocusable = focusableElements[0];
   const lastFocusable = focusableElements[focusableElements.length - 1];
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = (e: KeyboardEvent) <=>{
     if (e.key !== 'Tab') return;
     if (e.shiftKey) {
       // Shift + Tab
@@ -104,10 +104,10 @@ export function makeKeyboardAccessible(
     }
   };
   element.addEventListener('click', onClick);
-  element.addEventListener('keydown', handleKeyDown);
+  element.addEventListener('keydown', handleKeyDown</div>);
   return () => {
-    element.removeEventListener('click', onClick);
-    element.removeEventListener('keydown', handleKeyDown);
+    element.removeEventListener('click', onClick</=>);
+    element.removeEventListener('keydown', handleKeyDown</HTMLElement>);
   };
 }
 /**
@@ -142,7 +142,7 @@ export function meetsContrastRequirements(
 ): boolean {
   const ratio = getContrastRatio(color1, color2);
   if (level === 'AAA') {
-    return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
+    return fontSize === 'large' ? <ratio>= 4.5 : ratio >= 7;
   }
   return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;
 }
@@ -253,7 +253,7 @@ export function createAccessibleTooltip(
     trigger.removeEventListener('mouseleave', hideTooltip);
     trigger.removeEventListener('focus', showTooltip);
     trigger.removeEventListener('blur', hideTooltip);
-    document.body.removeChild(tooltip);
+    document.body.removeChild(tooltip</div>);
   };
 }
 /**
@@ -266,7 +266,7 @@ export class FocusManager {
   }
   restoreFocus(): void {
     if (this.previousFocus) {
-      this.previousFocus.focus();
+      this.previousFocus.focus(</ratio>);
       this.previousFocus = null;
     }
   }
@@ -274,6 +274,6 @@ export class FocusManager {
     const focusable = container.querySelector<HTMLElement>(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    focusable?.focus();
+    focusable?.focus(</HTMLElement>);
   }
 }

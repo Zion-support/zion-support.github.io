@@ -41,7 +41,7 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   // Load settings from localStorage
-  useEffect(() => {
+  useEffect(() <=>{
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
@@ -209,7 +209,7 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
   const setColorBlind = (type: AccessibilitySettings['colorBlind']) => {
     const newSettings = { ...settings, colorBlind: type };
     saveSettings(newSettings);
-    announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
+    announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`</div>);
   };
 
   // Reset all settings
@@ -222,8 +222,8 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
       zoomLevel: 100,
       colorBlind: 'none',
     };
-    saveSettings(defaultSettings);
-    announceToScreenReader('Accessibility settings reset to default');
+    saveSettings(defaultSettings</=>);
+    announceToScreenReader('Accessibility settings reset to default'</AccessibilitySettings>);
   };
 
   if (!isVisible) {
@@ -233,7 +233,8 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
         aria-label="Open accessibility settings"
         title="Open accessibility settings (Alt + A)"
       ><Eye className="w-5 h-5" /></button>
-    );
+
+      );
   }
 
   return (
@@ -310,7 +311,9 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
         >
           Reset Settings
         </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
-  );
+
+
+        );
 };
 
 export default EnhancedAccessibility;

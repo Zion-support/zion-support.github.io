@@ -68,11 +68,10 @@ export class AppError extends Error {
     message: string,
     public category: ErrorCategory = ErrorCategory.UNKNOWN,
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    public metadata?: Record<string, unknown>
-  ) {
-    super(message);
+    public metadata?: Record<string, <unknown>) {
+    super(message</unknown>);
     this.name = 'AppError';
-    Error.captureStackTrace(this, this.constructor);
+    Error.captureStackTrace(this, this.constructor</string>);
   }
 }
 export default errorHandlingConfig;

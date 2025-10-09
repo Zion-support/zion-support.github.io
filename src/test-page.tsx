@@ -8,22 +8,25 @@ const testPagetsx: React.FC = () => {
   const _features = [
     {
       icon: Users,
-      title: 'Advanced Features',
-      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
+      title: description,
+
+      $4: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
     },
     {
       icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimized performance and scalability for enterprise-grade applications',
+      title: description,
+
+      $4: 'Optimized performance and scalability for enterprise-grade applications',
       benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
     },
     {
       icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with full compliance and data protection',
-      benefits: ['Data protection', 'Compliance', 'Secure operations']
-    }
+      title: description,
+
+      $4: 'Enterprise-grade security with full compliance and data protection',
+      benefits: ['Data protection', 'Compliance', 'Secure operations'],
+ }
   ];
 
   return (
@@ -93,8 +96,7 @@ const testPagetsx: React.FC = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div> </div>);
 };
 
 export default testPagetsx;

@@ -6,9 +6,9 @@ export const _debounce = <T extends (...args: any[]) => any>(
   wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+  return (...args: Parameters<T>) <=>{
+    clearTimeout(timeout</=>);
+    timeout = setTimeout(() => func(...args), wait</T>);
   };
 };
 // Throttle utility for performance
@@ -17,7 +17,7 @@ export const throttle = <T extends (...args: any[]) => any>(
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+  return (...args: Parameters<T>) <=>{
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
@@ -40,7 +40,8 @@ export const useIntersectionObserver = (
           })
         : null,
     [callback, options]
-  );
+
+        );
   const observe = useCallback(
     (element: Element | null) => {
       if (observer && element) {
@@ -50,7 +51,7 @@ export const useIntersectionObserver = (
       return () => {};
     },
     [observer]
-  );
+ );
   const disconnect = useCallback(() => {
     if (observer) {
       observer.disconnect();
@@ -77,15 +78,15 @@ export const useLazyImage = (src: string, placeholder?: string) => {
               setIsLoaded(true);
             };
             img.onerror = () => {
-              setIsError(true);
+              setIsError(true</div>);
             };
             img.src = src;
           }
-        });
+        }</=>);
       },
       [src, isLoaded, isError]
     )
-  );
+  </T>);
   return { imageSrc, isLoaded, isError, observe };
 };
 // Performance monitoring hook
@@ -96,7 +97,7 @@ export const usePerformanceMonitoring = () => {
     fid?: number;
     cls?: number;
     ttfb?: number;
-  }>({});
+  <}>({});
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const updateMetrics = () => {
@@ -126,9 +127,9 @@ export const usePerformanceMonitoring = () => {
       });
     }
     return () => {
-      window.removeEventListener('load', updateMetrics);
+      window.removeEventListener('load', updateMetrics</div>);
     };
-  }, []);
+  }, []</}>);
   return metrics;
 };
 // Memory usage monitoring
@@ -137,7 +138,7 @@ export const useMemoryMonitoring = () => {
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;
-  }>({});
+  <}>({});
   useEffect(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = () => {
@@ -172,9 +173,9 @@ export const preloadCriticalResources = () => {
   preloadResource('/fonts/inter-var.woff', 'font');
   // Preload critical images
   preloadResource('/images/hero-bg.webp', 'image');
-  preloadResource('/images/logo.svg', 'image');
+  preloadResource('/images/logo.svg', 'image'</div>);
   // Preload critical CSS
-  preloadResource('/styles/critical.css', 'style');
+  preloadResource('/styles/critical.css', 'style'</}>);
 };
 // Bundle size monitoring
 export const useBundleSizeMonitoring = () => {
@@ -183,7 +184,7 @@ export const useBundleSizeMonitoring = () => {
     jsSize?: number;
     cssSize?: number;
     imageSize?: number;
-  }>({});
+  <}>({});
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const calculateBundleSize = () => {
@@ -215,9 +216,9 @@ export const useBundleSizeMonitoring = () => {
       window.addEventListener('load', calculateBundleSize);
     }
     return () => {
-      window.removeEventListener('load', calculateBundleSize);
+      window.removeEventListener('load', calculateBundleSize</div>);
     };
-  }, []);
+  }, []</}>);
   return bundleSize;
 };
 export default {

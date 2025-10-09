@@ -8,23 +8,27 @@ const AISalesForecastingPage: React.FC = () => {
   const features = [
     {
       icon: TrendingUp,
-      title: 'Predictive Forecasting',
-      description: 'AI-powered sales forecasting and prediction',
+      title: description,
+
+      $4: 'AI-powered sales forecasting and prediction',
       benefits: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting']
     },
       icon: Target,
-      title: 'Goal Setting',
-      description: 'Intelligent goal setting and tracking',
+      title: description,
+
+      $4: 'Intelligent goal setting and tracking',
       benefits: ['Smart goals', 'Progress tracking', 'Performance metrics']
       icon: Zap,
-      title: 'Real-time Insights',
-      description: 'Real-time sales insights and recommendations',
+      title: description,
+
+      $4: 'Real-time sales insights and recommendations',
       benefits: ['Live dashboards', 'Instant alerts', 'Action recommendations']
       icon: Settings,
-      title: 'Scenario Planning',
-      description: 'What-if analysis and scenario planning',
-      benefits: ['Scenario modeling', 'Risk assessment', 'Strategy optimization']
-    }
+      title: description,
+
+      $4: 'What-if analysis and scenario planning',
+      benefits: ['Scenario modeling', 'Risk assessment', 'Strategy optimization'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AISalesForecastingPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AISalesForecastingPage;

@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 
-const Analytics: React.FC = () => {
+const Analytics: React.FC = () <=>{
 
   useEffect(() => {
     // Google Analytics 4
@@ -96,9 +96,9 @@ const Analytics: React.FC = () => {
     window.addEventListener('scroll', trackScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', trackScroll);
+      window.removeEventListener('scroll', trackScroll</div>);
     };
-  }, [pathname]);
+  }, [pathname]</=>);
 
   return null;
 };

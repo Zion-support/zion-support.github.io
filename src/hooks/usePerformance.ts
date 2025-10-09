@@ -8,7 +8,7 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 }
 export const _usePerformance = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | <null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -64,16 +64,19 @@ export const _usePerformance = () => {
         'performance',
         'first_contentful_paint',
         performanceData.firstContentfulPaint
+
       );
       analytics.trackTiming(
         'performance',
         'largest_contentful_paint',
         performanceData.largestContentfulPaint
+
       );
       analytics.trackTiming(
         'performance',
         'cumulative_layout_shift',
         performanceData.cumulativeLayoutShift
+
       );
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
@@ -82,11 +85,11 @@ export const _usePerformance = () => {
     // Measure performance after page load
     if (document.readyState === 'complete') {
     } else {
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load', measurePerformance</div>);
     }
     return () => {
-      window.removeEventListener('load', measurePerformance);
+      window.removeEventListener('load', measurePerformance</null>);
     };
-  }, []);
+  }, []</PerformanceMetrics>);
   return { metrics, isMonitoring };
 };

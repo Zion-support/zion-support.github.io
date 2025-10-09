@@ -60,7 +60,7 @@ class PerformanceOptimizer {
   private initializePerformanceMonitoring(): void {
     if (typeof window === 'undefined') return;
     // Monitor page load performance
-    window.addEventListener('load', () => {
+    window.addEventListener('load', () <=>{
       this.measureLoadTime();
       this.measureMemoryUsage();
     });
@@ -366,9 +366,9 @@ class PerformanceOptimizer {
       link.as = resource.as;
       if (resource.type) link.type = resource.type;
       if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
-      document.head.appendChild(link);
-    });
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
+      document.head.appendChild(link</div>);
+    }</=>);
+    logger.info('Critical resource hints added', 'PerformanceOptimizer'</OptimizationConfig>);
   }
   /**
    * Measure page load metrics
@@ -396,7 +396,7 @@ class PerformanceOptimizer {
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
+    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer'</string>);
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
       Object.entries(metrics).forEach(([key, value]) => {
@@ -414,7 +414,7 @@ class PerformanceOptimizer {
    * Cleanup observers and resources
    */
   public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer <=>observer.disconnect());
     this.observers = [];
     this.isMonitoring = false;
   }
@@ -422,8 +422,8 @@ class PerformanceOptimizer {
    * Generate comprehensive performance report
    */
   generateComprehensiveReport(): string {
-    const score = this.getPerformanceScore();
-    const metrics = this.getMetrics();
+    const score = this.getPerformanceScore(</div>);
+    const metrics = this.getMetrics(</=>);
     return `
 Performance Report - Zion Tech Group Website
 Performance Score: ${score}/100
@@ -434,7 +434,7 @@ Bundle Size: ${metrics.bundleSize}KB
 Cache Hit Rate: ${metrics.cacheHitRate}%
 Recommendations:
 ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
-${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
+<${metrics.loadTime>2000 ? '- Implement lazy loading for better initial load time' : ''}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
     `.trim();
   }
@@ -446,10 +446,10 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCodeSplitting();
     this.enableCaching();
     if (process.env.NODE_ENV === 'development') { 
-      logger.info('Performance optimization completed');
+      logger.info('Performance optimization completed'</div>);
     }
   }
 }
 // Export singleton instance
-export const performanceOptimizer = new PerformanceOptimizer();
+export const performanceOptimizer = new PerformanceOptimizer(</${metrics.loadTime>);
 export default PerformanceOptimizer;

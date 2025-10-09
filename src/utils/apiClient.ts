@@ -17,7 +17,7 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   timeout?: number;
   skipCache?: boolean;
 }
-export interface ApiResponse<T = unknown> {
+export interface ApiResponse<T = unknown>{
   data: T;
   status: number;
   statusText: string;
@@ -29,7 +29,7 @@ export class ApiError extends Error {
     public status: number,
     public response?: unknown
   ) {
-    super(message);
+    super(message</T>);
     this.name = 'ApiError';
   }
 }
@@ -38,7 +38,7 @@ class ApiClient {
     baseURL: string;
     cacheOptions?: CacheOptions;
   };
-  private abortControllers: Map<string, AbortController> = new Map();
+  private abortControllers: Map<string, AbortController>= new Map(</string>);
   constructor(_config: ApiClientConfig = {}) {
     this.config = {
       baseURL: config.baseURL || '',
@@ -62,7 +62,7 @@ class ApiClient {
       ...config,
       url,
       method: 'GET'
-    });
+    }</T>);
   }
   /**
    * POST request
@@ -77,7 +77,7 @@ class ApiClient {
       url,
       method: 'POST',
       body: JSON.stringify(data)
-    });
+    }</T>);
   }
   /**
    * PUT request
@@ -92,7 +92,7 @@ class ApiClient {
       url,
       method: 'PUT',
       body: JSON.stringify(data)
-    });
+    }</T>);
   }
   /**
    * DELETE request
@@ -105,7 +105,7 @@ class ApiClient {
       ...config,
       url,
       method: 'DELETE'
-    });
+    }</T>);
   }
   /**
    * PATCH request
@@ -120,7 +120,7 @@ class ApiClient {
       url,
       method: 'PATCH',
       body: JSON.stringify(data)
-    });
+    }</T>);
   }
   /**
    * Main request method with retry logic
@@ -152,9 +152,9 @@ class ApiClient {
     // Create abort controller for timeout
     const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
-    const timeoutId = setTimeout(() => {
-      controller.abort();
-    }, timeout);
+    const timeoutId = setTimeout(() <=>{
+      controller.abort(</=>);
+    }, timeout</T>);
     let lastError: Error | null = null;
     while (attempt < retries) {
       try {
@@ -198,18 +198,18 @@ class ApiClient {
         attempt++;
         // Log error
         if (attempt === retries) {
-          if (error instanceof ApiError && error.status >= 500) {
+          if (error instanceof ApiError && <error.status>= 500) {
             logCritical(`API request failed after ${retries} attempts`, error as Error, {
               url: fullUrl,
               method,
               attempt
-            });
+            }</div>);
           } else {
             logError(`API request failed`, error as Error, {
               url: fullUrl,
               method,
               attempt
-            });
+            }</error.status>);
           }
         }
         // Don't retry on certain errors
@@ -241,10 +241,10 @@ class ApiClient {
    * Cancel all pending requests
    */
   cancelAll(): void {
-    this.abortControllers.forEach(controller => {
+    this.abortControllers.forEach(controller <=>{
       controller.abort();
-    });
-    this.abortControllers.clear();
+    }</div>);
+    this.abortControllers.clear(</=>);
   }
   /**
    * Update default config
@@ -274,13 +274,13 @@ class ApiClient {
   /**
    * Delay helper
    */
-  private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  private delay(ms: number): Promise<void>{
+    return new Promise(resolve => setTimeout(resolve, ms)</void>);
   }
   /**
    * Health check
    */
-  async healthCheck(endpoint: string = '/health'): Promise<boolean> {
+  async healthCheck(endpoint: string = '/health'): Promise<boolean>{
     try {
       const response = await this.get(endpoint, { timeout: 5000, retries: 1 });
       return response.status === 200;
@@ -298,7 +298,7 @@ const apiClient = new ApiClient({
   cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
   }
-});
+}</boolean>);
 // Export both the class and default instance
 export { apiClient };
 export default ApiClient;

@@ -8,23 +8,27 @@ const AILeadScoringPage: React.FC = () => {
   const features = [
     {
       icon: Target,
-      title: 'Intelligent Scoring',
-      description: 'AI-powered lead scoring and qualification',
+      title: description,
+
+      $4: 'AI-powered lead scoring and qualification',
       benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking']
     },
       icon: BarChart,
-      title: 'Predictive Analytics',
-      description: 'Predict lead conversion probability',
+      title: description,
+
+      $4: 'Predict lead conversion probability',
       benefits: ['Conversion prediction', 'Risk assessment', 'Opportunity scoring']
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Automated lead nurturing and follow-up',
+      title: description,
+
+      $4: 'Automated lead nurturing and follow-up',
       benefits: ['Auto-nurturing', 'Follow-up sequences', 'Lead routing']
       icon: Settings,
-      title: 'Performance Analytics',
-      description: 'Comprehensive lead performance analytics',
-      benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports']
-    }
+      title: description,
+
+      $4: 'Comprehensive lead performance analytics',
+      benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AILeadScoringPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AILeadScoringPage;

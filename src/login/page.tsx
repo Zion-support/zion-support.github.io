@@ -1,16 +1,16 @@
 'use client';
 import React, { useState } from 'react';
 
-const LoginPage: React.FC = () => {
+const LoginPage: React.FC = () <=>{
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     rememberMe: false
   });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false</div>);
+  const [isLoading, setIsLoading] = useState(false</=>);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) <=>{
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -20,12 +20,12 @@ const LoginPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
+    setIsLoading(true</div>);
     
     // Simulate login process
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)</=>);
     
-    setIsLoading(false);
+    setIsLoading(false</HTMLInputElement>);
     // Redirect to dashboard or home page
     window.location.href = '/';
   };
@@ -33,19 +33,22 @@ const LoginPage: React.FC = () => {
   const features = [
     {
       icon: Shield,
-      title: 'Secure Access',
-      description: 'Bank-level security with multi-factor authentication'
+      title: description,
+
+      $4: 'Bank-level security with multi-factor authentication'
     },
     {
       icon: CheckCircle,
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all your needs'
+      title: description,
+
+      $4: 'Round-the-clock support for all your needs'
     },
     {
       icon: Phone,
-      title: 'Mobile Ready',
-      description: 'Access your account from any device, anywhere'
-    }
+      title: description,
+
+      $4: 'Access your account from any device, anywhere',
+ }
   ];
 
   return (
@@ -227,8 +230,7 @@ const LoginPage: React.FC = () => {
         </div>
       </div>
       <Footer />
-    </>
-  );
+    </> </div>);
 };
 
 export default LoginPage;

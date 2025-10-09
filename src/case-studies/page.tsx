@@ -15,8 +15,9 @@ const CaseStudiesPage: React.FC = () => {
         costReduction: '-65%',
         revenue: '+$2.3M'
       },
-      image: '🛒',
-      description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
+      image: description,
+
+      $4: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
     },
     {
       id: 2,
@@ -31,8 +32,9 @@ const CaseStudiesPage: React.FC = () => {
         accuracy: '+95%',
         costSavings: '$1.8M'
       },
-      image: '🏦',
-      description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
+      image: description,
+
+      $4: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
     },
     {
       id: 3,
@@ -47,8 +49,9 @@ const CaseStudiesPage: React.FC = () => {
         efficiency: '+90%',
         costSavings: '$3.2M'
       },
-      image: '🏥',
-      description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
+      image: description,
+
+      $4: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
     },
     {
       id: 4,
@@ -63,9 +66,12 @@ const CaseStudiesPage: React.FC = () => {
         defects: '-90%',
         downtime: '-85%'
       },
-      image: '🏭',
-      description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
-    }
+      image: description,
+
+      $4: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.',
+
+
+      }
   ];
 
   return (
@@ -77,8 +83,7 @@ const CaseStudiesPage: React.FC = () => {
           Contact Us
         </a>
       </div>
-    </div>
-  );
+    </div> </div>);
 };
 
 export default CaseStudiesPage;

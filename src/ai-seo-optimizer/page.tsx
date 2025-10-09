@@ -8,23 +8,27 @@ const AISEOOptimizerPage: React.FC = () => {
   const features = [
     {
       icon: Search,
-      title: 'SEO Analysis',
-      description: 'Comprehensive SEO analysis and optimization',
+      title: description,
+
+      $4: 'Comprehensive SEO analysis and optimization',
       benefits: ['Keyword research', 'On-page optimization', 'Technical SEO']
     },
       icon: Target,
-      title: 'Content Optimization',
-      description: 'AI-powered content optimization for search engines',
+      title: description,
+
+      $4: 'AI-powered content optimization for search engines',
       benefits: ['Content scoring', 'Keyword density', 'Readability']
       icon: Zap,
-      title: 'Automated Optimization',
-      description: 'Automated SEO improvements and monitoring',
+      title: description,
+
+      $4: 'Automated SEO improvements and monitoring',
       benefits: ['Auto-optimization', 'Performance monitoring', 'Alert system']
       icon: Settings,
-      title: 'Ranking Tracking',
-      description: 'Track and monitor search engine rankings',
-      benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports']
-    }
+      title: description,
+
+      $4: 'Track and monitor search engine rankings',
+      benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AISEOOptimizerPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AISEOOptimizerPage;

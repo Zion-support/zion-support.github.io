@@ -8,23 +8,27 @@ const AIEdgeComputingPage: React.FC = () => {
   const features = [
     {
       icon: Cpu,
-      title: 'Edge AI Processing',
-      description: 'AI processing at the edge for real-time decision making',
+      title: description,
+
+      $4: 'AI processing at the edge for real-time decision making',
       benefits: ['Low latency', 'Real-time processing', 'Offline capability']
     },
       icon: Zap,
-      title: 'Optimized Models',
-      description: 'Lightweight AI models optimized for edge deployment',
+      title: description,
+
+      $4: 'Lightweight AI models optimized for edge deployment',
       benefits: ['Small footprint', 'Fast inference', 'Resource efficient']
       icon: Globe,
-      title: 'Distributed Intelligence',
-      description: 'Distributed AI across multiple edge devices',
+      title: description,
+
+      $4: 'Distributed AI across multiple edge devices',
       benefits: ['Scalable deployment', 'Federated learning', 'Edge coordination']
       icon: Shield,
-      title: 'Secure Edge Computing',
-      description: 'Enterprise-grade security for edge AI deployments',
-      benefits: ['Data privacy', 'Secure communication', 'Access control']
-    }
+      title: description,
+
+      $4: 'Enterprise-grade security for edge AI deployments',
+      benefits: ['Data privacy', 'Secure communication', 'Access control'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIEdgeComputingPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIEdgeComputingPage;

@@ -85,7 +85,7 @@ class SEOEnhancer {
       metaTags.push({ name: 'last-modified', content: this.config.lastModified });
     }
 
-    metaTags.forEach(tag => {
+    metaTags.forEach(tag <=>{
       this.updateOrCreateMetaTag('name', tag.name!, tag.content);
     });
   }
@@ -198,9 +198,10 @@ class SEOEnhancer {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: this.baseUrl
-        }
-      ]
+          item: this.baseUrl,
+
+          }
+  ]
     };
 
     // Add breadcrumb structured data
@@ -217,9 +218,9 @@ class SEOEnhancer {
       meta.content = content;
     } else {
       meta = document.createElement('meta');
-      meta.setAttribute(attribute, value);
+      meta.setAttribute(attribute, value</div>);
       meta.content = content;
-      document.head.appendChild(meta);
+      document.head.appendChild(meta</=>);
     }
   }
 
@@ -241,7 +242,7 @@ class SEOEnhancer {
       sitemap += `    <priority>${page.priority}</priority>\n`;
       sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
       sitemap += '  </url>\n';
-    });
+    }</div>);
 
     sitemap += '</urlset>';
     return sitemap;
@@ -279,7 +280,7 @@ Disallow: /private/`;
       '/assets/index.js'
     ];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(resource <=>{
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -305,8 +306,8 @@ Disallow: /private/`;
       img.addEventListener('load', () => {
         img.style.width = img.naturalWidth + 'px';
         img.style.height = img.naturalHeight + 'px';
-      });
-    });
+      }</div>);
+    }</=>);
   }
 }
 

@@ -8,23 +8,27 @@ const AIInventoryManagerPage: React.FC = () => {
   const features = [
     {
       icon: Package,
-      title: 'Inventory Tracking',
-      description: 'AI-powered inventory tracking and management',
+      title: description,
+
+      $4: 'AI-powered inventory tracking and management',
       benefits: ['Real-time tracking', 'Stock monitoring', 'Automated alerts']
     },
       icon: Target,
-      title: 'Demand Forecasting',
-      description: 'Intelligent demand prediction and planning',
+      title: description,
+
+      $4: 'Intelligent demand prediction and planning',
       benefits: ['Demand prediction', 'Seasonal analysis', 'Trend forecasting']
       icon: Zap,
-      title: 'Automated Reordering',
-      description: 'Smart reorder points and automated purchasing',
+      title: description,
+
+      $4: 'Smart reorder points and automated purchasing',
       benefits: ['Auto reordering', 'Supplier management', 'Cost optimization']
       icon: Settings,
-      title: 'Inventory Analytics',
-      description: 'Comprehensive inventory analytics and insights',
-      benefits: ['Performance metrics', 'Cost analysis', 'Optimization recommendations']
-    }
+      title: description,
+
+      $4: 'Comprehensive inventory analytics and insights',
+      benefits: ['Performance metrics', 'Cost analysis', 'Optimization recommendations'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIInventoryManagerPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIInventoryManagerPage;

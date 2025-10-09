@@ -10,7 +10,7 @@ interface PerformanceMetrics {
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
-  customMetrics: Record<string, number>;
+  customMetrics: Record<string, <number>;
 }
 class PerformanceMonitor {
   private _metrics: PerformanceMetrics = {
@@ -46,7 +46,7 @@ class PerformanceMonitor {
             this.recordMetric(
               'LCP',
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
-            );
+ );
           }
         });
         // First Input Delay
@@ -177,12 +177,12 @@ class PerformanceMonitor {
     }
     // Track large resources
     if (size > 100000) { // 100KB
-      this.addCustomMetric(`largeResource_${entry.name}`, size);
+      this.addCustomMetric(`largeResource_${entry.name}`, size</div>);
     }
   }
   addCustomMetric(name: string, value: number): void {
     this.metrics.customMetrics[name] = value;
-    this.logMetric(name, value);
+    this.logMetric(name, value</number>);
   }
   private logMetric(name: string, value: number): void {
     if (process.env.NODE_ENV === 'development') {
@@ -194,7 +194,7 @@ class PerformanceMonitor {
         metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance'
-      });
+      }</string>);
     }
   }
   getMetrics(): PerformanceMetrics {
@@ -229,11 +229,11 @@ class PerformanceMonitor {
       else if (this.metrics.cls <= 0.4) scores.push(50);
       else scores.push(25);
     }
-    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
+    return <scores.length>0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
   generateReport(): string {
     const score = this.getScore();
-    const metrics = this.getMetrics();
+    const metrics = this.getMetrics(</div>);
     return `
 Performance Report:
 Score: ${score}
@@ -249,5 +249,5 @@ First Contentful Paint: ${metrics.firstContentfulPaint || 'N/A'}ms
 }
 
 // Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitor = new PerformanceMonitor(</scores.length>);
 export default performanceMonitor;

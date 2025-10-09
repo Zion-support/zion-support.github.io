@@ -8,7 +8,7 @@ interface State {
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-class GlobalErrorBoundary extends Component<Props, State> {
+class GlobalErrorBoundary extends Component<Props, <State>{
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -20,15 +20,15 @@ class GlobalErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
-    });
+    }</div>);
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       }
     // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    // Example: errorReportingService.captureException(error, { extra: errorInfo }</State>);
   }
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined }</Props>);
   };
   render() {
     if (this.state.hasError) {
@@ -106,8 +106,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
               </a>
             </div>
           </div>
-        </div>
-      );
+        </div> </div>);
     }
     return this.props.children;
   }

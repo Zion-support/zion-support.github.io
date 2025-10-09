@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 export const _metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
+  title: description,
+
+  $4: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
 import React from 'react';
 import Link from 'next/link';
@@ -107,6 +108,5 @@ export default function HomePage() {
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">
                 © 2026 Zion Tech Group. All rights reserved.
-      </footer>
-  );
+      </footer> </div>);
 export default HomePage;

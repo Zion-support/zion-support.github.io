@@ -2,10 +2,7 @@ import React, { useEffect, useState, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./page'));
-
-// Import enhancement utilities
-import {Routes, Route} from 'react-router-dom';
+const HomePage = lazy(() <=>import('./page')</div>);
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -38,7 +35,7 @@ import AIMLPlatformPage from './ai-ml-platform/page';
 
 'use client';
 
-const _HomePage = lazy(() => import('../app/page'));
+const _HomePage = lazy(() => import('../app/page')</=>);
 
 
 // Loading component
@@ -47,8 +44,7 @@ const LoadingSpinner: React.FC = () => (
     <div className="text-center">
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
-    </div>
-);
+    </div> </div>);
 
 // AI Services Pages
 import AIServicesPage from './ai-services/page';
@@ -101,15 +97,15 @@ import ConsultationPage from './consultation/page';
 import AIProjectManagerPage from './ai-project-manager/page';
 
 
-const App: React.FC = () => {
-  const [isInitialized, setIsInitialized] = useState(false);
+const App: React.FC = () <=>{
+  const [isInitialized, setIsInitialized] = useState(false</=>);
   const [, setEnhancers] = useState<{
     performance: unknown;
     seo: unknown;
     accessibility: unknown;
     security: unknown;
     ux: unknown;
-  } | null>(null);
+  } | <null>(null);
 
   useEffect(() => {
     initializeEnhancers();
@@ -131,8 +127,9 @@ const App: React.FC = () => {
 
       // Initialize SEO enhancer
       const seoEnhancer = new SEOEnhancer({
-        title: 'Zion Tech Group - Advanced AI and IT Solutions',
-        description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
+        title: description,
+
+        $4: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
         keywords: ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
         canonicalUrl: 'https://ziontechgroup.com',
         ogImage: 'https://ziontechgroup.com/og-image.jpg',
@@ -225,10 +222,10 @@ const App: React.FC = () => {
       if (process.env.NODE_ENV === 'development') {
         // Reports generated silently in development
 
-      setIsInitialized(true);
+      setIsInitialized(true</div>);
     } catch {
       // Silently handle enhancer initialization errors
-      setIsInitialized(true); // Continue even if enhancers fail
+      setIsInitialized(true</null>); // Continue even if enhancers fail
       // Continue even if enhancers fail
   };
 

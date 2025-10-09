@@ -117,8 +117,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           </button>
         </div>
       </div>
-    </div>
-  );
+    </div> </div>);
 }
 /**
  * Network error fallback component
@@ -155,8 +154,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           </button>
         </div>
       </div>
-    </div>
-  );
+    </div> </div>);
 }
 /**
  * Not found error fallback component
@@ -185,8 +183,7 @@ function NotFoundFallback(): JSX.Element {
           </button>
         </div>
       </div>
-    </div>
-  );
+    </div> </div>);
 }
 /**
  * Get error type from error object

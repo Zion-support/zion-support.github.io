@@ -5,38 +5,43 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const MarketplacePage: React.FC = () => {
+const MarketplacePage: React.FC = () <=>{
   const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(''</div>);
 
   const categories = [
     {
       id: 'products',
-      name: 'Products',
-      icon: ShoppingCart,
+      name: icon,
+
+      $4: ShoppingCart,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description: 'AI-powered software products and solutions'
     },
       id: 'talent',
-      name: 'Talent',
-      icon: Users,
+      name: icon,
+
+      $4: Users,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       description: 'Expert professionals and consultants'
       id: 'equipment',
-      name: 'Equipment',
-      icon: Wrench,
+      name: icon,
+
+      $4: Wrench,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description: 'Hardware and infrastructure solutions'
-    }
+      description: 'Hardware and infrastructure solutions',
+
+      }
   ];
 
   const products = [
       id: 1,
-      name: 'AI Project Manager Pro',
-      description: 'Intelligent project management with AI-powered insights and automation',
+      name: description,
+
+      $4: 'Intelligent project management with AI-powered insights and automation',
       category: 'AI Tools',
       price: '$49/month',
       rating: 4.9,
@@ -46,8 +51,9 @@ const MarketplacePage: React.FC = () => {
       vendor: 'Zion Tech Group',
       verified: true
       id: 2,
-      name: 'Smart Analytics Dashboard',
-      description: 'Real-time business intelligence with customizable dashboards and reports',
+      name: description,
+
+      $4: 'Real-time business intelligence with customizable dashboards and reports',
       category: 'Analytics',
       price: '$79/month',
       rating: 4.8,
@@ -56,8 +62,9 @@ const MarketplacePage: React.FC = () => {
       features: ['Real-time Data', 'Custom Dashboards', 'Predictive Analytics', 'Mobile App'],
       vendor: 'DataFlow Solutions',
       id: 3,
-      name: 'AI Customer Support Bot',
-      description: '24/7 intelligent customer support with natural language processing',
+      name: description,
+
+      $4: '24/7 intelligent customer support with natural language processing',
       category: 'Customer Service',
       price: '$29/month',
       rating: 4.7,
@@ -66,8 +73,9 @@ const MarketplacePage: React.FC = () => {
       features: ['24/7 Support', 'Multi-language', 'Sentiment Analysis', 'Human Handoff'],
       vendor: 'SupportAI Inc',
       id: 4,
-      name: 'Quantum Security Suite',
-      description: 'Next-generation cybersecurity powered by quantum computing principles',
+      name: description,
+
+      $4: 'Next-generation cybersecurity powered by quantum computing principles',
       category: 'Security',
       price: '$199/month',
       reviews: 45,
@@ -76,8 +84,9 @@ const MarketplacePage: React.FC = () => {
       vendor: 'QuantumSec',
 
   const talent = [
-      name: 'Dr. Sarah Chen',
-      title: 'AI Research Scientist',
+      name: title,
+
+      $4: 'AI Research Scientist',
       expertise: ['Machine Learning', 'Deep Learning', 'Computer Vision'],
       experience: '8 years',
       projects: 45,
@@ -85,14 +94,16 @@ const MarketplacePage: React.FC = () => {
       image: '👩‍💼',
       verified: true,
       available: true
-      name: 'Michael Rodriguez',
-      title: 'Cloud Architecture Expert',
+      name: title,
+
+      $4: 'Cloud Architecture Expert',
       expertise: ['AWS', 'Azure', 'DevOps', 'Microservices'],
       experience: '12 years',
       projects: 67,
       rate: '$120/hour',
-      image: '👨‍💻',
-      name: 'Lisa Park',
+      image: name,
+
+      $4: 'Lisa Park',
       title: 'Cybersecurity Specialist',
       expertise: ['Penetration Testing', 'Security Audits', 'Compliance', 'Incident Response'],
       experience: '10 years',
@@ -102,8 +113,9 @@ const MarketplacePage: React.FC = () => {
       available: false
 
   const equipment = [
-      name: 'AI Workstation Pro',
-      description: 'High-performance workstation optimized for AI development and training',
+      name: description,
+
+      $4: 'High-performance workstation optimized for AI development and training',
       category: 'Hardware',
       price: '$4,999',
       reviews: 23,
@@ -111,8 +123,9 @@ const MarketplacePage: React.FC = () => {
       features: ['RTX 4090 GPU', '64GB RAM', '2TB NVMe SSD', 'AI-optimized cooling'],
       vendor: 'TechWorkstations',
       inStock: true
-      name: 'Quantum Computing Access',
-      description: 'Cloud access to quantum computing resources for research and development',
+      name: description,
+
+      $4: 'Cloud access to quantum computing resources for research and development',
       category: 'Cloud Services',
       price: '$500/month',
       reviews: 15,
@@ -135,7 +148,7 @@ const MarketplacePage: React.FC = () => {
   const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  </=>);
 
   const stats = [
       value: '500+',
@@ -154,17 +167,21 @@ const MarketplacePage: React.FC = () => {
 
   const benefits = [
       icon: CheckCircle,
-      title: 'Verified Vendors',
-      description: 'All vendors are thoroughly vetted and verified'
+      title: description,
+
+      $4: 'All vendors are thoroughly vetted and verified'
       icon: Shield,
-      title: 'Secure Transactions',
-      description: 'Bank-level security for all marketplace transactions'
+      title: description,
+
+      $4: 'Bank-level security for all marketplace transactions'
       icon: Clock,
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all marketplace activities'
+      title: description,
+
+      $4: 'Round-the-clock support for all marketplace activities'
       icon: Award,
-      title: 'Quality Guarantee',
-      description: '100% satisfaction guarantee on all purchases'
+      title: description,
+
+      $4: '100% satisfaction guarantee on all purchases'
 
   return (
     <>

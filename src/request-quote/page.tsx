@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 
-const RequestQuotePage: React.FC = () => {
+const RequestQuotePage: React.FC = () <=>{
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,8 +15,8 @@ const RequestQuotePage: React.FC = () => {
     requirements: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false</div>);
+  const [isSubmitted, setIsSubmitted] = useState(false</=>);
 
   const _serviceTypes = [
     'AI Services',
@@ -55,7 +55,7 @@ const RequestQuotePage: React.FC = () => {
     'To be discussed'
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | <HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -68,56 +68,66 @@ const RequestQuotePage: React.FC = () => {
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)</div>);
     
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setIsSubmitting(false</HTMLSelectElement>);
+    setIsSubmitted(true</HTMLInputElement>);
   };
 
   const benefits = [
     {
       icon: Calculator,
-      title: 'Free Quote',
-      description: 'Get a detailed, no-obligation quote within 24 hours'
+      title: description,
+
+      $4: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {
       icon: Clock,
-      title: 'Quick Response',
-      description: 'We respond to all quote requests within 4 hours'
+      title: description,
+
+      $4: 'We respond to all quote requests within 4 hours'
     },
     {
       icon: CheckCircle,
-      title: 'Transparent Pricing',
-      description: 'Clear, detailed pricing with no hidden fees'
+      title: description,
+
+      $4: 'Clear, detailed pricing with no hidden fees'
     },
     {
       icon: Star,
-      title: 'Expert Consultation',
-      description: 'Free consultation with our technology experts'
-    }
+      title: description,
+
+      $4: 'Free consultation with our technology experts',
+
+
+      }
   ];
 
   const whyChooseUs = [
     {
       icon: Users,
-      title: '50+ Successful Projects',
-      description: 'Proven track record of delivering results'
+      title: description,
+
+      $4: 'Proven track record of delivering results'
     },
     {
       icon: Award,
-      title: '300% Average ROI',
-      description: 'Our clients see significant returns on investment'
+      title: description,
+
+      $4: 'Our clients see significant returns on investment'
     },
     {
       icon: Clock,
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all our clients'
+      title: description,
+
+      $4: 'Round-the-clock support for all our clients'
     },
     {
       icon: Star,
-      title: '99.9% Uptime',
-      description: 'Reliable, high-performance solutions'
-    }
+      title: description,
+
+      $4: 'Reliable, high-performance solutions',
+ }
   ];
 
   if (isSubmitted) {
@@ -174,8 +184,7 @@ const RequestQuotePage: React.FC = () => {
           </div>
         </div>
         <Footer />
-      </>
-    );
+      </> </div>);
   }
 
   return (
@@ -452,8 +461,7 @@ const RequestQuotePage: React.FC = () => {
         </div>
       </div>
       <Footer />
-    </>
-  );
+    </> </div>);
 };
 
 export default RequestQuotePage;

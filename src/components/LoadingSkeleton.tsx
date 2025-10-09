@@ -21,12 +21,12 @@ const Skeleton: React.FC<SkeletonProps> = ({
       role="status"
       aria-label="Loading content"
     ><span className="sr-only">Loading...</span></div>
-  );
+ );
 };
 // Predefined skeleton components for common use cases
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded /></div>
-);
+ );
 export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
   <div className="space-y-2">
     {Array.from({ length: lines }).map((_, index) => (
@@ -36,8 +36,7 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
         width={index === lines - 1 ? '75%' : '100%'}
       />
     ))}
-  </div>
-);
+  </div> </div>);
 export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({ 
   aspectRatio = '16/9' 
 }) => (
@@ -46,14 +45,13 @@ export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
     role="status"
     aria-label="Loading image"
   ><span className="sr-only">Loading image...</span></div>
-);
+ );
 export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => (
   <div className="space-y-3">
     {Array.from({ length: items }).map((_, index) => (
       <div key={index} className="flex items-center space-x-3"><Skeleton height="40px" width="40px" rounded /><div className="flex-1 space-y-2"><Skeleton height="16px" width="80%" /><Skeleton height="14px" width="60%" /></div></div>
     ))}
-  </div>
-);
+  </div> </div>);
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
   rows = 5, 
   columns = 4 
@@ -73,6 +71,5 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
         ))}
       </div>
     ))}
-  </div>
-);
+  </div> </div>);
 export default Skeleton;

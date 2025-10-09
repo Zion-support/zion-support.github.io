@@ -8,7 +8,7 @@ export interface ErrorContext {
   action?: string;
   userId?: string;
   sessionId?: string;
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, <unknown>;
 }
 export interface TrackedError {
   message: string;
@@ -61,14 +61,14 @@ class EnhancedErrorTracker {
     this.errors.push(trackedError);
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {
-      this.errors.shift();
+      this.errors.shift(</div>);
     }
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      // // console.error('Tracked Error:', trackedError);
+      // // console.error('Tracked Error:', trackedError</unknown>);
     }
     // Send to analytics if available
-    this.sendToAnalytics(trackedError);
+    this.sendToAnalytics(trackedError</string>);
   }
   private sendToAnalytics(error: TrackedError): void {
     if (
@@ -87,7 +87,7 @@ class EnhancedErrorTracker {
         description: error.message,
         fatal: false,
         component: error.context.component
-      });
+      }</string>);
     }
   }
   public getErrors(): TrackedError[] {
@@ -101,10 +101,10 @@ class EnhancedErrorTracker {
     byComponent: Record<string, number>;
     recent: TrackedError[];
   } {
-    const byComponent: Record<string, number> = {};
+    const byComponent: Record<string, <number>= {};
     this.errors.forEach(error => {
       byComponent[component] = (byComponent[component] || 0) + 1;
-    });
+    }</number>);
     return {
       total: this.errors.length,
       byComponent,
@@ -113,5 +113,5 @@ class EnhancedErrorTracker {
   }
 }
 // Export singleton instance
-export const errorTracker = new EnhancedErrorTracker();
+export const errorTracker = new EnhancedErrorTracker(</string>);
 export default errorTracker;

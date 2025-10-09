@@ -1,105 +1,109 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
+// Common syntax error patterns and their fixes
+const fixes = [
+  // Fix missing commas in object literals
+  {
+    pattern: /(\s+)(name|role|image|bio|title|description|icon):\s*['"][^'"]*['"],?\s*\n\s*(name|role|image|bio|title|description|icon):/g,
+    replacement: '$1$2: $3,\n$1$4:'
+  },
+  // Fix missing closing braces in JSX
+  {
+    pattern: /(\s+)(<[^>]+>)\s*\n\s*\);/g,
+    replacement: '$1$2\n$1);'
+  },
+  // Fix missing closing tags
+  {
+    pattern: /<(\w+)([^>]*)>\s*([^<]*)\s*\);/g,
+    replacement: '<$1$2>$3</$1>);'
+  },
+  // Fix duplicate function declarations
+  {
+    pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\n\s*const\s+\1:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g,
+    replacement: 'const $1: React.FC = () => {'
+  },
+  // Fix missing closing div tags
+  {
+    pattern: /<div([^>]*)>\s*([^<]*)\s*\);/g,
+    replacement: '<div$1>$2</div>);'
+  },
+  // Fix malformed JSX expressions
+  {
+    pattern: /(\s+)([^<>\s]+)\s*>\s*([^<]+)\s*\);/g,
+    replacement: '$1<$2>$3</$2>);'
+  }
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Check if file has syntax errors by looking for incomplete structures
-    if (content.includes('const Ai') && content.includes('return (') && content.includes('</div>') && !content.includes('export default')) {
-      // This is likely an incomplete file that needs to be completed
-      modified = true;
-      
-      // Extract the component name from the first const declaration
-      const componentMatch = content.match(/const (Ai\w+): React\.FC = \(\) => \{/);
-      if (componentMatch) {
-        const componentName = componentMatch[1];
-        
-        // Create a simple complete component
-        const simpleComponent = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const ${componentName}: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>${componentName.replace(/([A-Z])/g, ' $1').trim()} | Zion Tech Group</title>
-        <meta name="description" content="Advanced ${componentName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} solutions by Zion Tech Group." />
-      </Helmet>
-      
-      <Navigation />
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">${componentName.replace(/([A-Z])/g, ' $1').trim()}</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced ${componentName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} solutions that will transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <Footer />
-    </div>
-  );
-};
-
-export default ${componentName};`;
-        
-        fs.writeFileSync(filePath, simpleComponent, 'utf8');
-        console.log(`✅ Fixed syntax errors in: ${filePath}`);
+    // Apply fixes
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
-    }
+    });
     
-    return modified;
+    // Additional specific fixes
+    // Fix missing commas in arrays
+    content = content.replace(/(\s+)([^,\n]+)\s*\n\s*([^,\n]+)\s*\n\s*]/g, '$1$2,\n$1$3\n  ]');
+    
+    // Fix missing closing parentheses
+    content = content.replace(/(\s+)([^)]+)\s*\n\s*\);/g, '$1$2\n$1);');
+    
+    // Fix unclosed JSX elements
+    content = content.replace(/(\s+)(<[^>]+>)\s*([^<]+)\s*\);/g, '$1$2$3</div>);');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// List of files with known syntax errors
-const filesWithErrors = [
-  'src/ai-email-marketing/page.tsx',
-  'src/ai-ml-platform/page.tsx',
-  'src/ai-project-manager/page.tsx',
-  'src/ai-services/page.tsx',
-  'src/it-services/page.tsx',
-  'src/blog/ai-cost-optimization-breakthrough-2026/page.tsx'
-];
-
-// Main function
-function main() {
-  console.log('🔧 Fixing syntax errors in files...');
+function findTsxFiles(dir) {
+  const files = [];
   
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  filesWithErrors.forEach(file => {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    } else {
-      errorCount++;
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
     }
-  });
+  }
   
-  console.log(`\n📊 Summary:`);
-  console.log(`  ✅ Successfully fixed: ${fixedCount} files`);
-  console.log(`  ❌ Errors: ${errorCount} files`);
+  traverse(dir);
+  return files;
 }
 
-// Run the script
-main();
+// Main execution
+const srcDir = path.join(__dirname, 'src');
+const files = findTsxFiles(srcDir);
+
+console.log(`Found ${files.length} TypeScript/TSX files`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);

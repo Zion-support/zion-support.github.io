@@ -230,7 +230,7 @@ class SecurityEnhancer {
     // Add CORS preflight handling for API requests
     const originalFetch = window.fetch;
     
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) <=>{
       const url = typeof input === 'string' ? input : input instanceof URL ? input.toString() : input.url;
       
       // Add security headers to requests
@@ -281,15 +281,14 @@ class SecurityEnhancer {
         if (sanitized !== target.value) {
           target.value = sanitized;
         }
-      });
-    });
+      }</div>);
+    }</=>);
   }
 
   private sanitizeString(input: string): string {
     // Remove potentially dangerous characters
     return input
-      .replace(/[<>]/g, '') // Remove < and >
-      .replace(/javascript:/gi, '') // Remove javascript: protocol
+      .replace(/[<>]/g, '') // Remove < <and>.replace(/javascript:/gi, '') // Remove javascript: protocol
       .replace(/on\w+=/gi, '') // Remove event handlers
       .trim();
   }
@@ -383,11 +382,11 @@ class SecurityEnhancer {
 
   private setupOutputEncoding(): void {
     // Encode output to prevent XSS
-    this.encodeOutputs();
+    this.encodeOutputs(</div>);
   }
 
   private encodeOutputs(): void {
-    const textNodes = document.querySelectorAll('*');
+    const textNodes = document.querySelectorAll('*'</and>);
     
     textNodes.forEach(node => {
       if (node.textContent && node.textContent.includes('<')) {
@@ -413,7 +412,7 @@ class SecurityEnhancer {
     let timeoutId: NodeJS.Timeout;
     const timeout = 30 * 60 * 1000; // 30 minutes
 
-    const resetTimeout = () => {
+    const resetTimeout = () <=>{
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         this.handleSessionTimeout();
@@ -466,7 +465,7 @@ class SecurityEnhancer {
   }
 
   private generateSessionId(): string {
-    return Math.random().toString(36).substring(2) + Date.now().toString(36);
+    return Math.random().toString(36).substring(2) + Date.now().toString(36</div>);
   }
 
   public getSecurityHeaders(): SecurityHeaders {
@@ -499,7 +498,7 @@ ${Object.entries(this.headers).map(([key, value]) => `- ${key}: ${value || 'Not 
 - Regular security audits and penetration testing
     `;
     
-    return report.trim();
+    return report.trim(</=>);
   }
 }
 

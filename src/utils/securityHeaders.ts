@@ -80,11 +80,11 @@ export function getSecurityHeaders(
  */
 export function getNextSecurityHeaders(
   customConfig?: Partial<SecurityHeadersConfig>
-): Array<{ key: string; value: string }> {
-  const headers = getSecurityHeaders(customConfig);
+): Array<{ key: string; value: string <}>{
+  const headers = getSecurityHeaders(customConfig</div>);
   return Object.entries(headers).map(([key, value]) => ({
     key,
     value
-  }));
+  })</}>);
 }
 export default defaultSecurityHeaders;

@@ -8,23 +8,27 @@ const AIHRAssistantPage: React.FC = () => {
   const features = [
     {
       icon: Users,
-      title: 'HR Automation',
-      description: 'AI-powered HR process automation',
+      title: description,
+
+      $4: 'AI-powered HR process automation',
       benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']
     },
       icon: Target,
-      title: 'Talent Management',
-      description: 'Intelligent talent acquisition and management',
+      title: description,
+
+      $4: 'Intelligent talent acquisition and management',
       benefits: ['Candidate screening', 'Skill matching', 'Career development']
       icon: Zap,
-      title: 'Employee Engagement',
-      description: 'Automated employee engagement and satisfaction',
+      title: description,
+
+      $4: 'Automated employee engagement and satisfaction',
       benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies']
       icon: Settings,
-      title: 'HR Analytics',
-      description: 'Comprehensive HR analytics and insights',
-      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
-    }
+      title: description,
+
+      $4: 'Comprehensive HR analytics and insights',
+      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIHRAssistantPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIHRAssistantPage;

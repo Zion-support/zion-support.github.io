@@ -28,12 +28,11 @@ interface ErrorReport {
 }
 class AdvancedErrorBoundary extends Component<
   ErrorBoundaryProps,
-  ErrorBoundaryState
-> {
+  <ErrorBoundaryState>{
   private retryCount = 0;
   private maxRetries = 3;
   constructor(props: ErrorBoundaryProps) {
-    super(props);
+    super(props</ErrorBoundaryState>);
     this.state = {
       hasError: false,
       error: null,
@@ -41,7 +40,7 @@ class AdvancedErrorBoundary extends Component<
       errorId: null
     };
   }
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState>{
     return {
       hasError: true,
       error,
@@ -70,7 +69,7 @@ class AdvancedErrorBoundary extends Component<
       this.reportError(error, errorInfo);
     }
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private reportError = (error: Error, errorInfo: ErrorInfo) <=>{
     const _errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
       error,
@@ -101,7 +100,7 @@ class AdvancedErrorBoundary extends Component<
       let _sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem('sessionId', sessionId);
+        sessionStorage.setItem('sessionId', sessionId</div>);
       }
       return sessionId;
     } catch {
@@ -120,12 +119,12 @@ class AdvancedErrorBoundary extends Component<
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(errorReport)
-      });
+      }</=>);
     } catch (reportError) {
       logger.error('Failed to send error report', { 
         context: 'ErrorReporting',
         error: reportError 
-      });
+      }</ErrorBoundaryState>);
     }
   };
   private handleRetry = () => {
@@ -139,8 +138,8 @@ class AdvancedErrorBoundary extends Component<
       });
     }
   };
-  private handleReload = () => {
-    window.location.reload();
+  private handleReload = () <=>{
+    window.location.reload(</=>);
   };
   private handleGoHome = () => {
     window.location.href = '/';
@@ -209,7 +208,8 @@ class AdvancedErrorBoundary extends Component<
                   >
                     kleber@ziontechgroup.com
                   </a></p></div></div></div></div>
-      );
+
+                );
     }
     return this.props.children;
   }

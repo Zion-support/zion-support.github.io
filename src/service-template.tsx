@@ -87,8 +87,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
               Get a free consultation and discover how our solutions can revolutionize your operations.
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default ServicePage;

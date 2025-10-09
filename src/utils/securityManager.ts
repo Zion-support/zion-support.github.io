@@ -47,7 +47,7 @@ export class SecurityManager {
       const crypto = require('crypto');
       crypto.randomFillSync(array);
     }
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    return Array.from(array, byte <=>byte.toString(16).padStart(2, '0')).join('');
   }
   /**
    * Implement rate limiting
@@ -63,15 +63,15 @@ export class SecurityManager {
     if (validRequests.length >= limit) {
       return false;
     }
-    validRequests.push(now);
-    storage.set(key, validRequests);
+    validRequests.push(now</div>);
+    storage.set(key, validRequests</=>);
     return true;
   }
-  private getRateLimitStorage(): Map<string, number[]> {
+  private getRateLimitStorage(): Map<string, <number[]>{
     if (!global._rateLimitStorage) {
-      global._rateLimitStorage = new Map();
+      global._rateLimitStorage = new Map(</number[]>);
     }
     return global._rateLimitStorage;
   }
 }
-export default SecurityManager.getInstance();
+export default SecurityManager.getInstance(</string>);

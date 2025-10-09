@@ -1,204 +1,235 @@
 'use client';
 import React, { useState } from 'react';
 
-const SolutionsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+const SolutionsPage: React.FC = () <=>{
+  const [activeTab, setActiveTab] = useState('ai'</=>);
 
   const _solutionCategories = [
     {
       id: 'ai',
-      name: 'AI Solutions',
-      icon: Brain,
+      name: icon,
+
+      $4: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       description: 'Transform your business with cutting-edge artificial intelligence'
     },
     {
       id: 'it',
-      name: 'IT Infrastructure',
-      icon: Cloud,
+      name: icon,
+
+      $4: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description: 'Robust and scalable IT infrastructure solutions'
     },
     {
       id: 'security',
-      name: 'Cybersecurity',
-      icon: Shield,
+      name: icon,
+
+      $4: Shield,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10',
       description: 'Comprehensive security solutions for your digital assets'
     },
     {
       id: 'automation',
-      name: 'Automation',
-      icon: Zap,
+      name: icon,
+
+      $4: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description: 'Streamline operations with intelligent automation'
-    }
+      description: 'Streamline operations with intelligent automation',
+
+      }
   ];
 
   const solutions = {
     ai: [
       {
-        title: 'AI-Powered Analytics',
-        description: 'Transform raw data into actionable insights with advanced AI analytics',
+        title: description,
+
+        $4: 'Transform raw data into actionable insights with advanced AI analytics',
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricing: 'Starting at $1,500/month',
         icon: BarChart,
         color: 'text-blue-400'
       },
       {
-        title: 'AI Marketing Automation',
-        description: 'Revolutionize your marketing with AI-powered automation and personalization',
+        title: description,
+
+        $4: 'Revolutionize your marketing with AI-powered automation and personalization',
         features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricing: 'Starting at $199/month',
         icon: Target,
         color: 'text-pink-400'
       },
       {
-        title: 'AI Customer Support',
-        description: 'Enhance customer experience with intelligent AI-powered support systems',
+        title: description,
+
+        $4: 'Enhance customer experience with intelligent AI-powered support systems',
         features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
         pricing: 'Starting at $299/month',
         icon: Users,
         color: 'text-green-400'
       },
       {
-        title: 'AI Process Automation',
-        description: 'Automate complex business processes with intelligent decision-making capabilities',
+        title: description,
+
+        $4: 'Automate complex business processes with intelligent decision-making capabilities',
         features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricing: 'Starting at $399/month',
         icon: Zap,
-        color: 'text-yellow-400'
-      }
-    ],
+        color: 'text-yellow-400',
+
+        }
+  ],
     it: [
       {
-        title: 'Cloud Migration',
-        description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
+        title: description,
+
+        $4: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
         features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricing: 'Starting at $1,299/month',
         icon: Cloud,
         color: 'text-blue-400'
       },
       {
-        title: 'IT Infrastructure Management',
-        description: 'Comprehensive IT infrastructure management and optimization services',
+        title: description,
+
+        $4: 'Comprehensive IT infrastructure management and optimization services',
         features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricing: 'Starting at $799/month',
         icon: Globe,
         color: 'text-green-400'
       },
       {
-        title: 'DevOps & CI/CD',
-        description: 'Streamline development workflows with automated testing and deployment',
+        title: description,
+
+        $4: 'Streamline development workflows with automated testing and deployment',
         features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricing: 'Starting at $599/month',
         icon: Zap,
         color: 'text-purple-400'
       },
       {
-        title: 'Database Management',
-        description: 'Optimize and manage your databases with AI-powered performance tuning',
+        title: description,
+
+        $4: 'Optimize and manage your databases with AI-powered performance tuning',
         features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricing: 'Starting at $399/month',
         icon: BarChart,
-        color: 'text-orange-400'
-      }
-    ],
+        color: 'text-orange-400',
+
+        }
+  ],
     security: [
       {
-        title: 'Cybersecurity Suite',
-        description: 'Comprehensive security solutions with threat detection and response',
+        title: description,
+
+        $4: 'Comprehensive security solutions with threat detection and response',
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricing: 'Starting at $799/month',
         icon: Shield,
         color: 'text-red-400'
       },
       {
-        title: 'AI Security Monitoring',
-        description: 'Real-time security monitoring with AI-powered threat detection',
+        title: description,
+
+        $4: 'Real-time security monitoring with AI-powered threat detection',
         features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricing: 'Starting at $299/month',
         icon: Brain,
         color: 'text-purple-400'
       },
       {
-        title: 'Compliance Management',
-        description: 'Ensure regulatory compliance with automated compliance monitoring',
+        title: description,
+
+        $4: 'Ensure regulatory compliance with automated compliance monitoring',
         features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricing: 'Starting at $499/month',
         icon: CheckCircle,
         color: 'text-green-400'
       },
       {
-        title: 'Security Training',
-        description: 'Comprehensive security awareness training for your organization',
+        title: description,
+
+        $4: 'Comprehensive security awareness training for your organization',
         features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricing: 'Starting at $199/month',
         icon: Users,
-        color: 'text-blue-400'
-      }
-    ],
+        color: 'text-blue-400',
+
+        }
+  ],
     automation: [
       {
-        title: 'Business Process Automation',
-        description: 'Automate complex business processes with intelligent workflow management',
+        title: description,
+
+        $4: 'Automate complex business processes with intelligent workflow management',
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricing: 'Starting at $399/month',
         icon: Zap,
         color: 'text-yellow-400'
       },
       {
-        title: 'IT Automation',
-        description: 'Automate IT operations and reduce manual tasks with intelligent automation',
+        title: description,
+
+        $4: 'Automate IT operations and reduce manual tasks with intelligent automation',
         features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricing: 'Starting at $299/month',
         icon: Cloud,
         color: 'text-blue-400'
       },
       {
-        title: 'Marketing Automation',
-        description: 'Automate marketing campaigns and customer engagement processes',
+        title: description,
+
+        $4: 'Automate marketing campaigns and customer engagement processes',
         features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricing: 'Starting at $199/month',
         icon: Target,
         color: 'text-pink-400'
       },
       {
-        title: 'Data Automation',
-        description: 'Automate data processing, analysis, and reporting workflows',
+        title: description,
+
+        $4: 'Automate data processing, analysis, and reporting workflows',
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricing: 'Starting at $249/month',
         icon: BarChart,
-        color: 'text-green-400'
-      }
-    ]
+        color: 'text-green-400',
+
+        }
+  ]
   };
 
   const benefits = [
     {
       icon: Star,
-      title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients'
+      title: description,
+
+      $4: '300% average ROI and 95% process automation for our clients'
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for all our solutions'
+      title: description,
+
+      $4: 'Bank-level security and compliance for all our solutions'
     },
     {
       icon: Globe,
-      title: 'Global Support',
-      description: '24/7 support and services across multiple time zones'
+      title: description,
+
+      $4: '24/7 support and services across multiple time zones'
     },
     {
       icon: Users,
-      title: 'Expert Team',
-      description: 'Certified professionals with years of industry experience'
-    }
+      title: description,
+
+      $4: 'Certified professionals with years of industry experience',
+
+
+      }
   ];
 
   return (
@@ -341,8 +372,7 @@ const SolutionsPage: React.FC = () => {
         </div>
       </div>
       <Footer />
-    </>
-  );
+    </> </div>);
 };
 
 export default SolutionsPage;

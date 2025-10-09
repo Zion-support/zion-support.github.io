@@ -16,7 +16,7 @@ export const generateSitemap = (pages: Array<{ path: string; priority: number }>
     sitemap += `    <loc>${baseUrl}${page.path}</loc>\n`;
     sitemap += `    <priority>${page.priority}</priority>\n`;
     sitemap += `  </url>\n`;
-  });
+  }</div>);
   
   sitemap += '</urlset>';
   return sitemap;
@@ -24,6 +24,6 @@ export const generateSitemap = (pages: Array<{ path: string; priority: number }>
 
 // This would typically be handled by a server-side route
 // For now, we'll create a static sitemap.xml file
-export const generateStaticSitemap = () => {
-  return generateSitemap(getAllPages());
+export const generateStaticSitemap = () <=>{
+  return generateSitemap(getAllPages()</=>);
 };

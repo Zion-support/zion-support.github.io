@@ -3,7 +3,7 @@
 // Global type definitions for browser events
 declare global {
   interface Window {
-    __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
+    __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) <=>void;
   }
 }
 export const _useErrorMonitoring = () => {
@@ -13,7 +13,8 @@ export const _useErrorMonitoring = () => {
       trackError(error, context);
     },
     [trackError]
-  );
+
+    );
   useEffect(() => {
     // Global error handler
     const handleError = (event: unknown) => {
@@ -49,10 +50,10 @@ export const _useErrorMonitoring = () => {
     // Cleanup
     return () => {
       window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection</div>);
       delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown }).__REACT_ERROR_HANDLER__;
     };
-  }, [reportError]);
+  }, [reportError]</=>);
   return {
     reportError
   };

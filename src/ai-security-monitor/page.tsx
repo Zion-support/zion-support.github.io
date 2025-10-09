@@ -8,23 +8,27 @@ const AISecurityMonitorPage: React.FC = () => {
   const features = [
     {
       icon: Shield,
-      title: 'Threat Detection',
-      description: 'AI-powered threat detection and monitoring',
+      title: description,
+
+      $4: 'AI-powered threat detection and monitoring',
       benefits: ['Real-time monitoring', 'Threat analysis', 'Incident response']
     },
       icon: Target,
-      title: 'Vulnerability Assessment',
-      description: 'Automated vulnerability scanning and assessment',
+      title: description,
+
+      $4: 'Automated vulnerability scanning and assessment',
       benefits: ['Security scanning', 'Risk assessment', 'Compliance checking']
       icon: Zap,
-      title: 'Automated Response',
-      description: 'Intelligent security incident response',
+      title: description,
+
+      $4: 'Intelligent security incident response',
       benefits: ['Auto-response', 'Threat mitigation', 'Recovery procedures']
       icon: Settings,
-      title: 'Security Analytics',
-      description: 'Comprehensive security analytics and reporting',
-      benefits: ['Security metrics', 'Threat intelligence', 'Performance reports']
-    }
+      title: description,
+
+      $4: 'Comprehensive security analytics and reporting',
+      benefits: ['Security metrics', 'Threat intelligence', 'Performance reports'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AISecurityMonitorPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AISecurityMonitorPage;

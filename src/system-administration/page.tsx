@@ -8,23 +8,27 @@ const SystemAdministrationPage: React.FC = () => {
   const features = [
     {
       icon: Settings,
-      title: 'System Management',
-      description: 'Comprehensive system administration and maintenance',
+      title: description,
+
+      $4: 'Comprehensive system administration and maintenance',
       benefits: ['Server management', 'User administration', 'System monitoring']
     },
       icon: Shield,
-      title: 'Security Administration',
-      description: 'System security hardening and compliance',
+      title: description,
+
+      $4: 'System security hardening and compliance',
       benefits: ['Security patches', 'Access control', 'Compliance monitoring']
       icon: BarChart,
-      title: 'Performance Monitoring',
-      description: 'Real-time system performance monitoring',
+      title: description,
+
+      $4: 'Real-time system performance monitoring',
       benefits: ['Resource monitoring', 'Performance optimization', 'Alerting']
       icon: Zap,
-      title: 'Automation',
-      description: 'Automated system administration tasks',
-      benefits: ['Automated backups', 'Patch management', 'Health checks']
-    }
+      title: description,
+
+      $4: 'Automated system administration tasks',
+      benefits: ['Automated backups', 'Patch management', 'Health checks'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const SystemAdministrationPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default SystemAdministrationPage;

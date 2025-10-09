@@ -5,33 +5,38 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const GreenITPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('solutions');
+const GreenITPage: React.FC = () <=>{
+  const [activeTab, setActiveTab] = useState('solutions'</=>);
 
   const tabs = [
     {
       id: 'solutions',
-      name: 'Green Solutions',
-      icon: Leaf,
+      name: icon,
+
+      $4: Leaf,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10'
     },
       id: 'benefits',
-      name: 'Benefits',
-      icon: Target,
+      name: icon,
+
+      $4: Target,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10'
       id: 'certifications',
-      name: 'Certifications',
-      icon: Award,
+      name: icon,
+
+      $4: Award,
       color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
-    }
+      bgColor: 'bg-yellow-500/10',
+
+      }
   ];
 
   const greenSolutions = [
-      title: 'Energy-Efficient Data Centers',
-      description: 'Design and implement energy-efficient data centers with renewable energy integration',
+      title: description,
+
+      $4: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
       features: [
         'PUE (Power Usage Effectiveness) optimization',
@@ -41,8 +46,9 @@ const GreenITPage: React.FC = () => {
       ],
       impact: 'Reduce energy consumption by up to 40%',
       pricing: 'Starting at $2,500/month'
-      title: 'Cloud Carbon Footprint Reduction',
-      description: 'Optimize cloud infrastructure to minimize carbon emissions and environmental impact',
+      title: description,
+
+      $4: 'Optimize cloud infrastructure to minimize carbon emissions and environmental impact',
       icon: Cloud,
         'Carbon footprint monitoring',
         'Green cloud migration',
@@ -50,8 +56,9 @@ const GreenITPage: React.FC = () => {
         'Renewable energy sourcing'
       impact: 'Reduce carbon footprint by up to 60%',
       pricing: 'Starting at $1,800/month'
-      title: 'Sustainable IT Asset Management',
-      description: 'Implement circular economy principles for IT equipment lifecycle management',
+      title: description,
+
+      $4: 'Implement circular economy principles for IT equipment lifecycle management',
       icon: Recycle,
         'Equipment refurbishment',
         'Responsible disposal',
@@ -59,8 +66,9 @@ const GreenITPage: React.FC = () => {
         'Circular economy implementation'
       impact: 'Extend equipment lifecycle by 50%',
       pricing: 'Starting at $1,200/month'
-      title: 'Green Software Development',
-      description: 'Develop energy-efficient software applications and optimize existing systems',
+      title: description,
+
+      $4: 'Develop energy-efficient software applications and optimize existing systems',
       icon: Code,
       color: 'text-purple-400',
         'Energy-efficient coding practices',
@@ -69,8 +77,9 @@ const GreenITPage: React.FC = () => {
         'Sustainable architecture design'
       impact: 'Reduce software energy consumption by 30%',
       pricing: 'Starting at $1,500/month'
-      title: 'Remote Work Infrastructure',
-      description: 'Enable sustainable remote work with optimized digital infrastructure',
+      title: description,
+
+      $4: 'Enable sustainable remote work with optimized digital infrastructure',
       icon: Users,
       color: 'text-cyan-400',
         'Virtual desktop infrastructure',
@@ -79,8 +88,9 @@ const GreenITPage: React.FC = () => {
         'Digital workspace management'
       impact: 'Reduce commuting emissions by 80%',
       pricing: 'Starting at $800/month'
-      title: 'Environmental Monitoring',
-      description: 'Real-time monitoring and reporting of environmental impact metrics',
+      title: description,
+
+      $4: 'Real-time monitoring and reporting of environmental impact metrics',
       icon: Globe,
       color: 'text-emerald-400',
         'Carbon footprint tracking',
@@ -92,43 +102,51 @@ const GreenITPage: React.FC = () => {
 
   const benefits = [
       icon: TrendingUp,
-      title: 'Cost Savings',
-      description: 'Reduce operational costs through energy efficiency and resource optimization',
+      title: description,
+
+      $4: 'Reduce operational costs through energy efficiency and resource optimization',
       details: [
         'Up to 40% reduction in energy costs',
         'Lower maintenance and replacement costs',
         'Improved resource utilization',
         'Reduced waste management costs'
       ]
-      title: 'Environmental Impact',
-      description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
+      title: description,
+
+      $4: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
         '60% reduction in carbon emissions',
         '50% less electronic waste',
         '100% renewable energy options',
         'Carbon neutral operations'
-      title: 'Compliance & Certification',
-      description: 'Meet environmental regulations and achieve sustainability certifications',
+      title: description,
+
+      $4: 'Meet environmental regulations and achieve sustainability certifications',
         'ISO 14001 environmental management',
         'LEED certification support',
         'Carbon Trust certification',
         'ESG reporting compliance'
-      title: 'Brand Reputation',
-      description: 'Enhance your brand image and attract environmentally conscious customers',
+      title: description,
+
+      $4: 'Enhance your brand image and attract environmentally conscious customers',
         'Improved brand perception',
         'Customer loyalty increase',
         'Investor confidence boost',
         'Talent attraction and retention'
 
   const certifications = [
-      name: 'ISO 14001:2015',
-      description: 'Environmental Management Systems',
+      name: description,
+
+      $4: 'Environmental Management Systems',
       status: 'Certified'
-      name: 'LEED Platinum',
-      description: 'Leadership in Energy and Environmental Design',
-      name: 'Carbon Trust Standard',
-      description: 'Carbon Footprint Management',
-      name: 'Green IT Certification',
-      description: 'Sustainable IT Practices',
+      name: description,
+
+      $4: 'Leadership in Energy and Environmental Design',
+      name: description,
+
+      $4: 'Carbon Footprint Management',
+      name: description,
+
+      $4: 'Sustainable IT Practices',
 
   const stats = [
       value: '60%',
@@ -322,8 +340,7 @@ const GreenITPage: React.FC = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-    </>
-  );
+    </> </div>);
 };
 
 export default GreenITPage;

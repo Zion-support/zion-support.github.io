@@ -8,31 +8,38 @@ const TaskManagerProPage: React.FC = () => {
   const features = [
     {
       icon: CheckSquare,
-      title: 'AI Task Prioritization',
-      description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
+      title: description,
+
+      $4: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
       benefit: 'Increase productivity by 40%'
     },
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
+      title: description,
+
+      $4: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%'
       icon: Brain,
-      title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.',
+      title: description,
+
+      $4: 'AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.',
       benefit: 'Complete tasks 30% faster'
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
+      title: description,
+
+      $4: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
       benefit: 'Reduce manual work by 70%'
       icon: Target,
-      title: 'Goal Tracking',
-      description: 'Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.',
+      title: description,
+
+      $4: 'Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.',
       benefit: 'Achieve 85% of your goals'
       icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
-      benefit: 'Data-driven improvements'
-    }
+      title: description,
+
+      $4: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
+      benefit: 'Data-driven improvements',
+
+      }
   ];
 
   const pricingPlans = [
@@ -219,10 +226,9 @@ const TaskManagerProPage: React.FC = () => {
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Supercharge Your Productivity?
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using Task Manager Pro to achieve more, 
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of professionals using Task Manager Pro to achieve more, 
             work smarter, and reach their goals faster.
-  );
+  </p>);
 };
 
 export default TaskManagerProPage;

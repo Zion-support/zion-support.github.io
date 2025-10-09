@@ -55,10 +55,10 @@ export interface CacheEntry {
 export class APIInterceptor {
   private static instance: APIInterceptor;
   private config: APIConfig;
-  private cache: Map<string, CacheEntry> = new Map();
+  private cache: Map<string, CacheEntry>= new Map(</string>);
   private errorHandler: ErrorHandler;
-  private pendingRequests: Map<string, Promise<APIResponse>> = new Map();
-  constructor(config: Partial<APIConfig> = {}) {
+  private pendingRequests: Map<string, Promise<APIResponse>> = new Map(</string>);
+  constructor(config: Partial<APIConfig>= {}) {
     this.config = {
       baseURL: config.baseURL || '',
       timeout: config.timeout || 30000,
@@ -69,11 +69,11 @@ export class APIInterceptor {
       headers: config.headers || {},
       interceptors: config.interceptors || {}
     };
-    this.errorHandler = ErrorHandler.getInstance();
+    this.errorHandler = ErrorHandler.getInstance(</APIConfig>);
   }
   static getInstance(config?: Partial<APIConfig>): APIInterceptor {
     if (!APIInterceptor.instance) {
-      APIInterceptor.instance = new APIInterceptor(config);
+      APIInterceptor.instance = new APIInterceptor(config</APIConfig>);
     }
     return APIInterceptor.instance;
   }
@@ -84,7 +84,7 @@ export class APIInterceptor {
     const cacheKey = this.getCacheKey(fullConfig);
     // Check cache for GET requests
     if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {
-      const cachedResponse = this.getFromCache(cacheKey);
+      const cachedResponse = this.getFromCache(cacheKey</APIResponse>);
       if (cachedResponse) {
         return cachedResponse as APIResponse<T>;
       }
@@ -94,7 +94,7 @@ export class APIInterceptor {
       return this.pendingRequests.get(cacheKey) as Promise<APIResponse<T>>;
     }
     // Create the request promise
-    const requestPromise = this.executeRequest<T>(fullConfig);
+    const requestPromise = this.executeRequest<T>(fullConfig</T>);
     this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
     try {
       const response = await requestPromise;
@@ -104,7 +104,7 @@ export class APIInterceptor {
       }
       return response;
     } finally {
-      this.pendingRequests.delete(cacheKey);
+      this.pendingRequests.delete(cacheKey</APIResponse>);
     }
   }
   /**
@@ -134,7 +134,7 @@ export class APIInterceptor {
       // Apply response interceptor
       let finalResponse = response;
       if (this.config.interceptors?.response) {
-        finalResponse = await this.config.interceptors.response(response);
+        finalResponse = await this.config.interceptors.response(response</APIResponse>);
       }
       // Parse response data
       const data = await this.parseResponse<T>(finalResponse);
@@ -151,15 +151,15 @@ export class APIInterceptor {
       // Record error metric
       performanceMetrics.recordNetworkRequest(this.buildURL(config), duration, 0);
       // Handle error with error handler
-      this.errorHandler.handleNetworkError(err, this.buildURL(config), undefined);
+      this.errorHandler.handleNetworkError(err, this.buildURL(config), undefined</T>);
       // Retry logic
       if (attempt < (config.retryAttempts || this.config.retryAttempts)) {
         await this.delay(this.config.retryDelay * attempt);
-        return this.executeRequest<T>(config, attempt + 1);
+        return this.executeRequest<T>(config, attempt + 1</div>);
       }
       // Apply error interceptor
       if (this.config.interceptors?.error) {
-        const modifiedError = await this.config.interceptors.error(err);
+        const modifiedError = await this.config.interceptors.error(err</T>);
         throw modifiedError;
       }
       throw err;
@@ -172,7 +172,7 @@ export class APIInterceptor {
     url: string,
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'GET' });
+    return this.request<T>({ ...config, url, method: 'GET' }</T>);
   }
   /**
    * POST request
@@ -182,7 +182,7 @@ export class APIInterceptor {
     body?: unknown,
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'POST', body });
+    return this.request<T>({ ...config, url, method: 'POST', body }</T>);
   }
   /**
    * PUT request
@@ -192,7 +192,7 @@ export class APIInterceptor {
     body?: unknown,
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'PUT', body });
+    return this.request<T>({ ...config, url, method: 'PUT', body }</T>);
   }
   /**
    * DELETE request
@@ -201,7 +201,7 @@ export class APIInterceptor {
     url: string,
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'DELETE' });
+    return this.request<T>({ ...config, url, method: 'DELETE' }</T>);
   }
   /**
    * PATCH request
@@ -235,7 +235,7 @@ export class APIInterceptor {
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
     if (config.params) {
       const params = new URLSearchParams();
-      Object.entries(config.params).forEach(([key, value]) => {
+      Object.entries(config.params).forEach(([key, value]) <=>{
         params.append(key, String(value));
       });
       url += `?${params.toString()}`;
@@ -252,21 +252,21 @@ export class APIInterceptor {
     // Add config headers
     Object.entries(config.headers || {}).forEach(([key, value]) => {
       headers.set(key, value);
-    });
+    }</div>);
     return headers;
   }
   /**
    * Create abort signal for timeout
    */
   private createAbortSignal(timeout: number): AbortSignal {
-    const controller = new AbortController();
-    setTimeout(() => controller.abort(), timeout);
+    const controller = new AbortController(</=>);
+    setTimeout(() => controller.abort(), timeout</T>);
     return controller.signal;
   }
   /**
    * Parse response based on content type
    */
-  private async parseResponse<T>(response: Response): Promise<T> {
+  private async parseResponse<T>(response: Response): Promise<T>{
     const contentType = response.headers.get('content-type');
     if (contentType?.includes('application/json')) {
       return await response.json();
@@ -289,7 +289,7 @@ export class APIInterceptor {
   private getFromCache(key: string): APIResponse | null {
     const entry = this.cache.get(key);
     if (!entry) return null;
-    if (Date.now() > entry.expiresAt) {
+    if <(Date.now()>entry.expiresAt) {
       this.cache.delete(key);
       return null;
     }
@@ -318,7 +318,7 @@ export class APIInterceptor {
     const now = Date.now();
     for (const [key, entry] of this.cache.entries()) {
       if (now > entry.expiresAt) {
-        this.cache.delete(key);
+        this.cache.delete(key</div>);
       }
     }
   }
@@ -326,8 +326,8 @@ export class APIInterceptor {
    * Get cache statistics
    */
   getCacheStats() {
-    const entries = Array.from(this.cache.values());
-    const now = Date.now();
+    const entries = Array.from(this.cache.values()</(Date.now()>);
+    const now = Date.now(</T>);
     const valid = entries.filter(e => now <= e.expiresAt).length;
     const expired = entries.length - valid;
     return {
@@ -340,8 +340,8 @@ export class APIInterceptor {
   /**
    * Delay helper for retry logic
    */
-  private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  private delay(ms: number): Promise<void>{
+    return new Promise(resolve => setTimeout(resolve, ms)</void>);
   }
   /**
    * Update configuration
@@ -357,4 +357,4 @@ export class APIInterceptor {
   }
 }
 // Export singleton instance
-export const apiInterceptor = APIInterceptor.getInstance();
+export const apiInterceptor = APIInterceptor.getInstance(</APIConfig>);

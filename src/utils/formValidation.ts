@@ -28,10 +28,10 @@ export const _validationRules = {
   /**
    * Validate email format
    */
-  email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({
+  email: (message = 'Please enter a valid email address'): ValidationRule<string>=> ({
     validate: (value: string) => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(value);
+      return emailRegex.test(value</string>);
     },
     message
   }),
@@ -52,20 +52,20 @@ export const _validationRules = {
   /**
    * Validate phone number (US format)
    */
-  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({
+  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string>=> ({
     validate: (value: string) => {
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-      return phoneRegex.test(value.replace(/\s/g, ''));
+      return phoneRegex.test(value.replace(/\s/g, '')</string>);
     },
     message
   }),
   /**
    * Validate URL format
    */
-  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({
+  url: (message = 'Please enter a valid URL'): ValidationRule<string>=> ({
     validate: (value: string) => {
       try {
-        new URL(value);
+        new URL(value</string>);
         return true;
       } catch {
         return false;
@@ -99,11 +99,11 @@ export const _validationRules = {
    */
   strongPassword: (
     message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
-  ): ValidationRule<string> => ({
-    validate: (value: string) => {
-      const hasUpperCase = /[A-Z]/.test(value);
-      const hasLowerCase = /[a-z]/.test(value);
-      const hasNumber = /[0-9]/.test(value);
+  ): ValidationRule<string>=> ({
+    validate: (value: string) <=>{
+      const hasUpperCase = /[A-Z]/.test(value</div>);
+      const hasLowerCase = /[a-z]/.test(value</=>);
+      const hasNumber = /[0-9]/.test(value</string>);
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
@@ -142,7 +142,7 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
   const errors: string[] = [];
   for (const rule of rules) {
     if (!rule.validate(value)) {
-      errors.push(rule.message);
+      errors.push(rule.message</T>);
     }
   }
   return {
@@ -161,7 +161,7 @@ export function validateForm<T extends Record<string, unknown>>(
   for (const fieldName in validationSchema) {
     const value = formData[fieldName];
     const rules = validationSchema[fieldName];
-    results[fieldName] = validateField(value, rules);
+    results[fieldName] = validateField(value, rules</keyof>);
   }
   return results;
 }
@@ -169,9 +169,8 @@ export function validateForm<T extends Record<string, unknown>>(
  * Check if form is valid
  */
 export function isFormValid<T extends Record<string, unknown>>(
-  validationResults: Record<keyof T, ValidationResult>
-): boolean {
-  return Object.values(validationResults).every(result => result.valid);
+  validationResults: Record<keyof T, ValidationResult>): boolean {
+  return Object.values(validationResults).every(result => result.valid</keyof>);
 }
 /**
  * Get all form errors
@@ -206,13 +205,13 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
+    const later = () <=>{
       timeout = null;
-      func(...args);
+      func(...args</div>);
     };
     if (timeout) {
-      clearTimeout(timeout);
+      clearTimeout(timeout</=>);
     }
-    timeout = setTimeout(later, wait);
+    timeout = setTimeout(later, wait</T>);
   };
 }

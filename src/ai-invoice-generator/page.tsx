@@ -10,31 +10,37 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Invoice Generation',
-      description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
+      title: description,
+
+      $4: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
       benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']
     },
       icon: Zap,
-      title: 'Instant Processing',
-      description: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
+      title: description,
+
+      $4: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
       benefits: ['Real-time generation', 'Batch processing', 'Template optimization', 'Error reduction']
       icon: Shield,
-      title: 'Secure & Compliant',
-      description: 'Bank-level security with automatic compliance checking for tax regulations and business requirements.',
+      title: description,
+
+      $4: 'Bank-level security with automatic compliance checking for tax regulations and business requirements.',
       benefits: ['GDPR compliant', 'Tax calculation', 'Audit trails', 'Data encryption']
       icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Track payment patterns, identify trends, and get AI-powered insights to improve your cash flow.',
+      title: description,
+
+      $4: 'Track payment patterns, identify trends, and get AI-powered insights to improve your cash flow.',
       benefits: ['Payment analytics', 'Trend analysis', 'Cash flow predictions', 'Client insights']
       icon: Globe,
-      title: 'Multi-Currency Support',
-      description: 'Generate invoices in any currency with automatic exchange rate updates and local formatting.',
+      title: description,
+
+      $4: 'Generate invoices in any currency with automatic exchange rate updates and local formatting.',
       benefits: ['150+ currencies', 'Real-time rates', 'Local formatting', 'Tax calculations']
       icon: Smartphone,
-      title: 'Mobile Optimized',
-      description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
-      benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
-    }
+      title: description,
+
+      $4: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
+      benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications'],
+ }
   ];
 
   const pricingPlans = [
@@ -79,38 +85,45 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       color: 'green'
 
   const testimonials = [
-      name: 'Sarah Johnson',
-      role: 'Freelance Designer',
+      name: role,
+
+      $4: 'Freelance Designer',
       company: 'Creative Studio',
       content: 'AI Invoice Generator has saved me 10+ hours per week. The AI understands my clients and creates perfect invoices every time.',
       rating: 5,
       avatar: '👩‍🎨'
-      name: 'Michael Chen',
-      role: 'CEO',
+      name: role,
+
+      $4: 'CEO',
       company: 'TechStart Inc.',
       content: 'The analytics insights helped us identify payment patterns and improve our cash flow by 40%. Game changer!',
       avatar: '👨‍💼'
-      name: 'Emily Rodriguez',
-      role: 'Accountant',
+      name: role,
+
+      $4: 'Accountant',
       company: 'Finance Pro',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
       avatar: '👩‍💻'
 
   const useCases = [
-      title: 'Freelancers & Consultants',
-      description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
+      title: description,
+
+      $4: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
       icon: Briefcase,
       benefits: ['Project-based invoicing', 'Time tracking integration', 'Client management', 'Expense tracking']
-      title: 'E-commerce Businesses',
-      description: 'Automate invoice generation for online sales with AI-powered order processing.',
+      title: description,
+
+      $4: 'Automate invoice generation for online sales with AI-powered order processing.',
       icon: ShoppingCart,
       benefits: ['Order integration', 'Inventory tracking', 'Tax calculations', 'Customer management']
-      title: 'Service Providers',
-      description: 'Create professional invoices for recurring services with smart scheduling and automation.',
+      title: description,
+
+      $4: 'Create professional invoices for recurring services with smart scheduling and automation.',
       icon: Settings,
       benefits: ['Recurring billing', 'Service tracking', 'Client portals', 'Payment processing']
-      title: 'Agencies & Studios',
-      description: 'Manage complex client billing with AI that handles multiple projects and billing structures.',
+      title: description,
+
+      $4: 'Manage complex client billing with AI that handles multiple projects and billing structures.',
       icon: Building,
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
 
@@ -286,9 +299,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         </main>
         
         <Footer />
-    </>
-  );
-});
+    </>);
+}</div>);
 
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 export default AIInvoiceGeneratorPage;

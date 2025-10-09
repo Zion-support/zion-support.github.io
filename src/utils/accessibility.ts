@@ -32,7 +32,7 @@ class AccessibilityService {
     const rgb2 = this.hexToRgb(background);
     const l1 = this.getLuminance(rgb1);
     const l2 = this.getLuminance(rgb2);
-    const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
+    const ratio = <l1>l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05</div>);
     return {
       ratio: Math.round(ratio * 100) / 100,
       passes: {
@@ -42,7 +42,7 @@ class AccessibilityService {
     };
   }
   private hexToRgb(hex: string): { r: number; g: number; b: number } {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex</l1>);
     return result
       ? {
           r: parseInt(result[1], 16),
@@ -63,7 +63,7 @@ class AccessibilityService {
     const errors: A11yError[] = [];
     const warnings: A11yWarning[] = [];
     // Check for missing alt text on images
-    document.querySelectorAll('img').forEach(img => {
+    document.querySelectorAll('img').forEach(img <=>{
       if (!img.hasAttribute('alt')) {
         errors.push({
           type: 'missing-alt',
@@ -148,10 +148,10 @@ class AccessibilityService {
           suggestion: 'Use more descriptive link text that makes sense out of context'
         });
       }
-    });
+    }</div>);
     // Check for touch target size
     document.querySelectorAll('button, a, input, select').forEach(element => {
-      const rect = element.getBoundingClientRect();
+      const rect = element.getBoundingClientRect(</=>);
       if (rect.width < 44 || rect.height < 44) {
         warnings.push({
           type: 'small-touch-target',
@@ -172,7 +172,7 @@ class AccessibilityService {
   // Add keyboard navigation helpers
   public enhanceKeyboardNavigation(): void {
     // Add focus visible class for keyboard navigation
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', e <=>{
       if (e.key === 'Tab') {
         document.body.classList.add('keyboard-nav');
       }
@@ -261,9 +261,9 @@ class AccessibilityService {
       style.opacity === '0' ||
       element.hasAttribute('hidden') ||
       element.getAttribute('aria-hidden') === 'true'
-    );
+ </div>);
   }
 }
 // Singleton instance
-const a11y = new AccessibilityService();
+const a11y = new AccessibilityService(</=>);
 export default a11y;

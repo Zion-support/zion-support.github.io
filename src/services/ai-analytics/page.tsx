@@ -9,8 +9,9 @@ const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
+      title: description,
+
+      $4: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefits: [
         '95% accuracy in predictions',
         'Real-time data processing',
@@ -19,43 +20,51 @@ const AIAnalyticsPage: React.FC = () => {
       ]
     },
       icon: BarChart,
-      title: 'Real-time Dashboards',
-      description: 'Interactive dashboards that provide instant insights into your business performance',
+      title: description,
+
+      $4: 'Interactive dashboards that provide instant insights into your business performance',
         'Live data visualization',
         'Customizable metrics',
         'Mobile-responsive design',
         'Role-based access control'
       icon: Target,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with AI-powered insights',
+      title: description,
+
+      $4: 'Generate comprehensive reports automatically with AI-powered insights',
         'Scheduled report generation',
         'Natural language summaries',
         'Executive briefings',
         'Custom report templates'
       icon: Zap,
-      title: 'Anomaly Detection',
-      description: 'Identify unusual patterns and potential issues before they impact your business',
+      title: description,
+
+      $4: 'Identify unusual patterns and potential issues before they impact your business',
         'Real-time anomaly alerts',
         'Pattern recognition',
         'Risk assessment',
-        'Automated responses'
-    }
+        'Automated responses',
+
+        }
   ];
 
   const useCases = [
-      title: 'Sales Performance Analysis',
-      description: 'Track sales metrics, identify top performers, and optimize sales strategies',
+      title: description,
+
+      $4: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
       color: 'text-green-400'
-      title: 'Customer Behavior Insights',
-      description: 'Understand customer preferences and behavior patterns for better targeting',
+      title: description,
+
+      $4: 'Understand customer preferences and behavior patterns for better targeting',
       icon: Users,
       color: 'text-blue-400'
-      title: 'Financial Forecasting',
-      description: 'Predict revenue, expenses, and cash flow with high accuracy',
+      title: description,
+
+      $4: 'Predict revenue, expenses, and cash flow with high accuracy',
       color: 'text-purple-400'
-      title: 'Operational Efficiency',
-      description: 'Optimize business processes and identify areas for improvement',
+      title: description,
+
+      $4: 'Optimize business processes and identify areas for improvement',
       color: 'text-yellow-400'
 
   const pricingTiers = [
@@ -100,15 +109,19 @@ const AIAnalyticsPage: React.FC = () => {
 
   const benefits = [
       icon: Star,
-      title: '95% Accuracy',
-      description: 'Industry-leading accuracy in predictions and insights'
-      title: 'Real-time Processing',
-      description: 'Instant analysis of data as it comes in'
-      title: 'Actionable Insights',
-      description: 'Clear, actionable recommendations for business improvement'
+      title: description,
+
+      $4: 'Industry-leading accuracy in predictions and insights'
+      title: description,
+
+      $4: 'Instant analysis of data as it comes in'
+      title: description,
+
+      $4: 'Clear, actionable recommendations for business improvement'
       icon: Award,
-      title: 'Proven Results',
-      description: '300% average ROI for our analytics clients'
+      title: description,
+
+      $4: '300% average ROI for our analytics clients'
 
   return (
     <>
@@ -229,8 +242,7 @@ const AIAnalyticsPage: React.FC = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-    </>
-  );
+    </> </div>);
 };
 
 export default AIAnalyticsPage;

@@ -100,9 +100,8 @@ export default function AICostOptimizationBreakthrough2026() {
                   Get Cost Assessment
                 </a>
                   href="/services"
-                  className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors">
-                  Explore AI Services
-  );
+                  className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 <transition-colors">Explore AI Services
+  </transition-colors">);
 };
 
 export default AICostOptimizationBreakthrough2026Page;

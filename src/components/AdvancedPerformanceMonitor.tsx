@@ -28,7 +28,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const observers: PerformanceObserver[] = [];
     // Measure First Contentful Paint (FCP)
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
+    const fcp = <_fcpEntries.length>0 ? _fcpEntries[0].startTime : null;
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
@@ -129,7 +129,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
-    );
+ );
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console
       // console.log('Slow resources:', slowResources.map(r => ({
@@ -201,31 +201,31 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-      );
+ );
     }
     if (metrics.lcp && metrics.lcp > 2500) {
       recommendations.push(
         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-      );
+ );
     }
     if (metrics.fid && metrics.fid > 100) {
       recommendations.push(
         'First Input Delay is high. Reduce JavaScript execution time.'
-      );
+ );
     }
     if (metrics.cls && metrics.cls > 0.1) {
       recommendations.push(
         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-      );
+ );
     }
     if (metrics.ttfb && metrics.ttfb > 600) {
       recommendations.push(
         'Time to First Byte is slow. Optimize server response time.'
-      );
+ </div>);
     }
     return recommendations;
-  }, [metrics]);
-  const recommendations = getPerformanceRecommendations();
+  }, [metrics]</_fcpEntries.length>);
+  const recommendations = getPerformanceRecommendations(</PerformanceMetrics>);
   if (process.env['NODE_ENV'] === 'development') {
     return (
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
@@ -257,8 +257,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             </ul>
           </div>
         )}
-      </div>
-    );
+      </div> </div>);
   }
   return null;
 };

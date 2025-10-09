@@ -14,11 +14,10 @@ interface State {
 }
 class OptimizedErrorBoundary extends Component<
   OptimizedErrorBoundaryProps,
-  State
-> {
+  <State>{
   private resetTimeoutId: number | null = null;
   constructor(props: OptimizedErrorBoundaryProps) {
-    super(props);
+    super(props</State>);
     this.state = {
       hasError: false,
       error: null,
@@ -26,7 +25,7 @@ class OptimizedErrorBoundary extends Component<
       errorId: ''
     };
   }
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): Partial<State>{
     return {
       hasError: true,
       error,
@@ -55,10 +54,10 @@ class OptimizedErrorBoundary extends Component<
     const { hasError } = this.state;
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
-          (key, index) => key !== prevProps.resetKeys?.[index]
-        );
+          (key, index) <=>key !== prevProps.resetKeys?.[index]
+ );
         if (hasResetKeyChanged) {
-          this.resetErrorBoundary();
+          this.resetErrorBoundary(</div>);
         }
       }
     }
@@ -67,12 +66,12 @@ class OptimizedErrorBoundary extends Component<
       resetOnPropsChange &&
       prevProps.children !== this.props.children
     ) {
-      this.resetErrorBoundary();
+      this.resetErrorBoundary(</=>);
     }
   }
   componentWillUnmount() {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
+      clearTimeout(this.resetTimeoutId</State>);
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -83,8 +82,7 @@ class OptimizedErrorBoundary extends Component<
           gtag: (
             command: string,
             action: string,
-            parameters: Record<string, unknown>
-          ) => void;
+            parameters: Record<string, <unknown>) => void;
         }
       ).gtag;
       gtag('event', 'exception', {
@@ -107,11 +105,11 @@ class OptimizedErrorBoundary extends Component<
         error: null,
         errorInfo: null,
         errorId: ''
-      });
-    }, 100);
+      }</div>);
+    }, 100</unknown>);
   };
   private handleRetry = () => {
-    this.resetErrorBoundary();
+    this.resetErrorBoundary(</string>);
   };
   render() {
     if (this.state.hasError) {
@@ -124,8 +122,7 @@ class OptimizedErrorBoundary extends Component<
           errorInfo={this.state.errorInfo}
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
-        />
-      );
+        /></ErrorFallback>);
     }
     return this.props.children;
   }
@@ -205,7 +202,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
         )}
       </div>
-    </div>
-  )
-);
+    </div>)
+</div>);
 ErrorFallback.displayName = 'ErrorFallback';

@@ -12,14 +12,14 @@ interface ResponsiveContainerProps {
   fallback?: React.ReactNode;
 }
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
+const ResponsiveContainer: React.FC<ResponsiveContainerProps>= ({
   children,
   className = '',
   breakpoints = {},
   fallback,
 }) => {
-  const [isClient, setIsClient] = useState(false);
-  const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
+  const [isClient, setIsClient] = useState(false</ResponsiveContainerProps>);
+  const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl' | <'2xl'>('lg');
 
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -39,25 +39,24 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
     } else if (isTablet) {
       setScreenSize('md');
     } else {
-      setScreenSize('sm');
+      setScreenSize('sm'</div>);
     }
-  }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
+  }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]</'2xl'>);
 
   if (!isClient) {
     return fallback || <div className={className}>{children}</div>;
   }
 
-  const getResponsiveClasses = () => {
+  const getResponsiveClasses = () <=>{
     const baseClasses = className;
     const responsiveClasses = breakpoints[screenSize] || '';
-    return `${baseClasses} ${responsiveClasses}`.trim();
+    return `${baseClasses} ${responsiveClasses}`.trim(</=>);
   };
 
   return (
     <div className={getResponsiveClasses()}>
       {children}
-    </div>
-  );
+    </div> </div>);
 };
 
 // Hook for responsive values
@@ -68,7 +67,7 @@ export const useResponsiveValue = <T,>(values: {
 // xl?: T;
 // '2xl'?: T;
 // default?: T;
-}): T => {
+}): T <=>{
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -92,9 +91,9 @@ export const useResponsiveValue = <T,>(values: {
 // Hook for responsive breakpoints
 export const useBreakpoint = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
-  const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 }</div>);
+  const isDesktop = useMediaQuery({ minWidth: 1024 }</=>);
+  const isLargeDesktop = useMediaQuery({ minWidth: 1280 }</T>);
 
   return {
     isMobile,

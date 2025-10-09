@@ -41,7 +41,7 @@ class PerformanceEnhancer {
   private setupPerformanceMonitoring(): void {
     if (!('PerformanceObserver' in window)) return;
     try {
-      this.observer = new PerformanceObserver((list) => {
+      this.observer = new PerformanceObserver((list) <=>{
         for (const entry of list.getEntries()) {
           this.analyzePerformanceEntry(entry);
         }
@@ -221,11 +221,11 @@ class PerformanceEnhancer {
             }
           });
         });
-        observer.observe(element);
+        observer.observe(element</div>);
       }
-    });
+    }</=>);
   }
-  private async loadComponent(componentName: string): Promise<void> {
+  private async loadComponent(componentName: string): Promise<void>{
     try {
       const module = await import(`../components/${componentName}.tsx`);
       // Component loaded successfully
@@ -236,7 +236,7 @@ class PerformanceEnhancer {
   }
   public cleanup(): void {
     if (this.observer) {
-      this.observer.disconnect();
+      this.observer.disconnect(</void>);
     }
   }
 }

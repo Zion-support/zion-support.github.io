@@ -7,31 +7,38 @@ const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'Real-time Dashboards',
-      description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
+      title: description,
+
+      $4: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefit: 'Make decisions 10x faster'
     },
       icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
+      title: description,
+
+      $4: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities'
       icon: Target,
-      title: 'Custom Metrics',
-      description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
+      title: description,
+
+      $4: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
       benefit: 'Focus on what drives growth'
       icon: Zap,
-      title: 'Automated Alerts',
-      description: 'Get instant notifications when important metrics change or when action is needed.',
+      title: description,
+
+      $4: 'Get instant notifications when important metrics change or when action is needed.',
       benefit: 'Never miss critical changes'
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Share insights and reports with your team with role-based access and collaborative features.',
+      title: description,
+
+      $4: 'Share insights and reports with your team with role-based access and collaborative features.',
       benefit: 'Align your entire organization'
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit: '100% data protection'
-    }
+      title: description,
+
+      $4: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
+      benefit: '100% data protection',
+
+      }
   ];
 
   const pricingPlans = [
@@ -169,7 +176,7 @@ const SmartAnalyticsPage: React.FC = () => {
                   kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-  );
+ );
 };
 
 export default SmartAnalyticsPage;

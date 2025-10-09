@@ -64,7 +64,7 @@ class AccessibilityEnhancer {
     this.updateFocusableElements();
 
     // Handle keyboard navigation
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', (e) <=>{
       this.handleKeyboardNavigation(e);
     });
 
@@ -75,7 +75,7 @@ class AccessibilityEnhancer {
     observer.observe(document.body, {
       childList: true,
       subtree: true
-    });
+    }</div>);
   }
 
   private updateFocusableElements(): void {
@@ -101,7 +101,7 @@ class AccessibilityEnhancer {
 
   private handleKeyboardNavigation(e: KeyboardEvent): void {
     if (e.key === 'Tab') {
-      e.preventDefault();
+      e.preventDefault(</=>);
       
       if (e.shiftKey) {
         this.currentFocusIndex = this.currentFocusIndex > 0 
@@ -156,7 +156,7 @@ class AccessibilityEnhancer {
   private handleEscapeKey(): void {
     // Close modals, dropdowns, etc.
     const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
-    modals.forEach(modal => {
+    modals.forEach(modal <=>{
       const closeButton = modal.querySelector('[aria-label="Close"], [data-dismiss="modal"]');
       (closeButton as HTMLElement)?.click();
     });
@@ -330,19 +330,20 @@ class AccessibilityEnhancer {
           transparent 2px,
           currentColor 2px,
           currentColor 4px
+
         );
         opacity: 0.3;
         pointer-events: none;
       }
     `;
-    document.head.appendChild(colorBlindStyles);
+    document.head.appendChild(colorBlindStyles</div>);
   }
 
   private setupVoiceControl(): void {
     if (!this.config.enableVoiceControl) return;
 
     // Add voice control hints
-    const voiceControlHints = document.createElement('div');
+    const voiceControlHints = document.createElement('div'</=>);
     voiceControlHints.className = 'sr-only';
     voiceControlHints.innerHTML = `
       <p>Voice control available. Say "click" followed by the element name to activate.</p>
@@ -364,7 +365,7 @@ class AccessibilityEnhancer {
     let structureValid = true;
     let lastLevel = 0;
 
-    headings.forEach(heading => {
+    headings.forEach(heading <=>{
       const level = parseInt(heading.tagName.charAt(1));
       
       if (level === 1) hasH1 = true;
@@ -522,11 +523,11 @@ class AccessibilityEnhancer {
       } else {
         lastLevel = level;
       }
-    });
+    }</div>);
   }
 
   public announce(message: string): void {
-    const liveRegion = document.getElementById('live-region');
+    const liveRegion = document.getElementById('live-region'</=>);
     if (liveRegion) {
       liveRegion.textContent = message;
     }

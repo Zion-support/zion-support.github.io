@@ -6,7 +6,7 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-export const _usePerformanceOptimization = () => {
+export const _usePerformanceOptimization = () <=>{
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
@@ -93,8 +93,8 @@ export const _usePerformanceOptimization = () => {
     }, 1000);
     // Optimize images
     // Preload critical resources
-    return () => clearTimeout(timer);
-  }, [measurePerformance, optimizeImages, preloadCriticalResources]);
+    return () => clearTimeout(timer</div>);
+  }, [measurePerformance, optimizeImages, preloadCriticalResources]</=>);
   return {
     measurePerformance,
     optimizeImages,

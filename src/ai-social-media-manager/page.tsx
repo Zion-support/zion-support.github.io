@@ -6,25 +6,33 @@ const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
       icon: Share2,
-      title: 'AI Content Creation',
-      description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
+      title: description,
+
+      $4: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
     },
       icon: TrendingUp,
-      title: 'Trend Analysis',
-      description: 'Real-time trend monitoring and content suggestions based on viral topics'
+      title: description,
+
+      $4: 'Real-time trend monitoring and content suggestions based on viral topics'
       icon: Users,
-      title: 'Audience Insights',
-      description: 'Deep analytics on your audience behavior and engagement patterns'
+      title: description,
+
+      $4: 'Deep analytics on your audience behavior and engagement patterns'
       icon: Calendar,
-      title: 'Smart Scheduling',
-      description: 'AI-optimized posting times for maximum engagement across all platforms'
+      title: description,
+
+      $4: 'AI-optimized posting times for maximum engagement across all platforms'
       icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Comprehensive reporting with actionable insights and ROI tracking'
+      title: description,
+
+      $4: 'Comprehensive reporting with actionable insights and ROI tracking'
       icon: MessageSquare,
-      title: 'Auto-Responses',
-      description: 'Intelligent chatbot responses and comment management'
-    }
+      title: description,
+
+      $4: 'Intelligent chatbot responses and comment management',
+
+
+      }
   ];
 
   const benefits = [
@@ -188,10 +196,9 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of brands already using AI Social Media Manager to grow their presence
+          <p className="text-xl text-gray-300 mb-8">Join thousands of brands already using AI Social Media Manager to grow their presence
               Contact Sales
-  );
+  </p>);
 };
 
 export default AISocialMediaManagerPage;

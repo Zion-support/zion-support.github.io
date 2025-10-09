@@ -11,12 +11,12 @@ interface AccessibilityEnhancerProps {
   enableFocusIndicators?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true,
-}) => {
+}) <=>{
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
 
@@ -151,9 +151,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Toggle high contrast mode
   const toggleHighContrast = useCallback(() => {
-    setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast', !isHighContrast);
-  }, [isHighContrast]);
+    setIsHighContrast(!isHighContrast</div>);
+    document.documentElement.classList.toggle('high-contrast', !isHighContrast</=>);
+  }, [isHighContrast]</AccessibilityEnhancerProps>);
 
   return (
     <div className="accessibility-controls">
@@ -173,7 +173,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       >
         Skip to main content
       </a></div>
-  );
+
+
+      );
 };
 
 export default AccessibilityEnhancer;

@@ -8,23 +8,27 @@ const InnovationLabsPage: React.FC = () => {
   const features = [
     {
       icon: FlaskConical,
-      title: 'Research & Development',
-      description: 'Cutting-edge research and development projects',
+      title: description,
+
+      $4: 'Cutting-edge research and development projects',
       benefits: ['Technology research', 'Prototype development', 'Innovation projects']
     },
       icon: Target,
-      title: 'Innovation Consulting',
-      description: 'Strategic innovation consulting and guidance',
+      title: description,
+
+      $4: 'Strategic innovation consulting and guidance',
       benefits: ['Innovation strategy', 'Technology roadmaps', 'Market analysis']
       icon: Zap,
-      title: 'Rapid Prototyping',
-      description: 'Fast prototyping and proof-of-concept development',
+      title: description,
+
+      $4: 'Fast prototyping and proof-of-concept development',
       benefits: ['Quick iteration', 'MVP development', 'Testing']
       icon: Settings,
-      title: 'Technology Incubation',
-      description: 'Incubate and accelerate new technologies',
-      benefits: ['Technology incubation', 'Startup support', 'Mentorship']
-    }
+      title: description,
+
+      $4: 'Incubate and accelerate new technologies',
+      benefits: ['Technology incubation', 'Startup support', 'Mentorship'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const InnovationLabsPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default InnovationLabsPage;

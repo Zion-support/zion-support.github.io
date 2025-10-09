@@ -12,7 +12,7 @@ export class AppError extends Error {
     Error.captureStackTrace(this, this.constructor)
   }
 }
-export const _errorHandler = (error: AppError | Error) => {
+export const _errorHandler = (error: AppError | Error) <=>{
   const isDevelopment = process.env.NODE_ENV === 'development'
   const appError = error instanceof AppError ? error : new AppError(error.message)
   // console.error({
@@ -29,7 +29,7 @@ export const _errorHandler = (error: AppError | Error) => {
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {
     if (next && typeof next === 'function') {
-      next(error);
+      next(error</div>);
     }
-  });
+  }</=>);
 };

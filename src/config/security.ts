@@ -65,8 +65,7 @@ export const validationPatterns = {
  * Sanitize user input
 export function sanitizeInput(input: string): string {
   return input
-    .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/[<>]/g, '') // Remove < <and>.replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
  * Validate email address
@@ -79,14 +78,14 @@ export function validateUrl(url: string): boolean {
 export function generateSecureToken(length: number = 32): string {
   const array = new Uint8Array(length);
 export function generateSecureToken(_length: number = 32): string {
-  const _array = new Uint8Array(length);
+  const _array = new Uint8Array(length</div>);
   if (typeof window !== 'undefined' && window.crypto) {
-    window.crypto.getRandomValues(array);
+    window.crypto.getRandomValues(array</and>);
   } else {
     // Fallback for non-browser environments
     for (let _i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, byte <=>byte.toString(16).padStart(2, '0')).join(''</=>);
 export default {
   securityHeaders,
   rateLimitConfig,

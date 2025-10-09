@@ -8,31 +8,38 @@ const ExpenseTrackerPage: React.FC = () => {
   const features = [
     {
       icon: Receipt,
-      title: 'Smart Receipt Scanning',
-      description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
+      title: description,
+
+      $4: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefit: 'Save 8+ hours per month'
     },
       icon: TrendingUp,
-      title: 'Real-time Analytics',
-      description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
+      title: description,
+
+      $4: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by 25%'
       icon: Brain,
-      title: 'AI Categorization',
-      description: 'Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.',
+      title: description,
+
+      $4: 'Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.',
       benefit: '99% accurate categorization'
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
+      title: description,
+
+      $4: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
       benefit: 'Process expenses 5x faster'
       icon: Target,
-      title: 'Budget Management',
-      description: 'Create and track budgets with AI-powered alerts and recommendations for better financial control.',
+      title: description,
+
+      $4: 'Create and track budgets with AI-powered alerts and recommendations for better financial control.',
       benefit: 'Stay within budget 90% of the time'
       icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
-      benefit: '100% compliance guarantee'
-    }
+      title: description,
+
+      $4: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
+      benefit: '100% compliance guarantee',
+
+      }
   ];
 
   const pricingPlans = [
@@ -219,10 +226,9 @@ const ExpenseTrackerPage: React.FC = () => {
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Master Your Expenses?
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using AI Expense Tracker to streamline financial 
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using AI Expense Tracker to streamline financial 
             management and gain better control over their spending.
-  );
+  </p>);
 };
 
 export default ExpenseTrackerPage;

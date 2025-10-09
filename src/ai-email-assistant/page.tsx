@@ -180,6 +180,5 @@ export default function AIEmailAssistantPage() {
       </main>
       
         <Footer />
-      </div>
-  );
+      </div> </div>);
 };

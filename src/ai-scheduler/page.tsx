@@ -8,31 +8,38 @@ const AISchedulerPage: React.FC = () => {
   const features = [
     {
       icon: Calendar,
-      title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
+      title: description,
+
+      $4: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
       benefit: 'Save 5+ hours per week'
     },
       icon: Users,
-      title: 'Team Coordination',
-      description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
+      title: description,
+
+      $4: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
       benefit: 'Eliminate scheduling conflicts'
       icon: Brain,
-      title: 'Predictive Planning',
-      description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
+      title: description,
+
+      $4: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
       benefit: '95% accuracy in predictions'
       icon: Zap,
-      title: 'Automated Reminders',
-      description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
+      title: description,
+
+      $4: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
       benefit: 'Reduce no-shows by 60%'
       icon: Target,
-      title: 'Meeting Optimization',
-      description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
+      title: description,
+
+      $4: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
       benefit: 'Improve meeting ROI by 40%'
       icon: Shield,
-      title: 'Privacy & Security',
-      description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
-      benefit: '100% secure scheduling'
-    }
+      title: description,
+
+      $4: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
+      benefit: '100% secure scheduling',
+
+      }
   ];
 
   const pricingPlans = [
@@ -219,10 +226,9 @@ const AISchedulerPage: React.FC = () => {
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Master Your Schedule?
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
-  );
+  </p>);
 };
 
 export default AISchedulerPage;

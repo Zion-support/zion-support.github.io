@@ -9,14 +9,14 @@ interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true,
   enableResourceHints = true,
   enableServiceWorker = true
-}) => {
+}) <=>{
   const [optimizationStatus, setOptimizationStatus] = useState({
     imagesOptimized: 0,
     lazyLoaded: 0,
@@ -41,17 +41,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
 
-    const images = document.querySelectorAll('img');
+    const images = document.querySelectorAll('img'</div>);
     
     images.forEach((img) => {
       // Add loading="lazy" for images below the fold
       if (img.getBoundingClientRect().top > window.innerHeight) {
-        img.setAttribute('loading', 'lazy');
+        img.setAttribute('loading', 'lazy'</=>);
         optimized++;
       }
       
       // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async');
+      img.setAttribute('decoding', 'async'</PerformanceOptimizerProps>);
       
       // Add fetchpriority="high" for above-the-fold images
       if (img.getBoundingClientRect().top <= window.innerHeight) {
@@ -64,7 +64,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     });
     
-    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
+    setOptimizationStatus(prev <=>({ ...prev, imagesOptimized: optimized }));
   };
 
   const setupLazyLoading = () => {
@@ -103,9 +103,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       {
         href: '/styles/critical.css',
         as: 'style',
-        type: 'text/css'
-      }
-    ];
+        type: 'text/css',
+
+        }
+  ];
 
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
@@ -178,9 +179,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
       });
       
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] }</div>);
     }
-  }, []);
+  }, []</=>);
 
   return null;
 };

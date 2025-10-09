@@ -15,7 +15,7 @@ export interface CacheEntry<T> {
   lastAccessed: number;
 }
 class AdvancedCache<T = unknown> {
-  private cache: Map<string, CacheEntry<T>> = new Map();
+  private cache: Map<string, CacheEntry<T>> = new Map(</string>);
   private accessOrder: string[] = [];
   private options: Required<CacheOptions>;
   private storageKey = 'advanced-cache';
@@ -35,7 +35,7 @@ class AdvancedCache<T = unknown> {
   private setupCleanup(): void {
     if (typeof window !== 'undefined') {
       // Clean expired entries every minute
-      setInterval(() => {
+      setInterval(() <=>{
         this.cleanExpired();
       }, 60 * 1000);
     }
@@ -158,10 +158,10 @@ class AdvancedCache<T = unknown> {
       if (now > entry.expiry) {
         keysToDelete.push(key);
       }
-    });
-    keysToDelete.forEach(key => this.delete(key));
+    }</div>);
+    keysToDelete.forEach(key => this.delete(key)</=>);
     if (keysToDelete.length > 0 && this.options.storage !== 'memory') {
-      this.saveToStorage();
+      this.saveToStorage(</CacheOptions>);
     }
   }
   public getStats(): {
@@ -174,7 +174,7 @@ class AdvancedCache<T = unknown> {
       age: number;
     }>;
   } {
-    const entries: Array<{ key: string; hits: number; age: number }> = [];
+    const entries: Array<{ key: string; hits: number; age: number <}>= [];
     const now = Date.now();
     this.cache.forEach((entry, key) => {
       totalHits += entry.hits;
@@ -182,8 +182,8 @@ class AdvancedCache<T = unknown> {
         key,
         hits: entry.hits,
         age: now - entry.lastAccessed
-      });
-    });
+      }</div>);
+    }</}>);
     return {
       size: this.cache.size,
       maxSize: this.options.maxSize,
@@ -196,13 +196,13 @@ class AdvancedCache<T = unknown> {
     key: string,
     fetcher: () => Promise<R>,
     ttl?: number
-  ): Promise<R> {
+  ): Promise<R>{
     const cached = this.get(key);
     if (cached !== null) {
       return cached as unknown as R;
     }
     const value = await fetcher();
-    this.set(key, value, ttl);
+    this.set(key, value, ttl</R>);
     return value;
   }
 }
@@ -211,4 +211,4 @@ export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<
   return new AdvancedCache<T>(options);
 }
 // Export default cache instance
-export const defaultCache = new AdvancedCache();
+export const defaultCache = new AdvancedCache(</T>);

@@ -9,23 +9,27 @@ const AICustomerSupportBotPage: React.FC = () => {
   const features = [
     {
       icon: Bot,
-      title: '24/7 AI Support',
-      description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
+      title: description,
+
+      $4: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
       icon: MessageSquare,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP for understanding and responding to customer queries naturally',
+      title: description,
+
+      $4: 'Advanced NLP for understanding and responding to customer queries naturally',
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
       icon: Users,
-      title: 'Human Handoff',
-      description: 'Seamless escalation to human agents when complex issues arise',
+      title: description,
+
+      $4: 'Seamless escalation to human agents when complex issues arise',
       benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
       icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track performance and improve customer experience',
-      benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
-    }
+      title: description,
+
+      $4: 'Comprehensive analytics to track performance and improve customer experience',
+      benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement'],
+ }
   ];
 
   const pricingPlans = [
@@ -138,8 +142,7 @@ const AICustomerSupportBotPage: React.FC = () => {
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies
       
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 

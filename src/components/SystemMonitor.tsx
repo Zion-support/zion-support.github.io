@@ -5,7 +5,7 @@
  */
 import React, { useState, useEffect, useCallback } from 'react';
 // Collect basic performance metrics
-const collectPerformanceMetrics = () => {
+const collectPerformanceMetrics = () <=>{
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 const __collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
@@ -17,7 +17,7 @@ const __collectPerformanceMetrics = () => {
   };
 // Helper functions
 const calculatePerformanceScore = () => {
-  const metrics = performanceOptimizer.getMetrics();
+  const metrics = performanceOptimizer.getMetrics(</div>);
   if (!metrics) return 0;
   let __score = 100;
   // Deduct points for slow load times
@@ -26,7 +26,7 @@ const calculatePerformanceScore = () => {
   // Deduct points for slow paint times
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
-  return Math.max(0, score);
+  return Math.max(0, score</=>);
 // Network connection interface
 interface NetworkConnection {
   effectiveType?: string;
@@ -78,9 +78,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   enableExport = true,
   className = ''
 }) => {
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
+  const [metrics, setMetrics] = useState<SystemMetrics | <null>(null</null>);
+  const [isMonitoring, setIsMonitoring] = useState(false</SystemMetrics>);
+  const [lastUpdate, setLastUpdate] = useState<Date | <null>(null);
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
@@ -175,9 +175,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    a.click(</div>);
+    document.body.removeChild(a</null>);
+    URL.revokeObjectURL(url</Date>);
   // Get performance score color
   const getPerformanceScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-600';
@@ -197,8 +197,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         <div className="flex items-center justify-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
-        </div>
-    );
+        </div> </div>);
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>

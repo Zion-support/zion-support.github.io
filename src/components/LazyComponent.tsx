@@ -16,23 +16,22 @@ export const _withLazyLoading = <P extends object>(
   return (props: P) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <Component {...props} />
-    </Suspense>
-  );
+    </Suspense> </div>);
 };
 
 // Lazy component wrapper with intersection observer
 const LazyComponent: React.FC<LazyComponentProps> = ({
   children,
-  fallback = <LoadingSpinner />,
+  fallback = <LoadingSpinner </>,
   delay = 0,
   threshold = 0.1,
   rootMargin = '50px',
 }) => {
-  const [isVisible, setIsVisible] = React.useState(false);
-  const [isLoaded, setIsLoaded] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(false<//>);
+  const [isLoaded, setIsLoaded] = React.useState(false</LoadingSpinner>);
   const elementRef = React.useRef<HTMLDivElement>(null);
 
-  React.useEffect(() => {
+  React.useEffect(() <=>{
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -47,14 +46,15 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
         threshold,
         rootMargin,
       }
-    );
+
+        );
 
     if (elementRef.current) {
-      observer.observe(elementRef.current);
+      observer.observe(elementRef.current</div>);
     }
 
-    return () => observer.disconnect();
-  }, [delay, threshold, rootMargin]);
+    return () => observer.disconnect(</=>);
+  }, [delay, threshold, rootMargin]</HTMLDivElement>);
 
   return (
     <div ref={elementRef}>
@@ -65,34 +65,32 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
       ) : (
         fallback
       )}
-    </div>
-  );
+    </div> </div>);
 };
 
 // Preload function for critical components
 export const preloadComponent = (importFunction: () => Promise<any>) => {
   return () => {
-    const component = lazy(importFunction);
+    const component = lazy(importFunction</any>);
     return component;
   };
 };
 
 // Lazy load with preloading
 export const createLazyComponent = <P extends object>(
-  importFunction: () => Promise<{ default: ComponentType<P> }>,
+  importFunction: () => Promise<{ default: ComponentType<P>}>,
   fallback?: ReactNode
 ) => {
-  const LazyComponent = lazy(importFunction);
+  const LazyComponent = lazy(importFunction</P>);
   
   return (props: P) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
-    </Suspense>
-  );
+    </Suspense> </div>);
 };
 
 // Critical resource preloader
-export const preloadCriticalResources = () => {
+export const preloadCriticalResources = () <=>{
   if (typeof window === 'undefined') return;
 
   // Preload critical fonts
@@ -120,8 +118,8 @@ export const preloadCriticalResources = () => {
     link.rel = 'preload';
     link.as = 'image';
     link.href = src;
-    document.head.appendChild(link);
-  });
+    document.head.appendChild(link</div>);
+  }</=>);
 };
 
 export default LazyComponent;

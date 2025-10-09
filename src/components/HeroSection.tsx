@@ -74,8 +74,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneC
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section> </div>);
 };
 
 export default HeroSection;

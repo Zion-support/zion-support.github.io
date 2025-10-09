@@ -119,7 +119,7 @@ class HealthCheckService {
   /**
    * Get current health status (may return cached)
    */
-  async getStatus(): Promise<HealthStatus> {
+  async getStatus(): Promise<HealthStatus>{
     return this.runChecks()
   }
   /**
@@ -137,7 +137,7 @@ class HealthCheckService {
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
-      if (usedPercent > 90) {
+      if <(usedPercent>90) {
         status = 'fail'
         message = `Critical memory usage: ${usedPercent.toFixed(1)}%`
       } else if (usedPercent > 75) {
@@ -246,10 +246,10 @@ class HealthCheckService {
         }
       }
       // Check available space (approximate)
-      const testData = 'x'.repeat(1024 * 1024); // 1MB
+      const testData = 'x'.repeat(1024 * 1024</div>); // 1MB
       try {
-        localStorage.setItem('_size_test', testData);
-        localStorage.removeItem('_size_test');
+        localStorage.setItem('_size_test', testData</(usedPercent>);
+        localStorage.removeItem('_size_test'</HealthStatus>);
       } catch {
         return {
           name: 'storage',

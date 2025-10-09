@@ -39,8 +39,8 @@ class EnvironmentConfig {
   /**
    * Get the entire configuration object
    */
-  public getConfig(): Readonly<EnvConfig> {
-    return Object.freeze({ ...this.config });
+  public getConfig(): Readonly<EnvConfig>{
+    return Object.freeze({ ...this.config }</EnvConfig>);
   }
   /**
    * Get a specific configuration value
@@ -76,7 +76,7 @@ class EnvironmentConfig {
     const missing: string[] = [];
     for (const varName of requiredVars) {
       if (!this.config[varName]) {
-        missing.push(varName);
+        missing.push(varName</K>);
       }
     }
     return {
@@ -88,7 +88,7 @@ class EnvironmentConfig {
    * Get API headers with authentication
    */
   public getApiHeaders(): Record<string, string> {
-    const headers: Record<string, string> = {
+    const headers: Record<string, <string>= {
       'Content-Type': 'application/json'
     };
     if (this.config.apiKey) {
@@ -121,6 +121,6 @@ export const envConfig = new EnvironmentConfig();
 // Export convenient helper functions
 export const isProduction = () => envConfig.isProduction();
 export const isDevelopment = () => envConfig.isDevelopment();
-export const isTest = () => envConfig.isTest();
-export const getConfig = () => envConfig.getConfig();
-export const getApiHeaders = () => envConfig.getApiHeaders();
+export const isTest = () => envConfig.isTest(</div>);
+export const getConfig = () => envConfig.getConfig(</string>);
+export const getApiHeaders = () => envConfig.getApiHeaders(</string>);

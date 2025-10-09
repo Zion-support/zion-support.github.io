@@ -15,9 +15,9 @@ interface State {
   errorInfo: ErrorInfo | null;
   errorCount: number;
 }
-class ImprovedErrorBoundary extends Component<Props, State> {
+class ImprovedErrorBoundary extends Component<Props, State>{
   constructor(props: Props) {
-    super(props);
+    super(props</Props>);
     this.state = {
       hasError: false,
       error: null,
@@ -25,7 +25,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       errorCount: 0
     };
   }
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): Partial<State>{
     return {
       hasError: true,
       error
@@ -49,13 +49,13 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     this.setState((prevState) => ({
       errorInfo,
       errorCount: prevState.errorCount + 1
-    }));
+    })</State>);
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
     }
     // Send to external error tracking (if available)
     if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
-      (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
+      (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, <unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
           react: {
             componentStack: errorInfo.componentStack
@@ -68,9 +68,9 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
         (key, index) => key !== prevProps.resetKeys![index]
-      );
+ );
       if (resetKeysChanged && this.state.hasError) {
-        this.resetErrorBoundary();
+        this.resetErrorBoundary(</div>);
       }
     }
   }
@@ -79,10 +79,10 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    });
+    }</unknown>);
   };
   handleReload = (): void => {
-    window.location.reload();
+    window.location.reload(</string>);
   };
   handleGoHome = (): void => {
     window.location.href = '/';
@@ -152,8 +152,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
               </p>
             )}
           </div>
-        </div>
-      );
+        </div> </div>);
     }
     return this.props.children;
   }

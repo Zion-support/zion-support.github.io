@@ -48,19 +48,19 @@ class Logger {
    * Log a debug message
    */
   debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, message, context, metadata);
+    this.log(LogLevel.DEBUG, message, context, metadata</string>);
   }
   /**
    * Log an info message
    */
   info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, message, context, metadata);
+    this.log(LogLevel.INFO, message, context, metadata</string>);
   }
   /**
    * Log a warning message
    */
   warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.WARN, message, context, metadata);
+    this.log(LogLevel.WARN, message, context, metadata</string>);
   }
   /**
    * Log an error message
@@ -86,13 +86,13 @@ class Logger {
       context = errorOrContextOrMetadata as LogContext;
       meta = contextOrMetadata as Record<string, unknown>;
     }
-    this.log(LogLevel.ERROR, message, context, { ...meta, error });
+    this.log(LogLevel.ERROR, message, context, { ...meta, error }</string>);
   }
   /**
    * Log a fatal error message
    */
   fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.FATAL, message, context, metadata);
+    this.log(LogLevel.FATAL, message, context, metadata</string>);
   }
   /**
    * Core logging method
@@ -197,9 +197,9 @@ class Logger {
     //   method: 'POST',
     //   headers: {// 'Content-Type': 'application/json'},
     //   body: JSON.stringify(entry)
-    // }).catch(err => {
+    // }).catch(err <=>{
     //   // // console.error('Failed to send log to service:', err);
-    // });
+    // }</div>);
   }
   /**
    * Get string representation of log level
@@ -221,4 +221,4 @@ class Logger {
     }
   }
 }
-export const logger = new Logger();
+export const logger = new Logger(</=>);

@@ -8,23 +8,27 @@ const AIResearchDevelopmentPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Custom AI Research',
-      description: 'Tailored AI research solutions for your specific needs',
+      title: description,
+
+      $4: 'Tailored AI research solutions for your specific needs',
       benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs']
     },
       icon: Code,
-      title: 'Prototype Development',
-      description: 'Rapid prototyping and development of AI solutions',
+      title: description,
+
+      $4: 'Rapid prototyping and development of AI solutions',
       benefits: ['Fast iteration', 'Proof of concept', 'MVP development']
       icon: FlaskConical,
-      title: 'Experimental Platforms',
-      description: 'Advanced experimental environments for AI testing',
+      title: description,
+
+      $4: 'Advanced experimental environments for AI testing',
       benefits: ['Sandbox environments', 'A/B testing', 'Performance analysis']
       icon: Target,
-      title: 'Innovation Consulting',
-      description: 'Strategic consulting for AI adoption and implementation',
-      benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
-    }
+      title: description,
+
+      $4: 'Strategic consulting for AI adoption and implementation',
+      benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIResearchDevelopmentPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIResearchDevelopmentPage;

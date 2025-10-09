@@ -18,7 +18,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
     if (timeout) {
       clearTimeout(timeout);
     }
-    timeout = setTimeout(later, wait);
+    timeout = setTimeout(later, wait</T>);
   };
 }
 /**
@@ -33,7 +33,7 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() => (inThrottle = false), limit</T>);
     }
   };
 }
@@ -43,14 +43,14 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
 export function memoize<T extends (...args: unknown[]) => unknown>(
   func: T
 ): T {
-  const cache = new Map<string, ReturnType<T>>();
-  return ((...args: Parameters<T>): ReturnType<T> => {
-    const key = JSON.stringify(args);
+  const cache = new Map<string, ReturnType<T>>(</string>);
+  return ((...args: Parameters<T>): ReturnType<T>=> {
+    const key = JSON.stringify(args</T>);
     if (cache.has(key)) {
       return cache.get(key)!;
     }
     const result = func(...args) as ReturnType<T>;
-    cache.set(key, result);
+    cache.set(key, result</T>);
     return result;
   }) as T;
 }
@@ -60,8 +60,8 @@ export function memoize<T extends (...args: unknown[]) => unknown>(
 export function lazyLoad<T extends React.ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
   fallback?: React.ReactNode
-): React.LazyExoticComponent<T> {
-  const LazyComponent = React.lazy(importFunc);
+): React.LazyExoticComponent<T>{
+  const LazyComponent = React.lazy(importFunc</T>);
   if (fallback) {
     return LazyComponent;
   }
@@ -73,11 +73,11 @@ export function lazyLoad<T extends React.ComponentType<unknown>>(
 export async function measureTime<T>(
   name: string,
   func: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> {
+): Promise<{ result: T; duration: number <}>{
   const start = performance.now();
-  const result = await func();
+  const result = await func(</div>);
   const duration = performance.now() - start;
-  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`</}>); } }
   return { result, duration };
 }
 /**
@@ -99,7 +99,7 @@ export async function batchAsync<T, R>(
 /**
  * Create a request animation frame loop
  */
-export function rafLoop(callback: (time: number) => boolean | void): () => void {
+export function rafLoop(callback: (time: number) <=>boolean | void): () => void {
   let rafId: number;
   let running = true;
   function loop(time: number) {
@@ -139,16 +139,16 @@ export function runWhenIdle(
 export function cancelIdle(id: number): void {
   if (typeof window !== 'undefined') {
     if ('cancelIdleCallback' in window) {
-      window.cancelIdleCallback(id);
+      window.cancelIdleCallback(id</div>);
     } else {
-      (window as Window).clearTimeout(id);
+      (window as Window).clearTimeout(id</=>);
     }
   }
 }
 /**
  * Virtual scroll helper
  */
-export class VirtualScroller<T> {
+export class VirtualScroller<T>{
   private itemHeight: number;
   private containerHeight: number;
   private items: T[];
@@ -169,7 +169,7 @@ export class VirtualScroller<T> {
   }
   getVisibleItems(scrollTop: number): T[] {
     const { start, end } = this.getVisibleRange(scrollTop);
-    return this.items.slice(start, end);
+    return this.items.slice(start, end</T>);
   }
   getTotalHeight(): number {
     return this.items.length * this.itemHeight;
@@ -183,7 +183,7 @@ export function setupLazyImages(
   options?: IntersectionObserverInit
 ): () => void {
   const images = document.querySelectorAll<HTMLImageElement>(selector);
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries) <=>{
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
@@ -195,14 +195,14 @@ export function setupLazyImages(
         }
       }
     });
-  }, options);
-  images.forEach((img) => observer.observe(img));
-  return () => observer.disconnect();
+  }, options</div>);
+  images.forEach((img) => observer.observe(img)</=>);
+  return () => observer.disconnect(</HTMLImageElement>);
 }
 /**
  * Preload critical resources
  */
-export function preloadResources(resources: Array<{ url: string; as: string }>): void {
+export function preloadResources(resources: Array<{ url: string; as: string <}>): void {
   resources.forEach(({ url, as }) => {
     const link = document.createElement('link');
     link.rel = 'preload';
@@ -273,11 +273,11 @@ export class FPSMonitor {
       }
       this.rafId = requestAnimationFrame(loop);
     };
-    this.rafId = requestAnimationFrame(loop);
+    this.rafId = requestAnimationFrame(loop</div>);
   }
   stop(): void {
     if (this.rafId) {
-      cancelAnimationFrame(this.rafId);
+      cancelAnimationFrame(this.rafId</}>);
     }
   }
   getFPS(): number {

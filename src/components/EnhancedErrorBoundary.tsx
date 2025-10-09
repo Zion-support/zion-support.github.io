@@ -14,9 +14,9 @@ interface State {
   errorId: string | null;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
+class EnhancedErrorBoundary extends Component<Props, State>{
   constructor(props: Props) {
-    super(props);
+    super(props</Props>);
     this.state = {
       hasError: false,
       error: null,
@@ -25,7 +25,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): Partial<State>{
     return {
       hasError: true,
       error,
@@ -53,7 +53,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.props.onError?.(error, errorInfo);
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private reportError = (error: Error, errorInfo: ErrorInfo) <=>{
       errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
@@ -134,11 +134,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
-        alert('Error details copied to clipboard');
+        alert('Error details copied to clipboard'</div>);
       })
       .catch(() => {
-        alert('Failed to copy error details');
-      });
+        alert('Failed to copy error details'</=>);
+      }</State>);
   };
 
   render() {
@@ -232,8 +232,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </p>
             </div>
           </div>
-        </div>
-      );
+        </div> </div>);
     }
 
     return this.props.children;

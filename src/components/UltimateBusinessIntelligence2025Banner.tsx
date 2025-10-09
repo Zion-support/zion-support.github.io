@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-const UltimateBusinessIntelligence2025Banner = () => {
+const UltimateBusinessIntelligence2025Banner = () <=>{
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,8 +8,9 @@ const _UltimateBusinessIntelligence2025Banner = () => {
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      title: description,
+
+      $4: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
       metrics: {
@@ -20,8 +21,9 @@ const _UltimateBusinessIntelligence2025Banner = () => {
       },
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
       id: 'fortune-500-case-study',
-      title: 'Fortune 500 Ultimate Business Intelligence Success',
-      description: 'Real-world case study: How a Fortune 500 company achieved 30,000% ROI through AI-powered business intelligence transformation.',
+      title: description,
+
+      $4: 'Real-world case study: How a Fortune 500 company achieved 30,000% ROI through AI-powered business intelligence transformation.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
         roi: '30,000%',
@@ -30,24 +32,25 @@ const _UltimateBusinessIntelligence2025Banner = () => {
         timeline: '18 months'
       tags: ['Case Study', 'Fortune 500', 'ROI', '2025']
       id: 'enterprise-automation-2025',
-      title: 'Enterprise Automation Suite 2025',
-      description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
+      title: description,
+
+      $4: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
       url: '/services/automation',
       type: 'Service',
         automation: '95%',
         productivity: '300%',
         cost: '80% reduction'
-      tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
-    }
+      tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025'],
+ }
   ];
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [content.length]);
+  }, [content.length]</div>);
   const handleClose = () => {
-    setIsVisible(false);
+    setIsVisible(false</=>);
   };
   if (!isVisible) return null;
   const currentContent = content[currentSlide];
@@ -155,6 +158,5 @@ const _UltimateBusinessIntelligence2025Banner = () => {
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
-    </section>
-  );
+    </section> </div>);
 export default UltimateBusinessIntelligence2025Banner;

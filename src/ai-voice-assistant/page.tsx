@@ -8,23 +8,27 @@ const AIVoiceAssistantPage: React.FC = () => {
   const features = [
     {
       icon: Mic,
-      title: 'Voice Recognition',
-      description: 'Advanced voice recognition and processing',
+      title: description,
+
+      $4: 'Advanced voice recognition and processing',
       benefits: ['Speech-to-text', 'Voice commands', 'Multi-language support']
     },
       icon: Target,
-      title: 'Natural Language Processing',
-      description: 'Intelligent conversation and understanding',
+      title: description,
+
+      $4: 'Intelligent conversation and understanding',
       benefits: ['Context understanding', 'Intent recognition', 'Response generation']
       icon: Zap,
-      title: 'Automated Tasks',
-      description: 'Voice-controlled task automation',
+      title: description,
+
+      $4: 'Voice-controlled task automation',
       benefits: ['Task automation', 'Workflow control', 'Smart scheduling']
       icon: Settings,
-      title: 'Custom Integration',
-      description: 'Custom voice assistant integration',
-      benefits: ['API integration', 'Custom commands', 'Third-party apps']
-    }
+      title: description,
+
+      $4: 'Custom voice assistant integration',
+      benefits: ['API integration', 'Custom commands', 'Third-party apps'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const AIVoiceAssistantPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default AIVoiceAssistantPage;

@@ -8,23 +8,27 @@ const DevOpsCICDPage: React.FC = () => {
   const features = [
     {
       icon: Settings,
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment pipelines',
+      title: description,
+
+      $4: 'Automated build, test, and deployment pipelines',
       benefits: ['Automated testing', 'Continuous deployment', 'Quality gates']
     },
       icon: Zap,
-      title: 'Infrastructure as Code',
-      description: 'Manage infrastructure through code and automation',
+      title: description,
+
+      $4: 'Manage infrastructure through code and automation',
       benefits: ['Version control', 'Reproducible environments', 'Cost optimization']
       icon: Shield,
-      title: 'Security Integration',
-      description: 'Built-in security scanning and compliance checks',
+      title: description,
+
+      $4: 'Built-in security scanning and compliance checks',
       benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Security gates']
       icon: BarChart,
-      title: 'Monitoring & Analytics',
-      description: 'Comprehensive monitoring and performance analytics',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Alerting']
-    }
+      title: description,
+
+      $4: 'Comprehensive monitoring and performance analytics',
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Alerting'],
+ }
   ];
 
   return (
@@ -82,8 +86,7 @@ const DevOpsCICDPage: React.FC = () => {
                 </ul>
       </main>
 
-      <Footer />
-  );
+      <Footer /></Footer>);
 };
 
 export default DevOpsCICDPage;

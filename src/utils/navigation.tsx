@@ -2,7 +2,7 @@
 export   }, []);
     }, []);
 import { useCallback } from 'react';
-export const _useRouter = () => {
+export const _useRouter = () <=>{
   const push = useCallback((url: string) => {
     window.location.href = url;
   const replace = useCallback((url: string) => {
@@ -10,9 +10,9 @@ export const _useRouter = () => {
   const back = useCallback(() => {
     window.history.back();
   const forward = useCallback(() => {
-    window.history.forward();
+    window.history.forward(</div>);
   const refresh = useCallback(() => {
-    window.location.reload();
+    window.location.reload(</=>);
   return {
     push,
     replace,
