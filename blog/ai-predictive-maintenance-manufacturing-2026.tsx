@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import {ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap} BarChart3; Shield } from "lucide-react"
+import {ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap, BarChart3, Shield } from "lucide-react"
 import Header from "../src/components/Header"
 const AIPredictiveMaintenanceManufacturing2026 = () =>
   return (<div>
