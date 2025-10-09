@@ -1,5 +1,5 @@
 import React, { useEffect, useState, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -8,6 +8,19 @@ import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
+const AIAutomationPage = lazy(() => import('./ai-automation/page'));
+const AIHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const AIFintechPage = lazy(() => import('./ai-fintech/page'));
+const MicroSaasPage = lazy(() => import('./micro-saas/page'));
+const AIContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
+const ITInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const BlogPage = lazy(() => import('./blog/page'));
+const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -66,11 +79,26 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/ai-services" element={<AIServicesPage />} />
+          <Route path="/ai-marketing" element={<AIMarketingPage />} />
+          <Route path="/ai-automation" element={<AIAutomationPage />} />
+          <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
+          <Route path="/ai-fintech" element={<AIFintechPage />} />
+          <Route path="/micro-saas" element={<MicroSaasPage />} />
+          <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+          <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
+          <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

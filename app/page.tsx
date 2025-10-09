@@ -1,13 +1,18 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
+// Import components
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('../src/components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('../src/components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('../src/components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('../src/components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components with better timing
 const preloadComponents = () => {
@@ -37,10 +42,6 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-<<<<<<< HEAD
-export default HomePage;
-=======
-
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -135,13 +136,13 @@ const HomePage: React.FC = () => {
             >
               📞 Call Now: (302) 464-0950
             </a>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="cyber-button w-full sm:w-auto text-center"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
               Get Free Consultation
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -165,9 +166,9 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                  <Link to="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
-                  </a>
+                  </Link>
                 </div>
               </article>
             </Suspense>
@@ -181,9 +182,9 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
-                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                  <Link to="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
-                  </a>
+                  </Link>
                 </div>
               </article>
             </Suspense>
@@ -197,9 +198,9 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                  <Link to="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
-                  </a>
+                  </Link>
                 </div>
               </article>
             </Suspense>
@@ -216,9 +217,9 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
-                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+                  <Link to="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
                     Learn More →
-                  </a>
+                  </Link>
                 </div>
               </article>
             </Suspense>
@@ -232,9 +233,9 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
-                  <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                  <Link to="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
                     Learn More →
-                  </a>
+                  </Link>
                 </div>
               </article>
             </Suspense>
@@ -248,9 +249,9 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                  <Link to="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
                     Learn More →
-                  </a>
+                  </Link>
                 </div>
               </article>
             </Suspense>
@@ -267,9 +268,9 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $79/month</div>
-                  <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
+                  <Link to="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
                     Learn More →
-                  </a>
+                  </Link>
                 </div>
               </article>
             </Suspense>
@@ -283,9 +284,9 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-content-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
+                  <Link to="/ai-content-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
                     Learn More →
-                  </a>
+                  </Link>
                 </div>
               </article>
             </Suspense>
@@ -299,9 +300,9 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $999/month</div>
-                  <a href="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
+                  <Link to="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
                     Learn More →
-                  </a>
+                  </Link>
                 </div>
               </article>
             </Suspense>
@@ -383,4 +384,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
->>>>>>> origin/comprehensive-improvements-final
