@@ -74,7 +74,10 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' }
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'AI-powered cloud management' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales automation' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'AI-powered data visualization' }
       ]
     },
     {
@@ -87,11 +90,11 @@ const Navigation: React.FC = () => {
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'AI-powered cloud management' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-admin', description: 'System management' }
+        { name: 'System Administration', path: '/system-admin', description: 'AI-powered system management' }
       ]
     },
     {
@@ -105,8 +108,10 @@ const Navigation: React.FC = () => {
         { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
         { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' }
+        { name: 'Analytics Tools', path: '/analytics-tools', description: 'AI-powered business intelligence' },
+        { name: 'Communication Tools', path: '/communication-tools', description: 'AI-powered team collaboration' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales automation' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'AI-powered data visualization' }
       ]
     },
     {

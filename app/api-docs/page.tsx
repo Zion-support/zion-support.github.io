@@ -1,28 +1,6 @@
-<<<<<<< HEAD
 'use client';
-=======
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
-
-const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
- cursor/analyze-improve-and-deploy-application-cde4
 import Link from 'next/link';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
@@ -223,7 +201,7 @@ console.log(result.predictions);`,
                 Sign up for an account and get your API key from the dashboard.
               </p>
               <Link 
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
               >
                 Get API Key
@@ -239,7 +217,7 @@ console.log(result.predictions);`,
                 Use our REST API or SDKs to make your first API call.
               </p>
               <Link 
-                to="#examples"
+                href="#examples"
                 className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold"
               >
                 View Examples
@@ -255,7 +233,7 @@ console.log(result.predictions);`,
                 Integrate AI into your applications and scale with confidence.
               </p>
               <Link 
-                to="/docs"
+                href="/docs"
                 className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold"
               >
                 Full Documentation
@@ -319,8 +297,8 @@ console.log(result.predictions);`,
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-        </section>
+        </div>
+      </section>
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
@@ -365,16 +343,9 @@ console.log(result.predictions);`,
           </div>
 
         </section>
-      </main>
-      
-      <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
-=======
-        </div>
-      </section>
 
-      {/* SDK Examples */}
-      <section id="examples" className="py-16 bg-white">
+        {/* SDK Examples */}
+        <section id="examples" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -502,13 +473,13 @@ console.log(result.predictions);`,
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact"
+              href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Get API Key
             </Link>
             <Link 
-              to="/docs"
+              href="/docs"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View Full Docs
@@ -516,13 +487,8 @@ console.log(result.predictions);`,
           </div>
         </div>
       </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     </div>
   );
 };
 
 export default ApiDocsPage;
-<<<<<<< HEAD
- cursor/analyze-improve-and-deploy-application-cde4
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19

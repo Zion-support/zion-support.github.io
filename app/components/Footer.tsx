@@ -12,7 +12,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'AI-powered cloud management' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales automation' },
+    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'AI-powered data visualization' }
   ];
 
   const itServices = [
@@ -20,10 +23,13 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Micro SAAS', url: '/micro-saas', description: '50+ ready-to-use apps' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+    { name: 'AI Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'AI-powered cloud management' },
     { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
     { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
-    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
+    { name: 'Database Services', url: '/database', description: 'Database management' },
+    { name: 'System Administration', url: '/system-admin', description: 'AI-powered system management' },
+    { name: 'Analytics Tools', url: '/analytics-tools', description: 'AI-powered business intelligence' },
+    { name: 'Communication Tools', url: '/communication-tools', description: 'AI-powered team collaboration' }
   ];
 
   const specializedServices = [
