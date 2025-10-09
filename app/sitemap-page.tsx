@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Helmet } from 'react-helmet-async';
 
 const SitemapPage: React.FC = () => {
@@ -62,7 +62,7 @@ const SitemapPage: React.FC = () => {
                 {pages.map((page, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg p-4">
                     <Link
-                      to={page.url}
+                      href={page.url}
                       className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
                     >
                       {page.title}
@@ -79,7 +79,7 @@ const SitemapPage: React.FC = () => {
               
               <div className="mt-8 text-center">
                 <Link
-                  to="/"
+                  href="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
                   Back to Home

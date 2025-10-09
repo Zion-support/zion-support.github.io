@@ -291,6 +291,488 @@ const ITServicesPage: React.FC = () => {
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'ROI Analysis', 'Change Management', 'Vendor Management'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // NEW ADVANCED IT SERVICES
+    {
+      title: 'AI-Powered IT Operations Center',
+      description: 'Intelligent IT operations with predictive maintenance, automated incident response, and self-healing infrastructure.',
+      icon: '🤖',
+      price: '$3,500/month',
+      features: [
+        'Predictive Maintenance',
+        'Automated Incident Response',
+        'Self-Healing Infrastructure',
+        'Intelligent Monitoring',
+        'Proactive Problem Resolution',
+        'AI-Driven Root Cause Analysis'
+      ],
+      benefits: [
+        'Reduce downtime by 85%',
+        'Prevent 90% of incidents',
+        'Improve MTTR by 70%',
+        'Enable autonomous operations'
+      ],
+      marketPrice: '$7,000-15,000/month',
+      category: 'AI Operations',
+      technologies: ['Machine Learning', 'Anomaly Detection', 'Automation', 'Monitoring', 'AIOps'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with continuous verification and micro-segmentation.',
+      icon: '🔐',
+      price: '$4,200/month',
+      features: [
+        'Identity Verification',
+        'Micro-segmentation',
+        'Continuous Monitoring',
+        'Least Privilege Access',
+        'Threat Detection',
+        'Security Automation'
+      ],
+      benefits: [
+        'Prevent 99.9% of breaches',
+        'Reduce attack surface by 80%',
+        'Enable secure remote work',
+        'Comply with regulations'
+      ],
+      marketPrice: '$8,500-18,000/month',
+      category: 'Security',
+      technologies: ['Zero Trust', 'Identity Management', 'Network Segmentation', 'SIEM', 'SOAR'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions for low-latency applications and IoT connectivity.',
+      icon: '⚡',
+      price: '$2,800/month',
+      features: [
+        'Edge Data Centers',
+        '5G Integration',
+        'IoT Connectivity',
+        'Low-Latency Processing',
+        'Distributed Storage',
+        'Edge AI Processing'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Enable real-time applications',
+        'Improve user experience',
+        'Support IoT ecosystems'
+      ],
+      marketPrice: '$5,500-12,000/month',
+      category: 'Edge Computing',
+      technologies: ['Edge Computing', '5G', 'IoT', 'Kubernetes', 'Edge AI'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Quantum-Safe Cryptography',
+      description: 'Post-quantum cryptography implementation to protect against future quantum computing threats.',
+      icon: '🔒',
+      price: '$3,200/month',
+      features: [
+        'Quantum-Safe Algorithms',
+        'Hybrid Cryptography',
+        'Key Management',
+        'Migration Planning',
+        'Compliance Support',
+        'Future-Proof Security'
+      ],
+      benefits: [
+        'Protect against quantum threats',
+        'Future-proof security',
+        'Maintain compliance',
+        'Ensure data longevity'
+      ],
+      marketPrice: '$6,500-14,000/month',
+      category: 'Security',
+      technologies: ['Post-Quantum Crypto', 'NIST Standards', 'Key Management', 'Hybrid Systems'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Data Center Management',
+      description: 'Intelligent data center operations with predictive cooling, power optimization, and automated maintenance.',
+      icon: '🏢',
+      price: '$4,500/month',
+      features: [
+        'Predictive Cooling',
+        'Power Optimization',
+        'Automated Maintenance',
+        'Capacity Planning',
+        'Environmental Monitoring',
+        'Energy Efficiency'
+      ],
+      benefits: [
+        'Reduce energy costs by 40%',
+        'Improve efficiency by 60%',
+        'Prevent equipment failures',
+        'Optimize space utilization'
+      ],
+      marketPrice: '$9,000-20,000/month',
+      category: 'Data Center',
+      technologies: ['AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Automation', 'Energy Management'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified multi-cloud management with cost optimization, security, and performance monitoring.',
+      icon: '☁️',
+      price: '$2,200/month',
+      features: [
+        'Multi-Cloud Orchestration',
+        'Cost Optimization',
+        'Security Management',
+        'Performance Monitoring',
+        'Compliance Tracking',
+        'Resource Automation'
+      ],
+      benefits: [
+        'Reduce cloud costs by 35%',
+        'Improve security posture',
+        'Simplify management',
+        'Optimize performance'
+      ],
+      marketPrice: '$4,500-10,000/month',
+      category: 'Cloud Management',
+      technologies: ['Multi-Cloud', 'Cost Optimization', 'Security', 'Monitoring', 'Automation'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Network Optimization',
+      description: 'Intelligent network management with traffic optimization, congestion prediction, and automated routing.',
+      icon: '🌐',
+      price: '$2,600/month',
+      features: [
+        'Traffic Optimization',
+        'Congestion Prediction',
+        'Automated Routing',
+        'Quality of Service',
+        'Bandwidth Management',
+        'Network Analytics'
+      ],
+      benefits: [
+        'Improve network performance by 50%',
+        'Reduce congestion by 70%',
+        'Optimize bandwidth usage',
+        'Enhance user experience'
+      ],
+      marketPrice: '$5,200-12,000/month',
+      category: 'Network Management',
+      technologies: ['AI/ML', 'SDN', 'Network Analytics', 'Automation', 'QoS'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Enterprise blockchain solutions with smart contracts, decentralized applications, and tokenization.',
+      icon: '⛓️',
+      price: '$3,800/month',
+      features: [
+        'Blockchain Development',
+        'Smart Contracts',
+        'DApp Development',
+        'Tokenization',
+        'Consensus Mechanisms',
+        'Security Auditing'
+      ],
+      benefits: [
+        'Enable decentralized solutions',
+        'Improve transparency',
+        'Reduce intermediaries',
+        'Enhance security'
+      ],
+      marketPrice: '$7,500-18,000/month',
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Hyperledger', 'Smart Contracts', 'Web3', 'DeFi'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered IT Service Desk',
+      description: 'Intelligent service desk with automated ticket routing, resolution, and user self-service capabilities.',
+      icon: '🎧',
+      price: '$1,800/month',
+      features: [
+        'AI Ticket Routing',
+        'Automated Resolution',
+        'Self-Service Portal',
+        'Knowledge Management',
+        'User Experience Analytics',
+        'Proactive Support'
+      ],
+      benefits: [
+        'Resolve 80% of tickets automatically',
+        'Reduce response time by 90%',
+        'Improve user satisfaction',
+        'Lower support costs'
+      ],
+      marketPrice: '$3,600-8,000/month',
+      category: 'Service Desk',
+      technologies: ['AI/ML', 'NLP', 'Automation', 'Knowledge Management', 'Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Hyperconverged Infrastructure',
+      description: 'Integrated compute, storage, and networking solutions with simplified management and scalability.',
+      icon: '🔄',
+      price: '$3,000/month',
+      features: [
+        'Integrated Infrastructure',
+        'Simplified Management',
+        'Scalable Architecture',
+        'High Availability',
+        'Disaster Recovery',
+        'Performance Optimization'
+      ],
+      benefits: [
+        'Reduce complexity by 60%',
+        'Improve scalability',
+        'Lower total cost of ownership',
+        'Simplify management'
+      ],
+      marketPrice: '$6,000-15,000/month',
+      category: 'Infrastructure',
+      technologies: ['HCI', 'Virtualization', 'Storage', 'Networking', 'Management'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Application Performance Monitoring',
+      description: 'Intelligent APM with predictive analytics, root cause analysis, and automated optimization.',
+      icon: '📊',
+      price: '$2,400/month',
+      features: [
+        'Real-time Monitoring',
+        'Predictive Analytics',
+        'Root Cause Analysis',
+        'Performance Optimization',
+        'User Experience Tracking',
+        'Automated Alerts'
+      ],
+      benefits: [
+        'Prevent 90% of performance issues',
+        'Improve application performance',
+        'Reduce mean time to resolution',
+        'Enhance user experience'
+      ],
+      marketPrice: '$4,800-12,000/month',
+      category: 'Monitoring',
+      technologies: ['APM', 'AI/ML', 'Analytics', 'Monitoring', 'Automation'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Software-Defined Everything (SDx)',
+      description: 'Comprehensive software-defined infrastructure including networking, storage, and security.',
+      icon: '⚙️',
+      price: '$3,600/month',
+      features: [
+        'Software-Defined Networking',
+        'Software-Defined Storage',
+        'Software-Defined Security',
+        'Centralized Management',
+        'Policy Automation',
+        'Dynamic Provisioning'
+      ],
+      benefits: [
+        'Increase agility by 80%',
+        'Reduce operational costs',
+        'Improve flexibility',
+        'Simplify management'
+      ],
+      marketPrice: '$7,200-18,000/month',
+      category: 'SDx',
+      technologies: ['SDN', 'SDS', 'SD-Security', 'Automation', 'Orchestration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered IT Asset Management',
+      description: 'Intelligent asset lifecycle management with predictive maintenance and optimization recommendations.',
+      icon: '📦',
+      price: '$1,500/month',
+      features: [
+        'Asset Discovery',
+        'Lifecycle Management',
+        'Predictive Maintenance',
+        'Cost Optimization',
+        'Compliance Tracking',
+        'Automated Reporting'
+      ],
+      benefits: [
+        'Reduce asset costs by 30%',
+        'Improve utilization by 50%',
+        'Prevent asset failures',
+        'Ensure compliance'
+      ],
+      marketPrice: '$3,000-7,500/month',
+      category: 'Asset Management',
+      technologies: ['AI/ML', 'Asset Management', 'Predictive Analytics', 'Automation', 'Reporting'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Container Security & Orchestration',
+      description: 'Comprehensive container security with Kubernetes orchestration and runtime protection.',
+      icon: '🐳',
+      price: '$2,800/month',
+      features: [
+        'Container Security',
+        'Kubernetes Orchestration',
+        'Runtime Protection',
+        'Vulnerability Scanning',
+        'Policy Enforcement',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Secure containerized applications',
+        'Improve deployment efficiency',
+        'Ensure compliance',
+        'Reduce security risks'
+      ],
+      marketPrice: '$5,600-14,000/month',
+      category: 'Container Security',
+      technologies: ['Kubernetes', 'Container Security', 'Runtime Protection', 'Policy Management'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered IT Governance',
+      description: 'Intelligent IT governance with policy automation, compliance monitoring, and risk management.',
+      icon: '📋',
+      price: '$2,200/month',
+      features: [
+        'Policy Automation',
+        'Compliance Monitoring',
+        'Risk Management',
+        'Audit Preparation',
+        'Governance Reporting',
+        'Decision Support'
+      ],
+      benefits: [
+        'Ensure 100% compliance',
+        'Reduce audit findings by 90%',
+        'Improve governance efficiency',
+        'Minimize risks'
+      ],
+      marketPrice: '$4,400-11,000/month',
+      category: 'Governance',
+      technologies: ['Governance', 'Compliance', 'Risk Management', 'Policy Automation', 'Reporting'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Quantum Computing Integration',
+      description: 'Quantum computing integration services for optimization, cryptography, and machine learning applications.',
+      icon: '⚛️',
+      price: '$8,500/month',
+      features: [
+        'Quantum Algorithm Development',
+        'Hybrid Classical-Quantum Systems',
+        'Quantum Cryptography',
+        'Optimization Problems',
+        'Machine Learning Integration',
+        'Quantum Simulation'
+      ],
+      benefits: [
+        'Solve complex optimization problems',
+        'Enhance cryptographic security',
+        'Accelerate machine learning',
+        'Enable quantum advantage'
+      ],
+      marketPrice: '$17,000-50,000/month',
+      category: 'Quantum Computing',
+      technologies: ['Quantum Computing', 'Qiskit', 'Cirq', 'Quantum ML', 'Quantum Cryptography'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered IT Financial Management',
+      description: 'Intelligent IT financial management with cost optimization, budgeting, and ROI analysis.',
+      icon: '💰',
+      price: '$1,800/month',
+      features: [
+        'Cost Optimization',
+        'Budget Planning',
+        'ROI Analysis',
+        'Financial Forecasting',
+        'Cost Allocation',
+        'Investment Planning'
+      ],
+      benefits: [
+        'Reduce IT costs by 25%',
+        'Improve budget accuracy',
+        'Optimize investments',
+        'Enhance financial visibility'
+      ],
+      marketPrice: '$3,600-9,000/month',
+      category: 'Financial Management',
+      technologies: ['Financial Analytics', 'Cost Optimization', 'Budgeting', 'ROI Analysis', 'Forecasting'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Intelligent Data Management Platform',
+      description: 'AI-powered data management with automated classification, governance, and lifecycle management.',
+      icon: '🗄️',
+      price: '$3,200/month',
+      features: [
+        'Automated Data Classification',
+        'Data Governance',
+        'Lifecycle Management',
+        'Data Quality',
+        'Privacy Protection',
+        'Compliance Automation'
+      ],
+      benefits: [
+        'Improve data quality by 80%',
+        'Ensure compliance',
+        'Reduce data risks',
+        'Optimize storage costs'
+      ],
+      marketPrice: '$6,400-16,000/month',
+      category: 'Data Management',
+      technologies: ['Data Management', 'AI/ML', 'Governance', 'Privacy', 'Compliance'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered IT Training Platform',
+      description: 'Intelligent IT training with personalized learning paths, skill assessment, and certification tracking.',
+      icon: '🎓',
+      price: '$1,200/month',
+      features: [
+        'Personalized Learning',
+        'Skill Assessment',
+        'Certification Tracking',
+        'Progress Analytics',
+        'Content Management',
+        'Performance Evaluation'
+      ],
+      benefits: [
+        'Improve IT skills by 60%',
+        'Reduce training costs',
+        'Accelerate certification',
+        'Enhance team capabilities'
+      ],
+      marketPrice: '$2,400-6,000/month',
+      category: 'Training',
+      technologies: ['Learning Management', 'AI/ML', 'Assessment', 'Analytics', 'Content Management'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Intelligent IT Procurement Platform',
+      description: 'AI-powered IT procurement with vendor management, contract optimization, and spend analytics.',
+      icon: '🛒',
+      price: '$1,600/month',
+      features: [
+        'Vendor Management',
+        'Contract Optimization',
+        'Spend Analytics',
+        'Procurement Automation',
+        'Supplier Evaluation',
+        'Cost Benchmarking'
+      ],
+      benefits: [
+        'Reduce procurement costs by 20%',
+        'Improve vendor relationships',
+        'Optimize contracts',
+        'Enhance spend visibility'
+      ],
+      marketPrice: '$3,200-8,000/month',
+      category: 'Procurement',
+      technologies: ['Procurement', 'Vendor Management', 'Contract Management', 'Analytics', 'Automation'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 

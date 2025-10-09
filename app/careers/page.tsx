@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
@@ -135,13 +135,13 @@ const CareersPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="#open-positions"
+                href="#open-positions"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 View Open Positions
               </Link>
               <Link 
-                to="/contact"
+                href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Get in Touch
@@ -251,7 +251,7 @@ const CareersPage: React.FC = () => {
                   </div>
                   <div className="mt-4 lg:mt-0">
                     <Link 
-                      to="/contact"
+                      href="/contact"
                       className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
                     >
                       Apply Now
@@ -309,7 +309,7 @@ const CareersPage: React.FC = () => {
               Send Your Resume
             </Link>
             <Link 
-              to="/about"
+              href="/about"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Learn About Us

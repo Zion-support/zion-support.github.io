@@ -1,5 +1,6 @@
+'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
@@ -200,7 +201,7 @@ console.log(result.predictions);`,
                 Sign up for an account and get your API key from the dashboard.
               </p>
               <Link 
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
               >
                 Get API Key
@@ -216,7 +217,7 @@ console.log(result.predictions);`,
                 Use our REST API or SDKs to make your first API call.
               </p>
               <Link 
-                to="#examples"
+                href="#examples"
                 className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold"
               >
                 View Examples
@@ -232,7 +233,7 @@ console.log(result.predictions);`,
                 Integrate AI into your applications and scale with confidence.
               </p>
               <Link 
-                to="/docs"
+                href="/docs"
                 className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold"
               >
                 Full Documentation
@@ -428,13 +429,13 @@ console.log(result.predictions);`,
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact"
+              href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Get API Key
             </Link>
             <Link 
-              to="/docs"
+              href="/docs"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View Full Docs

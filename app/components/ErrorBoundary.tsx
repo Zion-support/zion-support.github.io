@@ -1,10 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-import { FileWarning } from 'lucide-react';
-=======
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
+import { FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;

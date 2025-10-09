@@ -1,7 +1,11 @@
 import React from 'react';
+const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
 
-<<<<<<< HEAD
-const LoadingSpinner: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" role="status" aria-label="Loading">
       <div className="text-center">
@@ -35,14 +39,7 @@ const LoadingSpinner: React.FC = () => {
           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
           <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
           <div className="w-2 h-2 bg-pink-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-        </div>
-=======
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+        </div> 
   size = 'md', 
   className = '' 
 }) => {
@@ -60,7 +57,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         aria-label="Loading"
       >
         <span className="sr-only">Loading...</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
       </div>
     </div>
   );

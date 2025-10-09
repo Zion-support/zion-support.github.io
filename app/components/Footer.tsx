@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Phone, 
   Mail, 
@@ -181,7 +181,7 @@ const Footer: React.FC = memo(() => {
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-white transition-colors group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-purple-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -207,7 +207,7 @@ const Footer: React.FC = memo(() => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-white transition-colors group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-blue-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -233,7 +233,7 @@ const Footer: React.FC = memo(() => {
               {specializedServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-white transition-colors group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-orange-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -256,7 +256,7 @@ const Footer: React.FC = memo(() => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.url}
+                    href={link.url}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
