@@ -131,12 +131,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
-<<<<<<< HEAD
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
-              data-text="Zion Tech Group"
-=======
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
             >
               Zion Tech Group
             </h1>
@@ -147,7 +142,6 @@ const HomePage: React.FC = () => {
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth.
             </p>
-            
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -171,7 +165,6 @@ const HomePage: React.FC = () => {
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
               </div>
             </div>
-            
             {/* CTA Buttons */}
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -986,7 +979,6 @@ const HomePage: React.FC = () => {
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
         </Suspense>
-
         {/* Contact Section */}
         <section className="mb-16" aria-labelledby="contact-heading">
           <div className="max-w-6xl mx-auto">
@@ -996,7 +988,6 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
               Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.
             </p>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Contact Information */}
               <div className="cyber-card hologram-card p-8">
@@ -1013,7 +1004,6 @@ const HomePage: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
                       <Mail className="w-6 h-6 text-white" />
@@ -1025,7 +1015,6 @@ const HomePage: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
                       <MapPin className="w-6 h-6 text-white" />
@@ -1038,7 +1027,6 @@ const HomePage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
                       <Clock className="w-6 h-6 text-white" />
@@ -1053,7 +1041,6 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
@@ -1071,7 +1058,6 @@ const HomePage: React.FC = () => {
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address
@@ -1085,7 +1071,6 @@ const HomePage: React.FC = () => {
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
@@ -1098,7 +1083,6 @@ const HomePage: React.FC = () => {
                       placeholder="Enter your phone number"
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
@@ -1116,7 +1100,6 @@ const HomePage: React.FC = () => {
                       <option value="other">Other</option>
                     </select>
                   </div>
-                  
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message
@@ -1129,7 +1112,6 @@ const HomePage: React.FC = () => {
                       placeholder="Tell us about your project or requirements"
                     ></textarea>
                   </div>
-                  
                   <button
                     type="submit"
                     className="w-full cyber-button text-center py-4"

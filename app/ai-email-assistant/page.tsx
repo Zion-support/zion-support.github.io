@@ -2,12 +2,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 export default function AIEmailAssistantPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg particle-system">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -21,7 +19,6 @@ export default function AIEmailAssistantPage() {
             Transform your email workflow with our intelligent AI assistant that handles responses, scheduling, 
             priority sorting, and automated follow-ups. Save hours every day with smart email automation.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
               href="tel:+13024640950"
@@ -37,7 +34,6 @@ export default function AIEmailAssistantPage() {
             </a>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -52,7 +48,6 @@ export default function AIEmailAssistantPage() {
                 professional replies based on your communication style.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">📅</div>
               <h3 className="text-xl font-bold text-white mb-4">Intelligent Scheduling</h3>
@@ -61,7 +56,6 @@ export default function AIEmailAssistantPage() {
                 email content and your availability preferences.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold text-white mb-4">Priority Sorting</h3>
@@ -70,7 +64,6 @@ export default function AIEmailAssistantPage() {
                 with smart priority levels and categorization.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>
@@ -79,7 +72,6 @@ export default function AIEmailAssistantPage() {
                 with personalized timing and content.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-white mb-4">Analytics Dashboard</h3>
@@ -88,7 +80,6 @@ export default function AIEmailAssistantPage() {
                 analytics and insights.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>
@@ -99,7 +90,6 @@ export default function AIEmailAssistantPage() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -120,7 +110,6 @@ export default function AIEmailAssistantPage() {
                 Get Started
               </a>
             </div>
-            
             <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400">
               <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
@@ -137,7 +126,6 @@ export default function AIEmailAssistantPage() {
                 Get Started
               </a>
             </div>
-            
             <div className="cyber-card hologram-card p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>
@@ -155,7 +143,6 @@ export default function AIEmailAssistantPage() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8 neon-text">
@@ -181,7 +168,6 @@ export default function AIEmailAssistantPage() {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );

@@ -2,12 +2,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 export default function AIAnalyticsDashboardPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg particle-system">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -21,7 +19,6 @@ export default function AIAnalyticsDashboardPage() {
             Transform your data into actionable insights with our AI-powered analytics platform. 
             Get real-time dashboards, predictive analytics, and automated reporting that drives business growth.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
               href="tel:+13024640950"
@@ -37,7 +34,6 @@ export default function AIAnalyticsDashboardPage() {
             </a>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -52,7 +48,6 @@ export default function AIAnalyticsDashboardPage() {
                 giving you instant insights into your business performance.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🔮</div>
               <h3 className="text-xl font-bold text-white mb-4">Predictive Analytics</h3>
@@ -61,7 +56,6 @@ export default function AIAnalyticsDashboardPage() {
                 helping you make data-driven decisions with confidence.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-bold text-white mb-4">Automated Reports</h3>
@@ -70,7 +64,6 @@ export default function AIAnalyticsDashboardPage() {
                 scheduled delivery, and customizable formats for different stakeholders.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">📈</div>
               <h3 className="text-xl font-bold text-white mb-4">Performance Tracking</h3>
@@ -79,7 +72,6 @@ export default function AIAnalyticsDashboardPage() {
                 improvement with intelligent performance metrics and alerts.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-bold text-white mb-4">Data Integration</h3>
@@ -88,7 +80,6 @@ export default function AIAnalyticsDashboardPage() {
                 platform that works with 100+ popular business tools and databases.
               </p>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold text-white mb-4">Custom Insights</h3>
@@ -99,7 +90,6 @@ export default function AIAnalyticsDashboardPage() {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -119,7 +109,6 @@ export default function AIAnalyticsDashboardPage() {
                 <li>• Marketing attribution</li>
               </ul>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <h3 className="text-xl font-bold text-white mb-4">SaaS Companies</h3>
               <p className="text-gray-300 mb-4">
@@ -133,7 +122,6 @@ export default function AIAnalyticsDashboardPage() {
                 <li>• Revenue forecasting</li>
               </ul>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <h3 className="text-xl font-bold text-white mb-4">Marketing Agencies</h3>
               <p className="text-gray-300 mb-4">
@@ -147,7 +135,6 @@ export default function AIAnalyticsDashboardPage() {
                 <li>• Client reporting automation</li>
               </ul>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <h3 className="text-xl font-bold text-white mb-4">Financial Services</h3>
               <p className="text-gray-300 mb-4">
@@ -163,7 +150,6 @@ export default function AIAnalyticsDashboardPage() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -184,7 +170,6 @@ export default function AIAnalyticsDashboardPage() {
                 Get Started
               </a>
             </div>
-            
             <div className="cyber-card hologram-card p-8 text-center border-2 border-green-400">
               <div className="text-sm font-bold text-green-400 mb-2">MOST POPULAR</div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
@@ -201,7 +186,6 @@ export default function AIAnalyticsDashboardPage() {
                 Get Started
               </a>
             </div>
-            
             <div className="cyber-card hologram-card p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
               <div className="text-4xl font-bold text-green-400 mb-6">$499<span className="text-lg text-gray-400">/month</span></div>
@@ -219,7 +203,6 @@ export default function AIAnalyticsDashboardPage() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8 neon-text">
@@ -245,7 +228,6 @@ export default function AIAnalyticsDashboardPage() {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );

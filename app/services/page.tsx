@@ -1,14 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -74,10 +67,6 @@ const ServicesPage: React.FC = () => {
       ]
     }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   const benefits = [
     {
       icon: TrendingUp,
@@ -100,7 +89,6 @@ const ServicesPage: React.FC = () => {
       description: 'World-class engineers and data scientists with proven track records'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Helmet>
@@ -155,10 +143,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
       {/* Service Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -182,7 +166,6 @@ const ServicesPage: React.FC = () => {
                     <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
                       <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
                       <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                      
                       {/* Features */}
                       <div className="mb-4">
                         <h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
@@ -195,7 +178,6 @@ const ServicesPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                         <a
@@ -213,10 +195,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
       {/* Benefits Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -234,10 +212,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -266,5 +240,4 @@ const ServicesPage: React.FC = () => {
     </div>
   );
 };
-
 export default ServicesPage;
