@@ -1,7 +1,17 @@
 'use client';
-import React, { useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useEffect, ReactNode, useCallback } from 'react';
+
+interface AccessibilityContextType {
+  announce: (message: string) => void;
+  setFocus: (element: HTMLElement) => void;
+  toggleHighContrast: () => void;
+  toggleReducedMotion: () => void;
+}
+
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 interface AccessibilityEnhancerProps {
+  children: ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -10,7 +20,8 @@ interface AccessibilityEnhancerProps {
   enableARIALabels?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
+  children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
@@ -153,70 +164,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableARIALabels]);
 
-  // Add high contrast mode support
-  useEffect(() => {
-    if (enableHighContrast) {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      
-      const handleContrastChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.body.classList.add('high-contrast');
-        } else {
-          document.body.classList.remove('high-contrast');
-        }
-      };
-
-      // Check initial state
-      if (mediaQuery.matches) {
-        document.body.classList.add('high-contrast');
-      }
-
-      // Listen for changes
-      mediaQuery.addEventListener('change', handleContrastChange);
-
-      return () => {
-        mediaQuery.removeEventListener('change', handleContrastChange);
-      };
-    }
-  }, [enableHighContrast]);
-
-  // Add reduced motion support
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
-        document.documentElement.style.setProperty('--motion-reduce', '1');
-      } else {
-        document.documentElement.style.removeProperty('--motion-reduce');
-      }
-    };
-
-    handleMotionChange(mediaQuery);
-    mediaQuery.addEventListener('change', handleMotionChange);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMotionChange);
-    };
-  }, []);
-
-  return null;
-};
-
-interface AccessibilityContextType {
-  announce: (message: string) => void;
-  setFocus: (element: HTMLElement) => void;
-  toggleHighContrast: () => void;
-  toggleReducedMotion: () => void;
-}
-
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-
-interface AccessibilityEnhancerProps {
-  children: ReactNode;
-}
-
-export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Create announcement area for screen readers
     const announcement = document.createElement('div');
@@ -274,33 +221,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
         document.body.classList.remove('reduced-motion');
       }
     };
-    // Check initial state
-    if (mediaQuery.matches) {
-      document.body.classList.add('reduced-motion');
-    }
 
-    // Listen for changes
-    mediaQuery.addEventListener('change', handleMotionChange);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMotionChange);
-    };
-  }, []);
-
-  // Add screen reader announcements
-  useEffect(() => {
-    if (enableScreenReaderSupport) {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.id = 'announcements';
-      document.body.appendChild(announcement);
-    }
-  }, [enableScreenReaderSupport]);
-
-  return null;
-=======
     motionQuery.addEventListener('change', handleMotionChange);
     if (motionQuery.matches) {
       document.body.classList.add('reduced-motion');
@@ -356,7 +277,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
       {children}
     </AccessibilityContext.Provider>
   );
->>>>>>> origin/comprehensive-improvements-final
 };
 
 export const useAccessibility = (): AccessibilityContextType => {
