@@ -2,10 +2,7 @@
 import React, { Suspense, memo, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { Phone, Mail, Brain, Cloud, Zap } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e055
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 
