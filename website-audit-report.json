@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "totalPages": 124,
+    "missingPages": 0,
+    "brokenLinks": 13,
+    "navigationIssues": 0,
+    "seoIssues": 13,
+    "accessibilityIssues": 5,
+    "contentIssues": 0,
+    "auditDuration": 173
+  },
+  "missingPages": [],
+  "brokenLinks": [
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: {`mailto:kleber@ziontechgroup.com?subject=Interest",
+      "severity": "high",
+      "url": "https://ziontechgroup.com/%7B%60mailto:kleber@ziontechgroup.com?subject=Interest",
+      "page": "https:/ziontechgroup.com/ai-3d-generation"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-3d-generation"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-3d-generation"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-analytics-dashboard"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-analytics-dashboard"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-chatbot-builder"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: {`mailto:kleber@ziontechgroup.com?subject=Interest",
+      "severity": "high",
+      "url": "https://ziontechgroup.com/%7B%60mailto:kleber@ziontechgroup.com?subject=Interest",
+      "page": "https:/ziontechgroup.com/ai-code-generation"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-code-generation"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-crm"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-crm"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: {`mailto:kleber@ziontechgroup.com?subject=Interest",
+      "severity": "high",
+      "url": "https://ziontechgroup.com/%7B%60mailto:kleber@ziontechgroup.com?subject=Interest",
+      "page": "https:/ziontechgroup.com/ai-customer-support"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-cybersecurity"
+    },
+    {
+      "type": "broken-link",
+      "message": "Broken internal link: mailto:kleber@ziontechgroup.com",
+      "severity": "high",
+      "url": "mailto:kleber@ziontechgroup.com",
+      "page": "https:/ziontechgroup.com/ai-cybersecurity"
+    }
+  ],
+  "navigationIssues": [],
+  "seoIssues": [
+    {
+      "type": "seo",
+      "message": "Missing or empty title tag",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/App"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty meta description",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/App"
+    },
+    {
+      "type": "seo",
+      "message": "No heading tags found",
+      "severity": "medium",
+      "page": "https:/ziontechgroup.com/App"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty title tag",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/about"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty meta description",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/about"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty title tag",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/ai-chatbot-builder"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty meta description",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/ai-chatbot-builder"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty title tag",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/ai-content-generation"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty meta description",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/ai-content-generation"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty title tag",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/ai-customer-support"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty meta description",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/ai-customer-support"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty title tag",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/ai-cybersecurity"
+    },
+    {
+      "type": "seo",
+      "message": "Missing or empty meta description",
+      "severity": "high",
+      "page": "https:/ziontechgroup.com/ai-cybersecurity"
+    }
+  ],
+  "accessibilityIssues": [
+    {
+      "type": "accessibility",
+      "message": "No main content area found",
+      "severity": "medium",
+      "page": "https:/ziontechgroup.com/App"
+    },
+    {
+      "type": "accessibility",
+      "message": "No main content area found",
+      "severity": "medium",
+      "page": "https:/ziontechgroup.com/ai-analytics-dashboard"
+    },
+    {
+      "type": "accessibility",
+      "message": "No main content area found",
+      "severity": "medium",
+      "page": "https:/ziontechgroup.com/ai-code-generation"
+    },
+    {
+      "type": "accessibility",
+      "message": "No main content area found",
+      "severity": "medium",
+      "page": "https:/ziontechgroup.com/ai-crm"
+    },
+    {
+      "type": "accessibility",
+      "message": "No main content area found",
+      "severity": "medium",
+      "page": "https:/ziontechgroup.com/ai-customer-support"
+    }
+  ],
+  "contentIssues": [],
+  "recommendations": [
+    "Fix all broken internal links",
+    "Add missing meta tags and improve SEO structure",
+    "Add alt attributes to images and improve accessibility",
+    "Implement comprehensive testing for all navigation links",
+    "Add proper error handling for missing pages",
+    "Optimize page loading performance",
+    "Implement proper sitemap generation"
+  ]
+}
