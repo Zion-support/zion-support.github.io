@@ -178,7 +178,6 @@ const SecurityPage: React.FC = () => {
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{detail}</span>
 
- cursor/analyze-improve-and-deploy-application-cde4
                     </li>
                   ))}
                 </ul>
@@ -330,11 +329,9 @@ const SecurityPage: React.FC = () => {
         </div>
       </section>
 
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default SecurityPage;
 
- cursor/analyze-improve-and-deploy-application-cde4

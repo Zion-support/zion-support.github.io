@@ -200,6 +200,59 @@ const ServicesPage: React.FC = () => {
       link: '/ai-data-visualization',
       features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates'],
       price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI Email Marketing',
+      description: 'Revolutionary AI-powered email marketing platform with intelligent content generation and automation.',
+      icon: '📧',
+      link: '/ai-email-marketing',
+      features: ['AI Content Generation', 'Smart Segmentation', 'Advanced Analytics', 'Automated Campaigns'],
+      price: 'Starting at $199/month',
+      popular: true
+    },
+    {
+      title: 'AI Social Media Management',
+      description: 'Automate your social media presence with AI that creates content, schedules posts, and engages audiences.',
+      icon: '📱',
+      link: '/ai-social-media-management',
+      features: ['Multi-Platform Support', 'AI Content Creation', 'Smart Scheduling', 'Community Management'],
+      price: 'Starting at $299/month',
+      popular: true
+    },
+    {
+      title: 'AI Customer Service',
+      description: 'Provide exceptional customer support 24/7 with AI-powered chatbots and intelligent routing.',
+      icon: '💬',
+      link: '/ai-customer-service',
+      features: ['AI Chatbots', 'Intelligent Routing', 'Omnichannel Support', 'Advanced Analytics'],
+      price: 'Starting at $199/month',
+      popular: true
+    },
+    {
+      title: 'AI Invoice Generator',
+      description: 'Generate professional invoices automatically with AI-powered automation and payment processing.',
+      icon: '🧾',
+      link: '/ai-invoice-generator',
+      features: ['AI Generation', 'Automated Billing', 'Payment Processing', 'Advanced Analytics'],
+      price: 'Starting at $29/month',
+      popular: true
+    },
+    {
+      title: 'AI Project Management',
+      description: 'Manage projects intelligently with AI-powered task management and predictive analytics.',
+      icon: '📋',
+      link: '/ai-project-management',
+      features: ['AI Task Management', 'Team Collaboration', 'Advanced Analytics', 'Automated Workflows'],
+      price: 'Starting at $49/month',
+      popular: true
+    },
+    {
+      title: 'AI Cloud Migration',
+      description: 'Migrate to the cloud intelligently with AI-powered planning and zero-downtime migration.',
+      icon: '☁️',
+      link: '/ai-cloud-migration',
+      features: ['AI Migration Planning', 'Multi-Cloud Support', 'Zero-Downtime Migration', 'Automated Migration'],
+      price: 'Starting at $2,999'
     }
   ];
 

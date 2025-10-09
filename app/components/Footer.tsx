@@ -37,6 +37,11 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield, description: 'AI security solutions' },
     { name: 'AI Cloud Infrastructure', url: '/ai-cloud-infrastructure', icon: Cloud, description: 'Cloud AI solutions' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', icon: Mail, description: 'AI email automation' },
+    { name: 'AI Social Media Management', url: '/ai-social-media-management', icon: Share2, description: 'Social media AI' },
+    { name: 'AI Customer Service', url: '/ai-customer-service', icon: MessageCircle, description: 'AI customer support' },
+    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', icon: FileText, description: 'AI invoicing' },
+    { name: 'AI Project Management', url: '/ai-project-management', icon: CheckSquare, description: 'AI project tools' },
   ];
 
   const itServices = [
@@ -46,6 +51,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', icon: Globe, description: 'Cloud migration & setup' },
     { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce platforms' },
     { name: 'Mobile App Development', url: '/ai-mobile-app-development', icon: Code, description: 'Mobile applications' },
+    { name: 'AI Cloud Migration', url: '/ai-cloud-migration', icon: Cloud, description: 'AI cloud migration' },
   ];
 
   const emergingTech = [
@@ -182,7 +188,7 @@ const Footer: React.FC = memo(() => {
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
                   >
                     <service.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -204,7 +210,7 @@ const Footer: React.FC = memo(() => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
                   >
                     <service.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -241,7 +247,7 @@ const Footer: React.FC = memo(() => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.url}
+                    href={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-center"
                   >
                     <span>{link.name}</span>
@@ -256,7 +262,7 @@ const Footer: React.FC = memo(() => {
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.url}
+                    href={link.url}
                     className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200 group flex items-center"
                   >
                     <span>{link.name}</span>
@@ -271,7 +277,7 @@ const Footer: React.FC = memo(() => {
               {legal.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.url}
+                    href={link.url}
                     className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200 group flex items-center"
                   >
                     <span>{link.name}</span>
