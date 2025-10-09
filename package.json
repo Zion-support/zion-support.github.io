@@ -92,7 +92,11 @@
     "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096 --no-warnings\" vite build --mode production --minify terser",
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
     "optimize": "node scripts/performance-optimizer.cjs",
-    "build:optimized": "npm run build && npm run optimize"
+    "build:optimized": "npm run build && npm run optimize",
+    "build:enhanced": "node scripts/build-optimizer.js",
+    "analyze:performance": "npm run build && node scripts/performance-analyzer.js",
+    "test:accessibility": "npm run build && node scripts/accessibility-test.js",
+    "optimize:all": "npm run build:enhanced && npm run analyze:performance && npm run test:accessibility"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

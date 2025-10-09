@@ -1,17 +1,42 @@
 #!/bin/bash
 
-# Fix merge conflicts by removing conflict markers and keeping the latest version
-find /workspace/app -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
-  if grep -q "^<<<<<<<\|^=======\|^>>>>>>>" "$file"; then
-    echo "Fixing merge conflicts in: $file"
+# Script to fix merge conflicts by choosing HEAD version
+echo "Fixing merge conflicts in TypeScript/TSX files..."
+
+# List of files with merge conflicts
+files=(
+  "/workspace/app/components/Footer.tsx"
+  "/workspace/app/ai-customer-support/page.tsx"
+  "/workspace/app/ai-data-visualization/page.tsx"
+  "/workspace/app/ai-sales-automation/page.tsx"
+  "/workspace/app/ai-workflow-automation/page.tsx"
+  "/workspace/app/it-services/page.tsx"
+  "/workspace/app/services/page.tsx"
+)
+
+for file in "${files[@]}"; do
+  if [ -f "$file" ]; then
+    echo "Processing $file..."
     
-    # Remove merge conflict markers and keep the latest version (after =======)
-    sed -i '/^<<<<<<<.*/,/^=======/d' "$file"
-    sed -i '/^>>>>>>>.*/d' "$file"
+    # Create a temporary file
+    temp_file=$(mktemp)
     
-    # Clean up any remaining empty lines
-    sed -i '/^$/N;/^\n$/d' "$file"
+    # Process the file to resolve merge conflicts
+    awk '
+    /^<<<<<<< HEAD/ { in_head = 1; next }
+    /^=======/ { in_head = 0; in_other = 1; next }
+    /^>>>>>>> / { in_other = 0; next }
+    in_head { print; next }
+    in_other { next }
+    { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
+    echo "Fixed $file"
+  else
+    echo "File $file not found, skipping..."
   fi
 done
 
-echo "Fixed merge conflicts in all files"
+echo "Merge conflict resolution complete!"

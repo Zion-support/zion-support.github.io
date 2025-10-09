@@ -1,6 +1,8 @@
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import ErrorBoundary from './components/ErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import AdvancedPerformanceOptimizer from './components/AdvancedPerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 export default function RootLayout({
   children
 }: {
@@ -177,10 +179,25 @@ export default function RootLayout({
         />
       </head>
       <body className='antialiased'>
-        <ErrorBoundary>
+        <EnhancedErrorBoundary>
+          <AdvancedPerformanceOptimizer
+            enableImageOptimization={true}
+            enableLazyLoading={true}
+            enablePreloading={true}
+            enableCodeSplitting={true}
+            enableServiceWorker={true}
+            enableResourceHints={true}
+          />
+          <AccessibilityEnhancer
+            enableKeyboardNavigation={true}
+            enableScreenReader={true}
+            enableHighContrast={true}
+            enableFocusManagement={true}
+            enableAriaLabels={true}
+          />
           <PerformanceMonitor />
           {children}
-        </ErrorBoundary>
+        </EnhancedErrorBoundary>
       </body>
     </html>
   );
