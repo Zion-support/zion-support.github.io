@@ -133,15 +133,11 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
         </main>
       </div>
     </>
   );
 };
-
-const AIWorkflowAutomationPage2: React.FC = () => {
-=======
         </div>
       </main>
       <Footer />

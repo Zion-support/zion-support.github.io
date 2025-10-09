@@ -1,6 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-// import { Link } from 'react-router-dom';
+// 
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;

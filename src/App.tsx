@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));

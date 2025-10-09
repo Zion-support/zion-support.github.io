@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-fb42
+import Link from 'next/link';
 export default function AICostOptimizationBreakthrough2026() {
   return (
     <div className="min-h-screen bg-gray-50">
