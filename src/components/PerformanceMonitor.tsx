@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;
-  fid: number | null;
+  inp: number | null;
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
@@ -20,7 +20,7 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Measure Core Web Vitals
-    getCLS((metric) => {
+    onCLS((metric) => {
       setMetrics(prev => ({ ...prev, cls: metric.value }));
       // Send to analytics
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -32,7 +32,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
-    getFID((metric) => {
+    onFID((metric) => {
       setMetrics(prev => ({ ...prev, fid: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
@@ -43,7 +43,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
-    getFCP((metric) => {
+    onFCP((metric) => {
       setMetrics(prev => ({ ...prev, fcp: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
@@ -54,7 +54,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
-    getLCP((metric) => {
+    onLCP((metric) => {
       setMetrics(prev => ({ ...prev, lcp: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
@@ -65,7 +65,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
-    getTTFB((metric) => {
+    onTTFB((metric) => {
       setMetrics(prev => ({ ...prev, ttfb: metric.value }));
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
