@@ -7,97 +7,36 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
-  ];
-
-  const itServices = [
-  ];
-
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI Tools' },
-    { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
-    { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
-    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
-    { name: 'Developer Tools', url: '/developer-tools', description: 'Development Tools' }
-  ];
-
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum Solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent Robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' }
-=======
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
     { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
     { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
-<<<<<<< HEAD
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
-    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
-    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
-    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
-    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
-    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
-=======
-    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation suite' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
-    { name: 'AI Machine Learning Platform', url: '/ai-ml-platform', description: 'Complete ML platform' },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
-    { name: 'AI Natural Language Processing', url: '/ai-nlp', description: 'Advanced NLP solutions' },
-    { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' }
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-<<<<<<< HEAD
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
-    { name: 'Database Services', url: '/database', description: 'Database management' },
-    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
+    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud migration & setup' },
+    { name: 'DevOps & CI/CD', url: '/devops', description: 'DevOps automation' },
+    { name: 'Database Management', url: '/database', description: 'Database management' },
     { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' }
-=======
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
-    { name: 'Cybersecurity Suite', url: '/cybersecurity-suite', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Development operations' },
-    { name: 'Database Management', url: '/database-management', description: 'Database management' },
-    { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
-    { name: 'System Administration', url: '/system-administration', description: 'System management' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT management' },
-    { name: 'IT Training & Certification', url: '/it-training', description: 'Staff development' },
-    { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+    { name: 'IT Consulting', url: '/consultation', description: 'Strategic IT planning' }
   ];
 
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
     { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI writing tool' },
     { name: 'Smart Analytics', url: '/smart-analytics', description: 'Business analytics' },
     { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
-    { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
-    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
-    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
-    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
-    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
-    { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
-    { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
-    { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
-    { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
-    { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
+    { name: 'AI CRM', url: '/ai-crm', description: 'Intelligent CRM' },
+    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Content creation suite' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' },
+    { name: 'AI Mobile Builder', url: '/ai-mobile-app-development', description: 'AI-assisted app development' }
   ];
 
   const emergingTech = [
@@ -107,7 +46,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
   ];
 
   const companyLinks = [
@@ -152,19 +90,17 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center cyber-pulse-glow">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-2xl font-bold text-white neon-text cyber-text">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
@@ -188,7 +124,7 @@ const Footer: React.FC = memo(() => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300 group"
+                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300 group cyber-card"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400" />
@@ -201,8 +137,7 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
-              {aiServices.slice(0, 8).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+              {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -227,12 +162,9 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
-=======
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -254,8 +186,6 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
-=======
 
           {/* Micro SAAS & Emerging Tech */}
           <div>
@@ -264,7 +194,7 @@ const Footer: React.FC = memo(() => {
               <div>
                 <h4 className="text-sm font-medium text-white mb-2">Micro SAAS</h4>
                 <ul className="space-y-2">
-                  {microSaasServices.slice(0, 3).map((service, index) => (
+                  {microSaasServices.slice(0, 4).map((service, index) => (
                     <li key={index}>
                       <Link 
                         href={service.url}
@@ -276,12 +206,11 @@ const Footer: React.FC = memo(() => {
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
               </div>
               <div>
                 <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
                 <ul className="space-y-2">
-                  {emergingTech.slice(0, 3).map((service, index) => (
+                  {emergingTech.slice(0, 4).map((service, index) => (
                     <li key={index}>
                       <Link 
                         href={service.url}
@@ -299,7 +228,7 @@ const Footer: React.FC = memo(() => {
         </div>
 
         {/* Contact Information */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
+        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card holographic-border">
           <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-center space-x-3">
@@ -336,7 +265,7 @@ const Footer: React.FC = memo(() => {
         {/* Company Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
+            <h4 className="text-sm font-semibold text-white mb-4 neon-text">Company</h4>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -351,7 +280,7 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Support</h4>
+            <h4 className="text-sm font-semibold text-white mb-4 neon-text">Support</h4>
             <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
@@ -366,7 +295,7 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-sm font-semibold text-white mb-4 neon-text">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
               <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
@@ -375,15 +304,15 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Newsletter</h4>
+            <h4 className="text-sm font-semibold text-white mb-4 neon-text">Newsletter</h4>
             <p className="text-gray-400 text-sm mb-4">Stay updated with our latest news and offers.</p>
             <div className="flex space-x-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400"
+                className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400 cyber-card"
               />
-              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
+              <button className="px-4 py-2 cyber-button-advanced text-white rounded-lg transition-all text-sm">
                 Subscribe
               </button>
             </div>
@@ -392,7 +321,7 @@ const Footer: React.FC = memo(() => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700/50">
+      <div className="border-t border-cyan-500/20">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
