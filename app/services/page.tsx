@@ -53,6 +53,11 @@ const ServicesPage: React.FC = () => {
       bgColor: 'bg-green-50',
       description: '100+ ready-to-use AI-powered applications',
       services: [
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Intelligent voice solutions - $199/month' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media - $99/month' },
+        { name: 'AI Financial Planner', path: '/ai-financial-planner', description: 'Smart financial planning - $49/month' },
+        { name: 'AI Code Generator', path: '/ai-code-generator', description: 'Generate code 10x faster - $79/month' },
+        { name: 'AI Video Creator', path: '/ai-video-creator', description: 'Create videos with AI - $99/month' },
         { name: 'AI Writing Assistant', path: '/ai-writing-assistant', description: 'AI-powered content creation' },
         { name: 'Smart Analytics', path: '/smart-analytics', description: 'Business intelligence tools' },
         { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Intelligent scheduling system' },

@@ -414,14 +414,41 @@ body {
   80% { transform: translate(-2px, -2px); }
 }
 
-/* Responsive Design */
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+  .cyber-grid-enhanced {
+    background-size: 40px 40px;
+  }
+  
+  .holographic-text-enhanced {
+    font-size: 2.5rem;
+  }
+  
+  .cyber-card-advanced {
+    padding: 1.5rem;
+  }
+  
+  .cyber-button-enhanced {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .cyber-grid {
     background-size: 25px 25px;
   }
   
+  .cyber-grid-enhanced {
+    background-size: 30px 30px;
+  }
+  
   .neon-text {
     font-size: 1.5rem;
+  }
+  
+  .holographic-text-enhanced {
+    font-size: 2rem;
   }
   
   .cyber-text {
@@ -433,21 +460,90 @@ body {
     padding: 1rem;
   }
   
+  .cyber-card-advanced {
+    padding: 1.25rem;
+  }
+  
   .cyber-button {
     padding: 10px 20px;
     font-size: 0.9rem;
+  }
+  
+  .cyber-button-enhanced {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* Mobile-specific improvements */
+  .mobile-text-center {
+    text-align: center;
+  }
+  
+  .mobile-full-width {
+    width: 100%;
+  }
+  
+  .mobile-padding {
+    padding: 1rem;
+  }
+  
+  .mobile-margin {
+    margin: 0.5rem;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 1rem;
+    z-index: 50;
+  }
+  
+  /* Mobile grid improvements */
+  .mobile-grid-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .mobile-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Mobile spacing */
+  .mobile-space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  
+  .mobile-space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  .mobile-space-y-8 > * + * {
+    margin-top: 2rem;
   }
 }
 
 <<<<<<< HEAD
 =======
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .cyber-grid {
     background-size: 20px 20px;
   }
   
+  .cyber-grid-enhanced {
+    background-size: 25px 25px;
+  }
+  
   .neon-text {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+  }
+  
+  .holographic-text-enhanced {
+    font-size: 1.75rem;
   }
   
   .cyber-text {
@@ -456,12 +552,98 @@ body {
   }
   
   .cyber-card {
-    padding: 0.75rem;
+    padding: 0.875rem;
+  }
+  
+  .cyber-card-advanced {
+    padding: 1rem;
   }
   
   .cyber-button {
     padding: 8px 16px;
     font-size: 0.8rem;
+  }
+  
+  .cyber-button-enhanced {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  
+  /* Small mobile improvements */
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-padding-sm {
+    padding: 0.75rem;
+  }
+  
+  .mobile-margin-sm {
+    margin: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-grid {
+    background-size: 15px 15px;
+  }
+  
+  .cyber-grid-enhanced {
+    background-size: 20px 20px;
+  }
+  
+  .neon-text {
+    font-size: 1rem;
+  }
+  
+  .holographic-text-enhanced {
+    font-size: 1.5rem;
+  }
+  
+  .cyber-text {
+    font-size: 0.875rem;
+    letter-spacing: 0.25px;
+  }
+  
+  .cyber-card {
+    padding: 0.75rem;
+  }
+  
+  .cyber-card-advanced {
+    padding: 0.875rem;
+  }
+  
+  .cyber-button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  
+  .cyber-button-enhanced {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  
+  /* Extra small mobile improvements */
+  .mobile-text-xs {
+    font-size: 0.75rem;
+  }
+  
+  .mobile-padding-xs {
+    padding: 0.5rem;
+  }
+  
+  .mobile-margin-xs {
+    margin: 0.125rem;
+  }
+  
+  /* Mobile navigation for very small screens */
+  .mobile-nav-compact {
+    padding: 0.5rem;
+  }
+  
+  .mobile-nav-compact .nav-item {
+    padding: 0.25rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -1249,4 +1431,3 @@ body {
     background: #fff !important;
   }
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-acd7
