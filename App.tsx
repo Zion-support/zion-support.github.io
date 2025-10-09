@@ -1,3 +1,10 @@
+import React, { Suspense, memo, useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import FuturisticHero from './app/components/FuturisticHero';
+import FuturisticServicesShowcase from './app/components/FuturisticServicesShowcase';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -46,8 +53,11 @@ const InteractiveContentShowcase2026 = memo(() => (
 
 // Loading component
 const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
+  <div className="min-h-screen flex items-center justify-center bg-slate-900">
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <div className="text-cyan-400 text-lg font-semibold">Loading...</div>
+    </div>
   </div>
 ));
 
@@ -74,23 +84,22 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   override componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-       
-      // // console.error('App Error Boundary caught an error:', _error, _errorInfo);
+      console.error('App Error Boundary caught an error:', _error, _errorInfo);
     }
   }
 
   override render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-4">
               We're working to fix this issue. Please try refreshing the page.
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              className="cyber-button px-6 py-2 rounded-lg transition-colors"
             >
               Refresh Page
             </button>
@@ -102,6 +111,27 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return this.props.children;
   }
 }
+
+// Main Layout Component
+const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div className="min-h-screen bg-slate-900">
+    <Navigation />
+    <main>{children}</main>
+    <Footer />
+  </div>
+);
+
+// Home Page Component
+const HomePage = memo(() => (
+  <>
+    <FuturisticHero />
+    <FuturisticServicesShowcase />
+    <UnifiedContentPromotion />
+    <InteractiveAIROICalculator />
+    <ContentShowcase />
+    <InteractiveContentShowcase2026 />
+  </>
+));
 
 export default function App() {
   const structuredData = useMemo(
@@ -152,7 +182,7 @@ export default function App() {
           />
           <meta
             name="keywords"
-            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
+            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services, micro saas, business intelligence, customer service automation"
           />
           <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
           <meta
@@ -170,26 +200,45 @@ export default function App() {
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <Router>
-          <div className="min-h-screen bg-white">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={
-                  <>
-                    <UnifiedContentPromotion />
-                    <InteractiveAIROICalculator />
-                    <ContentShowcase />
-                    <InteractiveContentShowcase2026 />
-                  </>
-                } />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/ai-services" element={<AIServicesPage />} />
-                <Route path="/it-services" element={<ITServicesPage />} />
-                <Route path="/micro-saas" element={<MicroSaasPage />} />
-              </Routes>
-            </Suspense>
-          </div>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={
+                <MainLayout>
+                  <HomePage />
+                </MainLayout>
+              } />
+              <Route path="/about" element={
+                <MainLayout>
+                  <AboutPage />
+                </MainLayout>
+              } />
+              <Route path="/contact" element={
+                <MainLayout>
+                  <ContactPage />
+                </MainLayout>
+              } />
+              <Route path="/pricing" element={
+                <MainLayout>
+                  <PricingPage />
+                </MainLayout>
+              } />
+              <Route path="/ai-services" element={
+                <MainLayout>
+                  <AIServicesPage />
+                </MainLayout>
+              } />
+              <Route path="/it-services" element={
+                <MainLayout>
+                  <ITServicesPage />
+                </MainLayout>
+              } />
+              <Route path="/micro-saas" element={
+                <MainLayout>
+                  <MicroSaasPage />
+                </MainLayout>
+              } />
+            </Routes>
+          </Suspense>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
