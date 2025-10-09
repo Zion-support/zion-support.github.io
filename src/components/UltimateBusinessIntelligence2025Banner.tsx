@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -47,6 +48,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];
+  
+  const currentContent = content[currentSlide];
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
