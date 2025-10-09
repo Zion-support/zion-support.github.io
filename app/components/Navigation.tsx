@@ -72,7 +72,14 @@ const Navigation: React.FC = () => {
         { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
         { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
         { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Intelligent voice solutions' },
+        { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance', description: 'Equipment failure prediction' },
+        { name: 'AI Supply Chain Optimization', path: '/ai-supply-chain-optimization', description: 'Supply chain intelligence' },
+        { name: 'AI Personalization Engine', path: '/ai-personalization-engine', description: 'Hyper-personalized experiences' },
+        { name: 'AI Fraud Detection', path: '/ai-fraud-detection', description: 'Advanced fraud prevention' },
+        { name: 'AI NLP Processing', path: '/ai-nlp-processing', description: 'Natural language processing' },
+        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Visual recognition systems' }
       ]
     },
     {
@@ -97,7 +104,15 @@ const Navigation: React.FC = () => {
         { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
         { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' },
+        { name: 'Cloud Migration Services', path: '/cloud-migration-services', description: 'Seamless cloud migration' },
+        { name: 'Cybersecurity Consulting', path: '/cybersecurity-consulting', description: 'Security strategy & implementation' },
+        { name: 'DevOps Automation', path: '/devops-automation', description: 'CI/CD pipeline automation' },
+        { name: 'Database Optimization', path: '/database-optimization', description: 'Database performance tuning' },
+        { name: 'Network Security', path: '/network-security', description: 'Network protection & monitoring' },
+        { name: 'Backup & Disaster Recovery', path: '/backup-disaster-recovery', description: 'Data protection & recovery' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
+        { name: 'Managed IT Services', path: '/managed-it-services', description: '24/7 IT management' }
       ]
     },
     {
@@ -118,7 +133,12 @@ const Navigation: React.FC = () => {
         { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
         { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
         { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' },
+        { name: 'Smart Scheduling SAAS', path: '/smart-scheduling-saas', description: 'AI-powered scheduling' },
+        { name: 'AI Content Optimizer', path: '/ai-content-optimizer', description: 'Content optimization AI' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Social media automation' },
+        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing-suite', description: 'Email marketing AI' },
+        { name: 'AI CRM Automation', path: '/ai-crm-automation', description: 'CRM intelligence' }
       ]
     },
     {
