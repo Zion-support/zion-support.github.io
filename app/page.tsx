@@ -1142,9 +1142,15 @@ const HomePage: React.FC = () => {
       category: 'Data Science'
     },
     {
+<<<<<<< HEAD
       title: 'AI 3D & AR Solutions',
       description: 'Create 3D models, environments, and augmented reality experiences with AI technology',
       icon: Cube,
+=======
+      title: 'AI 3D Generation',
+      description: 'Create 3D models and environments with AI technology',
+      icon: Box,
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
       price: '$1,600/month',
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support', 'Spatial Computing', 'Mixed Reality'],
       color: 'text-pink-400',

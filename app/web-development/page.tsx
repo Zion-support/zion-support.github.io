@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -8,11 +9,18 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 import Analytics from '../components/Analytics';
+=======
+import { Code, Globe, Zap, Shield, BarChart, Settings, Smartphone, Palette } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
 
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {
       title: 'Frontend Development',
+<<<<<<< HEAD
       description: 'Modern, responsive web applications with cutting-edge technologies',
       icon: Code,
       price: '$1,200/month',
@@ -74,6 +82,29 @@ const WebDevelopmentPage: React.FC = () => {
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
+=======
+      description: 'Modern, responsive web applications using React, Vue, and Angular',
+      icon: Code,
+      features: ['React/Vue/Angular', 'Responsive Design', 'Progressive Web Apps', 'Performance Optimization']
+    },
+    {
+      title: 'Backend Development',
+      description: 'Scalable server-side applications and APIs using Node.js, Python, and more',
+      icon: Settings,
+      features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Integration']
+    },
+    {
+      title: 'Full-Stack Development',
+      description: 'Complete web solutions from frontend to backend and database',
+      icon: Globe,
+      features: ['End-to-End Development', 'Database Design', 'API Development', 'Deployment']
+    },
+    {
+      title: 'E-commerce Solutions',
+      description: 'Custom e-commerce platforms and online store development',
+      icon: BarChart,
+      features: ['Custom Stores', 'Payment Integration', 'Inventory Management', 'Analytics']
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
     }
   ];
 
@@ -81,6 +112,7 @@ const WebDevelopmentPage: React.FC = () => {
     <>
       <SEOOptimizer
         title="Web Development Services - Zion Tech Group"
+<<<<<<< HEAD
         description="Professional web development services including frontend, backend, full-stack, e-commerce, and performance optimization. Build modern, scalable web applications."
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'web applications']}
         canonicalUrl="https://ziontechgroup.com/web-development"
@@ -106,6 +138,14 @@ const WebDevelopmentPage: React.FC = () => {
       <Analytics />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Build modern, scalable web applications."
+        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'web applications']}
+        canonicalUrl="https://ziontechgroup.com/web-development"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
@@ -115,6 +155,7 @@ const WebDevelopmentPage: React.FC = () => {
               Web Development
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
+<<<<<<< HEAD
               Modern, Scalable Web Applications
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
@@ -142,11 +183,41 @@ const WebDevelopmentPage: React.FC = () => {
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                           <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
+=======
+              Build Modern Web Applications
+            </p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
+              Professional web development services for modern, scalable applications. 
+              From frontend to backend, we create web solutions that drive business success.
+            </p>
+          </section>
+
+          {/* Web Services Grid */}
+          <section className="mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {webServices.map((service, index) => (
+                <article key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 neon-text">{service.title}</h3>
+                  <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3 flex-shrink-0"></div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
                   
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
@@ -157,11 +228,14 @@ const WebDevelopmentPage: React.FC = () => {
                       Get Started
                     </a>
                   </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
                 </article>
               ))}
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Technology Stack */}
           <section className="mb-16">
             <div className="cyber-card p-8">
@@ -205,11 +279,32 @@ const WebDevelopmentPage: React.FC = () => {
                     <li>Figma/Sketch</li>
                   </ul>
                 </div>
+=======
+          {/* Benefits Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Web Development?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="cyber-card p-6 text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold text-white mb-3">High Performance</h3>
+                <p className="text-gray-300">Optimized web applications that load fast and perform smoothly across all devices.</p>
+              </div>
+              <div className="cyber-card p-6 text-center">
+                <div className="text-4xl mb-4">📱</div>
+                <h3 className="text-xl font-bold text-white mb-3">Responsive Design</h3>
+                <p className="text-gray-300">Mobile-first design that looks great on all screen sizes and devices.</p>
+              </div>
+              <div className="cyber-card p-6 text-center">
+                <div className="text-4xl mb-4">🔒</div>
+                <h3 className="text-xl font-bold text-white mb-3">Secure & Scalable</h3>
+                <p className="text-gray-300">Enterprise-grade security and architecture that scales with your business.</p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
               </div>
             </div>
           </section>
 
           {/* CTA Section */}
+<<<<<<< HEAD
           <section className="text-center">
             <div className="cyber-card p-8 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">
@@ -234,6 +329,27 @@ const WebDevelopmentPage: React.FC = () => {
                   +1 302 464 0950
                 </a>
               </div>
+=======
+          <section className="cyber-card p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Build Your Web Application?</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Let our web development experts help you create a powerful, modern web application. 
+              Get a free consultation and discover how we can bring your web vision to life.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+              >
+                Get Free Consultation
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Call +1 302 464 0950
+              </a>
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
             </div>
           </section>
         </main>

@@ -1,221 +1,357 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
+'use client';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Target, CheckCircle, BarChart, Zap, Shield } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+
 const CaseStudiesPage: React.FC = () => {
+  const [selectedIndustry, setSelectedIndustry] = useState('all');
+
   const caseStudies = [
     {
       id: 1,
-      title: 'E-commerce Platform Transformation',
-      company: 'TechRetail Inc.',
-      industry: 'E-commerce',
-      challenge: 'Low conversion rates and high customer acquisition costs',
-      solution: 'AI-powered personalization and dynamic pricing optimization',
+      title: "Healthcare Giant Achieves 95% Diagnostic Accuracy with AI",
+      company: "MedTech Solutions",
+      industry: "Healthcare",
+      challenge: "Manual diagnostic processes were causing delays and inconsistencies in patient care.",
+      solution: "Implemented AI-powered diagnostic assistance system with computer vision and machine learning.",
       results: {
-        roi: '340%',
-        conversion: '+85%',
-        costReduction: '-65%',
-        revenue: '+$2.3M'
+        accuracy: "95%",
+        timeReduction: "70%",
+        costSavings: "$2.5M",
+        roi: "400%"
       },
-      image: '🛒',
-      description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
+      metrics: [
+        { label: "Diagnostic Accuracy", value: "95%", icon: Target },
+        { label: "Time Reduction", value: "70%", icon: Clock },
+        { label: "Cost Savings", value: "$2.5M", icon: DollarSign },
+        { label: "ROI", value: "400%", icon: TrendingUp }
+      ],
+      testimonial: "The AI system has revolutionized our diagnostic process. We're seeing faster, more accurate diagnoses and significantly improved patient outcomes.",
+      author: "Dr. Sarah Johnson, Chief Medical Officer",
+      duration: "6 months",
+      teamSize: "15 AI specialists",
+      technologies: ["Computer Vision", "Machine Learning", "Natural Language Processing"],
+      featured: true
     },
     {
       id: 2,
-      title: 'Financial Services Automation',
-      company: 'FinTech Solutions',
-      industry: 'Financial Services',
-      challenge: 'Manual processes causing delays and errors in loan processing',
-      solution: 'AI-powered document processing and risk assessment automation',
+      title: "Financial Services Firm Reduces Fraud by 99.9% with AI",
+      company: "Global Finance Corp",
+      industry: "Finance",
+      challenge: "Increasing fraud attempts were costing millions in losses and damaging customer trust.",
+      solution: "Deployed advanced AI fraud detection system with real-time monitoring and behavioral analysis.",
       results: {
-        roi: '280%',
-        processingTime: '-80%',
-        accuracy: '+95%',
-        costSavings: '$1.8M'
+        fraudReduction: "99.9%",
+        falsePositives: "85%",
+        costSavings: "$15M",
+        roi: "500%"
       },
-      image: '🏦',
-      description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
+      metrics: [
+        { label: "Fraud Reduction", value: "99.9%", icon: Shield },
+        { label: "False Positives", value: "85%", icon: BarChart },
+        { label: "Cost Savings", value: "$15M", icon: DollarSign },
+        { label: "ROI", value: "500%", icon: TrendingUp }
+      ],
+      testimonial: "Our AI fraud detection system has been a game-changer. We've virtually eliminated fraud while reducing false positives by 85%.",
+      author: "Michael Chen, Chief Security Officer",
+      duration: "4 months",
+      teamSize: "12 AI specialists",
+      technologies: ["Machine Learning", "Behavioral Analytics", "Real-time Processing"],
+      featured: true
     },
     {
       id: 3,
-      title: 'Healthcare Data Analytics',
-      company: 'MedTech Innovations',
-      industry: 'Healthcare',
-      challenge: 'Fragmented patient data and inefficient treatment planning',
-      solution: 'AI-powered data integration and predictive analytics for treatment optimization',
+      title: "Manufacturing Company Achieves 40% Efficiency Gain with AI Automation",
+      company: "Industrial Manufacturing Ltd",
+      industry: "Manufacturing",
+      challenge: "Manual quality control processes were slow and prone to human error, affecting production efficiency.",
+      solution: "Implemented AI-powered quality control system with computer vision and predictive maintenance.",
       results: {
-        roi: '420%',
-        patientOutcomes: '+70%',
-        efficiency: '+90%',
-        costSavings: '$3.2M'
+        efficiency: "40%",
+        defectReduction: "90%",
+        costSavings: "$8M",
+        roi: "350%"
       },
-      image: '🏥',
-      description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
+      metrics: [
+        { label: "Efficiency Gain", value: "40%", icon: Zap },
+        { label: "Defect Reduction", value: "90%", icon: Target },
+        { label: "Cost Savings", value: "$8M", icon: DollarSign },
+        { label: "ROI", value: "350%", icon: TrendingUp }
+      ],
+      testimonial: "The AI automation has transformed our production line. We're producing higher quality products faster than ever before.",
+      author: "Lisa Rodriguez, Operations Director",
+      duration: "8 months",
+      teamSize: "20 AI specialists",
+      technologies: ["Computer Vision", "Predictive Analytics", "IoT Integration"],
+      featured: false
     },
     {
       id: 4,
-      title: 'Manufacturing Optimization',
-      company: 'AutoParts Manufacturing',
-      industry: 'Manufacturing',
-      challenge: 'Production inefficiencies and quality control issues',
-      solution: 'AI-powered predictive maintenance and quality control automation',
+      title: "Retail Chain Increases Sales by 60% with AI Personalization",
+      company: "Mega Retail Group",
+      industry: "Retail",
+      challenge: "Generic marketing approaches were failing to engage customers and drive sales growth.",
+      solution: "Deployed AI-powered personalization engine with customer behavior analysis and recommendation systems.",
       results: {
-        roi: '310%',
-        efficiency: '+75%',
-        defects: '-90%',
-        downtime: '-85%'
+        salesIncrease: "60%",
+        customerEngagement: "80%",
+        revenueGrowth: "$25M",
+        roi: "450%"
       },
-      image: '🏭',
-      description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
+      metrics: [
+        { label: "Sales Increase", value: "60%", icon: TrendingUp },
+        { label: "Customer Engagement", value: "80%", icon: Users },
+        { label: "Revenue Growth", value: "$25M", icon: DollarSign },
+        { label: "ROI", value: "450%", icon: BarChart }
+      ],
+      testimonial: "AI personalization has revolutionized our customer experience. We're seeing unprecedented engagement and sales growth.",
+      author: "David Park, Chief Marketing Officer",
+      duration: "5 months",
+      teamSize: "18 AI specialists",
+      technologies: ["Machine Learning", "Recommendation Systems", "Customer Analytics"],
+      featured: true
+    },
+    {
+      id: 5,
+      title: "Logistics Company Optimizes Routes and Reduces Costs by 35%",
+      company: "Global Logistics Inc",
+      industry: "Logistics",
+      challenge: "Inefficient routing and fleet management were driving up costs and delivery times.",
+      solution: "Implemented AI-powered route optimization and fleet management system with predictive analytics.",
+      results: {
+        costReduction: "35%",
+        deliveryTime: "50%",
+        fuelSavings: "30%",
+        roi: "300%"
+      },
+      metrics: [
+        { label: "Cost Reduction", value: "35%", icon: DollarSign },
+        { label: "Delivery Time", value: "50%", icon: Clock },
+        { label: "Fuel Savings", value: "30%", icon: Zap },
+        { label: "ROI", value: "300%", icon: TrendingUp }
+      ],
+      testimonial: "Our AI optimization system has made us the most efficient logistics company in the region. The cost savings are remarkable.",
+      author: "Jennifer Lee, Chief Operations Officer",
+      duration: "7 months",
+      teamSize: "14 AI specialists",
+      technologies: ["Optimization Algorithms", "Predictive Analytics", "IoT Sensors"],
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Education Platform Improves Learning Outcomes by 75% with AI",
+      company: "EduTech Solutions",
+      industry: "Education",
+      challenge: "One-size-fits-all learning approaches were failing to meet individual student needs.",
+      solution: "Developed AI-powered adaptive learning platform with personalized content and progress tracking.",
+      results: {
+        learningOutcomes: "75%",
+        studentEngagement: "90%",
+        completionRate: "85%",
+        roi: "400%"
+      },
+      metrics: [
+        { label: "Learning Outcomes", value: "75%", icon: Target },
+        { label: "Student Engagement", value: "90%", icon: Users },
+        { label: "Completion Rate", value: "85%", icon: CheckCircle },
+        { label: "ROI", value: "400%", icon: TrendingUp }
+      ],
+      testimonial: "AI has transformed how students learn. We're seeing remarkable improvements in outcomes and engagement across all age groups.",
+      author: "Dr. Robert Kim, Chief Academic Officer",
+      duration: "9 months",
+      teamSize: "22 AI specialists",
+      technologies: ["Adaptive Learning", "Natural Language Processing", "Learning Analytics"],
+      featured: false
     }
   ];
+
+  const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Logistics', 'Education'];
+
+  const filteredCaseStudies = caseStudies.filter(study => 
+    selectedIndustry === 'all' || study.industry === selectedIndustry
+  );
+
+  const featuredCaseStudies = caseStudies.filter(study => study.featured);
+
   return (
     <>
-      <Helmet>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Header */}
-        <header className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </a>
-          </div>
-        </header>
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Success Stories
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-                Real results from real companies using our AI solutions
-              </p>
-              <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-                Discover how leading companies across industries have transformed their operations 
-                and achieved remarkable ROI with our cutting-edge AI technology.
-              </p>
-            </div>
-          </div>
-        </section>
-        {/* Case Studies Grid */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
-                  <div className="p-8">
-                    <div className="flex items-center mb-4">
-                      <div className="text-4xl mr-4">{study.image}</div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-1">{study.title}</h3>
-                        <p className="text-blue-600 font-semibold">{study.company}</p>
-                        <p className="text-gray-500 text-sm">{study.industry}</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 mb-6">{study.description}</p>
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
-                      <p className="text-gray-600 text-sm">{study.challenge}</p>
-                    </div>
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
-                      <p className="text-gray-600 text-sm">{study.solution}</p>
-                    </div>
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-4">Results:</h4>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="text-center p-3 bg-green-50 rounded-lg">
-                          <div className="text-2xl font-bold text-green-600">{study.results.roi}</div>
-                          <div className="text-sm text-gray-600">ROI</div>
-                        </div>
-                        <div className="text-center p-3 bg-blue-50 rounded-lg">
-                          <div className="text-2xl font-bold text-blue-600">
-                            {Object.values(study.results)[1]}
-                          </div>
-                          <div className="text-sm text-gray-600">
-                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a href="/contact"
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
-                      >
-                        Learn More
-                      </a>
-                      <div className="flex items-center text-green-600">
-                        <CheckCircle className="w-4 h-4 mr-1" />
-                        <span className="text-sm font-semibold">Verified Results</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <SEOOptimizer
+        title="AI Success Stories & Case Studies - Zion Tech Group"
+        description="Discover how our AI solutions have transformed businesses across industries. Real case studies showing 300%+ ROI and significant efficiency gains."
+        keywords={['AI case studies', 'AI success stories', 'enterprise AI', 'AI ROI', 'AI implementation', 'business transformation']}
+        canonicalUrl="https://ziontechgroup.com/case-studies"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+              AI Success Stories
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover how our AI solutions have transformed businesses across industries, delivering measurable results and unprecedented ROI.
+            </p>
+            
+            {/* Industry Filter */}
+            <div className="flex flex-wrap justify-center gap-2 mb-8">
+              {industries.map(industry => (
+                <button
+                  key={industry}
+                  onClick={() => setSelectedIndustry(industry)}
+                  className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                    selectedIndustry === industry
+                      ? 'bg-cyan-400 text-slate-900 font-semibold'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'
+                  }`}
+                >
+                  {industry === 'all' ? 'All Industries' : industry}
+                </button>
               ))}
             </div>
           </div>
-        </section>
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Proven Track Record
-              </h2>
-              <p className="text-xl text-gray-600">
-                Our AI solutions deliver consistent, measurable results
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">300%+</div>
-                <div className="text-gray-600">Average ROI</div>
+
+          {/* Featured Case Studies */}
+          {selectedIndustry === 'all' && (
+            <section className="mb-16">
+              <h2 className="text-2xl font-bold text-white mb-8 neon-text">Featured Success Stories</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {featuredCaseStudies.map((study) => (
+                  <article key={study.id} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
+                        <BarChart className="w-8 h-8 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-1">{study.title}</h3>
+                        <p className="text-cyan-400 font-semibold">{study.company}</p>
+                        <p className="text-gray-400 text-sm">{study.industry}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-white mb-2">Challenge:</h4>
+                      <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
+                      <h4 className="text-lg font-semibold text-white mb-2">Solution:</h4>
+                      <p className="text-gray-300 text-sm">{study.solution}</p>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      {study.metrics.slice(0, 4).map((metric, index) => (
+                        <div key={index} className="text-center p-3 bg-slate-800/50 rounded-lg">
+                          <metric.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+                          <div className="text-2xl font-bold text-white">{metric.value}</div>
+                          <div className="text-xs text-gray-400">{metric.label}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <blockquote className="border-l-4 border-cyan-400 pl-4 mb-4">
+                      <p className="text-gray-300 italic text-sm">"{study.testimonial}"</p>
+                      <cite className="text-cyan-400 text-sm font-semibold">— {study.author}</cite>
+                    </blockquote>
+
+                    <div className="flex items-center justify-between text-sm text-gray-400">
+                      <span>Duration: {study.duration}</span>
+                      <span>Team: {study.teamSize}</span>
+                    </div>
+                  </article>
+                ))}
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">150+</div>
-                <div className="text-gray-600">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">95%</div>
-                <div className="text-gray-600">Client Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">$50M+</div>
-                <div className="text-gray-600">Cost Savings Generated</div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Create Your Success Story?
+            </section>
+          )}
+
+          {/* All Case Studies */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-8 neon-text">
+              {selectedIndustry === 'all' ? 'All Case Studies' : `${selectedIndustry} Case Studies`}
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Join the companies that have transformed their business with our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
-                Start Your Project
-                <TrendingUp className="w-4 h-4 ml-2" />
-              </a>
-              <a href="/services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
-                View Our Services
-              </a>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredCaseStudies.map((study) => (
+                <article key={study.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                      <BarChart className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-1">{study.title}</h3>
+                      <p className="text-cyan-400 text-sm font-semibold">{study.company}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
+
+                  <div className="grid grid-cols-2 gap-2 mb-4">
+                    {study.metrics.slice(0, 4).map((metric, index) => (
+                      <div key={index} className="text-center p-2 bg-slate-800/50 rounded">
+                        <div className="text-lg font-bold text-white">{metric.value}</div>
+                        <div className="text-xs text-gray-400">{metric.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap gap-1">
+                      {study.technologies.slice(0, 2).map((tech, index) => (
+                        <span key={index} className="px-2 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <Link 
+                      to={`/case-studies/${study.id}`}
+                      className="text-cyan-400 hover:text-white transition-colors flex items-center gap-1 text-sm"
+                    >
+                      View Details <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </article>
+              ))}
             </div>
-          </div>
-        </section>
+            
+            {filteredCaseStudies.length === 0 && (
+              <div className="text-center py-12">
+                <div className="text-6xl mb-4">📊</div>
+                <h3 className="text-xl font-bold text-white mb-2">No case studies found</h3>
+                <p className="text-gray-400">Try selecting a different industry filter.</p>
+              </div>
+            )}
+          </section>
+
+          {/* CTA Section */}
+          <section className="mt-16 text-center">
+            <div className="cyber-card p-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+              <p className="text-gray-300 mb-6">
+                Join hundreds of companies that have already achieved remarkable results with our AI solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact"
+                  className="cyber-button px-8 py-3 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                >
+                  Start Your AI Journey
+                </Link>
+                <Link 
+                  to="/pricing"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  View Pricing
+                </Link>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <Footer />
       </div>
     </>
   );
 };
+
 export default CaseStudiesPage;
