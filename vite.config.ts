@@ -22,6 +22,10 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'terser',
+    target: 'es2020',
+    cssTarget: 'chrome80',
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -44,7 +48,6 @@ export default defineConfig({
             }
             return 'vendor-misc';
           }
-          
           // App chunks
           if (id.includes('/app/ai-')) {
             return 'ai-services';
@@ -77,6 +80,7 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
+<<<<<<< HEAD
         drop_debugger: true
       },
       mangle: {
@@ -84,12 +88,31 @@ export default defineConfig({
       },
       format: {
         comments: false
+=======
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
       }
     },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
+<<<<<<< HEAD
     assetsInlineLimit: 4096
+=======
+    assetsInlineLimit: 4096,
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
   },
   server: {
     port: 3000,

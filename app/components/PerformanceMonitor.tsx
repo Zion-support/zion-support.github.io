@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -7,6 +8,10 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
+=======
+import React, { useEffect } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -19,16 +24,28 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Monitor Core Web Vitals
+<<<<<<< HEAD
     const measureLCP = () => {
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+=======
+    getCLS((metric) => {
+      console.log('CLS:', metric);
+      // Send to analytics
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'CLS',
+          value: Math.round(metric.value * 1000),
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
         });
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
         return observer;
       }
+<<<<<<< HEAD
       return null;
     };
 
@@ -109,6 +126,54 @@ const PerformanceMonitor: React.FC = () => {
     if (process.env.NODE_ENV === 'development') {
       console.log('Performance metrics:', metrics);
     }
+=======
+    });
+
+    getFID((metric) => {
+      console.log('FID:', metric);
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'FID',
+          value: Math.round(metric.value),
+        });
+      }
+    });
+
+    getFCP((metric) => {
+      console.log('FCP:', metric);
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'FCP',
+          value: Math.round(metric.value),
+        });
+      }
+    });
+
+    getLCP((metric) => {
+      console.log('LCP:', metric);
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'LCP',
+          value: Math.round(metric.value),
+        });
+      }
+    });
+
+    getTTFB((metric) => {
+      console.log('TTFB:', metric);
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'TTFB',
+          value: Math.round(metric.value),
+        });
+      }
+    });
+  }, []);
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 
     // Cleanup
     return () => {

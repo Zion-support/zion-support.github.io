@@ -1,55 +1,43 @@
-<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 // Lazy load components for better performance
 const HomePage = lazy(() => import('../app/page'));
-
 // Import enhancement utilities
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
-
 // Import components
-=======
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 const BlogPage = lazy(() => import('./blog/page'));
-
 // AI Services
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
 const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
 const AiFintechPage = lazy(() => import('./ai-fintech/page'));
-
 // IT Services
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
-
 // Specialized Solutions
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
-
 // Additional pages
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-
 // Loading component
 const LoadingSpinner: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -59,7 +47,6 @@ const LoadingSpinner: React.FC = () => (
     </div>
   </div>
 );
-
 // AI Services Pages
 import AIServicesPage from './ai-services/page';
 import AIMarketingPage from './ai-marketing/page';
@@ -77,7 +64,6 @@ import AISalesAutomationPage from './ai-sales-automation/page';
 import AIDataVisualizationPage from './ai-data-visualization/page';
 import AILeadGenerationPage from './ai-lead-generation/page';
 import AIDocumentProcessingPage from './ai-document-processing/page';
-
 // IT Services Pages
 import ITServicesPage from './it-services/page';
 import ITInfrastructurePage from './it-infrastructure/page';
@@ -92,8 +78,6 @@ import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIEmailMarketingPage from './ai-email-marketing/page';
 import AIWritingAssistantPage from './ai-writing-assistant/page';
-
-<<<<<<< HEAD
 // Specialized Solutions Pages
 import QuantumComputingPage from './quantum-computing/page';
 import AutonomousSystemsPage from './autonomous-systems/page';
@@ -101,24 +85,18 @@ import BlockchainWeb3Page from './blockchain-web3/page';
 import IoTEdgeComputingPage from './iot-edge-computing/page';
 import BusinessIntelligencePage from './business-intelligence/page';
 import RoboticsPage from './robotics/page';
-=======
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-
 // Company Pages
 import TeamPage from './team/page';
 import CareersPage from './careers/page';
 import NewsPage from './news/page';
-
 // Support Pages
-
 // Additional Pages
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
-
 // AI Services
 import AIServicesPage from './ai-services/page';
 import AIMarketingPage from './ai-marketing/page';
@@ -136,7 +114,6 @@ import AISalesAutomationPage from './ai-sales-automation/page';
 import AIDataVisualizationPage from './ai-data-visualization/page';
 import AILeadGenerationPage from './ai-lead-generation/page';
 import AIDocumentProcessingPage from './ai-document-processing/page';
-
 // Micro SAAS Solutions
 import AIProjectManagerPage from './ai-project-manager/page';
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
@@ -147,7 +124,6 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIWritingAssistantPage from './ai-writing-assistant/page';
 import AICRMPage from './ai-crm/page';
-
 // IT Services
 import ITServicesPage from './it-services/page';
 import ITInfrastructurePage from './it-infrastructure/page';
@@ -156,7 +132,6 @@ import CloudMigrationPage from './cloud-migration/page';
 import DevOpsPage from './devops/page';
 import DatabasePage from './database/page';
 import NetworkingPage from './networking/page';
-
 // Specialized Solutions
 import QuantumComputingPage from './quantum-computing/page';
 import AutonomousSystemsPage from './autonomous-systems/page';
@@ -164,7 +139,6 @@ import BlockchainWeb3Page from './blockchain-web3/page';
 import IoTEdgeComputingPage from './iot-edge-computing/page';
 import BusinessIntelligencePage from './business-intelligence/page';
 import RoboticsPage from './robotics/page';
-
 // Company Pages
 import TeamPage from './team/page';
 import CareersPage from './careers/page';
@@ -172,22 +146,17 @@ import NewsPage from './news/page';
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
-
 // Support Pages
-
 // AI Services Pages
 import AIProjectManagerPage from './ai-project-manager/page';
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
 import AIAutomationPage from './ai-automation/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
-
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-
   useEffect(() => {
     initializeEnhancers();
   }, []);
-
   const initializeEnhancers = async () => {
     try {
       // Initialize performance enhancer
@@ -201,7 +170,6 @@ const App: React.FC = () => {
         enableCompression: true,
         enableCaching: true
       });
-
       // Initialize SEO enhancer
       const seoEnhancer = new SEOEnhancer({
         title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -250,7 +218,6 @@ const App: React.FC = () => {
         author: 'Zion Tech Group',
         publisher: 'Zion Tech Group'
       });
-
       // Initialize accessibility enhancer
       const accessibilityEnhancer = new AccessibilityEnhancer({
         enableKeyboardNavigation: true,
@@ -261,7 +228,6 @@ const App: React.FC = () => {
         enableColorBlindSupport: true,
         enableVoiceControl: true
       });
-
       // Initialize security enhancer
       const securityEnhancer = new SecurityEnhancer({
         enableCSP: true,
@@ -274,7 +240,6 @@ const App: React.FC = () => {
         enableCORS: true,
         enableSecureCookies: true
       });
-
       // Initialize UX enhancer
       const uxEnhancer = new UserExperienceEnhancer({
         enableSmoothScrolling: true,
@@ -288,7 +253,6 @@ const App: React.FC = () => {
         enableDarkMode: true,
         enableAnimations: true
       });
-
       setEnhancers({
         performance: performanceEnhancer,
         seo: seoEnhancer,
@@ -296,10 +260,8 @@ const App: React.FC = () => {
         security: securityEnhancer,
         ux: uxEnhancer
       });
-
       // Optimize for Core Web Vitals
       seoEnhancer.optimizeForCoreWebVitals();
-
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
         // Reports are available but not logged to console
@@ -308,38 +270,31 @@ const App: React.FC = () => {
         securityEnhancer.generateSecurityReport();
         uxEnhancer.generateUXReport();
       }
-
       setIsInitialized(true);
     } catch (error) {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
     }
   };
-
   if (!isInitialized) {
     return <LoadingSpinner />;
   }
-
   return (
-<<<<<<< HEAD
     <Router>
       <Routes>
         {/* Main Pages */}
         <Route path="/" element={<HomePage />} />
-        
         {/* Company Pages */}
         <Route path="/about" element={<AboutPage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        
         {/* Main Services */}
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/demo" element={<DemoPage />} />
         <Route path="/consultation" element={<ConsultationPage />} />
-        
         {/* AI Services */}
         <Route path="/ai-services" element={<AIServicesPage />} />
         <Route path="/ai-marketing" element={<AIMarketingPage />} />
@@ -357,7 +312,6 @@ const App: React.FC = () => {
         <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
         <Route path="/ai-lead-generation" element={<AILeadGenerationPage />} />
         <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} />
-        
         {/* Micro SAAS Solutions */}
         <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
         <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
@@ -368,7 +322,6 @@ const App: React.FC = () => {
         <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
         <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} />
         <Route path="/ai-crm" element={<AICRMPage />} />
-        
         {/* IT Services */}
         <Route path="/it-services" element={<ITServicesPage />} />
         <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
@@ -377,7 +330,6 @@ const App: React.FC = () => {
         <Route path="/devops-cicd" element={<DevOpsPage />} />
         <Route path="/database-management" element={<DatabasePage />} />
         <Route path="/network-solutions" element={<NetworkingPage />} />
-        
         {/* Specialized Solutions */}
         <Route path="/quantum-computing" element={<QuantumComputingPage />} />
         <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
@@ -385,21 +337,17 @@ const App: React.FC = () => {
         <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
         <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
         <Route path="/robotics" element={<RoboticsPage />} />
-        
         {/* Content Pages */}
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/case-studies" element={<CaseStudiesPage />} />
-        
         {/* AI Services Routes */}
         <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
         <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
         <Route path="/ai-automation" element={<AIAutomationPage />} />
         <Route path="/ai-ml-platform" element={<AIMLPlatformPage />} />
-        
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
-=======
     <ErrorBoundary>
       <div className="App">
         <Navigation />
@@ -411,28 +359,23 @@ const App: React.FC = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/blog" element={<BlogPage />} />
-            
             {/* AI Services */}
             <Route path="/ai-services" element={<AiServicesPage />} />
             <Route path="/ai-marketing" element={<AiMarketingPage />} />
             <Route path="/ai-automation" element={<AiAutomationPage />} />
             <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
             <Route path="/ai-fintech" element={<AiFintechPage />} />
-            
             {/* IT Services */}
             <Route path="/it-services" element={<ItServicesPage />} />
             <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
             <Route path="/cybersecurity" element={<CybersecurityPage />} />
-            
             {/* Specialized Solutions */}
             <Route path="/quantum-computing" element={<QuantumComputingPage />} />
             <Route path="/micro-saas" element={<MicroSaasPage />} />
-            
             {/* Legal Pages */}
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/cookies" element={<CookiesPage />} />
-            
             {/* Catch all route */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
@@ -440,10 +383,8 @@ const App: React.FC = () => {
         <Footer />
       </div>
     </ErrorBoundary>
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
   );
 };
-
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -460,5 +401,4 @@ const NotFoundPage: React.FC = () => (
     </div>
   </div>
 );
-
 export default App;
