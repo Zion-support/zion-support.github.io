@@ -1,134 +1,125 @@
 'use client';
 import React from 'react';
-import { Target, BarChart, Users, CheckCircle, Star, ArrowRight, Brain, Zap, Shield, Clock, DollarSign, Award, Globe, Database, Settings, Smartphone, Mail, Phone, Calendar, FileText, TrendingUp, Eye } from 'lucide-react';
+import { Brain, Zap, Target, Users, CheckCircle, Star, ArrowRight, Sparkles, Code, Image, Video, FileText, Mic, Globe, BarChart, Shield, Clock, DollarSign, Award } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIMarketing: React.FC = () => {
+const AIContentStudio: React.FC = () => {
   const features = [
     {
-      icon: Target,
-      title: 'AI Audience Targeting',
-      description: 'Precisely target your ideal customers using AI-powered audience analysis and segmentation',
+      icon: FileText,
+      title: 'AI Writing Assistant',
+      description: 'Generate high-quality blog posts, articles, and marketing copy with advanced AI',
+      price: '$29/month',
+      features: ['Unlimited content generation', 'SEO optimization', 'Multiple writing styles', 'Plagiarism detection']
+    },
+    {
+      icon: Image,
+      title: 'AI Image Generator',
+      description: 'Create stunning visuals, graphics, and illustrations using AI',
+      price: '$39/month',
+      features: ['High-resolution images', 'Custom style training', 'Batch processing', 'Commercial license']
+    },
+    {
+      icon: Video,
+      title: 'AI Video Creator',
+      description: 'Produce professional videos with AI-powered editing and effects',
       price: '$79/month',
-      features: ['Behavioral analysis', 'Demographic targeting', 'Lookalike audiences', 'Real-time optimization']
+      features: ['Auto-editing', 'Voice synthesis', 'Background removal', 'Multiple formats']
+    },
+    {
+      icon: Mic,
+      title: 'AI Voice Generator',
+      description: 'Convert text to natural-sounding speech in multiple languages',
+      price: '$19/month',
+      features: ['50+ voice options', 'Emotion control', 'SSML support', 'API access']
+    },
+    {
+      icon: Code,
+      title: 'AI Code Generator',
+      description: 'Generate clean, optimized code for web and mobile applications',
+      price: '$49/month',
+      features: ['Multiple languages', 'Code review', 'Documentation', 'Testing']
     },
     {
       icon: BarChart,
-      title: 'Predictive Analytics',
-      description: 'Forecast campaign performance and optimize strategies before launch',
-      price: '$99/month',
-      features: ['Performance predictions', 'ROI forecasting', 'Trend analysis', 'Risk assessment']
-    },
-    {
-      icon: Brain,
-      title: 'Content Generation',
-      description: 'Create compelling marketing content with AI-powered copywriting and design',
-      price: '$59/month',
-      features: ['Ad copy generation', 'Email campaigns', 'Social media posts', 'Landing page content']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Campaign Optimization',
-      description: 'Automatically optimize campaigns for maximum performance and ROI',
-      price: '$89/month',
-      features: ['A/B testing automation', 'Bid optimization', 'Budget allocation', 'Performance monitoring']
-    },
-    {
-      icon: Users,
-      title: 'Customer Journey Mapping',
-      description: 'Map and optimize the complete customer journey with AI insights',
-      price: '$69/month',
-      features: ['Journey visualization', 'Touchpoint analysis', 'Conversion optimization', 'Personalization']
-    },
-    {
-      icon: Eye,
-      title: 'Competitive Intelligence',
-      description: 'Monitor competitors and market trends with AI-powered analysis',
-      price: '$49/month',
-      features: ['Competitor tracking', 'Market analysis', 'Price monitoring', 'Trend identification']
+      title: 'AI Analytics Dashboard',
+      description: 'Track content performance with AI-powered insights and recommendations',
+      price: '$39/month',
+      features: ['Real-time analytics', 'Performance predictions', 'A/B testing', 'ROI tracking']
     }
   ];
 
   const pricingTiers = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfect for individuals and small teams',
       features: [
-        'Basic AI targeting',
-        'Content generation',
-        'Campaign optimization',
+        '5,000 AI-generated words/month',
+        '100 AI-generated images/month',
+        'Basic video editing',
         'Email support',
-        'Up to 3 campaigns',
-        'Basic analytics'
+        'Standard templates'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$79',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        'Advanced AI features',
-        'Predictive analytics',
-        'Customer journey mapping',
+        '25,000 AI-generated words/month',
+        '500 AI-generated images/month',
+        'Advanced video creation',
         'Priority support',
-        'Up to 15 campaigns',
-        'Advanced analytics',
-        'Custom integrations',
-        'A/B testing'
+        'Custom templates',
+        'Team collaboration',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$999',
+      price: '$199',
       period: '/month',
-      description: 'For large organizations with complex needs',
+      description: 'For large organizations with advanced needs',
       features: [
-        'Full AI marketing suite',
-        'Custom AI models',
+        'Unlimited AI-generated content',
+        'Unlimited AI-generated images',
+        'Full video production suite',
         'Dedicated account manager',
+        'Custom integrations',
         'White-label options',
-        'Unlimited campaigns',
-        'Custom analytics',
-        'API access',
+        'Advanced analytics',
         'SLA guarantee'
       ],
       popular: false
     }
   ];
 
-  const successMetrics = [
-    { number: '300%', label: 'Average ROI Increase' },
-    { number: '85%', label: 'Cost Reduction' },
-    { number: '250%', label: 'Conversion Rate Boost' },
-    { number: '40%', label: 'Time Savings' }
-  ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'Marketing Director',
-      company: 'TechStart Inc.',
-      content: 'AI Marketing has transformed our campaigns. We\'ve seen a 300% increase in ROI and 85% reduction in ad spend.',
+      company: 'TechCorp Inc.',
+      content: 'AI Content Studio has revolutionized our content creation process. We\'ve increased our output by 300% while maintaining quality.',
       rating: 5
     },
     {
       name: 'Michael Chen',
-      role: 'CEO',
-      company: 'E-commerce Plus',
-      content: 'The predictive analytics are incredibly accurate. We can now forecast campaign performance with 95% accuracy.',
+      role: 'Creative Director',
+      company: 'Design Studio Pro',
+      content: 'The AI image generator is incredible. We can create custom visuals in minutes instead of hours.',
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
-      role: 'Digital Marketing Manager',
-      company: 'Creative Agency',
-      content: 'The AI content generation saves us hours every week. The quality is consistently high and conversion rates are up 250%.',
+      role: 'Content Manager',
+      company: 'Digital Agency',
+      content: 'The analytics dashboard gives us insights we never had before. Our content performance has improved dramatically.',
       rating: 5
     }
   ];
@@ -142,15 +133,15 @@ const AIMarketing: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Target className="w-4 h-4" />
-              <span>AI-Powered Marketing Automation</span>
+              <Sparkles className="w-4 h-4" />
+              <span>AI Content Creation Suite</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Marketing Suite
+              AI Content Studio
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your marketing with AI-powered automation, predictive analytics, and intelligent optimization. 
-              Maximize ROI and drive growth with cutting-edge marketing technology.
+              Create stunning content at scale with our comprehensive AI-powered content creation suite. 
+              Generate text, images, videos, and more with professional quality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="cyber-button inline-flex items-center px-8 py-4 text-lg">
@@ -158,19 +149,29 @@ const AIMarketing: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-lg transition-colors">
-                View Demo
+                Watch Demo
               </button>
             </div>
           </div>
 
-          {/* Success Metrics */}
+          {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-            {successMetrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{metric.number}</div>
-                <div className="text-gray-300">{metric.label}</div>
-              </div>
-            ))}
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">10M+</div>
+              <div className="text-gray-300">Content Pieces Created</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">50K+</div>
+              <div className="text-gray-300">Active Users</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">95%</div>
+              <div className="text-gray-300">Time Saved</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-orange-400 mb-2">4.9/5</div>
+              <div className="text-gray-300">User Rating</div>
+            </div>
           </div>
         </div>
       </section>
@@ -179,9 +180,9 @@ const AIMarketing: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Marketing Features</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Complete Content Creation Suite</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create, optimize, and scale high-performing marketing campaigns.
+              Everything you need to create professional content at scale, powered by advanced AI technology.
             </p>
           </div>
 
@@ -212,9 +213,9 @@ const AIMarketing: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Marketing Power</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Select the plan that matches your marketing needs and budget.
+              Choose the plan that fits your content creation needs. All plans include our core AI features.
             </p>
           </div>
 
@@ -263,9 +264,9 @@ const AIMarketing: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">What Our Users Say</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how businesses are achieving remarkable results with AI Marketing.
+              Join thousands of satisfied users who have transformed their content creation process.
             </p>
           </div>
 
@@ -291,9 +292,9 @@ const AIMarketing: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Marketing?</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Content Creation?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Start your free trial today and experience the power of AI-driven marketing.
+            Start your free trial today and experience the power of AI-driven content creation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cyber-button inline-flex items-center px-8 py-4 text-lg">
@@ -305,7 +306,7 @@ const AIMarketing: React.FC = () => {
             </button>
           </div>
           <p className="text-sm text-gray-400 mt-4">
-            Free trial • No credit card required • Cancel anytime
+            No credit card required • 14-day free trial • Cancel anytime
           </p>
         </div>
       </section>
@@ -315,4 +316,4 @@ const AIMarketing: React.FC = () => {
   );
 };
 
-export default AIMarketing;
+export default AIContentStudio;

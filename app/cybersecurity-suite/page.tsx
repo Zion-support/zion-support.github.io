@@ -1,145 +1,148 @@
 'use client';
 import React from 'react';
-import { BarChart, TrendingUp, Users, Target, CheckCircle, Star, ArrowRight, Brain, Zap, Shield, Clock, DollarSign, Award, Globe, Database, PieChart, Activity } from 'lucide-react';
+import { Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, ArrowRight, Brain, Zap, Users, Clock, DollarSign, Award, Globe, Database, Settings, Smartphone, Mail, Phone, Calendar, FileText, Network, Server } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIAnalyticsDashboard: React.FC = () => {
+const CybersecuritySuite: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Monitor your business performance with live data updates and instant insights',
-      price: '$49/month',
-      features: ['Live data streaming', 'Custom dashboards', 'Real-time alerts', 'Mobile app access']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and predictions based on your data patterns',
-      price: '$79/month',
-      features: ['Predictive analytics', 'Anomaly detection', 'Trend forecasting', 'Smart recommendations']
-    },
-    {
-      icon: Target,
-      title: 'Goal Tracking',
-      description: 'Set and monitor business objectives with automated progress tracking',
-      price: '$39/month',
-      features: ['KPI monitoring', 'Goal setting', 'Progress alerts', 'Performance reports']
-    },
-    {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Share insights and collaborate with your team on data-driven decisions',
-      price: '$29/month',
-      features: ['Shared dashboards', 'Comment system', 'Role-based access', 'Team notifications']
-    },
-    {
       icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security to protect your sensitive business data',
-      price: 'Included',
-      features: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
+      title: 'Advanced Threat Protection',
+      description: 'Multi-layered security defense against malware, ransomware, and advanced persistent threats',
+      price: '$99/month',
+      features: ['Real-time threat detection', 'Behavioral analysis', 'Machine learning algorithms', 'Zero-day protection']
     },
     {
-      icon: Globe,
-      title: 'Multi-platform Integration',
-      description: 'Connect with 100+ business tools and platforms for comprehensive analytics',
-      price: 'Included',
-      features: ['API integrations', 'Data connectors', 'Custom webhooks', 'Third-party apps']
+      icon: Lock,
+      title: 'Identity & Access Management',
+      description: 'Secure user authentication and authorization with multi-factor authentication',
+      price: '$49/month',
+      features: ['Single sign-on (SSO)', 'Multi-factor authentication', 'Role-based access control', 'Password management']
+    },
+    {
+      icon: Eye,
+      title: 'Security Monitoring',
+      description: '24/7 security monitoring and incident response with SOC team support',
+      price: '$199/month',
+      features: ['24/7 SOC monitoring', 'Incident response', 'Threat hunting', 'Security alerts']
+    },
+    {
+      icon: Network,
+      title: 'Network Security',
+      description: 'Comprehensive network protection with firewalls, VPN, and intrusion detection',
+      price: '$79/month',
+      features: ['Next-gen firewall', 'VPN solutions', 'Intrusion detection', 'Network segmentation']
+    },
+    {
+      icon: Database,
+      title: 'Data Protection',
+      description: 'Encrypt and protect sensitive data with advanced encryption and backup solutions',
+      price: '$69/month',
+      features: ['Data encryption', 'Backup & recovery', 'Data loss prevention', 'Compliance reporting']
+    },
+    {
+      icon: AlertTriangle,
+      title: 'Vulnerability Management',
+      description: 'Continuous vulnerability scanning and patch management for all systems',
+      price: '$59/month',
+      features: ['Vulnerability scanning', 'Patch management', 'Risk assessment', 'Compliance monitoring']
     }
   ];
 
   const pricingTiers = [
     {
-      name: 'Starter',
-      price: '$49',
+      name: 'Essential',
+      price: '$199',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Basic security for small businesses',
       features: [
-        'Up to 5 data sources',
-        'Basic dashboards',
-        'Standard reports',
+        'Basic threat protection',
+        'Firewall management',
+        'Antivirus & antimalware',
+        'Email security',
+        'Basic monitoring',
         'Email support',
-        '1 user included',
-        '30-day data retention'
+        'Up to 25 users'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$499',
       period: '/month',
-      description: 'Ideal for growing companies and teams',
+      description: 'Comprehensive security for growing companies',
       features: [
-        'Up to 25 data sources',
-        'Advanced dashboards',
-        'AI-powered insights',
+        'Advanced threat protection',
+        'Identity & access management',
+        'Network security',
+        'Data protection',
+        '24/7 monitoring',
         'Priority support',
-        'Up to 10 users',
-        '1-year data retention',
-        'Custom integrations',
-        'API access'
+        'Up to 100 users',
+        'Compliance reporting',
+        'Incident response'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399',
+      price: '$999',
       period: '/month',
-      description: 'For large organizations with complex needs',
+      description: 'Complete security suite for large organizations',
       features: [
-        'Unlimited data sources',
-        'Custom dashboards',
-        'Advanced AI analytics',
-        'Dedicated support',
-        'Unlimited users',
-        'Unlimited data retention',
+        'Full security suite',
+        'Custom security policies',
+        'Dedicated security team',
+        'Advanced analytics',
         'White-label options',
-        'Custom development',
-        'SLA guarantee'
+        'Custom integrations',
+        'Unlimited users',
+        'SLA guarantee',
+        'Penetration testing'
       ],
       popular: false
     }
   ];
 
-  const integrations = [
-    { name: 'Google Analytics', logo: 'GA' },
-    { name: 'Salesforce', logo: 'SF' },
-    { name: 'HubSpot', logo: 'HS' },
-    { name: 'Shopify', logo: 'SH' },
-    { name: 'Stripe', logo: 'ST' },
-    { name: 'Mailchimp', logo: 'MC' },
-    { name: 'Facebook Ads', logo: 'FB' },
-    { name: 'Google Ads', logo: 'GAD' },
-    { name: 'LinkedIn', logo: 'LI' },
-    { name: 'Twitter', logo: 'TW' },
-    { name: 'Instagram', logo: 'IG' },
-    { name: 'YouTube', logo: 'YT' }
+  const compliance = [
+    { name: 'SOC 2 Type II', status: 'Certified', icon: Shield },
+    { name: 'ISO 27001', status: 'Certified', icon: Lock },
+    { name: 'GDPR', status: 'Compliant', icon: Globe },
+    { name: 'HIPAA', status: 'Compliant', icon: FileText },
+    { name: 'PCI DSS', status: 'Compliant', icon: CreditCard },
+    { name: 'NIST', status: 'Aligned', icon: Settings }
   ];
 
   const testimonials = [
     {
       name: 'David Kim',
-      role: 'CEO',
-      company: 'GrowthTech Solutions',
-      content: 'The AI insights have helped us identify opportunities we never knew existed. Our revenue increased by 40% in just 3 months.',
+      role: 'CISO',
+      company: 'Financial Services Corp',
+      content: 'The cybersecurity suite has significantly improved our security posture. We\'ve had zero breaches since implementation.',
       rating: 5
     },
     {
       name: 'Lisa Martinez',
-      role: 'Marketing Director',
-      company: 'Digital Agency Pro',
-      content: 'The real-time analytics are game-changing. We can now make data-driven decisions instantly instead of waiting for reports.',
+      role: 'IT Director',
+      company: 'Healthcare Systems',
+      content: 'The 24/7 monitoring gives us peace of mind. The SOC team is incredibly responsive and professional.',
       rating: 5
     },
     {
       name: 'James Wilson',
-      role: 'Data Analyst',
-      company: 'Enterprise Corp',
-      content: 'The predictive analytics are incredibly accurate. We\'ve been able to forecast trends with 95% accuracy.',
+      role: 'Security Manager',
+      company: 'E-commerce Platform',
+      content: 'The compliance reporting features saved us months of work. We passed our audit with flying colors.',
       rating: 5
     }
+  ];
+
+  const securityStats = [
+    { number: '99.9%', label: 'Threat Detection Rate' },
+    { number: '24/7', label: 'Security Monitoring' },
+    { number: '< 5 min', label: 'Incident Response Time' },
+    { number: '0', label: 'Successful Breaches' }
   ];
 
   return (
@@ -150,20 +153,20 @@ const AIAnalyticsDashboard: React.FC = () => {
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <BarChart className="w-4 h-4" />
-              <span>AI-Powered Business Intelligence</span>
+            <div className="inline-flex items-center space-x-2 bg-red-500/20 text-red-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Shield className="w-4 h-4" />
+              <span>Enterprise-Grade Security</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Analytics Dashboard
+              Cybersecurity Suite
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your data into actionable insights with our advanced AI-powered analytics platform. 
-              Make smarter decisions faster with real-time intelligence and predictive analytics.
+              Protect your business with our comprehensive cybersecurity suite. 
+              Advanced threat protection, 24/7 monitoring, and compliance management all in one platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-                Start Free Trial
+                Get Security Assessment
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-lg transition-colors">
@@ -172,24 +175,14 @@ const AIAnalyticsDashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* Stats */}
+          {/* Security Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">500M+</div>
-              <div className="text-gray-300">Data Points Processed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">25K+</div>
-              <div className="text-gray-300">Active Dashboards</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime Guarantee</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">4.8/5</div>
-              <div className="text-gray-300">Customer Rating</div>
-            </div>
+            {securityStats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -198,17 +191,17 @@ const AIAnalyticsDashboard: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Security Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to understand your business data and make informed decisions.
+              Everything you need to protect your business from cyber threats and ensure compliance.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-800/70 transition-colors">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
-                  <feature.icon className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-6 h-6 text-red-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -227,23 +220,24 @@ const AIAnalyticsDashboard: React.FC = () => {
         </div>
       </section>
 
-      {/* Integrations Section */}
+      {/* Compliance Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Connect Everything</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Compliance & Certifications</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Integrate with 100+ popular business tools and platforms to get a complete view of your data.
+              Meet industry standards and regulatory requirements with our certified security solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {compliance.map((item, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center hover:bg-slate-800/70 transition-colors">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold text-sm">{integration.logo}</span>
+                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <item.icon className="w-6 h-6 text-green-400" />
                 </div>
-                <div className="text-sm text-gray-300">{integration.name}</div>
+                <div className="text-sm text-white font-medium mb-1">{item.name}</div>
+                <div className="text-xs text-green-400">{item.status}</div>
               </div>
             ))}
           </div>
@@ -254,20 +248,20 @@ const AIAnalyticsDashboard: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Plan</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Security Level</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Start with our free trial and scale as your business grows.
+              Select the security package that matches your business needs and risk profile.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
               <div key={index} className={`relative bg-slate-800/50 rounded-xl p-8 ${
-                tier.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+                tier.popular ? 'ring-2 ring-red-500 scale-105' : ''
               }`}>
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -290,7 +284,7 @@ const AIAnalyticsDashboard: React.FC = () => {
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
                   tier.popular 
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                    ? 'bg-red-600 hover:bg-red-700 text-white' 
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
                 }`}>
                   Get Started
@@ -307,7 +301,7 @@ const AIAnalyticsDashboard: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Trusted by Industry Leaders</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how companies are using AI Analytics Dashboard to drive growth and make better decisions.
+              See how organizations rely on our cybersecurity suite to protect their critical assets.
             </p>
           </div>
 
@@ -331,23 +325,23 @@ const AIAnalyticsDashboard: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
+      <section className="py-16 px-4 bg-gradient-to-r from-red-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Unlock Your Data's Potential?</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Secure Your Business Today</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Start your free trial today and discover the power of AI-driven analytics.
+            Don't wait for a breach. Get a free security assessment and protect your business now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-              Start Free Trial
+              Get Free Assessment
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
             <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-lg transition-colors">
-              Schedule Demo
+              Schedule Consultation
             </button>
           </div>
           <p className="text-sm text-gray-400 mt-4">
-            No credit card required • 14-day free trial • Cancel anytime
+            Free security assessment • No obligation • Expert recommendations
           </p>
         </div>
       </section>
@@ -357,4 +351,4 @@ const AIAnalyticsDashboard: React.FC = () => {
   );
 };
 
-export default AIAnalyticsDashboard;
+export default CybersecuritySuite;
