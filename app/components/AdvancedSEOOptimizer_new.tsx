@@ -112,6 +112,7 @@ const,
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
     structuredDataRef.current = script;
+  };
 
   useEffect(() => {/* TODO: Fix JSX expression */}
     }

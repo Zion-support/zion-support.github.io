@@ -138,5 +138,15 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
-  generateReport(): string {/* TODO: Fix JSX expression */}
-}`
+
+  generateReport(): string {
+    const score = this.getScore();
+    const metrics = this.getMetrics();
+    return `
+Performance Report:
+Score: ${score}
+Metrics: ${JSON.stringify(metrics, null, 2)}
+    `;
+  }
+
+

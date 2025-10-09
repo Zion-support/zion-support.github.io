@@ -114,18 +114,5 @@ const,
 
 
 export default AIWorkflowAutomationPage;
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 
-              >
-                Email Us;
-              </a>
-            </div>
-          </section>
-        </main>
-        <Footer /></Footer>
-      </div>
-  );
-};
 
-export default AIWorkflowAutomationPage2;
-"`

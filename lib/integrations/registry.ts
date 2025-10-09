@@ -1,14 +1,7 @@
 
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
 
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
+import type { IntegrationProviderMeta } from './types';
 
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
 
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [

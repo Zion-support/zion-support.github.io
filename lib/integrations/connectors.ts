@@ -1,14 +1,21 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
 import { ProviderConnection, SyncLogEntry } from './types';
 
-export async function simulateAction<T = unknown>(connectio,
-  n: ProviderConnection,
-  actio,
-  n: string,
-  detail,
-  s: Record<string, unknown> = {})
-): Promise<{/* TODO: Fix JSX expression */}
-  t: T }> {/* TODO: Fix JSX expression */}
+
+export async function simulateAction<T = unknown>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, unknown> = {}
+): Promise<{ log: SyncLogEntry; result: T }> {
+  const log: SyncLogEntry = {
+    id: Math.random().toString(36).substr(2, 9),
+  };
+};
+
+// Simple UUID generator since uuid package is not available
+const generateId = (): string => {
+  return Math.random().toString(36).substr(2, 9);
+
 };
 
 

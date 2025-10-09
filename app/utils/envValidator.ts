@@ -29,10 +29,12 @@ ${validation.errors.join('
   private validateNodeEnv(): void {/* TODO: Fix JSX expression */}
 
     }
-    if (!validEnvs.includes(nodeEnv)) {/* TODO: Fix JSX expression */}
-  of: ${validEnvs.join(', ')}. Go,`
-  t: ${nodeEnv}`
-      )
+
+    if (!validEnvs.includes(nodeEnv)) {
+      this.errors.push(
+        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
+      );
+
     }
   }
   private validateOptionalVars(): void {/* TODO: Fix JSX expression */}
@@ -50,3 +52,4 @@ export const envValidator = new EnvValidator()
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
 }
 export default envValidator;`
+

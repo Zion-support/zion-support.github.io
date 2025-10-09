@@ -37,8 +37,141 @@ const ServicesPage: React.FC = () => {
           features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling']
         }
       ]
+
+    },
+    {
+      title: 'IT Services',
+      icon: Cloud,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      description: 'Comprehensive IT infrastructure and support',
+      services: [
+        {
+          name: 'Cloud Migration & Management',
+          description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee',
+          price: 'Starting at $1,299/month',
+          features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring']
+        },
+        {
+          name: 'Cybersecurity',
+          description: 'Advanced security solutions with threat detection and prevention',
+          price: 'Starting at $1,599/month',
+          features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response']
+        },
+        {
+          name: 'DevOps & CI/CD',
+          description: 'Streamlined development workflows with automated testing and deployment',
+          price: 'Starting at $1,199/month',
+          features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup']
+        },
+        {
+          name: 'Database Management',
+          description: 'Database design, optimization, and management with AI-powered tuning',
+          price: 'Starting at $899/month',
+          features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
+        }
+      ]
+    },
+    {
+      title: 'Micro SAAS',
+      icon: Zap,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      description: 'Ready-to-use AI-powered applications',
+      services: [
+        {
+          name: 'AI Project Manager',
+          description: 'Intelligent project planning with AI-powered resource optimization',
+          price: '$99/month',
+          features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration']
+        },
+        {
+          name: 'AI Social Media Manager',
+          description: 'Automate your social media with AI-powered content creation',
+          price: '$79/month',
+          features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence']
+        },
+        {
+          name: 'AI Analytics Dashboard',
+          description: 'Real-time business intelligence with AI-powered insights',
+          price: '$149/month',
+          features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking']
+        },
+        {
+          name: 'AI Email Marketing',
+          description: 'Transform your email marketing with AI-powered content generation',
+          price: '$69/month',
+          features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns']
+        }
+      ]
     }
   ];
+
+  const processSteps = [
+    {
+      step: '01',
+      title: 'Discovery & Analysis',
+      description: 'We analyze your business needs, current systems, and goals to create a tailored solution strategy.',
+      icon: Target
+    },
+    {
+      step: '02',
+      title: 'Solution Design',
+      description: 'Our experts design a comprehensive solution architecture that aligns with your business objectives.',
+      icon: Code
+    },
+    {
+      step: '03',
+      title: 'Implementation',
+      description: 'We implement the solution with minimal disruption to your operations and maximum efficiency.',
+      icon: Zap
+    },
+    {
+      step: '04',
+      title: 'Optimization & Support',
+      description: 'Continuous monitoring, optimization, and 24/7 support to ensure peak performance.',
+      icon: TrendingUp
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+    { number: '24/7', label: 'Support Available', icon: Users },
+    { number: '50+', label: 'Expert Engineers', icon: Award }
+  ];
+
+  const benefits = [
+    'Expert team of engineers',
+    'Cutting-edge technology',
+    '24/7 support',
+    'Scalable solutions',
+    'Cost-effective pricing'
+  ];
+
+  const additionalServices = [
+    {
+      title: 'AI-Powered Solutions',
+      description: 'Leverage cutting-edge artificial intelligence to automate processes and gain insights',
+      icon: Shield
+    },
+    {
+      title: 'Enterprise Security',
+      description: 'Bank-level security measures to protect your critical data and systems',
+      icon: Shield
+    },
+    {
+      title: 'Rapid Deployment',
+      description: 'Get your solutions up and running quickly with our proven methodologies',
+      icon: BarChart
+    },
+    {
+      title: 'Measurable Results',
+      description: 'Track performance with detailed analytics and reporting dashboards',
+      icon: BarChart
+    }
+  ];
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -109,6 +242,7 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;"`
+
 
 
 

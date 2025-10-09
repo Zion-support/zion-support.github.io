@@ -223,10 +223,17 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     setTimeout(() => {/* TODO: Fix JSX expression */}
     }, this.config.retryDelay * retryItem.retryCount);
   }
-  // Retry error;
-  private async retryError(retryIte,
-  m: {/* TODO: Fix JSX expression */})
-  t: number}) {/* TODO: Fix JSX expression */}
+
+  // Retry error
+  private async retryError(retryItem: { error: AppError; retryCount: number }) {
+    try {
+      // Implement retry logic based on error type
+      if (retryItem.error.type === ErrorType.NETWORK) {
+        // Retry network request
+        if (process.env['NODE_ENV'] === 'development') {
+          if (import.meta.env.DEV) {
+            `);
+
           }
         }
         // Add your retry logic here;

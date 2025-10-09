@@ -9,6 +9,7 @@ const,
   AI3DGenerationPage: React.FC = () => {/* TODO: Fix JSX expression */}
     },
 
+
     {
       title: 'Architecture & Real Estate',
       description: 'Create 3D visualizations and virtual tours',
@@ -43,6 +44,7 @@ const,
 
   const features = [
 
+
     'AI-powered 3D model generation',
     'Automatic texture synthesis',
     'Real-time 3D rendering',
@@ -62,8 +64,8 @@ const,
   ];
 
 
-  const advantages = [
 
+  const benefits = [
     'Faster 3D asset creation',
     'Reduced production costs',
     'Consistent quality output',
@@ -282,6 +284,7 @@ const,
 
 
 export default AI3DGenerationPage;"`
+
 
 
 

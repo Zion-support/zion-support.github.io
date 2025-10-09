@@ -59,8 +59,12 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   // Monitor long tasks;
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */}
     }
-    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}`
-          }ms`);
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.duration > 50) { // Tasks longer than 50ms
+          console.warn(`Long task detected: ${entry.duration}ms`);
+
         }
       });
     });
@@ -164,3 +168,4 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}
     }
 };`
+

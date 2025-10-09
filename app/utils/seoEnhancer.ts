@@ -187,14 +187,16 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
     <priority>${page.priority}</priority>`
   </url>`
   )
-  .join('\n')}`
+  .join('
+')}`
 </urlset>`;
     return sitemap;
   }
   // Generate robots.txt;
   generateRobotsTxt(disallowPath,)
   s: string[] = []) {/* TODO: Fix JSX expression */}`
-  w: ${path}`).join('\n')}
+  w: ${path}`).join('
+')}
 Sitema,`
   p: ${this.config.canonicalUrl}/sitemap.xml`;
     return robots;
@@ -268,18 +270,24 @@ export const generateSitemapData = (page,
 export const generateRobotsTxt = (sitemapUr,
   l: string, disallowPath,)
   s: string[] = []) => {/* TODO: Fix JSX expression */}`
-  w: ${path}`).join('\n');`
+  w: ${path}`).join('
+');`
   return `User-agen,
   t: *
 ${disallowRules}
 Sitema,`
   p: ${sitemapUrl}`;
 };
-// SEO validation;
-export const validateSEOData = (dat,
-  a: {/* TODO: Fix JSX expression */})
-  l: string}) => {/* TODO: Fix JSX expression */}
-  } else if (data.title.length > 60) {/* TODO: Fix JSX expression */}
+
+// SEO validation
+export const validateSEOData = (data: { title: string; description: string; url: string }) => {
+  const issues: string[] = [];
+  // Check title length
+  if (data.title.length < 30) {
+    issues.push('Title is too short (recommended: 30-60 characters)');
+  } else if (data.title.length > 60) {
+    issues.push('Title is too long (recommended: 30-60 characters)');
+
   }
   // Check description length;
   if (data.description.length < 120) {/* TODO: Fix JSX expression */}

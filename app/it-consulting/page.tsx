@@ -85,9 +85,10 @@ const ITConsultingPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
 
-                  <div className="text-center">
+
+
+                    <div className="text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
                     <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
                       Get Started
@@ -105,15 +106,17 @@ const ITConsultingPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
                   <Phone className="w-5 h-5 inline mr-2" />
-                  Call (302) 464-0950
+
+                  Call Us
                 </button>
-                <button className="border-2 border-blue-600 text-blue-600 py-3 px-8 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+                <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
                   <Mail className="w-5 h-5 inline mr-2" />
-                  Get Free Quote
+                  Email Us
                 </button>
               </div>
             </div>
-          </div>
+          </section>
+
         </main>
         
         <Footer />
@@ -124,6 +127,7 @@ const ITConsultingPage: React.FC = () => {
 };
 
 export default ITConsultingPage;
+
 
 
 

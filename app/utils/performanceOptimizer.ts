@@ -53,7 +53,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    */
   private measureLoadTime(): void {/* TODO: Fix JSX expression */}
       }
-    } catch () {}}
+    } catch (error) {
+      console.warn('Failed to measure load time:', error);
+    }
+  }
   /**
    * Measure render time using PerformanceObserver;
    */

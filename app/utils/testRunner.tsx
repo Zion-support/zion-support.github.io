@@ -92,9 +92,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       const renderTime = performance.now() - startTime;
       // Measure memory usage if available;
       let memoryUsage = 0;
-      if ('memory' in performance) {/* TODO: Fix JSX expression */}
-  e: number} }).memory;
-        if (memory) {/* TODO: Fix JSX expression */}
+
+      if ('memory' in performance) {
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        if (memory) {
+          memoryUsage = memory.usedJSHeapSize;
+
         }
       }
       unmount();
