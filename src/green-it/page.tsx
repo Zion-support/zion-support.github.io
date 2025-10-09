@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { Leaf, Recycle, Zap, Globe, TreePine, Wind, Sun, Droplets, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('../app/page'));
@@ -50,10 +49,7 @@ import CloudMigrationPage from './cloud-migration/page';
 import DevOpsPage from './devops/page';
 import DatabasePage from './database/page';
 import NetworkingPage from './networking/page';
-import ITConsultingPage from './it-consulting/page';
-
 // Micro SAAS Pages
-import MicroSAASPage from './micro-saas/page';
 import AICRMPage from './ai-crm/page';
 import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
@@ -74,14 +70,6 @@ import CareersPage from './careers/page';
 import NewsPage from './news/page';
 
 // Support Pages
-import DocsPage from './docs/page';
-import APIDocsPage from './api-docs/page';
-import SupportPage from './support/page';
-import StatusPage from './status/page';
-import PrivacyPage from './privacy/page';
-import TermsPage from './terms/page';
-import CookiesPage from './cookies/page';
-
 // Additional Pages
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
@@ -142,14 +130,6 @@ import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
 // Support Pages
-import SupportPage from './support/page';
-import DocsPage from './docs/page';
-import APIDocsPage from './api-docs/page';
-import StatusPage from './status/page';
-import PrivacyPage from './privacy/page';
-import TermsPage from './terms/page';
-import CookiesPage from './cookies/page';
-
 // AI Services Pages
 import AIProjectManagerPage from './ai-project-manager/page';
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';

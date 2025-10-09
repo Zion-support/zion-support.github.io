@@ -1,112 +1,102 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Patterns to replace
-const replacements = [
-  // Fix duplicate React imports
-  {
-    from: /import React from 'react';\s*import React from 'react';/g,
-    to: "import React from 'react';",
-  },
-  {
-    from: /import React from 'react';\s*\nimport React from 'react';/g,
-    to: "import React from 'react';",
-  },
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-  // Fix Metadata type issues
-  { from: /export const metadata: Metadata =/g, to: 'const metadata = {' },
-  { from: /: Metadata =/g, to: ' = {' },
-
-  // Fix Link component props
-  { from: /<Link\s+href=/g, to: '<Link to=' },
-
-  // Fix Image component - replace with regular img
-  { from: /import Image from 'react';/g, to: '' },
-  { from: /<Image\s+/g, to: '<img ' },
-  { from: /\/>/g, to: ' />' },
-
-  // Fix dynamic imports that weren't properly converted
-  { from: /dynamic\(\(\) => import\(['"]([^'"]+)['"]\)/g, to: "lazy(() => import('$1')" },
-  {
-    from: /dynamic\(\(\) => import\(['"]([^'"]+)['"]\),\s*\{[^}]*\}/g,
-    to: "lazy(() => import('$1').catch(() => ({ default: () => <div>Loading...</div> })))",
-  },
-];
-
-// Function to process a file
-function processFile(filePath) {
+// Function to fix specific files with known issues
+function fixFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    replacements.forEach(({ from, to }) => {
-      if (typeof from === 'string') {
-        if (content.includes(from)) {
-          content = content.replace(
-            new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
-            to
-          );
+    // Fix App.tsx - remove unused imports
+    if (filePath.includes('App.tsx')) {
+      const unusedImports = [
+        'ITConsultingPage',
+        'MicroSAASPage', 
+        'DocsPage',
+        'APIDocsPage',
+        'SupportPage',
+        'StatusPage',
+        'PrivacyPage',
+        'TermsPage',
+        'CookiesPage'
+      ];
+      
+      // Remove unused imports
+      unusedImports.forEach(importName => {
+        const regex = new RegExp(`import\\s+${importName}\\s+from[^;]+;\\s*`, 'g');
+        if (content.match(regex)) {
+          content = content.replace(regex, '');
           modified = true;
         }
-      } else if (from instanceof RegExp) {
-        if (from.test(content)) {
-          content = content.replace(from, to);
-          modified = true;
-        }
-      }
-    });
-
-    // Additional cleanup for Image components
-    if (content.includes('<Image')) {
-      // Replace Image component with img tag
-      content = content.replace(/<Image\s+([^>]*?)\s*\/>/g, (match, props) => {
-        // Extract props and convert to img attributes
-        const _propMatches = props.match(/(\w+)=['"]([^'"]*)['"]/g);
-        if (propMatches) {
-          const imgProps = propMatches
-            .map(prop =>
-              prop
-                .replace(/src=/g, 'src=')
-                .replace(/alt=/g, 'alt=')
-                .replace(/width=/g, 'width=')
-                .replace(/height=/g, 'height=')
-                .replace(/className=/g, 'class=')
-            )
-            .join(' ');
-          return `<img ${imgProps} />`;
-        }
-        return match;
       });
+      
+      // Fix unused error parameter
+      content = content.replace(/\(error\) => \{/, '() => {');
+      modified = true;
+    }
+
+    // Fix about/page.tsx - remove unused imports and fix export
+    if (filePath.includes('about/page.tsx')) {
+      // Remove unused imports
+      content = content.replace(/import\s+Navigation\s+from[^;]+;\s*/, '');
+      content = content.replace(/import\s+SEOOptimizer\s+from[^;]+;\s*/, '');
+      
+      // Fix export
+      content = content.replace(/const AboutPage: React\.FC = \(\) => \{/, 'export default function AboutPage() {');
+      content = content.replace(/export default AboutPage;/, '');
+      modified = true;
+    }
+
+    // Fix ai-crm/page.tsx - remove unused imports
+    if (filePath.includes('ai-crm/page.tsx')) {
+      content = content.replace(/import\s+Navigation\s+from[^;]+;\s*/, '');
+      content = content.replace(/import\s+Footer\s+from[^;]+;\s*/, '');
+      modified = true;
+    }
+
+    // Fix ai-customer-support/page.tsx - fix export
+    if (filePath.includes('ai-customer-support/page.tsx')) {
+      content = content.replace(/const AICustomerSupportPage: React\.FC = \(\) => \{/, 'export default function AICustomerSupportPage() {');
+      content = content.replace(/export default AICustomerSupportPage;/, '');
+      modified = true;
+    }
+
+    // Fix ai-writing-assistant/page.tsx - fix export
+    if (filePath.includes('ai-writing-assistant/page.tsx')) {
+      content = content.replace(/const AIWritingAssistantPage: React\.FC = \(\) => \{/, 'export default function AIWritingAssistantPage() {');
+      content = content.replace(/export default AIWritingAssistantPage;/, '');
       modified = true;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+      fs.writeFileSync(filePath, content);
+      console.log(`✓ Fixed ${filePath}`);
     }
-
-    return false;
   } catch (error) {
-
-    return false;
+    console.log(`✗ Error processing ${filePath}: ${error.message}`);
   }
 }
 
 // Main execution
-async function main() {
-  // Find all TypeScript/JavaScript files in app directory
-  const _files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+console.log('🔧 Fixing remaining issues...\n');
 
-  let _fixedCount = 0;
-  files.forEach(file => {
-    if (processFile(file)) {
-      fixedCount++;
-    }
-  });
+const filesToFix = [
+  'src/App.tsx',
+  'src/about/page.tsx',
+  'src/ai-crm/page.tsx',
+  'src/ai-customer-support/page.tsx',
+  'src/ai-writing-assistant/page.tsx'
+];
 
+for (const file of filesToFix) {
+  const fullPath = path.join(__dirname, file);
+  if (fs.existsSync(fullPath)) {
+    fixFile(fullPath);
+  }
 }
 
-main().catch(console.error);
+console.log('\n✅ Fixes complete!');

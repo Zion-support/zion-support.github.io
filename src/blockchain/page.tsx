@@ -1,5 +1,4 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
