@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, FileText, Target, PenTool, Users, ShoppingCart, Globe, Shield, Brain, Eye, Cloud, Settings, Database, Briefcase, Lock, Home, Heart, Stethoscope, Palette, Music, Package, DollarSign, Scale, Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +33,14 @@ const Navigation: React.FC = () => {
     { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
+    { name: 'AI Document Processor', href: '/ai-document-processor', icon: FileText },
+    { name: 'AI Lead Generator', href: '/ai-lead-generator', icon: Target },
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: PenTool },
+    { name: 'AI Meeting Assistant', href: '/ai-meeting-assistant', icon: Mic },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Users },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', icon: ShoppingCart },
+    { name: 'AI Translation Service', href: '/ai-translation-service', icon: Globe },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', icon: Shield },
   ];
 
   const aiServices = [

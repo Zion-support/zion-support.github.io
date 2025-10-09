@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Star, Users, Award, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, MapPin, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react';
+import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Star, Users, Award, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, MapPin, ArrowRight, CheckCircle, TrendingUp, Mic, Package, PenTool, DollarSign, Scale } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -137,6 +137,160 @@ const ServicesPage: React.FC = () => {
       link: '/ai-fitness-coach',
       popular: false,
       category: 'Health & Fitness'
+    },
+    {
+      title: 'AI Document Processor',
+      description: 'Intelligent document processing with AI-powered data extraction and analysis',
+      icon: FileText,
+      price: '$79/month',
+      features: ['OCR technology', 'Data extraction', 'Document classification', 'Smart search'],
+      benefits: ['95% accuracy', '80% time saved', 'Automated workflows'],
+      link: '/ai-document-processor',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Inventory Manager',
+      description: 'Smart inventory management with AI-powered demand forecasting',
+      icon: Package,
+      price: '$129/month',
+      features: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Analytics dashboard'],
+      benefits: ['30% cost reduction', '99% stock accuracy', 'Zero stockouts'],
+      link: '/ai-inventory-manager',
+      popular: true,
+      category: 'Business'
+    },
+    {
+      title: 'AI Lead Generator',
+      description: 'Generate high-quality leads with AI-powered prospecting and qualification',
+      icon: Target,
+      price: '$199/month',
+      features: ['Lead scoring', 'Contact discovery', 'Email sequences', 'CRM integration'],
+      benefits: ['300% more leads', '50% higher conversion', 'Automated follow-ups'],
+      link: '/ai-lead-generator',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      title: 'AI Content Writer',
+      description: 'Create engaging content with AI-powered writing assistance',
+      icon: PenTool,
+      price: '$69/month',
+      features: ['Blog posts', 'Social media content', 'Product descriptions', 'SEO optimization'],
+      benefits: ['10x faster writing', 'SEO-optimized content', 'Multiple languages'],
+      link: '/ai-content-writer',
+      popular: true,
+      category: 'Content'
+    },
+    {
+      title: 'AI Meeting Assistant',
+      description: 'Transcribe and analyze meetings with AI-powered insights and action items',
+      icon: Mic,
+      price: '$99/month',
+      features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Team collaboration'],
+      benefits: ['100% accuracy', 'Time saved', 'Better follow-ups'],
+      link: '/ai-meeting-assistant',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Price Optimizer',
+      description: 'Optimize pricing strategies with AI-powered dynamic pricing and competitor analysis',
+      icon: DollarSign,
+      price: '$149/month',
+      features: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Revenue optimization'],
+      benefits: ['15% revenue increase', 'Optimal pricing', 'Real-time adjustments'],
+      link: '/ai-price-optimizer',
+      popular: false,
+      category: 'Business'
+    },
+    {
+      title: 'AI HR Assistant',
+      description: 'Streamline HR processes with AI-powered recruitment and employee management',
+      icon: Users,
+      price: '$179/month',
+      features: ['Resume screening', 'Candidate matching', 'Employee analytics', 'Performance tracking'],
+      benefits: ['70% faster hiring', 'Better candidate fit', 'Reduced bias'],
+      link: '/ai-hr-assistant',
+      popular: true,
+      category: 'HR'
+    },
+    {
+      title: 'AI Financial Advisor',
+      description: 'Personalized financial advice with AI-powered investment recommendations',
+      icon: Briefcase,
+      price: '$199/month',
+      features: ['Portfolio analysis', 'Risk assessment', 'Investment recommendations', 'Tax optimization'],
+      benefits: ['Better returns', 'Risk management', 'Tax savings'],
+      link: '/ai-financial-advisor',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Legal Assistant',
+      description: 'Legal document analysis and contract review with AI-powered insights',
+      icon: Scale,
+      price: '$299/month',
+      features: ['Contract analysis', 'Legal research', 'Document review', 'Compliance checking'],
+      benefits: ['90% time saved', 'Reduced errors', 'Cost effective'],
+      link: '/ai-legal-assistant',
+      popular: false,
+      category: 'Legal'
+    },
+    {
+      title: 'AI Real Estate Assistant',
+      description: 'Property analysis and market insights with AI-powered valuation and recommendations',
+      icon: Home,
+      price: '$159/month',
+      features: ['Property valuation', 'Market analysis', 'Investment recommendations', 'Trend forecasting'],
+      benefits: ['Accurate valuations', 'Market insights', 'Better investments'],
+      link: '/ai-real-estate-assistant',
+      popular: false,
+      category: 'Real Estate'
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'Medical data analysis and patient insights with AI-powered health monitoring',
+      icon: Stethoscope,
+      price: '$249/month',
+      features: ['Symptom analysis', 'Health monitoring', 'Medication reminders', 'Doctor recommendations'],
+      benefits: ['Better health outcomes', 'Early detection', 'Personalized care'],
+      link: '/ai-healthcare-assistant',
+      popular: false,
+      category: 'Healthcare'
+    },
+    {
+      title: 'AI E-commerce Optimizer',
+      description: 'Optimize online stores with AI-powered product recommendations and conversion optimization',
+      icon: ShoppingCart,
+      price: '$189/month',
+      features: ['Product recommendations', 'Conversion optimization', 'Customer segmentation', 'A/B testing'],
+      benefits: ['25% conversion increase', 'Higher revenue', 'Better customer experience'],
+      link: '/ai-ecommerce-optimizer',
+      popular: true,
+      category: 'E-commerce'
+    },
+    {
+      title: 'AI Translation Service',
+      description: 'Real-time translation with AI-powered language processing and cultural adaptation',
+      icon: Globe,
+      price: '$79/month',
+      features: ['100+ languages', 'Real-time translation', 'Cultural adaptation', 'API integration'],
+      benefits: ['99% accuracy', 'Instant translation', 'Cultural context'],
+      link: '/ai-translation-service',
+      popular: true,
+      category: 'Communication'
+    },
+    {
+      title: 'AI Security Monitor',
+      description: 'Advanced threat detection and security monitoring with AI-powered analysis',
+      icon: Shield,
+      price: '$199/month',
+      features: ['Threat detection', 'Anomaly detection', 'Security alerts', 'Incident response'],
+      benefits: ['99.9% threat detection', 'Real-time monitoring', 'Automated response'],
+      link: '/ai-security-monitor',
+      popular: true,
+      category: 'Security'
     }
   ];
 
@@ -280,7 +434,7 @@ const ServicesPage: React.FC = () => {
             Powerful, affordable AI-powered tools designed for modern businesses
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {microSAASServices.map((service, index) => (
               <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
@@ -346,7 +500,7 @@ const ServicesPage: React.FC = () => {
             Advanced artificial intelligence solutions for enterprise applications
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {aiServices.map((service, index) => (
               <a
                 key={index}
@@ -385,7 +539,7 @@ const ServicesPage: React.FC = () => {
             Comprehensive IT solutions for modern enterprises
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {itServices.map((service, index) => (
               <a
                 key={index}
