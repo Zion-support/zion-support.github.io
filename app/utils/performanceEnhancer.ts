@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application

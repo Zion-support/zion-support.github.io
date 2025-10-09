@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Jest setup file for testing environment
  */

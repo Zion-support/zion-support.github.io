@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * SEO Enhancement Utilities
  * Tools to improve search engine optimization

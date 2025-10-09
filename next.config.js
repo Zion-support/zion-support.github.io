@@ -56,8 +56,8 @@ const nextConfig = {
             },
             name(module) {
               const _hash = crypto.createHash('sha1');
-              hash.update(module.identifier());
-              return hash.digest('hex').substring(0, 8);
+              _hash.update(module.identifier());
+              return _hash.digest('hex').substring(0, 8);
             },
             priority: 30,
             minChunks: 1,
@@ -165,18 +165,9 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@heroicons/react', 'recharts', 'framer-motion'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
   },
 
   // Performance optimizations
-  swcMinify: true,
   modularizeImports: {
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',

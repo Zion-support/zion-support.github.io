@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Comprehensive Test Runner and Testing Utilities
  * Provides advanced testing capabilities, mocking, and test automation
@@ -5,7 +7,7 @@
 
 import React, { ReactElement, useCallback } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+
 
 // Test result types
 export interface PerformanceMetrics {

@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * API Interceptor Utility
  * Centralized API request handling with error handling, retry logic, and caching

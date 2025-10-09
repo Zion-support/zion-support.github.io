@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const EnterprisePage: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const EnterprisePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span>Schedule Enterprise Demo</span>
@@ -108,7 +108,7 @@ const EnterprisePage: React.FC = () => {
 
           <div className="text-center mt-12">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
               Get Started Today

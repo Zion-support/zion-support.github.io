@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Advanced Error Handler
  * Comprehensive error handling utilities for React applications

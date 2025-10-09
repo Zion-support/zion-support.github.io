@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Helmet } from 'react-helmet-async';
 
 const SitemapPage: React.FC = () => {
@@ -81,7 +81,7 @@ const SitemapPage: React.FC = () => {
                     {section.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
                         <Link
-                          to={link.url}
+                          href={link.url}
                           className="block text-indigo-600 hover:text-indigo-700 hover:underline transition-colors"
                         >
                           <div className="font-medium">{link.title}</div>
@@ -105,17 +105,17 @@ const SitemapPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                 <ul className="space-y-2">
                   <li>
-                    <Link to="/" className="text-indigo-600 hover:text-indigo-700">
+                    <Link href="/" className="text-indigo-600 hover:text-indigo-700">
                       ← Back to Homepage
                     </Link>
                   </li>
                   <li>
-                    <Link to="/contact" className="text-indigo-600 hover:text-indigo-700">
+                    <Link href="/contact" className="text-indigo-600 hover:text-indigo-700">
                       Contact Us
                     </Link>
                   </li>
                   <li>
-                    <Link to="/about" className="text-indigo-600 hover:text-indigo-700">
+                    <Link href="/about" className="text-indigo-600 hover:text-indigo-700">
                       About Zion Tech Group
                     </Link>
                   </li>

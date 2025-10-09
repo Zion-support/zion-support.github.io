@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Enhanced Security Utilities
  * Generated: 2025-10-08T02:06:22.083Z

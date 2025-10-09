@@ -1,9 +1,11 @@
+'use client';
+
 /**
  * API Caching Utility
  * Provides caching, deduplication, and retry logic for API calls
  */
 
-import { CacheManager } from '../../src/utils/enhanced-cache';
+import { CacheManager } from '../utils/enhanced-cache';
 
 interface ApiCacheConfig {
   ttl?: number;

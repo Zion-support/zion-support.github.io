@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface ContentPreviewCardProps {
   id: string;
@@ -133,7 +133,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-500">{date}</span>
           <Link
-            to={path}
+            href={path}
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
           >
             Read Article

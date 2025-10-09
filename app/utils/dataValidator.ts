@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Data Validation Utility
  * Provides comprehensive data validation with type safety

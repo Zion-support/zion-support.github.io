@@ -1,3 +1,5 @@
+'use client';
+
 import React, { lazy, Suspense, ComponentType } from 'react';
 
 interface DynamicOptions {

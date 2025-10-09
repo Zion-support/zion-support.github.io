@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Form Validation Utilities
  * Provides common validation rules and form handling utilities

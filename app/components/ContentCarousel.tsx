@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface ContentItem {
   id: string;
@@ -204,7 +206,7 @@ const ContentCarousel: React.FC = () => {
 
                   <div className="flex items-center space-x-4">
                     <Link
-                      to={currentItem.path}
+                      href={currentItem.path}
                       className="inline-flex items-center bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg"
                     >
                       Read Full Article
@@ -214,7 +216,7 @@ const ContentCarousel: React.FC = () => {
                     </Link>
                     
                     <Link
-                      to="/blog"
+                      href="/blog"
                       className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium"
                     >
                       View All Articles

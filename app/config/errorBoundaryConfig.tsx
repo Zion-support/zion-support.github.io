@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
