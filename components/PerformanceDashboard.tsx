@@ -25,19 +25,11 @@ const PerformanceDashboard: React.FC = () => {
 
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
-<<<<<<< HEAD
-      setMetrics(prev => ({
-        ...prev,
-        loadTime: _loadTime,
-        memoryUsage,      }));
-=======
-
       setMetrics(prev => ({
         ...prev,
         loadTime: _loadTime,
         memoryUsage,
       }));
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
     };
 
     //Update metrics on load
@@ -46,7 +38,7 @@ const PerformanceDashboard: React.FC = () => {
     //Update metrics periodically
     const interval = setInterval(updateMetrics, 1000);
 
-    return () => clearInterval(_interval);
+    return () => clearInterval(interval);
   }, []);
 
   //Only show in development
