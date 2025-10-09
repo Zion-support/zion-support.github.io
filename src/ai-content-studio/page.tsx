@@ -12,14 +12,19 @@ const AIContentStudioPage: React.FC = () => {
       description: 'AI-powered content generation and optimization',
       benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
     },
+    {
       icon: Target,
       title: 'Content Strategy',
       description: 'Intelligent content planning and strategy',
       benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
+    },
+    {
       icon: Zap,
       title: 'Automated Publishing',
       description: 'Automated content publishing and distribution',
       benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']
+    },
+    {
       icon: Settings,
       title: 'Content Analytics',
       description: 'Comprehensive content performance analytics',
@@ -83,7 +88,9 @@ const AIContentStudioPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AIContentStudioPage;

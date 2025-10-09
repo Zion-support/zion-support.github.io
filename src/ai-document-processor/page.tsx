@@ -12,14 +12,19 @@ const AIDocumentProcessorPage: React.FC = () => {
       description: 'AI-powered document processing and analysis',
       benefits: ['OCR processing', 'Text extraction', 'Data validation']
     },
+    {
       icon: Target,
       title: 'Intelligent Classification',
       description: 'Automated document classification and sorting',
       benefits: ['Auto categorization', 'Smart routing', 'Metadata extraction']
+    },
+    {
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Streamlined document processing workflows',
       benefits: ['Batch processing', 'Workflow automation', 'Error handling']
+    },
+    {
       icon: Settings,
       title: 'Document Analytics',
       description: 'Comprehensive document analytics and insights',
@@ -83,7 +88,9 @@ const AIDocumentProcessorPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AIDocumentProcessorPage;

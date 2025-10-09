@@ -12,14 +12,19 @@ const AISecurityMonitorPage: React.FC = () => {
       description: 'AI-powered threat detection and monitoring',
       benefits: ['Real-time monitoring', 'Threat analysis', 'Incident response']
     },
+    {
       icon: Target,
       title: 'Vulnerability Assessment',
       description: 'Automated vulnerability scanning and assessment',
       benefits: ['Security scanning', 'Risk assessment', 'Compliance checking']
+    },
+    {
       icon: Zap,
       title: 'Automated Response',
       description: 'Intelligent security incident response',
       benefits: ['Auto-response', 'Threat mitigation', 'Recovery procedures']
+    },
+    {
       icon: Settings,
       title: 'Security Analytics',
       description: 'Comprehensive security analytics and reporting',
@@ -83,7 +88,9 @@ const AISecurityMonitorPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AISecurityMonitorPage;

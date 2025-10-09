@@ -12,14 +12,19 @@ const AIPerformanceTrackerPage: React.FC = () => {
       description: 'Comprehensive performance tracking and analysis',
       benefits: ['Real-time metrics', 'Performance alerts', 'Trend analysis']
     },
+    {
       icon: Target,
       title: 'Goal Tracking',
       description: 'Intelligent goal setting and progress monitoring',
       benefits: ['Smart goals', 'Progress tracking', 'Achievement metrics']
+    },
+    {
       icon: Zap,
       title: 'Automated Insights',
       description: 'AI-powered performance insights and recommendations',
       benefits: ['Performance insights', 'Optimization tips', 'Action recommendations']
+    },
+    {
       icon: Settings,
       title: 'Custom Dashboards',
       description: 'Customizable performance dashboards and reports',
@@ -83,7 +88,9 @@ const AIPerformanceTrackerPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AIPerformanceTrackerPage;

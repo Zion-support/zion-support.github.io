@@ -12,14 +12,19 @@ const AIRoboticsPage: React.FC = () => {
       description: 'AI-powered robots that learn and adapt to their environment',
       benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior']
     },
+    {
       icon: Cpu,
       title: 'Advanced Control Systems',
       description: 'Sophisticated control algorithms for precise robot movement',
       benefits: ['Precision control', 'Real-time processing', 'Safety systems']
+    },
+    {
       icon: Settings,
       title: 'Automated Workflows',
       description: 'Streamlined robotic processes for maximum efficiency',
       benefits: ['Process optimization', 'Error reduction', '24/7 operation']
+    },
+    {
       icon: Shield,
       title: 'Safety & Security',
       description: 'Built-in safety protocols and security measures',
@@ -83,7 +88,9 @@ const AIRoboticsPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AIRoboticsPage;

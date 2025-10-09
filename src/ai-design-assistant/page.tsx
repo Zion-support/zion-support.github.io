@@ -12,14 +12,19 @@ const AIDesignAssistantPage: React.FC = () => {
       description: 'AI-powered design creation and optimization',
       benefits: ['Auto design', 'Style optimization', 'Brand consistency']
     },
+    {
       icon: Target,
       title: 'Design Recommendations',
       description: 'Intelligent design suggestions and improvements',
       benefits: ['Layout optimization', 'Color suggestions', 'Typography advice']
+    },
+    {
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Streamlined design workflows and automation',
       benefits: ['Template generation', 'Batch processing', 'Asset management']
+    },
+    {
       icon: Settings,
       title: 'Design Analytics',
       description: 'Comprehensive design performance analytics',
@@ -83,7 +88,9 @@ const AIDesignAssistantPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AIDesignAssistantPage;

@@ -12,14 +12,19 @@ const AIMobileBuilderPage: React.FC = () => {
       description: 'Intelligent mobile app development with AI assistance',
       benefits: ['Code generation', 'UI/UX optimization', 'Performance tuning']
     },
+    {
       icon: Target,
       title: 'Cross-Platform Support',
       description: 'Build for iOS and Android with a single codebase',
       benefits: ['iOS development', 'Android development', 'Unified codebase']
+    },
+    {
       icon: Zap,
       title: 'Rapid Prototyping',
       description: 'Fast prototyping and MVP development',
       benefits: ['Quick iteration', 'MVP development', 'Testing']
+    },
+    {
       icon: Settings,
       title: 'App Analytics',
       description: 'Comprehensive app performance and user analytics',
@@ -83,7 +88,9 @@ const AIMobileBuilderPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AIMobileBuilderPage;

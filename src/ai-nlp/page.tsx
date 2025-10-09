@@ -12,14 +12,19 @@ const AINLPPage: React.FC = () => {
       description: 'Advanced text processing and sentiment analysis',
       benefits: ['Sentiment detection', 'Entity extraction', 'Language detection']
     },
+    {
       icon: Brain,
       title: 'Language Understanding',
       description: 'Deep understanding of human language and context',
       benefits: ['Intent recognition', 'Context analysis', 'Semantic understanding']
+    },
+    {
       icon: FileText,
       title: 'Document Processing',
       description: 'Intelligent document analysis and information extraction',
       benefits: ['Document classification', 'Key phrase extraction', 'Summarization']
+    },
+    {
       icon: Globe,
       title: 'Multi-language Support',
       description: 'Support for 100+ languages and dialects',
@@ -83,7 +88,9 @@ const AINLPPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AINLPPage;

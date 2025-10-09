@@ -12,14 +12,19 @@ const AISalesForecastingPage: React.FC = () => {
       description: 'AI-powered sales forecasting and prediction',
       benefits: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting']
     },
+    {
       icon: Target,
       title: 'Goal Setting',
       description: 'Intelligent goal setting and tracking',
       benefits: ['Smart goals', 'Progress tracking', 'Performance metrics']
+    },
+    {
       icon: Zap,
       title: 'Real-time Insights',
       description: 'Real-time sales insights and recommendations',
       benefits: ['Live dashboards', 'Instant alerts', 'Action recommendations']
+    },
+    {
       icon: Settings,
       title: 'Scenario Planning',
       description: 'What-if analysis and scenario planning',
@@ -83,7 +88,9 @@ const AISalesForecastingPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AISalesForecastingPage;

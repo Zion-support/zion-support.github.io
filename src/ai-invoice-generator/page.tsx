@@ -14,22 +14,31 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
       benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']
     },
+    {
       icon: Zap,
       title: 'Instant Processing',
       description: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
       benefits: ['Real-time generation', 'Batch processing', 'Template optimization', 'Error reduction']
+    },
+    {
       icon: Shield,
       title: 'Secure & Compliant',
       description: 'Bank-level security with automatic compliance checking for tax regulations and business requirements.',
       benefits: ['GDPR compliant', 'Tax calculation', 'Audit trails', 'Data encryption']
+    },
+    {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Track payment patterns, identify trends, and get AI-powered insights to improve your cash flow.',
       benefits: ['Payment analytics', 'Trend analysis', 'Cash flow predictions', 'Client insights']
+    },
+    {
       icon: Globe,
       title: 'Multi-Currency Support',
       description: 'Generate invoices in any currency with automatic exchange rate updates and local formatting.',
       benefits: ['150+ currencies', 'Real-time rates', 'Local formatting', 'Tax calculations']
+    },
+    {
       icon: Smartphone,
       title: 'Mobile Optimized',
       description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
@@ -288,7 +297,9 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         <Footer />
     </>
   );
-});
-
+}
+  );
+};
+};
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 export default AIInvoiceGeneratorPage;

@@ -12,14 +12,19 @@ const AIComputerVisionPage: React.FC = () => {
       description: 'Advanced object detection and recognition with high accuracy',
       benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
     },
+    {
       icon: Camera,
       title: 'Image Classification',
       description: 'Automated image categorization and content analysis',
       benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories']
+    },
+    {
       icon: Video,
       title: 'Video Analysis',
       description: 'Real-time video processing and analysis capabilities',
       benefits: ['Live streaming', 'Motion detection', 'Activity recognition']
+    },
+    {
       icon: Target,
       title: 'Facial Recognition',
       description: 'Secure and accurate facial recognition technology',
@@ -191,7 +196,9 @@ const AIComputerVisionPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AIComputerVisionPage;

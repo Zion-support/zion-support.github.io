@@ -12,6 +12,7 @@ const AISchedulerPage: React.FC = () => {
       description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
       benefit: 'Save 5+ hours per week'
     },
+    {
       icon: Users,
       title: 'Team Coordination',
       description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',

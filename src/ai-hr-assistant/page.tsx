@@ -12,14 +12,19 @@ const AIHRAssistantPage: React.FC = () => {
       description: 'AI-powered HR process automation',
       benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']
     },
+    {
       icon: Target,
       title: 'Talent Management',
       description: 'Intelligent talent acquisition and management',
       benefits: ['Candidate screening', 'Skill matching', 'Career development']
+    },
+    {
       icon: Zap,
       title: 'Employee Engagement',
       description: 'Automated employee engagement and satisfaction',
       benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies']
+    },
+    {
       icon: Settings,
       title: 'HR Analytics',
       description: 'Comprehensive HR analytics and insights',
@@ -83,7 +88,9 @@ const AIHRAssistantPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AIHRAssistantPage;

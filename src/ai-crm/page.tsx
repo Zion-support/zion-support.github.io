@@ -1,20 +1,33 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const AICRMPage: React.FC = () => {
-
-const AiCrmPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Ai Crm</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ai crm solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI CRM Solutions | Zion Tech Group</title>
+        <meta name="description" content="Transform your customer relationships with our AI-powered CRM solutions. Advanced analytics, automation, and intelligent insights." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">AI CRM Solutions</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Coming Soon - Advanced AI-powered CRM solutions that will revolutionize how you manage customer relationships.
+          </p>
+          <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+            Contact Us
+          </a>
+        </div>
       </div>
+      
+      <Footer />
+    </div>
   );
 };
 
-}
-
-export default AiCrmPage;
+export default AICRMPage;

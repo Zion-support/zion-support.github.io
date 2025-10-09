@@ -12,14 +12,19 @@ const AILeadScoringPage: React.FC = () => {
       description: 'AI-powered lead scoring and qualification',
       benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking']
     },
+    {
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'Predict lead conversion probability',
       benefits: ['Conversion prediction', 'Risk assessment', 'Opportunity scoring']
+    },
+    {
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Automated lead nurturing and follow-up',
       benefits: ['Auto-nurturing', 'Follow-up sequences', 'Lead routing']
+    },
+    {
       icon: Settings,
       title: 'Performance Analytics',
       description: 'Comprehensive lead performance analytics',
@@ -83,7 +88,9 @@ const AILeadScoringPage: React.FC = () => {
       </main>
 
       <Footer />
+    </div>
   );
+};
 };
 
 export default AILeadScoringPage;

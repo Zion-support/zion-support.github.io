@@ -13,14 +13,19 @@ const AICustomerSupportBotPage: React.FC = () => {
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
+    {
       icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
+    },
+    {
       icon: Users,
       title: 'Human Handoff',
       description: 'Seamless escalation to human agents when complex issues arise',
       benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
+    },
+    {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to track performance and improve customer experience',
