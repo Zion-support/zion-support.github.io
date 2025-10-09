@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-
 interface Props {/* TODO: Fix JSX expression */}
 }
 
@@ -13,7 +12,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     };
     this.maxRetries = props.maxRetries || 3;
   }
-
 
   static getDerivedStateFromError(erro,)
   r: Error): State {/* TODO: Fix JSX expression */}`
@@ -28,7 +26,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   r: Error, errorInf,)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
-
 
  cursor/analyze-improve-and-deploy-application-cde4;
     // Log error to console in development;
@@ -118,7 +115,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
       const { retryCount, error, errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
-
 
       return ("
         <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"

@@ -4,7 +4,6 @@
  * Applies production-ready optimizations to the codebase;
  */
 
-
 // Configuration;
 const config = {/* TODO: Fix JSX expression */}
 };

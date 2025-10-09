@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 };
   titl,
   e: 'IoT Device Management Platform',
@@ -321,7 +320,5 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-whi
   );
 };
 
-
 export default IotEdgePage;
-
 

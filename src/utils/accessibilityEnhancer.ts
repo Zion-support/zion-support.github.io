@@ -1,7 +1,6 @@
 // AccessibilityEnhancer utility
 // This file contains utility functions and configurations
 
-
 interface AccessibilityConfig {enableKeyboardNavigation: boolean;}
   enableScreenReaderSupport: boolean;
   enableHighContrast: boolean;
@@ -19,8 +18,6 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
 
     }
     this.init()
-
-
 
   private init(): void {// Initialize accessibility enhancements;}
     this.setupKeyboardNavigation();
@@ -57,6 +54,4 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
 }
 
 export default AccessibilityEnhancer;`
-
-
 

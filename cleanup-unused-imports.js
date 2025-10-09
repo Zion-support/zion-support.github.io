@@ -3,7 +3,6 @@ import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
-
 // Function to remove unused imports from a file;
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, {/* TODO: Fix JSX expression */})

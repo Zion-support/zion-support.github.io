@@ -663,5 +663,3 @@ const defaultValue = this.getDefaultForKey(key);
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance();
 
-
-

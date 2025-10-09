@@ -341,4 +341,3 @@ className={`h-2 rounded-full ${}
 
 export default SystemMonitor;
 
-

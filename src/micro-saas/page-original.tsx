@@ -7053,7 +7053,6 @@ const categories = [
           </h2>"
           <p className="text-xl text-purple-100 mb-8"></p>
 // Get started with our micro SAAS solutions today and see the difference AI can make.
-<<<<<<< HEAD
           
           
           
@@ -7063,9 +7062,6 @@ const categories = [
           
           
           
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

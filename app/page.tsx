@@ -13,23 +13,11 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
 
 // Preload critical components
 const preloadComponents = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  setTimeout(() => {
-    // Preload components after initial render
-  }, 100);
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       // Preload components after initial render
     }, 100);
   }
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 };
 
 // Loading skeleton component

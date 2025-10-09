@@ -679,5 +679,3 @@ export {/* TODO: Fix JSX expression */}
   type ErrorHandlerConfig;
 };
 
-
-

@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 // Files with parsing errors;
 const filesWithErrors = [
   'src/blog/ai-2026-autonomous-agent-factories/page.tsx',

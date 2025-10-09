@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 // Function to fix remaining lint issues in a file;
 function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }

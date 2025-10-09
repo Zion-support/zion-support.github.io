@@ -1,6 +1,5 @@
 'use client';
 
-
 interface SecurityEnhancerProps {/* TODO: Fix JSX expression */}
 }
 
@@ -121,7 +120,6 @@ const,
         }
       });
     });
-
 
     // Track rapid keyboard input;
     let keyCount = 0;

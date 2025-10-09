@@ -95,9 +95,5 @@ const Pagetsx: React.FC = () => {
 }
 export default Pagetsx;"
 
-
-
-
 export default Ai20252026MegaTrendsBreakthroughPage;
-
 

@@ -7,7 +7,6 @@ import { execSync } from 'child_process';
 try {/* TODO: Fix JSX expression */}
   g: 'utf8' });
 
-
     // Check total size;
     const _totalSize = execSync('du -sh dist', {/* TODO: Fix JSX expression */})
   g: 'utf8' }).trim();
@@ -38,7 +37,6 @@ try {/* TODO: Fix JSX expression */}
 try {/* TODO: Fix JSX expression */}
   const _dependencies = Object.keys(packageJson.dependencies || {});
   const _devDependencies = Object.keys(packageJson.devDependencies || {});
-
 
   // Check for potential performance issues;
   const _heavyDeps = ['framer-motion', 'recharts', 'lighthouse'];
@@ -89,10 +87,5 @@ const report = {/* TODO: Fix JSX expression */}
 };
 
 fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
-
-
-
-
-
 
 report.improvements.forEach(improvement => // console.log(`  ${improvement}`));"`

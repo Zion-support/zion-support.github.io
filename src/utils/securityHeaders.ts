@@ -140,5 +140,3 @@ export function getNextSecurityHeaders()
 }
 export default defaultSecurityHeaders;"
 
-
-

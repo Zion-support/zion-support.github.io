@@ -1,6 +1,5 @@
 'use client';
 
-
 interface UserExperienceEnhancerProps {/* TODO: Fix JSX expression */}
 }
 
@@ -13,7 +12,6 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
 
     };
-
 
   // Smooth scrolling;
   useEffect(() => {/* TODO: Fix JSX expression */}

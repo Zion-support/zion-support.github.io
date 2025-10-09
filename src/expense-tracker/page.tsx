@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [];
@@ -23,10 +22,8 @@ const ExpenseTrackerPage: React.FC = () => {
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by 25%',
 
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const PagePage: React.FC = () => {
   return (
@@ -194,7 +191,5 @@ Most Popular;
   );
 };
 
-
 export default ExpenseTrackerPage;
-
 

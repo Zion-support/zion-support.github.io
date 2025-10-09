@@ -151,7 +151,6 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   let _removedCount = 0;
   let _keptCount = 0;
 
-
   files.forEach(file => {/* TODO: Fix JSX expression */})
         } catch (error) {/* TODO: Fix JSX expression */}
         }
@@ -159,8 +158,6 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
       }
     }
   });
-
-
 
 }
 

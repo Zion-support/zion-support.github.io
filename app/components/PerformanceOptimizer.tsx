@@ -1,6 +1,5 @@
 'use client';
 
-
 interface PerformanceOptimizerProps {/* TODO: Fix JSX expression */}
 }
 
@@ -69,7 +68,6 @@ const,
 
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
-
 
     setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
   d: criticalResources.length }));

@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 // List of all page files that need to be restored;
 const pageFiles = [
   'ai-services/page.tsx',

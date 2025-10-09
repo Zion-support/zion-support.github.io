@@ -513,5 +513,3 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 export const performanceMonitoring = PerformanceMonitoringService.getInstance()
 export default PerformanceMonitoringService;`
 
-
-

@@ -137,5 +137,3 @@ export const _performanceConfig = {// TODO: Add content;}
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
 
-
-

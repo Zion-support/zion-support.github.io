@@ -315,4 +315,3 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   getReport(): string {/* TODO: Fix JSX expression */}
 }}"`
 
-

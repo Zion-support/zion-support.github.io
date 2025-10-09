@@ -1,7 +1,6 @@
 // SecurityEnhancer utility
 // This file contains utility functions and configurations
 
-
 interface SecurityConfig {enableCSP: boolean;}
   enableHTTPS: boolean;
   enableXSSProtection: boolean;
@@ -19,8 +18,6 @@ class SecurityEnhancer {private config: SecurityConfig;}
 
     }
     this.init()
-
-
 
   private init(): void {// Initialize security enhancements;}
     this.setupSecurityHeaders();
@@ -40,6 +37,4 @@ class SecurityEnhancer {private config: SecurityConfig;}
 }
 
 export default SecurityEnhancer;"
-
-
 

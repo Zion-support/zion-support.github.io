@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 // Function to properly fix console statements;
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
@@ -49,7 +48,6 @@ const filesToFix = [
 
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
-
 
     // Apply fixes;
     content = fixConsoleStatements(content);

@@ -1,7 +1,6 @@
 // PerformanceEnhancer utility
 // This file contains utility functions and configurations
 
-
 interface PerformanceMetrics {lcp: number;}
   fid: number;
   cls: number;
@@ -57,6 +56,4 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
 }
 
 export default PerformanceEnhancer;
-
-
 

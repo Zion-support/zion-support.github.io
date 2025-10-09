@@ -56,4 +56,3 @@ ${pages.map(page => `}
 
 export default SitemapPage;
 
-

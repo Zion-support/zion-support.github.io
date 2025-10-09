@@ -1,7 +1,6 @@
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
-
 // Files that need specific fixes;
 const specificFixes = {/* TODO: Fix JSX expression */}
   },

@@ -1,7 +1,6 @@
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
-
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     } else if (isInComponents) {/* TODO: Fix JSX expression */}
     } else if (isInApp) {/* TODO: Fix JSX expression */}

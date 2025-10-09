@@ -46,4 +46,3 @@ export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'http
   }))
 }
 
-

@@ -137,5 +137,3 @@ const categories = [
       <Footer /></Footer>
 export default MarketplacePage;
 
-
-

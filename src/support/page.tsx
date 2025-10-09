@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 
 import { Star, Phone } from 'lucide-react';
@@ -56,7 +55,5 @@ const Support: React.FC = () => {
   );
 };
 
-
 export default SupportPage;
-
 

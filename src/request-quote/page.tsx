@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 'use client';
 import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {
@@ -702,7 +701,5 @@ type="submit" disabled={isSubmitting}
   );
 };
 
-
 export default RequestQuotePage;
-
 

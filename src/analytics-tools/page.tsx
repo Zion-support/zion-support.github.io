@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 const PagePage: React.FC = () => {
   return (
     
@@ -134,7 +133,5 @@ Call (302) 464-0950;
   );
 };
 
-
 export default AnalyticsToolsPage;
-
 

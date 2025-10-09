@@ -278,9 +278,5 @@ type="text" placeholder="Search FAQs..."
     </>
 export default FAQPage;
 
-
-
-
 export default FaqPage;
-
 

@@ -112,5 +112,3 @@ const,
 
 export default LazyImage;"
 
-
-

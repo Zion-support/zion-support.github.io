@@ -845,5 +845,3 @@ let label = id || className || text?.substring(0, 50) || tagName;
 export const advancedAnalytics = AdvancedAnalytics.getInstance()
 export default advancedAnalytics;`
 
-
-

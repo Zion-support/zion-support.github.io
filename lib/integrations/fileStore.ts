@@ -2,10 +2,8 @@ import * as fs from 'fs';
 import * as path from 'path';
 import type { IntegrationsState } from './types';
 
-
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
-
 
 function ensureDataDir(): void {/* TODO: Fix JSX expression */}
   e: true });
@@ -42,7 +40,6 @@ export function readState(): IntegrationsState {
   }
 }
 
-
 export function writeState(
   mutator: (state: IntegrationsState) => void
 ): IntegrationsState {
@@ -60,7 +57,6 @@ export interface FileStoreOptions {/* TODO: Fix JSX expression */}
 export class FileStore {/* TODO: Fix JSX expression */}
   }
 
-
   async readFile(filePath: string): Promise<string> {
     const fullPath = path.join(this.basePath, filePath);
     return fs.promises.readFile(fullPath, this.encoding);
@@ -73,10 +69,8 @@ export class FileStore {/* TODO: Fix JSX expression */}
     // Ensure directory exists
     await fs.promises.mkdir(dir, { recursive: true });
 
-
     return fs.promises.writeFile(fullPath, content, this.encoding);
   }
-
 
   async exists(filePath: string): Promise<boolean> {
     const fullPath = path.join(this.basePath, filePath);
@@ -102,7 +96,6 @@ export class FileStore {/* TODO: Fix JSX expression */}
       .map(file => path.join(dirPath, file.name));
   }
 
-
   async createDirectory(dirPath: string): Promise<void> {
     const fullPath = path.join(this.basePath, dirPath);
     await fs.promises.mkdir(fullPath, { recursive: true });
@@ -116,5 +109,4 @@ export class FileStore {/* TODO: Fix JSX expression */}
 
 export const createFileStore = (options: FileStoreOptions) =>
   new FileStore(options);
-
 

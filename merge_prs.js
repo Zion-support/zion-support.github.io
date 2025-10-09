@@ -76,7 +76,6 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
     }
 
-
     // Filter PRs that target main branch and don't have conflicts;
     const mainPRs = prs.filter(pr => 
       pr.base.ref === 'main' && 
@@ -87,7 +86,6 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
     if (mainPRs.length === 0) {/* TODO: Fix JSX expression */}
     }
 
-
     // Merge PRs one by one;
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
@@ -96,10 +94,6 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
       // Add a small delay between merges;
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
-
-
-
-
 
   } catch (error) {/* TODO: Fix JSX expression */}
   }

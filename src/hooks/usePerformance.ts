@@ -141,5 +141,3 @@ export const _usePerformance = () => {// TODO: Add content;}
   return { metrics, isMonitoring };
 };
 
-
-

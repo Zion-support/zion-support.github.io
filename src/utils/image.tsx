@@ -135,5 +135,3 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 }
 export default Image;"`
 
-
-

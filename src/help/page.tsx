@@ -132,5 +132,3 @@ const categories = [
     </>
 export default HelpPage;
 
-
-

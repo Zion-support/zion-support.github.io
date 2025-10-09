@@ -412,5 +412,3 @@ First Contentful Paint: ${metrics.firstContentfulPaint || 'N/A'}ms;
 export const performanceMonitor = new PerformanceMonitor()
 export default performanceMonitor;`
 
-
-

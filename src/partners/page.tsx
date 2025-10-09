@@ -216,7 +216,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-
 export default PartnersPage;
-
 

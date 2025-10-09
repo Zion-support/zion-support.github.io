@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [];
@@ -23,10 +22,8 @@ const SmartAnalyticsPage: React.FC = () => {
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities',
 
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const PagePage: React.FC = () => {
   return (
@@ -126,7 +123,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-
 export default SmartAnalyticsPage;
-
 

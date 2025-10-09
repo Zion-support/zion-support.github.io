@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 'use client';
 import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
@@ -752,7 +751,5 @@ const ResearchDevelopmentPage: React.FC = () => {
   );
 };
 
-
 export default ResearchDevelopmentPage;
-
 

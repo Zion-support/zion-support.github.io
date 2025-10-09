@@ -81,5 +81,3 @@ export function runWhenIdle(callbac,)
 * Default performance monitor instance;
 export const performanceMonitor = new PerformanceMonitor();
 
-
-

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface ResponsiveContainerProps {// TODO: Add content;}
 
 };
@@ -162,5 +161,4 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
 };
 
 export default ResponsiveContainer;
-
 

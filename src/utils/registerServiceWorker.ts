@@ -247,5 +247,3 @@ export async function getServiceWorkerStatus(): Promise;
   }
 }
 
-
-

@@ -1,11 +1,9 @@
 
 #!/usr/bin/env node
 
-
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
 
 // Function to fix common syntax errors in a file
 function fixSyntaxErrors(filePath) {
@@ -124,7 +122,6 @@ import $3'
   }
 }
 
-
 // Function to find files with syntax errors
 function findFilesWithSyntaxErrors() {
   try {
@@ -164,5 +161,4 @@ try {
 } catch (error) {
   console.log('✅ No syntax errors found');
 }
-
 

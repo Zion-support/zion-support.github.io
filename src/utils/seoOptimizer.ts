@@ -511,4 +511,3 @@ const,
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;
 
-

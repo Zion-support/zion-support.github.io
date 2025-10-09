@@ -516,5 +516,3 @@ class DataValidator {/* TODO: Fix JSX expression */}
 }
 export const dataValidator = DataValidator.getInstance()"`
 
-
-

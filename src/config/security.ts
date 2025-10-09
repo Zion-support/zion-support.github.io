@@ -176,5 +176,3 @@ export default {securityHeaders,}
   validateUrl,
   generateSecureToken;"
 
-
-

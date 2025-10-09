@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */}
 }
 

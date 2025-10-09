@@ -104,7 +104,5 @@ Learn More;
   );
 };
 
-
 export default AiMlPlatformPage;
-
 

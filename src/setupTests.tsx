@@ -88,4 +88,3 @@ delete (window as unknown as Record;
   assign: jest.fn(),
   replace: jest.fn()
 
-

@@ -140,5 +140,3 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025;
 
-
-

@@ -4,11 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 const,
   AI3DGenerationPage: React.FC = () => {/* TODO: Fix JSX expression */}
     },
-
 
     {
       title: 'Architecture & Real Estate',
@@ -42,8 +40,6 @@ const,
     }
   ];
 
-
-
   const features = [
     'AI-powered 3D model generation',
     'Automatic texture synthesis',
@@ -63,8 +59,6 @@ const,
     'Educational content'
   ];
 
-
-
   const benefits = [
     'Faster 3D asset creation',
     'Reduced production costs',
@@ -76,7 +70,6 @@ const,
   ];
 
   const useCases = [
-
 
     {
       title: 'Gaming',
@@ -110,8 +103,6 @@ const,
       popular: false
     }
   ];
-
-
 
   const technologies = [
     'Neural Radiance Fields',
@@ -178,7 +169,6 @@ const,
               ))}
             </div>
           </section>
-
 
           {/* Benefits Section */}
           <section className="mb-16">
@@ -306,11 +296,5 @@ const,
   );
 };
 
-
 export default AI3DGenerationPage;"`
-
-
-
-
-
 

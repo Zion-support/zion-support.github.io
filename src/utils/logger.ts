@@ -342,5 +342,3 @@ class Logger {/* TODO: Fix JSX expression */}
 }
 export const logger = new Logger()`
 
-
-

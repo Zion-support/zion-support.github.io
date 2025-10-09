@@ -1,7 +1,6 @@
 // UserExperienceEnhancer utility
 // This file contains utility functions and configurations
 
-
 interface UXConfig {enableSmoothScrolling: boolean;}
   enableLoadingStates: boolean;
   enableErrorBoundaries: boolean;
@@ -48,8 +47,6 @@ class UserExperienceEnhancer {private config: UXConfig;}
     }
     this.init()
 
-
-
   private init(): void {// Initialize UX enhancements;}
     this.setupSmoothScrolling();
     this.setupLoadingStates();
@@ -74,6 +71,4 @@ class UserExperienceEnhancer {private config: UXConfig;}
 }
 
 export default UserExperienceEnhancer;
-
-
 

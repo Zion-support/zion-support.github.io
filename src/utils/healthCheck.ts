@@ -501,5 +501,3 @@ export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck;"`
 
-
-

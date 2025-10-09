@@ -357,5 +357,3 @@ export function createCache;
 // Export default cache instance;
 export const defaultCache = new AdvancedCache();
 
-
-

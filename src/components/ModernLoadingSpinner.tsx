@@ -69,5 +69,3 @@ const,
 
 export default ModernLoadingSpinner;"`
 
-
-

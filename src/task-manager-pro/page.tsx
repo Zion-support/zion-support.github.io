@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
   const features = [];
@@ -23,10 +22,8 @@ const TaskManagerProPage: React.FC = () => {
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%',
 
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const PagePage: React.FC = () => {
   return (
@@ -194,7 +191,5 @@ Most Popular;
   );
 };
 
-
 export default TaskManagerProPage;
-
 

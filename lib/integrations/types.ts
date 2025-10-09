@@ -10,7 +10,6 @@ export type IntegrationProviderId =
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
@@ -49,7 +48,6 @@ export interface SyncLogEntry {
 export interface ManualOverride {/* TODO: Fix JSX expression */}
 }
 
-
 export interface IntegrationOverride {
   id: string;
   connectionId: string;
@@ -63,7 +61,6 @@ export interface IntegrationOverride {
 
 export interface IntegrationEvent {/* TODO: Fix JSX expression */}
 }
-
 
 export interface ZapierEvent {
   id: string;
@@ -79,5 +76,4 @@ export interface IntegrationsState {
   events: ZapierEvent[];
   lastError?: string | null;
 }
-
 

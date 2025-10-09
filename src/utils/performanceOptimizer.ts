@@ -717,5 +717,3 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 export const performanceOptimizer = new PerformanceOptimizer()
 export default PerformanceOptimizer;"`
 
-
-

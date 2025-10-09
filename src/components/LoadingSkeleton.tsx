@@ -30,7 +30,6 @@ const,
   );
 };
 
-
           
 
           
@@ -128,6 +127,4 @@ export const,
   </div>
 );
 export default Skeleton;
-
-
 

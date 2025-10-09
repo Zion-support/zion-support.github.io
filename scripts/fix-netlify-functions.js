@@ -61,9 +61,6 @@ async function main() {/* TODO: Fix JSX expression */}
     }
   });
 
-
-
-
   if (errorCount > 0) {/* TODO: Fix JSX expression */}
   }
 }

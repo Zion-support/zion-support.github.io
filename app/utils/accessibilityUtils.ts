@@ -143,7 +143,6 @@ export const setupLandmarkNavigation = (): void => {/* TODO: Fix JSX expression 
   observer.observe(document.body, {/* TODO: Fix JSX expression */})
   });
 
-
 /**
  * Accessibility Utilities
  * Provides accessibility enhancements and monitoring

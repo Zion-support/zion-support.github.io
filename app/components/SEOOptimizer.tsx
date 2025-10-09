@@ -1,6 +1,5 @@
 'use client';
 
-
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 
@@ -235,8 +234,6 @@ const,
   );
 };
 
-
 SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;"`
-
 

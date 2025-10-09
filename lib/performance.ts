@@ -1,6 +1,5 @@
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-
 export interface Metric {
   name: string;
   value: number;
@@ -79,7 +78,6 @@ export function reportWebVitals(): void {
   getTTFB(sendToAnalytics);
 }
 
-
 export function measurePerformance(name: string, fn: () => void): void {
   const start = performance.now();
   fn();
@@ -109,5 +107,4 @@ export function measureAsyncPerformance<T>(
     return result;
   });
 }
-
 

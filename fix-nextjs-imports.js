@@ -149,9 +149,6 @@ async function main() {/* TODO: Fix JSX expression */}
     });
   }
 
-
-
-
   if (fixedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }

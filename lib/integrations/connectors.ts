@@ -1,7 +1,6 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
 import { ProviderConnection, SyncLogEntry } from './types';
 
-
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection,
   action: string,
@@ -17,8 +16,6 @@ const generateId = (): string => {
   return Math.random().toString(36).substr(2, 9);
 
 };
-
-
 
 export async function simulateAction<T = any>(connectio,
   n: ProviderConnection,
@@ -98,7 +95,6 @@ export async function simulateAction<T = any>(connectio,
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-
 
   async addProjectNote(connectio,
   n: ProviderConnection, not,)
@@ -195,7 +191,6 @@ export async function syncData(connectio,
   } catch (error) {/* TODO: Fix JSX expression */}
     });
   }
-
 
   async updateStatus(connectio,
   n: ProviderConnection, chang,)

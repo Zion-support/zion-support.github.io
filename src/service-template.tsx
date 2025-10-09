@@ -1,6 +1,5 @@
 
 
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Phone } from 'lucide-react';
@@ -114,14 +113,11 @@ Ready to Transform Your Business?"
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Get a free consultation and discover how our solutions can revolutionize your operations.
 
-
       </main>
       <Footer /></Footer>
     </div>
   );
 };
 
-
 export default ServicePage;
-
 

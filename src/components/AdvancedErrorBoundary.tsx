@@ -383,5 +383,3 @@ onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 bord
 
 export default AdvancedErrorBoundary;`
 
-
-

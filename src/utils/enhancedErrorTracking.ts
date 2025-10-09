@@ -213,5 +213,3 @@ class EnhancedErrorTracker {// TODO: Add content;}
 export const errorTracker = new EnhancedErrorTracker()
 export default errorTracker;`
 
-
-

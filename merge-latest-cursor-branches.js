@@ -43,7 +43,6 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
 safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
-
 //Process each branch;
 for (const branch of latestCursorBranches) {/* TODO: Fix JSX expression */}
     });
@@ -87,13 +86,6 @@ const report = {/* TODO: Fix JSX expression */}`
 
 // Save detailed report;
 fs.writeFileSync('latest-cursor-branches-merge-report.json', JSON.stringify(report, null, 2));
-
-
-
-
-
-
-
 
 if (report.systemChecks.allPassed) {/* TODO: Fix JSX expression */}
 } else {/* TODO: Fix JSX expression */}

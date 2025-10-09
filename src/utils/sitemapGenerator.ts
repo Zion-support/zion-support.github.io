@@ -196,5 +196,3 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   ]
 }"`
 
-
-

@@ -2,11 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -22,11 +17,8 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
-<<<<<<< HEAD
   buil,
   d: {/* TODO: Fix JSX expression */}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -77,7 +69,6 @@ export default defineConfig({
           if (id.includes('/app/components/')) {
             return 'components';
           }
-<<<<<<< HEAD
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -85,8 +76,6 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -96,16 +85,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-<<<<<<< HEAD
           router: ['react-router-dom'],
-=======
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          router: ['react-router-dom'],
-          utils: ['clsx', 'tailwind-merge']
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-=======
           return null;
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -127,7 +108,6 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-<<<<<<< HEAD
         drop_debugger: true,
       },
       mangle: {
@@ -135,12 +115,6 @@ export default defineConfig({
       },
       format: {
         comments: false,
-=======
-        drop_debugger: true
-      },
-      mangle: {
-        safari10: true
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
       },
       format: {
         comments: false
@@ -149,7 +123,6 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
-<<<<<<< HEAD
     assetsInlineLimit: 4096,
   },
   server: {
@@ -166,22 +139,4 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
-=======
-    assetsInlineLimit: 4096
-  },
-  server: {
-    port: 3000,
-    host: true
-  },
-  preview: {
-    port: 4173,
-    host: true
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
-  },
-  css: {
-    devSourcemap: true
-  }
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 });

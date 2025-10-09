@@ -105,14 +105,9 @@ const,
             </div>
           </section>
 
-
         </main>
       </div>
     </>
   );
 };
-
-
-
-
 

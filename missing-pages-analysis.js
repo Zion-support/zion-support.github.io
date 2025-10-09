@@ -4,7 +4,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 // Get all existing pages;
 const appDir = '/workspace/app';
 const existingPages = [];

@@ -105,7 +105,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -146,23 +145,6 @@ export default function AboutPage() {
                 <div className="text-gray-600 font-medium">
                   {stat.label}
                 </div>
-=======
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Leading the future of AI-powered enterprise solutions with cutting-edge technology, 
-              innovative thinking, and unwavering commitment to client success.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Award className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">ISO 27001 Certified</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
               </div>
               <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
                 <Shield className="w-5 h-5 text-purple-400" />

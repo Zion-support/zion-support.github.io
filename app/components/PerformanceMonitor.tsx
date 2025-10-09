@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-=======
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -19,7 +7,7 @@ const PerformanceMonitor: React.FC = () => {
       // Monitor Core Web Vitals
       if ('web-vitals' in window) {
         // This would typically use the web-vitals library
-        console.log('Performance monitoring enabled');
+        // Performance monitoring enabled
       }
 
       // Monitor page load time

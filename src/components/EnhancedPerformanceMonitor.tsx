@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface PerformanceMetrics {// TODO: Add content;}
 
 };
@@ -460,6 +459,4 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
 };
 
 export default EnhancedPerformanceMonitor;"
-
-
 

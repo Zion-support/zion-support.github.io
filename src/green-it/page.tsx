@@ -450,7 +450,5 @@ Benefits of Green IT;"
   );
 };
 
-
 export default GreenItPage;
-
 

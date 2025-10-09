@@ -8,17 +8,6 @@ export class AppError extends Error implements ApiError {/* TODO: Fix JSX expres
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 export const errorHandler = (er,
   r: ApiError,
   re,
@@ -30,16 +19,9 @@ export const errorHandler = (er,
   
   
 
-
-
-
-
-
-
   
 
   
-
 
   // Log error for monitoring
   if (process.env['NODE_ENV'] === 'development') {
@@ -52,16 +34,6 @@ export const errorHandler = (er,
       ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
 
   });
-
-
-
-
-
-
-
-
-
-
 
     timestam,
   p: new Date().toISOString(),

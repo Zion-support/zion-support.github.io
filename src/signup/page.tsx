@@ -240,7 +240,5 @@ Join thousands of businesses already using our AI and IT solutions;
   );
 };
 
-
 export default SignupPage;
-
 

@@ -66,7 +66,6 @@ function applyFixes() {/* TODO: Fix JSX expression */}
   fixes.forEach(({ file, changes }) => {/* TODO: Fix JSX expression */}
     }
 
-
     changes.forEach(({ from, to }) => {/* TODO: Fix JSX expression */}
         content = content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to);
         modified = true;

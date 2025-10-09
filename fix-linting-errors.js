@@ -23,7 +23,6 @@ const filesToFix = [
 function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   }
 
-
   // Fix unused variables by prefixing with underscore;
   const unusedVarPatterns = [
     // Unused imports;

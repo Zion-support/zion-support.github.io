@@ -75,11 +75,9 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
     }
 
-
     // Filter PRs that target main branch;
     if (mainPRs.length === 0) {/* TODO: Fix JSX expression */}
     }
-
 
     // Process PRs one by one;
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
@@ -89,10 +87,6 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
       // Add a small delay between merges;
       await new Promise(resolve => setTimeout(resolve, 2000));
     }
-
-
-
-
 
   } catch (error) {/* TODO: Fix JSX expression */}
   }

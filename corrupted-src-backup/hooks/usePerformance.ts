@@ -3,7 +3,6 @@
  * Provides React hooks for performance monitoring and optimization;
  */
 
-
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 

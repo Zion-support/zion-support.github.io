@@ -250,7 +250,6 @@ const addStructuredData = (dat,)
   
   document.head.appendChild(script);
 
-
   ogImage: string;
   twitterCard: string;
   structuredData: Record<string, any>;

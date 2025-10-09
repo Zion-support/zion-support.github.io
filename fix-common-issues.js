@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 // Function to fix console statements;
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
     return `if (process.env.NODE_ENV === 'development') console.${method}(`;)
@@ -27,7 +26,6 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 // Function to fix specific files;
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
-
 
     // Apply fixes;
     content = fixConsoleStatements(content);

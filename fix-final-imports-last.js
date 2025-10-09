@@ -1,7 +1,6 @@
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
-
 function processFile(filePath) {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,

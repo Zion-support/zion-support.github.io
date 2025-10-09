@@ -2,7 +2,6 @@
 
 import type { IntegrationProviderMeta } from './types';
 
-
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [
   {/* TODO: Fix JSX expression */}
@@ -67,15 +66,6 @@ export const,
   n: 'HRIS & ATS' }
 ];
 
-
-
-
-
-  {/* TODO: Fix JSX expression */}
-  n: 'HRIS & ATS' }
-];
-
-
   {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' }
 ];
@@ -84,6 +74,9 @@ export const,
   n: 'HRIS & ATS' }
 ];
 
+  {/* TODO: Fix JSX expression */}
+  n: 'HRIS & ATS' }
+];
 
 export function getProviderById(i,)
   d: string): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
