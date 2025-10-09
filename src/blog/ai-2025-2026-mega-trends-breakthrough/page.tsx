@@ -95,18 +95,16 @@ const AIMegaTrends20252026: React.FC = () => {
                   Join leading enterprises embracing the AI mega trends of 2025-2026
                 </p>
                 <div className="space-x-4">
-                  <Link
-                    to="/contact"
+                  <a href="/contact"
                     className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
                   >
                     Get AI Assessment
-                  </Link>
-                  <Link
-                    to="/services"
+                  </a>
+                  <a href="/services"
                     className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors"
                   >
                     Explore AI Services
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

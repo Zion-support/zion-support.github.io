@@ -112,7 +112,7 @@ class AccessibilityService {
       prevLevel = level;
     });
     // Check for skip navigation link
-    const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]');
+    const hasSkipLink = document.querySelector('a[href="#main"], a[href="#content"]');
     if (!hasSkipLink) {
       warnings.push({
         type: 'missing-skip-link',

@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -91,8 +90,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </p>
         </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link
-              to="/services"
+            <a href="/services"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Get Started Today
@@ -104,13 +102,12 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </Link>
-            <Link
-              to="/contact"
+            </a>
+            <a href="/contact"
               className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
             >
               Schedule Consultation
-            </Link>
+            </a>
           </div>
           {/* Key Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -155,14 +152,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                href={currentContent.url}
+              <a href={currentContent.url}
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
               >
                 <span className="text-xl">📖</span>
                 <span>Read {currentContent.type}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
+              </a>
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
