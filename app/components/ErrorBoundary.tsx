@@ -1,15 +1,9 @@
-'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { FileWarning } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
 }
 
 interface State {
@@ -29,32 +23,30 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
+    this.setState({
+      error,
+      errorInfo
+    });
 
-    }
-
-    // Report error to monitoring service in production
-    if (process.env['NODE_ENV'] === 'production') {
-      // Send to error tracking service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
-          description: error.message,
-          fatal: false
-        });
-      }
-    }
+    // Log error to monitoring service
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
     
-    this.setState({ errorInfo });
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    if (this.props.enableErrorReporting && process.env.NODE_ENV === 'development') {
-
+    // You can also log to external service here
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: true
+      });
     }
   }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
 
   render() {
     if (this.state.hasError) {
@@ -63,41 +55,47 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-md rounded-lg p-8 text-center cyber-glow">
             <div className="mb-6">
-              <FileWarning className="mx-auto h-16 w-16 text-red-500" />
+              <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+              <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
+              <p className="text-gray-300 mb-6">
+                We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
+              </p>
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Oops! Something went wrong</h1>
-            <p className="text-gray-600 mb-6">
-              We&apos;re sorry for the inconvenience. Please try refreshing the page.
-            </p>
-            <div className="space-y-3">
+
+            <div className="space-y-4">
               <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                onClick={this.handleRetry}
+                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
               >
-                Refresh Page
+                <RefreshCw className="w-4 h-4" />
+                <span>Try Again</span>
               </button>
-              <Link
-                to="/"
-                className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+              
+              <button
+                onClick={this.handleGoHome}
+                className="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
               >
-                Go to Homepage
-              </Link>
+                <Home className="w-4 h-4" />
+                <span>Go Home</span>
+              </button>
             </div>
-            {this.props.enableErrorReporting && this.state.error && (
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300">
+                  Error Details (Development)
                 </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
+                <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-300 overflow-auto">
+                  <pre>{this.state.error.stack}</pre>
+                  {this.state.errorInfo && (
+                    <pre className="mt-2">{this.state.errorInfo.componentStack}</pre>
+                  )}
                 </div>
-                </details>
-              )}
+              </details>
+            )}
           </div>
         </div>
       );
