@@ -20,6 +20,13 @@ interface AccessibilityMetrics {
   keyboardNavigationScore: number;
   screenReaderScore: number;
   overallScore: number;
+  score?: number;
+  issues?: number;
+  recommendations?: number;
+  colorContrast?: string;
+  keyboardNavigation?: string;
+  screenReader?: string;
+  focusManagement?: string;
 }
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
@@ -578,9 +585,9 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
-Score: ${metrics.score}/100
-Issues Found: ${metrics.issues.length}
-Recommendations: ${metrics.recommendations.length}
+Score: ${metrics.score || 'N/A'}
+Issues Found: ${metrics.issues || 0}
+Recommendations: ${metrics.recommendations || 0}
 `;
   }
 }
