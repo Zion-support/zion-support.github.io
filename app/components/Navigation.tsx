@@ -92,31 +92,17 @@ const Navigation: React.FC = () => {
     { name: 'Edge Computing', href: '/edge-computing', icon: Cloud },
     { name: '5G Solutions', href: '/5g-solutions', icon: Zap },
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
 
   return (
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
           <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
             <span className="text-3xl mr-2">⚡</span>
           <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center cyber-text">
             <span className="text-3xl mr-2 energy-pulse">⚡</span>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
             Zion Tech Group
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
           <Link 
             to="/" 
             className="flex items-center space-x-2 text-2xl font-bold"
@@ -150,33 +136,27 @@ const Navigation: React.FC = () => {
           <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
             </div>
           </Link>
 
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
           <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl">
             <span className="text-3xl">⚡</span>
             <span className="hidden sm:block">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
             <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               Zion Tech Group
             </span>
           </Link>
 
           {/* Desktop Menu */}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
             <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               Zion Tech Group
             </span>
           </Link>
 
           {/* Desktop Menu */}
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
@@ -187,29 +167,23 @@ const Navigation: React.FC = () => {
               to="/"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               onClick={closeAllMenus}
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
             >
               Home
             </Link>
             
               <button
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
                 className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
                 className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
                   isScrolled ? 'text-gray-700' : 'text-white'
                 }`}
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onMouseEnter={() => setAiServicesOpen(true)}
                 onMouseLeave={() => setAiServicesOpen(false)}
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
               >
                 <Brain className="w-4 h-4" />
                 <span>AI Services</span>
@@ -222,12 +196,8 @@ const Navigation: React.FC = () => {
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
               </button>
               
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
                   <div className="grid grid-cols-2 gap-4 px-4">
                     <div>
@@ -241,10 +211,8 @@ const Navigation: React.FC = () => {
                         >
                           {service.name}
                         </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
                           {service.name}
                         </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
                       ))}
                     </div>
                     <div>
@@ -260,7 +228,6 @@ const Navigation: React.FC = () => {
                         </Link>
                       ))}
                     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
@@ -304,7 +271,6 @@ const Navigation: React.FC = () => {
                       View All Services
                     </Link>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
                 </div>
               )}
             </div>
@@ -315,7 +281,6 @@ const Navigation: React.FC = () => {
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
               onClick={closeAllMenus}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
             >
               About
             </Link>
@@ -372,7 +337,6 @@ const Navigation: React.FC = () => {
             </div>
           </div>
                   </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
                 </div>
               )}
             </div>
@@ -404,7 +368,6 @@ const Navigation: React.FC = () => {
                 {aiServicesOpen && (
                   <div className="ml-4 space-y-2 mt-2">
                     {aiServices.map((service, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
                       <Link
                         key={index}
                         to={service.href}
@@ -415,7 +378,6 @@ const Navigation: React.FC = () => {
                         <span>{service.name}</span>
                       </Link>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50">
                   <div className="grid grid-cols-2 gap-4 px-6">
                     {/* AI Services */}
@@ -474,7 +436,6 @@ const Navigation: React.FC = () => {
                       )}
                     </div>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
                 </div>
               )}
             </div>
@@ -494,8 +455,6 @@ const Navigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -589,12 +548,10 @@ const Navigation: React.FC = () => {
               >
                 About
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
               <Link
               Team
             </Link>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
             {/* Contact Button */}
             <Link 
               to="/contact" 
@@ -626,7 +583,6 @@ const Navigation: React.FC = () => {
                 to="/" 
                 className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
                 onClick={closeAllMenus}
               >
                 Contact
@@ -677,33 +633,26 @@ const Navigation: React.FC = () => {
                   <Mail className="w-4 h-4" />
                   <span>kleber@ziontechgroup.com</span>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
               </div>
             </div>
           </div>
         )}
       </div>
     </nav>
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
   );
 };
 
 export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
   );
 };
 
 export default Navigation;
 export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
   );
 };
 
 export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
   );
 };
 
 export default Navigation;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
->>>>>>> cursor/fix-errors-and-merge-to-main-2152

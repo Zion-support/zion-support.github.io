@@ -257,15 +257,11 @@ const AIServicesPage: React.FC = () => {
       category: 'Space AI',
       technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
     }
-<<<<<<< HEAD
   ];
 
   const categories = [...new Set(aiServices.map(service => service.category))];
 
   return (
-=======
-  ];return (
->>>>>>> resolve-merge-conflicts-1759965566
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>

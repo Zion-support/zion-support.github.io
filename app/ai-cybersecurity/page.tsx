@@ -1,10 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, Eye, AlertTriangle, Zap, ShieldCheck } from 'lucide-react';;
-=======
-
->>>>>>> resolve-merge-conflicts-1759965566
+import { CheckCircle, Eye, AlertTriangle, Zap, ShieldCheck } from 'lucide-react';
 
 const AICybersecurityPage: React.FC = () => {
   const securityServices = [

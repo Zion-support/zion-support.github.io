@@ -91,6 +91,7 @@ const SEOOptimizer: React.FC = () => {
   }, []);
 
   return null;
+};
 
 interface SEOOptimizerProps {
   title: string;
@@ -103,7 +104,7 @@ interface SEOOptimizerProps {
   twitterCard?: string;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizerWithProps: React.FC<SEOOptimizerProps> = ({
   title,
   description,
   keywords,
@@ -145,3 +146,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 };
 
 export default SEOOptimizer;
+export { SEOOptimizerWithProps };
