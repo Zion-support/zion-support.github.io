@@ -650,11 +650,6 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-      icon: '🚛',
-      price: '$349/month',
-      features: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],
-      benefits: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life'],
-      marketPrice: '$500-1000/month',
       category: 'Transportation',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
