@@ -107,8 +107,6 @@ const MicroSAASPage: React.FC = () => {
     { icon: Globe, label: 'Countries', value: '50+' }
   ];
 
-<<<<<<< HEAD
-=======
   const realEstateServices = [
     {
       title: 'AI Property Valuation Platform',
@@ -1834,7 +1832,6 @@ const MicroSAASPage: React.FC = () => {
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
   return (
     <>
       <Helmet>

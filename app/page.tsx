@@ -5,6 +5,9 @@ import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AdvancedPerformanceOptimizer from './components/AdvancedPerformanceOptimizer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedAccessibilityEnhancer from './components/AdvancedAccessibilityEnhancer';
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
@@ -98,11 +101,34 @@ const HomePage: React.FC = () => {
         enablePreloading={true}
         enableCodeSplitting={true}
       />
+      <AdvancedPerformanceOptimizer
+        enableAdvancedCaching={true}
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enablePreloading={true}
+        enableCodeSplitting={true}
+        enableResourceHints={true}
+        enableServiceWorker={true}
+        enableCriticalCSS={true}
+        enableWebVitals={true}
+      />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
+      />
+      <AdvancedAccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReader={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+        enableARIALabels={true}
+        enableSkipLinks={true}
+        enableColorContrast={true}
+        enableMotionReduction={true}
+        enableFontScaling={true}
+        enableVoiceNavigation={true}
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}
