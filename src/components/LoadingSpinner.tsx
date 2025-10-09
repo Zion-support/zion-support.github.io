@@ -1,5 +1,12 @@
 'use client';
 
+import React from 'react';
+
+// Simple utility function to combine class names
+const cn = (...classes: (string | undefined)[]): string => {
+  return classes.filter(Boolean).join(' ');
+};
+
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
@@ -13,6 +20,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text = 'Loading...',
   fullScreen = false,
 }) => {
+  const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',

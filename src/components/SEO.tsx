@@ -1,4 +1,5 @@
 'use client';
+import React, { useEffect } from 'react';
 
 /**
  * SEO Component
@@ -24,9 +25,9 @@ export interface SEOProps {
   alternateLocales?: { locale: string; url: string }[];
 }
 
+const defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+  description: 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
     'AI',
     'artificial intelligence',
@@ -41,7 +42,7 @@ export interface SEOProps {
   twitterCard: 'summary_large_image' as const,
 };
 
-export const SEO: React.FC<SEOProps> = ({
+const SEO: React.FC<SEOProps> = ({
   title,
   description,
   keywords,

@@ -1,6 +1,9 @@
 'use client';
+import React, { useState, useEffect } from 'react';
+
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
-export interface ToastProps {
+
+interface ToastProps {
   message: string;
   type?: ToastType;
   duration?: number;
@@ -18,8 +21,10 @@ const Toast: React.FC<ToastProps> = ({
   useEffect(() => {
     setIsVisible(show);
     if (show && duration > 0) {
+      const timer = setTimeout(() => {
         setIsVisible(false);
         if (onClose) {
+          onClose();
         }
       }, duration);
       return () => clearTimeout(timer);
