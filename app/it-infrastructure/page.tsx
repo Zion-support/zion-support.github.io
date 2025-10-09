@@ -1,5 +1,8 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
@@ -197,12 +200,14 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: '100%', description: 'Security Compliance' }
   ];
   return (
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
     <>
-      <Helmet>
-        <title>IT Infrastructure Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
-        <meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
-      </Helmet>
+      <SEOOptimizer
+        title="IT Infrastructure Services - Zion Tech Group"
+        description="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
+        keywords={[IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
+      />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">

@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-=======
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
 import React, { useEffect, useCallback } from 'react';
+
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableSkipLinks?: boolean;

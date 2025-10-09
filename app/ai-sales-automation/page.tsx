@@ -1,54 +1,39 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
+import { TrendingUp, Target, Users, Zap, Shield, BarChart, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, Building } from 'lucide-react';
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI Lead Scoring',
-      description: 'Intelligent lead scoring using machine learning to identify high-value prospects and prioritize sales efforts.',
-      benefits: ['95% accuracy', 'Real-time scoring', 'Behavioral analysis']
-    },
-    {
       icon: Target,
-      title: 'Automated Outreach',
-      description: 'AI-powered email sequences, follow-ups, and personalized messaging that converts prospects into customers.',
-      benefits: ['3x higher open rates', 'Personalized content', 'Perfect timing']
+      title: 'Intelligent Lead Scoring',
+      description: 'AI-powered lead scoring that identifies high-value prospects automatically.',
+      benefits: ['Behavioral analysis', 'Predictive scoring', 'Real-time updates']
     },
     {
-      icon: Users,
-      title: 'CRM Integration',
-      description: 'Seamless integration with popular CRMs like Salesforce, HubSpot, and Pipedrive for unified sales management.',
-      benefits: ['One-click sync', 'Real-time updates', 'Unified pipeline']
+      icon: Zap,
+      title: 'Automated Outreach',
+      description: 'Personalized email sequences and follow-ups that convert prospects into customers.',
+      benefits: ['Personalized content', 'Optimal timing', 'A/B testing']
     },
     {
       icon: BarChart,
       title: 'Sales Analytics',
-      description: 'Advanced analytics and reporting to track performance, identify trends, and optimize sales strategies.',
-      benefits: ['Real-time insights', 'Predictive analytics', 'ROI tracking']
-    },
-    {
-      icon: Zap,
-      title: 'Workflow Automation',
-      description: 'Automate repetitive sales tasks, follow-ups, and administrative work to focus on closing deals.',
-      benefits: ['80% time savings', 'Consistent processes', 'Error reduction']
+      description: 'Comprehensive analytics to track performance and optimize your sales process.',
+      benefits: ['Real-time dashboards', 'Performance metrics', 'ROI tracking']
     },
     {
       icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Built-in compliance with GDPR, CAN-SPAM, and other regulations to protect your business and customers.',
-      benefits: ['Legal compliance', 'Data protection', 'Audit trails']
+      title: 'CRM Integration',
+      description: 'Seamless integration with popular CRM systems for unified sales management.',
+      benefits: ['Salesforce integration', 'HubSpot support', 'Custom APIs']
     }
   ];
-  const pricingPlans = [
+
+  const pricingTiers = [
     {
       name: 'Starter',
       price: '$299',
@@ -56,12 +41,12 @@ const AISalesAutomationPage: React.FC = () => {
       description: 'Perfect for small sales teams',
       features: [
         'Up to 1,000 leads/month',
-        'Basic AI lead scoring',
-        'Email automation',
-        'CRM integration',
-        'Standard analytics',
-        'Email support'
+        'Basic automation',
+        'Email support',
+        'Standard integrations',
+        'Basic analytics'
       ],
+      cta: 'Start Free Trial',
       popular: false
     },
     {
@@ -71,46 +56,36 @@ const AISalesAutomationPage: React.FC = () => {
       description: 'Ideal for growing sales teams',
       features: [
         'Up to 10,000 leads/month',
-        'Advanced AI algorithms',
-        'Multi-channel automation',
-        'Advanced CRM features',
-        'Custom reporting',
+        'Advanced AI features',
         'Priority support',
-        'A/B testing'
+        'Advanced integrations',
+        'Comprehensive analytics',
+        'Custom workflows',
+        'API access'
       ],
+      cta: 'Start Free Trial',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'For large sales organizations',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large sales organizations',
       features: [
         'Unlimited leads',
         'Custom AI models',
-        'All channels + voice',
+        '24/7 dedicated support',
         'Custom integrations',
-        'Real-time dashboard',
-        'Dedicated account manager',
-        'Custom development',
-        'SLA guarantee'
+        'Advanced security features',
+        'White-label options',
+        'Dedicated account manager'
       ],
+      cta: 'Contact Sales',
       popular: false
     }
   ];
-<<<<<<< HEAD
-  const testimonials = [
-=======
-
-  const stats = [
-    { number: '300%', label: 'Increase in Sales' },
-    { number: '80%', label: 'Time Savings' },
-    { number: '95%', label: 'Lead Accuracy' },
-    { number: '50+', label: 'CRM Integrations' }
-  ];
 
   const useCases = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
     {
       title: 'B2B Lead Generation',
       description: 'Automatically identify and score high-value B2B prospects using AI-powered analysis of company data, website behavior, and engagement patterns.',
@@ -119,445 +94,221 @@ const AISalesAutomationPage: React.FC = () => {
     {
       title: 'E-commerce Upselling',
       description: 'Intelligent product recommendations and automated follow-up sequences to increase average order value and customer lifetime value.',
-      icon: ShoppingCart
+      icon: TrendingUp
     },
     {
-      title: 'SaaS Trial Conversion',
-      description: 'Automated onboarding sequences and personalized engagement to convert free trial users into paying customers.',
-      icon: Cloud
+      title: 'Customer Retention',
+      description: 'Proactive customer engagement and retention campaigns that reduce churn and increase customer lifetime value.',
+      icon: Users
     },
     {
-      title: 'Real Estate Lead Nurturing',
-      description: 'AI-powered lead nurturing for real estate agents with automated follow-ups, market updates, and personalized property recommendations.',
-      icon: Home
+      title: 'Sales Pipeline Management',
+      description: 'Automated pipeline tracking, forecasting, and optimization to ensure consistent revenue growth.',
+      icon: BarChart
     }
   ];
-<<<<<<< HEAD
+
   const stats = [
-    { number: '60%', label: 'Increase in Close Rate' },
-    { number: '3x', label: 'Higher Response Rates' },
-    { number: '40%', label: 'Time Saved on Follow-ups' },
-    { number: '95%', label: 'Lead Scoring Accuracy' }
+    { number: '300%', label: 'Sales Increase' },
+    { number: '85%', label: 'Lead Quality' },
+    { number: '50%', label: 'Time Saved' },
+    { number: '24/7', label: 'Automation' }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 neon-text">
-              AI Sales Automation
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-              Automate your sales process and close more deals with AI
+      <SEOOptimizer
+        title="AI Sales Automation - Zion Tech Group"
+        description="Boost sales by 300% with intelligent lead scoring, automated outreach, and CRM integration. Transform your sales process with AI."
+        keywords={['AI sales automation', 'lead scoring', 'sales optimization', 'CRM integration']}
+        canonicalUrl="https://ziontechgroup.com/ai-sales-automation"
+      />
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            AI Sales Automation
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+            Boost sales by 300% with intelligent automation
+          </p>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
+            Our AI sales automation platform helps you identify high-value prospects, 
+            automate outreach, and optimize your entire sales process for maximum results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+            <a
+              href="#demo"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+            >
+              Watch Demo
+            </a>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Sales Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI sales automation platform combines machine learning, predictive analytics, 
+              and intelligent automation to maximize your sales performance.
             </p>
-            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-              Transform your sales team with AI-powered automation that scores leads, 
-              predicts outcomes, and automates follow-ups. Increase close rates by 60% 
-              while saving 40% of your time on manual tasks.
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-cyan-400">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Real-World Applications</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how our AI sales automation solutions are transforming businesses across industries
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center justify-center"
-              >
-                📞 Call Now: (302) 464-0950
-              </a>
-              <a
-                href="/contact"
-                className="cyber-button inline-flex items-center justify-center"
-                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-              >
-                Get Free Demo
-              </a>
-            </div>
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                  <useCase.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="mb-16">
+          <div className="bg-slate-800/30 rounded-xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Proven Results</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  <div className="text-white font-semibold">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Powerful AI Features
-            </h2>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate and optimize your sales process
+              Choose the perfect plan for your sales automation needs. All plans include our core AI features.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card hologram-card">
-                <div className="flex items-start space-x-4">
-                  <div className="text-cyan-400 flex-shrink-0">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* How It Works Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              How It Works
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your sales process in just 3 simple steps
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-slate-900">1</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Connect & Import</h3>
-              <p className="text-gray-300">
-                Connect your CRM, import your leads, and configure the AI with your sales process and goals.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-slate-900">2</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI Analyzes & Scores</h3>
-              <p className="text-gray-300">
-                The AI analyzes lead behavior, scores prospects, and automatically triggers personalized follow-ups.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-pink-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-slate-900">3</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Optimize & Scale</h3>
-              <p className="text-gray-300">
-                Monitor performance, optimize campaigns, and scale your sales efforts with data-driven insights.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Simple Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your sales team size and volume. All plans include our core AI features.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`cyber-card hologram-card relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((plan, index) => (
+              <div
+                key={index}
+                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 ${
+                  plan.popular 
+                    ? 'border-cyan-400/60 ring-2 ring-cyan-400/20 scale-105' 
+                    : 'border-cyan-500/20 hover:border-cyan-400/40'
+                }`}
+              >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
+                    <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                       Most Popular
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+                <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                    <span className="text-gray-300">{plan.period}</span>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <a
                   href="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-=======
-
-  return (
-    <>
-      <SEOOptimizer
-        title="AI Sales Automation Platform - Zion Tech Group"
-        description="Revolutionary AI sales automation that increases revenue by 300% and saves 80% of sales time. Lead scoring, automated outreach, and CRM integration."
-        keywords={['AI sales automation', 'lead scoring', 'sales CRM', 'automated outreach', 'sales analytics']}
-        canonicalUrl="https://ziontechgroup.com/ai-sales-automation"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main className="pt-16">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Sales Automation Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Boost sales by 300% with intelligent automation
-              </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered sales automation platform combines intelligent lead scoring, automated outreach, 
-                and advanced analytics to help sales teams close more deals in less time.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
-                </a>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Features Section */}
-          <section className="container mx-auto px-4 py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Sales Automation Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
-                        <CheckCircle className="w-4 h-4" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Use Cases Section */}
-          <section className="container mx-auto px-4 py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Perfect for Every Industry
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Pricing Section */}
-          <section className="container mx-auto px-4 py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Simple, Transparent Pricing
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`cyber-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}
                 >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="tel:+13024640950"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
-                    }`}
-                  >
-                    Get Started
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to 3x Your Sales Performance?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join 1,000+ sales teams already using our AI automation platform
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Schedule Demo</span>
+                  {plan.cta}
                 </a>
               </div>
-<<<<<<< HEAD
             ))}
           </div>
-        </div>
-      </section>
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              What Our Customers Say
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-xl">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Automate Your Sales?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of sales teams who have transformed their performance with AI
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of businesses already using our AI sales automation platform 
+              to boost their sales performance and revenue growth.
             </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="cyber-card hologram-card">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-            Ready to Transform Your Sales Process?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Start closing more deals with AI-powered sales automation. 
-            Join thousands of sales teams already using our platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center justify-center"
-            >
-              📞 Call Now: (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button inline-flex items-center justify-center"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
-              Get Free Demo
-            </a>
-          </div>
-          <div className="mt-8 text-sm text-gray-400">
-            <p>✓ Free 14-day trial • ✓ No setup fees • ✓ Cancel anytime</p>
-          </div>
-        </div>
-      </section>
-    </div>
-=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
+              >
+                Start Your Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              >
+                Schedule Demo
+              </a>
             </div>
-          </section>
-        </main>
-
-        <Footer />
-      </div>
-    </>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 };
+
 export default AISalesAutomationPage;

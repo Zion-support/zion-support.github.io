@@ -1,5 +1,8 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
@@ -70,11 +73,13 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
   return (
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
     <>
-      <Helmet>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
-      </Helmet>
+      <SEOOptimizer
+        title="Case Studies - Zion Tech Group"
+        description="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
+      />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">

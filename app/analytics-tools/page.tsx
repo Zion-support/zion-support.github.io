@@ -1,5 +1,8 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 const AnalyticsToolsPage: React.FC = () => {
@@ -79,11 +82,14 @@ const AnalyticsToolsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Analytics Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
-        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
-      </Helmet>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+      <SEOOptimizer
+        title="Analytics Tools - Zion Tech Group"
+        description="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month."
+        keywords={['analytics tools', 'business intelligence', 'web analytics', 'marketing analytics', 'sales analytics', 'ai analytics']}
+        canonicalUrl="https://ziontechgroup.com/analytics-tools"
+      />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -224,6 +230,8 @@ const AnalyticsToolsPage: React.FC = () => {
           </div>
         </div>
       </section>
+      </main>
+      <Footer />
     </div>
   );
 };

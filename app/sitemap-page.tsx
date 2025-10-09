@@ -1,6 +1,9 @@
+'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import Link from 'next/link';
-import { Helmet } from 'react-helmet-async';
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },
@@ -35,15 +38,17 @@ const SitemapPage: React.FC = () => {
     { url: '/terms', title: 'Terms of Service', priority: '0.3' },
   ];
   return (
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
     <>
-      <Helmet>
-        <title>Sitemap | Zion Tech Group</title>
+      <SEOOptimizer
+        title="Sitemap | Zion Tech Group"
         <meta
           name="description"
           content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
         />
         <meta name="robots" content="index, follow" />
-      </Helmet>
+      />
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-8">
           <header className="text-center mb-12">

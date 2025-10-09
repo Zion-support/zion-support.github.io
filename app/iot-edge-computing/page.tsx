@@ -1,5 +1,8 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
@@ -138,12 +141,14 @@ const IoTEdgeComputingPage: React.FC = () => {
   ];
   const _categories = [...new Set(iotServices.map(service => service.category))];
   return (
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
     <>
-      <Helmet>
-        <title>IoT & Edge Computing Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced IoT and edge computing solutions for smart cities, industrial automation, and connected devices." />
-        <meta name="keywords" content="IoT services, edge computing, smart cities, industrial IoT, sensor networks, connected devices" />
-      </Helmet>
+      <SEOOptimizer
+        title="IoT & Edge Computing Services - Zion Tech Group"
+        description="Advanced IoT and edge computing solutions for smart cities, industrial automation, and connected devices." />
+        keywords={[IoT services, edge computing, smart cities, industrial IoT, sensor networks, connected devices" />
+      />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
