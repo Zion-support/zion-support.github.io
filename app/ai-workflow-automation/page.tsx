@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-export default AIWorkflowAutomationPage;
->>>>>>> origin/main
 =======
 'use client';
 import React from 'react';

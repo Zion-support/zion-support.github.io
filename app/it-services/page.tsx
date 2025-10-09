@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-export default ITServicesPage;
->>>>>>> origin/main
 =======
 'use client';
 import React from 'react';

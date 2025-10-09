@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-
-=======
-'use client';
-import React, { useEffect, useCallback } from 'react';
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  enableSkipLinks?: boolean;
-  enableKeyboardNav?: boolean;
-  enableFocusIndicators?: boolean;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b494
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
