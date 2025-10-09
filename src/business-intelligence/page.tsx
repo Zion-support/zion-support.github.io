@@ -1,6 +1,8 @@
 'use client';
+
 import React from 'react';
-import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
+import { CheckCircle, Star, BarChart, TrendingUp, Target, Eye, Database, Zap, Brain, PieChart, LineChart, Activity } from 'lucide-react';
+
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
     {
@@ -34,6 +36,7 @@ const BusinessIntelligencePage: React.FC = () => {
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -58,6 +61,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Key Benefits */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,6 +73,7 @@ const BusinessIntelligencePage: React.FC = () => {
               Our business intelligence solutions deliver actionable insights that drive real business value
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -77,6 +82,7 @@ const BusinessIntelligencePage: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Data-Driven Decisions</h3>
               <p className="text-gray-600">Make informed decisions based on real-time data and comprehensive analytics</p>
             </div>
+            
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-blue-600" />
@@ -84,6 +90,7 @@ const BusinessIntelligencePage: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance Optimization</h3>
               <p className="text-gray-600">Identify opportunities for improvement and optimize business processes</p>
             </div>
+            
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-blue-600" />
@@ -94,6 +101,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Services */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,11 +113,13 @@ const BusinessIntelligencePage: React.FC = () => {
               Comprehensive business intelligence services designed to unlock the value in your data
             </p>
           </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {biServices.map((service) => (
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
+                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -121,6 +131,7 @@ const BusinessIntelligencePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
                   <ul className="space-y-2">
@@ -132,6 +143,7 @@ const BusinessIntelligencePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+                
                 <div className="border-t pt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
@@ -143,6 +155,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -165,4 +178,5 @@ const BusinessIntelligencePage: React.FC = () => {
     </div>
   );
 };
+
 export default BusinessIntelligencePage;

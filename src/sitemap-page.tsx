@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },
@@ -35,7 +37,16 @@ const SitemapPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <>
+      <Helmet>
+        <title>Sitemap | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-8">
           <header className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
@@ -51,7 +62,7 @@ const SitemapPage: React.FC = () => {
                 {pages.map((page, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg p-4">
                     <Link
-                      href={page.url}
+                      to={page.url}
                       className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
                     >
                       {page.title}
@@ -68,7 +79,7 @@ const SitemapPage: React.FC = () => {
               
               <div className="mt-8 text-center">
                 <Link
-                  href="/"
+                  to="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
                   Back to Home
@@ -78,6 +89,7 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
       </div>
+    </>
   );
 };
 
