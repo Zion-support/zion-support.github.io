@@ -14,7 +14,10 @@ export interface Metadata {
   metadataBase?: URL;
   alternates?: {
     canonical?: string;
+<<<<<<< HEAD
     languages?: Record<string, string>;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9def
   };
   openGraph?: {
     title?: string;
@@ -33,9 +36,13 @@ export interface Metadata {
     publishedTime?: string;
   };
   twitter?: {
+<<<<<<< HEAD
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
     creator?: string;
+=======
+    card?: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9def
     title?: string;
     description?: string;
     images?: string[];
@@ -47,7 +54,11 @@ export interface Metadata {
       index?: boolean;
       follow?: boolean;
       'max-video-preview'?: number;
+<<<<<<< HEAD
       'max-image-preview'?: 'none' | 'standard' | 'large';
+=======
+      'max-image-preview'?: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9def
       'max-snippet'?: number;
     };
   };
@@ -68,7 +79,11 @@ export interface MetadataRoute {
 
 export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
 
+<<<<<<< HEAD
 export interface MetadataRouteSitemap {
+=======
+export interface MetadataRouteSitemap extends MetadataRoute {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9def
   url: string;
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';

@@ -46,7 +46,12 @@ const ITServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
+<<<<<<< HEAD
   const itServices = [
+=======
+  const itServices = useMemo(() => [
+    // Core IT Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-9def
     {
       id: 'managed-it-services',
       name: 'Managed IT Services',
@@ -359,7 +364,7 @@ const ITServicesPage: React.FC = () => {
       users: 600,
       link: 'https://ziontechgroup.com/it-audit-compliance'
     }
-  ];
+  ], []);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe },
@@ -407,7 +412,7 @@ const ITServicesPage: React.FC = () => {
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+  }, [searchTerm, selectedCategory, sortBy, itServices]);
 
   return (
     <>

@@ -9,7 +9,7 @@ const MicroSAASPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
-  const microSAASServices = [
+  const microSAASServices = useMemo(() => [
     {
       id: 'ai-project-manager',
       name: 'AI Project Manager Pro',
@@ -178,7 +178,7 @@ const MicroSAASPage: React.FC = () => {
       users: 9200,
       link: 'https://ziontechgroup.com/lead-scoring-ai'
     }
-  ];
+  ], []);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe },
@@ -226,7 +226,7 @@ const MicroSAASPage: React.FC = () => {
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+  }, [searchTerm, selectedCategory, sortBy, microSAASServices]);
 
   return (
     <>

@@ -52,6 +52,7 @@ class ErrorBoundary extends React.Component<
     this.setState({ error, errorInfo });
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }

@@ -5,6 +5,10 @@ import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
 interface FuturisticServiceCardProps {
   title: string;
   description: string;
+<<<<<<< HEAD
+=======
+  icon: React.ComponentType<{ className?: string }>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9def
   features: string[];
   price: string;
   popular?: boolean;

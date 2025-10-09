@@ -71,7 +71,8 @@ export const validateAriaAttributes = (element: HTMLElement): string[] => {
     errors.push('Element with aria-expanded must have aria-controls');
   }
   
-  if (element.getAttribute('aria-labelledby') && !document.getElementById(element.getAttribute('aria-labelledby')!)) {
+  const ariaLabelledBy = element.getAttribute('aria-labelledby');
+  if (ariaLabelledBy && !document.getElementById(ariaLabelledBy)) {
     errors.push('Element with aria-labelledby references non-existent element');
   }
   
