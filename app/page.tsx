@@ -100,9 +100,10 @@ const HomePage: React.FC = () => {
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
-        enableScreenReaderSupport={true}
+        enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
+        enableARIALabels={true}
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}

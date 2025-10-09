@@ -8,6 +8,15 @@ interface SEOOptimizerProps {
   canonicalUrl?: string;
   ogImage?: string;
   structuredData?: any;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  noIndex?: boolean;
+  noFollow?: boolean;
+  locale?: string;
+  alternateLocales?: { [key: string]: string };
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -16,7 +25,16 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData,
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section = 'Technology',
+  tags = [],
+  noIndex = false,
+  noFollow = false,
+  locale = 'en_US',
+  alternateLocales = {}
 }) => {
   useEffect(() => {
     // Update page title
@@ -26,6 +44,21 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords.join(', '));
     
+    // Update author
+    updateMetaTag('author', author);
+    
+    // Update robots
+    const robotsContent = [];
+    if (noIndex) robotsContent.push('noindex');
+    else robotsContent.push('index');
+    if (noFollow) robotsContent.push('nofollow');
+    else robotsContent.push('follow');
+    updateMetaTag('robots', robotsContent.join(', '));
+    
+    // Update language
+    updateMetaTag('language', locale.split('_')[0]);
+    document.documentElement.lang = locale.split('_')[0];
+    
     // Update Open Graph tags
     updateMetaTag('og:title', title, 'property');
     updateMetaTag('og:description', description, 'property');
@@ -33,6 +66,29 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateMetaTag('og:url', canonicalUrl, 'property');
     updateMetaTag('og:type', 'website', 'property');
     updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
+    updateMetaTag('og:locale', locale, 'property');
+    
+    if (author) {
+      updateMetaTag('og:author', author, 'property');
+    }
+    
+    if (publishedTime) {
+      updateMetaTag('article:published_time', publishedTime, 'property');
+    }
+    
+    if (modifiedTime) {
+      updateMetaTag('article:modified_time', modifiedTime, 'property');
+    }
+    
+    if (section) {
+      updateMetaTag('article:section', section, 'property');
+    }
+    
+    if (tags.length > 0) {
+      tags.forEach(tag => {
+        addMetaTag('article:tag', tag, 'property');
+      });
+    }
     
     // Update Twitter tags
     updateMetaTag('twitter:card', 'summary_large_image', 'name');
@@ -45,166 +101,140 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Update canonical URL
     updateCanonicalUrl(canonicalUrl);
     
+    // Add alternate language links
+    Object.entries(alternateLocales).forEach(([lang, url]) => {
+      addAlternateLink(lang, url);
+    });
+    
     // Add structured data
     if (structuredData) {
       addStructuredData(structuredData);
     }
     
-    // Add breadcrumb structured data
-    addBreadcrumbStructuredData();
+    // Add additional SEO meta tags
+    addAdditionalSEOTags();
     
-    // Add FAQ structured data
-    addFAQStructuredData();
-    
-    // Add organization structured data
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, noIndex, noFollow, locale, alternateLocales]);
 
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+    
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
     }
-    meta.setAttribute('content', content);
+    
+    meta.content = content;
+  };
+
+  const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
+    const meta = document.createElement('meta');
+    meta.setAttribute(attribute, name);
+    meta.content = content;
+    document.head.appendChild(meta);
   };
 
   const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    
     if (!canonical) {
       canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
+      canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', url);
+    
+    canonical.href = url;
+  };
+
+  const addAlternateLink = (hreflang: string, href: string) => {
+    const link = document.createElement('link');
+    link.rel = 'alternate';
+    link.hreflang = hreflang;
+    link.href = href;
+    document.head.appendChild(link);
   };
 
   const addStructuredData = (data: any) => {
+    // Remove existing structured data
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => script.remove());
+    
+    // Add new structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    // Remove existing structured data
-    const existing = document.getElementById('structured-data');
-    if (existing) {
-      existing.remove();
-    }
     document.head.appendChild(script);
   };
 
-  const addBreadcrumbStructuredData = () => {
-    const breadcrumbData = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      'itemListElement': [
-        {
-          '@type': 'ListItem',
-          'position': 1,
-          'name': 'Home',
-          'item': 'https://ziontechgroup.com'
+  const addAdditionalSEOTags = () => {
+    // Add viewport meta tag if not present
+    if (!document.querySelector('meta[name="viewport"]')) {
+      const viewport = document.createElement('meta');
+      viewport.name = 'viewport';
+      viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
+      document.head.appendChild(viewport);
+    }
+    
+    // Add theme color
+    updateMetaTag('theme-color', '#4f46e5');
+    updateMetaTag('msapplication-TileColor', '#4f46e5');
+    
+    // Add mobile web app capabilities
+    updateMetaTag('mobile-web-app-capable', 'yes');
+    updateMetaTag('apple-mobile-web-app-capable', 'yes');
+    updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
+    updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
+    
+    // Add format detection
+    updateMetaTag('format-detection', 'telephone=yes');
+    
+    // Add referrer policy
+    updateMetaTag('referrer', 'origin-when-cross-origin');
+    
+    // Add security headers
+    updateMetaTag('X-Content-Type-Options', 'nosniff');
+    updateMetaTag('X-Frame-Options', 'DENY');
+    updateMetaTag('X-XSS-Protection', '1; mode=block');
+    
+    // Add preconnect hints for performance
+    const preconnectDomains = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com',
+      'https://www.googletagmanager.com',
+      'https://www.google-analytics.com'
+    ];
+    
+    preconnectDomains.forEach(domain => {
+      if (!document.querySelector(`link[rel="preconnect"][href="${domain}"]`)) {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        if (domain.includes('fonts.gstatic.com')) {
+          link.crossOrigin = 'anonymous';
         }
-      ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
-    script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data
-    const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {
-      existing.remove();
-    }
-    document.head.appendChild(script);
+        document.head.appendChild(link);
+      }
+    });
+    
+    // Add DNS prefetch for external resources
+    const dnsPrefetchDomains = [
+      'https://www.googletagmanager.com',
+      'https://www.google-analytics.com',
+      'https://fonts.googleapis.com'
+    ];
+    
+    dnsPrefetchDomains.forEach(domain => {
+      if (!document.querySelector(`link[rel="dns-prefetch"][href="${domain}"]`)) {
+        const link = document.createElement('link');
+        link.rel = 'dns-prefetch';
+        link.href = domain;
+        document.head.appendChild(link);
+      }
+    });
   };
 
-  const addFAQStructuredData = () => {
-    const faqData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'What AI services does Zion Tech Group offer?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Zion Tech Group offers comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, and AI-powered business intelligence.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'What is the pricing for AI services?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Our AI services start at $1,500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Do you provide 24/7 support?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
-          }
-        }
-      ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(faqData);
-    script.id = 'faq-structured-data';
-    // Remove existing FAQ data
-    const existing = document.getElementById('faq-structured-data');
-    if (existing) {
-      existing.remove();
-    }
-    document.head.appendChild(script);
-  };
-
-  const addOrganizationStructuredData = () => {
-    const organizationData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      'name': 'Zion Tech Group',
-      'url': 'https://ziontechgroup.com',
-      'logo': 'https://ziontechgroup.com/logo.png',
-      'description': 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-      'foundingDate': '2020',
-      'numberOfEmployees': '50-100',
-      'industry': 'Technology',
-      'contactPoint': {
-        '@type': 'ContactPoint',
-        'telephone': '+1-302-464-0950',
-        'contactType': 'Customer Service',
-        'areaServed': 'US',
-        'availableLanguage': 'en'
-      },
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': '364 E Main St STE 1008',
-        'addressLocality': 'Middletown',
-        'addressRegion': 'DE',
-        'postalCode': '19709',
-        'addressCountry': 'US'
-      },
-      'sameAs': [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup'
-      ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(organizationData);
-    script.id = 'organization-structured-data';
-    // Remove existing organization data
-    const existing = document.getElementById('organization-structured-data');
-    if (existing) {
-      existing.remove();
-    }
-    document.head.appendChild(script);
-  };
-
-  return null;
+  return null; // This component doesn't render anything visible
 };
 
 export default SEOOptimizer;
