@@ -1,210 +1,162 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Music, Headphones, Mic } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const AIMusicCompositionPage: React.FC = () => {
   const features = [
-    'Generate original music in any genre or style',
-    'Create custom melodies, harmonies, and rhythms',
-    'Emotional analysis and mood-based composition',
-    'Instrument synthesis and arrangement',
-    'Lyrics generation with rhyme and meter',
+    'AI-powered music composition in multiple genres',
+    'Intelligent melody and harmony generation',
+    'Automatic chord progression creation',
     'Style transfer between different musical genres',
-    'Real-time music generation and playback',
-    'MIDI export for professional editing',
-    'Collaborative composition tools',
-    'Copyright-free original compositions'
+    'Emotional analysis and mood-based composition',
+    'Real-time music generation and improvisation',
+    'Lyrics generation and vocal melody creation',
+    'Instrument arrangement and orchestration',
+    'MIDI export for professional DAWs',
+    'Custom neural network training for specific styles'
   ];
 
   const benefits = [
-    'Create original music without musical training',
-    'Reduce music production costs by 70%',
-    'Generate unlimited royalty-free tracks',
-    'Accelerate content creation workflows',
+    'Reduce music production time by 90%',
+    'Generate unlimited musical variations',
+    'Create professional-quality compositions',
     'Explore new musical styles and genres',
+    'Accelerate creative workflow for musicians',
+    'Generate background music for content creators',
     'Create personalized music experiences',
-    'Scale music production instantly',
-    'Enable non-musicians to create professional tracks'
-  ];
-
-  const genres = [
-    { name: 'Classical', description: 'Symphonic and orchestral compositions', icon: '🎼' },
-    { name: 'Jazz', description: 'Improvisational and complex harmonies', icon: '🎷' },
-    { name: 'Rock', description: 'Electric guitars and powerful rhythms', icon: '🎸' },
-    { name: 'Electronic', description: 'Synthesized sounds and electronic beats', icon: '🎛️' },
-    { name: 'Hip-Hop', description: 'Beats, samples, and urban rhythms', icon: '🎤' },
-    { name: 'Pop', description: 'Catchy melodies and mainstream appeal', icon: '⭐' },
-    { name: 'Ambient', description: 'Atmospheric and meditative soundscapes', icon: '🌊' },
-    { name: 'Folk', description: 'Acoustic instruments and storytelling', icon: '🪕' }
+    'Enable non-musicians to create music',
+    'Generate royalty-free music for projects',
+    'Scale music production for studios'
   ];
 
   const useCases = [
     {
       title: 'Content Creation',
       description: 'Generate background music for videos, podcasts, and presentations',
-      icon: '🎬',
-      examples: ['YouTube videos', 'Podcast intros', 'Presentation music', 'Social media content']
+      icon: Video,
+      benefits: ['Royalty-free music', 'Perfect mood matching', 'Unlimited variations']
     },
     {
       title: 'Game Development',
-      description: 'Create dynamic soundtracks and ambient music for games',
-      icon: '🎮',
-      examples: ['Game soundtracks', 'Menu music', 'Ambient sounds', 'Dynamic scoring']
+      description: 'Create dynamic soundtracks and adaptive music for games',
+      icon: Gamepad2,
+      benefits: ['Dynamic composition', 'Seamless loops', 'Emotional scoring']
     },
     {
-      title: 'Marketing & Advertising',
-      description: 'Produce jingles, commercial music, and brand soundtracks',
-      icon: '📢',
-      examples: ['Commercial jingles', 'Brand anthems', 'Product demos', 'Social media ads']
+      title: 'Film & TV',
+      description: 'Generate scores and soundtracks for visual media',
+      icon: Film,
+      benefits: ['Professional quality', 'Style consistency', 'Rapid iteration']
     },
     {
-      title: 'Education & Training',
-      description: 'Create educational music and learning soundtracks',
-      icon: '📚',
-      examples: ['Learning modules', 'Training videos', 'Educational content', 'Language learning']
-    },
-    {
-      title: 'Therapy & Wellness',
-      description: 'Generate therapeutic and relaxation music',
-      icon: '🧘',
-      examples: ['Meditation music', 'Sleep sounds', 'Therapy sessions', 'Wellness apps']
-    },
-    {
-      title: 'Live Performance',
-      description: 'Create backing tracks and accompaniment for live shows',
-      icon: '🎭',
-      examples: ['Backing tracks', 'Live accompaniment', 'Performance music', 'Karaoke tracks']
+      title: 'Music Education',
+      description: 'Help students learn composition and music theory',
+      icon: GraduationCap,
+      benefits: ['Interactive learning', 'Style examples', 'Theory practice']
     }
   ];
 
   const pricing = [
     {
       name: 'Creator',
-      price: '$99/month',
-      description: 'Perfect for individual creators',
+      price: '$199',
+      period: '/month',
+      description: 'Perfect for content creators and individual musicians',
       features: [
-        'Up to 50 tracks/month',
+        'Up to 50 compositions per month',
         'Basic genre support',
-        'Standard quality output',
-        'Email support',
         'MIDI export',
-        'MP3 downloads'
+        'Standard quality (44.1kHz)',
+        'Email support',
+        'Community access'
       ],
       popular: false
     },
     {
-      name: 'Producer',
-      price: '$299/month',
-      description: 'Ideal for music producers',
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
+      description: 'Ideal for music producers and studios',
       features: [
-        'Up to 200 tracks/month',
+        'Up to 200 compositions per month',
         'All genre support',
-        'High quality output',
+        'Advanced style transfer',
+        'High quality (48kHz)',
         'Priority support',
-        'Advanced editing tools',
-        'WAV/FLAC export',
-        'Lyrics generation',
-        'Style transfer'
+        'Custom style training',
+        'API access',
+        'Commercial license'
       ],
       popular: true
     },
     {
-      name: 'Studio',
-      price: '$799/month',
-      description: 'For professional studios',
+      name: 'Enterprise',
+      price: '$1,999',
+      period: '/month',
+      description: 'For large studios and production companies',
       features: [
-        'Unlimited tracks',
-        'Premium quality output',
+        'Unlimited compositions',
+        'All features included',
+        'Custom neural networks',
+        'Studio quality (96kHz)',
         'Dedicated support',
-        'Custom model training',
-        'API access',
+        'On-premise deployment',
+        'SLA guarantee',
         'White-label solution',
-        'Commercial licensing',
-        'SLA guarantee'
+        'Custom integrations'
       ],
       popular: false
     }
   ];
 
   const technologies = [
-    'MuseNet', 'Jukebox', 'Magenta', 'MIDI Processing',
-    'Neural Audio Synthesis', 'Style Transfer', 'Custom Music Models',
-    'Deep Learning', 'Generative AI', 'Audio Processing'
-  ];
-
-  const workflow = [
-    {
-      step: 1,
-      title: 'Choose Style & Mood',
-      description: 'Select genre, mood, and musical parameters',
-      icon: '🎵'
-    },
-    {
-      step: 2,
-      title: 'AI Composition',
-      description: 'Our AI generates original music and arrangements',
-      icon: '🤖'
-    },
-    {
-      step: 3,
-      title: 'Review & Customize',
-      description: 'Listen, edit, and refine your composition',
-      icon: '🎧'
-    },
-    {
-      step: 4,
-      title: 'Export & Use',
-      description: 'Download in your preferred format and integrate',
-      icon: '📤'
-    }
+    'MuseNet', 'Jukebox', 'Magenta', 'MIDI Processing', 'Custom Music Models',
+    'TensorFlow', 'PyTorch', 'Music21', 'LilyPond', 'ABC Notation',
+    'Audio Processing', 'Spectral Analysis', 'Harmony Analysis', 'Rhythm Generation'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Music Composition - Zion Tech Group</title>
-        <meta name="description" content="Generate original music with AI. Create custom compositions, lyrics, and arrangements in any genre. Starting at $99/month." />
-        <meta name="keywords" content="AI music, music generation, composition, lyrics, soundtrack, background music" />
+        <meta name="description" content="AI-powered music composition and generation. Create original music, generate melodies, and compose in any style. Perfect for content creators and musicians. Starting at $199/month." />
+        <meta name="keywords" content="ai music composition, music generation, ai music, melody generation, music ai, composition ai" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Music className="w-4 h-4 mr-2" />
-            Revolutionary Music Technology
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
             AI Music Composition
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create original music, lyrics, and arrangements with our advanced AI technology. 
-            Generate professional-quality tracks in any genre without musical training.
+            Create original music with AI. Generate melodies, harmonies, and complete compositions in any style. 
+            Perfect for content creators, musicians, and anyone who wants to create music without traditional instruments.
           </p>
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-              <div className="text-gray-300">Cost Reduction</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>
+              <div className="text-gray-300">Time Saved</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">5min</div>
-              <div className="text-gray-300">Generation Time</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">8+</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
               <div className="text-gray-300">Genres</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-purple-400 mb-2">96kHz</div>
+              <div className="text-gray-300">Max Quality</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
+              <div className="text-gray-300">Generation</div>
             </div>
           </div>
 
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12 cyber-card">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
@@ -226,96 +178,15 @@ const AIMusicCompositionPage: React.FC = () => {
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Powerful Music Generation Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
-                </div>
-              ))}
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Why Choose Our Music AI?</h3>
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <TrendingUp className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Genres */}
-      <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Supported Musical Genres
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {genres.map((genre, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <div className="text-4xl mb-3">{genre.icon}</div>
-                <h3 className="text-lg font-bold text-white mb-2">{genre.name}</h3>
-                <p className="text-gray-300 text-sm">{genre.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Workflow */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Simple 4-Step Process
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {workflow.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{step.icon}</span>
-                </div>
-                <div className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
-                  Step {step.step}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-300 text-sm">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases */}
-      <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Applications & Use Cases
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Advanced Music AI Technology
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 mb-4">{useCase.description}</p>
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-cyan-400">Examples:</h4>
-                  <ul className="space-y-1">
-                    {useCase.examples.map((example, exampleIndex) => (
-                      <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
-                        <ArrowRight className="w-3 h-3 mr-2" />
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-white font-medium">{feature}</span>
                 </div>
               </div>
             ))}
@@ -323,43 +194,86 @@ const AIMusicCompositionPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Benefits Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Transform Your Music Creation
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
+                <div className="flex items-center space-x-3">
+                  <TrendingUp className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                  <span className="text-white font-medium">{benefit}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Flexible Pricing Plans
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Creative Applications
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
+                <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300 mb-4">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Pricing Plans
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className={`bg-white rounded-xl shadow-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>
+              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 cyber-card relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-4">{plan.description}</p>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}</div>
-                  <p className="text-gray-500">per month</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="flex items-center justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                  </div>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <a
                   href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Music Composition Plan`}
-                  className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all text-center block"
                 >
                   Get Started
                 </a>
@@ -369,15 +283,15 @@ const AIMusicCompositionPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Technologies */}
-      <section className="py-16 px-4 bg-white/5">
+      {/* Technologies Section */}
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Advanced Technologies
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Technologies & Integrations
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech, index) => (
-              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm">
+              <span key={index} className="bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition-colors">
                 {tech}
               </span>
             ))}
@@ -389,10 +303,10 @@ const AIMusicCompositionPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Compose Music?
+            Ready to Create Amazing Music with AI?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Start creating original music with our AI-powered composition technology.
+            Start composing original music today and unlock your creative potential with AI.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

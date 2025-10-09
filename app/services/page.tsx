@@ -50,7 +50,13 @@ const ServicesPage: React.FC = () => {
         { name: 'AI Email Assistant', price: '$99/month', description: 'Smart email management and response suggestions', features: ['Email Classification', 'Response Suggestions', 'Scheduling', 'Follow-up Reminders'] },
         { name: 'AI Lead Generation', price: '$349/month', description: 'Automated lead generation and qualification system', features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration'] },
         { name: 'AI Sales Automation', price: '$399/month', description: 'Intelligent sales process automation and optimization', features: ['Sales Pipeline Management', 'Deal Tracking', 'Forecasting', 'Performance Analytics'] },
-        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] }
+        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] },
+        { name: 'AI Voice Cloning', price: '$299/month', description: 'Advanced voice synthesis and cloning technology', features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'] },
+        { name: 'AI 3D Generation', price: '$499/month', description: 'AI-powered 3D model and asset creation', features: ['3D Model Generation', 'Texture Synthesis', 'Animation Creation', 'VR/AR Integration'] },
+        { name: 'AI Music Composition', price: '$199/month', description: 'Intelligent music generation and composition', features: ['Music Composition', 'Style Transfer', 'Emotional Analysis', 'MIDI Export'] },
+        { name: 'AI Fitness Coach', price: '$29/month', description: 'Personalized fitness coaching with AI', features: ['Form Analysis', 'Workout Plans', 'Progress Tracking', 'Nutrition Guidance'] },
+        { name: 'AI Cybersecurity', price: '$299/month', description: 'AI-powered security monitoring and protection', features: ['Threat Detection', 'Incident Response', 'Compliance Monitoring', '24/7 SOC'] },
+        { name: 'AI Scheduler', price: '$19/month', description: 'Smart scheduling and calendar management', features: ['Smart Scheduling', 'Conflict Resolution', 'Resource Booking', 'Meeting Analytics'] }
       ]
     },
     {

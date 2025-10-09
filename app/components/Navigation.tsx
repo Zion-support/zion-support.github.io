@@ -190,7 +190,11 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
-    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Music, description: 'Voice Synthesis' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Video, description: '3D Model Creation' },
+    { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music, description: 'Music Generation' },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, description: 'Fitness Coaching' }
   ];
 
   const itServices = [
@@ -221,7 +225,12 @@ const Navigation: React.FC = () => {
     { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI' },
     { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
     { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
+    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Music, description: 'Voice Synthesis' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Video, description: '3D Creation' },
+    { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music, description: 'Music AI' },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, description: 'Fitness AI' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Security AI' }
   ];
 
   const emergingTech = [

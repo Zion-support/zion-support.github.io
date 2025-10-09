@@ -44,7 +44,13 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
+    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+    { name: 'AI Voice Cloning', url: '/ai-voice-cloning', description: 'Voice synthesis and cloning' },
+    { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D model generation' },
+    { name: 'AI Music Composition', url: '/ai-music-composition', description: 'Music generation and composition' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness coaching' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security solutions' },
+    { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling and calendar management' }
 =======
     { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation suite' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
