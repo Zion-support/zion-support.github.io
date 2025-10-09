@@ -1,103 +1,169 @@
-
-
+import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const Pagetsx: React.FC = () => {
-  const _features = [];
-  return (
-    {icon: Users,
-    title: 'Advanced Features',
-      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
-      benefits: ['Improved efficiency', 'Better results', 'Cost savings']
-    },
-    {icon: TrendingUp,
-    title: 'Performance Optimization',
-      description: 'Optimized performance and scalability for enterprise-grade applications',
-      benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
-    },
-    {icon: Shield,
-    title: 'Security & Compliance',
-      description: 'Enterprise-grade security with full compliance and data protection',
-      benefits: ['Data protection', 'Compliance', 'Secure operations']
+import { Shield, CheckCircle, Star, ArrowRight, Users, Lock, Eye, FileText } from 'lucide-react';
 
+const GDPRPage: React.FC = () => {
+  const principles = [
+    {
+      title: 'Lawfulness, Fairness and Transparency',
+      description: 'Personal data must be processed lawfully, fairly and in a transparent manner'
+    },
+    {
+      title: 'Purpose Limitation',
+      description: 'Personal data must be collected for specified, explicit and legitimate purposes'
+    },
+    {
+      title: 'Data Minimisation',
+      description: 'Personal data must be adequate, relevant and limited to what is necessary'
+    },
+    {
+      title: 'Accuracy',
+      description: 'Personal data must be accurate and kept up to date'
+    },
+    {
+      title: 'Storage Limitation',
+      description: 'Personal data must be kept in a form that permits identification for no longer than necessary'
+    },
+    {
+      title: 'Integrity and Confidentiality',
+      description: 'Personal data must be processed in a manner that ensures appropriate security'
     }
-  ]
-  return (<div className="min-h-screen bg-gray-900 text-white"></div>
-      <Helmet></Helmet>
-        <title>tsx - Zion Tech Group</title>"
-        <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" /></Helmet>
-      <Navigation /></Navigation>"
-      <main className="pt-20"></main>
-        {/* Hero Section */}"
-        <section className="py-20 px-4"></section>"
-          <div className="max-w-6xl mx-auto text-center"></div>"
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h1>
-              tsx;
-            </h1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-              Advanced tsx solutions powered by AI and cutting-edge technology;
-            </p>"
-            <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>"
-              <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
-                Get Started;
-              </a>"
-              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
-  hover:bg-cyan-500,"
-  hover:text-white transition-colors"></a>
-                View Demo;
-              </a>
-            </div>
-          </div>
-        </section>
+  ];
 
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_features.map((feature, index) => (}
-                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {feature.benefits.map((benefit, idx) => (}
-                      <li key={idx} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+  const rights = [
+    'Right to be informed',
+    'Right of access',
+    'Right to rectification',
+    'Right to erasure',
+    'Right to restrict processing',
+    'Right to data portability',
+    'Right to object',
+    'Rights related to automated decision making'
+  ];
 
-                        {benefit}
-                      </li>)
-                    ))}
-                  </ul>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <main className="pt-20">
+        <div className="container mx-auto px-4 py-16 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+            GDPR Compliance
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Last updated: January 2025
+          </p>
+          
+          <div className="cyber-card p-8 space-y-8">
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <Shield className="w-6 h-6 mr-3 text-cyan-400" />
+                What is GDPR?
+              </h2>
+              <p className="text-gray-300 mb-4">
+                The General Data Protection Regulation (GDPR) is a comprehensive data protection law
+                that governs how personal data is collected, processed, and stored within the European Union.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <FileText className="w-6 h-6 mr-3 text-cyan-400" />
+                GDPR Principles
+              </h2>
+              <div className="space-y-4">
+                {principles.map((principle, index) => (
+                  <div key={index} className="bg-gray-800 p-4 rounded-lg">
+                    <h3 className="text-lg font-semibold text-white mb-2">{principle.title}</h3>
+                    <p className="text-gray-300">{principle.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <Users className="w-6 h-6 mr-3 text-cyan-400" />
+                Individual Rights
+              </h2>
+              <p className="text-gray-300 mb-4">
+                Under GDPR, individuals have the following rights regarding their personal data:
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {rights.map((right, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    {right}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <Lock className="w-6 h-6 mr-3 text-cyan-400" />
+                Our GDPR Compliance
+              </h2>
+              <p className="text-gray-300 mb-4">
+                We are committed to GDPR compliance and have implemented the following measures:
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Data Protection Impact Assessments (DPIA)</li>
+                <li>• Privacy by Design and Default</li>
+                <li>• Data Processing Agreements (DPA)</li>
+                <li>• Regular staff training on data protection</li>
+                <li>• Incident response procedures</li>
+                <li>• Data subject rights procedures</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <Eye className="w-6 h-6 mr-3 text-cyan-400" />
+                Data Processing
+              </h2>
+              <p className="text-gray-300 mb-4">
+                We process personal data in accordance with GDPR requirements:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-gray-800 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-white mb-2">Legal Basis</h3>
+                  <p className="text-gray-300">Consent, contract performance, legal obligation, legitimate interests</p>
                 </div>
-              ))}
-            </div>
+                <div className="bg-gray-800 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-white mb-2">Data Retention</h3>
+                  <p className="text-gray-300">Data is retained only as long as necessary for the specified purpose</p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Contact Information
+              </h2>
+              <p className="text-gray-300 mb-4">
+                For any GDPR-related inquiries, please contact our Data Protection Officer:
+              </p>
+              <div className="mt-4 text-cyan-400 space-y-2">
+                <div className="flex items-center">
+                  <FileText className="w-5 h-5 mr-3" />
+                  <span>dpo@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center">
+                  <Users className="w-5 h-5 mr-3" />
+                  <span>+1 (555) 123-4567</span>
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
-        {/* CTA Section */}"
-        <section className="py-16 px-4 bg-gray-800"></section>"
-          <div className="max-w-4xl mx-auto text-center"></div>"
-            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>"
-            <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>"
-            <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
-              Contact Us;
-            </a>
-          </div>
-        </section>
+        </div>
       </main>
-      <Footer /></div>
-  )
-}
-export default Pagetsx;"
 
+      <Footer />
+    </div>
+  );
+};
 
-
-
-export default GdprPage;
-
-
+export default GDPRPage;
