@@ -35,22 +35,22 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
-    const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const _fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
-          const _lastEntry = entries[entries.length - 1];
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('LCP observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('LCP observer not supported:', error);
       }
     }
 
@@ -58,14 +58,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('PerformanceObserver' in window) {
       try {
         const fidObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
+          const entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
               'startTime' in entry
             ) {
-              const _fidEntry = entry as PerformanceEventTiming;
+              const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
                 fid: fidEntry.processingStart - fidEntry.startTime,
@@ -77,23 +77,23 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(fidObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('FID observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('FID observer not supported:', error);
       }
     }
 
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
-        let _clsValue = 0;
+        let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
+          const entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
-              const _clsEntry = entry as LayoutShift;
+              const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -105,14 +105,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('CLS observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('CLS observer not supported:', error);
       }
     }
 
     // Measure Time to First Byte (TTFB)
     try {
-      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry
         ? navigationEntry.responseStart - navigationEntry.requestStart
         : null;
@@ -130,7 +130,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+      console.warn('Performance measurement failed:', error);
     }
 
     // Cleanup observers
@@ -149,7 +149,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
-    const _resources = performance.getEntriesByType('resource');
+    const resources = performance.getEntriesByType('resource');
     const slowResources = resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
@@ -209,7 +209,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
-    const _cleanup = measureWebVitals();
+    const cleanup = measureWebVitals();
     measureResourceTiming();
     measureCoreWebVitals();
 
@@ -272,7 +272,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return recommendations;
   }, [metrics]);
 
-  const _recommendations = getPerformanceRecommendations();
+  const recommendations = getPerformanceRecommendations();
 
   if (process.env['NODE_ENV'] === 'development') {
     return (
