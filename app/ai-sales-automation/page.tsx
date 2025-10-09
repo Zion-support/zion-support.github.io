@@ -4,88 +4,75 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
       icon: Target,
       title: 'Lead Scoring & Qualification',
-      description: 'AI-powered lead scoring that automatically identifies and prioritizes high-value prospects.',
-      benefits: ['Automated Scoring', 'Behavioral Analysis', 'Predictive Modeling', 'Priority Ranking']
+      description: 'AI automatically scores and qualifies leads based on behavior, demographics, and engagement patterns.',
+      benefits: ['Behavioral Analysis', 'Predictive Scoring', 'Auto-qualification', 'Priority Ranking']
     },
     {
       icon: Users,
-      title: 'Sales Pipeline Management',
-      description: 'Intelligent pipeline management that optimizes deals and predicts closing probabilities.',
-      benefits: ['Deal Tracking', 'Probability Prediction', 'Pipeline Optimization', 'Performance Analytics']
+      title: 'Customer Segmentation',
+      description: 'Intelligent customer segmentation helps you target the right audience with personalized messaging.',
+      benefits: ['Dynamic Segmentation', 'Behavioral Clustering', 'Personalization', 'Campaign Optimization']
     },
     {
-      icon: TrendingUp,
-      title: 'Revenue Forecasting',
-      description: 'Advanced forecasting models that predict revenue with high accuracy using AI algorithms.',
-      benefits: ['Accurate Predictions', 'Trend Analysis', 'Risk Assessment', 'Scenario Planning']
+      icon: BarChart,
+      title: 'Sales Forecasting',
+      description: 'Predict future sales performance with AI-powered forecasting models and trend analysis.',
+      benefits: ['Predictive Models', 'Trend Analysis', 'Revenue Projections', 'Risk Assessment']
     },
     {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Comprehensive analytics dashboard that provides insights into sales performance and opportunities.',
-      benefits: ['Real-time Metrics', 'Performance Tracking', 'ROI Analysis', 'Team Insights']
+      icon: Zap,
+      title: 'Automated Follow-ups',
+      description: 'Never miss an opportunity with intelligent follow-up sequences that adapt to customer behavior.',
+      benefits: ['Smart Sequences', 'Behavioral Triggers', 'Multi-channel', 'Timing Optimization']
     }
   ];
 
   const pricing = [
     {
       name: 'Starter',
-      price: '$399/month',
+      price: '$249/month',
       description: 'Perfect for small sales teams',
-      features: ['Up to 5 users', 'Basic lead scoring', 'Pipeline management', 'Email support']
+      features: ['Up to 1,000 contacts', 'Basic automation', 'Email campaigns', 'Lead scoring']
     },
     {
       name: 'Professional',
-      price: '$799/month',
-      description: 'Ideal for growing sales teams',
-      features: ['Up to 25 users', 'Advanced AI features', 'Revenue forecasting', 'Priority support', 'API access']
+      price: '$499/month',
+      description: 'Ideal for growing businesses',
+      features: ['Up to 10,000 contacts', 'Advanced AI features', 'Multi-channel campaigns', 'Sales forecasting', 'CRM integration']
     },
     {
       name: 'Enterprise',
-      price: '$1,599/month',
+      price: '$999/month',
       description: 'For large sales organizations',
-      features: ['Unlimited users', 'Custom AI training', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
+      features: ['Unlimited contacts', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'Custom integrations']
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
-    { number: '300%', label: 'Increase in Sales' },
-    { number: '80%', label: 'Time Savings' },
-    { number: '95%', label: 'Lead Accuracy' },
-    { number: '50+', label: 'CRM Integrations' }
+    { number: '40%', label: 'Increase in Sales' },
+    { number: '60%', label: 'Time Saved' },
+    { number: '85%', label: 'Lead Accuracy' },
+    { number: '200%', label: 'ROI Improvement' }
   ];
-  const useCases = [
-    {
-      title: 'B2B Lead Generation',
-      description: 'Automatically identify and score high-value B2B prospects using AI-powered analysis of company data, website behavior, and engagement patterns.',
-      icon: Building
-    },
-    {
-      title: 'E-commerce Upselling',
-      description: 'Intelligent product recommendations and automated follow-up sequences to increase average order value and customer lifetime value.',
-      icon: ShoppingCart
-    },
-    {
-      title: 'SaaS Trial Conversion',
-      description: 'Automated onboarding sequences and personalized engagement to convert free trial users into paying customers.',
-      icon: Cloud
-    },
-    {
-      title: 'Real Estate Lead Nurturing',
-      description: 'AI-powered lead nurturing for real estate agents with automated follow-ups, market updates, and personalized property recommendations.',
-      icon: Home
-    }
-  ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Sales Automation Platform - Zion Tech Group"
-        description="Revolutionary AI sales automation that increases revenue by 300% and saves 80% of sales time. Lead scoring, automated outreach, and CRM integration."
-        keywords={['AI sales automation', 'lead scoring', 'sales CRM', 'automated outreach', 'sales analytics']}
+        title="AI Sales Automation Solutions - Zion Tech Group"
+        description="Revolutionize your sales process with AI-powered automation. Increase sales by 40%, save 60% time, and improve lead accuracy by 85%."
+        keywords={['AI sales automation', 'lead scoring', 'sales forecasting', 'customer segmentation', 'sales optimization']}
         canonicalUrl="https://ziontechgroup.com/ai-sales-automation"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -95,14 +82,14 @@ const AISalesAutomationPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Sales Automation Platform
+                AI Sales Automation Solutions
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Boost sales by 300% with intelligent automation
+                Automate your sales process and boost revenue with intelligent AI
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered sales automation platform combines intelligent lead scoring, automated outreach, 
-                and advanced analytics to help sales teams close more deals in less time.
+                Our AI-powered sales automation platform helps you identify high-value leads, 
+                optimize your sales process, and close more deals with less effort.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <a
@@ -134,6 +121,7 @@ const AISalesAutomationPage: React.FC = () => {
               </div>
             </div>
           </section>
+
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -157,6 +145,7 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -172,20 +161,23 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
+              {pricing.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+                    index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
                 >
-                  {plan.popular && (
+                  {index === 1 && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular
@@ -213,14 +205,15 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
+
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to 3x Your Sales Performance?
+                Ready to Automate Your Sales?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 1,000+ sales teams already using our AI automation platform
+                Join 400+ companies already using our AI sales automation solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

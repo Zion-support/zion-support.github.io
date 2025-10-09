@@ -4,87 +4,79 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Zap,
-      title: 'Intelligent Process Automation',
-      description: 'AI-powered automation that learns from your workflows and optimizes them continuously.',
-      benefits: ['Process Learning', 'Automatic Optimization', 'Exception Handling', 'Performance Monitoring']
+      icon: Workflow,
+      title: 'Process Automation',
+      description: 'Automate complex business processes with intelligent workflow engines that adapt and learn.',
+      benefits: ['Visual Workflow Builder', 'Conditional Logic', 'Error Handling', 'Process Optimization']
+    },
+    {
+      icon: Brain,
+      title: 'AI Decision Making',
+      description: 'Let AI make intelligent decisions based on data patterns and business rules.',
+      benefits: ['Smart Routing', 'Risk Assessment', 'Quality Control', 'Predictive Actions']
+    },
+    {
+      icon: BarChart,
+      title: 'Performance Analytics',
+      description: 'Monitor and analyze workflow performance with real-time dashboards and insights.',
+      benefits: ['Real-time Monitoring', 'Performance Metrics', 'Bottleneck Detection', 'Optimization Suggestions']
     },
     {
       icon: Settings,
-      title: 'Workflow Designer',
-      description: 'Visual workflow designer that allows you to create complex automation workflows without coding.',
-      benefits: ['Drag & Drop Interface', 'Visual Logic Builder', 'Template Library', 'Testing Tools']
-    },
-    {
-      icon: Clock,
-      title: 'Real-time Monitoring',
-      description: 'Monitor your automated workflows in real-time with detailed analytics and performance metrics.',
-      benefits: ['Live Monitoring', 'Performance Metrics', 'Error Tracking', 'Alert System']
-    },
-    {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Collaborate with your team on workflow design and management with role-based access control.',
-      benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
+      title: 'Custom Integrations',
+      description: 'Connect with any system or application through our extensive integration library.',
+      benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
   ];
+<<<<<<< HEAD
   const pricingPlans = [
+=======
+
+  const pricing = [
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
     {
       name: 'Starter',
-      price: '$399/month',
+      price: '$299/month',
       description: 'Perfect for small teams',
-      features: ['Up to 10 workflows', 'Basic automation', 'Email support', 'Standard templates']
+      features: ['Up to 5 workflows', 'Basic automation', 'Email notifications', 'Standard integrations']
     },
     {
       name: 'Professional',
-      price: '$799/month',
+      price: '$599/month',
       description: 'Ideal for growing businesses',
-      features: ['Up to 50 workflows', 'Advanced AI features', 'Priority support', 'API access', 'Custom integrations']
+      features: ['Up to 25 workflows', 'Advanced AI features', 'Custom integrations', 'Analytics dashboard', 'Priority support']
     },
     {
       name: 'Enterprise',
-      price: '$1,599/month',
+      price: '$1,299/month',
       description: 'For large organizations',
-      features: ['Unlimited workflows', 'Custom development', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
+      features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
-    { number: '90%', label: 'Time Savings' },
-    { number: '75%', label: 'Error Reduction' },
-    { number: '500+', label: 'Integrations' },
-    { number: '24/7', label: 'Processing' }
+    { number: '70%', label: 'Process Efficiency' },
+    { number: '90%', label: 'Error Reduction' },
+    { number: '50%', label: 'Time Savings' },
+    { number: '99.9%', label: 'Reliability' }
   ];
-  const useCases = [
-    {
-      title: 'Customer Onboarding',
-      description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
-      icon: Users
-    },
-    {
-      title: 'Invoice Processing',
-      description: 'Automatically process invoices, validate data, route for approval, and update accounting systems.',
-      icon: Database
-    },
-    {
-      title: 'Lead Management',
-      description: 'Automate lead scoring, assignment, follow-up sequences, and CRM updates based on lead behavior.',
-      icon: Globe
-    },
-    {
-      title: 'Employee Onboarding',
-      description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
-      icon: Settings
-    }
-  ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Workflow Automation Platform - Zion Tech Group"
-        description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
-        keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}
+        title="AI Workflow Automation Solutions - Zion Tech Group"
+        description="Automate complex business processes with AI-powered workflow automation. Increase efficiency by 70% and reduce errors by 90%."
+        keywords={['AI workflow automation', 'business process automation', 'workflow optimization', 'process intelligence', 'automation platform']}
         canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -94,14 +86,14 @@ const AIWorkflowAutomationPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Workflow Automation Platform
+                AI Workflow Automation Solutions
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Automate any business process with intelligent workflows
+                Automate complex business processes with intelligent AI
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered workflow automation platform helps businesses eliminate manual tasks, 
-                reduce errors by 75%, and save 90% of processing time with intelligent automation.
+                Our AI-powered workflow automation platform helps you streamline operations, 
+                reduce errors, and increase efficiency across your entire organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <a
@@ -133,6 +125,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </div>
             </div>
           </section>
+
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -156,6 +149,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -171,17 +165,25 @@ const AIWorkflowAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricing.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
+                <div
+                  key={index}
+                  className={`cyber-card p-8 relative ${
+                    index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
+                  }`}
+                >
                   {index === 1 && (
-                    <div className="text-center mb-4">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular
                       </span>
                     </div>
@@ -207,27 +209,33 @@ const AIWorkflowAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
+
           {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Automate Your Workflows?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact us today to learn how AI workflow automation can transform your business processes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
-                Call (302) 464-0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Email Us
-              </a>
+          <section className="container mx-auto px-4 py-16 text-center">
+            <div className="cyber-card p-12 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                Ready to Automate Your Workflows?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join 200+ companies already using our AI workflow automation solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="cyber-button flex items-center justify-center space-x-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Call (302) 464-0950</span>
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center justify-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>Schedule Demo</span>
+                </a>
+              </div>
             </div>
           </section>
         </main>
