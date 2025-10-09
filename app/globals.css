@@ -610,8 +610,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
-=======
 /* Additional Futuristic Styles */
 /* Energy Pulse Animation */
 .energy-pulse {
@@ -1406,9 +1404,6 @@ body {
   white-space: normal;
 }
 
-<<<<<<< HEAD
-/* Focus Styles */
-=======
 /* Enhanced Accessibility Styles */
 .high-contrast {
   --neon-cyan: #00ffff;
@@ -1467,13 +1462,11 @@ body {
   font-size: 1.125rem;
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
 .focus-visible *:focus {
   outline: 3px solid #00ffff;
   outline-offset: 2px;
 }
 
-<<<<<<< HEAD
 /* High Contrast Mode */
 .high-contrast {
   --neon-cyan: #00ffff;

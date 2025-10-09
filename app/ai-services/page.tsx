@@ -330,14 +330,9 @@ const AIServicesPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-<<<<<<< HEAD
         <main className="pt-24">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
-=======
-        {/* Hero Section */}
-        <section className="container mx-auto px-4 py-16 pt-24">
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
                 AI Services
@@ -381,7 +376,6 @@ const AIServicesPage: React.FC = () => {
                     <h3 className="text-xl font-bold text-white">{tech.name}</h3>
                   </div>
                   
-<<<<<<< HEAD
                   <p className="text-gray-300 mb-4">{tech.description}</p>
                   
                   <div>
@@ -428,11 +422,9 @@ const AIServicesPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
                   
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
-<<<<<<< HEAD
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -474,16 +466,10 @@ const AIServicesPage: React.FC = () => {
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-=======
-                  <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                    Get Started
-                  </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
                 </div>
               ))}
             </div>
           </section>
-<<<<<<< HEAD
 
           {/* AI Implementation Process */}
           <section className="container mx-auto px-4 py-16">
@@ -579,11 +565,3 @@ const AIServicesPage: React.FC = () => {
 };
 
 export default AIServicesPage;
-=======
-        </div>
-      </>
-    );
-};
-
-export default AIServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0133

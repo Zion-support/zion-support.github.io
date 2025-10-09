@@ -24,6 +24,8 @@ export default defineConfig({
     minify: 'terser',
     target: 'es2020',
     cssTarget: 'chrome80',
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: (id) => {

@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Targe
 import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -135,8 +136,15 @@ const HomePage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Header />
+    <>
+      <SEOHead 
+        title="Zion Tech Group - Advanced AI & IT Solutions"
+        description="Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services."
+        keywords="AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation"
+        canonical="https://ziontechgroup.com"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Header />
       {/* Hero Section */}
       <section 
         className="relative min-h-screen flex items-center justify-center overflow-hidden cyber-grid neural-network-bg"
@@ -320,8 +328,9 @@ const HomePage: React.FC = () => {
       <Suspense fallback={<ServiceCardSkeleton />}>
         <ContentNewsletterSignup />
       </Suspense>
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

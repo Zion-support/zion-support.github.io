@@ -1,6 +1,10 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import ErrorBoundary from './components/ErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -55,19 +59,24 @@ const StatusPage = lazy(() => import('./status/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 
 // Loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
-  </div>
+const AppLoadingSpinner = () => (
+  <LoadingSpinner 
+    size="xl" 
+    text="Loading Zion Tech Group..." 
+    fullScreen 
+  />
 );
 
 const App: React.FC = () => {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <div className="App">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <div className="App">
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
+            <Suspense fallback={<AppLoadingSpinner />}>
+              <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -120,10 +129,11 @@ const App: React.FC = () => {
               <Route path="/status" element={<StatusPage />} />
               <Route path="/consultation" element={<ConsultationPage />} />
             </Routes>
-          </Suspense>
-        </div>
-      </BrowserRouter>
-    </HelmetProvider>
+            </Suspense>
+          </div>
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 };
 
