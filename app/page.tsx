@@ -58,23 +58,6 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      {/* Navigation */}
-      <Navigation />
-=======
-    <>
-      <SEOHead 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence"
-        url="https://ziontechgroup.com"
-        type="website"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-        {/* Navigation */}
-        <Navigation />
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
       
       {/* Skip to main content for accessibility */}
       <a
@@ -212,60 +195,6 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
 
-<<<<<<< HEAD
-          {/* Secondary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare</h3>
-                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
-                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>
-                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
-                  <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>
-                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Next-generation quantum computing capabilities for complex problem solving and optimization.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-          </div>
-
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
           {/* Micro SAAS Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -371,107 +300,13 @@ const HomePage: React.FC = () => {
         </Suspense>
 
         {/* Content Carousel */}
-<<<<<<< HEAD
-        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
-=======
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading content showcase..." />}>
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
           <ContentCarousel />
         </Suspense>
 
         {/* Dynamic Content Showcase */}
-<<<<<<< HEAD
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <DynamicContentShowcase />
-        </Suspense>
-
-        {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-=======
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading dynamic content..." />}>
-          <DynamicContentShowcase />
-        </Suspense>
-
-        {/* Content Statistics */}
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading statistics..." />}>
-          <ContentStatistics />
-        </Suspense>
-
-        {/* Social Proof Section */}
-        <section className="bg-gradient-to-r from-slate-800 to-purple-900 py-12 sm:py-16 rounded-2xl" aria-labelledby="social-proof-heading">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 id="social-proof-heading" className="text-2xl sm:text-3xl font-bold text-center text-white mb-8 sm:mb-12 neon-text">
-              Trusted by Industry Leaders
-            </h2>
-            
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-8 sm:mb-12">
-              <div className="text-center cyber-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                <div className="text-gray-300 text-xs sm:text-base">Enterprise Clients</div>
-              </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-4xl font-bold text-green-400 mb-2">$2.5B+</div>
-                <div className="text-gray-300 text-xs sm:text-base">Cost Savings Delivered</div>
-              </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-xs sm:text-base">Uptime Guarantee</div>
-              </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-4xl font-bold text-orange-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-xs sm:text-base">Support Available</div>
-              </div>
-            </div>
-
-            <div className="cyber-card hologram-card p-6 sm:p-8">
-              <div className="text-center mb-6 sm:mb-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">What Our Clients Say</h3>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <div className="text-center">
-                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-300 mb-4 italic text-sm sm:text-base">"Zion Tech Group transformed our operations with AI solutions that delivered $50M in annual savings. Their expertise is unmatched."</p>
-                  <div className="font-semibold text-white text-sm sm:text-base">Sarah Johnson</div>
-                  <div className="text-xs sm:text-sm text-gray-400">CTO, Fortune 500 Company</div>
-                </div>
-                
-                <div className="text-center">
-                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-300 mb-4 italic text-sm sm:text-base">"The digital transformation they implemented increased our efficiency by 300%. Highly recommend their services."</p>
-                  <div className="font-semibold text-white text-sm sm:text-base">Michael Chen</div>
-                  <div className="text-xs sm:text-sm text-gray-400">VP Operations, Global Corp</div>
-                </div>
-                
-                <div className="text-center sm:col-span-2 lg:col-span-1">
-                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-300 mb-4 italic text-sm sm:text-base">"Outstanding cloud infrastructure and AI implementation. They exceeded all our expectations."</p>
-                  <div className="font-semibold text-white text-sm sm:text-base">Emily Rodriguez</div>
-                  <div className="text-xs sm:text-sm text-gray-400">Director of Technology, Tech Giant</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Signup */}
-        <Suspense fallback={<LoadingSpinner size="md" text="Loading newsletter signup..." />}>
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
           <ContentNewsletterSignup />
         </Suspense>
       </main>
-<<<<<<< HEAD
-
-      {/* Footer */}
-      <Footer />
-    </div>
-=======
-      
-        {/* Footer */}
-        <Footer />
-      </div>
-    </>
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
   );
 };
 
