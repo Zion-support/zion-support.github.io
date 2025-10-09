@@ -622,6 +622,248 @@ const AIServicesPage: React.FC = () => {
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    // Cutting-Edge AI Innovation Services
+    {
+      title: 'AI Quantum Machine Learning',
+      description: 'Revolutionary quantum-enhanced machine learning algorithms for solving complex optimization problems and advanced pattern recognition.',
+      icon: '⚛️',
+      price: '$5,000/month',
+      features: [
+        'Quantum Algorithm Development',
+        'Quantum Neural Networks',
+        'Quantum Optimization',
+        'Quantum Data Processing',
+        'Hybrid Classical-Quantum Models',
+        'Quantum Error Correction'
+      ],
+      benefits: [
+        'Solve exponentially complex problems',
+        'Achieve quantum advantage in ML',
+        'Breakthrough optimization results',
+        'Future-proof AI solutions'
+      ],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Quantum AI',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Quantum Hardware', 'Custom Quantum Algorithms'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'AI Neural Interface Development',
+      description: 'Advanced brain-computer interface solutions with AI-powered neural signal processing and real-time control systems.',
+      icon: '🧠',
+      price: '$8,000/month',
+      features: [
+        'Neural Signal Processing',
+        'Real-time Brain Analysis',
+        'Motor Control Interfaces',
+        'Cognitive Enhancement',
+        'Medical Applications',
+        'Safety & Compliance'
+      ],
+      benefits: [
+        'Revolutionary human-AI interaction',
+        'Medical breakthrough applications',
+        'Accessibility solutions',
+        'Next-generation interfaces'
+      ],
+      marketPrice: '$25,000-100,000/month',
+      category: 'Neural AI',
+      technologies: ['EEG Processing', 'Machine Learning', 'Signal Processing', 'Medical Devices', 'Custom Hardware'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Autonomous Systems Platform',
+      description: 'Comprehensive autonomous vehicle and robotics platform with advanced AI decision-making and real-time control.',
+      icon: '🤖',
+      price: '$6,000/month',
+      features: [
+        'Autonomous Vehicle AI',
+        'Robotic Control Systems',
+        'Real-time Decision Making',
+        'Sensor Fusion',
+        'Path Planning',
+        'Safety Systems'
+      ],
+      benefits: [
+        'Enable fully autonomous operations',
+        'Reduce human intervention',
+        'Improve safety and efficiency',
+        'Scale autonomous solutions'
+      ],
+      marketPrice: '$20,000-80,000/month',
+      category: 'Autonomous AI',
+      technologies: ['Computer Vision', 'Reinforcement Learning', 'Sensor Fusion', 'Robotics', 'Real-time Systems'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Space Technology Solutions',
+      description: 'Advanced AI systems for space missions, satellite operations, and space exploration with autonomous decision-making.',
+      icon: '🚀',
+      price: '$10,000/month',
+      features: [
+        'Space Mission Planning',
+        'Satellite Operations AI',
+        'Autonomous Spacecraft Control',
+        'Space Data Analysis',
+        'Orbital Mechanics AI',
+        'Space Weather Prediction'
+      ],
+      benefits: [
+        'Optimize space missions',
+        'Reduce mission costs',
+        'Improve success rates',
+        'Enable autonomous space operations'
+      ],
+      marketPrice: '$30,000-150,000/month',
+      category: 'Space AI',
+      technologies: ['Orbital Mechanics', 'Space Data Processing', 'Autonomous Systems', 'Satellite Communication', 'Space Weather Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Climate & Environmental Intelligence',
+      description: 'Advanced AI systems for climate modeling, environmental monitoring, and sustainability optimization.',
+      icon: '🌍',
+      price: '$4,000/month',
+      features: [
+        'Climate Change Modeling',
+        'Environmental Impact Analysis',
+        'Carbon Footprint Optimization',
+        'Renewable Energy AI',
+        'Ecosystem Monitoring',
+        'Sustainability Planning'
+      ],
+      benefits: [
+        'Accurate climate predictions',
+        'Optimize environmental impact',
+        'Enable sustainable operations',
+        'Support green initiatives'
+      ],
+      marketPrice: '$12,000-40,000/month',
+      category: 'Environmental AI',
+      technologies: ['Climate Models', 'Environmental Data', 'Machine Learning', 'IoT Sensors', 'Sustainability Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Drug Discovery & Development',
+      description: 'Revolutionary AI platform for pharmaceutical research, drug discovery, and clinical trial optimization.',
+      icon: '💊',
+      price: '$15,000/month',
+      features: [
+        'Molecular Design AI',
+        'Drug Interaction Prediction',
+        'Clinical Trial Optimization',
+        'Side Effect Analysis',
+        'Patent Research AI',
+        'Regulatory Compliance'
+      ],
+      benefits: [
+        'Accelerate drug discovery',
+        'Reduce development costs',
+        'Improve success rates',
+        'Faster time to market'
+      ],
+      marketPrice: '$50,000-500,000/month',
+      category: 'Pharmaceutical AI',
+      technologies: ['Deep Learning', 'Molecular Modeling', 'Bioinformatics', 'Clinical Data', 'Regulatory Systems'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Energy Grid Intelligence',
+      description: 'Smart energy grid management with AI-powered load balancing, renewable integration, and predictive maintenance.',
+      icon: '⚡',
+      price: '$7,000/month',
+      features: [
+        'Smart Grid Management',
+        'Renewable Energy Integration',
+        'Load Balancing AI',
+        'Predictive Maintenance',
+        'Energy Trading AI',
+        'Grid Optimization'
+      ],
+      benefits: [
+        'Optimize energy distribution',
+        'Increase renewable usage',
+        'Reduce energy costs',
+        'Improve grid reliability'
+      ],
+      marketPrice: '$25,000-100,000/month',
+      category: 'Energy AI',
+      technologies: ['IoT', 'Machine Learning', 'Energy Systems', 'Grid Analytics', 'Renewable Integration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Agricultural Intelligence Platform',
+      description: 'Comprehensive smart farming solution with AI-powered crop monitoring, yield optimization, and automated farming.',
+      icon: '🌾',
+      price: '$3,000/month',
+      features: [
+        'Crop Monitoring AI',
+        'Yield Prediction',
+        'Pest & Disease Detection',
+        'Soil Analysis',
+        'Weather Integration',
+        'Automated Farming'
+      ],
+      benefits: [
+        'Increase crop yields by 40%',
+        'Reduce resource usage',
+        'Prevent crop diseases',
+        'Optimize farming operations'
+      ],
+      marketPrice: '$10,000-30,000/month',
+      category: 'Agricultural AI',
+      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'Agricultural Data', 'Weather APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Cybersecurity Intelligence',
+      description: 'Advanced AI-powered cybersecurity platform with real-time threat detection, automated response, and predictive security.',
+      icon: '🛡️',
+      price: '$5,000/month',
+      features: [
+        'Real-time Threat Detection',
+        'Automated Incident Response',
+        'Predictive Security Analytics',
+        'Behavioral Analysis',
+        'Zero-day Detection',
+        'Compliance Monitoring'
+      ],
+      benefits: [
+        'Detect threats 100x faster',
+        'Reduce false positives by 90%',
+        'Automated response',
+        'Proactive security posture'
+      ],
+      marketPrice: '$20,000-80,000/month',
+      category: 'Security AI',
+      technologies: ['Threat Intelligence', 'Machine Learning', 'Behavioral Analysis', 'Security Orchestration', 'Compliance Systems'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Smart City Management',
+      description: 'Comprehensive smart city AI platform with traffic optimization, resource management, and citizen services.',
+      icon: '🏙️',
+      price: '$12,000/month',
+      features: [
+        'Traffic Optimization AI',
+        'Resource Management',
+        'Citizen Service AI',
+        'Environmental Monitoring',
+        'Emergency Response',
+        'Urban Planning AI'
+      ],
+      benefits: [
+        'Improve city efficiency',
+        'Reduce operational costs',
+        'Enhance citizen services',
+        'Enable sustainable development'
+      ],
+      marketPrice: '$40,000-200,000/month',
+      category: 'Smart City AI',
+      technologies: ['IoT', 'Big Data', 'Machine Learning', 'City Infrastructure', 'Citizen Services'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
   // const categories = [

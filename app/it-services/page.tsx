@@ -221,6 +221,238 @@ const ITServicesPage: React.FC = () => {
       benefits: ['On-time delivery', 'Cost control', 'Quality assurance', 'Risk mitigation'],
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    // Cutting-Edge IT Innovation Services
+    {
+      title: 'AI-Powered IT Operations',
+      description: 'Revolutionary AI-driven IT operations with predictive maintenance, automated troubleshooting, and intelligent resource optimization.',
+      icon: Activity,
+      features: [
+        'Predictive Maintenance',
+        'Automated Troubleshooting',
+        'Intelligent Resource Optimization',
+        'Anomaly Detection',
+        'Self-Healing Systems',
+        'Performance Prediction'
+      ],
+      price: 'Starting at $4,000/month',
+      category: 'AI Operations',
+      benefits: [
+        'Reduce downtime by 80%',
+        'Predict issues before they occur',
+        'Automate 90% of routine tasks',
+        'Optimize resource utilization'
+      ],
+      technologies: ['Machine Learning', 'AIOps', 'Predictive Analytics', 'Automation Tools', 'Monitoring Platforms'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'Quantum-Safe Security Solutions',
+      description: 'Future-proof cybersecurity with quantum-resistant encryption and post-quantum cryptography implementation.',
+      icon: Shield,
+      features: [
+        'Quantum-Resistant Encryption',
+        'Post-Quantum Cryptography',
+        'Quantum Key Distribution',
+        'Hybrid Security Models',
+        'Future-Proof Compliance',
+        'Quantum Threat Assessment'
+      ],
+      price: 'Starting at $6,000/month',
+      category: 'Quantum Security',
+      benefits: [
+        'Protect against quantum threats',
+        'Future-proof security infrastructure',
+        'Maintain compliance standards',
+        'Advanced cryptographic protection'
+      ],
+      technologies: ['Post-Quantum Algorithms', 'Quantum Key Distribution', 'Hybrid Cryptography', 'Quantum-Safe Protocols'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions with low-latency processing, IoT integration, and real-time analytics.',
+      icon: Globe,
+      features: [
+        'Edge Data Centers',
+        'IoT Integration',
+        'Real-time Analytics',
+        'Low-latency Processing',
+        'Distributed Computing',
+        'Edge AI Processing'
+      ],
+      price: 'Starting at $3,500/month',
+      category: 'Edge Computing',
+      benefits: [
+        'Reduce latency by 90%',
+        'Enable real-time processing',
+        'Improve user experience',
+        'Optimize bandwidth usage'
+      ],
+      technologies: ['Edge Servers', 'IoT Platforms', 'Real-time Analytics', '5G Networks', 'Edge AI'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Enterprise blockchain solutions with smart contracts, decentralized applications, and secure digital identity.',
+      icon: Lock,
+      features: [
+        'Blockchain Development',
+        'Smart Contract Implementation',
+        'Decentralized Applications',
+        'Digital Identity Solutions',
+        'Tokenization Services',
+        'Blockchain Integration'
+      ],
+      price: 'Starting at $5,000/month',
+      category: 'Blockchain',
+      benefits: [
+        'Enhanced security and transparency',
+        'Reduced transaction costs',
+        'Improved trust and verification',
+        'Decentralized operations'
+      ],
+      technologies: ['Ethereum', 'Hyperledger', 'Smart Contracts', 'Web3', 'DeFi Protocols'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: '5G Network Implementation',
+      description: 'Complete 5G network deployment with ultra-low latency, massive IoT connectivity, and enhanced mobile broadband.',
+      icon: Globe,
+      features: [
+        '5G Network Design',
+        'Ultra-Low Latency Setup',
+        'Massive IoT Connectivity',
+        'Enhanced Mobile Broadband',
+        'Network Slicing',
+        'Edge Computing Integration'
+      ],
+      price: 'Starting at $8,000/month',
+      category: '5G Networks',
+      benefits: [
+        '10x faster data speeds',
+        'Ultra-low latency',
+        'Massive device connectivity',
+        'Enhanced mobile experience'
+      ],
+      technologies: ['5G Core', 'RAN', 'Network Slicing', 'Edge Computing', 'IoT Platforms'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description: 'Eco-friendly IT infrastructure with energy-efficient systems, carbon footprint reduction, and sustainable technology practices.',
+      icon: Globe,
+      features: [
+        'Energy-Efficient Infrastructure',
+        'Carbon Footprint Reduction',
+        'Sustainable Technology Practices',
+        'Green Data Centers',
+        'Renewable Energy Integration',
+        'Environmental Monitoring'
+      ],
+      price: 'Starting at $2,500/month',
+      category: 'Green IT',
+      benefits: [
+        'Reduce energy consumption by 40%',
+        'Lower carbon footprint',
+        'Achieve sustainability goals',
+        'Reduce operational costs'
+      ],
+      technologies: ['Energy Management', 'Renewable Energy', 'Efficient Hardware', 'Green Software', 'Carbon Tracking'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security model with continuous verification, micro-segmentation, and identity-based access control.',
+      icon: Shield,
+      features: [
+        'Continuous Verification',
+        'Micro-segmentation',
+        'Identity-Based Access',
+        'Least Privilege Access',
+        'Behavioral Analytics',
+        'Automated Response'
+      ],
+      price: 'Starting at $4,500/month',
+      category: 'Zero Trust',
+      benefits: [
+        'Eliminate security perimeters',
+        'Reduce attack surface',
+        'Improve security posture',
+        'Enable secure remote work'
+      ],
+      technologies: ['Zero Trust Framework', 'Identity Management', 'Network Segmentation', 'Behavioral Analytics', 'Automation'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description: 'Integrated compute, storage, and networking solutions with simplified management and scalable architecture.',
+      icon: HardDrive,
+      features: [
+        'Integrated Infrastructure',
+        'Simplified Management',
+        'Scalable Architecture',
+        'High Availability',
+        'Disaster Recovery',
+        'Cost Optimization'
+      ],
+      price: 'Starting at $3,000/month',
+      category: 'HCI',
+      benefits: [
+        'Simplify infrastructure management',
+        'Reduce hardware costs',
+        'Improve scalability',
+        'Enhance performance'
+      ],
+      technologies: ['HCI Platforms', 'Virtualization', 'Software-Defined Storage', 'Network Virtualization', 'Management Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified management across multiple cloud providers with cost optimization, security governance, and workload portability.',
+      icon: Cloud,
+      features: [
+        'Multi-Cloud Orchestration',
+        'Cost Optimization',
+        'Security Governance',
+        'Workload Portability',
+        'Unified Monitoring',
+        'Compliance Management'
+      ],
+      price: 'Starting at $3,500/month',
+      category: 'Multi-Cloud',
+      benefits: [
+        'Avoid vendor lock-in',
+        'Optimize costs across clouds',
+        'Improve security governance',
+        'Enable workload flexibility'
+      ],
+      technologies: ['Multi-Cloud Tools', 'Cost Management', 'Security Frameworks', 'Orchestration Platforms', 'Monitoring Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Service Management (ITSM) Platform',
+      description: 'Comprehensive ITSM solution with service desk, change management, incident management, and service catalog.',
+      icon: Settings,
+      features: [
+        'Service Desk Management',
+        'Change Management',
+        'Incident Management',
+        'Service Catalog',
+        'Knowledge Management',
+        'Performance Analytics'
+      ],
+      price: 'Starting at $2,000/month',
+      category: 'ITSM',
+      benefits: [
+        'Improve service delivery',
+        'Reduce resolution times',
+        'Enhance user satisfaction',
+        'Streamline IT operations'
+      ],
+      technologies: ['ITSM Platforms', 'Service Management', 'Workflow Automation', 'Analytics Tools', 'Integration APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
@@ -236,7 +468,17 @@ const ITServicesPage: React.FC = () => {
     { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
-    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
+    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length },
+    { name: 'AI Operations', count: itServices.filter(s => s.category === 'AI Operations').length },
+    { name: 'Quantum Security', count: itServices.filter(s => s.category === 'Quantum Security').length },
+    { name: 'Edge Computing', count: itServices.filter(s => s.category === 'Edge Computing').length },
+    { name: 'Blockchain', count: itServices.filter(s => s.category === 'Blockchain').length },
+    { name: '5G Networks', count: itServices.filter(s => s.category === '5G Networks').length },
+    { name: 'Green IT', count: itServices.filter(s => s.category === 'Green IT').length },
+    { name: 'Zero Trust', count: itServices.filter(s => s.category === 'Zero Trust').length },
+    { name: 'HCI', count: itServices.filter(s => s.category === 'HCI').length },
+    { name: 'Multi-Cloud', count: itServices.filter(s => s.category === 'Multi-Cloud').length },
+    { name: 'ITSM', count: itServices.filter(s => s.category === 'ITSM').length }
   ];
 =======
   const services = [

@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -46,7 +42,6 @@ const Navigation: React.FC = () => {
       closeAllMenus();
     }
   };
-<<<<<<< HEAD
 
   const serviceCategories = [
     {
@@ -72,21 +67,18 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-<<<<<<< HEAD
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
         { name: 'AI Image Recognition', path: '/ai-image-recognition', description: 'Computer vision solutions' },
         { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
         { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
         { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
-=======
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' },
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
         { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
         { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
         { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
         { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
         { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
       ]
     },
     {
@@ -105,23 +97,19 @@ const Navigation: React.FC = () => {
         { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
         { name: 'System Administration', path: '/system-administration', description: 'System management' },
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-<<<<<<< HEAD
         { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
         { name: 'IT Training', path: '/it-training', description: 'Staff development' },
         { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
         { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
         { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
-=======
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' },
         { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' },
         { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
         { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring' },
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
       ]
     },
     {
