@@ -137,4 +137,3 @@ const BusinessIntelligencePage: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
     }
   ];
-

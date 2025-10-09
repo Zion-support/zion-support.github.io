@@ -272,24 +272,25 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Edge Computing Solutions',
       description: 'Deploy AI models at the edge for real-time processing, reduced latency, and offline capabilities.',
       icon: '⚡',
-<<<<<<< HEAD
-      price: 'Starting at $6,500/month',
-      features: ['Grid optimization', 'Renewable integration', 'Demand response', 'Energy storage', 'Load forecasting'],
-      benefits: ['Improve grid efficiency', 'Integrate renewables', 'Reduce energy costs'],
-      marketPrice: '$11,000-35,000/month',
-      category: 'Energy AI',
-      technologies: ['TensorFlow', 'PyTorch', 'Pandas', 'Time Series DB', 'Grid APIs']
-    },
-    {
-      title: 'AI-Powered Space Exploration',
-      description: 'Machine learning for satellite data analysis, space mission planning, and astronomical research.',
-      icon: '🚀',
-      price: 'Starting at $18,000/month',
-      features: ['Satellite data analysis', 'Mission planning', 'Astronomical research', 'Space weather prediction', 'Orbital mechanics'],
-      benefits: ['Improve mission success', 'Discover new phenomena', 'Optimize space operations'],
-      marketPrice: '$30,000-90,000/month',
-      category: 'Space AI',
-      technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
+      price: '$1,700/month',
+      features: [
+        'Edge Model Deployment',
+        'Real-time Inference',
+        'Offline Capabilities',
+        'Model Optimization',
+        'Edge Analytics',
+        'Device Management'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Enable offline operations',
+        'Reduce bandwidth costs by 70%',
+        'Improve data privacy'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Edge AI',
+      technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // NEW ADVANCED AI SERVICES
     {
@@ -621,45 +622,10 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']
-=======
-      price: '$1,700/month',
-      features: [
-        'Edge Model Deployment',
-        'Real-time Inference',
-        'Offline Capabilities',
-        'Model Optimization',
-        'Edge Analytics',
-        'Device Management'
-      ],
-      benefits: [
-        'Reduce latency by 90%',
-        'Enable offline operations',
-        'Reduce bandwidth costs by 70%',
-        'Improve data privacy'
-      ],
-      marketPrice: '$3,000-6,000/month',
-      category: 'Edge AI',
-      technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> eb805111b9a39d156e248671e5cb99c5fd811fd8
     }
   ];
 
-  const categories = [
-    { name: 'All', count: aiServices.length },
-    { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
-    { name: 'Machine Learning', count: aiServices.filter(s => s.category === 'Machine Learning').length },
-    { name: 'NLP', count: aiServices.filter(s => s.category === 'NLP').length },
-    { name: 'Computer Vision', count: aiServices.filter(s => s.category === 'Computer Vision').length },
-    { name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length },
-    { name: 'Automation', count: aiServices.filter(s => s.category === 'Automation').length },
-    { name: 'Conversational AI', count: aiServices.filter(s => s.category === 'Conversational AI').length },
-    { name: 'Data Engineering', count: aiServices.filter(s => s.category === 'Data Engineering').length },
-    { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length },
-    { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
-    { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
-    { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
-  ];
+  const categories = [...new Set(aiServices.map(service => service.category))];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
