@@ -1,5 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -320,12 +321,12 @@ const HomePage: React.FC = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
                   Get Started Today
-                </a>
+                </Link>
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
@@ -389,12 +390,12 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
-                    <a 
-                      href={service.link} 
+                    <Link 
+                      to={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
                     >
                       Learn More
-                    </a>
+                    </Link>
                   </div>
                 </article>
               ))}
@@ -435,12 +436,12 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/ai-services" 
+                    <Link 
+                      to="/ai-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >
                       Learn More
-                    </a>
+                    </Link>
                   </div>
                 </article>
               ))}
@@ -481,12 +482,12 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/it-services" 
+                    <Link 
+                      to="/it-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >
                       Learn More
-                    </a>
+                    </Link>
                   </div>
                 </article>
               ))}
