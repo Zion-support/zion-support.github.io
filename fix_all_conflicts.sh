@@ -1,34 +1,37 @@
 #!/bin/bash
 
-echo "Fixing all merge conflicts in the codebase..."
+# Fix merge conflicts by keeping the newer version (after =======)
+echo "Fixing merge conflicts..."
 
-# Find all files with conflict markers
-files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> main" 2>/dev/null)
-
-echo "Found files with conflicts:"
-echo "$files_with_conflicts"
-
-# Process each file
-for file in $files_with_conflicts; do
-    if [ -f "$file" ]; then
-        echo "Processing $file..."
-        
-        # Create a backup
-        cp "$file" "$file.backup"
-        
-        # Remove conflict markers and choose the cleaner version
-        # This is a more aggressive approach that removes all conflict markers
-        sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/{
-            /^<<<<<<< HEAD$/d
-            /^=======$/d
-            /^>>>>>>> main$/d
-        }' "$file"
-        
-        # Clean up any remaining empty lines
-        sed -i '/^[[:space:]]*$/N;/^\n$/d' "$file"
-        
-        echo "  ✓ Processed $file"
-    fi
+# Process each file with merge conflicts
+for file in /workspace/app/ai-customer-support/page.tsx /workspace/app/ai-data-visualization/page.tsx /workspace/app/ai-sales-automation/page.tsx /workspace/app/ai-workflow-automation/page.tsx; do
+    echo "Processing $file"
+    
+    # Create a temporary file
+    temp_file=$(mktemp)
+    
+    # Process the file line by line
+    in_conflict=false
+    keep_section=""
+    
+    while IFS= read -r line; do
+        if [[ "$line" == "<<<<<<< HEAD" ]]; then
+            in_conflict=true
+            keep_section="old"
+        elif [[ "$line" == "=======" ]]; then
+            keep_section="new"
+        elif [[ "$line" == ">>>>>>> cursor"* ]]; then
+            in_conflict=false
+            keep_section=""
+        elif [[ "$in_conflict" == true && "$keep_section" == "new" ]]; then
+            echo "$line" >> "$temp_file"
+        elif [[ "$in_conflict" == false ]]; then
+            echo "$line" >> "$temp_file"
+        fi
+    done < "$file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
 done
 
-echo "Conflict resolution complete!"
+echo "Merge conflicts fixed!"

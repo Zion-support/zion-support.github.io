@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-const ContentCarousel: React.FC = () => {
-  return (
-    <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">
-          Featured Content
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-white mb-4">AI Revolution</h3>
-            <p className="text-gray-300">Discover how AI is transforming businesses worldwide.</p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-white mb-4">Quantum Computing</h3>
-            <p className="text-gray-300">The future of computing is here with quantum technology.</p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-white mb-4">Digital Transformation</h3>
-            <p className="text-gray-300">Transform your business with our digital solutions.</p>
-          </div>
-=======
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -29,22 +6,22 @@ const ContentCarousel: React.FC = () => {
 
   const slides = [
     {
-      title: "AI-Powered Automation",
-      description: "Transform your business processes with intelligent automation that learns and adapts.",
+      title: "AI Revolution",
+      description: "Discover how AI is transforming businesses worldwide.",
       image: "🤖",
-      color: "from-purple-500 to-pink-500"
+      link: "/ai-services"
     },
     {
-      title: "Quantum Computing Solutions",
-      description: "Harness the power of quantum computing for complex problem solving and optimization.",
+      title: "Quantum Computing",
+      description: "The future of computing is here with quantum technology.",
       image: "⚛️",
-      color: "from-blue-500 to-cyan-500"
+      link: "/quantum-computing"
     },
     {
-      title: "Enterprise Security",
-      description: "Bank-level security and compliance for your critical data and infrastructure.",
-      image: "🔒",
-      color: "from-green-500 to-emerald-500"
+      title: "Digital Transformation",
+      description: "Transform your business with our digital solutions.",
+      image: "🚀",
+      link: "/contact"
     }
   ];
 
@@ -52,7 +29,6 @@ const ContentCarousel: React.FC = () => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [slides.length]);
 
@@ -65,69 +41,61 @@ const ContentCarousel: React.FC = () => {
   };
 
   return (
-    <section className="mb-16" aria-labelledby="carousel-heading">
-      <h2 id="carousel-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-        Featured Solutions
-      </h2>
-      
-      <div className="relative max-w-4xl mx-auto">
-        <div className="overflow-hidden rounded-xl">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {slides.map((slide, index) => (
-              <div key={index} className="w-full flex-shrink-0">
-                <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-center text-white`}>
-                  <div className="text-6xl md:text-8xl mb-6">{slide.image}</div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{slide.title}</h3>
-                  <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-                    {slide.description}
-                  </p>
+    <section className="py-16 px-4">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          Featured Content
+        </h2>
+        <div className="relative">
+          <div className="overflow-hidden rounded-lg">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="bg-gradient-to-r from-indigo-600 to-purple-700 p-8 text-center text-white">
+                    <div className="text-6xl mb-4">{slide.image}</div>
+                    <h3 className="text-2xl font-bold mb-4">{slide.title}</h3>
+                    <p className="text-lg mb-6 max-w-2xl mx-auto">{slide.description}</p>
+                    <a
+                      href={slide.link}
+                      className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                    >
+                      Learn More
+                    </a>
+                  </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+          <div className="flex justify-center mt-4 space-x-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/30'
+                }`}
+              />
             ))}
           </div>
-        </div>
-
-        {/* Navigation buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-
-        {/* Dots indicator */}
-        <div className="flex justify-center space-x-2 mt-6">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
         </div>
       </div>
     </section>
   );
 };
-<<<<<<< HEAD
-export default ContentCarousel;
-=======
 
 export default ContentCarousel;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
