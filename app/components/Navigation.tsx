@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -38,51 +38,54 @@ const Navigation: React.FC = () => {
     }
   };
   const aiServices = [
-    { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
-    { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
-    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Shield, description: 'Medical AI Solutions' },
-    { name: 'AI Fintech', href: '/ai-fintech', icon: TrendingUp, description: 'Financial AI' },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Code, description: 'Content Creation' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
-    { name: 'AI E-commerce', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security AI' },
-    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' },
-    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support' },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, description: 'Sales AI' },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
-    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
+    { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions - $1,500/month' },
+    { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing - $199/month' },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation - $399/month' },
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Shield, description: 'Medical AI Solutions - $1,999/month' },
+    { name: 'AI Fintech', href: '/ai-fintech', icon: TrendingUp, description: 'Financial AI - $1,499/month' },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Code, description: 'Content Creation - $299/month' },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence - $799/month' },
+    { name: 'AI E-commerce', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI - $1,299/month' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security AI - $1,999/month' },
+    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI - $5,000/project' },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support - $599/month' },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, description: 'Sales AI - $799/month' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI - $499/month' },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI - $399/month' },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI - $299/month' },
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI - $199/month' }
   ];
   const itServices = [
-    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
-    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'AWS/Azure/GCP Migration - $2,500/month' },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: Shield, description: 'Security & Compliance - $1,999/month' },
+    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Infrastructure Setup - $3,500/month' },
+    { name: 'Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone, description: 'iOS/Android Apps - $5,000/project' },
+    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations - $2,999/month' },
+    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management - $1,499/month' },
+    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions - $1,999/month' },
+    { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions - $1,299/month' },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy - $299/hour' },
+    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support - $2,999/month' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool' },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Business Analytics' },
-    { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Smart Scheduling' },
-    { name: 'Expense Tracker', href: '/expense-tracker', icon: TrendingUp, description: 'Expense Management' },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckSquare, description: 'Task Management' },
-    { name: 'CRM Lite', href: '/crm-lite', icon: Users, description: 'Customer Management' },
-    { name: 'Email Optimizer', href: '/email-optimizer', icon: Mail, description: 'Email Marketing' },
-    { name: 'Social Media Manager', href: '/social-media-manager', icon: Globe, description: 'Social Media' },
-    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools' },
-    { name: 'Landing Page Builder', href: '/landing-page-builder', icon: Globe, description: 'Page Builder' },
-    { name: 'SEO Optimizer', href: '/seo-optimizer', icon: Target, description: 'SEO Tools' },
-    { name: 'Ad Campaign Manager', href: '/ad-campaign-manager', icon: TrendingUp, description: 'Ad Management' },
-    { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI' },
-    { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
-    { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
+    { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Intelligent CRM - $149/month' },
+    { name: 'AI Content Studio', href: '/ai-content-studio', icon: Code, description: 'Content Creation Suite - $299/month' },
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Target, description: 'Smart Project Management - $199/month' },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence - $199/month' },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'Intelligent Chatbots - $399/month' },
+    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool - $99/month' },
+    { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Business Analytics - $149/month' },
+    { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Smart Scheduling - $79/month' },
+    { name: 'Expense Tracker', href: '/expense-tracker', icon: TrendingUp, description: 'Expense Management - $49/month' },
+    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckSquare, description: 'Task Management - $99/month' },
+    { name: 'Email Optimizer', href: '/email-optimizer', icon: Mail, description: 'Email Marketing - $199/month' },
+    { name: 'Social Media Manager', href: '/social-media-manager', icon: Globe, description: 'Social Media - $149/month' },
+    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools - $299/month' },
+    { name: 'Landing Page Builder', href: '/landing-page-builder', icon: Globe, description: 'Page Builder - $199/month' },
+    { name: 'SEO Optimizer', href: '/seo-optimizer', icon: Target, description: 'SEO Tools - $149/month' },
+    { name: 'Ad Campaign Manager', href: '/ad-campaign-manager', icon: TrendingUp, description: 'Ad Management - $299/month' },
+    { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI - $199/month' },
+    { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development - $399/month' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
