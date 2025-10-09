@@ -1,8 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Rocket, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
-
+import { Rocket, CheckCircle } from 'lucide-react';
 const FutureTechnologiesPage: React.FC = () => {
   const features = [
     {

@@ -59,6 +59,11 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
+      <SEOOptimizer
+        title="About Zion Tech Group - Leading AI and IT Solutions"
+        description="Learn about Zion Tech Group's mission, team, and values. We're dedicated to transforming businesses through cutting-edge AI and IT solutions."
+        keywords={['about us', 'team', 'mission', 'AI solutions', 'IT services', 'company values']}
+      />
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>
@@ -85,7 +90,6 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
         </div>
-      </div>
 
         {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -238,3 +242,5 @@ const AboutPage: React.FC = () => {
     </div>
   );
 };
+
+export default AboutPage;

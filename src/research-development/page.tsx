@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Microscope, Brain, Atom, Rocket, Users, Award, BookOpen, Lightbulb, Target, Zap, Globe, Phone, Mail } from 'lucide-react';
+import { BookOpen, Phone, Mail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, Zap, Shield, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
-
+import { BarChart, CheckCircle } from 'lucide-react';
 const ITPerformanceMonitoringPage: React.FC = () => {
   const features = [
     {

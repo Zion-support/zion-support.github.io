@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Calculator, Phone, Mail, MessageSquare, CheckCircle, Star, Users, Award, Clock, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MessageSquare, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

@@ -1,10 +1,5 @@
-'use client';
 import React from 'react';
-<<<<<<< HEAD:app/offline/page.tsx
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-import Link from 'next/link';
-
-=======
 import { Link } from 'react-router-dom';
 /**
  * Offline Page

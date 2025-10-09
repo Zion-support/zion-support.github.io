@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cloud, Shield, Server, Database, BarChart, Users, CheckCircle, ArrowRight, Phone } from 'lucide-react';
+import { Cloud, CheckCircle, ArrowRight, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
