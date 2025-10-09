@@ -289,33 +289,6 @@ const AIDataVisualizationPage2: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
-          <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Visualize Your Data?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact us today to learn how AI data visualization can transform your business insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
-                Call (302) 464-0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Email Us
-              </a>
-            </div>
-          </section>
-        </div>
-      </main>
-      
-      <Footer />
     </div>
   );
 };
