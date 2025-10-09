@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { MapPin, Clock, CheckCircle } from 'lucide-react';
@@ -31,11 +27,7 @@ const CareersPage: React.FC = () => {
       title: 'Cybersecurity Specialist',
       location: 'Delaware, USA',
       type: 'Full-time',
-<<<<<<< HEAD
-      description: 'Analyze data and build predictive models'
-=======
       description: 'Protect and secure our clients digital assets'
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     }
   ];
 
@@ -49,10 +41,6 @@ const CareersPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -104,16 +92,8 @@ const CareersPage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
- cursor/analyze-improve-and-deploy-application-cde4
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     </div>
   );
 };
 
 export default CareersPage;
-<<<<<<< HEAD
- cursor/analyze-improve-and-deploy-application-cde4
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19

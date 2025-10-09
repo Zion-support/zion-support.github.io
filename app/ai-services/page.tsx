@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
@@ -289,8 +288,6 @@ const AIServicesPage: React.FC = () => {
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Edge AI',
-<<<<<<< HEAD
-
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
@@ -623,11 +620,8 @@ const AIServicesPage: React.FC = () => {
       benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
-      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']
-=======
-      technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
+      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     }
   ];
 

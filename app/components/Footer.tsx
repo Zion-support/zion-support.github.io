@@ -12,18 +12,33 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI CRM', url: '/ai-crm', description: 'Intelligent customer management' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot', description: 'No-code chatbot creation' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' }
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Micro SAAS', url: '/micro-saas', description: '50+ ready-to-use apps' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
-    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
+    { name: 'DevOps & CI/CD', url: '/devops', description: 'DevOps automation' },
+    { name: 'Database Services', url: '/database', description: 'Database management' },
+    { name: 'Network Security', url: '/network-security', description: 'Advanced security solutions' },
+    { name: 'System Administration', url: '/system-admin', description: 'System management' },
+    { name: 'Data Backup & Recovery', url: '/data-backup', description: 'Automated backup solutions' }
+  ];
+
+  const microSaasServices = [
+    { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent customer management' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot', description: 'No-code chatbot creation' },
+    { name: 'AI Content Studio', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'AI-powered SEO tools' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media', description: 'Automated social media' },
+    { name: 'AI Invoice Generator', url: '/ai-invoice', description: 'Automated invoicing' }
   ];
 
   const specializedServices = [
@@ -82,7 +97,7 @@ const Footer: React.FC = memo(() => {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
@@ -218,6 +233,32 @@ const Footer: React.FC = memo(() => {
                 ))}
               </ul>
             </div>
+          </div>
+
+          {/* Micro SAAS Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Code className="w-5 h-5 mr-2 text-cyan-400" />
+              Micro SAAS
+            </h3>
+            <ul className="space-y-3">
+              {microSaasServices.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
+                  >
+                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div>
+                      <div className="font-medium">{service.name}</div>
+                      <div className="text-xs text-gray-400 group-hover:text-gray-300">
+                        {service.description}
+                      </div>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Company & Support */}
