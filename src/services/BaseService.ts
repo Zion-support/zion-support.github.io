@@ -77,7 +77,7 @@ export class BaseService {
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
     const _cacheKey = `GET:${endpoint}`;
     if (useCache) {
-      const _cached = this.getFromCache<T>(cacheKey);
+      const cached = this.getFromCache<T>(_cacheKey);
       if (cached) return cached;
     }
     try {
@@ -87,7 +87,7 @@ export class BaseService {
         retries: this.options.retries
       });
       if (useCache) {
-        this.setInCache(cacheKey, response.data);
+        this.setInCache(_cacheKey, response.data);
       }
       return response.data;
     } catch (error) {
