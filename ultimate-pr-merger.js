@@ -74,7 +74,7 @@ const _results = [];
 
 //Process each PR
 for (const pr of allPRs) {
-//   console.log(
+//   // console.log(
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
   );
 //   //Check if branch exists

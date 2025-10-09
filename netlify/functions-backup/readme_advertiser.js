@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'readme_advertiser'}
       });
     };
-//   } catch (error) {console.error('❌ readme_advertiser function failed: ') error
+//   } catch (error) {// console.error('❌ readme_advertiser function failed: ') error
       }
     return {
       statusCode: 500,

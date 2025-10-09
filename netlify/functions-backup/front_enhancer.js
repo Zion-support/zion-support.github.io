@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'front_enhancer'}
       });
     };
-//   } catch (error) {console.error('❌ front_enhancer function failed: ') error
+//   } catch (error) {// console.error('❌ front_enhancer function failed: ') error
       }
     return {
       statusCode: 500,

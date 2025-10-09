@@ -171,7 +171,7 @@ class PerformanceMonitor {
       return total + (resource.transferSize || 0);
     }, 0);
 
-//     console.log(
+//     // console.log(
       `Total resources loaded: ${resources.length}, Total size: ${(totalResourceSize / 1024).toFixed(2)} KB`
     );
   }

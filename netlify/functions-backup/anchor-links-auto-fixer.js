@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {try {
-//     console.log('anchor-links-auto-fixer function triggered')}
+//     // console.log('anchor-links-auto-fixer function triggered')}
     // Anchor links auto-fixing simulation
     const result = {
       statusCode: 200,
@@ -19,7 +19,7 @@ exports.handler = async function (event, context) {try {
       }),
     };
     return result;
-//   } catch (error) {console.error('Error in anchor-links-auto-fixer: ') error
+//   } catch (error) {// console.error('Error in anchor-links-auto-fixer: ') error
       }
     return {
       statusCode: 500,
@@ -35,5 +35,5 @@ exports.handler = async function (event, context) {try {
   }
 };
         timestamp: new Date().toISOString(),' function: 'anchor-links-auto-fixer',' source: event.source || 'unknown', fixing: {' status: 'active', linksProcessed: 0,
-        lastFix: new Date().toISOString() } }) }; return result; } catch (error) {' console.error('Error in anchor-links-auto-fixer: ') error
+        lastFix: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in anchor-links-auto-fixer: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'anchor-links-auto-fixer' }) }; } };'

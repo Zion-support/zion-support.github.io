@@ -1,11 +1,10 @@
+'use client';
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-
 import React from 'react'
 import { performanceConfig } from '../../performance.config'
-
 export interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -26,7 +25,6 @@ class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null
-
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
@@ -35,13 +33,10 @@ class MonitoringService {
   private initializeMonitoring(): void {
     // Monitor Web Vitals
     this.monitorWebVitals()
-    
     // Monitor Long Tasks
     this.monitorLongTasks()
-    
     // Monitor Resource Loading
     this.monitorResourceTiming()
-    
     // Global Error Handler
     this.setupErrorHandling()
   }
@@ -56,7 +51,6 @@ class MonitoringService {
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -66,7 +60,6 @@ class MonitoringService {
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
-
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
@@ -80,7 +73,6 @@ class MonitoringService {
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
-
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
@@ -91,8 +83,7 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        console.error('Error setting up performance observers:', error);
-      }
+        }
     }
   }
   private monitorLongTasks(): void {
@@ -103,7 +94,6 @@ class MonitoringService {
             }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
-
       } catch (error) {
         // Long task API might not be available
       }
@@ -121,8 +111,7 @@ class MonitoringService {
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
-        console.error('Error monitoring resources:', _error);
-      }
+        }
     }
   }
   private setupErrorHandling(): void {
@@ -136,7 +125,6 @@ class MonitoringService {
         url: window.location.href
       })
     })
-
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
@@ -155,7 +143,6 @@ class MonitoringService {
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-      
       }
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
@@ -167,13 +154,10 @@ class MonitoringService {
   }
   public logError(error: ErrorReport): void {
     this.errors.push(error)
-    
     // Keep only last 50 errors
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
-    console.error('[Error]', error)
-
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {
@@ -188,7 +172,6 @@ class MonitoringService {
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
-
       if (memory) {
         }MB`,
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
@@ -215,5 +198,4 @@ class MonitoringService {
 }
 // Singleton instance
 const monitoring = new MonitoringService()
-
 export default monitoring

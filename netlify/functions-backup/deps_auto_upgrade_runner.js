@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'deps_auto_upgrade_runner'}
       });
     };
-//   } catch (error) {console.error('❌ deps_auto_upgrade_runner function failed: ') error
+//   } catch (error) {// console.error('❌ deps_auto_upgrade_runner function failed: ') error
       }
     return {
       statusCode: 500,

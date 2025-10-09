@@ -177,7 +177,7 @@ for (const branch of branchesToMerge) {
 
 //Step 5: Generate report
 // // // // // // // // // // // if (results.failed.length > 0) {
-//   //   results.failed.forEach(result => console.log(`  - ${result.branch}`));
+//   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
 }
 
 //Save report

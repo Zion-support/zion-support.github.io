@@ -18,7 +18,7 @@ import { fileURLToPath } from 'url';
 
   //   //   //   // Check for syntax issues
   const _hasDoubleClosing = content.includes('}, []);\n  }, []);');
-  //   console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
+  //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
 
   if (
     classMatches &&
