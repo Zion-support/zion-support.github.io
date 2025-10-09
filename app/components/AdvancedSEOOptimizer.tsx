@@ -120,35 +120,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
 
-    const faqData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
-          },
-        },
-      ],
+    return {
+      'twitter:card': 'summary_large_image',
+      'twitter:title': seoData.ogTitle || seoData.title,
+      'twitter:description': seoData.ogDescription || seoData.description,
+      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg',
+      'twitter:site': '@ziontechgroup',
+      'twitter:creator': '@ziontechgroup',
     };
   }, [seoData, enableTwitterCards]);
 
@@ -168,8 +146,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, [seoData]);
 
   const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
+  const metaTags = generateMetaTags();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -193,8 +172,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       }
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
-
-    return metaTags;
   }, [seoData]);
 
   const addStructuredData = (data: Record<string, unknown>) => {
@@ -205,9 +182,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
 
   useEffect(() => {
     if (structuredData) {
@@ -215,17 +193,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [structuredData]);
 
-  useEffect(() => {
-    if (breadcrumbData) {
-      addStructuredData(breadcrumbData);
-    }
-  }, [breadcrumbData]);
-
-  useEffect(() => {
-    if (faqData) {
-      addStructuredData(faqData);
-    }
-  }, [faqData]);
 
   useEffect(() => {
     // Track page performance
