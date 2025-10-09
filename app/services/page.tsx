@@ -1,9 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -95,14 +91,14 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-const ServicessPage: React.FC = () => {
+const ServicesPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="Service - Zion Tech Group"
-        description="Professional AI and IT servicess for your business transformation."
+        title="Services - Zion Tech Group"
+        description="Professional AI and IT services for your business transformation."
         keywords={['AI services', 'IT solutions', 'business transformation']}
-        canonicalUrl="https://ziontechgroup.com/service"
+        canonicalUrl="https://ziontechgroup.com/services"
       />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
         <Navigation />
@@ -113,7 +109,7 @@ const ServicessPage: React.FC = () => {
             <div className="relative z-10 py-16 px-4">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Service
+                  Services
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -240,4 +236,4 @@ const ServicessPage: React.FC = () => {
   );
 };
 
-export default PageComponent;
+export default ServicesPage;
