@@ -164,10 +164,10 @@ class MonitoringService {}
     return { ...this.metrics }
   }
   public getErrors(): ErrorReport[] {
-    return [...this.errors]}
+    return [...this.errors]
   }
   public clearErrors(): void {
-    this.errors = []}
+    this.errors = []
   }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}

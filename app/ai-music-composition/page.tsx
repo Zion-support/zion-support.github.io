@@ -41,37 +41,37 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
       title: 'Content Creation',
       description: 'Generate background music for videos, podcasts, and presentations',
       icon: '🎬',
-      examples: ['YouTube videos', 'Podcast intros', 'Presentation music', 'Social media content']}
+      examples: ['YouTube videos', 'Podcast intros', 'Presentation music', 'Social media content']
     },
     {
       title: 'Game Development',
       description: 'Create dynamic soundtracks and ambient music for games',
       icon: '🎮',
-      examples: ['Game soundtracks', 'Menu music', 'Ambient sounds', 'Dynamic scoring']}
+      examples: ['Game soundtracks', 'Menu music', 'Ambient sounds', 'Dynamic scoring']
     },
     {
       title: 'Marketing & Advertising',
       description: 'Produce jingles, commercial music, and brand soundtracks',
       icon: '📢',
-      examples: ['Commercial jingles', 'Brand anthems', 'Product demos', 'Social media ads']}
+      examples: ['Commercial jingles', 'Brand anthems', 'Product demos', 'Social media ads']
     },
     {
       title: 'Education & Training',
       description: 'Create educational music and learning soundtracks',
       icon: '📚',
-      examples: ['Learning modules', 'Training videos', 'Educational content', 'Language learning']}
+      examples: ['Learning modules', 'Training videos', 'Educational content', 'Language learning']
     },
     {
       title: 'Therapy & Wellness',
       description: 'Generate therapeutic and relaxation music',
       icon: '🧘',
-      examples: ['Meditation music', 'Sleep sounds', 'Therapy sessions', 'Wellness apps']}
+      examples: ['Meditation music', 'Sleep sounds', 'Therapy sessions', 'Wellness apps']
     },
     {
       title: 'Live Performance',
       description: 'Create backing tracks and accompaniment for live shows',
       icon: '🎭',
-      examples: ['Backing tracks', 'Live accompaniment', 'Performance music', 'Karaoke tracks']}
+      examples: ['Backing tracks', 'Live accompaniment', 'Performance music', 'Karaoke tracks']
     }
   ]
   const pricing = [

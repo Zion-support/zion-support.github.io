@@ -54,7 +54,7 @@ const ComputerVisionPage: React.FC = () => {
       <SEOOptimizer
         title="Computer Vision Solutions - Zion Tech Group"
         description="Advanced computer vision solutions including object detection, image classification, facial recognition, and video analysis. Transform visual data into actionable insights."
-        keywords={['computer vision', 'object detection', 'image classification', 'facial recognition', 'video analysis', 'visual AI']}
+        keywords={['computer vision', 'object detection', 'image classification', 'facial recognition', 'video analysis', 'visual AI']
         canonicalUrl="https://ziontechgroup.com/computer-vision"
       />
       <PerformanceOptimizer

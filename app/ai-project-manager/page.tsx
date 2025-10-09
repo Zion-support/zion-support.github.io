@@ -16,25 +16,25 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with resource optimization and timeline prediction',
-      benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']}
+      benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']
     },
     {
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment, priority setting, and progress tracking',
-      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']}
+      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']
     },
     {
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'AI-driven insights for project success prediction and risk management',
-      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']}
+      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']
     },
     {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team communication and collaboration with AI assistance',
-      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']}
+      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']
     }
   ]
   const pricingPlans = [
@@ -106,7 +106,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
       <SEOOptimizer
         title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group"
         description="Transform your project management with AI-powered planning, predictive analytics, and intelligent task management. Increase productivity by 40% and reduce project delays by 70%."
-        keywords={['AI project management', 'project planning', 'team collaboration', 'predictive analytics', 'task management', 'project optimization']}
+        keywords={['AI project management', 'project planning', 'team collaboration', 'predictive analytics', 'task management', 'project optimization']
         canonicalUrl="https://ziontechgroup.com/ai-project-manager"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">

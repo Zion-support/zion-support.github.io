@@ -57,7 +57,7 @@ export const generateStructuredData = useCallback((...args) => {
     description: data.description,
     url: data.url || '',
     logo: data.logo || '',
-    sameAs: data.sameAs || []}
+    sameAs: data.sameAs || []
   }
   return { ...baseStructure, ...data }
 }
@@ -239,7 +239,7 @@ export const generateAdvancedStructuredData = useCallback((...args) => {
     description: data.description,
     url: data.url || '',
     logo: data.logo || '',
-    sameAs: data.sameAs || []}
+    sameAs: data.sameAs || []
   }
   // Add type-specific properties
   if (data.type === 'Organization') {
@@ -355,7 +355,7 @@ export const initializeSEOEnhancements = useCallback((...args) => {
     description: 'Leading provider of AI-powered business solutions',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.jpg',
-    sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings']}
+    sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings']
   })
   const script = document.createElement('script')
   script.type = 'application/ld+json'

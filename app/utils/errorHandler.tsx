@@ -466,7 +466,7 @@ export class ErrorBoundary extends React.Component<
                 border: 'none',
                 borderRadius: '4px',
                 cursor: 'pointer'}
-              }}
+              }
              tabIndex="0">
               Try again
             "> this.setState({ hasError: false, error: undefined })}
@@ -477,7 +477,7 @@ export class ErrorBoundary extends React.Component<
                 border: 'none',
                 borderRadius: '4px',
                 cursor: 'pointer'}
-              }}
+              }
             >
               Try again
             </button>

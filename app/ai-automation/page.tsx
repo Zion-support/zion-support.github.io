@@ -10,25 +10,25 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'Intelligent Process Discovery',
       description: 'AI automatically identifies and maps your business processes for optimization opportunities.',
-      benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']}
+      benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']
     },
     {
       icon: Zap,
       title: 'Smart Workflow Automation',
       description: 'Deploy AI-powered workflows that learn and adapt to your business needs over time.',
-      benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']}
+      benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']
     },
     {
       icon: Target,
       title: 'Predictive Task Management',
       description: 'AI predicts and prioritizes tasks based on business impact and resource availability.',
-      benefits: ['Smart prioritization', 'Resource optimization', 'Deadline prediction', 'Capacity planning']}
+      benefits: ['Smart prioritization', 'Resource optimization', 'Deadline prediction', 'Capacity planning']
     },
     {
       icon: TrendingUp,
       title: 'Performance Analytics',
       description: 'Comprehensive analytics and insights to measure and improve automation effectiveness.',
-      benefits: ['Real-time metrics', 'Performance dashboards', 'Trend analysis', 'Improvement recommendations']}
+      benefits: ['Real-time metrics', 'Performance dashboards', 'Trend analysis', 'Improvement recommendations']
     }
   ]
   const useCases = [

@@ -223,7 +223,7 @@ const ITServicesPage: React.FC = () => {
       <SEOOptimizer
         title="IT Services - Zion Tech Group"
         description="Comprehensive IT services including cloud migration, cybersecurity, DevOps, database management, and more. Transform your IT infrastructure with our expert solutions."
-        keywords={['IT services', 'cloud migration', 'cybersecurity', 'DevOps', 'database management', 'IT consulting', 'network infrastructure']}
+        keywords={['IT services', 'cloud migration', 'cybersecurity', 'DevOps', 'database management', 'IT consulting', 'network infrastructure']
         canonicalUrl="https://ziontechgroup.com/it-services"
       />
       <PerformanceOptimizer

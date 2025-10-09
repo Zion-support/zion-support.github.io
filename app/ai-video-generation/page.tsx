@@ -41,37 +41,37 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
       title: 'Content Marketing',
       description: 'Create engaging video content for marketing campaigns',
       icon: '📈',
-      examples: ['Product launches', 'Brand awareness', 'Social media ads', 'Email campaigns']}
+      examples: ['Product launches', 'Brand awareness', 'Social media ads', 'Email campaigns']
     },
     {
       title: 'E-Learning',
       description: 'Generate educational videos and training materials',
       icon: '🎓',
-      examples: ['Course content', 'Tutorial videos', 'Training modules', 'Knowledge sharing']}
+      examples: ['Course content', 'Tutorial videos', 'Training modules', 'Knowledge sharing']
     },
     {
       title: 'E-commerce',
       description: 'Create product videos and shopping experiences',
       icon: '🛒',
-      examples: ['Product showcases', 'Shopping demos', 'Unboxing videos', 'Comparison videos']}
+      examples: ['Product showcases', 'Shopping demos', 'Unboxing videos', 'Comparison videos']
     },
     {
       title: 'Real Estate',
       description: 'Generate property tours and virtual walkthroughs',
       icon: '🏠',
-      examples: ['Property tours', 'Virtual staging', 'Neighborhood guides', 'Investment presentations']}
+      examples: ['Property tours', 'Virtual staging', 'Neighborhood guides', 'Investment presentations']
     },
     {
       title: 'Healthcare',
       description: 'Create medical education and patient information videos',
       icon: '🏥',
-      examples: ['Medical procedures', 'Patient education', 'Training materials', 'Health awareness']}
+      examples: ['Medical procedures', 'Patient education', 'Training materials', 'Health awareness']
     },
     {
       title: 'Entertainment',
       description: 'Produce creative and entertainment content',
       icon: '🎬',
-      examples: ['Short films', 'Music videos', 'Comedy sketches', 'Creative projects']}
+      examples: ['Short films', 'Music videos', 'Comedy sketches', 'Creative projects']
     }
   ]
   const pricing = [

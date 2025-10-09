@@ -10,7 +10,7 @@ const AiWorkflowAutomationPage: React.FC = React.memo((props) => {
       <SEOOptimizer
         title="AiWorkflowAutomation - Zion Tech Group"
         description="Professional AI and IT ai-workflow-automations for your business transformation."}
-        keywords={['AI services', 'IT solutions', 'business transformation']}
+        keywords={['AI services', 'IT solutions', 'business transformation']
         canonicalUrl="https://ziontechgroup.com/service"
       />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">

@@ -41,37 +41,37 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
       title: 'Fashion Brands',
       description: 'Create new collections and design variations',
       icon: '🏷️',
-      examples: ['Seasonal collections', 'Design variations', 'Trend analysis', 'Market research']}
+      examples: ['Seasonal collections', 'Design variations', 'Trend analysis', 'Market research']
     },
     {
       title: 'E-commerce',
       description: 'Generate product images and virtual try-ons',
       icon: '🛒',
-      examples: ['Product visualization', 'Virtual fitting rooms', 'Size recommendations', 'Style matching']}
+      examples: ['Product visualization', 'Virtual fitting rooms', 'Size recommendations', 'Style matching']
     },
     {
       title: 'Fashion Designers',
       description: 'Accelerate design process and creativity',
       icon: '👨‍🎨',
-      examples: ['Design inspiration', 'Pattern creation', 'Color matching', 'Fabric selection']}
+      examples: ['Design inspiration', 'Pattern creation', 'Color matching', 'Fabric selection']
     },
     {
       title: 'Retail Stores',
       description: 'Improve customer experience and sales',
       icon: '🏪',
-      examples: ['Virtual styling', 'Size optimization', 'Inventory management', 'Customer insights']}
+      examples: ['Virtual styling', 'Size optimization', 'Inventory management', 'Customer insights']
     },
     {
       title: 'Fashion Education',
       description: 'Teach design principles and techniques',
       icon: '🎓',
-      examples: ['Design courses', 'Pattern making', 'Color theory', 'Trend analysis']}
+      examples: ['Design courses', 'Pattern making', 'Color theory', 'Trend analysis']
     },
     {
       title: 'Sustainable Fashion',
       description: 'Create eco-friendly and ethical designs',
       icon: '🌱',
-      examples: ['Waste reduction', 'Sustainable materials', 'Circular fashion', 'Ethical production']}
+      examples: ['Waste reduction', 'Sustainable materials', 'Circular fashion', 'Ethical production']
     }
   ]
   const pricing = [

@@ -175,7 +175,7 @@ const BlogPage: React.FC = () => {
       <SEOOptimizer
         title="Blog - Zion Tech Group"
         description="Stay updated with the latest insights on AI, technology trends, digital transformation, and industry best practices from Zion Tech Group experts."
-        keywords={['AI blog', 'technology insights', 'digital transformation', 'machine learning', 'business intelligence', 'tech trends']}
+        keywords={['AI blog', 'technology insights', 'digital transformation', 'machine learning', 'business intelligence', 'tech trends']
         canonicalUrl="https://ziontechgroup.com/blog"
       />
       <PerformanceOptimizer

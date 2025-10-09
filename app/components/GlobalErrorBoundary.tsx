@@ -103,7 +103,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 <button
                   onClick={this.handleReload}
                   className="cyber-button"
-                  style={{ background: 'linear-gradient(45deg, #8b5cf6, #ec4899)' }}
+                  style={{ background: 'linear-gradient(45deg, #8b5cf6, #ec4899)' }
                 >
                   Reload Page
                 </button>

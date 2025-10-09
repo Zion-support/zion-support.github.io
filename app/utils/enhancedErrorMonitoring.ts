@@ -284,7 +284,7 @@ class EnhancedErrorMonitoring {
     total: number,
     bySeverity: Record<string, number>
     byCategory: Record<string, number>
-    recent: ErrorReport[]}
+    recent: ErrorReport[]
   } {
     const recent = this.errorQueue
       .filter(error => Date.now() - new Date(error.lastSeen).getTime() < 24 * 60 * 60 * 1000) // Last 24 hours

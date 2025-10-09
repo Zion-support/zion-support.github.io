@@ -227,7 +227,7 @@ Security Report:}
   }
   public cleanup(): void {
     this.eventListeners.forEach(cleanup => cleanup())
-    this.eventListeners = []}
+    this.eventListeners = []
   }
 }
 // Export singleton instance

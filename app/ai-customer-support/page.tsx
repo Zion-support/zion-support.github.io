@@ -10,25 +10,25 @@ const AICustomerSupportPage: React.FC = React.memo((props) => {
       icon: MessageCircle,
       title: '24/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
-      benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']}
+      benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
     },
     {
       icon: Users,
       title: 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
-      benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']}
+      benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
     },
     {
       icon: Clock,
       title: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
-      benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']}
+      benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
     },
     {
       icon: Shield,
       title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
-      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']}
+      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
     }
   ]
   const pricing = [
@@ -36,19 +36,19 @@ const AICustomerSupportPage: React.FC = React.memo((props) => {
       name: 'Starter',
       price: '$149/month',
       description: 'Perfect for small businesses',
-      features: ['Up to 1,000 conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']}
+      features: ['Up to 1,000 conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']
     },
     {
       name: 'Professional',
       price: '$299/month',
       description: 'Ideal for growing companies',
-      features: ['Up to 10,000 conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']}
+      features: ['Up to 10,000 conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']
     },
     {
       name: 'Enterprise',
       price: '$599/month',
       description: 'For large organizations',
-      features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']}
+      features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ]
   const stats = [
@@ -62,7 +62,7 @@ const AICustomerSupportPage: React.FC = React.memo((props) => {
       <SEOOptimizer
         title="AI Customer Support - Zion Tech Group"
         description="Revolutionary AI-powered customer support solutions with 24/7 availability, multi-language support, and intelligent automation."
-        keywords={['AI customer support', 'chatbot', 'customer service automation', 'AI helpdesk', 'virtual assistant']}
+        keywords={['AI customer support', 'chatbot', 'customer service automation', 'AI helpdesk', 'virtual assistant']
         canonicalUrl="https://ziontechgroup.com/ai-customer-support"
       />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">

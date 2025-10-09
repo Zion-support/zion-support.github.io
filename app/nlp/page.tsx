@@ -54,7 +54,7 @@ const NLPPage: React.FC = () => {
       <SEOOptimizer
         title="Natural Language Processing - Zion Tech Group"
         description="Advanced NLP solutions including text analysis, language translation, chatbot development, and document processing. Transform text data into actionable insights."
-        keywords={['natural language processing', 'NLP', 'text analysis', 'language translation', 'chatbot development', 'document processing']}
+        keywords={['natural language processing', 'NLP', 'text analysis', 'language translation', 'chatbot development', 'document processing']
         canonicalUrl="https://ziontechgroup.com/nlp"
       />
       <PerformanceOptimizer

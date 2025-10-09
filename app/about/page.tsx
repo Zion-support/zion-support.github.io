@@ -82,7 +82,7 @@ const AboutPage: React.FC = () => {
       <SEOOptimizer
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide."
-        keywords={['about zion tech group', 'AI company', 'technology team', 'company mission', 'AI experts', 'IT solutions provider']}
+        keywords={['about zion tech group', 'AI company', 'technology team', 'company mission', 'AI experts', 'IT solutions provider']
         canonicalUrl="https://ziontechgroup.com/about"
       />
       <PerformanceOptimizer

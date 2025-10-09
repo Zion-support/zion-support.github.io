@@ -54,7 +54,7 @@ const MachineLearningPage: React.FC = () => {
       <SEOOptimizer
         title="Machine Learning Solutions - Zion Tech Group"
         description="Advanced machine learning solutions including predictive analytics, custom model development, and AI infrastructure. Transform your business with data-driven insights."
-        keywords={['machine learning', 'predictive analytics', 'AI models', 'data science', 'ML solutions', 'custom AI development']}
+        keywords={['machine learning', 'predictive analytics', 'AI models', 'data science', 'ML solutions', 'custom AI development']
         canonicalUrl="https://ziontechgroup.com/machine-learning"
       />
       <PerformanceOptimizer

@@ -16,25 +16,25 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI Content Creation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI',
-      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']}
+      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']
     },
     {
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-optimized posting times for maximum reach and engagement',
-      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']}
+      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']
     },
     {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics with AI-powered performance predictions',
-      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']}
+      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']
     },
     {
       icon: Users,
       title: 'Audience Intelligence',
       description: 'AI-driven audience analysis and targeting recommendations',
-      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']}
+      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']
     }
   ]
   const platforms = [
@@ -43,7 +43,7 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
     { name: 'Twitter', icon: '🐦', features: ['Tweet scheduling', 'Thread management', 'Trend monitoring'] },
     { name: 'LinkedIn', icon: '💼', features: ['Professional posts', 'Company updates', 'B2B content'] },
     { name: 'TikTok', icon: '🎵', features: ['Video scheduling', 'Trend analysis', 'Hashtag optimization'] },
-    { name: 'YouTube', icon: '📺', features: ['Video optimization', 'Thumbnail creation', 'SEO optimization'] }
+    { name: 'YouTube', icon: '📺', features: ['Video optimization', 'Thumbnail creation', 'SEO optimization']
   ]
   const pricingPlans = [
     {
@@ -114,7 +114,7 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
       <SEOOptimizer
         title="AI Social Media Manager - Automated Social Media Management | Zion Tech Group"
         description="Transform your social media with AI-powered content creation, smart scheduling, and analytics. Increase engagement by 200% and save 20+ hours per week."
-        keywords={['AI social media management', 'social media automation', 'content creation', 'social media analytics', 'social media scheduling', 'AI marketing']}
+        keywords={['AI social media management', 'social media automation', 'content creation', 'social media analytics', 'social media scheduling', 'AI marketing']
         canonicalUrl="https://ziontechgroup.com/ai-social-media-manager"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">

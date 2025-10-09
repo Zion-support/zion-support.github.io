@@ -15,25 +15,25 @@ const AICustomerSupportBotPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'Natural Language Processing',
       description: 'Understand customer queries in natural language with advanced NLP',
-      benefits: ['Context understanding', 'Intent recognition', 'Sentiment analysis', 'Multi-language support']}
+      benefits: ['Context understanding', 'Intent recognition', 'Sentiment analysis', 'Multi-language support']
     },
     {
       icon: MessageSquare,
       title: '24/7 Availability',
       description: 'Provide instant support around the clock without human intervention',
-      benefits: ['Instant responses', 'No waiting time', 'Consistent service', 'Scalable support']}
+      benefits: ['Instant responses', 'No waiting time', 'Consistent service', 'Scalable support']
     },
     {
       icon: Users,
       title: 'Human Handoff',
       description: 'Seamlessly transfer complex queries to human agents when needed',
-      benefits: ['Smart escalation', 'Context preservation', 'Agent efficiency', 'Customer satisfaction']}
+      benefits: ['Smart escalation', 'Context preservation', 'Agent efficiency', 'Customer satisfaction']
     },
     {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Track performance and gain insights into customer behavior',
-      benefits: ['Response analytics', 'Customer insights', 'Performance metrics', 'Improvement suggestions']}
+      benefits: ['Response analytics', 'Customer insights', 'Performance metrics', 'Improvement suggestions']
     }
   ]
   const capabilities = [
@@ -113,7 +113,7 @@ const AICustomerSupportBotPage: React.FC = React.memo((props) => {
       <SEOOptimizer
         title="AI Customer Support Bot - Intelligent 24/7 Customer Service | Zion Tech Group"
         description="Transform your customer support with AI-powered chatbot. Reduce response time by 90%, increase satisfaction by 45%, and handle 80% of queries automatically."
-        keywords={['AI customer support', 'chatbot', 'customer service automation', '24/7 support', 'NLP chatbot', 'customer experience']}
+        keywords={['AI customer support', 'chatbot', 'customer service automation', '24/7 support', 'NLP chatbot', 'customer experience']
         canonicalUrl="https://ziontechgroup.com/ai-customer-support-bot"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">

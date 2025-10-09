@@ -162,7 +162,7 @@ export function createCustomValidator<T>(
     const isValid = validator(value)
     return {
       isValid,
-      errors: isValid ? [] : [message]}
+      errors: isValid ? [] : [message]
     }
   }
 }

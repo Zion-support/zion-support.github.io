@@ -16,25 +16,25 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI Content Generation',
       description: 'Generate compelling email content with AI-powered writing assistance',
-      benefits: ['Personalized content', 'A/B testing', 'Subject line optimization', 'Call-to-action suggestions']}
+      benefits: ['Personalized content', 'A/B testing', 'Subject line optimization', 'Call-to-action suggestions']
     },
     {
       icon: Target,
       title: 'Smart Segmentation',
       description: 'Automatically segment your audience based on behavior and preferences',
-      benefits: ['Behavioral targeting', 'Demographic segmentation', 'Engagement-based groups', 'Predictive segments']}
+      benefits: ['Behavioral targeting', 'Demographic segmentation', 'Engagement-based groups', 'Predictive segments']
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Track performance with detailed analytics and AI-powered insights',
-      benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']}
+      benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']
     },
     {
       icon: Send,
       title: 'Automated Campaigns',
       description: 'Set up sophisticated email sequences that work around the clock',
-      benefits: ['Welcome series', 'Abandoned cart recovery', 'Re-engagement campaigns', 'Birthday/anniversary emails']}
+      benefits: ['Welcome series', 'Abandoned cart recovery', 'Re-engagement campaigns', 'Birthday/anniversary emails']
     }
   ]
   const campaignTypes = [
@@ -114,7 +114,7 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
       <SEOOptimizer
         title="AI Email Marketing - Intelligent Email Campaign Management | Zion Tech Group"
         description="Transform your email marketing with AI-powered content generation, smart segmentation, and automated campaigns. Increase open rates by 65% and revenue by 40%."
-        keywords={['AI email marketing', 'email automation', 'email campaigns', 'email segmentation', 'email analytics', 'marketing automation']}
+        keywords={['AI email marketing', 'email automation', 'email campaigns', 'email segmentation', 'email analytics', 'marketing automation']
         canonicalUrl="https://ziontechgroup.com/ai-email-marketing"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">

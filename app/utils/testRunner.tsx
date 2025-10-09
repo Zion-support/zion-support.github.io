@@ -154,7 +154,7 @@ export class TestRunner {
       beforeAll: [],
       afterAll: [],
       beforeEach: [],
-      afterEach: []}
+      afterEach: []
     }
     const previousSuite = this.currentSuite
     this.currentSuite = suite
@@ -286,7 +286,7 @@ export class TestRunner {
     this.startTime = Date.now()
     this.results = []
     try {}
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
+      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
       for (const suite of this.suites) {
         await this.runSuite(suite);}
       }
@@ -300,7 +300,7 @@ export class TestRunner {
    * Run a test suite
    */
   private async runSuite(suite: TestSuite): Promise<void> {}
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {
       await this.runHook(hook, 'beforeAll');}
@@ -348,7 +348,7 @@ export class TestRunner {
         assertions}
       })
       if (this.config.verbose) {`}
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } }
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); }
       }
     } catch (error) {
       this.results.push({
@@ -407,12 +407,12 @@ export class TestRunner {
     const passed = this.results.filter(r => r.status === 'passed').length
     const failed = this.results.filter(r => r.status === 'failed').length
     const skipped = this.results.filter(r => r.status === 'skipped').length;}
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
     if (this.config.reporter === 'json') {
       this.generateJsonReport();}
     } else if (this.config.reporter === 'html') {
@@ -435,8 +435,8 @@ export class TestRunner {
       },
       results: this.results
     }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { ); } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { ); }
   }
   /**
    * Generate HTML report
@@ -482,8 +482,8 @@ export class TestRunner {
     </div>
 </body>
 </html>`
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
   }
   // Accessibility test
   async runAccessibilityTest(
@@ -583,8 +583,8 @@ export class TestRunner {
           .join('')}
     </testsuite>
 </testsuites>`
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
   }
   // Integration test
   async runIntegrationTest(
@@ -619,7 +619,7 @@ export class TestRunner {
   ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder}
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }
     this.testResults.push({`}
       name: `Visual: ${testName}`,
       status: 'passed',
@@ -1030,7 +1030,7 @@ class Mock {
     (mockFn as MockFunction).mock = {
       calls,
       results: [],
-      instances: []}
+      instances: []
     }
     return mockFn as MockFunction
   }

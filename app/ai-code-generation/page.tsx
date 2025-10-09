@@ -26,7 +26,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
     'Reduce development costs by 60%',
     'Enable rapid prototyping and MVP development'
   ]
-  const languages = [}
+  const languages = [
     { name: 'JavaScript', description: 'Web development and Node.js', icon: '🟨' },
     { name: 'Python', description: 'Data science and backend development', icon: '🐍' },
     { name: 'Java', description: 'Enterprise applications and Android', icon: '☕' },
@@ -41,37 +41,37 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
       title: 'Web Development',
       description: 'Generate full-stack web applications and APIs',
       icon: '🌐',
-      examples: ['React components', 'Express APIs', 'Database schemas', 'Authentication systems']}
+      examples: ['React components', 'Express APIs', 'Database schemas', 'Authentication systems']
     },
     {
       title: 'Mobile Development',
       description: 'Create mobile apps for iOS and Android',
       icon: '📱',
-      examples: ['React Native apps', 'Flutter widgets', 'Native iOS code', 'Android components']}
+      examples: ['React Native apps', 'Flutter widgets', 'Native iOS code', 'Android components']
     },
     {
       title: 'Data Science',
       description: 'Generate data analysis and ML pipelines',
       icon: '📊',
-      examples: ['Data processing scripts', 'ML models', 'Visualization code', 'ETL pipelines']}
+      examples: ['Data processing scripts', 'ML models', 'Visualization code', 'ETL pipelines']
     },
     {
       title: 'DevOps & Automation',
       description: 'Create deployment and automation scripts',
       icon: '⚙️',
-      examples: ['Docker configurations', 'CI/CD pipelines', 'Infrastructure code', 'Monitoring scripts']}
+      examples: ['Docker configurations', 'CI/CD pipelines', 'Infrastructure code', 'Monitoring scripts']
     },
     {
       title: 'API Development',
       description: 'Generate RESTful APIs and microservices',
       icon: '🔌',
-      examples: ['REST endpoints', 'GraphQL schemas', 'Database models', 'Authentication middleware']}
+      examples: ['REST endpoints', 'GraphQL schemas', 'Database models', 'Authentication middleware']
     },
     {
       title: 'Testing & QA',
       description: 'Create comprehensive test suites and quality assurance',
       icon: '🧪',
-      examples: ['Unit tests', 'Integration tests', 'E2E tests', 'Performance tests']}
+      examples: ['Unit tests', 'Integration tests', 'E2E tests', 'Performance tests']
     }
   ]
   const pricing = [

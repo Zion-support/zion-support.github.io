@@ -53,7 +53,7 @@ const HomePage: React.FC = React.memo((props) => {
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
@@ -88,7 +88,7 @@ const HomePage: React.FC = React.memo((props) => {
             postalCode: '19709',
             addressCountry: 'US'}
           }
-        }}
+        }
       />
       <PerformanceOptimizer
         enableImageOptimization={true}

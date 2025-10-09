@@ -37,7 +37,7 @@ export const preloadRoute = useCallback((...args) => {
   const routeResources = {
     '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
     '/services': ['/api/services', '/images/services-hero.jpg'],
-    '/contact': ['/api/contact', '/images/contact-hero.jpg']}
+    '/contact': ['/api/contact', '/images/contact-hero.jpg']
   }
   const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {

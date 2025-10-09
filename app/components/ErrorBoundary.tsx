@@ -2,11 +2,12 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
   children: ReactNode
-  fallback?: ReactNode;}
+  fallback?: ReactNode
 }
+
 interface State {
   hasError: boolean
-  error?: Error;}
+  error?: Error
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
