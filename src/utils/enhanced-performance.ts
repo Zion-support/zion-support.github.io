@@ -10,7 +10,16 @@ import type {
 export class PerformanceMonitor {
   // TODO: Add content
 }
-  private metrics: Map<string, number[]> = new Map();
+  private metrics: Map
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, number[]> = new Map();
   private observers: PerformanceObserver[] = [];
   constructor() {
   // TODO: Add content
@@ -53,7 +62,16 @@ export class PerformanceMonitor {
 } from '../types/app.types';
 // Utility Functions
  * Throttle function
-export function throttle<T extends (...args: unknown[]) => any>(
+export function throttle
+          
+          
+          
+          
+          
+          
+          
+          
+          <T extends (...args: unknown[]) => any>(
  * Request idle callback wrapper
 export function runWhenIdle(callback: () => void, timeout = 1000): void {
   // TODO: Add content

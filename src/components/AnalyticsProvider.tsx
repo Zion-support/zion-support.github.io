@@ -1,20 +1,38 @@
 
 interface AnalyticsContextType {
   // TODO: Add content
-}
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
+};
+  trackEvent: (eventName: string, parameters?: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown>) => void;
   trackPageView: (pageName: string, pagePath?: string) => void;
-  setUserId: (userId: string) => void;
-  setUserProperties: (properties: Record<string, unknown>) => void;
+  setUserId: (userId: string) => void;,
+    setUserProperties: (properties: Record<string, unknown>) => void;
 }
 interface AnalyticsProviderProps {
   // TODO: Add content
-}
+};
   children: React.ReactNode;
   trackingId?: string;
   enableDebug?: boolean;
 }
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+export const AnalyticsProvider: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <AnalyticsProviderProps> = ({
   // TODO: Add content
 }
 //   children,
@@ -55,8 +73,8 @@ const script = document.createElement('script');
       (window as any).gtag('js', new Date());
       (window as any).gtag('config', trackingId, {
   // TODO: Add content
-}
-        page_title: document.title,
+};
+  page_title: document.title,
         page_location: window.location.href,
       });
       setIsInitialized(true);
@@ -65,7 +83,16 @@ const script = document.createElement('script');
       }
     };
   }, [trackingId, enableDebug]);
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+  const trackEvent = (eventName: string, parameters?: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown>) => {
   // TODO: Add content
 }
     if (!isInitialized || typeof window === 'undefined') return;
@@ -90,8 +117,8 @@ const script = document.createElement('script');
 }
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'page_view', {
   // TODO: Add content
-}
-        page_title: pageName,
+};
+  page_title: pageName,
         page_location: pagePath || window.location.href,
       });
     }
@@ -105,12 +132,21 @@ const script = document.createElement('script');
 }
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', trackingId, {
   // TODO: Add content
-}
-        user_id: userId,
+};
+  user_id: userId,
       });
     }
   };
-  const setUserProperties = (properties: Record<string, unknown>) => {
+  const setUserProperties = (properties: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown>) => {
   // TODO: Add content
 }
     if (!isInitialized || typeof window === 'undefined') return;
@@ -135,13 +171,13 @@ const script = document.createElement('script');
 }
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
   // TODO: Add content
-}
-        description: error.message,
+};
+  description: error.message,
         fatal: false,
         custom_map: {
   // TODO: Add content
-}
-          context: context || 'unknown',
+};
+  context: context || 'unknown',
         },
       });
     }
@@ -152,9 +188,18 @@ trackEvent,
     setUserProperties,
   };
   return (
-  // TODO: Add parameters,
-)
-    <AnalyticsContext.Provider value={contextValue}>
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <AnalyticsContext.Provider value={contextValue}>
       {children}
     </AnalyticsContext.Provider>
   );

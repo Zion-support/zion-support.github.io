@@ -4,9 +4,7 @@ export const _usePerformanceMonitoring = () => {
   // TODO: Add content
 }
   const { trackPerformance } = useAnalytics();
-  const reportMetric = useCallback(
-  // TODO: Add parameters,
-)
+  const reportMetric = useCallback()
     (name: string, value: number) => {
   // TODO: Add content
 }
@@ -39,9 +37,7 @@ const fidObserver = new PerformanceObserver(list => {
   // TODO: Add content
 }
         const entries = list.getEntries();
-//         entries.forEach(
-  // TODO: Add parameters,
-)
+//         entries.forEach()
           (entry: PerformanceEntry & { processingStart?: number }) => {
   // TODO: Add content
 }
@@ -57,12 +53,8 @@ const fidObserver = new PerformanceObserver(list => {
   // TODO: Add content
 }
         const entries = list.getEntries();
-//         entries.forEach(
-  // TODO: Add parameters,
-)
-//           (
-  // TODO: Add parameters,
-)
+//         entries.forEach()
+//           ()
             entry: PerformanceEntry & {
   // TODO: Add content
 }
@@ -164,9 +156,7 @@ const resourceObserver = new PerformanceObserver(list => {
   // TODO: Add content
 }
       if (typeof window === 'undefined') return;
-      const navigation = performance.getEntriesByType(
-  // TODO: Add parameters,
-)
+      const navigation = performance.getEntriesByType()
 //         'navigation'
       )[0] as PerformanceNavigationTiming;
       if (navigation) {
@@ -174,8 +164,8 @@ const resourceObserver = new PerformanceObserver(list => {
 }
         const metrics = {
   // TODO: Add content
-}
-          domContentLoaded:
+};
+  domContentLoaded:
 //             navigation.domContentLoadedEventEnd -
 //             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,

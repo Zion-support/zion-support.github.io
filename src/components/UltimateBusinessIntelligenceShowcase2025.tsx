@@ -7,12 +7,12 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     {
   // TODO: Add content
-}
-      id: 'ultimate-business-intelligence-revolution',
+};
+  id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
@@ -20,8 +20,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       category: 'blog',
       metrics: {
   // TODO: Add content
-}
-        roi: '30,000%',
+};
+  roi: '30,000%',
         efficiency: '500%',
         accuracy: '99.9%',
         timeline: '12 months'
@@ -42,7 +42,16 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       type: 'Implementation Guide',
       category: 'resource',
               {/* Badge */}
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
                 </span>
@@ -61,10 +70,9 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
                     {item.metrics.timeline}
                   <div className="text-gray-400 text-xs">Timeline</div>
               {/* Tags */}
-                {item.tags.slice(0, 3).map((tag, index) => (
-  // TODO: Add parameters,
-)
-                  <span
+                {item.tags.slice(0, 3).map((tag, index) => ()
+                  
+          <span
                     key={index}
                     className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                 Read {item.readingTime}
@@ -82,8 +90,17 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
-//                   />
-                </svg>
+// />
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          </svg>
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>

@@ -1,55 +1,64 @@
 /**
  * Accessibility Enhancer
- * Improves website accessibility
+ * Basic accessibility optimization utilities
  */
 
+interface AccessibilityConfig {
+  enableKeyboardNavigation: boolean;
+  enableScreenReaderSupport: boolean;
+  enableHighContrast: boolean;
+  enableFocusIndicators: boolean;
+  enableAriaLabels: boolean;
+}
+
 class AccessibilityEnhancer {
-  constructor() {}
+  private config: AccessibilityConfig;
 
-  initialize(): void {
-    this.addSkipLinks();
-    this.improveFocusManagement();
-    this.addAriaLabels();
+  constructor(config?: AccessibilityConfig) {
+    this.config = config || {
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableHighContrast: true,
+      enableFocusIndicators: true,
+      enableAriaLabels: true,
+    };
+    this.init();
   }
 
-  private addSkipLinks(): void {
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      text-decoration: none;
-      z-index: 1000;
-    `;
-    document.body.insertBefore(skipLink, document.body.firstChild);
+  private init(): void {
+    // Initialize accessibility enhancements
+    this.setupKeyboardNavigation();
+    this.setupFocusIndicators();
   }
 
-  private improveFocusManagement(): void {
-    // Add focus indicators
-    const style = document.createElement('style');
-    style.textContent = `
-      *:focus {
-        outline: 2px solid #4F46E5;
-        outline-offset: 2px;
-      }
-    `;
-    document.head.appendChild(style);
+  private setupKeyboardNavigation(): void {
+    if (typeof document !== 'undefined' {
+      // Add keyboard navigation support
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Tab') {
+          // Handle tab navigation
+          console.log('Tab navigation detected');
+        }
+      });
+    }
   }
 
-  private addAriaLabels(): void {
-    // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach(button => {
-      if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', 'Button');
-      }
-    });
+  private setupFocusIndicators(): void {
+    if (typeof document !== 'undefined') {
+      // Add focus indicators
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #0066cc;
+          outline-offset: 2px;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+
+  public cleanup(): void {
+    // Cleanup accessibility enhancements
   }
 }
 

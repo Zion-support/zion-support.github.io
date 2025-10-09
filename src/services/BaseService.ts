@@ -8,7 +8,7 @@ import axios from 'axios';
 // Create axios instance with default config;
 const apiClient = axios.create({
   // TODO: Add content
-}
+};
   timeout: 30000,
   headers: {
   // TODO: Add content
@@ -25,17 +25,35 @@ export interface ServiceOptions {
   cache?: boolean;
   cacheDuration?: number;
 }
-export interface CacheEntry<T> {
+export interface CacheEntry
+          
+          
+          
+          
+          
+          
+          
+          
+          <T> {
   // TODO: Add content
-}
-  data: T;
-  timestamp: number;
+};
+  data: T;,
+    timestamp: number;
 export class BaseService {
   // TODO: Add content
 }
   protected baseUrl: string;
   protected options: ServiceOptions;
-  private cache: Map<string, CacheEntry<unknown>> = new Map();
+  private cache: Map
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, CacheEntry<unknown>> = new Map();
 constructor(baseUrl: string, options: ServiceOptions = {}) {
     this.baseUrl = baseUrl;
     this.options = {
@@ -50,7 +68,16 @@ const entry = this.cache.get(key);
     const __entry = this.cache.get(key);
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
-    return age < (this.options.cacheDuration || 300000);
+    return age 
+          
+          
+          
+          
+          
+          
+          
+          
+          < (this.options.cacheDuration || 300000);
    * Get data from cache
   protected getFromCache<T>(key: string): T | null {
   // TODO: Add content
@@ -64,7 +91,16 @@ const entry = this.cache.get(key);
     this.cache.delete(key);
     return null;
    * Set data in cache
-  protected setInCache<T>(key: string, data: T): void {
+  protected setInCache
+          
+          
+          
+          
+          
+          
+          
+          
+          <T>(key: string, data: T): void {
   // TODO: Add content
 }
     if (!this.options.cache) return;
@@ -83,23 +119,50 @@ const entry = this.cache.get(key);
 }
       this.cache.clear();
    * Make a GET request
-  protected async get<T>(endpoint: string, useCache = true): Promise<T> {
+  protected async get
+          
+          
+          
+          
+          
+          
+          
+          
+          <T>(endpoint: string, useCache = true): Promise<T> {
   // TODO: Add content
 }
     const cacheKey = `GET:${endpoint}`;
     if (useCache) {
   // TODO: Add content
 }
-      const cached = this.getFromCache<T>(cacheKey);
+      const cached = this.getFromCache
+          
+          
+          
+          
+          
+          
+          
+          
+          <T>(cacheKey);
       if (cached) return cached;
     try {
   // TODO: Add content
 }
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
+      const response = await apiClient.get
+          
+          
+          
+          
+          
+          
+          
+          
+          <T>(`${this.baseUrl}${endpoint}`, {
   // TODO: Add content
-}
-        timeout: this.options.timeout,
+};
+  timeout: this.options.timeout,
         retries: this.options.retries
         this.setInCache(cacheKey, response.data);
       return response.data;
@@ -108,12 +171,21 @@ const entry = this.cache.get(key);
 }
       logger.error('GET request failed', error as Error, {
   // TODO: Add content
-}
-        component: 'BaseService',
+};
+  component: 'BaseService',
 endpoint
       throw error;
    * Make a POST request
-  protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
+  protected async post
+          
+          
+          
+          
+          
+          
+          
+          
+          <T, D = unknown>(endpoint: string, data?: D): Promise<T> {
 logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
       logger.error('POST request failed', error as Error, {
@@ -138,6 +210,6 @@ logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
 }
     logger.error('Service error', error, {
   // TODO: Add content
-}
-      component: this.constructor.name,
+};
+  component: this.constructor.name,
 ...context

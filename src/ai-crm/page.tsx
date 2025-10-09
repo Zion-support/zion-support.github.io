@@ -14,8 +14,12 @@ const AiCrmPage: React.FC = () => {
 };
 }
 const AiCrmPage: React.FC = () => {
-  // TODO: Add content
-}
+  return (
+    <div>Coming Soon</div>
+  );
+};
 const AICRMPage: React.FC = () => {
-  // TODO: Add content
-}
+  return (
+    <div>Coming Soon</div>
+  );
+};

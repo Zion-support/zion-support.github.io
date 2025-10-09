@@ -17,14 +17,23 @@ export interface SEOProps {
   modifiedDate?: string;
   canonical?: string;
   noIndex?: boolean;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown>;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
   alternateLocales?: { locale: string; url: string }[];
 }
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
-//     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+// 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
   // TODO: Add items,
 ]
@@ -40,7 +49,16 @@ export interface SEOProps {
   locale: 'en_US',
   twitterCard: 'summary_large_image' as const,
 };
-export const SEO: React.FC<SEOProps> = ({
+export const SEO: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <SEOProps> = ({
   // TODO: Add content
 }
 //   title,
@@ -63,8 +81,8 @@ export const SEO: React.FC<SEOProps> = ({
 }
   const seo = {
   // TODO: Add content
-}
-    title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
+};
+  title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
     keywords: keywords || defaultSEO.keywords,
     image: image || defaultSEO.image,
@@ -82,7 +100,16 @@ const generateStructuredData = () => {
 }
       return structuredData;
     }
-    const baseStructuredData: Record<string, unknown> = {
+    const baseStructuredData: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown> = {
   // TODO: Add content
 }
       '@context': 'https://schema.org',

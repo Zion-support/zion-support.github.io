@@ -1,4 +1,4 @@
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
+import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award,  Brain,  BarChart,  Target,  Zap,  TrendingUp,  Star,  Award from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,13 +7,13 @@ const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
   // TODO: Add content
-}
-      icon: Brain,
+};
+  icon: Brain,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefits: [
   // TODO: Add items,
-]
+];
 //         '95% accuracy in predictions',
 //         'Real-time data processing',
 //         'Automated trend detection',
@@ -47,10 +47,12 @@ icon: BarChart,
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
-      color: 'text-green-400'
+      color: 'text-green-400',
+
       title: 'Financial Forecasting',
       description: 'Predict revenue, expenses, and cash flow with high accuracy',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
+
       name: 'Professional',
       price: '$3,500',
       description: 'Ideal for growing businesses with complex analytics needs',
@@ -62,7 +64,8 @@ icon: BarChart,
         'API access'
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      popular: true
+      popular: true,
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -76,33 +79,63 @@ icon: BarChart,
         'SLA guarantees'
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10'
-  const benefits = [
+  const benefits = [,
+
       icon: Star,
       title: '95% Accuracy',
-      description: 'Industry-leading accuracy in predictions and insights'
+      description: 'Industry-leading accuracy in predictions and insights',
+
       title: 'Real-time Processing',
-      description: 'Instant analysis of data as it comes in'
+      description: 'Instant analysis of data as it comes in',
+
       title: 'Actionable Insights',
       description: 'Clear, actionable recommendations for business improvement'
       icon: Award,
       title: 'Proven Results',
       description: '300% average ROI for our analytics clients'
   return (
-  // TODO: Add parameters,
-)
-    <>
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-//               AI Analytics Services
-            </h1>
+// AI Analytics Services
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-//               Transform your data into actionable insights with our advanced AI-powered analytics platform.
+// Transform your data into actionable insights with our advanced AI-powered analytics platform.
 //               Make data-driven decisions that drive growth and optimize performance.
-            </p>
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
                 <Brain className="w-5 h-5 mr-2" />
@@ -117,13 +150,21 @@ icon: BarChart,
           {/* Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-//               Key Features
-            </h2>
+// Key Features
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-  // TODO: Add parameters,
-)
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+              {features.map((feature, index) => ()
+                
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -131,10 +172,9 @@ icon: BarChart,
                       <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                       <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-  // TODO: Add parameters,
-)
-                      <li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
+                    {feature.benefits.map((benefit, benefitIndex) => ()
+                      
+          <li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -143,10 +183,9 @@ icon: BarChart,
 {/* Use Cases */}
               Use Cases
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {useCases.map((useCase, index) => (
-  // TODO: Add parameters,
-)
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
+              {useCases.map((useCase, index) => ()
+                
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
                   <div className={`w-16 h-16 ${useCase.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <useCase.icon className={`w-8 h-8 ${useCase.color}`} />
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
@@ -154,17 +193,24 @@ icon: BarChart,
 {/* Pricing */}
               Pricing Plans
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-  // TODO: Add parameters,
-)
-                <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {tier.popular && (
-  // TODO: Add parameters,
-)
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              {pricingTiers.map((tier, index) => ()
+                
+          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                  {tier.popular && ()
+                    
+          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-//                         Most Popular
-                      </span>
+// Most Popular
+                      
+          
+          
+          
+          
+          
+          
+          
+          
+          </span>
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
@@ -173,10 +219,9 @@ icon: BarChart,
                       <span className="text-gray-400 ml-1">{tier.period}</span>
                     <p className="text-gray-300 text-sm mt-2">{tier.description}</p>
                   <ul className="space-y-3 mb-6">
-                    {tier.features.map((feature, featureIndex) => (
-  // TODO: Add parameters,
-)
-                      <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
+                    {tier.features.map((feature, featureIndex) => ()
+                      
+          <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                         {feature}
                   <a
                     href="/contact"
@@ -189,13 +234,21 @@ icon: BarChart,
                     }`}
 //                   >
 //                     Get Started
-                  </a>
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
 {/* Benefits */}
               Why Choose Our AI Analytics?
-              {benefits.map((benefit, index) => (
-  // TODO: Add parameters,
-)
-                <div key={index} className="text-center">
+              {benefits.map((benefit, index) => ()
+                
+          <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>

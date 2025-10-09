@@ -13,10 +13,8 @@ type GtagCommand = 'config' | 'set' | 'event' | 'js';
 interface Window {
   // TODO: Add content
 }
-  gtag?: (
-  // TODO: Add parameters,
-)
-    command: GtagCommand,
+  gtag?: ();
+  command: GtagCommand,
     targetId: string | Date,
 config?: GtagEvent;
   ) => void;

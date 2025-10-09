@@ -1,18 +1,36 @@
 'use client';
 interface HeroSectionProps {
   // TODO: Add content
+};
+  isLoaded: boolean;,
+    isVisible: boolean;,
+    onPhoneClick: () => void;
 }
-  isLoaded: boolean;
-  isVisible: boolean;
-  onPhoneClick: () => void;
-}
-const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {
+const HeroSection: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {
   // TODO: Add content
 }
   return (
-  // TODO: Add parameters,
-)
-    <section;
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <section;
 className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
   // TODO: Add content
 }
@@ -22,21 +40,57 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
       }`}
       aria-labelledby="hero-heading"
 //     >
-      <div className="max-w-6xl mx-auto">
+      
+          
+          
+          
+          
+          
+          
+          
+          
+          <div className="max-w-6xl mx-auto">
         <h1
           id="hero-heading"
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
           data-text="Zion Tech Group"
-//         >
+// >
 //           Zion Tech Group
-        </h1>
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          </h1>
         <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-//           Advanced AI and IT Solutions
-        </p>
+// Advanced AI and IT Solutions
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
         <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-//           Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+// Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
 //           Transform your business with our cutting-edge technology and achieve unprecedented growth.
-        </p>
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
         {/* Key Benefits */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
           <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -65,16 +119,34 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
           <a
             href="tel:+13024640950"
             onClick={onPhoneClick}
-            className="cyber-button w-full sm:w-auto text-center"
+            className="cyber-button w-full sm: w-auto text-center"
             aria-label="Call us at (302) 464-0950"
-//           >
-             Call: (302) 464-0950
+// >,
+ Call: (302) 464-0950
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </a>
           <a
             href="/contact"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//           >
+// >
 //             Get Free Consultation
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </a>
         </div>
       </div>

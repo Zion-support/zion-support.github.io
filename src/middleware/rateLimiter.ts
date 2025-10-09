@@ -6,7 +6,7 @@
  */
 export interface RateLimitConfig {
   // TODO: Add content
-}
+};
   windowMs: number; // Time window in milliseconds,
   max: number; // Maximum number of requests per window
   message?: string; // Custom error message
@@ -15,23 +15,32 @@ export interface RateLimitConfig {
 }
 interface RequestRecord {
   // TODO: Add content
-}
-  count: number;
-  resetTime: number;
+};
+  count: number;,
+    resetTime: number;
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
 export class RateLimiter {
   // TODO: Add content
 }
-  private requests: Map<string, RequestRecord> = new Map();
+  private requests: Map
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, RequestRecord> = new Map();
   private config: RateLimitConfig;
   constructor(config: RateLimitConfig) {
   // TODO: Add content
 }
     this.config = {
   // TODO: Add content
-}
-      message: 'Too many requests, please try again later.',
+};
+  message: 'Too many requests, please try again later.',
       skipSuccessfulRequests: false,
       skipFailedRequests: false,
 //       ...config
@@ -54,15 +63,24 @@ const now = Date.now();
       this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime };
     // Increment count
-    if (record.count < this.config.max) {
+    if (record.count 
+          
+          
+          
+          
+          
+          
+          
+          
+          < this.config.max) {
   // TODO: Add content
 }
       record.count++;
       this.requests.set(identifier, record);
       return {
   // TODO: Add content
-}
-        allowed: true,
+};
+  allowed: true,
         remaining: this.config.max - record.count,
         resetTime: record.resetTime
     // Limit exceeded
@@ -94,29 +112,34 @@ export const rateLimiters = {
   // Strict: 10 requests per minute,
   strict: new RateLimiter({
   // TODO: Add content
-}
-    windowMs: 60 * 1000,
+};
+  windowMs: 60 * 1000,
     max: 10,
     message: 'Too many requests. Please try again in a minute.'
   }),
   // Standard: 100 requests per 15 minutes,
   standard: new RateLimiter({
   // TODO: Add content
-}
-    windowMs: 15 * 60 * 1000,
+};
+  windowMs: 15 * 60 * 1000,
     max: 100
-  // Lenient: 1000 requests per hour
-  lenient: new RateLimiter({
+  // Lenient: 1000 requests per hour,
+
+    lenient: new RateLimiter({
   // TODO: Add content
-}
-    windowMs: 60 * 60 * 1000,
+};
+  windowMs: 60 * 60 * 1000,
     max: 1000
-// API: 60 requests per minute
-  api: new RateLimiter({
+// API: 60 requests per minute,
+
+    api: new RateLimiter({,
+
     max: 60,
     message: 'API rate limit exceeded. Please try again later.'
-  // Authentication: 5 login attempts per 15 minutes
-  auth: new RateLimiter({
+  // Authentication: 5 login attempts per 15 minutes,
+
+    auth: new RateLimiter({,
+
     max: 5,
     message: 'Too many login attempts. Please try again later.',
     skipSuccessfulRequests: true
@@ -143,7 +166,16 @@ export function getClientIdentifier(request: Request): string {
 export function createRateLimitMiddleware(limiter: RateLimiter) {
   // TODO: Add content
 }
-  return async (request: Request): Promise<Response | null> => {
+  return async (request: Request): Promise
+          
+          
+          
+          
+          
+          
+          
+          
+          <Response | null> => {
   // TODO: Add content
 }
     const identifier = getClientIdentifier(request);
@@ -151,18 +183,16 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
     if (!allowed) {
   // TODO: Add content
 }
-      return new Response(
-  // TODO: Add parameters,
-)
+      return new Response()
         JSON.stringify({
   // TODO: Add content
-}
-          error: 'Rate limit exceeded',
+};
+  error: 'Rate limit exceeded',
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
         {
   // TODO: Add content
-}
-          status: 429,
+};
+  status: 429,
           headers: {
   // TODO: Add content
 }

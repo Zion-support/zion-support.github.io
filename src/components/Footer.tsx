@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const aiServices = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     { name: 'Machine Learning Solutions', url: '/ai-ml-solutions', description: 'Custom ML models and analytics' },
     { name: 'Natural Language Processing', url: '/ai-nlp', description: 'Advanced text analysis and understanding' },
     { name: 'Computer Vision', url: '/ai-computer-vision', description: 'Image and video analysis solutions' },
@@ -16,8 +16,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI-powered content creation' }
   ];
   const itServices = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud migration, setup, and optimization' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Streamlined development workflows' },
@@ -27,8 +27,8 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
     { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT support and maintenance' }
   const microSaasServices = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media management' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered business intelligence' },
@@ -38,8 +38,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoice creation' },
     { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' }
   const emergingTech = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
@@ -49,8 +49,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' }
   const companyLinks = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
@@ -58,8 +58,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Blog', url: '/blog' },
     { name: 'Contact', url: '/contact' }
   const supportLinks = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     { name: 'Help Center', url: '/help' },
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -68,8 +68,8 @@ const Footer: React.FC = memo(() => {
     { name: 'System Requirements', url: '/requirements' },
     { name: 'Troubleshooting', url: '/troubleshooting' }
   const legalLinks = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
@@ -77,9 +77,18 @@ const Footer: React.FC = memo(() => {
     { name: 'Security', url: '/security' },
     { name: 'Compliance', url: '/compliance' }
   return (
-  // TODO: Add parameters,
-)
-    <footer className="bg-slate-900 border-t border-cyan-400/20 relative overflow-hidden">
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <footer className="bg-slate-900 border-t border-cyan-400/20 relative overflow-hidden">
       {/* Background Effects */}
 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div><div className="absolute inset-0 cyber-grid opacity-10"></div><div className="relative z-10">
         {/* Main Footer Content */}
@@ -147,10 +156,9 @@ to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors d
         <div className="border-t border-gray-700 bg-slate-800/30"><div className="container mx-auto px-4 py-6"><div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"><div className="text-gray-400 text-sm">
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div><div className="flex flex-wrap justify-center md:justify-end space-x-6">
-                {legalLinks.map((link, index) => (
-  // TODO: Add parameters,
-)
-                  <Link
+                {legalLinks.map((link, index) => ()
+                  
+          <Link
                     key={index}
 to={link.url} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                   </Link>

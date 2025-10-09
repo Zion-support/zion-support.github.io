@@ -13,12 +13,21 @@ export enum ErrorSeverity {
 }
 export interface ErrorLogEntry {
   // TODO: Add content
-}
-  timestamp: string;
-  severity: ErrorSeverity;
-  message: string;
+};
+  timestamp: string;,
+    severity: ErrorSeverity;,
+    message: string;
   error?: Error;
-  context?: Record<string, unknown>;
+  context?: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown>;
   userAgent?: string;
   url?: string;
   stackTrace?: string;
@@ -31,20 +40,27 @@ class ErrorLogger {
   /**
    * Log an error with context
    */
-//   log(
-  // TODO: Add parameters,
-)
+//   log(),
     message: string,
     _severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
-    context?: Record<string, unknown>
+    context?: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown>
   ): void {
   // TODO: Add content
 }
     const entry: ErrorLogEntry = {
   // TODO: Add content
-}
-      timestamp: new Date().toISOString(),
+};
+  timestamp: new Date().toISOString(),
 //       severity,
 //       message,
 //       error,
@@ -79,7 +95,16 @@ class ErrorLogger {
   private logToConsole(entry: ErrorLogEntry): void {
   // TODO: Add content
 }
-    const styles: Record<ErrorSeverity, string> = {
+    const styles: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <ErrorSeverity, string> = {
   // TODO: Add content
 }
       [ErrorSeverity.LOW]: 'color: #4ade80',
@@ -104,7 +129,16 @@ class ErrorLogger {
   /**
    * Send error to external logging service
    */
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
+  private async sendToExternalService(entry: ErrorLogEntry): Promise
+          
+          
+          
+          
+          
+          
+          
+          
+          <void> {
   // TODO: Add content
 }
     try {
@@ -118,8 +152,8 @@ class ErrorLogger {
       }
       await fetch(endpoint, {
   // TODO: Add content
-}
-        method: 'POST',
+};
+  method: 'POST',
         headers: {
   // TODO: Add content
 }
@@ -132,8 +166,8 @@ class ErrorLogger {
           error: entry.error
             ? {
   // TODO: Add content
-}
-                message: entry.error.message,
+};
+  message: entry.error.message,
                 name: entry.error.name,
                 stack: entry.error.stack
               }
@@ -183,7 +217,16 @@ class ErrorLogger {
 // Singleton instance;
 const errorLogger = new ErrorLogger();
 // Convenience functions;
-export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =>
+export const logError = (message: string, error?: Error, context?: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
 export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);

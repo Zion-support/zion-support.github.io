@@ -2,14 +2,23 @@
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {
   // TODO: Add content
-}
+};
   message: string;
   type?: ToastType;
   duration?: number;
-  onClose?: () => void;
-  show: boolean;
+  onClose?: () => void;,
+    show: boolean;
 }
-const Toast: React.FC<ToastProps> = ({
+const Toast: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <ToastProps> = ({
   // TODO: Add content
 }
 //   message,
@@ -72,14 +81,32 @@ setIsVisible(false);
     }
   };
   return (
-  // TODO: Add parameters,
-)
-    <div;
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div;
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert"
       aria-live="polite"
-//     >
-      <span className="text-xl font-bold">{getIcon()}</span>
+// >
+      
+          
+          
+          
+          
+          
+          
+          
+          
+          <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button
         onClick={() => {
@@ -92,7 +119,16 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
         aria-label="Close notification"
 //       >
 //
-      </button>
+      
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
     </div>
   );
 };

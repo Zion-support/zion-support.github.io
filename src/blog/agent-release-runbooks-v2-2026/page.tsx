@@ -2,9 +2,18 @@ export default function Page() {
   // TODO: Add content
 }
   return (
-  // TODO: Add parameters,
-)
-    <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div>
           <div>
@@ -12,7 +21,16 @@ export default function Page() {
             <span className='text-sm font-semibold'>Agent Ops  2026</span>
           </div>
           <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
-//             Agent Release Runbooks v2 (2026)
+// Agent Release Runbooks v2 (2026)
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </h1>
 <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
             canaries, approvals and one‑click rollback.
@@ -68,14 +86,32 @@ export default function Page() {
               <h3 className='text-2xl font-bold flex items-center gap-2'>
                 <FileWarning />Prevent Regressions</h3>
               <p className='text-white/90'>
-//                 We implement v2 runbooks in 46 weeks with audits and training.
-              </p>
+// We implement v2 runbooks in 46 weeks with audits and training.
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
             </div>
             <Link
               href='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
-//             >
-//               Engage <RefreshCw />
+// >
+//               Engage 
+          
+          
+          
+          
+          
+          
+          
+          
+          <RefreshCw />
             </Link>
           </div>
         </div>

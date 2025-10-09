@@ -27,12 +27,12 @@ console.error = (...args) => {
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   // TODO: Add content
-}
+};
   writable: true,
   value: jest.fn().mockImplementation(query => ({
   // TODO: Add content
-}
-    matches: false,
+};
+  matches: false,
     media: query,
     onchange: null,
     addListener: jest.fn(), // deprecated,
@@ -48,20 +48,20 @@ global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 // Mock localStorage;
 const localStorageMock = {
   // TODO: Add content
-}
+};
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn()
 Object.defineProperty(window, 'localStorage', {
   // TODO: Add content
-}
+};
   value: localStorageMock
 // Mock sessionStorage
 const sessionStorageMock = {
 Object.defineProperty(window, 'sessionStorage', {
   // TODO: Add content
-}
+};
   value: sessionStorageMock
 // Mock fetch
 global.fetch = jest.fn();
@@ -78,10 +78,19 @@ console.warn = (...args) => {
 }
     return; // Suppress JSDOM navigation warnings
 // Mock window.location
-delete (window as unknown as Record<string, unknown>).location;
+delete (window as unknown as Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {
   // TODO: Add content
-}
+};
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',

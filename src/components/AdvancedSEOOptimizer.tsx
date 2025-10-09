@@ -23,7 +23,16 @@ interface AdvancedSEOOptimizerProps {
   organizationData?: unknown;
   websiteData?: unknown;
 }
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+const AdvancedSEOOptimizer: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <AdvancedSEOOptimizerProps> = ({
   // TODO: Add content
 }
   title = 'Zion Tech Group - Advanced AI and IT Solutions',

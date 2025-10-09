@@ -1,12 +1,12 @@
 import React from 'react';
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
+import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users,  BarChart,  Brain,  Zap,  Shield from 'lucide-react';
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
   // TODO: Add content
-}
-      icon: BarChart,
+};
+  icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefit: 'Make decisions 10x faster'
@@ -14,11 +14,13 @@ const SmartAnalyticsPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
-      benefit: 'Discover hidden opportunities'
+      benefit: 'Discover hidden opportunities',
+
       icon: Zap,
       title: 'Automated Alerts',
       description: 'Get instant notifications when important metrics change or when action is needed.',
-      benefit: 'Never miss critical changes'
+      benefit: 'Never miss critical changes',
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
@@ -29,13 +31,29 @@ const SmartAnalyticsPage: React.FC = () => {
       name: 'Professional',
       price: '$799',
       description: 'Advanced analytics for growing businesses',
-                {plan.popular && (
-  // TODO: Add parameters,
-)
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && ()
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-//                       Most Popular
-                    </span>
+// Most Popular
+                    
+          
+          
+          
+          
+          
+          
+          
+          
+          </span>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -43,10 +61,9 @@ const SmartAnalyticsPage: React.FC = () => {
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-  // TODO: Add parameters,
-)
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                  {plan.features.map((feature, featureIndex) => ()
+                    
+          <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
@@ -60,7 +77,16 @@ const SmartAnalyticsPage: React.FC = () => {
                   }`}
                   Get Started
         {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Data?
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">

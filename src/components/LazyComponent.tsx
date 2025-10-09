@@ -1,7 +1,7 @@
 import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {
   // TODO: Add content
-}
+};
   children: ReactNode;
   fallback?: ReactNode;
   delay?: number;
@@ -9,28 +9,61 @@ interface LazyComponentProps {
   rootMargin?: string;
 }
 // Higher-order component for lazy loading;
-export const _withLazyLoading = <P extends object>(
-  // TODO: Add parameters,
-)
-  Component: ComponentType<P>,
+export const _withLazyLoading = 
+          
+          
+          
+          
+          
+          
+          
+          
+          <P extends object>()
+  Component: ComponentType
+          <P>,
   fallback?: ReactNode,
 ) => {
   // TODO: Add content
 }
-  return (props: P) => (
-  // TODO: Add parameters,
-)
-    <Suspense fallback={fallback || <LoadingSpinner />}>
+  return (props: P) => ()
+    
+          
+          
+          
+          
+          
+          
+          
+          
+          <Suspense fallback={fallback || <LoadingSpinner />}>
       <Component {...props} />
     </Suspense>
   );
 };
 // Lazy component wrapper with intersection observer;
-const LazyComponent: React.FC<LazyComponentProps> = ({
+const LazyComponent: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <LazyComponentProps> = ({
   // TODO: Add content
 }
 //   children,
-  fallback = <LoadingSpinner />,
+  fallback = 
+          
+          
+          
+          
+          
+          
+          
+          
+          <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
   rootMargin = '50px',
@@ -39,13 +72,20 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 }
   const [isVisible, setIsVisible] = React.useState(false);
   const [isLoaded, setIsLoaded] = React.useState(false);
-  const elementRef = React.useRef<HTMLDivElement>(null);
+  const elementRef = React.useRef
+          
+          
+          
+          
+          
+          
+          
+          
+          <HTMLDivElement>(null);
   React.useEffect(() => {
   // TODO: Add content
 }
-    const observer = new IntersectionObserver(
-  // TODO: Add parameters,
-)
+    const observer = new IntersectionObserver()
       ([entry]) => {
   // TODO: Add content
 }
@@ -76,25 +116,49 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
     return () => observer.disconnect();
   }, [delay, threshold, rootMargin]);
   return (
-  // TODO: Add parameters,
-)
-    <div ref={elementRef}>
-      {isVisible ? (
-  // TODO: Add parameters,
-)
-        <Suspense fallback={fallback}>
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div ref={elementRef}>
+      {isVisible ? ()
+        
+          <Suspense fallback={fallback}>
           {children}
         </Suspense>
-      ) : (
-  // TODO: Add parameters,
-)
-//         fallback,
+      ) : ()
+// fallback,
 )}
-    </div>
+    
+          
+          
+          
+          
+          
+          
+          
+          
+          </div>
   );
 };
 // Preload function for critical components;
-export const preloadComponent = (importFunction: () => Promise<any>) => {
+export const preloadComponent = (importFunction: () => Promise
+          
+          
+          
+          
+          
+          
+          
+          
+          <any>) => {
   // TODO: Add content
 }
   return () => {
@@ -105,19 +169,34 @@ export const preloadComponent = (importFunction: () => Promise<any>) => {
   };
 };
 // Lazy load with preloading;
-export const createLazyComponent = <P extends object>(
-  // TODO: Add parameters,
-)
-  importFunction: () => Promise<{ default: ComponentType<P> }>,
+export const createLazyComponent = 
+          
+          
+          
+          
+          
+          
+          
+          
+          <P extends object>()
+  importFunction: () => Promise
+          <{ default: ComponentType<P> }>,
   fallback?: ReactNode,
 ) => {
   // TODO: Add content
 }
   const LazyComponent = lazy(importFunction);
-  return (props: P) => (
-  // TODO: Add parameters,
-)
-    <Suspense fallback={fallback || <LoadingSpinner />}>
+  return (props: P) => ()
+    
+          
+          
+          
+          
+          
+          
+          
+          
+          <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
   );
@@ -129,8 +208,8 @@ export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
 const fontPreloads = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap',
     'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
   ];
@@ -145,8 +224,8 @@ const fontPreloads = [
   });
   // Preload critical images;
 const imagePreloads = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
 //     '/og-image.jpg',
 //     '/favicon.ico',
   ];

@@ -1,17 +1,19 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
+import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp,  Leaf,  Target,  Zap,  Cloud,  Recycle,  Code,  Users,  Globe,  TrendingUp,  Factory,  Building from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
-  // TODO: Add content
-}
+  return (
+    <div>Coming Soon</div>
+  );
+};
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
     {
   // TODO: Add content
-}
-      id: 'solutions',
+};
+  id: 'solutions',
       name: 'Green Solutions',
       icon: Leaf,
       color: 'text-green-400',
@@ -21,13 +23,14 @@ const tabs = [
       name: 'Benefits',
       icon: Target,
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
+      bgColor: 'bg-blue-500/10',
+
       title: 'Energy-Efficient Data Centers',
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
       features: [
   // TODO: Add items,
-]
+];
 //         'PUE (Power Usage Effectiveness) optimization',
 //         'Renewable energy integration',
 //         'Cooling system optimization',
@@ -72,7 +75,8 @@ const tabs = [
         'Energy-efficient hardware',
         'Digital workspace management'
       impact: 'Reduce commuting emissions by 80%',
-      pricing: 'Starting at $800/month'
+      pricing: 'Starting at $800/month',
+
       title: 'Environmental Monitoring',
       description: 'Real-time monitoring and reporting of environmental impact metrics',
       icon: Globe,
@@ -83,7 +87,8 @@ const tabs = [
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month'
-  const benefits = [
+  const benefits = [,
+
       icon: TrendingUp,
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
@@ -92,7 +97,7 @@ const tabs = [
         'Lower maintenance and replacement costs',
         'Improved resource utilization',
         'Reduced waste management costs'
-      ]
+      ];
       title: 'Environmental Impact',
       description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
         '60% reduction in carbon emissions',
@@ -114,8 +119,9 @@ const tabs = [
   const certifications = [
       name: 'ISO 14001:2015',
       description: 'Environmental Management Systems',
-      status: 'Certified'
-name: 'LEED Platinum',
+      status: 'Certified',
+
+      name: 'LEED Platinum',
       description: 'Leadership in Energy and Environmental Design',
       name: 'Carbon Trust Standard',
       description: 'Carbon Footprint Management',
@@ -124,17 +130,21 @@ name: 'LEED Platinum',
   const stats = [
       value: '60%',
       label: 'Carbon Footprint Reduction',
-      color: 'text-green-400'
+      color: 'text-green-400',
+
       value: '40%',
       label: 'Energy Cost Savings',
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
+
       value: '50%',
       label: 'Waste Reduction',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
+
       value: '100%',
       label: 'Renewable Energy Options',
       color: 'text-purple-400'
-  const caseStudies = [
+  const caseStudies = [,
+
       company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
       challenge: 'High energy consumption in data centers',
@@ -155,21 +165,48 @@ name: 'LEED Platinum',
         'Enhanced brand reputation'
       icon: Building,
   return (
-  // TODO: Add parameters,
-)
-    <>
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-//               Green IT Solutions
-            </h1>
+// Green IT Solutions
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-//               Transform your IT infrastructure into a sustainable, environmentally friendly system
+// Transform your IT infrastructure into a sustainable, environmentally friendly system
               that reduces costs while protecting our planet.
-            </p>
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-green-400">
                 <Leaf className="w-5 h-5 mr-2" />
@@ -183,10 +220,9 @@ name: 'LEED Platinum',
                 <span className="font-medium">Certified Solutions</span>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (
-  // TODO: Add parameters,
-)
-              <div key={index} className="text-center">
+            {stats.map((stat, index) => ()
+              
+          <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
@@ -195,10 +231,9 @@ name: 'LEED Platinum',
           {/* Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {tabs.map((tab) => (
-  // TODO: Add parameters,
-)
-                <button
+              {tabs.map((tab) => ()
+                
+          <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
@@ -209,22 +244,38 @@ name: 'LEED Platinum',
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
 //                 >
-                  <tab.icon className="w-5 h-5 mr-2" />
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          <tab.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{tab.name}</span>
                 </button>
           {/* Tab Content */}
-          {activeTab === 'solutions' && (
-  // TODO: Add parameters,
-)
-            <div className="mb-16">
+          {activeTab === 'solutions' && ()
+            
+          <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-//                 Our Green IT Solutions
-              </h2>
+// Our Green IT Solutions
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {greenSolutions.map((solution, index) => (
-  // TODO: Add parameters,
-)
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                {greenSolutions.map((solution, index) => ()
+                  
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                     <div className="flex items-start mb-4">
                       <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                         <solution.icon className={`w-6 h-6 ${solution.color}`} />
@@ -234,10 +285,9 @@ name: 'LEED Platinum',
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {solution.features.map((feature, featureIndex) => (
-  // TODO: Add parameters,
-)
-                          <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
+                        {solution.features.map((feature, featureIndex) => ()
+                          
+          <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {feature}
                           </li>
@@ -257,28 +307,25 @@ Learn More
           {activeTab === 'benefits' && (
 Benefits of Green IT
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => (
-  // TODO: Add parameters,
-)
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
+                {benefits.map((benefit, index) => ()
+                  
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
                         <benefit.icon className="w-6 h-6 text-cyan-400" />
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300 mb-4">{benefit.description}</p>
                     <ul className="space-y-2">
-                      {benefit.details.map((detail, detailIndex) => (
-  // TODO: Add parameters,
-)
-                        <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
+                      {benefit.details.map((detail, detailIndex) => ()
+                        
+          <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
                           {detail}
 {activeTab === 'certifications' && (
                 Our Certifications
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {certifications.map((cert, index) => (
-  // TODO: Add parameters,
-)
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
+                {certifications.map((cert, index) => ()
+                  
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <cert.icon className={`w-8 h-8 ${cert.color}`} />
                     <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
@@ -296,19 +343,27 @@ Benefits of Green IT
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
-                      {study.results.map((result, resultIndex) => (
-  // TODO: Add parameters,
-)
-                        <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
+                      {study.results.map((result, resultIndex) => ()
+                        
+          <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
                           {result}
 {/* CTA Section */}
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Go Green?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-//               Start your journey towards sustainable IT operations. Get a free environmental
+// Start your journey towards sustainable IT operations. Get a free environmental
               assessment and discover how much you can save while protecting the planet.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 Get Free Assessment
                 href="tel:+13024640950"

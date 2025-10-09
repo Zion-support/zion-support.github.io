@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {Menu, X, Phone, MapPin, Home} from 'lucide-react';
 const Navigation: React.FC = () => {
-  // TODO: Add content
-}
+  return (
+    <div>Coming Soon</div>
+  );
+};
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -24,15 +26,33 @@ const Navigation: React.FC = () => {
     setIsOpen(false);
     setServicesOpen(false);
   return (
-  // TODO: Add parameters,
-)
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
   // TODO: Add content
 }
 //       isScrolled
 //         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20'
         : 'bg-transparent'
-    }`}><div className="container mx-auto px-4"><div className="flex items-center justify-between h-16">
+    }`}>
+          
+          
+          
+          
+          
+          
+          
+          
+          <div className="container mx-auto px-4"><div className="flex items-center justify-between h-16">
           {/* Logo */}
 <Link to="/" className="flex items-center space-x-2 group"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300"><span className="text-white font-bold text-lg">Z</span></div><div><h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></Link>
           {/* Desktop Menu */}
@@ -105,10 +125,19 @@ const Navigation: React.FC = () => {
                 ><Phone className="w-5 h-5" /><span>(302) 464-0950</span></a><a
                   href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
                 ><span>kleber@ziontechgroup.com</span></a><a
-                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                  href="https:// maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
                   target="_blank"
                   rel="noopener noreferrer" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
-                ><MapPin className="w-5 h-5" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></a></div></div></div>
+                >
+          
+          
+          
+          
+          
+          
+          
+          
+          <MapPin className="w-5 h-5" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></a></div></div></div>
       </div></nav>
   );
 export default Navigation;

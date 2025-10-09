@@ -1,15 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
   const _features = [
-    {
-      icon: Users,
+    {,
+ icon: Users,
       title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
-      benefits: ['Improved efficiency', 'Better results', 'Cost savings']
+      benefits: ['Improved efficiency', 'Better results', 'Cost savings'];
     },
     {
       icon: TrendingUp,

@@ -36,11 +36,11 @@ const _baseUrl = 'https://ziontechgroup.com'
     '/privacy',
     '/terms',
     '/support',
-  ]
+  ];
   return routes.map((route) => ({
   // TODO: Add content
-}
-    url: `${baseUrl}${route}`,
+};
+  url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === '' ? 'daily' : 'weekly',
     priority: route === '' ? 1 : 0.8,

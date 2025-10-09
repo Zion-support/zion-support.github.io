@@ -38,8 +38,8 @@ const observer = new PerformanceObserver((list) => {
 }
           reportWebVitals({
   // TODO: Add content
-}
-            name: entry.name,
+};
+  name: entry.name,
             value: entry.startTime,
             timestamp: Date.now()
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });

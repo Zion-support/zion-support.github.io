@@ -1,7 +1,7 @@
 
 interface ResponsiveContainerProps {
   // TODO: Add content
-}
+};
   children: React.ReactNode;
   className?: string;
   breakpoints?: {
@@ -15,7 +15,16 @@ interface ResponsiveContainerProps {
   };
   fallback?: React.ReactNode;
 }
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
+const ResponsiveContainer: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <ResponsiveContainerProps> = ({
   // TODO: Add content
 }
 //   children,
@@ -26,7 +35,16 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
   // TODO: Add content
 }
   const [isClient, setIsClient] = useState(false);
-  const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
+  const [screenSize, setScreenSize] = useState
+          
+          
+          
+          
+          
+          
+          
+          
+          <'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
@@ -60,7 +78,16 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
   if (!isClient) {
   // TODO: Add content
 }
-    return fallback || <div className={className}>{children}</div>;
+    return fallback || 
+          
+          
+          
+          
+          
+          
+          
+          
+          <div className={className}>{children}</div>;
   }
   const getResponsiveClasses = () => {
   // TODO: Add content
@@ -70,15 +97,33 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
     return `${baseClasses} ${responsiveClasses}`.trim();
   };
   return (
-  // TODO: Add parameters,
-)
-    <div className={getResponsiveClasses()}>
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className={getResponsiveClasses()}>
       {children}
     </div>
   );
 };
 // Hook for responsive values;
-export const useResponsiveValue = <T,>(values: {
+export const useResponsiveValue = 
+          
+          
+          
+          
+          
+          
+          
+          
+          <T,>(values: {
 // sm?: T;
 // md?: T;
 // lg?: T;

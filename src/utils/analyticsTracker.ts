@@ -5,33 +5,42 @@
  */
 interface AnalyticsEvent {
   // TODO: Add content
-}
-  category: string;
-  action: string;
+};
+  category: string;,
+    action: string;
   label?: string;
   value?: number;
   nonInteraction?: boolean;
 }
 interface PerformanceMetrics {
   // TODO: Add content
-}
-  metric: string;
-  value: number;
+};
+  metric: string;,
+    value: number;
   rating?: 'good' | 'needs-improvement' | 'poor';
 }
 interface ErrorReport {
   // TODO: Add content
-}
+};
   message: string;
   stack?: string;
-  componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  componentStack?: string;,
+    severity: 'low' | 'medium' | 'high' | 'critical';
 }
 class AnalyticsTracker {
   // TODO: Add content
 }
   private isInitialized = false;
-  private queue: Array<() => void> = [];
+  private queue: Array
+          
+          
+          
+          
+          
+          
+          
+          
+          <() => void> = [];
   /**
    * Initialize the analytics tracker
    */
@@ -58,8 +67,8 @@ class AnalyticsTracker {
 }
         window.gtag('event', event.action, {
   // TODO: Add content
-}
-          event_category: event.category,
+};
+  event_category: event.category,
           event_label: event.label,
           value: event.value,
           non_interaction: event.nonInteraction
@@ -93,8 +102,8 @@ class AnalyticsTracker {
 }
         window.gtag('event', 'performance', {
   // TODO: Add content
-}
-          event_category: 'Web Vitals',
+};
+  event_category: 'Web Vitals',
           event_label: metrics.metric,
           value: Math.round(metrics.value),
           metric_rating: metrics.rating
@@ -127,8 +136,8 @@ class AnalyticsTracker {
 }
         window.gtag('event', 'timing_complete', {
   // TODO: Add content
-}
-          name: variable,
+};
+  name: variable,
           value: Math.round(value),
           event_category: category,
           event_label: label

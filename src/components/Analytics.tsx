@@ -24,15 +24,15 @@ const script = document.createElement('script');
       gtag('js', new Date());
       gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
   // TODO: Add content
-}
-        page_title: document.title,
+};
+  page_title: document.title,
         page_location: window.location.href,
       });
       // Track page views
       gtag('event', 'page_view', {
   // TODO: Add content
-}
-        page_title: document.title,
+};
+  page_title: document.title,
         page_location: window.location.href,
         page_path: pathname,
       });
@@ -57,8 +57,8 @@ const script = document.createElement('script');
 }
               window.gtag('event', 'timing_complete', {
   // TODO: Add content
-}
-                name: 'load',
+};
+  name: 'load',
                 value: Math.round(loadTime),
               });
             }
@@ -76,8 +76,8 @@ const trackInteraction = (eventName: string, category: string, label?: string) =
 }
         window.gtag('event', eventName, {
   // TODO: Add content
-}
-          event_category: category,
+};
+  event_category: category,
           event_label: label,
         });
       }
@@ -134,8 +134,8 @@ let _maxScroll = 0;
 declare global {
   // TODO: Add content
 }
-  interface Window {
-dataLayer: unknown[];
+  interface Window {;
+  dataLayer: unknown[];,
     gtag: (...args: any[]) => void;
   }
 }

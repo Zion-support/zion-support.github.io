@@ -15,9 +15,7 @@ export const _useErrorMonitoring = () => {
   // TODO: Add content
 }
   const { trackError } = useAnalytics();
-  const reportError = useCallback(
-  // TODO: Add parameters,
-)
+  const reportError = useCallback()
     (error: Error, context?: string) => {
   // TODO: Add content
 }
@@ -60,9 +58,7 @@ const handleUnhandledRejection = (event: unknown) => {
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
     // Expose React error handler globally for error boundaries
-//     (
-  // TODO: Add parameters,
-)
+//     ()
       window as Window & {
 _REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
       }

@@ -4,8 +4,8 @@ const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
   // TODO: Add content
-}
-      title: 'IoT Device Management Platform',
+};
+  title: 'IoT Device Management Platform',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
       icon: '',
       price: 'Starting at $3,500/month',
@@ -79,24 +79,60 @@ title: 'IoT Data Management',
   ];
   const categories = [...new Set(iotServices.map(service => service.category))];
   return (
-  // TODO: Add parameters,
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-//                 IoT & Edge Computing Services
-              </h1>
+// IoT & Edge Computing Services
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </h1>
               <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">
-//                 Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
-              </p>
+// Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
-//                   Explore IoT Solutions
-                </button>
+// Explore IoT Solutions
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
 Schedule Demo
               </div>
@@ -106,8 +142,17 @@ Schedule Demo
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-//                 Why Choose Our IoT & Edge Services?
-              </h2>
+// Why Choose Our IoT & Edge Services?
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </h2>
               <p className="text-xl text-gray-600">
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -128,19 +173,17 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
                 <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries</p>
         {/* Services by Category */}
-        {categories.map(category => (
-  // TODO: Add parameters,
-)
+        {categories.map(category => ()
+          
           <section key={category} className="py-16 bg-gray-50">
                   {category} Solutions
                   Specialized {category.toLowerCase()} services for connected and intelligent systems
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {iotServices
                   .filter(service => service.category === category)
-                  .map((service, index) => (
-  // TODO: Add parameters,
-)
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  .map((service, index) => ()
+                    
+          <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -152,10 +195,9 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
 Save up to 40% vs market rates
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-  // TODO: Add parameters,
-)
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          {service.features.map((feature, featureIndex) => ()
+                            
+          <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
@@ -163,18 +205,16 @@ Save up to 40% vs market rates
                         </ul>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => (
-  // TODO: Add parameters,
-)
-                            <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
+                          {service.technologies.map((tech, techIndex) => ()
+                            
+          <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                          {service.benefits.map((benefit, benefitIndex) => (
-  // TODO: Add parameters,
-)
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          {service.benefits.map((benefit, benefitIndex) => ()
+                            
+          <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
 <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
@@ -216,9 +256,18 @@ Ready to Connect Your World?
               <a
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
-//               >
+// >
 //                  +1 302 464 0950
-              </a>
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com

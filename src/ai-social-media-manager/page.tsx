@@ -1,26 +1,30 @@
 import React from 'react';
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
+import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react';
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
   // TODO: Add content
-}
-      icon: Share2,
+};
+  icon: Share2,
       title: 'AI Content Creation',
       description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
     },
 icon: TrendingUp,
       title: 'Trend Analysis',
-      description: 'Real-time trend monitoring and content suggestions based on viral topics'
+      description: 'Real-time trend monitoring and content suggestions based on viral topics',
+
       icon: Users,
       title: 'Audience Insights',
-      description: 'Deep analytics on your audience behavior and engagement patterns'
+      description: 'Deep analytics on your audience behavior and engagement patterns',
+
       icon: Calendar,
       title: 'Smart Scheduling',
-      description: 'AI-optimized posting times for maximum engagement across all platforms'
+      description: 'AI-optimized posting times for maximum engagement across all platforms',
+
       icon: BarChart,
       title: 'Performance Analytics',
-      description: 'Comprehensive reporting with actionable insights and ROI tracking'
+      description: 'Comprehensive reporting with actionable insights and ROI tracking',
+
       icon: MessageSquare,
       title: 'Auto-Responses',
       description: 'Intelligent chatbot responses and comment management'
@@ -39,21 +43,22 @@ icon: TrendingUp,
     { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-500' }
-  const pricing = [
-      name: 'Starter',
+  const pricing = [;
+  name: 'Starter',
       price: '$29',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
   // TODO: Add items,
-]
+];
 //         '3 social media accounts',
 //         '50 posts per month',
 //         'Basic AI content generation',
 //         'Standard analytics',
 //         'Email support'
 //       ],
-      popular: false
+      popular: false,
+
       name: 'Professional',
       price: '$79',
       description: 'Ideal for growing brands',
@@ -61,7 +66,16 @@ icon: TrendingUp,
                     : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
                   {plan.popular ? 'Start Free Trial' : 'Get Started'}
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
+      
+          
+          
+          
+          
+          
+          
+          
+          
+          <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 Ready to Get Started?

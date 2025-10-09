@@ -5,10 +5,18 @@ interface DynamicOptions {
   loading?: () => React.ReactElement;
   ssr?: boolean;
 }
-export function dynamic<T extends ComponentType<unknown>>(
-  // TODO: Add parameters,
-)
-  importFunc: () => Promise<{ default: T }>,
+export function dynamic
+          
+          
+          
+          
+          
+          
+          
+          
+          <T extends ComponentType<unknown>>()
+  importFunc: () => Promise
+          <{ default: T }>,
   _options: DynamicOptions = {}
 ): ComponentType<unknown> {
 return (props: unknown) => (

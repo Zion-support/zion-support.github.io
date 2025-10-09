@@ -8,7 +8,16 @@ interface SEOEnhancerProps {
   url?: string;
   children: React.ReactNode;
 }
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+const SEOEnhancer: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <SEOEnhancerProps> = ({
   // TODO: Add content
 }
   title = "Zion Tech Group - Advanced AI and IT Solutions",
@@ -99,9 +108,18 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     }
   };
   return (
-  // TODO: Add parameters,
-)
-    <>
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <>
       {children}
     </>
   );

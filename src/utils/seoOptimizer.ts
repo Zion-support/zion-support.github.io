@@ -5,12 +5,12 @@
  */
 interface SEOConfig {
   // TODO: Add content
-}
-  siteName: string;
-  siteUrl: string;
-  defaultTitle: string;
-  defaultDescription: string;
-  defaultImage: string;
+};
+  siteName: string;,
+    siteUrl: string;,
+    defaultTitle: string;,
+    defaultDescription: string;,
+    defaultImage: string;
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string;
@@ -18,10 +18,10 @@ interface SEOConfig {
 }
 interface PageSEOData {
   // TODO: Add content
-}
-  title: string;
-  description: string;
-  keywords: string[];
+};
+  title: string;,
+    description: string;,
+    keywords: string[];
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'profile';
@@ -223,8 +223,8 @@ return title.includes(this.config.siteName)
 }
       Object.assign(structuredData, {
   // TODO: Add content
-}
-        author: {
+};
+  author: {
 // '@type': 'Person',
 // name: this.currentPageData.author || this.config.siteName
         },
@@ -307,8 +307,8 @@ private addStructuredData(data: unknown): void {
 }
       (window as any).gtag('event', 'seo_metric', {
   // TODO: Add content
-}
-        metric_name: metric,
+};
+  metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo'
       });
@@ -317,7 +317,16 @@ private addStructuredData(data: unknown): void {
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {
+  generateSitemapData(): Array
+          
+          
+          
+          
+          
+          
+          
+          
+          <{ url: string; lastmod: string; changefreq: string; priority: number }> {
   // TODO: Add content
 }
     // This would typically come from your CMS or routing system
@@ -326,8 +335,8 @@ private addStructuredData(data: unknown): void {
 ]
       {
   // TODO: Add content
-}
-        url: this.config.siteUrl,
+};
+  url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
         priority: '1.0'
@@ -340,15 +349,17 @@ private addStructuredData(data: unknown): void {
   generateRobotsTxt(): string {
   // TODO: Add content
 }
-    return `User-agent: *
-Allow: /
+    return `User-agent: *,
+Allow: /,
 Sitemap: ${this.config.siteUrl}/sitemap.xml
 // # Disallow admin and private areas,
-  Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/`;
+  Disallow: /admin/,
+    Disallow: /private/,
+    Disallow: /api/,
+
+  Disallow: /_next/,
+
+  Disallow: /static/`;
   }
   /**
    * Check for SEO issues
@@ -359,7 +370,16 @@ Disallow: /static/`;
     const issues: string[] = [];
     // Check title length;
 const title = document.title;
-    if (title.length < 30) {
+    if (title.length 
+          
+          
+          
+          
+          
+          
+          
+          
+          < 30) {
   // TODO: Add content
 }
       issues.push('Title is too short (less than 30 characters)');
@@ -374,7 +394,16 @@ const description = document.querySelector('meta[name="description"]')?.getAttri
   // TODO: Add content
 }
       issues.push('Missing meta description');
-    } else if (description.length < 120) {
+    } else if (description.length 
+          
+          
+          
+          
+          
+          
+          
+          
+          < 120) {
   // TODO: Add content
 }
       issues.push('Description is too short (less than 120 characters)');
@@ -422,7 +451,7 @@ const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
 // Default configuration;
 const defaultConfig: SEOConfig = {
   // TODO: Add content
-}
+};
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',
   defaultTitle: 'Advanced AI and IT Solutions',

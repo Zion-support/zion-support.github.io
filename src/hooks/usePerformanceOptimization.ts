@@ -1,12 +1,12 @@
 'use client';
 interface PerformanceMetrics {
   // TODO: Add content
-}
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+};
+  loadTime: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    cumulativeLayoutShift: number;,
+    firstInputDelay: number;
 }
 export const _usePerformanceOptimization = () => {
   // TODO: Add content
@@ -18,9 +18,7 @@ export const _usePerformanceOptimization = () => {
   // TODO: Add content
 }
       return null;
-    const navigation = performance.getEntriesByType(
-  // TODO: Add parameters,
-)
+    const navigation = performance.getEntriesByType()
 //       'navigation'
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
@@ -28,8 +26,8 @@ export const _usePerformanceOptimization = () => {
     const _paintEntries = performance.getEntriesByType('paint');
     const _metrics: PerformanceMetrics = {
   // TODO: Add content
-}
-      loadTime: navigation
+};
+  loadTime: navigation
 //         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
       firstContentfulPaint:

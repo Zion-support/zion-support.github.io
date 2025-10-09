@@ -3,9 +3,9 @@ import React, { useState, useCallback } from 'react';
 const Image: React.FC = () => {
 interface ImageProps {
   // TODO: Add content
-}
-  src: string;
-  alt: string;
+};
+  src: string;,
+    alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -19,7 +19,16 @@ interface ImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-export const Image: React.FC<ImageProps> = ({
+export const Image: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <ImageProps> = ({
   // TODO: Add content
 }
 //   src,
@@ -60,8 +69,8 @@ quality = 75,
 //     ...style,
     ...(fill && {
   // TODO: Add content
-}
-      position: 'absolute',
+};
+  position: 'absolute',
       top: 0,
       left: 0,
       width: '100%',
@@ -73,21 +82,40 @@ quality = 75,
   // TODO: Add content
 }
     return (
-  // TODO: Add parameters,
-)
-      <div;
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+      
+          <div;
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
-//       >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
+// >
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
     );
   }
   return (
-  // TODO: Add parameters,
-)
-    <img
+    <div>Coming Soon</div>
+  )
+    
+          <img
       src={src}
       alt={alt}
       width={width}

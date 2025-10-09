@@ -1,7 +1,7 @@
 
 interface Props {
   // TODO: Add content
-}
+};
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -10,13 +10,22 @@ interface Props {
 }
 interface State {
   // TODO: Add content
+};
+  hasError: boolean;,
+    error: Error | null;,
+    errorInfo: ErrorInfo | null;,
+    errorId: string | null;
 }
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-}
-class EnhancedErrorBoundary extends Component<Props, State> {
+class EnhancedErrorBoundary extends Component
+          
+          
+          
+          
+          
+          
+          
+          
+          <Props, State> {
   // TODO: Add content
 }
   constructor(props: Props) {
@@ -25,20 +34,29 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = {
   // TODO: Add content
-}
-      hasError: false,
+};
+  hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
     };
   }
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): Partial
+          
+          
+          
+          
+          
+          
+          
+          
+          <State> {
   // TODO: Add content
 }
     return {
   // TODO: Add content
-}
-      hasError: true,
+};
+  hasError: true,
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
@@ -65,8 +83,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-      errorId: this.state.errorId,
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
+ errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -84,13 +102,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
       (window as any).gtag('event', 'exception', {
   // TODO: Add content
-}
-        description: error.message,
+};
+  description: error.message,
         fatal: false,
         custom_map: {
   // TODO: Add content
-}
-          error_id: this.state.errorId,
+};
+  error_id: this.state.errorId,
         },
       });
     }
@@ -113,8 +131,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
     this.setState({
   // TODO: Add content
-}
-      hasError: false,
+};
+  hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
@@ -135,8 +153,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
     const errorDetails = {
   // TODO: Add content
-}
-      errorId: this.state.errorId,
+};
+  errorId: this.state.errorId,
       message: this.state.error?.message,
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
@@ -167,65 +185,163 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-      const canRetry = retryCount < this.maxRetries;
+      const canRetry = retryCount 
+          
+          
+          
+          
+          
+          
+          
+          
+          < this.maxRetries;
       return (
-  // TODO: Add parameters,
-)
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+    <div>Coming Soon</div>
+  )
+        
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-slate-800/50 backdrop-blur-md border border-red-500/20 rounded-lg p-8 text-center">
             <div className="mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
               <h1 className="text-2xl font-bold text-white mb-2">
-//                 Oops! Something went wrong
-              </h1>
+// Oops! Something went wrong
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </h1>
               <p className="text-gray-300 mb-4">
-//                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-              </p>
+// We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
             </div>
             <div className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={this.handleRetry}
                   className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-200"
-//                 >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-//                   Try Again
-                </button>
+// >
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          <RefreshCw className="w-4 h-4 mr-2" />
+// Try Again
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
                 <button
                   onClick={this.handleReload}
                   className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
-//                 >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-//                   Reload Page
-                </button>
+// >
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          <RefreshCw className="w-4 h-4 mr-2" />
+// Reload Page
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
                 <button
                   onClick={this.handleGoHome}
                   className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors duration-200"
-//                 >
-                  <Home className="w-4 h-4 mr-2" />
-//                   Go Home
-                </button>
+// >
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          <Home className="w-4 h-4 mr-2" />
+// Go Home
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
               </div>
-              {this.state.errorId && (
-  // TODO: Add parameters,
-)
-                <div className="mt-6 p-4 bg-slate-700/50 rounded-lg">
+              {this.state.errorId && ()
+                
+          <div className="mt-6 p-4 bg-slate-700/50 rounded-lg">
                   <p className="text-sm text-gray-400 mb-2">
                     Error ID: <code className="text-cyan-400">{this.state.errorId}</code>
                   </p>
                   <p className="text-xs text-gray-500">
-//                     Please include this ID when contacting support.
-                  </p>
+// Please include this ID when contacting support.
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
                 </div>
               )}
-              {this.props.showDetails && this.state.error && (
-  // TODO: Add parameters,
-)
-                <details className="mt-6 text-left">
+              {this.props.showDetails && this.state.error && ()
+                
+          <details className="mt-6 text-left">
                   <summary className="cursor-pointer text-sm text-gray-400 hover:text-white mb-2 flex items-center">
                     <Bug className="w-4 h-4 mr-2" />
-//                     Technical Details
-                  </summary>
+// Technical Details
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          </summary>
                   <div className="mt-2 p-4 bg-slate-900/50 rounded-lg">
                     <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">
                       {this.state.error.message}
@@ -235,9 +351,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     <button
                       onClick={this.copyErrorDetails}
                       className="mt-2 text-xs text-cyan-400 hover:text-cyan-300"
-//                     >
+// >
 //                       Copy Error Details
-                    </button>
+                    
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
                   </div>
                 </details>
               )}
@@ -246,8 +371,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <p>
                 If this problem persists, please contact our support team at{' '}
                 <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-//                   support@ziontechgroup.com
-                </a>
+// support@ziontechgroup.com
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
               </p>
             </div>
           </div>

@@ -13,7 +13,16 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
-const SEOHead: React.FC<SEOHeadProps> = ({
+const SEOHead: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <SEOHeadProps> = ({
   // TODO: Add content
 }
   title = 'Zion Tech Group - Advanced AI and IT Solutions',

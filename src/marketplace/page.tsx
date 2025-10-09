@@ -1,18 +1,20 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
+import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award,  ShoppingCart,  Users from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const MarketplacePage: React.FC = () => {
-  // TODO: Add content
-}
+  return (
+    <div>Coming Soon</div>
+  );
+};
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {
   // TODO: Add content
-}
-      id: 'products',
+};
+  id: 'products',
       name: 'Products',
       icon: ShoppingCart,
       color: 'text-blue-400',
@@ -24,7 +26,8 @@ const categories = [
       icon: Users,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      description: 'Expert professionals and consultants'
+      description: 'Expert professionals and consultants',
+
       id: 1,
       name: 'AI Project Manager Pro',
       description: 'Intelligent project management with AI-powered insights and automation',
@@ -35,7 +38,8 @@ const categories = [
       image: '',
       features: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
       vendor: 'Zion Tech Group',
-      verified: true
+      verified: true,
+
       id: 3,
       name: 'AI Customer Support Bot',
       description: '24/7 intelligent customer support with natural language processing',
@@ -60,9 +64,27 @@ const categories = [
       image: '',
       features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendor: 'QuantumCloud',
-                <ShoppingCart className="w-5 h-5 mr-2" />
-//                 Start Shopping
-              </a>
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          <ShoppingCart className="w-5 h-5 mr-2" />
+// Start Shopping
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />

@@ -40,12 +40,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #000;
-      color: #fff;
-      padding: 8px;
+      position: absolute;,
+    top: -40px;,
+    left: 6px;,
+    background: #000;,
+    color: #fff;,
+    padding: 8px;
       text-decoration: none;
       z-index: 1000;
     `;
@@ -75,7 +75,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     });
   };
 
-  return <>{children}</>;
+  return 
+          
+          
+          
+          
+          
+          
+          
+          
+          <>{children}</>;
 };
 
 export default AccessibilityEnhancer;

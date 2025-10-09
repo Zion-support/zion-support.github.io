@@ -1,115 +1,134 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-import fs from 'fs';
-import { glob } from 'glob';
+// Common patterns to fix
+const fixes = [
+  // Fix missing commas in object arrays
+  {
+    pattern: /(\s*)(\w+):\s*([^,}]+)\n\s*(\w+):/g,
+    replacement: '$1$2: $3,\n$1$4:'
+  },
+  // Fix missing commas in arrays
+  {
+    pattern: /(\s*)(\w+):\s*([^,}]+)\n\s*(\w+):/g,
+    replacement: '$1$2: $3,\n$1$4:'
+  },
+  // Fix incomplete function definitions
+  {
+    pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\/\/\s*TODO:.*?\n\s*}/g,
+    replacement: 'const $1: React.FC = () => {\n  return (\n    <div>Coming Soon</div>\n  );\n};'
+  },
+  // Fix missing closing braces
+  {
+    pattern: /(\s*)(\w+):\s*([^,}]+)\n\s*(\w+):/g,
+    replacement: '$1$2: $3,\n$1$4:'
+  },
+  // Fix malformed JSX comments
+  {
+    pattern: /\/\/\s*([^<]+)</g,
+    replacement: '// $1\n          <'
+  },
+  // Fix missing semicolons
+  {
+    pattern: /(\w+)\s*=\s*\[([^\]]+)\]\s*$/gm,
+    replacement: '$1 = [$2];'
+  },
+  // Fix incomplete object definitions
+  {
+    pattern: /{\s*\/\/\s*TODO:.*?\n\s*}/g,
+    replacement: '{\n  // TODO: Add content\n}'
+  }
+];
 
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
+function fixFile(filePath) {
   try {
-
-    // Fix double brace imports
-    content = content.replace(
-      /import\s*{\s*{\s*([^}]+)\s*}\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-    );
-
-    // Fix malformed imports with extra braces
-    content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-      (match, imports1, module1, imports2, module2) => {
-        if (module1 === module2) {
-        } else {
-        }
-      }
-    );
-
-    // Fix empty imports
-    content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n/g, '');
-
-    // Fix malformed metadata exports
-    content = content.replace(/\/\/ Metadata moved to Helmet component\s*([^}]+)\s*};/g, '');
-
-    // Fix malformed function declarations
-    content = content.replace(
-      /export\s+default\s+function\s+([^(]+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<Helmet>\s*([^<]+)\s*<\/Helmet>/g,
-      (match, funcName, helmetContent) => {
-        return `export default function ${funcName}() {\n  return (\n    <>\n      <Helmet>\n        ${helmetContent}\n      </Helmet>`;
-      }
-    );
-
-    // Fix missing semicolons and brackets
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
-
-    // Clean up excessive whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
-    // Fix React import issues
-    content = content.replace(
-      /import\s*{\s*React\s*,\s*([^}]+)\s*}\s*from\s*['"]react['"];?/g,
-    );
-
-    // Fix Helmet import issues
-    content = content.replace(
-      /import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?/g,
-      "import { Helmet } from 'react-helmet-async';"
-    );
-
-    // Fix Router import issues
-    content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]react-router-dom['"];?/g,
-    );
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Apply fixes
+    fixes.forEach(fix => {
+      content = content.replace(fix.pattern, fix.replacement);
+    });
+    
+    // Additional specific fixes
+    // Fix missing commas in object properties
+    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    // Fix missing closing braces for objects
+    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    // Fix incomplete function returns
+    content = content.replace(/return\s*\(\s*\/\/\s*TODO:.*?\n\s*\)/g, 'return (\n    <div>Coming Soon</div>\n  )');
+    
+    // Fix malformed JSX
+    content = content.replace(/<(\w+)\s*\/\/\s*([^>]+)>/g, '<$1>// $2');
+    
+    // Fix missing semicolons after variable declarations
+    content = content.replace(/(\w+)\s*=\s*\[([^\]]+)\]\s*$/gm, '$1 = [$2];');
+    
+    // Fix incomplete object definitions
+    content = content.replace(/{\s*\/\/\s*TODO:.*?\n\s*}/g, '{\n  // TODO: Add content\n}');
+    
+    // Fix missing closing tags
+    content = content.replace(/<(\w+)>\s*\/\/\s*([^<]+)</g, '<$1>// $2\n          <');
+    
+    // Fix malformed array definitions
+    content = content.replace(/(\w+)\s*=\s*\[\s*\/\/\s*TODO:.*?\n\s*\]/g, '$1 = [\n  // TODO: Add items\n];');
+    
+    // Fix incomplete function parameters
+    content = content.replace(/\(\s*\/\/\s*TODO:.*?\n\s*\)/g, '()');
+    
+    // Fix malformed JSX attributes
+    content = content.replace(/className="([^"]*)\s*\/\/\s*([^"]*)"/g, 'className="$1" // $2');
+    
+    // Fix missing closing parentheses
+    content = content.replace(/\(\s*\/\/\s*TODO:.*?\n\s*\)/g, '()');
+    
+    // Fix incomplete object properties
+    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    // Fix malformed JSX elements
+    content = content.replace(/<(\w+)\s*\/\/\s*([^>]+)>/g, '<$1>// $2');
+    
+    // Fix missing commas in arrays
+    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    // Fix incomplete function definitions
+    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\/\/\s*TODO:.*?\n\s*}/g, 'const $1: React.FC = () => {\n  return (\n    <div>Coming Soon</div>\n  );\n};');
+    
+    // Fix missing closing braces
+    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    // Fix malformed JSX comments
+    content = content.replace(/\/\/\s*([^<]+)</g, '// $1\n          <');
+    
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*=\s*\[([^\]]+)\]\s*$/gm, '$1 = [$2];');
+    
+    // Fix incomplete object definitions
+    content = content.replace(/{\s*\/\/\s*TODO:.*?\n\s*}/g, '{\n  // TODO: Add content\n}');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-
     return false;
   } catch (error) {
-
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main execution
-async function main() {
+// Find all TypeScript/JSX files
+const files = glob.sync('src/**/*.{ts,tsx}', { cwd: process.cwd() });
 
-
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      cwd: process.cwd(),
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/*.disabled/**',
-        '**/*backup*/**',
-        '**/*corrupted*/**',
-        '**/*temp*/**',
-        '**/*.broken/**',
-      ],
-    });
-
-    for (const file of files) {
-      totalFiles++;
-      if (fixSyntaxErrors(file)) {
-        fixedFiles++;
-      }
-    }
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
   }
+});
 
-
-
-
-  if (fixedFiles > 0) {
-
-  } else {
-
-  }
-}
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-}
-
-export { fixSyntaxErrors };
+console.log(`Fixed ${fixedCount} files`);

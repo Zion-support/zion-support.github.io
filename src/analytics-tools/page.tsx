@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
+import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain from 'lucide-react';
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
   // TODO: Add content
-}
-      title: 'AI Business Intelligence',
+};
+  title: 'AI Business Intelligence',
       price: '$399/month',
       description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
@@ -18,13 +18,15 @@ const AnalyticsToolsPage: React.FC = () => {
       description: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.',
       features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
       icon: '',
-      category: 'Web Analytics'
+      category: 'Web Analytics',
+
       title: 'AI Sales Analytics',
       price: '$199/month',
       description: 'Sales performance analytics with AI-powered forecasting and optimization.',
       features: ['Sales forecasting', 'Pipeline analysis', 'Performance tracking', 'Lead scoring', 'Conversion optimization', 'Revenue insights'],
       icon: '',
-      category: 'Sales Analytics'
+      category: 'Sales Analytics',
+
       title: 'AI Financial Analytics',
       price: '$349/month',
       description: 'Financial performance analytics with AI-powered insights and risk assessment.',
@@ -36,20 +38,32 @@ const AnalyticsToolsPage: React.FC = () => {
   const benefits = [
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
-      description: 'Make informed decisions with comprehensive analytics and AI insights'
+      description: 'Make informed decisions with comprehensive analytics and AI insights',
+
       icon: Target,
       title: 'Predictive Insights',
-      description: 'Anticipate trends and opportunities with AI-powered predictions'
+      description: 'Anticipate trends and opportunities with AI-powered predictions',
+
       icon: BarChart,
       title: 'Real-Time Monitoring',
-      description: 'Track performance in real-time with live dashboards and alerts'
+      description: 'Track performance in real-time with live dashboards and alerts',
+
       icon: Brain,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
   return (
-  // TODO: Add parameters,
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Analytics Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
@@ -59,7 +73,16 @@ const AnalyticsToolsPage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-//             AI Analytics Tools
+// AI Analytics Tools
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
@@ -91,13 +114,21 @@ const AnalyticsToolsPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-//             Our Analytics Tools
+// Our Analytics Tools
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {analyticsTools.map((tool, index) => (
-  // TODO: Add parameters,
-)
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+            {analyticsTools.map((tool, index) => ()
+              
+          <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{tool.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
@@ -107,10 +138,9 @@ const AnalyticsToolsPage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {tool.features.map((feature, featureIndex) => (
-  // TODO: Add parameters,
-)
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                    {tool.features.map((feature, featureIndex) => ()
+                      
+          <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
@@ -121,16 +151,24 @@ const AnalyticsToolsPage: React.FC = () => {
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
-//                   >
+// >
 //                     Get Started
-                  </a>
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
       {/* Benefits Section */}
 Why Choose Our Analytics Tools?
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-  // TODO: Add parameters,
-)
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
+            {benefits.map((benefit, index) => ()
+              
+          <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>

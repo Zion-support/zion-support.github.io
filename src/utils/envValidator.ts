@@ -5,7 +5,7 @@
  */
 export interface EnvConfig {
   // TODO: Add content
-}
+};
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
@@ -30,8 +30,8 @@ class EnvValidator {
 //     this.validateOptionalVars()
     return {
   // TODO: Add content
-}
-      isValid: this.errors.length === 0,
+};
+  isValid: this.errors.length === 0,
       errors: this.errors,
       warnings: this.warnings
     };
@@ -43,15 +43,13 @@ class EnvValidator {
     if (!validation.isValid) {
   // TODO: Add content
 }
-      throw new Error(
-  // TODO: Add parameters,
-)
+      throw new Error()
         `Environment validation failed:\n${validation.errors.join('\n')}`
 //       )
     }
     if (validation.warnings.length > 0) {
     const nodeEnv = process.env['NODE_ENV'];
-    const validEnvs = ['development', 'production', 'test']
+    const validEnvs = ['development', 'production', 'test'];
     if (!nodeEnv) {
   // TODO: Add content
 }
@@ -61,9 +59,7 @@ class EnvValidator {
     if (!validEnvs.includes(nodeEnv)) {
   // TODO: Add content
 }
-//       this.errors.push(
-  // TODO: Add parameters,
-)
+//       this.errors.push()
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
 //       )
     }
@@ -79,18 +75,14 @@ class EnvValidator {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
   // TODO: Add content
 }
-//         this.warnings.push(
-  // TODO: Add parameters,
-)
+//         this.warnings.push()
           'NEXT_PUBLIC_SITE_URL is not set (recommended for production)'
 //         )
       }
       if (!process.env['NEXT_PUBLIC_GA_ID']) {
   // TODO: Add content
 }
-//         this.warnings.push(
-  // TODO: Add parameters,
-)
+//         this.warnings.push()
 //           'NEXT_PUBLIC_GA_ID is not set (analytics will be disabled)'
 //         )
       }

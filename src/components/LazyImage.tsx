@@ -1,9 +1,9 @@
 'use client';
 interface LazyImageProps {
   // TODO: Add content
-}
-  src: string;
-  alt: string;
+};
+  src: string;,
+    alt: string;
   className?: string;
   placeholder?: string;
   width?: number;
@@ -12,7 +12,16 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-const LazyImage: React.FC<LazyImageProps> = ({
+const LazyImage: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <LazyImageProps> = ({
   // TODO: Add content
 }
 //   src,
@@ -34,9 +43,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   // TODO: Add content
 }
     if (priority) return;
-    const observer = new IntersectionObserver(
-  // TODO: Add parameters,
-)
+    const observer = new IntersectionObserver()
       ([entry]) => {
   // TODO: Add content
 }
@@ -49,8 +56,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
       },
       {
   // TODO: Add content
-}
-        threshold: 0.1,
+};
+  threshold: 0.1,
         rootMargin: '50px',
       }
     );
@@ -74,22 +81,47 @@ const LazyImage: React.FC<LazyImageProps> = ({
     onError?.();
   };
   return (
-  // TODO: Add parameters,
-)
-    <div
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div
       ref={imgRef} className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
-//     >
-      {!isInView ? (
-  // TODO: Add parameters,
-)
-        <img
+// >
+      {!isInView ? ()
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          <img
           src={placeholder}
           alt="" className="w-full h-full object-cover"
           aria-hidden="true"
-//         />
+// />
       ) : (
-<><img
+
+          
+          
+          
+          
+          
+          
+          
+          
+          <><img
             src={hasError ? placeholder : src}
             alt={alt} className={cn(
               'w-full h-full object-cover transition-opacity duration-300',
@@ -99,9 +131,18 @@ const LazyImage: React.FC<LazyImageProps> = ({
             onError={handleError}
             loading={priority ? 'eager' : 'lazy'}
             decoding="async"
-//           />
+// />
           {!isLoaded && !hasError && (
-<div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>
+
+          
+          
+          
+          
+          
+          
+          
+          
+          <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>
           )}
         </>
       )}

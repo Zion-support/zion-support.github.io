@@ -1,32 +1,38 @@
 import React from 'react';
-import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
+import { Mail, Target, Send, BarChart, Users, TrendingUp ,  Mail,  Target,  Send,  BarChart,  Users,  TrendingUp from 'lucide-react';
 const AiEmailMarketingPage: React.FC = () => {
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 const AIEmailMarketingPage: React.FC = () => {
-  // TODO: Add content
-}
+  return (
+    <div>Coming Soon</div>
+  );
+};
   const _features = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     {
   // TODO: Add content
-}
-      icon: Mail,
+};
+  icon: Mail,
       title: 'AI Content Generation',
       description: 'Automatically create compelling email content that resonates with your audience'
     },
 icon: Target,
       title: 'Smart Segmentation',
-      description: 'AI-powered audience segmentation for highly targeted campaigns'
+      description: 'AI-powered audience segmentation for highly targeted campaigns',
+
       icon: Send,
       title: 'Optimal Send Times',
-      description: 'AI determines the best time to send emails for maximum engagement'
+      description: 'AI determines the best time to send emails for maximum engagement',
+
       icon: BarChart,
       title: 'Predictive Analytics',
-      description: 'Forecast campaign performance and optimize for better results'
+      description: 'Forecast campaign performance and optimize for better results',
+
       icon: Users,
       title: 'Behavioral Triggers',
-      description: 'Automated email sequences based on user behavior and actions'
+      description: 'Automated email sequences based on user behavior and actions',
+
       icon: TrendingUp,
       title: 'A/B Testing',
       description: 'Intelligent A/B testing with AI-powered optimization'
@@ -45,14 +51,14 @@ icon: Target,
     { name: 'Transactional', icon: '📧', description: 'Order confirmations and receipts' },
     { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
     { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
-  const pricing = [
-      name: 'Starter',
+  const pricing = [;
+  name: 'Starter',
       price: '$29',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
   // TODO: Add items,
-]
+];
 //         '1,000 subscribers',
 //         '10,000 emails/month',
 //         'Basic AI features',
@@ -60,7 +66,8 @@ icon: Target,
 //         'Basic analytics',
 //         'Email support'
 //       ],
-      popular: false
+      popular: false,
+
       name: 'Professional',
       price: '$79',
       description: 'Ideal for growing businesses',
@@ -71,7 +78,8 @@ icon: Target,
         'Advanced analytics',
         'Priority support',
         'A/B testing'
-      popular: true
+      popular: true,
+
       name: 'Enterprise',
       price: '$199',
       description: 'For large organizations',
@@ -86,9 +94,18 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   return (
-  // TODO: Add parameters,
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Email Marketing | Zion Tech Group</title>
         <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." />
@@ -98,12 +115,30 @@ import Footer from '../components/Footer';
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Email Marketing</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-//             Coming Soon - Advanced AI email marketing solutions that will transform your business.
+// Coming Soon - Advanced AI email marketing solutions that will transform your business.
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-//               Contact Us
-            </button>
+// Contact Us
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
 Learn More
           </div>

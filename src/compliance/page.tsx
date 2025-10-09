@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
+import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
@@ -14,12 +14,12 @@ const CompliancePage: React.FC = () => {
     { name: 'NIST Framework', status: 'Implemented' }
   ];
   const complianceAreas = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     {
   // TODO: Add content
-}
-      icon: Shield,
+};
+  icon: Shield,
       title: 'Data Protection',
       description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
       features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
@@ -34,9 +34,18 @@ const CompliancePage: React.FC = () => {
       features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
   return (
-  // TODO: Add parameters,
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
@@ -45,10 +54,28 @@ const CompliancePage: React.FC = () => {
               <Link
                 to="/privacy"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-//               >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-//                 Back to Privacy Policy
-              </Link>
+// >
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          <ArrowLeft className="w-4 h-4 mr-2" />
+// Back to Privacy Policy
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </Link>
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
         </section>
@@ -57,19 +84,36 @@ const CompliancePage: React.FC = () => {
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-//                 Our Commitment to Compliance
-              </h2>
+// Our Commitment to Compliance
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-//                 At Zion Tech Group, we maintain the highest standards of compliance and security.
+// At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected
 //                 and our services meet the most stringent requirements.
-              </p>
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
             {/* Certifications Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {certifications.map((cert, index) => (
-  // TODO: Add parameters,
-)
-                <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
+              {certifications.map((cert, index) => ()
+                
+          <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
                   <div className="flex items-center justify-between">
                     <h3 className="text-lg font-semibold text-gray-900">{cert.name}</h3>
                     <div className="flex items-center text-green-600">
@@ -80,20 +124,18 @@ const CompliancePage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
 Compliance Areas
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {complianceAreas.map((area, index) => (
-  // TODO: Add parameters,
-)
-                <div key={index} className="bg-white rounded-lg shadow-md p-8">
+              {complianceAreas.map((area, index) => ()
+                
+          <div key={index} className="bg-white rounded-lg shadow-md p-8">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
                       <area.icon className="w-6 h-6 text-blue-600" />
                     <h3 className="text-xl font-semibold text-gray-900">{area.title}</h3>
                   <p className="text-gray-600 mb-4">{area.description}</p>
                   <ul className="space-y-2">
-                    {area.features.map((feature, featureIndex) => (
-  // TODO: Add parameters,
-)
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                    {area.features.map((feature, featureIndex) => ()
+                      
+          <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>

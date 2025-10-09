@@ -1,16 +1,25 @@
 'use client';
 interface SEOOptimizerProps {
   // TODO: Add content
-}
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
+};
+  title: string;,
+    description: string;,
+    keywords: string[];,
+    canonicalUrl: string;
   structuredData?: object;
   ogImage?: string;
   twitterCard?: string;
 }
-const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
+const SEOOptimizer: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <SEOOptimizerProps> = memo(({
   // TODO: Add content
 }
   title = 'Zion Tech Group - Advanced AI and IT Solutions',

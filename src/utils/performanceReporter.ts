@@ -5,21 +5,21 @@
  */
 export interface PerformanceMetric {
   // TODO: Add content
-}
-  name: string;
-  value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-  timestamp: number;
+};
+  name: string;,
+    value: number;,
+    rating: 'good' | 'needs-improvement' | 'poor';,
+    timestamp: number;
 }
 export interface PerformanceReport {
   // TODO: Add content
-}
+};
   metrics: PerformanceMetric[];
   navigation?: PerformanceNavigationTiming;
-  resources?: PerformanceResourceTiming[];
-  timestamp: number;
-  userAgent: string;
-  url: string;
+  resources?: PerformanceResourceTiming[];,
+    timestamp: number;,
+    userAgent: string;,
+    url: string;
 }
 class PerformanceReporter {
   // TODO: Add content
@@ -214,8 +214,8 @@ const slowResources = resources
 }
           logger.warn('Slow resource detected', {
   // TODO: Add content
-}
-            name: resource.name,
+};
+  name: resource.name,
             duration: resource.duration,;
             type: resource.initiatorType
           });
@@ -253,10 +253,19 @@ const slowResources = resources
   private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   // TODO: Add content
 }
-    const thresholds: Record<string, { good: number; poor: number }> = {
+    const thresholds: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, { good: number; poor: number }> = {
   // TODO: Add content
-}
-      lcp: { good: 2500, poor: 4000 },
+};
+  lcp: { good: 2500, poor: 4000 },
       fid: { good: 100, poor: 300 },
       cls: { good: 0.1, poor: 0.25 },
       fcp: { good: 1800, poor: 3000 },
@@ -270,12 +279,30 @@ const slowResources = resources
 }
       return 'good'
     }
-    if (value <= threshold.good) {
+    if (value 
+          
+          
+          
+          
+          
+          
+          
+          
+          <= threshold.good) {
   // TODO: Add content
 }
       return 'good'
     }
-    if (value <= threshold.poor) {
+    if (value 
+          
+          
+          
+          
+          
+          
+          
+          
+          <= threshold.poor) {
   // TODO: Add content
 }
       return 'needs-improvement'
@@ -299,8 +326,8 @@ const slowResources = resources
 }
       gtag('event', metric.name, {
   // TODO: Add content
-}
-        event_category: 'Web Vitals',
+};
+  event_category: 'Web Vitals',
         value: Math.round(metric.value),
         event_label: metric.rating,
         non_interaction: true
@@ -322,8 +349,8 @@ const slowResources = resources
 const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
     return {
   // TODO: Add content
-}
-      metrics: this.metrics,
+};
+  metrics: this.metrics,
 //       navigation,
       resources: resources.slice(0, 50), // Limit to 50 resources,
   timestamp: Date.now(),
@@ -350,12 +377,12 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
     }
     logger.info('Performance Report', {
   // TODO: Add content
-}
-      metrics: report.metrics,
+};
+  metrics: report.metrics,
       navigation: {
   // TODO: Add content
-}
-        ttfb: report.navigation?.responseStart ?
+};
+  ttfb: report.navigation?.responseStart ?
           report.navigation.responseStart - report.navigation.requestStart : null,
         domContentLoaded: report.navigation?.domContentLoadedEventEnd ?
           report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null
@@ -386,8 +413,8 @@ if (typeof window !== 'undefined') {
 }
   performanceReporter.init({
   // TODO: Add content
-}
-    enabled: process.env['NODE_ENV'] === 'production',
+};
+  enabled: process.env['NODE_ENV'] === 'production',
     reportInterval: 60000, // Report every minute
   })
 }

@@ -5,7 +5,16 @@ export interface Metadata {
   title?: string;
   description?: string;
   keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[];
+  authors?: Array
+          
+          
+          
+          
+          
+          
+          
+          
+          <{ name: string; url?: string }> | string[];
   creator?: string;
   publisher?: string;
   formatDetection?: {
@@ -28,17 +37,35 @@ export interface Metadata {
     description?: string;
     url?: string;
     siteName?: string;
-    images?: Array<{
+    images?: Array
+          
+          
+          
+          
+          
+          
+          
+          
+          <{
   // TODO: Add content
-}
-      url: string;
+};
+  url: string;
       width?: number;
       height?: number;
       alt?: string;
     }>;
     locale?: string;
     type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
+    authors?: Array
+          
+          
+          
+          
+          
+          
+          
+          
+          <{ name: string; url?: string }> | string[];
     publishedTime?: string;
   }
   twitter?: {
@@ -82,7 +109,7 @@ export interface MetadataRoute {
 export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
 export interface MetadataRouteSitemap {
   // TODO: Add content
-}
+};
   url: string;
   lastModified?: Date | string;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';

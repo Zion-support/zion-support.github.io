@@ -17,13 +17,13 @@ export interface PerformanceMetrics {
 }
 export interface ErrorReport {
   // TODO: Add content
-}
+};
   message: string;
   stack?: string;
-  component?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
+  component?: string;,
+    timestamp: number;,
+    userAgent: string;,
+    url: string;
 class MonitoringService {
   // TODO: Add content
 }
@@ -49,8 +49,8 @@ class MonitoringService {
 }
       gtag('event', name, {
   // TODO: Add content
-}
-        value: Math.round(name === 'cls' ? value * 1000 : value),
+};
+  value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
   public logError(error: ErrorReport): void {
 this.errors.push(error)
@@ -83,8 +83,8 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
 }
         console.log('[Memory]', {
   // TODO: Add content
-}
-          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+};
+  used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
   public measureNavigationTiming(): void {

@@ -23,7 +23,16 @@ const BusinessAppsPage: React.FC = () => {
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-//             Why Choose Our Business Apps?
+// Why Choose Our Business Apps?
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </h2>
 <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>
@@ -38,9 +47,8 @@ const BusinessAppsPage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>
               <p className="text-gray-300 text-sm">Live insights and analytics to drive better decisions</p>
         {/* Apps by Category */}
-        {categories.map(category => (
-  // TODO: Add parameters,
-)
+        {categories.map(category => ()
+          
           <section key={category} className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>
             <div>{businessApps
@@ -54,10 +62,9 @@ const BusinessAppsPage: React.FC = () => {
                       <div>Save up to 50% vs market rates</div>
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
-                        {app.features.slice(0, 3).map((feature, featureIndex) => (
-  // TODO: Add parameters,
-)
-                          <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                        {app.features.slice(0, 3).map((feature, featureIndex) => ()
+                          
+          <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {feature}
                           </li>
@@ -67,10 +74,9 @@ const BusinessAppsPage: React.FC = () => {
                         )}
                       </ul>
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefits:</h5>
-                        {app.benefits.map((benefit, benefitIndex) => (
-  // TODO: Add parameters,
-)
-                          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
+                        {app.benefits.map((benefit, benefitIndex) => ()
+                          
+          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                             <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
                             {benefit}
 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all text-sm inline-block"

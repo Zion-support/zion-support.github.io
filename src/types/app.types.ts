@@ -13,7 +13,16 @@ fcp?: number; // First Contentful Paint;
   cls?: number; // Cumulative Layout Shift;
   ttfb?: number; // Time to First Byte;
   fmp?: number; // First Meaningful Paint;
-  customMetrics?: Record<string, number>;
+  customMetrics?: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, number>;
 }
 /**
  * Performance Report Interface;
@@ -21,11 +30,20 @@ fcp?: number; // First Contentful Paint;
  */
 export interface PerformanceReport {
   // TODO: Add content
-}
-  webVitals: Partial<PerformanceMetrics>;
-  resources: ResourceStats;
-  memory: MemoryStats | null;
-  timestamp: number;
+};
+  webVitals: Partial
+          
+          
+          
+          
+          
+          
+          
+          
+          <PerformanceMetrics>;,
+    resources: ResourceStats;,
+    memory: MemoryStats | null;,
+    timestamp: number;
 }
 /**
  * Resource Statistics Interface;
@@ -33,12 +51,12 @@ export interface PerformanceReport {
  */
 export interface ResourceStats {
   // TODO: Add content
-}
-  total: number;
-  scripts: number;
-  styles: number;
-  images: number;
-  fonts: number;
+};
+  total: number;,
+    scripts: number;,
+    styles: number;,
+    images: number;,
+    fonts: number;
 }
 /**
  * Memory Statistics Interface;
@@ -46,10 +64,10 @@ export interface ResourceStats {
  */
 export interface MemoryStats {
   // TODO: Add content
-}
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
+};
+  usedJSHeapSize: number;,
+    totalJSHeapSize: number;,
+    jsHeapSizeLimit: number;
 }
 /**
  * Performance Alert Interface;
@@ -57,13 +75,13 @@ export interface MemoryStats {
  */
 export interface PerformanceAlert {
   // TODO: Add content
-}
-  type: 'warning' | 'error' | 'info';
-  message: string;
-  metric: keyof PerformanceMetrics;
-  value: number;
-  threshold: number;
-  timestamp: number;
+};
+  type: 'warning' | 'error' | 'info';,
+    message: string;,
+    metric: keyof PerformanceMetrics;,
+    value: number;,
+    threshold: number;,
+    timestamp: number;
 }
 /**
  * Layout Shift Interface;
@@ -71,9 +89,9 @@ export interface PerformanceAlert {
  */
 export interface LayoutShift extends PerformanceEntry {
   // TODO: Add content
-}
-  value: number;
-  hadRecentInput: boolean;
+};
+  value: number;,
+    hadRecentInput: boolean;
 }
 /**
  * Performance with Memory Interface;
@@ -84,9 +102,9 @@ export interface PerformanceWithMemory extends Performance {
 }
   memory: {
   // TODO: Add content
-}
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
+};
+  usedJSHeapSize: number;,
+    totalJSHeapSize: number;,
     jsHeapSizeLimit: number;
   }
 }

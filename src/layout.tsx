@@ -6,7 +6,7 @@ export default function RootLayout({
 //   children,
 }: {
   // TODO: Add content
-}
+};
   children: React.ReactNode;
 }) {
     address: {
@@ -34,8 +34,8 @@ export default function RootLayout({
 }
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
-        }
-          itemOffered: {
+        };
+  itemOffered: {
   // TODO: Add content
 }
             '@type': 'Service',

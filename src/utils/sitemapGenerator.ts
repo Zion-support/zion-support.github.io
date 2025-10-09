@@ -1,7 +1,7 @@
 // Sitemap generator utility;
 export interface SitemapUrl {
   // TODO: Add content
-}
+};
   loc: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
@@ -12,14 +12,32 @@ export const _generateSitemap = (urls: SitemapUrl[]): string => {
 }
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  const sitemap = `
+          
+          
+          
+          
+          
+          
+          
+          
+          <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map((url) => {
   // TODO: Add content
 }
     const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
-    return `  <url>
+    return `  
+          
+          
+          
+          
+          
+          
+          
+          
+          <url>
     <loc>${fullUrl}</loc>
     <lastmod>${url.lastmod || currentDate}</lastmod>
     <changefreq>${url.changefreq || 'weekly'}</changefreq>

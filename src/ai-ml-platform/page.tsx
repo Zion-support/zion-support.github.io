@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
+import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star ,  Brain,  TrendingUp,  Users,  Clock,  Star from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
@@ -9,11 +9,11 @@ const AIMLPlatformPage: React.FC = () => {
 const features = [
     {
   // TODO: Add content
-}
-      icon: Brain,
+};
+  icon: Brain,
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
-      benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
+      benefits: ['Rapid model development', 'Automated training', 'Seamless deployment'];
     },
       icon: TrendingUp,
       title: 'Advanced Analytics',
@@ -35,7 +35,8 @@ const features = [
         'High-performance compute',
         'Advanced analytics',
         'Team collaboration'
-      popular: true
+      popular: true,
+
       name: 'Enterprise',
       price: '$4,999',
       description: 'For large organizations',
@@ -47,16 +48,25 @@ const features = [
         'White-label options',
         'API access'
   const stats = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
   return (
-  // TODO: Add parameters,
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI ML Platform | Zion Tech Group</title>
         <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
@@ -66,12 +76,30 @@ const features = [
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-//             Coming Soon - Advanced AI ML platform solutions that will transform your business.
+// Coming Soon - Advanced AI ML platform solutions that will transform your business.
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-//               Contact Us
-            </button>
+// Contact Us
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
 Learn More
           </div>

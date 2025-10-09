@@ -11,10 +11,28 @@ const getAllPages = () => {
   ];
 };
 const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {
-  const baseUrl = 'https://ziontechgroup.com';
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+  const baseUrl = 'https:// ziontechgroup.com';
+  const sitemap = `
+          
+          
+          
+          
+          
+          
+          
+          
+          <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  
+          
+          
+          
+          
+          
+          
+          
+          
+          <url>
     <loc>${baseUrl}${page.url}</loc>
     <priority>${page.priority}</priority>
     <changefreq>${page.changefreq}</changefreq>
@@ -22,9 +40,10 @@ ${pages.map(page => `  <url>
 </urlset>`;
   return sitemap;
   return (
-  // TODO: Add parameters,
-)
-    <div>
+    <div>Coming Soon</div>
+  )
+    
+          <div>
       <pre>{sitemap}</pre>
     </div>
   );

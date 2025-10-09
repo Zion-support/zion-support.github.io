@@ -25,7 +25,16 @@ export class SecurityManager {
   // TODO: Add content
 }
     return input
-//       .replace(/[<>]/g, '')
+//       .replace(/[
+          
+          
+          
+          
+          
+          
+          
+          
+          <>]/g, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+=/gi, '')
       .trim();
@@ -91,7 +100,16 @@ const validRequests = requests.filter((time: number) => time > windowStart);
     storage.set(key, validRequests);
     return true;
   }
-  private getRateLimitStorage(): Map<string, number[]> {
+  private getRateLimitStorage(): Map
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, number[]> {
   // TODO: Add content
 }
     if (!global._rateLimitStorage) {

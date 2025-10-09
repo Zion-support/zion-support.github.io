@@ -10,18 +10,45 @@ export interface CacheOptions {
   storage?: 'memory' | 'localStorage' | 'sessionStorage';
   maxSize?: number; // Maximum number of entries
 }
-export interface CacheEntry<T> {
+export interface CacheEntry
+          
+          
+          
+          
+          
+          
+          
+          
+          <T> {
+  // TODO: Add content
+};
+  value: T;,
+    expiry: number;,
+    hits: number;,
+    lastAccessed: number;
+}
+class AdvancedCache
+          
+          
+          
+          
+          
+          
+          
+          
+          <T = unknown> {
   // TODO: Add content
 }
-  value: T;
-  expiry: number;
-  hits: number;
-  lastAccessed: number;
-}
-class AdvancedCache<T = unknown> {
-  // TODO: Add content
-}
-  private cache: Map<string, CacheEntry<T>> = new Map();
+  private cache: Map
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, CacheEntry<T>> = new Map();
   private accessOrder: string[] = [];
   private options: Required<CacheOptions>;
   private storageKey = 'advanced-cache';
@@ -30,8 +57,8 @@ class AdvancedCache<T = unknown> {
 }
     this.options = {
   // TODO: Add content
-}
-      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes,
+};
+  ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes,
   storage: options.storage || 'memory',
       maxSize: options.maxSize || 100
     };
@@ -86,8 +113,8 @@ class AdvancedCache<T = unknown> {
       const storage = this.getStorage();
       const data = {
   // TODO: Add content
-}
-        cache: Object.fromEntries(this.cache.entries()),
+};
+  cache: Object.fromEntries(this.cache.entries()),
         accessOrder: this.accessOrder
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
@@ -246,21 +273,39 @@ class AdvancedCache<T = unknown> {
   }
   public getStats(): {
   // TODO: Add content
-}
-    size: number;
-    maxSize: number;
-    hitRate: number;
-    entries: Array<{
+};
+  size: number;,
+    maxSize: number;,
+    hitRate: number;,
+    entries: Array
+          
+          
+          
+          
+          
+          
+          
+          
+          <{
   // TODO: Add content
-}
-      key: string;
-      hits: number;
-      age: number;
+};
+  key: string;,
+    hits: number;,
+    age: number;
     }>;
   } {
   // TODO: Add content
 }
-    const entries: Array<{ key: string; hits: number; age: number }> = [];
+    const entries: Array
+          
+          
+          
+          
+          
+          
+          
+          
+          <{ key: string; hits: number; age: number }> = [];
     const now = Date.now();
     this.cache.forEach((entry, key) => {
   // TODO: Add content
@@ -276,19 +321,27 @@ class AdvancedCache<T = unknown> {
     });
     return {
   // TODO: Add content
-}
-      size: this.cache.size,
+};
+  size: this.cache.size,
       maxSize: this.options.maxSize,
       hitRate: totalHits / Math.max(this.cache.size, 1),
       entries: entries.sort((a, b) => b.hits - a.hits)
     };
   }
   // Utility method for async operations with caching
-//   public async getOrFetch<R extends T>(
-  // TODO: Add parameters,
-)
+//   public async getOrFetch
+          
+          
+          
+          
+          
+          
+          
+          
+          <R extends T>()
     key: string,
-    fetcher: () => Promise<R>,
+    fetcher: () => Promise
+          <R>,
     ttl?: number,
 ): Promise<R> {
   // TODO: Add content
@@ -305,10 +358,28 @@ class AdvancedCache<T = unknown> {
   }
 }
 // Export factory function;
-export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<T> {
+export function createCache
+          
+          
+          
+          
+          
+          
+          
+          
+          <T = unknown>(options?: CacheOptions): AdvancedCache<T> {
   // TODO: Add content
 }
-  return new AdvancedCache<T>(options);
+  return new AdvancedCache
+          
+          
+          
+          
+          
+          
+          
+          
+          <T>(options);
 }
 // Export default cache instance
 export const defaultCache = new AdvancedCache();

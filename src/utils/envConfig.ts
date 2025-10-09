@@ -5,13 +5,13 @@
  */
 export interface EnvConfig {
   // TODO: Add content
-}
-  nodeEnv: 'development' | 'production' | 'test';
-  apiUrl: string;
-  apiKey?: string;
-  enableAnalytics: boolean;
-  enableLogging: boolean;
-  logLevel: 'debug' | 'info' | 'warn' | 'error';
+};
+  nodeEnv: 'development' | 'production' | 'test';,
+    apiUrl: string;
+  apiKey?: string;,
+    enableAnalytics: boolean;,
+    enableLogging: boolean;,
+    logLevel: 'debug' | 'info' | 'warn' | 'error';
   sentryDsn?: string;
   gaTrackingId?: string;
 }
@@ -47,7 +47,16 @@ class EnvironmentConfig {
   /**
    * Get the entire configuration object
    */
-  public getConfig(): Readonly<EnvConfig> {
+  public getConfig(): Readonly
+          
+          
+          
+          
+          
+          
+          
+          
+          <EnvConfig> {
   // TODO: Add content
 }
     return Object.freeze({ ...this.config });
@@ -55,7 +64,16 @@ class EnvironmentConfig {
   /**
    * Get a specific configuration value
    */
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {
+  public get
+          
+          
+          
+          
+          
+          
+          
+          
+          <K extends keyof EnvConfig>(key: K): EnvConfig[K] {
   // TODO: Add content
 }
     return this.config[key];
@@ -89,8 +107,8 @@ class EnvironmentConfig {
    */
   public validate(requiredVars: (keyof EnvConfig)[]): {
   // TODO: Add content
-}
-    valid: boolean;
+};
+  valid: boolean;,
     missing: string[];
   } {
   // TODO: Add content
@@ -107,18 +125,36 @@ class EnvironmentConfig {
     }
     return {
   // TODO: Add content
-}
-      valid: missing.length === 0,
+};
+  valid: missing.length === 0,
 //       missing
     };
   }
   /**
    * Get API headers with authentication
    */
-  public getApiHeaders(): Record<string, string> {
+  public getApiHeaders(): Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, string> {
   // TODO: Add content
 }
-    const headers: Record<string, string> = {
+    const headers: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, string> = {
   // TODO: Add content
 }
       'Content-Type': 'application/json'
@@ -142,8 +178,8 @@ class EnvironmentConfig {
       console.group(' Environment Configuration');
       console.table({
   // TODO: Add content
-}
-        Environment: this.config.nodeEnv,
+};
+  Environment: this.config.nodeEnv,
         'API URL': this.config.apiUrl,
         'Analytics Enabled': this.config.enableAnalytics,
         'Logging Enabled': this.config.enableLogging,

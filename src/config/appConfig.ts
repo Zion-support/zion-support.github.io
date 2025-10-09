@@ -7,36 +7,36 @@ export interface AppConfig {
 }
   app: {
   // TODO: Add content
-}
-    name: string;
-    version: string;
+};
+  name: string;,
+    version: string;,
     environment: 'development' | 'production' | 'test';
   };
   api: {
   // TODO: Add content
-}
-    baseUrl: string;
-    timeout: number;
-    retryAttempts: number;
-  features: {
+};
+  baseUrl: string;,
+    timeout: number;,
+    retryAttempts: number;,
+    features: {
   // TODO: Add content
-}
-    analytics: boolean;
-    monitoring: boolean;
-    errorTracking: boolean;
-    performanceOptimization: boolean;
-  performance: {
+};
+  analytics: boolean;,
+    monitoring: boolean;,
+    errorTracking: boolean;,
+    performanceOptimization: boolean;,
+    performance: {
   // TODO: Add content
-}
-    enableLazyLoading: boolean;
-    imageLazyLoadThreshold: number;
-    componentLazyLoadThreshold: number;
-    cacheMaxAge: number;
-  security: {
+};
+  enableLazyLoading: boolean;,
+    imageLazyLoadThreshold: number;,
+    componentLazyLoadThreshold: number;,
+    cacheMaxAge: number;,
+    security: {
   // TODO: Add content
-}
-    enableCSP: boolean;
-    enableHSTS: boolean;
+};
+  enableCSP: boolean;,
+    enableHSTS: boolean;,
     enableXSSProtection: boolean;
 }
     name: 'Zion Tech Group',
@@ -53,7 +53,16 @@ export interface AppConfig {
 // enableXSSProtection: true
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
-export function getConfig<T = unknown>(keyPath: string): T {
+export function getConfig
+          
+          
+          
+          
+          
+          
+          
+          
+          <T = unknown>(keyPath: string): T {
 const keys = keyPath.split('.');
   const __keys = keyPath.split('.');
   let value: unknown = config;
@@ -63,7 +72,16 @@ const keys = keyPath.split('.');
     if (value && typeof value === 'object' && key in value) {
   // TODO: Add content
 }
-      value = (value as Record<string, unknown>)[key];
+      value = (value as Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, unknown>)[key];
     } else {
   // TODO: Add content
 }

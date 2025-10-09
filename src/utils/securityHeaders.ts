@@ -56,10 +56,17 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {
 /**
  * Get security headers as key-value pairs
  */
-export function getSecurityHeaders(
-  // TODO: Add parameters,
-)
-  customConfig?: Partial<SecurityHeadersConfig>
+export function getSecurityHeaders()
+  customConfig?: Partial
+          
+          
+          
+          
+          
+          
+          
+          
+          <SecurityHeadersConfig>
 ): Record<string, string> {
   const headers: Record<string, string> = {
   // TODO: Add content
@@ -102,10 +109,17 @@ export function getSecurityHeaders(
 /**
  * Get security headers in Next.js format
  */
-export function getNextSecurityHeaders(
-  // TODO: Add parameters,
-)
-  customConfig?: Partial<SecurityHeadersConfig>
+export function getNextSecurityHeaders()
+  customConfig?: Partial
+          
+          
+          
+          
+          
+          
+          
+          
+          <SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {
   // TODO: Add content
 }

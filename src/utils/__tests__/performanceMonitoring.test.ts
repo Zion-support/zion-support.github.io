@@ -108,7 +108,16 @@ describe('performanceMonitoring', () => {
   // TODO: Add content
 }
         let sum = 0;
-        for (let i = 0; i < 1000; i++) {
+        for (let i = 0; i 
+          
+          
+          
+          
+          
+          
+          
+          
+          < 1000; i++) {
   // TODO: Add content
 }
           sum += i;
@@ -166,10 +175,22 @@ const metrics = getMetrics();
   // TODO: Add content
 }
       // Good performance metrics
-      recordMetric('FCP', 1000); // < 1800 = good
-      recordMetric('LCP', 2000); // < 2500 = good
-      recordMetric('FID', 50);   // < 100 = good
-      recordMetric('CLS', 0.05); // < 0.1 = good;
+      recordMetric('FCP', 1000); // 
+          
+          
+          
+          
+          
+          
+          
+          
+          < 1800 = good
+      recordMetric('LCP', 2000); //  
+          < 2500 = good
+      recordMetric('FID', 50);   //  
+          < 100 = good
+      recordMetric('CLS', 0.05); //  
+          < 0.1 = good;
 const score = getPerformanceScore();
       expect(score).toBeGreaterThan(80);
     });

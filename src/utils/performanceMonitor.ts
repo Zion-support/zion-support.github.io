@@ -12,15 +12,24 @@ interface PerformanceMetrics {
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint,
-  customMetrics: Record<string, number>;
+  customMetrics: Record
+          
+          
+          
+          
+          
+          
+          
+          
+          <string, number>;
 }
 class PerformanceMonitor {
   // TODO: Add content
 }
   private _metrics: PerformanceMetrics = {
   // TODO: Add content
-}
-    customMetrics: {}
+};
+  customMetrics: {}
   };
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
@@ -65,9 +74,7 @@ class PerformanceMonitor {
           if (lastEntry) {
   // TODO: Add content
 }
-//             this.recordMetric(
-  // TODO: Add parameters,
-)
+//             this.recordMetric()
 //               'LCP',
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime,
 );
@@ -302,8 +309,8 @@ class PerformanceMonitor {
 }
       (window as any).gtag('event', 'performance_metric', {
   // TODO: Add content
-}
-        metric_name: name,
+};
+  metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance'
       });
@@ -322,7 +329,16 @@ class PerformanceMonitor {
     if (this.metrics.fcp) {
   // TODO: Add content
 }
-      if (this.metrics.fcp <= 1800) scores.push(100);
+      if (this.metrics.fcp 
+          
+          
+          
+          
+          
+          
+          
+          
+          <= 1800) scores.push(100);
       else if (this.metrics.fcp <= 4000) scores.push(50);
       else scores.push(25);
     }
@@ -330,7 +346,16 @@ class PerformanceMonitor {
     if (this.metrics.lcp) {
   // TODO: Add content
 }
-      if (this.metrics.lcp <= 2500) scores.push(100);
+      if (this.metrics.lcp 
+          
+          
+          
+          
+          
+          
+          
+          
+          <= 2500) scores.push(100);
       else if (this.metrics.lcp <= 4000) scores.push(75);
       else if (this.metrics.lcp <= 6000) scores.push(50);
       else scores.push(25);
@@ -339,7 +364,16 @@ class PerformanceMonitor {
     if (this.metrics.fid) {
   // TODO: Add content
 }
-      if (this.metrics.fid <= 100) scores.push(100);
+      if (this.metrics.fid 
+          
+          
+          
+          
+          
+          
+          
+          
+          <= 100) scores.push(100);
       else if (this.metrics.fid <= 300) scores.push(75);
       else if (this.metrics.fid <= 500) scores.push(50);
       else scores.push(25);
@@ -348,7 +382,16 @@ class PerformanceMonitor {
     if (this.metrics.cls) {
   // TODO: Add content
 }
-      if (this.metrics.cls <= 0.1) scores.push(100);
+      if (this.metrics.cls 
+          
+          
+          
+          
+          
+          
+          
+          
+          <= 0.1) scores.push(100);
       else if (this.metrics.cls <= 0.25) scores.push(75);
       else if (this.metrics.cls <= 0.4) scores.push(50);
       else scores.push(25);

@@ -1,14 +1,16 @@
 import React from 'react';
 const CareersPage: React.FC = () => {
-  // TODO: Add content
-}
+  return (
+    <div>Coming Soon</div>
+  );
+};
   const _openPositions = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     {
   // TODO: Add content
-}
-      title: 'Senior AI Engineer',
+};
+  title: 'Senior AI Engineer',
       department: 'Engineering',
       location: 'Remote / Middletown, DE',;
       type: 'Full-time',
@@ -18,8 +20,8 @@ const CareersPage: React.FC = () => {
     },
     {
   // TODO: Add content
-}
-      title: 'Full-Stack Developer',
+};
+  title: 'Full-Stack Developer',
       department: 'Engineering',
       location: 'Remote / Middletown, DE',;
       type: 'Full-time',
@@ -29,8 +31,8 @@ const CareersPage: React.FC = () => {
     },
     {
   // TODO: Add content
-}
-      title: 'AI Product Manager',
+};
+  title: 'AI Product Manager',
       department: 'Product',
       location: 'Remote / Middletown, DE',;
       type: 'Full-time',
@@ -40,8 +42,8 @@ const CareersPage: React.FC = () => {
     },
     {
   // TODO: Add content
-}
-      title: 'Cybersecurity Specialist',
+};
+  title: 'Cybersecurity Specialist',
       department: 'Security',
       location: 'Remote / Middletown, DE',;
       type: 'Full-time',
@@ -51,8 +53,8 @@ const CareersPage: React.FC = () => {
     }
   ];
   const benefits = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
 //     'Competitive salary and equity',
 //     'Comprehensive health insurance',
 //     'Flexible remote work options',
@@ -63,15 +65,33 @@ const CareersPage: React.FC = () => {
 //     'Mentorship programs'
   ];
   return (
-  // TODO: Add parameters,
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Careers</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced careers solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-//           Contact Us
-        </a>
+// Contact Us
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
       </div>
     </div>
   );

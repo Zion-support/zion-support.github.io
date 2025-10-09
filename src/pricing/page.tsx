@@ -1,14 +1,17 @@
 import React from 'react';
+import {  Zap,  Brain,  Cloud } from 'lucide-react';
 const PricingPage: React.FC = () => {
-  // TODO: Add content
-}
+  return (
+    <div>Coming Soon</div>
+  );
+};
   const _plans = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     {
   // TODO: Add content
-}
-      name: 'Starter',
+};
+  name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses getting started with AI',
@@ -28,8 +31,8 @@ const PricingPage: React.FC = () => {
     },
     {
   // TODO: Add content
-}
-      name: 'Professional',
+};
+  name: 'Professional',
       price: '$799',
       period: '/month',
       description: 'Ideal for growing businesses with advanced AI needs',
@@ -51,8 +54,8 @@ const PricingPage: React.FC = () => {
     },
     {
   // TODO: Add content
-}
-      name: 'Enterprise',
+};
+  name: 'Enterprise',
       price: '$1,999',
       period: '/month',
       description: 'Complete AI solution for large organizations',
@@ -76,43 +79,61 @@ const PricingPage: React.FC = () => {
     }
   ];
   const addOns = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
     {
   // TODO: Add content
-}
-      name: 'AI Security Suite',
+};
+  name: 'AI Security Suite',
       price: '$199/month',
       description: 'Advanced security monitoring and compliance',
       icon: Shield
     },
     {
   // TODO: Add content
-}
-      name: 'Custom AI Development',
+};
+  name: 'Custom AI Development',
       price: '$150/hour',
       description: 'Bespoke AI solutions for unique requirements',
       icon: Brain
     },
     {
   // TODO: Add content
-}
-      name: 'Priority Support',
+};
+  name: 'Priority Support',
       price: '$99/month',
       description: '24/7 priority support and faster response times',
       icon: Phone
     }
   ];
   return (
-  // TODO: Add parameters,
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Pricing</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced pricing solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-//           Contact Us
-        </a>
+// Contact Us
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
       </div>
     </div>
   );

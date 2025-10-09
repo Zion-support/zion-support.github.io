@@ -20,7 +20,16 @@ interface SEOProps {
   section?: string;
   tags?: string[];
 }
-const EnhancedSEO: React.FC<SEOProps> = ({
+const EnhancedSEO: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <SEOProps> = ({
   // TODO: Add content
 }
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -44,9 +53,18 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
-  // TODO: Add parameters,
-)
-    <Helmet>
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
       {/* Open Graph Meta Tags */}
@@ -59,23 +77,84 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map((tag, index) => (
-  // TODO: Add parameters,
-)
-        <meta key={index} property="article:tag" content={tag} />
+      {tags.length > 0 && tags.map((tag, index) => ()
+        
+          <meta key={index} property="article:tag" content={tag} />
       ))}
       {/* Structured Data */}
-      {structuredData && (
-  // TODO: Add parameters,
-)
-        <script type="application/ld+json">
+      {structuredData && ()
+        
+          <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
       {/* Preconnect to external domains */}
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /><link rel="preconnect" href="https://www.google-analytics.com" /><link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https:// fonts.googleapis.com" />
+          
+          
+          
+          
+          
+          
+          
+          
+          <link rel="preconnect" href="https:// fonts.gstatic.com" crossOrigin="anonymous" />
+          
+          
+          
+          
+          
+          
+          
+          
+          <link rel="preconnect" href="https:// www.google-analytics.com" />
+          
+          
+          
+          
+          
+          
+          
+          
+          <link rel="preconnect" href="https:// www.googletagmanager.com" />
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" /><link rel="dns-prefetch" href="//www.google-analytics.com" /><link rel="dns-prefetch" href="//www.googletagmanager.com" /></Helmet>
+      
+          
+          
+          
+          
+          
+          
+          
+          
+          <link rel="dns-prefetch" href="// fonts.googleapis.com" />
+          
+          
+          
+          
+          
+          
+          
+          
+          <link rel="dns-prefetch" href="// www.google-analytics.com" />
+          
+          
+          
+          
+          
+          
+          
+          
+          <link rel="dns-prefetch" href="// www.googletagmanager.com" />
+          
+          
+          
+          
+          
+          
+          
+          
+          </Helmet>
   );
 };
 export default EnhancedSEO;

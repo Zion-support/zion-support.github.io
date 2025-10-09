@@ -8,7 +8,16 @@ interface SecurityEnhancerProps {
   enableClickjackingProtection?: boolean;
   enableContentTypeSniffingProtection?: boolean;
 }
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
+const SecurityEnhancer: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <SecurityEnhancerProps> = ({
   // TODO: Add content
 }
   enableCSP = true,
@@ -34,8 +43,8 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
 //       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
@@ -88,8 +97,8 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   // TODO: Add content
 }
     const headers = [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];;
       { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
       { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
       { httpEquiv: 'Strict-Transport-Security', content: 'max-age=63072000; includeSubDomains; preload' }

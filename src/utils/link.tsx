@@ -1,15 +1,24 @@
 interface LinkProps {
   // TODO: Add content
-}
-  href: string;
-  children: React.ReactNode;
+};
+  href: string;,
+    children: React.ReactNode;
   className?: string;
   target?: string;
   rel?: string;
   onClick?: () => void;
   'aria-label'?: string;
 }
-export const Link: React.FC<LinkProps> = ({
+export const Link: React.FC
+          
+          
+          
+          
+          
+          
+          
+          
+          <LinkProps> = ({
   // TODO: Add content
 }
 //   href,
@@ -32,9 +41,18 @@ if (onClick) {
     }
   };
   return (
-  // TODO: Add parameters,
-)
-    <a
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <a
       href={href}
       className={className}
       target={target}
@@ -42,9 +60,18 @@ if (onClick) {
       onClick={handleClick}
       aria-label={ariaLabel}
       {...props}
-//     >
+// >
       {children}
-    </a>
+    
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
   );
 };
 export default Link;

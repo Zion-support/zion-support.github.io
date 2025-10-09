@@ -1,18 +1,27 @@
 'use client';
 interface Props {
   // TODO: Add content
-}
+};
   children: ReactNode;
   fallback?: ReactNode;
 }
 interface State {
   // TODO: Add content
-}
+};
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-class GlobalErrorBoundary extends Component<Props, State> {
+class GlobalErrorBoundary extends Component
+          
+          
+          
+          
+          
+          
+          
+          
+          <Props, State> {
   // TODO: Add content
 }
   constructor(props: Props) {
@@ -60,9 +69,18 @@ class GlobalErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       return (
-  // TODO: Add parameters,
-)
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+        
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full text-center">
             {/* Error Icon */}
             <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
@@ -72,27 +90,43 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>
             {/* Error Message */}
             <h1 className="text-2xl font-bold text-white mb-4">
-//               Something went wrong
-            </h1>
+// Something went wrong
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             {/* Error Details (Development Only) */}
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-  // TODO: Add parameters,
-)
-              <details className="mb-6 text-left">
+            {process.env.NODE_ENV === 'development' && this.state.error && ()
+              
+          <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-//                   Error Details (Development)
-                </summary>
+// Error Details (Development)
+                
+          
+          
+          
+          
+          
+          
+          
+          
+          </summary>
                 <div className="mt-2 p-4 bg-slate-800 rounded-lg text-xs text-red-300 font-mono overflow-auto">
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
-                  {this.state.errorInfo && (
-  // TODO: Add parameters,
-)
-                    <div>
+                  {this.state.errorInfo && ()
+                    
+          <div>
                       <strong>Stack:</strong>
                       <pre className="mt-1 whitespace-pre-wrap">
                         {this.state.errorInfo.componentStack}
@@ -107,21 +141,48 @@ class GlobalErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleRetry}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
-//               >
+// >
 //                 Try Again
-              </button>
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
               <button
                 onClick={() => window.location.reload()}
                 className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300 font-medium"
-//               >
+// >
 //                 Refresh Page
-              </button>
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
               <a
                 href="/"
                 className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
-//               >
+// >
 //                 Go Home
-              </a>
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
             </div>
             {/* Contact Information */}
             <div className="mt-8 pt-6 border-t border-gray-700">
@@ -131,9 +192,18 @@ class GlobalErrorBoundary extends Component<Props, State> {
               <a
                 href="tel:+13024640950"
                 className="text-cyan-400 hover:text-cyan-300 font-medium"
-//               >
+// >
 //                 (302) 464-0950
-              </a>
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          </a>
             </div>
           </div>
         </div>

@@ -2,10 +2,10 @@
 // Enhanced Error Handler;
 export class AppError extends Error {
   // TODO: Add content
-}
-  statusCode: number;
-  isOperational: boolean;
-  timestamp: string;
+};
+  statusCode: number;,
+    isOperational: boolean;,
+    timestamp: string;
   constructor(message: string, statusCode = 500, isOperational = true) {
   // TODO: Add content
 }
@@ -29,8 +29,8 @@ export const _errorHandler = (error: AppError | Error) => {
   });
   return {
   // TODO: Add content
-}
-    message: appError.isOperational ? appError.message : 'An unexpected error occurred',
+};
+  message: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCode: appError.statusCode || 500
   };
 };
