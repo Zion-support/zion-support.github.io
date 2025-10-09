@@ -123,6 +123,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   };
 
+  const contextValue: AnalyticsContextType = {
     trackEvent,
     trackPageView,
     setUserId,

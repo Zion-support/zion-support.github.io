@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useState, useEffect } from 'react';
+
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
@@ -28,20 +30,28 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   useEffect(() => {
     if (enableImageOptimization) {
+      optimizeImages();
     }
     if (enableLazyLoading) {
+      setupLazyLoading();
     }
     if (enablePreloading) {
+      preloadCriticalResources();
     }
     if (enableCodeSplitting) {
+      setupCodeSplitting();
     }
     if (enableResourceHints) {
+      addResourceHints();
     }
     if (enableServiceWorker) {
+      registerServiceWorker();
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
 
+  const optimizeImages = () => {
     const images = document.querySelectorAll('img');
+    let optimized = 0;
     
     images.forEach((img) => {
       // Add loading="lazy" for images below the fold
@@ -68,8 +78,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   };
 
   const setupLazyLoading = () => {
-    if ('IntersectionObserver' in window) {}
-
+    if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {

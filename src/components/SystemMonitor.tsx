@@ -163,8 +163,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   };
   // Get network information
   const getNetworkInfo = () => {
-    if ('connection' in navigator) {}
-
+    if ('connection' in navigator) {
       const nav = navigator as NavigatorWithConnection;
       const connection = nav.connection;
       return {

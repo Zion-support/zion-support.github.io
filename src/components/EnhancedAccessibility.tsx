@@ -214,6 +214,7 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
 
   // Reset all settings
   const resetSettings = () => {
+    const defaultSettings = {
       highContrast: false,
       largeText: false,
       reducedMotion: false,

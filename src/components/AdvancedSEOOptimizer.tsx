@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useEffect } from 'react';
+
 interface AdvancedSEOOptimizerProps {
   title?: string;
   description?: string;
@@ -45,6 +47,45 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   organizationData,
   websiteData
 }) => {
+  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
+    let element = document.querySelector(`meta[${attribute}="${name}"]`);
+    if (!element) {
+      element = document.createElement('meta');
+      element.setAttribute(attribute, name);
+      document.head.appendChild(element);
+    }
+    element.setAttribute('content', content);
+  };
+
+  const addAdditionalSEOTags = () => {
+    // Add viewport meta tag if not present
+    if (!document.querySelector('meta[name="viewport"]')) {
+      const viewport = document.createElement('meta');
+      viewport.name = 'viewport';
+      viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
+      document.head.appendChild(viewport);
+    }
+
+    // Add theme color
+    updateMetaTag('theme-color', '#4f46e5');
+    updateMetaTag('msapplication-TileColor', '#4f46e5');
+    
+    // Add mobile app meta tags
+    updateMetaTag('mobile-web-app-capable', 'yes');
+    updateMetaTag('apple-mobile-web-app-capable', 'yes');
+    updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
+    updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
+    
+    // Add format detection
+    updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
+    
+    // Add referrer policy
+    updateMetaTag('referrer', 'strict-origin-when-cross-origin');
+    
+    // Add content security policy
+    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
+  };
+
   useEffect(() => {
     // Update page title
     document.title = title;
@@ -119,16 +160,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
     
     // Add additional SEO meta tags
-    
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
-
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
-  };
 
   const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -187,35 +219,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     document.head.appendChild(script);
   };
 
-  const addAdditionalSEOTags = () => {
-    // Add viewport meta tag if not present
-    if (!document.querySelector('meta[name="viewport"]')) {}
-
-      const viewport = document.createElement('meta');
-      viewport.name = 'viewport';
-      viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
-      document.head.appendChild(viewport);
-    }
-
-    // Add theme color
-    updateMetaTag('theme-color', '#4f46e5');
-    updateMetaTag('msapplication-TileColor', '#4f46e5');
-    
-    // Add mobile app meta tags
-    updateMetaTag('mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
-    updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
-    
-    // Add format detection
-    updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
-    
-    // Add referrer policy
-    updateMetaTag('referrer', 'strict-origin-when-cross-origin');
-    
-    // Add content security policy
-    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
-  };
+  useEffect(() => {
+    // Add additional SEO tags
+    addAdditionalSEOTags();
+  }, [title, description, keywords, canonicalUrl, ogImage, author, robots, noindex, publishedTime, modifiedTime, section, tags, locale, alternateLocales, breadcrumbs, faqData, organizationData, websiteData]);
 
   return null;
 };
