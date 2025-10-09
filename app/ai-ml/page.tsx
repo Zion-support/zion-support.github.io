@@ -1,0 +1,321 @@
+'use client';
+import React from 'react';
+import { Brain, BarChart, TrendingUp, CheckCircle, Phone, Mail, MapPin, ArrowRight, Star, Users, Clock, Award } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import SecurityEnhancer from '../components/SecurityEnhancer';
+import Analytics from '../components/Analytics';
+
+const AIMLPage: React.FC = () => {
+  const features = [
+    'Custom Model Development',
+    'Predictive Analytics',
+    'Data Pipeline Setup',
+    'Model Monitoring & Maintenance',
+    'Real-time Inference',
+    'A/B Testing Framework',
+    'Model Versioning',
+    'Performance Optimization'
+  ];
+
+  const benefits = [
+    '40% better predictions than traditional methods',
+    '60% faster insights from your data',
+    '85% accuracy improvement in decision-making',
+    'Real-time processing capabilities',
+    'Scalable to millions of data points',
+    'Reduced manual analysis time by 90%'
+  ];
+
+  const useCases = [
+    {
+      title: 'Sales Forecasting',
+      description: 'Predict future sales with 95% accuracy using historical data and market trends',
+      icon: '📈'
+    },
+    {
+      title: 'Customer Churn Prediction',
+      description: 'Identify customers likely to churn and take proactive retention measures',
+      icon: '👥'
+    },
+    {
+      title: 'Fraud Detection',
+      description: 'Detect fraudulent transactions in real-time with 99.9% accuracy',
+      icon: '🛡️'
+    },
+    {
+      title: 'Demand Planning',
+      description: 'Optimize inventory levels based on predicted demand patterns',
+      icon: '📦'
+    }
+  ];
+
+  return (
+    <>
+      <SEOOptimizer
+        title="Machine Learning Solutions - Zion Tech Group"
+        description="Custom machine learning models for predictive analytics, fraud detection, and business intelligence. Enterprise-grade ML solutions that drive real results."
+        keywords={['machine learning', 'ML solutions', 'predictive analytics', 'AI models', 'data science', 'ML consulting']}
+        canonicalUrl="https://ziontechgroup.com/ai-ml"
+      />
+      <PerformanceOptimizer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enableCodeSplitting={true}
+      />
+      <AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReader={true}
+        enableHighContrast={true}
+      />
+      <SecurityEnhancer
+        enableCSP={true}
+        enableHSTS={true}
+        enableXSSProtection={true}
+      />
+      <Analytics />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+              Machine Learning Solutions
+            </h1>
+            <p className="text-xl text-purple-400 mb-8 font-medium">
+              Custom ML Models for Predictive Analytics & Business Intelligence
+            </p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your data into actionable insights with our custom machine learning solutions. 
+              From predictive analytics to fraud detection, we build ML models that drive real business value.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="/contact"
+                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+              >
+                <Phone className="w-5 h-5" />
+                +1 302 464 0950
+              </a>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+              Our ML Capabilities
+            </h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {features.map((feature, index) => (
+                <div key={index} className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2 neon-text">{feature}</h3>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Benefits Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+              Proven Benefits
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <p className="text-gray-300">{benefit}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Use Cases Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+              Common Use Cases
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-4 neon-text">{useCase.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+              Pricing & Packages
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="cyber-card p-8 text-center">
+                <h3 className="text-2xl font-bold text-white mb-4 neon-text">Starter</h3>
+                <div className="text-4xl font-bold text-purple-400 mb-6">$1,500<span className="text-lg text-gray-400">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Basic ML Model Development
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Data Preprocessing
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Model Training & Testing
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Basic Documentation
+                  </li>
+                </ul>
+                <a href="/contact" className="cyber-button px-6 py-3 w-full text-center">
+                  Get Started
+                </a>
+              </div>
+              
+              <div className="cyber-card p-8 text-center ring-2 ring-purple-400">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 neon-text">Professional</h3>
+                <div className="text-4xl font-bold text-purple-400 mb-6">$2,500<span className="text-lg text-gray-400">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Advanced ML Model Development
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Real-time Inference
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Model Monitoring
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    A/B Testing Framework
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Performance Optimization
+                  </li>
+                </ul>
+                <a href="/contact" className="cyber-button px-6 py-3 w-full text-center">
+                  Get Started
+                </a>
+              </div>
+              
+              <div className="cyber-card p-8 text-center">
+                <h3 className="text-2xl font-bold text-white mb-4 neon-text">Enterprise</h3>
+                <div className="text-4xl font-bold text-purple-400 mb-6">$4,000<span className="text-lg text-gray-400">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Custom ML Solutions
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Multi-model Architecture
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    24/7 Support
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Dedicated ML Engineer
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Custom Integration
+                  </li>
+                </ul>
+                <a href="/contact" className="cyber-button px-6 py-3 w-full text-center">
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
+              Ready to Build Your ML Solution?
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
+                <p className="text-gray-300 mb-4">+1 302 464 0950</p>
+                <a 
+                  href="tel:+13024640950" 
+                  className="text-purple-400 hover:text-purple-300 font-medium transition-colors"
+                >
+                  Call Now
+                </a>
+              </div>
+              
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
+                <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
+                >
+                  Send Email
+                </a>
+              </div>
+              
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
+                <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                <a 
+                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:text-green-300 font-medium transition-colors"
+                >
+                  View on Map
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default AIMLPage;
