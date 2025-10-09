@@ -851,16 +851,26 @@ body {
 
 @media (max-width: 480px) {
   .cyber-grid {
+<<<<<<< HEAD:src/globals.css
 <<<<<<< HEAD
 =======
     background-size: 10px 10px;
+=======
+    background-size: 15px 15px;
+>>>>>>> cursor/website-audit-and-update-with-deployment-d15a:app/globals.css
   }
   
   .neon-text {
+    font-size: 1rem;
     text-shadow: 
       0 0 2px #00ffff,
       0 0 4px #00ffff,
       0 0 6px #00ffff;
+  }
+  
+  .cyber-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.25px;
   }
   
   .cyber-text-3d {
@@ -885,6 +895,7 @@ body {
   .quantum-field {
     animation: none;
   }
+<<<<<<< HEAD:src/globals.css
   
   .cyber-grid {
 >>>>>>> cursor/website-audit-and-update-with-deployment-33eb
@@ -899,6 +910,8 @@ body {
     font-size: 0.9rem;
     letter-spacing: 0.25px;
   }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-d15a:app/globals.css
   
   .cyber-card {
     padding: 0.5rem;
@@ -1028,6 +1041,7 @@ body {
     border-color: rgba(0, 0, 0, 0.1);
   }
 }
+<<<<<<< HEAD:src/globals.css
 <<<<<<< HEAD
 
 /* Performance optimizations */
@@ -1107,3 +1121,5 @@ img {
 }
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-33eb
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-d15a:app/globals.css
