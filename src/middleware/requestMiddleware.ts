@@ -3,7 +3,7 @@
  * Request Middleware System
  * Provides middleware for handling requests and responses
  */
-import logger from '../utils/logger';
+import { logger } from '../utils/logger';
 export type NextFunction = () => Promise<unknown> | unknown;
 export interface MiddlewareContext {
   request: {
@@ -45,7 +45,7 @@ export class MiddlewareExecutor {
         return context.response?.data;
       }
       const _middleware = this.middlewares[index++];
-      return await middleware(context, next);
+      return await _middleware(context, next);
     };
     return await next();
   }
@@ -62,7 +62,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   });
   try {
     const _result = await next();
-    const _duration = Date.now() - startTime;
+    const duration = Date.now() - _startTime;
     logger.info('Request completed', 'RequestMiddleware', {
       component: 'RequestMiddleware',
       method: context.request.method,
@@ -70,9 +70,9 @@ export const loggingMiddleware: Middleware = async (context, next) => {
       status: context.response?.status,
       duration
     });
-    return result;
+    return _result;
   } catch (error) {
-    const _duration = Date.now() - startTime;
+    const duration = Date.now() - _startTime;
     logger.error('Request failed', error as Error, 'RequestMiddleware', {
       component: 'RequestMiddleware',
       method: context.request.method,
@@ -87,8 +87,8 @@ export const loggingMiddleware: Middleware = async (context, next) => {
  */
 export const authMiddleware: Middleware = async (context, next) => {
   const _token = getAuthToken();
-  if (token) {
-    context.request.headers['Authorization'] = `Bearer ${token}`;
+  if (_token) {
+    context.request.headers['Authorization'] = `Bearer ${_token}`;
   }
   return await next();
 };
@@ -128,14 +128,14 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
   return async (context, next) => {
     const _key = context.request.url;
     const _now = Date.now();
-    const _timestamps = requests.get(key) || [];
+    const _timestamps = _requests.get(_key) || [];
     // Remove expired timestamps
-    const _validTimestamps = timestamps.filter(t => now - t < windowMs);
-    if (validTimestamps.length >= maxRequests) {
+    const _validTimestamps = _timestamps.filter(t => _now - t < windowMs);
+    if (_validTimestamps.length >= maxRequests) {
       throw new Error('Rate limit exceeded');
     }
-    validTimestamps.push(now);
-    requests.set(key, validTimestamps);
+    _validTimestamps.push(_now);
+    _requests.set(_key, _validTimestamps);
     return await next();
   };
 };
@@ -149,17 +149,17 @@ export const cachingMiddleware = (ttl: number): Middleware => {
       return await next();
     }
     const _key = context.request.url;
-    const _cached = cache.get(key);
-    if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
-      return cached.data;
+    const _cached = _cache.get(_key);
+    if (_cached && Date.now() - _cached.timestamp < ttl) {
+      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: _key });
+      return _cached.data;
     }
     const _result = await next();
-    cache.set(key, {
-      data: result,
+    _cache.set(_key, {
+      data: _result,
       timestamp: Date.now()
     });
-    return result;
+    return _result;
   };
 };
 /**
