@@ -72,33 +72,78 @@ const ServicesPage: React.FC = () => {
     {
 
       title: 'Web Development',
-      icon: Globe,
+      icon: Code,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      description: 'Modern web applications with cutting-edge technologies',
+      description: 'Modern web applications and digital experiences',
       services: [
         {
           name: 'Frontend Development',
-          description: 'React, Next.js, and modern JavaScript frameworks',
-          price: 'Starting at $1,000/month',
-          features: ['React/Next.js Development', 'Responsive Design', 'Performance Optimization', 'SEO Implementation']
+          description: 'React, Vue, Angular applications with modern UI/UX',
+          price: 'Starting at $999/month',
+          features: ['Responsive Design', 'Performance Optimization', 'Cross-browser Compatibility', 'Accessibility']
         },
         {
           name: 'Backend Development',
-          description: 'Scalable server-side solutions with Node.js, Python, and more',
-          price: 'Starting at $1,200/month',
-          features: ['API Development', 'Database Design', 'Authentication', 'Performance Optimization']
+          description: 'Scalable APIs and server-side applications',
+          price: 'Starting at $1,299/month',
+          features: ['RESTful APIs', 'Database Design', 'Authentication', 'Performance Optimization']
+
         },
         {
           name: 'Full-Stack Development',
           description: 'Complete web applications from frontend to backend',
-          price: 'Starting at $1,800/month',
-          features: ['End-to-End Development', 'Database Integration', 'Third-party Integrations', 'Deployment & Maintenance']
+
+          price: 'Starting at $1,799/month',
+          features: ['End-to-End Development', 'Database Integration', 'Deployment', 'Maintenance']
 
         }
       ]
     }
   ];
+
+  const microSaasServices = [
+    {
+      name: 'Database Management',
+      description: 'Database design, optimization, and management with AI-powered tuning',
+      price: 'Starting at $899/month',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
+    }
+  ];
+
+  const microSaas = {
+    title: 'Micro SAAS',
+    icon: Zap,
+    color: 'text-cyan-400',
+    bgColor: 'bg-cyan-500/10',
+    description: 'Ready-to-use AI-powered applications',
+    services: [
+      {
+        name: 'AI Project Manager',
+        description: 'Intelligent project planning with AI-powered resource optimization',
+        price: '$99/month',
+        features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration']
+      },
+      {
+        name: 'AI Social Media Manager',
+        description: 'Automate your social media with AI-powered content creation',
+        price: '$79/month',
+        features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence']
+      },
+      {
+        name: 'AI Analytics Dashboard',
+        description: 'Real-time business intelligence with AI-powered insights',
+        price: '$149/month',
+        features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking']
+      },
+      {
+        name: 'AI Email Marketing',
+        description: 'Transform your email marketing with AI-powered content generation',
+        price: '$89/month',
+        features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns']
+      }
+    ]
+  };
 
   const processSteps = [
     {
@@ -135,82 +180,82 @@ const ServicesPage: React.FC = () => {
   ];
 
   const benefits = [
-    'Expert team of engineers',
-    'Cutting-edge technology',
-    '24/7 support',
-    'Scalable solutions',
-    'Cost-effective pricing'
+
+    'Expert Team',
+    'Proven Track Record',
+    '24/7 Support',
+    'Scalable Solutions',
+    'Cost-Effective',
+    'Latest Technologies'
+
   ];
 
   const additionalServices = [
     {
       title: 'AI-Powered Solutions',
-      description: 'Leverage cutting-edge artificial intelligence to automate processes and gain insights',
-      icon: Shield
+
+      description: 'Leverage cutting-edge artificial intelligence to automate processes and gain insights'
     },
     {
+      icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security measures to protect your critical data and systems',
-      icon: Shield
+      description: 'Bank-level security measures to protect your critical data and systems'
     },
     {
       title: 'Rapid Deployment',
-      description: 'Get your solutions up and running quickly with our proven methodologies',
-      icon: BarChart
+      description: 'Get your solutions up and running quickly with our proven methodologies'
     },
     {
+      icon: BarChart,
       title: 'Measurable Results',
-      description: 'Track performance with detailed analytics and reporting dashboards',
-      icon: BarChart
+      description: 'Track performance with detailed analytics and reporting dashboards'
     }
   ];
 
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive technology solutions to transform your business and drive growth.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {serviceCategories.map((category, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all">
-              <div className="flex items-center mb-6">
-                <div className={`p-3 ${category.bgColor} rounded-xl mr-4`}>
-                  <category.icon className={`w-8 h-8 ${category.color}`} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">{category.title}</h3>
-                  <p className="text-gray-300">{category.description}</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                {category.services.map((service, serviceIndex) => (
-                  <div key={serviceIndex} className="border-b border-gray-700 pb-4 last:border-b-0">
-                    <h4 className="text-lg font-semibold text-white mb-2">{service.name}</h4>
-                    <p className="text-gray-300 text-sm mb-2">{service.description}</p>
-                    <div className="text-cyan-400 font-semibold mb-2">{service.price}</div>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Professional AI and IT services for your business transformation." />
+        <meta name="keywords" content="AI services, IT solutions, business transformation" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
+        <div className="container mx-auto px-4 py-8">
+          {/* Hero Section */}
+          <section className="text-center mb-16 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
+            <div className="relative z-10 py-16 px-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Services
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+                Comprehensive AI and IT Solutions
+              </p>
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+                From artificial intelligence and machine learning to cloud migration and cybersecurity, 
+                we provide end-to-end technology solutions that transform businesses and drive growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="cyber-button inline-flex items-center space-x-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Get Free Consultation</span>
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  (302) 464-0950
+                </a>
               </div>
             </div>
-          ))}
-        </div>
+          </section>
+
 
         <div className="text-center mt-16">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -231,10 +276,52 @@ const ServicesPage: React.FC = () => {
       </div>
     </div>
 
+
+          {/* Benefits Section */}
+                Why Choose Our Services?
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
+                    <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                    <p className="text-gray-300 text-sm">{benefit.description}</p>
+
+          {/* CTA Section */}
+          <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8">
+                Get started with our services today and see the difference AI and IT solutions can make.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                >
+                  Call (302) 464-0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Email Us
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+        
+        <Footer />
+      </div>
+    </>
+
   );
 };
 
 export default ServicesPage;"`
+
 
 
 

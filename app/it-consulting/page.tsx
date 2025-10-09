@@ -88,26 +88,36 @@ const ITConsultingPage: React.FC = () => {
 
 
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center mb-2">
+
+                        <li key={idx} className="flex items-center">
+
                           <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
                           {benefit}
                         </li>
                       ))}
 
-
+                    </ul>
 
                     <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
-                    <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
-                      Get Started
-                    </button>
+                      <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
+                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                        Get Started
+                      </button>
+                    </div>
+
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <div className="max-w-4xl mx-auto text-center">
+
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?</h2>
               <p className="text-xl text-gray-600 mb-8">
                 Contact our experts for a free consultation and discover how we can help your business.
@@ -126,20 +136,18 @@ const ITConsultingPage: React.FC = () => {
             </div>
           </section>
 
+
         </main>
         
         <Footer />
       </div>
+
 
     </>
   );
 };
 
 export default ITConsultingPage;
-
-
-
-
 
 
 
