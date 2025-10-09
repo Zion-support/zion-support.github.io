@@ -275,3 +275,7 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
+    Score: ${score}
+    Metrics: ${JSON.stringify(metrics)}
+    `;
+  }

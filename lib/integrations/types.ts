@@ -8,21 +8,6 @@ export type IntegrationProviderId =
   | 'workable'
   | 'bamboohr';
 
-
-
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export interface IntegrationProviderMeta {
@@ -30,16 +15,7 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats';
   description: string;
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 }
-
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';

@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -13,7 +13,12 @@ interface AccessibilityEnhancerProps {
  */
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
-  enableSkipLinks = true,
-  enableKeyboardNav = true,
-  enableFocusIndicators = true,
+  // enableSkipLinks = true,
+  // enableKeyboardNav = true,
+  // enableFocusIndicators = true,
 }) => {
+  // Implementation will be added
+  return <>{children}</>;
+};
+
+export default AccessibilityEnhancer;

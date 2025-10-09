@@ -1,41 +1,14 @@
 import fs from 'fs';
 import path from 'path';
-import fs from 'fs';
-import path from 'path';
-import fs from 'fs';
-import path from 'path';
-import * as fs from 'fs';
-import * as path from 'path';
 import type { IntegrationsState } from './types';
 
-// const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
-// const STATE_FILE = path.join(DATA_DIR, 'state.json');
-import fs from "fs";
-import path from "path";
-import type { IntegrationsState } from "./types";
-
-// const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
-// const STATE_FILE = path.join(DATA_DIR, "state.json");
-import fs from "fs";
-import path from "path";
-import { IntegrationsState } from "./types";
-
-// const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
-// const STATE_FILE = path.join(DATA_DIR, "state.json");
-import fs from 'fs';
-import path from 'path';
-import { IntegrationsState } from './types';
-
-// const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
-// const STATE_FILE = path.join(DATA_DIR, 'state.json');
+const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
+const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-  
-  
-  if (!fs.existsSync(STATE_FILE)) {
 }
 
 export function readState(): IntegrationsState {

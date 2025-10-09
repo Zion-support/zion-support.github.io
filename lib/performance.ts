@@ -55,32 +55,13 @@ const THRESHOLDS = {
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
   TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
 };
 
 /**
  * Get performance rating based on thresholds
  */
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-function getRating(
-  name: string,
-  value: number
-): 'good' | 'needs-improvement' | 'poor' {
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-  const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
+  const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
 
   if (value <= threshold.good) return 'good';
@@ -98,27 +79,9 @@ function sendToAnalytics(metric: Metric): void {
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
     id: metric.id
-    id: metric.id,
-    id: metric.id,
-    id: metric.id,
-    id: metric.id,
-    id: metric.id
-    id: metric.id
-    id: metric.id
-    id: metric.id
-    id: metric.id
-    id: metric.id,
-    id: metric.id,
-    id: metric.id
-    id: metric.id,
-    id: metric.id,
   };
 
   // Log in development
-//     }
-
-    id: metric.id,
-  };
 
   // Log in development
   if (process.env['NODE_ENV'] === 'development') {

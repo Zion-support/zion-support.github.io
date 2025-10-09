@@ -147,38 +147,41 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const _addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    document.head.appendChild(script);
-    _structuredDataRef.current = script;
-  };
+  // Structured data functionality (currently unused but available for future implementation)
+  // const _addStructuredData = (data: Record<string, unknown>) => {
+  //   const script = document.createElement('script');
+  //   script.type = 'application/ld+json';
+  //   script.textContent = JSON.stringify(data);
+  //   script.id = 'structured-data';
+  //   document.head.appendChild(script);
+  //   _structuredDataRef.current = script;
+  // };
 
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,
-        page_location: config.canonicalUrl,
-      });
-    }
-  };
+  // Page view tracking functionality (currently unused but available for future implementation)
+  // const _trackPageView = (config: SEOData) => {
+  //   if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+  //     ((window as unknown as { gtag: (command: string, id: string, config: Record<string, string>) => void }).gtag)('config', 'GA_MEASUREMENT_ID', {
+  //       page_title: config.title,
+  //       page_location: config.canonicalUrl,
+  //     });
+  //   }
+  // };
 
-  const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      window.addEventListener('load', () => {
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (_perfData) {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
-          });
-        }
-      });
-    }
-  };
+  // Performance metrics tracking functionality (currently unused but available for future implementation)
+  // const _trackPerformanceMetrics = () => {
+  //   if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+  //     window.addEventListener('load', () => {
+  //       const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  //       if (_perfData) {
+  //         ((window as unknown as { gtag: (command: string, event: string, data: Record<string, string>) => void }).gtag)('event', 'page_load_performance', {
+  //           event_category: 'Performance',
+  //           event_label: 'Page Load',
+  //           value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
+  //         });
+  //       }
+  //     });
+  //   }
+  // };
 
   return (
     <Helmet>
