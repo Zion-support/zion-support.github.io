@@ -1,15 +1,6 @@
 'use client';
 import React from 'react'
 
-<<<<<<< HEAD
-// Declare gtag function
-declare global {
-  function gtag(command: string, targetId: string, config?: any): void;
-=======
-// Declare gtag function for Google Analytics
-declare global {
-  function gtag(...args: any[]): void;
->>>>>>> origin/main
 }
 
 /**
@@ -31,15 +22,6 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
-<<<<<<< HEAD
-  private config: { gaId: string } = { gaId: '' }
-=======
-<<<<<<< HEAD
-  public config: { gaId: string } = { gaId: '' }
-=======
-  public config: Record<string, any> = {}
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
->>>>>>> origin/main
   /**
    * Initialize analytics service
    */
