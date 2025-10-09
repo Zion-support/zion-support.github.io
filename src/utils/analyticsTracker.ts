@@ -70,7 +70,7 @@ class AnalyticsTracker {
   }
   event_category: event.category,
           event_label: event.label,
-          value: event.value,
+
           non_interaction: event.nonInteraction
         }
   )
@@ -104,9 +104,9 @@ class AnalyticsTracker {
         window.gtag('event', 'performance', {
     // TODO: Add content
   }
-  event_category: 'Web Vitals',
-          event_label: metrics.metric,
-          value: Math.round(metrics.value),
+
+
+
           metric_rating: metrics.rating
         }
   )
@@ -140,9 +140,9 @@ class AnalyticsTracker {
     // TODO: Add content
   }
   name: variable,
-          value: Math.round(value),
-          event_category: category,
-          event_label: label
+
+
+
         }
   )
       }

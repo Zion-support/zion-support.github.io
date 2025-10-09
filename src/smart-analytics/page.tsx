@@ -1,37 +1,35 @@
 import React from 'react';
-<<<<<<< HEAD
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users,  BarChart,  Brain,  Zap,  Shield from 'lucide-react';
-import { Link } from 'react-router-dom';
+import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users, BarChart, Brain, Zap, Shield, import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
   icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefit: 'Make decisions 10x faster'
     },
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
-      benefit: 'Discover hidden opportunities',
 
-      icon: Zap,
-      title: 'Automated Alerts',
-      description: 'Get instant notifications when important metrics change or when action is needed.',
-      benefit: 'Never miss critical changes',
 
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit: '100% data protection'
+
+
+
+
+
+
+
+
+
+
+
+
     }
   ];
   const pricingPlans = [
       name: 'Professional',
       price: '$799',
-      description: 'Advanced analytics for growing businesses',
+
                 {plan.popular && ()
                   
           
@@ -53,7 +51,7 @@ const SmartAnalyticsPage: React.FC = () => {
           
           
           
-          
+          ;
           </span>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -70,13 +68,13 @@ const SmartAnalyticsPage: React.FC = () => {
                     </li>
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-  // TODO: Add content
+  // TODO: Add content;
 }
-//                     plan.popular
+//                     plan.popular;
                       ? 'bg-cyan-600 text-white hover:bg-cyan-700'
                       : 'bg-gray-600 text-white hover:bg-gray-700'
                   }`}
-                  Get Started
+                  Get Started;
         {/* CTA Section */}
         
           
@@ -93,8 +91,8 @@ const SmartAnalyticsPage: React.FC = () => {
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-              Get Free Demo
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hove,text-cyan-600 transition-colors"
+              Get Free Demo;
         {/* Contact Info */}
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -102,38 +100,16 @@ const SmartAnalyticsPage: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-6 text-gray-300">
               <div className="flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2 text-cyan-400" />
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
-+1 (302) 464-0950
+                <a href="tel: +13024640950" className="hove,
+    r:text-white transition-colors">
++1 (302) 464-0950;
                 <Mail className="w-5 h-5 mr-2 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
+                <a href="mailto: kleber@ziontechgroup.com" className="hove,
+
+                  kleber@ziontechgroup.com;
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 
-export default PagePage;
+export default AiAnalyticsDashboardPage;

@@ -27,15 +27,15 @@ export const _usePerformanceOptimization = () => {
     const _metrics: PerformanceMetrics = {
     // TODO: Add content
   }
-  loadTime: navigation
+
 //         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
-      firstContentfulPaint:
+
         paintEntries.find(entry => entry.name === 'first-contentful-paint')
 //           ?.startTime || 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0
+
+
+
     }
     // Measure LCP
 const lcpObserver = new PerformanceObserver(list => {

@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 
 const ServicesAdvertisingPage: React.FC = () => {
   return (
-<<<<<<< HEAD
     
           
           
@@ -19,7 +18,8 @@ const ServicesAdvertisingPage: React.FC = () => {
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8 py-4">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
 // Back to Home
@@ -38,7 +38,8 @@ const ServicesAdvertisingPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 l,
+
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
               <Target className="w-4 h-4 mr-2" />
@@ -97,12 +98,13 @@ AI-Powered Advertising Solutions
           
           <ArrowRight className="w-4 h-4 ml-2" />
 href="#services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+                className="border-2 border-white text-white hover: bg-white hove,text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
                 View Our Services
       </section>
       {/* Key Metrics */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 // Proven Advertising Results
@@ -118,7 +120,8 @@ href="#services"
           </h2>
             <p className="text-xl text-gray-600">
 Our AI-powered advertising delivers measurable business impact
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+
               <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
               <div className="text-gray-600">Average ROI</div>
               <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
@@ -131,7 +134,8 @@ Our AI-powered advertising delivers measurable business impact
       <section id="services" className="py-16 bg-gray-50">
 AI Advertising Solutions
               Comprehensive AI-powered advertising services for maximum impact
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-blue-600 text-4xl mb-4"></div>
               <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>
@@ -245,7 +249,8 @@ Transparent Pricing
                 Contact Sales
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
 Ready to Transform Your Advertising?
           <p className="text-xl mb-8 text-blue-100">
@@ -253,28 +258,8 @@ Ready to Transform Your Advertising?
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               Get Free Assessment
               href="/case-studies"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              View Success Stories
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Advertising Services
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+              className="border-2 border-white text-white hover: bg-white hove,text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              View Success, Stories);
 };
 
 export default ServicesAdvertisingPage;

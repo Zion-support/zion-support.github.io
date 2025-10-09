@@ -124,10 +124,10 @@ export class AccessibilityChecker {
     return {
     // TODO: Add content
   }
-  passed: this.issues.length === 0,
-      issueCount: this.issues.length,
-      issues: [...this.issues],
-      timestamp: new Date(),
+
+
+
+
 //       score
     }
   }
@@ -145,11 +145,11 @@ export class AccessibilityChecker {
       return {
     // TODO: Add content
   }
-  passed: true,
-        issueCount: 0,
-        issues: [],
-        timestamp: new Date(),
-        score: 100
+
+
+
+
+
       }
     }
     return this.checkElement(document.body)
@@ -176,11 +176,11 @@ export class AccessibilityChecker {
         this.addIssue({
     // TODO: Add content
   }
-  type: 'missing-alt-text',
-          severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '1.1.1',
-          message: `Image ${index + 1} is missing alt text`,
+
+
+
+
+
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
           codeExample: '
@@ -203,14 +203,14 @@ export class AccessibilityChecker {
         this.addIssue({
     // TODO: Add content
   }
-  type: 'empty-alt-without-role',
-          severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '1.1.1',
-          message: `Image ${index + 1} has empty alt without role="presentation"`,
-          element: `img[src="${img['src']}"]`,
-          fix: 'Add role="presentation" to decorative images',
-          codeExample: '
+
+
+
+
+
+
+
+
           
           
           
@@ -248,14 +248,14 @@ export class AccessibilityChecker {
         this.addIssue({
     // TODO: Add content
   }
-  type: 'skipped-heading-level',
-          severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.AA,
-          wcagCriterion: '2.4.6',
-          message: `Heading level skipped from h${previousLevel} to h${level}`,
-          element: heading.tagName.toLowerCase(),
-          fix: 'Maintain sequential heading hierarchy',
-          codeExample: `Use h${previousLevel + 1} instead of h${level}`
+
+
+
+
+
+
+
+
         }
   )
       }
@@ -266,13 +266,13 @@ export class AccessibilityChecker {
         this.addIssue({
     // TODO: Add content
   }
-  type: 'empty-heading',
-          severity: A11ySeverity.SERIOUS,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '2.4.6',
-          message: `Empty ${heading.tagName} at position ${index + 1}`,
-          element: heading.tagName.toLowerCase(),
-          fix: 'Add descriptive text to the heading'
+
+
+
+
+
+
+
         }
   )
       }
@@ -287,13 +287,13 @@ const h1Count = element.querySelectorAll('h1').length
       this.addIssue({
     // TODO: Add content
   }
-  type: 'multiple-h1',
-        severity: A11ySeverity.MODERATE,
-        wcagLevel: WCAGLevel.AA,
-        wcagCriterion: '2.4.6',
-        message: `Found ${h1Count} h1 elements (should have only one)`,
-        element: 'h1',
-        fix: 'Use only one h1 per page for the main heading'
+
+
+
+
+
+
+
       }
   )
     }
@@ -322,14 +322,14 @@ const h1Count = element.querySelectorAll('h1').length
         this.addIssue({
     // TODO: Add content
   }
-  type: 'link-no-text',
-          severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '2.4.4',
-          message: `Link ${index + 1} has no accessible text`,
-          element: `a[to="${link.getAttribute('href')}"]`,
-          fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '
+
+
+
+
+
+
+
+
           
           
           
@@ -349,14 +349,14 @@ const h1Count = element.querySelectorAll('h1').length
         this.addIssue({
     // TODO: Add content
   }
-  type: 'generic-link-text',
-          severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.AA,
-          wcagCriterion: '2.4.4',
-          message: `Link ${index + 1} has generic text: "${text}"`,
-          element: `a[to="${link.getAttribute('href')}"]`,
-          fix: 'Use descriptive link text that explains the destination',
-          codeExample: 'Use "Read full article" instead of "Read more"'
+
+
+
+
+
+
+
+
         }
   )
       }
@@ -372,14 +372,14 @@ const target = link.getAttribute('target')
         this.addIssue({
     // TODO: Add content
   }
-  type: 'new-window-no-warning',
-          severity: A11ySeverity.MINOR,
-          wcagLevel: WCAGLevel.AAA,
-          wcagCriterion: '3.2.5',
-          message: `Link ${index + 1} opens in new window without warning`,
-          element: `a[to="${link.getAttribute('href')}"]`,
-          fix: 'Add indication that link opens in new window',
-          codeExample:
+
+
+
+
+
+
+
+
             '
           
           
@@ -419,14 +419,14 @@ const target = link.getAttribute('target')
         this.addIssue({
     // TODO: Add content
   }
-  type: 'button-no-text',
-          severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '4.1.2',
-          message: `Button ${index + 1} has no accessible text`,
-          element: 'button',
-          fix: 'Add text content or aria-label to the button',
-          codeExample: '
+
+
+
+
+
+
+
+
           
           
           
@@ -469,14 +469,14 @@ const target = link.getAttribute('target')
         this.addIssue({
     // TODO: Add content
   }
-  type: 'form-no-label',
-          severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '1.3.1',
-          message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
-          element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
-          fix: 'Associate a label with the form control',
-          codeExample: '
+
+
+
+
+
+
+
+
           
           
           
@@ -514,13 +514,13 @@ const elementsWithColor = element.querySelectorAll('[style*="color"]')
         this.addIssue({
     // TODO: Add content
   }
-  type: 'color-without-background',
-          severity: A11ySeverity.MINOR,
-          wcagLevel: WCAGLevel.AA,
-          wcagCriterion: '1.4.3',
-          message: 'Element has inline color without explicit background',
-          element: el.tagName.toLowerCase(),
-          fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
+
+
+
+
+
+
+
         }
   )
       }
@@ -548,14 +548,14 @@ const elementsWithColor = element.querySelectorAll('[style*="color"]')
         this.addIssue({
     // TODO: Add content
   }
-  type: 'interactive-not-focusable',
-          severity: A11ySeverity.SERIOUS,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '2.1.1',
-          message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
-          element: el.tagName.toLowerCase(),
-          fix: 'Remove tabindex="-1" or use tabindex="0"',
-          codeExample: '
+
+
+
+
+
+
+
+
           
           
           
@@ -584,14 +584,14 @@ const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(b
         this.addIssue({
     // TODO: Add content
   }
-  type: 'click-without-keyboard',
-          severity: A11ySeverity.SERIOUS,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '2.1.1',
-          message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
-          element: el.tagName.toLowerCase(),
-          fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '
+
+
+
+
+
+
+
+
           
           
           
@@ -651,13 +651,13 @@ const validRoles = [
         this.addIssue({
     // TODO: Add content
   }
-  type: 'invalid-aria-role',
-          severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '4.1.2',
-          message: `Invalid ARIA role: "${role}"`,
-          element: el.tagName.toLowerCase(),
-          fix: 'Use a valid ARIA role or remove the role attribute'
+
+
+
+
+
+
+
         }
   )
       }
@@ -673,13 +673,13 @@ const labelledBy = el.getAttribute('aria-labelledby')
           this.addIssue({
     // TODO: Add content
   }
-  type: 'aria-labelledby-missing',
-            severity: A11ySeverity.SERIOUS,
-            wcagLevel: WCAGLevel.A,
-            wcagCriterion: '4.1.2',
-            message: `aria-labelledby references non-existent element: "${labelledBy}"`,
-            element: el.tagName.toLowerCase(),
-            fix: 'Ensure the referenced element exists'
+
+
+
+
+
+
+
           }
   )
         }
@@ -704,12 +704,12 @@ const labelledBy = el.getAttribute('aria-labelledby')
       this.addIssue({
     // TODO: Add content
   }
-  type: 'missing-main-landmark',
-        severity: A11ySeverity.MODERATE,
-        wcagLevel: WCAGLevel.AA,
-        wcagCriterion: '2.4.1',
-        message: 'Page is missing a main landmark',
-        fix: 'Add a 
+
+
+
+
+
+
           
           
           
@@ -719,7 +719,7 @@ const labelledBy = el.getAttribute('aria-labelledby')
           
           
           <main> element or role="main"',
-        codeExample: '<main><!-- Main content --></main>'
+
       }
   )
     }
@@ -736,7 +736,7 @@ const labelledBy = el.getAttribute('aria-labelledby')
     this.issues.push({
     // TODO: Add content
   }
-  id: this.generateIssueId(),
+
 //       ...issue
     }
   )

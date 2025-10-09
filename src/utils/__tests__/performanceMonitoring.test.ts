@@ -8,7 +8,6 @@ describe('performanceMonitoring', () => {
   it('should pass basic test', () => {
     expect(true).toBe(true);
   });
-<<<<<<< HEAD
   describe('getMetrics', () => {
   // TODO: Add content
 }
@@ -225,11 +224,5 @@ const metrics = getMetrics();
       recordMetric('CLS', 0.3); // Poor
       expect(getMetrics()['CLS'].rating).toBe('poor');
     });
-=======
-
-  it('should handle basic functionality', () => {
-    const result = 1 + 1;
-    expect(result).toBe(2);
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   });
 });

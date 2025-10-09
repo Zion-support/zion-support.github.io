@@ -41,7 +41,7 @@ class ErrorLogger {
    * Log an error with context
    */
 //   log(),
-    message: string,
+
     _severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
     context?: Record
@@ -60,7 +60,7 @@ class ErrorLogger {
     const entry: ErrorLogEntry = {
     // TODO: Add content
   }
-  timestamp: new Date().toISOString(),
+
 //       severity,
 //       message,
 //       error,
@@ -167,7 +167,7 @@ class ErrorLogger {
             ? {
     // TODO: Add content
   }
-  message: entry.error.message,
+
                 name: entry.error.name,
                 stack: entry.error.stack
               }

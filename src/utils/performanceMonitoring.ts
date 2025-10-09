@@ -54,10 +54,10 @@ export interface WebVitals {
 export interface CustomMetric {
     // TODO: Add content
   }
-  name: string;,
-    value: number;,
+
+
     unit: 'ms' | 'bytes' | 'count' | 'percentage';,
-    timestamp: number
+
 }
 class PerformanceMonitoringService {
     // TODO: Add content
@@ -198,7 +198,7 @@ const navObserver = new PerformanceObserver((list) => {
 //       name,
 //       value,
 //       rating,
-      timestamp: Date.now()
+
     }
     this.webVitals[name] = metric
     logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating }
@@ -258,7 +258,7 @@ const navObserver = new PerformanceObserver((list) => {
 //       name,
 //       value,
 //       unit,
-      timestamp: Date.now()
+
     }
     this.customMetrics.push(metric)
     // Maintain max metrics limit
@@ -390,8 +390,8 @@ const navObserver = new PerformanceObserver((list) => {
     // TODO: Add content
   }
 //       score,
-      webVitals: this.webVitals,
-      customMetrics: this.customMetrics,
+
+
 //       recommendations
     }
   }

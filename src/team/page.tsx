@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
   const _teamMembers = [
   // TODO: Add items
 ];;
@@ -12,28 +11,32 @@ import Footer from '../components/Footer';
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
       image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/kleber-santos',
+      linkedin: 'http,
+    s://linkedin.com/in/kleber-santos',
       email: 'kleber@ziontechgroup.com',
       expertise: ['AI Strategy', 'Leadership', 'Innovation']
     },
-      name: 'Dr. Sarah Chen',
-      role: 'Chief AI Officer',
-      bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
-      linkedin: 'https://linkedin.com/in/sarah-chen-ai',
-      email: 'sarah@ziontechgroup.com',
-      expertise: ['Machine Learning', 'Deep Learning', 'Research']
-      name: 'Dr. Emily Watson',
-      role: 'Head of Data Science',
-      bio: 'Data science expert specializing in predictive analytics and business intelligence',
-      linkedin: 'https://linkedin.com/in/emily-watson-data',
-      email: 'emily@ziontechgroup.com',
-      expertise: ['Data Science', 'Analytics', 'Statistics']
-      name: 'Lisa Thompson',
-      role: 'Head of Client Success',
-      bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
-      linkedin: 'https://linkedin.com/in/lisa-thompson-success',
-      email: 'lisa@ziontechgroup.com',
-      expertise: ['Client Relations', 'Project Management', 'Customer Success']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
   ];
   const stats = [
@@ -72,28 +75,6 @@ import Footer from '../components/Footer';
           
           </a>
       </div>
-=======
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

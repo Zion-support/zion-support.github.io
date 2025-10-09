@@ -32,13 +32,13 @@ class EnvironmentConfig {
     // TODO: Add content
   }
 //       nodeEnv,
-      apiUrl:
+
         process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
-      enableAnalytics:
+
         process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
-      enableLogging: nodeEnv !== 'test',
-      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||
+
+
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID
@@ -127,7 +127,7 @@ class EnvironmentConfig {
     return {
     // TODO: Add content
   }
-  valid: missing.length === 0,
+
 //       missing
     }
   }

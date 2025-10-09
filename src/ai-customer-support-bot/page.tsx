@@ -1,34 +1,32 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone,  Bot,  MessageSquare,  BarChart,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
-import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, Bot, MessageSquare, BarChart, Users, TrendingUp, Clock, Star, import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AICustomerSupportBotPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
   icon: Bot,
       title: '24/7 AI Support',
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available'];
     },
-      icon: MessageSquare,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP for understanding and responding to customer queries naturally',
-      benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track performance and improve customer experience',
-      benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
+
+
+
+
+
+
+
+
     }
   ];
   const pricingPlans = [
       name: 'Professional',
       price: '$299',
-      description: 'Ideal for growing companies',
+
         'Up to 10,000 conversations/month',
         'Advanced AI responses',
         'Priority support',
@@ -37,9 +35,9 @@ const features = [
         'Multi-language support'
       popular: true,
 
-      name: 'Enterprise',
-      price: '$599',
-      description: 'For large organizations',
+
+
+
 'Unlimited conversations',
         'Premium AI features',
         '24/7 support',
@@ -48,7 +46,7 @@ const features = [
         'API access',
         'Custom training'
   const stats = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
@@ -76,7 +74,7 @@ const features = [
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-// Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands
+// Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands;
 //             natural language and escalates complex issues to human agents seamlessly.
           
           
@@ -89,7 +87,8 @@ const features = [
           
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md: grid-cols-2 l,
+    g:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => ()
             
           <div key={index} className="text-center">
@@ -120,8 +119,7 @@ const features = [
                 {plan.popular && ()
                   
           <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-Most Popular
-                )}
+Most, Popular)}
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-white mb-1">
                   {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
@@ -141,7 +139,7 @@ Most Popular
           
           
           
-          
+          ;
           </button>
 <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
@@ -149,34 +147,12 @@ Most Popular
             Contact our experts to discuss your support needs and get a custom AI solution.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Schedule Demo
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              View Case Studies
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+              Schedule Demo;
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover: bg-cyan-400 hove,text-slate-900 transition-colors">
+              View Case Studies;
       <Footer />
     </div>
   );
 };
 
-export default PagePage;
+export default AiAnalyticsDashboardPage;

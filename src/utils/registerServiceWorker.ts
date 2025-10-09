@@ -232,9 +232,9 @@ export async function getServiceWorkerStatus(): Promise
     return {
     // TODO: Add content
   }
-  supported: false,
-      registered: false,
-      active: false
+
+
+
     }
   }
   try {
@@ -244,9 +244,9 @@ export async function getServiceWorkerStatus(): Promise
     return {
     // TODO: Add content
   }
-  supported: true,
-      registered: !!registration,
-      active: !!registration?.active
+
+
+
     }
   } catch {
     // TODO: Add content
@@ -254,9 +254,9 @@ export async function getServiceWorkerStatus(): Promise
     return {
     // TODO: Add content
   }
-  supported: true,
-      registered: false,
-      active: false
+
+
+
     }
   }
 }

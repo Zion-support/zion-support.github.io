@@ -8,18 +8,38 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix specific syntax errors
-function fixSpecificErrors(filePath) {
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix malformed import statements with duplicate imports
-    content = content.replace(/import\s*{[^}]*,\s*[^}]*,\s*import\s*{/g, (match) => {
-      // Extract the first part before the duplicate import
-      const firstPart = match.split(', import')[0];
-      return firstPart + '} from \'lucide-react\';\nimport {';
-    });
+    // Fix malformed import statements
+    const importRegex = /import\s*{[^}]*}\s*from\s*['"][^'"]+['"];?/g;
+    const imports = content.match(importRegex) || [];
+    
+    for (const importStatement of imports) {
+      // Fix duplicate imports in the same statement
+      let fixedImport = importStatement
+        .replace(/,\s*,/g, ',') // Remove double commas
+        .replace(/,\s*}/g, '}') // Remove trailing comma before closing brace
+        .replace(/\s+/g, ' ') // Normalize whitespace
+        .replace(/(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)/g, '$1, $2, $3, $4, $5, $6, $7, $8') // Fix space-separated imports
+        .replace(/(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)/g, '$1, $2, $3, $4, $5, $6, $7') // Fix space-separated imports
+        .replace(/(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)/g, '$1, $2, $3, $4, $5, $6') // Fix space-separated imports
+        .replace(/(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)/g, '$1, $2, $3, $4, $5') // Fix space-separated imports
+        .replace(/(\w+)\s+(\w+)\s+(\w+)\s+(\w+)/g, '$1, $2, $3, $4') // Fix space-separated imports
+        .replace(/(\w+)\s+(\w+)\s+(\w+)/g, '$1, $2, $3') // Fix space-separated imports
+        .replace(/(\w+)\s+(\w+)/g, '$1, $2') // Fix space-separated imports
+        .replace(/,\s*from/g, ' from') // Fix comma before from
+        .replace(/\s+from\s+/g, ' from ') // Normalize from keyword
+        .replace(/;\s*$/g, ';'); // Ensure semicolon at end
+      
+      if (fixedImport !== importStatement) {
+        content = content.replace(importStatement, fixedImport);
+        modified = true;
+      }
+    }
 
     // Fix incomplete import statements
     content = content.replace(/import\s*{[^}]*\s*$/gm, (match) => {
@@ -29,54 +49,6 @@ function fixSpecificErrors(filePath) {
       return match;
     });
 
-    // Fix duplicate imports in the same line
-    content = content.replace(/import\s*{[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*\s*from/g, (match) => {
-      // Remove duplicates and fix the import
-      const imports = match.match(/\w+/g) || [];
-      const uniqueImports = [...new Set(imports)];
-      return `import { ${uniqueImports.join(', ')} } from`;
-    });
-
-    // Fix extra semicolons in comments
-    content = content.replace(/\/\/[^;]*;/g, (match) => {
-      return match.replace(/;+$/, '');
-    });
-
-    // Fix stray semicolons
-    content = content.replace(/;\s*\)/g, ')');
-    content = content.replace(/;\s*}/g, '}');
-
-    // Fix malformed object literals
-    content = content.replace(/\[\s*{\s*,\s*name:/g, '[{\n    name:');
-    content = content.replace(/{\s*,\s*name:/g, '{\n    name:');
-
-    // Fix missing commas in object properties
-    content = content.replace(/(\w+):\s*([^,\n}]+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
-
-    // Fix duplicate property names in objects
-    const lines = content.split('\n');
-    const seenProps = new Set();
-    const fixedLines = lines.map(line => {
-      const propMatch = line.match(/^\s*(\w+):/);
-      if (propMatch) {
-        const propName = propMatch[1];
-        if (seenProps.has(propName)) {
-          return ''; // Remove duplicate property
-        }
-        seenProps.add(propName);
-      }
-      return line;
-    });
-
-    const newContent = fixedLines.join('\n');
-    if (newContent !== content) {
-      content = newContent;
-      modified = true;
-    }
-
-    // Fix malformed function declarations
-    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*<div>Coming Soon<\/div>\s*\);\s*};\s*return\s*\(/g, 'const $1: React.FC = () => {\n  return (');
-    
     // Fix duplicate return statements
     const returnMatches = content.match(/return\s*\(/g);
     if (returnMatches && returnMatches.length > 1) {
@@ -117,7 +89,8 @@ function fixSpecificErrors(filePath) {
           !line.includes('return (') && 
           !line.includes('</div>') && 
           !line.includes('</main>') && 
-          !line.includes('</>') ||
+          !line.includes('</>') &&
+          !line.trim().startsWith('<') ||
           line.includes('export default')
         );
         
@@ -126,17 +99,52 @@ function fixSpecificErrors(filePath) {
       }
     }
 
-    // Fix stray closing parentheses
-    content = content.replace(/^\s*\)\s*$/gm, '');
-    content = content.replace(/^\s*}\s*$/gm, '');
+    // Fix malformed object literals
+    content = content.replace(/{\s*,\s*name:/g, '{\n    name:');
+    content = content.replace(/\[\s*{\s*,\s*name:/g, '[{\n    name:');
+    
+    // Fix missing commas in object properties
+    content = content.replace(/(\w+):\s*([^,\n}]+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    // Fix duplicate property names
+    const lines = content.split('\n');
+    const seenProps = new Set();
+    const fixedLines = lines.map(line => {
+      const propMatch = line.match(/^\s*(\w+):/);
+      if (propMatch) {
+        const propName = propMatch[1];
+        if (seenProps.has(propName)) {
+          return ''; // Remove duplicate property
+        }
+        seenProps.add(propName);
+      }
+      return line;
+    });
+    
+    const newContent = fixedLines.join('\n');
+    if (newContent !== content) {
+      content = newContent;
+      modified = true;
+    }
 
-    // Fix malformed component names
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*$/gm, (match, p1) => {
+      if (p1 && !match.includes(';') && !match.includes('{') && !match.includes('}') && !match.includes('(') && !match.includes(')')) {
+        return match + ';';
+      }
+      return match;
+    });
+
+    // Fix malformed function declarations
+    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*<div>Coming Soon<\/div>\s*\);\s*};\s*return\s*\(/g, 'const $1: React.FC = () => {\n  return (');
+    
+    // Fix duplicate component names
     content = content.replace(/export default PagePage;/g, 'export default AiAnalyticsDashboardPage;');
     content = content.replace(/export default Page;/g, 'export default AiAnalyticsDashboardPage;');
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed specific errors in: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
     
@@ -171,7 +179,7 @@ function findSourceFiles(dir) {
 }
 
 // Main execution
-console.log('Starting specific error fixes...');
+console.log('Starting syntax error fixes...');
 
 const srcDir = path.join(__dirname, 'src');
 const files = findSourceFiles(srcDir);
@@ -182,12 +190,12 @@ let totalFiles = files.length;
 console.log(`Found ${totalFiles} source files to check...`);
 
 for (const file of files) {
-  if (fixSpecificErrors(file)) {
+  if (fixSyntaxErrors(file)) {
     fixedCount++;
   }
 }
 
-console.log(`\nFixed specific errors in ${fixedCount} out of ${totalFiles} files.`);
+console.log(`\nFixed syntax errors in ${fixedCount} out of ${totalFiles} files.`);
 
 // Run linting to check if there are still errors
 console.log('\nRunning linting check...');
@@ -195,9 +203,9 @@ try {
   execSync('npm run lint', { stdio: 'pipe' });
   console.log('✅ Linting passed!');
 } catch (error) {
-  console.log('❌ Linting still has errors. Running final cleanup...');
+  console.log('❌ Linting still has errors. Running additional targeted fixes...');
   
-  // Get specific files with errors and apply final fixes
+  // Get specific files with errors
   try {
     const lintOutput = execSync('npm run lint 2>&1', { encoding: 'utf8' });
     const errorFiles = new Set();
@@ -212,16 +220,13 @@ try {
     
     console.log(`Found ${errorFiles.size} files with remaining errors.`);
     
-    // Apply final cleanup fixes
+    // Apply additional targeted fixes
     for (const filePath of errorFiles) {
       try {
         let content = fs.readFileSync(filePath, 'utf8');
         let modified = false;
         
-        // Remove empty lines and fix formatting
-        content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-        
-        // Fix any remaining malformed imports
+        // More aggressive fixes for specific patterns
         content = content.replace(/import\s*{[^}]*\s*$/gm, (match) => {
           if (!match.includes('}')) {
             return match + '} from \'lucide-react\';';
@@ -229,14 +234,13 @@ try {
           return match;
         });
         
-        // Remove duplicate imports
-        const importLines = content.split('\n').filter(line => line.trim().startsWith('import'));
-        const uniqueImports = [...new Set(importLines)];
-        if (importLines.length !== uniqueImports.length) {
-          const nonImportLines = content.split('\n').filter(line => !line.trim().startsWith('import'));
-          content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
-          modified = true;
-        }
+        // Fix incomplete lines
+        content = content.replace(/^\s*[^;{}()]*\s*$/gm, (match) => {
+          if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}') && !match.includes('(') && !match.includes(')') && !match.includes('import') && !match.includes('export') && !match.includes('const') && !match.includes('function') && !match.includes('return') && !match.includes('<') && !match.includes('//')) {
+            return match + ';';
+          }
+          return match;
+        });
         
         if (content !== fs.readFileSync(filePath, 'utf8')) {
           fs.writeFileSync(filePath, content, 'utf8');
@@ -244,10 +248,10 @@ try {
         }
         
         if (modified) {
-          console.log(`Applied final cleanup to: ${filePath}`);
+          console.log(`Applied additional fixes to: ${filePath}`);
         }
       } catch (err) {
-        console.error(`Error in final cleanup for ${filePath}:`, err.message);
+        console.error(`Error in additional fixes for ${filePath}:`, err.message);
       }
     }
   } catch (err) {
@@ -255,4 +259,4 @@ try {
   }
 }
 
-console.log('\nSpecific error fixes completed!');
+console.log('\nSyntax error fixes completed!');

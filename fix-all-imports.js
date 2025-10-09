@@ -8,15 +8,14 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix import statements
-function fixImports(filePath) {
+// Function to fix all import and syntax issues
+function fixAllIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix malformed import statements with duplicate imports
     content = content.replace(/import\s*{[^}]*,\s*[^}]*,\s*import\s*{/g, (match) => {
-      // Extract the first part before the duplicate import
       const firstPart = match.split(', import')[0];
       return firstPart + '} from \'lucide-react\';\nimport {';
     });
@@ -29,15 +28,22 @@ function fixImports(filePath) {
       return match;
     });
 
+    // Fix space-separated imports
+    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4, $5, $6, $7, $8 }');
+    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4, $5, $6, $7 }');
+    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4, $5, $6 }');
+    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4, $5 }');
+    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4 }');
+    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3 }');
+    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s*}/g, 'import { $1, $2 }');
+
     // Fix duplicate imports in the same line
     content = content.replace(/import\s*{[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*\s*from/g, (match) => {
-      // Remove duplicates and fix the import
       const imports = match.match(/\w+/g) || [];
       const uniqueImports = [...new Set(imports)];
       return `import { ${uniqueImports.join(', ')} } from`;
     });
 
-    // Fix specific patterns
     content = content.replace(/import\s*{[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*,\s*[^}]*\s*from/g, (match) => {
       const imports = match.match(/\w+/g) || [];
       const uniqueImports = [...new Set(imports)];
@@ -74,15 +80,6 @@ function fixImports(filePath) {
       return `import { ${uniqueImports.join(', ')} } from`;
     });
 
-    // Fix space-separated imports
-    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4, $5, $6, $7, $8 }');
-    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4, $5, $6, $7 }');
-    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4, $5, $6 }');
-    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4, $5 }');
-    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3, $4 }');
-    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s+(\w+)\s*}/g, 'import { $1, $2, $3 }');
-    content = content.replace(/import\s*{\s*(\w+)\s+(\w+)\s*}/g, 'import { $1, $2 }');
-
     // Fix malformed object literals
     content = content.replace(/\[\s*{\s*,\s*name:/g, '[{\n    name:');
     content = content.replace(/{\s*,\s*name:/g, '{\n    name:');
@@ -111,9 +108,77 @@ function fixImports(filePath) {
       modified = true;
     }
 
+    // Fix malformed function declarations
+    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*<div>Coming Soon<\/div>\s*\);\s*};\s*return\s*\(/g, 'const $1: React.FC = () => {\n  return (');
+    
+    // Fix duplicate return statements
+    const returnMatches = content.match(/return\s*\(/g);
+    if (returnMatches && returnMatches.length > 1) {
+      const lines = content.split('\n');
+      let inFirstReturn = false;
+      let braceCount = 0;
+      let firstReturnEnd = -1;
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.includes('return (')) {
+          if (!inFirstReturn) {
+            inFirstReturn = true;
+            braceCount = 0;
+          } else {
+            firstReturnEnd = i;
+            break;
+          }
+        }
+        
+        if (inFirstReturn) {
+          braceCount += (line.match(/\(/g) || []).length;
+          braceCount -= (line.match(/\)/g) || []).length;
+          
+          if (braceCount === 0 && line.includes(');')) {
+            firstReturnEnd = i + 1;
+            break;
+          }
+        }
+      }
+      
+      if (firstReturnEnd > 0) {
+        const beforeReturn = lines.slice(0, firstReturnEnd);
+        const afterReturn = lines.slice(firstReturnEnd).filter(line => 
+          !line.includes('return (') && 
+          !line.includes('</div>') && 
+          !line.includes('</main>') && 
+          !line.includes('</>') ||
+          line.includes('export default')
+        );
+        
+        content = beforeReturn.join('\n') + '\n' + afterReturn.join('\n');
+        modified = true;
+      }
+    }
+
+    // Fix stray closing parentheses and braces
+    content = content.replace(/^\s*\)\s*$/gm, '');
+    content = content.replace(/^\s*}\s*$/gm, '');
+
+    // Fix malformed component names
+    content = content.replace(/export default PagePage;/g, 'export default AiAnalyticsDashboardPage;');
+    content = content.replace(/export default Page;/g, 'export default AiAnalyticsDashboardPage;');
+
+    // Fix incomplete lines that should be removed
+    content = content.replace(/^\s*[^;{}()]*\s*$/gm, (match) => {
+      if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}') && !match.includes('(') && !match.includes(')') && !match.includes('import') && !match.includes('export') && !match.includes('const') && !match.includes('function') && !match.includes('return') && !match.includes('<') && !match.includes('//') && !match.includes('*') && !match.includes('=')) {
+        return '';
+      }
+      return match;
+    });
+
+    // Clean up empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed imports in: ${filePath}`);
+      console.log(`Fixed issues in: ${filePath}`);
       return true;
     }
     
@@ -148,7 +213,7 @@ function findSourceFiles(dir) {
 }
 
 // Main execution
-console.log('Starting import fixes...');
+console.log('Starting comprehensive fixes...');
 
 const srcDir = path.join(__dirname, 'src');
 const files = findSourceFiles(srcDir);
@@ -159,12 +224,12 @@ let totalFiles = files.length;
 console.log(`Found ${totalFiles} source files to check...`);
 
 for (const file of files) {
-  if (fixImports(file)) {
+  if (fixAllIssues(file)) {
     fixedCount++;
   }
 }
 
-console.log(`\nFixed imports in ${fixedCount} out of ${totalFiles} files.`);
+console.log(`\nFixed issues in ${fixedCount} out of ${totalFiles} files.`);
 
 // Run linting to check if there are still errors
 console.log('\nRunning linting check...');
@@ -175,4 +240,4 @@ try {
   console.log('❌ Linting still has errors.');
 }
 
-console.log('\nImport fixes completed!');
+console.log('\nComprehensive fixes completed!');

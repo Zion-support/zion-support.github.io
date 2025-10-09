@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 interface BeforeInstallPromptEvent extends Event {
   // TODO: Add content
@@ -13,13 +12,7 @@ interface BeforeInstallPromptEvent extends Event {
           
           
           <void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-=======
-import React from 'react';
-
-interface PWAInstallerProps {
-  // Add props here
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+  userChoice: Promise<{ outcom, 'accepted' | 'dismissed' }>;
 }
 
 const PWAInstaller: React.FC<PWAInstallerProps> = () => {

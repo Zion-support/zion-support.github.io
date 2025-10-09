@@ -72,8 +72,8 @@ class EnhancedErrorTracker {
         this.trackError(new Error(event.reason), {
     // TODO: Add content
   }
-  component: 'Global',
-          action: 'Unhandled Promise Rejection'
+
+
         }
   )
       }
@@ -87,17 +87,17 @@ class EnhancedErrorTracker {
     const trackedError: TrackedError = {
     // TODO: Add content
   }
-  message: error.message,
+
       stack: error.stack,
-      context: {
+
     // TODO: Add content
   }
 //         ...context,
         sessionId: this.sessionId
       },
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
+
+
+
     }
     this.errors.push(trackedError)
     // Keep only the most recent errors
@@ -157,7 +157,7 @@ class EnhancedErrorTracker {
   }
   description: error.message,
         fatal: false,
-        component: error.context.component
+
       }
   )
     }
@@ -207,9 +207,9 @@ class EnhancedErrorTracker {
     return {
     // TODO: Add content
   }
-  total: this.errors.length,
+
 //       byComponent,
-      recent: this.errors.slice(-10)
+
     }
   }
 }

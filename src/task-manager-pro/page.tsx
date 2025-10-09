@@ -1,45 +1,43 @@
 import React from 'react';
-<<<<<<< HEAD
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone,  CheckSquare,  Users,  Zap,  BarChart from 'lucide-react';
-import { Link } from 'react-router-dom';
+import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone, CheckSquare, Users, Zap, BarChart, import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
   icon: CheckSquare,
       title: 'AI Task Prioritization',
       description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
       benefit: 'Increase productivity by 40%'
     },
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
-      benefit: 'Improve team efficiency by 60%',
 
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
-      benefit: 'Reduce manual work by 70%',
 
-      icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
-      benefit: 'Data-driven improvements'
+
+
+
+
+
+
+
+
+
+
+
+
     }
   ];
   const pricingPlans = [
       name: 'Team',
       price: '$49',
-      description: 'Ideal for small teams',
-      name: 'Tom Anderson',
+
+
       company: 'Software Startup',
       role: 'CEO',
       content: 'The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.',
-      name: 'Lisa Park',
-      company: 'Consulting Firm',
-      role: 'Operations Director',
-      content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
+
+
+
+
   return (
     
           
@@ -69,7 +67,7 @@ const TaskManagerProPage: React.FC = () => {
           
           
           
-          
+          ;
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
 // AI-Powered Productivity Platform
@@ -81,16 +79,16 @@ const TaskManagerProPage: React.FC = () => {
           
           
           
-          
+          ;
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 Supercharge your productivity with our AI-powered task management platform.
-            Get intelligent prioritization, automated workflows, and team collaboration
+            Get intelligent prioritization, automated workflows, and team collaboration;
             tools that help you achieve more in less time.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hove,to-purple-600 transition-all duration-300 flex items-center"
 // >
               
           
@@ -102,12 +100,12 @@ Supercharge your productivity with our AI-powered task management platform.
           
           
           <Phone className="w-5 h-5 mr-2" />,
- Call: (302) 464-0950
+ Call: (302) 464-0950;
             </a>
-            <Link
+            <Link;
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-Start Free Trial
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hove,text-indigo-600 transition-all duration-300"
+Start Free Trial;
             </Link>
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
@@ -136,9 +134,10 @@ Start Free Trial
           
           
           
-          
+          ;
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8">
             {features.map((feature, index) => ()
               
           <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
@@ -149,7 +148,7 @@ Start Free Trial
             ))}
         </section>
         {/* Integrations Section */}
-Works with Your Tools
+Works with Your Tools;
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => ()
               
@@ -158,14 +157,14 @@ Works with Your Tools
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
 {/* Pricing Section */}
-            Simple, Transparent Pricing
+            Simple, Transparent Pricing;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => ()
               
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-  // TODO: Add content
+  // TODO: Add content;
 }
-//                 plan.popular
+//                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
@@ -180,8 +179,7 @@ Works with Your Tools
           
           
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-Most Popular
-                )}
+Most, Popular)}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <div className="mb-6">
@@ -196,12 +194,12 @@ Most Popular
                     </li>
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                  Get Started
+? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hove,to-purple-600'
+                    : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hove,text-white'
+                  Get Started;
                 </button>
         {/* Testimonials */}
-            What Our Users Say
+            What Our Users Say;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => ()
               
@@ -222,31 +220,7 @@ Most Popular
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using Task Manager Pro to achieve more,
             work smarter, and reach their goals faster.
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 
-export default PagePage;
+export default AiAnalyticsDashboardPage;

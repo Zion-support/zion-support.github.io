@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 /**
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
@@ -43,32 +42,18 @@ class ImprovedErrorBoundary extends Component
 }
   constructor(props: Props) {
   // TODO: Add content
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-<<<<<<< HEAD
     this.state = {
   // TODO: Add content
 };
-  hasError: false,
-      error: null,
-      errorInfo: null,
-      errorCount: 0
+
+
+
+
     };
   }
   static getDerivedStateFromError(error: Error): Partial
@@ -86,7 +71,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return {
   // TODO: Add content
 };
-  hasError: true,
+
 //       error
     };
   }
@@ -115,18 +100,19 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   // TODO: Add content
 }
 //       errorInfo,
-      errorCount: prevState.errorCount + 1
+
     }));
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
   // TODO: Add content
 }
     }
-    // Send to external error tracking (if available)
+    // Send to external error tracking (if, available)
     if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
   // TODO: Add content
 }
-      (window as unknown as { Sentry: { captureException: (error: Error, context: Record
+      (window as unknown as { Sentry: { captureException: (erro,
+    r: Error, context: Record
           
           
           
@@ -170,9 +156,9 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     this.setState({
   // TODO: Add content
 };
-  hasError: false,
-      error: null,
-      errorInfo: null
+
+
+
     });
   };
   handleReload = (): void => {
@@ -220,7 +206,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()
               
           <details style={styles.details}>
-                <summary style={styles.summary}>Error Details (Development Only)</summary>
+                <summary style={styles.summary}>Error Details (Development, Only)</summary>
                 <div style={styles.errorDetails}>
                   <p style={styles.errorMessage}>
                     <strong>Error:</strong> {this.state.error.message}
@@ -297,26 +283,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 This error has occurred {this.state.errorCount} times
               </p>
             )}
-=======
-    this.state = { hasError: false, error: null, errorInfo: null };
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
           </div>
         </div>
       );
@@ -325,7 +291,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return this.props.children;
   }
 }
-<<<<<<< HEAD
 const styles = {
   // TODO: Add content
 }
@@ -345,9 +310,9 @@ const styles = {
 };
   maxWidth: '600px',
     width: '100%',
-    backgroundColor: 'white',
+
     borderRadius: '8px',
-    padding: '40px',
+
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     textAlign: 'center' as const
   },
@@ -360,95 +325,91 @@ const styles = {
   title: {
   // TODO: Add content
 };
-  fontSize: '24px',
+
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: '16px'
+
   },
-  message: {
+
   // TODO: Add content
 };
-  fontSize: '16px',
-    color: '#666',
-    marginBottom: '32px',
+
+
+
     lineHeight: '1.6'
   },
   details: {
   // TODO: Add content
 };
-  textAlign: 'left' as const,
-    marginBottom: '24px',
-    backgroundColor: '#f9f9f9',
-    padding: '16px',
-    borderRadius: '4px',
+
+
+
+
+
     border: '1px solid #e0e0e0'
   },
   summary: {
   // TODO: Add content
 };
   cursor: 'pointer',
-    fontWeight: 'bold',
-    marginBottom: '12px',
+
+
     userSelect: 'none' as const
   },
   errorDetails: {
   // TODO: Add content
 };
-  fontSize: '14px'
+
   },
   errorMessage: {
   // TODO: Add content
 };
-  marginBottom: '12px',
-    color: '#d32f2f'
+
+
   },
-  stack: {
+
   // TODO: Add content
 };
-  backgroundColor: '#f5f5f5',
-    padding: '12px',
-    borderRadius: '4px',
-    fontSize: '12px',
+
+
+
+
     overflowX: 'auto' as const,
-    fontFamily: 'monospace',
+
     whiteSpace: 'pre-wrap' as const,
     wordBreak: 'break-all' as const
   },
   actions: {
   // TODO: Add content
 };
-  display: 'flex',
+
     gap: '12px',
-    justifyContent: 'center',
+
     flexWrap: 'wrap' as const
   },
   button: {
   // TODO: Add content
 };
-  padding: '12px 24px',
-    fontSize: '16px',
-    fontWeight: '500',
-    color: 'white',
-    backgroundColor: '#007bff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
+
+
+
+
+
+
+
+
     transition: 'background-color 0.2s'
   },
   secondaryButton: {
   // TODO: Add content
 };
-  backgroundColor: '#6c757d'
+
   },
-  errorCount: {
+
   // TODO: Add content
 };
   marginTop: '24px',
-    fontSize: '14px',
-    color: '#999'
+
+
   }
 };
-=======
-
-export default ImprovedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

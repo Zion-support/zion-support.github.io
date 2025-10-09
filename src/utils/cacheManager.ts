@@ -222,7 +222,7 @@ export class CacheManager {
     // TODO: Add content
   }
 //       value,
-      timestamp: Date.now(),
+
 //       ttl
     }
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count')
@@ -562,10 +562,10 @@ export class CacheManager {
           
           
           <T>()
-    key: string,
-    fn: () => Promise
+
+
           <T> | T,
-    options: { ttl?: number } = {}
+
   ): Promise<T> {
     // TODO: Add content
   }
@@ -604,8 +604,8 @@ export class CacheManager {
           
           
           <TArgs extends unknown[], TResult>()
-    fn: (...args: TArgs) => TResult,
-    options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
+
+
   ): (...args: TArgs) => TResult {
     // TODO: Add content
   }
@@ -629,11 +629,11 @@ export class CacheManager {
     return {
     // TODO: Add content
   }
-  hits: this.stats.hits,
-      misses: this.stats.misses,
-      hitRate: total > 0 ? this.stats.hits / total : 0,
-      count: this.memoryCache.size,
-      entries: this.memoryCache.size
+
+
+
+
+
     }
   }
   /**
@@ -703,7 +703,7 @@ export class CacheManager {
     return {
     // TODO: Add content
   }
-  memorySize: this.memoryCache.size,
+
 //       localStorageSize,
 //       sessionStorageSize
     }

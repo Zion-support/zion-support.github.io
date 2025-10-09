@@ -271,6 +271,6 @@ values,
     setFieldError,
     setFieldTouched,
     resetForm,
-    validateField: validateSingleField,
+
     validateAllFields
   }

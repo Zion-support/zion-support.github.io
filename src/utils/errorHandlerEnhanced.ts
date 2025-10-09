@@ -24,15 +24,15 @@ export const _errorHandler = (error: AppError | Error) => {
 // console.error({
     message: appError.message,
     stack: isDevelopment ? appError.stack : undefined,
-    timestamp: new Date().toISOString(),
-    statusCode: appError.statusCode || 500
+
+
   }
   )
   return {
     // TODO: Add content
   }
-  message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-    statusCode: appError.statusCode || 500
+
+
   }
 }
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {

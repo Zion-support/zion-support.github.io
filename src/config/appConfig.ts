@@ -39,15 +39,15 @@ export interface AppConfig {
     enableHSTS: boolean;,
     enableXSSProtection: boolean
 }
-    name: 'Zion Tech Group',
-    version: '1.0.0',
-    environment:
+
+
+
 //       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
   },
-    enableLazyLoading: true,
-    imageLazyLoadThreshold: 0.5,
-    componentLazyLoadThreshold: 0.25,
-    cacheMaxAge: 3600000, // 1 hour in milliseconds
+
+
+
+
 // enableCSP: true,
 // enableHSTS: true,
 // enableXSSProtection: true

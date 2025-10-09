@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface ResponsiveContainerProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   children: React.ReactNode;
@@ -32,7 +31,7 @@ const ResponsiveContainer: React.FC
 //   children,
   className = '',
   breakpoints = {},
-//   fallback,
+//   fallback
 }) => {
   // TODO: Add content
 }
@@ -159,7 +158,7 @@ export const useResponsiveValue =
 }
     return values.sm;
   }
-  return values.default || values.lg || values.md || values.sm || ({} as T);
+  return values.default || values.lg || values.md || values.sm || ({} as, T);
 };
 // Hook for responsive breakpoints;
 export const useBreakpoint = () => {
@@ -176,20 +175,7 @@ export const useBreakpoint = () => {
 //     isTablet,
 //     isDesktop,
 //     isLargeDesktop,
-    current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',
+    current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm'
   };
 };
-=======
-  // Add props here
-}
-
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = () => {
-  return (
-    <div className="responsivecontainer">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default ResponsiveContainer;

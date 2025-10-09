@@ -99,8 +99,8 @@ class ErrorTrackingService {
       this.trackError(event.error || new Error(event.message), {
     // TODO: Add content
   }
-  category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.High,
+
+
         context: {
     // TODO: Add content
   }
@@ -119,9 +119,9 @@ class ErrorTrackingService {
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
     // TODO: Add content
   }
-  category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.Critical,
-        context: { reason: event.reason }
+
+
+
       }
   )
     }
@@ -132,7 +132,7 @@ class ErrorTrackingService {
    */
 //   trackError()
     error: Error,
-    metadata: Partial
+
           
           
           
@@ -165,12 +165,12 @@ const timestamp = Date.now()
 const trackedError: TrackedError = {
     // TODO: Add content
   }
-  id: errorId,
-        message: error.message,
-        metadata: fullMetadata,
-        occurrences: 1,
-        firstSeen: timestamp,
-        lastSeen: timestamp
+
+
+
+
+
+
       }
       this.errors.set(errorId, trackedError)
       // Notify listeners
@@ -188,7 +188,7 @@ const trackedError: TrackedError = {
     // TODO: Add content
   }
   error_id: errorId,
-      category: metadata.category,
+
 //       ...metadata.context
     }
   )
@@ -369,7 +369,7 @@ const trackedError: TrackedError = {
     return {
     // TODO: Add content
   }
-  total: errors.length,
+
 //       byCategory,
 //       bySeverity,
 //       topErrors

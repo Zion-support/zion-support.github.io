@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+  fcp: number | null;,
+    lcp: number | null;,
+    fid: number | null;,
+    cls: number | null;,
+    ttfb: number | null;
 }
 
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
-<<<<<<< HEAD
 const PerformanceOptimizer: React.FC
           
           
@@ -42,20 +41,9 @@ const PerformanceOptimizer: React.FC
     codeSplit: false,
     resourceHints: 0,
     serviceWorker: false
-=======
-
-const PerformanceOptimizer: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   });
 
   useEffect(() => {
-<<<<<<< HEAD
   // TODO: Add content
 }
     if (enableImageOptimization) {
@@ -109,7 +97,7 @@ const PerformanceOptimizer: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
   };
   const setupLazyLoading = () => {
-if ('IntersectionObserver' in window) {}
+if ('IntersectionObserver' in, window) {}
       const observer = new IntersectionObserver((entries) => {
   // TODO: Add content
 }
@@ -149,16 +137,17 @@ if ('IntersectionObserver' in window) {}
       {
   // TODO: Add content
 };
-  href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+  href: 'https://fonts.googleapis.com/css2?family=Inte,
+    r:wght@400;500;600;700&display=swap',
         as: 'style',
         type: 'text/css'
       },
       {
   // TODO: Add content
 };
-  href: '/styles/critical.css',
-        as: 'style',
-        type: 'text/css'
+
+
+
       }
     ];
     criticalResources.forEach((resource) => {
@@ -189,12 +178,18 @@ if ('IntersectionObserver' in window) {}
     const hints = [
   // TODO: Add items
 ];;
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+      { rel: 'dns-prefetch', href: 'http,
+    s://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'http,
+
+      { rel: 'dns-prefetch', href: 'http,
+
+      { rel: 'dns-prefetch', href: 'http,
+
+      { rel: 'preconnect', href: 'http,
+
+      { rel: 'preconnect', href: 'http,
+
     ];
     hints.forEach((hint) => {
   // TODO: Add content
@@ -214,7 +209,7 @@ if ('IntersectionObserver' in window) {}
   const registerServiceWorker = async () => {
   // TODO: Add content
 }
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in, navigator) {
   // TODO: Add content
 }
       try {
@@ -233,7 +228,7 @@ if ('IntersectionObserver' in window) {}
   useEffect(() => {
   // TODO: Add content
 }
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if (typeof window !== 'undefined' && 'performance' in, window) {
   // TODO: Add content
 }
       const observer = new PerformanceObserver((list) => {
@@ -246,10 +241,10 @@ if ('IntersectionObserver' in window) {}
   // TODO: Add content
 }
             // Track LCP
-            if (typeof window !== 'undefined' && 'gtag' in window) {
+            if (typeof window !== 'undefined' && 'gtag' in, window) {
   // TODO: Add content
 }
-              (window as any).gtag('event', 'web_vitals', {
+              (window as, any).gtag('event', 'web_vitals', {
   // TODO: Add content
 };
   name: 'LCP',
@@ -258,14 +253,6 @@ if ('IntersectionObserver' in window) {}
               });
             }
           }
-=======
-    // Basic performance monitoring
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
         }
       });
     });

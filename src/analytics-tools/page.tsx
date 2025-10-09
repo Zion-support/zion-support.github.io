@@ -1,7 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain from 'lucide-react';
+import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target, BarChart, Brain 
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
@@ -14,44 +13,44 @@ const AnalyticsToolsPage: React.FC = () => {
       icon: '',
       category: 'Business Intelligence'
     },
-      title: 'AI Web Analytics',
-      price: '$299/month',
-      description: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.',
-      features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
-      icon: '',
-      category: 'Web Analytics',
 
-      title: 'AI Sales Analytics',
-      price: '$199/month',
-      description: 'Sales performance analytics with AI-powered forecasting and optimization.',
-      features: ['Sales forecasting', 'Pipeline analysis', 'Performance tracking', 'Lead scoring', 'Conversion optimization', 'Revenue insights'],
-      icon: '',
-      category: 'Sales Analytics',
 
-      title: 'AI Financial Analytics',
-      price: '$349/month',
-      description: 'Financial performance analytics with AI-powered insights and risk assessment.',
-      features: ['Financial reporting', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling'],
-      icon: '',
-      category: 'Financial Analytics'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
   ];
   const benefits = [
-      icon: TrendingUp,
-      title: 'Data-Driven Decisions',
-      description: 'Make informed decisions with comprehensive analytics and AI insights',
 
-      icon: Target,
-      title: 'Predictive Insights',
-      description: 'Anticipate trends and opportunities with AI-powered predictions',
 
-      icon: BarChart,
-      title: 'Real-Time Monitoring',
-      description: 'Track performance in real-time with live dashboards and alerts',
 
-      icon: Brain,
-      title: 'AI-Powered',
-      description: 'Leverage advanced AI algorithms for deeper insights and automation'
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     
           
@@ -73,7 +72,8 @@ const AnalyticsToolsPage: React.FC = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl sm: text-5xl m,
+    d:text-6xl font-bold text-white mb-6">
 // AI Analytics Tools
           
           
@@ -84,24 +84,10 @@ const AnalyticsToolsPage: React.FC = () => {
           
           
           
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -116,7 +102,7 @@ const PagePage: React.FC = () => {
               <div className="text-gray-300">Monitoring</div>
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+            <div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 m,space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span className="text-white font-medium">+1 302 464 0950</span>
@@ -140,7 +126,8 @@ const PagePage: React.FC = () => {
           
           
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8">
             {analyticsTools.map((tool, index) => ()
               
           <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
@@ -165,7 +152,7 @@ const PagePage: React.FC = () => {
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hove,to-blue-700 transition-all inline-block"
 // >
 //                     Get Started
                   
@@ -180,7 +167,8 @@ const PagePage: React.FC = () => {
           </a>
       {/* Benefits Section */}
 Why Choose Our Analytics Tools?
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+
             {benefits.map((benefit, index) => ()
               
           <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
@@ -199,18 +187,8 @@ Ready to Unlock Your Data?
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              Email Us
-=======
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover: bg-white hove,text-purple-600 transition-colors"
+              Email, Us);
 };
 
 export default PagePage;

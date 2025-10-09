@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
@@ -93,19 +92,22 @@ const Footer: React.FC = memo(() => {
       {/* Background Effects */}
 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div><div className="absolute inset-0 cyber-grid opacity-10"></div><div className="relative z-10">
         {/* Main Footer Content */}
-        <div className="container mx-auto px-4 py-16"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="container mx-auto px-4 py-16"><div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
 <div className="lg:col-span-1"><div className="flex items-center space-x-2 mb-6"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"><span className="text-white font-bold text-lg">Z</span></div><div><h2 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h2><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></div><p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
               </p>
               {/* Contact Info */}
-<div className="space-y-3 mb-6"><div className="flex items-center space-x-3 text-gray-300"><Phone className="w-4 h-4 text-cyan-400" /><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+<div className="space-y-3 mb-6"><div className="flex items-center space-x-3 text-gray-300"><Phone className="w-4 h-4 text-cyan-400" /><a href="tel: +13024640950" className="hove,
+    r:text-cyan-400 transition-colors">
                     +1 302 464-0950
-                  </a></div><div className="flex items-center space-x-3 text-gray-300"><Mail className="w-4 h-4 text-cyan-400" /><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                  </a></div><div className="flex items-center space-x-3 text-gray-300"><Mail className="w-4 h-4 text-cyan-400" /><a href="mailto: kleber@ziontechgroup.com" className="hove,
+
                     kleber@ziontechgroup.com
                   </a></div><div className="flex items-center space-x-3 text-gray-300"><MapPin className="w-4 h-4 text-cyan-400" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></div></div>
               {/* Social Links */}
-              <div className="flex space-x-4"><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Facebook className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Linkedin className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Github className="w-5 h-5" /></a></div></div>
+              <div className="flex space-x-4"><a href="#" className="text-gray-400 hover: text-cyan-400 transition-colors"><Facebook className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Linkedin className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a><a href="#" className="text-gray-400 hove,text-cyan-400 transition-colors"><Github className="w-5 h-5" /></a></div></div>
             {/* AI Services */}
             <div><h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3><ul className="space-y-3">
                 {aiServices.slice(0, 8).map((service, index) => (
@@ -154,7 +156,7 @@ to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors d
           {/* Stats Section */}
           <div className="bg-slate-800/50 rounded-2xl p-8 mb-12 border border-cyan-400/20"><div className="grid grid-cols-1 md:grid-cols-4 gap-8"><div className="text-center"><div className="text-3xl font-bold text-cyan-400 mb-2">500+</div><div className="text-gray-300 text-sm">Projects Completed</div></div><div className="text-center"><div className="text-3xl font-bold text-green-400 mb-2">99.9%</div><div className="text-gray-300 text-sm">Uptime Guarantee</div></div><div className="text-center"><div className="text-3xl font-bold text-purple-400 mb-2">24/7</div><div className="text-gray-300 text-sm">Support Available</div></div><div className="text-center"><div className="text-3xl font-bold text-pink-400 mb-2">50+</div><div className="text-gray-300 text-sm">Countries Served</div></div></div></div></div>
         {/* Bottom Footer */}
-        <div className="border-t border-gray-700 bg-slate-800/30"><div className="container mx-auto px-4 py-6"><div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"><div className="text-gray-400 text-sm">
+        <div className="border-t border-gray-700 bg-slate-800/30"><div className="container mx-auto px-4 py-6"><div className="flex flex-col md: flex-row justify-between items-center space-y-4 m,space-y-0"><div className="text-gray-400 text-sm">
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div><div className="flex flex-wrap justify-center md:justify-end space-x-6">
                 {legalLinks.map((link, index) => ()
@@ -164,19 +166,6 @@ to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors d
 to={link.url} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                   </Link>
               </div></div></div></div></div></footer>
-=======
-import React from 'react';
-
-interface FooterProps {
-  // Add props here
-}
-
-const Footer: React.FC<FooterProps> = () => {
-  return (
-    <div className="footer">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

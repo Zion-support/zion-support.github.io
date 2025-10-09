@@ -1,31 +1,31 @@
 'use client'
-// PerformanceMetrics interface removed as it's not used in this hook
+// PerformanceMetrics interface removed as it's not used in this hook;
 export const _usePerformanceMonitoring = () => {
-    // TODO: Add content
+    // TODO: Add content;
   }
   const { trackPerformance } = useAnalytics()
   const reportMetric = useCallback()
     (name: string, value: number) => {
-    // TODO: Add content
+    // TODO: Add content;
   }
       trackPerformance(name, value)
     },
 //     [trackPerformance]
   )
   useEffect(() => {
-    // TODO: Add content
+    // TODO: Add content;
   }
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-    // TODO: Add content
+    // TODO: Add content;
   }
       return () => {}
     }
     try {
-    // TODO: Add content
+    // TODO: Add content;
   }
-      // LCP - Largest Contentful Paint
+      // LCP - Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {
-    // TODO: Add content
+    // TODO: Add content;
   }
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
@@ -34,17 +34,17 @@ const lcpObserver = new PerformanceObserver(list => {
   )
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
   )
-      // FID - First Input Delay
+      // FID - First Input Delay;
 const fidObserver = new PerformanceObserver(list => {
-    // TODO: Add content
+    // TODO: Add content;
   }
         const entries = list.getEntries()
 //         entries.forEach()
           (entry: PerformanceEntry & { processingStart?: number }) => {
-    // TODO: Add content
+    // TODO: Add content;
   }
             const fid =
-              (entry.processingStart || entry.startTime) - entry.startTime
+              (entry.processingStart || entry.startTime) - entry.startTime;
             reportMetric('FID', fid)
           }
   )
@@ -52,26 +52,26 @@ const fidObserver = new PerformanceObserver(list => {
   )
       fidObserver.observe({ entryTypes: ['first-input'] }
   )
-// CLS - Cumulative Layout Shift
+// CLS - Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {
-    // TODO: Add content
+    // TODO: Add content;
   }
         const entries = list.getEntries()
 //         entries.forEach()
 //           ()
             entry: PerformanceEntry & {
-    // TODO: Add content
+    // TODO: Add content;
   }
-              hadRecentInput?: boolean
-              value?: number
+              hadRecentInput?: boolean;
+              value?: number;
             }
           ) => {
-    // TODO: Add content
+    // TODO: Add content;
   }
             if (!entry.hadRecentInput && entry.value) {
-    // TODO: Add content
+    // TODO: Add content;
   }
-              clsValue += entry.value
+              clsValue += entry.value;
             }
           }
   )
@@ -80,16 +80,16 @@ const fidObserver = new PerformanceObserver(list => {
   )
       clsObserver.observe({ entryTypes: ['layout-shift'] }
   )
-      // FCP - First Contentful Paint
+      // FCP - First Contentful Paint;
 const fcpObserver = new PerformanceObserver(list => {
-    // TODO: Add content
+    // TODO: Add content;
   }
         const entries = list.getEntries()
         entries.forEach(entry => {
-    // TODO: Add content
+    // TODO: Add content;
   }
           if (entry.name === 'first-contentful-paint') {
-    // TODO: Add content
+    // TODO: Add content;
   }
             reportMetric('FCP', entry.startTime)
           }
@@ -99,19 +99,19 @@ const fcpObserver = new PerformanceObserver(list => {
   )
       fcpObserver.observe({ entryTypes: ['paint'] }
   )
-      // TTFB - Time to First Byte
+      // TTFB - Time to First Byte;
 const navigationObserver = new PerformanceObserver(list => {
-    // TODO: Add content
+    // TODO: Add content;
   }
         const entries = list.getEntries()
         entries.forEach((entry) => {
-    // TODO: Add content
+    // TODO: Add content;
   }
           if (entry.entryType === 'navigation') {
-    // TODO: Add content
+    // TODO: Add content;
   }
-            const navEntry = entry as PerformanceNavigationTiming
-            const ttfb = navEntry.responseStart - navEntry.requestStart
+            const navEntry = entry as PerformanceNavigationTiming;
+            const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb)
           }
         }
@@ -120,23 +120,23 @@ const navigationObserver = new PerformanceObserver(list => {
   )
       navigationObserver.observe({ entryTypes: ['navigation'] }
   )
-      // Resource timing
+      // Resource timing;
 const resourceObserver = new PerformanceObserver(list => {
-    // TODO: Add content
+    // TODO: Add content;
   }
         const entries = list.getEntries()
         entries.forEach((entry) => {
-    // TODO: Add content
+    // TODO: Add content;
   }
           if (entry.entryType === 'resource') {
-    // TODO: Add content
+    // TODO: Add content;
   }
-            const resourceEntry = entry as PerformanceResourceTiming
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart
+            const resourceEntry = entry as PerformanceResourceTiming;
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
             if (loadTime > 1000) {
-    // TODO: Add content
+    // TODO: Add content;
   }
-              // Only track slow resources
+              // Only track slow resources;
               reportMetric('SLOW_RESOURCE', loadTime)
             }
           }
@@ -146,9 +146,8 @@ const resourceObserver = new PerformanceObserver(list => {
   )
       resourceObserver.observe({ entryTypes: ['resource'] }
   )
-      // Cleanup
-      return () => {
-    // TODO: Add content
+      // Cleanup;
+    // TODO: Add content;
   }
         lcpObserver.disconnect()
         fidObserver.disconnect()
@@ -158,37 +157,36 @@ const resourceObserver = new PerformanceObserver(list => {
         resourceObserver.disconnect()
       }
     } catch (error) {
-    // TODO: Add content
+    // TODO: Add content;
   }
-      return () => {}
     }
   }, [reportMetric])
-  // Monitor page load performance
+  // Monitor page load performance;
   useEffect(() => {
-    // TODO: Add content
+    // TODO: Add content;
   }
     const handleLoad = () => {
-    // TODO: Add content
+    // TODO: Add content;
   }
-      if (typeof window === 'undefined') return
+      if (typeof window === 'undefined') return;
       const navigation = performance.getEntriesByType()
 //         'navigation'
-      )[0] as PerformanceNavigationTiming
+      )[0] as PerformanceNavigationTiming;
       if (navigation) {
-    // TODO: Add content
+    // TODO: Add content;
   }
         const metrics = {
-    // TODO: Add content
+    // TODO: Add content;
   }
   domContentLoaded:
 //             navigation.domContentLoadedEventEnd -
 //             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;
         }
         Object.entries(metrics).forEach(([key, value]) => {
-    // TODO: Add content
+    // TODO: Add content;
   }
           reportMetric(key.toUpperCase(), value)
         }
@@ -196,12 +194,11 @@ const resourceObserver = new PerformanceObserver(list => {
       }
     }
     window.addEventListener('load', handleLoad)
-    return () => window.removeEventListener('load', handleLoad)
   }, [reportMetric])
   return {
-    // TODO: Add content
+    // TODO: Add content;
   }
-//     reportMetric
+//     reportMetric;
   }
 }
-export default usePerformanceMonitoring
+export default usePerformanceMonitoring;

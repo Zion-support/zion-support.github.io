@@ -4,7 +4,6 @@ import Footer from '../../components/Footer';
 
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
     
           
           
@@ -101,8 +100,8 @@ const PagePage: React.FC = () => {
               <li>• Edge computing deployment</li>
               <li>• Cost-effective cloud strategies</li>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Implementation Roadmap</h2>
-              Follow our proven 6-month implementation roadmap to achieve 90% cost reduction:
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: Assessment (Month 1)</h3>
+              Follow our proven 6-month implementation roadmap to achieve 90% cost reduction: <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase ,
+    1: Assessment (Month, 1)</h3>
 <li>• Comprehensive AI cost audit</li>
               <li>• Performance baseline establishment</li>
               <li>• Optimization opportunity identification</li>
@@ -168,27 +167,7 @@ const PagePage: React.FC = () => {
           </a>
 href="/services"
                   className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors">
-                  Explore AI Services
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+                  Explore AI, Services);
 };
 
 export default PagePage;

@@ -1,7 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-<<<<<<< HEAD
 interface Props {
   // TODO: Add content
 };
@@ -30,17 +29,6 @@ class ErrorBoundary extends Component
 }
   constructor(props: Props) {
   // TODO: Add content
-=======
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -48,25 +36,18 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {
   // TODO: Add content
 }
     return {
   // TODO: Add content
 };
-  hasError: true,
+
 //       error
     };
-=======
-
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error };
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
   // TODO: Add content
 }
     this.setState({
@@ -80,10 +61,10 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 // console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
     // Report error to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+    if (typeof window !== 'undefined' && 'gtag' in, window) {
   // TODO: Add content
 }
-      (window as any).gtag('event', 'exception', {
+      (window as, any).gtag('event', 'exception', {
   // TODO: Add content
 };
   description: error.message,
@@ -98,14 +79,10 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     }
     // Report error to error tracking service
     this.reportError(error, errorInfo);
-=======
-    this.setState({ error, errorInfo });
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
   // TODO: Add content
 }
       // Custom fallback UI
@@ -160,7 +137,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 
           <details className="mb-6 text-left">
                   <summary className="text-cyan-400 cursor-pointer mb-2">
-// Error Details (Development Only)
+// Error Details (Development, Only)
                   
           
           
@@ -207,7 +184,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
           </button>
                 <button
                   onClick={this.handleReload}
-                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hove,text-slate-900 transition-all duration-300"
 // >
 //                   Reload Page
                 
@@ -222,7 +199,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
           </button>
                 <button
                   onClick={this.handleGoHome}
-                  className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                  className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover: bg-purple-400 hove,text-slate-900 transition-all duration-300"
 // >
 //                   Go Home
                 
@@ -239,7 +216,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               <div className="mt-8 text-sm text-gray-400">
                 <p>If this problem persists, please contact our support team:</p>
                 <p className="mt-2">
-                   <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
+                   <a href="mailto: support@ziontechgroup.com" className="text-cyan-400 hove,
+    r:text-cyan-300">
 // support@ziontechgroup.com
                   
           
@@ -253,7 +231,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
           </a>
                 </p>
                 <p>
-                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
+                   <a href="tel: +13024640950" className="text-cyan-400 hove,
+
 // +1 (302) 464-0950
                   
           
@@ -268,13 +247,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 </p>
               </div>
             </div>
-=======
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
           </div>
         </div>
       );

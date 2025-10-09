@@ -206,15 +206,15 @@ return title.includes(this.config.siteName)
       '@context': 'https://schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
-      description: this.generateDescription(),
-      url: this.currentPageData.url || window.location.href,
+
+
       image: this.currentPageData.image || this.config.defaultImage,
       publisher: {
     // TODO: Add content
   }
         '@type': 'Organization',
-        name: this.config.siteName,
-        url: this.config.siteUrl
+
+
       }
     }
     // Add article-specific properties
@@ -231,7 +231,7 @@ return title.includes(this.config.siteName)
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
         articleSection: this.currentPageData.section,
-        keywords: this.generateKeywords()
+
       }
   )
     }
@@ -340,7 +340,7 @@ private addStructuredData(data: unknown): void {
       {
     // TODO: Add content
   }
-  url: this.config.siteUrl,
+
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
         priority: '1.0'
@@ -358,12 +358,12 @@ Allow: /,
 Sitemap: ${this.config.siteUrl}/sitemap.xml
 // # Disallow admin and private areas,
   Disallow: /admin/,
-    Disallow: /private/,
-    Disallow: /api/,
 
-  Disallow: /_next/,
 
-  Disallow: /static/`
+
+
+
+
   }
   /**
    * Check for SEO issues
@@ -457,11 +457,11 @@ const score = Math.max(0, 100 - (issues.length / maxIssues) * 100)
 const defaultConfig: SEOConfig = {
     // TODO: Add content
   }
-  siteName: 'Zion Tech Group',
-  siteUrl: 'https://zion.app',
-  defaultTitle: 'Advanced AI and IT Solutions',
-  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
-  defaultImage: 'https://zion.app/og-image.jpg',
+
+
+
+
+
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID

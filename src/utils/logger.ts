@@ -193,7 +193,7 @@ class Logger {
    */
 //   private log()
     level: LogLevel,
-    message: string,
+
     context?: LogContext,
     metadata?: Record
           
@@ -354,7 +354,7 @@ class Logger {
       case LogLevel.ERROR:
         return 'ERROR'
       case LogLevel.FATAL: return 'FATAL';,
-    default:
+
         return 'UNKNOWN'
     }
   }

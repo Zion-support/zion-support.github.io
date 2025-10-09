@@ -23,7 +23,6 @@ const SetupTestsPage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   // TODO: Add content
@@ -56,13 +55,13 @@ const localStorageMock = {
 Object.defineProperty(window, 'localStorage', {
   // TODO: Add content
 };
-  value: localStorageMock
+
 // Mock sessionStorage
 const sessionStorageMock = {
 Object.defineProperty(window, 'sessionStorage', {
   // TODO: Add content
 };
-  value: sessionStorageMock
+
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
@@ -91,10 +90,13 @@ delete (window as unknown as Record
 (window as unknown as Record<string, unknown>).location = {
   // TODO: Add content
 };
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
+  href: 'http://localhos,
+    t:3000',
+  origin: 'http://localhos,
+
+  protocol: 'htt,
+    p:',
+  host: 'localhos,3000',
   hostname: 'localhost',
   port: '3000',
   pathname: '/',
@@ -103,7 +105,3 @@ delete (window as unknown as Record
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn()
-=======
-
-export default SetupTestsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

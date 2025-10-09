@@ -13,7 +13,7 @@ export interface FieldRule {
     // TODO: Add content
   }
   type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';,
-    message: string
+
   min?: number
   max?: number
   minLength?: number
@@ -49,7 +49,7 @@ export class ValidationError extends Error {
     // TODO: Add content
   }
 //   constructor()
-  message: string,
+
     public field: string,
     public errors: string[]
   ) {
@@ -240,7 +240,7 @@ export function createCustomValidator
           
           <T>()
   validator: (value: T) => boolean,
-  message: string,
+
 ): (value: T) => { isValid: boolean; errors: string[] } {
     // TODO: Add content
   }
@@ -252,7 +252,7 @@ export function createCustomValidator
     // TODO: Add content
   }
 //       isValid,
-      errors: isValid ? [] : [message]
+
     }
   }
 }
@@ -349,7 +349,7 @@ export function validateForm<T extends Record<string, unknown>>()
     // TODO: Add content
   }
 //             field,
-            errors: fieldErrors
+
           }
         }
   )
@@ -358,7 +358,7 @@ export function validateForm<T extends Record<string, unknown>>()
   return {
     // TODO: Add content
   }
-  isValid: Object.keys(errors).length === 0,
+
 //     errors
   }
 }
@@ -380,7 +380,7 @@ export const ValidationRulesBuilder = {
           <T>(): ValidationRule<T> => ({
     // TODO: Add content
   }
-  validate: (value: T) => {
+
     // TODO: Add content
   }
       if (value === null || value === undefined) return false
@@ -388,7 +388,7 @@ export const ValidationRulesBuilder = {
       if (Array.isArray(value) && value.length === 0) return false
       return true
     },
-    message: 'This field is required'
+
   }),
   email: (): ValidationRule
           
@@ -402,8 +402,8 @@ export const ValidationRulesBuilder = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => validateEmail(value),
-    message: 'Please enter a valid email address'
+
+
   }),
   url: (): ValidationRule
           
@@ -417,8 +417,8 @@ export const ValidationRulesBuilder = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => validateURL(value),
-    message: 'Please enter a valid URL'
+
+
   }),
   minLength: (min: number): ValidationRule
           
@@ -432,8 +432,8 @@ export const ValidationRulesBuilder = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => value.length >= min,
-    message: `Must be at least ${min} characters long`
+
+
   }),
   maxLength: (max: number): ValidationRule
           
@@ -447,7 +447,7 @@ export const ValidationRulesBuilder = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => value.length 
+
           
           
           
@@ -457,12 +457,12 @@ export const ValidationRulesBuilder = {
           
           
           <= max,
-    message: `Must be no more than ${max} characters long`
+
   }),
   pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => pattern.test(value),
+
 //     message
   }),
   range: (min: number, max: number): ValidationRule
@@ -477,8 +477,8 @@ export const ValidationRulesBuilder = {
           <number> => ({
     // TODO: Add content
   }
-  validate: (value: number) => validateNumberRange(value, min, max),
-    message: `Must be between ${min} and ${max}`
+
+
   }),
   custom: 
           
@@ -492,7 +492,7 @@ export const ValidationRulesBuilder = {
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     // TODO: Add content
   }
-  validate: validator,
+
 //     message
   }
   )

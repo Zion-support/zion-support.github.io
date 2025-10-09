@@ -2,22 +2,22 @@
 import React, { useState, useCallback } from 'react'
 const Image: React.FC = () => {
 interface ImageProps {
-    // TODO: Add content
+    // TODO: Add content;
   }
   src: string;,
-    alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
+    alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  _quality?: number;
   _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string
-  fill?: boolean
-  sizes?: string
-  style?: React.CSSProperties
-  onLoad?: () => void
-  onError?: () => void
+  _blurDataURL?: string;
+  fill?: boolean;
+  sizes?: string;
+  style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 export const Image: React.FC
           
@@ -27,9 +27,9 @@ export const Image: React.FC
           
           
           
-          
+          ;
           <ImageProps> = ({
-    // TODO: Add content
+    // TODO: Add content;
   }
 //   src,
 //   alt,
@@ -45,30 +45,30 @@ quality = 75,
 //   style,
 //   onLoad,
 //   onError,
-//   ...props
+//   ...props;
 }) => {
-    // TODO: Add content
+    // TODO: Add content;
   }
   const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const _handleLoad = useCallback(() => {
-    // TODO: Add content
+    // TODO: Add content;
   }
     setIsLoaded(true)
     if (onLoad) onLoad()
   }, [onLoad])
   const handleError = useCallback(() => {
-    // TODO: Add content
+    // TODO: Add content;
   }
     setHasError(true)
     if (onError) onError()
   }, [onError])
   const imageStyle: React.CSSProperties = {
-    // TODO: Add content
+    // TODO: Add content;
   }
 //     ...style,
     ...(fill && {
-    // TODO: Add content
+    // TODO: Add content;
   }
   position: 'absolute',
       top: 0,
@@ -80,7 +80,7 @@ quality = 75,
   )
   }
   if (hasError) {
-    // TODO: Add content
+    // TODO: Add content;
   }
     return (
     
@@ -94,7 +94,7 @@ quality = 75,
           <div>Coming Soon</div>
   )
       
-          <div
+          <div;
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
@@ -112,11 +112,8 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
       </div>
     )
   }
-  return (
-    <div>Coming Soon</div>
   )
     
-          <img
       src={src}
       alt={alt}
       width={width}
@@ -131,4 +128,4 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 //     />
   )
 }
-export default Image
+export default Image;

@@ -1,9 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users from 'lucide-react';
+import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield, FileText, Users from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer 
 const CompliancePage: React.FC = () => {
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -24,14 +23,14 @@ const CompliancePage: React.FC = () => {
       description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
       features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
     },
-      icon: FileText,
-      title: 'Regulatory Compliance',
-      description: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
-      features: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
-      icon: Users,
-      title: 'Privacy Rights',
-      description: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
-      features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
+
+
+
+
+
+
+
+
     }
   return (
     
@@ -49,7 +48,8 @@ const CompliancePage: React.FC = () => {
         <Navigation />
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8 py-6">
             <div className="flex items-center">
               <Link
                 to="/privacy"
@@ -79,7 +79,8 @@ const CompliancePage: React.FC = () => {
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
         </section>
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <main className="max-w-7xl mx-auto px-4 sm: px-6 l,
+
           {/* Overview */}
           <section className="mb-16">
             <div className="text-center mb-12">
@@ -110,7 +111,8 @@ const CompliancePage: React.FC = () => {
           
           </p>
             {/* Certifications Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 md: grid-cols-2 l,
+
               {certifications.map((cert, index) => ()
                 
           <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
@@ -156,30 +158,6 @@ Compliance Areas
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

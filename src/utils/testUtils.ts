@@ -79,7 +79,7 @@ export const mockFetch = ()
           
           < 300,
 // status,
-        headers: new Headers(headers),
+
         json: async () => response,
         text: async () => JSON.stringify(response)
       } as Response)
@@ -204,10 +204,10 @@ measure: (name: string, startMark?: string, endMark?: string) => {
     // TODO: Add content
   }
 //         name,
-        entryType: 'measure',
-        startTime: Date.now(),
-        duration: 100,
-        toJSON: () => ({}
+
+
+
+
   )
       } as PerformanceEntry)
     },
@@ -226,7 +226,7 @@ measure: (name: string, startMark?: string, endMark?: string) => {
     },
     clearResourceTimings: () => {},
     setResourceTimingBufferSize: () => {},
-    toJSON: () => ({}),
+
     addEventListener: () => {},
     removeEventListener: () => {},
     dispatchEvent: () => true,
@@ -500,7 +500,7 @@ export const measureExecutionTime = async
           
           
           <T>()
-  fn: () => T | Promise
+
           <T>
 ): Promise<{ result: T; duration: number }> => {
     // TODO: Add content

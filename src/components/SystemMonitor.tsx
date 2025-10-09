@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * System Monitor Component
@@ -55,9 +54,9 @@ interface SystemMetrics {
   performance: {
   // TODO: Add content
 };
-  score: number;
-    loadTime: number;,
-    firstContentfulPaint: number;,
+  score: number;,
+
+
     largestContentfulPaint: number;,
     firstInputDelay: number;,
     cumulativeLayoutShift: number;,
@@ -99,14 +98,9 @@ interface SystemMetrics {
     downlink: number;,
     rtt: number;,
     saveData: boolean;
-=======
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 interface SystemMonitorProps {
   // Add props here
 }
-<<<<<<< HEAD
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
@@ -158,29 +152,29 @@ const updateMetrics = useCallback(() => {
       const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {
       const _networkInfo = getNetworkInfo();
-      const _newMetrics: SystemMetrics = {,
-    score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
-          largestContentfulPaint: 0, // Not available in current metrics,
-  firstInputDelay: 0, // Not available in current metrics,
-  cumulativeLayoutShift: 0, // Not available in current metrics
+      const _newMetrics: SystemMetrics = {
+
+
+
+
+
+
         },
-          total: errorStats.totalErrors,
-          byType: errorStats.errorsByType,
-          byCategory: errorStats.errorsByCategory,
-          bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
+
+
+
+
+
   // TODO: Add content
 };
-  id: error.id,
-            message: error.message,
-            type: error.type,
-            severity: error.severity,
-            timestamp: error.context.timestamp
+
+
+
+
+
           }));
-  memory: memoryInfo,
-        network: networkInfo
+
+
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
@@ -188,10 +182,10 @@ const updateMetrics = useCallback(() => {
     const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
-      effectiveType: 'unknown',
-      downlink: 0,
-      rtt: 0,
-      saveData: false
+
+
+
+
     
           
           
@@ -214,7 +208,7 @@ const updateMetrics = useCallback(() => {
             
           <button
               onClick={handleExport}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 focus: outline-none focus:ring-2 focu,ring-blue-500"
 // >
 //               Export Data
             
@@ -236,7 +230,8 @@ const updateMetrics = useCallback(() => {
       {/* Performance Metrics */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-4">
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Performance Score</span>
@@ -255,7 +250,8 @@ const updateMetrics = useCallback(() => {
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
       {/* Error Metrics */}
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md: grid-cols-2 l,
+
               <span className="text-sm font-medium text-gray-600">Total Errors</span>
               <span className="text-2xl font-bold text-red-600">
                 {metrics.errors.total}
@@ -326,15 +322,4 @@ className={`h-2 rounded-full ${
                   
           <div key={category} className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
-=======
-
-const SystemMonitor: React.FC<SystemMonitorProps> = () => {
-  return (
-    <div className="systemmonitor">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default SystemMonitor;

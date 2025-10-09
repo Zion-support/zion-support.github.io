@@ -3,7 +3,6 @@ import React from 'react';
 interface UltimateBusinessIntelligenceShowcase2025Props {
   // Add props here
 }
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TODO: Add items
@@ -12,7 +11,8 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
   // TODO: Add content
 };
   id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
+      title: 'AI 202,
+    5: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
       type: 'Blog Post',
@@ -28,18 +28,18 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
       readingTime: '35 min read',
       featured: true,
       tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
-      id: 'fortune-500-business-intelligence-success',
-      title: 'Fortune 500 Ultimate Business Intelligence Success',
-      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-success',
-      type: 'Case Study',
-      category: 'case-study',
-      id: 'business-intelligence-implementation-guide',
-      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
-      description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
-      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',;
-      type: 'Implementation Guide',
-      category: 'resource',
+
+
+
+
+
+
+
+
+
+
+
+
               {/* Badge */}
                 
           
@@ -82,7 +82,7 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
               Ready to Transform Your Business?
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>
                 to="/contact"
-                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover: from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hove,scale-105 shadow-2xl"
               >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -105,15 +105,3 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
 >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025
-=======
-
-const UltimateBusinessIntelligenceShowcase2025: React.FC<UltimateBusinessIntelligenceShowcase2025Props> = () => {
-  return (
-    <div className="ultimatebusinessintelligenceshowcase2025">
-      {/* Component content */}
-    </div>
-  );
-};
-
-export default UltimateBusinessIntelligenceShowcase2025;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

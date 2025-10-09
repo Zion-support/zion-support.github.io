@@ -153,8 +153,8 @@ class AdvancedCache
   }
 //       value,
 //       expiry,
-      hits: 0,
-      lastAccessed: Date.now()
+
+
     }
   )
     // Update access order
@@ -277,7 +277,7 @@ class AdvancedCache
     // TODO: Add content
   }
   size: number;,
-    maxSize: number;,
+
     hitRate: number;,
     entries: Array
           
@@ -292,7 +292,7 @@ class AdvancedCache
     // TODO: Add content
   }
   key: string;,
-    hits: number;,
+
     age: number
     }>
   } {
@@ -317,8 +317,8 @@ class AdvancedCache
     // TODO: Add content
   }
 //         key,
-        hits: entry.hits,
-        age: now - entry.lastAccessed
+
+
       }
   )
     }
@@ -326,10 +326,10 @@ class AdvancedCache
     return {
     // TODO: Add content
   }
-  size: this.cache.size,
-      maxSize: this.options.maxSize,
-      hitRate: totalHits / Math.max(this.cache.size, 1),
-      entries: entries.sort((a, b) => b.hits - a.hits)
+
+
+
+
     }
   }
   // Utility method for async operations with caching
@@ -343,7 +343,7 @@ class AdvancedCache
           
           
           <R extends T>()
-    key: string,
+
     fetcher: () => Promise
           <R>,
     ttl?: number,

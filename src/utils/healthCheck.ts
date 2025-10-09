@@ -15,7 +15,7 @@ export interface HealthCheck {
     // TODO: Add content
   }
   name: string;,
-    status: 'pass' | 'warn' | 'fail'
+
   message?: string
   details?: Record
           
@@ -152,7 +152,7 @@ constructor() {
     // TODO: Add content
   }
 //           name,
-          status: 'fail',
+
           message: error instanceof Error ? error.message : 'Unknown error'
         }
   )
@@ -179,8 +179,8 @@ const hasFailures = checks.some((c) => c.status === 'fail')
     // TODO: Add content
   }
 //       status,
-      timestamp: now,
-      uptime: now - this.startTime,
+
+
 //       checks
     }
     // Cache the result
@@ -229,9 +229,9 @@ const hasFailures = checks.some((c) => c.status === 'fail')
       return {
     // TODO: Add content
   }
-  name: 'memory',
-        status: 'pass',
-        message: 'Memory API not available'
+
+
+
       }
     }
     try {
@@ -254,7 +254,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       return {
     // TODO: Add content
   }
-  name: 'memory',
+
 //         status,
 //         message,
         details: {
@@ -272,9 +272,9 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       return {
     // TODO: Add content
   }
-  name: 'memory',
-        status: 'warn',
-        message: 'Could not check memory usage'
+
+
+
       }
     }
   }
@@ -305,10 +305,10 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       return {
     // TODO: Add content
   }
-  name: 'performance',
+
 //         status,
 //         message,
-        details: {
+
     // TODO: Add content
   }
   metrics: report.metrics,
@@ -321,9 +321,9 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       return {
     // TODO: Add content
   }
-  name: 'performance',
-        status: 'warn',
-        message: 'Could not check performance'
+
+
+
       }
     }
   }
@@ -357,18 +357,18 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       return {
     // TODO: Add content
   }
-  name: 'browser-apis',
-        status: 'warn',
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
-        details: { missingAPIs }
+
+
+
+
       }
     }
     return {
     // TODO: Add content
   }
-  name: 'browser-apis',
-      status: 'pass',
-      message: 'All required browser APIs available'
+
+
+
     }
   }
   /**
@@ -392,9 +392,9 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
         return {
     // TODO: Add content
   }
-  name: 'storage',
-          status: 'fail',
-          message: 'LocalStorage not working correctly'
+
+
+
         }
       }
       // Check available space (approximate)
@@ -410,17 +410,17 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
         return {
     // TODO: Add content
   }
-  name: 'storage',
-          status: 'warn',
-          message: 'LocalStorage space limited'
+
+
+
         }
       }
       return {
     // TODO: Add content
   }
-  name: 'storage',
-        status: 'pass',
-        message: 'Storage working correctly'
+
+
+
       }
     } catch {
     // TODO: Add content
@@ -428,9 +428,9 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       return {
     // TODO: Add content
   }
-  name: 'storage',
-        status: 'fail',
-        message: 'LocalStorage not available'
+
+
+
       }
     }
   }

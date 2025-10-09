@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award,  Brain,  BarChart,  Target,  Zap,  TrendingUp,  Star,  Award from 'lucide-react';
+import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award,  Brain,  BarChart,  Target,  Zap,  TrendingUp, Star, Award from 'lucide-react';
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 import React from 'react';
 import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
+import Footer 
 
 const AIAnalyticsPage: React.FC = () => {
-<<<<<<< HEAD
   const features = [
     {
   // TODO: Add content
@@ -25,23 +21,23 @@ const AIAnalyticsPage: React.FC = () => {
 //         'Custom prediction models'
 //       ]
     },
-icon: BarChart,
-      title: 'Real-time Dashboards',
-      description: 'Interactive dashboards that provide instant insights into your business performance',
+
+
+
         'Live data visualization',
         'Customizable metrics',
         'Mobile-responsive design',
         'Role-based access control'
-      icon: Target,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with AI-powered insights',
+
+
+
         'Scheduled report generation',
         'Natural language summaries',
         'Executive briefings',
         'Custom report templates'
-      icon: Zap,
-      title: 'Anomaly Detection',
-      description: 'Identify unusual patterns and potential issues before they impact your business',
+
+
+
         'Real-time anomaly alerts',
         'Pattern recognition',
         'Risk assessment',
@@ -49,32 +45,32 @@ icon: BarChart,
     }
   ];
   const useCases = [
-      title: 'Sales Performance Analysis',
-      description: 'Track sales metrics, identify top performers, and optimize sales strategies',
-      icon: TrendingUp,
+
+
+
       color: 'text-green-400',
 
-      title: 'Financial Forecasting',
-      description: 'Predict revenue, expenses, and cash flow with high accuracy',
-      color: 'text-purple-400',
+
+
+
 
       name: 'Professional',
       price: '$3,500',
-      description: 'Ideal for growing businesses with complex analytics needs',
+
         'Up to 50 data sources',
         'Advanced dashboards',
         'Real-time reporting',
         'Priority support',
         'Custom integrations',
         'API access'
-      color: 'text-purple-400',
+
       bgColor: 'bg-purple-500/10',
       popular: true,
 
-      name: 'Enterprise',
-      price: 'Custom',
+
+
       period: '',
-      description: 'Tailored solutions for large organizations with extensive requirements',
+
 'Unlimited data sources',
         'Custom dashboards',
         'Real-time analytics',
@@ -82,22 +78,22 @@ icon: BarChart,
         'Custom development',
         'On-premise deployment',
         'SLA guarantees'
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10'
+
+
   const benefits = [,
 
-      icon: Star,
-      title: '95% Accuracy',
-      description: 'Industry-leading accuracy in predictions and insights',
 
-      title: 'Real-time Processing',
-      description: 'Instant analysis of data as it comes in',
 
-      title: 'Actionable Insights',
-      description: 'Clear, actionable recommendations for business improvement'
-      icon: Award,
-      title: 'Proven Results',
-      description: '300% average ROI for our analytics clients'
+
+
+
+
+
+
+
+
+
+
   return (
     
           
@@ -187,7 +183,8 @@ icon: BarChart,
                   </ul>
 {/* Use Cases */}
               Use Cases
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-6">
               {useCases.map((useCase, index) => ()
                 
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
@@ -269,31 +266,13 @@ icon: BarChart,
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 Get Free Consultation
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hove,text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover: bg-purple-400 hove,text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

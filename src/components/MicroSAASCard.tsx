@@ -1,15 +1,14 @@
 import React from 'react';
 
 interface MicroSAASCardProps {
-<<<<<<< HEAD
   // TODO: Add content
 }
   service: {
   // TODO: Add content
 };
-  title: string;
-    description: string;
-    icon: string;
+  title: string;,
+    description: string;,
+    icon: string;,
     price: string;,
     features: string[];,
     benefits: string[];
@@ -32,14 +31,10 @@ const MicroSAASCard: React.FC
           
           <MicroSAASCardProps> = ({ service }) => {
   // TODO: Add content
-=======
-  // Add props here
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
-<<<<<<< HEAD
     
           
           
@@ -123,7 +118,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         <div className="pt-4">
           <a
             href={service.link || 'mailto:kleber@ziontechgroup.com'}
-            className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
+            className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover: from-cyan-600 hove,to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
 // >
 //             Get Started
             
@@ -140,10 +135,6 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>
       </div>
-=======
-    <div className="microsaascard">
-      {/* Component content */}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     </div>
   );
 };

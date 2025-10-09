@@ -39,7 +39,7 @@ class MonitoringService {
         clsObserver.observe({ entryTypes: ['layout-shift'] }
   )
         // First Contentful Paint
-        message: `Unhandled Promise Rejection: ${event.reason}`,
+
   private reportMetric(name: string, value: number): void {
     // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {

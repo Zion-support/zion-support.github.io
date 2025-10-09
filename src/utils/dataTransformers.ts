@@ -170,7 +170,7 @@ export function flattenObject()
  * Unflatten a flattened object
  */
 export function unflattenObject()
-  obj: Record
+
           
           
           
@@ -242,7 +242,7 @@ export function unflattenObject()
  * Pick specific keys from an object
  */
 export function pick<T extends Record<string, unknown>, K extends keyof T>()
-  obj: T,
+
   keys: K[]
 ): Pick
           <T, K> {
@@ -283,8 +283,8 @@ export function omit
           
           
           <T extends Record<string, unknown>, K extends keyof T>()
-  obj: T,
-  keys: K[]
+
+
 ): Omit
           <T, K> {
     // TODO: Add content
@@ -376,8 +376,8 @@ export function sortBy
           
           
           <T>()
-  array: T[],
-  keys: Array
+
+
           <keyof T | ((item: T) => unknown)>,
   orders: Array<'asc' | 'desc'> = []
 ): T[] {

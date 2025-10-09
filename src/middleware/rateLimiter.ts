@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Rate Limiting Middleware
@@ -49,9 +48,10 @@ export class RateLimiter {
     // Cleanup old entries every minute
     setInterval(() => this.cleanup(), 60000);
    * Check if request is allowed
-   * @param identifier - Unique identifier (e.g., IP address)
+   * @param identifier - Unique identifier (e.g., IP, address)
    * @returns Whether the request is allowed
-  check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
+  check(identifier: string): { allowed: boolean; remaining: number; resetTim,
+    e: number } {
 const now = Date.now();
     const record = this.requests.get(identifier);
     const __now = Date.now();
@@ -83,7 +83,7 @@ const now = Date.now();
 };
   allowed: true,
         remaining: this.config.max - record.count,
-        resetTime: record.resetTime
+
     // Limit exceeded
     return { allowed: false, remaining: 0, resetTime: record.resetTime };
    * Reset rate limit for identifier
@@ -114,44 +114,42 @@ export const rateLimiters = {
   strict: new RateLimiter({
   // TODO: Add content
 };
-  windowMs: 60 * 1000,
-    max: 10,
-    message: 'Too many requests. Please try again in a minute.'
+
+
+
   }),
   // Standard: 100 requests per 15 minutes,
   standard: new RateLimiter({
   // TODO: Add content
 };
-  windowMs: 15 * 60 * 1000,
-    max: 100
+
+
   // Lenient: 1000 requests per hour,
 
     lenient: new RateLimiter({
   // TODO: Add content
 };
-  windowMs: 60 * 60 * 1000,
-    max: 1000
+
+
 // API: 60 requests per minute,
 
-    api: new RateLimiter({,
+    api: new RateLimiter({
 
-    max: 60,
-    message: 'API rate limit exceeded. Please try again later.'
+
   // Authentication: 5 login attempts per 15 minutes,
 
-    auth: new RateLimiter({,
+    auth: new RateLimiter({
 
-    max: 5,
-    message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true
+
+
   })
  * Get client identifier from request
  * @param request - Request object
- * @returns Client identifier (IP address or user ID)
+ * @returns Client identifier (IP address or user, ID)
 export function getClientIdentifier(request: Request): string {
   // TODO: Add content
 }
-  // Try to get real IP from headers (for proxied requests)
+  // Try to get real IP from headers (for proxied, requests)
   const headers = request.headers;
   const forwardedFor = headers.get('x-forwarded-for');
   const realIp = headers.get('x-real-ip');
@@ -205,7 +203,3 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
       );
     // Request allowed - headers can be added to response later
 return null;
-=======
-// TypeScript file - rateLimiter
-export default {};
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

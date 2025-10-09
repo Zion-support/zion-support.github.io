@@ -4,7 +4,6 @@ interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string[];
-<<<<<<< HEAD
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'profile';
@@ -25,7 +24,8 @@ interface SEOProps {
           <string, unknown>;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+  alternateLocales?: { locale: string; ur,
+    l: string }[];
 }
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
@@ -39,11 +39,13 @@ interface SEOProps {
 //     'digital transformation',
 //     'IT services',
 //   ],
-  image: 'https://ziontechgroup.com/og-image.jpg',
-  url: 'https://ziontechgroup.com',
+  image: 'http,
+    s://ziontechgroup.com/og-image.jpg',
+  url: 'http,
+
   type: 'website' as const,
   locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
+  twitterCard: 'summary_large_image' as const
 };
 export const SEO: React.FC
           
@@ -71,21 +73,21 @@ export const SEO: React.FC
 //   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = [],
+  alternateLocales = []
 }) => {
   // TODO: Add content
 }
   const seo = {
   // TODO: Add content
 };
-  title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
-    description: description || defaultSEO.description,
-    keywords: keywords || defaultSEO.keywords,
-    image: image || defaultSEO.image,
-    url: url || defaultSEO.url,
+
+
+
+
+
 //     type,
 //     twitterCard,
-//     locale,
+//     locale
   };
   // Generate structured data;
 const generateStructuredData = () => {
@@ -111,9 +113,9 @@ const generateStructuredData = () => {
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
-      description: seo.description,
-      url: seo.url,
-      image: seo.image,
+
+
+
     };
     if (author) {
   // TODO: Add content
@@ -122,38 +124,8 @@ const generateStructuredData = () => {
   // TODO: Add content
 }
         '@type': 'Person',
-        name: author,
+        name: author
       };
-=======
-  canonicalUrl?: string;
-}
-
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-}) => {
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-    
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     }
     metaKeywords.setAttribute('content', keywords.join(', '));
     

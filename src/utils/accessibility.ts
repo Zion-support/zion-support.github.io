@@ -21,9 +21,9 @@ export interface A11yError {
 export interface A11yWarning {
     // TODO: Add content
   }
-  type: string;,
-    element: string;,
-    message: string;,
+
+
+
     suggestion: string
 }
 class AccessibilityService {
@@ -46,8 +46,8 @@ class AccessibilityService {
     return {
     // TODO: Add content
   }
-  ratio: Math.round(ratio * 100) / 100,
-      passes: {
+
+
     // TODO: Add content
   }
   normal: ratio >= 4.5, // WCAG AA for normal text,
@@ -106,10 +106,10 @@ class AccessibilityService {
         errors.push({
     // TODO: Add content
   }
-  type: 'missing-alt',
-          element: img['src'] || 'unknown',
-          message: 'Image missing alt attribute',
-          wcag: '1.1.1 (Level A)'
+
+
+
+
         }
   )
       } else if (img.alt === '') {
@@ -118,10 +118,10 @@ class AccessibilityService {
         warnings.push({
     // TODO: Add content
   }
-  type: 'empty-alt',
-          element: img['src'] || 'unknown',
-          message: 'Image has empty alt text',
-          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
+
+
+
+
         }
   )
       }
@@ -141,10 +141,10 @@ class AccessibilityService {
         errors.push({
     // TODO: Add content
   }
-  type: 'missing-label',
-          element: input.tagName.toLowerCase(),
-          message: 'Form element missing label',
-          wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
+
+
+
+
         }
   )
       }
@@ -162,10 +162,10 @@ class AccessibilityService {
         warnings.push({
     // TODO: Add content
   }
-  type: 'heading-hierarchy',
-          element: heading.tagName.toLowerCase(),
-          message: `Heading level skipped from h${prevLevel} to h${level}`,
-          suggestion: 'Maintain proper heading hierarchy'
+
+
+
+
         }
   )
       }
@@ -180,10 +180,10 @@ const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]')
       warnings.push({
     // TODO: Add content
   }
-  type: 'missing-skip-link',
-        element: 'body',
-        message: 'No skip navigation link found',
-        suggestion: 'Add a skip link to main content for keyboard users'
+
+
+
+
       }
   )
     }
@@ -195,10 +195,10 @@ const html = document.documentElement
       errors.push({
     // TODO: Add content
   }
-  type: 'missing-lang',
-        element: 'html',
-        message: 'Missing lang attribute on html element',
-        wcag: '3.1.1 (Level A)'
+
+
+
+
       }
   )
     }
@@ -214,10 +214,10 @@ const html = document.documentElement
         errors.push({
     // TODO: Add content
   }
-  type: 'empty-link',
-          element: link.href || 'unknown',
-          message: 'Link has no accessible text',
-          wcag: '2.4.4 (Level A)'
+
+
+
+
         }
   )
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {
@@ -226,10 +226,10 @@ const html = document.documentElement
         warnings.push({
     // TODO: Add content
   }
-  type: 'generic-link-text',
-          element: text,
-          message: 'Link text is not descriptive',
-          suggestion: 'Use more descriptive link text that makes sense out of context'
+
+
+
+
         }
   )
       }
@@ -255,10 +255,10 @@ const html = document.documentElement
         warnings.push({
     // TODO: Add content
   }
-  type: 'small-touch-target',
-          element: element.tagName.toLowerCase(),
-          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
-          suggestion: 'Increase touch target size to at least 44x44px'
+
+
+
+
         }
   )
       }

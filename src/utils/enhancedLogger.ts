@@ -87,13 +87,13 @@ export interface LoggerConfig {
 /**
  * Default logger configuration
  */
-  minLevel: LogLevel.INFO,
-  enableConsole: true,
-  enableRemote: false,
-  enableStructured: true,
-  maxLogs: 1000,
-  enablePerformance: true,
-  environment: process.env['NODE_ENV'] || 'development'
+
+
+
+
+
+
+
 }
 /**
  * Enhanced Logger class
@@ -265,7 +265,7 @@ export class EnhancedLogger {
    * ```
    */
 //   public error()
-    message: string,
+
     data?: Record
           
           
@@ -289,7 +289,7 @@ export class EnhancedLogger {
     // TODO: Add content
   }
   name: error.name,
-        message: error.message,
+
         stack: error.stack
       }
     }
@@ -304,7 +304,7 @@ export class EnhancedLogger {
    * @param source - Optional source identifier
    */
 //   public fatal()
-    message: string,
+
     data?: Record
           
           
@@ -327,9 +327,9 @@ export class EnhancedLogger {
       logData.error = {
     // TODO: Add content
   }
-  name: error.name,
-        message: error.message,
-        stack: error.stack
+
+
+
       }
     }
     this.log(LogLevel.FATAL, message, logData, source, error?.stack)
@@ -403,8 +403,8 @@ export class EnhancedLogger {
    * @param stack - Optional stack trace
    */
 //   private log()
-    level: LogLevel,
-    message: string,
+
+
     data?: Record
           
           
@@ -434,16 +434,16 @@ export class EnhancedLogger {
     const logEntry: LogEntry = {
     // TODO: Add content
   }
-  id: this.generateLogId(),
+
 //       level,
 //       message,
-      timestamp: new Date(),
+
 //       data,
 //       source,
 //       stack,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-      environment: this.config.environment
+
     }
     // Store log entry
     this.logs.push(logEntry)
@@ -496,9 +496,9 @@ export class EnhancedLogger {
       const structuredLog = {
     // TODO: Add content
   }
-  timestamp: entry.timestamp,
-        level: levelName,
-        message: entry.message,
+
+
+
         source: entry.source,
         data: entry.data
       }
@@ -596,7 +596,7 @@ export class EnhancedLogger {
     // TODO: Add content
   }
 //           ...entry,
-          timestamp: entry.timestamp.toISOString()
+
         }
   )
       }
@@ -744,7 +744,7 @@ export class EnhancedLogger {
     return {
     // TODO: Add content
   }
-  total: this.logs.length,
+
 //       byLevel,
 //       bySource
     }
@@ -789,7 +789,7 @@ export class EnhancedLogger {
     // TODO: Add content
   }
 //         ...log,
-        timestamp: log.timestamp.toISOString()
+
       })),
 //       null,
 //       2,

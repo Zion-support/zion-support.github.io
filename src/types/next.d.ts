@@ -110,7 +110,7 @@ export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest'
 export interface MetadataRouteSitemap {
     // TODO: Add content
   }
-  url: string
+
   lastModified?: Date | string
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number

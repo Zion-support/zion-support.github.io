@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   // TODO: Add content
 };
   loadTime: number;,
@@ -12,22 +11,11 @@ interface PerformanceMetrics {
 interface PerformanceMetrics {
   // TODO: Add content
 };
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
-  [key: string]: number;
-=======
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
 
-interface PerformanceProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
+
+
+  [key: string]: number;
 }
 
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
@@ -36,7 +24,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
+    ttfb: null
   });
 
   useEffect(() => {

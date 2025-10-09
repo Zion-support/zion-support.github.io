@@ -81,7 +81,7 @@ export interface PerformanceAlert {
     metric: keyof PerformanceMetrics;,
     value: number;,
     threshold: number;,
-    timestamp: number
+
 }
 /**
  * Layout Shift Interface
@@ -90,7 +90,7 @@ export interface PerformanceAlert {
 export interface LayoutShift extends PerformanceEntry {
     // TODO: Add content
   }
-  value: number;,
+
     hadRecentInput: boolean
 }
 /**
@@ -100,11 +100,11 @@ export interface LayoutShift extends PerformanceEntry {
 export interface PerformanceWithMemory extends Performance {
     // TODO: Add content
   }
-  memory: {
+
     // TODO: Add content
   }
-  usedJSHeapSize: number;,
-    totalJSHeapSize: number;,
-    jsHeapSizeLimit: number
+
+
+
   }
 }

@@ -84,8 +84,8 @@ export const _usePerformance = () => {
         observer.observe({ entryTypes: ['first-input'] }
   )
       }
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded:
+
+
 //           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 //         firstContentfulPaint,
 //         largestContentfulPaint,

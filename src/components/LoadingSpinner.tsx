@@ -3,7 +3,6 @@ import React from 'react';
 interface LoadingSpinnerProps {
   // Add props here
 }
-<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   text?: string;
@@ -24,12 +23,12 @@ const LoadingSpinner: React.FC
   size = 'md',
 //   className,
   text = 'Loading...',
-  fullScreen = false,
+  fullScreen = false
 }) => {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
+    xl: 'w-16 h-16'
   };
   const spinner = ()
     
@@ -87,15 +86,6 @@ className={cn()
     );
   }
   return spinner;
-=======
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
-  return (
-    <div className="loadingspinner">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default LoadingSpinner;

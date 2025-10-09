@@ -95,11 +95,11 @@ class ApiClient {
     this.config = {
     // TODO: Add content
   }
-  baseURL: config.baseURL || '',
+
       timeout: config.timeout || 30000,
       retries: config.retries || 3,
       retryDelay: config.retryDelay || 1000,
-      headers: config.headers || {
+
     // TODO: Add content
   }
         'Content-Type': 'application/json'
@@ -120,7 +120,7 @@ class ApiClient {
           
           
           <T = unknown>()
-    url: string,
+
     config: Omit
           <RequestConfig, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {
@@ -157,9 +157,9 @@ class ApiClient {
           
           
           <T = unknown>()
-    url: string,
+
     data?: unknown,
-    config: Omit
+
           <RequestConfig, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {
     // TODO: Add content
@@ -178,7 +178,7 @@ class ApiClient {
   }
 //       ...config,
 //       url,
-      method: 'POST',
+
       body: JSON.stringify(data)
     }
   )
@@ -196,9 +196,9 @@ class ApiClient {
           
           
           <T = unknown>()
-    url: string,
+
     data?: unknown,
-    config: Omit
+
           <RequestConfig, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {
     // TODO: Add content
@@ -217,8 +217,8 @@ class ApiClient {
   }
 //       ...config,
 //       url,
-      method: 'PUT',
-      body: JSON.stringify(data)
+
+
     }
   )
   }
@@ -235,8 +235,8 @@ class ApiClient {
           
           
           <T = unknown>()
-    url: string,
-    config: Omit
+
+
           <RequestConfig, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {
     // TODO: Add content
@@ -255,7 +255,7 @@ class ApiClient {
   }
 //       ...config,
 //       url,
-      method: 'DELETE'
+
     }
   )
   }
@@ -272,9 +272,9 @@ class ApiClient {
           
           
           <T = unknown>()
-    url: string,
+
     data?: unknown,
-    config: Omit
+
           <RequestConfig, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {
     // TODO: Add content
@@ -293,8 +293,8 @@ class ApiClient {
   }
 //       ...config,
 //       url,
-      method: 'PATCH',
-      body: JSON.stringify(data)
+
+
     }
   )
   }
@@ -319,7 +319,7 @@ class ApiClient {
 //       url,
       method = 'GET',
       headers = {},
-      cacheOptions: cacheConfig,
+
       skipCache = false,
       retries = this.config.retries,
       timeout = this.config.timeout,
@@ -346,10 +346,10 @@ class ApiClient {
         return {
     // TODO: Add content
   }
-  data: cached,
-          status: 200,
-          statusText: 'OK (cached)',
-          headers: new Headers()
+
+
+
+
         }
       }
     }
@@ -382,7 +382,7 @@ const controller = new AbortController()
   }
 //           ...fetchConfig,
 //           method,
-          headers: {
+
     // TODO: Add content
   }
 //             ...this.config.headers,
@@ -424,9 +424,9 @@ const controller = new AbortController()
     // TODO: Add content
   }
 //           data,
-          status: response.status,
-          statusText: response.statusText,
-          headers: response.headers
+
+
+
         }
       } catch (error) {
     // TODO: Add content
@@ -443,7 +443,7 @@ const controller = new AbortController()
             logCritical(`API request failed after ${retries} attempts`, error as Error, {
     // TODO: Add content
   }
-  url: fullUrl,
+
 //               method,
 //               attempt
             }
@@ -454,7 +454,7 @@ const controller = new AbortController()
             logError(`API request failed`, error as Error, {
     // TODO: Add content
   }
-  url: fullUrl,
+
 //               method,
 //               attempt
             }
@@ -546,7 +546,7 @@ const controller = new AbortController()
   }
 //       ...this.config,
 //       ...config,
-      headers: {
+
     // TODO: Add content
   }
 //         ...this.config.headers,
@@ -620,11 +620,11 @@ const controller = new AbortController()
 const apiClient = new ApiClient({
     // TODO: Add content
   }
-  baseURL: process.env.NEXT_PUBLIC_API_URL || '',
-  timeout: 30000,
-  retries: 3,
-  retryDelay: 1000,
-  cacheOptions: {
+
+
+
+
+
     // TODO: Add content
   }
   ttl: 5 * 60 * 1000, // 5 minutes

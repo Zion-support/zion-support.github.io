@@ -1,45 +1,43 @@
 import React from 'react';
-<<<<<<< HEAD
-import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target,  Calendar,  Users,  Zap,  Shield from 'lucide-react';
-import { Link } from 'react-router-dom';
+import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target, Calendar, Users, Zap, Shield, import { Link } from 'react-router-dom';
 const AISchedulerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
   icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
       benefit: 'Save 5+ hours per week'
     },
-      icon: Users,
-      title: 'Team Coordination',
-      description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
-      benefit: 'Eliminate scheduling conflicts',
 
-      icon: Zap,
-      title: 'Automated Reminders',
-      description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
-      benefit: 'Reduce no-shows by 60%',
 
-      icon: Shield,
-      title: 'Privacy & Security',
-      description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
-      benefit: '100% secure scheduling'
+
+
+
+
+
+
+
+
+
+
+
+
     }
   ];
   const pricingPlans = [
       name: 'Team',
       price: '$49',
-      description: 'Ideal for small teams',
-      name: 'Robert Martinez',
+
+
       company: 'Consulting Group',
       role: 'Senior Partner',
       content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
-      name: 'Amanda Chen',
-      company: 'Digital Agency',
-      role: 'Project Manager',
-      content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
+
+
+
+
   return (
     
           
@@ -69,7 +67,7 @@ const AISchedulerPage: React.FC = () => {
           
           
           
-          
+          ;
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
 // Intelligent Meeting & Event Scheduling
@@ -81,11 +79,11 @@ const AISchedulerPage: React.FC = () => {
           
           
           
-          
+          ;
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-// Never miss another meeting with our AI-powered scheduling assistant. Automatically find
-//             the best meeting times, coordinate complex team schedules, and optimize your calendar
+// Never miss another meeting with our AI-powered scheduling assistant. Automatically find;
+//             the best meeting times, coordinate complex team schedules, and optimize your calendar;
             for maximum productivity.
           
           
@@ -97,9 +95,9 @@ const AISchedulerPage: React.FC = () => {
           
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hove,to-purple-600 transition-all duration-300 flex items-center"
 // >
               
           
@@ -111,12 +109,12 @@ const AISchedulerPage: React.FC = () => {
           
           
           <Phone className="w-5 h-5 mr-2" />,
- Call: (302) 464-0950
+ Call: (302) 464-0950;
             </a>
-            <Link
+            <Link;
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-Start Free Trial
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hove,text-indigo-600 transition-all duration-300"
+Start Free Trial;
             </Link>
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
@@ -145,9 +143,10 @@ Start Free Trial
           
           
           
-          
+          ;
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8">
             {features.map((feature, index) => ()
               
           <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
@@ -158,7 +157,7 @@ Start Free Trial
             ))}
         </section>
         {/* Integrations Section */}
-Works with Your Favorite Tools
+Works with Your Favorite Tools;
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => ()
               
@@ -167,14 +166,14 @@ Works with Your Favorite Tools
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
 {/* Pricing Section */}
-            Simple, Transparent Pricing
+            Simple, Transparent Pricing;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => ()
               
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-  // TODO: Add content
+  // TODO: Add content;
 }
-//                 plan.popular
+//                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
@@ -189,8 +188,7 @@ Works with Your Favorite Tools
           
           
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-Most Popular
-                )}
+Most, Popular)}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <div className="mb-6">
@@ -205,12 +203,12 @@ Most Popular
                     </li>
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                  Get Started
+? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hove,to-purple-600'
+                    : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hove,text-white'
+                  Get Started;
                 </button>
         {/* Testimonials */}
-            What Our Users Say
+            What Our Users Say;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => ()
               
@@ -229,33 +227,9 @@ Most Popular
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Master Your Schedule?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches
+            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches;
             and maximize productivity.
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 
-export default PagePage;
+export default AiAnalyticsDashboardPage;

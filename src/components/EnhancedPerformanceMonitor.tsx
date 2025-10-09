@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-  // TODO: Add content
+  // TODO: Add content;
 };
-  fcp: number | null;
-    lcp: number | null;
+  fcp: number | null;,
+    lcp: number | null;,
     fid: number | null;,
     cls: number | null;,
     ttfb: number | null;,
@@ -14,19 +13,11 @@ interface PerformanceMetrics {
     si: number | null;
 }
 interface PerformanceMonitorProps {
-  // TODO: Add content
-=======
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+  // TODO: Add content;
 }
 
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-<<<<<<< HEAD
   enableReporting?: boolean;
   reportInterval?: number;
 }
@@ -38,15 +29,15 @@ const EnhancedPerformanceMonitor: React.FC
           
           
           
-          
+          ;
           <PerformanceMonitorProps> = ({
-  // TODO: Add content
+  // TODO: Add content;
 }
 //   onMetricsUpdate,
   enableReporting = true,
-  reportInterval = 10000,
+  reportInterval = 10000;
 }) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
   const [metrics, setMetrics] = useState
           
@@ -56,39 +47,31 @@ const EnhancedPerformanceMonitor: React.FC
           
           
           
-          
+          ;
           <PerformanceMetrics>({
-  // TODO: Add content
+  // TODO: Add content;
 };
-  fcp: null,
-=======
-}
 
-const EnhancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
+
+
+
+
   });
 
   useEffect(() => {
-    // Basic performance monitoring
+    // Basic performance monitoring;
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
-<<<<<<< HEAD
       }
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
     // Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
@@ -97,10 +80,10 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdat
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
       for (const entry of list.getEntries()) {
-  // TODO: Add content
+  // TODO: Add content;
 }
         setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
       }
@@ -108,15 +91,15 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdat
     fidObserver.observe({ entryTypes: ['first-input'] });
     // Cumulative Layout Shift (CLS)
     const clsObserver = new PerformanceObserver((list) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
       for (const entry of list.getEntries()) {
-  // TODO: Add content
+  // TODO: Add content;
 }
-        if (!(entry as any).hadRecentInput) {
-  // TODO: Add content
+        if (!(entry as, any).hadRecentInput) {
+  // TODO: Add content;
 }
-          clsValue += (entry as any).value;
+          clsValue += (entry as, any).value;
           setMetrics(prev => ({ ...prev, cls: clsValue }));
         }
       }
@@ -125,19 +108,19 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdat
     // Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
-  // TODO: Add content
+  // TODO: Add content;
 }
       setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
     }
     // First Meaningful Paint (FMP) - approximation;
 const fmpObserver = new PerformanceObserver((list) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
       for (const entry of list.getEntries()) {
-  // TODO: Add content
+  // TODO: Add content;
 }
         if (entry.name === 'first-meaningful-paint') {
-  // TODO: Add content
+  // TODO: Add content;
 }
           setMetrics(prev => ({ ...prev, fmp: entry.startTime }));
         }
@@ -146,16 +129,16 @@ const fmpObserver = new PerformanceObserver((list) => {
     fmpObserver.observe({ entryTypes: ['paint'] });
     // Total Blocking Time (TBT) - approximation;
 const tbtObserver = new PerformanceObserver((list) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
       let totalBlockingTime = 0;
       for (const entry of list.getEntries()) {
-  // TODO: Add content
+  // TODO: Add content;
 }
         if (entry.entryType === 'longtask') {
-  // TODO: Add content
+  // TODO: Add content;
 }
-          totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT
+          totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT;
         }
       }
       setMetrics(prev => ({ ...prev, tbt: totalBlockingTime }));
@@ -163,13 +146,13 @@ const tbtObserver = new PerformanceObserver((list) => {
     tbtObserver.observe({ entryTypes: ['longtask'] });
     // Speed Index (SI) - approximation using LCP;
 const siObserver = new PerformanceObserver((list) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
       for (const entry of list.getEntries()) {
-  // TODO: Add content
+  // TODO: Add content;
 }
         if (entry.entryType === 'largest-contentful-paint') {
-  // TODO: Add content
+  // TODO: Add content;
 }
           setMetrics(prev => ({ ...prev, si: entry.startTime }));
         }
@@ -177,7 +160,7 @@ const siObserver = new PerformanceObserver((list) => {
     });
     siObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     return () => {
-  // TODO: Add content
+  // TODO: Add content;
 }
       fcpObserver.disconnect();
       lcpObserver.disconnect();
@@ -190,20 +173,20 @@ const siObserver = new PerformanceObserver((list) => {
   }, []);
   // Resource timing analysis;
 const analyzeResourceTiming = useCallback(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (typeof window === 'undefined' || !('performance' in, window)) return;
     const resources = performance.getEntriesByType('resource');
     const resourceMetrics = {
-  // TODO: Add content
+  // TODO: Add content;
 };
   totalResources: resources.length,
       totalSize: 0,
       slowResources: 0,
-      cachedResources: 0,
+      cachedResources: 0;
     };
     resources.forEach((resource: any) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
       resourceMetrics.totalSize += resource.transferSize || 0;
       if (resource.duration > 1000) resourceMetrics.slowResources++;
@@ -213,41 +196,41 @@ const analyzeResourceTiming = useCallback(() => {
   }, []);
   // Memory usage monitoring;
 const getMemoryUsage = useCallback(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
-    if (typeof window === 'undefined' || !('memory' in performance)) return null;
-    const memory = (performance as any).memory;
+    if (typeof window === 'undefined' || !('memory' in, performance)) return null;
+    const memory = (performance as, any).memory;
     return {
-  // TODO: Add content
+  // TODO: Add content;
 };
   usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
-      jsHeapSizeLimit: memory.jsHeapSizeLimit,
+      jsHeapSizeLimit: memory.jsHeapSizeLimit;
     };
   }, []);
   // Network information;
 const getNetworkInfo = useCallback(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
-    if (typeof window === 'undefined' || !('connection' in navigator)) return null;
-    const connection = (navigator as any).connection;
+    if (typeof window === 'undefined' || !('connection' in, navigator)) return null;
+    const connection = (navigator as, any).connection;
     return {
-  // TODO: Add content
+  // TODO: Add content;
 };
   effectiveType: connection.effectiveType,
       downlink: connection.downlink,
       rtt: connection.rtt,
-      saveData: connection.saveData,
+      saveData: connection.saveData;
     };
   }, []);
   // Performance score calculation;
 const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
     let score = 100;
     // FCP scoring (0-100)
     if (metrics.fcp !== null) {
-  // TODO: Add content
+  // TODO: Add content;
 }
       if (metrics.fcp > 3000) score -= 30;
       else if (metrics.fcp > 1800) score -= 20;
@@ -255,7 +238,7 @@ const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics) => {
     }
     // LCP scoring (0-100)
     if (metrics.lcp !== null) {
-  // TODO: Add content
+  // TODO: Add content;
 }
       if (metrics.lcp > 4000) score -= 30;
       else if (metrics.lcp > 2500) score -= 20;
@@ -263,14 +246,14 @@ const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics) => {
     }
     // FID scoring (0-100)
     if (metrics.fid !== null) {
-  // TODO: Add content
+  // TODO: Add content;
 }
       if (metrics.fid > 300) score -= 20;
       else if (metrics.fid > 100) score -= 10;
     }
     // CLS scoring (0-100)
     if (metrics.cls !== null) {
-  // TODO: Add content
+  // TODO: Add content;
 }
       if (metrics.cls > 0.25) score -= 20;
       else if (metrics.cls > 0.1) score -= 10;
@@ -279,7 +262,7 @@ const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics) => {
   }, []);
   // Report metrics;
 const reportMetrics = useCallback(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
     if (!enableReporting) return;
     const performanceScore = calculatePerformanceScore(metrics);
@@ -287,7 +270,7 @@ const reportMetrics = useCallback(() => {
     const memoryUsage = getMemoryUsage();
     const networkInfo = getNetworkInfo();
     const report = {
-  // TODO: Add content
+  // TODO: Add content;
 };
   timestamp: new Date().toISOString(),
 //       metrics,
@@ -296,42 +279,37 @@ const reportMetrics = useCallback(() => {
 //       memoryUsage,
 //       networkInfo,
       userAgent: navigator.userAgent,
-      url: window.location.href,
+      url: window.location.href;
     };
-    // Send to analytics (replace with your analytics service)
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
+    // Send to analytics (replace with your analytics, service)
+    if (typeof window !== 'undefined' && 'gtag' in, window) {
+  // TODO: Add content;
 }
-      (window as any).gtag('event', 'performance_metrics', {
-  // TODO: Add content
+      (window as, any).gtag('event', 'performance_metrics', {
+  // TODO: Add content;
 };
   event_category: 'performance',
         event_label: 'web_vitals',
         value: performanceScore,
         custom_map: {
-  // TODO: Add content
+  // TODO: Add content;
 };
-  fcp: metrics.fcp,
-          lcp: metrics.lcp,
-          fid: metrics.fid,
-          cls: metrics.cls,
-        },
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
+
+
+
+        }
       });
     });
 
     try {
       observer.observe({ entryTypes: ['paint'] });
-      return () => observer.disconnect();
     } catch (error) {
       console.warn('Performance monitoring not supported:', error);
     }
   }, []);
-<<<<<<< HEAD
   if (!isVisible) return null;
   const performanceScore = calculatePerformanceScore(metrics);
-  return (
     
           
           
@@ -340,13 +318,8 @@ const reportMetrics = useCallback(() => {
           
           
           
-          <div>Coming Soon</div>
   )
     
-          <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
-        <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
 // >
@@ -360,52 +333,22 @@ const reportMetrics = useCallback(() => {
           
           
           
-          </button>
-      </div>
-      <div className="space-y-1">
-        <div className="flex justify-between">
-          <span>Performance Score:</span>
-          <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400'}>
-            {performanceScore}/100
-          </span>
-        </div>
+            {performanceScore}/100;
         {metrics.fcp !== null && ()
           
-          <div className="flex justify-between">
-            <span>FCP:</span>
-            <span>{metrics.fcp.toFixed(0)}ms</span>
-          </div>
         )}
         {metrics.lcp !== null && ()
           
-          <div className="flex justify-between">
-            <span>LCP:</span>
-            <span>{metrics.lcp.toFixed(0)}ms</span>
-          </div>
         )}
         {metrics.fid !== null && ()
           
-          <div className="flex justify-between">
-            <span>FID:</span>
-            <span>{metrics.fid.toFixed(0)}ms</span>
-          </div>
         )}
         {metrics.cls !== null && ()
           
-          <div className="flex justify-between">
-            <span>CLS:</span>
-            <span>{metrics.cls.toFixed(3)}</span>
-          </div>
         )}
         {metrics.ttfb !== null && ()
           
-          <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span>{metrics.ttfb.toFixed(0)}ms</span>
-          </div>
         )}
-      </div>
-      <div className="mt-2 text-gray-400 text-xs">
 // Press Ctrl+Shift+P to toggle
       
           
@@ -415,20 +358,8 @@ const reportMetrics = useCallback(() => {
           
           
           
-          
-          </div>
-    </div>
+          ;
   );
-=======
-
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default EnhancedPerformanceMonitor;

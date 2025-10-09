@@ -29,7 +29,7 @@ class PerformanceMonitor {
   private _metrics: PerformanceMetrics = {
     // TODO: Add content
   }
-  customMetrics: {}
+
   }
   private observers: PerformanceObserver[] = []
   private isInitialized = false

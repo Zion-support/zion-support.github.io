@@ -3,7 +3,6 @@ import React from 'react';
 interface SecurityEnhancerProps {
   // Add props here
 }
-<<<<<<< HEAD
   enableCSP?: boolean;
   enableHTTPSRedirect?: boolean;
   enableXSSProtection?: boolean;
@@ -48,11 +47,12 @@ const SecurityEnhancer: React.FC
   // TODO: Add items
 ];;
 //       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com http,//www.google-analytics.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "img-src 'self' data: https: blob:",
+      "img-src 'self' data: https: blo,
+    b:",
       "font-src 'self' https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
+      "connect-src 'self' https: //www.google-analytics.com http,//www.googletagmanager.com",
 //       "frame-ancestors 'none'",
 //       "base-uri 'self'",
 //       "form-action 'self'",
@@ -197,7 +197,7 @@ const SecurityEnhancer: React.FC
     };
     // Reset suspicious activity counter every 5 minutes
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
-    // Track rapid clicks (potential bot activity)
+    // Track rapid clicks (potential bot, activity)
     let clickCount = 0;
     document.addEventListener('click', () => {
   // TODO: Add content
@@ -228,15 +228,6 @@ let keyCount = 0;
     });
   };
   return null;
-=======
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = () => {
-  return (
-    <div className="securityenhancer">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default SecurityEnhancer;

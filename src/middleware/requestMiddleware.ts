@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Request Middleware System
@@ -89,8 +88,8 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
   // TODO: Add content
 };
   component: 'RequestMiddleware',
-    method: context.request.method,
-    url: context.request.url
+
+
   });
   try {
   // TODO: Add content
@@ -98,8 +97,8 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
     const result = await next();
     const duration = Date.now() - startTime;
     logger.info('Request completed', 'RequestMiddleware', {
-url: context.request.url,
-      status: context.response?.status,
+
+
       duration
     return result;
   } catch (error) {
@@ -125,12 +124,12 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
 // Transform error into a standardized format
     const standardError = {
       message: error instanceof Error ? error.message : 'Unknown error',
-      status: context.response?.status || 500,
-      method: context.request.method
+
+
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
   // TODO: Add content
 };
-  component: 'ErrorHandlingMiddleware',
+
 ...standardError
     throw standardError;
  * Rate limiting middleware
@@ -183,7 +182,8 @@ export const cachingMiddleware = (ttl: number): Middleware => {
           
           
           
-          <string, { data: unknown; timestamp: number }>();
+          <string, { data: unknown; timestam,
+    p: number }>();
 if (context.request.method !== 'GET') {
     const cached = cache.get(key);
     if (cached && Date.now() - cached.timestamp < ttl) {
@@ -219,7 +219,7 @@ let lastError: Error | null = null;
             {
   // TODO: Add content
 };
-  component: 'RetryMiddleware',
+
           );
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
     throw lastError;
@@ -233,7 +233,8 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {
     ]);
  * Request transformation middleware
 export const transformRequestMiddleware = ()
-  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise
+  transformer: (contex,
+    t: MiddlewareContext) => MiddlewareContext | Promise
           
           
           
@@ -268,7 +269,3 @@ export default {
   transformRequestMiddleware,
   transformResponseMiddleware,
   createDefaultMiddlewareChain
-=======
-// TypeScript file - requestMiddleware
-export default {};
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

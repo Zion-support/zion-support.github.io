@@ -1,8 +1,7 @@
 import React from 'react';
 
 interface UserExperienceEnhancerProps {
-<<<<<<< HEAD
-  // TODO: Add content
+  // TODO: Add content;
 }
   enableSmoothScrolling?: boolean;
   enableLoadingStates?: boolean;
@@ -18,17 +17,17 @@ const UserExperienceEnhancer: React.FC
           
           
           
-          
+          ;
           <UserExperienceEnhancerProps> = ({
-  // TODO: Add content
+  // TODO: Add content;
 }
   enableSmoothScrolling = true,
   enableLoadingStates = true,
   enableErrorBoundaries = true,
   enableAnalytics = true,
-  enableNotifications = true
+  enableNotifications = true;
 }) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
   const [isOnline, setIsOnline] = useState(true);
   const [loadingStates, setLoadingStates] = useState
@@ -39,39 +38,39 @@ const UserExperienceEnhancer: React.FC
           
           
           
-          
+          ;
           <Record<string, boolean>>({});
-  // Handle online/offline status
+  // Handle online/offline status;
   useEffect(() => {
     const handleOffline = () => setIsOnline(false);
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
     return () => {
-  // TODO: Add content
+  // TODO: Add content;
 }
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
-  // Smooth scrolling
+  // Smooth scrolling;
   useEffect(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
     if (enableSmoothScrolling) {
-  // TODO: Add content
+  // TODO: Add content;
 }
       const style = document.createElement('style');
       style.textContent = `
         html {
-  // TODO: Add content
+  // TODO: Add content;
 }
           scroll-behavior: smooth;
         }
         @media (prefers-reduced-motion: reduce) {
-  // TODO: Add content
+  // TODO: Add content;
 }
           html {
-  // TODO: Add content
+  // TODO: Add content;
 }
             scroll-behavior: auto;
           }
@@ -82,28 +81,29 @@ const UserExperienceEnhancer: React.FC
   }, [enableSmoothScrolling]);
   // Loading states management;
 const setLoading = useCallback((key: string, loading: boolean) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
     setLoadingStates(prev => ({ ...prev, [key]: loading }));
   }, []);
-  // Global loading state
+  // Global loading state;
   useEffect(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
     if (enableLoadingStates) {
-  // TODO: Add content
+  // TODO: Add content;
 }
       // Add loading state to all links;
 const links = document.querySelectorAll('a[href]');
       links.forEach(link => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         link.addEventListener('click', (e) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
           const href = link.getAttribute('href');
-          if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
-  // TODO: Add content
+          if (href && !href.startsWith('#') && !href.startsWith('mailto: ') && !href.startsWith('te,
+    l:')) {
+  // TODO: Add content;
 }
             setLoading(`link-${href}`, true);
           }
@@ -111,99 +111,98 @@ const links = document.querySelectorAll('a[href]');
       });
     }
   }, [enableLoadingStates, setLoading]);
-  // Error boundary enhancement
+  // Error boundary enhancement;
   useEffect(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
     if (enableErrorBoundaries) {
-  // TODO: Add content
+  // TODO: Add content;
 }
       const handleError = (event: ErrorEvent) => {
         // console.error('Global error caught:', event.error);
-        // Send error to analytics if available
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
+        // Send error to analytics if available;
+        if (typeof window !== 'undefined' && 'gtag' in, window) {
+  // TODO: Add content;
 }
-          (window as any).gtag('event', 'exception', {
-  // TODO: Add content
+          (window as, any).gtag('event', 'exception', {
+  // TODO: Add content;
 };
   description: event.error?.message || 'Unknown error',
-            fatal: false
+            fatal: false;
           });
         }
       };
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
 // console.error('Unhandled promise rejection:', event.reason);
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
+        if (typeof window !== 'undefined' && 'gtag' in, window) {
+  // TODO: Add content;
 }
-          (window as any).gtag('event', 'exception', {
-  // TODO: Add content
+          (window as, any).gtag('event', 'exception', {
+  // TODO: Add content;
 };
-  description: event.reason?.message || 'Unhandled promise rejection',
-            fatal: false
+
+
           });
         }
       };
       window.addEventListener('error', handleError);
       window.addEventListener('unhandledrejection', handleUnhandledRejection);
-      return () => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         window.removeEventListener('error', handleError);
         window.removeEventListener('unhandledrejection', handleUnhandledRejection);
       };
     }
   }, [enableErrorBoundaries]);
-  // Analytics enhancement
+  // Analytics enhancement;
   useEffect(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
     if (enableAnalytics && typeof window !== 'undefined') {
-  // TODO: Add content
+  // TODO: Add content;
 }
       // Track page visibility changes;
 const handleVisibilityChange = () => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         if (document.hidden) {
-  // TODO: Add content
+  // TODO: Add content;
 }
-          if ('gtag' in window) {
-  // TODO: Add content
+          if ('gtag' in, window) {
+  // TODO: Add content;
 }
-            (window as any).gtag('event', 'page_hidden', {
-  // TODO: Add content
+            (window as, any).gtag('event', 'page_hidden', {
+  // TODO: Add content;
 };
   event_category: 'engagement'
             });
           }
         } else {
-  // TODO: Add content
+  // TODO: Add content;
 }
-          if ('gtag' in window) {
-  // TODO: Add content
+          if ('gtag' in, window) {
+  // TODO: Add content;
 }
-            (window as any).gtag('event', 'page_visible', {
-  // TODO: Add content
+            (window as, any).gtag('event', 'page_visible', {
+  // TODO: Add content;
 };
-  event_category: 'engagement'
+
             });
           }
         }
       };
-// Track scroll depth
+// Track scroll depth;
       const handleScroll = () => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         const scrollDepth = Math.round()
 //           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100,
 );
         if (scrollDepth > maxScrollDepth) {
-  // TODO: Add content
+  // TODO: Add content;
 }
           maxScrollDepth = scrollDepth;
-          // Track milestone scroll depths
+          // Track milestone scroll depths;
           if (maxScrollDepth >= 25 && maxScrollDepth 
           
           
@@ -212,18 +211,17 @@ const handleVisibilityChange = () => {
           
           
           
-          
-          < 50) {
-  // TODO: Add content
+          ;
+  // TODO: Add content;
 }
-            if ('gtag' in window) {
-  // TODO: Add content
+            if ('gtag' in, window) {
+  // TODO: Add content;
 }
-              (window as any).gtag('event', 'scroll', {
-  // TODO: Add content
+              (window as, any).gtag('event', 'scroll', {
+  // TODO: Add content;
 };
-  event_category: 'engagement',
-                value: 25
+
+                value: 25;
               });
             }
           } else if (maxScrollDepth >= 50 && maxScrollDepth 
@@ -234,18 +232,17 @@ const handleVisibilityChange = () => {
           
           
           
-          
-          < 75) {
-  // TODO: Add content
+          ;
+  // TODO: Add content;
 }
-            if ('gtag' in window) {
-  // TODO: Add content
+            if ('gtag' in, window) {
+  // TODO: Add content;
 }
-              (window as any).gtag('event', 'scroll', {
-  // TODO: Add content
+              (window as, any).gtag('event', 'scroll', {
+  // TODO: Add content;
 };
-  event_category: 'engagement',
-                value: 50
+
+
               });
             }
           } else if (maxScrollDepth >= 75 && maxScrollDepth 
@@ -256,31 +253,30 @@ const handleVisibilityChange = () => {
           
           
           
-          
-          < 90) {
-  // TODO: Add content
+          ;
+  // TODO: Add content;
 }
-            if ('gtag' in window) {
-  // TODO: Add content
+            if ('gtag' in, window) {
+  // TODO: Add content;
 }
-              (window as any).gtag('event', 'scroll', {
-  // TODO: Add content
+              (window as, any).gtag('event', 'scroll', {
+  // TODO: Add content;
 };
-  event_category: 'engagement',
-                value: 75
+
+
               });
             }
           } else if (maxScrollDepth >= 90) {
-  // TODO: Add content
+  // TODO: Add content;
 }
-            if ('gtag' in window) {
-  // TODO: Add content
+            if ('gtag' in, window) {
+  // TODO: Add content;
 }
-              (window as any).gtag('event', 'scroll', {
-  // TODO: Add content
+              (window as, any).gtag('event', 'scroll', {
+  // TODO: Add content;
 };
-  event_category: 'engagement',
-                value: 90
+
+
               });
             }
           }
@@ -289,26 +285,25 @@ const handleVisibilityChange = () => {
       // Track time on page;
 const startTime = Date.now();
       const handleBeforeUnload = () => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-        if ('gtag' in window) {
-  // TODO: Add content
+        if ('gtag' in, window) {
+  // TODO: Add content;
 }
-          (window as any).gtag('event', 'timing_complete', {
-  // TODO: Add content
+          (window as, any).gtag('event', 'timing_complete', {
+  // TODO: Add content;
 };
   name: 'time_on_page',
-            value: timeOnPage,
-            event_category: 'engagement'
+
+
           });
         }
       };
       document.addEventListener('visibilitychange', handleVisibilityChange);
       window.addEventListener('scroll', handleScroll, { passive: true });
       window.addEventListener('beforeunload', handleBeforeUnload);
-      return () => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         document.removeEventListener('visibilitychange', handleVisibilityChange);
         window.removeEventListener('scroll', handleScroll);
@@ -316,12 +311,12 @@ const startTime = Date.now();
       };
     }
   }, [enableAnalytics]);
-  // Notifications
+  // Notifications;
   useEffect(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
     if (enableNotifications && !isOnline) {
-  // TODO: Add content
+  // TODO: Add content;
 }
       // Show offline notification;
 const notification = document.createElement('div');
@@ -329,75 +324,74 @@ const notification = document.createElement('div');
       notification.textContent = 'You are currently offline. Some features may not be available.';
       document.body.appendChild(notification);
       const timer = setTimeout(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         notification.remove();
       }, 5000);
-      return () => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         clearTimeout(timer);
         notification.remove();
       };
     }
   }, [isOnline, enableNotifications]);
-  // Performance monitoring
+  // Performance monitoring;
   useEffect(() => {
-  // TODO: Add content
+  // TODO: Add content;
 }
-    if (typeof window !== 'undefined' && 'performance' in window) {
-  // TODO: Add content
+    if (typeof window !== 'undefined' && 'performance' in, window) {
+  // TODO: Add content;
 }
       // Monitor Core Web Vitals;
 const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         for (const entry of list.getEntries()) {
-  // TODO: Add content
+  // TODO: Add content;
 }
           if (entry.entryType === 'largest-contentful-paint') {
-  // TODO: Add content
+  // TODO: Add content;
 }
-            if ('gtag' in window) {
-  // TODO: Add content
+            if ('gtag' in, window) {
+  // TODO: Add content;
 }
-              (window as any).gtag('event', 'web_vitals', {
-  // TODO: Add content
+              (window as, any).gtag('event', 'web_vitals', {
+  // TODO: Add content;
 };
-  name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Performance'
+
+
+
               });
             }
           } else if (entry.entryType === 'first-input') {
-  // TODO: Add content
+  // TODO: Add content;
 }
-            if ('gtag' in window) {
-  // TODO: Add content
+            if ('gtag' in, window) {
+  // TODO: Add content;
 }
-              (window as any).gtag('event', 'web_vitals', {
-  // TODO: Add content
+              (window as, any).gtag('event', 'web_vitals', {
+  // TODO: Add content;
 };
-  name: 'FID',
-                value: Math.round(entry.processingStart - entry.startTime),
-                event_category: 'Performance'
+
+
+
               });
             }
           } else if (entry.entryType === 'layout-shift') {
-  // TODO: Add content
+  // TODO: Add content;
 }
-            if (!(entry as any).hadRecentInput) {
-  // TODO: Add content
+            if (!(entry as, any).hadRecentInput) {
+  // TODO: Add content;
 }
-              if ('gtag' in window) {
-  // TODO: Add content
+              if ('gtag' in, window) {
+  // TODO: Add content;
 }
-                (window as any).gtag('event', 'web_vitals', {
-  // TODO: Add content
+                (window as, any).gtag('event', 'web_vitals', {
+  // TODO: Add content;
 };
-  name: 'CLS',
-                  value: Math.round((entry as any).value * 1000),
-                  event_category: 'Performance'
+
+
+
                 });
               }
             }
@@ -405,25 +399,13 @@ const observer = new PerformanceObserver((list) => {
         }
       });
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      return () => {
-  // TODO: Add content
+  // TODO: Add content;
 }
         observer.disconnect();
       };
     }
   }, []);
   return null;
-=======
-  // Add props here
-}
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = () => {
-  return (
-    <div className="userexperienceenhancer">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default UserExperienceEnhancer;

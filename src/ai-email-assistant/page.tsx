@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
     
           
           
@@ -17,13 +16,9 @@ const PagePage: React.FC = () => {
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg particle-system">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
 // AI Email Assistant
           
@@ -79,7 +74,7 @@ const PagePage: React.FC = () => {
           </a>
             <a
               href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hove,text-indigo-600 transition-all duration-300"
 // >
 //               Get Free Demo
             
@@ -108,7 +103,8 @@ const PagePage: React.FC = () => {
           
           
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8">
             <div className="cyber-card hologram-card p-6">
               <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>
@@ -334,7 +330,7 @@ const PagePage: React.FC = () => {
               href="tel:+13024640950"
               className="cyber-button w-full sm:w-auto text-center"
 // >,
- Call: (302) 464-0950
+
             
           
           
@@ -347,7 +343,7 @@ const PagePage: React.FC = () => {
           </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hove,text-black transition-all duration-300"
 // >
 //                Email Us
             
@@ -361,17 +357,6 @@ const PagePage: React.FC = () => {
           
           </a>
           </div>
-=======
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
         </section>
       </main>
       <Footer />

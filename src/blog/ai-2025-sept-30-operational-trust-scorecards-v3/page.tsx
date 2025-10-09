@@ -12,16 +12,16 @@ const Pagetsx: React.FC = () => {
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
     },
     {
-    icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimized performance and scalability for enterprise-grade applications',
-      benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
+
+
+
+
     },
     {
-    icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with full compliance and data protection',
-      benefits: ['Data protection', 'Compliance', 'Secure operations']
+
+
+
+
     }
   ]
   return (

@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users,  Star,  CheckCircle from 'lucide-react';
+import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users, Star, CheckCircle from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer 
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
@@ -25,22 +24,22 @@ const PartnersPage: React.FC = () => {
         { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '' }
 //       ]
     },
-      title: 'Solution Partners',
-      description: 'Specialized solution providers that complement our offerings',
-      icon: Handshake,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
+
+
+
+
+
         { name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️' },
         { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️' },
         { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },
         { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
         { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
         { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' };
-  title: 'Integration Partners',
-      description: 'Partners that help us integrate with existing enterprise systems',
-      icon: Award,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
+
+
+
+
+
 { name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾' },
         { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐' },
         { name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️' },
@@ -50,26 +49,26 @@ const PartnersPage: React.FC = () => {
     }
   ];
   const benefits = [
-icon: Globe,
-      title: 'Global Reach',
-      description: 'Access to worldwide markets and customers through our partner network',
 
-      icon: Users,
-      title: 'Expertise Sharing',
-      description: 'Collaborative knowledge sharing and best practices across industries',
 
-      icon: Star,
-      title: 'Innovation',
-      description: 'Joint innovation initiatives and cutting-edge technology development',
 
-      icon: CheckCircle,
-      title: 'Quality Assurance',
-      description: 'Rigorous partner certification and quality standards'
+
+
+
+
+
+
+
+
+
+
+
+
   const partnershipTiers = [,
 
       name: 'Strategic Partners',
       level: 'Platinum',
-      description: 'Long-term strategic relationships with joint go-to-market initiatives',
+
       benefits: [
   // TODO: Add items,
 ];
@@ -79,30 +78,30 @@ icon: Globe,
 //         'Executive relationship management',
 //         'Custom pricing and terms'
 //       ],
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10',
 
-      name: 'Solution Partners',
-      level: 'Gold',
-      description: 'Technology integration and solution delivery partnerships',
+
+
+
+
+
         'Technical integration support',
         'Joint solution development',
         'Marketing support and co-marketing',
         'Training and certification',
         'Preferred pricing'
-      color: 'text-gray-400',
-      bgColor: 'bg-gray-500/10',
 
-      name: 'Channel Partners',
-      level: 'Silver',
-      description: 'Reseller and referral partnerships for market expansion',
+
+
+
+
+
         'Reseller program access',
         'Sales training and support',
         'Marketing materials and tools',
         'Lead sharing and referrals',
         'Competitive margins'
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10'
+
+
   return (
     
           
@@ -158,7 +157,8 @@ icon: Globe,
                   <div>
                     <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>
                     <p className="text-gray-300">{type.description}</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-6">
                   {type.partners.map((partner, partnerIndex) => ()
                     
           <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
@@ -179,7 +179,8 @@ icon: Globe,
           
           
           </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 l,
+
               {benefits.map((benefit, index) => ()
                 
           <div key={index} className="text-center">
@@ -239,36 +240,13 @@ icon: Globe,
           
           </a>
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hove,text-slate-900 transition-all duration-300 inline-flex items-center"
 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover: bg-purple-400 hove,text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

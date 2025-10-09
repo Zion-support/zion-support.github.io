@@ -4,10 +4,10 @@
  */
 
 interface AccessibilityConfig {
-  enableKeyboardNavigation: boolean
-  enableScreenReaderSupport: boolean
-  enableHighContrast: boolean
-  enableFocusIndicators: boolean
+  enableKeyboardNavigation: boolean,
+    enableScreenReaderSupport: boolean
+  enableHighContrast: boolean,
+    enableFocusIndicators: boolean
   enableAriaLabels: boolean
 }
 
@@ -15,11 +15,11 @@ class AccessibilityEnhancer {
   private config: AccessibilityConfig
   constructor(config?: AccessibilityConfig) {
     this.config = config || {
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableHighContrast: true,
-      enableFocusIndicators: true,
-      enableAriaLabels: true,
+
+
+
+
+
     }
     this.init()
   }

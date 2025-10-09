@@ -34,10 +34,10 @@ export interface ErrorReporterConfig {
     maxErrorsInMemory: number;,
     captureContext: boolean
 }
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50,
-  captureContext: true
+
+
+
+
 }
 /**
  * ErrorReporter class for comprehensive error handling
@@ -90,7 +90,7 @@ export class ErrorReporter {
    */
 //   reportError()
     error: Error,
-    severity: ErrorReport['severity'] = 'medium',
+
     context?: Record
           
           
@@ -107,11 +107,11 @@ export class ErrorReporter {
     const errorReport: ErrorReport = {
     // TODO: Add content
   }
-  message: error.message,
+
       stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+
+
+
 //       severity,
       context: this.config.captureContext ? context : undefined
     }
@@ -265,9 +265,9 @@ export class ErrorReporter {
     return {
     // TODO: Add content
   }
-  totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount)
+
+
+
     }
   }
   /**
@@ -289,7 +289,7 @@ export class ErrorReporter {
       {
     // TODO: Add content
   }
-  timestamp: new Date().toISOString(),
+
         stats: this.getErrorStats(),
         errors: this.errorQueue
       },
@@ -302,7 +302,7 @@ export class ErrorReporter {
  * Convenience function to report errors
  */
 export const reportError = ()
-  error: Error,
+
   severity?: ErrorReport['severity'],
   context?: Record
           
@@ -323,7 +323,7 @@ export const reportError = ()
  * React error boundary helper
  */
 export const captureComponentError = ()
-  error: Error,
+
   errorInfo: { componentStack: string },
   componentName: string,
 ): void => {

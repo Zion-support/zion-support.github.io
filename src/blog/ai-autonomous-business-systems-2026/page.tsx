@@ -4,7 +4,6 @@ import Footer from '../../components/Footer';
 
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
 
           
           
@@ -43,8 +42,8 @@ const PagePage: React.FC = () => {
               <li> <strong>Monitoring Hub:</strong> Real-time system health and performance</li>
             </ul>
 <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Implementation Strategy</h2>
-              The path to 95% automation requires a systematic approach across multiple business functions:
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: Foundation (Months 1-6)</h3>
+              The path to 95% automation requires a systematic approach across multiple business functions: <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase ,
+    1: Foundation (Months 1-6)</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
 <li>• Deploy AI decision engines for core business processes</li>
               <li>• Implement automated workflow orchestration</li>
@@ -93,26 +92,3 @@ const PagePage: React.FC = () => {
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">Explore AI Services</a>
     </div>)
 }
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

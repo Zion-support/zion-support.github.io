@@ -100,8 +100,8 @@ class EnhancedAnalytics {
     this.trackEvent({
     // TODO: Add content
   }
-  category: 'System',
-      action: 'Analytics Initialized',
+
+
       metadata: {
     // TODO: Add content
   }
@@ -128,12 +128,12 @@ class EnhancedAnalytics {
     // TODO: Add content
   }
 //       ...event,
-      metadata: {
+
     // TODO: Add content
   }
 //         ...event.metadata,
-        sessionId: this.sessionId,
-        timestamp: new Date().toISOString(),
+
+
         url: typeof window !== 'undefined' ? window.location.href : ''
       }
     }
@@ -204,10 +204,10 @@ class EnhancedAnalytics {
     this.trackEvent({
     // TODO: Add content
   }
-  category: 'Navigation',
-      action: 'Page View',
+
+
       label: pagePath,
-      metadata: {
+
     // TODO: Add content
   }
   pageTitle: pageTitle || document.title,
@@ -222,7 +222,7 @@ class EnhancedAnalytics {
     this.trackEvent({
     // TODO: Add content
   }
-  category: 'User Interaction',
+
 //       action,
 //       label,
 //       value
@@ -244,10 +244,10 @@ class EnhancedAnalytics {
     this.trackEvent({
     // TODO: Add content
   }
-  category: 'Error',
-      action: 'Error Occurred',
-      label: error.message,
-      metadata: {
+
+
+
+
     // TODO: Add content
   }
   stack: error.stack,
@@ -262,10 +262,10 @@ class EnhancedAnalytics {
     this.trackEvent({
     // TODO: Add content
   }
-  category: 'Performance',
-      action: metric,
-      value: Math.round(value),
-      metadata: {
+
+
+
+
     // TODO: Add content
   }
 //         rating
@@ -279,10 +279,10 @@ class EnhancedAnalytics {
     this.trackEvent({
     // TODO: Add content
   }
-  category: 'Conversion',
-      action: conversionType,
+
+
 //       value,
-      metadata: {
+
     // TODO: Add content
   }
   conversionId: `conv-${Date.now()}`
@@ -291,8 +291,8 @@ class EnhancedAnalytics {
   )
   }
 //   public trackCustomEvent()
-    category: string,
-    action: string,
+
+
     label?: string,
     value?: number,
     metadata?: Record
@@ -369,7 +369,7 @@ class EnhancedAnalytics {
   }
   queueSize: number;,
     offlineQueueSize: number;,
-    sessionId: string;,
+
     userProperties: UserProperties
   } {
     // TODO: Add content
@@ -377,10 +377,10 @@ class EnhancedAnalytics {
     return {
     // TODO: Add content
   }
-  queueSize: this.queue.length,
-      offlineQueueSize: this.offlineQueue.length,
-      sessionId: this.sessionId,
-      userProperties: this.getUserProperties()
+
+
+
+
     }
   }
 }

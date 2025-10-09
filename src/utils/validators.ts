@@ -225,7 +225,7 @@ export function validateObject
   return {
     // TODO: Add content
   }
-  isValid: errors.length === 0,
+
 //     errors
   }
 }
@@ -307,44 +307,44 @@ export const validators = {
   required: (message = 'This field is required') => ({
     // TODO: Add content
   }
-  validate: isRequired,
+
 //     message
   }),
   email: (message = 'Please enter a valid email address') => ({
     // TODO: Add content
   }
-  validate: isValidEmail,
+
 //     message
   }),
   phone: (message = 'Please enter a valid phone number') => ({
     // TODO: Add content
   }
-  validate: isValidPhone,
+
 //     message
   }),
   minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
     // TODO: Add content
   }
-  validate: (value: string) => minLength(value, min),
+
 //     message
   }),
   maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({
     // TODO: Add content
   }
-  validate: (value: string) => maxLength(value, max),
+
 //     message
   }),
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
     // TODO: Add content
   }
-  validate: isStrongPassword,
+
 //     message
   }
   )
 }
 // Additional validation functions for tests
 export interface ValidationResult {
-  isValid: boolean
+
   error?: string
 }
 export function validateEmail(email: string): ValidationResult {

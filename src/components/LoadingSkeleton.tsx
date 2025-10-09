@@ -3,7 +3,6 @@ import React from 'react';
 interface LoadingSkeletonProps {
   // Add props here
 }
-<<<<<<< HEAD
   className?: string;
   width?: string | number;
   height?: string | number;
@@ -153,15 +152,3 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
   </div>
 );
 export default Skeleton;
-=======
-
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = () => {
-  return (
-    <div className="loadingskeleton">
-      {/* Component content */}
-    </div>
-  );
-};
-
-export default LoadingSkeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

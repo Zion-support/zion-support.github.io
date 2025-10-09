@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 interface Props {
   // TODO: Add content
 };
@@ -28,23 +27,6 @@ class GlobalErrorBoundary extends Component
   constructor(props: Props) {
   // TODO: Add content
 }
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
@@ -59,7 +41,6 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
   // TODO: Add content
 }
       if (this.props.fallback) {
@@ -103,7 +84,7 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            {/* Error Details (Development Only) */}
+            {/* Error Details (Development, Only) */}
             {process.env.NODE_ENV === 'development' && this.state.error && ()
               
           <details className="mb-6 text-left">
@@ -139,7 +120,7 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover: from-cyan-600 hove,to-purple-700 transition-all duration-300 font-medium"
 // >
 //                 Try Again
               
@@ -169,7 +150,7 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
           </button>
               <a
                 href="/"
-                className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
+                className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover: bg-slate-800 hove,text-white transition-all duration-300 font-medium"
 // >
 //                 Go Home
               
@@ -204,13 +185,6 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
           
           </a>
             </div>
-=======
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
           </div>
         </div>
       );

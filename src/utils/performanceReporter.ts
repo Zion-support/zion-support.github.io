@@ -17,7 +17,7 @@ export interface PerformanceReport {
   metrics: PerformanceMetric[]
   navigation?: PerformanceNavigationTiming
   resources?: PerformanceResourceTiming[];,
-    timestamp: number;,
+
     userAgent: string;,
     url: string
 }
@@ -229,7 +229,7 @@ const slowResources = resources
           logger.warn('Slow resource detected', {
     // TODO: Add content
   }
-  name: resource.name,
+
             duration: resource.duration,
             type: resource.initiatorType
           }
@@ -252,7 +252,7 @@ const slowResources = resources
 //       name,
 //       value,
 //       rating,
-      timestamp: Date.now()
+
     }
 //     this.metrics.push(metric)
     // Log poor performing metrics
@@ -346,7 +346,7 @@ const slowResources = resources
     // TODO: Add content
   }
   event_category: 'Web Vitals',
-        value: Math.round(metric.value),
+
         event_label: metric.rating,
         non_interaction: true
       }
@@ -369,12 +369,12 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
     return {
     // TODO: Add content
   }
-  metrics: this.metrics,
+
 //       navigation,
       resources: resources.slice(0, 50), // Limit to 50 resources,
-  timestamp: Date.now(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
+
+
+
     }
   }
   /**
@@ -397,11 +397,11 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
     logger.info('Performance Report', {
     // TODO: Add content
   }
-  metrics: report.metrics,
+
       navigation: {
     // TODO: Add content
   }
-  ttfb: report.navigation?.responseStart ?
+
           report.navigation.responseStart - report.navigation.requestStart : null,
         domContentLoaded: report.navigation?.domContentLoadedEventEnd ?
           report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null

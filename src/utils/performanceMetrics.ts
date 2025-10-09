@@ -45,7 +45,7 @@ export interface PerformanceReport {
     performanceScore: number;,
     recommendations: string[]
   }
-  timestamp: Date
+
 }
 export class PerformanceMetrics {
     // TODO: Add content
@@ -95,11 +95,11 @@ export class PerformanceMetrics {
               this.recordMetric({
     // TODO: Add content
   }
-  name: 'pageLoadTime',
-                value: navEntry.loadEventEnd - navEntry.fetchStart,
-                unit: 'ms',
-                timestamp: new Date(),
-                category: 'load',
+
+
+
+
+
                 metadata: {
     // TODO: Add content
   }
@@ -129,11 +129,11 @@ const paintObserver = new PerformanceObserver(list => {
               this.recordMetric({
     // TODO: Add content
   }
-  name: 'FCP',
-                value: entry.startTime,
-                unit: 'ms',
-                timestamp: new Date(),
-                category: 'load'
+
+
+
+
+
               }
   )
             }
@@ -156,11 +156,11 @@ const lcpObserver = new PerformanceObserver(list => {
             this.recordMetric({
     // TODO: Add content
   }
-  name: 'LCP',
-              value: lastEntry.startTime,
-              unit: 'ms',
-              timestamp: new Date(),
-              category: 'load'
+
+
+
+
+
             }
   )
           }
@@ -181,11 +181,11 @@ const lcpObserver = new PerformanceObserver(list => {
           this.recordMetric({
     // TODO: Add content
   }
-  name: 'CLS',
-            value: clsValue,
-            unit: 'score',
-            timestamp: new Date(),
-            category: 'runtime'
+
+
+
+
+
           }
   )
         }
@@ -225,12 +225,12 @@ const lcpObserver = new PerformanceObserver(list => {
     this.recordMetric({
     // TODO: Add content
   }
-  name: 'pageLoad',
-      value: pageLoadTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'load',
-      metadata: {
+
+
+
+
+
+
     // TODO: Add content
   }
   dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
@@ -250,12 +250,12 @@ const lcpObserver = new PerformanceObserver(list => {
     this.recordMetric({
     // TODO: Add content
   }
-  name: 'networkRequest',
-      value: duration,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'network',
-      metadata: {
+
+
+
+
+
+
     // TODO: Add content
   }
 //         url,
@@ -276,12 +276,12 @@ const lcpObserver = new PerformanceObserver(list => {
     this.recordMetric({
     // TODO: Add content
   }
-  name: 'memoryUsage',
-      value: memory.usedJSHeapSize,
-      unit: 'bytes',
-      timestamp: new Date(),
-      category: 'memory',
-      metadata: {
+
+
+
+
+
+
     // TODO: Add content
   }
   total: memory.totalJSHeapSize,
@@ -312,11 +312,11 @@ const lcpObserver = new PerformanceObserver(list => {
     this.recordMetric({
     // TODO: Add content
   }
-  name: `function:${name}`,
-      value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'runtime'
+
+
+
+
+
     }
   )
     return result
@@ -342,11 +342,11 @@ const lcpObserver = new PerformanceObserver(list => {
     this.recordMetric({
     // TODO: Add content
   }
-  name: `async:${name}`,
-      value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'runtime'
+
+
+
+
+
     }
   )
     return result
@@ -468,17 +468,17 @@ const lcpObserver = new PerformanceObserver(list => {
     return {
     // TODO: Add content
   }
-  metrics: this.getMetrics(),
-      webVitals: this.getWebVitals(),
-      summary: {
+
+
+
     // TODO: Add content
   }
 //         avgLoadTime,
-        totalMetrics: this.metrics.length,
-        performanceScore: this.calculatePerformanceScore(),
-        recommendations: this.getRecommendations()
+
+
+
       },
-      timestamp: new Date()
+
     }
   }
   /**
@@ -522,7 +522,7 @@ interface PerformanceWithMemory extends Performance {
 interface LayoutShift extends PerformanceEntry {
     // TODO: Add content
   }
-  value: number;,
+
     hadRecentInput: boolean
 }
 // Export singleton instance

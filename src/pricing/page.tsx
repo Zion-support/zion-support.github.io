@@ -1,16 +1,15 @@
 import React from 'react';
-<<<<<<< HEAD
-import {  Zap,  Brain,  Cloud } from 'lucide-react';
+import { Zap, Brain, Cloud } from 'lucide-react';
 const PricingPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
 };
   const _plans = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
   name: 'Starter',
       price: '$299',
@@ -28,19 +27,19 @@ const PricingPage: React.FC = () => {
 //         'Monthly Reports',
 //         'Basic Integration'
 //       ],
-      popular: false
+      popular: false;
     },
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
-  name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for growing businesses with advanced AI needs',
-      icon: Brain,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
-      features: [
+
+
+
+
+
+
+
+
   // TODO: Add items,
 ]
 //         'Advanced AI Analytics',
@@ -51,19 +50,19 @@ const PricingPage: React.FC = () => {
 //         'Custom Integrations',
 //         'Training Sessions'
 //       ],
-      popular: true
+
     },
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
-  name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'Complete AI solution for large organizations',
-      icon: Cloud,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      features: [
+
+
+
+
+
+
+
+
   // TODO: Add items,
 ]
 //         'Unlimited AI Models',
@@ -76,38 +75,37 @@ const PricingPage: React.FC = () => {
 //         'On-site Training',
 //         'SLA Guarantee'
 //       ],
-      popular: false
+
     }
   ];
   const addOns = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
-  name: 'AI Security Suite',
-      price: '$199/month',
-      description: 'Advanced security monitoring and compliance',
-      icon: Shield
+
+
+
+
     },
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
-  name: 'Custom AI Development',
-      price: '$150/hour',
-      description: 'Bespoke AI solutions for unique requirements',
-      icon: Brain
+
+
+
+
     },
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
-  name: 'Priority Support',
-      price: '$99/month',
-      description: '24/7 priority support and faster response times',
-      icon: Phone
+
+
+
+
     }
   ];
-  return (
     
           
           
@@ -116,14 +114,8 @@ const PricingPage: React.FC = () => {
           
           
           
-          <div>Coming Soon</div>
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Pricing</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced pricing solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
 // Contact Us
         
           
@@ -133,34 +125,8 @@ const PricingPage: React.FC = () => {
           
           
           
-          
-          </a>
-      </div>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-    </div>
+          ;
   );
 };
 
-export default PagePage;
+export default AiAnalyticsDashboardPage;

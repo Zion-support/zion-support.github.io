@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Base Service Class
@@ -14,8 +13,8 @@ const apiClient = axios.create({
   headers: {
   // TODO: Add content
 }
-    'Content-Type': 'application/json',
-  },
+    'Content-Type': 'application/json'
+  }
 });
 export interface ServiceOptions {
   // TODO: Add content
@@ -109,7 +108,7 @@ const entry = this.cache.get(key);
   // TODO: Add content
 }
 //       data,
-      timestamp: Date.now()
+
    * Clear cache for a specific key or all cache
   protected clearCache(key?: string): void {
   // TODO: Add content
@@ -163,8 +162,8 @@ const entry = this.cache.get(key);
           <T>(`${this.baseUrl}${endpoint}`, {
   // TODO: Add content
 };
-  timeout: this.options.timeout,
-        retries: this.options.retries
+
+
         this.setInCache(cacheKey, response.data);
       return response.data;
     } catch (error) {
@@ -212,22 +211,5 @@ logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
     logger.error('Service error', error, {
   // TODO: Add content
 };
-  component: this.constructor.name,
+
 ...context
-=======
-export abstract class BaseService {
-  protected baseUrl: string;
-  
-  constructor(baseUrl: string) {
-    this.baseUrl = baseUrl;
-  }
-  
-  protected async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    const response = await fetch(`${this.baseUrl}${endpoint}`, options);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

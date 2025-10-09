@@ -1,45 +1,43 @@
 import React from 'react';
-<<<<<<< HEAD
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone,  Receipt,  TrendingUp,  Zap,  Shield from 'lucide-react';
-import { Link } from 'react-router-dom';
+import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone, Receipt, TrendingUp, Zap, Shield, import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
+  // TODO: Add content;
 };
   icon: Receipt,
       title: 'Smart Receipt Scanning',
       description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefit: 'Save 8+ hours per month'
     },
-      icon: TrendingUp,
-      title: 'Real-time Analytics',
-      description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
-      benefit: 'Reduce expenses by 25%',
 
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
-      benefit: 'Process expenses 5x faster',
 
-      icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
-      benefit: '100% compliance guarantee'
+
+
+
+
+
+
+
+
+
+
+
+
     }
   ];
   const pricingPlans = [
       name: 'Business',
       price: '$29',
-      description: 'Ideal for small businesses',
-      name: 'Sarah Williams',
+
+
       company: 'Marketing Agency',
       role: 'Finance Manager',
       content: 'Our expense processing time dropped from 2 days to 2 hours. The automated workflows are game-changing.',
-      name: 'David Chen',
-      company: 'Consulting Firm',
-      role: 'Operations Director',
-      content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.',
+
+
+
+
   return (
     
           
@@ -69,7 +67,7 @@ const ExpenseTrackerPage: React.FC = () => {
           
           
           
-          
+          ;
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
 // Smart Financial Management
@@ -81,16 +79,16 @@ const ExpenseTrackerPage: React.FC = () => {
           
           
           
-          
+          ;
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 Transform your expense management with AI-powered receipt scanning, automated categorization,
-            and intelligent financial insights. Save time, reduce errors, and gain complete control
+            and intelligent financial insights. Save time, reduce errors, and gain complete control;
             over your business finances.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hove,to-purple-600 transition-all duration-300 flex items-center"
 // >
               
           
@@ -102,12 +100,12 @@ Transform your expense management with AI-powered receipt scanning, automated ca
           
           
           <Phone className="w-5 h-5 mr-2" />,
- Call: (302) 464-0950
+ Call: (302) 464-0950;
             </a>
-            <Link
+            <Link;
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-Start Free Trial
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hove,text-indigo-600 transition-all duration-300"
+Start Free Trial;
             </Link>
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
@@ -136,9 +134,10 @@ Start Free Trial
           
           
           
-          
+          ;
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8">
             {features.map((feature, index) => ()
               
           <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
@@ -149,7 +148,7 @@ Start Free Trial
             ))}
         </section>
         {/* Integrations Section */}
-Integrates with Your Tools
+Integrates with Your Tools;
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => ()
               
@@ -158,14 +157,14 @@ Integrates with Your Tools
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
 {/* Pricing Section */}
-            Simple, Transparent Pricing
+            Simple, Transparent Pricing;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => ()
               
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-  // TODO: Add content
+  // TODO: Add content;
 }
-//                 plan.popular
+//                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
@@ -180,8 +179,7 @@ Integrates with Your Tools
           
           
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-Most Popular
-                )}
+Most, Popular)}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <div className="mb-6">
@@ -196,12 +194,12 @@ Most Popular
                     </li>
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                  Get Started
+? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hove,to-purple-600'
+                    : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hove,text-white'
+                  Get Started;
                 </button>
         {/* Testimonials */}
-            What Our Customers Say
+            What Our Customers Say;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => ()
               
@@ -220,33 +218,9 @@ Most Popular
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Master Your Expenses?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using AI Expense Tracker to streamline financial
+            Join thousands of businesses using AI Expense Tracker to streamline financial;
             management and gain better control over their spending.
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 
-export default PagePage;
+export default AiAnalyticsDashboardPage;

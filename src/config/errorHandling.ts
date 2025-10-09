@@ -27,7 +27,7 @@ export enum ErrorCategory {
 export interface ErrorConfig {
     // TODO: Add content
   }
-  enabled: boolean
+  enabled: boolean,
     logToConsole: boolean;,
     sendToServer: boolean;,
     sampleRate: number;,
@@ -38,19 +38,19 @@ export interface ErrorConfig {
 export const _errorHandlingConfig: ErrorConfig = {
     // TODO: Add content
   }
-  enabled: true,
-  logToConsole: process.env['NODE_ENV'] !== 'production',
-  sendToServer: process.env['NODE_ENV'] === 'production',
-  sampleRate: 1.0,
-  maxStackTraceLength: 1000,
-  ignoreErrors: [
+
+
+
+
+
+
   // TODO: Add items,
 ]
 //     /ResizeObserver loop/i,
 //     /Non-Error promise rejection captured/i,
 //     /Loading chunk \d+ failed/i,
 //   ],
-  severityThreshold: ErrorSeverity.LOW
+
 }
 export const _errorMessages = {
     // TODO: Add content

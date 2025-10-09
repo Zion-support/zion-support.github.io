@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 import {CheckCircle, Star, Phone} from 'lucide-react';
@@ -20,9 +19,8 @@ interface ServicePageProps {
           
           
           <{ className?: string }>;
-  services: Array<{,
-
-  features: string[];,
+  services: Array<{
+    features: string[];,
     price: string;
   }>;
   benefits: string[];
@@ -43,14 +41,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const ServiceTemplatePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -63,7 +53,6 @@ const ServiceTemplatePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This blog post is under development. Please check back soon for the full content.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -92,7 +81,7 @@ const ServiceTemplatePage: React.FC = () => {
           </Link>
             <a
               href="tel:+13024640950"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hove,text-slate-900 transition-all duration-300 inline-flex items-center"
               <Phone className="w-4 h-4 mr-2" />
 // (302) 464-0950
             
@@ -109,7 +98,8 @@ const ServiceTemplatePage: React.FC = () => {
         </section>
         {/* Services Grid */}
         <section className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-2 gap-8">
             {services.map((service, index) => ()
               
           <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
@@ -133,7 +123,8 @@ Get Started
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
             Why Choose Our {title}?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+
             {benefits.map((benefit, index) => ()
               
           <div key={index} className="text-center">
@@ -146,9 +137,6 @@ Get Started
 Ready to Transform Your Business?
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free consultation and discover how our solutions can revolutionize your operations.
-=======
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       </main>
       <Footer />
     </div>

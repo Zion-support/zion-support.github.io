@@ -5,7 +5,6 @@ interface SEOProps {
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
-<<<<<<< HEAD
   ogImage?: string;
   structuredData?: unknown;
   author?: string;
@@ -14,12 +13,15 @@ interface SEOProps {
   section?: string;
   tags?: string[];
   locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+  alternateLocales?: { locale: string; ur,
+    l: string }[];
   robots?: string;
   noindex?: boolean;
   nofollow?: boolean;
-  breadcrumbs?: { name: string; url: string }[];
-  faqData?: { question: string; answer: string }[];
+  breadcrumbs?: { name: string; ur,
+
+  faqData?: { question: string; answe,
+    r: string }[];
   organizationData?: unknown;
   websiteData?: unknown;
 }
@@ -34,8 +36,6 @@ const AdvancedSEOOptimizer: React.FC
           
           <AdvancedSEOOptimizerProps> = ({
   // TODO: Add content
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 const AdvancedSEOOptimizer: React.FC<SEOProps> = ({

@@ -158,8 +158,8 @@ const requestPromise = this.fetchWithRetry
       this.pendingRequests.set(cacheKey, {
     // TODO: Add content
   }
-  promise: requestPromise,
-        timestamp: Date.now()
+
+
       }
   )
     }
@@ -190,10 +190,10 @@ const requestPromise = this.fetchWithRetry
           
           
           <T>()
-    url: string,
-    options: RequestInit,
-    maxRetries: number,
-    retryDelay: number,
+
+
+
+
     attempt = 1,
 ): Promise
           <T> {
@@ -324,8 +324,8 @@ const requestPromise = this.fetchWithRetry
           
           
           <T>()
-    url: string,
-    options: RequestInit = {},
+
+
     cacheConfig?: Partial
           <ApiCacheConfig>
   ): Promise<void> {
@@ -402,10 +402,10 @@ const requestPromise = this.fetchWithRetry
 export const defaultApiCache = new ApiCache({
     // TODO: Add content
   }
-  ttl: 5 * 60 * 1000, // 5 minutes,
-  maxRetries: 3,
-  retryDelay: 1000,
-  deduplicate: true
+
+
+
+
 }
   )
 /**
@@ -421,7 +421,7 @@ export async function cachedFetch
           
           
           <T>()
-  url: string,
+
   options?: RequestInit,
   cacheConfig?: Partial
           <ApiCacheConfig>
@@ -492,8 +492,8 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   }
 //         ...defaultOptions,
 //         ...options,
-        method: 'PUT',
-        headers: {
+
+
     // TODO: Add content
   }
           'Content-Type': 'application/json',
@@ -501,7 +501,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
           ...(options?.headers || {}
   )
         },
-        body: JSON.stringify(body)
+
       }),
     delete: 
           

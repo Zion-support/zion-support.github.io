@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
@@ -16,66 +15,66 @@ const IoTEdgePage: React.FC = () => {
       category: 'Device Management',
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT']
     },
-      title: 'Edge Computing Solutions',
-      description: 'Real-time data processing at the edge with low latency and high performance.',
-      icon: '',
-      price: 'Starting at $4,500/month',
-      features: ['Edge analytics', 'Real-time processing', 'Local data storage', 'Offline capabilities', 'Edge AI'],
-      benefits: ['Reduce latency by 90%', 'Lower bandwidth costs', 'Enable offline operations'],
-      marketPrice: '$7,000-20,000/month',
-      category: 'Edge Computing',
-      technologies: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'OpenVINO', 'Edge TPU']
-      title: 'Smart City Solutions',
-      description: 'Comprehensive smart city infrastructure with traffic, energy, and environmental monitoring.',
-      icon: '',
-      price: 'Starting at $12,000/month',
-      features: ['Traffic management', 'Energy monitoring', 'Environmental sensors', 'Public safety', 'Citizen services'],
-      benefits: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen experience'],
-      marketPrice: '$20,000-60,000/month',
-      category: 'Smart Cities',
-      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Big Data', 'AI Analytics']
-      title: 'Real-Time Data Analytics',
-      description: 'Streaming analytics for IoT data with real-time insights and alerting.',
-      icon: '',
-      price: 'Starting at $3,200/month',
-      features: ['Stream processing', 'Real-time dashboards', 'Anomaly detection', 'Predictive analytics', 'Alert systems'],
-      benefits: ['Make faster decisions', 'Identify issues early', 'Optimize operations'],
-      category: 'Analytics',
-      technologies: ['Apache Kafka', 'Apache Flink', 'Apache Spark', 'InfluxDB', 'Grafana']
-      title: 'Predictive Maintenance Systems',
-      description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
-      icon: '',
-      price: 'Starting at $5,500/month',
-      features: ['Vibration analysis', 'Temperature monitoring', 'Performance tracking', 'Failure prediction', 'Maintenance scheduling'],
-      benefits: ['Prevent unplanned downtime', 'Reduce maintenance costs', 'Extend equipment life'],
-      marketPrice: '$8,000-25,000/month',
-      category: 'Predictive Maintenance',
-      technologies: ['Machine Learning', 'Time Series Analysis', 'Vibration Sensors', 'Thermal Cameras', 'AI Models']
-      title: 'Smart Agriculture Solutions',
-      description: 'Precision agriculture with IoT sensors, drones, and AI-powered crop management.',
-      icon: '',
-      price: 'Starting at $4,000/month',
-      features: ['Soil monitoring', 'Crop health analysis', 'Weather tracking', 'Irrigation control', 'Yield optimization'],
-      benefits: ['Increase crop yields by 25%', 'Reduce water usage by 30%', 'Optimize fertilizer use'],
-      marketPrice: '$6,000-18,000/month',
-      category: 'Agriculture',
-      technologies: ['Soil Sensors', 'Drones', 'Satellite Imagery', 'Machine Learning', 'Precision Agriculture']
-      title: 'IoT Device Development',
-      description: 'Custom IoT device design and development for specific business requirements.',
-      icon: '',
-      price: 'Starting at $15,000/project',
-      features: ['Hardware design', 'Firmware development', 'Prototyping', 'Testing & validation', 'Manufacturing support'],
-      benefits: ['Custom solutions', 'Competitive advantage', 'Optimized performance'],
-      marketPrice: '$25,000-100,000/project',
-      category: 'Device Development',
-      technologies: ['Arduino', 'Raspberry Pi', 'ESP32', 'ARM Cortex', 'Custom PCBs']
-title: 'IoT Data Management',
-      description: 'Comprehensive data management for IoT with storage, processing, and analytics.',
-      icon: '🗄️',
-      features: ['Data ingestion', 'Storage optimization', 'Data processing', 'Quality management', 'Analytics'],
-      benefits: ['Handle massive data volumes', 'Ensure data quality', 'Enable advanced analytics'],
-      category: 'Data Management',
-      technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
   ];
   const categories = [...new Set(iotServices.map(service => service.category))];
@@ -95,7 +94,8 @@ title: 'IoT Data Management',
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
 // IoT & Edge Computing Services
@@ -134,13 +134,14 @@ title: 'IoT Data Management',
           
           
           </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hove,text-cyan-600 transition-colors">
 Schedule Demo
               </div>
         </section>
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 // Why Choose Our IoT & Edge Services?
@@ -156,7 +157,8 @@ Schedule Demo
           </h2>
               <p className="text-xl text-gray-600">
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 l,
+
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-cyan-600" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Experts</h3>
@@ -179,7 +181,8 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
           <section key={category} className="py-16 bg-gray-50">
                   {category} Solutions
                   Specialized {category.toLowerCase()} services for connected and intelligent systems
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: grid-cols-2 l,
+
                 {iotServices
                   .filter(service => service.category === category)
                   .map((service, index) => ()
@@ -249,7 +252,8 @@ Save up to 40% vs market rates
                 <p className="text-gray-600">Comprehensive smart city infrastructure and services</p>
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
 Ready to Connect Your World?
             <p className="text-xl mb-8 text-cyan-100">
@@ -270,34 +274,10 @@ Ready to Connect Your World?
           
           </a>
 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hove,text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com
             <div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

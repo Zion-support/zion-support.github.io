@@ -41,7 +41,7 @@ export const _validationRules = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
+
 //     message
   }),
   /**
@@ -59,7 +59,7 @@ export const _validationRules = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => {
+
     // TODO: Add content
   }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -82,8 +82,8 @@ export const _validationRules = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => value.length >= min,
-    message: message || `Must be at least ${min} characters`
+
+
   }),
   /**
    * Validate maximum length
@@ -100,7 +100,7 @@ export const _validationRules = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => value.length 
+
           
           
           
@@ -110,7 +110,7 @@ export const _validationRules = {
           
           
           <= max,
-    message: message || `Must be no more than ${max} characters`
+
   }),
   /**
    * Validate phone number (US format)
@@ -118,7 +118,7 @@ export const _validationRules = {
   phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => {
+
     // TODO: Add content
   }
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
@@ -141,7 +141,7 @@ export const _validationRules = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => {
+
     // TODO: Add content
   }
       try {
@@ -172,7 +172,7 @@ export const _validationRules = {
           <number> => ({
     // TODO: Add content
   }
-  validate: (value: number) => value >= min && value 
+
           
           
           
@@ -182,7 +182,7 @@ export const _validationRules = {
           
           
           <= max,
-    message: message || `Must be between ${min} and ${max}`
+
   }),
   /**
    * Validate pattern match
@@ -190,7 +190,7 @@ export const _validationRules = {
   pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => regex.test(value),
+
 //     message
   }),
   /**
@@ -208,7 +208,7 @@ export const _validationRules = {
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     // TODO: Add content
   }
-  validate: validator,
+
 //     message
   }),
   /**
@@ -228,7 +228,7 @@ export const _validationRules = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => {
+
     // TODO: Add content
   }
       const hasUpperCase = /[A-Z]/.test(value)
@@ -264,8 +264,8 @@ export const _validationRules = {
           <string> => ({
     // TODO: Add content
   }
-  validate: (value: string) => value === otherFieldValue,
-    message: `Must match ${fieldName}`
+
+
   }),
   /**
    * Validate file size
@@ -282,7 +282,7 @@ export const _validationRules = {
           <File> => ({
     // TODO: Add content
   }
-  validate: (file: File) => {
+
     // TODO: Add content
   }
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024
@@ -297,7 +297,7 @@ export const _validationRules = {
           
           <= maxSizeInBytes
     },
-    message: message || `File size must not exceed ${maxSizeInMB}MB`
+
   }),
   /**
    * Validate file type
@@ -305,8 +305,8 @@ export const _validationRules = {
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({
     // TODO: Add content
   }
-  validate: (file: File) => allowedTypes.includes(file.type),
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}`
+
+
   }
   )
 }
@@ -338,7 +338,7 @@ export function validateField
   return {
     // TODO: Add content
   }
-  valid: errors.length === 0,
+
 //     errors
   }
 }
@@ -413,7 +413,7 @@ export function getFormErrors
           
           
           <T extends Record<string, unknown>>()
-  validationResults: Record
+
           <keyof T, ValidationResult>
 ): Record<keyof T, string[]> {
     // TODO: Add content

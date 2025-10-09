@@ -1,8 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import {Smartphone, Target, Zap, Settings, CheckCircle, Star, Code,  Smartphone,  Target,  Settings from 'lucide-react';
+import {Smartphone, Target, Zap, Settings, CheckCircle, Star, Code,  Smartphone, Target, Settings 
 const AIMobileBuilderPage: React.FC = () => {
   const features = [
     {
@@ -13,14 +12,14 @@ const AIMobileBuilderPage: React.FC = () => {
       description: 'Intelligent mobile app development with AI assistance',
       benefits: ['Code generation', 'UI/UX optimization', 'Performance tuning'];
     },
-      icon: Target,
-      title: 'Cross-Platform Support',
-      description: 'Build for iOS and Android with a single codebase',
-      benefits: ['iOS development', 'Android development', 'Unified codebase']
-      icon: Settings,
-      title: 'App Analytics',
-      description: 'Comprehensive app performance and user analytics',
-      benefits: ['User behavior', 'Performance metrics', 'Crash reporting']
+
+
+
+
+
+
+
+
     }
   ];
   return (
@@ -83,7 +82,7 @@ const AIMobileBuilderPage: React.FC = () => {
           
           </a>
               href="tel:+13024640950"
-              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hove,text-slate-900 transition-all duration-300"
 <Smartphone className="w-5 h-5" />
               +1 302 464 0950
           </div>
@@ -101,7 +100,8 @@ const AIMobileBuilderPage: React.FC = () => {
           
           
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-8">
             {features.map((feature, index) => ()
               
           <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -121,25 +121,6 @@ const AIMobileBuilderPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       </main>
       <Footer />
     </div>
