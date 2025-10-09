@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Calendar, Clock, Users, Zap, Brain, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Target, BarChart } from 'lucide-react';
+import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';
 import Link from 'next/link';
 
 const AISchedulerPage: React.FC = () => {

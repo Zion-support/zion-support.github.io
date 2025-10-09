@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
+import { CheckCircle, Phone, Mail, Cube, Zap, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

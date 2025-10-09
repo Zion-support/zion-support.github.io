@@ -174,7 +174,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       if (clickCount > 10) { // More than 10 clicks in 5 minutes
         suspiciousActivity++;
         if (suspiciousActivity > 3) {
-          console.warn('Suspicious activity detected: Excessive clicking');
           // Could implement additional security measures here
         }
       }
@@ -187,8 +186,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       if (keyCount > 100) { // More than 100 keystrokes in 5 minutes
         suspiciousActivity++;
         if (suspiciousActivity > 3) {
-          console.warn('Suspicious activity detected: Excessive keyboard input');
-        }
+          }
       }
     });
   };

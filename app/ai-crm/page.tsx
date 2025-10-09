@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Brain, Users, BarChart, Zap, Shield, Clock, Target, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';
 import Link from 'next/link';
 
 const AICRMPage: React.FC = () => {

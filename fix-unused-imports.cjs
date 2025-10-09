@@ -1,99 +1,95 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Files to fix
+// List of files and their correct import statements
 const filesToFix = [
-  'app/blog/ai-2025-january-cutting-edge-trends-breakthrough/page.tsx',
-  'app/blog/ai-2025-march-autonomous-enterprise-operations-revolution/page.tsx',
-  'app/blog/ai-2026-adaptive-neural-architectures-breakthrough/page.tsx',
-  'app/blog/ai-2026-advanced-neural-optimization-revolution/page.tsx',
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-april-ultimate-breakthrough-revolution/page.tsx',
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
-  'app/blog/ai-2026-autonomous-business-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx',
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-breakthrough/page.tsx',
-  'app/blog/ai-2026-february-mega-breakthrough-revolution/page.tsx',
-  'app/blog/ai-2026-february-ultimate-consciousness-breakthrough/page.tsx',
-  'app/blog/ai-2026-hyperconscious-computing-revolution/page.tsx',
-  'app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx',
-  'app/blog/ai-trends-2026-future-enterprise-transformation/page.tsx',
-  'app/contact/page.tsx',
-  'app/privacy/page.tsx',
-  'app/team/page.tsx',
-  'app/terms/page.tsx'
+  {
+    file: 'app/ai-content-generation/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-crm/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-customer-support/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-cybersecurity/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-data-visualization/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-document-processing/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-fitness-coach/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-lead-generation/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-sales-automation/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-scheduler/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-voice-cloning/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-workflow-automation/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/ai-writing-assistant/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  },
+  {
+    file: 'app/analytics-tools/page.tsx',
+    correctImport: "import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';"
+  }
 ];
 
-// Fix unused Link imports
-filesToFix.forEach(filePath => {
+function fixFile(filePath, correctImport) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (fs.existsSync(fullPath)) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      
-      // Remove unused Link import
-      content = content.replace(/import { Link } from 'react-router-dom';\n/g, '');
-      content = content.replace(/import { Link } from 'react-router-dom';\r\n/g, '');
-      content = content.replace(/import { Link } from 'react-router-dom';\n\n/g, '');
-      
-      // Remove unused Link from multi-import
-      content = content.replace(/import { [^}]*Link[^}]* } from 'react-router-dom';\n/g, '');
-      content = content.replace(/import { [^}]*Link[^}]* } from 'react-router-dom';\r\n/g, '');
-      
-      fs.writeFileSync(fullPath, content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Find and replace the lucide-react import line
+    const importRegex = /import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?/g;
+    const match = content.match(importRegex);
+    
+    if (match) {
+      content = content.replace(importRegex, correctImport);
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
+    } else {
+      console.log(`No lucide-react import found in: ${filePath}`);
     }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
-});
+}
 
-// Fix other common issues
-const otherFiles = [
-  'app/not-found.tsx',
-  'app/guides/ai-2026-implementation-roadmap/page.tsx',
-  'app/guides/ai-2027-implementation-roadmap/page.tsx'
-];
-
-otherFiles.forEach(filePath => {
-  try {
-    const fullPath = path.join(__dirname, filePath);
-    if (fs.existsSync(fullPath)) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      
-      // Remove unused icon imports
-      if (filePath.includes('not-found.tsx')) {
-        content = content.replace(/import { [^}]*ArrowLeft[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Search[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*BookOpen[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Users[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      if (filePath.includes('ai-2026-implementation-roadmap')) {
-        content = content.replace(/import { [^}]*Target[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*CheckCircle[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      if (filePath.includes('ai-2027-implementation-roadmap')) {
-        content = content.replace(/import { [^}]*Calendar[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*User[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Tag[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Cpu[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+// Apply fixes
+console.log('Fixing unused imports...');
+filesToFix.forEach(({ file, correctImport }) => {
+  const filePath = path.join(__dirname, file);
+  if (fs.existsSync(filePath)) {
+    fixFile(filePath, correctImport);
+  } else {
+    console.log(`File not found: ${filePath}`);
   }
 });
 
-console.log('Fixed unused imports!');
+console.log('All unused import fixes applied!');

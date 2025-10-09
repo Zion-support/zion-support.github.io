@@ -7,10 +7,25 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
+    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI Solutions' },
+    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-Powered Marketing' },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Business Process Automation' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI Solutions' },
+    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI Services' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI Content Creation' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI Support Systems' },
+    { name: 'AI Analytics', url: '/ai-data-analytics', description: 'AI Data Analysis' }
   ];
 
   const itServices = [
+    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud Infrastructure' },
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security Solutions' },
+    { name: 'DevOps', url: '/devops', description: 'Development Operations' },
+    { name: 'Database Services', url: '/database', description: 'Database Management' },
+    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Infrastructure Solutions' },
+    { name: 'Networking', url: '/networking', description: 'Network Solutions' },
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'BI Solutions' },
+    { name: 'Digital Transformation', url: '/enterprise', description: 'Enterprise Solutions' }
   ];
 
   const microSaasServices = [
@@ -26,8 +41,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Robotics', url: '/robotics', description: 'Intelligent Robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' }
-=======
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' },
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },

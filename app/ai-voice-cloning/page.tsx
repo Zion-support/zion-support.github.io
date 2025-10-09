@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Star, Phone, Mail, MapPin, Mic, Volume2, Languages, Zap, Shield, Clock } from 'lucide-react';
+import { CheckCircle, Zap, Brain, BarChart, Eye } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
