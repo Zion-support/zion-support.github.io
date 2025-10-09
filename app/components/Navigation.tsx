@@ -71,11 +71,20 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-green-100',
       services: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '50+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' }
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Automated lead qualification' },
+        { name: 'AI Chat Assistant', path: '/ai-chat-assistant', description: 'Intelligent customer support' },
+        { name: 'AI Code Reviewer', path: '/ai-code-reviewer', description: 'Automated code analysis' },
+        { name: 'AI Email Optimizer', path: '/ai-email-optimizer', description: 'Smart email marketing' },
+        { name: 'AI Task Manager', path: '/ai-task-manager', description: 'Intelligent task management' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory tracking' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Voice-controlled automation' },
+        { name: 'AI Performance Monitor', path: '/ai-performance-monitor', description: 'Real-time system monitoring' },
+        { name: 'AI Compliance Checker', path: '/ai-compliance-checker', description: 'Automated compliance monitoring' },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer analysis' },
+        { name: 'AI Workflow Engine', path: '/ai-workflow-engine', description: 'Intelligent workflow automation' }
       ]
     },
     {

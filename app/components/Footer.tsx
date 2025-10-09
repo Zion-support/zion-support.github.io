@@ -15,10 +15,24 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
   ];
+  const microSaasServices = [
+    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ ready-to-use apps' },
+    { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Intelligent document processing' },
+    { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Automated lead qualification' },
+    { name: 'AI Chat Assistant', url: '/ai-chat-assistant', description: 'Intelligent customer support' },
+    { name: 'AI Code Reviewer', url: '/ai-code-reviewer', description: 'Automated code analysis' },
+    { name: 'AI Email Optimizer', url: '/ai-email-optimizer', description: 'Smart email marketing' },
+    { name: 'AI Task Manager', url: '/ai-task-manager', description: 'Intelligent task management' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Smart inventory tracking' },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice-controlled automation' },
+    { name: 'AI Performance Monitor', url: '/ai-performance-monitor', description: 'Real-time system monitoring' }
+  ];
+
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Micro SAAS', url: '/micro-saas', description: '50+ ready-to-use apps' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
     { name: 'Database Services', url: '/database', description: 'Database management' },
@@ -55,12 +69,28 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Micro SAAS Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Micro SAAS</h3>
+            <ul className="space-y-2">
+              {microSaasServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}

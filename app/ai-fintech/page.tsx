@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const AIFintechPage: React.FC = () => {
   const aiFintechServices = [
     {

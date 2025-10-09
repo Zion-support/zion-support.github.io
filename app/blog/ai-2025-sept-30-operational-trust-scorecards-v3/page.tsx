@@ -1,14 +1,8 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 const OperationalTrustScorecardsPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Operational Trust Scorecards v3</title>
-        <meta name="description" content="Measure reliability, cost, safety, and value with live AI scorecards." />
-        <meta property="og:type" content="article" />
-      </Helmet>
-      <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4">
           <div className="mb-6 inline-flex items-center gap-2">
@@ -72,8 +66,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </main>
-    </>
+      </main>
   );
 }
 export default OperationalTrustScorecardsPage;

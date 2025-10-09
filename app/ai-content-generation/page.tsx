@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
     {
@@ -149,35 +151,30 @@ const AIContentGenerationPage: React.FC = () => {
     }
   ];
   return (
-    <>
-      <Helmet>
-        <title>AI Content Generation Services - Zion Tech Group</title>
-        <meta name="description" content="Transform your content strategy with our AI-powered content generation services. Create blog posts, social media content, and marketing copy 10x faster." />
-        <meta name="keywords" content="AI content generation, automated content creation, blog writing, social media content, marketing copy" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-        {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg quantum-field">
+      <Navigation />
+      {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text">
                 AI Content Generation
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                   Services
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your content strategy with our AI-powered content generation services. 
                 Create high-quality blog posts, social media content, and marketing copy 10x faster.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
+                <a href="/contact" className="cyber-button inline-flex items-center justify-center space-x-2">
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors">
+                </a>
+                <a href="/micro-saas" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-white transition-colors">
                   View Pricing
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -186,63 +183,63 @@ const AIContentGenerationPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
                 Our AI Content Services
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose from our comprehensive suite of AI-powered content generation services
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {contentServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div key={index} className="cyber-card hologram-card p-8 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <span className="text-4xl mr-4">{service.icon}</span>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-                      <p className="text-gray-600">{service.description}</p>
+                      <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                      <p className="text-gray-300">{service.description}</p>
                     </div>
                   </div>
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-3xl font-bold text-blue-600">{service.price}</span>
-                      <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                      <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
+                      <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
                     </div>
                   </div>
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Features:</h4>
+                    <h4 className="font-semibold text-white mb-3">Features:</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <li key={idx} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <h4 className="font-semibold text-white mb-3">Benefits:</h4>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-gray-600">
-                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                        <li key={idx} className="flex items-center text-gray-300">
+                          <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                    <h4 className="font-semibold text-white mb-3">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
                       {service.technologies.map((tech, idx) => (
-                        <span key={idx} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                        <span key={idx} className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm border border-cyan-500/30">
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
-                  <div className="border-t pt-4">
-                    <p className="text-sm text-gray-600">{service.contactInfo}</p>
+                  <div className="border-t border-gray-600 pt-4">
+                    <p className="text-sm text-gray-400">{service.contactInfo}</p>
                   </div>
                 </div>
               ))}
@@ -250,25 +247,25 @@ const AIContentGenerationPage: React.FC = () => {
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
                 Why Choose Our AI Content Services?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our advanced AI technology delivers superior content generation capabilities
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="text-center cyber-card hologram-card p-6">
+                  <div className="bg-cyan-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-cyan-400">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="text-sm text-gray-400 space-y-1">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx}>• {benefit}</li>
                     ))}
@@ -282,50 +279,55 @@ const AIContentGenerationPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
                 How It Works
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our streamlined process makes AI content generation simple and efficient
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div key={index} className="text-center cyber-card hologram-card p-6">
+                  <div className="bg-gradient-to-r from-cyan-500 to-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                     {step.step}
                   </div>
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-cyan-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-cyan-400">
                     {step.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300">{step.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center cyber-card hologram-card p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 holographic-text">
               Ready to Transform Your Content Strategy?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI content generation services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+              <a href="/contact" className="cyber-button inline-flex items-center justify-center">
                 Start Free Trial
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
+              </a>
+              <a href="tel:+13024640950" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-white transition-colors">
                 Schedule Demo
-              </button>
+              </a>
+            </div>
+            <div className="mt-8 text-sm text-gray-400">
+              <p>📧 Email: kleber@ziontechgroup.com</p>
+              <p>📞 Phone: +1 (302) 464-0950</p>
+              <p>📍 Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </div>
         </section>
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 export default AIContentGenerationPage;
