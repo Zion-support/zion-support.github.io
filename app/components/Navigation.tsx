@@ -72,7 +72,13 @@ const Navigation: React.FC = () => {
         { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
         { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
         { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', description: 'Smart email campaigns' },
+        { name: 'AI Project Management', path: '/ai-project-management', description: 'Intelligent project planning' },
+        { name: 'AI Customer Service Bot', path: '/ai-customer-service-bot', description: '24/7 intelligent support' },
+        { name: 'AI Inventory Management', path: '/ai-inventory-management', description: 'Smart stock optimization' },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Smart investment management' }
       ]
     },
     {
