@@ -1,13 +1,9 @@
 'use client';
 import React, { useEffect, useState, lazy } from 'react';
-import {Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
-<<<<<<< HEAD
 const HomePage = lazy(() => import('./page'));
-=======
-const _HomePage = lazy(() => import('../app/page'));
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 // Import enhancement utilities
 import PerformanceEnhancer from './utils/performanceEnhancer';
@@ -27,9 +23,24 @@ const LoadingSpinner: React.FC = () => (
 );
 
 // AI Services Pages
+import AIServicesPage from './ai-services/page';
+import AIMarketingPage from './ai-marketing/page';
+import AIAutomationPage from './ai-automation/page';
+import AIHealthcarePage from './ai-healthcare/page';
+import AIFintechPage from './ai-fintech/page';
+import AIContentGenerationPage from './ai-content-generation/page';
+import AIDataAnalyticsPage from './ai-data-analytics/page';
+import AICybersecurityPage from './ai-cybersecurity/page';
+import AIWorkflowAutomationPage from './ai-workflow-automation/page';
+import AIMobileAppDevelopmentPage from './ai-mobile-app-development/page';
+import AIEcommerceSolutionsPage from './ai-ecommerce-solutions/page';
+import AICustomerSupportPage from './ai-customer-support/page';
+import AISalesAutomationPage from './ai-sales-automation/page';
+import AIDataVisualizationPage from './ai-data-visualization/page';
+import AILeadGenerationPage from './ai-lead-generation/page';
+import AIDocumentProcessingPage from './ai-document-processing/page';
 
 // IT Services Pages
-<<<<<<< HEAD
 import ITServicesPage from './it-services/page';
 import ITInfrastructurePage from './it-infrastructure/page';
 import CybersecurityPage from './cybersecurity/page';
@@ -43,42 +54,49 @@ import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIEmailMarketingPage from './ai-email-marketing/page';
 import AIWritingAssistantPage from './ai-writing-assistant/page';
-=======
-
-// Micro SAAS Pages
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 // Specialized Solutions Pages
+import QuantumComputingPage from './quantum-computing/page';
+import AutonomousSystemsPage from './autonomous-systems/page';
+import BlockchainWeb3Page from './blockchain-web3/page';
+import IoTEdgeComputingPage from './iot-edge-computing/page';
+import BusinessIntelligencePage from './business-intelligence/page';
+import RoboticsPage from './robotics/page';
 
 // Company Pages
-<<<<<<< HEAD
 import TeamPage from './team/page';
 import CareersPage from './careers/page';
 import NewsPage from './news/page';
-<<<<<<< HEAD
 import AboutPage from './about/page';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 import ContactPage from './contact/page';
 import ServicesPage from './services/page';
 import BlogPage from './blog/page';
 import CaseStudiesPage from './case-studies/page';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 // Support Pages
-
-=======
-import AboutPage from './about/page';
-
-// Support Pages
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 // Additional Pages
+import PricingPage from './pricing/page';
+import DemoPage from './demo/page';
+import ConsultationPage from './consultation/page';
 
 // AI Services
+import AIServicesPage from './ai-services/page';
+import AIMarketingPage from './ai-marketing/page';
+import AIAutomationPage from './ai-automation/page';
+import AIHealthcarePage from './ai-healthcare/page';
+import AIFintechPage from './ai-fintech/page';
+import AIContentGenerationPage from './ai-content-generation/page';
+import AIDataAnalyticsPage from './ai-data-analytics/page';
+import AICybersecurityPage from './ai-cybersecurity/page';
+import AIWorkflowAutomationPage from './ai-workflow-automation/page';
+import AIMobileAppDevelopmentPage from './ai-mobile-app-development/page';
+import AIEcommerceSolutionsPage from './ai-ecommerce-solutions/page';
+import AICustomerSupportPage from './ai-customer-support/page';
+import AISalesAutomationPage from './ai-sales-automation/page';
+import AIDataVisualizationPage from './ai-data-visualization/page';
+import AILeadGenerationPage from './ai-lead-generation/page';
+import AIDocumentProcessingPage from './ai-document-processing/page';
 
-<<<<<<< HEAD
 // Additional AI Services
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
 import AICodeGenerationPage from './ai-code-generation/page';
@@ -87,24 +105,28 @@ import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIWritingAssistantPage from './ai-writing-assistant/page';
 import AICRMPage from './ai-crm/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
-=======
-// Micro SAAS Solutions
-import AISocialMediaManagerPage from './ai-social-media-manager/page';
-import AICodeGenerationPage from './ai-code-generation/page';
-
-// IT Services
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 // Specialized Solutions
+import QuantumComputingPage from './quantum-computing/page';
+import AutonomousSystemsPage from './autonomous-systems/page';
+import BlockchainWeb3Page from './blockchain-web3/page';
+import IoTEdgeComputingPage from './iot-edge-computing/page';
+import BusinessIntelligencePage from './business-intelligence/page';
+import RoboticsPage from './robotics/page';
 
 // Company Pages
+import TeamPage from './team/page';
+import CareersPage from './careers/page';
+import NewsPage from './news/page';
+import PricingPage from './pricing/page';
+import DemoPage from './demo/page';
+import ConsultationPage from './consultation/page';
 
 // Support Pages
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 // AI Services Pages
+import AIProjectManagerPage from './ai-project-manager/page';
+import AICustomerSupportBotPage from './ai-customer-support-bot/page';
+import AIAutomationPage from './ai-automation/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
 const App: React.FC = () => {
@@ -240,16 +262,8 @@ const App: React.FC = () => {
 
       setIsInitialized(true);
     } catch {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-=======
-      // Continue even if enhancers fail
-      setIsInitialized(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
     }
   };
 

@@ -8,7 +8,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const _structuredData = {
+  const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -187,17 +187,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 
 export default RootLayout;
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
