@@ -11,15 +11,19 @@ const AboutPage: React.FC = () => {
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.',
     },
+    {
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',
       bio: 'Technical expert specializing in machine learning and cloud architecture.',
+    },
+    {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-import { Users, Target, Brain, Shield } from 'lucide-react';
+    }
+  ];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
