@@ -1,7 +1,6 @@
 'use client';
-import React, { useEffect, useState, Suspense, lazy } from 'react';
+import React, { useEffect, useState, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('../app/page'));
@@ -14,15 +13,6 @@ import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 
 // Import components
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancerComponent from './components/AccessibilityEnhancer';
-import SecurityEnhancerComponent from './components/SecurityEnhancer';
-import UserExperienceEnhancerComponent from './components/UserExperienceEnhancer';
-import Analytics from './components/Analytics';
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -281,6 +271,7 @@ const App: React.FC = () => {
         enableAnimations: true
       });
 
+      // Initialize enhancers
       setEnhancers({
         performance: performanceEnhancer,
         seo: seoEnhancer,
@@ -294,15 +285,16 @@ const App: React.FC = () => {
 
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Report:', performanceEnhancer.getMetrics());
-        console.log('Accessibility Report:', accessibilityEnhancer.generateReport());
-        console.log('Security Report:', securityEnhancer.generateSecurityReport());
-        console.log('UX Report:', uxEnhancer.generateUXReport());
+        // Performance and enhancement reports are generated silently
+        performanceEnhancer.getMetrics();
+        accessibilityEnhancer.generateReport();
+        securityEnhancer.generateSecurityReport();
+        uxEnhancer.generateUXReport();
       }
 
       setIsInitialized(true);
     } catch (error) {
-      console.error('Failed to initialize enhancers:', error);
+      // Silently handle initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
     }
   };

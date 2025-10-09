@@ -21,9 +21,10 @@ const DynamicContentShowcase: React.FC = () => {
               Explore
             </button>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );
 };
+
 export default DynamicContentShowcase;
