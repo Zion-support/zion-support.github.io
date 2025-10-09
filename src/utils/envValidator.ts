@@ -40,8 +40,8 @@ class EnvValidator {
     }
     if (validation.warnings.length > 0) {
       // console.warn(
-        `Environment warnings:\n${validation.warnings.join('\n')}`
-      )
+      //   `Environment warnings:\n${validation.warnings.join('\n')}`
+      // )
     }
     return {
       NODE_ENV: this.getNodeEnv(),

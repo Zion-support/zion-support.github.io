@@ -300,7 +300,9 @@ export class TestRunner {
    * Run a test suite
    */
   private async runSuite(suite: TestSuite): Promise<void> {
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // console.log(`\n📁 Running suite: ${suite.name}`); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      // console.log(`\n📁 Running suite: ${suite.name}`);
+    }
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {
       await this.runHook(hook, 'beforeAll');

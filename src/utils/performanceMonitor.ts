@@ -238,3 +238,10 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     return `
 Performance Report:
+      Overall Score: ${score}%
+      Load Time: ${metrics.loadTime}ms
+      Render Time: ${metrics.renderTime}ms
+      Memory Usage: ${metrics.memoryUsage}MB
+    `;
+  }
+}

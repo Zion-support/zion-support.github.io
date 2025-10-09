@@ -578,12 +578,11 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
           </section>
-        </div>
-      </main>
+        </main>
 
-      <Footer />
-    </div>
-  );
-};
+        <Footer />
+      </div>
+    );
+  };
 
 export default ITServicesPage;
