@@ -141,7 +141,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       )}
     </Helmet>
   );
->>>>>>> origin/main
 };
 
 export default SEOOptimizer;

@@ -1,25 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
-
-import { ChevronDown, Phone, Mail, Menu, X, Brain, Code } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -84,7 +71,6 @@ const Navigation: React.FC = () => {
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
         { name: 'Business Intelligence', path: '/business-intelligence' }
       ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
     }
   };
 

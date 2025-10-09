@@ -1,42 +1,38 @@
-import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, Brain, Cloud, Code, BarChart, Users, Globe, ArrowRight } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Clock, Globe, Linkedin, Twitter, Github } from 'lucide-react';
 
-const Footer: React.FC = memo(() => {
+const Footer: React.FC = React.memo(() => {
   const serviceCategories = [
     {
       title: 'AI Services',
-      services: [
-        { name: 'AI Consulting', href: '/ai-services' },
-        { name: 'Machine Learning', href: '/ai-services' },
-        { name: 'Natural Language Processing', href: '/ai-services' },
-        { name: 'Computer Vision', href: '/ai-services' },
-        { name: 'Predictive Analytics', href: '/ai-services' },
-        { name: 'AI Automation', href: '/ai-services' },
-      ],
+      links: [
+        { name: 'AI Solutions', href: '/ai-services' },
+        { name: 'AI Marketing', href: '/ai-marketing' },
+        { name: 'AI Automation', href: '/ai-automation' },
+        { name: 'AI Healthcare', href: '/ai-healthcare' },
+        { name: 'AI Fintech', href: '/ai-fintech' }
+      ]
     },
     {
-      title: 'IT Solutions',
-      services: [
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+      title: 'IT Services',
+      links: [
+        { name: 'Cloud Services', href: '/cloud-services' },
         { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'IT Consulting', href: '/it-consulting' },
         { name: 'Data Analytics', href: '/data-analytics' },
-        { name: 'Mobile Development', href: '/mobile-development' },
-        { name: 'Web Development', href: '/web-development' },
-        { name: 'DevOps', href: '/devops' },
-      ],
+        { name: 'Mobile Development', href: '/mobile-development' }
+      ]
     },
     {
-      title: 'Emerging Tech',
-      services: [
-        { name: 'Blockchain & Web3', href: '/blockchain' },
+      title: 'Specialized Tech',
+      links: [
         { name: 'Quantum Computing', href: '/quantum-computing' },
-        { name: 'IoT Solutions', href: '/iot-solutions' },
-        { name: 'AR/VR Development', href: '/ar-vr' },
-        { name: 'Edge Computing', href: '/edge-computing' },
-        { name: '5G Solutions', href: '/5g-solutions' },
-      ],
-    },
+        { name: 'Autonomous Systems', href: '/autonomous-systems' },
+        { name: 'Blockchain', href: '/blockchain' },
+        { name: 'IoT Solutions', href: '/iot-solutions' }
+      ]
+    }
   ];
 
   const quickLinks = [
@@ -44,16 +40,16 @@ const Footer: React.FC = memo(() => {
     { name: 'Our Team', href: '/team' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' }
   ];
 
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR Compliance', href: '/gdpr' },
-    { name: 'Security', href: '/security' },
+    { name: 'GDPR', href: '/gdpr' }
   ];
 
   return (
@@ -68,7 +64,7 @@ const Footer: React.FC = memo(() => {
               <h3 className="text-2xl font-bold text-cyan-400">Zion Tech Group</h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
+              Leading provider of AI-powered enterprise solutions, quantum computing, and autonomous systems. 
               Transform your business with cutting-edge technology.
             </p>
             
@@ -76,15 +72,19 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Phone className="w-4 h-4 mr-3 text-cyan-400" />
-                <span>+1 (555) 123-4567</span>
+                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                  +1 (302) 464-0950
+                </a>
               </div>
               <div className="flex items-center text-gray-300">
                 <Mail className="w-4 h-4 mr-3 text-cyan-400" />
-                <span>info@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 text-cyan-400" />
-                <span>San Francisco, CA</span>
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>
@@ -93,20 +93,17 @@ const Footer: React.FC = memo(() => {
           {serviceCategories.map((category, index) => (
             <div key={index} className="lg:col-span-1">
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                {category.title === 'AI Services' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
-                {category.title === 'IT Solutions' && <Code className="w-5 h-5 mr-2 text-cyan-400" />}
-                {category.title === 'Emerging Tech' && <Zap className="w-5 h-5 mr-2 text-cyan-400" />}
+                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                 {category.title}
               </h4>
-              <ul className="space-y-2">
-                {category.services.map((service, serviceIndex) => (
-                  <li key={serviceIndex}>
+              <ul className="space-y-3">
+                {category.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
                     <Link
-                      to={service.href}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
+                      href={link.href}
+                      className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                     >
-                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {service.name}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
@@ -117,17 +114,16 @@ const Footer: React.FC = memo(() => {
           {/* Quick Links */}
           <div className="lg:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-              <Users className="w-5 h-5 mr-2 text-cyan-400" />
+              <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
+                    href={link.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
                   </Link>
                 </li>
@@ -136,77 +132,23 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
 
-        {/* Contact Info */}
-        <div className="space-y-3 mt-6">
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                <span className="text-gray-300">24/7 Support Available</span>
-              </div>
-              <div className="flex space-x-4 mt-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </div>
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                    +1 302 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">24/7 Support Available</span>
-                </div>
-              </div>
-        </div>
-
         {/* Newsletter Signup */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Latest Tech Trends
+              Stay Updated with Our Latest Innovations
             </h3>
             <p className="text-gray-300 mb-6">
-              Get insights on AI, emerging technologies, and industry best practices delivered to your inbox.
+              Get exclusive insights, industry trends, and technology updates delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center">
+              <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                 Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
           </div>
@@ -248,8 +190,8 @@ const Footer: React.FC = memo(() => {
               {legalLinks.map((link, index) => (
                 <Link
                   key={index}
-                  to={link.href}
-                  className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-200"
+                  href={link.href}
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   {link.name}
                 </Link>
@@ -260,22 +202,29 @@ const Footer: React.FC = memo(() => {
             <div className="flex space-x-4">
               <a
                 href="https://linkedin.com/company/ziontechgroup"
-                className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
-                <Globe className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
-                <Globe className="w-5 h-5" />
+                <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="https://github.com/ziontechgroup"
-                className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://ziontechgroup.com"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Website"
               >
                 <Globe className="w-5 h-5" />
               </a>
