@@ -36,6 +36,16 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       []
     );
+    
+    const baseClasses = useMemo(
+      () => `bg-${color}-500 ${sizeClasses[size]}`,
+      [color, size, sizeClasses]
+    );
+    
+    const fullScreenClasses = useMemo(
+      () => 'fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90',
+      []
+    );
     const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',

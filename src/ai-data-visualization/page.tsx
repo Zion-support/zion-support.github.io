@@ -32,6 +32,29 @@ const AIDataVisualizationPage: React.FC = () => {
     }
   ];
 
+  const useCases = [
+    {
+      icon: BarChart,
+      title: 'Sales Analytics',
+      description: 'Track sales performance, identify trends, and optimize revenue with real-time dashboards.'
+    },
+    {
+      icon: PieChart,
+      title: 'Marketing Insights',
+      description: 'Analyze campaign performance, customer behavior, and ROI with comprehensive visualizations.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Financial Reporting',
+      description: 'Monitor financial health, track expenses, and generate automated financial reports.'
+    },
+    {
+      icon: Users,
+      title: 'HR Analytics',
+      description: 'Analyze employee performance, engagement metrics, and workforce planning data.'
+    }
+  ];
+
   const pricing = [
     {
       name: 'Starter',

@@ -31,6 +31,33 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
   ];
+  const useCases = [
+    {
+      icon: Zap,
+      title: 'Process Automation',
+      description: 'Automate repetitive tasks and workflows to increase efficiency and reduce human error.',
+      benefits: ['Task Automation', 'Workflow Optimization', 'Error Reduction', 'Time Savings']
+    },
+    {
+      icon: Clock,
+      title: 'Scheduling & Planning',
+      description: 'Intelligent scheduling and resource planning for optimal workflow management.',
+      benefits: ['Smart Scheduling', 'Resource Allocation', 'Conflict Resolution', 'Deadline Management']
+    },
+    {
+      icon: Shield,
+      title: 'Compliance & Security',
+      description: 'Ensure all workflows meet compliance requirements and security standards.',
+      benefits: ['Audit Trails', 'Security Checks', 'Compliance Monitoring', 'Risk Management']
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Streamline team communication and collaboration across all workflow stages.',
+      benefits: ['Real-time Updates', 'Team Notifications', 'Progress Tracking', 'Knowledge Sharing']
+    }
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -157,7 +184,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${

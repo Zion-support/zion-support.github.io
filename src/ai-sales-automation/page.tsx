@@ -5,6 +5,33 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
 const AISalesAutomationPage: React.FC = () => {
+  const useCases = [
+    {
+      icon: Target,
+      title: 'Lead Scoring & Qualification',
+      description: 'AI automatically scores and qualifies leads based on behavior, demographics, and engagement patterns.',
+      benefits: ['Behavioral Analysis', 'Predictive Scoring', 'Auto-qualification', 'Priority Ranking']
+    },
+    {
+      icon: Users,
+      title: 'Customer Segmentation',
+      description: 'Intelligent customer segmentation helps you target the right audience with personalized messaging.',
+      benefits: ['Dynamic Segmentation', 'Behavioral Clustering', 'Personalization', 'Campaign Optimization']
+    },
+    {
+      icon: BarChart,
+      title: 'Sales Forecasting',
+      description: 'Predict future sales performance with AI-powered forecasting and trend analysis.',
+      benefits: ['Revenue Prediction', 'Trend Analysis', 'Risk Assessment', 'Goal Setting']
+    },
+    {
+      icon: Zap,
+      title: 'Automated Follow-ups',
+      description: 'Never miss a follow-up with intelligent automation that nurtures leads through the sales funnel.',
+      benefits: ['Auto-scheduling', 'Personalized Messaging', 'Multi-channel Outreach', 'Response Tracking']
+    }
+  ];
+
   const features = [
     {
       icon: Target,
