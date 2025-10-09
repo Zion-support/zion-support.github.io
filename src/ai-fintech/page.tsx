@@ -351,11 +351,7 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD:app/ai-fintech/page.tsx
-      </div>
-=======
       </main>
->>>>>>> main:src/ai-fintech/page.tsx
       <Footer />
     </div>
   );
