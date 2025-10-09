@@ -121,7 +121,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       console.warn('Performance measurement failed:', error);
     }
     // Cleanup observers
-    return () => {
+    return (
+    <>) => {
       observers.forEach(observer => {
         try {
           observer.disconnect();
@@ -137,7 +138,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const _resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
-    );
+      </>
+  );
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console
       console.warn(
@@ -147,7 +149,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           duration: r.duration,
           size: r.transferSize,
         }))
-      );
+        </>
+  );
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {
@@ -160,22 +163,26 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (onCLS) {
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
-            );
+              </>
+  );
           }
           if (onFCP) {
             onFCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, fcp: metric.value }))
-            );
+              </>
+  );
           }
           if (onLCP) {
             onLCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, lcp: metric.value }))
-            );
+              </>
+  );
           }
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-            );
+              </>
+  );
           }
         })
         .catch(() => {
@@ -194,7 +201,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const interval = setInterval(() => {
       measureResourceTiming();
     }, 5000);
-    return () => {
+    return (
+    <>) => {
       if (_cleanup) _cleanup();
       clearInterval(interval);
     };
@@ -215,33 +223,39 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-      );
+        </>
+  );
     }
     if (metrics.lcp && metrics.lcp > 2500) {
       recommendations.push(
         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-      );
+        </>
+  );
     }
     if (metrics.fid && metrics.fid > 100) {
       recommendations.push(
         'First Input Delay is high. Reduce JavaScript execution time.'
-      );
+        </>
+  );
     }
     if (metrics.cls && metrics.cls > 0.1) {
       recommendations.push(
         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-      );
+        </>
+  );
     }
     if (metrics.ttfb && metrics.ttfb > 600) {
       recommendations.push(
         'Time to First Byte is slow. Optimize server response time.'
-      );
+        </>
+  );
     }
     return recommendations;
   }, [metrics]);
   const _recommendations = getPerformanceRecommendations();
   if (process.env['NODE_ENV'] === 'development') {
     return (
+    <>
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'>
@@ -272,7 +286,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
         )}
       </div>
-    );
+      </>
+  );
   }
   return null;
 };

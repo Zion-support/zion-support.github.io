@@ -78,6 +78,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
  */
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
   return (
+    <>
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
@@ -120,6 +121,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </div>
       </div>
     </div>
+    </>
   );
 }
 /**
@@ -127,6 +129,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
  */
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
   return (
+    <>
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full">
@@ -158,6 +161,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </div>
       </div>
     </div>
+    </>
   );
 }
 /**
@@ -165,6 +169,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
  */
 function NotFoundFallback(): JSX.Element {
   return (
+    <>
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full text-center">
         <h1 className="text-6xl font-bold text-gray-900">404</h1>
@@ -188,6 +193,7 @@ function NotFoundFallback(): JSX.Element {
         </div>
       </div>
     </div>
+    </>
   );
 }
 /**

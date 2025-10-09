@@ -25,7 +25,8 @@ const Toast: React.FC<ToastProps> = ({
           onClose();
         }
       }, duration);
-      return () => clearTimeout(timer);
+      return (
+    <>) => clearTimeout(timer);
     }
     return undefined;
   }, [show, duration, onClose]);
@@ -59,6 +60,7 @@ const Toast: React.FC<ToastProps> = ({
     }
   };
   return (
+    <>
     <div
       className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert"
@@ -77,6 +79,7 @@ const Toast: React.FC<ToastProps> = ({
         ✕
       </button>
     </div>
+    </>
   );
 };
 export default Toast;

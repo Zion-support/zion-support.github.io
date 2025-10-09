@@ -36,6 +36,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
   return (
+    <>
     <div className={containerClasses} role="status" aria-label="Loading">
       <div className="flex flex-col items-center space-y-4">
         <div className="relative">
@@ -48,6 +49,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
       </div>
       <span className="sr-only">Loading content, please wait...</span>
     </div>
+    </>
   );
 };
 export default ModernLoadingSpinner;

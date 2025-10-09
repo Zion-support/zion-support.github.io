@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 const NewestContent2025Banner: React.FC = () => {
   return (
+    <>
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse top-10 left-10"></div>
@@ -116,6 +117,7 @@ const NewestContent2025Banner: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 export default NewestContent2025Banner;

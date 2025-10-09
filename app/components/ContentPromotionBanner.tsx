@@ -1,44 +1,56 @@
 import React from 'react';
-<<<<<<< HEAD
+
 const ContentPromotionBanner: React.FC = () => {
   return (
+    <>
     <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">
-          Transform Your Business Today
-        </h2>
-        <p className="text-gray-300 mb-8">
-          Join thousands of companies already using our AI solutions to drive growth and innovation.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-            Get Started
-          </button>
-          <button className="border-2 border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-            Learn More
-          </button>
+      <div className="max-w-7xl mx-auto">
+        <div className="cyber-card hologram-card p-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+            Transform Your Business with AI
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join thousands of businesses already using our AI solutions to increase productivity, 
+            reduce costs, and drive innovation.
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
+              <div className="text-white font-medium">Productivity Boost</div>
+              <div className="text-gray-400 text-sm">Average increase</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">$50M+</div>
+              <div className="text-white font-medium">Cost Savings</div>
+              <div className="text-gray-400 text-sm">For enterprise clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+              <div className="text-white font-medium">Process Automation</div>
+              <div className="text-gray-400 text-sm">Efficiency gain</div>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="cyber-button px-8 py-4 text-lg"
+            >
+              Get Started Today
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+            >
+              Call (302) 464-0950
+            </a>
+          </div>
         </div>
       </div>
     </section>
-  );
-};
-export default ContentPromotionBanner;
-=======
-
-const ContentPromotionBanner: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4">
-      <div className="container mx-auto text-center">
-        <p className="text-sm font-medium">
-          🚀 <strong>New:</strong> AI-Powered Business Intelligence Dashboard - 
-          <a href="/business-intelligence" className="underline hover:no-underline ml-1">
-            Learn More →
-          </a>
-        </p>
-      </div>
-    </div>
+    </>
   );
 };
 
 export default ContentPromotionBanner;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d

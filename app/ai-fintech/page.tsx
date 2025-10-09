@@ -140,6 +140,7 @@ const AIFintechPage: React.FC = () => {
   ];
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
         {/* Hero Section */}
@@ -351,8 +352,7 @@ const AIFintechPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 export default AIFintechPage;

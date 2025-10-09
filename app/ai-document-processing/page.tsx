@@ -128,6 +128,7 @@ const AIDocumentProcessingPage: React.FC = () => {
 
   return (
     <>
+    
       <SEOOptimizer
         title="AI Document Processing Platform - Zion Tech Group"
         description="Automate document processing with AI-powered OCR and data extraction. 99.9% accuracy, 90% time savings, and 50+ document types supported."
@@ -307,6 +308,7 @@ const AIDocumentProcessingPage: React.FC = () => {
 
         <Footer />
       </div>
+    
     </>
   );
 };

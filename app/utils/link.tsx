@@ -29,6 +29,7 @@ export const Link: React.FC<LinkProps> = ({
     }
   };
   return (
+    <>
     <a
       href={href}
       className={className}
@@ -40,6 +41,7 @@ export const Link: React.FC<LinkProps> = ({
     >
       {children}
     </a>
+    </>
   );
 };
 export default Link;

@@ -85,6 +85,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
   };
   return (
+    <>
     <div className="performance-optimizer">
       <div className="optimization-stats">
         <div className="stat">
@@ -105,6 +106,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default PerformanceOptimizer;

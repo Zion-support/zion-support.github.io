@@ -12,7 +12,8 @@ const ScrollToTop: React.FC = () => {
       }
     };
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return (
+    <>) => window.removeEventListener('scroll', toggleVisibility);
   }, []);
   const scrollToTop = () => {
     window.scrollTo({
@@ -24,6 +25,7 @@ const ScrollToTop: React.FC = () => {
     return null;
   }
   return (
+    <>
     <button
       onClick={scrollToTop}
       className="fixed bottom-8 right-8 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
@@ -31,6 +33,7 @@ const ScrollToTop: React.FC = () => {
     >
       <ArrowUp className="w-5 h-5" />
     </button>
+    </>
   );
 };
 export default ScrollToTop;

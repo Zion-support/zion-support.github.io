@@ -15,6 +15,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false
 }) => {
   return (
+    <>
     <img
       src={src}
       alt={alt}
@@ -28,6 +29,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         height: height ? `${height}px` : 'auto'
       }}
     />
+    </>
   );
 };
 export default OptimizedImage;

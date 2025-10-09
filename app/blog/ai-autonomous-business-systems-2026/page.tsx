@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 export default function AIAutonomousBusinessSystems2026() {
   return (
+    <>
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -133,5 +134,6 @@ export default function AIAutonomousBusinessSystems2026() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -131,6 +131,7 @@ const AICybersecurityPage: React.FC = () => {
 
   return (
     <>
+    
       <SEOOptimizer
         title="AI Cybersecurity Solutions - Zion Tech Group"
         description="Advanced AI-powered cybersecurity with 99.9% threat detection, 24/7 monitoring, and automated response. Protect your business from evolving cyber threats."
@@ -310,6 +311,7 @@ const AICybersecurityPage: React.FC = () => {
 
         <Footer />
       </div>
+    
     </>
   );
 };

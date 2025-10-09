@@ -25,7 +25,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         xl: 'h-16 w-16',
       }),
       []
-    );
+      </>
+  );
     const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
@@ -35,7 +36,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         xl: 'text-xl',
       }),
       []
-    );
+      </>
+  );
     const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
@@ -45,12 +47,14 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         purple: 'border-purple-600 bg-purple-600',
       }),
       []
-    );
+      </>
+  );
     const renderSpinner = useMemo(() => {
       const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
       switch (variant) {
         case 'dots':
           return (
+    <>
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => (
                 <div
@@ -60,17 +64,21 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 />
               ))}
             </div>
-          );
+            </>
+  );
         case 'pulse':
           return (
+    <>
             <div
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status'
               aria-label='Loading'
             />
-          );
+            </>
+  );
         case 'skeleton':
           return (
+    <>
             <div className='space-y-2' role='status' aria-label='Loading'>
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
@@ -84,9 +92,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 style={{ width: '50%' }}
               />
             </div>
-          );
+            </>
+  );
         case 'bars':
           return (
+    <>
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2, 3].map(i => (
                 <div
@@ -99,16 +109,19 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 />
               ))}
             </div>
-          );
+            </>
+  );
         case 'spinner':
         default:
           return (
+    <>
             <div
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
               aria-label='Loading'
             />
-          );
+            </>
+  );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
     const containerClasses = useMemo(() => {
@@ -117,6 +130,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
     return (
+    <>
       <div className={containerClasses}>
         <div className='text-center'>
           {renderSpinner}
@@ -127,7 +141,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           )}
         </div>
       </div>
-    );
+      </>
+  );
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';

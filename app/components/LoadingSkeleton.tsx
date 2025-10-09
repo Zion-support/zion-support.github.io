@@ -17,6 +17,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   const roundedClasses = rounded ? 'rounded' : '';
   const animatedClasses = animated ? 'animate-pulse' : '';
   return (
+    <>
     <div
       className={`${baseClasses} ${roundedClasses} ${animatedClasses} ${className}`}
       style={{ width, height }}
@@ -25,6 +26,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
     >
       <span className="sr-only">Loading...</span>
     </div>
+    </>
   );
 };
 // Predefined skeleton components for common use cases

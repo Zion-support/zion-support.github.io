@@ -64,19 +64,23 @@ const PerformanceDashboard: React.FC = () => {
     updateMetrics();
     // Update metrics every 5 seconds
     const _interval = setInterval(updateMetrics, 5000);
-    return () => clearInterval(interval);
+    return (
+    <>) => clearInterval(interval);
   }, []);
   if (!isVisible) {
     return (
+    <>
       <button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
       >
         Show Performance
       </button>
-    );
+      </>
+  );
   }
   return (
+    <>
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
@@ -117,6 +121,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default PerformanceDashboard;

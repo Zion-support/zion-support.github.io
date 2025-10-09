@@ -24,6 +24,7 @@ const ContentShowcase = lazy(() =>
 );
 export default function OptimizedHomePage() {
   return (
+    <>
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
       <AccessibilityEnhancer>
@@ -67,6 +68,7 @@ export default function OptimizedHomePage() {
         </section>
       </main>
     </div>
+    </>
   );
 };
 export default OptimizedHomePage;

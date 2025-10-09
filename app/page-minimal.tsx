@@ -7,6 +7,7 @@ export const metadata = {
 };
 export default function HomePage() {
   return (
+    <>
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
@@ -162,6 +163,7 @@ export default function HomePage() {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 export default HomePage;

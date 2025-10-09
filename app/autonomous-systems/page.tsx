@@ -35,6 +35,7 @@ const AutonomousSystemsPage: React.FC = () => {
     }
   ];
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
@@ -163,6 +164,7 @@ const AutonomousSystemsPage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 export default AutonomousSystemsPage;

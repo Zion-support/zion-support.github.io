@@ -137,10 +137,12 @@ export class TestRunner {
   ): RenderResult {
     const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
       return (
+    <>
         <BrowserRouter>
           {children}
         </BrowserRouter>
-      );
+        </>
+  );
     };
     return render(ui, { wrapper: AllTheProviders, ...options });
   }
@@ -671,14 +673,16 @@ export class TestRunner {
             test.component,
             test.name,
             test.assertions!
-          );
+            </>
+  );
           break;
         case 'integration':
           result = await this.runIntegrationTest(
             test.component,
             test.name,
             test.userInteractions!
-          );
+            </>
+  );
           break;
         case 'performance':
           result = await this.runPerformanceTest(test.component, test.name);
@@ -923,13 +927,15 @@ export class Assert {
           if (!errorMessage.includes(expectedError)) {
             throw new Error(
               `Expected error message to contain "${expectedError}", but got "${errorMessage}"`
-            );
+              </>
+  );
           }
         } else {
           if (!expectedError.test(errorMessage)) {
             throw new Error(
               `Expected error message to match ${expectedError}, but got "${errorMessage}"`
-            );
+              </>
+  );
           }
         }
       }
@@ -944,7 +950,8 @@ export class Assert {
     } catch (error) {
       throw new Error(
         `Expected function not to throw, but it threw: ${(error as Error).message}`
-      );
+        </>
+  );
     }
   }
   /**
@@ -958,7 +965,8 @@ export class Assert {
     if (!(value instanceof constructor)) {
       throw new Error(
         message || `Expected ${value} to be an instance of ${constructor.name}`
-      );
+        </>
+  );
     }
   }
   /**

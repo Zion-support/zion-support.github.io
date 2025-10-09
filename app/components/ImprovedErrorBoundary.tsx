@@ -71,7 +71,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     if (this.props.resetKeys && prevProps.resetKeys) {
       const resetKeysChanged = this.props.resetKeys.some(
         (key, index) => key !== prevProps.resetKeys![index]
-      );
+        </>
+  );
       if (resetKeysChanged && this.state.hasError) {
         this.resetErrorBoundary();
       }
@@ -98,6 +99,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       }
       // Default error UI
       return (
+    <>
         <div className="error-boundary-container" style={styles.container}>
           <div style={styles.content}>
             <div style={styles.icon}>⚠️</div>
@@ -156,7 +158,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+        </>
+  );
     }
     return this.props.children;
   }

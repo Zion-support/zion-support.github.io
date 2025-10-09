@@ -12,6 +12,7 @@ const InteractiveAIROICalculator: React.FC = () => {
   };
   const _roi = calculateROI();
   return (
+    <>
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
@@ -80,6 +81,7 @@ const InteractiveAIROICalculator: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 export default InteractiveAIROICalculator;

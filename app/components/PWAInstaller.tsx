@@ -31,7 +31,8 @@ const PWAInstaller: React.FC = () => {
     };
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
-    return () => {
+    return (
+    <>) => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
       window.removeEventListener('appinstalled', handleAppInstalled);
     };
@@ -62,6 +63,7 @@ const PWAInstaller: React.FC = () => {
     return null;
   }
   return (
+    <>
     <div className="fixed bottom-4 right-4 z-50 max-w-sm">
       <div className="bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4">
         <div className="flex items-start justify-between mb-3">
@@ -103,6 +105,7 @@ const PWAInstaller: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default PWAInstaller;

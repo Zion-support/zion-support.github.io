@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
 export default function Page() {
   return (
+    <>
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div className='max-w-5xl mx-auto px-6'>
@@ -90,5 +91,6 @@ export default function Page() {
         </div>
       </section>
     </main>
+    </>
   );
 }

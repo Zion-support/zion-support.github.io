@@ -93,7 +93,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       };
       document.addEventListener('click', trackClicks);
       // Cleanup
-      return () => {
+      return (
+    <>) => {
         window.removeEventListener('popstate', trackPageView);
         window.removeEventListener('load', trackPerformance);
         window.removeEventListener('scroll', trackScroll);

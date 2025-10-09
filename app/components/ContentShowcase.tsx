@@ -1,6 +1,7 @@
 import React from 'react';
 const ContentShowcase: React.FC = () => {
   return (
+    <>
     <div className="bg-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -30,6 +31,7 @@ const ContentShowcase: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default ContentShowcase;

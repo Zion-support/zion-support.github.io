@@ -39,6 +39,7 @@ const CareersPage: React.FC = () => {
     'Stock Options'
   ];
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -87,6 +88,7 @@ const CareersPage: React.FC = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 export default CareersPage;

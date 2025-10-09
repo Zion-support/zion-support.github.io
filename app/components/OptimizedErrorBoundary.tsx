@@ -58,7 +58,8 @@ class OptimizedErrorBoundary extends Component<
       if (resetKeys && prevProps.resetKeys) {
         const hasResetKeyChanged = resetKeys.some(
           (key, index) => key !== prevProps.resetKeys?.[index]
-        );
+          </>
+  );
         if (hasResetKeyChanged) {
           this.resetErrorBoundary();
         }
@@ -121,13 +122,15 @@ class OptimizedErrorBoundary extends Component<
         return this.props.fallback;
       }
       return (
+    <>
         <ErrorFallback
           error={this.state.error}
           errorInfo={this.state.errorInfo}
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
         />
-      );
+        </>
+  );
     }
     return this.props.children;
   }

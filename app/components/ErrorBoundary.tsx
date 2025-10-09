@@ -52,6 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       return (
+    <>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
             <div className="flex justify-center mb-6">
@@ -94,7 +95,8 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+        </>
+  );
     }
     return this.props.children;
   }

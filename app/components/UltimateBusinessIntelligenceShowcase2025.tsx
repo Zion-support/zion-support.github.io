@@ -66,6 +66,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     ? content 
     : content.filter(item => item.category === selectedCategory);
   return (
+    <>
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
@@ -211,6 +212,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 export default UltimateBusinessIntelligenceShowcase2025;

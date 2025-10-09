@@ -102,14 +102,17 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       }
       if (this.state.isRetrying) {
         return (
+    <>
           <ModernLoadingSpinner 
             size="lg" 
             text="Retrying..." 
             fullScreen={true}
           />
-        );
+          </>
+  );
       }
       return (
+    <>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center">
             <div className="text-6xl mb-6">⚠️</div>
@@ -168,7 +171,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+        </>
+  );
     }
     return this.props.children;
   }

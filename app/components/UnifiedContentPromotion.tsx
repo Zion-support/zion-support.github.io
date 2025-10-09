@@ -22,6 +22,7 @@ const UnifiedContentPromotion: React.FC = () => {
     }
   ];
   return (
+    <>
     <div className="unified-content-promotion py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -47,6 +48,7 @@ const UnifiedContentPromotion: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default UnifiedContentPromotion;

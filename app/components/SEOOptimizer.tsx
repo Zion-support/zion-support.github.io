@@ -96,6 +96,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     document.head.appendChild(script);
   };
   return (
+    <>
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -109,6 +110,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:image" content={ogImage} />
       <link rel="canonical" href={canonicalUrl} />
     </Head>
+    </>
   );
 };
 export default SEOOptimizer;

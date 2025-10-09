@@ -3,6 +3,7 @@ import React from 'react';
 // Metadata removed for Vite compatibility
 const ContactPage: React.FC = () => {
   return (
+    <>
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
@@ -74,6 +75,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </div>
+    </>
   );
 };
 export default ContactPage;

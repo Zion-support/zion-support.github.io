@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
 
@@ -8,64 +6,118 @@ interface AccessibilityEnhancerProps {
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
-import React, { useEffect, useCallback } from 'react';
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  enableSkipLinks?: boolean;
-  enableKeyboardNav?: boolean;
-  enableFocusIndicators?: boolean;
 }
-/**
- * Accessibility Enhancer Component
- * Provides comprehensive accessibility improvements
- */
+
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-  enableSkipLinks = true,
-  enableKeyboardNav = true,
-  enableFocusIndicators = true,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
 }) => {
-  // Add skip links
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+
   useEffect(() => {
-    if (enableSkipLinks) {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
-  }, [enableSkipLinks]);
-  // Add keyboard navigation
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (enableKeyboardNav) {
-      // Handle keyboard navigation
-      if (event.key === 'Tab') {
-        // Ensure focus indicators are visible
-        document.body.classList.add('keyboard-navigation');
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsReducedMotion(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  useEffect(() => {
+    if (enableHighContrast) {
+      // Apply high contrast mode if needed
+      if (isHighContrast) {
+        document.documentElement.classList.add('high-contrast');
+      } else {
+        document.documentElement.classList.remove('high-contrast');
       }
     }
-  }, [enableKeyboardNav]);
+  }, [isHighContrast, enableHighContrast]);
+
   useEffect(() => {
-    if (enableKeyboardNav) {
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
+    if (enableScreenReaderSupport) {
+      // Add screen reader announcements
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.id = 'screen-reader-announcements';
+      document.body.appendChild(announcement);
+
+      return (
+    <>) => {
+        const existing = document.getElementById('screen-reader-announcements');
+        if (existing) {
+          existing.remove();
+        }
+      };
     }
-  }, [enableKeyboardNav, handleKeyDown]);
-  // Add focus indicators
+  }, [enableScreenReaderSupport]);
+
+  const announceToScreenReader = useCallback((message: string) => {
+    if (enableScreenReaderSupport) {
+      const announcement = document.getElementById('screen-reader-announcements');
+      if (announcement) {
+        announcement.textContent = message;
+      }
+    }
+  }, [enableScreenReaderSupport]);
+
   useEffect(() => {
-    if (enableFocusIndicators) {
+    if (enableKeyboardNavigation) {
+      const handleKeyDown = (e: KeyboardEvent) => {
+        // Skip to main content
+        if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          if (skipLink) {
+            skipLink.focus();
+            e.preventDefault();
+          }
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      return (
+    <>) => document.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [enableKeyboardNavigation]);
+
+  useEffect(() => {
+    if (enableFocusManagement) {
+      // Add focus indicators
       const style = document.createElement('style');
       style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #3b82f6;
+        .focus-visible:focus {
+          outline: 2px solid #00ffff;
           outline-offset: 2px;
         }
       `;
       document.head.appendChild(style);
+
+      return (
+    <>) => {
+        document.head.removeChild(style);
+      };
     }
-  }, [enableFocusIndicators]);
-  return <>{children}</>;
+  }, [enableFocusManagement]);
+
+  // Expose announcement function globally for other components
+  useEffect(() => {
+    (window as any).announceToScreenReader = announceToScreenReader;
+    return (
+    <>) => {
+      delete (window as any).announceToScreenReader;
+    };
+  }, [announceToScreenReader]);
+
+  return null;
 };
+
 export default AccessibilityEnhancer;

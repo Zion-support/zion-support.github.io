@@ -25,6 +25,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
     }
   ];
   return (
+    <>
     <section className='bg-gray-50 py-16 rounded-2xl'>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12'>
@@ -67,6 +68,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 export default InteractiveContentShowcase2026;

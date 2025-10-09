@@ -78,8 +78,9 @@ const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
-  }, [enableConsoleLogging]);
+  }, []);
   return (
+    <>
     <div className="performance-monitor">
       <h3>Performance Metrics</h3>
       <div className="metrics">
@@ -91,6 +92,7 @@ const PerformanceMonitor: React.FC = () => {
         <div>Memory: {metrics.memoryUsage}MB</div>
       </div>
     </div>
+    </>
   );
 };
 export default PerformanceMonitor;

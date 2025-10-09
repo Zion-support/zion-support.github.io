@@ -326,10 +326,12 @@ export class ErrorHandler {
   // Check if error should be retried
   private shouldRetry(error: AppError): boolean {
     return (
+    <>
       error.type === ErrorType.NETWORK &&
       error.retryCount! < this.config.maxRetries &&
       error.severity !== ErrorSeverity.CRITICAL
-    );
+      </>
+  );
   }
   // Schedule retry
   private scheduleRetry(error: AppError) {
@@ -403,14 +405,16 @@ export class ErrorHandler {
         return acc;
       },
       {} as Record<ErrorType, number>
-    );
+      </>
+  );
     const bySeverity = this.errors.reduce(
       (acc, error) => {
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;
       },
       {} as Record<ErrorSeverity, number>
-    );
+      </>
+  );
     const resolved = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
     return {
@@ -459,6 +463,7 @@ export class ErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return (
+    <>
         this.props.fallback || (
           <div style={{ padding: '20px', textAlign: 'center' }}>
             <h2>Something went wrong</h2>
@@ -478,7 +483,8 @@ export class ErrorBoundary extends React.Component<
             </button>
           </div>
         )
-      );
+        </>
+  );
     }
     return this.props.children;
   }
@@ -491,18 +497,21 @@ export const useErrorHandler = () => {
       return errorHandler.handleError(error, undefined, context);
     },
     [errorHandler]
+    </>
   );
   const handleNetworkError = useCallback(
     (error: Error, url: string, status?: number) => {
       return errorHandler.handleNetworkError(error, url, status);
     },
     [errorHandler]
+    </>
   );
   const handleValidationError = useCallback(
     (field: string, message: string, value?: unknown) => {
       return errorHandler.handleValidationError(field, message, value);
     },
     [errorHandler]
+    </>
   );
   return {
     handleError,

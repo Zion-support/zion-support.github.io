@@ -31,7 +31,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
 }) => {
   const formatNumber = (num: number): string => {
     if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'k';
+      return (
+    <>num / 1000).toFixed(1) + 'k';
     }
     return num.toString();
   };
@@ -49,6 +50,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
     return colors[category] || colors.default;
   };
   return (
+    <>
     <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}>
@@ -132,6 +134,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         </div>
       </div>
     </article>
+    </>
   );
 };
 export default ContentPreviewCard;

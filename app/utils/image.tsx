@@ -56,6 +56,7 @@ export const Image: React.FC<ImageProps> = ({
   };
   if (hasError) {
     return (
+    <>
       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -63,9 +64,11 @@ export const Image: React.FC<ImageProps> = ({
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
-    );
+      </>
+  );
   }
   return (
+    <>
     <img
       src={src}
       alt={alt}
@@ -79,6 +82,7 @@ export const Image: React.FC<ImageProps> = ({
       onError={handleError}
       {...props}
     />
+    </>
   );
 };
 export default Image;

@@ -147,6 +147,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 =======
       const canRetry = retryCount < this.maxRetries;
       return (
+    <>
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="text-6xl mb-4">⚠️</div>
@@ -198,7 +199,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+        </>
+  );
     }
     return this.props.children;
   }

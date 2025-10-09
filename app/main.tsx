@@ -8,5 +8,6 @@ if (root) {
     <React.StrictMode>
       <App />
     </React.StrictMode>
+    </>
   );
 }

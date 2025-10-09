@@ -128,6 +128,7 @@ const AILeadGenerationPage: React.FC = () => {
 
   return (
     <>
+    
       <SEOOptimizer
         title="AI Lead Generation Platform - Zion Tech Group"
         description="Generate 300% more qualified leads with AI-powered prospecting, lead scoring, and automated outreach. 85% time savings and 95% accuracy."
@@ -307,6 +308,7 @@ const AILeadGenerationPage: React.FC = () => {
 
         <Footer />
       </div>
+    
     </>
   );
 };

@@ -140,7 +140,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       updateMetrics();
     };
     initializeMonitoring();
-    return () => {
+    return (
+    <>) => {
       // Stop monitoring (placeholder - implement as needed)
       setIsMonitoring(false);
     };
@@ -149,7 +150,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   useEffect(() => {
     if (!isMonitoring) return;
     const _interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
+    return (
+    <>) => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information
   const getMemoryInfo = () => {
@@ -221,15 +223,18 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   };
   if (!metrics) {
     return (
+    <>
       <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
         <div className="flex items-center justify-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
         </div>
       </div>
-    );
+      </>
+  );
   }
   return (
+    <>
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
@@ -453,6 +458,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
       )}
     </div>
+    </>
   );
 };
 export default SystemMonitor;

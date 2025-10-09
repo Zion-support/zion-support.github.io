@@ -31,13 +31,15 @@ const LazyImage: React.FC<LazyImageProps> = ({
         }
       },
       { threshold: 0.1 }
-    );
+      </>
+  );
 
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
 
-    return () => observer.disconnect();
+    return (
+    <>) => observer.disconnect();
   }, []);
 
   const handleLoad = () => {
@@ -51,6 +53,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   };
 
   return (
+    <>
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
@@ -71,6 +74,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
         />
       )}
     </div>
+    </>
   );
 };
 

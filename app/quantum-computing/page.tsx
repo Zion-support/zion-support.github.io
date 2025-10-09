@@ -35,6 +35,7 @@ const QuantumComputingPage: React.FC = () => {
     }
   ];
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white">
@@ -160,6 +161,7 @@ const QuantumComputingPage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 export default QuantumComputingPage;

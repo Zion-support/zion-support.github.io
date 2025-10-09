@@ -113,6 +113,7 @@ export default function RootLayout({
     }
   };
   return (
+    <>
     <html lang='en'>
       <head>
         <meta charSet="UTF-8" />
@@ -183,5 +184,6 @@ export default function RootLayout({
         </ErrorBoundary>
       </body>
     </html>
+    </>
   );
 }
