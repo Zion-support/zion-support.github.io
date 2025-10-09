@@ -76,10 +76,7 @@ import BlogPage from './blog/page';
 import CaseStudiesPage from './case-studies/page';
 
 // Support Pages
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
 // Additional Pages
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
@@ -106,9 +103,7 @@ import AIDocumentProcessingPage from './ai-document-processing/page';
 // Additional AI Services
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
 import AICodeGenerationPage from './ai-code-generation/page';
-<<<<<<< HEAD
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
-=======
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIWritingAssistantPage from './ai-writing-assistant/page';
 import AICRMPage from './ai-crm/page';
@@ -143,7 +138,6 @@ import ConsultationPage from './consultation/page';
 import AIProjectManagerPage from './ai-project-manager/page';
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
 import AIAutomationPage from './ai-automation/page';
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
 import AIMLPlatformPage from './ai-ml-platform/page';
 
 const App: React.FC = () => {
@@ -272,13 +266,8 @@ const App: React.FC = () => {
 
       setIsInitialized(true);
     } catch {
-<<<<<<< HEAD
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-=======
-      // Continue even if enhancers fail
-      setIsInitialized(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
     }
   };
 

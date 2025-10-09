@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Phone } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
