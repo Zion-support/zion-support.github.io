@@ -1,10 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-=======
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Brain, Cloud, Code, BarChart, Users, Globe, Shield, TrendingUp, Target, Settings, Database, Smartphone, Lock, Calendar, FileText, Sparkles, Cpu, Award } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Atom } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -51,10 +47,7 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-<<<<<<< HEAD
   // Analytics tracking for phone clicks - optimized
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
@@ -64,7 +57,7 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
+  // Comprehensive service data with enhanced features and pricing
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -125,6 +118,26 @@ const HomePage: React.FC = () => {
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
       popular: false
+    },
+    {
+      title: 'AI Content Generator',
+      description: 'Generate high-quality content for blogs, social media, and marketing materials',
+      icon: '✍️',
+      price: '$49/month',
+      features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization'],
+      benefits: ['10x content output', '50% time saved', 'Better SEO rankings'],
+      link: '/ai-content-generation',
+      popular: true
+    },
+    {
+      title: 'AI Lead Generation',
+      description: 'Automated lead identification and qualification with AI-powered scoring',
+      icon: '🎯',
+      price: '$199/month',
+      features: ['Lead scoring', 'Contact discovery', 'Email outreach', 'CRM integration'],
+      benefits: ['300% more qualified leads', '60% conversion rate', 'Automated follow-ups'],
+      link: '/ai-lead-generation',
+      popular: true
     }
   ];
 
@@ -160,6 +173,22 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400'
+    },
+    {
+      title: 'AI Healthcare Solutions',
+      description: 'Medical imaging analysis, drug discovery, and personalized treatment recommendations',
+      icon: Heart,
+      price: '$2,500/month',
+      features: ['Medical Imaging', 'Drug Discovery', 'Treatment Planning', 'Patient Monitoring'],
+      color: 'text-red-400'
+    },
+    {
+      title: 'AI Financial Services',
+      description: 'Fraud detection, algorithmic trading, and risk assessment solutions',
+      icon: CreditCard,
+      price: '$1,800/month',
+      features: ['Fraud Detection', 'Algorithmic Trading', 'Risk Assessment', 'Credit Scoring'],
+      color: 'text-yellow-400'
     }
   ];
 
@@ -195,11 +224,24 @@ const HomePage: React.FC = () => {
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
       color: 'text-purple-400'
+    },
+    {
+      title: 'Blockchain Solutions',
+      description: 'Smart contracts, DeFi applications, and Web3 integration services',
+      icon: Globe,
+      price: '$2,200/month',
+      features: ['Smart Contracts', 'DeFi Development', 'NFT Platforms', 'Web3 Integration'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Internet of Things solutions and edge computing infrastructure',
+      icon: Cpu,
+      price: '$1,600/month',
+      features: ['IoT Device Management', 'Edge Computing', 'Real-time Analytics', 'Device Security'],
+      color: 'text-orange-400'
     }
   ];
-
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   return (
     <>
       <SEOOptimizer
@@ -292,11 +334,7 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-<<<<<<< HEAD
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
-=======
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
@@ -333,29 +371,11 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Get Started Today
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  onClick={handlePhoneClick}
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
-                </a>
-=======
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                  onClick={handlePhoneClick}
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Get Free Consultation
@@ -368,7 +388,6 @@ const HomePage: React.FC = () => {
                   <Phone className="w-4 h-4 mr-2" />
                   (302) 464-0950
                 </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
               </div>
             </div>
           </section>
