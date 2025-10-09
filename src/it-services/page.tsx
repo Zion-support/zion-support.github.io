@@ -5,12 +5,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD:src/it-services/page.tsx
-<<<<<<< HEAD:src/it-services/page.tsx
   const itServices = [
     // Infrastructure & Cloud Services
     {
-<<<<<<< HEAD:app/it-services/page.tsx
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
       icon: HardDrive,
@@ -352,13 +349,10 @@ const ITServicesPage: React.FC = () => {
       description: 'Microsoft, AWS, and Google certified engineers'
     }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD:src/it-services/page.tsx
       
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
@@ -392,7 +386,6 @@ const ITServicesPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD:src/it-services/page.tsx
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
@@ -406,9 +399,6 @@ const ITServicesPage: React.FC = () => {
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-<<<<<<< HEAD:app/it-services/page.tsx
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
                         {feature}
                       </li>
                     ))}
@@ -456,9 +446,6 @@ const ITServicesPage: React.FC = () => {
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
-<<<<<<< HEAD:src/it-services/page.tsx
-<<<<<<< HEAD:src/it-services/page.tsx
-<<<<<<< HEAD:app/it-services/page.tsx
               </div>
             ))}
           </div>
@@ -478,12 +465,6 @@ const ITServicesPage: React.FC = () => {
                 <div className="text-cyan-400 font-bold text-sm">{service.price}</div>
               </div>
             ))}
-          </div>
-        </section>
-<<<<<<< HEAD:src/it-services/page.tsx
-<<<<<<< HEAD:app/it-services/page.tsx
-              ))}
-            </div>
           </div>
         </section>
 
@@ -595,12 +576,8 @@ const ITServicesPage: React.FC = () => {
                 (302) 464-0950
               </a>
             </div>
-<<<<<<< HEAD:src/it-services/page.tsx
-          </section>
-        </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
+          </div>
+        </section>
       </main>
 
       <Footer />

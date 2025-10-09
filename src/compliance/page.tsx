@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD:src/compliance/page.tsx
 import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
 const CompliancePage: React.FC = () => {
@@ -285,9 +284,8 @@ const CompliancePage: React.FC = () => {
           </div>
         </section>
       </main>
-      </div>
       <Footer />
-    </>
+    </div>
   );
 };
 export default CompliancePage;
