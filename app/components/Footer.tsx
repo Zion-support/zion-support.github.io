@@ -73,7 +73,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Support Center', url: '/support' },
     { name: 'System Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' }
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' },
+    { name: 'GDPR Compliance', url: '/gdpr' }
   ];
   const contactInfo = {
     phone: '+1 (302) 464-0950',

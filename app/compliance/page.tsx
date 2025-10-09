@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -16,7 +18,7 @@ const CompliancePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center">
             <Link 
-              to="/privacy" 
+              href="/privacy" 
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -43,13 +45,13 @@ const CompliancePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact"
+                href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Request Compliance Report
               </Link>
               <Link 
-                to="/security"
+                href="/security"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Security Information
@@ -219,8 +221,9 @@ const CompliancePage: React.FC = () => {
           </h2>
           <p className="text-xl mb-8 text-blue-100">
             Our compliance team is available to answer your questions and provide additional documentation.
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+          </p>
+        </div>
+      </section>
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Compliance & Certifications</h1>
@@ -285,4 +288,5 @@ const CompliancePage: React.FC = () => {
     </div>
   );
 };
+
 export default CompliancePage;
