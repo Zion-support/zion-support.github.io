@@ -1,7 +1,10 @@
 'use client';
 import React from 'react';
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
 
 /**
  * Offline Page
