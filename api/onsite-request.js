@@ -4,9 +4,7 @@ const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { name, email, company, message } = req.body || {};

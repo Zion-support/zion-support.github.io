@@ -14,10 +14,7 @@ export interface Metadata {
   metadataBase?: URL;
   alternates?: {
     canonical?: string;
-<<<<<<< HEAD
     languages?: Record<string, string>;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9def
   };
   openGraph?: {
     title?: string;
@@ -36,13 +33,9 @@ export interface Metadata {
     publishedTime?: string;
   };
   twitter?: {
-<<<<<<< HEAD
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
     creator?: string;
-=======
-    card?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-9def
     title?: string;
     description?: string;
     images?: string[];
