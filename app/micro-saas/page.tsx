@@ -1424,6 +1424,372 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+    },
+
+    // Advanced AI & Machine Learning Services
+    {
+      title: 'AI Voice Assistant Builder',
+      description: 'Create custom voice assistants for businesses with natural language processing and multi-language support.',
+      icon: '🎤',
+      price: '$299/month',
+      features: ['Voice recognition', 'Natural language processing', 'Multi-language support', 'Custom wake words', 'Integration APIs', 'Analytics dashboard'],
+      benefits: ['Build custom voice assistants', 'Improve customer service', 'Automate voice interactions', 'Scale voice operations'],
+      marketPrice: '$500-1000/month',
+      category: 'AI Voice',
+      technologies: ['OpenAI Whisper', 'Google Speech API', 'React', 'Node.js', 'WebRTC', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Computer Vision Platform',
+      description: 'Advanced image and video analysis with object detection, facial recognition, and automated content moderation.',
+      icon: '👁️',
+      price: '$399/month',
+      features: ['Object detection', 'Facial recognition', 'Content moderation', 'Image classification', 'Video analysis', 'Real-time processing'],
+      benefits: ['Automate visual tasks', 'Improve security', 'Enhance user experience', 'Reduce manual work'],
+      marketPrice: '$600-1200/month',
+      category: 'Computer Vision',
+      technologies: ['OpenCV', 'TensorFlow', 'PyTorch', 'React', 'Python', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Blockchain Analytics Suite',
+      description: 'Comprehensive blockchain data analysis with transaction monitoring, smart contract auditing, and DeFi analytics.',
+      icon: '⛓️',
+      price: '$499/month',
+      features: ['Transaction analysis', 'Smart contract auditing', 'DeFi analytics', 'Risk assessment', 'Compliance monitoring', 'Real-time alerts'],
+      benefits: ['Monitor blockchain activity', 'Ensure smart contract security', 'Analyze DeFi protocols', 'Maintain compliance'],
+      marketPrice: '$800-1500/month',
+      category: 'Blockchain',
+      technologies: ['Web3.js', 'Ethereum API', 'Python', 'React', 'PostgreSQL', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Quantum Computing Simulator',
+      description: 'Quantum algorithm simulation and optimization with quantum machine learning and quantum cryptography tools.',
+      icon: '⚛️',
+      price: '$999/month',
+      features: ['Quantum simulation', 'Algorithm optimization', 'Quantum ML', 'Cryptography tools', 'Performance analysis', 'Cloud integration'],
+      benefits: ['Explore quantum computing', 'Optimize quantum algorithms', 'Develop quantum applications', 'Stay ahead of technology'],
+      marketPrice: '$1500-3000/month',
+      category: 'Quantum Computing',
+      technologies: ['Qiskit', 'Cirq', 'Python', 'React', 'Quantum Simulators', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // Advanced Business Intelligence & Data Science
+    {
+      title: 'AI Predictive Maintenance Platform',
+      description: 'Intelligent equipment monitoring with failure prediction, maintenance scheduling, and cost optimization.',
+      icon: '🔧',
+      price: '$399/month',
+      features: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Real-time monitoring', 'Alert system', 'Analytics dashboard'],
+      benefits: ['Prevent equipment failures', 'Reduce maintenance costs', 'Optimize schedules', 'Improve uptime'],
+      marketPrice: '$600-1200/month',
+      category: 'IoT & Maintenance',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Time Series Analysis', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Fraud Detection System',
+      description: 'Advanced fraud detection with real-time monitoring, pattern recognition, and automated response systems.',
+      icon: '🛡️',
+      price: '$599/month',
+      features: ['Real-time monitoring', 'Pattern recognition', 'Automated response', 'Risk scoring', 'Alert system', 'Compliance reporting'],
+      benefits: ['Detect fraud instantly', 'Reduce false positives', 'Protect revenue', 'Ensure compliance'],
+      marketPrice: '$800-1500/month',
+      category: 'Security & Fraud',
+      technologies: ['Machine Learning', 'Anomaly Detection', 'Python', 'React', 'Real-time Processing', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'End-to-end supply chain optimization with demand forecasting, inventory management, and logistics optimization.',
+      icon: '📦',
+      price: '$699/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Logistics planning', 'Cost analysis', 'Risk assessment', 'Performance tracking'],
+      benefits: ['Optimize supply chains', 'Reduce costs', 'Improve efficiency', 'Minimize risks'],
+      marketPrice: '$1000-2000/month',
+      category: 'Supply Chain',
+      technologies: ['Optimization Algorithms', 'Machine Learning', 'Python', 'React', 'Linear Programming', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Climate Risk Assessment',
+      description: 'Environmental risk analysis with climate impact modeling, sustainability tracking, and ESG reporting.',
+      icon: '🌍',
+      price: '$399/month',
+      features: ['Climate modeling', 'Risk assessment', 'Sustainability tracking', 'ESG reporting', 'Carbon footprint analysis', 'Compliance monitoring'],
+      benefits: ['Assess climate risks', 'Track sustainability', 'Ensure ESG compliance', 'Plan for climate change'],
+      marketPrice: '$600-1200/month',
+      category: 'Environmental',
+      technologies: ['Climate APIs', 'Machine Learning', 'Python', 'React', 'GIS Data', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // Advanced Healthcare & Life Sciences
+    {
+      title: 'AI Drug Discovery Platform',
+      description: 'Accelerated drug discovery with molecular analysis, compound screening, and clinical trial optimization.',
+      icon: '💊',
+      price: '$1999/month',
+      features: ['Molecular analysis', 'Compound screening', 'Clinical trial optimization', 'Drug interaction analysis', 'Patent analysis', 'Regulatory compliance'],
+      benefits: ['Accelerate drug discovery', 'Reduce development costs', 'Improve success rates', 'Ensure compliance'],
+      marketPrice: '$3000-5000/month',
+      category: 'Healthcare',
+      technologies: ['Bioinformatics', 'Machine Learning', 'Python', 'React', 'Molecular Databases', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Genomic Analysis Suite',
+      description: 'Comprehensive genomic data analysis with variant detection, gene expression analysis, and personalized medicine insights.',
+      icon: '🧬',
+      price: '$1499/month',
+      features: ['Variant detection', 'Gene expression analysis', 'Personalized medicine', 'Disease prediction', 'Pharmacogenomics', 'Clinical reporting'],
+      benefits: ['Analyze genomic data', 'Enable personalized medicine', 'Predict disease risks', 'Optimize treatments'],
+      marketPrice: '$2000-4000/month',
+      category: 'Genomics',
+      technologies: ['Bioinformatics', 'Machine Learning', 'Python', 'React', 'Genomic Databases', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Medical Imaging Analysis',
+      description: 'Advanced medical image analysis with diagnostic assistance, anomaly detection, and treatment planning support.',
+      icon: '🏥',
+      price: '$1299/month',
+      features: ['Diagnostic assistance', 'Anomaly detection', 'Treatment planning', 'Image enhancement', 'Report generation', 'Integration APIs'],
+      benefits: ['Improve diagnostic accuracy', 'Reduce analysis time', 'Enhance treatment planning', 'Support radiologists'],
+      marketPrice: '$2000-3500/month',
+      category: 'Medical Imaging',
+      technologies: ['Computer Vision', 'Deep Learning', 'Python', 'React', 'DICOM', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // Advanced Financial Technology
+    {
+      title: 'AI Algorithmic Trading Platform',
+      description: 'Sophisticated trading algorithms with market analysis, risk management, and automated execution systems.',
+      icon: '📈',
+      price: '$1999/month',
+      features: ['Trading algorithms', 'Market analysis', 'Risk management', 'Automated execution', 'Backtesting', 'Performance analytics'],
+      benefits: ['Automate trading', 'Optimize strategies', 'Manage risks', 'Maximize returns'],
+      marketPrice: '$3000-5000/month',
+      category: 'Fintech',
+      technologies: ['Trading APIs', 'Machine Learning', 'Python', 'React', 'Quantitative Analysis', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Credit Risk Assessment',
+      description: 'Advanced credit scoring with alternative data analysis, default prediction, and portfolio optimization.',
+      icon: '💳',
+      price: '$899/month',
+      features: ['Credit scoring', 'Default prediction', 'Portfolio optimization', 'Alternative data analysis', 'Risk modeling', 'Regulatory compliance'],
+      benefits: ['Improve credit decisions', 'Reduce defaults', 'Optimize portfolios', 'Ensure compliance'],
+      marketPrice: '$1200-2000/month',
+      category: 'Fintech',
+      technologies: ['Machine Learning', 'Statistical Modeling', 'Python', 'React', 'Financial Data', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Insurance Underwriting Assistant',
+      description: 'Intelligent insurance underwriting with risk assessment, pricing optimization, and claims prediction.',
+      icon: '🏦',
+      price: '$799/month',
+      features: ['Risk assessment', 'Pricing optimization', 'Claims prediction', 'Policy analysis', 'Fraud detection', 'Regulatory compliance'],
+      benefits: ['Improve underwriting', 'Optimize pricing', 'Predict claims', 'Reduce fraud'],
+      marketPrice: '$1000-1800/month',
+      category: 'Insurance',
+      technologies: ['Machine Learning', 'Actuarial Science', 'Python', 'React', 'Insurance Data', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // Advanced E-commerce & Retail
+    {
+      title: 'AI Dynamic Pricing Engine',
+      description: 'Intelligent pricing optimization with competitor analysis, demand forecasting, and revenue maximization.',
+      icon: '💰',
+      price: '$599/month',
+      features: ['Price optimization', 'Competitor analysis', 'Demand forecasting', 'Revenue maximization', 'A/B testing', 'Performance analytics'],
+      benefits: ['Optimize pricing', 'Maximize revenue', 'Beat competitors', 'Improve margins'],
+      marketPrice: '$800-1500/month',
+      category: 'E-commerce',
+      technologies: ['Machine Learning', 'Optimization', 'Python', 'React', 'E-commerce APIs', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Inventory Forecasting System',
+      description: 'Advanced inventory management with demand prediction, stock optimization, and supply chain integration.',
+      icon: '📊',
+      price: '$499/month',
+      features: ['Demand prediction', 'Stock optimization', 'Supply chain integration', 'Seasonal analysis', 'Reorder automation', 'Cost optimization'],
+      benefits: ['Optimize inventory', 'Reduce stockouts', 'Minimize waste', 'Improve cash flow'],
+      marketPrice: '$700-1200/month',
+      category: 'E-commerce',
+      technologies: ['Time Series Analysis', 'Machine Learning', 'Python', 'React', 'Inventory APIs', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Customer Lifetime Value Optimizer',
+      description: 'Comprehensive CLV analysis with customer segmentation, retention strategies, and revenue optimization.',
+      icon: '💎',
+      price: '$399/month',
+      features: ['CLV analysis', 'Customer segmentation', 'Retention strategies', 'Revenue optimization', 'Churn prediction', 'Personalization'],
+      benefits: ['Maximize CLV', 'Improve retention', 'Optimize revenue', 'Reduce churn'],
+      marketPrice: '$600-1000/month',
+      category: 'E-commerce',
+      technologies: ['Customer Analytics', 'Machine Learning', 'Python', 'React', 'CRM Integration', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // Advanced Manufacturing & Industry 4.0
+    {
+      title: 'AI Quality Control System',
+      description: 'Automated quality inspection with defect detection, process optimization, and predictive quality analytics.',
+      icon: '🔍',
+      price: '$799/month',
+      features: ['Defect detection', 'Process optimization', 'Quality analytics', 'Real-time monitoring', 'Alert system', 'Compliance tracking'],
+      benefits: ['Improve quality', 'Reduce defects', 'Optimize processes', 'Ensure compliance'],
+      marketPrice: '$1000-2000/month',
+      category: 'Manufacturing',
+      technologies: ['Computer Vision', 'Machine Learning', 'Python', 'React', 'IoT Integration', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Energy Management System',
+      description: 'Intelligent energy optimization with consumption analysis, renewable integration, and cost reduction strategies.',
+      icon: '⚡',
+      price: '$599/month',
+      features: ['Consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Grid optimization', 'Sustainability tracking'],
+      benefits: ['Reduce energy costs', 'Optimize consumption', 'Integrate renewables', 'Improve sustainability'],
+      marketPrice: '$800-1500/month',
+      category: 'Energy',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Energy APIs', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Predictive Maintenance Pro',
+      description: 'Advanced equipment monitoring with failure prediction, maintenance optimization, and cost reduction.',
+      icon: '🔧',
+      price: '$699/month',
+      features: ['Failure prediction', 'Maintenance optimization', 'Cost reduction', 'Real-time monitoring', 'Alert system', 'Performance analytics'],
+      benefits: ['Prevent failures', 'Optimize maintenance', 'Reduce costs', 'Improve uptime'],
+      marketPrice: '$1000-1800/month',
+      category: 'Manufacturing',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Time Series Analysis', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // Advanced Education & Training
+    {
+      title: 'AI Personalized Learning Platform',
+      description: 'Adaptive learning system with personalized curricula, progress tracking, and intelligent tutoring.',
+      icon: '🎓',
+      price: '$299/month',
+      features: ['Personalized curricula', 'Progress tracking', 'Intelligent tutoring', 'Adaptive assessments', 'Learning analytics', 'Multi-language support'],
+      benefits: ['Personalize learning', 'Improve outcomes', 'Track progress', 'Adapt to learners'],
+      marketPrice: '$400-800/month',
+      category: 'Education',
+      technologies: ['Machine Learning', 'Adaptive Learning', 'Python', 'React', 'Learning Analytics', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Skill Assessment & Certification',
+      description: 'Comprehensive skill evaluation with automated testing, certification management, and competency tracking.',
+      icon: '🏆',
+      price: '$199/month',
+      features: ['Automated testing', 'Certification management', 'Competency tracking', 'Skill gap analysis', 'Progress reporting', 'Integration APIs'],
+      benefits: ['Assess skills', 'Manage certifications', 'Track competencies', 'Identify gaps'],
+      marketPrice: '$300-600/month',
+      category: 'Education',
+      technologies: ['Assessment APIs', 'Machine Learning', 'Python', 'React', 'Certification Systems', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Corporate Training Platform',
+      description: 'Enterprise training solution with content generation, progress tracking, and performance analytics.',
+      icon: '🏢',
+      price: '$399/month',
+      features: ['Content generation', 'Progress tracking', 'Performance analytics', 'Compliance training', 'Skill development', 'Team management'],
+      benefits: ['Generate training content', 'Track progress', 'Analyze performance', 'Ensure compliance'],
+      marketPrice: '$500-1000/month',
+      category: 'Corporate Training',
+      technologies: ['Content Generation', 'Learning Management', 'Python', 'React', 'Analytics', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // Advanced Real Estate & Property
+    {
+      title: 'AI Property Valuation Engine',
+      description: 'Intelligent property valuation with market analysis, investment scoring, and risk assessment.',
+      icon: '🏠',
+      price: '$299/month',
+      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Risk assessment', 'Comparable analysis', 'ROI prediction'],
+      benefits: ['Accurate valuations', 'Analyze markets', 'Score investments', 'Assess risks'],
+      marketPrice: '$400-800/month',
+      category: 'Real Estate',
+      technologies: ['Real Estate APIs', 'Machine Learning', 'Python', 'React', 'Market Data', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Property Management Suite',
+      description: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial optimization.',
+      icon: '🏘️',
+      price: '$199/month',
+      features: ['Tenant screening', 'Maintenance scheduling', 'Financial optimization', 'Lease management', 'Performance analytics', 'Mobile app'],
+      benefits: ['Screen tenants', 'Schedule maintenance', 'Optimize finances', 'Manage leases'],
+      marketPrice: '$300-600/month',
+      category: 'Real Estate',
+      technologies: ['Property Management APIs', 'Machine Learning', 'Python', 'React', 'Financial Data', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Real Estate Investment Analyzer',
+      description: 'Advanced investment analysis with market trends, cash flow optimization, and portfolio management.',
+      icon: '📊',
+      price: '$399/month',
+      features: ['Investment analysis', 'Market trends', 'Cash flow optimization', 'Portfolio management', 'Risk assessment', 'ROI prediction'],
+      benefits: ['Analyze investments', 'Track trends', 'Optimize cash flow', 'Manage portfolios'],
+      marketPrice: '$500-1000/month',
+      category: 'Real Estate',
+      technologies: ['Financial Modeling', 'Machine Learning', 'Python', 'React', 'Market Data', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // Advanced Legal & Compliance
+    {
+      title: 'AI Legal Research Assistant',
+      description: 'Intelligent legal research with case law analysis, precedent identification, and document summarization.',
+      icon: '⚖️',
+      price: '$499/month',
+      features: ['Case law analysis', 'Precedent identification', 'Document summarization', 'Legal research', 'Citation tracking', 'Compliance checking'],
+      benefits: ['Research efficiently', 'Find precedents', 'Summarize documents', 'Ensure compliance'],
+      marketPrice: '$700-1200/month',
+      category: 'Legal',
+      technologies: ['NLP', 'Legal Databases', 'Python', 'React', 'Document Processing', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Contract Analysis Platform',
+      description: 'Automated contract review with risk identification, clause analysis, and compliance checking.',
+      icon: '📋',
+      price: '$399/month',
+      features: ['Contract review', 'Risk identification', 'Clause analysis', 'Compliance checking', 'Version comparison', 'Alert system'],
+      benefits: ['Review contracts', 'Identify risks', 'Analyze clauses', 'Ensure compliance'],
+      marketPrice: '$600-1000/month',
+      category: 'Legal',
+      technologies: ['NLP', 'Document Processing', 'Python', 'React', 'Legal Databases', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Compliance Monitoring Suite',
+      description: 'Comprehensive compliance tracking with regulatory updates, risk assessment, and automated reporting.',
+      icon: '📊',
+      price: '$599/month',
+      features: ['Compliance tracking', 'Regulatory updates', 'Risk assessment', 'Automated reporting', 'Alert system', 'Audit trails'],
+      benefits: ['Track compliance', 'Stay updated', 'Assess risks', 'Automate reporting'],
+      marketPrice: '$800-1500/month',
+      category: 'Compliance',
+      technologies: ['Regulatory APIs', 'Machine Learning', 'Python', 'React', 'Compliance Data', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
@@ -1439,7 +1805,23 @@ const MicroSAASPage: React.FC = () => {
     { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
     { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
     { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length }
+    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length },
+    { name: 'AI Voice', count: microSAASServices.filter(s => s.category === 'AI Voice').length },
+    { name: 'Computer Vision', count: microSAASServices.filter(s => s.category === 'Computer Vision').length },
+    { name: 'Blockchain', count: microSAASServices.filter(s => s.category === 'Blockchain').length },
+    { name: 'Quantum Computing', count: microSAASServices.filter(s => s.category === 'Quantum Computing').length },
+    { name: 'IoT & Maintenance', count: microSAASServices.filter(s => s.category === 'IoT & Maintenance').length },
+    { name: 'Security & Fraud', count: microSAASServices.filter(s => s.category === 'Security & Fraud').length },
+    { name: 'Supply Chain', count: microSAASServices.filter(s => s.category === 'Supply Chain').length },
+    { name: 'Environmental', count: microSAASServices.filter(s => s.category === 'Environmental').length },
+    { name: 'Genomics', count: microSAASServices.filter(s => s.category === 'Genomics').length },
+    { name: 'Medical Imaging', count: microSAASServices.filter(s => s.category === 'Medical Imaging').length },
+    { name: 'Fintech', count: microSAASServices.filter(s => s.category === 'Fintech').length },
+    { name: 'Insurance', count: microSAASServices.filter(s => s.category === 'Insurance').length },
+    { name: 'Manufacturing', count: microSAASServices.filter(s => s.category === 'Manufacturing').length },
+    { name: 'Energy', count: microSAASServices.filter(s => s.category === 'Energy').length },
+    { name: 'Corporate Training', count: microSAASServices.filter(s => s.category === 'Corporate Training').length },
+    { name: 'Compliance', count: microSAASServices.filter(s => s.category === 'Compliance').length }
   ];
 
   return (
