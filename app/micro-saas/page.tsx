@@ -1664,6 +1664,11 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+
+  const realEstateServices = [
+    {
+      title: 'AI Property Valuation Platform',
+      description: 'Advanced property valuation using machine learning and market data analysis.',
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
