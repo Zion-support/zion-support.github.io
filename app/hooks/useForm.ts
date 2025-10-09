@@ -54,9 +54,9 @@ export function useForm<T extends Record<string, unknown>>({
     (field: keyof T): void => {
       if (!validationSchema[field]) return;
 
-      const _fieldValue = values[field];
-      const _rules = validationSchema[field];
-      const _result = validateField(fieldValue, rules);
+      
+      
+      
 
       setErrors(prev => ({
         ...prev,
@@ -70,8 +70,8 @@ export function useForm<T extends Record<string, unknown>>({
   const validateAllFields = useCallback((): boolean => {
     if (Object.keys(validationSchema).length === 0) return true;
 
-    const _validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
-    const _formErrors = getFormErrors(validationResults);
+    
+    
     
     setErrors(formErrors);
     
@@ -82,7 +82,7 @@ export function useForm<T extends Record<string, unknown>>({
   const handleChange = useCallback(
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const { name, value, type } = e.target;
-      const _fieldName = name as keyof T;
+      
       
       // Handle checkbox inputs
       let fieldValue: unknown = value;
@@ -106,7 +106,7 @@ export function useForm<T extends Record<string, unknown>>({
   // Handle input blur
   const handleBlur = useCallback(
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-      const _fieldName = e.target.name as keyof T;
+      
 
       setTouched(prev => ({
         ...prev,
@@ -134,7 +134,7 @@ export function useForm<T extends Record<string, unknown>>({
       setTouched(allTouched);
 
       // Validate all fields
-      const _isValid = validateAllFields();
+      
 
       if (!isValid) {
         return;

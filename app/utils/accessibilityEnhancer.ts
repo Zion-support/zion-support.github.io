@@ -679,3 +679,10 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Score: ${metrics.score}/100
+- Issues Found: ${metrics.issuesFound}
+- WCAG Level: ${metrics.wcagLevel}
+- Last Checked: ${new Date().toISOString()}
+    `;
+  }
+}

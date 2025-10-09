@@ -19,7 +19,7 @@ export const usePerformanceOptimization = () => {
     const navigation = performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
-    const _paintEntries = performance.getEntriesByType('paint');
+    
 
     const metrics: PerformanceMetrics = {
       loadTime: navigation
@@ -35,8 +35,8 @@ export const usePerformanceOptimization = () => {
 
     // Measure LCP
     const lcpObserver = new PerformanceObserver(list => {
-      const _entries = list.getEntries();
-      const _lastEntry = entries[entries.length - 1];
+      
+      
       if (lastEntry) {
         metrics.largestContentfulPaint = lastEntry.startTime;
       }
@@ -82,11 +82,11 @@ export const usePerformanceOptimization = () => {
   }, []);
 
   const optimizeImages = useCallback(() => {
-    const _images = document.querySelectorAll('img[data-src]');
+    
     const imageObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const _img = entry.target as HTMLImageElement;
+          
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
@@ -98,10 +98,10 @@ export const usePerformanceOptimization = () => {
   }, []);
 
   const preloadCriticalResources = useCallback(() => {
-    const _criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+    
 
     criticalResources.forEach(resource => {
-      const _link = document.createElement('link');
+      
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'style';
@@ -115,7 +115,7 @@ export const usePerformanceOptimization = () => {
   useEffect(() => {
     // Measure performance after page load
     const timer = setTimeout(() => {
-      const _metrics = measurePerformance();
+      
       if (metrics) {
         // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {

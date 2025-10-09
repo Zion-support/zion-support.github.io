@@ -24,17 +24,16 @@ export const useErrorMonitoring = () => {
 
   useEffect(() => {
     // Global error handler
-    const handleError = (event: unknown) => {
-      const _errorEvent = event as { message: string; error?: Error };
-      const _error = new Error(errorEvent.message);
-      error.stack = errorEvent.error?.stack;
+    const handleError = (event: ErrorEvent) => {
+      const error = event.error || new Error(event.message);
+      error.stack = event.error?.stack;
 
       reportError(error, 'global_error');
     };
 
     // Unhandled promise rejection handler
     const handleUnhandledRejection = (event: unknown) => {
-      const _rejectionEvent = event as { reason: unknown };
+      
       const error =
         rejectionEvent.reason instanceof Error
           ? rejectionEvent.reason

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
@@ -569,20 +569,7 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-  const categories = [
-    { name: 'All', count: microSAASServices.length },
-    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
-    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length },
-    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },
-    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length },
-    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
-    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length }
-  ];
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

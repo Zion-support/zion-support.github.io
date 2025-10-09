@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -294,21 +294,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = [
-    { name: 'All', count: itServices.length },
-    { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
-    { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
-    { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
-    { name: 'DevOps', count: itServices.filter(s => s.category === 'DevOps').length },
-    { name: 'Database', count: itServices.filter(s => s.category === 'Database').length },
-    { name: 'Network Security', count: itServices.filter(s => s.category === 'Network Security').length },
-    { name: 'Support', count: itServices.filter(s => s.category === 'Support').length },
-    { name: 'Backup & Recovery', count: itServices.filter(s => s.category === 'Backup & Recovery').length },
-    { name: 'Mobile Management', count: itServices.filter(s => s.category === 'Mobile Management').length },
-    { name: 'Compliance', count: itServices.filter(s => s.category === 'Compliance').length },
-    { name: 'Asset Management', count: itServices.filter(s => s.category === 'Asset Management').length },
-    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length }
-  ];
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
