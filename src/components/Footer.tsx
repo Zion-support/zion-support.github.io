@@ -3,12 +3,18 @@ import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, 
 
 const Footer: React.FC = () => {
   const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
+    { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
+    { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns' },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' }
+    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI video creation' },
+    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Lead Generation System', url: '/ai-lead-generation', description: 'Automated lead gen' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Sales process automation' },
+    { name: 'AI E-commerce Assistant', url: '/ai-ecommerce-solutions', description: 'E-commerce optimization' }
   ];
 
   const aiServices = [
@@ -17,7 +23,13 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'Quantum AI Computing', url: '/quantum-ai', description: 'Next-gen algorithms' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI solutions' },
+    { name: 'AI Financial Services', url: '/ai-fintech', description: 'Financial AI solutions' },
+    { name: 'AI Supply Chain Optimization', url: '/ai-supply-chain', description: 'Supply chain AI' },
+    { name: 'AI Energy Management', url: '/ai-energy', description: 'Energy optimization AI' },
+    { name: 'AI Legal Tech', url: '/ai-legal', description: 'Legal AI solutions' },
+    { name: 'AI Education Platform', url: '/ai-education', description: 'Educational AI' }
   ];
 
   const itServices = [
@@ -26,7 +38,13 @@ const Footer: React.FC = () => {
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
     { name: 'Database Services', url: '/database-services', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking' },
-    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' }
+    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT consulting' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless cloud migration' },
+    { name: 'IT Infrastructure Management', url: '/it-infrastructure', description: 'Infrastructure management' },
+    { name: 'Mobile App Development', url: '/mobile-development', description: 'Mobile app development' },
+    { name: 'Web Development', url: '/web-development', description: 'Web application development' },
+    { name: 'Data Analytics & BI', url: '/data-analytics', description: 'Business intelligence' }
   ];
 
   const specializedServices = [

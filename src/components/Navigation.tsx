@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Server, Smartphone, TrendingUp, Award, BookOpen as Book, HelpCircle, Info, ExternalLink } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,18 +67,27 @@ const Navigation: React.FC = () => {
   };
 
   const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3 },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator }
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, popular: true },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, popular: true },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3, popular: true },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, popular: true },
+    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, popular: true },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, popular: true },
+    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, popular: true },
+    { name: 'AI Lead Generation System', href: '/ai-lead-generation', icon: Target, popular: true },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, popular: true },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, popular: true },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Phone, popular: true },
+    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, popular: true },
+    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, popular: false },
+    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, popular: false },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, popular: true },
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, popular: false },
+    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music, popular: false },
+    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette, popular: false },
+    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music, popular: false },
+    { name: 'AI 3D Model Generator', href: '/ai-3d-generation', icon: Camera, popular: false },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, popular: false }
   ];
 
   const aiServices = [
@@ -87,7 +96,13 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
     { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield }
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
+    { name: 'AI Financial Services', href: '/ai-fintech', icon: CreditCard },
+    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Ship },
+    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap },
+    { name: 'AI Legal Tech', href: '/ai-legal', icon: FileText },
+    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap }
   ];
 
   const itServices = [
@@ -96,7 +111,13 @@ const Navigation: React.FC = () => {
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database-services', icon: Database },
     { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users }
+    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Briefcase },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
+    { name: 'IT Infrastructure Management', href: '/it-infrastructure', icon: Server },
+    { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
+    { name: 'Web Development', href: '/web-development', icon: Code },
+    { name: 'Data Analytics & BI', href: '/data-analytics', icon: BarChart }
   ];
 
   const specializedServices = [
@@ -193,34 +214,22 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
-<<<<<<< HEAD
                     <div className="grid grid-cols-2 gap-4">
-                      <Link
-                        to="/services"
+                      <a href="/services"
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
-                      </Link>
-                      <Link
-                        to="/specialized-services"
+                      </a>
+                      <a href="/specialized-services"
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
                         <span>Specialized Solutions</span>
                         <ArrowRight className="w-4 h-4" />
-                      </Link>
+                      </a>
                     </div>
-=======
-                    <a href="/services"
-                      className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      <span>View All Services</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-d937
                   </div>
                 </div>
               )}
@@ -228,29 +237,19 @@ const Navigation: React.FC = () => {
 
             <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
-<<<<<<< HEAD
-            </Link>
-            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
-              Blog
-            </Link>
-            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
-            </Link>
-            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
-              Pricing
-            </Link>
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
-              Contact
-            </Link>
-=======
             </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
-              Contact
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+              Blog
             </a>
             <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-d937
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+              Pricing
+            </a>
+            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+              Contact
+            </a>
             
             <div className="flex items-center space-x-4">
               <a
@@ -332,29 +331,19 @@ const Navigation: React.FC = () => {
 
               <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
-<<<<<<< HEAD
-              </Link>
-              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </Link>
-              <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </Link>
-              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
-              </Link>
-              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
-              </Link>
-=======
               </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Blog
               </a>
               <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Case Studies
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-d937
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Pricing
+              </a>
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Contact
+              </a>
               
               <div className="pt-4 border-t border-gray-700">
                 <a
