@@ -3,12 +3,12 @@ import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 // PerformanceMetrics interface removed as it's not used in this hook
 export const usePerformanceMonitoring = () => {
-  const { trackPerformance } = useAnalytics();
+  const { trackEvent } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
-      trackPerformance(name, value);
+      trackEvent('performance_metric', { name, value });
     },
-    [trackPerformance]
+    [trackEvent]
   );
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
@@ -17,14 +17,14 @@ export const usePerformanceMonitoring = () => {
     try {
       // LCP - Largest Contentful Paint
       const lcpObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
-        const _lastEntry = entries[entries.length - 1];
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
+        const entries = list.getEntries();
         entries.forEach(
           (entry: PerformanceEntry & { processingStart?: number }) => {
             const fid =
@@ -35,9 +35,9 @@ export const usePerformanceMonitoring = () => {
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       // CLS - Cumulative Layout Shift
-      let _clsValue = 0;
+      let clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
+        const entries = list.getEntries();
         entries.forEach(
           (
             entry: PerformanceEntry & {
@@ -55,7 +55,7 @@ export const usePerformanceMonitoring = () => {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       // FCP - First Contentful Paint
       const fcpObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
+        const entries = list.getEntries();
         entries.forEach(entry => {
           if (entry.name === 'first-contentful-paint') {
             reportMetric('FCP', entry.startTime);
@@ -65,11 +65,11 @@ export const usePerformanceMonitoring = () => {
       fcpObserver.observe({ entryTypes: ['paint'] });
       // TTFB - Time to First Byte
       const navigationObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
+        const entries = list.getEntries();
         entries.forEach((entry) => {
           if (entry.entryType === 'navigation') {
-            const _navEntry = entry as PerformanceNavigationTiming;
-            const _ttfb = navEntry.responseStart - navEntry.requestStart;
+            const navEntry = entry as PerformanceNavigationTiming;
+            const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
           }
         });
@@ -77,11 +77,11 @@ export const usePerformanceMonitoring = () => {
       navigationObserver.observe({ entryTypes: ['navigation'] });
       // Resource timing
       const resourceObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
+        const entries = list.getEntries();
         entries.forEach((entry) => {
           if (entry.entryType === 'resource') {
-            const _resourceEntry = entry as PerformanceResourceTiming;
-            const _loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
+            const resourceEntry = entry as PerformanceResourceTiming;
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
             if (loadTime > 1000) {
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
