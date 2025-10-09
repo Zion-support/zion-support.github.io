@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
+import Head from 'next/head';
 
 interface SEOOptimizerProps {
   title?: string;
@@ -7,202 +8,118 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation'],
+  canonicalUrl,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
 }) => {
   useEffect(() => {
-    // Update page title
-    document.title = title;
-    
-    // Update meta description
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords.join(', '));
-    
-    // Update Open Graph tags
-    updateMetaTag('og:title', title, 'property');
-    updateMetaTag('og:description', description, 'property');
-    updateMetaTag('og:image', ogImage, 'property');
-    updateMetaTag('og:url', canonicalUrl, 'property');
-    updateMetaTag('og:type', 'website', 'property');
-    updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
-    
-    // Update Twitter tags
-    updateMetaTag('twitter:card', 'summary_large_image', 'name');
-    updateMetaTag('twitter:title', title, 'name');
-    updateMetaTag('twitter:description', description, 'name');
-    updateMetaTag('twitter:image', ogImage, 'name');
-    updateMetaTag('twitter:site', '@ziontechgroup', 'name');
-    updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
-    
-    // Update canonical URL
-    updateCanonicalUrl(canonicalUrl);
-    
-    // Add structured data
-    if (structuredData) {
-      addStructuredData(structuredData);
+    // Update document title
+    if (title) {
+      document.title = title;
     }
-    
-    // Add breadcrumb structured data
-    addBreadcrumbStructuredData();
-    
-    // Add FAQ structured data
-    addFAQStructuredData();
-    
-    // Add organization structured data
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
       document.head.appendChild(meta);
     }
-    meta.setAttribute('content', content);
-  };
 
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords.join(', '));
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = keywords.join(', ');
+      document.head.appendChild(meta);
     }
-    canonical.setAttribute('href', url);
-  };
 
-  const addStructuredData = (data: any) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    // Remove existing structured data
-    const existing = document.getElementById('structured-data');
-    if (existing) {
-      existing.remove();
+    // Update canonical URL
+    if (canonicalUrl) {
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', canonicalUrl);
+      } else {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        canonical.setAttribute('href', canonicalUrl);
+        document.head.appendChild(canonical);
+      }
     }
-    document.head.appendChild(script);
-  };
 
-  const addBreadcrumbStructuredData = () => {
-    const breadcrumbData = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      'itemListElement': [
-        {
-          '@type': 'ListItem',
-          'position': 1,
-          'name': 'Home',
-          'item': 'https://ziontechgroup.com'
-        }
-      ]
+    // Update Open Graph tags
+    const updateMetaTag = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
     };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
-    script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data
-    const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {
-      existing.remove();
-    }
-    document.head.appendChild(script);
-  };
 
-  const addFAQStructuredData = () => {
-    const faqData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'What AI services does Zion Tech Group offer?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Zion Tech Group offers comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, and AI-powered business intelligence.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'What is the pricing for AI services?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Our AI services start at $1,500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Do you provide 24/7 support?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
-          }
-        }
-      ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(faqData);
-    script.id = 'faq-structured-data';
-    // Remove existing FAQ data
-    const existing = document.getElementById('faq-structured-data');
-    if (existing) {
-      existing.remove();
+    updateMetaTag('og:title', title);
+    updateMetaTag('og:description', description);
+    updateMetaTag('og:type', ogType);
+    if (ogImage) {
+      updateMetaTag('og:image', ogImage);
     }
-    document.head.appendChild(script);
-  };
+    if (canonicalUrl) {
+      updateMetaTag('og:url', canonicalUrl);
+    }
 
-  const addOrganizationStructuredData = () => {
-    const organizationData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      'name': 'Zion Tech Group',
-      'url': 'https://ziontechgroup.com',
-      'logo': 'https://ziontechgroup.com/logo.png',
-      'description': 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-      'foundingDate': '2020',
-      'numberOfEmployees': '50-100',
-      'industry': 'Technology',
-      'contactPoint': {
-        '@type': 'ContactPoint',
-        'telephone': '+1-302-464-0950',
-        'contactType': 'Customer Service',
-        'areaServed': 'US',
-        'availableLanguage': 'en'
-      },
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': '364 E Main St STE 1008',
-        'addressLocality': 'Middletown',
-        'addressRegion': 'DE',
-        'postalCode': '19709',
-        'addressCountry': 'US'
-      },
-      'sameAs': [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup'
-      ]
+    // Update Twitter Card tags
+    const updateTwitterTag = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
     };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(organizationData);
-    script.id = 'organization-structured-data';
-    // Remove existing organization data
-    const existing = document.getElementById('organization-structured-data');
-    if (existing) {
-      existing.remove();
+
+    updateTwitterTag('twitter:card', twitterCard);
+    updateTwitterTag('twitter:title', title);
+    updateTwitterTag('twitter:description', description);
+    if (ogImage) {
+      updateTwitterTag('twitter:image', ogImage);
     }
-    document.head.appendChild(script);
-  };
+
+    // Add structured data
+    if (structuredData) {
+      let script = document.querySelector('script[type="application/ld+json"]');
+      if (script) {
+        script.textContent = JSON.stringify(structuredData);
+      } else {
+        script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+      }
+    }
+  }, [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard, structuredData]);
 
   return null;
 };

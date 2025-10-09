@@ -36,10 +36,10 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
     // Initialize gtag
     window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args);
+    function gtag(...args: unknown[]) {
+      window.dataLayer?.push(args);
     }
-    (window as any).gtag = gtag;
+    window.gtag = gtag;
 
     gtag('js', new Date());
     gtag('config', GA_MEASUREMENT_ID, {
@@ -96,7 +96,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const PIXEL_ID = 'XXXXXXXXXXXXXXX'; // Replace with actual Pixel ID
 
     // Facebook Pixel initialization
-    (function(f: any, b: any, e: any, v: any, n: any, t: any, s: any) {
+    (function(f: Window, b: Document, e: string, v: string, n: unknown, t: HTMLScriptElement, s: HTMLScriptElement | null) {
       if (f.fbq) return;
       n = f.fbq = function() {
         n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
@@ -111,11 +111,10 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       t.src = v;
       s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
-<<<<<<< HEAD
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     
-    (window as any).fbq('init', PIXEL_ID);
-    (window as any).fbq('track', 'PageView');
+    window.fbq?.('init', PIXEL_ID);
+    window.fbq?.('track', 'PageView');
 
   }, [enableFacebookPixel]);
 
@@ -134,8 +133,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         const buttonId = button.id || '';
         
         // Send to analytics
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'button_click', {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'button_click', {
             event_category: 'Engagement',
             event_label: buttonText,
             button_class: buttonClass,
@@ -154,8 +153,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const formClass = form.className || '';
       const formAction = form.action || '';
       
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'form_submit', {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'form_submit', {
           event_category: 'Engagement',
           event_label: 'Form Submission',
           form_id: formId,
@@ -174,8 +173,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         const currentDomain = window.location.hostname;
         
         if (url.hostname !== currentDomain) {
-          if (typeof window !== 'undefined' && 'gtag' in window) {
-            (window as any).gtag('event', 'click', {
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'click', {
               event_category: 'Outbound',
               event_label: target.href,
               transport_type: 'beacon',
@@ -198,8 +197,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         
         // Track at 25%, 50%, 75%, 100%
         if ([25, 50, 75, 100].includes(scrollPercent)) {
-          if (typeof window !== 'undefined' && 'gtag' in window) {
-            (window as any).gtag('event', 'scroll', {
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'scroll', {
               event_category: 'Engagement',
               event_label: `${scrollPercent}%`,
               page_location: window.location.href
@@ -218,15 +217,15 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Track page visibility changes
     const trackVisibilityChange = () => {
       if (document.hidden) {
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'page_hide', {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'page_hide', {
             event_category: 'Engagement',
             page_location: window.location.href
           });
         }
       } else {
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'page_show', {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'page_show', {
             event_category: 'Engagement',
             page_location: window.location.href
           });
@@ -257,8 +256,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         const entries = entryList.getEntries();
         const lastEntry = entries[entries.length - 1];
         
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'web_vitals', {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'LCP',
             value: Math.round(lastEntry.startTime),
@@ -273,8 +272,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         entries.forEach((entry) => {
           const fid = entry.processingStart - entry.startTime;
           
-          if (typeof window !== 'undefined' && 'gtag' in window) {
-            (window as any).gtag('event', 'web_vitals', {
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: 'FID',
               value: Math.round(fid),
@@ -289,13 +288,14 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       new PerformanceObserver((entryList) => {
         const entries = entryList.getEntries();
         entries.forEach((entry) => {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value || 0;
           }
         });
         
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'web_vitals', {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'CLS',
             value: Math.round(clsValue * 1000),
@@ -312,8 +312,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const loadTime = navigation.loadEventEnd - navigation.fetchStart;
       
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'page_load_time', {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'page_load_time', {
           event_category: 'Performance',
           event_label: 'Page Load',
           value: Math.round(loadTime),
@@ -334,8 +334,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const trackTimeOnPage = () => {
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
       
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'time_on_page', {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'time_on_page', {
           event_category: 'Engagement',
           event_label: 'Time on Page',
           value: timeOnPage,
@@ -354,8 +354,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         mouseMovements++;
         
         if (mouseMovements % 10 === 0) { // Track every 10 movements
-          if (typeof window !== 'undefined' && 'gtag' in window) {
-            (window as any).gtag('event', 'mouse_movement', {
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'mouse_movement', {
               event_category: 'User Behavior',
               event_label: 'Mouse Activity',
               value: mouseMovements,
@@ -381,8 +381,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const trackContactForm = (event: Event) => {
       const form = event.target as HTMLFormElement;
       if (form.id === 'contact-form' || form.className.includes('contact-form')) {
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'conversion', {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'conversion', {
             event_category: 'Conversion',
             event_label: 'Contact Form Submission',
             value: 1,
@@ -396,8 +396,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const trackPhoneClick = (event: Event) => {
       const target = event.target as HTMLElement;
       if (target.closest('a[href^="tel:"]')) {
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'conversion', {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'conversion', {
             event_category: 'Conversion',
             event_label: 'Phone Click',
             value: 1,
@@ -411,8 +411,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const trackEmailClick = (event: Event) => {
       const target = event.target as HTMLElement;
       if (target.closest('a[href^="mailto:"]')) {
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'conversion', {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'conversion', {
             event_category: 'Conversion',
             event_label: 'Email Click',
             value: 1,
@@ -461,5 +461,3 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 };
 
 export default EnhancedAnalytics;
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4b08

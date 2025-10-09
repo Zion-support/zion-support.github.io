@@ -14,6 +14,7 @@ import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnh
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
 import ServiceWorker from './components/ServiceWorker';
 import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -1884,17 +1885,35 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <EnhancedErrorBoundary>
-      <EnhancedSEO
+    <ErrorBoundary>
+      <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting']}
         canonicalUrl="https://ziontechgroup.com"
         ogImage="https://ziontechgroup.com/og-image.jpg"
-        preloadResources={[
-          { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
-          { href: '/images/hero-bg.jpg', as: 'image' }
-        ]}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "description": "Advanced AI and IT Solutions",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          }
+        }}
       />
       <EnhancedPerformanceOptimizer
         enableImageOptimization={true}
@@ -2525,7 +2544,7 @@ const HomePage: React.FC = () => {
 
         <Footer />
       </div>
-    </EnhancedErrorBoundary>
+    </ErrorBoundary>
   );
 };
 
