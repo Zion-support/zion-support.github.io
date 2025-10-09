@@ -2,9 +2,7 @@ import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const PagePage: React.FC = () => {
-  return (
-<<<<<<< HEAD
+const PagePage: React.FC = () => { return (
 
           
           
@@ -21,8 +19,7 @@ const PagePage: React.FC = () => {
             </h1><p className="text-gray-600 text-lg">
               Revolutionary adaptive neural architectures that self-evolve and optimize in real-time, delivering 1000x performance improvements
             </p></div><div className="prose max-w-none"><h2 className="text-2xl font-bold text-gray-900 mb-6">🧬 Breakthrough Overview</h2><p className="text-gray-700 mb-6">
-              Adaptive neural architectures represent a revolutionary breakthrough in AI technology,
-              delivering <strong>1000x performance improvements</strong> and <strong>$25B+ enterprise value</strong>
+              Adaptive neural architectures represent a revolutionary breakthrough in AI technology, delivering <strong>1000x performance improvements</strong> and <strong>$25B+ enterprise value</strong>
               through self-evolving and self-optimizing neural networks.
             </p><div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div className="bg-purple-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-purple-600 mb-2">1000x</div><div className="text-gray-700">Performance Improvement</div></div><div className="bg-blue-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-blue-600 mb-2">$25B+</div><div className="text-gray-700">Enterprise Value</div></div><div className="bg-green-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-green-600 mb-2">Real-time</div><div className="text-gray-700">Self-Optimization</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🔬 Technical Innovation</h2><p className="text-gray-700 mb-6">
               Our adaptive neural architectures leverage cutting-edge technologies:
@@ -47,7 +44,7 @@ const PagePage: React.FC = () => {
 └── Security
     ├── Encrypted Processing
     ├── Privacy Protection
-    └── Compliance Framework`}
+    └── Compliance Framework` }
               </pre></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Neural Revolution</h2><p className="text-gray-700 mb-6">
               Ready to embrace adaptive neural architectures? Our breakthrough technologies
               can transform your enterprise and deliver unprecedented performance gains.
@@ -60,25 +57,6 @@ const PagePage: React.FC = () => {
                   href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
                 </a></div></div></div></div></div></div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

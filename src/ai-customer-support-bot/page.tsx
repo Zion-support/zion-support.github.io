@@ -1,8 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone,  Bot,  MessageSquare,  BarChart,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
-import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart, Star from 'lucide-react';
+import { Bot } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AICustomerSupportBotPage: React.FC = () => {
@@ -90,33 +89,33 @@ const features = [
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => ()
+          { stats.map((stat, index) => ()
             
-          <div key={index} className="text-center">
+          <div key={index } className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
           ))}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {features.map((feature, index) => ()
+          { features.map((feature, index) => ()
             
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+          <div key={index } className="bg-slate-800/50 rounded-lg p-6">
               <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
-                {feature.benefits.map((benefit, benefitIndex) => ()
+                { feature.benefits.map((benefit, benefitIndex) => ()
                   
-          <li key={benefitIndex} className="flex items-center text-gray-300">
+          <li key={benefitIndex } className="flex items-center text-gray-300">
                     <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     {benefit}
                   </li>
               </ul>
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => ()
+            { pricingPlans.map((plan, index) => ()
               
-          <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+          <div key={index } className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && ()
                   
           <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
@@ -127,9 +126,9 @@ Most Popular
                   {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => ()
+                  { plan.features.map((feature, featureIndex) => ()
                     
-          <li key={featureIndex} className="flex items-center text-gray-300">
+          <li key={featureIndex } className="flex items-center text-gray-300">
                       {feature}
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
 // Get Started
@@ -152,28 +151,6 @@ Most Popular
               Schedule Demo
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

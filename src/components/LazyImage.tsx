@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface LazyImageProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   src: string;,
@@ -34,7 +33,7 @@ const LazyImage: React.FC
 //   height,
   priority = false,
 //   onLoad,
-//   onError,
+//   onError
 }) => {
   // TODO: Add content
 }
@@ -60,7 +59,7 @@ const LazyImage: React.FC
   // TODO: Add content
 };
   threshold: 0.1,
-        rootMargin: '50px',
+        rootMargin: '50px'
       }
     );
     if (imgRef.current) {
@@ -95,8 +94,8 @@ const LazyImage: React.FC
   )
     
           <div
-      ref={imgRef} className={cn('relative overflow-hidden', className)}
-      style={{ width, height }}
+      ref={imgRef} className={ cn('relative overflow-hidden', className) }
+      style={ { width, height }}
 // >
       {!isInView ? ()
         
@@ -125,10 +124,9 @@ const LazyImage: React.FC
           
           <><img
             src={hasError ? placeholder : src}
-            alt={alt} className={cn(
-              'w-full h-full object-cover transition-opacity duration-300',
-              isLoaded ? 'opacity-100' : 'opacity-0'
-            )}
+            alt={alt} className={ cn(
+              'w-full h-full object-cover transition-opacity duration-300', isLoaded ? 'opacity-100' : 'opacity-0'
+            ) }
             onLoad={handleLoad}
             onError={handleError}
             loading={priority ? 'eager' : 'lazy'}
@@ -148,15 +146,6 @@ const LazyImage: React.FC
           )}
         </>
       )}
-=======
-  // Add props here
-}
-
-const LazyImage: React.FC<LazyImageProps> = () => {
-  return (
-    <div className="lazyimage">
-      {/* Component content */}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     </div>
   );
 };

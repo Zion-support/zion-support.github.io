@@ -3,7 +3,6 @@ import React from 'react';
 interface OptimizedLoadingSpinnerProps {
   // Add props here
 }
-<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
@@ -18,11 +17,8 @@ const OptimizedLoadingSpinner: React.FC
           
           
           <OptimizedLoadingSpinnerProps> = memo()
-  ({ size = 'md', color = 'primary', className = '' }) => {
-      sm: 'w-4 h-4',
-      md: 'w-8 h-8',
-      lg: 'w-12 h-12'
-    };
+  ({ size = 'md', color = 'primary', className = '' }) => { sm: 'w-4 h-4',
+      md: 'w-8 h-8', lg: 'w-12 h-12' };
     const colorClasses = {
   // TODO: Add content
 };
@@ -108,15 +104,4 @@ className="opacity-75"
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-=======
-
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = () => {
-  return (
-    <div className="optimizedloadingspinner">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default OptimizedLoadingSpinner;

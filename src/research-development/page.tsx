@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
@@ -413,9 +412,9 @@ const ResearchDevelopmentPage: React.FC = () => {
           
           </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()
+              { researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()
                 
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+          <div key={index } className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <project.icon className={`w-6 h-6 ${project.color}`} />
@@ -462,9 +461,9 @@ const ResearchDevelopmentPage: React.FC = () => {
                   <div>
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
                     <ul className="space-y-1">
-                      {project.outcomes.map((outcome, outcomeIndex) => ()
+                      { project.outcomes.map((outcome, outcomeIndex) => ()
                         
-          <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start">
+          <li key={outcomeIndex } className="text-sm text-gray-300 flex items-start">
                           <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                           {outcome}
                         </li>
@@ -491,9 +490,9 @@ const ResearchDevelopmentPage: React.FC = () => {
           </h2>
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
-                {publications.map((pub, index) => ()
+                { publications.map((pub, index) => ()
                   
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+          <div key={index } className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                     <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>
                     <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>
                     <div className="flex items-center justify-between">
@@ -554,9 +553,9 @@ const ResearchDevelopmentPage: React.FC = () => {
           
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {achievements.map((achievement, index) => ()
+              { achievements.map((achievement, index) => ()
                 
-          <div key={index} className="text-center">
+          <div key={index } className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <achievement.icon className="w-8 h-8 text-cyan-400" />
                   </div>
@@ -673,29 +672,6 @@ const ResearchDevelopmentPage: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

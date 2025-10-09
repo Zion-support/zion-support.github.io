@@ -4,7 +4,6 @@ interface AccessibilityEnhancerProps {
   // Add props here
 }
 
-<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
@@ -13,7 +12,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true,
   enableSkipLinks = true,
   enableKeyboardNav = true,
-  enableFocusIndicators = true,
+  enableFocusIndicators = true
 }) => {
   React.useEffect(() => {
     // Initialize accessibility features
@@ -28,8 +27,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, []);
 
-  const addSkipLinks = () => {
-    const skipLink = document.createElement('a');
+  const addSkipLinks = () => { const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
@@ -43,8 +41,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       text-decoration: none;
       z-index: 1000;
     `;
-    document.body.insertBefore(skipLink, document.body.firstChild);
-  };
+    document.body.insertBefore(skipLink, document.body.firstChild); };
 
   const addFocusIndicators = () => {
     const style = document.createElement('style');
@@ -57,11 +54,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     document.head.appendChild(style);
   };
 
-  const setupKeyboardNavigation = () => {
-    document.addEventListener('keydown', (e) => {
+  const setupKeyboardNavigation = () => { document.addEventListener('keydown', (e) => {
       if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
+        document.body.classList.add('keyboard-navigation'); }
     });
 
     document.addEventListener('mousedown', () => {
@@ -79,14 +74,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           
           
           <>{children}</>;
-=======
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = () => {
-  return (
-    <div className="accessibilityenhancer">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default AccessibilityEnhancer;

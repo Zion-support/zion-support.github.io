@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Request Middleware System
@@ -79,11 +78,9 @@ let index = 0;
       return await middleware(context, next);
     return await next();
  * Logging middleware
-export const loggingMiddleware: Middleware = async (context, next) => {
-  const startTime = Date.now();
+export const loggingMiddleware: Middleware = async (context, next) => { const startTime = Date.now();
 export const _loggingMiddleware: Middleware = async (context, next) => {
-  // TODO: Add content
-}
+  // TODO: Add content }
   const _startTime = Date.now();
   logger.info('Request started', 'RequestMiddleware', {
   // TODO: Add content
@@ -97,18 +94,13 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
 }
     const result = await next();
     const duration = Date.now() - startTime;
-    logger.info('Request completed', 'RequestMiddleware', {
-url: context.request.url,
-      status: context.response?.status,
-      duration
-    return result;
-  } catch (error) {
-    logger.error('Request failed', error as Error, 'RequestMiddleware', {
+    logger.info('Request completed', 'RequestMiddleware', { url: context.request.url,
+      status: context.response?.status, duration
+    return result; } catch (error) { logger.error('Request failed', error as Error, 'RequestMiddleware', {
     throw error;
  * Authentication middleware
 export const authMiddleware: Middleware = async (context, next) => {
-  // TODO: Add content
-}
+  // TODO: Add content }
   const token = getAuthToken();
   if (token) {
   // TODO: Add content
@@ -121,15 +113,13 @@ function getAuthToken(): string | null {
   if (typeof window === 'undefined') return null;
   return localStorage.getItem('authToken');
  * Error handling middleware
-export const errorHandlingMiddleware: Middleware = async (context, next) => {
-// Transform error into a standardized format
+export const errorHandlingMiddleware: Middleware = async (context, next) => { // Transform error into a standardized format
     const standardError = {
       message: error instanceof Error ? error.message : 'Unknown error',
       status: context.response?.status || 500,
       method: context.request.method
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
-  // TODO: Add content
-};
+  // TODO: Add content };
   component: 'ErrorHandlingMiddleware',
 ...standardError
     throw standardError;
@@ -224,13 +214,11 @@ let lastError: Error | null = null;
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
     throw lastError;
  * Timeout middleware
-export const timeoutMiddleware = (timeoutMs: number): Middleware => {
-    return await Promise.race([
+export const timeoutMiddleware = (timeoutMs: number): Middleware => { return await Promise.race([
   // TODO: Add items,
 ]
 //       next(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),
-    ]);
+      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)), ]);
  * Request transformation middleware
 export const transformRequestMiddleware = ()
   transformer: (context: MiddlewareContext) => MiddlewareContext | Promise
@@ -247,8 +235,7 @@ export const transformRequestMiddleware = ()
     return await transformer(result);
  * Create default middleware chain
 export function createDefaultMiddlewareChain(): MiddlewareExecutor {
-  // TODO: Add content
-}
+  // TODO: Add content }
   const executor = new MiddlewareExecutor();
   return executor
 //     .use(loggingMiddleware)
@@ -268,7 +255,3 @@ export default {
   transformRequestMiddleware,
   transformResponseMiddleware,
   createDefaultMiddlewareChain
-=======
-// TypeScript file - requestMiddleware
-export default {};
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

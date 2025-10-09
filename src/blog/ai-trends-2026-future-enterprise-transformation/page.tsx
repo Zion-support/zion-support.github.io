@@ -2,9 +2,7 @@ import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const PagePage: React.FC = () => {
-  return (
-<<<<<<< HEAD
+const PagePage: React.FC = () => { return (
 
           
           
@@ -45,7 +43,7 @@ const PagePage: React.FC = () => {
 └── Autonomous Operations
     ├── Self-Managing Systems
     ├── Predictive Maintenance
-    └── Real-time Optimization`}
+    └── Real-time Optimization` }
               </pre></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Prepare for 2026</h2><p className="text-gray-700 mb-6">
               Ready to embrace the AI trends of 2026? Our expert team can help you prepare
               for the quantum intelligence revolution and transform your enterprise.
@@ -58,25 +56,6 @@ const PagePage: React.FC = () => {
                   href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
                 </a></div></div></div></div></div></div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

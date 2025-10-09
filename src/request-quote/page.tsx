@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {
@@ -485,9 +484,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select a service type</option>
-                      {serviceTypes.map((type, index) => ()
+                      { serviceTypes.map((type, index) => ()
                         
-          <option key={index} value={type}>{type}</option>
+          <option key={index } value={type}>{type}</option>
                       ))}
                     </select>
                   </div>
@@ -521,9 +520,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select project size</option>
-                        {projectSizes.map((size, index) => ()
+                        { projectSizes.map((size, index) => ()
                           
-          <option key={index} value={size}>{size}</option>
+          <option key={index } value={size}>{size}</option>
                         ))}
                       </select>
                     </div>
@@ -556,9 +555,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select timeline</option>
-                        {timelines.map((timeline, index) => ()
+                        { timelines.map((timeline, index) => ()
                           
-          <option key={index} value={timeline}>{timeline}</option>
+          <option key={index } value={timeline}>{timeline}</option>
                         ))}
                       </select>
                     </div>
@@ -592,9 +591,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select budget range</option>
-                      {budgetRanges.map((range, index) => ()
+                      { budgetRanges.map((range, index) => ()
                         
-          <option key={index} value={range}>{range}</option>
+          <option key={index } value={range}>{range}</option>
                       ))}
                     </select>
                   </div>
@@ -711,9 +710,9 @@ type="submit"
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>
                 <div className="space-y-4">
-                  {benefits.map((benefit, index) => ()
+                  { benefits.map((benefit, index) => ()
                     
-          <div key={index} className="flex items-start">
+          <div key={index } className="flex items-start">
                       <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <benefit.icon className="w-4 h-4 text-cyan-400" />
                       </div>
@@ -729,9 +728,9 @@ type="submit"
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
                 <div className="space-y-4">
-                  {whyChooseUs.map((item, index) => ()
+                  { whyChooseUs.map((item, index) => ()
                     
-          <div key={index} className="flex items-start">
+          <div key={index } className="flex items-start">
                       <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <item.icon className="w-4 h-4 text-purple-400" />
                       </div>
@@ -813,29 +812,6 @@ type="submit"
           </div>
         </div>
       </div>
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

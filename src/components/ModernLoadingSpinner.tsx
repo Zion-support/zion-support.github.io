@@ -3,7 +3,6 @@ import React from 'react';
 interface ModernLoadingSpinnerProps {
   // Add props here
 }
-<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
@@ -25,12 +24,9 @@ const ModernLoadingSpinner: React.FC
   color = 'primary',
   text = 'Loading...',
   fullScreen = false
-}) => {
-    sm: 'w-4 h-4',
+}) => { sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
-  };
+    lg: 'w-12 h-12', xl: 'w-16 h-16' };
   const colorClasses = {
   // TODO: Add content
 };
@@ -74,13 +70,6 @@ const ModernLoadingSpinner: React.FC
         )}
       </div>
       <span className="sr-only">Loading content, please wait...</span>
-=======
-
-const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = () => {
-  return (
-    <div className="modernloadingspinner">
-      {/* Component content */}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     </div>
   );
 };

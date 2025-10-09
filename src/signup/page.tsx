@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe,  Shield,  Award,  Globe from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe, Globe from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -34,8 +33,7 @@ const handleInputChange = (e: React.ChangeEvent
           
           
           
-          <HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+          <HTMLInputElement>) => { const { name, value, type, checked } = e.target;
     setFormData(prev => ({
   // TODO: Add content
 }
@@ -301,9 +299,9 @@ Sign in here
 Join thousands of businesses already using our AI and IT solutions
                   to achieve unprecedented growth and efficiency.
               <div className="space-y-6">
-                {features.map((feature, index) => ()
+                { features.map((feature, index) => ()
                   
-          <div key={index} className="flex items-start">
+          <div key={index } className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
@@ -314,9 +312,9 @@ Join thousands of businesses already using our AI and IT solutions
                   What You Get:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {benefits.map((benefit, index) => ()
+                  { benefits.map((benefit, index) => ()
                     
-          <div key={index} className="flex items-center text-sm text-gray-300">
+          <div key={index } className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
 <div className="text-center">
@@ -326,29 +324,6 @@ Join thousands of businesses already using our AI and IT solutions
                   <div className="text-2xl font-bold text-white">Microsoft</div>
                   <div className="text-2xl font-bold text-white">Google</div>
                   <div className="text-2xl font-bold text-white">Amazon</div>
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

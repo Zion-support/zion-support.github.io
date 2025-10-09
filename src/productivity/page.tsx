@@ -18,7 +18,6 @@ const PagePage: React.FC = () => {
             This page is under development. Please check back soon for updates.
           </p>
         </section>
-<<<<<<< HEAD
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
@@ -50,10 +49,10 @@ const PagePage: React.FC = () => {
           
           <section key={category} className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
-            <div>{productivityTools
+            <div>{ productivityTools
                 .filter(tool => tool.category === category)
                 .map((tool, index) => (
-<div className="text-4xl mb-4 text-center">{tool.icon}</div>
+<div className="text-4xl mb-4 text-center">{tool.icon }</div>
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{tool.title}</h4>
                     <p className="text-gray-300 mb-4 text-sm text-center">{tool.description}</p>
                         <span className="text-2xl font-bold text-cyan-400">{tool.price}</span>
@@ -61,9 +60,9 @@ const PagePage: React.FC = () => {
                       <div>Save up to 50% vs market rates</div>
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
-                        {tool.features.slice(0, 3).map((feature, featureIndex) => ()
+                        { tool.features.slice(0, 3).map((feature, featureIndex) => ()
                           
-          <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+          <li key={featureIndex } className="flex items-center text-xs text-gray-300">
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {feature}
                           </li>
@@ -73,9 +72,9 @@ const PagePage: React.FC = () => {
                         )}
                       </ul>
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefits:</h5>
-                        {tool.benefits.map((benefit, benefitIndex) => ()
+                        { tool.benefits.map((benefit, benefitIndex) => ()
                           
-          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
+          <li key={benefitIndex } className="flex items-center text-xs text-gray-300">
                             <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
                             {benefit}
 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all text-sm inline-block"
@@ -88,8 +87,6 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
             >Get Started Today</a>
               href="tel:+13024640950"
             >Call (302) 464-0950</a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       </main>
       <Footer />
     </div>

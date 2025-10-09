@@ -1,6 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target,  Calendar,  Users,  Zap,  Shield from 'lucide-react';
+import { Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target, Shield from 'lucide-react';
 import { Link } from 'react-router-dom';
 const AISchedulerPage: React.FC = () => {
   const features = [
@@ -148,9 +147,9 @@ Start Free Trial
           
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => ()
+            { features.map((feature, index) => ()
               
-          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+          <div key={index } className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
@@ -160,18 +159,18 @@ Start Free Trial
         {/* Integrations Section */}
 Works with Your Favorite Tools
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => ()
+            { integrations.map((integration, index) => ()
               
-          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
+          <div key={index } className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
 {/* Pricing Section */}
             Simple, Transparent Pricing
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => ()
+            { pricingPlans.map((plan, index) => ()
               
-          <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
+          <div key={index } className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
   // TODO: Add content
 }
 //                 plan.popular
@@ -197,9 +196,9 @@ Most Popular
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-300">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => ()
+                  { plan.features.map((feature, featureIndex) => ()
                     
-          <li key={featureIndex} className="flex items-center text-gray-300">
+          <li key={featureIndex } className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
@@ -212,13 +211,13 @@ Most Popular
         {/* Testimonials */}
             What Our Users Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => ()
+            { testimonials.map((testimonial, index) => ()
               
-          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+          <div key={index } className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => ()
+                  { [...Array(testimonial.rating)].map((_, i) => ()
                     
-          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+          <Star key={i } className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
@@ -231,30 +230,6 @@ Most Popular
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches
             and maximize productivity.
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

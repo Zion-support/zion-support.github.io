@@ -1,33 +1,26 @@
 import React from 'react';
-import { Brain, Shield, Target, Users ,  Brain,  Shield,  Target,  Users from 'lucide-react';
+import { Brain, Shield, Target, Users, Users from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
-<<<<<<< HEAD
   const team = [
-    {,
- name: 'Kleber Santos',
-=======
-  const _team = [
-    {
-      name: 'Kleber Santos',
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+    { name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.',
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.'
     },
     {
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',
-      bio: 'Technical expert specializing in machine learning and cloud architecture.',
+      bio: 'Technical expert specializing in machine learning and cloud architecture.'
     },
     {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
-      bio: 'AI researcher and developer with expertise in deep learning and NLP.',
+      bio: 'AI researcher and developer with expertise in deep learning and NLP.'
     }
   ];
 
@@ -42,28 +35,27 @@ const AboutPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
     },
     {
       icon: Shield,
       title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.',
+      description: 'Your data and systems are protected with enterprise-grade security measures.'
     },
     {
       icon: Target,
       title: 'Results',
-      description: 'We focus on delivering measurable business outcomes and ROI.',
+      description: 'We focus on delivering measurable business outcomes and ROI.'
     },
     {
       icon: Users,
       title: 'Partnership',
-      description: 'We work closely with our clients as strategic technology partners.',
+      description: 'We work closely with our clients as strategic technology partners.'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
@@ -76,8 +68,8 @@ const AboutPage: React.FC = () => {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+              { stats.map((stat, index) => (
+                <div key={index } className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
@@ -137,8 +129,8 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="text-center">
+              { values.map((value, index) => (
+                <div key={index } className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
@@ -166,8 +158,8 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              { team.map((member, index) => (
+                <div key={index } className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
                       <Users className="w-16 h-16 text-gray-600" />
@@ -216,95 +208,6 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </div>
-=======
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            About <span className="text-cyan-400">Zion Tech Group</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We are pioneers in AI and IT solutions, transforming businesses through innovative technology and expert guidance.
-          </p>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Our Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-slate-800/50">
-                <value.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Meet Our Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {_team.map((member, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-slate-800/50">
-                <div className="w-32 h-32 bg-cyan-400 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-slate-900">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                <p className="text-cyan-400 mb-3">{member.role}</p>
-                <p className="text-gray-300">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI and IT solutions can drive your success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-cyan-400 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition-colors"
-            >
-              Get Started
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors"
-            >
-              Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

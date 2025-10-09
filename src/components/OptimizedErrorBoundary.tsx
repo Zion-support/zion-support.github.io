@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 interface OptimizedErrorBoundaryProps {
   // TODO: Add content
 };
@@ -44,25 +43,11 @@ class OptimizedErrorBoundary extends Component
   private resetTimeoutId: number | null = null;
   constructor(props: OptimizedErrorBoundaryProps) {
   // TODO: Add content
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-<<<<<<< HEAD
     this.state = {
   // TODO: Add content
 };
@@ -89,21 +74,12 @@ class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundary
 };
   hasError: true,
 //       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()}_${ Math.random().toString(36).substr(2, 9) }`
     };
-=======
-    this.state = { hasError: false, error: null, errorInfo: null };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error };
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo });
   }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-  }
-<<<<<<< HEAD
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
   // TODO: Add content
 }
@@ -112,12 +88,10 @@ class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundary
     if (hasError && prevProps.resetKeys !== resetKeys) {
   // TODO: Add content
 }
-      if (resetKeys && prevProps.resetKeys) {
-          (key, index) => key !== prevProps.resetKeys?.[index]
+      if (resetKeys && prevProps.resetKeys) { (key, index) => key !== prevProps.resetKeys?.[index]
         );
         if (hasResetKeyChanged) {
-  // TODO: Add content
-}
+  // TODO: Add content }
           this.resetErrorBoundary();
         }
       }
@@ -208,12 +182,8 @@ class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundary
 }
     this.resetErrorBoundary();
   };
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
   // TODO: Add content
 }
       if (this.props.fallback) {
@@ -239,22 +209,12 @@ class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundary
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
 // />
-=======
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
-          </div>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       );
     }
 
     return this.props.children;
   }
 }
-<<<<<<< HEAD
 interface ErrorFallbackProps {
   // TODO: Add content
 };
@@ -403,7 +363,3 @@ className='w-6 h-6 text-red-600'
 //   )
 );
 ErrorFallback.displayName = 'ErrorFallback';
-=======
-
-export default OptimizedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

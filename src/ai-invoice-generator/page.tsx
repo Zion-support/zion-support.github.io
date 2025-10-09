@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon,  Brain,  Zap,  BarChart,  Smartphone,  ShoppingCart,  Building from 'lucide-react';
+import { Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
@@ -57,7 +56,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       <SEOOptimizer
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
-        keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
+        keywords={ ['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation'] }
         canonicalUrl="https:// ziontechgroup.com/ai-invoice-generator"
 //       />
       
@@ -167,17 +166,17 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
 Our AI invoice generator combines cutting-edge technology with user-friendly design
                   to revolutionize your billing process.
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => ()
+                { features.map((feature, index) => ()
                   
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+          <div key={index } className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                     <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                       <feature.icon className="w-6 h-6 text-purple-400" />
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => ()
+                      { feature.benefits.map((benefit, benefitIndex) => ()
                         
-          <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+          <li key={benefitIndex } className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -189,24 +188,24 @@ Our AI invoice generator combines cutting-edge technology with user-friendly des
 Whether you're a freelancer or a large enterprise, our AI invoice generator
                   adapts to your specific needs and industry requirements.
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {useCases.map((useCase, index) => ()
+                { useCases.map((useCase, index) => ()
                   
-          <div key={index} className="text-center group">
+          <div key={index } className="text-center group">
                     <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <useCase.icon className="w-8 h-8 text-white" />
                     <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                     <p className="text-gray-300 mb-4">{useCase.description}</p>
                     <ul className="space-y-2 text-left">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-{/* Pricing Section */}
+                      { useCase.benefits.map((benefit, benefitIndex) => (
+{/* Pricing Section */ }
           <section id="pricing" className="py-16 bg-slate-800/30">
                   Simple, Transparent Pricing
                   Choose the plan that fits your business needs. All plans include our core AI features
                   with no hidden fees or setup costs.
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {pricingPlans.map((plan, index) => ()
+                { pricingPlans.map((plan, index) => ()
                   
-          <div key={index} className={`relative rounded-lg p-8 ${
+          <div key={index } className={`relative rounded-lg p-8 ${
   // TODO: Add content
 }
 //                     plan.popular
@@ -234,9 +233,9 @@ Most Popular
                         <span className="text-4xl font-bold text-white">{plan.price}</span>
                         <span className="text-gray-400 ml-1">{plan.period}</span>
                     <ul className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => ()
+                      { plan.features.map((feature, featureIndex) => ()
                         
-          <li key={featureIndex} className="flex items-center">
+          <li key={featureIndex } className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -248,18 +247,18 @@ Most Popular
                   Loved by Businesses Worldwide
                   See how our AI invoice generator is transforming businesses across industries.
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {testimonials.map((testimonial, index) => ()
+                { testimonials.map((testimonial, index) => ()
                   
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+          <div key={index } className="bg-slate-800/50 rounded-lg p-6">
                     <div className="flex items-center mb-4">
                       <div className="text-2xl mr-3">{testimonial.avatar}</div>
                       <div>
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => ()
+                      { [...Array(testimonial.rating)].map((_, i) => ()
                         
-          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+          <Star key={i } className="w-5 h-5 text-yellow-400 fill-current" />
                     <p className="text-gray-300 italic">"{testimonial.content}"</p>
 {/* CTA Section */}
           <section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
@@ -278,31 +277,6 @@ Most Popular
         </main>
         <Footer />
     </>
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

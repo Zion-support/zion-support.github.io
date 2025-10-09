@@ -1,13 +1,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import {Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings from 'lucide-react';
+import { Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target, Settings from 'lucide-react';
 const ARVRSolutionsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  // TODO: Add content };
   icon: Eye,
       title: 'AR Development',
       description: 'Augmented reality applications and experiences',
@@ -102,9 +100,9 @@ const ARVRSolutionsPage: React.FC = () => {
           
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => ()
+            { features.map((feature, index) => ()
               
-          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+          <div key={index } className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
@@ -113,33 +111,14 @@ const ARVRSolutionsPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => ()
+                  { feature.benefits.map((benefit, benefitIndex) => ()
                     
-          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
+          <li key={benefitIndex } className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
                 </ul>
-=======
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       </main>
       <Footer />
     </div>

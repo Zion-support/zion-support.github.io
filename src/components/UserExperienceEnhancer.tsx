@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface UserExperienceEnhancerProps {
-<<<<<<< HEAD
   // TODO: Add content
 }
   enableSmoothScrolling?: boolean;
@@ -42,13 +41,11 @@ const UserExperienceEnhancer: React.FC
           
           <Record<string, boolean>>({});
   // Handle online/offline status
-  useEffect(() => {
-    const handleOffline = () => setIsOnline(false);
+  useEffect(() => { const handleOffline = () => setIsOnline(false);
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
     return () => {
-  // TODO: Add content
-}
+  // TODO: Add content }
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
@@ -118,12 +115,10 @@ const links = document.querySelectorAll('a[href]');
     if (enableErrorBoundaries) {
   // TODO: Add content
 }
-      const handleError = (event: ErrorEvent) => {
-        // console.error('Global error caught:', event.error);
+      const handleError = (event: ErrorEvent) => { // console.error('Global error caught:', event.error);
         // Send error to analytics if available
         if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
+  // TODO: Add content }
           (window as any).gtag('event', 'exception', {
   // TODO: Add content
 };
@@ -132,11 +127,9 @@ const links = document.querySelectorAll('a[href]');
           });
         }
       };
-      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-// console.error('Unhandled promise rejection:', event.reason);
+      const handleUnhandledRejection = (event: PromiseRejectionEvent) => { // console.error('Unhandled promise rejection:', event.reason);
         if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
+  // TODO: Add content }
           (window as any).gtag('event', 'exception', {
   // TODO: Add content
 };
@@ -413,17 +406,6 @@ const observer = new PerformanceObserver((list) => {
     }
   }, []);
   return null;
-=======
-  // Add props here
-}
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = () => {
-  return (
-    <div className="userexperienceenhancer">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default UserExperienceEnhancer;

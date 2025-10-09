@@ -2,9 +2,7 @@ import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const PagePage: React.FC = () => {
-  return (
-<<<<<<< HEAD
+const PagePage: React.FC = () => { return (
 
           
           
@@ -22,8 +20,7 @@ const PagePage: React.FC = () => {
             <p className="text-gray-600 text-lg">January 28, 2026 · 40 min read · Autonomous Systems</p>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Automation Results</h2>
             <p className="text-gray-700 mb-6">
-              Revolutionary AI autonomous business systems have achieved <strong>95% operational automation</strong>,
-              transforming how enterprises operate. Discover the breakthrough technologies and strategies that
+              Revolutionary AI autonomous business systems have achieved <strong>95% operational automation</strong>, transforming how enterprises operate. Discover the breakthrough technologies and strategies that
               enable self-managing business processes.
             </p>
                 <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
@@ -79,7 +76,7 @@ const PagePage: React.FC = () => {
 └── Infrastructure;
     ├── Edge Computing;
     ├── Cloud-native Architecture
-    └── High Availability Systems`}
+    └── High Availability Systems` }
               </pre>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Autonomous Journey</h2>
             <p className="text-gray-700 mb-6">Ready to achieve 95% automation? Our autonomous business systems can transform your
@@ -93,26 +90,3 @@ const PagePage: React.FC = () => {
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">Explore AI Services</a>
     </div>)
 }
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

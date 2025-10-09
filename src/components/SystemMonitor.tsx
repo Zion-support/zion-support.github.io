@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * System Monitor Component
@@ -99,14 +98,9 @@ interface SystemMetrics {
     downlink: number;,
     rtt: number;,
     saveData: boolean;
-=======
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 interface SystemMonitorProps {
   // Add props here
 }
-<<<<<<< HEAD
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
@@ -156,16 +150,14 @@ const updateMetrics = useCallback(() => {
       const memoryInfo = getMemoryInfo();
       // Get network info
       const networkInfo = getNetworkInfo();
-      const newMetrics: SystemMetrics = {
-      const _networkInfo = getNetworkInfo();
+      const newMetrics: SystemMetrics = { const _networkInfo = getNetworkInfo();
       const _newMetrics: SystemMetrics = {,
     score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics,
   firstInputDelay: 0, // Not available in current metrics,
-  cumulativeLayoutShift: 0, // Not available in current metrics
-        },
+  cumulativeLayoutShift: 0, // Not available in current metrics },
           total: errorStats.totalErrors,
           byType: errorStats.errorsByType,
           byCategory: errorStats.errorsByCategory,
@@ -183,11 +175,9 @@ const updateMetrics = useCallback(() => {
         network: networkInfo
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-    } catch (error) {
-    if (!isMonitoring) return;
+    } catch (error) { if (!isMonitoring) return;
     const interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval, updateMetrics]);
+    return () => clearInterval(interval); }, [isMonitoring, refreshInterval, updateMetrics]);
       effectiveType: 'unknown',
       downlink: 0,
       rtt: 0,
@@ -288,7 +278,7 @@ className={`h-2 rounded-full ${
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
-                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
+                  style={ { width: `${Math.min(metrics.memory.percentage, 100) }%` }}
           
           
           
@@ -312,29 +302,18 @@ className={`h-2 rounded-full ${
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
             ))}
       {/* Error Distribution */}
-      {showDetails && (
+      { showDetails && (
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
               <div className="space-y-1">
                 {Object.entries(metrics.errors.byType).map(([type, count]) => ()
                   
-          <div key={type} className="flex justify-between text-sm">
+          <div key={type } className="flex justify-between text-sm">
                     <span className="capitalize">{type}</span>
                     <span>{count}</span>
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
-                {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()
+                { Object.entries(metrics.errors.byCategory).map(([category, count]) => ()
                   
-          <div key={category} className="flex justify-between text-sm">
+          <div key={category } className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
-=======
-
-const SystemMonitor: React.FC<SystemMonitorProps> = () => {
-  return (
-    <div className="systemmonitor">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default SystemMonitor;

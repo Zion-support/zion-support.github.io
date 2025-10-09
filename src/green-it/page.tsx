@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp,  Leaf,  Target,  Zap,  Cloud,  Recycle,  Code,  Users,  Globe,  TrendingUp,  Factory,  Building from 'lucide-react';
+import { Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp, Cloud, Code, Factory, Building from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -221,10 +220,10 @@ const tabs = [
                 <span className="font-medium">Certified Solutions</span>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => ()
+            { stats.map((stat, index) => ()
               
-          <div key={index} className="text-center">
-                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
+          <div key={index } className="text-center">
+                <div className={ `w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10') } rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -258,7 +257,7 @@ const tabs = [
                   <span className="font-medium">{tab.name}</span>
                 </button>
           {/* Tab Content */}
-          {activeTab === 'solutions' && ()
+          { activeTab === 'solutions' && ()
             
           <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -276,7 +275,7 @@ const tabs = [
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {greenSolutions.map((solution, index) => ()
                   
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+          <div key={index } className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                     <div className="flex items-start mb-4">
                       <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                         <solution.icon className={`w-6 h-6 ${solution.color}`} />
@@ -286,9 +285,9 @@ const tabs = [
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {solution.features.map((feature, featureIndex) => ()
+                        { solution.features.map((feature, featureIndex) => ()
                           
-          <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
+          <li key={featureIndex } className="text-sm text-gray-300 flex items-start">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {feature}
                           </li>
@@ -305,29 +304,29 @@ Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
           )}
-          {activeTab === 'benefits' && (
+          { activeTab === 'benefits' && (
 Benefits of Green IT
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {benefits.map((benefit, index) => ()
                   
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
+          <div key={index } className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
                         <benefit.icon className="w-6 h-6 text-cyan-400" />
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300 mb-4">{benefit.description}</p>
                     <ul className="space-y-2">
-                      {benefit.details.map((detail, detailIndex) => ()
+                      { benefit.details.map((detail, detailIndex) => ()
                         
-          <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
+          <li key={detailIndex } className="text-sm text-gray-300 flex items-start">
                           {detail}
-{activeTab === 'certifications' && (
+{ activeTab === 'certifications' && (
                 Our Certifications
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {certifications.map((cert, index) => ()
                   
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
-                    <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
+          <div key={index } className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
+                    <div className={ `w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10') } rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <cert.icon className={`w-8 h-8 ${cert.color}`} />
                     <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
                     <p className="text-gray-300 text-sm mb-3">{cert.description}</p>
@@ -335,8 +334,8 @@ Benefits of Green IT
 {/* Case Studies */}
               Success Stories
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                      <study.icon className={`w-6 h-6 ${study.color}`} />
+              { caseStudies.map((study, index) => (
+                      <study.icon className={`w-6 h-6 ${study.color }`} />
                       <h3 className="text-xl font-semibold text-white mb-1">{study.company}</h3>
                       <p className="text-gray-400 text-sm mb-3">{study.industry}</p>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
@@ -344,9 +343,9 @@ Benefits of Green IT
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
-                      {study.results.map((result, resultIndex) => ()
+                      { study.results.map((result, resultIndex) => ()
                         
-          <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
+          <li key={resultIndex } className="text-sm text-gray-300 flex items-start">
                           {result}
 {/* CTA Section */}
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
@@ -375,29 +374,6 @@ Get Free Assessment
                 className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

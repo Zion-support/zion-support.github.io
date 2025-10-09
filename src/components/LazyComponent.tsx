@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface LazyComponentProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   children: ReactNode;
@@ -68,7 +67,7 @@ const LazyComponent: React.FC
           <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
-  rootMargin = '50px',
+  rootMargin = '50px'
 }) => {
   // TODO: Add content
 }
@@ -107,7 +106,7 @@ const LazyComponent: React.FC
   // TODO: Add content
 }
 //         threshold,
-//         rootMargin,
+//         rootMargin
       }
     );
     if (elementRef.current) {
@@ -241,17 +240,4 @@ const imagePreloads = [
     document.head.appendChild(link);
   });
 };
-=======
-  // Add props here
-}
-
-const LazyComponent: React.FC<LazyComponentProps> = () => {
-  return (
-    <div className="lazycomponent">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default LazyComponent;

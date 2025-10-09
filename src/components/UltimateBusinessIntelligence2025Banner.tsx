@@ -3,7 +3,6 @@ import React from 'react';
 interface UltimateBusinessIntelligence2025BannerProps {
   // Add props here
 }
-<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const content = [
@@ -52,7 +51,7 @@ interface UltimateBusinessIntelligence2025BannerProps {
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
+          { [
   // TODO: Add items,
 ]
             { value: '500+', label: 'Enterprise Clients' },
@@ -73,14 +72,6 @@ interface UltimateBusinessIntelligence2025BannerProps {
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
     </section>
-=======
-
-const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = () => {
-  return (
-    <div className="ultimatebusinessintelligence2025banner">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

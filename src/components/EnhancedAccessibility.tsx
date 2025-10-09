@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 interface AccessibilitySettings {
   // TODO: Add content
 };
@@ -41,7 +40,7 @@ const EnhancedAccessibility: React.FC
   enableFocusManagement = true,
   enableReducedMotion = true,
   enableColorBlindSupport = true,
-  enableZoomControl = true,
+  enableZoomControl = true
 }) => {
   // TODO: Add content
 }
@@ -63,7 +62,7 @@ const EnhancedAccessibility: React.FC
     screenReader: false,
     focusVisible: true,
     zoomLevel: 100,
-    colorBlind: 'none',
+    colorBlind: 'none'
   });
   const [isVisible, setIsVisible] = useState(false);
   // Load settings from localStorage
@@ -75,9 +74,7 @@ const EnhancedAccessibility: React.FC
   // TODO: Add content
 }
         setSettings(JSON.parse(savedSettings));
-      } catch (error) {
-        // console.error('Failed to load accessibility settings:', error);
-      }
+      } catch (error) { // console.error('Failed to load accessibility settings:', error); }
     }
   }, []);
   // Save settings to localStorage;
@@ -288,7 +285,7 @@ const toggleHighContrast = () => {
       screenReader: false,
       focusVisible: true,
       zoomLevel: 100,
-      colorBlind: 'none',
+      colorBlind: 'none'
     };
     saveSettings(defaultSettings);
     announceToScreenReader('Accessibility settings reset to default');
@@ -400,17 +397,6 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600 hover:bg-red
         >
           Reset Settings
         </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
-=======
-interface EnhancedAccessibilityProps {
-  // Add props here
-}
-
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = () => {
-  return (
-    <div className="enhancedaccessibility">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {
@@ -346,9 +345,9 @@ const SolutionsPage: React.FC = () => {
           {/* Solutions Grid */}
           <div className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()
+              { solutions[activeTab as keyof typeof solutions].map((solution, index) => ()
                 
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+          <div key={index } className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <solution.icon className={`w-6 h-6 ${solution.color}`} />
@@ -361,9 +360,9 @@ const SolutionsPage: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {solution.features.map((feature, featureIndex) => ()
+                      { solution.features.map((feature, featureIndex) => ()
                         
-          <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+          <li key={featureIndex } className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
@@ -410,9 +409,9 @@ const SolutionsPage: React.FC = () => {
           
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => ()
+              { benefits.map((benefit, index) => ()
                 
-          <div key={index} className="text-center">
+          <div key={index } className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>
@@ -529,29 +528,6 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

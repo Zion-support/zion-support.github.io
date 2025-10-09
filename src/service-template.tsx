@@ -1,8 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
-import {CheckCircle, Star, Phone} from 'lucide-react';
+import { CheckCircle, Star, Phone } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 interface ServicePageProps {
@@ -20,11 +19,9 @@ interface ServicePageProps {
           
           
           <{ className?: string }>;
-  services: Array<{,
+  services: Array<{ ,
 
-  features: string[];,
-    price: string;
-  }>;
+  features: string[];, price: string; }>;
   benefits: string[];
 }
 const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {
@@ -43,14 +40,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const ServiceTemplatePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -63,7 +52,6 @@ const ServiceTemplatePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This blog post is under development. Please check back soon for the full content.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -110,17 +98,17 @@ const ServiceTemplatePage: React.FC = () => {
         {/* Services Grid */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => ()
+            { services.map((service, index) => ()
               
-          <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+          <div key={index } className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-6">
                   <service.icon className="w-12 h-12 text-cyan-400 mr-4" />
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => ()
+                  { service.features.map((feature, featureIndex) => ()
                     
-          <li key={featureIndex} className="flex items-center text-gray-300">
+          <li key={featureIndex } className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                       {feature}
                     </li>
@@ -134,9 +122,9 @@ Get Started
             Why Choose Our {title}?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => ()
+            { benefits.map((benefit, index) => ()
               
-          <div key={index} className="text-center">
+          <div key={index } className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-2">{benefit}</h3>
@@ -146,9 +134,6 @@ Get Started
 Ready to Transform Your Business?
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free consultation and discover how our solutions can revolutionize your operations.
-=======
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       </main>
       <Footer />
     </div>

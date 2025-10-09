@@ -3,7 +3,6 @@ import React from 'react';
 interface SecurityEnhancerProps {
   // Add props here
 }
-<<<<<<< HEAD
   enableCSP?: boolean;
   enableHTTPSRedirect?: boolean;
   enableXSSProtection?: boolean;
@@ -228,15 +227,6 @@ let keyCount = 0;
     });
   };
   return null;
-=======
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = () => {
-  return (
-    <div className="securityenhancer">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default SecurityEnhancer;

@@ -3,7 +3,6 @@ import React from 'react';
 interface AnalyticsProps {
   // Add props here
 }
-<<<<<<< HEAD
     // Google Analytics 4
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
   // TODO: Add content
@@ -26,7 +25,7 @@ const script = document.createElement('script');
   // TODO: Add content
 };
   page_title: document.title,
-        page_location: window.location.href,
+        page_location: window.location.href
       });
       // Track page views
       gtag('event', 'page_view', {
@@ -34,7 +33,7 @@ const script = document.createElement('script');
 };
   page_title: document.title,
         page_location: window.location.href,
-        page_path: pathname,
+        page_path: pathname
       });
     }
     // Track performance metrics
@@ -59,7 +58,7 @@ const script = document.createElement('script');
   // TODO: Add content
 };
   name: 'load',
-                value: Math.round(loadTime),
+                value: Math.round(loadTime)
               });
             }
           }
@@ -78,7 +77,7 @@ const trackInteraction = (eventName: string, category: string, label?: string) =
   // TODO: Add content
 };
   event_category: category,
-          event_label: label,
+          event_label: label
         });
       }
     };
@@ -134,20 +133,7 @@ let _maxScroll = 0;
 declare global {
   // TODO: Add content
 }
-  interface Window {;
-  dataLayer: unknown[];,
-    gtag: (...args: any[]) => void;
-  }
+  interface Window { ;
+  dataLayer: unknown[];, gtag: (...args: any[]) => void; }
 }
-=======
-
-const Analytics: React.FC<AnalyticsProps> = () => {
-  return (
-    <div className="analytics">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default Analytics;

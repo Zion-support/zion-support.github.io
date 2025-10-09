@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   // TODO: Add content
 };
   fcp: number | null;,
@@ -13,18 +12,10 @@ interface PerformanceMetrics {
 }
 interface PerformanceMonitorProps {
   // TODO: Add content
-=======
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-<<<<<<< HEAD
   enableRealTimeMonitoring?: boolean;
 }
 const AdvancedPerformanceMonitor: React.FC
@@ -57,28 +48,19 @@ const AdvancedPerformanceMonitor: React.FC
   // TODO: Add content
 };
   fcp: null,
-=======
-}
-
-const AdvancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
+    ttfb: null
   });
 
-  useEffect(() => {
-    // Basic performance monitoring
+  useEffect(() => { // Basic performance monitoring
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
-<<<<<<< HEAD
     }
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
@@ -209,10 +191,8 @@ const memory =
   // TODO: Add content
 }
       // eslint-disable-next-line no-console
-// console.log('Slow resources:', slowResources.map(r => ({
-      //   name: r.name,
-      //   duration: r.duration,
-      //   size: r.transferSize
+// console.log('Slow resources:', slowResources.map(r => ({ //   name: r.name,
+      //   duration: r.duration, //   size: r.transferSize
       // })));
     }
   }, []);
@@ -221,17 +201,10 @@ const memory =
 }
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available
-=======
-      });
-    });
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     try {
       observer.observe({ entryTypes: ['paint'] });
       return () => observer.disconnect();
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
-    }
+    } catch (error) { console.warn('Performance monitoring not supported:', error); }
   }, []);
 
   useEffect(() => {
@@ -239,7 +212,6 @@ const memory =
       onMetricsUpdate(metrics);
     }
   }, [metrics, onMetricsUpdate]);
-<<<<<<< HEAD
   // Performance recommendations;
 const getPerformanceRecommendations = useCallback(() => {
   // TODO: Add content
@@ -315,7 +287,7 @@ const getPerformanceRecommendations = useCallback(() => {
               : 'N/A'}
           </div>
         </div>
-        {_recommendations.length > 0 && ()
+        { _recommendations.length > 0 && ()
           
           <div className='mt-2'>
             <h4 className='font-semibold text-xs text-red-600'>;
@@ -323,7 +295,7 @@ const getPerformanceRecommendations = useCallback(() => {
             </h4>
             <ul className='text-xs text-red-600'>
 {recommendations.map((rec, index) => (
-                <li key={index}>• {rec}</li>
+                <li key={index }>• {rec}</li>
               ))}
             </ul>
           </div>
@@ -331,9 +303,6 @@ const getPerformanceRecommendations = useCallback(() => {
       </div>
     );
   }
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   return null;
 };
 

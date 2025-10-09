@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 interface SEOOptimizerProps {
   // TODO: Add content
@@ -22,24 +21,11 @@ const SEOOptimizer: React.FC
           
           <SEOOptimizerProps> = memo(({
   // TODO: Add content
-=======
-import React, { useEffect } from 'react';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
-const SEOOptimizer: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+const SEOOptimizer: React.FC<SEOProps> = ({ title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-}) => {
-  useEffect(() => {
+  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'], canonicalUrl }) => { useEffect(() => {
     // Update document title
     document.title = title;
     
@@ -48,27 +34,22 @@ const SEOOptimizer: React.FC<SEOProps> = ({
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
       metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
+      document.head.appendChild(metaDescription); }
     metaDescription.setAttribute('content', description);
     
     // Update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
+    if (!metaKeywords) { metaKeywords = document.createElement('meta');
       metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
+      document.head.appendChild(metaKeywords); }
     metaKeywords.setAttribute('content', keywords.join(', '));
     
     // Update canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonicalUrl) { let canonical = document.querySelector('link[rel="canonical"]');
       if (!canonical) {
         canonical = document.createElement('link');
         canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
-      }
+        document.head.appendChild(canonical); }
       canonical.setAttribute('href', canonicalUrl);
     }
   }, [title, description, keywords, canonicalUrl]);

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users,  Star,  CheckCircle from 'lucide-react';
+import { Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users,  Star, CheckCircle from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,8 +6,7 @@ import Footer from '../components/Footer';
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
-  // TODO: Add content
-};
+  // TODO: Add content };
   title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
@@ -149,9 +147,9 @@ icon: Globe,
           </div>
           {/* Partner Types */}
           <div className="mb-16">
-            {partnerTypes.map((type, index) => ()
+            { partnerTypes.map((type, index) => ()
               
-          <div key={index} className="mb-12">
+          <div key={index } className="mb-12">
                 <div className="flex items-center mb-8">
                   <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}>
                     <type.icon className={`w-6 h-6 ${type.color}`} />
@@ -159,9 +157,9 @@ icon: Globe,
                     <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>
                     <p className="text-gray-300">{type.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {type.partners.map((partner, partnerIndex) => ()
+                  { type.partners.map((partner, partnerIndex) => ()
                     
-          <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+          <div key={partnerIndex } className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                       <div className="text-3xl mb-3">{partner.logo}</div>
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>
                       <p className="text-gray-300 text-sm">{partner.description}</p>
@@ -180,9 +178,9 @@ icon: Globe,
           
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => ()
+              { benefits.map((benefit, index) => ()
                 
-          <div key={index} className="text-center">
+          <div key={index } className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -190,17 +188,17 @@ icon: Globe,
 {/* Partnership Tiers */}
               Partnership Tiers
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {partnershipTiers.map((tier, index) => ()
+              { partnershipTiers.map((tier, index) => ()
                 
-          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}>
+          <div key={index } className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}>
                   <div className="text-center mb-6">
                     <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}</div>
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
                     <p className="text-gray-300 text-sm">{tier.description}</p>
                   <ul className="space-y-3">
-                    {tier.benefits.map((benefit, benefitIndex) => ()
+                    { tier.benefits.map((benefit, benefitIndex) => ()
                       
-          <li key={benefitIndex} className="flex items-start">
+          <li key={benefitIndex } className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{benefit}</span>
                       </li>
@@ -246,29 +244,6 @@ icon: Globe,
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Footer />
     </div>
   );

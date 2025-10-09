@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 interface AnalyticsContextType {
   // TODO: Add content
 };
@@ -39,7 +38,7 @@ export const AnalyticsProvider: React.FC
 }
 //   children,
   trackingId = 'G-XXXXXXXXXX',
-  enableDebug = false,
+  enableDebug = false
 }) => {
   // TODO: Add content
 }
@@ -77,12 +76,10 @@ const script = document.createElement('script');
   // TODO: Add content
 };
   page_title: document.title,
-        page_location: window.location.href,
+        page_location: window.location.href
       });
       setIsInitialized(true);
-      if (enableDebug) {
-// console.log('Analytics initialized with tracking ID:', trackingId);
-      }
+      if (enableDebug) { // console.log('Analytics initialized with tracking ID:', trackingId); }
     };
   }, [trackingId, enableDebug]);
   const trackEvent = (eventName: string, parameters?: Record
@@ -98,9 +95,7 @@ const script = document.createElement('script');
   // TODO: Add content
 }
     if (!isInitialized || typeof window === 'undefined') return;
-    if (enableDebug) {
-// console.log('Analytics Event:', eventName, parameters);
-    }
+    if (enableDebug) { // console.log('Analytics Event:', eventName, parameters); }
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
   // TODO: Add content
 }
@@ -111,9 +106,7 @@ const script = document.createElement('script');
   // TODO: Add content
 }
     if (!isInitialized || typeof window === 'undefined') return;
-    if (enableDebug) {
-// console.log('Analytics Page View:', pageName, pagePath);
-    }
+    if (enableDebug) { // console.log('Analytics Page View:', pageName, pagePath); }
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
   // TODO: Add content
 }
@@ -121,7 +114,7 @@ const script = document.createElement('script');
   // TODO: Add content
 };
   page_title: pageName,
-        page_location: pagePath || window.location.href,
+        page_location: pagePath || window.location.href
       });
     }
   };
@@ -135,7 +128,7 @@ const script = document.createElement('script');
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', trackingId, {
   // TODO: Add content
 };
-  user_id: userId,
+  user_id: userId
       });
     }
   };
@@ -179,15 +172,15 @@ const script = document.createElement('script');
         custom_map: {
   // TODO: Add content
 };
-  context: context || 'unknown',
-        },
+  context: context || 'unknown'
+        }
       });
     }
   };
 trackEvent,
     trackPageView,
     setUserId,
-    setUserProperties,
+    setUserProperties
   };
   return (
     
@@ -204,17 +197,6 @@ trackEvent,
           <AnalyticsContext.Provider value={contextValue}>
       {children}
     </AnalyticsContext.Provider>
-=======
-interface AnalyticsProviderProps {
-  // Add props here
-}
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = () => {
-  return (
-    <div className="analyticsprovider">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

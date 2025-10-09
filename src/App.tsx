@@ -14,47 +14,16 @@ const LoadingSpinner: React.FC = () => (
   </div>
 );
 
-const App: React.FC = () => {
-  const [isInitialized, setIsInitialized] = useState(false);
+const App: React.FC = () => { const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     // Simulate initialization
     const timer = setTimeout(() => {
-      setIsInitialized(true);
-    }, 1000);
+      setIsInitialized(true); }, 1000);
     
     return () => clearTimeout(timer);
   }, []);
-<<<<<<< HEAD
 
-=======
-  const initializeEnhancers = async () => {
-    try {
-      // Initialize enhancers
-      const performanceEnhancer = new PerformanceEnhancer();
-      const seoEnhancer = new SEOEnhancer({
-        title: 'Zion Tech Group - Advanced AI and IT Solutions',
-        description: 'Leading provider of AI and IT solutions for modern enterprises',
-        keywords: ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-        canonicalUrl: 'https://ziontechgroup.com',
-      });
-      const accessibilityEnhancer = new AccessibilityEnhancer();
-      const securityEnhancer = new SecurityEnhancer();
-      const uxEnhancer = new UserExperienceEnhancer();
-      setEnhancers({
-        performance: performanceEnhancer,
-        seo: seoEnhancer,
-        accessibility: accessibilityEnhancer,
-        security: securityEnhancer,
-        ux: uxEnhancer,
-      });
-      setIsInitialized(true);
-    } catch (error) {
-      // console.error('Failed to initialize enhancers:', error);
-      setIsInitialized(true);
-    }
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   if (!isInitialized) {
     return <LoadingSpinner />;
   }

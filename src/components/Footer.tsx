@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react';
-const Footer: React.FC = memo(() => {
-  const aiServices = [
+import { Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+const Footer: React.FC = memo(() => { const aiServices = [
   // TODO: Add items
 ];;
     { name: 'Machine Learning Solutions', url: '/ai-ml-solutions', description: 'Custom ML models and analytics' },
@@ -108,8 +106,8 @@ const Footer: React.FC = memo(() => {
               <div className="flex space-x-4"><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Facebook className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Linkedin className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Github className="w-5 h-5" /></a></div></div>
             {/* AI Services */}
             <div><h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3><ul className="space-y-3">
-                {aiServices.slice(0, 8).map((service, index) => (
-<li key={index}><Link
+                { aiServices.slice(0, 8).map((service, index) => (
+<li key={index }><Link
                       to={service.url} className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                     ><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {service.name}
@@ -122,14 +120,14 @@ const Footer: React.FC = memo(() => {
                   </Link></li></ul></div>
             {/* IT Services */}
             <div><h3 className="text-lg font-semibold mb-6 text-blue-400 neon-text">IT Services</h3><ul className="space-y-3">
-                {itServices.slice(0, 8).map((service, index) => (
-to={service.url} className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm group flex items-center"
+                { itServices.slice(0, 8).map((service, index) => (
+to={service.url } className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm group flex items-center"
                     to="/it-services" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm font-medium flex items-center"
                     View All IT Services →
             {/* Micro SAAS Solutions */}
             <div><h3 className="text-lg font-semibold mb-6 text-green-400 neon-text">Micro SAAS</h3><ul className="space-y-3">
-                {microSaasServices.slice(0, 8).map((service, index) => (
-to={service.url} className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm group flex items-center"
+                { microSaasServices.slice(0, 8).map((service, index) => (
+to={service.url } className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm group flex items-center"
                     to="/micro-saas" className="text-green-400 hover:text-green-300 transition-colors duration-300 text-sm font-medium flex items-center"
                     View All Micro SAAS →
                   </Link></li></ul></div></div>
@@ -137,19 +135,19 @@ to={service.url} className="text-gray-300 hover:text-green-400 transition-colors
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Emerging Technologies */}
             <div><h3 className="text-lg font-semibold mb-6 text-purple-400 neon-text">Emerging Tech</h3><ul className="space-y-3">
-                {emergingTech.slice(0, 6).map((service, index) => (
-to={service.url} className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm group flex items-center"
+                { emergingTech.slice(0, 6).map((service, index) => (
+to={service.url } className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm group flex items-center"
               </ul></div>
             {/* Company Links */}
             <div><h3 className="text-lg font-semibold mb-6 text-pink-400 neon-text">Company</h3><ul className="space-y-3">
-                {companyLinks.map((link, index) => (
-to={link.url} className="text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm group flex items-center"
+                { companyLinks.map((link, index) => (
+to={link.url } className="text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm group flex items-center"
                       {link.name}
                     </Link></li>
             {/* Support Links */}
             <div><h3 className="text-lg font-semibold mb-6 text-orange-400 neon-text">Support</h3><ul className="space-y-3">
-                {supportLinks.map((link, index) => (
-to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-sm group flex items-center"
+                { supportLinks.map((link, index) => (
+to={link.url } className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-sm group flex items-center"
               </ul></div></div>
           {/* Stats Section */}
           <div className="bg-slate-800/50 rounded-2xl p-8 mb-12 border border-cyan-400/20"><div className="grid grid-cols-1 md:grid-cols-4 gap-8"><div className="text-center"><div className="text-3xl font-bold text-cyan-400 mb-2">500+</div><div className="text-gray-300 text-sm">Projects Completed</div></div><div className="text-center"><div className="text-3xl font-bold text-green-400 mb-2">99.9%</div><div className="text-gray-300 text-sm">Uptime Guarantee</div></div><div className="text-center"><div className="text-3xl font-bold text-purple-400 mb-2">24/7</div><div className="text-gray-300 text-sm">Support Available</div></div><div className="text-center"><div className="text-3xl font-bold text-pink-400 mb-2">50+</div><div className="text-gray-300 text-sm">Countries Served</div></div></div></div></div>
@@ -157,26 +155,13 @@ to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors d
         <div className="border-t border-gray-700 bg-slate-800/30"><div className="container mx-auto px-4 py-6"><div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"><div className="text-gray-400 text-sm">
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div><div className="flex flex-wrap justify-center md:justify-end space-x-6">
-                {legalLinks.map((link, index) => ()
+                { legalLinks.map((link, index) => ()
                   
           <Link
-                    key={index}
+                    key={index }
 to={link.url} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                   </Link>
               </div></div></div></div></div></footer>
-=======
-import React from 'react';
-
-interface FooterProps {
-  // Add props here
-}
-
-const Footer: React.FC<FooterProps> = () => {
-  return (
-    <div className="footer">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

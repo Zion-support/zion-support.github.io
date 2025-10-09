@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   // TODO: Add content
 };
   loadTime: number;,
@@ -17,17 +16,6 @@ interface PerformanceMetrics {
     memoryUsage: number;,
     fps: number;
   [key: string]: number;
-=======
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
-
-interface PerformanceProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
@@ -36,11 +24,10 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
+    ttfb: null
   });
 
-  useEffect(() => {
-    // Basic performance monitoring
+  useEffect(() => { // Basic performance monitoring
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -53,9 +40,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     try {
       observer.observe({ entryTypes: ['paint'] });
       return () => observer.disconnect();
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
-    }
+    } catch (error) { console.warn('Performance monitoring not supported:', error); }
   }, []);
 
   useEffect(() => {

@@ -1,6 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import {  Code,  Zap,  BarChart,  Target,  Users,  TrendingUp } from 'lucide-react';
+import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
@@ -171,9 +170,9 @@ const DeveloperToolsPage: React.FC = () => {
           
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {devTools.map((tool, index) => ()
+              { devTools.map((tool, index) => ()
                 
-          <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+          <div key={index } className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <tool.icon className="w-8 h-8 text-white" />
@@ -187,9 +186,9 @@ const DeveloperToolsPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {tool.features.map((feature, featureIndex) => ()
+                      { tool.features.map((feature, featureIndex) => ()
                         
-          <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+          <li key={featureIndex } className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
@@ -199,9 +198,9 @@ const DeveloperToolsPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-1">
-                      {tool.benefits.map((benefit, benefitIndex) => ()
+                      { tool.benefits.map((benefit, benefitIndex) => ()
                         
-          <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+          <li key={benefitIndex } className="text-sm text-gray-600 flex items-center">
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -294,30 +293,6 @@ const DeveloperToolsPage: React.FC = () => {
         <Footer />
       </div>
     </>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

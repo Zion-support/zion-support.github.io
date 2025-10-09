@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {
@@ -130,18 +129,6 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           
           </button>
-=======
-import React from 'react';
-
-interface ToastProps {
-  // Add props here
-}
-
-const Toast: React.FC<ToastProps> = () => {
-  return (
-    <div className="toast">
-      {/* Component content */}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     </div>
   );
 };

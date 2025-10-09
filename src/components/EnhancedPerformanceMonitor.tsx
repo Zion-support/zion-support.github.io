@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   // TODO: Add content
 };
   fcp: number | null;
@@ -15,18 +14,10 @@ interface PerformanceMetrics {
 }
 interface PerformanceMonitorProps {
   // TODO: Add content
-=======
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-<<<<<<< HEAD
   enableReporting?: boolean;
   reportInterval?: number;
 }
@@ -44,7 +35,7 @@ const EnhancedPerformanceMonitor: React.FC
 }
 //   onMetricsUpdate,
   enableReporting = true,
-  reportInterval = 10000,
+  reportInterval = 10000
 }) => {
   // TODO: Add content
 }
@@ -61,28 +52,19 @@ const EnhancedPerformanceMonitor: React.FC
   // TODO: Add content
 };
   fcp: null,
-=======
-}
-
-const EnhancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
+    ttfb: null
   });
 
-  useEffect(() => {
-    // Basic performance monitoring
+  useEffect(() => { // Basic performance monitoring
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
-<<<<<<< HEAD
       }
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
@@ -200,7 +182,7 @@ const analyzeResourceTiming = useCallback(() => {
   totalResources: resources.length,
       totalSize: 0,
       slowResources: 0,
-      cachedResources: 0,
+      cachedResources: 0
     };
     resources.forEach((resource: any) => {
   // TODO: Add content
@@ -222,7 +204,7 @@ const getMemoryUsage = useCallback(() => {
 };
   usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
-      jsHeapSizeLimit: memory.jsHeapSizeLimit,
+      jsHeapSizeLimit: memory.jsHeapSizeLimit
     };
   }, []);
   // Network information;
@@ -237,7 +219,7 @@ const getNetworkInfo = useCallback(() => {
   effectiveType: connection.effectiveType,
       downlink: connection.downlink,
       rtt: connection.rtt,
-      saveData: connection.saveData,
+      saveData: connection.saveData
     };
   }, []);
   // Performance score calculation;
@@ -296,7 +278,7 @@ const reportMetrics = useCallback(() => {
 //       memoryUsage,
 //       networkInfo,
       userAgent: navigator.userAgent,
-      url: window.location.href,
+      url: window.location.href
     };
     // Send to analytics (replace with your analytics service)
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -314,21 +296,16 @@ const reportMetrics = useCallback(() => {
   fcp: metrics.fcp,
           lcp: metrics.lcp,
           fid: metrics.fid,
-          cls: metrics.cls,
-        },
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+          cls: metrics.cls
+        }
       });
     });
 
     try {
       observer.observe({ entryTypes: ['paint'] });
       return () => observer.disconnect();
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
-    }
+    } catch (error) { console.warn('Performance monitoring not supported:', error); }
   }, []);
-<<<<<<< HEAD
   if (!isVisible) return null;
   const performanceScore = calculatePerformanceScore(metrics);
   return (
@@ -419,16 +396,6 @@ const reportMetrics = useCallback(() => {
           </div>
     </div>
   );
-=======
-
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default EnhancedPerformanceMonitor;

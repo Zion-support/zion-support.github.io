@@ -1,29 +1,17 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 >>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIAutomationPage: React.FC = () => {
-  const features = [
+const AIAutomationPage: React.FC = () => { const features = [
     {
       icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
-      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
-    },
+      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation'] },
       icon: Zap,
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
@@ -138,8 +126,8 @@ export default AIAutomationPage;
                 Key Features
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                { features.map((feature, index) => (
+                  <div key={index } className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
                     <div className="flex items-center mb-4">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                       <h3 className="text-lg font-semibold text-gray-900">{feature}</h3>
@@ -148,8 +136,8 @@ export default AIAutomationPage;
             {/* Benefits Section */}
                 Why Choose AI Automation?
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="text-center">
+                { benefits.map((benefit, index) => (
+                  <div key={index } className="text-center">
                     <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                       <TrendingUp className="w-8 h-8 text-blue-600" />
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
@@ -157,15 +145,15 @@ export default AIAutomationPage;
             {/* Automation Types Section */}
                 Types of Automation
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {automationTypes.map((type, index) => (
-                  <div key={index} className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+                { automationTypes.map((type, index) => (
+                  <div key={index } className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
                     <div className="flex items-center mb-6">
                       <type.icon className="w-12 h-12 text-blue-600 mr-4" />
                       <h3 className="text-xl font-bold text-gray-900">{type.title}</h3>
                     <p className="text-gray-600 mb-6">{type.description}</p>
                     <ul className="space-y-2">
-                      {type.examples.map((example, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                      { type.examples.map((example, idx) => (
+                        <li key={idx } className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                           {example}
                         </li>
@@ -201,8 +189,8 @@ export default AIAutomationPage;
           {/* Stats Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center cyber-card p-6">
+              { stats.map((stat, index) => (
+                <div key={index } className="text-center cyber-card p-6">
                   <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300">{stat.label}</div>
@@ -218,8 +206,8 @@ export default AIAutomationPage;
                     <div>
                       <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300 mb-4">{feature.description}</p>
-                        {feature.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        { feature.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex } className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
 
@@ -227,8 +215,8 @@ export default AIAutomationPage;
               Choose Your Plan
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              { pricingPlans.map((plan, index) => (
+                <div key={index } className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
@@ -243,8 +231,8 @@ export default AIAutomationPage;
                       <span className="text-gray-300 ml-1">{plan.period}</span>
                   
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
+                    { plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex } className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                   

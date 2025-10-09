@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface OptimizedImageProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   src: string;,
@@ -42,7 +41,7 @@ const OptimizedImage: React.FC
   sizes = '100vw',
   loading = 'lazy',
 //   onLoad,
-//   onError,
+//   onError
 }) => {
   // TODO: Add content
 }
@@ -73,7 +72,7 @@ const OptimizedImage: React.FC
   // TODO: Add content
 };
   rootMargin: '50px',
-        threshold: 0.1,
+        threshold: 0.1
       }
     );
     if (imgRef.current) {
@@ -118,7 +117,7 @@ const getOptimizedSrc = () => {
     
           <div
       ref={imgRef} className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+      style={ { width, height }}
 // >
       {/* Blur placeholder */}
       {placeholder === 'blur' && blurDataURL && !isLoaded && (
@@ -135,7 +134,7 @@ const getOptimizedSrc = () => {
           style={{
   // TODO: Add content
 };
-  backgroundImage: `url(${blurDataURL})`,
+  backgroundImage: `url(${blurDataURL})`
           }}
 //         />
       )}
@@ -175,7 +174,7 @@ onError={handleError} className={`transition-opacity duration-300 ${
 };
   width: '100%',
             height: '100%',
-            objectFit: 'cover',
+            objectFit: 'cover'
           }}
 //         />
       )}
@@ -189,16 +188,6 @@ onError={handleError} className={`transition-opacity duration-300 ${
           
           
           </div>
-=======
-  // Add props here
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = () => {
-  return (
-    <div className="optimizedimage">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

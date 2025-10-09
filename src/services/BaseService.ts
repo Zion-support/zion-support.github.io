@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Base Service Class
@@ -14,8 +13,8 @@ const apiClient = axios.create({
   headers: {
   // TODO: Add content
 }
-    'Content-Type': 'application/json',
-  },
+    'Content-Type': 'application/json'
+  }
 });
 export interface ServiceOptions {
   // TODO: Add content
@@ -55,14 +54,12 @@ export class BaseService {
           
           
           <string, CacheEntry<unknown>> = new Map();
-constructor(baseUrl: string, options: ServiceOptions = {}) {
-    this.baseUrl = baseUrl;
+constructor(baseUrl: string, options: ServiceOptions = {}) { this.baseUrl = baseUrl;
     this.options = {
       retries: 3,
       cache: false,
       cacheDuration: 300000, // 5 minutes
-//       ...options
-    };
+//       ...options };
    * Check if cached data is still valid
   protected isCacheValid(key: string): boolean {
 const entry = this.cache.get(key);
@@ -188,46 +185,24 @@ endpoint
           
           <T, D = unknown>(endpoint: string, data?: D): Promise<T> {
 logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
-      logger.error('POST request failed', error as Error, {
+      const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, { logger.error('POST request failed', error as Error, {
    * Make a PUT request
   protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
-      logger.error('PUT request failed', error as Error, {
+logger.debug(`PUT request to ${endpoint }`, { component: 'BaseService' });
+      const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, { logger.error('PUT request failed', error as Error, {
    * Make a PATCH request
   protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
-      logger.error('PATCH request failed', error as Error, {
+logger.debug(`PATCH request to ${endpoint }`, { component: 'BaseService' });
+      const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, { logger.error('PATCH request failed', error as Error, {
    * Make a DELETE request
   protected async delete<T>(endpoint: string): Promise<T> {
-logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
-      logger.error('DELETE request failed', error as Error, {
+logger.debug(`DELETE request to ${endpoint }`, { component: 'BaseService' });
+      const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, { logger.error('DELETE request failed', error as Error, {
    * Handle service error
   protected handleError(error: Error, context?: Record<string, unknown>): never {
-  // TODO: Add content
-}
+  // TODO: Add content }
     logger.error('Service error', error, {
   // TODO: Add content
 };
   component: this.constructor.name,
 ...context
-=======
-export abstract class BaseService {
-  protected baseUrl: string;
-  
-  constructor(baseUrl: string) {
-    this.baseUrl = baseUrl;
-  }
-  
-  protected async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    const response = await fetch(`${this.baseUrl}${endpoint}`, options);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

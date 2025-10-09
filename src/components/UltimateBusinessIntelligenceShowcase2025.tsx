@@ -3,7 +3,6 @@ import React from 'react';
 interface UltimateBusinessIntelligenceShowcase2025Props {
   // Add props here
 }
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TODO: Add items
@@ -69,10 +68,10 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
                     {item.metrics.timeline}
                   <div className="text-gray-400 text-xs">Timeline</div>
               {/* Tags */}
-                {item.tags.slice(0, 3).map((tag, index) => ()
+                { item.tags.slice(0, 3).map((tag, index) => ()
                   
           <span
-                    key={index}
+                    key={index }
                     className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                 Read {item.readingTime}
                 <span className="text-lg"></span>
@@ -105,15 +104,3 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
 >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025
-=======
-
-const UltimateBusinessIntelligenceShowcase2025: React.FC<UltimateBusinessIntelligenceShowcase2025Props> = () => {
-  return (
-    <div className="ultimatebusinessintelligenceshowcase2025">
-      {/* Component content */}
-    </div>
-  );
-};
-
-export default UltimateBusinessIntelligenceShowcase2025;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

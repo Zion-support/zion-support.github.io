@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Rate Limiting Middleware
@@ -93,10 +92,8 @@ const now = Date.now();
 }
     this.requests.delete(identifier);
    * Cleanup expired entries
-  private cleanup(): void {
-    for (const [key, record] of this.requests.entries()) {
-  // TODO: Add content
-}
+  private cleanup(): void { for (const [key, record] of this.requests.entries()) {
+  // TODO: Add content }
       if (now > record.resetTime) {
   // TODO: Add content
 }
@@ -133,7 +130,7 @@ export const rateLimiters = {
     max: 1000
 // API: 60 requests per minute,
 
-    api: new RateLimiter({,
+    api: new RateLimiter({ ,
 
     max: 60,
     message: 'API rate limit exceeded. Please try again later.'
@@ -142,9 +139,7 @@ export const rateLimiters = {
     auth: new RateLimiter({,
 
     max: 5,
-    message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true
-  })
+    message: 'Too many login attempts. Please try again later.', skipSuccessfulRequests: true })
  * Get client identifier from request
  * @param request - Request object
  * @returns Client identifier (IP address or user ID)
@@ -205,7 +200,3 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
       );
     // Request allowed - headers can be added to response later
 return null;
-=======
-// TypeScript file - rateLimiter
-export default {};
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
