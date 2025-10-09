@@ -138,3 +138,114 @@ const BusinessIntelligencePage: React.FC = () => {
     }
   ];
 
+  const categories = [...new Set(biServices.map(service => service.category))];
+
+  return (
+    <>
+      <Helmet>
+        <title>Business Intelligence Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced business intelligence solutions including real-time analytics, predictive modeling, and AI-powered insights for data-driven decision making." />
+        <meta name="keywords" content="business intelligence, analytics, data visualization, predictive analytics, BI consulting" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+        <div className="container mx-auto px-4 py-16">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Business Intelligence Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your data into actionable insights with our comprehensive business intelligence solutions. 
+              From real-time dashboards to predictive analytics, we help you make data-driven decisions.
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {biServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-indigo-600 mb-2">{service.price}</div>
+                  <div className="text-sm text-gray-500">Market rate: {service.marketPrice}</div>
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.technologies.map((tech, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <a
+                    href="tel:+13024640950"
+                    className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+                  >
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center text-white">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Data?</h2>
+            <p className="text-xl mb-6">
+              Let our BI experts help you unlock the power of your data with custom analytics solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Call (302) 464-0950
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+              >
+                Get Free Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BusinessIntelligencePage;

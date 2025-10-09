@@ -1,206 +1,308 @@
-import React from 'react'
-/**
- * Enhanced Analytics Utility
- * Provides type-safe analytics tracking with error handling
- */
+// Advanced analytics and tracking utilities
 
 export interface AnalyticsEvent {
-  action: string;
+  event: string;
   category: string;
+  action: string;
   label?: string;
   value?: number;
-  metadata?: Record<string, unknown>;
+  customParameters?: Record<string, any>;
 }
-export interface AnalyticsUser {
-  id?: string;
-  properties?: Record<string, unknown>;
+
+export interface UserProperties {
+  userId?: string;
+  sessionId: string;
+  userAgent: string;
+  language: string;
+  timezone: string;
+  screenResolution: string;
+  viewportSize: string;
 }
-class AnalyticsService {
-  private isInitialized = false
-  private queue: AnalyticsEvent[] = []
-  private readonly maxQueueSize = 100
 
-  /**
-   * Initialize analytics service
-   */
-  initialize(): void {
-    if (this.isInitialized) return
-    
-    try {
-      // Check if we're in a browser environment
-      if (typeof window === 'undefined') return
+export class AnalyticsManager {
+  private static instance: AnalyticsManager;
+  private userProperties: UserProperties;
+  private eventQueue: AnalyticsEvent[] = [];
+  private isInitialized = false;
 
-      // Process queued events
-      this.processQueue()
-      this.isInitialized = true
-    } catch (error) {
-      console.error('Analytics initialization failed:', error)
+  static getInstance(): AnalyticsManager {
+    if (!AnalyticsManager.instance) {
+      AnalyticsManager.instance = new AnalyticsManager();
     }
+    return AnalyticsManager.instance;
   }
-  /**
-   * Track a custom event
-   */
-  trackEvent(event: AnalyticsEvent): void {
-    try {
-      if (!this.isInitialized) {
-        this.queueEvent(event)
-        return
-      }
-      // Send to Google Analytics if available
-      if (this.hasGtag()) {
-        gtag('event', event.action, {
-          event_category: event.category,
-          event_label: event.label,
-          value: event.value,
-          ...event.metadata
-        })
-      }
-      // Log in development
-      if (process.env['NODE_ENV'] === 'development') {
-        }
-    } catch (error) {
-      console.error('Failed to track event:', error)
+
+  private constructor() {
+    this.userProperties = this.initializeUserProperties();
+  }
+
+  private initializeUserProperties(): UserProperties {
+    if (typeof window === 'undefined') {
+      return {
+        sessionId: 'server-side',
+        userAgent: 'server-side',
+        language: 'en',
+        timezone: 'UTC',
+        screenResolution: 'unknown',
+        viewportSize: 'unknown',
+      };
     }
+
+    return {
+      sessionId: this.generateSessionId(),
+      userAgent: navigator.userAgent,
+      language: navigator.language,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      screenResolution: `${screen.width}x${screen.height}`,
+      viewportSize: `${window.innerWidth}x${window.innerHeight}`,
+    };
   }
-  /**
-   * Track page view
-   */
-  trackPageView(path: string, title?: string): void {
-    try {
-      if (this.hasGtag()) {
-        gtag('config', this.config.gaId, {
-          page_path: path,
-          page_title: title,
-        })
-      }
-    } catch (error) {
-      console.error('Failed to track page view:', error)
+
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  init(trackingId?: string) {
+    if (this.isInitialized) return;
+
+    if (typeof window === 'undefined') return;
+
+    // Initialize Google Analytics
+    if (trackingId) {
+      this.initializeGoogleAnalytics(trackingId);
     }
+
+    // Initialize custom analytics
+    this.initializeCustomAnalytics();
+
+    this.isInitialized = true;
   }
-  /**
-   * Track user properties
-   */
-  identifyUser(user: AnalyticsUser): void {
-    try {
-      if (this.hasGtag() && user.id) {
-        gtag('config', this.config.gaId, {
-          user_id: user.id,
-          ...user.properties
-        })
-      }
-    } catch (error) {
-      console.error('Failed to identify user:', error)
+
+  private initializeGoogleAnalytics(trackingId: string) {
+    // Load Google Analytics script
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+    document.head.appendChild(script);
+
+    // Initialize gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
     }
+    window.gtag = gtag;
+
+    gtag('js', new Date());
+    gtag('config', trackingId, {
+      page_title: document.title,
+      page_location: window.location.href,
+      custom_map: {
+        dimension1: 'user_type',
+        dimension2: 'session_duration',
+      },
+    });
   }
-  /**
-   * Track error events
-   */
-  trackError(error: Error, metadata?: Record<string, unknown>): void {
+
+  private initializeCustomAnalytics() {
+    // Track page views
     this.trackEvent({
-      action: 'error',
-      category: 'exception',
-      label: error.message,
-      metadata: {
-        stack: error.stack,
-        ...metadata
-      }
-    })
+      event: 'page_view',
+      category: 'Navigation',
+      action: 'Page View',
+      label: window.location.pathname,
+    });
+
+    // Track user engagement
+    this.trackUserEngagement();
   }
-  /**
-   * Track timing events (for performance monitoring)
-   */
-  trackTiming(
-    category: string,
-    variable: string,
-    value: number,
-    label?: string
-  ): void {
-    try {
-      if (this.hasGtag()) {
-        gtag('event', 'timing_complete', {
-          name: variable,
-          value: Math.round(value),
-          event_category: category,
-          event_label: label,
+
+  private trackUserEngagement() {
+    let startTime = Date.now();
+    let isActive = true;
+
+    // Track time on page
+    const trackTimeOnPage = () => {
+      const timeOnPage = Date.now() - startTime;
+      this.trackEvent({
+        event: 'time_on_page',
+        category: 'Engagement',
+        action: 'Time on Page',
+        value: Math.round(timeOnPage / 1000),
+      });
+    };
+
+    // Track when user becomes inactive
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        isActive = false;
+        trackTimeOnPage();
+      } else {
+        isActive = true;
+        startTime = Date.now();
+      }
+    };
+
+    // Track when user leaves the page
+    const handleBeforeUnload = () => {
+      if (isActive) {
+        trackTimeOnPage();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Track scroll depth
+    this.trackScrollDepth();
+
+    // Track clicks
+    this.trackClicks();
+  }
+
+  private trackScrollDepth() {
+    let maxScrollDepth = 0;
+    const trackScroll = () => {
+      const scrollDepth = Math.round(
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+      );
+      
+      if (scrollDepth > maxScrollDepth) {
+        maxScrollDepth = scrollDepth;
+        
+        // Track milestone scroll depths
+        if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
+          this.trackEvent({
+            event: 'scroll_depth',
+            category: 'Engagement',
+            action: 'Scroll Depth',
+            label: '25%',
+            value: 25,
+          });
+        } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {
+          this.trackEvent({
+            event: 'scroll_depth',
+            category: 'Engagement',
+            action: 'Scroll Depth',
+            label: '50%',
+            value: 50,
+          });
+        } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {
+          this.trackEvent({
+            event: 'scroll_depth',
+            category: 'Engagement',
+            action: 'Scroll Depth',
+            label: '75%',
+            value: 75,
+          });
+        } else if (maxScrollDepth >= 90) {
+          this.trackEvent({
+            event: 'scroll_depth',
+            category: 'Engagement',
+            action: 'Scroll Depth',
+            label: '90%',
+            value: 90,
+          });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', trackScroll, { passive: true });
+  }
+
+  private trackClicks() {
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const link = target.closest('a');
+      const button = target.closest('button');
+
+      if (link) {
+        this.trackEvent({
+          event: 'click',
+          category: 'Navigation',
+          action: 'Link Click',
+          label: link.href || link.textContent || 'Unknown Link',
+        });
+      } else if (button) {
+        this.trackEvent({
+          event: 'click',
+          category: 'Interaction',
+          action: 'Button Click',
+          label: button.textContent || 'Unknown Button',
         });
       }
-    } catch (error) {
-      console.error('Failed to track timing:', error)
+    });
+  }
+
+  trackEvent(event: AnalyticsEvent) {
+    // Add to queue
+    this.eventQueue.push({
+      ...event,
+      customParameters: {
+        ...event.customParameters,
+        ...this.userProperties,
+        timestamp: new Date().toISOString(),
+      },
+    });
+
+    // Send to Google Analytics if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', event.action, {
+        event_category: event.category,
+        event_label: event.label,
+        value: event.value,
+        ...event.customParameters,
+      });
+    }
+
+    // Log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Analytics Event:', event);
     }
   }
-  /**
-   * Track performance metrics
-   */
-  trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    try {
-      this.trackEvent({
-        action: 'performance',
-        category: 'web_vitals',
-        label: metric,
-        value: Math.round(value),
-        metadata
-      })
-    } catch (error) {
-      console.error('Failed to track performance:', error)
-    }
+
+  trackPageView(page: string, title?: string) {
+    this.trackEvent({
+      event: 'page_view',
+      category: 'Navigation',
+      action: 'Page View',
+      label: page,
+      customParameters: {
+        page_title: title || document.title,
+        page_location: window.location.href,
+      },
+    });
   }
-  /**
-   * Check if gtag is available
-   */
-  private hasGtag(): boolean {
-    return (
-      typeof window !== 'undefined' &&
-      typeof window.gtag === 'function'
-    )
+
+  trackConversion(conversionType: string, value?: number) {
+    this.trackEvent({
+      event: 'conversion',
+      category: 'Conversion',
+      action: 'Conversion',
+      label: conversionType,
+      value,
+    });
   }
-  /**
-   * Get Google Analytics ID
-   */
-  private getGtagId(): string {
-    // Return the tracking ID from environment or config
-    return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'
+
+  trackError(error: Error, context?: string) {
+    this.trackEvent({
+      event: 'error',
+      category: 'Error',
+      action: 'Error Occurred',
+      label: error.message,
+      customParameters: {
+        error_stack: error.stack,
+        error_context: context,
+      },
+    });
   }
-  /**
-   * Queue event for later processing
-   */
-  private queueEvent(event: AnalyticsEvent): void {
-    if (this.queue.length < this.maxQueueSize) {
-      this.queue.push(event)
-    }
+
+  getEventQueue(): AnalyticsEvent[] {
+    return [...this.eventQueue];
   }
-  /**
-   * Process queued events
-   */
-  private processQueue(): void {
-    while (this.queue.length > 0) {
-      const event = this.queue.shift()
-      if (event) {
-        this.trackEvent(event)
-      }
-    }
+
+  clearEventQueue() {
+    this.eventQueue = [];
   }
 }
-// Export singleton instance
-export const analytics = new AnalyticsService()
 
-// Export convenience functions
-export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
-export const trackPageView = (path: string, title?: string) =>
-  analytics.trackPageView(path, title)
-export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
-  analytics.trackError(error, metadata)
-export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
-  analytics.trackPerformance(metric, value, metadata)
-export const trackTiming = (
-  category: string,
-  variable: string,
-  value: number,
-  label?: string
-) => analytics.trackTiming(category, variable, value, label)
-export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user)
-
-// Initialize on import
-if (typeof window !== 'undefined') {
-  analytics.initialize()
-}
-export default analytics
+export const analytics = AnalyticsManager.getInstance();

@@ -61,6 +61,18 @@ const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { logger } from './utils/logger';
+import { 
+  lazyLoadImages, 
+  preloadCriticalResources, 
+  performanceOptimizer, 
+  performanceMonitor, 
+  seoOptimizer, 
+  accessibilityEnhancer,
+  collectPerformanceMetrics 
+} from './utils/performance';
+import { setupAccessibilityFeatures } from './utils/accessibilityUtils';
+import { analytics } from './utils/analytics';
+import { errorHandler } from './utils/errorHandling';
 
 // Styles
 import './globals.css';
@@ -69,6 +81,9 @@ const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
     logger.info('initialized', { component: 'App' });
+
+    // Initialize analytics
+    analytics.init('G-XXXXXXXXXX');
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -81,49 +96,37 @@ const App: React.FC = () => {
     
     // Initialize accessibility enhancements
     accessibilityEnhancer.init();
+    setupAccessibilityFeatures({
+      enableSkipLinks: true,
+      enableKeyboardNavigation: true,
+      enableFocusManagement: true,
+      enableScreenReaderSupport: true,
+      enableHighContrast: true,
+      enableReducedMotion: true,
+    });
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      // const performanceMetrics = performanceMonitor.getMetrics();
       
       if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
+        logger.info('Performance metrics collected', { metrics: pageLoadMetrics });
       }
       if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
+        logger.info('Performance metrics', { metrics });
       }
-      // Performance metrics logging removed for production
     }
     
-    // Log performance and accessibility metrics periodically
-    const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
-      // const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance Score:', performanceMonitor.getScore());
-        // eslint-disable-next-line no-console
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-      }
-    }, 30000);
+    // Track page view
+    analytics.trackPageView(window.location.pathname, document.title);
     
     logger.info('performance monitoring initialized', { component: 'App' });
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
 
     return () => {
       // Cleanup
-      performanceOptimizer.cleanup();
       performanceMonitor.cleanup();
-      accessibilityEnhancer.cleanup();
-      clearInterval(metricsInterval);
     };
   }, []);
 

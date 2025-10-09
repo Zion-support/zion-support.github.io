@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight } from 'lucide-react';
 
@@ -159,7 +158,6 @@ const AIContentGenerationPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Content Generation Services - Zion Tech Group</title>
@@ -343,7 +341,6 @@ const AIContentGenerationPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
 
                   <div className="mb-4 p-3 bg-gray-50 rounded-lg">
                     <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
