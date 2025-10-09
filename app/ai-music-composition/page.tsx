@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Music, Headphones, Mic } from 'lucide-react';
-
 const AIMusicCompositionPage: React.FC = () => {
   const features = [
     'Generate original music in any genre or style',
@@ -16,7 +14,6 @@ const AIMusicCompositionPage: React.FC = () => {
     'Collaborative composition tools',
     'Copyright-free original compositions'
   ];
-
   const benefits = [
     'Create original music without musical training',
     'Reduce music production costs by 70%',
@@ -27,7 +24,6 @@ const AIMusicCompositionPage: React.FC = () => {
     'Scale music production instantly',
     'Enable non-musicians to create professional tracks'
   ];
-
   const genres = [
     { name: 'Classical', description: 'Symphonic and orchestral compositions', icon: '🎼' },
     { name: 'Jazz', description: 'Improvisational and complex harmonies', icon: '🎷' },
@@ -38,7 +34,6 @@ const AIMusicCompositionPage: React.FC = () => {
     { name: 'Ambient', description: 'Atmospheric and meditative soundscapes', icon: '🌊' },
     { name: 'Folk', description: 'Acoustic instruments and storytelling', icon: '🪕' }
   ];
-
   const useCases = [
     {
       title: 'Content Creation',
@@ -77,7 +72,6 @@ const AIMusicCompositionPage: React.FC = () => {
       examples: ['Backing tracks', 'Live accompaniment', 'Performance music', 'Karaoke tracks']
     }
   ];
-
   const pricing = [
     {
       name: 'Creator',
@@ -126,13 +120,11 @@ const AIMusicCompositionPage: React.FC = () => {
       popular: false
     }
   ];
-
   const technologies = [
     'MuseNet', 'Jukebox', 'Magenta', 'MIDI Processing',
     'Neural Audio Synthesis', 'Style Transfer', 'Custom Music Models',
     'Deep Learning', 'Generative AI', 'Audio Processing'
   ];
-
   const workflow = [
     {
       step: 1,
@@ -159,7 +151,6 @@ const AIMusicCompositionPage: React.FC = () => {
       icon: '📤'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -167,7 +158,6 @@ const AIMusicCompositionPage: React.FC = () => {
         <meta name="description" content="Generate original music with AI. Create custom compositions, lyrics, and arrangements in any genre. Starting at $99/month." />
         <meta name="keywords" content="AI music, music generation, composition, lyrics, soundtrack, background music" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -202,7 +192,6 @@ const AIMusicCompositionPage: React.FC = () => {
               <div className="text-gray-300">Support</div>
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
@@ -222,7 +211,6 @@ const AIMusicCompositionPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -252,7 +240,6 @@ const AIMusicCompositionPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Genres */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -270,7 +257,6 @@ const AIMusicCompositionPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Workflow */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -293,7 +279,6 @@ const AIMusicCompositionPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -322,7 +307,6 @@ const AIMusicCompositionPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -368,7 +352,6 @@ const AIMusicCompositionPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technologies */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -384,7 +367,6 @@ const AIMusicCompositionPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -413,5 +395,4 @@ const AIMusicCompositionPage: React.FC = () => {
     </div>
   );
 };
-
 export default AIMusicCompositionPage;

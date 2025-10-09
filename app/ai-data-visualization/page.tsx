@@ -3,9 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
-
-const AiDataVisualizationPage: React.FC = () => {
+const DataVisualizationPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
@@ -45,7 +43,6 @@ const AiDataVisualizationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center py-16">
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -77,5 +74,4 @@ const AiDataVisualizationPage: React.FC = () => {
     </>
   );
 };
-
-export default PageComponent;
+export default DataVisualizationPage;

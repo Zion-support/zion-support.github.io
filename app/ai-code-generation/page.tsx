@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Code, Terminal, Bug } from 'lucide-react';
-
 const AICodeGenerationPage: React.FC = () => {
   const features = [
     'Generate code from natural language descriptions',
@@ -16,7 +14,6 @@ const AICodeGenerationPage: React.FC = () => {
     'API integration and endpoint generation',
     'Real-time code completion and suggestions'
   ];
-
   const benefits = [
     'Accelerate development by 300%',
     'Reduce coding errors by 80%',
@@ -27,7 +24,6 @@ const AICodeGenerationPage: React.FC = () => {
     'Reduce development costs by 60%',
     'Enable rapid prototyping and MVP development'
   ];
-
   const languages = [
     { name: 'JavaScript', description: 'Web development and Node.js', icon: '🟨' },
     { name: 'Python', description: 'Data science and backend development', icon: '🐍' },
@@ -38,7 +34,6 @@ const AICodeGenerationPage: React.FC = () => {
     { name: 'TypeScript', description: 'Type-safe JavaScript development', icon: '🔷' },
     { name: 'Swift', description: 'iOS and macOS development', icon: '🍎' }
   ];
-
   const useCases = [
     {
       title: 'Web Development',
@@ -77,7 +72,6 @@ const AICodeGenerationPage: React.FC = () => {
       examples: ['Unit tests', 'Integration tests', 'E2E tests', 'Performance tests']
     }
   ];
-
   const pricing = [
     {
       name: 'Developer',
@@ -126,13 +120,11 @@ const AICodeGenerationPage: React.FC = () => {
       popular: false
     }
   ];
-
   const technologies = [
     'GitHub Copilot', 'CodeT5', 'CodeBERT', 'Custom Code Models',
     'IDE Integration', 'Deep Learning', 'Natural Language Processing',
     'Code Analysis', 'Static Analysis', 'Machine Learning'
   ];
-
   const workflow = [
     {
       step: 1,
@@ -159,7 +151,6 @@ const AICodeGenerationPage: React.FC = () => {
       icon: '🚀'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -167,7 +158,6 @@ const AICodeGenerationPage: React.FC = () => {
         <meta name="description" content="Generate code with AI. Create applications, APIs, and scripts from natural language descriptions. Support for 50+ programming languages. Starting at $99/month." />
         <meta name="keywords" content="AI code generation, programming, code assistant, development tools, automated coding, software development" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -202,7 +192,6 @@ const AICodeGenerationPage: React.FC = () => {
               <div className="text-gray-300">Support</div>
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
@@ -222,7 +211,6 @@ const AICodeGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -252,7 +240,6 @@ const AICodeGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Languages */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -270,7 +257,6 @@ const AICodeGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Workflow */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -293,7 +279,6 @@ const AICodeGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -322,7 +307,6 @@ const AICodeGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -368,7 +352,6 @@ const AICodeGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technologies */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -384,7 +367,6 @@ const AICodeGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -413,5 +395,4 @@ const AICodeGenerationPage: React.FC = () => {
     </div>
   );
 };
-
 export default AICodeGenerationPage;

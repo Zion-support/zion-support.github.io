@@ -1,9 +1,7 @@
 'use client';
 import React from 'react';
-import { BarChart, Brain, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Users, Clock, Zap, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -31,7 +29,6 @@ const AIAnalyticsPage: React.FC = () => {
       benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']
     }
   ];
-
   const analyticsTypes = [
     {
       title: 'Sales Analytics',
@@ -58,7 +55,6 @@ const AIAnalyticsPage: React.FC = () => {
       metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -110,7 +106,6 @@ const AIAnalyticsPage: React.FC = () => {
       popular: false
     }
   ];
-
   const integrations = [
     { name: 'Google Analytics', icon: '📊' },
     { name: 'Salesforce', icon: '☁️' },
@@ -121,7 +116,6 @@ const AIAnalyticsPage: React.FC = () => {
     { name: 'Facebook Ads', icon: '📱' },
     { name: 'Google Ads', icon: '🔍' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -145,7 +139,6 @@ const AIAnalyticsPage: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
@@ -167,7 +160,6 @@ const AIAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -175,7 +167,6 @@ const AIAnalyticsPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
             <p className="text-xl text-gray-300">Everything you need to understand your business data</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6">
@@ -197,7 +188,6 @@ const AIAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Analytics Types Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -205,7 +195,6 @@ const AIAnalyticsPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Analytics Coverage</h2>
             <p className="text-xl text-gray-300">Track every aspect of your business with specialized analytics</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {analyticsTypes.map((type, index) => (
               <div key={index} className="cyber-card p-6">
@@ -224,7 +213,6 @@ const AIAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -232,7 +220,6 @@ const AIAnalyticsPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Seamless Integrations</h2>
             <p className="text-xl text-gray-300">Connect with your favorite tools and platforms</p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
             {integrations.map((integration, index) => (
               <div key={index} className="cyber-card p-4 text-center">
@@ -243,7 +230,6 @@ const AIAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -251,7 +237,6 @@ const AIAnalyticsPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300">Choose the plan that fits your analytics needs</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
@@ -290,7 +275,6 @@ const AIAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -308,10 +292,8 @@ const AIAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 };
-
 export default AIAnalyticsPage;

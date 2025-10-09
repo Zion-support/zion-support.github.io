@@ -1,9 +1,7 @@
 'use client';
 import React from 'react';
-import { Brain, Users, Target, TrendingUp, Shield, Clock, BarChart, CheckCircle, ArrowRight, Star, Award, Globe, Phone, Mail, Calendar, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AICRMPage: React.FC = () => {
   const features = [
     {
@@ -31,7 +29,6 @@ const AICRMPage: React.FC = () => {
       benefits: ['Smart scheduling', 'Personalized content', 'Engagement tracking', 'Response optimization']
     }
   ];
-
   const capabilities = [
     {
       title: 'Smart Contact Management',
@@ -58,7 +55,6 @@ const AICRMPage: React.FC = () => {
       stats: '100% mobile optimized'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -110,7 +106,6 @@ const AICRMPage: React.FC = () => {
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -134,7 +129,6 @@ const AICRMPage: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -158,7 +152,6 @@ const AICRMPage: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
@@ -180,7 +173,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -188,7 +180,6 @@ const AICRMPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Intelligent CRM Features</h2>
             <p className="text-xl text-gray-300">Everything you need to manage and grow your customer relationships</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6">
@@ -210,7 +201,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -218,7 +208,6 @@ const AICRMPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Capabilities</h2>
             <p className="text-xl text-gray-300">Advanced features that set us apart from traditional CRM systems</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
               <div key={index} className="cyber-card p-6">
@@ -233,7 +222,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -241,7 +229,6 @@ const AICRMPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">What Our Customers Say</h2>
             <p className="text-xl text-gray-300">Real results from real businesses</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="cyber-card p-6">
@@ -260,7 +247,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -268,7 +254,6 @@ const AICRMPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300">Choose the plan that fits your business needs</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
@@ -307,7 +292,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -325,10 +309,8 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 };
-
 export default AICRMPage;

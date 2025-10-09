@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
-
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   
@@ -13,7 +11,6 @@ const ApiDocsPage: React.FC = () => {
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
   };
-
   const apiEndpoints = [
     {
       id: 'ai-chat',
@@ -44,7 +41,6 @@ const ApiDocsPage: React.FC = () => {
   }'`
     }
   ];
-
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
@@ -64,7 +60,6 @@ const ApiDocsPage: React.FC = () => {
               </p>
             </div>
           </section>
-
           {/* API Endpoints */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
@@ -97,7 +92,6 @@ const ApiDocsPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center py-16">
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -129,5 +123,4 @@ const ApiDocsPage: React.FC = () => {
     </>
   );
 };
-
 export default ApiDocsPage;

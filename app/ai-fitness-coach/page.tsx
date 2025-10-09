@@ -1,9 +1,7 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Star, Phone, Mail, Dumbbell, Zap, Shield, Clock, Target, TrendingUp, Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIFitnessCoachPage: React.FC = () => {
   const features = [
     'AI form analysis',
@@ -15,7 +13,6 @@ const AIFitnessCoachPage: React.FC = () => {
     'Wearable integration',
     'Social challenges'
   ];
-
   const benefits = [
     'Improve workout effectiveness by 40%',
     'Prevent injuries with AI monitoring',
@@ -24,7 +21,6 @@ const AIFitnessCoachPage: React.FC = () => {
     'Motivate with AI coaching',
     'Integrate with fitness devices'
   ];
-
   const useCases = [
     'Home workouts',
     'Gym training',
@@ -35,7 +31,6 @@ const AIFitnessCoachPage: React.FC = () => {
     'Flexibility training',
     'Group fitness'
   ];
-
   const pricing = [
     {
       plan: 'Basic',
@@ -56,7 +51,6 @@ const AIFitnessCoachPage: React.FC = () => {
       popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
@@ -90,7 +84,6 @@ const AIFitnessCoachPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -107,7 +100,6 @@ const AIFitnessCoachPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -127,7 +119,6 @@ const AIFitnessCoachPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -147,7 +138,6 @@ const AIFitnessCoachPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -187,7 +177,6 @@ const AIFitnessCoachPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Technology Stack */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -204,7 +193,6 @@ const AIFitnessCoachPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Fitness?</h2>
@@ -233,5 +221,4 @@ const AIFitnessCoachPage: React.FC = () => {
     </div>
   );
 };
-
 export default AIFitnessCoachPage;

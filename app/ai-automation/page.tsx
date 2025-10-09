@@ -1,9 +1,7 @@
 'use client';
 import React from 'react';
-import { Brain, Zap, Target, TrendingUp, Shield, Clock, Users, CheckCircle, ArrowRight, Star, Award, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
@@ -31,7 +29,6 @@ const AIAutomationPage: React.FC = () => {
       benefits: ['Real-time metrics', 'Performance dashboards', 'Trend analysis', 'Improvement recommendations']
     }
   ];
-
   const useCases = [
     {
       industry: 'Healthcare',
@@ -58,7 +55,6 @@ const AIAutomationPage: React.FC = () => {
       icon: Target
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -108,7 +104,6 @@ const AIAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -132,7 +127,6 @@ const AIAutomationPage: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
@@ -154,7 +148,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -162,7 +155,6 @@ const AIAutomationPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Automation Features</h2>
             <p className="text-xl text-gray-300">Everything you need to automate and optimize your business processes</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6">
@@ -184,7 +176,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -192,7 +183,6 @@ const AIAutomationPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-xl text-gray-300">See how AI automation transforms different industries</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="cyber-card p-6">
@@ -207,7 +197,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -215,7 +204,6 @@ const AIAutomationPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300">Choose the plan that fits your automation needs</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
@@ -254,7 +242,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -272,10 +259,8 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 };
-
 export default AIAutomationPage;

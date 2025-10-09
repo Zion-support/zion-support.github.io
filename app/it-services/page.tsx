@@ -1,17 +1,11 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Star, Cloud, Shield, Database, Settings, HardDrive, Lock, FileText, Activity, ArrowRight, Code, Cog, Globe, Users, Target, Award, Rocket, Mail, Phone } from 'lucide-react';
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
   const itServices = [
     // Infrastructure & Cloud Services
     {
@@ -244,8 +238,6 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-=======
-  const services = [
     {
       icon: Cloud,
       title: 'IT Infrastructure',
@@ -275,12 +267,10 @@ const ITServicesPage: React.FC = () => {
       features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup']
     }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
@@ -337,9 +327,6 @@ const ITServicesPage: React.FC = () => {
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-=======
-      
-      <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -383,7 +370,6 @@ const ITServicesPage: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                         {feature}
                       </li>
                     ))}
@@ -421,7 +407,6 @@ const ITServicesPage: React.FC = () => {
                     Get Started →
                   </a>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -450,10 +435,6 @@ const ITServicesPage: React.FC = () => {
             </a>
           </div>
         </section>
-=======
-              ))}
-=======
-const ItItServicessPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
@@ -491,7 +472,6 @@ const ItItServicessPage: React.FC = () => {
                   Contact Us
                 </a>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
             </div>
           </section>
 
@@ -521,12 +501,8 @@ const ItItServicessPage: React.FC = () => {
             </div>
           </section>
         </div>
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
       </main>
-=======
       </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
       <Footer />
     </>
   );

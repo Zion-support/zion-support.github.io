@@ -3,8 +3,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -32,7 +30,6 @@ const AICustomerSupportPage: React.FC = () => {
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
     }
   ];
-
   const pricing = [
     {
       name: 'Starter',
@@ -53,14 +50,12 @@ const AICustomerSupportPage: React.FC = () => {
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ];
-
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
     { number: '24/7', label: 'Availability' },
     { number: '100+', label: 'Languages Supported' }
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -106,7 +101,6 @@ const AICustomerSupportPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Stats Section */}
           <section className="mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -118,7 +112,6 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -146,7 +139,6 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -183,7 +175,6 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Contact Section */}
           <section className="mb-16">
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -218,5 +209,4 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
-
 export default AICustomerSupportPage;

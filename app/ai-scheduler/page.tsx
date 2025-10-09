@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-import { Calendar, Clock, Users, Zap, Brain, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Target, BarChart } from 'lucide-react';
 import Link from 'next/link';
-
 const AISchedulerPage: React.FC = () => {
   const features = [
     {
@@ -42,7 +40,6 @@ const AISchedulerPage: React.FC = () => {
       benefit: '100% secure scheduling'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Personal',
@@ -94,7 +91,6 @@ const AISchedulerPage: React.FC = () => {
       popular: false
     }
   ];
-
   const integrations = [
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
@@ -105,7 +101,6 @@ const AISchedulerPage: React.FC = () => {
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
   ];
-
   const testimonials = [
     {
       name: 'Jennifer Lee',
@@ -129,7 +124,6 @@ const AISchedulerPage: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -165,7 +159,6 @@ const AISchedulerPage: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -189,7 +182,6 @@ const AISchedulerPage: React.FC = () => {
             <div className="text-gray-300 text-sm">Scheduling guaranteed</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -206,7 +198,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -222,7 +213,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -265,7 +255,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -289,7 +278,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -319,5 +307,4 @@ const AISchedulerPage: React.FC = () => {
     </div>
   );
 };
-
 export default AISchedulerPage;
