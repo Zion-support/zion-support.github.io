@@ -238,3 +238,10 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     return `
 Performance Report:
+Score: ${score}/100
+Load Time: ${metrics.loadTime}ms
+First Paint: ${metrics.firstPaint}ms
+Largest Contentful Paint: ${metrics.lcp}ms
+`;
+  }
+}
