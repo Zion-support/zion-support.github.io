@@ -143,18 +143,18 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
  * Caching middleware
  */
 export const cachingMiddleware = (ttl: number): Middleware => {
-  const _cache = new Map<string, { data: unknown; timestamp: number }>();
+  const cache = new Map<string, { data: unknown; timestamp: number }>();
   return async (context, next) => {
     if (context.request.method !== 'GET') {
       return await next();
     }
-    const _key = context.request.url;
-    const _cached = cache.get(key);
+    const key = context.request.url;
+    const cached = cache.get(key);
     if (cached && Date.now() - cached.timestamp < ttl) {
       logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
       return cached.data;
     }
-    const _result = await next();
+    const result = await next();
     cache.set(key, {
       data: result,
       timestamp: Date.now()
