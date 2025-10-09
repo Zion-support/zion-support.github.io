@@ -12,10 +12,4 @@ export default function AIWritingAssistantPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-export default AIWritingAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9296

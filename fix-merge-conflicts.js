@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -5,30 +7,59 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
+// Function to resolve merge conflicts by keeping HEAD version
+function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n([\s\S]*?)
+    // Check if file has merge conflict markers
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
+      return false; // No conflicts to resolve
+    }
     
-    // Clean up any remaining conflict markers
-    content = content.replace(/\n/g, '');
-    content = content.replace(/
+    console.log(`Resolving conflicts in: ${filePath}`);
     
-    fs.writeFileSync(filePath, content);
-<<<<<<< HEAD
-
-=======
-    // console.log(`Fixed merge conflicts in: ${filePath}`);
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
+    // Split content into lines
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictDepth = 0;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.trim() === '<<<<<<< HEAD') {
+        inConflict = true;
+        conflictDepth++;
+        continue; // Skip the conflict marker
+      } else if (line.trim() === '=======') {
+        if (inConflict) {
+          // Skip everything until the end marker
+          continue;
+        }
+      } else if (line.trim().startsWith('>>>>>>> ')) {
+        inConflict = false;
+        conflictDepth--;
+        continue; // Skip the conflict marker
+      } else if (!inConflict) {
+        // Keep the line if we're not in a conflict
+        resolvedLines.push(line);
+      }
+      // Skip lines that are in the "other" branch of the conflict
+    }
+    
+    // Write the resolved content back
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    
+    return true; // Conflicts were resolved
   } catch (error) {
-    // console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Find all TypeScript/TSX files with merge conflicts
+// Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
   
@@ -39,11 +70,14 @@ function findFilesWithConflicts(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules')) {
-        scanDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+      if (stat.isDirectory()) {
+        // Skip node_modules and other common directories
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          scanDirectory(fullPath);
+        }
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('') || content.includes('
+        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
           files.push(fullPath);
         }
       }
@@ -55,20 +89,30 @@ function findFilesWithConflicts(dir) {
 }
 
 // Main execution
+console.log('Starting merge conflict resolution...');
+
+const srcDir = path.join(__dirname, 'src');
 const appDir = path.join(__dirname, 'app');
-const filesWithConflicts = findFilesWithConflicts(appDir);
+const filesWithConflicts = [...findFilesWithConflicts(srcDir), ...findFilesWithConflicts(appDir)];
 
-<<<<<<< HEAD
-filesWithConflicts.forEach(file => console.log(`- ${file}`));
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
-// Fix all files
-filesWithConflicts.forEach(fixMergeConflicts);
-=======
-// console.log(`Found ${filesWithConflicts.length} files with merge conflicts:`);
-filesWithConflicts.forEach(file => // console.log(`- ${file}`));
+let resolvedCount = 0;
+let errorCount = 0;
 
-// Fix all files
-filesWithConflicts.forEach(fixMergeConflicts);
+for (const filePath of filesWithConflicts) {
+  if (resolveMergeConflicts(filePath)) {
+    resolvedCount++;
+  } else {
+    errorCount++;
+  }
+}
 
-// console.log('Merge conflict fixing completed!');
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
+console.log(`\nResolution complete:`);
+console.log(`- Files resolved: ${resolvedCount}`);
+console.log(`- Files with errors: ${errorCount}`);
+
+if (resolvedCount > 0) {
+  console.log('\nMerge conflicts have been resolved by keeping the HEAD version.');
+  console.log('Please review the changes and test the application.');
+}

@@ -48,58 +48,6 @@ import CloudMigrationPage from './cloud-migration/page';
 import DevOpsPage from './devops/page';
 import DatabasePage from './database/page';
 import NetworkingPage from './networking/page';
-<<<<<<< HEAD
-// Micro SAAS Pages
-import AICRMPage from './ai-crm/page';
-import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
-import AIChatbotBuilderPage from './ai-chatbot-builder/page';
-import AIEmailMarketingPage from './ai-email-marketing/page';
-import AIWritingAssistantPage from './ai-writing-assistant/page';
-
-// Specialized Solutions Pages
-import QuantumComputingPage from './quantum-computing/page';
-import AutonomousSystemsPage from './autonomous-systems/page';
-import BlockchainWeb3Page from './blockchain-web3/page';
-import IoTEdgeComputingPage from './iot-edge-computing/page';
-import BusinessIntelligencePage from './business-intelligence/page';
-import RoboticsPage from './robotics/page';
-
-// Company Pages
-import TeamPage from './team/page';
-import CareersPage from './careers/page';
-import NewsPage from './news/page';
-import AboutPage from './about/page';
-import ContactPage from './contact/page';
-import ServicesPage from './services/page';
-import BlogPage from './blog/page';
-import CaseStudiesPage from './case-studies/page';
-
-// Support Pages
-
-// Additional Pages
-import PricingPage from './pricing/page';
-import DemoPage from './demo/page';
-import ConsultationPage from './consultation/page';
-
-// AI Services
-import AIServicesPage from './ai-services/page';
-import AIMarketingPage from './ai-marketing/page';
-import AIAutomationPage from './ai-automation/page';
-import AIHealthcarePage from './ai-healthcare/page';
-import AIFintechPage from './ai-fintech/page';
-import AIContentGenerationPage from './ai-content-generation/page';
-import AIDataAnalyticsPage from './ai-data-analytics/page';
-import AICybersecurityPage from './ai-cybersecurity/page';
-import AIWorkflowAutomationPage from './ai-workflow-automation/page';
-import AIMobileAppDevelopmentPage from './ai-mobile-app-development/page';
-import AIEcommerceSolutionsPage from './ai-ecommerce-solutions/page';
-import AICustomerSupportPage from './ai-customer-support/page';
-import AISalesAutomationPage from './ai-sales-automation/page';
-import AIDataVisualizationPage from './ai-data-visualization/page';
-import AILeadGenerationPage from './ai-lead-generation/page';
-import AIDocumentProcessingPage from './ai-document-processing/page';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 // Additional AI Services
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
@@ -126,30 +74,6 @@ import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
-<<<<<<< HEAD
-// Support Pages
-// AI Services Pages
-import AIProjectManagerPage from './ai-project-manager/page';
-import AICustomerSupportBotPage from './ai-customer-support-bot/page';
-import AIAutomationPage from './ai-automation/page';
-import AIMLPlatformPage from './ai-ml-platform/page';
-=======
-// Support Pages - These are imported but not used in routes yet
-// import SupportPage from './support/page';
-// import DocsPage from './docs/page';
-// import APIDocsPage from './api-docs/page';
-// import StatusPage from './status/page';
-// import PrivacyPage from './privacy/page';
-// import TermsPage from './terms/page';
-// import CookiesPage from './cookies/page';
-
-// Additional Pages
-import AboutPage from './about/page';
-import ServicesPage from './services/page';
-import ContactPage from './contact/page';
-import BlogPage from './blog/page';
-import CaseStudiesPage from './case-studies/page';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);

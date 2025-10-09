@@ -158,10 +158,4 @@ export default function AICostOptimizationBreakthrough2026() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default AICostOptimizationBreakthrough2026Page;
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
+}
