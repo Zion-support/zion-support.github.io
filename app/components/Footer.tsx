@@ -74,7 +74,14 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Deep customer insights' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
     { name: 'AI A/B Testing Platform', url: '/ai-ab-testing', description: 'Advanced A/B testing' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Future outcome predictions' }
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Future outcome predictions' },
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'Intelligent project planning' },
+    { name: 'AI Financial Advisor', url: '/ai-financial-advisor', description: 'AI-powered financial planning' },
+    { name: 'AI Supply Chain Optimizer', url: '/ai-supply-chain-optimizer', description: 'Supply chain optimization' },
+    { name: 'AI Legal Assistant', url: '/ai-legal-assistant', description: 'Legal document analysis' },
+    { name: 'AI HR Recruiter', url: '/ai-hr-recruiter', description: 'Intelligent talent acquisition' },
+    { name: 'AI Cybersecurity Monitor', url: '/ai-cybersecurity-monitor', description: 'AI-powered security monitoring' },
+    { name: 'AI Healthcare Diagnostics', url: '/ai-healthcare-diagnostics', description: 'Medical AI diagnostics' }
   ];
 
   const emergingTech = [

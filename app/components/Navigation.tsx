@@ -130,7 +130,14 @@ const Navigation: React.FC = () => {
         { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
         { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' },
+        { name: 'AI Project Management', path: '/ai-project-management', description: 'Intelligent project planning' },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'AI-powered financial planning' },
+        { name: 'AI Supply Chain Optimizer', path: '/ai-supply-chain-optimizer', description: 'Supply chain optimization' },
+        { name: 'AI Legal Assistant', path: '/ai-legal-assistant', description: 'Legal document analysis' },
+        { name: 'AI HR Recruiter', path: '/ai-hr-recruiter', description: 'Intelligent talent acquisition' },
+        { name: 'AI Cybersecurity Monitor', path: '/ai-cybersecurity-monitor', description: 'AI-powered security monitoring' },
+        { name: 'AI Healthcare Diagnostics', path: '/ai-healthcare-diagnostics', description: 'Medical AI diagnostics' }
       ]
     },
     {

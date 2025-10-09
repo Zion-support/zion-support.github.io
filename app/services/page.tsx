@@ -50,7 +50,12 @@ const ServicesPage: React.FC = () => {
         { name: 'AI Email Assistant', price: '$99/month', description: 'Smart email management and response suggestions', features: ['Email Classification', 'Response Suggestions', 'Scheduling', 'Follow-up Reminders'] },
         { name: 'AI Lead Generation', price: '$349/month', description: 'Automated lead generation and qualification system', features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration'] },
         { name: 'AI Sales Automation', price: '$399/month', description: 'Intelligent sales process automation and optimization', features: ['Sales Pipeline Management', 'Deal Tracking', 'Forecasting', 'Performance Analytics'] },
-        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] }
+        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] },
+        { name: 'AI Project Management', price: '$299/month', description: 'Intelligent project planning with predictive analytics', features: ['AI-Powered Planning', 'Real-time Analytics', 'Team Collaboration', 'Goal Tracking'] },
+        { name: 'AI Financial Advisor', price: '$199/month', description: 'AI-powered financial planning and investment analysis', features: ['Investment Analysis', 'Financial Planning', 'Risk Management', 'Performance Tracking'] },
+        { name: 'AI Supply Chain Optimizer', price: '$1,999/month', description: 'Supply chain optimization with predictive analytics', features: ['Predictive Analytics', 'Global Visibility', 'Logistics Optimization', 'Risk Management'] },
+        { name: 'AI Legal Assistant', price: '$399/month', description: 'Legal document analysis and compliance monitoring', features: ['Document Analysis', 'Case Research', 'Document Generation', 'Compliance Monitoring'] },
+        { name: 'AI HR Recruiter', price: '$299/month', description: 'Intelligent talent acquisition and recruitment automation', features: ['AI Candidate Matching', 'Talent Pipeline', 'Interview Scheduling', 'Analytics & Insights'] }
       ]
     },
     {
