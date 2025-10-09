@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<<< HEAD:app/pages-backup/iot-edge-computing/page.tsx
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Wifi, Shield, Zap, BarChart, Globe, Database } from 'lucide-react';
-========
-import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
->>>>>>>> origin/main:src/iot-edge-computing/page.tsx
 
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
@@ -142,11 +136,6 @@ const IoTEdgeComputingPage: React.FC = () => {
     }
   ];
 
-<<<<<<<< HEAD:app/pages-backup/iot-edge-computing/page.tsx
-  // Categories removed as they were unused
-========
-  const categories = [...new Set(iotServices.map(service => service.category))];
->>>>>>>> origin/main:src/iot-edge-computing/page.tsx
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

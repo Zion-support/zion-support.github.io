@@ -67,14 +67,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-<<<<<<< HEAD:app/components/AdvancedPerformanceMonitor.tsx
         // eslint-disable-next-line no-console
         console.warn('FID observer not supported:', error);
       }
-=======
-         
-        }
->>>>>>> origin/main:src/components/AdvancedPerformanceMonitor.tsx
     }
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
@@ -99,14 +94,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-<<<<<<< HEAD:app/components/AdvancedPerformanceMonitor.tsx
         // eslint-disable-next-line no-console
         console.warn('CLS observer not supported:', error);
       }
-=======
-         
-        }
->>>>>>> origin/main:src/components/AdvancedPerformanceMonitor.tsx
     }
     // Measure Time to First Byte (TTFB)
     try {
@@ -134,14 +124,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-<<<<<<< HEAD:app/components/AdvancedPerformanceMonitor.tsx
           // eslint-disable-next-line no-console
           console.warn('Error disconnecting observer:', error);
         }
-=======
-           
-          }
->>>>>>> origin/main:src/components/AdvancedPerformanceMonitor.tsx
       });
     };
   }, []);

@@ -5,12 +5,6 @@
 
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD:app/pages-backup/micro-saas/page.tsx
-import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-=======
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-import MicroSAASCard from '../components/MicroSAASCard';
->>>>>>> origin/main:app/micro-saas/page.tsx
 
 const MicroSAASPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -445,19 +439,6 @@ const MicroSAASPage: React.FC = () => {
     { id: 'support', name: 'Support', icon: Headphones, count: microSAASServices.filter(s => s.category === 'support').length }
   ];
 
-<<<<<<< HEAD:app/pages-backup/micro-saas/page.tsx
-  // Categories removed as they were unused
-=======
-  const filteredServices = selectedCategory === 'all' 
-    ? microSAASServices 
-    : microSAASServices.filter(service => service.category === selectedCategory);
-
-  const totalSavings = microSAASServices.reduce((total, service) => {
-    const original = parseInt(service.originalPrice.replace('$', '').replace('/month', ''));
-    const current = parseInt(service.price.replace('$', '').replace('/month', ''));
-    return total + (original - current);
-  }, 0);
->>>>>>> origin/main:app/micro-saas/page.tsx
 
   return (
 

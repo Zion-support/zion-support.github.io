@@ -11,12 +11,6 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======\n/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
     
     fs.writeFileSync(filePath, content);
     // console.log(`Fixed merge conflicts in: ${filePath}`);
@@ -40,25 +34,3 @@ function findFilesWithConflicts(dir) {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
         const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
-          files.push(fullPath);
-        }
-      }
-    }
-  }
-  
-  scanDirectory(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const filesWithConflicts = findFilesWithConflicts(appDir);
-
-// console.log(`Found ${filesWithConflicts.length} files with merge conflicts:`);
-filesWithConflicts.forEach(file => // console.log(`- ${file}`));
-
-// Fix all files
-filesWithConflicts.forEach(fixMergeConflicts);
-
-// console.log('Merge conflict fixing completed!');

@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<<< HEAD:app/pages-backup/iot-edge/page.tsx
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
-========
-import { CheckCircle, Star, Wifi, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
->>>>>>>> origin/main:src/iot-edge/page.tsx
 
 const IoTEdgePage: React.FC = () => {
   const iotServices = [

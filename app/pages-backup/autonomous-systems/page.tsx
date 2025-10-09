@@ -1,10 +1,6 @@
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Bot, Cpu, BarChart } from 'lucide-react';
-<<<<<<<< HEAD:app/pages-backup/autonomous-systems/page.tsx
-
-========
->>>>>>>> origin/main:src/autonomous-systems/page.tsx
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
     {

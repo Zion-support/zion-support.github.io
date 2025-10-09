@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:app/pages-backup/ai-customer-support/page.tsx
-import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
-=======
-import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, MessageCircle, Clock, Users, Shield, Zap } from 'lucide-react';
->>>>>>> origin/main:app/ai-customer-support/page.tsx
 
 const AICustomerSupportPage: React.FC = () => {
   const features = [
