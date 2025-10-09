@@ -1,22 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-// Import Navigation and Footer components
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-
-
-// Dynamically import heavy components for better performance;
-const ContentPromotionBanner = lazy(() => import('../src/components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('../src/components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('../src/components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('../src/components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
-=======
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
@@ -26,26 +10,31 @@ const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
 
-
-// Preload critical components with better timing;
-const preloadComponents = () => {/* TODO: Fix JSX expression */}
-      });
-    } else {/* TODO: Fix JSX expression */}
-      }, 100);
-    }
+// Preload critical components with better timing
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    setTimeout(() => {
+      // Preload components after initial render
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+      import('./components/DynamicContentShowcase');
+      import('./components/ContentStatistics');
+      import('./components/ContentNewsletterSignup');
+    }, 100);
   }
 };
-// Loading skeleton component;
-const,
-  ServiceCardSkeleton: React.FC = memo(() => (<div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>"
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>"
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>"
+
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>)
+  </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -70,11 +59,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-advanced neural-network-bg">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network particle-system">
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
       {/* Navigation */}
       <Navigation />
       
@@ -103,20 +88,11 @@ const HomePage: React.FC = () => {
         >
           <h1 
             id="hero-heading" 
-<<<<<<< HEAD
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text-advanced cyber-text-advanced"
-            data-text="Zion Tech Group"
-          >
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow hologram-flicker" role="doc-subtitle">
-=======
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-flicker-enhanced cyber-text-enhanced"
           >
             Zion Tech Group
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow-enhanced" role="doc-subtitle">
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
             Advanced AI and IT Solutions
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -163,19 +139,15 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Enhanced Services Section */}
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <EnhancedServicesShowcase />
-        </Suspense>
-=======
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Comprehensive AI and IT solutions designed to transform your business operations
+            Comprehensive AI and IT solutions designed to transform your business operations. 
+            From cutting-edge AI services to robust IT infrastructure, we deliver enterprise-grade 
+            solutions that drive growth and innovation.
           </p>
           
           {/* Primary Services Grid */}
@@ -185,10 +157,22 @@ const HomePage: React.FC = () => {
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line-enhanced">🤖</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-flicker-enhanced">AI Services</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+                  Advanced artificial intelligence solutions including machine learning, natural language processing, 
+                  computer vision, and predictive analytics. Transform your business with cutting-edge AI technology.
                 </p>
+                <div className="mb-4">
+                  <ul className="text-xs sm:text-sm text-gray-400 space-y-1 text-left">
+                    <li>• Machine Learning Models</li>
+                    <li>• Natural Language Processing</li>
+                    <li>• Computer Vision</li>
+                    <li>• Predictive Analytics</li>
+                    <li>• AI Chatbots & Virtual Assistants</li>
+                    <li>• Custom AI Development</li>
+                  </ul>
+                </div>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 cyber-glow-enhanced">Starting at $1,500/month</div>
+                  <div className="text-xs text-gray-400 mb-3">Enterprise-grade AI solutions</div>
                   <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:cyber-glow-enhanced">
                     Learn More →
                   </a>
@@ -201,10 +185,22 @@ const HomePage: React.FC = () => {
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line-enhanced">📢</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-flicker-enhanced">AI Marketing</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Revolutionary AI-powered marketing automation, ad optimization, and content generation.
+                  Revolutionary AI-powered marketing automation, ad optimization, content generation, 
+                  and customer segmentation. Maximize ROI with intelligent marketing strategies.
                 </p>
+                <div className="mb-4">
+                  <ul className="text-xs sm:text-sm text-gray-400 space-y-1 text-left">
+                    <li>• Automated Ad Optimization</li>
+                    <li>• AI Content Generation</li>
+                    <li>• Customer Segmentation</li>
+                    <li>• Email Marketing Automation</li>
+                    <li>• Social Media Management</li>
+                    <li>• Performance Analytics</li>
+                  </ul>
+                </div>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 cyber-glow-enhanced">Starting at $199/month</div>
+                  <div className="text-xs text-gray-400 mb-3">AI-powered marketing automation</div>
                   <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:cyber-glow-enhanced">
                     Learn More →
                   </a>
@@ -217,10 +213,22 @@ const HomePage: React.FC = () => {
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line-enhanced">⚙️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-flicker-enhanced">AI Automation</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Intelligent automation of business processes with decision-making capabilities and exception handling.
+                  Intelligent automation of business processes with decision-making capabilities, 
+                  exception handling, and workflow optimization. Reduce manual work by up to 80%.
                 </p>
+                <div className="mb-4">
+                  <ul className="text-xs sm:text-sm text-gray-400 space-y-1 text-left">
+                    <li>• Workflow Automation</li>
+                    <li>• Decision-Making AI</li>
+                    <li>• Exception Handling</li>
+                    <li>• Process Optimization</li>
+                    <li>• Integration Management</li>
+                    <li>• Performance Monitoring</li>
+                  </ul>
+                </div>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 cyber-glow-enhanced">Starting at $399/month</div>
+                  <div className="text-xs text-gray-400 mb-3">Intelligent process automation</div>
                   <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:cyber-glow-enhanced">
                     Learn More →
                   </a>
@@ -287,10 +295,22 @@ const HomePage: React.FC = () => {
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
+                  Affordable, powerful AI-driven tools for modern businesses. 30+ ready-to-use applications 
+                  including AI content generation, CRM, analytics, and automation tools.
                 </p>
+                <div className="mb-4">
+                  <ul className="text-xs sm:text-sm text-gray-400 space-y-1 text-left">
+                    <li>• AI Content Generation</li>
+                    <li>• Smart CRM & Analytics</li>
+                    <li>• Marketing Automation</li>
+                    <li>• Productivity Tools</li>
+                    <li>• Business Intelligence</li>
+                    <li>• Custom Development</li>
+                  </ul>
+                </div>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $79/month</div>
+                  <div className="text-xs text-gray-400 mb-3">30+ AI-powered applications</div>
                   <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
@@ -378,7 +398,6 @@ const HomePage: React.FC = () => {
             </article>
           </div>
         </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
 
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
@@ -408,4 +427,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-"

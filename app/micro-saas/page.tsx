@@ -1,1113 +1,486 @@
 'use client';
-import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+import React, { useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, 
+  Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, 
+  Settings, Calendar, CheckSquare, FileText, Search, Bot, Palette, 
+  Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, 
+  Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, 
+  Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, 
+  Clock3, Compass, PieChart, TrendingDown, Activity, Phone, Mail, MapPin,
+  CheckCircle, Award, DollarSign, Clock, Globe as World, User, Users as People,
+  MessageSquare, Eye, Zap as Lightning, Target as Crosshair, Shield as Security,
+  Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon,
+  Mail as MailIcon, MapPin as Location, DollarSign as Dollar, Clock as Time,
+  Grid, Share2
+} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Rocket, Code, Database, Smartphone, Lock, Settings, Calendar, FileText, Image, Video, Music, Palette, ShoppingCart, CreditCard, PieChart, LineChart, Activity, Zap as Lightning, Globe as World, Shield as Security, Users as Team, Clock as Time, Star as Rating, TrendingUp as Growth, BarChart as Analytics, MessageSquare as Chat, Eye as View, Sparkles as Magic, ArrowRight as Arrow, Phone as Call, Mail as Email, MapPin as Location, CheckCircle as Check, DollarSign as Money, Award as Trophy, Rocket as Launch, Code as Dev, Database as Data, Smartphone as Mobile, Lock as Secure, Settings as Config, Calendar as Schedule, FileText as Document, Image as Photo, Video as Media, Music as Audio, Palette as Design, ShoppingCart as Cart, CreditCard as Payment, PieChart as Pie, LineChart as Line, Activity as ActivityIcon } from 'lucide-react';
-=======
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Search as SearchIcon, FileText as FileTextIcon } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
+
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
+    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  </div>
+));
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const MicroSAASPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
-  const [sortBy, setSortBy] = useState('popularity');
 
-  const microSaasServices = useMemo(() => [
-    {
-      id: 'ai-project-manager',
-      name: 'AI Project Manager Pro',
-      description: 'Intelligent project management with AI-powered insights, automated scheduling, and real-time collaboration tools.',
-      category: 'productivity',
-      price: 29,
-      priceType: 'month',
-      features: [
-        'AI-powered task prioritization',
-        'Automated resource allocation',
-        'Real-time progress tracking',
-        'Smart deadline predictions',
-        'Team collaboration tools',
-        'Integration with 50+ tools',
-        'Custom reporting dashboard',
-        'Mobile app access'
-      ],
-      benefits: [
-        'Increase productivity by 40%',
-        'Reduce project delays by 60%',
-        'Save 15 hours per week',
-        'Improve team collaboration'
-      ],
-      icon: BarChart,
-      color: 'blue',
-      popular: true,
-      rating: 4.9,
-      users: 12500,
-      launchDate: '2024-01-15',
-      tags: ['AI', 'Project Management', 'Productivity', 'Collaboration']
-=======
-  const [sortBy, setSortBy] = useState('popular');
+  useEffect(() => {
+    setIsLoaded(true);
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
-  const microSaasServices = [
-    // AI-Powered Business Tools
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Grid, color: 'text-cyan-400' },
+    { id: 'ai', name: 'AI-Powered', icon: Brain, color: 'text-purple-400' },
+    { id: 'business', name: 'Business Tools', icon: Briefcase, color: 'text-blue-400' },
+    { id: 'marketing', name: 'Marketing', icon: Target, color: 'text-pink-400' },
+    { id: 'productivity', name: 'Productivity', icon: Zap, color: 'text-green-400' },
+    { id: 'analytics', name: 'Analytics', icon: BarChart, color: 'text-orange-400' },
+    { id: 'communication', name: 'Communication', icon: MessageSquare, color: 'text-indigo-400' },
+    { id: 'development', name: 'Development', icon: Code, color: 'text-yellow-400' }
+  ];
+
+  const microSAASServices = [
+    // AI-Powered Services
     {
-      id: 'ai-project-manager',
-      name: 'AI Project Manager Pro',
-      category: 'project-management',
-      description: 'Intelligent project planning, resource allocation, and timeline optimization with AI-powered insights.',
-      features: [
-        'AI-powered task prioritization',
-        'Resource allocation optimization',
-        'Risk assessment and mitigation',
-        'Real-time progress tracking',
-        'Team collaboration tools',
-        'Integration with 50+ tools'
-      ],
-      pricing: { monthly: 99, yearly: 999, setup: 0 },
-      popular: true,
-      icon: '📊',
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-500/10',
-      borderColor: 'border-blue-500/30',
-      textColor: 'text-blue-400',
-      stats: { users: '10K+', rating: 4.9, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-project-manager',
-      docs: 'https://docs.ziontechgroup.com/ai-project-manager'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-    },
-    {
-      id: 'ai-social-media-manager',
-      name: 'AI Social Media Manager',
-<<<<<<< HEAD
-      description: 'Automated social media management with AI content creation, scheduling, and analytics across all platforms.',
-      category: 'marketing',
-      price: 49,
-      priceType: 'month',
-      features: [
-        'AI content generation',
-        'Multi-platform posting',
-        'Optimal timing suggestions',
-        'Hashtag optimization',
-        'Engagement analytics',
-        'Competitor analysis',
-        'Auto-responder',
-        'Content calendar'
-      ],
-      benefits: [
-        'Increase engagement by 300%',
-        'Save 20 hours per week',
-        'Grow followers by 150%',
-        'Boost brand awareness'
-      ],
-      icon: MessageSquare,
-      color: 'purple',
-      popular: true,
-      rating: 4.8,
-      users: 8900,
-      launchDate: '2024-02-01',
-      tags: ['AI', 'Social Media', 'Marketing', 'Automation']
-=======
-      category: 'marketing',
-      description: 'Automated social media content creation, scheduling, and engagement optimization across all platforms.',
-      features: [
-        'AI content generation',
-        'Multi-platform scheduling',
-        'Engagement analytics',
-        'Hashtag optimization',
-        'Competitor analysis',
-        'Influencer collaboration tools'
-      ],
-      pricing: { monthly: 79, yearly: 799, setup: 0 },
-      popular: true,
-      icon: '📱',
-      color: 'from-pink-500 to-purple-500',
-      bgColor: 'bg-pink-500/10',
-      borderColor: 'border-pink-500/30',
-      textColor: 'text-pink-400',
-      stats: { users: '25K+', rating: 4.8, uptime: '99.8%' },
-      demo: 'https://demo.ziontechgroup.com/ai-social-manager',
-      docs: 'https://docs.ziontechgroup.com/ai-social-manager'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-    },
-    {
-      id: 'ai-analytics-dashboard',
-      name: 'AI Analytics Dashboard',
-<<<<<<< HEAD
-      description: 'Advanced business intelligence with AI-powered insights, predictive analytics, and custom reporting.',
-      category: 'analytics',
-      price: 79,
-      priceType: 'month',
-      features: [
-        'Real-time data visualization',
-        'Predictive analytics',
-        'Custom KPI tracking',
-        'Automated insights',
-        'Data integration',
-        'Custom dashboards',
-        'Alert system',
-        'Export capabilities'
-      ],
-      benefits: [
-        'Make data-driven decisions',
-        'Identify trends 3x faster',
-        'Reduce analysis time by 70%',
-        'Increase revenue by 25%'
-      ],
-      icon: PieChart,
-      color: 'green',
-      popular: true,
-      rating: 4.9,
-      users: 15600,
-      launchDate: '2024-01-20',
-      tags: ['AI', 'Analytics', 'Business Intelligence', 'Data Visualization']
-=======
-      category: 'analytics',
-      description: 'Advanced business intelligence with AI-powered insights, predictive analytics, and custom reporting.',
-      features: [
-        'Real-time data visualization',
-        'Predictive analytics',
-        'Custom dashboard builder',
-        'Automated reporting',
-        'Data integration from 100+ sources',
-        'AI-powered insights'
-      ],
-      pricing: { monthly: 149, yearly: 1499, setup: 0 },
-      popular: true,
-      icon: '📈',
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'bg-green-500/10',
-      borderColor: 'border-green-500/30',
-      textColor: 'text-green-400',
-      stats: { users: '15K+', rating: 4.9, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-analytics',
-      docs: 'https://docs.ziontechgroup.com/ai-analytics'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-    },
-    {
-      id: 'ai-email-marketing',
-      name: 'AI Email Marketing Suite',
-<<<<<<< HEAD
-      description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automated campaigns.',
-      category: 'marketing',
-      price: 39,
-      priceType: 'month',
-      features: [
-        'AI content personalization',
-        'Smart segmentation',
-        'Automated workflows',
-        'A/B testing',
-        'Deliverability optimization',
-        'Template library',
-        'Performance analytics',
-        'CRM integration'
-      ],
-      benefits: [
-        'Increase open rates by 45%',
-        'Boost click-through rates by 60%',
-        'Reduce unsubscribe rates by 30%',
-        'Save 10 hours per week'
-      ],
-      icon: Mail,
-      color: 'orange',
-      popular: true,
-      rating: 4.7,
-      users: 11200,
-      launchDate: '2024-02-15',
-      tags: ['AI', 'Email Marketing', 'Automation', 'Personalization']
-=======
-      category: 'marketing',
-      description: 'Intelligent email campaigns with AI-powered personalization, A/B testing, and deliverability optimization.',
-      features: [
-        'AI-powered personalization',
-        'Automated A/B testing',
-        'Deliverability optimization',
-        'Advanced segmentation',
-        'Behavioral triggers',
-        'ROI tracking and analytics'
-      ],
-      pricing: { monthly: 59, yearly: 599, setup: 0 },
-      popular: true,
-      icon: '📧',
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'bg-orange-500/10',
-      borderColor: 'border-orange-500/30',
-      textColor: 'text-orange-400',
-      stats: { users: '30K+', rating: 4.7, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-email-marketing',
-      docs: 'https://docs.ziontechgroup.com/ai-email-marketing'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-    },
-    {
-      id: 'ai-customer-support-bot',
-      name: 'AI Customer Support Bot',
-<<<<<<< HEAD
-      description: '24/7 AI-powered customer support with natural language processing and seamless human handoff.',
-      category: 'support',
-      price: 59,
-      priceType: 'month',
-      features: [
-        'Natural language processing',
-        'Multi-language support',
-        'Human handoff capability',
-        'Knowledge base integration',
-        'Sentiment analysis',
-        'Ticket management',
-        'Live chat integration',
-        'Performance metrics'
-      ],
-      benefits: [
-        'Reduce support costs by 50%',
-        'Improve response time by 80%',
-        'Increase customer satisfaction',
-        'Handle 90% of queries automatically'
-      ],
-      icon: MessageSquare,
-      color: 'cyan',
-      popular: true,
-      rating: 4.8,
-      users: 18700,
-      launchDate: '2024-01-10',
-      tags: ['AI', 'Customer Support', 'Chatbot', 'Automation']
-    },
-    {
-      id: 'ai-code-review-assistant',
-      name: 'AI Code Review Assistant',
-      description: 'Automated code review with AI-powered suggestions, security scanning, and best practice recommendations.',
-      category: 'development',
-      price: 69,
-      priceType: 'month',
-      features: [
-        'Automated code analysis',
-        'Security vulnerability detection',
-        'Performance optimization suggestions',
-        'Code quality metrics',
-        'Best practice recommendations',
-        'Multi-language support',
-        'Git integration',
-        'Team collaboration'
-      ],
-      benefits: [
-        'Reduce bugs by 40%',
-        'Improve code quality',
-        'Save 8 hours per week',
-        'Accelerate development'
-      ],
-      icon: Code,
-      color: 'indigo',
-      popular: false,
-      rating: 4.6,
-      users: 5600,
-      launchDate: '2024-03-01',
-      tags: ['AI', 'Code Review', 'Development', 'Security']
-=======
-      category: 'customer-service',
-      description: '24/7 AI-powered customer support with natural language processing and seamless human handoff.',
-      features: [
-        'Natural language processing',
-        'Multi-language support',
-        'Seamless human handoff',
-        'Knowledge base integration',
-        'Sentiment analysis',
-        'Performance analytics'
-      ],
-      pricing: { monthly: 199, yearly: 1999, setup: 0 },
-      popular: true,
-      icon: '🤖',
-      color: 'from-purple-500 to-indigo-500',
-      bgColor: 'bg-purple-500/10',
-      borderColor: 'border-purple-500/30',
-      textColor: 'text-purple-400',
-      stats: { users: '8K+', rating: 4.8, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-support-bot',
-      docs: 'https://docs.ziontechgroup.com/ai-support-bot'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-    },
-    {
-      id: 'ai-content-generator',
-      name: 'AI Content Generator Pro',
-<<<<<<< HEAD
-      description: 'AI-powered content creation for blogs, social media, ads, and marketing materials with brand voice consistency.',
-      category: 'content',
-      price: 45,
-      priceType: 'month',
-      features: [
-        'Multi-format content creation',
-        'Brand voice training',
-        'SEO optimization',
-        'Plagiarism detection',
-        'Content calendar',
-        'Team collaboration',
-        'Version control',
-        'Performance tracking'
-      ],
-      benefits: [
-        'Create content 10x faster',
-        'Maintain brand consistency',
-        'Improve SEO rankings',
-        'Reduce content costs by 60%'
-      ],
+      id: 'ai-content-writer',
+      name: 'AI Content Writer Pro',
+      description: 'Advanced AI-powered content creation for blogs, articles, social media, and marketing copy with 50+ templates and multi-language support.',
       icon: FileText,
-      color: 'pink',
-      popular: false,
-      rating: 4.5,
-      users: 7200,
-      launchDate: '2024-02-20',
-      tags: ['AI', 'Content Creation', 'Writing', 'SEO']
-=======
-      category: 'content-creation',
-      description: 'AI-powered content creation for blogs, social media, emails, and marketing materials with brand voice consistency.',
-      features: [
-        'Multi-format content generation',
-        'Brand voice training',
-        'SEO optimization',
-        'Plagiarism detection',
-        'Content calendar integration',
-        'Team collaboration tools'
-      ],
-      pricing: { monthly: 89, yearly: 899, setup: 0 },
-      popular: false,
-      icon: '✍️',
-      color: 'from-teal-500 to-cyan-500',
-      bgColor: 'bg-teal-500/10',
-      borderColor: 'border-teal-500/30',
-      textColor: 'text-teal-400',
-      stats: { users: '20K+', rating: 4.6, uptime: '99.8%' },
-      demo: 'https://demo.ziontechgroup.com/ai-content-generator',
-      docs: 'https://docs.ziontechgroup.com/ai-content-generator'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
+      category: 'ai',
+      price: 29,
+      period: 'month',
+      features: ['50+ Content Templates', 'Multi-language Support', 'SEO Optimization', 'Brand Voice Training', 'Plagiarism Checker', 'Content Calendar'],
+      popular: true,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      borderColor: 'border-purple-500/20'
     },
     {
-      id: 'ai-seo-optimizer',
-      name: 'AI SEO Optimizer',
-<<<<<<< HEAD
-      description: 'Comprehensive SEO optimization with AI-powered keyword research, content analysis, and ranking tracking.',
-      category: 'seo',
-      price: 55,
-      priceType: 'month',
-      features: [
-        'AI keyword research',
-        'Content optimization',
-        'Technical SEO analysis',
-        'Competitor tracking',
-        'Ranking monitoring',
-        'Backlink analysis',
-        'Site speed optimization',
-        'Local SEO tools'
-      ],
-      benefits: [
-        'Increase organic traffic by 200%',
-        'Improve search rankings',
-        'Save 12 hours per week',
-        'Boost conversion rates'
-      ],
-      icon: Target,
-      color: 'yellow',
+      id: 'ai-chatbot-builder',
+      name: 'AI Chatbot Builder',
+      description: 'Create intelligent chatbots for customer support, lead generation, and sales automation with no coding required.',
+      icon: Bot,
+      category: 'ai',
+      price: 49,
+      period: 'month',
+      features: ['No-Code Builder', 'Multi-channel Support', 'Analytics Dashboard', 'Custom Integrations', 'Voice & Text Support', 'A/B Testing'],
       popular: false,
-      rating: 4.7,
-      users: 9800,
-      launchDate: '2024-03-10',
-      tags: ['AI', 'SEO', 'Marketing', 'Optimization']
-=======
-      category: 'seo',
-      description: 'Comprehensive SEO optimization with AI-powered keyword research, content analysis, and ranking tracking.',
-      features: [
-        'AI keyword research',
-        'Content optimization suggestions',
-        'Competitor analysis',
-        'Ranking tracking',
-        'Technical SEO audits',
-        'Local SEO optimization'
-      ],
-      pricing: { monthly: 129, yearly: 1299, setup: 0 },
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      borderColor: 'border-purple-500/20'
+    },
+    {
+      id: 'ai-image-generator',
+      name: 'AI Image Generator',
+      description: 'Generate high-quality images, logos, and graphics using advanced AI with commercial licensing included.',
+      icon: Camera,
+      category: 'ai',
+      price: 39,
+      period: 'month',
+      features: ['High-Resolution Images', 'Commercial License', 'Style Transfer', 'Background Removal', 'Logo Generation', 'Batch Processing'],
+      popular: true,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      borderColor: 'border-purple-500/20'
+    },
+    {
+      id: 'ai-voice-cloner',
+      name: 'AI Voice Cloner',
+      description: 'Create realistic voice clones for podcasts, videos, and presentations with natural speech synthesis.',
+      icon: Music,
+      category: 'ai',
+      price: 79,
+      period: 'month',
+      features: ['Voice Cloning', 'Multiple Languages', 'Emotion Control', 'Audio Editing', 'API Access', 'Commercial Use'],
       popular: false,
-      icon: '🎯',
-      color: 'from-yellow-500 to-orange-500',
-      bgColor: 'bg-yellow-500/10',
-      borderColor: 'border-yellow-500/30',
-      textColor: 'text-yellow-400',
-      stats: { users: '12K+', rating: 4.7, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-seo-optimizer',
-      docs: 'https://docs.ziontechgroup.com/ai-seo-optimizer'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      borderColor: 'border-purple-500/20'
+    },
+    {
+      id: 'ai-video-generator',
+      name: 'AI Video Generator',
+      description: 'Create professional videos from text, images, or scripts with AI-powered editing and effects.',
+      icon: Video,
+      category: 'ai',
+      price: 99,
+      period: 'month',
+      features: ['Text-to-Video', 'Auto-Editing', 'Stock Footage', 'Voice Synthesis', 'Multiple Formats', 'HD Export'],
+      popular: true,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      borderColor: 'border-purple-500/20'
+    },
+
+    // Business Tools
+    {
+      id: 'ai-crm',
+      name: 'AI-Powered CRM',
+      description: 'Intelligent customer relationship management with AI insights, lead scoring, and automated follow-ups.',
+      icon: Users,
+      category: 'business',
+      price: 59,
+      period: 'month',
+      features: ['Lead Scoring', 'Auto Follow-ups', 'Sales Forecasting', 'Email Integration', 'Mobile App', 'Custom Fields'],
+      popular: true,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      borderColor: 'border-blue-500/20'
     },
     {
       id: 'ai-invoice-generator',
-      name: 'AI Invoice Generator',
-<<<<<<< HEAD
-      description: 'Automated invoice creation with AI-powered pricing suggestions, payment tracking, and financial analytics.',
-      category: 'finance',
-      price: 25,
-      priceType: 'month',
-=======
-      category: 'finance',
-      description: 'Automated invoice generation with AI-powered pricing suggestions, payment tracking, and financial analytics.',
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-      features: [
-        'Automated invoice generation',
-        'AI pricing suggestions',
-        'Payment tracking',
-        'Financial analytics',
-<<<<<<< HEAD
-        'Tax calculations',
-        'Multi-currency support',
-        'Client management',
-        'Integration with accounting software'
-      ],
-      benefits: [
-        'Reduce invoicing time by 80%',
-        'Improve payment collection',
-        'Minimize billing errors',
-        'Save 5 hours per week'
-      ],
-      icon: CreditCard,
-      color: 'emerald',
+      name: 'Smart Invoice Generator',
+      description: 'Automated invoice creation with AI-powered data extraction, payment tracking, and tax calculations.',
+      icon: FileText,
+      category: 'business',
+      price: 19,
+      period: 'month',
+      features: ['Auto Data Extraction', 'Payment Tracking', 'Tax Calculations', 'Multi-currency', 'Recurring Invoices', 'PDF Export'],
       popular: false,
-      rating: 4.4,
-      users: 4200,
-      launchDate: '2024-03-15',
-      tags: ['AI', 'Invoicing', 'Finance', 'Automation']
-=======
-        'Multi-currency support',
-        'Tax calculation'
-      ],
-      pricing: { monthly: 39, yearly: 399, setup: 0 },
-      popular: false,
-      icon: '💰',
-      color: 'from-emerald-500 to-green-500',
-      bgColor: 'bg-emerald-500/10',
-      borderColor: 'border-emerald-500/30',
-      textColor: 'text-emerald-400',
-      stats: { users: '18K+', rating: 4.5, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-invoice-generator',
-      docs: 'https://docs.ziontechgroup.com/ai-invoice-generator'
-    },
-    {
-      id: 'ai-lead-scoring',
-      name: 'AI Lead Scoring Engine',
-      category: 'sales',
-      description: 'Intelligent lead qualification and scoring with AI-powered behavioral analysis and conversion prediction.',
-      features: [
-        'Behavioral analysis',
-        'Conversion prediction',
-        'Lead qualification',
-        'Scoring algorithms',
-        'CRM integration',
-        'Performance tracking'
-      ],
-      pricing: { monthly: 169, yearly: 1699, setup: 0 },
-      popular: false,
-      icon: '🎯',
-      color: 'from-red-500 to-pink-500',
-      bgColor: 'bg-red-500/10',
-      borderColor: 'border-red-500/30',
-      textColor: 'text-red-400',
-      stats: { users: '6K+', rating: 4.8, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-lead-scoring',
-      docs: 'https://docs.ziontechgroup.com/ai-lead-scoring'
-    },
-    {
-      id: 'ai-hr-assistant',
-      name: 'AI HR Assistant',
-      category: 'hr',
-      description: 'Comprehensive HR management with AI-powered recruitment, employee analytics, and performance tracking.',
-      features: [
-        'AI-powered recruitment',
-        'Employee analytics',
-        'Performance tracking',
-        'Payroll automation',
-        'Compliance monitoring',
-        'Training recommendations'
-      ],
-      pricing: { monthly: 249, yearly: 2499, setup: 0 },
-      popular: false,
-      icon: '👥',
-      color: 'from-indigo-500 to-purple-500',
-      bgColor: 'bg-indigo-500/10',
-      borderColor: 'border-indigo-500/30',
-      textColor: 'text-indigo-400',
-      stats: { users: '4K+', rating: 4.7, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-hr-assistant',
-      docs: 'https://docs.ziontechgroup.com/ai-hr-assistant'
-    },
-    {
-      id: 'ai-inventory-manager',
-      name: 'AI Inventory Manager',
-      category: 'inventory',
-      description: 'Smart inventory management with AI-powered demand forecasting, automated reordering, and optimization.',
-      features: [
-        'Demand forecasting',
-        'Automated reordering',
-        'Inventory optimization',
-        'Multi-location support',
-        'Supplier management',
-        'Cost analysis'
-      ],
-      pricing: { monthly: 179, yearly: 1799, setup: 0 },
-      popular: false,
-      icon: '📦',
-      color: 'from-amber-500 to-yellow-500',
-      bgColor: 'bg-amber-500/10',
-      borderColor: 'border-amber-500/30',
-      textColor: 'text-amber-400',
-      stats: { users: '7K+', rating: 4.6, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-inventory-manager',
-      docs: 'https://docs.ziontechgroup.com/ai-inventory-manager'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      borderColor: 'border-blue-500/20'
     },
     {
       id: 'ai-expense-tracker',
       name: 'AI Expense Tracker',
-<<<<<<< HEAD
-      description: 'Smart expense tracking with AI categorization, receipt scanning, and automated expense reports.',
-      category: 'finance',
-      price: 19,
-      priceType: 'month',
-      features: [
-        'Receipt scanning with OCR',
-        'AI expense categorization',
-        'Automated expense reports',
-        'Budget tracking',
-        'Tax preparation',
-        'Multi-currency support',
-        'Team expense management',
-        'Integration with accounting tools'
-      ],
-      benefits: [
-        'Save 6 hours per week',
-        'Improve expense accuracy',
-        'Simplify tax preparation',
-        'Better budget control'
-      ],
-      icon: PieChart,
-      color: 'teal',
+      description: 'Intelligent expense management with receipt scanning, categorization, and budget insights.',
+      icon: Calculator,
+      category: 'business',
+      price: 25,
+      period: 'month',
+      features: ['Receipt Scanning', 'Auto Categorization', 'Budget Alerts', 'Tax Preparation', 'Team Collaboration', 'Export Options'],
       popular: false,
-      rating: 4.3,
-      users: 3100,
-      launchDate: '2024-03-20',
-      tags: ['AI', 'Expense Tracking', 'Finance', 'Automation']
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      borderColor: 'border-blue-500/20'
     },
+    {
+      id: 'ai-project-manager',
+      name: 'AI Project Manager',
+      description: 'Smart project management with AI-powered task prioritization, resource allocation, and deadline predictions.',
+      icon: CheckSquare,
+      category: 'business',
+      price: 45,
+      period: 'month',
+      features: ['Task Prioritization', 'Resource Allocation', 'Deadline Predictions', 'Team Collaboration', 'Progress Tracking', 'Risk Analysis'],
+      popular: true,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      borderColor: 'border-blue-500/20'
+    },
+    {
+      id: 'ai-hr-assistant',
+      name: 'AI HR Assistant',
+      description: 'Automated HR processes including resume screening, interview scheduling, and employee onboarding.',
+      icon: Users,
+      category: 'business',
+      price: 69,
+      period: 'month',
+      features: ['Resume Screening', 'Interview Scheduling', 'Employee Onboarding', 'Performance Tracking', 'Compliance Management', 'Analytics'],
+      popular: false,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      borderColor: 'border-blue-500/20'
+    },
+
+    // Marketing Tools
+    {
+      id: 'ai-email-marketer',
+      name: 'AI Email Marketer',
+      description: 'Intelligent email marketing with AI-powered subject lines, content optimization, and send time optimization.',
+      icon: Mail,
+      category: 'marketing',
+      price: 35,
+      period: 'month',
+      features: ['Subject Line AI', 'Content Optimization', 'Send Time Optimization', 'A/B Testing', 'Segmentation', 'Analytics'],
+      popular: true,
+      color: 'text-pink-400',
+      bgColor: 'bg-pink-500/10',
+      borderColor: 'border-pink-500/20'
+    },
+    {
+      id: 'ai-social-media-manager',
+      name: 'AI Social Media Manager',
+      description: 'Automated social media posting, content creation, and engagement tracking across all platforms.',
+      icon: Share2,
+      category: 'marketing',
+      price: 49,
+      period: 'month',
+      features: ['Auto Posting', 'Content Creation', 'Engagement Tracking', 'Hashtag Optimization', 'Analytics Dashboard', 'Multi-platform'],
+      popular: true,
+      color: 'text-pink-400',
+      bgColor: 'bg-pink-500/10',
+      borderColor: 'border-pink-500/20'
+    },
+    {
+      id: 'ai-seo-optimizer',
+      name: 'AI SEO Optimizer',
+      description: 'Advanced SEO analysis and optimization with AI-powered keyword research and content suggestions.',
+      icon: Search,
+      category: 'marketing',
+      price: 39,
+      period: 'month',
+      features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis', 'Rank Tracking', 'Reports'],
+      popular: false,
+      color: 'text-pink-400',
+      bgColor: 'bg-pink-500/10',
+      borderColor: 'border-pink-500/20'
+    },
+    {
+      id: 'ai-ad-optimizer',
+      name: 'AI Ad Optimizer',
+      description: 'Automated ad campaign optimization for Google, Facebook, and LinkedIn with AI-powered bidding strategies.',
+      icon: Target,
+      category: 'marketing',
+      price: 79,
+      period: 'month',
+      features: ['Multi-platform Ads', 'AI Bidding', 'Ad Creation', 'Performance Tracking', 'Budget Optimization', 'ROI Analysis'],
+      popular: true,
+      color: 'text-pink-400',
+      bgColor: 'bg-pink-500/10',
+      borderColor: 'border-pink-500/20'
+    },
+
+    // Productivity Tools
     {
       id: 'ai-scheduler',
       name: 'AI Smart Scheduler',
-      description: 'Intelligent scheduling with AI-powered meeting optimization, time zone handling, and conflict resolution.',
-      category: 'productivity',
-      price: 35,
-      priceType: 'month',
-      features: [
-        'AI meeting optimization',
-        'Time zone management',
-        'Conflict resolution',
-        'Calendar integration',
-        'Meeting analytics',
-        'Team scheduling',
-        'Resource booking',
-        'Mobile app'
-      ],
-      benefits: [
-        'Reduce scheduling conflicts by 90%',
-        'Save 3 hours per week',
-        'Improve meeting efficiency',
-        'Better time management'
-      ],
+      description: 'Intelligent scheduling assistant that finds optimal meeting times and manages calendar conflicts.',
       icon: Calendar,
-      color: 'violet',
+      category: 'productivity',
+      price: 29,
+      period: 'month',
+      features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Meeting Optimization', 'Calendar Sync', 'Reminders'],
       popular: false,
-      rating: 4.5,
-      users: 6800,
-      launchDate: '2024-04-01',
-      tags: ['AI', 'Scheduling', 'Productivity', 'Time Management']
-=======
-      category: 'finance',
-      description: 'Intelligent expense tracking with AI-powered categorization, receipt scanning, and budget optimization.',
-      features: [
-        'Receipt scanning',
-        'AI categorization',
-        'Budget optimization',
-        'Expense analytics',
-        'Tax preparation',
-        'Multi-currency support'
-      ],
-      pricing: { monthly: 29, yearly: 299, setup: 0 },
-      popular: false,
-      icon: '💳',
-      color: 'from-rose-500 to-pink-500',
-      bgColor: 'bg-rose-500/10',
-      borderColor: 'border-rose-500/30',
-      textColor: 'text-rose-400',
-      stats: { users: '35K+', rating: 4.4, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-expense-tracker',
-      docs: 'https://docs.ziontechgroup.com/ai-expense-tracker'
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      borderColor: 'border-green-500/20'
     },
     {
       id: 'ai-time-tracker',
       name: 'AI Time Tracker',
-<<<<<<< HEAD
-      description: 'Advanced time tracking with AI-powered productivity insights, automatic time categorization, and performance analytics.',
-      category: 'productivity',
-      price: 29,
-      priceType: 'month',
-      features: [
-        'Automatic time tracking',
-        'AI productivity insights',
-        'Project time allocation',
-        'Performance analytics',
-        'Team time management',
-        'Integration with project tools',
-        'Billing automation',
-        'Mobile tracking'
-      ],
-      benefits: [
-        'Increase productivity by 25%',
-        'Accurate time billing',
-        'Better project planning',
-        'Identify time wasters'
-      ],
+      description: 'Automatic time tracking with AI-powered activity recognition and productivity insights.',
       icon: Clock,
-      color: 'blue',
+      category: 'productivity',
+      price: 19,
+      period: 'month',
+      features: ['Auto Time Tracking', 'Activity Recognition', 'Productivity Insights', 'Team Reports', 'Integration', 'Mobile App'],
       popular: false,
-      rating: 4.4,
-      users: 5400,
-      launchDate: '2024-04-05',
-      tags: ['AI', 'Time Tracking', 'Productivity', 'Analytics']
-    }
-  ], []);
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      borderColor: 'border-green-500/20'
+    },
+    {
+      id: 'ai-note-taker',
+      name: 'AI Note Taker',
+      description: 'Intelligent note-taking with voice-to-text, automatic summarization, and smart organization.',
+      icon: BookOpen,
+      category: 'productivity',
+      price: 25,
+      period: 'month',
+      features: ['Voice-to-Text', 'Auto Summarization', 'Smart Organization', 'Search & Tag', 'Sync Across Devices', 'Export Options'],
+      popular: true,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      borderColor: 'border-green-500/20'
+    },
+    {
+      id: 'ai-task-manager',
+      name: 'AI Task Manager',
+      description: 'Smart task management with AI-powered prioritization, deadline predictions, and workflow optimization.',
+      icon: CheckSquare,
+      category: 'productivity',
+      price: 35,
+      period: 'month',
+      features: ['Smart Prioritization', 'Deadline Predictions', 'Workflow Optimization', 'Team Collaboration', 'Progress Tracking', 'Integrations'],
+      popular: true,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      borderColor: 'border-green-500/20'
+    },
 
-  const categories = [
-    { id: 'all', name: 'All Services', count: microSaasServices.length },
-    { id: 'productivity', name: 'Productivity', count: microSaasServices.filter(s => s.category === 'productivity').length },
-    { id: 'marketing', name: 'Marketing', count: microSaasServices.filter(s => s.category === 'marketing').length },
-    { id: 'analytics', name: 'Analytics', count: microSaasServices.filter(s => s.category === 'analytics').length },
-    { id: 'support', name: 'Support', count: microSaasServices.filter(s => s.category === 'support').length },
-    { id: 'development', name: 'Development', count: microSaasServices.filter(s => s.category === 'development').length },
-    { id: 'content', name: 'Content', count: microSaasServices.filter(s => s.category === 'content').length },
-    { id: 'seo', name: 'SEO', count: microSaasServices.filter(s => s.category === 'seo').length },
-    { id: 'finance', name: 'Finance', count: microSaasServices.filter(s => s.category === 'finance').length }
-=======
-      category: 'productivity',
-      description: 'Smart time tracking with AI-powered productivity insights, automatic task detection, and team analytics.',
-      features: [
-        'Automatic task detection',
-        'Productivity insights',
-        'Team analytics',
-        'Project time tracking',
-        'Billing integration',
-        'Performance reports'
-      ],
-      pricing: { monthly: 49, yearly: 499, setup: 0 },
-      popular: false,
-      icon: '⏰',
-      color: 'from-violet-500 to-purple-500',
-      bgColor: 'bg-violet-500/10',
-      borderColor: 'border-violet-500/30',
-      textColor: 'text-violet-400',
-      stats: { users: '22K+', rating: 4.5, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-time-tracker',
-      docs: 'https://docs.ziontechgroup.com/ai-time-tracker'
+    // Analytics Tools
+    {
+      id: 'ai-analytics-dashboard',
+      name: 'AI Analytics Dashboard',
+      description: 'Comprehensive business analytics with AI-powered insights, predictions, and automated reporting.',
+      icon: BarChart,
+      category: 'analytics',
+      price: 69,
+      period: 'month',
+      features: ['Real-time Analytics', 'AI Insights', 'Predictive Analytics', 'Custom Dashboards', 'Automated Reports', 'Data Visualization'],
+      popular: true,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      borderColor: 'border-orange-500/20'
     },
     {
-      id: 'ai-scheduler',
-      name: 'AI Smart Scheduler',
-      category: 'productivity',
-      description: 'Intelligent scheduling with AI-powered meeting optimization, conflict resolution, and calendar management.',
-      features: [
-        'Meeting optimization',
-        'Conflict resolution',
-        'Calendar management',
-        'Time zone handling',
-        'Resource booking',
-        'Analytics and insights'
-      ],
-      pricing: { monthly: 69, yearly: 699, setup: 0 },
+      id: 'ai-data-visualizer',
+      name: 'AI Data Visualizer',
+      description: 'Transform complex data into beautiful, interactive visualizations with AI-powered chart recommendations.',
+      icon: PieChart,
+      category: 'analytics',
+      price: 45,
+      period: 'month',
+      features: ['Auto Chart Selection', 'Interactive Visualizations', 'Data Import', 'Custom Themes', 'Export Options', 'Collaboration'],
       popular: false,
-      icon: '📅',
-      color: 'from-cyan-500 to-blue-500',
-      bgColor: 'bg-cyan-500/10',
-      borderColor: 'border-cyan-500/30',
-      textColor: 'text-cyan-400',
-      stats: { users: '16K+', rating: 4.6, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-scheduler',
-      docs: 'https://docs.ziontechgroup.com/ai-scheduler'
-    },
-    {
-      id: 'ai-document-processor',
-      name: 'AI Document Processor',
-      category: 'document-management',
-      description: 'Intelligent document processing with AI-powered OCR, data extraction, and automated workflows.',
-      features: [
-        'AI-powered OCR',
-        'Data extraction',
-        'Automated workflows',
-        'Document classification',
-        'Version control',
-        'Search and retrieval'
-      ],
-      pricing: { monthly: 119, yearly: 1199, setup: 0 },
-      popular: false,
-      icon: '📄',
-      color: 'from-slate-500 to-gray-500',
-      bgColor: 'bg-slate-500/10',
-      borderColor: 'border-slate-500/30',
-      textColor: 'text-slate-400',
-      stats: { users: '9K+', rating: 4.7, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-document-processor',
-      docs: 'https://docs.ziontechgroup.com/ai-document-processor'
-    },
-    {
-      id: 'ai-voice-assistant',
-      name: 'AI Voice Assistant',
-      category: 'productivity',
-      description: 'Custom voice assistant for business operations with natural language processing and task automation.',
-      features: [
-        'Natural language processing',
-        'Task automation',
-        'Voice commands',
-        'Integration with business tools',
-        'Custom voice training',
-        'Multi-language support'
-      ],
-      pricing: { monthly: 159, yearly: 1599, setup: 0 },
-      popular: false,
-      icon: '🎤',
-      color: 'from-lime-500 to-green-500',
-      bgColor: 'bg-lime-500/10',
-      borderColor: 'border-lime-500/30',
-      textColor: 'text-lime-400',
-      stats: { users: '5K+', rating: 4.8, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-voice-assistant',
-      docs: 'https://docs.ziontechgroup.com/ai-voice-assistant'
-    },
-    {
-      id: 'ai-ab-testing',
-      name: 'AI A/B Testing Platform',
-      category: 'marketing',
-      description: 'Advanced A/B testing with AI-powered experiment design, statistical analysis, and optimization recommendations.',
-      features: [
-        'AI experiment design',
-        'Statistical analysis',
-        'Optimization recommendations',
-        'Multi-variate testing',
-        'Real-time results',
-        'Integration with analytics tools'
-      ],
-      pricing: { monthly: 189, yearly: 1899, setup: 0 },
-      popular: false,
-      icon: '🧪',
-      color: 'from-fuchsia-500 to-pink-500',
-      bgColor: 'bg-fuchsia-500/10',
-      borderColor: 'border-fuchsia-500/30',
-      textColor: 'text-fuchsia-400',
-      stats: { users: '3K+', rating: 4.9, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-ab-testing',
-      docs: 'https://docs.ziontechgroup.com/ai-ab-testing'
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      borderColor: 'border-orange-500/20'
     },
     {
       id: 'ai-predictive-analytics',
       name: 'AI Predictive Analytics',
+      description: 'Advanced predictive modeling for sales forecasting, customer behavior, and business trends.',
+      icon: TrendingUp,
       category: 'analytics',
-      description: 'Advanced predictive analytics with machine learning models for forecasting and trend analysis.',
-      features: [
-        'Machine learning models',
-        'Forecasting algorithms',
-        'Trend analysis',
-        'Anomaly detection',
-        'Custom model training',
-        'Real-time predictions'
-      ],
-      pricing: { monthly: 299, yearly: 2999, setup: 0 },
+      price: 89,
+      period: 'month',
+      features: ['Sales Forecasting', 'Customer Behavior', 'Trend Analysis', 'Risk Assessment', 'Custom Models', 'API Access'],
+      popular: true,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      borderColor: 'border-orange-500/20'
+    },
+
+    // Communication Tools
+    {
+      id: 'ai-translator',
+      name: 'AI Translator Pro',
+      description: 'Real-time translation for 100+ languages with context-aware accuracy and voice translation.',
+      icon: Globe,
+      category: 'communication',
+      price: 39,
+      period: 'month',
+      features: ['100+ Languages', 'Voice Translation', 'Context Awareness', 'Document Translation', 'API Access', 'Offline Mode'],
       popular: false,
-      icon: '🔮',
-      color: 'from-purple-500 to-violet-500',
-      bgColor: 'bg-purple-500/10',
-      borderColor: 'border-purple-500/30',
-      textColor: 'text-purple-400',
-      stats: { users: '2K+', rating: 4.9, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-predictive-analytics',
-      docs: 'https://docs.ziontechgroup.com/ai-predictive-analytics'
+      color: 'text-indigo-400',
+      bgColor: 'bg-indigo-500/10',
+      borderColor: 'border-indigo-500/20'
     },
     {
-      id: 'ai-security-monitor',
-      name: 'AI Security Monitor',
-      category: 'security',
-      description: 'AI-powered security monitoring with threat detection, anomaly analysis, and automated response.',
-      features: [
-        'Threat detection',
-        'Anomaly analysis',
-        'Automated response',
-        'Real-time monitoring',
-        'Compliance reporting',
-        'Incident management'
-      ],
-      pricing: { monthly: 399, yearly: 3999, setup: 0 },
-      popular: false,
-      icon: '🛡️',
-      color: 'from-red-500 to-orange-500',
-      bgColor: 'bg-red-500/10',
-      borderColor: 'border-red-500/30',
-      textColor: 'text-red-400',
-      stats: { users: '1K+', rating: 4.9, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-security-monitor',
-      docs: 'https://docs.ziontechgroup.com/ai-security-monitor'
+      id: 'ai-meeting-assistant',
+      name: 'AI Meeting Assistant',
+      description: 'Intelligent meeting transcription, summarization, and action item extraction with real-time insights.',
+      icon: MessageSquare,
+      category: 'communication',
+      price: 59,
+      period: 'month',
+      features: ['Live Transcription', 'Auto Summarization', 'Action Items', 'Speaker Identification', 'Integration', 'Search & Archive'],
+      popular: true,
+      color: 'text-indigo-400',
+      bgColor: 'bg-indigo-500/10',
+      borderColor: 'border-indigo-500/20'
     },
     {
-      id: 'ai-performance-tracker',
-      name: 'AI Performance Tracker',
-      category: 'analytics',
-      description: 'Comprehensive performance tracking with AI-powered insights, benchmarking, and optimization recommendations.',
-      features: [
-        'Performance insights',
-        'Benchmarking',
-        'Optimization recommendations',
-        'Real-time monitoring',
-        'Custom metrics',
-        'Team performance analysis'
-      ],
-      pricing: { monthly: 139, yearly: 1399, setup: 0 },
+      id: 'ai-email-assistant',
+      name: 'AI Email Assistant',
+      description: 'Smart email management with auto-responses, priority sorting, and intelligent suggestions.',
+      icon: Mail,
+      category: 'communication',
+      price: 29,
+      period: 'month',
+      features: ['Auto Responses', 'Priority Sorting', 'Smart Suggestions', 'Email Templates', 'Scheduling', 'Integration'],
       popular: false,
-      icon: '📊',
-      color: 'from-blue-500 to-indigo-500',
-      bgColor: 'bg-blue-500/10',
-      borderColor: 'border-blue-500/30',
-      textColor: 'text-blue-400',
-      stats: { users: '11K+', rating: 4.6, uptime: '99.9%' },
-      demo: 'https://demo.ziontechgroup.com/ai-performance-tracker',
-      docs: 'https://docs.ziontechgroup.com/ai-performance-tracker'
+      color: 'text-indigo-400',
+      bgColor: 'bg-indigo-500/10',
+      borderColor: 'border-indigo-500/20'
+    },
+
+    // Development Tools
+    {
+      id: 'ai-code-generator',
+      name: 'AI Code Generator',
+      description: 'Generate code in multiple languages from natural language descriptions with intelligent suggestions.',
+      icon: Code,
+      category: 'development',
+      price: 79,
+      period: 'month',
+      features: ['Multi-language Support', 'Natural Language Input', 'Code Suggestions', 'Bug Detection', 'Documentation', 'API Access'],
+      popular: true,
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-500/10',
+      borderColor: 'border-yellow-500/20'
+    },
+    {
+      id: 'ai-api-builder',
+      name: 'AI API Builder',
+      description: 'Create and deploy APIs without coding using AI-powered interface design and automatic documentation.',
+      icon: Settings,
+      category: 'development',
+      price: 99,
+      period: 'month',
+      features: ['No-Code API Creation', 'Auto Documentation', 'Testing Tools', 'Deployment', 'Monitoring', 'Scalability'],
+      popular: true,
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-500/10',
+      borderColor: 'border-yellow-500/20'
+    },
+    {
+      id: 'ai-database-manager',
+      name: 'AI Database Manager',
+      description: 'Intelligent database management with automated optimization, query suggestions, and performance monitoring.',
+      icon: Database,
+      category: 'development',
+      price: 69,
+      period: 'month',
+      features: ['Query Optimization', 'Performance Monitoring', 'Auto Indexing', 'Backup Management', 'Security Scanning', 'Analytics'],
+      popular: false,
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-500/10',
+      borderColor: 'border-yellow-500/20'
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Grid, count: microSaasServices.length },
-    { id: 'project-management', name: 'Project Management', icon: Target, count: microSaasServices.filter(s => s.category === 'project-management').length },
-    { id: 'marketing', name: 'Marketing', icon: Megaphone, count: microSaasServices.filter(s => s.category === 'marketing').length },
-    { id: 'analytics', name: 'Analytics', icon: BarChart, count: microSaasServices.filter(s => s.category === 'analytics').length },
-    { id: 'customer-service', name: 'Customer Service', icon: MessageSquare, count: microSaasServices.filter(s => s.category === 'customer-service').length },
-    { id: 'content-creation', name: 'Content Creation', icon: FileText, count: microSaasServices.filter(s => s.category === 'content-creation').length },
-    { id: 'seo', name: 'SEO', icon: Search, count: microSaasServices.filter(s => s.category === 'seo').length },
-    { id: 'finance', name: 'Finance', icon: DollarSign, count: microSaasServices.filter(s => s.category === 'finance').length },
-    { id: 'sales', name: 'Sales', icon: TrendingUp, count: microSaasServices.filter(s => s.category === 'sales').length },
-    { id: 'hr', name: 'HR', icon: Users, count: microSaasServices.filter(s => s.category === 'hr').length },
-    { id: 'inventory', name: 'Inventory', icon: Package, count: microSaasServices.filter(s => s.category === 'inventory').length },
-    { id: 'productivity', name: 'Productivity', icon: Zap, count: microSaasServices.filter(s => s.category === 'productivity').length },
-    { id: 'document-management', name: 'Document Management', icon: FileText, count: microSaasServices.filter(s => s.category === 'document-management').length },
-    { id: 'security', name: 'Security', icon: Shield, count: microSaasServices.filter(s => s.category === 'security').length }
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-  ];
+  const filteredServices = selectedCategory === 'all' 
+    ? microSAASServices 
+    : microSAASServices.filter(service => service.category === selectedCategory);
 
-  const filteredServices = useMemo(() => {
-    let filtered = microSaasServices;
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-<<<<<<< HEAD
-        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-=======
-        service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()))
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-      );
+  const handlePhoneClick = () => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'micro_saas_phone',
+      });
     }
-
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
-    // Sort services
-    switch (sortBy) {
-<<<<<<< HEAD
-      case 'price-low':
-        filtered.sort((a, b) => a.price - b.price);
-        break;
-      case 'price-high':
-        filtered.sort((a, b) => b.price - a.price);
-        break;
-      case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
-        break;
-      case 'users':
-        filtered.sort((a, b) => b.users - a.users);
-        break;
-      case 'popularity':
-      default:
-        filtered.sort((a, b) => {
-          if (a.popular && !b.popular) return -1;
-          if (!a.popular && b.popular) return 1;
-          return b.rating - a.rating;
-        });
-=======
-      case 'popular':
-        filtered = filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
-      case 'price-low':
-        filtered = filtered.sort((a, b) => a.pricing.monthly - b.pricing.monthly);
-        break;
-      case 'price-high':
-        filtered = filtered.sort((a, b) => b.pricing.monthly - a.pricing.monthly);
-        break;
-      case 'rating':
-        filtered = filtered.sort((a, b) => b.stats.rating - a.stats.rating);
-        break;
-      case 'name':
-        filtered = filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;
-      default:
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-        break;
-    }
-
-    return filtered;
-<<<<<<< HEAD
-  }, [microSaasServices, searchTerm, selectedCategory, sortBy]);
-
-  const getColorClasses = (color: string) => {
-    const colorMap: { [key: string]: string } = {
-      blue: 'from-blue-500 to-blue-600',
-      purple: 'from-purple-500 to-purple-600',
-      green: 'from-green-500 to-green-600',
-      orange: 'from-orange-500 to-orange-600',
-      cyan: 'from-cyan-500 to-cyan-600',
-      indigo: 'from-indigo-500 to-indigo-600',
-      pink: 'from-pink-500 to-pink-600',
-      yellow: 'from-yellow-500 to-yellow-600',
-      emerald: 'from-emerald-500 to-emerald-600',
-      teal: 'from-teal-500 to-teal-600',
-      violet: 'from-violet-500 to-violet-600'
-    };
-    return colorMap[color] || 'from-gray-500 to-gray-600';
   };
 
   return (
-    <>
-      <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive collection of AI-powered micro SAAS solutions designed to streamline your business operations and boost productivity." />
-        <meta name="keywords" content="micro saas, ai solutions, business automation, productivity tools, software as a service" />
-        <meta property="og:title" content="Micro SAAS Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with our AI-powered micro SAAS solutions. Increase productivity, reduce costs, and accelerate growth." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-                Micro SAAS Solutions
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Discover our comprehensive collection of AI-powered micro SAAS solutions designed to 
-                streamline your business operations, boost productivity, and accelerate growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button-secondary inline-flex items-center justify-center px-8 py-4 text-lg"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Get Started
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">12+</div>
-                <div className="text-gray-300">Micro SAAS Solutions</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">100K+</div>
-                <div className="text-gray-300">Active Users</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">4.7</div>
-                <div className="text-gray-300">Average Rating</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime</div>
-              </div>
-            </div>
-=======
-  }, [searchTerm, selectedCategory, sortBy]);
-
-  const totalSavings = microSaasServices.reduce((total, service) => {
-    const yearlySavings = (service.pricing.monthly * 12) - service.pricing.yearly;
-    return total + yearlySavings;
-  }, 0);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive collection of AI-powered micro SAAS solutions designed to streamline your business operations. From project management to marketing automation, we have the tools you need." />
-        <meta name="keywords" content="micro saas, ai tools, business automation, project management, marketing tools, analytics, productivity" />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
-      </Helmet>
-
-      {/* Navigation */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network particle-system">
       <Navigation />
-
+      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text cyber-text">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-flicker-enhanced cyber-text-enhanced">
             Micro SAAS Solutions
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-            AI-Powered Business Tools for Modern Enterprises
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow-enhanced">
+            Powerful AI-driven tools for modern businesses
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Discover our comprehensive collection of 20+ AI-powered micro SAAS solutions designed to streamline your business operations. 
-            From project management to marketing automation, we have the tools you need to succeed.
+            Choose from 30+ ready-to-use applications designed to streamline your workflow, 
+            boost productivity, and drive growth. All tools include AI-powered features and 
+            are ready to deploy in minutes.
           </p>
           
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">🚀</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">20+ Tools</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Comprehensive suite of AI-powered business tools</p>
-            </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">💰</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Save ${totalSavings.toLocaleString()}</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Annual savings with yearly plans</p>
-            </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">99.9% Uptime</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Enterprise-grade reliability and performance</p>
-            </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance</p>
-            </div>
-          </div>
-
           {/* CTA Buttons */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
+              onClick={handlePhoneClick}
               className="cyber-button w-full sm:w-auto text-center"
               aria-label="Call us at (302) 464-0950"
             >
@@ -1120,421 +493,227 @@ const MicroSAASPage: React.FC = () => {
             >
               Get Free Consultation
             </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
           </div>
         </section>
 
-        {/* Search and Filter Section */}
-<<<<<<< HEAD
-        <section className="py-8 px-4">
-          <div className="container mx-auto">
-            <div className="max-w-6xl mx-auto">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/20">
-                <div className="flex flex-col lg:flex-row gap-4">
-                  {/* Search */}
-                  <div className="flex-1">
-                    <div className="relative">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input
-                        type="text"
-                        placeholder="Search micro SAAS solutions..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Category Filter */}
-                  <div className="lg:w-64">
-                    <select
-                      value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                    >
-                      {categories.map((category) => (
-                        <option key={category.id} value={category.id}>
-                          {category.name} ({category.count})
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {/* Sort */}
-                  <div className="lg:w-48">
-                    <select
-                      value={sortBy}
-                      onChange={(e) => setSortBy(e.target.value)}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                    >
-                      <option value="popularity">Most Popular</option>
-                      <option value="rating">Highest Rated</option>
-                      <option value="users">Most Users</option>
-                      <option value="price-low">Price: Low to High</option>
-                      <option value="price-high">Price: High to Low</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-=======
+        {/* Category Filter */}
         <section className="mb-12">
-          <div className="cyber-card hologram-card p-6">
-            <div className="flex flex-col lg:flex-row gap-4 items-center">
-              {/* Search */}
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search micro SAAS solutions..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                />
-              </div>
-
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
-                    }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
-
-              {/* Sort */}
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white shadow-lg'
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'
+                }`}
               >
-                <option value="popular">Most Popular</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="rating">Highest Rated</option>
-                <option value="name">Alphabetical</option>
-              </select>
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
-            </div>
+                <category.icon className={`w-5 h-5 ${selectedCategory === category.id ? 'text-white' : category.color}`} />
+                <span>{category.name}</span>
+              </button>
+            ))}
           </div>
         </section>
 
         {/* Services Grid */}
-<<<<<<< HEAD
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (
-                <div
-                  key={service.id}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
-                >
-                  {/* Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getColorClasses(service.color)} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      {service.popular && (
-                        <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
-                          Popular
-                        </span>
-                      )}
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-300">{service.rating}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, index) => (
-                        <li key={index} className="flex items-center text-xs text-gray-300">
-                          <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Pricing and Stats */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div>
-                      <div className="text-2xl font-bold text-white">
-                        ${service.price}
-                        <span className="text-sm text-gray-400">/{service.priceType}</span>
-                      </div>
-                      <div className="text-xs text-gray-400">
-                        {service.users.toLocaleString()} users
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm text-gray-300">Launched</div>
-                      <div className="text-xs text-gray-400">
-                        {new Date(service.launchDate).toLocaleDateString()}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {service.tags.slice(0, 3).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* CTA Buttons */}
-                  <div className="flex space-x-2">
-                    <a
-                      href={`/contact?service=${service.id}`}
-                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all text-center"
-                    >
-                      Get Started
-                    </a>
-                    <a
-                      href={`/demo?service=${service.id}`}
-                      className="px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg text-sm font-medium hover:bg-cyan-400/10 transition-all"
-                    >
-                      Demo
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {filteredServices.length === 0 && (
-              <div className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                <p className="text-gray-300 mb-6">Try adjusting your search or filter criteria</p>
-                <button
-                  onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
-                    setSortBy('popularity');
-                  }}
-                  className="cyber-button"
-                >
-                  Reset Filters
-                </button>
-              </div>
-            )}
-=======
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
               <div
                 key={service.id}
-                className={`cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300 ${service.borderColor} ${
+                className={`cyber-card-enhanced holographic-card quantum-field p-6 hover:scale-105 transition-all duration-300 ${
                   service.popular ? 'ring-2 ring-cyan-400/50' : ''
                 }`}
               >
-                {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    <div className={`w-12 h-12 rounded-lg ${service.bgColor} flex items-center justify-center text-2xl`}>
-                      {service.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>
-                      {service.popular && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
-                          <Star className="w-3 h-3 mr-1" />
-                          Popular
-                        </span>
-                      )}
-                    </div>
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
                   </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-white">${service.pricing.monthly}</div>
-                    <div className="text-sm text-gray-400">/month</div>
+                )}
+                
+                <div className="text-center mb-6">
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-lg ${service.bgColor} ${service.borderColor} border flex items-center justify-center`}>
+                    <service.icon className={`w-8 h-8 ${service.color}`} />
                   </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                 </div>
 
-                {/* Description */}
-                <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                <div className="text-center mb-6">
+                  <div className="text-3xl font-bold text-cyan-400 mb-1">
+                    ${service.price}
+                    <span className="text-lg text-gray-400">/{service.period}</span>
+                  </div>
+                  <div className="text-sm text-gray-400">per month</div>
+                </div>
 
-                {/* Features */}
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
+                  <h4 className="text-white font-semibold mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, index) => (
+                    {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
-                    {service.features.length > 4 && (
-                      <li className="text-sm text-cyan-400">
-                        +{service.features.length - 4} more features
-                      </li>
-                    )}
                   </ul>
                 </div>
 
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-white">{service.stats.users}</div>
-                    <div className="text-xs text-gray-400">Users</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-white">{service.stats.rating}</div>
-                    <div className="text-xs text-gray-400">Rating</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-white">{service.stats.uptime}</div>
-                    <div className="text-xs text-gray-400">Uptime</div>
-                  </div>
-                </div>
-
-                {/* Pricing */}
-                <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-400">Monthly</span>
-                    <span className="text-lg font-bold text-white">${service.pricing.monthly}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">Yearly</span>
-                    <div className="text-right">
-                      <span className="text-lg font-bold text-white">${service.pricing.yearly}</span>
-                      <span className="text-xs text-green-400 ml-2">
-                        Save ${(service.pricing.monthly * 12) - service.pricing.yearly}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Actions */}
-                <div className="flex space-x-3">
+                <div className="text-center">
                   <a
-                    href={service.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all text-center"
+                    href={`/contact?service=${service.id}`}
+                    className="cyber-button w-full text-center inline-block"
                   >
-                    <Play className="w-4 h-4 inline mr-2" />
-                    Demo
-                  </a>
-                  <a
-                    href={service.docs}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-all text-center"
-                  >
-                    <FileText className="w-4 h-4 inline mr-2" />
-                    Docs
+                    Get Started
                   </a>
                 </div>
               </div>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
           </div>
         </section>
 
-        {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-400/20">
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  Need a Custom Solution?
-                </h2>
-                <p className="text-gray-300 mb-8 text-lg">
-                  Our team can create a custom micro SAAS solution tailored to your specific business needs. 
-                  Get a free consultation and see how we can help transform your operations.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="tel:+13024640950"
-                    className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call (302) 464-0950
-                  </a>
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="cyber-button-secondary inline-flex items-center justify-center px-8 py-4 text-lg"
-                  >
-                    <Mail className="w-5 h-5 mr-2" />
-                    Email Us
-                  </a>
-                </div>
+        {/* Pricing Comparison */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Pricing Plans</h2>
+            <p className="text-gray-300 text-lg">Choose the perfect plan for your business needs</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="cyber-card hologram-card p-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-6">
+                $99<span className="text-lg text-gray-400">/month</span>
               </div>
+              <ul className="space-y-3 mb-8 text-left">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Up to 5 Micro SAAS tools
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Basic AI features
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Email support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Standard integrations
+                </li>
+              </ul>
+              <a href="/contact?plan=starter" className="cyber-button w-full text-center">
+                Choose Starter
+              </a>
+            </div>
+
+            <div className="cyber-card hologram-card p-8 text-center ring-2 ring-cyan-400/50 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium">
+                  Most Popular
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-6">
+                $199<span className="text-lg text-gray-400">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8 text-left">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Up to 15 Micro SAAS tools
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Advanced AI features
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Priority support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Custom integrations
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Analytics dashboard
+                </li>
+              </ul>
+              <a href="/contact?plan=professional" className="cyber-button w-full text-center">
+                Choose Professional
+              </a>
+            </div>
+
+            <div className="cyber-card hologram-card p-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-6">
+                $399<span className="text-lg text-gray-400">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8 text-left">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Unlimited Micro SAAS tools
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Premium AI features
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  24/7 dedicated support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Custom development
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Advanced analytics
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  White-label options
+                </li>
+              </ul>
+              <a href="/contact?plan=enterprise" className="cyber-button w-full text-center">
+                Choose Enterprise
+              </a>
             </div>
           </div>
         </section>
 
-        <Footer />
-      </div>
-    </>
-=======
-        <section className="text-center mb-16">
-          <div className="cyber-card hologram-card p-8">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Business?</h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get started with our micro SAAS solutions today and experience the power of AI-driven business automation.
+        {/* Contact Section */}
+        <section className="text-center">
+          <div className="cyber-card hologram-card p-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Contact us today to discuss your specific needs and get a customized solution for your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="cyber-button w-full sm:w-auto text-center"
+                onClick={handlePhoneClick}
+                className="cyber-button"
               >
                 📞 Call (302) 464-0950
               </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="cyber-button w-full sm:w-auto text-center"
-                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-              >
+              <a href="mailto:kleber@ziontechgroup.com" className="cyber-button">
                 ✉️ Email Us
+              </a>
+              <a href="/contact" className="cyber-button">
+                💬 Contact Form
               </a>
             </div>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
   );
 };
 
