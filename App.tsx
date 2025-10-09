@@ -3,7 +3,7 @@ import React, { memo, Suspense, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-// Lazy load pages for better performance;
+// Lazy load pages for better performance
 
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
@@ -25,7 +25,7 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 
-// Memoized components for better performance;
+// Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
     <div className="container mx-auto px-4 text-center">
@@ -33,7 +33,6 @@ const UnifiedContentPromotion = memo(() => (
       <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
     </div>
   </div>
-)
 ));
 
 const InteractiveAIROICalculator = memo(() => (
@@ -63,14 +62,14 @@ const InteractiveContentShowcase2026 = memo(() => (
   </div>
 ));
 
-// Loading component;
+// Loading component
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
 
-// Error Boundary Component;
+// Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
