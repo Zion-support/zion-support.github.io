@@ -145,8 +145,8 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-nav ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-glow' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -155,15 +155,15 @@ const Navigation: React.FC = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl neon-advanced hologram-flicker">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium cyber-scan-overlay">
               Home
             </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium cyber-scan-overlay">              
               About
             </Link>
 
@@ -232,7 +232,7 @@ const Navigation: React.FC = () => {
 
             <Link 
               href="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
+              className="font-medium transition-colors hover:text-cyan-400 text-white cyber-scan-overlay"
               onClick={closeAllMenus}
             >
               Case Studies
@@ -240,15 +240,23 @@ const Navigation: React.FC = () => {
 
             <Link
               href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium cyber-scan-overlay"
               onClick={closeAllMenus}
             >
               Blog
             </Link>
 
             <Link
+              href="/pricing"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium cyber-scan-overlay"
+              onClick={closeAllMenus}
+            >
+              Pricing
+            </Link>
+
+            <Link
               href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium cyber-scan-overlay"
               onClick={closeAllMenus}
             >
               Contact
@@ -257,7 +265,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="cyber-button inline-flex items-center"
+              className="cyber-button-advanced inline-flex items-center cyber-pulse"
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -345,6 +353,14 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Blog
+              </Link>
+
+              <Link
+                href="/pricing"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
               </Link>
 
               <Link
