@@ -1,41 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of files that need fixing based on remaining lint errors
-const filesToFix = [
-  'src/business-apps/page.tsx',
-  'src/compliance/page.tsx',
-  'src/contact/page.tsx',
-  'src/cookies/page.tsx',
-  'src/docs/page.tsx',
-  'src/faq/page.tsx',
-  'src/green-it/page.tsx',
-  'src/help/page.tsx',
-  'src/it-consulting/page.tsx',
-  'src/it-services/page.tsx',
-  'src/layout.tsx',
-  'src/marketplace/page.tsx',
-  'src/micro-saas/page.tsx',
-  'src/offline/page.tsx',
-  'src/page-minimal.tsx',
-  'src/page-optimized.tsx',
-  'src/page.tsx',
-  'src/partners/page.tsx',
-  'src/privacy/page.tsx',
-  'src/productivity/page.tsx',
-  'src/service-template.tsx',
-  'src/services-advertising/page.tsx',
-  'src/services/page.tsx',
-  'src/setupTests.tsx',
-  'src/signup/page.tsx',
-  'src/sitemap.tsx',
-  'src/sitemap/page.tsx',
-  'src/status/page.tsx',
-  'src/support/page.tsx',
-  'src/team/page.tsx',
-  'src/terms/page.tsx',
-];
-
 // Common template for simple pages
 const createSimplePage = (pageName, title) => `import React from 'react';
 
@@ -54,6 +19,60 @@ const ${pageName}Page: React.FC = () => {
 };
 
 export default ${pageName}Page;`;
+
+// List of files that need fixing based on the lint errors
+const filesToFix = [
+  'src/ai-ab-testing/page.tsx',
+  'src/ai-analytics/page.tsx',
+  'src/ai-computer-vision/page.tsx',
+  'src/ai-content-studio/page.tsx',
+  'src/ai-customer-insights/page.tsx',
+  'src/ai-customer-support-bot/page.tsx',
+  'src/ai-design-assistant/page.tsx',
+  'src/ai-document-processor/page.tsx',
+  'src/ai-ecommerce-optimizer/page.tsx',
+  'src/ai-edge-computing/page.tsx',
+  'src/ai-email-marketing/page.tsx',
+  'src/ai-hr-assistant/page.tsx',
+  'src/ai-inventory-manager/page.tsx',
+  'src/ai-invoice-generator/page.tsx',
+  'src/ai-lead-scoring/page.tsx',
+  'src/ai-ml-platform/page.tsx',
+  'src/ai-mobile-builder/page.tsx',
+  'src/ai-nlp/page.tsx',
+  'src/ai-performance-tracker/page.tsx',
+  'src/ai-predictive-analytics/page.tsx',
+  'src/ai-research-development/page.tsx',
+  'src/ai-robotics/page.tsx',
+  'src/ai-sales-forecasting/page.tsx',
+  'src/ai-scheduler/page.tsx',
+  'src/ai-security-monitor/page.tsx',
+  'src/ai-seo-optimizer/page.tsx',
+  'src/ai-social-media-manager/page.tsx',
+  'src/ai-voice-assistant/page.tsx',
+  'src/analytics-tools/page.tsx',
+  'src/ar-vr-solutions/page.tsx',
+  'src/database-management/page.tsx',
+  'src/devops-cicd/page.tsx',
+  'src/digital-transformation/page.tsx',
+  'src/expense-tracker/page.tsx',
+  'src/future-technologies/page.tsx',
+  'src/global-it-support/page.tsx',
+  'src/innovation-labs/page.tsx',
+  'src/iot-edge/page.tsx',
+  'src/it-automation/page.tsx',
+  'src/it-disaster-recovery/page.tsx',
+  'src/it-infrastructure-design/page.tsx',
+  'src/it-performance-monitoring/page.tsx',
+  'src/it-support/page.tsx',
+  'src/it-training/page.tsx',
+  'src/network-solutions/page.tsx',
+  'src/smart-analytics/page.tsx',
+  'src/smart-cities/page.tsx',
+  'src/sustainability-tech/page.tsx',
+  'src/system-administration/page.tsx',
+  'src/task-manager-pro/page.tsx',
+];
 
 // Function to get page name from file path
 const getPageName = (filePath) => {
@@ -95,4 +114,4 @@ filesToFix.forEach(filePath => {
   }
 });
 
-console.log('Remaining parsing errors fix completed!');
+console.log('Parsing errors fix completed!');
