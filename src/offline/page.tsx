@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
 import Link from 'next/link';
 
 /**
@@ -14,7 +11,7 @@ export const metadata = {
   title: 'Offline - Zion Tech Group',
   description: 'You are currently offline. Please check your internet connection.'
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-19c2
+
 const OfflinePage: React.FC = () => {
   const handleRetry = () => {
     window.location.reload();
