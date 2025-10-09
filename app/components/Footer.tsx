@@ -13,17 +13,41 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Machine Learning', url: '/ai-machine-learning', description: 'Custom ML models' },
+    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image recognition' },
+    { name: 'AI Voice & Speech', url: '/ai-voice-speech', description: 'Voice recognition' }
+  ];
+  const microSaasServices = [
+    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '100+ ready-to-use apps' },
+    { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent customer management' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
+    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' },
+    { name: 'AI Mobile App Builder', url: '/ai-mobile-builder', description: 'Drag-and-drop app creation' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoice creation' },
+    { name: 'AI Scheduling Assistant', url: '/ai-scheduling-assistant', description: 'Smart scheduling' },
+    { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Social media automation' }
   ];
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Micro SAAS', url: '/micro-saas', description: '50+ ready-to-use apps' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
     { name: 'Database Services', url: '/database', description: 'Database management' },
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
+    { name: 'Web Development', url: '/web-development', description: 'Modern web applications' },
+    { name: 'System Integration', url: '/system-integration', description: 'Seamless integration' },
+    { name: 'Data Backup & Recovery', url: '/data-backup-recovery', description: 'Data protection' },
+    { name: 'Performance Monitoring', url: '/performance-monitoring', description: 'System monitoring' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' }
+  ];
+  const specializedServices = [
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Next-gen computing' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
