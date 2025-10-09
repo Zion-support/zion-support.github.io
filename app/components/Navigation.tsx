@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -46,7 +43,6 @@ const Navigation: React.FC = () => {
       closeAllMenus();
     }
   };
-<<<<<<< HEAD
 
   const serviceCategories = [
     {
@@ -57,8 +53,9 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-purple-100',
       services: [
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
-        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'AI-powered data visualization' },
+        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
         { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
         { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
@@ -103,8 +100,6 @@ const Navigation: React.FC = () => {
         { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
         { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
-=======
         { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' },
         { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
@@ -112,7 +107,6 @@ const Navigation: React.FC = () => {
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
       ]
     },
     {
@@ -122,6 +116,11 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI-powered project management' },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Customer analytics & insights' },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Social media automation' },
+        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'HR management & recruitment' },
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
@@ -138,10 +137,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring' },
         { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
         { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media' },
-        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management' },
-        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management' },
-        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
         { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
@@ -168,11 +163,7 @@ const Navigation: React.FC = () => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-=======
-  const toggleServices = () => setServicesOpen(!servicesOpen);
-  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
-  const toggleItServices = () => setItServicesOpen(!itServicesOpen);
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
+  ];
 
   const aiServices = [
     { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
@@ -231,7 +222,6 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
   ];
 
   return (
@@ -249,18 +239,6 @@ const Navigation: React.FC = () => {
           </Link>
 
 <<<<<<< HEAD
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-            </Link>
-
-            {/* Services Dropdown */}
-            <div className="relative">
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
