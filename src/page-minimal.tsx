@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-
-
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const PageMinimalPage: React.FC = () => {
-  return (
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page Minimal
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-
-      </main>
-      <Footer />
-    </div>
-=======
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 export const _metadata = {// TODO: Add content;}
@@ -95,13 +66,11 @@ Home;
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+                href="/services" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
 // >
 //                 Explore Our Services;
           <Link className="w-5 h-5 ml-2" />
-              <a href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+              <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 <Phone className="w-5 h-5 mr-2" />
 // Call +1 302 464 0950;
           </a>
@@ -146,10 +115,8 @@ Expert Team;
 Ready to Transform Your Business?
             <p className="text-xl mb-8 text-blue-100">
               Let's discuss how our AI solutions can drive your success.
-                href="/contact"
-                Get Started Today;
-                href="/blog"
-                View Our Blog;
+                href="/contact" Get Started Today;
+                href="/blog" View Our Blog;
                 <ArrowRight className="w-5 h-5 ml-2" />
       </main>
       {/* Footer */}
@@ -167,7 +134,6 @@ Ready to Transform Your Business?
               <p className="text-gray-400 text-sm">
 © 2026 Zion Tech Group. All rights reserved.
       </footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

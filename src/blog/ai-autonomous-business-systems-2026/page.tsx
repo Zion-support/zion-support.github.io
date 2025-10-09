@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default PagePage;
-
-=======
 'use client';
 import { Link } from 'react-router-dom';
 export default function AIAutonomousBusinessSystems2026() {// TODO: Add content;}
@@ -116,10 +85,7 @@ export default function AIAutonomousBusinessSystems2026() {// TODO: Add content;
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Automation Transformation</h3>
               <p className="text-gray-700 mb-4">Join leading enterprises achieving 95% automation with AI autonomous business systems</p>
                 <a
-                  href="/contact"
-                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Automation Assessment</a>
-                  href="/services"
-                  className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">Explore AI Services</a>
+                  href="/contact" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Automation Assessment</a>
+                  href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">Explore AI Services</a>
     </div>)
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

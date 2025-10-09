@@ -1,12 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
-const PagePage: React.FC = () => {
-=======
-import {Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings from 'lucide-react';}
-const ARVRSolutionsPage: React.FC = () => {const features = [}
+import { Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings } from 'lucide-react';
+const ARVRSolutionsPage: React.FC = () => {
+  const features = [];
+  return (
     {// TODO: Add content;}
 };
   icon: Eye,
@@ -24,25 +22,11 @@ const ARVRSolutionsPage: React.FC = () => {const features = [}
       benefits: ['Device compatibility', 'Performance optimization', 'Hardware support']
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-
-=======
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AR/VR Solutions;
           </h1>
@@ -54,13 +38,11 @@ const ARVRSolutionsPage: React.FC = () => {const features = [}
             we help you build the future of interactive technology.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="/contact"
-              className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+              href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Get Started;
           </a>
-              href="tel:+13024640950"
-              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Eye className="w-5 h-5" />
               +1 302 464 0950;
           </div>
@@ -87,7 +69,6 @@ const ARVRSolutionsPage: React.FC = () => {const features = [}
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       </main>
       <Footer />
     </div>

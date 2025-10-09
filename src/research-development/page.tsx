@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-=======
 'use client';
 import React, { useState } from 'react';
-const ResearchDevelopmentPage: React.FC = () => {return (}
+const ResearchDevelopmentPage: React.FC = () => {
+  return (
     <div>Coming Soon</div>
   );
 };
@@ -329,19 +315,10 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
 // Research & Development;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-
-=======
           </div>
           {/* Research Areas Tabs */}
           <div className="mb-12">
@@ -517,8 +494,7 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="/contact"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
                 
           
@@ -533,8 +509,7 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
 // Start Collaboration;
           </a>
               <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
                 
           
@@ -549,8 +524,7 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
 // (302) 464-0950;
           </a>
               <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
                 
           
@@ -568,7 +542,6 @@ const ResearchDevelopmentPage: React.FC = () => {return (}
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );

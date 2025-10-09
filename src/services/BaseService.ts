@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-export abstract class BaseService {
-  protected baseUrl: string;
-  
-  constructor(baseUrl: string) {
-    this.baseUrl = baseUrl;
-  }
-  
-  protected async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    const response = await fetch(`${this.baseUrl}${endpoint}`, options);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  }
-}
-
-=======
 'use client';
 /**
  * Base Service Class;
@@ -53,8 +34,8 @@ export class BaseService {// TODO: Add content;}
   private cache: Map;
           <string, CacheEntry<unknown>> = new Map();
 constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseUrl;}
-    this.options = {retries: 3,}
-      cache: false,
+    this.options = {retries: 3,
+    cache: false,
       cacheDuration: 300000, // 5 minutes;
 //       ...options;
     };
@@ -142,4 +123,3 @@ logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
 };
   component: this.constructor.name,
 ...context;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

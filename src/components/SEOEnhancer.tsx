@@ -1,36 +1,10 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-
-interface SEOProps {
-=======
 interface SEOEnhancerProps {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
 }
-<<<<<<< HEAD
-
-const SEOEnhancer: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-
-}) => {
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-=======
 const SEOEnhancer: React.FC;
           <SEOEnhancerProps> = ({// TODO: Add content;}
 }
@@ -112,7 +86,6 @@ const SEOEnhancer: React.FC;
         "longitude": "-75.5795"
       },
       "geoRadius": "1000000"
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
 
     metaDescription.setAttribute('content', description);

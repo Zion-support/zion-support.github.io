@@ -1,15 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-<<<<<<< HEAD
-interface PerformanceMetrics {
-
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-
-=======
 interface PerformanceMetrics {// TODO: Add content;}
 };
   fcp: number | null;
@@ -22,20 +12,12 @@ interface PerformanceMetrics {// TODO: Add content;}
     si: number | null;
 }
 interface PerformanceMonitorProps {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 
 }
-<<<<<<< HEAD
-
-const EnhancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-
-=======
 const EnhancedPerformanceMonitor: React.FC;
           <PerformanceMonitorProps> = ({// TODO: Add content;}
 }
@@ -48,24 +30,11 @@ const EnhancedPerformanceMonitor: React.FC;
           <PerformanceMetrics>({// TODO: Add content;}
 };
   fcp: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
   });
-<<<<<<< HEAD
-
-  useEffect(() => {
-    // Basic performance monitoring
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-        }
-
-=======
   const [isVisible, setIsVisible] = useState(false);
 // Web Vitals measurement;
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -277,7 +246,6 @@ const reportMetrics = useCallback(() => {// TODO: Add content;}
           fid: metrics.fid,
           cls: metrics.cls,
         },
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       });
     });
 
@@ -287,18 +255,6 @@ const reportMetrics = useCallback(() => {// TODO: Add content;}
     } catch (error) {
       console.warn('Performance monitoring not supported:', error);
     }
-<<<<<<< HEAD
-  }, []);
-
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
-
-=======
     // Callback for custom handling;
     onMetricsUpdate?.(metrics);
 // console.log('Performance Report:', report);
@@ -408,7 +364,6 @@ const reportMetrics = useCallback(() => {// TODO: Add content;}
           </div>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
 
 export default EnhancedPerformanceMonitor;

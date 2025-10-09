@@ -1,31 +1,7 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-
-=======
 'use client';
 import React, { useState } from 'react';
-const SolutionsPage: React.FC = () => {return (}
+const SolutionsPage: React.FC = () => {
+  return (
     <div>Coming Soon</div>
   );
 };
@@ -361,8 +337,7 @@ const SolutionsPage: React.FC = () => {return (}
                       {solution.pricing}
                     </div>
                     <a
-                      href="/contact"
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+                      href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
 // >
 //                       Learn More;
           <ArrowRight className="w-4 h-4 ml-1" />
@@ -427,8 +402,7 @@ const SolutionsPage: React.FC = () => {return (}
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="/contact"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
                 
           
@@ -443,8 +417,7 @@ const SolutionsPage: React.FC = () => {return (}
 // Get Free Consultation;
           </a>
               <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
                 
           
@@ -459,8 +432,7 @@ const SolutionsPage: React.FC = () => {return (}
 // (302) 464-0950;
           </a>
               <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
                 
           
@@ -478,7 +450,6 @@ const SolutionsPage: React.FC = () => {return (}
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );

@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-interface LoadingSkeletonProps {
-  // Add props here
-}
-
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = () => {
-=======
 interface SkeletonProps {// TODO: Add content;}
 }
   className?: string;
@@ -25,7 +17,6 @@ const Skeleton: React.FC;
   animated = true;
 }) => {const roundedClasses = rounded ? 'rounded' : '';}
   const animatedClasses = animated ? 'animate-pulse' : '';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="loadingskeleton">
       {/* Component content */}
@@ -33,10 +24,6 @@ const Skeleton: React.FC;
   );
 };
 
-<<<<<<< HEAD
-export default LoadingSkeleton;
-
-=======
           
           
           
@@ -138,4 +125,3 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({//
   </div>
 );
 export default Skeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

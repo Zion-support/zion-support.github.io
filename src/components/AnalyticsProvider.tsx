@@ -1,12 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface AnalyticsProviderProps {
-  // Add props here
-}
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = () => {
-=======
 interface AnalyticsContextType {// TODO: Add content;}
 };
   trackEvent: (eventName: string, parameters?: Record;
@@ -135,7 +128,6 @@ trackEvent,
     setUserId,
     setUserProperties,
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="analyticsprovider">
       {/* Component content */}
@@ -143,9 +135,6 @@ trackEvent,
 
   );
 };
-<<<<<<< HEAD
-
-=======
 export const useAnalytics = (): AnalyticsContextType => {// TODO: Add content;}
 }
   const context = useContext(AnalyticsContext);
@@ -155,5 +144,4 @@ export const useAnalytics = (): AnalyticsContextType => {// TODO: Add content;}
   }
   return context;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default AnalyticsProvider;

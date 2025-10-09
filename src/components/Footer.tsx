@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface FooterProps {
-  // Add props here
-}
-
-const Footer: React.FC<FooterProps> = () => {
-  return (
-    <div className="footer">
-      {/* Component content */}
-    </div>
-
-=======
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
@@ -176,7 +161,6 @@ to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors d
 to={link.url} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                   </Link>
               </div></div></div></div></div></footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

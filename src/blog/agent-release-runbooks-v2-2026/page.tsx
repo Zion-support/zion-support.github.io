@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const PagePage: React.FC = () => {
-=======
 export default function Page() {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -18,24 +10,6 @@ export default function Page() {// TODO: Add content;}
             Page
 
           </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default PagePage;
-
-=======
 <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
             canaries, approvals and one‑click rollback.
           </p>
@@ -106,7 +80,7 @@ export default PagePage;
               href='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
 // >
-//               Engage;
+// Engage
           <RefreshCw />
             </Link>
           </div>
@@ -114,4 +88,3 @@ export default PagePage;
       </section>
     </main>)
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

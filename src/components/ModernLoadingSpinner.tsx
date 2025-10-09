@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface ModernLoadingSpinnerProps {
-  // Add props here
-}
-
-const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = () => {
-  return (
-    <div className="modernloadingspinner">
-      {/* Component content */}
-
-=======
 'use client';
 interface ModernLoadingSpinnerProps {// TODO: Add content;}
 }
@@ -72,7 +59,6 @@ const ModernLoadingSpinner: React.FC;
         )}
       </div>
       <span className="sr-only">Loading content, please wait...</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };

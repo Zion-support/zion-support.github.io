@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const ServiceTemplatePage: React.FC = () => {
-=======
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 import { CheckCircle, Star, Phone } from 'lucide-react';
@@ -24,7 +17,6 @@ interface ServicePageProps {// TODO: Add content;}
 }
 const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
@@ -37,18 +29,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Blog Post
           </p>
-<<<<<<< HEAD
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-
-        </section>
-
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
-              className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
+              to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 // >
               
           
@@ -63,8 +46,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
 // Get Free Consultation;
           </Link>
             <a
-              href="tel:+13024640950"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               <Phone className="w-4 h-4 mr-2" />
 // (302) 464-0950;
           </a>
@@ -88,8 +70,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
                   ))}
                 </ul>
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  className="cyber-button w-full text-center inline-block"
-Get Started;
+                  className="cyber-button w-full text-center inline-block" Get Started;
         {/* Benefits Section */}
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
             Why Choose Our {title}?
@@ -106,7 +87,6 @@ Get Started;
 Ready to Transform Your Business?
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free consultation and discover how our solutions can revolutionize your operations.
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       </main>
       <Footer />
     </div>

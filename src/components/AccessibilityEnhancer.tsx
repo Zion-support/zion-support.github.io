@@ -1,18 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface AccessibilityEnhancerProps {
-  // Add props here
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = () => {
-  return (
-    <div className="accessibilityenhancer">
-      {/* Component content */}
-    </div>
-  );
-
-=======
 interface AccessibilityEnhancerProps {children: React.ReactNode;}
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -78,7 +65,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({children,}
 
   return;
           <>{children}</>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
 
 export default AccessibilityEnhancer;

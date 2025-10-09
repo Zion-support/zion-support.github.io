@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface LazyComponentProps {
-
-  // Add props here
-}
-
-const LazyComponent: React.FC<LazyComponentProps> = () => {
-  return (
-    <div className="lazycomponent">
-      {/* Component content */}
-    </div>
-  );
-};
-
-=======
 import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {// TODO: Add content;}
 };
@@ -215,5 +198,4 @@ const imagePreloads = [
     document.head.appendChild(link);
   });
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default LazyComponent;

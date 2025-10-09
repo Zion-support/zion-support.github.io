@@ -1,9 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users, Shield from 'lucide-react';}
+import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const SmartAnalyticsPage: React.FC = () => {const features = [}
+const SmartAnalyticsPage: React.FC = () => {
+  const features = [];
+  return (
     {// TODO: Add content;}
 };
   icon: BarChart,
@@ -15,7 +15,6 @@ const SmartAnalyticsPage: React.FC = () => {const features = [}
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -40,8 +39,6 @@ const PagePage: React.FC = () => {
       <Footer />
     </div>
 
-<<<<<<< HEAD
-=======
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
@@ -93,8 +90,7 @@ const PagePage: React.FC = () => {
             Ready to Transform Your Data?
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-              Get Free Demo;
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo;
         {/* Contact Info */}
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -109,7 +105,6 @@ const PagePage: React.FC = () => {
                   kleber@ziontechgroup.com;
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

@@ -1,17 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface EnhancedAccessibilityProps {
-  // Add props here
-}
-
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = () => {
-  return (
-    <div className="enhancedaccessibility">
-      {/* Component content */}
-    </div>
-
-=======
 interface AccessibilitySettings {// TODO: Add content;}
 };
   highContrast: boolean;
@@ -336,7 +324,6 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600 hover:bg-red
         >
           Reset Settings;
         </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

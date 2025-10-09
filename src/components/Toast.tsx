@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface ToastProps {
-  // Add props here
-}
-
-const Toast: React.FC<ToastProps> = () => {
-  return (
-    <div className="toast">
-      {/* Component content */}
-
-=======
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {// TODO: Add content;}
@@ -126,7 +112,6 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           
           </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };

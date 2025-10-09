@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-// TypeScript file - requestMiddleware
-export default {};
-
-=======
 'use client';
 /**
  * Request Middleware System;
@@ -175,4 +169,3 @@ export default {MiddlewareExecutor,}
   transformRequestMiddleware,
   transformResponseMiddleware,
   createDefaultMiddlewareChain;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

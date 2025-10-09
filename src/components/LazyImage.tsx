@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface LazyImageProps {
-
-  // Add props here
-}
-
-const LazyImage: React.FC<LazyImageProps> = () => {
-  return (
-    <div className="lazyimage">
-      {/* Component content */}
-
-=======
 'use client';
 interface LazyImageProps {// TODO: Add content;}
 };
@@ -124,7 +110,6 @@ const LazyImage: React.FC;
           )}
         </>
       )}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };

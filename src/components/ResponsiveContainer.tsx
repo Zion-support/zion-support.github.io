@@ -1,13 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface ResponsiveContainerProps {
-
-  // Add props here
-}
-
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = () => {
-=======
 interface ResponsiveContainerProps {// TODO: Add content;}
 };
   children: React.ReactNode;
@@ -77,16 +69,12 @@ const ResponsiveContainer: React.FC;
     const responsiveClasses = breakpoints[screenSize] || '';
     return `${baseClasses} ${responsiveClasses}`.trim();
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="responsivecontainer">
       {/* Component content */}
     </div>
   );
 };
-<<<<<<< HEAD
-
-=======
 // Hook for responsive values;
 export const useResponsiveValue = 
           
@@ -143,5 +131,4 @@ export const useBreakpoint = () => {// TODO: Add content;}
     current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default ResponsiveContainer;

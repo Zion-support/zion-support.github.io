@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface UltimateBusinessIntelligence2025BannerProps {
-  // Add props here
-}
-
-const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = () => {
-  return (
-    <div className="ultimatebusinessintelligence2025banner">
-      {/* Component content */}
-    </div>
-
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
@@ -85,7 +71,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {// TODO: Add content;}
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
     </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

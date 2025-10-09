@@ -3,22 +3,12 @@
  * Error Boundary Configuration;
  * Centralized configuration for error handling across the application;
  */
-<<<<<<< HEAD
-export interface ErrorBoundaryConfig {
-    // TODO: Add content
-  }
-  /**
-   * Whether to log errors to console
-   */
-  logErrors: boolean
-=======
 export interface ErrorBoundaryConfig {// TODO: Add content;}
 }
   /**
    * Whether to log errors to console;
    */;
   logErrors: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   /**
    * Whether to show detailed error messages;
    */,
@@ -44,42 +34,11 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
    * Custom error messages by error type;
    */,
 
-<<<<<<< HEAD
-  customMessages: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, string>
-=======
   customMessages: Record;
           <string, string>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   /**
    * Fallback UI components;
    */
-<<<<<<< HEAD
-  fallbackComponents: {
-    // TODO: Add content
-  }
-  default: React.ComponentType
-          
-          
-          
-          
-          
-          
-          
-          
-          <{ error: Error; resetError: () => void }>
-    network: React.ComponentType<{ error: Error; resetError: () => void }>
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>
-  }
-=======
   fallbackComponents: {// TODO: Add content;}
 };
   default: React.ComponentType;
@@ -87,7 +46,6 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Default error messages;
@@ -102,21 +60,11 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
 /**
  * Get error boundary configuration based on environment;
  */
-<<<<<<< HEAD
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
-    // TODO: Add content
-  }
-  const isDevelopment = process.env['NODE_ENV'] === 'development'
-  return {
-    // TODO: Add content
-  }
-=======
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add content;}
 }
   const isDevelopment = process.env['NODE_ENV'] === 'development';
   return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   logErrors: true,
     showDetails: isDevelopment,
     reportErrors: !isDevelopment,
@@ -124,14 +72,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
     showErrorOverlay: isDevelopment,
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
-<<<<<<< HEAD
-    fallbackComponents: {
-    // TODO: Add content
-  }
-=======
     fallbackComponents: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   default: DefaultErrorFallback,
       network: NetworkErrorFallback,
       notFound: NotFoundFallback;
@@ -141,14 +83,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
 /**
  * Default error fallback component;
  */
-<<<<<<< HEAD
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
-    // TODO: Add content
-  }
-=======
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     
           
@@ -215,14 +151,8 @@ className="w-6 h-6 text-red-600"
 /**
  * Network error fallback component;
  */
-<<<<<<< HEAD
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
-    // TODO: Add content
-  }
-=======
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     
           
@@ -278,14 +208,8 @@ className="w-6 h-6 text-yellow-600"
 /**
  * Not found error fallback component;
  */
-<<<<<<< HEAD
-function NotFoundFallback(): JSX.Element {
-    // TODO: Add content
-  }
-=======
 function NotFoundFallback(): JSX.Element {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     
           
@@ -326,33 +250,6 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
 /**
  * Get error type from error object;
  */
-<<<<<<< HEAD
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
-    // TODO: Add content
-  }
-  if (error.message.includes('Network') || error.message.includes('fetch')) {
-    // TODO: Add content
-  }
-    return 'network'
-  }
-  if (error.message.includes('404') || error.message.includes('not found')) {
-    // TODO: Add content
-  }
-    return 'notFound'
-  }
-  if (error.message.includes('timeout')) {
-    // TODO: Add content
-  }
-    return 'timeout'
-  }
-  if (error.message.includes('500') || error.message.includes('server')) {
-    // TODO: Add content
-  }
-    return 'serverError'
-  }
-  if (error.message.includes('validation')) {
-    // TODO: Add content
-=======
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {// TODO: Add content;}
 }
   if (error.message.includes('Network') || error.message.includes('fetch')) {// TODO: Add content;}
@@ -374,7 +271,6 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   if (error.message.includes('validation')) {// TODO: Add content;}
 }
     return 'validation';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return 'validation'
   }
@@ -383,29 +279,11 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
 /**
  * Format error for logging;
  */
-<<<<<<< HEAD
-export function formatErrorForLogging(error: Error): Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown> {
-    // TODO: Add content
-  }
-  return {
-    // TODO: Add content
-  }
-=======
 export function formatErrorForLogging(error: Error): Record;
           <string, unknown> {// TODO: Add content;}
 }
   return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   message: error.message,
     stack: error.stack,
     name: error.name,

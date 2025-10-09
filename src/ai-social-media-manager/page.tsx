@@ -1,8 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react';}
-const AISocialMediaManagerPage: React.FC = () => {const features = [}
+import { Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare } from 'lucide-react';
+const AISocialMediaManagerPage: React.FC = () => {
+  const features = [];
+  return (
     {// TODO: Add content;}
 };
   icon: Share2,
@@ -12,7 +12,6 @@ const AISocialMediaManagerPage: React.FC = () => {const features = [}
 icon: TrendingUp,
       title: 'Trend Analysis',
       description: 'Real-time trend monitoring and content suggestions based on viral topics',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -37,8 +36,6 @@ const PagePage: React.FC = () => {
       <Footer />
     </div>
 
-<<<<<<< HEAD
-=======
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Comprehensive reporting with actionable insights and ROI tracking',
@@ -100,7 +97,6 @@ Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of brands already using AI Social Media Manager to grow their presence;
               Contact Sales;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

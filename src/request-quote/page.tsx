@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-=======
 'use client';
 import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {return (}
+const RequestQuotePage: React.FC = () => {
+  return (
     <div>Coming Soon</div>
   );
 };
@@ -216,8 +202,7 @@ const RequestQuotePage: React.FC = () => {return (}
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                  href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
                   
           
@@ -232,8 +217,7 @@ const RequestQuotePage: React.FC = () => {return (}
 // Contact Us;
           </a>
                 <a
-                  href="/"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                  href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
                   
           
@@ -267,15 +251,10 @@ const RequestQuotePage: React.FC = () => {return (}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
 // Request a Quote;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-=======
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
@@ -299,13 +278,11 @@ const RequestQuotePage: React.FC = () => {return (}
           
           </label>
                       <input
-type="text"
-                        name="name"
+type="text" name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-// required;
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your full name"
+// required
+className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name"
 //                       />
                     
           
@@ -331,13 +308,11 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           </label>
                       <input
-type="email"
-                        name="email"
+type="email" name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-// required;
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your email"
+// required
+className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
 //                       />
                     
           
@@ -356,12 +331,10 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 // Company Name;
           </label>
                       <input
-type="text"
-                        name="company"
+type="text" name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your company name"
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
 // />
                     
           
@@ -378,12 +351,10 @@ type="text"
 // Phone Number;
           </label>
                       <input
-type="tel"
-                        name="phone"
+type="tel" name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your phone number"
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
 // />
                     
           
@@ -411,10 +382,9 @@ type="tel"
           
           </label>
                     <select
-                      name="serviceType"
-                      value={formData.serviceType}
+                      name="serviceType" value={formData.serviceType}
                       onChange={handleInputChange}
-// required;
+// required
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 //                     >
                       
@@ -438,8 +408,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 // Project Size;
           </label>
                       <select
-                        name="projectSize"
-                        value={formData.projectSize}
+                        name="projectSize" value={formData.projectSize}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 // >
@@ -460,11 +429,10 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-// Timeline;
+// Timeline
           </label>
                       <select
-                        name="timeline"
-                        value={formData.timeline}
+                        name="timeline" value={formData.timeline}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 // >
@@ -489,8 +457,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 // Budget Range;
           </label>
                     <select
-                      name="budget"
-                      value={formData.budget}
+                      name="budget" value={formData.budget}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 // >
@@ -523,13 +490,11 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           </label>
                     <textarea
-                      name="description"
-                      value={formData.description}
+                      name="description" value={formData.description}
                       onChange={handleInputChange}
-// required;
+// required
                       rows={4}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Describe your project requirements and goals..."
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
 //                     />
                   
           
@@ -546,12 +511,10 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 // Specific Requirements;
           </label>
                     <textarea
-                      name="requirements"
-                      value={formData.requirements}
+                      name="requirements" value={formData.requirements}
                       onChange={handleInputChange}
                       rows={3}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Any specific technical requirements, integrations, or constraints..."
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."
 // />
                   
           
@@ -564,8 +527,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           </div>
                   <button
-type="submit"
-                    disabled={isSubmitting}
+type="submit" disabled={isSubmitting}
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
 // >
                     {isSubmitting ? ()}
@@ -648,7 +610,6 @@ type="submit"
           
           
           
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </p>
         </section>
       </main>

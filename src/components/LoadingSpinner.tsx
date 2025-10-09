@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface LoadingSpinnerProps {
-  // Add props here
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
-  return (
-    <div className="loadingspinner">
-      {/* Component content */}
-    </div>
-  );
-
-=======
 'use client';
 interface LoadingSpinnerProps {// TODO: Add content;}
 }
@@ -79,7 +64,6 @@ className={cn()}
     );
   }
   return spinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
 
 export default LoadingSpinner;

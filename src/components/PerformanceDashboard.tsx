@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
-
-interface PerformanceProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-
-=======
 'use client';
 interface PerformanceMetrics {// TODO: Add content;}
 };
@@ -29,7 +13,6 @@ interface PerformanceMetrics {// TODO: Add content;}
     memoryUsage: number;,
     fps: number;
   [key: string]: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {

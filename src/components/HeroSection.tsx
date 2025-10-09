@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface HeroSectionProps {
-
-  // Add props here
-
-=======
 'use client';
 interface HeroSectionProps {// TODO: Add content;}
 };
@@ -15,18 +7,10 @@ interface HeroSectionProps {// TODO: Add content;}
 }
 const HeroSection: React.FC;
           <HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
 const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
-<<<<<<< HEAD
-
-    <div className="herosection">
-      {/* Component content */}
-    </div>
-
-=======
     
           
           
@@ -123,7 +107,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${}
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

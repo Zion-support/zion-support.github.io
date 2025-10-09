@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface UltimateBusinessIntelligenceShowcase2025Props {
-  // Add props here
-}
-
-const UltimateBusinessIntelligenceShowcase2025: React.FC<UltimateBusinessIntelligenceShowcase2025Props> = () => {
-  return (
-    <div className="ultimatebusinessintelligenceshowcase2025">
-      {/* Component content */}
-    </div>
-  );
-};
-
-export default UltimateBusinessIntelligenceShowcase2025;
-
-=======
 'use client';
 import React, { useState } from 'react';
         return (
@@ -120,4 +102,3 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {// TODO: Add content;}
 >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface ContentPreviewCardProps {
-
-  // Add props here
-}
-
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = () => {
-  return (
-    <div className="contentpreviewcard">
-      {/* Component content */}
-    </div>
-
-=======
 interface ContentPreviewCardProps {// TODO: Add content;}
 };
   id: string;
@@ -173,7 +158,6 @@ const ContentPreviewCard: React.FC;
         </div>
       </div>
     </article>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

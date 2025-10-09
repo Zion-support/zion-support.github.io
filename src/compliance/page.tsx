@@ -1,35 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
-
-=======
 import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users from 'lucide-react';}
+import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const CompliancePage: React.FC = () => {const certifications = [}
+const CompliancePage: React.FC = () => {
+  const certifications = [];
+  return (
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
@@ -75,8 +51,7 @@ const CompliancePage: React.FC = () => {const certifications = [}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center">
               <Link
-                to="/privacy"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
+                to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
 // >
                 
           
@@ -150,15 +125,13 @@ Compliance Areas;
               Our compliance team is available to answer any questions about our certifications,
               security measures, or data protection practices.
             <a
-              href="mailto:compliance@ziontechgroup.com"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
               Contact Compliance Team;
             </a>
             <div className="mt-8 text-sm text-blue-200">
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

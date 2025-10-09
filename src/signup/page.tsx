@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe, Globe from 'lucide-react';}
+import { Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe, Globe } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const SignupPage: React.FC = () => {return (}
+const SignupPage: React.FC = () => {
+  return (
     <div>Coming Soon</div>
   );
 };
@@ -66,28 +61,11 @@ const handleInputChange = (e: React.ChangeEvent;)
 icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -110,45 +88,32 @@ const PagePage: React.FC = () => {
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
-type="text"
-                        name="firstName"
+type="text" name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-// required;
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your first name"
+// required
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
 />
                       Last Name;
-                        name="lastName"
-                        value={formData.lastName}
-                        placeholder="Enter your last name"
-                    Email Address;
+                        name="lastName" value={formData.lastName}
+                        placeholder="Enter your last name" Email Address;
           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="email"
-                      name="email"
+                      type="email" name="email"
                       value={formData.email}
-                      placeholder="Enter your email"
-                    Company Name;
+                      placeholder="Enter your email" Company Name;
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      name="company"
-                      value={formData.company}
-                      placeholder="Enter your company name"
-Phone Number;
+                      name="company" value={formData.company}
+                      placeholder="Enter your company name" Phone Number;
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="tel"
-                      name="phone"
+                      type="tel" name="phone"
                       value={formData.phone}
-                      placeholder="Enter your phone number"
-Password;
+                      placeholder="Enter your phone number" Password;
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type={showPassword ? 'text' : 'password'}
-                      name="password"
-                      value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Create a password"
+                      name="password" value={formData.password}
+                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
                     <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
+                      type="button" onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
 // >
                       {showPassword ?}
@@ -156,15 +121,12 @@ Password;
                     </button>
 Confirm Password;
                       type={showConfirmPassword ? 'text' : 'password'}
-                      name="confirmPassword"
-                      value={formData.confirmPassword}
-                      placeholder="Confirm your password"
-                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                      name="confirmPassword" value={formData.confirmPassword}
+                      placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                       {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 <div className="space-y-4">
                   <label className="flex items-start">
-                      type="checkbox"
-                      name="agreeToTerms"
+                      type="checkbox" name="agreeToTerms"
                       checked={formData.agreeToTerms}
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
                     <span className="ml-2 text-sm text-gray-300">
@@ -177,11 +139,9 @@ Confirm Password;
 // Privacy Policy;
           </a>
                     </span>
-name="subscribeNewsletter"
-                      checked={formData.subscribeNewsletter}
+name="subscribeNewsletter" checked={formData.subscribeNewsletter}
                       Subscribe to our newsletter for updates and tips;
-                  type="submit"
-                  disabled={isLoading}
+                  type="submit" disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? ()}
           <div className="flex items-center justify-center">
@@ -203,8 +163,7 @@ Creating Account...
               <div className="mt-8 text-center">
                   Already have an account?{' '}
                   <a
-                    href="/login"
-                    className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                    href="/login" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 Sign in here;
             {/* Right Side - Features and Benefits */}
             <div className="space-y-8">
@@ -238,7 +197,6 @@ Join thousands of businesses already using our AI and IT solutions;
                   <div className="text-2xl font-bold text-white">Microsoft</div>
                   <div className="text-2xl font-bold text-white">Google</div>
                   <div className="text-2xl font-bold text-white">Amazon</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );

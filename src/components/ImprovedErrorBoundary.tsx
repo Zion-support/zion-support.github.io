@@ -1,19 +1,4 @@
 'use client';
-<<<<<<< HEAD
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-
-=======
 /**
  * Improved Error Boundary;
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks;
@@ -37,34 +22,11 @@ class ImprovedErrorBoundary extends Component;
           <Props, State> {// TODO: Add content;}
 }
   constructor(props: Props) {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
 class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-<<<<<<< HEAD
-
-    this.state = { hasError: false, error: null, errorInfo: null };
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
-
-=======
     this.state = {// TODO: Add content;}
 };
   hasError: false,
@@ -231,7 +193,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 This error has occurred {this.state.errorCount} times;
               </p>
             )}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </div>
         </div>
       );
@@ -240,11 +201,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-
-export default ImprovedErrorBoundary;
-
-=======
 const styles = {// TODO: Add content;}
 }
   container: {// TODO: Add content;}
@@ -352,4 +308,3 @@ const styles = {// TODO: Add content;}
     color: '#999'
   }
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

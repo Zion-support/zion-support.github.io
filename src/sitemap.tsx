@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const SitemapPage: React.FC = () => {
-=======
 const getAllPages = () => {return [}
     { url: '/', priority: 1.0, changefreq: 'daily' },
     { url: '/services', priority: 0.9, changefreq: 'weekly' },
@@ -36,7 +29,6 @@ ${pages.map(page => `}
   </url>`).join('\n')}
 </urlset>`;
   return sitemap;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />

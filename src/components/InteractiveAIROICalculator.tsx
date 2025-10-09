@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface InteractiveAIROICalculatorProps {
-  // Add props here
-}
-
-const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = () => {
-  return (
-    <div className="interactiveairoicalculator">
-      {/* Component content */}
-    </div>
-
-  );
-};
-
-=======
 'use client';
 import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {return (}
@@ -116,5 +98,4 @@ Expected Efficiency Gain (%)
                 </p>
     </section>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default InteractiveAIROICalculator;

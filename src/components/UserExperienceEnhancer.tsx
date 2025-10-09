@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface UserExperienceEnhancerProps {
-
-  // Add props here
-}
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = () => {
-  return (
-    <div className="userexperienceenhancer">
-      {/* Component content */}
-    </div>
-  );
-
-=======
 'use client';
 interface UserExperienceEnhancerProps {// TODO: Add content;}
 }
@@ -316,7 +300,6 @@ const observer = new PerformanceObserver((list) => {// TODO: Add content;}
     }
   }, []);
   return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
 
 export default UserExperienceEnhancer;

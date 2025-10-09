@@ -1,16 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-=======
 import { Helmet } from 'react-helmet-async';
-import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react';}
+import { Shield, Settings, Zap,  Shield,  Clock,  Users,  TrendingUp,  Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIAutomationPage: React.FC = () => {const features = [}
+const AIAutomationPage: React.FC = () => {
+  const features = [];
+  return (
     {// TODO: Add content;}
 };
   icon: Settings,
@@ -106,7 +101,6 @@ const AIAutomationPage: React.FC = () => {const features = [}
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -118,14 +112,6 @@ const AIAutomationPage: React.FC = () => {const features = [}
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-
-=======
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => ()}
@@ -207,7 +193,6 @@ const AIAutomationPage: React.FC = () => {const features = [}
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );

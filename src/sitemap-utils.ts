@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-import { MetadataRoute } from 'next';
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: 'https://ziontechgroup.com',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-  ];
-}
-
-=======
 // Mock functions for sitemap generation;
 export const getAllPages = () => [
   // TODO: Add items,
@@ -63,4 +47,3 @@ export const generateStaticSitemap = () => {// TODO: Add content;}
 }
   return generateSitemap(getAllPages());
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

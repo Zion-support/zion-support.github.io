@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface SystemMonitorProps {
-  // Add props here
-}
-
-const SystemMonitor: React.FC<SystemMonitorProps> = () => {
-  return (
-    <div className="systemmonitor">
-      {/* Component content */}
-    </div>
-  );
-};
-
-=======
 'use client';
 /**
  * System Monitor Component;
@@ -270,5 +253,4 @@ className={`h-2 rounded-full ${}
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}
           <div key={category} className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default SystemMonitor;

@@ -4,17 +4,9 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
-<<<<<<< HEAD
-
-  const _team = [
-    {
-      name: 'Kleber Santos',
-
-=======
   const team = [
     {
       name: 'Kleber Santos',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.'},
@@ -38,35 +30,26 @@ const AboutPage: React.FC = () => {
   ];
 
   const values = [
-    {icon: Brain,}
+    {
+      icon: Brain,
       title: 'Innovation',
-<<<<<<< HEAD
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'},
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
+    },
     {
       icon: Shield,
       title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.'},
+      description: 'Your data and systems are protected with enterprise-grade security measures.',
+    },
     {
       icon: Target,
       title: 'Results',
-      description: 'We focus on delivering measurable business outcomes and ROI.'},
-    {
-      icon: Users,
-=======
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
-    },
-    {icon: Shield,}
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.',
-    },
-    {icon: Target,}
-      title: 'Results',
       description: 'We focus on delivering measurable business outcomes and ROI.',
     },
-    {icon: Users,}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+    {
+      icon: Users,
       title: 'Partnership',
-      description: 'We work closely with our clients as strategic technology partners.'}
+      description: 'We work closely with our clients as strategic technology partners.'
+    }
   ];
 
   return (
@@ -84,32 +67,6 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Our Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-slate-800/50">
-                <value.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-=======
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -145,8 +102,7 @@ const AboutPage: React.FC = () => {
                   transform their operations, improve efficiency, and drive growth.
                 </p>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  to="/contact" className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Get in Touch;
                 </Link>
@@ -158,26 +114,12 @@ const AboutPage: React.FC = () => {
                   helping organizations across all industries achieve digital transformation;
                   and sustainable growth in the age of artificial intelligence.
                 </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Team Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Meet Our Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {_team.map((member, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-slate-800/50">
-                <div className="w-32 h-32 bg-cyan-400 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-slate-900">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-=======
         {/* Values Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,7 +143,6 @@ const AboutPage: React.FC = () => {
                   <p className="text-gray-600">
                     {value.description}
                   </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 mb-3">{member.role}</p>
@@ -212,28 +153,6 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI and IT solutions can drive your success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-cyan-400 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition-colors"
-            >
-              Get Started
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors"
-            >
-              Our Services
-            </Link>
-=======
         {/* Team Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -267,13 +186,10 @@ const AboutPage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -285,14 +201,12 @@ const AboutPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                to="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
                 Start a Project;
               </Link>
               <Link
-                to="/careers"
-                className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300"
+                to="/careers" className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Join Our Team;
               </Link>
@@ -300,7 +214,6 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );

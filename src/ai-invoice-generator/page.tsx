@@ -1,31 +1,4 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
-
-=======
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building from 'lucide-react';}
+import { Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building } from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
@@ -79,8 +52,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {const features = [}
     
           <>
       <SEOOptimizer
-        title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
-        description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
+        title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group" description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
         canonicalUrl="https:// ziontechgroup.com/ai-invoice-generator"
 //       />
@@ -124,8 +96,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {const features = [}
           </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
-                  href="#pricing"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
+                  href="#pricing" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
 // >
                   
           
@@ -139,8 +110,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {const features = [}
           <Calculator className="w-5 h-5 mr-2" />
 // Start Free Trial;
           </a>
-                  href="#demo"
-                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
+                  href="#demo" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
 <Eye className="w-5 h-5 mr-2" />
                   Watch Demo;
               {/* Key Stats */}
@@ -259,7 +229,6 @@ Most Popular;
         </main>
         <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 

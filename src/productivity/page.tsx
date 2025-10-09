@@ -1,16 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
 import { CheckCircle, Star } from 'lucide-react';
-const ProductivityPage: React.FC = () => {return (}
+const ProductivityPage: React.FC = () => {
+  return (
     <div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -24,16 +18,6 @@ const ProductivityPage: React.FC = () => {return (}
             This page is under development. Please check back soon for updates.
           </p>
         </section>
-<<<<<<< HEAD
-
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default PagePage;
-=======
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
@@ -105,4 +89,3 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
 </div>);
 }
 export default ProductivityPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
