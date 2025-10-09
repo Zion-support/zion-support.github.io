@@ -5,12 +5,57 @@ import { ArrowRight, Star, CheckCircle } from 'lucide-react';
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
+      title: 'AI Document Processing',
+      description: 'Extract, classify, and analyze documents with 99.9% accuracy using advanced AI.',
+      icon: '📄',
+      link: '/ai-document-processing',
+      features: ['Intelligent OCR', 'Auto-Classification', 'Data Extraction', 'Real-time Processing'],
+      price: 'Starting at $29/month',
+      popular: true
+    },
+    {
+      title: 'AI Social Media Manager',
+      description: 'Automate posting, optimize content, and grow your social presence with AI.',
+      icon: '📱',
+      link: '/ai-social-media-manager',
+      features: ['Auto Posting', 'Content Optimization', 'Audience Insights', 'Performance Tracking'],
+      price: 'Starting at $49/month',
+      popular: true
+    },
+    {
+      title: 'AI Email Marketing',
+      description: 'Send emails that convert with AI-powered content generation and automation.',
+      icon: '📧',
+      link: '/ai-email-marketing',
+      features: ['AI Content Generation', 'Smart Segmentation', 'Advanced Analytics', 'Automation Workflows'],
+      price: 'Starting at $39/month',
+      popular: true
+    },
+    {
+      title: 'AI CRM Automation',
+      description: 'Automate your sales process with AI-powered lead scoring and analytics.',
+      icon: '🎯',
+      link: '/ai-crm-automation',
+      features: ['Lead Scoring', 'Predictive Analytics', 'Sales Forecasting', 'Automated Follow-ups'],
+      price: 'Starting at $79/month',
+      popular: true
+    },
+    {
+      title: 'AI Voice Assistant',
+      description: 'Never miss a call with intelligent AI that handles customer inquiries 24/7.',
+      icon: '🎤',
+      link: '/ai-voice-assistant',
+      features: ['Natural Conversations', '24/7 Availability', 'Instant Response', 'Smart Routing'],
+      price: 'Starting at $59/month',
+      popular: true
+    },
+    {
       title: 'Micro SAAS Solutions',
-      description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
+      description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $29/month.',
       icon: '💻',
       link: '/micro-saas',
-      features: ['12+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
-      price: 'Starting at $79/month',
+      features: ['20+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
+      price: 'Starting at $29/month',
       popular: true
     },
     {
