@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Eye, AlertTriangle, Zap, Shield, Lock, Star, Database, Globe, Target, Brain, Settings, RefreshCw, ShieldCheck } from 'lucide-react';
 
 const AICybersecurityPage: React.FC = () => {
   const securityServices = [
@@ -191,11 +190,6 @@ const AICybersecurityPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
-      <Helmet>
-        <title>AI Cybersecurity Services | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered cybersecurity solutions including threat detection, SOC services, vulnerability assessment, and compliance management. Protect your business with cutting-edge security technology." />
-        <meta name="keywords" content="AI cybersecurity, threat detection, SOC services, vulnerability assessment, compliance, data protection, cloud security" />
-      </Helmet>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-indigo-700 text-white py-20">

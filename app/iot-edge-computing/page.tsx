@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
 
 const IoTEdgeComputingPage: React.FC = () => {
@@ -142,11 +141,6 @@ const IoTEdgeComputingPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>IoT & Edge Computing Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced IoT and edge computing solutions for smart cities, industrial automation, and connected devices." />
-        <meta name="keywords" content="IoT services, edge computing, smart cities, industrial IoT, sensor networks, connected devices" />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
         {/* Hero Section */}
@@ -217,7 +211,7 @@ const IoTEdgeComputingPage: React.FC = () => {
         </section>
 
         {/* Services by Category */}
-        {categories.map(category => (
+        {_categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
