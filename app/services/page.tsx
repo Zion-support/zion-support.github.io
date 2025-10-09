@@ -90,7 +90,7 @@ const ServicesPage: React.FC = () => {
       title: 'Blockchain & Web3',
       description: 'Decentralized applications, smart contracts, and Web3 solutions.',
       icon: '🔗',
-      link: '/blockchain',
+      link: '/blockchain-web3',
       features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],
       price: 'Starting at $8,000/project'
     },
