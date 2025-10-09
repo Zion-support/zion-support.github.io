@@ -102,16 +102,16 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+    <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20 cyber-grid-enhanced particle-bg">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center neon-glow floating">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white holographic">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
