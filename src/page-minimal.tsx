@@ -1,6 +1,6 @@
 import React from 'react';
-import { Phone, CheckCircle, Star } from 'lucide-react';
-export default function HomePage() {
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
