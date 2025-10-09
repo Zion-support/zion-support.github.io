@@ -45,7 +45,7 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
-      }ms`);
+      console.log(`${componentName} rendered in ${renderTime}ms`);
     }
   }
   // Track memory usage
@@ -259,5 +259,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-    }
+    console.log('Performance metrics:', metrics);
+  }
 };
