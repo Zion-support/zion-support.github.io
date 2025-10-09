@@ -1,50 +1,27 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { X, Star, Zap, Award } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-
-  useEffect(() => {
-    // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('promotion-banner-dismissed');
-    if (!dismissed) {
-      setIsVisible(true);
-    }
-  }, []);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    localStorage.setItem('promotion-banner-dismissed', 'true');
-  };
-
-  if (isDismissed || !isVisible) {
-    return null;
-  }
-
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 relative overflow-hidden">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <Star className="w-5 h-5 text-yellow-300 animate-pulse" />
-          <span className="font-semibold text-sm sm:text-base">
-            🎉 New AI Solutions Available! Get 20% off your first project.
-          </span>
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="flex items-center justify-center mb-4">
+            <Sparkles className="w-8 h-8 mr-2" />
+            <h2 className="text-3xl font-bold">Latest AI Innovations</h2>
+          </div>
+          <p className="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">
+            Discover cutting-edge AI solutions that are transforming businesses worldwide. 
+            Stay ahead with our latest technology insights and implementations.
+          </p>
+          <a
+            href="/ai-services"
+            className="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+          >
+            Explore AI Solutions
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </a>
         </div>
-        <button
-          onClick={handleDismiss}
-          className="text-white hover:text-gray-200 transition-colors p-1"
-          aria-label="Dismiss banner"
-        >
-          <X className="w-4 h-4" />
-        </button>
-      </div>
-      
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-2 -left-2 w-4 h-4 bg-white/20 rounded-full animate-ping"></div>
-        <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-white/20 rounded-full animate-ping animation-delay-1000"></div>
       </div>
     </div>
   );

@@ -1,5 +1,15 @@
 import React, { memo, useMemo, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+
+// Lazy load pages for better performance
+const HomePage = React.lazy(() => import('./app/page'));
+const AboutPage = React.lazy(() => import('./app/about/page'));
+const ContactPage = React.lazy(() => import('./app/contact/page'));
+const PricingPage = React.lazy(() => import('./app/pricing/page'));
+const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -163,20 +173,28 @@ export default function App() {
           />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </div>
+        <Router>
+          <div className="min-h-screen bg-white">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={
+                  <>
+                    <UnifiedContentPromotion />
+                    <InteractiveAIROICalculator />
+                    <ContentShowcase />
+                    <InteractiveContentShowcase2026 />
+                  </>
+                } />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/ai-services" element={<AIServicesPage />} />
+                <Route path="/it-services" element={<ITServicesPage />} />
+                <Route path="/micro-saas" element={<MicroSaasPage />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </Router>
       </HelmetProvider>
     </ErrorBoundary>
   );

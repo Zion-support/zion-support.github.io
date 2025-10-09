@@ -1,144 +1,70 @@
-'use client';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableSkipLinks?: boolean;
-  enableARIALabels?: boolean;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableFocusManagement = true,
-  enableSkipLinks = true,
-  enableARIALabels = true
-}) => {
+const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Keyboard navigation
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content with Tab key
-        if (event.key === 'Tab' && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
-          }
-        }
+    // Add skip to main content link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
 
-        // Close dropdowns with Escape key
-        if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach((dropdown) => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          });
-        }
-      };
-
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
+    // Add main content landmark
+    const mainContent = document.querySelector('main') || document.querySelector('[role="main"]');
+    if (mainContent) {
+      mainContent.id = 'main-content';
     }
 
-    // Screen reader support
-    if (enableScreenReaderSupport && typeof window !== 'undefined') {
-      // Add aria-labels to buttons without text
-      const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-      buttons.forEach((button) => {
-        if (!button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-        }
-      });
+    // Enhance focus management
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
 
-      // Add role attributes where needed
-      const clickableElements = document.querySelectorAll('[onclick]:not([role])');
-      clickableElements.forEach((element) => {
-        element.setAttribute('role', 'button');
-      });
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Add ARIA labels to interactive elements without labels
+    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    buttons.forEach((button) => {
+      if (!button.textContent?.trim()) {
+        button.setAttribute('aria-label', 'Button');
+      }
+    });
+
+    // Add role attributes where needed
+    const nav = document.querySelector('nav');
+    if (nav && !nav.getAttribute('role')) {
+      nav.setAttribute('role', 'navigation');
     }
 
-    // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined') {
-      // Trap focus in modals
-      const modals = document.querySelectorAll('[role="dialog"]');
-      modals.forEach((modal) => {
-        const focusableElements = modal.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-        if (firstElement && lastElement) {
-          const handleTabKey = (e: KeyboardEvent) => {
-            if (e.key === 'Tab') {
-              if (e.shiftKey) {
-                if (document.activeElement === firstElement) {
-                  lastElement.focus();
-                  e.preventDefault();
-                }
-              } else {
-                if (document.activeElement === lastElement) {
-                  firstElement.focus();
-                  e.preventDefault();
-                }
-              }
-            }
-          };
-
-          modal.addEventListener('keydown', handleTabKey);
-        }
-      });
+    const footer = document.querySelector('footer');
+    if (footer && !footer.getAttribute('role')) {
+      footer.setAttribute('role', 'contentinfo');
     }
 
-    // High contrast mode
-    if (enableHighContrast && typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
-      
-      const updateHighContrast = (matches: boolean) => {
-        if (matches) {
-          document.body.classList.add('high-contrast');
-        } else {
-          document.body.classList.remove('high-contrast');
-        }
-      };
+    // Add heading hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        const id = `heading-${index}`;
+        heading.id = id;
+      }
+    });
 
-      updateHighContrast(prefersHighContrast.matches);
-      prefersHighContrast.addEventListener('change', updateHighContrast);
-    }
-
-    // ARIA labels
-    if (enableARIALabels && typeof window !== 'undefined') {
-      // Add aria-labels to form inputs
-      const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-      inputs.forEach((input) => {
-        const placeholder = input.getAttribute('placeholder');
-        if (placeholder) {
-          input.setAttribute('aria-label', placeholder);
-        }
-      });
-
-      // Add aria-labels to links
-      const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
-      links.forEach((link) => {
-        if (!link.textContent?.trim()) {
-          const href = link.getAttribute('href');
-          if (href) {
-            link.setAttribute('aria-label', `Link to ${href}`);
-          }
-        }
-      });
-    }
-  }, [
-    enableKeyboardNavigation,
-    enableScreenReaderSupport,
-    enableHighContrast,
-    enableFocusManagement,
-    enableSkipLinks,
-    enableARIALabels
-  ]);
+    // Cleanup
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
 
   return null;
 };

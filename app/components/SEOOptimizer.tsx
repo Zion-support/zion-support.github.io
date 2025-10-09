@@ -1,6 +1,5 @@
-'use client';
-import { useEffect } from 'react';
-import Head from 'next/head';
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   title: string;
@@ -9,7 +8,6 @@ interface SEOOptimizerProps {
   canonicalUrl: string;
   structuredData?: any;
   ogImage?: string;
-  ogType?: string;
   twitterCard?: string;
 }
 
@@ -20,8 +18,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   canonicalUrl,
   structuredData,
   ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+  twitterCard = 'summary_large_image',
 }) => {
   useEffect(() => {
     // Update document title
@@ -31,70 +28,46 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
+      document.head.appendChild(meta);
     }
 
     // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '));
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = keywords.join(', ');
+      document.head.appendChild(meta);
     }
 
     // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', canonicalUrl);
+    } else {
+      const link = document.createElement('link');
+      link.rel = 'canonical';
+      link.href = canonicalUrl;
+      document.head.appendChild(link);
     }
-    canonicalLink.setAttribute('href', canonicalUrl);
-
-    // Update Open Graph tags
-    const updateMetaTag = (property: string, content: string) => {
-      let metaTag = document.querySelector(`meta[property="${property}"]`);
-      if (!metaTag) {
-        metaTag = document.createElement('meta');
-        metaTag.setAttribute('property', property);
-        document.head.appendChild(metaTag);
-      }
-      metaTag.setAttribute('content', content);
-    };
-
-    updateMetaTag('og:title', title);
-    updateMetaTag('og:description', description);
-    updateMetaTag('og:url', canonicalUrl);
-    updateMetaTag('og:type', ogType);
-    updateMetaTag('og:image', ogImage);
-
-    // Update Twitter Card tags
-    const updateTwitterTag = (name: string, content: string) => {
-      let metaTag = document.querySelector(`meta[name="${name}"]`);
-      if (!metaTag) {
-        metaTag = document.createElement('meta');
-        metaTag.setAttribute('name', name);
-        document.head.appendChild(metaTag);
-      }
-      metaTag.setAttribute('content', content);
-    };
-
-    updateTwitterTag('twitter:card', twitterCard);
-    updateTwitterTag('twitter:title', title);
-    updateTwitterTag('twitter:description', description);
-    updateTwitterTag('twitter:image', ogImage);
 
     // Add structured data
     if (structuredData) {
-      let scriptTag = document.querySelector('script[type="application/ld+json"]');
-      if (!scriptTag) {
-        scriptTag = document.createElement('script');
-        scriptTag.setAttribute('type', 'application/ld+json');
-        document.head.appendChild(scriptTag);
-      }
-      scriptTag.textContent = JSON.stringify(structuredData);
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
     }
-  }, [title, description, keywords, canonicalUrl, structuredData, ogImage, ogType, twitterCard]);
+  }, [title, description, keywords, canonicalUrl, structuredData]);
 
   return (
-    <Head>
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
@@ -104,23 +77,28 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content={ogType} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content="website" />
       
-      {/* Twitter Card */}
+      {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       
+      {/* Additional SEO meta tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="publisher" content="Zion Tech Group" />
+      
       {/* Structured Data */}
       {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       )}
-    </Head>
+    </Helmet>
   );
 };
 

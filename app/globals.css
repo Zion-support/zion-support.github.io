@@ -438,6 +438,29 @@ body {
     font-size: 0.9rem;
   }
 }
+@media (max-width: 480px) {
+  .cyber-grid {
+    background-size: 20px 20px;
+  }
+  
+  .neon-text {
+    font-size: 1.2rem;
+  }
+  
+  .cyber-text {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .cyber-card {
+    padding: 0.75rem;
+  }
+  
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
 
 /* Loading Animations */
 @keyframes fadeInUp {
@@ -510,31 +533,6 @@ body {
   .quantum-card {
     border: 1px solid #ccc !important;
     background: #fff !important;
-  }
-}
-
-/* Mobile Responsive Styles */
-@media (max-width: 480px) {
-  .cyber-grid {
-    background-size: 20px 20px;
-  }
-  
-  .neon-text {
-    font-size: 1.2rem;
-  }
-  
-  .cyber-text {
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-  }
-  
-  .cyber-card {
-    padding: 0.75rem;
-  }
-  
-  .cyber-button {
-    padding: 8px 16px;
-    font-size: 0.8rem;
   }
 }
 /* Particle System */

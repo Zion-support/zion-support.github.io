@@ -1,153 +1,148 @@
-'use client';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-interface AnalyticsProps {
-  enableGoogleAnalytics?: boolean;
-  enablePerformanceMonitoring?: boolean;
-  enableErrorTracking?: boolean;
-  enableUserBehaviorTracking?: boolean;
-}
-
-const Analytics: React.FC<AnalyticsProps> = ({
-  enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true
-}) => {
+const Analytics: React.FC = () => {
   useEffect(() => {
-    // Google Analytics setup
-    if (enableGoogleAnalytics && typeof window !== 'undefined') {
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-      document.head.appendChild(script);
+    // Google Analytics 4
+    const GA_TRACKING_ID = 'G-XXXXXXXXXX'; // Replace with actual tracking ID
+    
+    // Load Google Analytics
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+    document.head.appendChild(script);
 
-      // Initialize gtag
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      function gtag(...args: any[]) {
-        (window as any).dataLayer.push(args);
-      }
-      (window as any).gtag = gtag;
+    // Initialize gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
+    }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_TRACKING_ID, {
+      page_title: document.title,
+      page_location: window.location.href,
+    });
 
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID', {
+    // Track page views
+    const trackPageView = () => {
+      gtag('event', 'page_view', {
         page_title: document.title,
         page_location: window.location.href,
+        page_path: window.location.pathname,
       });
-    }
+    };
 
-    // Performance monitoring
-    if (enablePerformanceMonitoring && typeof window !== 'undefined') {
-      const trackPerformance = () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        if (navigation) {
-          const metrics = {
-            loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - navigation.navigationStart,
-          };
+    // Track page view on load
+    trackPageView();
 
-          // Send to analytics
-          if ('gtag' in window) {
-            (window as any).gtag('event', 'performance_metrics', {
-              event_category: 'Performance',
-              event_label: 'Page Load',
-              custom_map: metrics,
-            });
-          }
-        }
-      };
+    // Track page view on route change (for SPA)
+    const originalPushState = history.pushState;
+    const originalReplaceState = history.replaceState;
 
-      window.addEventListener('load', trackPerformance);
-    }
+    history.pushState = function(...args) {
+      originalPushState.apply(history, args);
+      setTimeout(trackPageView, 100);
+    };
 
-    // Error tracking
-    if (enableErrorTracking && typeof window !== 'undefined') {
-      const handleError = (event: ErrorEvent) => {
-        if ('gtag' in window) {
-          (window as any).gtag('event', 'exception', {
-            description: event.message,
-            fatal: false,
-            error_file: event.filename,
-            error_line: event.lineno,
-            error_column: event.colno,
+    history.replaceState = function(...args) {
+      originalReplaceState.apply(history, args);
+      setTimeout(trackPageView, 100);
+    };
+
+    window.addEventListener('popstate', () => {
+      setTimeout(trackPageView, 100);
+    });
+
+    // Track custom events
+    const trackEvent = (eventName: string, parameters: any = {}) => {
+      gtag('event', eventName, parameters);
+    };
+
+    // Track button clicks
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'BUTTON' || target.tagName === 'A') {
+        const buttonText = target.textContent?.trim() || 'Unknown';
+        trackEvent('button_click', {
+          button_text: buttonText,
+          button_location: target.closest('section')?.className || 'unknown',
+        });
+      }
+    });
+
+    // Track form submissions
+    document.addEventListener('submit', (e) => {
+      const form = e.target as HTMLFormElement;
+      trackEvent('form_submit', {
+        form_id: form.id || 'unknown',
+        form_class: form.className || 'unknown',
+      });
+    });
+
+    // Track phone number clicks
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target.href && target.href.startsWith('tel:')) {
+        trackEvent('phone_click', {
+          phone_number: target.href.replace('tel:', ''),
+        });
+      }
+    });
+
+    // Track email clicks
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target.href && target.href.startsWith('mailto:')) {
+        trackEvent('email_click', {
+          email_address: target.href.replace('mailto:', ''),
+        });
+      }
+    });
+
+    // Track scroll depth
+    let maxScroll = 0;
+    const trackScrollDepth = () => {
+      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      if (scrollPercent > maxScroll) {
+        maxScroll = scrollPercent;
+        if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
+          trackEvent('scroll_depth', {
+            scroll_percent: maxScroll,
           });
         }
-      };
+      }
+    };
 
-      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        if ('gtag' in window) {
-          (window as any).gtag('event', 'exception', {
-            description: event.reason?.toString() || 'Unhandled Promise Rejection',
-            fatal: false,
-          });
-        }
-      };
+    window.addEventListener('scroll', trackScrollDepth, { passive: true });
 
-      window.addEventListener('error', handleError);
-      window.addEventListener('unhandledrejection', handleUnhandledRejection);
+    // Track time on page
+    const startTime = Date.now();
+    const trackTimeOnPage = () => {
+      const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+      trackEvent('time_on_page', {
+        time_seconds: timeOnPage,
+      });
+    };
 
-      return () => {
-        window.removeEventListener('error', handleError);
-        window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-      };
-    }
+    // Track time on page when user leaves
+    window.addEventListener('beforeunload', trackTimeOnPage);
 
-    // User behavior tracking
-    if (enableUserBehaviorTracking && typeof window !== 'undefined') {
-      const trackClick = (event: MouseEvent) => {
-        const target = event.target as HTMLElement;
-        const tagName = target.tagName.toLowerCase();
-        
-        if (['a', 'button'].includes(tagName)) {
-          const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
-          
-          if ('gtag' in window) {
-            (window as any).gtag('event', 'click', {
-              event_category: 'User Interaction',
-              event_label: `${tagName}: ${text || href}`,
-              value: 1,
-            });
-          }
-        }
-      };
-
-      const trackScroll = () => {
-        const scrollPercent = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-        );
-        
-        if (scrollPercent > 0 && scrollPercent % 25 === 0) {
-          if ('gtag' in window) {
-            (window as any).gtag('event', 'scroll', {
-              event_category: 'User Behavior',
-              event_label: `${scrollPercent}% scrolled`,
-              value: scrollPercent,
-            });
-          }
-        }
-      };
-
-      document.addEventListener('click', trackClick);
-      window.addEventListener('scroll', trackScroll);
-
-      return () => {
-        document.removeEventListener('click', trackClick);
-        window.removeEventListener('scroll', trackScroll);
-      };
-    }
-  }, [
-    enableGoogleAnalytics,
-    enablePerformanceMonitoring,
-    enableErrorTracking,
-    enableUserBehaviorTracking
-  ]);
+    // Cleanup
+    return () => {
+      window.removeEventListener('beforeunload', trackTimeOnPage);
+      window.removeEventListener('scroll', trackScrollDepth);
+    };
+  }, []);
 
   return null;
 };
+
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
 
 export default Analytics;
