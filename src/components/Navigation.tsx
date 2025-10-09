@@ -196,7 +196,7 @@ const Navigation: React.FC = () => {
                             ))}
                             {category.services.length > 6 && (
                               <Link
-                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                                to={`/${category.title.toLowerCase().split(' ').join('-')}`}
                                 className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                                 onClick={closeAllMenus}
                               >
@@ -220,6 +220,7 @@ const Navigation: React.FC = () => {
                 </div>
               </div>
             </div>
+              )}
 
             <Link 
               to="/case-studies" 
@@ -330,8 +331,8 @@ const Navigation: React.FC = () => {
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
               >
-                Case Studies
-              </Link>
+                (302) 464-0950
+              </a>
 
               <Link
                 to="/blog"

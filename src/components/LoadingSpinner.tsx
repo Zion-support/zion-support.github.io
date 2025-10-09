@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD:app/components/LoadingSpinner.tsx
-import { cn } from '@/utils/cn';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -24,12 +22,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const spinner = (
-    <div className={cn('flex flex-col items-center justify-center gap-3', className)}>
+    <div className={`flex flex-col items-center justify-center gap-3 ${className || ''}`}>
       <div
-        className={cn(
-          'border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin',
-          sizeClasses[size]
-        )}
+        className={`border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin ${sizeClasses[size]}`}
         role="status"
         aria-label="Loading"
       />
@@ -38,16 +33,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </p>
       )}
-=======
-const LoadingSpinner: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center p-8">
-      <div 
-        className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"
-        role="status"
-        aria-label="Loading"
-      ></div>
->>>>>>> cursor/website-audit-and-update-with-deployment-572b:src/components/LoadingSpinner.tsx
     </div>
   );
 

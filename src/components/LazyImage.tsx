@@ -1,6 +1,9 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { cn } from '@/utils/cn';
+// Simple utility function to combine class names
+const cn = (...classes: (string | undefined | null | false)[]): string => {
+  return classes.filter(Boolean).join(' ');
+};
 
 interface LazyImageProps {
   src: string;
