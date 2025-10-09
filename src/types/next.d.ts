@@ -1,4 +1,4 @@
-// Type definitions for Next.js compatibility in Vite
+// Type definitions for Next.js compatibility in Vite;
 export interface Metadata {
   title?: string;
   description?: string;
@@ -10,11 +10,11 @@ export interface Metadata {
     email?: boolean;
     address?: boolean;
     telephone?: boolean;
-  };
+  }
   metadataBase?: URL;
   alternates?: {
     canonical?: string;
-  };
+  }
   openGraph?: {
     title?: string;
     description?: string;
@@ -30,7 +30,7 @@ export interface Metadata {
     type?: string;
     authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string;
-  };
+  }
   twitter?: {
     card?: string;
     title?: string;
@@ -38,7 +38,7 @@ export interface Metadata {
     images?: string[];
     site?: string;
     creator?: string;
-  };
+  }
   robots?: {
     index?: boolean;
     follow?: boolean;
@@ -48,11 +48,11 @@ export interface Metadata {
       'max-video-preview'?: number;
       'max-image-preview'?: string;
       'max-snippet'?: number;
-    };
-  };
+    }
+  }
   verification?: {
     google?: string;
-  };
+  }
 }
 export interface MetadataRoute {
   sitemap?: string;

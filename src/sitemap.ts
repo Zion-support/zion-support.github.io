@@ -1,8 +1,8 @@
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
+  const _baseUrl = 'https://ziontechgroup.com'
   
-  const routes = [
+  const _routes = [
     '',
     '/about',
     '/contact',
