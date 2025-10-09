@@ -233,6 +233,90 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
 
+          {/* Micro SAAS Services Grid */}
+          <div className="mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center neon-text">
+              Micro SAAS Solutions
+            </h3>
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-8 max-w-3xl mx-auto px-4">
+              Powerful AI tools for every business need. Real solutions, real results, real value.
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              <article className="cyber-card hologram-card p-4 sm:p-6 group hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4 group-hover:text-cyan-400 transition-colors">AI Content Generator</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered content creation for blogs, social media, and marketing. Save 10+ hours per week.
+                </p>
+                <div className="text-center mb-4">
+                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-1">$29/month</div>
+                  <div className="text-xs text-gray-400 line-through">vs $50-200/month</div>
+                </div>
+                <ul className="text-xs sm:text-sm text-gray-400 space-y-1 mb-4">
+                  <li>• Blog Post Generation</li>
+                  <li>• Social Media Content</li>
+                  <li>• SEO Optimization</li>
+                  <li>• Multi-language Support</li>
+                </ul>
+                <a href="/micro-saas" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
+                  Learn More →
+                </a>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 group hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4 group-hover:text-cyan-400 transition-colors">Smart Analytics</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Real-time business analytics with AI insights and predictions. Make data-driven decisions.
+                </p>
+                <div className="text-center mb-4">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-1">$49/month</div>
+                  <div className="text-xs text-gray-400 line-through">vs $100-500/month</div>
+                </div>
+                <ul className="text-xs sm:text-sm text-gray-400 space-y-1 mb-4">
+                  <li>• Real-time Dashboards</li>
+                  <li>• AI Predictions</li>
+                  <li>• Custom Reports</li>
+                  <li>• Data Integration</li>
+                </ul>
+                <a href="/micro-saas" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                  Learn More →
+                </a>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 group hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4 group-hover:text-cyan-400 transition-colors">AI Support Bot</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Intelligent customer support automation with human handoff. Reduce costs by 60%.
+                </p>
+                <div className="text-center mb-4">
+                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-1">$79/month</div>
+                  <div className="text-xs text-gray-400 line-through">vs $200-1000/month</div>
+                </div>
+                <ul className="text-xs sm:text-sm text-gray-400 space-y-1 mb-4">
+                  <li>• 24/7 Support</li>
+                  <li>• Multi-language</li>
+                  <li>• Ticket Management</li>
+                  <li>• Human Handoff</li>
+                </ul>
+                <a href="/micro-saas" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+                  Learn More →
+                </a>
+              </article>
+            </div>
+            
+            <div className="text-center mt-8">
+              <a 
+                href="/micro-saas"
+                className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 text-sm sm:text-base"
+              >
+                View All Micro SAAS Solutions
+              </a>
+            </div>
+          </div>
+
           {/* Additional Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <article className="cyber-card hologram-card p-4 sm:p-6">
