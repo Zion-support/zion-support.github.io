@@ -59,6 +59,29 @@ const AIDataVisualizationPage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee' }
   ];
 
+  const useCases = [
+    {
+      title: 'Business Intelligence',
+      description: 'Transform raw data into actionable business insights with interactive dashboards and automated reporting.',
+      icon: BarChart
+    },
+    {
+      title: 'Financial Analytics',
+      description: 'Monitor financial performance, track KPIs, and generate comprehensive financial reports automatically.',
+      icon: TrendingUp
+    },
+    {
+      title: 'Marketing Analytics',
+      description: 'Analyze marketing campaigns, track ROI, and optimize strategies with real-time data visualization.',
+      icon: Eye
+    },
+    {
+      title: 'Operations Monitoring',
+      description: 'Monitor operational metrics, identify bottlenecks, and improve efficiency with AI-powered insights.',
+      icon: Settings
+    }
+  ];
+
   return (
     <>
       <SEOOptimizer

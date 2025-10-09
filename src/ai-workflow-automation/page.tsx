@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
+import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe, DollarSign, Headphones, Target } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -57,6 +57,31 @@ const AIWorkflowAutomationPage: React.FC = () => {
     { number: '50%', label: 'Time Savings' },
     { number: '99.9%', label: 'Reliability' }
   ];
+
+  const useCases = [
+    {
+      title: 'HR Automation',
+      description: 'Automate employee onboarding, leave management, and performance reviews.',
+      icon: Users
+    },
+    {
+      title: 'Finance & Accounting',
+      description: 'Streamline invoice processing, expense management, and financial reporting.',
+      icon: DollarSign
+    },
+    {
+      title: 'Customer Service',
+      description: 'Automate ticket routing, response generation, and escalation processes.',
+      icon: Headphones
+    },
+    {
+      title: 'Marketing Operations',
+      description: 'Automate campaign management, lead nurturing, and performance tracking.',
+      icon: Target
+    }
+  ];
+
+  const pricing = pricingPlans;
 
   return (
     <>
