@@ -10,11 +10,9 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance

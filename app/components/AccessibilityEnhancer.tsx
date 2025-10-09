@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -17,24 +17,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNav = true,
   enableFocusIndicators = true,
 }) => {
-<<<<<<< HEAD
-  // const [isReducedMotion, setIsReducedMotion] = useState(false);
-  // const [isHighContrast, setIsHighContrast] = useState(false);
-  // const [fontSize, setFontSize] = useState(16);
-=======
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
-
-  const addSkipLinks = useCallback(() => {
-    // Add skip links
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 
   useEffect(() => {
     // Check for reduced motion preference
@@ -43,12 +28,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       setIsReducedMotion(e.matches);
     };
     
-<<<<<<< HEAD
-=======
     setIsReducedMotion(mediaQuery.matches);
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
     mediaQuery.addEventListener('change', handleChange);
-    setIsReducedMotion(mediaQuery.matches);
 
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
@@ -183,40 +164,46 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         z-index: 1000;
         border-radius: 4px;
         transition: top 0.3s;
-      `;
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px';
-      });
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px';
-      });
-      
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
+      }
 
-    if (enableKeyboardNav) {
-      // Add keyboard navigation enhancements
-      const handleKeyDown = (e: KeyboardEvent) => {
-        // Skip to main content with Alt + M
-        if (e.altKey && e.key === 'm') {
-          e.preventDefault();
-          const mainContent = document.getElementById('main-content');
-          if (mainContent) {
-            mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      };
+      .skip-link:focus {
+        top: 6px;
+      }
+    `;
+    
+    document.head.appendChild(style);
 
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
-  }, [enableSkipLinks, enableKeyboardNav]);
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
 
+    return () => {
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
+      if (style.parentNode) {
+        style.parentNode.removeChild(style);
+      }
+    };
+  }, [handleFocusIn, handleFocusOut, enableFocusIndicators]);
+
+  // Add skip links
   useEffect(() => {
-    // Apply accessibility styles based on preferences
+    if (!enableSkipLinks) return;
+
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link sr-only-focusable';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    return () => {
+      if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink);
+      }
+    };
+  }, [enableSkipLinks]);
+
+  // Apply accessibility styles based on preferences
+  useEffect(() => {
     const root = document.documentElement;
     
     if (isReducedMotion) {
@@ -236,62 +223,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Apply font size scaling
     root.style.setProperty('--base-font-size', `${fontSize}px`);
   }, [isReducedMotion, isHighContrast, fontSize]);
-
-    return () => {
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
-      if (style.parentNode) {
-        style.parentNode.removeChild(style);
-      }
-    };
-  }, [handleFocusIn, handleFocusOut, enableFocusIndicators]);
-
-  // Screen reader announcements
-  // const announceToScreenReader = useCallback((message: string) => {
-  //   const announcement = document.createElement('div');
-  //   announcement.setAttribute('aria-live', 'polite');
-  //   announcement.setAttribute('aria-atomic', 'true');
-  //   announcement.className = 'sr-only';
-  //   announcement.textContent = message;
-  //   
-  //   document.body.appendChild(announcement);
-  //   
-  //   setTimeout(() => {
-  //     if (announcement.parentNode) {
-  //       announcement.parentNode.removeChild(announcement);
-  //     }
-  //   }, 1000);
-  // }, []);
-
-  // Add skip links
-  useEffect(() => {
-    if (!enableSkipLinks) return;
-
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only-focusable';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
-    return () => {
-      if (skipLink.parentNode) {
-        skipLink.parentNode.removeChild(skipLink);
-      }
-<<<<<<< HEAD
-    };
-  }, [enableSkipLinks]);
-=======
-    }, 1000);
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-
-  // Expose utility functions to children via context if needed
-  const accessibilityUtils = {
-    announceToScreenReader,
-    isReducedMotion,
-    isHighContrast,
-    fontSize,
-  };
 
   return (
     <div 

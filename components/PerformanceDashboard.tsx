@@ -21,35 +21,28 @@ const PerformanceDashboard: React.FC = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const _loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
-<<<<<<< HEAD
-      setMetrics(prev => ({
-        ...prev,
-        loadTime: _loadTime,
-        memoryUsage,      }));
-=======
 
       setMetrics(prev => ({
         ...prev,
-        loadTime: _loadTime,
-        memoryUsage,
+        loadTime: loadTime,
+        memoryUsage: memoryUsage,
       }));
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
     };
 
-    //Update metrics on load
+    // Update metrics on load
     updateMetrics();
 
-    //Update metrics periodically
+    // Update metrics periodically
     const interval = setInterval(updateMetrics, 1000);
 
-    return () => clearInterval(_interval);
+    return () => clearInterval(interval);
   }, []);
 
-  //Only show in development
+  // Only show in development
   if (process.env['NODE_ENV'] !== 'development') {
     return null;
   }
