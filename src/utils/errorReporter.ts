@@ -131,7 +131,7 @@ export class ErrorReporter {
     } catch (error) {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
-        logger.warn('Failed to send error to remote endpoint:', error);
+        logger.warn('Failed to send error to remote endpoint:', { error });
       }
     }
   }

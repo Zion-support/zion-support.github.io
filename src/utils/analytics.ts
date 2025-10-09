@@ -1,5 +1,10 @@
 'use client';
 import React from 'react'
+
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(command: string, targetId: string, config?: Record<string, unknown>): void;
+}
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
@@ -19,6 +24,9 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
+  public config = {
+    gaId: process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID'
+  }
   /**
    * Initialize analytics service
    */
