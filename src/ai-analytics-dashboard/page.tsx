@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Users, Zap, Brain, Phone, CheckCircle } from 'lucide-react';
+import { BarChart3, TrendingUp, Users, Zap, Brain, Phone, CheckCircle, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
