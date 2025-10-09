@@ -1,30 +1,38 @@
+// Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 
-// Static assets to cache
-const STATIC_ASSETS = [
+// Files to cache
+const STATIC_FILES = [
   '/',
-  '/main.tsx',
-  '/globals.css',
+  '/index.html',
+  '/src/main.tsx',
+  '/src/App.tsx',
+  '/src/page.tsx',
+  '/src/globals.css',
   '/manifest.json'
 ];
 
-// Install event - cache static assets
+// Install event
 self.addEventListener('install', (event) => {
+  console.log('Service Worker installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        return cache.addAll(STATIC_ASSETS);
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
       })
       .then(() => {
+        console.log('Service Worker installed');
         return self.skipWaiting();
       })
   );
 });
 
-// Activate event - clean up old caches
+// Activate event
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker activating...');
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
@@ -34,17 +42,19 @@ self.addEventListener('activate', (event) => {
               return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
             })
             .map((cacheName) => {
+              console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             })
         );
       })
       .then(() => {
+        console.log('Service Worker activated');
         return self.clients.claim();
       })
   );
 });
 
-// Fetch event - serve from cache or network
+// Fetch event
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -64,6 +74,7 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
+          console.log('Serving from cache:', request.url);
           return cachedResponse;
         }
 
@@ -86,30 +97,34 @@ self.addEventListener('fetch', (event) => {
 
             return response;
           })
-          .catch(() => {
+          .catch((error) => {
+            console.log('Fetch failed:', error);
+            
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
-              return caches.match('/');
+              return caches.match('/index.html');
             }
+            
+            throw error;
           });
       })
   );
 });
 
-// Background sync for offline form submissions
+// Background sync for offline actions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
-    event.waitUntil(
-      // Handle offline form submissions
-      handleOfflineSubmissions()
-    );
+    console.log('Background sync triggered');
+    event.waitUntil(doBackgroundSync());
   }
 });
 
 // Push notifications
 self.addEventListener('push', (event) => {
+  console.log('Push message received');
+  
   const options = {
-    body: event.data ? event.data.text() : 'New update available!',
+    body: event.data ? event.data.text() : 'New update available',
     icon: '/icon-192x192.png',
     badge: '/badge-72x72.png',
     vibrate: [100, 50, 100],
@@ -120,7 +135,7 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-        title: 'View Details',
+        title: 'Explore',
         icon: '/icon-192x192.png'
       },
       {
@@ -136,8 +151,9 @@ self.addEventListener('push', (event) => {
   );
 });
 
-// Handle notification clicks
+// Notification click
 self.addEventListener('notificationclick', (event) => {
+  console.log('Notification clicked');
   event.notification.close();
 
   if (event.action === 'explore') {
@@ -147,10 +163,40 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Helper function for offline form submissions
-async function handleOfflineSubmissions() {
-  // Implementation for handling offline form submissions
-  // This would typically involve storing form data in IndexedDB
-  // and syncing when back online
-  console.log('Handling offline submissions...');
+// Helper function for background sync
+async function doBackgroundSync() {
+  try {
+    // Perform background sync operations
+    console.log('Performing background sync...');
+    
+    // Example: Sync form submissions, analytics, etc.
+    const pendingActions = await getPendingActions();
+    
+    for (const action of pendingActions) {
+      await syncAction(action);
+    }
+    
+    console.log('Background sync completed');
+  } catch (error) {
+    console.error('Background sync failed:', error);
+  }
 }
+
+// Helper function to get pending actions
+async function getPendingActions() {
+  // This would typically come from IndexedDB
+  return [];
+}
+
+// Helper function to sync an action
+async function syncAction(action) {
+  // This would typically make API calls
+  console.log('Syncing action:', action);
+}
+
+// Message handling
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});

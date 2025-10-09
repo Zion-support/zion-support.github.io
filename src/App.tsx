@@ -1,5 +1,6 @@
-import React, { useEffect, useState, lazy } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -56,6 +57,7 @@ const App: React.FC = () => {
       });
       setIsInitialized(true);
     } catch (error) {
+      console.error('Failed to initialize enhancers:', error);
       // Error logged to monitoring service
       setIsInitialized(true);
     }
@@ -66,11 +68,15 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </div>
+    <ErrorBoundary>
+      <div className="App">
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </Suspense>
+      </div>
+    </ErrorBoundary>
   );
 };
 
