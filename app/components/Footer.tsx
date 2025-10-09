@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
     { name: 'AI Video Generator', href: '/ai-video-generation' },
     { name: 'AI Sales Automation', href: '/ai-sales-automation' },
     { name: 'AI Content Writer', href: '/ai-content-writer' },
-    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer' },
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer' },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
     { name: 'AI Fashion Design', href: '/ai-fashion-design' },
     { name: 'AI Music Composition', href: '/ai-music-composition' },
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
-    { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
   ];
 
   const itServices = [

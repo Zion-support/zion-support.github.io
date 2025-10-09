@@ -37,7 +37,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
-    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer', icon: DollarSign },
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: DollarSign },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
     { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
     { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
@@ -52,7 +52,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
-    { name: 'AI Fraud Detection', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
   ];
 
   const itServices = [
