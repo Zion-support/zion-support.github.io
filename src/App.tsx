@@ -70,10 +70,7 @@ import CareersPage from './careers/page';
 import NewsPage from './news/page';
 
 // Support Pages
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-19c2
 // Additional Pages
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
@@ -134,10 +131,7 @@ import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
 // Support Pages
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-19c2
 // AI Services Pages
 import AIProjectManagerPage from './ai-project-manager/page';
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
@@ -265,7 +259,6 @@ const App: React.FC = () => {
 
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
         // Reports are available but not logged to console
         performanceEnhancer.getMetrics();
         accessibilityEnhancer.generateReport();
@@ -277,15 +270,6 @@ const App: React.FC = () => {
     } catch (error) {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-=======
-        // Reports generated silently in development
-      }
-
-      setIsInitialized(true);
-    } catch {
-      // Continue even if enhancers fail
-      setIsInitialized(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-5cff
     }
   };
 
