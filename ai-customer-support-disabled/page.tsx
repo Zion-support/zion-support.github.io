@@ -102,6 +102,30 @@ const,
 };
 
 
+const AICustomerSupportPage2: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Navigation />
+      
+      <main className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              AI Customer Support
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
+            </p>
+          </section>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+
 export default AICustomerSupportPage;
+
 
 

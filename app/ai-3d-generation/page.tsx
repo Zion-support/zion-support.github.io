@@ -42,9 +42,9 @@ const,
     }
   ];
 
+
+
   const features = [
-
-
     'AI-powered 3D model generation',
     'Automatic texture synthesis',
     'Real-time 3D rendering',
@@ -77,40 +77,38 @@ const,
 
   const useCases = [
 
-      titl,
-  e: 'Gaming',
-      descriptio,
-  n: 'Create 3D assets for games and virtual worlds',
-      example,
-  s: ['Character models', 'Environment assets', 'Weapons and tools', 'Vehicles and props']
-      titl,
-  e: 'Architecture',
-      descriptio,
-  n: 'Generate 3D models for architectural visualization',
-      example,
-  s: ['Building designs', 'Interior layouts', 'Landscape models', 'Furniture pieces']
+    {
+      title: 'Gaming',
+      description: 'Create 3D assets for games and virtual worlds',
+      examples: ['Character models', 'Environment assets', 'Weapons and tools', 'Vehicles and props']
+    },
+    {
+      title: 'Architecture',
+      description: 'Generate 3D models for architectural visualization',
+      examples: ['Building designs', 'Interior layouts', 'Landscape models', 'Furniture pieces']
+    }
+  ];
 
   const pricing = [
-      pla,
-  n: 'Starter',
-      pric,
-  e: '$199/month',
-      feature,
-  s: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
-      popula,
-  r: false,
-  plan: 'Professional',
-      pric,
-  e: '$599/month',
-      feature,
-  s: ['Up to 50 models/month', 'Advanced textures', 'High quality', 'Animation support', 'API access'],
-      popula,
-  r: true,
-  plan: 'Enterprise',
-      pric,
-  e: '$1,999/month',
-      feature,
-  s: ['Unlimited models', 'Premium textures', 'Custom training', 'Priority support', 'White-label'],
+    {
+      plan: 'Starter',
+      price: '$199/month',
+      features: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
+      popular: false
+    },
+    {
+      plan: 'Professional',
+      price: '$599/month',
+      features: ['Up to 50 models/month', 'Advanced textures', 'High quality', 'Animation support', 'API access'],
+      popular: true
+    },
+    {
+      plan: 'Enterprise',
+      price: '$1,999/month',
+      features: ['Unlimited models', 'Premium textures', 'Custom training', 'Priority support', 'White-label'],
+      popular: false
+    }
+  ];
 
 
   const technologies = [
@@ -284,6 +282,7 @@ const,
 
 
 export default AI3DGenerationPage;"`
+
 
 
 

@@ -113,6 +113,5 @@ const,
 };
 
 
-export default AIWorkflowAutomationPage;
 
 

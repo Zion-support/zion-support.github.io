@@ -38,6 +38,7 @@ const ServicesPage: React.FC = () => {
         }
       ]
 
+
     },
     {
       title: 'IT Services',
@@ -63,45 +64,37 @@ const ServicesPage: React.FC = () => {
           description: 'Streamlined development workflows with automated testing and deployment',
           price: 'Starting at $1,199/month',
           features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup']
-        },
-        {
-          name: 'Database Management',
-          description: 'Database design, optimization, and management with AI-powered tuning',
-          price: 'Starting at $899/month',
-          features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
+
+
         }
       ]
     },
     {
-      title: 'Micro SAAS',
-      icon: Zap,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
-      description: 'Ready-to-use AI-powered applications',
+
+      title: 'Web Development',
+      icon: Globe,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      description: 'Modern web applications with cutting-edge technologies',
       services: [
         {
-          name: 'AI Project Manager',
-          description: 'Intelligent project planning with AI-powered resource optimization',
-          price: '$99/month',
-          features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration']
+          name: 'Frontend Development',
+          description: 'React, Next.js, and modern JavaScript frameworks',
+          price: 'Starting at $1,000/month',
+          features: ['React/Next.js Development', 'Responsive Design', 'Performance Optimization', 'SEO Implementation']
         },
         {
-          name: 'AI Social Media Manager',
-          description: 'Automate your social media with AI-powered content creation',
-          price: '$79/month',
-          features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence']
+          name: 'Backend Development',
+          description: 'Scalable server-side solutions with Node.js, Python, and more',
+          price: 'Starting at $1,200/month',
+          features: ['API Development', 'Database Design', 'Authentication', 'Performance Optimization']
         },
         {
-          name: 'AI Analytics Dashboard',
-          description: 'Real-time business intelligence with AI-powered insights',
-          price: '$149/month',
-          features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking']
-        },
-        {
-          name: 'AI Email Marketing',
-          description: 'Transform your email marketing with AI-powered content generation',
-          price: '$69/month',
-          features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns']
+          name: 'Full-Stack Development',
+          description: 'Complete web applications from frontend to backend',
+          price: 'Starting at $1,800/month',
+          features: ['End-to-End Development', 'Database Integration', 'Third-party Integrations', 'Deployment & Maintenance']
+
         }
       ]
     }
@@ -242,6 +235,7 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;"`
+
 
 
 
