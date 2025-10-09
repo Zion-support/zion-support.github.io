@@ -11,15 +11,19 @@ const AboutPage: React.FC = () => {
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.',
     },
+    {
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',
       bio: 'Technical expert specializing in machine learning and cloud architecture.',
+    },
+    {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-import { Users, Target, Brain, Shield } from 'lucide-react';
+    }
+  ];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -29,46 +33,29 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
   ];
 
   const values = [
+    {
       icon: Brain,
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
+    },
+    {
       icon: Shield,
       title: 'Security',
       description: 'Your data and systems are protected with enterprise-grade security measures.',
+    },
+    {
       icon: Target,
       title: 'Results',
       description: 'We focus on delivering measurable business outcomes and ROI.',
+    },
+    {
       icon: Users,
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.',
-
-    { number: '150+', label: 'Happy Clients' },
-    { number: '99%', label: 'Client Satisfaction' },
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
-      title: 'Excellence',
-      description: 'We deliver solutions that exceed expectations and drive real business value.'
-      title: 'Integrity',
-      description: 'We maintain the highest ethical standards in all our business practices.'
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners in their success.'
     }
-
-  const team = [
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.'
-      bio: 'Technical expert specializing in machine learning and cloud architecture.'
-      role: 'Lead Developer',
-      bio: 'Full-stack developer passionate about creating scalable solutions.'
+  ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-center mb-12'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            About Zion Tech Group
-          </h1>
-          <p className='text-xl text-gray-600'>
-            Leading the future of AI and IT solutions
-
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -101,9 +88,14 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
+                  </div>
                   <div className="text-gray-600 font-medium">
                     {stat.label}
+                  </div>
+                </div>
               ))}
+            </div>
+          </div>
         </section>
 
         {/* Mission Section */}
@@ -177,15 +169,16 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
                 Start a Project
                 to="/careers"
                 className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300"
+              >
                 Join Our Team
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <Footer />
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-white mb-4">About</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced about solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
+    </div>
   );
 };
 
