@@ -39,9 +39,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
-
-  // Generate structured data
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) {
       return null;
@@ -49,10 +48,30 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
     const baseStructuredData = {
       '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: seoData.title,
+      '@type': 'TechCompany',
+      name: 'Zion Tech Group',
       description: seoData.description,
       url: seoData.canonicalUrl,
+      logo: 'https://ziontechgroup.com/logo.png',
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup',
+        'https://github.com/zion-tech-group',
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-ZION-TECH',
+        contactType: 'customer service',
+        availableLanguage: 'English',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '123 Tech Innovation Drive',
+        addressLocality: 'San Francisco',
+        addressRegion: 'CA',
+        postalCode: '94105',
+        addressCountry: 'US',
+      },
       ...seoData.structuredData,
     };
 
@@ -101,13 +120,35 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
 
-    return {
-      'twitter:card': seoData.twitterCard || 'summary_large_image',
-      'twitter:title': seoData.twitterTitle || seoData.title,
-      'twitter:description': seoData.twitterDescription || seoData.description,
-      'twitter:image': seoData.twitterImage || seoData.ogImage || '/og-image.jpg',
-      'twitter:site': '@ziontechgroup',
-      'twitter:creator': '@ziontechgroup',
+    const faqData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What services does Zion Tech Group offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How can I contact Zion Tech Group?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What makes Zion Tech Group different?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
+          },
+        },
+      ],
     };
   }, [seoData, enableTwitterCards]);
 
@@ -124,70 +165,82 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'msapplication-config', content: '/browserconfig.xml' },
     ];
 
-    if (seoData.canonicalUrl) {
-      metaTags.push({ name: 'canonical', content: seoData.canonicalUrl });
+  const structuredData = generateStructuredData();
+  const breadcrumbData = generateBreadcrumbStructuredData();
+  const faqData = generateFAQStructuredData();
+
+  useEffect(() => {
+    // Update page title and meta description for better SEO
+    if (typeof document !== 'undefined') {
+      document.title = seoData.title;
+      
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.setAttribute('content', seoData.description);
+
+      // Update canonical URL
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (!canonicalLink) {
+        canonicalLink = document.createElement('link');
+        canonicalLink.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonicalLink);
+      }
+      canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
 
     return metaTags;
   }, [seoData]);
 
-  // Track page view
-  const _trackPageView = useCallback(() => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: seoData.title,
-        page_location: seoData.canonicalUrl,
-      });
-    }
-  }, [seoData.title, seoData.canonicalUrl]);
-
-  // Track performance metrics
-  const _trackPerformanceMetrics = useCallback(() => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'page_view', {
-        page_title: seoData.title,
-        page_location: seoData.canonicalUrl,
-        custom_parameter_1: 'seo_optimized',
-      });
-    }
-  }, [seoData.title, seoData.canonicalUrl]);
-
-  // Update structured data
-  useEffect(() => {
-    if (!enableSchemaMarkup) return;
-
-    const structuredData = generateStructuredData();
-    if (!structuredData) return;
-
+  const addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (existingScript) {
-      existingScript.remove();
+    if (structuredDataRef.current) {
+      structuredDataRef.current.remove();
     }
-
-    // Add new structured data
+    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
     _structuredDataRef.current = script;
 
-    return () => {
-      if (_structuredDataRef.current) {
-        _structuredDataRef.current.remove();
-      }
-    };
-  }, [generateStructuredData, enableSchemaMarkup]);
-
-  // Track analytics
   useEffect(() => {
-    _trackPageView();
-    _trackPerformanceMetrics();
-  }, [_trackPageView, _trackPerformanceMetrics]);
+    if (structuredData) {
+      addStructuredData(structuredData);
+    }
+  }, [structuredData]);
 
-  const openGraphData = generateOpenGraphData();
-  const twitterCardData = generateTwitterCardData();
-  const metaTags = generateMetaTags();
+  useEffect(() => {
+    if (breadcrumbData) {
+      addStructuredData(breadcrumbData);
+    }
+  }, [breadcrumbData]);
+
+  useEffect(() => {
+    if (faqData) {
+      addStructuredData(faqData);
+    }
+  }, [faqData]);
+
+  useEffect(() => {
+    // Track page performance
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (perfData) {
+        // Track performance metrics
+        if (typeof (window as any).gtag === 'function') {
+          (window as any).gtag('event', 'page_load_performance', {
+            event_category: 'Performance',
+            event_label: 'Page Load',
+            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+          });
+        }
+      }
+    }
+  }, []);
 
   return (
     <Helmet>
