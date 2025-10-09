@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
-    { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
   ];
 
   const itServices = [

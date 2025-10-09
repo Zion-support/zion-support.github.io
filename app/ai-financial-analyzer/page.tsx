@@ -1,0 +1,88 @@
+'use client';
+import React from 'react';
+import { DollarSign, CheckCircle, ArrowRight, Phone } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOEnhancer from '../components/SEOEnhancer';
+
+const AIFinancialAnalyzerPage: React.FC = () => {
+  const financialServices = [
+    {
+      title: 'Portfolio Analysis',
+      description: 'AI-powered portfolio analysis and optimization',
+      features: ['Risk Assessment', 'Performance Analysis', 'Asset Allocation', 'Rebalancing Recommendations']
+    },
+    {
+      title: 'Risk Assessment',
+      description: 'Advanced risk analysis and management tools',
+      features: ['Market Risk Analysis', 'Credit Risk Assessment', 'Operational Risk', 'Stress Testing']
+    },
+    {
+      title: 'Tax Optimization',
+      description: 'Intelligent tax planning and optimization strategies',
+      features: ['Tax Loss Harvesting', 'Asset Location Optimization', 'Tax-Efficient Investing', 'Compliance Monitoring']
+    },
+    {
+      title: 'Retirement Planning',
+      description: 'Comprehensive retirement planning and forecasting',
+      features: ['Retirement Projections', 'Savings Recommendations', 'Income Planning', 'Longevity Analysis']
+    }
+  ];
+
+  return (
+    <>
+      <SEOEnhancer
+        title="AI Financial Analyzer - Zion Tech Group"
+        description="Advanced AI-powered financial analysis including portfolio analysis, risk assessment, tax optimization, and retirement planning. Make smarter financial decisions."
+        keywords={['AI financial analyzer', 'portfolio analysis', 'risk assessment', 'tax optimization', 'retirement planning', 'financial AI']}
+        canonicalUrl="https://ziontechgroup.com/ai-financial-analyzer"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+          <section className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
+              AI Financial Analyzer
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Make smarter financial decisions with our AI-powered financial analysis tools.
+            </p>
+          </section>
+
+          <section className="mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {financialServices.map((service, index) => (
+                <div key={index} className="cyber-card p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="cyber-card p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Finances?</h2>
+            <p className="text-gray-300 mb-6">Let's discuss your financial analysis needs.</p>
+            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
+              Contact Us
+            </a>
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default AIFinancialAnalyzerPage;
