@@ -395,6 +395,135 @@ a {
       0 0 6px #00ffff,
       0 0 9px #00ffff;
   }
+  
+  .hologram-card,
+  .quantum-card,
+  .cyber-card {
+    padding: 1rem;
+  }
+  
+  .cyber-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .cyber-grid {
+    background-size: 10px 10px;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 2px #00ffff,
+      0 0 4px #00ffff,
+      0 0 6px #00ffff;
+  }
+  
+  .hologram-card,
+  .quantum-card,
+  .cyber-card {
+    padding: 0.75rem;
+  }
+  
+  .cyber-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .text-7xl {
+    font-size: 3.5rem;
+  }
+}
+
+/* Large Devices */
+@media (min-width: 1024px) {
+  .cyber-grid {
+    background-size: 25px 25px;
+  }
+  
+  .hologram-card,
+  .quantum-card,
+  .cyber-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Extra Large Devices */
+@media (min-width: 1280px) {
+  .cyber-grid {
+    background-size: 30px 30px;
+  }
+  
+  .hologram-card,
+  .quantum-card,
+  .cyber-card {
+    padding: 2rem;
+  }
+}
+
+/* Ultra Wide Screens */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .cyber-grid {
+    background-size: 35px 35px;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cyber-grid {
+    background-size: 20px 20px;
+  }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hologram-card,
+  .quantum-card,
+  .cyber-card {
+    padding: 0.75rem;
+  }
+  
+  .cyber-button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .cyber-grid,
+  .neural-network-bg,
+  .matrix-rain {
+    background: none !important;
+  }
+  
+  .hologram-card,
+  .quantum-card,
+  .cyber-card {
+    border: 1px solid #000;
+    background: #fff !important;
+    color: #000 !important;
+  }
+  
+  .neon-text,
+  .cyber-text,
+  .holographic-text {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
 }
 
 /* Loading Animation */

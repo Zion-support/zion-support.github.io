@@ -67,7 +67,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' }
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+        { name: 'AI Machine Learning', path: '/ai-machine-learning', description: 'Custom ML models' },
+        { name: 'Computer Vision', path: '/computer-vision', description: 'Image & video analysis' },
+        { name: 'Natural Language Processing', path: '/natural-language-processing', description: 'Text analysis & translation' },
+        { name: 'Predictive Analytics', path: '/predictive-analytics', description: 'Forecast trends & outcomes' }
       ]
     },
     {
@@ -88,7 +92,10 @@ const Navigation: React.FC = () => {
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
         { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
         { name: 'IT Training', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' }
+        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
+        { name: 'Data Backup & Recovery', path: '/data-backup-recovery', description: 'Disaster recovery planning' },
+        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System tuning & monitoring' },
+        { name: 'IT Infrastructure Setup', path: '/it-infrastructure-setup', description: 'Complete infrastructure design' }
       ]
     },
     {
@@ -99,17 +106,25 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-green-100',
       services: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
-        { name: 'Productivity Tools', path: '/productivity', description: 'Time management & efficiency' },
-        { name: 'HR & Recruitment', path: '/hr-recruitment-tools', description: 'Human resources solutions' },
-        { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
-        { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
-        { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
+        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'Drag-and-drop app creation' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
+        { name: 'AI Sales Pipeline', path: '/ai-sales-pipeline', description: 'Intelligent sales management' },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Advanced lead qualification' },
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Smart project management' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media' },
+        { name: 'AI Financial Tracker', path: '/ai-financial-tracker', description: 'Intelligent financial tracking' },
+        { name: 'AI Design Assistant', path: '/ai-design-assistant', description: 'AI-powered design tool' },
+        { name: 'AI Password Manager', path: '/ai-password-manager', description: 'Secure password management' },
+        { name: 'AI Calendar Assistant', path: '/ai-calendar-assistant', description: 'Smart calendar management' },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
+        { name: 'AI Music Generator', path: '/ai-music-generator', description: 'Custom music creation' },
+        { name: 'AI Website Builder', path: '/ai-website-builder', description: 'Professional website creation' }
       ]
     },
     {
@@ -130,7 +145,9 @@ const Navigation: React.FC = () => {
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
         { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
-        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
+        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' },
+        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI research' },
+        { name: 'AI Robotics', path: '/ai-robotics', description: 'Intelligent robotic systems' }
       ]
     }
   ];
