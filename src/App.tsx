@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('../app/page'));
@@ -68,12 +69,13 @@ import RoboticsPage from './robotics/page';
 import TeamPage from './team/page';
 import CareersPage from './careers/page';
 import NewsPage from './news/page';
+import ContactPage from './contact/page';
+import ServicesPage from './services/page';
+import BlogPage from './blog/page';
+import CaseStudiesPage from './case-studies/page';
+import AboutPage from './about/page';
 
 // Support Pages
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-19c2
 // Additional Pages
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
@@ -134,10 +136,6 @@ import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
 // Support Pages
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-19c2
 // AI Services Pages
 import AIProjectManagerPage from './ai-project-manager/page';
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
@@ -265,19 +263,6 @@ const App: React.FC = () => {
 
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-        // Reports are available but not logged to console
-        performanceEnhancer.getMetrics();
-        accessibilityEnhancer.generateReport();
-        securityEnhancer.generateSecurityReport();
-        uxEnhancer.generateUXReport();
-      }
-
-      setIsInitialized(true);
-    } catch (error) {
-      // Silently handle enhancer initialization errors
-      setIsInitialized(true); // Continue even if enhancers fail
-=======
         // Reports generated silently in development
       }
 
@@ -285,7 +270,6 @@ const App: React.FC = () => {
     } catch {
       // Continue even if enhancers fail
       setIsInitialized(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-5cff
     }
   };
 

@@ -187,3 +187,6 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
+
+export default RootLayout;
