@@ -1,246 +1,314 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
-import { BarChart3, Eye, TrendingUp, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
 
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart3,
+      icon: BarChart,
       title: 'Interactive Dashboards',
-      description: 'Create stunning, interactive dashboards that bring your data to life',
-      benefits: ['Real-time updates', 'Custom visualizations', 'Drill-down capabilities']
+      description: 'Create stunning, interactive dashboards that automatically update with real-time data from any source.',
+      benefits: ['Real-time updates', 'Drag-and-drop builder', 'Mobile responsive']
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Our AI automatically identifies patterns, trends, and anomalies in your data to provide actionable insights.',
+      benefits: ['Pattern recognition', 'Anomaly detection', 'Predictive analytics']
+    },
+    {
+      icon: Zap,
+      title: 'One-Click Integration',
+      description: 'Connect to 100+ data sources including databases, APIs, cloud services, and business applications.',
+      benefits: ['100+ connectors', 'Auto-sync', 'No coding required']
     },
     {
       icon: Eye,
-      title: 'AI-Powered Insights',
-      description: 'Automatically discover patterns and insights in your data with AI',
-      benefits: ['Pattern recognition', 'Anomaly detection', 'Predictive insights']
+      title: 'Advanced Visualizations',
+      description: '50+ chart types including heatmaps, scatter plots, treemaps, and custom visualizations for any data type.',
+      benefits: ['50+ chart types', 'Custom visuals', '3D visualizations']
     },
     {
-      icon: TrendingUp,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics tools for deep data exploration and analysis',
-      benefits: ['Statistical analysis', 'Trend forecasting', 'Correlation analysis']
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with role-based access, data encryption, and compliance with SOC 2 and GDPR.',
+      benefits: ['Role-based access', 'Data encryption', 'Audit logs']
+    },
+    {
+      icon: Users,
+      title: 'Collaborative Features',
+      description: 'Share dashboards, add comments, schedule reports, and collaborate with your team in real-time.',
+      benefits: ['Real-time sharing', 'Comments & annotations', 'Scheduled reports']
+    }
+  ];
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$149',
+      period: '/month',
+      description: 'Perfect for small teams',
+      features: [
+        'Up to 5 dashboards',
+        'Basic chart types',
+        'Standard data sources',
+        'Email support',
+        'Basic templates',
+        '1GB data storage'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$399',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 25 dashboards',
+        'All chart types',
+        '100+ data sources',
+        'Priority support',
+        'Custom templates',
+        '10GB data storage',
+        'AI insights',
+        'Team collaboration'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$999',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited dashboards',
+        'Custom visualizations',
+        'All integrations',
+        'Dedicated support',
+        'Custom development',
+        'Unlimited storage',
+        'Advanced AI features',
+        'White-label options',
+        'SLA guarantee'
+      ],
+      popular: false
     }
   ];
 
-  const visualizationTypes = [
+  const stats = [
+    { number: '95%', label: 'Faster Insights' },
+    { number: '100+', label: 'Data Sources' },
+    { number: '50+', label: 'Chart Types' },
+    { number: '24/7', label: 'Real-time Updates' }
+  ];
+
+  const useCases = [
     {
-      title: 'Business Intelligence',
-      description: 'Executive dashboards and KPI monitoring for strategic decision making',
-      icon: TrendingUp,
-      features: ['KPI dashboards', 'Executive reports', 'Performance metrics']
+      title: 'Sales Analytics',
+      description: 'Track sales performance, pipeline health, and revenue trends with interactive dashboards and AI-powered predictions.',
+      icon: TrendingUp
     },
     {
-      title: 'Operational Analytics',
-      description: 'Real-time operational data visualization and monitoring',
-      icon: Zap,
-      features: ['Live monitoring', 'Alert systems', 'Process optimization']
+      title: 'Marketing ROI',
+      description: 'Visualize marketing campaign performance, customer acquisition costs, and ROI across all channels.',
+      icon: Globe
     },
     {
-      title: 'Customer Analytics',
-      description: 'Customer behavior and engagement visualization and analysis',
-      icon: Users,
-      features: ['Customer journeys', 'Engagement metrics', 'Segmentation analysis']
+      title: 'Operations Monitoring',
+      description: 'Monitor key operational metrics, identify bottlenecks, and optimize processes with real-time dashboards.',
+      icon: Settings
+    },
+    {
+      title: 'Financial Reporting',
+      description: 'Create comprehensive financial reports with automated data collection and intelligent insights.',
+      icon: Database
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="cyber-grid"></div>
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
-                <BarChart3 className="w-8 h-8 text-white" />
-              </div>
-              <h1 className="text-5xl font-bold text-white neon-text">
-                AI Data Visualization
+    <>
+      <SEOOptimizer
+        title="AI Data Visualization Platform - Zion Tech Group"
+        description="Transform data into actionable insights with AI-powered visualization. 95% faster insights, 100+ data sources, and interactive dashboards."
+        keywords={['data visualization', 'business intelligence', 'dashboards', 'data analytics', 'AI insights']}
+        canonicalUrl="https://ziontechgroup.com/ai-data-visualization"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="pt-16">
+          {/* Hero Section */}
+          <section className="container mx-auto px-4 py-16 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+                AI Data Visualization Platform
               </h1>
-            </div>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform complex data into compelling visual stories with our AI-powered 
-              data visualization platform. Create interactive dashboards, discover hidden 
-              insights, and make data-driven decisions with confidence.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-              >
-                Start Visualizing
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                href="/demo"
-                className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-              >
-                View Live Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Advanced Data Visualization</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI data visualization platform combines powerful analytics with 
-              intuitive design to make complex data accessible and actionable.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Visualization Types Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Visualization Solutions</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Create the perfect visualization for any data type or business need
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {visualizationTypes.map((type, index) => (
-              <div key={index} className="cyber-card p-8 group hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center mb-4">
-                  <type.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">{type.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-6">{type.description}</p>
-                <ul className="space-y-2">
-                  {type.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Benefits Section */}
-      <div className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Data Visualization?</h2>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
-                    <CheckCircle className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Instant Insights</h3>
-                    <p className="text-gray-300">Discover patterns and insights in seconds, not hours</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-4 mt-1">
-                    <Shield className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Easy to Use</h3>
-                    <p className="text-gray-300">No coding required - drag and drop interface</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-4 mt-1">
-                    <Clock className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Real-time Updates</h3>
-                    <p className="text-gray-300">Always see the latest data with live updates</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="cyber-card p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Ready to Visualize Your Data?</h3>
-              <p className="text-gray-300 mb-6">
-                Transform your data into actionable insights with our AI-powered 
-                visualization platform. Get started with a free trial.
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+                Transform data into actionable insights with AI
               </p>
-              <div className="space-y-4">
-                <Link
-                  href="/contact"
-                  className="cyber-button w-full inline-flex items-center justify-center py-3"
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+                Our AI-powered data visualization platform helps businesses make data-driven decisions 
+                with interactive dashboards, intelligent insights, and 100+ data source integrations.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                <a
+                  href="tel:+13024640950"
+                  className="cyber-button flex items-center space-x-2"
                 >
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-                  href="/demo"
-                  className="cyber-button-outline w-full inline-flex items-center justify-center py-3"
+                  <Phone className="w-5 h-5" />
+                  <span>Call (302) 464-0950</span>
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  Schedule Demo
-                </Link>
+                  <Mail className="w-5 h-5" />
+                  <span>Get Free Demo</span>
+                </a>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                {stats.map((stat, index) => (
+                  <div key={index} className="cyber-card p-6 text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
+                      {stat.number}
+                    </div>
+                    <div className="text-gray-300 font-medium">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      {/* CTA Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Make Data-Driven Decisions
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Don't let valuable insights hide in your data. Our AI visualization platform 
-            will help you see patterns, trends, and opportunities you never knew existed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              href="/pricing"
-              className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-            >
-              View Pricing
-            </Link>
-          </div>
-        </div>
+          {/* Features Section */}
+          <section className="container mx-auto px-4 py-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Powerful Visualization Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
+                        <CheckCircle className="w-4 h-4" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Use Cases Section */}
+          <section className="container mx-auto px-4 py-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Perfect for Every Department
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section className="container mx-auto px-4 py-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Simple, Transparent Pricing
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`cyber-card p-8 relative ${
+                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="tel:+13024640950"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
+                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                    }`}
+                  >
+                    Get Started
+                  </a>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="container mx-auto px-4 py-16 text-center">
+            <div className="cyber-card p-12 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                Ready to Visualize Your Data?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join 1,500+ companies already using our data visualization platform
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="cyber-button flex items-center justify-center space-x-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Call (302) 464-0950</span>
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center justify-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>Schedule Demo</span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
-
 export default AIDataVisualizationPage;

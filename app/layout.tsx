@@ -1,11 +1,9 @@
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
-import SEOHead from './components/SEOHead';
-import ServiceWorker from './components/ServiceWorker';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import Analytics from './components/Analytics';
 export default function RootLayout({
-  children
+  children,
 }: {
   children: React.ReactNode;
 }) {
@@ -33,7 +31,7 @@ export default function RootLayout({
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
-      availableLanguage: 'en'
+      availableLanguage: 'en',
     },
     sameAs: [
       'https://twitter.com/ziontechgroup',
@@ -45,7 +43,7 @@ export default function RootLayout({
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US'
+      addressCountry: 'US',
     },
     offers: [
       {
@@ -121,8 +119,8 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         {/* Primary meta tags */}
-        <meta name="description" content="Zion Tech Group - Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology. Call (302) 464-0950." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, cybersecurity, custom development, Delaware technology company" />
+        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
         <meta name="theme-color" content="#4f46e5" />
         <meta name="color-scheme" content="dark light" />
         <meta name="author" content="Zion Tech Group" />
@@ -181,10 +179,8 @@ export default function RootLayout({
       </head>
       <body className='antialiased'>
         <ErrorBoundary>
-          <SEOHead />
-          <ServiceWorker />
-          <AccessibilityEnhancer />
           <PerformanceMonitor />
+          <Analytics />
           {children}
         </ErrorBoundary>
       </body>

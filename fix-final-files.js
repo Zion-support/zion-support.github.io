@@ -83,7 +83,6 @@ function fixFile(filePath) {
     // Check if file has severe corruption
     if (
       content.includes('<< HEAD') ||
-      content.includes('=======') ||
       content.includes('import, Reac, t') ||
       content.includes('con, s, t') ||
       content.includes('useSta, t, e') ||
