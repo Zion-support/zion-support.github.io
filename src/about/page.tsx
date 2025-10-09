@@ -1,19 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { Brain, Shield, Target, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
-import Footer from '../components/Footer';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
-
-const AboutPage: React.FC = () => {
-=======
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
@@ -68,9 +55,7 @@ const AboutPage: React.FC = () => {
     { number: '99%', label: 'Client Satisfaction' },
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   return (
-<<<<<<< HEAD
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
@@ -98,10 +83,6 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 
       {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -199,7 +180,7 @@ const AboutPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
+              {_team.map((member, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
@@ -250,16 +231,6 @@ const AboutPage: React.FC = () => {
         </section>
 
       <Footer />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">About</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced about solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
     </div>
   );
 };

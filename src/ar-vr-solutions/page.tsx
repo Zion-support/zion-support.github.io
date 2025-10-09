@@ -1,11 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {Eye, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const ARVRSolutionsPage: React.FC = () => {
   const _features = [
@@ -106,6 +101,4 @@ const ARVRSolutionsPage: React.FC = () => {
 };
 
 export default ARVRSolutionsPage;
-=======
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

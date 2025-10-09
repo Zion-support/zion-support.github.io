@@ -1,14 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const ServicesPage: React.FC = () => {
-=======
 import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -147,7 +142,6 @@ const ServicesPage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
