@@ -54,11 +54,12 @@ const PerformanceMonitor: React.FC = () => {
       if ('PerformanceObserver' in window) {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
+        for (const entry of list.getEntries()) {
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value || 0;
           }
+        }
           setMetrics(prev => ({ ...prev, cls: clsValue }));
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -78,17 +79,22 @@ const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
-  }, [enableConsoleLogging]);
+  }, []);
+  
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+  
   return (
-    <div className="performance-monitor">
-      <h3>Performance Metrics</h3>
-      <div className="metrics">
-        <div>LCP: {metrics.lcp || 'N/A'}</div>
-        <div>FID: {metrics.fid || 'N/A'}</div>
-        <div>CLS: {metrics.cls || 'N/A'}</div>
-        <div>FCP: {metrics.fcp || 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb || 'N/A'}</div>
-        <div>Memory: {metrics.memoryUsage}MB</div>
+    <div className="performance-monitor fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg text-xs z-50">
+      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <div className="metrics space-y-1">
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+        <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}</div>
       </div>
     </div>
   );

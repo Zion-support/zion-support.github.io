@@ -12,13 +12,13 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
-Disallow: /temp/
-Disallow: /backup/
+Disallow: /*.json$
+Disallow: /*.xml$
 
 # Allow important pages
-Allow: /
+Allow: /ai-services
+Allow: /it-services
+Allow: /micro-saas
 Allow: /about
-Allow: /services
 Allow: /contact
 Allow: /blog
-Allow: /case-studies

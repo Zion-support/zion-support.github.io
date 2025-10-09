@@ -1,155 +1,219 @@
-# Zion Tech Group - Advanced AI and IT Solutions Website
+# Zion Tech Group - Advanced AI and IT Solutions
 
-A cutting-edge, high-performance website built with React, TypeScript, and Vite, showcasing advanced AI and IT solutions.
+A modern, high-performance website built with Next.js 15, featuring cutting-edge AI and IT solutions. This website showcases our comprehensive range of services including AI solutions, quantum computing, autonomous systems, and digital transformation services.
 
 ## 🚀 Features
 
-- **High Performance**: Optimized for Core Web Vitals and maximum speed
-- **Modern Stack**: React 18, TypeScript, Vite, Tailwind CSS
-- **AI-Powered**: Advanced AI solutions and implementations
-- **Responsive Design**: Mobile-first, accessible design
-- **SEO Optimized**: Comprehensive SEO and meta tag management
-- **Performance Monitoring**: Real-time performance tracking and analytics
+### Core Technologies
+- **Next.js 15** - Latest React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Smooth animations and transitions
+- **Lucide React** - Beautiful, customizable icons
 
-## 🛠️ Tech Stack
+### Performance Optimizations
+- **Image Optimization** - Next.js Image component with lazy loading
+- **Code Splitting** - Dynamic imports for better performance
+- **Bundle Analysis** - Webpack bundle analyzer integration
+- **Performance Monitoring** - Real-time Core Web Vitals tracking
+- **SEO Optimization** - Comprehensive meta tags and structured data
 
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, Framer Motion
-- **Icons**: Lucide React, Heroicons
-- **Analytics**: Google Analytics, Web Vitals
-- **Testing**: Jest, Testing Library
-- **Linting**: ESLint, Prettier
-- **Build**: Vite with Terser minification
+### Accessibility Features
+- **WCAG 2.1 AA Compliance** - Full accessibility support
+- **Keyboard Navigation** - Complete keyboard accessibility
+- **Screen Reader Support** - ARIA landmarks and labels
+- **High Contrast Mode** - Support for high contrast displays
+- **Focus Management** - Proper focus indicators and management
 
-## 📦 Installation
+### SEO & Marketing
+- **Structured Data** - Rich snippets for search engines
+- **Sitemap** - XML sitemap for better crawling
+- **Robots.txt** - Search engine crawling instructions
+- **PWA Support** - Progressive Web App capabilities
+- **Open Graph** - Social media sharing optimization
 
+## 🛠️ Development
+
+### Prerequisites
+- Node.js 18.0.0 or higher
+- pnpm 8.0.0 or higher (recommended) or npm
+
+### Installation
+
+1. Clone the repository:
 ```bash
-# Install dependencies
+git clone https://github.com/ziontechgroup/website.git
+cd website
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+# or
 npm install
+```
 
-# Start development server
+3. Start the development server:
+```bash
+pnpm dev
+# or
 npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 ```
 
-## 🧪 Testing
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-```bash
-# Run all tests
-npm test
+### Available Scripts
 
-# Run tests with coverage
-npm run test:coverage
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
+- `pnpm lint:fix` - Fix ESLint issues
+- `pnpm type-check` - Run TypeScript type checking
+- `pnpm test` - Run tests
+- `pnpm build:analyze` - Analyze bundle size
 
-# Run tests in watch mode
-npm run test:watch
-```
-
-## 🔧 Development Scripts
-
-```bash
-# Type checking
-npm run type-check
-
-# Linting
-npm run lint
-
-# Linting with auto-fix
-npm run lint:fix
-
-# Format code
-npm run format
-
-# Performance optimization
-node scripts/performance-optimizer.js
-
-# Bundle analysis
-npm run build:analyze
-```
-
-## 📊 Performance
-
-The website is optimized for maximum performance with:
-
-- **Code Splitting**: Dynamic imports for optimal bundle sizes
-- **Image Optimization**: WebP format with fallbacks
-- **Caching**: Aggressive caching strategies for static assets
-- **Compression**: Gzip/Brotli compression
-- **CDN Ready**: Optimized for content delivery networks
-
-## 🎯 Core Web Vitals
-
-- **LCP**: < 2.5s (Largest Contentful Paint)
-- **FID**: < 100ms (First Input Delay)
-- **CLS**: < 0.1 (Cumulative Layout Shift)
-- **FCP**: < 1.8s (First Contentful Paint)
-- **TTFB**: < 600ms (Time to First Byte)
-
-## 🏗️ Architecture
+## 📁 Project Structure
 
 ```
-src/
-├── components/     # Reusable UI components
-├── pages/         # Page components
-├── hooks/         # Custom React hooks
-├── utils/         # Utility functions
-├── types/         # TypeScript type definitions
-├── config/        # Configuration files
-└── styles/        # Global styles
-
-app/
-├── components/    # App-specific components
-├── pages/         # App pages
-├── utils/         # App utilities
-└── config/        # App configuration
+├── app/                    # Next.js App Router
+│   ├── components/         # Reusable components
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   ├── loading.tsx        # Loading UI
+│   ├── error.tsx          # Error UI
+│   └── not-found.tsx      # 404 page
+├── public/                # Static assets
+│   ├── sitemap.xml        # XML sitemap
+│   ├── robots.txt         # Robots.txt
+│   └── site.webmanifest   # PWA manifest
+├── next.config.js         # Next.js configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+└── package.json           # Dependencies and scripts
 ```
 
-## 🔒 Security
+## 🎨 Design System
 
-- **CSP Headers**: Content Security Policy implementation
-- **XSS Protection**: Cross-site scripting prevention
-- **HTTPS**: Secure connections only
-- **Input Validation**: Comprehensive input sanitization
+### Color Palette
+- **Primary**: Cyan (#00ffff) - Tech and innovation
+- **Secondary**: Purple (#8b5cf6) - Creativity and AI
+- **Accent**: Pink (#ec4899) - Energy and growth
+- **Background**: Dark slate gradient for modern look
 
-## 📈 Analytics
+### Typography
+- **Headings**: Bold, large sizes with neon effects
+- **Body**: Clean, readable text with proper contrast
+- **Code**: Monospace font for technical content
 
-- **Google Analytics**: User behavior tracking
-- **Web Vitals**: Performance metrics monitoring
-- **Error Tracking**: Comprehensive error reporting
-- **Custom Events**: Business-specific analytics
+### Components
+- **Cyber Cards**: Glassmorphism design with neon borders
+- **Hologram Cards**: Animated cards with scanning effects
+- **Quantum Cards**: Energy pulse animations
+- **Buttons**: Gradient backgrounds with hover effects
+
+## 🔧 Configuration
+
+### Environment Variables
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
+```
+
+### Performance Monitoring
+The application includes built-in performance monitoring that tracks:
+- **LCP** (Largest Contentful Paint)
+- **FID** (First Input Delay)
+- **CLS** (Cumulative Layout Shift)
+- **FCP** (First Contentful Paint)
+- **TTFB** (Time to First Byte)
 
 ## 🚀 Deployment
 
-The website is optimized for deployment on:
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push to main branch
 
-- **Netlify**: Static site hosting
-- **Vercel**: Edge functions and CDN
-- **AWS S3**: Scalable object storage
-- **CloudFlare**: Global CDN and security
+### Other Platforms
+The application can be deployed to any platform that supports Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
 
-## 📝 Contributing
+## 📊 Analytics & Monitoring
+
+### Google Analytics
+- Page views and user interactions
+- Performance metrics
+- Error tracking
+- Custom events for service clicks
+
+### Performance Monitoring
+- Real-time Core Web Vitals
+- Bundle size analysis
+- Image optimization tracking
+- Loading performance metrics
+
+## 🔒 Security
+
+### Security Headers
+- Content Security Policy (CSP)
+- X-Frame-Options
+- X-Content-Type-Options
+- Referrer-Policy
+- Permissions-Policy
+
+### Best Practices
+- Input sanitization
+- XSS protection
+- CSRF protection
+- Secure cookie settings
+
+## 📱 Mobile Optimization
+
+- **Responsive Design** - Mobile-first approach
+- **Touch Optimization** - Touch-friendly interactions
+- **Performance** - Optimized for mobile networks
+- **PWA Features** - Installable and offline-capable
+
+## 🌐 Internationalization
+
+The website is prepared for internationalization with:
+- Language detection
+- RTL support
+- Localized content structure
+- SEO-friendly URLs
+
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Run tests and linting
+4. Add tests if applicable
 5. Submit a pull request
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Support
+## 📞 Support
 
 For support and questions:
-- Email: support@ziontechgroup.com
-- Website: https://ziontechgroup.com
-- Documentation: https://docs.ziontechgroup.com
+- **Phone**: +1 (302) 464-0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
+
+## 🔗 Links
+
+- **Website**: [https://ziontechgroup.com](https://ziontechgroup.com)
+- **Twitter**: [@ziontechgroup](https://twitter.com/ziontechgroup)
+- **LinkedIn**: [Zion Tech Group](https://linkedin.com/company/ziontechgroup)
 
 ---
 

@@ -7,7 +7,7 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -40,6 +40,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     // Add breadcrumb structured data
     addBreadcrumbStructuredData();
+    // Add organization structured data
+    addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
@@ -59,7 +61,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     canonical.setAttribute('href', url);
   };
-  const addStructuredData = (data: any) => {
+  const addStructuredData = (data: Record<string, unknown>) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -90,6 +92,49 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     script.id = 'breadcrumb-structured-data';
     // Remove existing breadcrumb data
     const existing = document.getElementById('breadcrumb-structured-data');
+    if (existing) {
+      existing.remove();
+    }
+    document.head.appendChild(script);
+  };
+
+  const addOrganizationStructuredData = () => {
+    const organizationData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'Zion Tech Group',
+      'url': 'https://ziontechgroup.com',
+      'logo': 'https://ziontechgroup.com/logo.png',
+      'description': 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+      'foundingDate': '2020',
+      'numberOfEmployees': '50-100',
+      'industry': 'Technology',
+      'contactPoint': {
+        '@type': 'ContactPoint',
+        'telephone': '+1-302-464-0950',
+        'contactType': 'Customer Service',
+        'areaServed': 'US',
+        'availableLanguage': 'en'
+      },
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '364 E Main St STE 1008',
+        'addressLocality': 'Middletown',
+        'addressRegion': 'DE',
+        'postalCode': '19709',
+        'addressCountry': 'US'
+      },
+      'sameAs': [
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/ziontechgroup'
+      ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(organizationData);
+    script.id = 'organization-structured-data';
+    // Remove existing organization data
+    const existing = document.getElementById('organization-structured-data');
     if (existing) {
       existing.remove();
     }

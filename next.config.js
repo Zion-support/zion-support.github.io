@@ -169,19 +169,20 @@ const nextConfig = {
   },
 
   experimental: {
-    optimizeCss: false,
-    optimizePackageImports: [],
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@heroicons/react'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
 
   // Performance optimizations
-  // modularizeImports: {
-  //   'lucide-react': {
-  //     transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
-  //   },
-  //   '@heroicons/react': {
-  //     transform: '@heroicons/react/{{member}}',
-  //   },
-  // },
+  modularizeImports: {
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
+    },
+    '@heroicons/react': {
+      transform: '@heroicons/react/{{member}}',
+    },
+  },
 
   // Compiler optimizations
   compiler: {
