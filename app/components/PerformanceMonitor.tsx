@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -10,7 +7,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {

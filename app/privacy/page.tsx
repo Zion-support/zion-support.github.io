@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from '../components/Header';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const PrivacyPage: React.FC = () => {
@@ -11,94 +11,53 @@ const PrivacyPage: React.FC = () => {
         <meta name="description" content="Privacy Policy for Zion Tech Group's AI and IT solutions." />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Header />
-        
-        <main className="pt-24">
-          <section className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
-              <div className="cyber-card p-8 space-y-6 text-gray-300">
-                <p className="text-sm text-gray-400">Last updated: January 1, 2024</p>
-                
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">1. Information We Collect</h2>
-                  <p>We collect information you provide directly to us, such as when you create an account, contact us, or use our services.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">2. How We Use Your Information</h2>
-                  <p>We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure security.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">3. Information Sharing</h2>
-                  <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">4. Data Security</h2>
-                  <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">5. Contact Us</h2>
-                  <p>If you have any questions about this Privacy Policy, please contact us at privacy@ziontechgroup.com</p>
-                </div>
-              </div>
-=======
       <Navigation />
       
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">Privacy Policy</h1>
-          
-          <div className="prose prose-invert max-w-none">
-            <p className="text-gray-300 text-lg mb-8">
-              Last updated: {new Date().toLocaleDateString()}
-            </p>
-            
-            <div className="space-y-8">
-              <section>
+      <main className="pt-24">
+        <section className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 space-y-6 text-gray-300">
+              <p className="text-sm text-gray-400">Last updated: January 1, 2024</p>
+              
+              <div>
                 <h2 className="text-2xl font-bold text-white mb-4">1. Information We Collect</h2>
-                <p className="text-gray-300">
-                  We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.
-                </p>
-              </section>
-              
-              <section>
+                <p>We collect information you provide directly to us, such as when you create an account, contact us, or use our services.</p>
+              </div>
+
+              <div>
                 <h2 className="text-2xl font-bold text-white mb-4">2. How We Use Your Information</h2>
-                <p className="text-gray-300">
-                  We use the information we collect to provide, maintain, and improve our services, process transactions, and communicate with you.
-                </p>
-              </section>
-              
-              <section>
+                <p>We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure security.</p>
+              </div>
+
+              <div>
                 <h2 className="text-2xl font-bold text-white mb-4">3. Information Sharing</h2>
-                <p className="text-gray-300">
-                  We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.
-                </p>
-              </section>
-              
-              <section>
+                <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p>
+              </div>
+
+              <div>
                 <h2 className="text-2xl font-bold text-white mb-4">4. Data Security</h2>
-                <p className="text-gray-300">
-                  We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
-                </p>
-              </section>
-              
-              <section>
-                <h2 className="text-2xl font-bold text-white mb-4">5. Contact Us</h2>
-                <p className="text-gray-300">
-                  If you have any questions about this Privacy Policy, please contact us at info@ziontechgroup.com or (302) 464-0950.
-                </p>
-              </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-6669
+                <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-4">5. Cookies and Tracking</h2>
+                <p>We use cookies and similar tracking technologies to enhance your experience and analyze usage patterns.</p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-4">6. Your Rights</h2>
+                <p>You have the right to access, update, or delete your personal information. You may also opt out of certain communications.</p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-4">7. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us at privacy@ziontechgroup.com</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
       
       <Footer />
     </div>

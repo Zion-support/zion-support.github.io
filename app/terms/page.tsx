@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from '../components/Header';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const TermsPage: React.FC = () => {
@@ -11,94 +11,63 @@ const TermsPage: React.FC = () => {
         <meta name="description" content="Terms of Service for Zion Tech Group's AI and IT solutions." />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Header />
-        
-        <main className="pt-24">
-          <section className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl font-bold text-white mb-8">Terms of Service</h1>
-              <div className="cyber-card p-8 space-y-6 text-gray-300">
-                <p className="text-sm text-gray-400">Last updated: January 1, 2024</p>
-                
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
-                  <p>By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">2. Use License</h2>
-                  <p>Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">3. Service Availability</h2>
-                  <p>We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">4. Limitation of Liability</h2>
-                  <p>In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">5. Contact Information</h2>
-                  <p>If you have any questions about these Terms of Service, please contact us at legal@ziontechgroup.com</p>
-                </div>
-              </div>
-=======
       <Navigation />
       
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">Terms of Service</h1>
-          
-          <div className="prose prose-invert max-w-none">
-            <p className="text-gray-300 text-lg mb-8">
-              Last updated: {new Date().toLocaleDateString()}
-            </p>
-            
-            <div className="space-y-8">
-              <section>
+      <main className="pt-24">
+        <section className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-white mb-8">Terms of Service</h1>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 space-y-6 text-gray-300">
+              <p className="text-sm text-gray-400">Last updated: January 1, 2024</p>
+              
+              <div>
                 <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
-                <p className="text-gray-300">
-                  By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement.
-                </p>
-              </section>
-              
-              <section>
+                <p>By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.</p>
+              </div>
+
+              <div>
                 <h2 className="text-2xl font-bold text-white mb-4">2. Use License</h2>
-                <p className="text-gray-300">
-                  Permission is granted to temporarily download one copy of the materials on Zion Tech Group's website for personal, non-commercial transitory viewing only.
-                </p>
-              </section>
-              
-              <section>
+                <p>Permission is granted to temporarily download one copy of our materials for personal, non-commercial transitory viewing only.</p>
+              </div>
+
+              <div>
                 <h2 className="text-2xl font-bold text-white mb-4">3. Disclaimer</h2>
-                <p className="text-gray-300">
-                  The materials on Zion Tech Group's website are provided on an 'as is' basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties.
-                </p>
-              </section>
-              
-              <section>
+                <p>The materials on our website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim all other warranties.</p>
+              </div>
+
+              <div>
                 <h2 className="text-2xl font-bold text-white mb-4">4. Limitations</h2>
-                <p className="text-gray-300">
-                  In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use the materials on Zion Tech Group's website.
-                </p>
-              </section>
-              
-              <section>
-                <h2 className="text-2xl font-bold text-white mb-4">5. Contact Information</h2>
-                <p className="text-gray-300">
-                  If you have any questions about these Terms of Service, please contact us at info@ziontechgroup.com or (302) 464-0950.
-                </p>
-              </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-6669
+                <p>In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website.</p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-4">5. Accuracy of Materials</h2>
+                <p>The materials appearing on our website could include technical, typographical, or photographic errors. We do not warrant that any of the materials are accurate, complete, or current.</p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-4">6. Links</h2>
+                <p>We have not reviewed all of the sites linked to our website and are not responsible for the contents of any such linked site.</p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-4">7. Modifications</h2>
+                <p>We may revise these terms of service at any time without notice. By using this website, you are agreeing to be bound by the current version of these terms.</p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-4">8. Governing Law</h2>
+                <p>These terms and conditions are governed by and construed in accordance with the laws of Delaware, United States.</p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-4">9. Contact Information</h2>
+                <p>If you have any questions about these Terms of Service, please contact us at legal@ziontechgroup.com</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
       
       <Footer />
     </div>
