@@ -292,13 +292,8 @@ const SupportPage: React.FC = () => {
             <p>🕒 Available 24/7 for all support requests</p>
           </div>
         </div>
-      </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-    </div>
+      </section></div>
   );
 };
 
 export default SupportPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

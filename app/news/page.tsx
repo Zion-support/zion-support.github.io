@@ -124,7 +124,7 @@ const NewsPage: React.FC = () => {
                     {article.excerpt}
                   </p>
                   <Link 
-                    to={`/news/${article.id}`}
+                    href={`/news/${article.id}`}
                     className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
                     Read Full Story
@@ -186,7 +186,7 @@ const NewsPage: React.FC = () => {
                     {article.excerpt}
                   </p>
                   <Link 
-                    to={`/news/${article.id}`}
+                    href={`/news/${article.id}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     Read More
@@ -257,7 +257,7 @@ const NewsPage: React.FC = () => {
                 Get in touch with our media relations team for press inquiries.
               </p>
               <Link 
-                to="/contact"
+                href="/contact"
                 className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors inline-block"
               >
                 Contact Us
@@ -279,11 +279,8 @@ const NewsPage: React.FC = () => {
         </div>
       </section>
 
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default NewsPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

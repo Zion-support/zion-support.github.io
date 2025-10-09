@@ -247,16 +247,10 @@ const CompliancePage: React.FC = () => {
                         {framework}
                       </span>
                     ))}
-                  </div>
-
- cursor/analyze-improve-and-deploy-application-cde4
-                </div>
+                  </div></div>
               </div>
             ))}
-          </div>
-
- cursor/analyze-improve-and-deploy-application-cde4
-        </div>
+          </div></div>
       </section>
 
       {/* Audit Schedule */}
@@ -364,10 +358,7 @@ const CompliancePage: React.FC = () => {
             <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
           </div>
         </div>
-      </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-    </div>
+      </section></div>
   );
 };
 

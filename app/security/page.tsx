@@ -176,10 +176,7 @@ const SecurityPage: React.FC = () => {
                   {measure.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{detail}</span>
-
- cursor/analyze-improve-and-deploy-application-cde4
-                    </li>
+                      <span className="text-gray-700">{detail}</span></li>
                   ))}
                 </ul>
               </div>
@@ -328,13 +325,8 @@ const SecurityPage: React.FC = () => {
             <p>We appreciate responsible disclosure and will respond within 24 hours</p>
           </div>
         </div>
-      </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-    </div>
+      </section></div>
   );
 };
 
 export default SecurityPage;
-
- cursor/analyze-improve-and-deploy-application-cde4
