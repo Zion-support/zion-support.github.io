@@ -4,39 +4,51 @@ import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, 
 
 const Footer: React.FC = () => {
   const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' }
+    { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning', price: '$199/mo', popular: true },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', price: '$149/mo', popular: true },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics', price: '$299/mo', popular: true },
+    { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns', price: '$199/mo', popular: true },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', price: '$249/mo', popular: true },
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', price: '$179/mo', popular: false },
+    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI-powered content creation', price: '$149/mo', popular: true },
+    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation', price: '$299/mo', popular: true },
+    { name: 'AI SEO Optimizer Pro', url: '/ai-seo-optimizer', description: 'SEO automation & optimization', price: '$199/mo', popular: true },
+    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce optimization', price: '$399/mo', popular: true },
+    { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Healthcare management', price: '$449/mo', popular: true },
+    { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'No-code app development', price: '$399/mo', popular: true }
   ];
 
   const aiServices = [
-    { name: 'Machine Learning', url: '/machine-learning', description: 'Custom ML models' },
-    { name: 'Natural Language Processing', url: '/nlp', description: 'Text analysis & understanding' },
-    { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'Quantum AI Computing', url: '/quantum-ai', description: 'Next-gen algorithms' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' }
+    { name: 'Machine Learning Solutions', url: '/machine-learning', description: 'Custom ML models', price: '$2,500/mo', popular: true },
+    { name: 'Natural Language Processing', url: '/nlp', description: 'Text analysis & understanding', price: '$1,800/mo', popular: true },
+    { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis', price: '$2,200/mo', popular: true },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation', price: '$1,900/mo', popular: true },
+    { name: 'Quantum AI Computing', url: '/quantum-ai', description: 'Next-gen algorithms', price: 'Custom', popular: false },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security', price: '$2,999/mo', popular: true },
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems', price: '$3,500/mo', popular: true },
+    { name: 'AI Consulting', url: '/ai-consulting', description: 'Strategic AI guidance', price: '$2,000/mo', popular: true }
   ];
 
   const itServices = [
-    { name: 'Cloud Services', url: '/cloud-services', description: 'AWS/Azure/GCP setup' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
-    { name: 'Database Services', url: '/database-services', description: 'Database optimization' },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking' },
-    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' }
+    { name: 'Cloud Services', url: '/cloud-services', description: 'AWS/Azure/GCP setup', price: '$1,999/mo', popular: true },
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions', price: '$2,499/mo', popular: true },
+    { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows', price: '$1,799/mo', popular: true },
+    { name: 'Database Services', url: '/database-services', description: 'Database optimization', price: '$1,299/mo', popular: true },
+    { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking', price: '$1,599/mo', popular: true },
+    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support', price: '$1,199/mo', popular: true },
+    { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions', price: '$2,999/mo', popular: true },
+    { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices', price: '$2,199/mo', popular: true }
   ];
 
   const specializedServices = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
-    { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' }
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms', price: 'Custom', popular: false },
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems', price: '$3,500/mo', popular: true },
+    { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions', price: '$2,999/mo', popular: true },
+    { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices', price: '$2,199/mo', popular: true },
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights', price: '$1,799/mo', popular: true },
+    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation', price: 'Custom', popular: false },
+    { name: 'AR/VR Solutions', url: '/ar-vr', description: 'Immersive experiences', price: '$2,499/mo', popular: true },
+    { name: 'Digital Transformation', url: '/digital-transformation', description: 'Complete digital overhaul', price: '$2,999/mo', popular: true }
   ];
 
   const additionalServices = [
@@ -119,14 +131,24 @@ const Footer: React.FC = () => {
               Micro SAAS
             </h3>
             <ul className="space-y-2">
-              {microSaasServices.map((service) => (
+              {microSaasServices.slice(0, 8).map((service) => (
                 <li key={service.name}>
                   <Link
                     to={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                    className="group flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded hover:bg-slate-800/30"
                   >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                    <div className="flex items-center space-x-2">
+                      <span>{service.name}</span>
+                      {service.popular && (
+                        <span className="text-xs bg-cyan-400 text-slate-900 px-1.5 py-0.5 rounded-full font-medium">
+                          Popular
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <span className="text-xs text-cyan-400 font-medium">{service.price}</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
+                    </div>
                   </Link>
                 </li>
               ))}
@@ -149,13 +171,21 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-white font-medium mb-2">AI Services</h4>
                 <ul className="space-y-1">
-                  {aiServices.slice(0, 3).map((service) => (
+                  {aiServices.slice(0, 4).map((service) => (
                     <li key={service.name}>
                       <Link
                         to={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                        className="group flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors p-1 rounded hover:bg-slate-800/30"
                       >
-                        {service.name}
+                        <div className="flex items-center space-x-2">
+                          <span>{service.name}</span>
+                          {service.popular && (
+                            <span className="text-xs bg-purple-400 text-slate-900 px-1.5 py-0.5 rounded-full font-medium">
+                              Popular
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                       </Link>
                     </li>
                   ))}
@@ -164,13 +194,21 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-white font-medium mb-2">IT Services</h4>
                 <ul className="space-y-1">
-                  {itServices.slice(0, 3).map((service) => (
+                  {itServices.slice(0, 4).map((service) => (
                     <li key={service.name}>
                       <Link
                         to={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                        className="group flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors p-1 rounded hover:bg-slate-800/30"
                       >
-                        {service.name}
+                        <div className="flex items-center space-x-2">
+                          <span>{service.name}</span>
+                          {service.popular && (
+                            <span className="text-xs bg-blue-400 text-slate-900 px-1.5 py-0.5 rounded-full font-medium">
+                              Popular
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-xs text-blue-400 font-medium">{service.price}</span>
                       </Link>
                     </li>
                   ))}

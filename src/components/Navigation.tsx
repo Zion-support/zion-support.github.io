@@ -68,45 +68,55 @@ const Navigation: React.FC = () => {
   };
 
   const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3 },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator }
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, price: '$199/mo', popular: true },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, price: '$149/mo', popular: true },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3, price: '$299/mo', popular: true },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, price: '$199/mo', popular: true },
+    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, price: '$249/mo', popular: true },
+    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, price: '$179/mo', popular: false },
+    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, price: '$149/mo', popular: true },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, price: '$299/mo', popular: true },
+    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, price: '$179/mo', popular: false },
+    { name: 'AI SEO Optimizer Pro', href: '/ai-seo-optimizer', icon: Search, price: '$199/mo', popular: true },
+    { name: 'AI E-commerce Solutions', href: '/ai-ecommerce-solutions', icon: ShoppingCart, price: '$399/mo', popular: true },
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, price: '$279/mo', popular: false },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart, price: '$449/mo', popular: true },
+    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone, price: '$399/mo', popular: true },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, price: '$329/mo', popular: true },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart3, price: '$229/mo', popular: false }
   ];
 
   const aiServices = [
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
-    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
-    { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield }
+    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain, price: '$2,500/mo', popular: true },
+    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare, price: '$1,800/mo', popular: true },
+    { name: 'Computer Vision', href: '/computer-vision', icon: Eye, price: '$2,200/mo', popular: true },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap, price: '$1,900/mo', popular: true },
+    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu, price: 'Custom', popular: false },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, price: '$2,999/mo', popular: true },
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings, price: '$3,500/mo', popular: true },
+    { name: 'AI Consulting', href: '/ai-consulting', icon: Users, price: '$2,000/mo', popular: true }
   ];
 
   const itServices = [
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
-    { name: 'Database Services', href: '/database-services', icon: Database },
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users }
+    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, price: '$1,999/mo', popular: true },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, price: '$2,499/mo', popular: true },
+    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, price: '$1,799/mo', popular: true },
+    { name: 'Database Services', href: '/database-services', icon: Database, price: '$1,299/mo', popular: true },
+    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe, price: '$1,599/mo', popular: true },
+    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users, price: '$1,199/mo', popular: true },
+    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock, price: '$2,999/mo', popular: true },
+    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe, price: '$2,199/mo', popular: true }
   ];
 
   const specializedServices = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings }
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, price: 'Custom', popular: false },
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings, price: '$3,500/mo', popular: true },
+    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock, price: '$2,999/mo', popular: true },
+    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe, price: '$2,199/mo', popular: true },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, price: '$1,799/mo', popular: true },
+    { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: 'Custom', popular: false },
+    { name: 'AR/VR Solutions', href: '/ar-vr', icon: Eye, price: '$2,499/mo', popular: true },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap, price: '$2,999/mo', popular: true }
   ];
 
   return (
@@ -147,11 +157,19 @@ const Navigation: React.FC = () => {
                           <Link
                             key={service.name}
                             to={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            className="flex items-center justify-between group text-sm text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded hover:bg-slate-800/50"
                             onClick={closeAllMenus}
                           >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
+                            <div className="flex items-center space-x-2">
+                              <service.icon className="w-3 h-3" />
+                              <span>{service.name}</span>
+                              {service.popular && (
+                                <span className="text-xs bg-cyan-400 text-slate-900 px-1.5 py-0.5 rounded-full font-medium">
+                                  Popular
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-xs text-cyan-400 font-medium">{service.price}</span>
                           </Link>
                         ))}
                       </div>
@@ -166,11 +184,19 @@ const Navigation: React.FC = () => {
                           <Link
                             key={service.name}
                             to={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            className="flex items-center justify-between group text-sm text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded hover:bg-slate-800/50"
                             onClick={closeAllMenus}
                           >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
+                            <div className="flex items-center space-x-2">
+                              <service.icon className="w-3 h-3" />
+                              <span>{service.name}</span>
+                              {service.popular && (
+                                <span className="text-xs bg-purple-400 text-slate-900 px-1.5 py-0.5 rounded-full font-medium">
+                                  Popular
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                           </Link>
                         ))}
                       </div>
@@ -185,11 +211,19 @@ const Navigation: React.FC = () => {
                           <Link
                             key={service.name}
                             to={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            className="flex items-center justify-between group text-sm text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded hover:bg-slate-800/50"
                             onClick={closeAllMenus}
                           >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
+                            <div className="flex items-center space-x-2">
+                              <service.icon className="w-3 h-3" />
+                              <span>{service.name}</span>
+                              {service.popular && (
+                                <span className="text-xs bg-blue-400 text-slate-900 px-1.5 py-0.5 rounded-full font-medium">
+                                  Popular
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-xs text-blue-400 font-medium">{service.price}</span>
                           </Link>
                         ))}
                       </div>
