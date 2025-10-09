@@ -38,36 +38,37 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
     const baseStructuredData = {
       '@context': 'https://schema.org',
-      '@type': 'Organization',
+      '@type': 'TechCompany',
       name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
       description: seoData.description,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
+      url: seoData.canonicalUrl,
+      logo: 'https://ziontechgroup.com/logo.png',
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
         'https://twitter.com/ziontechgroup',
-        'https://github.com/Zion-Holdings',
+        'https://github.com/zion-tech-group',
       ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-ZION-TECH',
+        contactType: 'customer service',
+        availableLanguage: 'English',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '123 Tech Innovation Drive',
+        addressLocality: 'San Francisco',
+        addressRegion: 'CA',
+        postalCode: '94105',
+        addressCountry: 'US',
+      },
       ...seoData.structuredData,
     };
 
@@ -109,7 +110,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Zion Tech Group offers comprehensive AI-powered enterprise solutions, digital transformation services, automation, cloud services, AI consulting, business intelligence, and machine learning solutions.',
+            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
           },
         },
         {
@@ -117,7 +118,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'How can I contact Zion Tech Group?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'You can contact us at kleber@ziontechgroup.com or call +1 302 464 0950. Our office is located at 364 E Main St STE 1008, Middletown DE 19709.',
+            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
           },
         },
         {
@@ -125,7 +126,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'What makes Zion Tech Group different?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.',
+            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
           },
         },
       ],
@@ -143,7 +144,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
       
-      let _metaDescription = document.querySelector('meta[name="description"]');
+      let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
@@ -152,7 +153,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       metaDescription.setAttribute('content', seoData.description);
 
       // Update canonical URL
-      let _canonicalLink = document.querySelector('link[rel="canonical"]');
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
@@ -162,40 +163,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
-  //   const metaTag = document.createElement('meta');
-  //   metaTag.setAttribute(attribute, name);
-  //   metaTag.content = content;
-  //   document.head.appendChild(metaTag);
-  // };
-
-  // const _updateCanonicalUrl = (url: string) => {
-  //   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-  //   
-  //   if (canonicalLink) {
-  //     canonicalLink.href = url;
-  //   } else {
-  //     canonicalLink = document.createElement('link');
-  //     canonicalLink.rel = 'canonical';
-  //     canonicalLink.href = url;
-  //     document.head.appendChild(canonicalLink);
-  //   }
-  // };origin/cursor/fix-errors-and-merge-to-main-6395
-
-  // const _addStructuredData = (data: Record<string, unknown>) => {
-  //   // Remove existing structured data
-  //   // if (structuredDataRef.current) {
-  //   //   structuredDataRef.current.remove();
-  //   // }
-  //   
-  //   const script = document.createElement('script');
-  //   script.type = 'application/ld+json';
-  //   script.textContent = JSON.stringify(data);
-  //   document.head.appendChild(script);
-  // };
-
-    // Add new structured data
-    const _script = document.createElement('script');
+  const addStructuredData = (data: Record<string, unknown>) => {
+    // Remove existing structured data
+    if (structuredDataRef.current) {
+      structuredDataRef.current.remove();
+    }
+    
+    const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     script.id = 'structured-data';
@@ -203,29 +177,40 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     structuredDataRef.current = script;
   };
 
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,
-        page_location: config.canonicalUrl,
-      });
+  useEffect(() => {
+    if (structuredData) {
+      addStructuredData(structuredData);
     }
-  };
+  }, [structuredData]);
 
-  const _trackPerformanceMetrics = () => {
+  useEffect(() => {
+    if (breadcrumbData) {
+      addStructuredData(breadcrumbData);
+    }
+  }, [breadcrumbData]);
+
+  useEffect(() => {
+    if (faqData) {
+      addStructuredData(faqData);
+    }
+  }, [faqData]);
+
+  useEffect(() => {
+    // Track page performance
     if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (perfData) {
+        // Track performance metrics
+        if (typeof (window as any).gtag === 'function') {
+          (window as any).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
           });
         }
-      });
+      }
     }
-  };
+  }, []);
 
   return (
     <Helmet>
