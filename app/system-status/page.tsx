@@ -41,11 +41,8 @@ const SystemStatusPage: React.FC = () => {
         </div>
       </div>
 
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default SystemStatusPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

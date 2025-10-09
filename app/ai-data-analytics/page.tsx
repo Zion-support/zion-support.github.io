@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
+import SEOOptimizer from '../components/SEOOptimizer';
 
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [
@@ -186,12 +186,13 @@ const AIDataAnalyticsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <Helmet>
-        <title>AI Data Analytics Services | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered data analytics solutions for business intelligence, predictive modeling, and data-driven decision making. Real-time insights and automated reporting." />
-        <meta name="keywords" content="AI analytics, business intelligence, predictive analytics, data visualization, machine learning, data science" />
-      </Helmet>
+    <>
+      <SEOOptimizer
+        title="AI Data Analytics Services | Zion Tech Group"
+        description="Advanced AI-powered data analytics solutions for business intelligence, predictive modeling, and data-driven decision making. Real-time insights and automated reporting."
+        keywords={['AI analytics', 'business intelligence', 'predictive analytics', 'data visualization', 'machine learning', 'data science']}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
@@ -334,7 +335,8 @@ const AIDataAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

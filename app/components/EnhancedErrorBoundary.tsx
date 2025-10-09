@@ -44,21 +44,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
- cursor/analyze-improve-and-deploy-application-cde4
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
- cursor/analyze-improve-and-deploy-application-cde4
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-
     // Error reporting logic would go here
-    console.error('Error reported:', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reported:', error, errorInfo);
+    }
   };
 
   private handleRetry = () => {
@@ -87,7 +86,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               Retry ({this.maxRetries - this.state.retryCount} attempts left)
             </button>
           )}
- cursor/analyze-improve-and-deploy-application-cde4
         </div>
       );
     }
