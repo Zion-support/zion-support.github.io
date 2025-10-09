@@ -34,7 +34,7 @@ class EnvironmentConfig {
       logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,
+      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID
     };
   }
   /**
@@ -82,7 +82,7 @@ class EnvironmentConfig {
     }
     return {
       valid: missing.length === 0,
-      missing,
+      missing
     };
   }
   /**
@@ -90,7 +90,7 @@ class EnvironmentConfig {
    */
   public getApiHeaders(): Record<string, string> {
     const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     };
     if (this.config.apiKey) {
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
@@ -111,7 +111,7 @@ class EnvironmentConfig {
         'Log Level': this.config.logLevel,
         'API Key Set': !!this.config.apiKey,
         'Sentry DSN Set': !!this.config.sentryDsn,
-        'GA Tracking ID Set': !!this.config.gaTrackingId,
+        'GA Tracking ID Set': !!this.config.gaTrackingId
       });
       console.groupEnd();
     }

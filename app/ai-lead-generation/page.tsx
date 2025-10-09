@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Target, Users, Mail, Phone, BarChart, Zap, Brain, CheckCircle, Phone as PhoneIcon, Mail as MailIcon, ArrowRight, TrendingUp, Globe, Database, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
-
 const AILeadGenerationPage: React.FC = () => {
   const features = [
     {
@@ -44,7 +43,6 @@ const AILeadGenerationPage: React.FC = () => {
       benefits: ['Team workflows', 'Lead assignment', 'Activity tracking']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -95,14 +93,12 @@ const AILeadGenerationPage: React.FC = () => {
       popular: false
     }
   ];
-
   const stats = [
     { number: '300%', label: 'More Qualified Leads' },
     { number: '85%', label: 'Time Savings' },
     { number: '95%', label: 'Lead Accuracy' },
     { number: '50+', label: 'CRM Integrations' }
   ];
-
   const useCases = [
     {
       title: 'B2B Lead Generation',
@@ -125,7 +121,6 @@ const AILeadGenerationPage: React.FC = () => {
       icon: Home
     }
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -136,7 +131,6 @@ const AILeadGenerationPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
@@ -151,7 +145,6 @@ const AILeadGenerationPage: React.FC = () => {
                 Our AI-powered lead generation platform helps businesses find, score, and nurture high-quality leads 
                 with intelligent automation and personalized outreach.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <a
                   href="tel:+13024640950"
@@ -169,7 +162,6 @@ const AILeadGenerationPage: React.FC = () => {
                   <span>Get Free Demo</span>
                 </a>
               </div>
-
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                 {stats.map((stat, index) => (
@@ -183,7 +175,6 @@ const AILeadGenerationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -207,7 +198,6 @@ const AILeadGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -223,7 +213,6 @@ const AILeadGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -274,7 +263,6 @@ const AILeadGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -304,11 +292,9 @@ const AILeadGenerationPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
   );
 };
-
 export default AILeadGenerationPage;

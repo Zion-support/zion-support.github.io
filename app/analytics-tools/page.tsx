@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
@@ -53,7 +52,6 @@ const AnalyticsToolsPage: React.FC = () => {
       category: 'Financial Analytics'
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -76,7 +74,6 @@ const AnalyticsToolsPage: React.FC = () => {
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -84,7 +81,6 @@ const AnalyticsToolsPage: React.FC = () => {
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -94,7 +90,6 @@ const AnalyticsToolsPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
           </p>
-          
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -114,7 +109,6 @@ const AnalyticsToolsPage: React.FC = () => {
               <div className="text-gray-300">Monitoring</div>
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
@@ -134,14 +128,12 @@ const AnalyticsToolsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Analytics Tools Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
             Our Analytics Tools
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsTools.map((tool, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
@@ -153,7 +145,6 @@ const AnalyticsToolsPage: React.FC = () => {
                     {tool.category}
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">
@@ -165,7 +156,6 @@ const AnalyticsToolsPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a
@@ -180,7 +170,6 @@ const AnalyticsToolsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -198,7 +187,6 @@ const AnalyticsToolsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -227,5 +215,4 @@ const AnalyticsToolsPage: React.FC = () => {
     </div>
   );
 };
-
 export default AnalyticsToolsPage;

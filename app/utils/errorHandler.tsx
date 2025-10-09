@@ -14,14 +14,14 @@ export enum ErrorType {
   NOT_FOUND = 'NOT_FOUND',
   SERVER = 'SERVER',
   CLIENT = 'CLIENT',
-  UNKNOWN = 'UNKNOWN',
+  UNKNOWN = 'UNKNOWN'
 }
 // Error severity levels
 export enum ErrorSeverity {
   LOW = 'LOW',
   MEDIUM = 'MEDIUM',
   HIGH = 'HIGH',
-  CRITICAL = 'CRITICAL',
+  CRITICAL = 'CRITICAL'
 }
 // Error interface
 export interface AppError {
@@ -63,7 +63,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
   enableUserNotification: true,
   enableConsoleLogging: true,
   enableNetworkLogging: true,
-  logLevel: 'error',
+  logLevel: 'error'
 };
 // Error Handler class
 export class ErrorHandler {
@@ -94,7 +94,7 @@ export class ErrorHandler {
       componentStack: errorInfo?.componentStack ?? undefined,
       context,
       resolved: false,
-      retryCount: 0,
+      retryCount: 0
     };
     this.errors.push(appError);
     if (this.config.enableLogging) {
@@ -124,7 +124,7 @@ export class ErrorHandler {
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       context: { networkUrl: url, statusCode: status },
       resolved: false,
-      retryCount: 0,
+      retryCount: 0
     };
     this.errors.push(appError);
     if (this.config.enableLogging) {
@@ -146,7 +146,7 @@ export class ErrorHandler {
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       context: { field, value },
       resolved: false,
-      retryCount: 0,
+      retryCount: 0
     };
     this.errors.push(appError);
     if (this.config.enableLogging) {
@@ -238,9 +238,9 @@ export class ErrorHandler {
       await fetch(this.config.reportEndpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(error),
+        body: JSON.stringify(error)
       });
     } catch (err) {
       console.error('Failed to log error to network:', err);
@@ -253,12 +253,12 @@ export class ErrorHandler {
       await fetch(this.config.reportEndpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           ...error,
-          timestamp: error.timestamp.toISOString(),
-        }),
+          timestamp: error.timestamp.toISOString()
+        })
       });
     } catch (err) {
       console.error('Failed to report error:', err);
@@ -418,7 +418,7 @@ export class ErrorHandler {
       resolved,
       unresolved,
       byType,
-      bySeverity,
+      bySeverity
     };
   }
   /**
@@ -453,7 +453,7 @@ export class ErrorBoundary extends React.Component<
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.errorHandler.handleError(error, errorInfo, {
-      component: 'ErrorBoundary',
+      component: 'ErrorBoundary'
     });
   }
   render() {
@@ -471,7 +471,7 @@ export class ErrorBoundary extends React.Component<
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px',
-                cursor: 'pointer',
+                cursor: 'pointer'
               }}
             >
               Try again
@@ -510,7 +510,7 @@ export const useErrorHandler = () => {
     handleValidationError,
     getErrors: () => errorHandler.getErrors(),
     getErrorStatistics: () => errorHandler.getErrorStatistics(),
-    clearResolvedErrors: () => errorHandler.clearResolvedErrors(),
+    clearResolvedErrors: () => errorHandler.clearResolvedErrors()
   };
 };
 export default ErrorHandler;

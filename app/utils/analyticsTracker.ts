@@ -47,7 +47,7 @@ class AnalyticsTracker {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
-          non_interaction: event.nonInteraction,
+          non_interaction: event.nonInteraction
         });
       }
       // Also log to console in development
@@ -70,7 +70,7 @@ class AnalyticsTracker {
         window.gtag('event', 'page_view', {
           page_path: path,
           page_title: document.title,
-          page_location: window.location.href,
+          page_location: window.location.href
         });
       }
       if (process.env.NODE_ENV === 'development') {
@@ -93,7 +93,7 @@ class AnalyticsTracker {
           event_category: 'Web Vitals',
           event_label: metrics.metric,
           value: Math.round(metrics.value),
-          metric_rating: metrics.rating,
+          metric_rating: metrics.rating
         });
       }
       if (process.env.NODE_ENV === 'development') {
@@ -115,7 +115,7 @@ class AnalyticsTracker {
         window.gtag('event', 'exception', {
           description: error.message,
           fatal: error.severity === 'critical',
-          error_severity: error.severity,
+          error_severity: error.severity
         });
       }
       // Always log errors to console
@@ -138,7 +138,7 @@ class AnalyticsTracker {
           name: variable,
           value: Math.round(value),
           event_category: category,
-          event_label: label,
+          event_label: label
         });
       }
       if (process.env.NODE_ENV === 'development') {
@@ -160,7 +160,7 @@ class AnalyticsTracker {
         window.gtag('event', 'conversion', {
           send_to: conversionId,
           value: value,
-          currency: 'USD',
+          currency: 'USD'
         });
       }
       if (process.env.NODE_ENV === 'development') {

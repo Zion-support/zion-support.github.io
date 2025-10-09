@@ -34,7 +34,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
-  enableSchemaMarkup = true,
+  enableSchemaMarkup = true
 }) => {
   const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
@@ -48,14 +48,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       description: 'Advanced AI and IT Solutions',
       address: {
         '@type': 'PostalAddress',
-        addressCountry: 'US',
+        addressCountry: 'US'
       },
       sameAs: [
         'https://www.linkedin.com/company/zion-tech-group',
         'https://twitter.com/ziontechgroup',
         'https://github.com/Zion-Holdings',
       ],
-      ...seoData.structuredData,
+      ...seoData.structuredData
     };
     return baseStructuredData;
   }, [enableStructuredData, seoData.structuredData]);
@@ -69,15 +69,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://ziontechgroup.com',
+          item: 'https://ziontechgroup.com'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: seoData.title,
-          item: seoData.canonicalUrl,
+          item: seoData.canonicalUrl
         },
-      ],
+      ]
     };
     return breadcrumbData;
   }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl]);
@@ -92,18 +92,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.',
-          },
+            text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.'
+          }
         },
         {
           '@type': 'Question',
           name: 'How can I contact Zion Tech Group?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.',
-          },
+            text: 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.'
+          }
         },
-      ],
+      ]
     };
     return faqData;
   }, [enableSchemaMarkup]);
@@ -144,7 +144,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
-        page_location: config.canonicalUrl,
+        page_location: config.canonicalUrl
       });
     }
   };
@@ -156,7 +156,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           (window as any).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
           });
         }
       });

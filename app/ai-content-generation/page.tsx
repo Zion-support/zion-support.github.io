@@ -3,7 +3,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
-
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
     {
@@ -39,7 +38,6 @@ const AIContentGenerationPage: React.FC = () => {
       popular: false
     }
   ];
-
   const processSteps = [
     {
       step: '1',
@@ -66,11 +64,9 @@ const AIContentGenerationPage: React.FC = () => {
       icon: <BarChart className="w-6 h-6" />
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -96,7 +92,6 @@ const AIContentGenerationPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
@@ -127,7 +122,6 @@ const AIContentGenerationPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Process Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
@@ -146,7 +140,6 @@ const AIContentGenerationPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8">
@@ -172,10 +165,8 @@ const AIContentGenerationPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default AIContentGenerationPage;

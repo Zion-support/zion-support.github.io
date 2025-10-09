@@ -2,7 +2,7 @@ import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 const metadata = {
   title: 'Terms of Service - Zion Tech Group',
-  description: 'Terms of service and usage agreement for Zion Tech Group services and website.',
+  description: 'Terms of service and usage agreement for Zion Tech Group services and website.'
 };
 export { metadata };
 const TermsPage: React.FC = () => {

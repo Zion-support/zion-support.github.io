@@ -17,7 +17,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
-    trackAnalytics = true,
+    trackAnalytics = true
   } = _options;
   const _mountTimeRef = useRef<number>(0);
   const _renderCountRef = useRef<number>(0);
@@ -66,7 +66,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
-          ...context,
+          ...context
         });
       }
     },
@@ -95,7 +95,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             );
           }
           return duration;
-        },
+        }
       };
     },
     [component, trackPerformance]
@@ -103,7 +103,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   return {
     trackError,
     trackUserAction,
-    measureOperation,
+    measureOperation
   };
 }
 export default useEnhancedPerformance;

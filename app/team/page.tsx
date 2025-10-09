@@ -3,7 +3,7 @@ import React from 'react';
 const metadata = {
   title: 'Our Team - Zion Tech Group',
   description:
-    'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.',
+    'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.'
 };
 export { metadata };
 const TeamPage: React.FC = () => {
@@ -12,25 +12,25 @@ const TeamPage: React.FC = () => {
       name: 'Dr. Sarah Johnson',
       role: 'Chief Executive Officer',
       bio: 'AI researcher with 15+ years of experience in machine learning and quantum computing.',
-      image: '👩‍💼',
+      image: '👩‍💼'
     },
     {
       name: 'Michael Chen',
       role: 'Chief Technology Officer',
       bio: 'Expert in autonomous systems and enterprise architecture with a focus on scalability.',
-      image: '👨‍💻',
+      image: '👨‍💻'
     },
     {
       name: 'Dr. Emily Rodriguez',
       role: 'Head of AI Research',
       bio: 'Leading researcher in natural language processing and computer vision applications.',
-      image: '👩‍🔬',
+      image: '👩‍🔬'
     },
     {
       name: 'David Kim',
       role: 'Head of Engineering',
       bio: 'Full-stack engineer specializing in cloud infrastructure and distributed systems.',
-      image: '👨‍🔧',
+      image: '👨‍🔧'
     },
   ];
   return (

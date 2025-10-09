@@ -11,7 +11,7 @@ import {
   validateForm,
   isFormValid,
   getFormErrors,
-  // ValidationResult as _ValidationResult,
+  // ValidationResult as _ValidationResult
 } from '../utils/formValidation';
 export interface UseFormConfig<T extends Record<string, unknown>> {
   initialValues: T;

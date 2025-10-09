@@ -228,7 +228,7 @@ export const getMemoryUsage = () => {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
     limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
   };
 };
 // Performance metrics collection
@@ -240,13 +240,13 @@ export const collectPerformanceMetrics = () => {
     navigation: {
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-      totalTime: navigation.loadEventEnd - navigation.fetchStart,
+      totalTime: navigation.loadEventEnd - navigation.fetchStart
     },
     paint: {
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
     },
-    memory: getMemoryUsage(),
+    memory: getMemoryUsage()
   };
 };
 // Initialize performance enhancements

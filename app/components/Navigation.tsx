@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
-
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -75,7 +74,13 @@ const Navigation: React.FC = () => {
         { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' }
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
+        { name: 'AI Image Recognition', path: '/ai-image-recognition', description: 'Computer vision solutions' },
+        { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
+        { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
+        { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
       ]
     },
     {
@@ -109,7 +114,9 @@ const Navigation: React.FC = () => {
         { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 technical support' },
         { name: 'Managed IT Services', path: '/managed-it-services', description: 'Complete IT management' },
         { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Project Management', path: '/it-project-management', description: 'End-to-end project delivery' }
+        { name: 'IT Project Management', path: '/it-project-management', description: 'End-to-end project delivery' },
+        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
       ]
     },
     {

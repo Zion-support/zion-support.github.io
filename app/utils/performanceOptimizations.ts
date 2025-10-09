@@ -37,7 +37,7 @@ export const useIntersectionObserver = (
         ? new IntersectionObserver(callback, {
             threshold: 0.1,
             rootMargin: '50px',
-            ...options,
+            ...options
           })
         : null,
     [callback, options]
@@ -108,7 +108,7 @@ export const usePerformanceMonitoring = () => {
       setMetrics({
         fcp,
         lcp,
-        ttfb: navigation?.responseStart - navigation?.requestStart,
+        ttfb: navigation?.responseStart - navigation?.requestStart
       });
     };
     // Monitor performance after page load
@@ -148,7 +148,7 @@ export const useMemoryMonitoring = () => {
         setMemoryInfo({
           usedJSHeapSize: memory.usedJSHeapSize,
           totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit,
+          jsHeapSizeLimit: memory.jsHeapSizeLimit
         });
       }
     };
@@ -210,7 +210,7 @@ export const useBundleSizeMonitoring = () => {
         totalSize,
         jsSize,
         cssSize,
-        imageSize,
+        imageSize
       });
     };
     // Calculate after page load
@@ -234,5 +234,5 @@ export default {
   useMemoryMonitoring,
   preloadResource,
   preloadCriticalResources,
-  useBundleSizeMonitoring,
+  useBundleSizeMonitoring
 };

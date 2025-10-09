@@ -36,7 +36,7 @@ export async function registerServiceWorker(
       }
     });
     const registration = await navigator.serviceWorker.register('/service-worker.js', {
-      scope: '/',
+      scope: '/'
     });
     // Handle updates
     registration.addEventListener('updatefound', () => {
@@ -126,7 +126,7 @@ export async function getServiceWorkerStatus(): Promise<{
     return {
       supported: false,
       registered: false,
-      active: false,
+      active: false
     };
   }
   try {
@@ -134,13 +134,13 @@ export async function getServiceWorkerStatus(): Promise<{
     return {
       supported: true,
       registered: !!registration,
-      active: !!registration?.active,
+      active: !!registration?.active
     };
   } catch {
     return {
       supported: true,
       registered: false,
-      active: false,
+      active: false
     };
   }
 }
