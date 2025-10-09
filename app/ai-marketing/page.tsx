@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Star, CheckCircle, ArrowRight, Brain, BarChart, Users, TrendingUp, Target, Zap, Shield, Clock, Smartphone, Palette, Code, Database, Cloud, Settings, Award, Globe, Lock, Sparkles, Cpu, Eye, Bot, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Compass, Navigation, PieChart, Activity, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, CheckCircle, ArrowRight, Brain, BarChart, Users, TrendingUp, Target, Zap, Shield, Clock, Smartphone, Palette, Code, Database, Cloud, Settings, Award, Globe, Lock, Sparkles, Cpu, Eye, Bot, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Compass, Navigation, PieChart, Activity, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Play, Download, Share2, BookOpen as BookOpenIcon, Lightbulb, RefreshCw, AlertTriangle, CheckSquare, Timer, DollarSign, TrendingDown, UserPlus, FolderOpen, MessageCircle, Bell, Settings as SettingsIcon, HelpCircle, ExternalLink } from 'lucide-react';
 
-const AIAutomationPage: React.FC = memo(() => {
+const AIMarketingPage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -12,84 +12,84 @@ const AIAutomationPage: React.FC = memo(() => {
 
   const features = [
     {
-      icon: Settings,
-      title: 'Intelligent Process Automation',
-      description: 'Automate complex business processes with AI that learns and adapts to your specific workflows and requirements.',
-      benefits: ['70% reduction in manual tasks', '24/7 automated operations', 'Improved accuracy and consistency']
-    },
-    {
       icon: Brain,
-      title: 'AI Decision Making',
-      description: 'Implement AI systems that can make intelligent decisions based on data analysis and predefined business rules.',
-      benefits: ['Faster decision making', 'Reduced human error', 'Consistent decision quality']
+      title: 'AI-Powered Campaign Optimization',
+      description: 'Automatically optimize your marketing campaigns using machine learning algorithms that analyze performance data and adjust strategies in real-time.',
+      benefits: ['45% higher conversion rates', '60% reduction in ad spend waste', 'Real-time optimization']
     },
     {
-      icon: Zap,
-      title: 'Workflow Optimization',
-      description: 'Continuously optimize workflows using AI to identify bottlenecks and suggest improvements.',
-      benefits: ['35% efficiency improvement', 'Reduced operational costs', 'Better resource utilization']
-    },
-    {
-      icon: Shield,
-      title: 'Exception Handling',
-      description: 'Intelligent exception handling that can resolve issues automatically or escalate to human operators when needed.',
-      benefits: ['95% automated resolution', 'Reduced downtime', 'Proactive issue detection']
+      icon: Target,
+      title: 'Intelligent Audience Targeting',
+      description: 'Advanced AI algorithms analyze customer behavior and demographics to create highly targeted audience segments for maximum engagement.',
+      benefits: ['85% improvement in targeting accuracy', '40% increase in engagement', 'Reduced customer acquisition costs']
     },
     {
       icon: BarChart,
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and analytics of automated processes with AI-powered insights and recommendations.',
-      benefits: ['Real-time visibility', 'Predictive maintenance', 'Performance optimization']
+      title: 'Predictive Analytics',
+      description: 'Forecast customer behavior, market trends, and campaign performance using advanced predictive models and machine learning.',
+      benefits: ['90% accuracy in predictions', 'Data-driven decision making', 'Competitive advantage']
+    },
+    {
+      icon: MessageSquare,
+      title: 'Automated Content Generation',
+      description: 'Generate high-quality marketing content, ad copy, and social media posts using AI-powered content creation tools.',
+      benefits: ['80% faster content creation', 'Consistent brand voice', 'A/B testing automation']
     },
     {
       icon: Users,
-      title: 'Human-AI Collaboration',
-      description: 'Seamless integration between AI automation and human workers for optimal productivity and efficiency.',
-      benefits: ['Enhanced productivity', 'Better job satisfaction', 'Improved outcomes']
+      title: 'Customer Journey Optimization',
+      description: 'Map and optimize the entire customer journey using AI insights to improve conversion rates at every touchpoint.',
+      benefits: ['35% improvement in conversion rates', 'Better customer experience', 'Increased lifetime value']
+    },
+    {
+      icon: TrendingUp,
+      title: 'ROI Optimization',
+      description: 'Maximize return on investment by automatically allocating budget to the most effective channels and campaigns.',
+      benefits: ['50% improvement in ROI', 'Automated budget allocation', 'Performance tracking']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$399',
+      price: '$199',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Basic process automation',
-        'Up to 10 workflows',
-        'Standard monitoring',
+        'Basic AI campaign optimization',
+        'Up to 5 campaigns',
+        'Standard analytics',
         'Email support',
-        'Basic analytics'
+        'Basic content generation'
       ],
       popular: false,
       color: 'from-gray-500 to-gray-600'
     },
     {
       name: 'Professional',
-      price: '$899',
+      price: '$499',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Advanced automation',
-        'Up to 50 workflows',
-        'Advanced monitoring',
+        'Advanced AI optimization',
+        'Up to 25 campaigns',
+        'Advanced analytics',
         'Priority support',
-        'AI decision making',
-        'Custom integrations',
-        'Performance analytics'
+        'Full content generation suite',
+        'A/B testing automation',
+        'Custom integrations'
       ],
       popular: true,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-pink-500 to-purple-500'
     },
     {
       name: 'Enterprise',
-      price: '$2,499',
+      price: '$1,299',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Full AI automation suite',
-        'Unlimited workflows',
+        'Full AI marketing suite',
+        'Unlimited campaigns',
         'Advanced analytics',
         '24/7 dedicated support',
         'Custom AI models',
@@ -106,7 +106,7 @@ const AIAutomationPage: React.FC = memo(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'ai_automation_phone',
+        event_label: 'ai_marketing_phone',
       });
     }
   };
@@ -149,43 +149,43 @@ const AIAutomationPage: React.FC = memo(() => {
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="flex items-center justify-center mb-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
-              <Settings className="w-8 h-8 text-white" />
+            <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
+              <Target className="w-8 h-8 text-white" />
             </div>
             <div className="text-left">
               <h1 className="text-4xl md:text-5xl font-bold text-white neon-text cyber-text">
-                AI Automation Solutions
+                AI Marketing Solutions
               </h1>
-              <p className="text-lg text-blue-400">Intelligent Process Automation & Workflow Optimization</p>
+              <p className="text-lg text-pink-400">Revolutionary AI-Powered Marketing Automation</p>
             </div>
           </div>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your business operations with intelligent automation that learns, adapts, and optimizes. 
-            Reduce manual tasks by 70% and improve efficiency by 35% with our advanced AI automation solutions.
+            Transform your marketing with AI-powered automation, intelligent targeting, and predictive analytics. 
+            Increase conversion rates by 45% and reduce ad spend waste by 60% with our advanced AI marketing solutions.
           </p>
 
           {/* Key Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-blue-400 mb-2">70%</div>
-              <div className="text-white font-medium">Task Reduction</div>
-              <div className="text-gray-400 text-sm">Manual processes</div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">45%</div>
+              <div className="text-white font-medium">Higher Conversion</div>
+              <div className="text-gray-400 text-sm">Average improvement</div>
             </div>
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">35%</div>
-              <div className="text-white font-medium">Efficiency Gain</div>
-              <div className="text-gray-400 text-sm">Overall improvement</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
+              <div className="text-white font-medium">Ad Spend Reduction</div>
+              <div className="text-gray-400 text-sm">Waste elimination</div>
             </div>
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-              <div className="text-white font-medium">Automated Resolution</div>
-              <div className="text-gray-400 text-sm">Exception handling</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">85%</div>
+              <div className="text-white font-medium">Targeting Accuracy</div>
+              <div className="text-gray-400 text-sm">AI-powered precision</div>
             </div>
             <div className="cyber-card p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-              <div className="text-white font-medium">Operations</div>
-              <div className="text-gray-400 text-sm">Always running</div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">50%</div>
+              <div className="text-white font-medium">ROI Improvement</div>
+              <div className="text-gray-400 text-sm">Average increase</div>
             </div>
           </div>
         </section>
@@ -193,19 +193,19 @@ const AIAutomationPage: React.FC = memo(() => {
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-            Advanced AI Automation Features
+            Powerful AI Marketing Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="quantum-card p-6 energy-pulse">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-blue-400">
+                    <li key={benefitIndex} className="flex items-center text-sm text-pink-400">
                       <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -223,10 +223,10 @@ const AIAutomationPage: React.FC = memo(() => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`quantum-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400' : ''}`}>
+              <div key={index} className={`quantum-card p-8 relative ${plan.popular ? 'ring-2 ring-pink-400' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-black px-4 py-1 rounded-full text-sm font-bold">
+                    <span className="bg-pink-500 text-black px-4 py-1 rounded-full text-sm font-bold">
                       MOST POPULAR
                     </span>
                   </div>
@@ -235,7 +235,7 @@ const AIAutomationPage: React.FC = memo(() => {
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-blue-400">{plan.price}</span>
+                    <span className="text-4xl font-bold text-pink-400">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
@@ -249,8 +249,8 @@ const AIAutomationPage: React.FC = memo(() => {
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all ${
                   plan.popular 
-                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600' 
-                    : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black'
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:from-pink-600 hover:to-purple-600' 
+                    : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-black'
                 }`}>
                   {plan.popular ? 'Start Free Trial' : 'Get Started'}
                 </button>
@@ -263,10 +263,10 @@ const AIAutomationPage: React.FC = memo(() => {
         <section className="text-center mb-16">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-              Ready to Automate Your Business?
+              Ready to Revolutionize Your Marketing?
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
-              Join hundreds of businesses already using our AI automation solutions to streamline operations and boost productivity.
+              Join hundreds of businesses already using our AI marketing solutions to drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -317,5 +317,5 @@ const AIAutomationPage: React.FC = memo(() => {
   );
 });
 
-AIAutomationPage.displayName = 'AIAutomationPage';
-export default AIAutomationPage;
+AIMarketingPage.displayName = 'AIMarketingPage';
+export default AIMarketingPage;
