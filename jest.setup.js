@@ -36,7 +36,7 @@ jest.mock('./src/hooks/usePerformance.ts', () => ({
   })),
 }));
 
-jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
+jest.mock('./src/hooks/usePerformanceMonitoring.ts', () => ({
   usePerformanceMonitoring: jest.fn(() => ({
     metrics: {},
     report: {},

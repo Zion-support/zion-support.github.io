@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'continuous_orchestrator'}
       });
     };
-//   } catch (error) {console.error('❌ continuous_orchestrator function failed: ') error
+//   } catch (error) {// console.error('❌ continuous_orchestrator function failed: ') error
       }
     return {
       statusCode: 500,

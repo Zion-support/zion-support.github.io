@@ -77,7 +77,7 @@ export class PerformanceOptimizer {
     this.metrics.set(name, duration);
 
     if (process.env['NODE_ENV'] === 'development') {
-      //       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+      //       // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
   }
 

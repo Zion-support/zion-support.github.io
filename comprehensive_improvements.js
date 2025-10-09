@@ -91,7 +91,7 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
 // // Monitor performance
 // try {
     const _memUsage = process.memoryUsage();
-//     console.log('Memory usage:', {
+//     // console.log('Memory usage:', {
         rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB'

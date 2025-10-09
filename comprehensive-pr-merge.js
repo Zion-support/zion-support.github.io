@@ -128,7 +128,7 @@ for (let batch = 0; batch < totalBatches; batch++) {
 //   const end = Math.min(start + batchSize, recentBranches.length);
   const _batchBranches = recentBranches.slice(start, end);
 
-//   console.log(
+//   // console.log(
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
   );
 

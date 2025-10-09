@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -10,7 +9,7 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-  errorId?: string;
+  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -20,97 +19,73 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };
+    return { hasError: true, error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Report error to this/monitoring service
-    this.reportError(error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+    
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-  }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as unknown as {
-          gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag('event', 'exception', {
+    // Send error to analytics if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack,
-        },
       });
     }
-  };
+  }
 
-  private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorId: undefined });
-  };
-
-  private handleGoHome = () => {
-    if (window?.location) {
-      window.location.href = '/';
-    }
-  };
-
-  override render() {
+  render() {
     if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
       return (
-        this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-gray-900">
-            <div className="text-center p-8 max-w-md">
-              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-              <p className="text-gray-300 mb-6">
-                We&apos;re sorry, but something unexpected happened. Our team has been notified.
-              </p>
-              {this.state.errorId && (
-                <p className="text-gray-400 mb-4 text-sm">Error ID: {this.state.errorId}</p>
-              )}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={this.handleRetry}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Try Again
-                </button>
-                <button
-                  onClick={this.handleGoHome}
-                  className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  <Home className="w-4 h-4" />
-                  Go Home
-                </button>
-              </div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center max-w-md mx-auto p-8">
+            <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <div className="space-y-4">
               <button
                 onClick={() => window.location.reload()}
-                className="mt-4 text-gray-400 hover:text-white text-sm underline"
+                className="bg-cyan-400 text-slate-900 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-300 transition-colors"
               >
-                Or refresh the page
+                Refresh Page
+              </button>
+              <button
+                onClick={() => window.location.href = '/'}
+                className="block w-full text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+              >
+                Go to Homepage
               </button>
             </div>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-6 text-left">
+                <summary className="text-gray-400 cursor-pointer">Error Details</summary>
+                <pre className="mt-2 text-xs text-gray-500 bg-gray-800 p-2 rounded overflow-auto">
+                  {this.state.error.stack}
+                </pre>
+              </details>
+            )}
           </div>
-        )
+        </div>
       );
     }
 

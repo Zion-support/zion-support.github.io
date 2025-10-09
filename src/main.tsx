@@ -1,15 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from '../App';
-import '../app/globals.css';
+import App from './App';
+import './globals.css';
+import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
-// Initialize the app
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+// Initialize performance optimizations immediately
+if (typeof window !== 'undefined') {
+  initializePerformanceOptimizations();
+}
 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        // Service Worker registered successfully
+      })
+      .catch((registrationError) => {
+        // Service Worker registration failed - handled silently
+      });
+  });
+}
+
+const root = document.getElementById('root');
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}

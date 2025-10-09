@@ -1,47 +1,132 @@
-# Zion Tech Group - Advanced AI and IT Solutions Website
+# Zion Tech Group Website
 
-A cutting-edge, high-performance website built with React, TypeScript, and Vite, showcasing advanced AI and IT solutions.
+A modern, high-performance website for Zion Tech Group - Advanced AI and IT Solutions.
 
 ## 🚀 Features
 
-- **High Performance**: Optimized for Core Web Vitals and maximum speed
-- **Modern Stack**: React 18, TypeScript, Vite, Tailwind CSS
-- **AI-Powered**: Advanced AI solutions and implementations
-- **Responsive Design**: Mobile-first, accessible design
-- **SEO Optimized**: Comprehensive SEO and meta tag management
-- **Performance Monitoring**: Real-time performance tracking and analytics
+- **Modern Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS
+- **Performance Optimized**: Code splitting, lazy loading, service worker caching
+- **SEO Optimized**: Meta tags, structured data, Open Graph
+- **Accessibility**: WCAG compliant, keyboard navigation, screen reader support
+- **Mobile First**: Responsive design with mobile-first approach
+- **PWA Ready**: Service worker, web app manifest
 
-## 🛠️ Tech Stack
+## 🛠️ Development
 
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, Framer Motion
-- **Icons**: Lucide React, Heroicons
-- **Analytics**: Google Analytics, Web Vitals
-- **Testing**: Jest, Testing Library
-- **Linting**: ESLint, Prettier
-- **Build**: Vite with Terser minification
+### Prerequisites
 
-## 📦 Installation
+- Node.js 18+ 
+- npm or pnpm
+
+### Installation
 
 ```bash
-# Install dependencies
 npm install
+```
 
-# Start development server
+### Development Server
+
+```bash
 npm run dev
+```
 
-# Build for production
+The application will be available at `http://localhost:3000`
+
+### Build for Production
+
+```bash
 npm run build
+```
 
-# Preview production build
+### Preview Production Build
+
+```bash
 npm run preview
 ```
+
+### Bundle Analysis
+
+```bash
+npm run build:analyze
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── pages/              # Page components
+├── utils/              # Utility functions
+├── hooks/              # Custom React hooks
+├── types/              # TypeScript type definitions
+└── App.tsx             # Main application component
+```
+
+## 🚀 Deployment
+
+### Build Check
+
+```bash
+npm run deploy:check
+```
+
+### Clean Build
+
+```bash
+npm run clean:build
+```
+
+## 🔧 Performance Features
+
+- **Code Splitting**: Automatic code splitting by route and feature
+- **Lazy Loading**: Components loaded on demand
+- **Service Worker**: Caching for offline functionality
+- **Image Optimization**: Optimized images with proper formats
+- **Bundle Analysis**: Tools to analyze and optimize bundle size
+
+## 📊 Performance Monitoring
+
+The application includes built-in performance monitoring for:
+- Largest Contentful Paint (LCP)
+- First Input Delay (FID)
+- Cumulative Layout Shift (CLS)
+- First Contentful Paint (FCP)
+- Time to First Byte (TTFB)
+
+## 🎨 Styling
+
+- **Tailwind CSS**: Utility-first CSS framework
+- **Custom Components**: Reusable component library
+- **Dark Theme**: Cyberpunk-inspired design
+- **Responsive**: Mobile-first responsive design
+
+## 🔍 SEO Features
+
+- **Meta Tags**: Comprehensive meta tag optimization
+- **Structured Data**: JSON-LD structured data
+- **Open Graph**: Social media sharing optimization
+- **Sitemap**: Automatic sitemap generation
+- **Robots.txt**: Search engine optimization
+
+## 🛡️ Security
+
+- **CSP Headers**: Content Security Policy
+- **HTTPS**: Secure connections
+- **XSS Protection**: Cross-site scripting protection
+- **Clickjacking Protection**: Frame options headers
+
+## 📱 PWA Features
+
+- **Service Worker**: Offline functionality
+- **Web App Manifest**: Installable web app
+- **Caching Strategy**: Intelligent caching
+- **Background Sync**: Background data synchronization
 
 ## 🧪 Testing
 
 ```bash
-# Run all tests
-npm test
+# Run tests
+npm run test
 
 # Run tests with coverage
 npm run test:coverage
@@ -50,107 +135,48 @@ npm run test:coverage
 npm run test:watch
 ```
 
-## 🔧 Development Scripts
-
-```bash
-# Type checking
-npm run type-check
-
-# Linting
-npm run lint
-
-# Linting with auto-fix
-npm run lint:fix
-
-# Format code
-npm run format
-
-# Performance optimization
-node scripts/performance-optimizer.js
-
-# Bundle analysis
-npm run build:analyze
-```
-
-## 📊 Performance
-
-The website is optimized for maximum performance with:
-
-- **Code Splitting**: Dynamic imports for optimal bundle sizes
-- **Image Optimization**: WebP format with fallbacks
-- **Caching**: Aggressive caching strategies for static assets
-- **Compression**: Gzip/Brotli compression
-- **CDN Ready**: Optimized for content delivery networks
-
-## 🎯 Core Web Vitals
-
-- **LCP**: < 2.5s (Largest Contentful Paint)
-- **FID**: < 100ms (First Input Delay)
-- **CLS**: < 0.1 (Cumulative Layout Shift)
-- **FCP**: < 1.8s (First Contentful Paint)
-- **TTFB**: < 600ms (Time to First Byte)
-
-## 🏗️ Architecture
-
-```
-src/
-├── components/     # Reusable UI components
-├── pages/         # Page components
-├── hooks/         # Custom React hooks
-├── utils/         # Utility functions
-├── types/         # TypeScript type definitions
-├── config/        # Configuration files
-└── styles/        # Global styles
-
-app/
-├── components/    # App-specific components
-├── pages/         # App pages
-├── utils/         # App utilities
-└── config/        # App configuration
-```
-
-## 🔒 Security
-
-- **CSP Headers**: Content Security Policy implementation
-- **XSS Protection**: Cross-site scripting prevention
-- **HTTPS**: Secure connections only
-- **Input Validation**: Comprehensive input sanitization
-
 ## 📈 Analytics
 
-- **Google Analytics**: User behavior tracking
-- **Web Vitals**: Performance metrics monitoring
-- **Error Tracking**: Comprehensive error reporting
-- **Custom Events**: Business-specific analytics
+The application includes Google Analytics integration for:
+- Page views
+- User interactions
+- Performance metrics
+- Error tracking
 
-## 🚀 Deployment
+## 🔧 Configuration
 
-The website is optimized for deployment on:
+### Environment Variables
 
-- **Netlify**: Static site hosting
-- **Vercel**: Edge functions and CDN
-- **AWS S3**: Scalable object storage
-- **CloudFlare**: Global CDN and security
+Create a `.env` file for environment-specific configuration:
 
-## 📝 Contributing
+```env
+VITE_GA_TRACKING_ID=your_ga_tracking_id
+VITE_API_URL=your_api_url
+```
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
+### Vite Configuration
+
+The `vite.config.ts` file contains:
+- Build optimization settings
+- Code splitting configuration
+- Asset optimization
+- Development server settings
 
 ## 📄 License
 
 MIT License - see LICENSE file for details
 
-## 🤝 Support
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and build
+5. Submit a pull request
+
+## 📞 Support
 
 For support and questions:
-- Email: support@ziontechgroup.com
+- Email: kleber@ziontechgroup.com
+- Phone: +1 302 464 0950
 - Website: https://ziontechgroup.com
-- Documentation: https://docs.ziontechgroup.com
-
----
-
-Built with ❤️ by the Zion Tech Group team
