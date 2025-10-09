@@ -3,8 +3,9 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
+import SEOHead from './components/SEOHead';
+import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
@@ -27,12 +28,10 @@ const preloadComponents = () => {
   }
 };
 
-// Loading skeleton component
+// Loading skeleton component - now using improved LoadingSpinner
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  <div className="bg-white rounded-lg shadow-lg p-6" role="status" aria-label="Loading service card">
+    <LoadingSpinner size="md" text="Loading service..." />
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
@@ -962,10 +961,10 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <SEOOptimizer
+      <SEOHead
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'cybersecurity', 'business intelligence']}
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
@@ -1002,17 +1001,13 @@ const HomePage: React.FC = () => {
           }
         }}
       />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enableCodeSplitting={true}
-        enablePrefetching={true}
-      />
+      <PerformanceMonitor />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
+        enableReducedMotion={true}
       />
       <SecurityEnhancer
         enableCSP={true}
@@ -1035,7 +1030,7 @@ const HomePage: React.FC = () => {
         </a>
 
         {/* Content Promotion Banner */}
-        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading promotion banner..." />}>
           <ContentPromotionBanner />
         </Suspense>
 

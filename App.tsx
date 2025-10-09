@@ -1,5 +1,10 @@
 import React, { memo, useMemo, Suspense } from 'react';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
+import ErrorBoundary from './src/components/ErrorBoundary';
+import SEOHead from './src/components/SEOHead';
+import LoadingSpinner from './src/components/LoadingSpinner';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -38,64 +43,9 @@ const InteractiveContentShowcase2026 = memo(() => (
   </div>
 ));
 
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
+// Loading component - now using the improved LoadingSpinner
 
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-       
-      // console.error('App Error Boundary caught an error:', error, errorInfo);
-    }
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
+// Error Boundary Component - now using the improved ErrorBoundary
 
 export default function App() {
   const structuredData = useMemo(
@@ -138,42 +88,34 @@ export default function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <Helmet>
-          <title>Zion Tech Group - AI & IT Solutions</title>
-          <meta
-            name="description"
-            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
-          />
-          <meta
-            name="keywords"
-            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
-          />
-          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            property="og:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            name="twitter:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-        </Helmet>
+        <SEOHead
+          title="Zion Tech Group - Advanced AI and IT Solutions"
+          description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+          keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'cybersecurity', 'business intelligence']}
+          canonicalUrl="https://ziontechgroup.com"
+          structuredData={structuredData}
+        />
+        
+        <PerformanceMonitor />
+        <AccessibilityEnhancer
+          enableKeyboardNavigation={true}
+          enableScreenReader={true}
+          enableHighContrast={true}
+          enableFocusManagement={true}
+          enableReducedMotion={true}
+        />
+        
         <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner size="lg" text="Loading content..." />}>
             <UnifiedContentPromotion />
           </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner size="md" text="Loading AI calculator..." />}>
             <InteractiveAIROICalculator />
           </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner size="md" text="Loading showcase..." />}>
             <ContentShowcase />
           </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner size="md" text="Loading 2026 content..." />}>
             <InteractiveContentShowcase2026 />
           </Suspense>
         </div>

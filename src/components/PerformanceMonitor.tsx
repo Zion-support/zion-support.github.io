@@ -1,96 +1,120 @@
-'use client';
 import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
 interface PerformanceMetrics {
+  cls: number | null;
+  inp: number | null;
   fcp: number | null;
   lcp: number | null;
-  fid: number | null;
-  cls: number | null;
   ttfb: number | null;
 }
+
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    inp: null,
     fcp: null,
     lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
+    ttfb: null,
   });
+
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-    const measurePerformance = () => {
-      // Measure First Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
+    const handleMetric = (metric: any) => {
+      setMetrics(prev => ({
+        ...prev,
+        [metric.name]: metric.value
+      }));
+
+      // Send to analytics if available
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: metric.name,
+          value: Math.round(metric.value),
+          non_interaction: true,
         });
-        observer.observe({ entryTypes: ['paint'] });
-      }
-      // Measure Largest Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      }
-      // Measure First Input Delay
-      if ('PerformanceObserver' in window) {
-        const fidObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-            }
-          }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      }
-      // Measure Cumulative Layout Shift
-      if ('PerformanceObserver' in window) {
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
-          }
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      }
-      // Measure Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-        }));
       }
     };
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+
+    // Measure Core Web Vitals
+    onCLS(handleMetric);
+    onINP(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
+
+    // Monitor memory usage
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      if (memory) {
+        const memoryUsage = {
+          used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
+          total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
+          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024),
+        };
+
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'memory_usage', {
+            event_category: 'Performance',
+            event_label: 'Memory',
+            value: memoryUsage.used,
+            custom_parameter_1: memoryUsage.total,
+            custom_parameter_2: memoryUsage.limit,
+          });
+        }
+      }
+    }
+
+    // Monitor long tasks
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.duration > 50) { // Tasks longer than 50ms
+              if (typeof window !== 'undefined' && (window as any).gtag) {
+                (window as any).gtag('event', 'long_task', {
+                  event_category: 'Performance',
+                  event_label: 'Long Task',
+                  value: Math.round(entry.duration),
+                });
+              }
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['longtask'] });
+      } catch (e) {
+        // Long task API not supported
+      }
     }
   }, []);
+
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+
   return (
-    <div className="performance-monitor">
-      <h3>Performance Metrics</h3>
-      <div className="metrics">
-        <div>LCP: {metrics.lcp || 'N/A'}</div>
-        <div>FID: {metrics.fid || 'N/A'}</div>
-        <div>CLS: {metrics.cls || 'N/A'}</div>
-        <div>FCP: {metrics.fcp || 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb || 'N/A'}</div>
-        <div>Memory: N/A</div>
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-3 text-xs font-mono text-white z-50">
+      <div className="text-cyan-400 font-semibold mb-2">Performance Metrics</div>
+      <div className="space-y-1">
+        {metrics.fcp && (
+          <div>FCP: {Math.round(metrics.fcp)}ms</div>
+        )}
+        {metrics.lcp && (
+          <div>LCP: {Math.round(metrics.lcp)}ms</div>
+        )}
+        {metrics.inp && (
+          <div>INP: {Math.round(metrics.inp)}ms</div>
+        )}
+        {metrics.cls && (
+          <div>CLS: {metrics.cls.toFixed(3)}</div>
+        )}
+        {metrics.ttfb && (
+          <div>TTFB: {Math.round(metrics.ttfb)}ms</div>
+        )}
       </div>
     </div>
   );
 };
+
 export default PerformanceMonitor;

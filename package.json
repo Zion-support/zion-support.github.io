@@ -27,7 +27,6 @@
     "build:production": "vite build --mode production",
     "build:clean": "node scripts/optimize-build.js",
     "build:final": "npm run build:clean && npm run build:production",
-    "prebuild": "",
     "postbuild": "echo \"Build completed successfully\"",
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
@@ -96,7 +95,9 @@
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
     "preview:build": "npm run build && npm run preview",
     "clean:build": "rm -rf dist && npm run build",
-    "deploy:ready": "npm run build && npm run test:unit && echo 'Ready for deployment'"
+    "deploy:ready": "npm run build && npm run test:unit && echo 'Ready for deployment'",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "prebuild": "npm run generate:sitemap"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
