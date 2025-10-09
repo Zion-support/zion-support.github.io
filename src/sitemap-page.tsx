@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 const SitemapPage: React.FC = () => {
   const pages = [
@@ -58,12 +57,11 @@ const SitemapPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {pages.map((page, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg p-4">
-                    <Link
-                      href={page.url}
+                    <a href={page.url}
                       className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
                     >
                       {page.title}
-                    </Link>
+                    </a>
                     <div className="text-sm text-gray-400">
                       Priority: {page.priority}
                     </div>
@@ -74,12 +72,11 @@ const SitemapPage: React.FC = () => {
                 ))}
               </div>
               <div className="mt-8 text-center">
-                <Link
-                  href="/"
+                <a href="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
                   Back to Home
-                </Link>
+                </a>
               </div>
             </div>
           </div>

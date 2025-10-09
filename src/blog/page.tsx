@@ -1,6 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useMemo } from 'react';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
   id: string;

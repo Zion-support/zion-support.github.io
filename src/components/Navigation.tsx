@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -79,7 +78,16 @@ const Navigation: React.FC = () => {
     { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
     { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator }
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video },
+    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music },
+    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
+    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
   ];
 
   const aiServices = [
@@ -88,7 +96,13 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
     { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield }
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
+    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
+    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
+    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
   ];
 
   const itServices = [
@@ -97,7 +111,13 @@ const Navigation: React.FC = () => {
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database-services', icon: Database },
     { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users }
+    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Briefcase },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
+    { name: 'Compliance & Governance', href: '/compliance', icon: FileText },
+    { name: 'Developer Tools', href: '/developer-tools', icon: Code },
+    { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
+    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
   ];
 
   const specializedServices = [
@@ -106,7 +126,13 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
     { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings }
+    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
+    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+    { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart3 },
+    { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
+    { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
+    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
+    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
   ];
 
   return (
@@ -116,12 +142,12 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -144,15 +170,14 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {microSAASServices.slice(0, 6).map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
+                          <a key={service.name}
+                            href={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
@@ -163,15 +188,14 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {aiServices.slice(0, 6).map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
+                          <a key={service.name}
+                            href={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
@@ -219,21 +243,21 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
-            </Link>
-            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
+            </a>
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
-            </Link>
-            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+            </a>
+            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
-            </Link>
-            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+            </a>
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
-            </Link>
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            </a>
+            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
-            </Link>
+            </a>
             
             <div className="flex items-center space-x-4">
               <a
@@ -243,12 +267,11 @@ const Navigation: React.FC = () => {
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">+1 302 464 0950</span>
               </a>
-              <Link
-                to="/contact"
+              <a href="/contact"
                 className="cyber-button px-4 py-2 text-sm"
               >
                 Get Started
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -280,14 +303,13 @@ const Navigation: React.FC = () => {
                       <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
                       <div className="space-y-2">
                         {microSAASServices.slice(0, 4).map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
+                          <a key={service.name}
+                            href={service.href}
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             {service.name}
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
@@ -295,43 +317,41 @@ const Navigation: React.FC = () => {
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
                       <div className="space-y-2">
                         {aiServices.slice(0, 4).map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
+                          <a key={service.name}
+                            href={service.href}
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             {service.name}
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
-                    <Link
-                      to="/services"
+                    <a href="/services"
                       className="block text-cyan-400 hover:text-white transition-colors"
                       onClick={closeAllMenus}
                     >
                       View All Services →
-                    </Link>
+                    </a>
                   </div>
                 )}
               </div>
 
-              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
-              </Link>
-              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </a>
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
-              </Link>
-              <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </a>
+              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Case Studies
-              </Link>
-              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </a>
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Pricing
-              </Link>
-              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </a>
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
-              </Link>
+              </a>
               
               <div className="pt-4 border-t border-gray-700">
                 <a
@@ -341,13 +361,12 @@ const Navigation: React.FC = () => {
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </a>
-                <Link
-                  to="/contact"
+                <a href="/contact"
                   className="block cyber-button px-4 py-2 text-center"
                   onClick={closeAllMenus}
                 >
                   Get Started
-                </Link>
+                </a>
               </div>
             </div>
           </div>

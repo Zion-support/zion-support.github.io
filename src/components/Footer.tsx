@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Calculator, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -9,7 +8,13 @@ const Footer: React.FC = () => {
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' }
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
+    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
+    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
+    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
+    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
+    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
   ];
 
   const aiServices = [
@@ -18,7 +23,13 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'Quantum AI Computing', url: '/quantum-ai', description: 'Next-gen algorithms' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI applications' },
+    { name: 'AI Fintech Solutions', url: '/ai-fintech', description: 'Financial AI services' },
+    { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Smart mobile apps' },
+    { name: 'AI CRM Solutions', url: '/ai-crm', description: 'Intelligent customer management' },
+    { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
+    { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
   ];
 
   const itServices = [
@@ -27,7 +38,13 @@ const Footer: React.FC = () => {
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
     { name: 'Database Services', url: '/database-services', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking' },
-    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' }
+    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT guidance' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless cloud migration' },
+    { name: 'Compliance & Governance', url: '/compliance', description: 'Regulatory compliance' },
+    { name: 'Developer Tools', url: '/developer-tools', description: 'Advanced dev tools' },
+    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' },
+    { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
   ];
 
   const specializedServices = [
@@ -36,7 +53,13 @@ const Footer: React.FC = () => {
     { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' }
+    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' },
+    { name: 'Enterprise Solutions', url: '/enterprise', description: 'Enterprise-grade solutions' },
+    { name: 'Analytics Tools', url: '/analytics-tools', description: 'Advanced analytics' },
+    { name: 'Business Apps', url: '/business-apps', description: 'Custom business apps' },
+    { name: 'Expense Tracker Pro', url: '/expense-tracker', description: 'AI expense management' },
+    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'AI task management' },
+    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
   ];
 
   const additionalServices = [
@@ -121,22 +144,20 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {microSaasServices.map((service) => (
                 <li key={service.name}>
-                  <Link
-                    to={service.url}
+                  <a href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <span>{service.name}</span>
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
-            <Link
-              to="/services"
+            <a href="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
               View All Micro SAAS →
-            </Link>
+            </a>
           </div>
 
           {/* AI & IT Services */}
@@ -151,12 +172,11 @@ const Footer: React.FC = () => {
                 <ul className="space-y-1">
                   {aiServices.slice(0, 3).map((service) => (
                     <li key={service.name}>
-                      <Link
-                        to={service.url}
+                      <a href={service.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {service.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -166,23 +186,21 @@ const Footer: React.FC = () => {
                 <ul className="space-y-1">
                   {itServices.slice(0, 3).map((service) => (
                     <li key={service.name}>
-                      <Link
-                        to={service.url}
+                      <a href={service.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {service.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            <Link
-              to="/services"
+            <a href="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
               View All Services →
-            </Link>
+            </a>
           </div>
 
           {/* Additional AI Services */}
@@ -215,12 +233,11 @@ const Footer: React.FC = () => {
                 <ul className="space-y-1">
                   {companyLinks.slice(0, 4).map((link) => (
                     <li key={link.name}>
-                      <Link
-                        to={link.url}
+                      <a href={link.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {link.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -230,12 +247,11 @@ const Footer: React.FC = () => {
                 <ul className="space-y-1">
                   {supportLinks.slice(0, 4).map((link) => (
                     <li key={link.name}>
-                      <Link
-                        to={link.url}
+                      <a href={link.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {link.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -252,13 +268,12 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex space-x-6">
               {legalLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.url}
+                <a key={link.name}
+                  href={link.url}
                   className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
             </div>
           </div>

@@ -8,6 +8,7 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -44,6 +45,10 @@ const HomePage: React.FC = () => {
     setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
+    
+    // Initialize performance optimizations
+    initializePerformanceOptimizations();
+    
     return () => clearTimeout(timer);
   }, []);
 
@@ -189,6 +194,105 @@ const HomePage: React.FC = () => {
       link: '/ai-financial-analyzer',
       popular: false,
       category: 'Finance'
+    },
+    {
+      title: 'AI Video Generator Pro',
+      description: 'Create professional videos with AI-powered editing and content generation',
+      icon: '🎬',
+      price: '$399/month',
+      features: ['AI video creation', 'Auto-editing', 'Voice synthesis', 'Text-to-video', 'Template library', 'Brand customization'],
+      benefits: ['90% time savings', 'Professional quality', 'Unlimited videos', 'Multi-language support'],
+      link: '/ai-video-generation',
+      popular: true,
+      category: 'Content'
+    },
+    {
+      title: 'AI Voice Cloning Studio',
+      description: 'Create realistic voice clones for content, presentations, and customer service',
+      icon: '🎤',
+      price: '$299/month',
+      features: ['Voice cloning', 'Text-to-speech', 'Emotion control', 'Multi-language', 'Voice training', 'API integration'],
+      benefits: ['Natural voice quality', 'Cost-effective', 'Scalable', 'Custom voices'],
+      link: '/ai-voice-cloning',
+      popular: true,
+      category: 'Content'
+    },
+    {
+      title: 'AI Music Composer',
+      description: 'Generate royalty-free music and soundtracks with AI composition',
+      icon: '🎵',
+      price: '$199/month',
+      features: ['AI composition', 'Multiple genres', 'Custom length', 'Royalty-free', 'Commercial use', 'High quality'],
+      benefits: ['Unlimited music', 'No copyright issues', 'Custom compositions', 'Professional quality'],
+      link: '/ai-music-composition',
+      popular: false,
+      category: 'Content'
+    },
+    {
+      title: 'AI Fashion Designer',
+      description: 'AI-powered fashion design and trend prediction for retail businesses',
+      icon: '👗',
+      price: '$349/month',
+      features: ['Design generation', 'Trend analysis', 'Color matching', 'Size optimization', 'Market research', 'Style recommendations'],
+      benefits: ['Faster design cycles', 'Trend accuracy', 'Cost reduction', 'Market insights'],
+      link: '/ai-fashion-design',
+      popular: false,
+      category: 'Design'
+    },
+    {
+      title: 'AI Fitness Coach',
+      description: 'Personalized fitness and nutrition plans powered by AI analysis',
+      icon: '💪',
+      price: '$149/month',
+      features: ['Personalized plans', 'Progress tracking', 'Nutrition analysis', 'Workout videos', 'Health monitoring', 'Goal setting'],
+      benefits: ['Better results', '24/7 guidance', 'Personalized approach', 'Health insights'],
+      link: '/ai-fitness-coach',
+      popular: true,
+      category: 'Health'
+    },
+    {
+      title: 'AI Workflow Automation',
+      description: 'Automate complex business processes with intelligent workflow management',
+      icon: '⚙️',
+      price: '$249/month',
+      features: ['Process automation', 'Workflow design', 'Integration APIs', 'Error handling', 'Monitoring', 'Custom triggers'],
+      benefits: ['80% process reduction', 'Error elimination', 'Cost savings', 'Scalable automation'],
+      link: '/ai-workflow-automation',
+      popular: true,
+      category: 'Automation'
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Intelligent sales process automation with AI-powered lead nurturing',
+      icon: '💼',
+      price: '$299/month',
+      features: ['Lead scoring', 'Email sequences', 'Follow-up automation', 'CRM integration', 'Performance analytics', 'A/B testing'],
+      benefits: ['50% more conversions', 'Automated nurturing', 'Better lead quality', 'ROI tracking'],
+      link: '/ai-sales-automation',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Transform complex data into stunning, interactive visualizations',
+      icon: '📊',
+      price: '$199/month',
+      features: ['Interactive charts', 'Real-time data', 'Custom dashboards', 'Export options', 'Collaboration tools', 'Mobile responsive'],
+      benefits: ['Better insights', 'Faster decisions', 'Professional presentations', 'Data storytelling'],
+      link: '/ai-data-visualization',
+      popular: false,
+      category: 'Analytics'
+    },
+    {
+      title: 'AI 3D Generation Studio',
+      description: 'Create 3D models, animations, and virtual environments with AI',
+      icon: '🎨',
+      price: '$499/month',
+      features: ['3D model generation', 'Animation creation', 'Texture mapping', 'Rendering', 'VR/AR support', 'Export formats'],
+      benefits: ['Professional 3D content', 'Time savings', 'No 3D skills needed', 'High quality output'],
+      link: '/ai-3d-generation',
+      popular: false,
+      category: 'Design'
     }
   ];
 
@@ -246,6 +350,60 @@ const HomePage: React.FC = () => {
       features: ['Threat Detection', 'Anomaly Detection', 'Behavioral Analysis', 'Incident Response', 'Risk Assessment', 'Compliance Monitoring'],
       color: 'text-red-400',
       benefits: ['99.9% threat detection', 'Real-time monitoring', 'Automated response', 'Reduced false positives']
+    },
+    {
+      title: 'AI Healthcare Solutions',
+      description: 'Advanced AI for medical diagnosis, drug discovery, and patient care',
+      icon: Stethoscope,
+      price: '$3,500/month',
+      features: ['Medical Imaging Analysis', 'Drug Discovery', 'Patient Monitoring', 'Diagnostic Assistance', 'Treatment Optimization', 'Clinical Trials'],
+      color: 'text-pink-400',
+      benefits: ['95% diagnostic accuracy', 'Faster drug development', 'Improved patient outcomes', 'Cost reduction']
+    },
+    {
+      title: 'AI Fintech Solutions',
+      description: 'AI-powered financial services including fraud detection and algorithmic trading',
+      icon: CreditCard,
+      price: '$2,999/month',
+      features: ['Fraud Detection', 'Algorithmic Trading', 'Risk Assessment', 'Credit Scoring', 'Regulatory Compliance', 'Real-time Analytics'],
+      color: 'text-emerald-400',
+      benefits: ['99.9% fraud detection', 'Real-time processing', 'Regulatory compliance', 'Risk mitigation']
+    },
+    {
+      title: 'AI Mobile App Development',
+      description: 'Intelligent mobile applications with AI-powered features and automation',
+      icon: Smartphone,
+      price: '$2,200/month',
+      features: ['AI Integration', 'Smart Features', 'User Behavior Analysis', 'Personalization', 'Voice Recognition', 'Image Processing'],
+      color: 'text-indigo-400',
+      benefits: ['Enhanced user experience', 'Smart automation', 'Personalized content', 'Advanced features']
+    },
+    {
+      title: 'AI CRM Solutions',
+      description: 'Intelligent customer relationship management with AI-powered insights',
+      icon: Users,
+      price: '$1,800/month',
+      features: ['Customer Analytics', 'Lead Scoring', 'Sales Forecasting', 'Automated Follow-ups', 'Sentiment Analysis', 'Churn Prediction'],
+      color: 'text-orange-400',
+      benefits: ['40% better conversions', 'Automated workflows', 'Customer insights', 'Sales optimization']
+    },
+    {
+      title: 'AI Email Assistant',
+      description: 'Intelligent email management with smart categorization and automated responses',
+      icon: Mail,
+      price: '$149/month',
+      features: ['Smart Categorization', 'Auto-responses', 'Priority Detection', 'Spam Filtering', 'Scheduling', 'Template Generation'],
+      color: 'text-cyan-400',
+      benefits: ['50% time savings', 'Better organization', 'Automated responses', 'Improved productivity']
+    },
+    {
+      title: 'AI Scheduler Pro',
+      description: 'Intelligent scheduling and calendar management with AI optimization',
+      icon: Calendar,
+      price: '$199/month',
+      features: ['Smart Scheduling', 'Conflict Resolution', 'Time Optimization', 'Meeting Analytics', 'Auto-booking', 'Integration APIs'],
+      color: 'text-violet-400',
+      benefits: ['Eliminate scheduling conflicts', 'Optimize time usage', 'Automated booking', 'Better productivity']
     }
   ];
 
@@ -303,6 +461,60 @@ const HomePage: React.FC = () => {
       features: ['24/7 Support', 'Remote Assistance', 'Ticket Management', 'Knowledge Base', 'User Training', 'System Maintenance'],
       color: 'text-orange-400',
       benefits: ['Instant response', '95% satisfaction', 'Proactive monitoring', 'User empowerment']
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting and digital transformation advisory services',
+      icon: Briefcase,
+      price: '$2,200/month',
+      features: ['Digital Strategy', 'Technology Roadmap', 'Architecture Design', 'Vendor Selection', 'Change Management', 'ROI Analysis'],
+      color: 'text-indigo-400',
+      benefits: ['Strategic guidance', 'Technology alignment', 'Cost optimization', 'Future-proofing']
+    },
+    {
+      title: 'Cloud Migration',
+      description: 'Seamless cloud migration services with zero downtime and data integrity',
+      icon: Cloud,
+      price: '$3,500/month',
+      features: ['Zero-downtime Migration', 'Data Integrity', 'Application Modernization', 'Security Hardening', 'Performance Optimization', 'Training & Support'],
+      color: 'text-sky-400',
+      benefits: ['Zero downtime', '100% data integrity', 'Improved performance', 'Cost savings']
+    },
+    {
+      title: 'Compliance & Governance',
+      description: 'Comprehensive compliance management and governance frameworks',
+      icon: FileText,
+      price: '$1,800/month',
+      features: ['GDPR Compliance', 'SOX Compliance', 'HIPAA Compliance', 'Audit Preparation', 'Policy Development', 'Risk Assessment'],
+      color: 'text-amber-400',
+      benefits: ['Regulatory compliance', 'Risk mitigation', 'Audit readiness', 'Policy enforcement']
+    },
+    {
+      title: 'Developer Tools',
+      description: 'Advanced development tools and platforms for modern software development',
+      icon: Code,
+      price: '$1,200/month',
+      features: ['IDE Integration', 'Code Quality Tools', 'Testing Frameworks', 'Version Control', 'Build Automation', 'Documentation Tools'],
+      color: 'text-emerald-400',
+      benefits: ['Faster development', 'Better code quality', 'Automated testing', 'Team collaboration']
+    },
+    {
+      title: 'Marketing Tools',
+      description: 'Comprehensive marketing technology stack and automation tools',
+      icon: Target,
+      price: '$1,500/month',
+      features: ['Marketing Automation', 'Analytics & Reporting', 'Lead Management', 'Email Campaigns', 'Social Media Tools', 'A/B Testing'],
+      color: 'text-pink-400',
+      benefits: ['Automated marketing', 'Better lead quality', 'ROI tracking', 'Campaign optimization']
+    },
+    {
+      title: 'Productivity Solutions',
+      description: 'Enterprise productivity tools and collaboration platforms',
+      icon: BarChart,
+      price: '$1,100/month',
+      features: ['Collaboration Tools', 'Project Management', 'Document Management', 'Communication Platforms', 'Workflow Automation', 'Analytics'],
+      color: 'text-teal-400',
+      benefits: ['Improved productivity', 'Better collaboration', 'Streamlined workflows', 'Team efficiency']
     }
   ];
 
@@ -366,6 +578,66 @@ const HomePage: React.FC = () => {
       color: 'text-orange-400',
       benefits: ['Increased productivity', 'Consistent quality', '24/7 operation', 'Cost reduction'],
       category: 'Robotics'
+    },
+    {
+      title: 'Enterprise Solutions',
+      description: 'Comprehensive enterprise-grade solutions for large organizations',
+      icon: Building,
+      price: 'Custom Pricing',
+      features: ['Enterprise Architecture', 'Legacy Modernization', 'Digital Transformation', 'Change Management', 'Training & Support', 'ROI Optimization'],
+      color: 'text-indigo-400',
+      benefits: ['Scalable solutions', 'Future-proof architecture', 'Digital transformation', 'Competitive advantage'],
+      category: 'Enterprise'
+    },
+    {
+      title: 'Analytics Tools',
+      description: 'Advanced analytics and business intelligence tools for data-driven decisions',
+      icon: BarChart3,
+      price: '$1,800/month',
+      features: ['Advanced Analytics', 'Predictive Modeling', 'Data Visualization', 'Real-time Dashboards', 'Custom Reports', 'API Integration'],
+      color: 'text-emerald-400',
+      benefits: ['Better insights', 'Faster decisions', 'Data-driven culture', 'Competitive intelligence'],
+      category: 'Analytics'
+    },
+    {
+      title: 'Business Apps',
+      description: 'Custom business applications tailored to specific industry needs',
+      icon: Briefcase,
+      price: '$2,500/month',
+      features: ['Custom Development', 'Industry Solutions', 'Integration APIs', 'Mobile Apps', 'Web Applications', 'Maintenance & Support'],
+      color: 'text-violet-400',
+      benefits: ['Tailored solutions', 'Industry expertise', 'Seamless integration', 'Ongoing support'],
+      category: 'Applications'
+    },
+    {
+      title: 'Expense Tracker Pro',
+      description: 'AI-powered expense management and financial tracking for businesses',
+      icon: Calculator,
+      price: '$299/month',
+      features: ['Expense Tracking', 'Receipt OCR', 'Budget Management', 'Approval Workflows', 'Reporting & Analytics', 'Integration APIs'],
+      color: 'text-rose-400',
+      benefits: ['Automated tracking', 'Cost control', 'Compliance', 'Financial insights'],
+      category: 'Finance'
+    },
+    {
+      title: 'Task Manager Pro',
+      description: 'Advanced project and task management with AI-powered optimization',
+      icon: CheckCircle,
+      price: '$199/month',
+      features: ['Task Management', 'Project Planning', 'Team Collaboration', 'Time Tracking', 'Resource Allocation', 'Progress Analytics'],
+      color: 'text-lime-400',
+      benefits: ['Better organization', 'Team efficiency', 'Project success', 'Resource optimization'],
+      category: 'Productivity'
+    },
+    {
+      title: 'Smart Analytics',
+      description: 'Intelligent analytics platform with AI-powered insights and recommendations',
+      icon: TrendingUp,
+      price: '$1,600/month',
+      features: ['AI Insights', 'Predictive Analytics', 'Anomaly Detection', 'Custom Dashboards', 'Real-time Alerts', 'Data Integration'],
+      color: 'text-amber-400',
+      benefits: ['Intelligent insights', 'Proactive alerts', 'Better decisions', 'Competitive advantage'],
+      category: 'Analytics'
     }
   ];
 

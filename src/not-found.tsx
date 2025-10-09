@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Home, Phone } from 'lucide-react';
 export default function NotFound() {
   const popularPages = [
@@ -74,7 +73,7 @@ export default function NotFound() {
               <p className="text-gray-600 text-sm">
                 {page.description}
               </p>
-            </Link>
+            </a>
           ))}
         </div>
         {/* Action Buttons */}
