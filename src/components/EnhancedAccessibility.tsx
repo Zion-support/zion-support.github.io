@@ -214,6 +214,7 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
 
   // Reset all settings
   const resetSettings = () => {
+    const defaultSettings = {
       highContrast: false,
       largeText: false,
       reducedMotion: false,
@@ -223,7 +224,7 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
       colorBlind: 'none',
     };
     saveSettings(defaultSettings);
-    announceToScreenReader('Accessibility settings reset to default');
+    announceToScreenReader('All accessibility settings have been reset to default');
   };
 
   if (!isVisible) {

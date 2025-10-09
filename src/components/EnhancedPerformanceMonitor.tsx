@@ -1,4 +1,6 @@
 
+import React, { useState, useEffect, useCallback } from 'react';
+
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -35,7 +37,10 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   // Web Vitals measurement
+  useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
+    
+    let clsValue = 0;
 
     // First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {

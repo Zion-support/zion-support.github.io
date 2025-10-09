@@ -1,10 +1,11 @@
 'use client';
 
+import React, { useEffect } from 'react';
+
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
-
 
 export interface SEOProps {
   title?: string;
@@ -24,40 +25,46 @@ export interface SEOProps {
   alternateLocales?: { locale: string; url: string }[];
 }
 
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
-  keywords: [
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - AI & IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+  keywords = [
     'AI',
     'artificial intelligence',
     'enterprise solutions',
     'digital transformation',
     'IT services',
   ],
-  image: 'https://ziontechgroup.com/og-image.jpg',
-  url: 'https://ziontechgroup.com',
-  type: 'website' as const,
-  locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
-};
-
-export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
-  image,
-  url,
-  type = defaultSEO.type,
+  image = 'https://ziontechgroup.com/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  locale = 'en_US',
+  twitterCard = 'summary_large_image' as const,
   author,
   publishDate,
   modifiedDate,
   canonical,
   noIndex = false,
   structuredData,
-  twitterCard = defaultSEO.twitterCard,
-  locale = defaultSEO.locale,
-  alternateLocales = [],
+  alternateLocales = []
 }) => {
+  const defaultSEO = {
+    title: 'Zion Tech Group - AI & IT Solutions',
+    description: 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+    keywords: [
+      'AI',
+      'artificial intelligence',
+      'enterprise solutions',
+      'digital transformation',
+      'IT services',
+    ],
+    image: 'https://ziontechgroup.com/og-image.jpg',
+    url: 'https://ziontechgroup.com',
+    type: 'website' as const,
+    locale: 'en_US',
+    twitterCard: 'summary_large_image' as const,
+  };
+
   const seo = {
     title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,

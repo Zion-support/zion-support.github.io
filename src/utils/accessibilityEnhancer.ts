@@ -69,6 +69,7 @@ class AccessibilityEnhancer {
     });
 
     // Update focusable elements on DOM changes
+    const observer = new MutationObserver(() => {
       this.updateFocusableElements();
     });
 
@@ -104,16 +105,16 @@ class AccessibilityEnhancer {
       e.preventDefault();
       
       if (e.shiftKey) {
-        this.currentFocusIndex = this.currentFocusIndex > 0 
-          ? this.currentFocusIndex - 1 
+        this._currentFocusIndex = this._currentFocusIndex > 0 
+          ? this._currentFocusIndex - 1 
           : this.focusableElements.length - 1;
       } else {
-        this.currentFocusIndex = this.currentFocusIndex < this.focusableElements.length - 1 
-          ? this.currentFocusIndex + 1 
+        this._currentFocusIndex = this._currentFocusIndex < this.focusableElements.length - 1 
+          ? this._currentFocusIndex + 1 
           : 0;
       }
 
-      this.focusableElements[this.currentFocusIndex]?.focus();
+      this.focusableElements[this._currentFocusIndex]?.focus();
     }
 
     // Handle arrow key navigation for custom components
@@ -134,7 +135,7 @@ class AccessibilityEnhancer {
     if (parent) {
       const items = Array.from(parent.querySelectorAll('[role="menuitem"], [role="option"], [role="gridcell"]'));
       const currentIndex = items.indexOf(activeElement);
-      
+      let nextIndex = currentIndex;
       
       switch (e.key) {
         case 'ArrowUp':
