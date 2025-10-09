@@ -1,53 +1,66 @@
 import React, { useEffect } from 'react';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
   useEffect(() => {
-    // Monitor performance metrics
-    const monitorPerformance = () => {
-      // Monitor Core Web Vitals
-      if ('web-vitals' in window) {
-        // This would typically use the web-vitals library
-        console.log('Performance monitoring enabled');
-      }
-
-      // Monitor page load time
-      window.addEventListener('load', () => {
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        console.log(`Page load time: ${loadTime}ms`);
-      });
-
-      // Monitor memory usage if available
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+    // Monitor Core Web Vitals
+    const sendToAnalytics = (metric: any) => {
+      // Send to Google Analytics or your analytics service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
         });
+      }
+      
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metric:', metric);
       }
     };
 
-    monitorPerformance();
+    // Measure Core Web Vitals
+    onCLS(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
 
-    // Monitor long tasks
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.duration > 50) {
-            console.warn('Long task detected:', entry.duration + 'ms');
+    // Monitor page load time
+    const pageLoadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+    if (pageLoadTime > 0) {
+      sendToAnalytics({
+        name: 'Page Load Time',
+        value: pageLoadTime,
+        id: 'page-load-time'
+      });
+    }
+
+    // Monitor resource loading
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'resource') {
+          const resource = entry as PerformanceResourceTiming;
+          if (resource.duration > 1000) { // Log resources taking more than 1 second
+            console.warn('Slow resource:', resource.name, resource.duration);
           }
         }
-      });
+      }
+    });
 
-      observer.observe({ entryTypes: ['longtask'] });
+    observer.observe({ entryTypes: ['resource'] });
 
-      return () => {
-        observer.disconnect();
-      };
-    }
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default PerformanceMonitor;

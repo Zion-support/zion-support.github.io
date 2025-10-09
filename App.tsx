@@ -1,6 +1,9 @@
 import React, { Suspense, lazy, memo, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import SEOHead from './app/components/SEOHead';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -21,16 +24,6 @@ const ConsultationPage = lazy(() => import('./app/consultation/page'));
 const CompliancePage = lazy(() => import('./app/compliance/page'));
 const GdprPage = lazy(() => import('./app/gdpr/page'));
 
-<<<<<<< HEAD
-// Lazy load components
-const Navigation = React.lazy(() => import('./app/components/Navigation'));
-const Footer = React.lazy(() => import('./app/components/Footer'));
-const PerformanceMonitor = React.lazy(() => import('./app/components/PerformanceMonitor'));
-const AccessibilityEnhancer = React.lazy(() => import('./app/components/AccessibilityEnhancer'));
-
-// Main page component
-const HomePage = React.lazy(() => import('./app/page'));
-=======
 // AI Services
 const AiServicesPage = lazy(() => import('./app/ai-services/page'));
 const AiMarketingPage = lazy(() => import('./app/ai-marketing/page'));
@@ -54,7 +47,6 @@ const RoboticsPage = lazy(() => import('./app/robotics/page'));
 
 // Micro SaaS
 const MicroSaasPage = lazy(() => import('./app/micro-saas/page'));
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
 
 // Loading component
 const LoadingSpinner = memo(() => (
@@ -83,11 +75,7 @@ class ErrorBoundary extends React.Component<
     this.setState({ error, errorInfo });
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-      // Error logging would be handled by error tracking service in production
-=======
       console.error('Error caught by boundary:', error, errorInfo);
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
     }
   }
 
@@ -122,18 +110,15 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider context={helmetContext}>
-        <Helmet>
-          <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-          <meta name="description" content="Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide." />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="canonical" href="https://ziontechgroup.com" />
-        </Helmet>
+        <SEOHead />
         
         <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <main className="min-h-screen">
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
+          <PerformanceMonitor>
+            <AccessibilityEnhancer>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <main className="min-h-screen" role="main">
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <Routes>
                   {/* Main Routes */}
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -181,10 +166,12 @@ const App: React.FC = () => {
 
                   {/* Catch all route */}
                   <Route path="*" element={<HomePage />} />
-                </Routes>
-              </Suspense>
-            </main>
-          </div>
+                    </Routes>
+                  </Suspense>
+                </main>
+              </div>
+            </AccessibilityEnhancer>
+          </PerformanceMonitor>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
