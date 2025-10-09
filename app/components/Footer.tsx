@@ -154,17 +154,17 @@ const Footer: React.FC = memo(() => {
   return (
 <<<<<<< HEAD
 =======
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid cyber-pulse energy-wave">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center cyber-pulse quantum-fluctuation">
+                <Brain className="w-5 h-5 text-white neural-sync" />
               </div>
-              <span className="text-2xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-2xl font-bold text-white neon-text holographic-shimmer">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
@@ -173,9 +173,9 @@ const Footer: React.FC = memo(() => {
             {/* Achievements */}
             <div className="space-y-3 mb-6">
               {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <achievement.icon className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm text-gray-300">{achievement.text}</span>
+                <div key={index} className="flex items-center space-x-2 cyber-pulse">
+                  <achievement.icon className="w-4 h-4 text-cyan-400 quantum-fluctuation" />
+                  <span className="text-sm text-gray-300 hologram-flicker">{achievement.text}</span>
                 </div>
               ))}
             </div>

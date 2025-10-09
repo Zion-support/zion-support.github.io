@@ -439,7 +439,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
 @media (max-width: 480px) {
   .cyber-grid {
     background-size: 20px 20px;
@@ -537,7 +536,6 @@ body {
     background: #fff !important;
   }
 }
-=======
 /* Particle System */
 .particle-system {
   position: relative;
@@ -815,6 +813,185 @@ body {
   100% { left: 100%; }
 }
 
+/* Advanced Futuristic Animations */
+@keyframes holographic-shimmer {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  50% { 
+    background-position: 100% 50%;
+    filter: hue-rotate(180deg);
+  }
+}
+
+.holographic-shimmer {
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+  background-size: 400% 400%;
+  animation: holographic-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes cyber-pulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.3),
+      inset 0 0 20px rgba(0, 255, 255, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 40px rgba(0, 255, 255, 0.6),
+      0 0 80px rgba(0, 255, 255, 0.3),
+      inset 0 0 30px rgba(0, 255, 255, 0.2);
+  }
+}
+
+.cyber-pulse {
+  animation: cyber-pulse 2s ease-in-out infinite;
+}
+
+@keyframes data-stream {
+  0% { 
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10%, 90% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.data-stream {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-stream::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: data-stream 3s linear infinite;
+}
+
+@keyframes quantum-fluctuation {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  25% { 
+    transform: scale(1.05) rotate(90deg);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(0.95) rotate(180deg);
+    opacity: 0.6;
+  }
+  75% { 
+    transform: scale(1.02) rotate(270deg);
+    opacity: 0.9;
+  }
+}
+
+.quantum-fluctuation {
+  animation: quantum-fluctuation 4s ease-in-out infinite;
+}
+
+@keyframes neural-sync {
+  0%, 100% { 
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% { 
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+}
+
+.neural-sync {
+  animation: neural-sync 2s ease-in-out infinite;
+}
+
+@keyframes cyber-matrix {
+  0% { 
+    background-position: 0% 0%;
+  }
+  100% { 
+    background-position: 100% 100%;
+  }
+}
+
+.cyber-matrix {
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(255, 0, 255, 0.1) 50%, transparent 70%);
+  background-size: 20px 20px;
+  animation: cyber-matrix 10s linear infinite;
+}
+
+@keyframes hologram-flicker {
+  0%, 100% { 
+    opacity: 1;
+    filter: brightness(1);
+  }
+  2% { 
+    opacity: 0.8;
+    filter: brightness(0.8);
+  }
+  4% { 
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+  6% { 
+    opacity: 0.9;
+    filter: brightness(0.9);
+  }
+  8% { 
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+.hologram-flicker {
+  animation: hologram-flicker 0.1s ease-in-out infinite;
+}
+
+@keyframes energy-wave {
+  0% { 
+    transform: translateX(-100%) scaleX(0);
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateX(100%) scaleX(1);
+    opacity: 0;
+  }
+}
+
+.energy-wave {
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-wave::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+  animation: energy-wave 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
   .cyber-grid {
@@ -833,6 +1010,14 @@ body {
   }
   
   .quantum-field {
+    animation-duration: 3s;
+  }
+  
+  .holographic-shimmer {
+    animation-duration: 4s;
+  }
+  
+  .cyber-pulse {
     animation-duration: 3s;
   }
 }
@@ -872,4 +1057,3 @@ body {
     animation: none;
   }
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
