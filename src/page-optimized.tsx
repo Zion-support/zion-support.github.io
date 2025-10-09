@@ -14,7 +14,7 @@ const UnifiedBanner = lazy(() =>
 );
 const ContentPromotion = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-    return { default: EmptyComponent } as { default: React.ComponentType };
+    return { default: EmptyComponent };
   })
 );
 const ContentShowcase = lazy(() =>
@@ -26,9 +26,7 @@ function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
-      <AccessibilityEnhancer>
-        <div />
-      </AccessibilityEnhancer>
+      <AccessibilityEnhancer />
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative">
