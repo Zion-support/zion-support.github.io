@@ -108,13 +108,14 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
+        { name: 'AI Code Review Assistant', path: '/ai-code-review-assistant', description: 'Automated code analysis and quality improvement' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-powered SEO analysis and optimization' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Real-time business intelligence' },
+        { name: 'AI Content Generator', path: '/ai-content-generator', description: 'AI-powered content creation' },
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
-        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
         { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
         { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
         { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'AI-assisted app development' },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
         { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
         { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
         { name: 'AI Sales Forecasting', path: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
@@ -172,11 +173,14 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium neon-text">
               Home
             </Link>
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
+            </Link>
+            <Link href="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Pricing
             </Link>
 
             {/* Services Dropdown */}
