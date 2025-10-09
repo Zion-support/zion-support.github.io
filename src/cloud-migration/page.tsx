@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const QuantumcomputingPage: React.FC = () => {
+const CloudmigrationPage: React.FC = () => {
   return (
     <>
       <Navigation />
@@ -12,10 +12,10 @@ const QuantumcomputingPage: React.FC = () => {
         <main className="container mx-auto px-4 py-16 pt-24">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Quantum Computing
+              Cloud Migration
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive quantum computing solutions for modern businesses.
+              Comprehensive cloud migration solutions for modern businesses.
             </p>
           </div>
           
@@ -36,4 +36,4 @@ const QuantumcomputingPage: React.FC = () => {
   );
 };
 
-export default QuantumcomputingPage;
+export default CloudmigrationPage;

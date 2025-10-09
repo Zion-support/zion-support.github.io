@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { Zap, Bot, Settings, BarChart, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const QuantumcomputingPage: React.FC = () => {
+const AIAutomationPage: React.FC = () => {
   return (
     <>
       <Navigation />
@@ -12,17 +12,18 @@ const QuantumcomputingPage: React.FC = () => {
         <main className="container mx-auto px-4 py-16 pt-24">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Quantum Computing
+              AI Automation
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive quantum computing solutions for modern businesses.
+              Intelligent process automation powered by AI to streamline your business operations and boost productivity.
             </p>
           </div>
           
           <div className="cyber-card p-8 text-center">
+            <Zap className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
             <p className="text-gray-300 mb-6">
-              We're working on this page. Contact us to learn more about our services.
+              We're working on comprehensive AI automation solutions. Contact us to learn more about our upcoming services.
             </p>
             <a href="/contact" className="cyber-button px-6 py-3 inline-flex items-center">
               Contact Us
@@ -36,4 +37,4 @@ const QuantumcomputingPage: React.FC = () => {
   );
 };
 
-export default QuantumcomputingPage;
+export default AIAutomationPage;
