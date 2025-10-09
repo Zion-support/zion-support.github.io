@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // Sitemap page placeholder
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import React from 'react';
 
 const SitemapPage: React.FC = () => {

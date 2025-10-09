@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -91,6 +92,10 @@ const AIMLPlatformPage: React.FC = () => {
   ];
 
   return (
+=======
+const AIMLPlatformPage: React.FC = () => {
+        return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c95
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI ML Platform | Zion Tech Group</title>

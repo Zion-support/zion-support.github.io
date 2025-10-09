@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
@@ -113,6 +114,10 @@ const AboutPage: React.FC = () => {
 //             Leading the future of AI and IT solutions
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
+=======
+
+import {Target, Brain, Shield} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {

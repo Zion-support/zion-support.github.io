@@ -134,6 +134,14 @@ const AIWorkflowAutomationPage: React.FC = () => {
             </div>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        </main>
+      </div>
+    </>
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c95
         </div>
       </main>
       <Footer />

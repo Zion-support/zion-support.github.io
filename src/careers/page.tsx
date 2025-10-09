@@ -1,7 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
 const CareersPage: React.FC = () => {
   const _openPositions = [
     {

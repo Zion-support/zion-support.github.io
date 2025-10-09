@@ -1,5 +1,13 @@
 import React, { useEffect, useState, lazy } from 'react';
 import {Routes, Route} from 'react-router-dom';
+<<<<<<< HEAD
+=======
+
+// Lazy load components for better performance
+const HomePage = lazy(() => import('./page'));
+
+// Import enhancement utilities
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';

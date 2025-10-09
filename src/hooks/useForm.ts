@@ -5,6 +5,7 @@ import React from 'react';
  * Provides form state management and validation
  */
 // import { logger } from '../utils/logger';
+<<<<<<< HEAD
 import {
 //   ValidationRule,
 //   validateField,
@@ -13,6 +14,9 @@ import {
 //   getFormErrors,
   // ValidationResult as _ValidationResult
 } from '../utils/formValidation';
+=======
+import {ValidationRule, validateField, validateForm, isFormValid, getFormErrors} from '../utils/formValidation';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 export interface UseFormConfig<T extends Record<string, unknown>> {
   initialValues: T;
   validationSchema?: Partial<Record<keyof T, ValidationRule[]>>;
