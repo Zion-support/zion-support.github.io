@@ -2,123 +2,94 @@
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
 
-interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
+interface FuturisticServiceCardProps {
+  title: string;
+  description: string;
+  features: string[];
+  price?: string;
+  isPopular?: boolean;
+  icon?: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
 }
 
-const,
-  FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    },
-    cya,
-  n: {/* TODO: Fix JSX expression */}
-    },
-    pin,
-  k: {/* TODO: Fix JSX expression */}
-    },
-    blu,
-  e: {/* TODO: Fix JSX expression */}
-    },
-    gree,
-  n: {/* TODO: Fix JSX expression */}
-    },
-    orang,
-  e: {/* TODO: Fix JSX expression */}
-    }
-  };
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
+  title,
+  description,
+  features,
+  price,
+  isPopular = false,
+  icon,
+  className = '',
+  onClick
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-  const currentColor = colorClasses[color];
-
-  return (<div></div>
-      className={/* TODO: Fix JSX expression */}
-      }`})
+  return (
+    <div
+      className={`relative group cursor-pointer transition-all duration-300 transform hover:scale-105 ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
-      {/* Popular Badge */}
-      {/* TODO: Fix JSX expression */}
-      )}
-
-      {/* Card */}
-      <div></div>
-        className={/* TODO: Fix JSX expression */}
-        } ${currentColor.hover} ${/* TODO: Fix JSX expression */}`
-          isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'`
-        }`}
-      >
-        {/* Icon */}
-        <div className="relative mb-6"></div>
-          <div></div>`
-            className={`w-16 h-16 bg-gradient-to-r ${currentColor.gradient} rounded-xl flex items-center justify-center mb-4 group-hove,
-  r:scale-110 transition-transform duration-300 ${/* TODO: Fix JSX expression */}`
-            }`}
-          >"
-            <Icon className="w-8 h-8 text-white" /></Icon>
+      {isPopular && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            <Star className="h-4 w-4 fill-current" />
+            Most Popular
           </div>
-          
-          {/* Animated Background */}"
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hove,"
-  r:opacity-100 transition-opacity duration-500"></div>
         </div>
-
-        {/* Title */}"
-        <h3 className="text-2xl font-bold text-white mb-3 group-hove,"
-  r:text-cyan-400 transition-colors duration-300"></h3>
-          {title}
-        </h3>
-
-        {/* Description */}"
-        <p className="text-gray-300 mb-6 leading-relaxed"></p>
-          {description}
-        </p>
-
-        {/* Price */}"
-        <div className="mb-6"></div>`
-          <div className={`text-3xl font-bold ${currentColor.text} mb-2`}></div>
-            {price}
-          </div>"
-          <div className="text-sm text-gray-400">per month</div>
-        </div>
-
-        {/* Features */}"
-        <ul className="space-y-3 mb-8"></ul>
-          {/* TODO: Fix JSX expression */}"
-            <li key={index} className="flex items-center text-sm text-gray-300"></li>"
-              <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
-              {feature}
-            </li>
-          ))}
-          {/* TODO: Fix JSX expression */}
-              +{features.length - 4} more features;
-            </li>
+      )}
+      
+      <div className={`
+        relative bg-white rounded-2xl shadow-lg border border-gray-200 p-6 h-full
+        transition-all duration-300
+        ${isHovered ? 'shadow-2xl border-blue-300' : ''}
+        ${isPopular ? 'ring-2 ring-blue-500 ring-opacity-50' : ''}
+      `}>
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-3">
+            {icon && (
+              <div className="p-2 bg-blue-100 rounded-lg">
+                {icon}
+              </div>
+            )}
+            <h3 className="text-xl font-bold text-gray-900">{title}</h3>
+          </div>
+          {isHovered && (
+            <ArrowRight className="h-5 w-5 text-blue-600 transition-transform duration-300 group-hover:translate-x-1" />
           )}
-        </ul>
+        </div>
 
-        {/* CTA Button */}
-        <button></button>
-          className={/* TODO: Fix JSX expression */}`
-              : `border border-${color}-500 text-${color}-300,`
-  hover:bg-${color}-500/20``
-          } flex items-center justify-center group`}
-        >
-          Get Started;"
-          <ArrowRight className="w-4 h-4 ml-2 group-hove,"
-  r:translate-x-1 transition-transform" /></ArrowRight>
-        </button>
+        <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
 
-        {/* Hover Effect Overlay */}
-        <div></div>`
-          className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
-  r:opacity-5 rounded-2xl transition-opacity duration-500`}
-        ></div>
+        <div className="space-y-3 mb-6">
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+              <span className="text-gray-700">{feature}</span>
+            </div>
+          ))}
+        </div>
+
+        {price && (
+          <div className="flex items-center justify-between mb-4">
+            <div className="text-3xl font-bold text-gray-900">{price}</div>
+            <div className="flex items-center gap-1 text-yellow-500">
+              <Zap className="h-4 w-4" />
+              <span className="text-sm font-medium">AI Powered</span>
+            </div>
+          </div>
+        )}
+
+        <div className="mt-auto">
+          <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:from-blue-700 hover:to-purple-700 transform hover:scale-105">
+            Get Started
+          </button>
+        </div>
       </div>
-
-      {/* Glow Effect */}
-      <div></div>`
-        className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
-  r:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
-      ></div>
     </div>
   );
 };
 
-export default FuturisticServiceCard;"`
+export default FuturisticServiceCard;
