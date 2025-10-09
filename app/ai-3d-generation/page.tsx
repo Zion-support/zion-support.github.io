@@ -66,11 +66,7 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🏭',
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
-import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+  ];
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [
@@ -185,8 +181,8 @@ const AI3DGenerationPage: React.FC = () => {
                   <p className="text-gray-300 text-sm">
                     Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
                   </p>
-
                 </div>
+              </div>
               ))}
             </div>
           </div>
