@@ -19,17 +19,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-<<<<<<< HEAD
-    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">
-      <div className={`animate-spin rounded-full border-2 border-cyan-400 border-t-transparent ${sizeClasses[size]}`}></div>
-=======
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div 
         className={`animate-spin rounded-full border-2 border-cyan-400 border-t-transparent ${sizeClasses[size]}`}
         role="status"
         aria-label="Loading"
       ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6103
       {text && (
         <p className="text-cyan-400 text-sm mt-2 animate-pulse">{text}</p>
       )}
