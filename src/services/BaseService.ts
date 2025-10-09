@@ -4,7 +4,7 @@
  * Provides common functionality for all service classes
  */
 import { apiClient } from '../utils/apiClient';
-import logger from '../utils/logger';
+import { logger } from '../utils/logger';
 export interface ServiceOptions {
   baseUrl?: string;
   timeout?: number;
@@ -35,9 +35,9 @@ export class BaseService {
    */
   protected isCacheValid(key: string): boolean {
     const _entry = this.cache.get(key);
-    if (!entry) return false;
-    const _age = Date.now() - entry.timestamp;
-    return age < (this.options.cacheDuration || 300000);
+    if (!_entry) return false;
+    const _age = Date.now() - _entry.timestamp;
+    return _age < (this.options.cacheDuration || 300000);
   }
   /**
    * Get data from cache
@@ -77,8 +77,8 @@ export class BaseService {
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
     const _cacheKey = `GET:${endpoint}`;
     if (useCache) {
-      const _cached = this.getFromCache<T>(cacheKey);
-      if (cached) return cached;
+      const _cached = this.getFromCache<T>(_cacheKey);
+      if (_cached) return _cached;
     }
     try {
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
