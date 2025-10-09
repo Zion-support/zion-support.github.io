@@ -29,6 +29,84 @@ const CloudMigrationPage = lazy(() => import('./app/cloud-migration/page'));
 const SecurityPage = lazy(() => import('./app/security/page'));
 const SupportPage = lazy(() => import('./app/support/page'));
 
+// AI Services Pages
+const AIMarketingPage = lazy(() => import('./app/ai-marketing/page'));
+const AIAutomationPage = lazy(() => import('./app/ai-automation/page'));
+const AIHealthcarePage = lazy(() => import('./app/ai-healthcare/page'));
+const AIFintechPage = lazy(() => import('./app/ai-fintech/page'));
+const AIContentGenerationPage = lazy(() => import('./app/ai-content-generation/page'));
+const AIDataAnalyticsPage = lazy(() => import('./app/ai-data-analytics/page'));
+const AICybersecurityPage = lazy(() => import('./app/ai-cybersecurity/page'));
+const AIWorkflowAutomationPage = lazy(() => import('./app/ai-workflow-automation/page'));
+const AICustomerSupportPage = lazy(() => import('./app/ai-customer-support/page'));
+const AISalesAutomationPage = lazy(() => import('./app/ai-sales-automation/page'));
+const AIProjectManagementPage = lazy(() => import('./app/ai-project-management/page'));
+const AICRMPage = lazy(() => import('./app/ai-crm/page'));
+const AICustomerServicePage = lazy(() => import('./app/ai-customer-service/page'));
+const AICustomerSupportBotPage = lazy(() => import('./app/ai-customer-support-bot/page'));
+const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
+const AIEmailMarketingPage = lazy(() => import('./app/ai-email-marketing/page'));
+const AIEnterpriseSolutionsPage = lazy(() => import('./app/ai-enterprise-solutions/page'));
+const AIExpenseTrackerPage = lazy(() => import('./app/ai-expense-tracker/page'));
+const AIFashionDesignPage = lazy(() => import('./app/ai-fashion-design/page'));
+const AIFinancialAdvisorPage = lazy(() => import('./app/ai-financial-advisor/page'));
+const AIFitnessCoachPage = lazy(() => import('./app/ai-fitness-coach/page'));
+const AIHealthcareSolutionsPage = lazy(() => import('./app/ai-healthcare-solutions/page'));
+const AIHRAssistantPage = lazy(() => import('./app/ai-hr-assistant/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+const AIInventoryManagementPage = lazy(() => import('./app/ai-inventory-management/page'));
+const AIInvoiceGeneratorPage = lazy(() => import('./app/ai-invoice-generator/page'));
+const AIMobileAppBuilderPage = lazy(() => import('./app/ai-mobile-app-builder/page'));
+const AIMusicCompositionPage = lazy(() => import('./app/ai-music-composition/page'));
+const AIPredictiveAnalyticsPage = lazy(() => import('./app/ai-predictive-analytics/page'));
+const AIProjectManagerPage = lazy(() => import('./app/ai-project-manager/page'));
+const AIRecommendationEnginePage = lazy(() => import('./app/ai-recommendation-engine/page'));
+const AISchedulerPage = lazy(() => import('./app/ai-scheduler/page'));
+const AISEOOptimizerPage = lazy(() => import('./app/ai-seo-optimizer/page'));
+const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
+const AITimeTrackerPage = lazy(() => import('./app/ai-time-tracker/page'));
+const AIVideoGenerationPage = lazy(() => import('./app/ai-video-generation/page'));
+const AIVoiceCloningPage = lazy(() => import('./app/ai-voice-cloning/page'));
+const AIVoiceProcessingPage = lazy(() => import('./app/ai-voice-processing/page'));
+const AIWritingAssistantPage = lazy(() => import('./app/ai-writing-assistant/page'));
+const AI3DGenerationPage = lazy(() => import('./app/ai-3d-generation/page'));
+const AIAnalyticsPage = lazy(() => import('./app/ai-analytics/page'));
+const AIAnalyticsDashboardPage = lazy(() => import('./app/ai-analytics-dashboard/page'));
+const AIBusinessIntelligencePage = lazy(() => import('./app/ai-business-intelligence/page'));
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AICloudInfrastructurePage = lazy(() => import('./app/ai-cloud-infrastructure/page'));
+const AICodeGenerationPage = lazy(() => import('./app/ai-code-generation/page'));
+const AIContentStudioPage = lazy(() => import('./app/ai-content-studio/page'));
+const AIDesignStudioPage = lazy(() => import('./app/ai-design-studio/page'));
+const AIDataVisualizationPage = lazy(() => import('./app/ai-data-visualization/page'));
+
+// IT Services Pages
+const ITServicesPage = lazy(() => import('./app/it-services/page'));
+const ITSupportPage = lazy(() => import('./app/it-support/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
+const ManagedITPage = lazy(() => import('./app/managed-it/page'));
+const NetworkSolutionsPage = lazy(() => import('./app/network-solutions/page'));
+
+// Emerging Tech Pages
+const QuantumComputingPage = lazy(() => import('./app/quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./app/autonomous-systems/page'));
+const BlockchainPage = lazy(() => import('./app/blockchain/page'));
+const IoTEdgeComputingPage = lazy(() => import('./app/iot-edge-computing/page'));
+const RoboticsPage = lazy(() => import('./app/robotics/page'));
+const ARVRSolutionsPage = lazy(() => import('./app/ar-vr-solutions/page'));
+
+// Additional Pages
+const NewsPage = lazy(() => import('./app/news/page'));
+const SitemapPage = lazy(() => import('./app/sitemap/page'));
+const SLAPage = lazy(() => import('./app/sla/page'));
+const SmartAnalyticsPage = lazy(() => import('./app/smart-analytics/page'));
+const SmartCitiesPage = lazy(() => import('./app/smart-cities/page'));
+const StatusPage = lazy(() => import('./app/status/page'));
+const SystemStatusPage = lazy(() => import('./app/system-status/page'));
+const CybersecuritySuitePage = lazy(() => import('./app/cybersecurity-suite/page'));
+const ITInfrastructureSolutionsPage = lazy(() => import('./app/it-infrastructure-solutions/page'));
+
 // Lazy load components
 const Navigation = React.lazy(() => import('./app/components/Navigation'));
 const Footer = React.lazy(() => import('./app/components/Footer'));
@@ -50,18 +128,11 @@ class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-<<<<<<< HEAD
-=======
     this.setState({ error, errorInfo });
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
     // Log error to monitoring service in production
     // In production, this should be sent to an error tracking service
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-      // Error logging would be handled by error tracking service in production
-=======
       console.error('Error caught by boundary:', error, errorInfo);
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
     }
   }
 
@@ -78,11 +149,7 @@ class ErrorBoundary extends React.Component<
               onClick={() => window.location.reload()}
               className="bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
             >
-<<<<<<< HEAD
-              Refresh Page
-=======
               Reload Page
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
             </button>
           </div>
         </div>
@@ -105,8 +172,8 @@ const LoadingSpinner = memo(() => (
 
 // Main App Component
 const App: React.FC = () => {
-<<<<<<< HEAD
   const routes = useMemo(() => [
+    // Main Pages
     { path: '/', component: HomePage },
     { path: '/about', component: AboutPage },
     { path: '/contact', component: ContactPage },
@@ -132,10 +199,85 @@ const App: React.FC = () => {
     { path: '/cloud-migration', component: CloudMigrationPage },
     { path: '/security', component: SecurityPage },
     { path: '/support', component: SupportPage },
+    
+    // AI Services
+    { path: '/ai-marketing', component: AIMarketingPage },
+    { path: '/ai-automation', component: AIAutomationPage },
+    { path: '/ai-healthcare', component: AIHealthcarePage },
+    { path: '/ai-fintech', component: AIFintechPage },
+    { path: '/ai-content-generation', component: AIContentGenerationPage },
+    { path: '/ai-data-analytics', component: AIDataAnalyticsPage },
+    { path: '/ai-cybersecurity', component: AICybersecurityPage },
+    { path: '/ai-workflow-automation', component: AIWorkflowAutomationPage },
+    { path: '/ai-customer-support', component: AICustomerSupportPage },
+    { path: '/ai-sales-automation', component: AISalesAutomationPage },
+    { path: '/ai-project-management', component: AIProjectManagementPage },
+    { path: '/ai-crm', component: AICRMPage },
+    { path: '/ai-customer-service', component: AICustomerServicePage },
+    { path: '/ai-customer-support-bot', component: AICustomerSupportBotPage },
+    { path: '/ai-document-processor', component: AIDocumentProcessorPage },
+    { path: '/ai-email-marketing', component: AIEmailMarketingPage },
+    { path: '/ai-enterprise-solutions', component: AIEnterpriseSolutionsPage },
+    { path: '/ai-expense-tracker', component: AIExpenseTrackerPage },
+    { path: '/ai-fashion-design', component: AIFashionDesignPage },
+    { path: '/ai-financial-advisor', component: AIFinancialAdvisorPage },
+    { path: '/ai-fitness-coach', component: AIFitnessCoachPage },
+    { path: '/ai-healthcare-solutions', component: AIHealthcareSolutionsPage },
+    { path: '/ai-hr-assistant', component: AIHRAssistantPage },
+    { path: '/ai-image-recognition', component: AIImageRecognitionPage },
+    { path: '/ai-inventory-management', component: AIInventoryManagementPage },
+    { path: '/ai-invoice-generator', component: AIInvoiceGeneratorPage },
+    { path: '/ai-mobile-app-builder', component: AIMobileAppBuilderPage },
+    { path: '/ai-music-composition', component: AIMusicCompositionPage },
+    { path: '/ai-predictive-analytics', component: AIPredictiveAnalyticsPage },
+    { path: '/ai-project-manager', component: AIProjectManagerPage },
+    { path: '/ai-recommendation-engine', component: AIRecommendationEnginePage },
+    { path: '/ai-scheduler', component: AISchedulerPage },
+    { path: '/ai-seo-optimizer', component: AISEOOptimizerPage },
+    { path: '/ai-social-media-manager', component: AISocialMediaManagerPage },
+    { path: '/ai-time-tracker', component: AITimeTrackerPage },
+    { path: '/ai-video-generation', component: AIVideoGenerationPage },
+    { path: '/ai-voice-cloning', component: AIVoiceCloningPage },
+    { path: '/ai-voice-processing', component: AIVoiceProcessingPage },
+    { path: '/ai-writing-assistant', component: AIWritingAssistantPage },
+    { path: '/ai-3d-generation', component: AI3DGenerationPage },
+    { path: '/ai-analytics', component: AIAnalyticsPage },
+    { path: '/ai-analytics-dashboard', component: AIAnalyticsDashboardPage },
+    { path: '/ai-business-intelligence', component: AIBusinessIntelligencePage },
+    { path: '/ai-chatbot-builder', component: AIChatbotBuilderPage },
+    { path: '/ai-cloud-infrastructure', component: AICloudInfrastructurePage },
+    { path: '/ai-code-generation', component: AICodeGenerationPage },
+    { path: '/ai-content-studio', component: AIContentStudioPage },
+    { path: '/ai-design-studio', component: AIDesignStudioPage },
+    { path: '/ai-data-visualization', component: AIDataVisualizationPage },
+    
+    // IT Services
+    { path: '/it-services', component: ITServicesPage },
+    { path: '/it-support', component: ITSupportPage },
+    { path: '/cybersecurity', component: CybersecurityPage },
+    { path: '/database-management', component: DatabaseManagementPage },
+    { path: '/managed-it', component: ManagedITPage },
+    { path: '/network-solutions', component: NetworkSolutionsPage },
+    
+    // Emerging Tech
+    { path: '/quantum-computing', component: QuantumComputingPage },
+    { path: '/autonomous-systems', component: AutonomousSystemsPage },
+    { path: '/blockchain', component: BlockchainPage },
+    { path: '/iot-edge-computing', component: IoTEdgeComputingPage },
+    { path: '/robotics', component: RoboticsPage },
+    { path: '/ar-vr-solutions', component: ARVRSolutionsPage },
+    
+    // Additional Pages
+    { path: '/news', component: NewsPage },
+    { path: '/sitemap', component: SitemapPage },
+    { path: '/sla', component: SLAPage },
+    { path: '/smart-analytics', component: SmartAnalyticsPage },
+    { path: '/smart-cities', component: SmartCitiesPage },
+    { path: '/status', component: StatusPage },
+    { path: '/system-status', component: SystemStatusPage },
+    { path: '/cybersecurity-suite', component: CybersecuritySuitePage },
+    { path: '/it-infrastructure-solutions', component: ITInfrastructureSolutionsPage },
   ], []);
-=======
-  const helmetContext = useMemo(() => ({}), []);
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 
   return (
     <ErrorBoundary>

@@ -5,7 +5,6 @@ import { Phone, Mail, MapPin, Clock, ArrowRight, Shield, Award, Globe, Facebook,
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const aiServices = [
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
@@ -152,118 +151,12 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
-=======
-  return (
-    <footer className="bg-slate-900/50 backdrop-blur-lg border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide.
-            </p>
-            <div className="flex space-x-4">
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                <Phone className="w-5 h-5" />
-              </a>
-              <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link></li>
-              <li><Link to="/it-consulting" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Consulting</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Infrastructure</Link></li>
-              <li><Link to="/security" className="text-gray-300 hover:text-cyan-400 transition-colors">Security</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors">Pricing</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors">Blog</Link></li>
-            </ul>
-          </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
         </div>
         
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
-<<<<<<< HEAD
-=======
-
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
-              <li><Link to="/case-studies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Case Studies</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Newsletter</h4>
-            <p className="text-gray-400 text-sm mb-4">Stay updated with our latest news and offers.</p>
-            <div className="flex space-x-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400"
-              />
-              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-700/50">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-gray-400">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6">
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Shield className="w-4 h-4 text-green-400" />
-                <span>Enterprise Security</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Award className="w-4 h-4 text-yellow-400" />
-                <span>ISO 27001 Certified</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Globe className="w-4 h-4 text-blue-400" />
-                <span>Global Reach</span>
-              </div>
-            </div>
-          </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
         </div>
       </div>
     </footer>
@@ -271,14 +164,5 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default Footer;
-=======
-export default Footer;
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
-=======
-
-export default Footer;
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
