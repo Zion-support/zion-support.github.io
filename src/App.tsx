@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-// App file
-// This file is under development
-
-export default function App() {
-  return null;
-}
-=======
 import React, { useEffect, useState, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';

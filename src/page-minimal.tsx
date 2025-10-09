@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// page-minimal file
-// This file is under development
-
-export default function page_minimal() {
-  return null;
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';

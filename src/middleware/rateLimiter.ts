@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// rateLimiter file
-// This file is under development
-
-export default function rateLimiter() {
-  return null;
-=======
 'use client';
 /**
  * Rate Limiting Middleware
