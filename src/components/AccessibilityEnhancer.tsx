@@ -8,6 +8,7 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
   enableSkipLinks?: boolean;
   enableARIALabels?: boolean;
+  children?: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
@@ -16,7 +17,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableHighContrast = true,
   enableFocusManagement = true,
   enableSkipLinks = true,
-  enableARIALabels = true
+  enableARIALabels = true,
+  children
 }) => {
   // Add skip links
   useEffect(() => {
@@ -217,7 +219,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableScreenReaderSupport]);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;

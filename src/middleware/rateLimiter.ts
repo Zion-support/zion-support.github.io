@@ -125,10 +125,10 @@ export const rateLimiters = {
  */
 export function getClientIdentifier(request: Request): string {
   // Try to get real IP from headers (for proxied requests)
-  const _headers = request.headers;
-  const _forwardedFor = headers.get('x-forwarded-for');
-  const _realIp = headers.get('x-real-ip');
-  const _cfConnectingIp = headers.get('cf-connecting-ip');
+  const headers = request.headers;
+  const forwardedFor = headers.get('x-forwarded-for');
+  const realIp = headers.get('x-real-ip');
+  const cfConnectingIp = headers.get('cf-connecting-ip');
   if (cfConnectingIp) return cfConnectingIp;
   if (realIp) return realIp;
   if (forwardedFor) return forwardedFor.split(',')[0].trim();
@@ -142,7 +142,7 @@ export function getClientIdentifier(request: Request): string {
  */
 export function createRateLimitMiddleware(limiter: RateLimiter) {
   return async (request: Request): Promise<Response | null> => {
-    const _identifier = getClientIdentifier(request);
+    const identifier = getClientIdentifier(request);
     const { allowed, remaining, resetTime } = limiter.check(identifier);
     if (!allowed) {
       return new Response(
