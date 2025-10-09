@@ -162,36 +162,3 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
-      } catch (error) {
-<<<<<<< HEAD:src/components/PerformanceOptimizer.tsx
-        // Service Worker registration failed - handled silently in production
-      }
-    }
-  };
-
-  // Performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // Track LCP
-            if (typeof window !== 'undefined' && 'gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Performance'
-              });
-            }
-          }
-        }
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    }
-  }, []);
-
-  return null;
-};
-
-export default PerformanceOptimizer;
