@@ -1,93 +1,195 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Users, TrendingUp, Award } from 'lucide-react';
+
+interface CarouselItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  rating: number;
+  reviews: number;
+}
+
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const carouselItems: CarouselItem[] = [
     {
-      title: "AI-Powered Automation",
-      description: "Transform your business processes with intelligent automation that learns and adapts.",
-      image: "🤖",
-      color: "from-purple-500 to-pink-500"
+      id: '1',
+      title: 'AI-Powered Business Automation',
+      description: 'Transform your business processes with our cutting-edge AI automation solutions.',
+      image: '/api/placeholder/400/300',
+      category: 'AI Solutions',
+      rating: 4.9,
+      reviews: 127
     },
     {
-      title: "Quantum Computing Solutions",
-      description: "Harness the power of quantum computing for complex problem solving and optimization.",
-      image: "⚛️",
-      color: "from-blue-500 to-cyan-500"
+      id: '2',
+      title: 'Cloud Infrastructure Migration',
+      description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime.',
+      image: '/api/placeholder/400/300',
+      category: 'Cloud Services',
+      rating: 4.8,
+      reviews: 89
     },
     {
-      title: "Enterprise Security",
-      description: "Bank-level security and compliance for your critical data and infrastructure.",
-      image: "🔒",
-      color: "from-green-500 to-emerald-500"
+      id: '3',
+      title: 'Cybersecurity Assessment',
+      description: 'Comprehensive security audit and protection for your digital assets.',
+      image: '/api/placeholder/400/300',
+      category: 'Security',
+      rating: 4.9,
+      reviews: 156
+    },
+    {
+      id: '4',
+      title: 'Digital Transformation Strategy',
+      description: 'Complete digital transformation roadmap tailored to your business needs.',
+      image: '/api/placeholder/400/300',
+      category: 'Consulting',
+      rating: 4.7,
+      reviews: 203
     }
   ];
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1
+      );
     }, 5000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, carouselItems.length]);
+
+  const goToPrevious = () => {
+    setCurrentIndex(currentIndex === 0 ? carouselItems.length - 1 : currentIndex - 1);
+    setIsAutoPlaying(false);
   };
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+
+  const goToNext = () => {
+    setCurrentIndex(currentIndex === carouselItems.length - 1 ? 0 : currentIndex + 1);
+    setIsAutoPlaying(false);
   };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    setIsAutoPlaying(false);
+  };
+
   return (
-    <section className="mb-16" aria-labelledby="carousel-heading">
-      <h2 id="carousel-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-        Featured Solutions
-      </h2>
-      <div className="relative max-w-4xl mx-auto">
-        <div className="overflow-hidden rounded-xl">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {slides.map((slide, index) => (
-              <div key={index} className="w-full flex-shrink-0">
-                <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-center text-white`}>
-                  <div className="text-6xl md:text-8xl mb-6">{slide.image}</div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{slide.title}</h3>
-                  <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-                    {slide.description}
-                  </p>
+    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Featured Solutions
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            Discover our most popular and effective technology solutions
+          </p>
+        </div>
+
+        <div className="relative max-w-6xl mx-auto">
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {carouselItems.map((item) => (
+                <div key={item.id} className="w-full flex-shrink-0">
+                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+                    <div className="md:flex">
+                      <div className="md:w-1/2">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-64 md:h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="md:w-1/2 p-8">
+                        <div className="mb-4">
+                          <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-semibold px-3 py-1 rounded-full">
+                            {item.category}
+                          </span>
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-300 mb-6">
+                          {item.description}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-2">
+                            <div className="flex items-center">
+                              {[...Array(5)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  className={`w-4 h-4 ${
+                                    i < Math.floor(item.rating)
+                                      ? 'text-yellow-400'
+                                      : 'text-gray-300'
+                                  }`}
+                                  fill={i < Math.floor(item.rating) ? 'currentColor' : 'none'}
+                                />
+                              ))}
+                            </div>
+                            <span className="text-sm text-gray-600 dark:text-gray-300">
+                              {item.rating} ({item.reviews} reviews)
+                            </span>
+                          </div>
+                          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                            Learn More
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation buttons */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white p-2 rounded-full shadow-lg transition-colors"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white p-2 rounded-full shadow-lg transition-colors"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Dots indicator */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {carouselItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentIndex
+                    ? 'bg-blue-600'
+                    : 'bg-gray-300 dark:bg-gray-600'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
             ))}
           </div>
-        </div>
-        {/* Navigation buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-        {/* Dots indicator */}
-        <div className="flex justify-center space-x-2 mt-6">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
         </div>
       </div>
     </section>
   );
 };
+
 export default ContentCarousel;

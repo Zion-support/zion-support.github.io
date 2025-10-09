@@ -12,10 +12,10 @@ const nextConfig = {
   compress: true,
   productionBrowserSourceMaps: false,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   
   images: {
@@ -169,8 +169,16 @@ const nextConfig = {
   },
 
   experimental: {
-    optimizeCss: false,
-    optimizePackageImports: [],
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@heroicons/react', 'framer-motion'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
 
   // Performance optimizations
