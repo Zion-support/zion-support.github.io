@@ -53,6 +53,26 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
+  // Analytics tracking for email clicks
+  const handleEmailClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'email_click', {
+        event_category: 'engagement',
+        event_label: 'main_email_address',
+      });
+    }
+  }, []);
+
+  // Analytics tracking for CTA clicks
+  const handleCTAClick = useCallback((ctaType: string) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'cta_click', {
+        event_category: 'engagement',
+        event_label: ctaType,
+      });
+    }
+  }, []);
+
   // Testimonials data
   const testimonials = [
     {
@@ -118,9 +138,13 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Header />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden cyber-grid neural-network-bg">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
-        <div className="absolute inset-0 particle-field"></div>
+      <section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden cyber-grid neural-network-bg"
+        role="banner"
+        aria-label="Hero section with company introduction"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
+        <div className="absolute inset-0 particle-field" aria-hidden="true"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse">
             Advanced AI & IT
@@ -134,110 +158,124 @@ const HomePage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+              onClick={() => handleCTAClick('hero_get_started')}
+              aria-label="Get started with Zion Tech Group services"
             >
               Get Started Today
             </Link>
             <Link
               to="/services"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+              onClick={() => handleCTAClick('hero_explore_services')}
+              aria-label="Explore our comprehensive service offerings"
             >
               Explore Services
             </Link>
           </div>
           
           {/* Contact Info */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto" role="complementary" aria-label="Contact information">
             <div className="cyber-card p-4 text-center">
-              <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+              <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" aria-hidden="true" />
               <p className="text-white font-semibold">Call Us</p>
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <a 
+                href="tel:+13024640950" 
+                className="text-cyan-400 hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded"
+                onClick={handlePhoneClick}
+                aria-label="Call Zion Tech Group at (302) 464-0950"
+              >
                 (302) 464-0950
               </a>
             </div>
             <div className="cyber-card p-4 text-center">
-              <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+              <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-2" aria-hidden="true" />
               <p className="text-white font-semibold">Email Us</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-cyan-400 hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded"
+                onClick={handleEmailClick}
+                aria-label="Email Zion Tech Group at kleber@ziontechgroup.com"
+              >
                 kleber@ziontechgroup.com
               </a>
             </div>
             <div className="cyber-card p-4 text-center">
-              <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+              <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-2" aria-hidden="true" />
               <p className="text-white font-semibold">Visit Us</p>
-              <p className="text-cyan-400 text-sm">
+              <address className="text-cyan-400 text-sm not-italic">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
-              </p>
+              </address>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-line">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-line" role="region" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text">
+            <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text">
               Our <span className="holographic-text">Services</span>
             </h2>
             <p className="text-xl text-cyan-400 max-w-3xl mx-auto neon-glow">
               Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list">
             {services.map((service, index) => (
-              <div key={index} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
-                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors animate-float">
+              <article key={index} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse" role="listitem">
+                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors animate-float" aria-hidden="true">
                   <service.icon className="w-12 h-12" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2" role="list">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" aria-hidden="true" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 neural-pattern">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 neural-pattern" role="region" aria-labelledby="testimonials-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text">
+            <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text">
               What Our <span className="holographic-text">Clients Say</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="hologram-card p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                <div className="flex mb-4">
+              <blockquote key={index} className="hologram-card p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-300 group" role="listitem">
+                <div className="flex mb-4" role="img" aria-label={`${testimonial.rating} out of 5 stars`}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current animate-pulse" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current animate-pulse" aria-hidden="true" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic neon-glow">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
+                <footer>
+                  <cite className="font-semibold text-white not-italic">{testimonial.name}</cite>
                   <p className="text-cyan-400 text-sm">{testimonial.company}</p>
-                </div>
-              </div>
+                </footer>
+              </blockquote>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect" role="region" aria-labelledby="cta-heading">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+          <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-cyan-400 mb-8 neon-glow">
@@ -247,16 +285,19 @@ const HomePage: React.FC = () => {
             <a
               href="tel:+13024640950"
               onClick={handlePhoneClick}
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+              aria-label="Call Zion Tech Group at (302) 464-0950 to discuss your project"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5" aria-hidden="true" />
               Call (302) 464-0950
             </a>
             <Link
               to="/contact"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+              onClick={() => handleCTAClick('cta_get_quote')}
+              aria-label="Get a quote for your AI and IT solutions"
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5" aria-hidden="true" />
               Get Quote
             </Link>
           </div>

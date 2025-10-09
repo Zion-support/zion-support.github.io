@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Zap, Settings, Shield, Clock, CheckCircle, ArrowRight, Phone, Mail, Star, TrendingUp, Users, Award } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
@@ -342,6 +341,10 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-d8c8
       <Footer />
     </div>
   );

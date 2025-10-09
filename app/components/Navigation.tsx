@@ -124,7 +124,7 @@ const Navigation: React.FC = memo(() => {
             </div>
           </Link>
 
-          {/* Desktop Menu */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Home
@@ -141,7 +141,7 @@ const Navigation: React.FC = memo(() => {
             <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Micro SAAS
             </Link>
-            <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
+            <Link to="/it-consulting" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               IT Services
             </Link>
             <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
@@ -163,7 +163,7 @@ const Navigation: React.FC = memo(() => {
                 aria-haspopup="true"
               >
                 <Brain className="w-4 h-4" />
-                <span>Services</span>
+                <span>More Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
@@ -217,22 +217,6 @@ const Navigation: React.FC = memo(() => {
                 </div>
               )}
             </div>
-
-            <Link 
-              to="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-              onClick={closeAllMenus}
-            >
-              Case Studies
-            </Link>
-
-            <Link 
-              to="/blog" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Blog
-            </Link>
 
             <Link 
               to="/contact" 
@@ -305,6 +289,13 @@ const Navigation: React.FC = memo(() => {
                 Micro SAAS
               </Link>
               <Link
+                to="/it-consulting"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                IT Services
+              </Link>
+              <Link
                 to="/pricing"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
@@ -334,7 +325,7 @@ const Navigation: React.FC = memo(() => {
                 >
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
-                    <span>Services</span>
+                    <span>More Services</span>
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -365,22 +356,6 @@ const Navigation: React.FC = memo(() => {
                   </div>
                 )}
               </div>
-
-              <Link
-                to="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Case Studies
-              </Link>
-
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
 
               <Link
                 to="/contact"

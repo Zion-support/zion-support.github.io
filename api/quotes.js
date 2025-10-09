@@ -1,27 +1,25 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
-      res.status(400).json({ error: 'Name, email, phone, and details are required' });
-      return;
+      return res.status(400).json({ error: 'Name, email, phone, and details are required' });
     }
 
     // Process quote submission logic here
     const quote = {
-      id: 'quote_' + Math.random().toString(36).substr(2, 9),
+      id: Date.now().toString(),
       name,
       email,
       phone,
       details,
       country,
       service,
-      timestamp: new Date().toISOString()
+      createdAt: new Date().toISOString()
     };
 
     // In a real application, you would save this to a database

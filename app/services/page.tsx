@@ -94,7 +94,7 @@ const ServicesPage: React.FC = () => {
 
   const contactInfo = {
     phone: '(302) 464-0950',
-    email: 'support@ziontechgroup.com',
+    email: 'kleber@ziontechgroup.com',
     address: 'Middletown, DE 19709'
   };
 
