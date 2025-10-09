@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 @import './styles/futuristic.css';
 
 /* Additional custom styles */
@@ -102,54 +104,5 @@ html {
   .neon-text {
     text-shadow: none;
     color: #000;
-  }
-}
-
-/* Enhanced Responsive Design */
-@media (max-width: 640px) {
-  .cyber-grid {
-    background-size: 20px 20px;
-  }
-  
-  .neon-text {
-    font-size: 1.25rem;
-  }
-  
-  .cyber-text {
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-  }
-  
-  .cyber-card {
-    padding: 0.75rem;
-  }
-  
-  .cyber-button {
-    padding: 8px 16px;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .cyber-grid {
-    background-size: 15px 15px;
-  }
-  
-  .neon-text {
-    font-size: 1.1rem;
-  }
-  
-  .cyber-text {
-    font-size: 0.9rem;
-    letter-spacing: 0.3px;
-  }
-  
-  .cyber-card {
-    padding: 0.5rem;
-  }
-  
-  .cyber-button {
-    padding: 6px 12px;
-    font-size: 0.75rem;
   }
 }
