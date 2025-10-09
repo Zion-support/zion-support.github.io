@@ -1,11 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
 
@@ -65,9 +59,6 @@ const AIVoiceCloningPage: React.FC = () => {
       description: 'Produce consistent brand voice across all marketing materials',
       icon: '📢'
     }
-=======
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
 import { CheckCircle, Star, Phone, Mail, MapPin, Mic, Volume2, Languages, Zap, Shield, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -304,4 +295,3 @@ const AIVoiceCloningPage: React.FC = () => {
 };
 
 export default AIVoiceCloningPage;
-=======

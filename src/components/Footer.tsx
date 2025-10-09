@@ -201,7 +201,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-<<<<<<< HEAD
           {/* Emerging Technologies */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>
@@ -210,16 +209,6 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     to={service.url}
-=======
-          {/* Micro SAAS Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SAAS</h3>
-            <ul className="space-y-3">
-              {microSaasServices.slice(0, 6).map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    href={service.url}
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -230,17 +219,10 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-<<<<<<< HEAD
                   to="/quantum-computing"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All Technologies →
-=======
-                  href="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
-                  View All Solutions →
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
                 </Link>
               </li>
             </ul>
