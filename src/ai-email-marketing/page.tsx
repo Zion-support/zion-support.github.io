@@ -144,3 +144,5 @@ const AIEmailMarketingPage: React.FC = () => {
 
 export default AiEmailMarketingPage;
 export default AIEmailMarketingPage;
+
+}

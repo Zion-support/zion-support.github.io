@@ -6,11 +6,7 @@ export const _metadata = {
 };
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 
 export default function HomePage() {
   return (

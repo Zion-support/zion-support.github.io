@@ -1,9 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 export default function AICostOptimizationBreakthrough2026() {
   return (
     <div className="min-h-screen bg-gray-50">

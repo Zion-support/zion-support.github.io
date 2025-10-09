@@ -4,8 +4,7 @@ import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-rea
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 const AIServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  const _services = [
+const _services = [
     {
       title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
@@ -44,9 +43,6 @@ const AIServicesPage: React.FC = () => {
   ];
 
   return (
-=======
-      return (
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services | Zion Tech Group</title>

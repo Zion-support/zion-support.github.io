@@ -5,8 +5,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import { Cloud } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  const _itServices = [
+const _itServices = [
     {
       title: 'Cloud Services',
       description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
@@ -77,9 +76,6 @@ const ITServicesPage: React.FC = () => {
 
 const ItServicesPage: React.FC = () => {
   return (
-=======
-    return (
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Services | Zion Tech Group</title>

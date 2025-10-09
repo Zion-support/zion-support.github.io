@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
@@ -111,13 +110,9 @@ const AboutPage: React.FC = () => {
 //             About Zion Tech Group
           </h1>
           <p className='text-xl text-gray-600'>
-//             Leading the future of AI and IT solutions
+//             Leading the future of AI and IT solutions;
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
-=======
-
-import {Target, Brain, Shield} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
@@ -188,8 +183,8 @@ const AboutPage: React.FC = () => {
 //                   We believe that every business deserves access to cutting-edge technology that can 
 //                   transform their operations, improve efficiency, and drive growth.
                 </p>
-                <Link
-                  to="/contact"
+                <Link,
+  to ="/contact"
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
 //                 >
 //                   Get in Touch
@@ -284,14 +279,14 @@ const AboutPage: React.FC = () => {
 //               Let's discuss how we can help transform your business with our AI-powered solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link,
+  to ="/contact"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
 //               >
 //                 Start a Project
               </Link>
-              <Link
-                to="/careers"
+              <Link,
+  to ="/careers"
                 className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300"
 //               >
 //                 Join Our Team
@@ -319,3 +314,4 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
+})

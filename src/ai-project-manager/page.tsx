@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
@@ -97,10 +96,6 @@ const AiProjectManagerPage: React.FC = () => {
   ];
 
   return (
-=======
-const AIProjectManagerPage: React.FC = () => {
-        return (
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Project Manager | Zion Tech Group</title>
