@@ -5,18 +5,7 @@ import Link from 'next/link';
 import { 
   Phone, 
   Mail, 
-  MapPin, 
-  Clock, 
-  Award, 
-  Shield, 
-  Zap, 
-  ArrowRight,
-  Brain,
-  Cloud,
-  Code,
-  BarChart,
-  Users,
-  Globe
+  MapPin
 } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
