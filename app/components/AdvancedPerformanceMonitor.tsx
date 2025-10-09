@@ -68,7 +68,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const _fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                fid: fidEntry.processingStart - fidEntry.startTime,
+                fid: _fidEntry.processingStart - _fidEntry.startTime,
               }));
             }
           });
@@ -94,9 +94,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               'value' in entry
             ) {
               const _clsEntry = entry as LayoutShift;
-              if (!clsEntry.hadRecentInput) {
-                clsValue += clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: clsValue }));
+              if (!_clsEntry.hadRecentInput) {
+                _clsValue += _clsEntry.value;
+                setMetrics(prev => ({ ...prev, cls: _clsValue }));
               }
             }
           });
