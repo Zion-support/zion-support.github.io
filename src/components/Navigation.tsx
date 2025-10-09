@@ -79,7 +79,22 @@ const Navigation: React.FC = () => {
     { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
     { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator }
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
+    { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant', icon: Users },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Database },
+    { name: 'AI Video Editor', href: '/ai-video-editor', icon: Video },
+    { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: Shield },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Heart },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Home },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Globe },
+    { name: 'AI Energy Manager', href: '/ai-energy-manager', icon: Zap },
+    { name: 'AI Training Platform', href: '/ai-training-platform', icon: GraduationCap },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: CheckCircle },
+    { name: 'AI Compliance Monitor', href: '/ai-compliance-monitor', icon: FileText },
+    { name: 'AI Customer Insights', href: '/ai-customer-insights', icon: Search },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
+    { name: 'AI Data Security', href: '/ai-data-security', icon: Shield },
+    { name: 'AI Performance Monitor', href: '/ai-performance-monitor', icon: BarChart }
   ];
 
   const aiServices = [
@@ -88,7 +103,13 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
     { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield }
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics', icon: BarChart },
+    { name: 'AI Voice & Speech', href: '/ai-voice-speech', icon: MessageSquare },
+    { name: 'AI Recommendation Engine', href: '/ai-recommendation-engine', icon: Target },
+    { name: 'AI Data Mining', href: '/ai-data-mining', icon: Search },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Cpu },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield }
   ];
 
   const itServices = [
@@ -97,7 +118,13 @@ const Navigation: React.FC = () => {
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database-services', icon: Database },
     { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users }
+    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
+    { name: 'Cloud Security', href: '/cloud-security', icon: Shield },
+    { name: 'Data Center Services', href: '/data-center-services', icon: Database },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Users },
+    { name: 'Mobile App Development', href: '/mobile-app-development', icon: Smartphone },
+    { name: 'Web Development', href: '/web-development', icon: Code },
+    { name: 'IT Asset Management', href: '/it-asset-management', icon: Settings }
   ];
 
   const specializedServices = [
@@ -106,7 +133,13 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
     { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings }
+    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
+    { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Eye },
+    { name: 'Digital Twin Technology', href: '/digital-twin-technology', icon: Cpu },
+    { name: '5G Network Solutions', href: '/5g-network-solutions', icon: Globe },
+    { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', icon: Shield },
+    { name: 'Space Technology Solutions', href: '/space-technology-solutions', icon: Globe },
+    { name: 'Neuromorphic Computing', href: '/neuromorphic-computing', icon: Brain }
   ];
 
   return (
@@ -135,15 +168,15 @@ const Navigation: React.FC = () => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
-                  <div className="grid grid-cols-3 gap-6">
+                <div className="absolute top-full left-0 mt-2 w-[900px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+                  <div className="grid grid-cols-4 gap-6">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Zap className="w-4 h-4 mr-2" />
                         Micro SAAS
                       </h3>
                       <div className="space-y-2">
-                        {microSAASServices.slice(0, 6).map((service) => (
+                        {microSAASServices.slice(0, 8).map((service) => (
                           <Link
                             key={service.name}
                             to={service.href}
@@ -162,7 +195,7 @@ const Navigation: React.FC = () => {
                         AI Services
                       </h3>
                       <div className="space-y-2">
-                        {aiServices.slice(0, 6).map((service) => (
+                        {aiServices.slice(0, 8).map((service) => (
                           <Link
                             key={service.name}
                             to={service.href}
@@ -181,7 +214,26 @@ const Navigation: React.FC = () => {
                         IT Services
                       </h3>
                       <div className="space-y-2">
-                        {itServices.slice(0, 6).map((service) => (
+                        {itServices.slice(0, 8).map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            <service.icon className="w-3 h-3" />
+                            <span>{service.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Sparkles className="w-4 h-4 mr-2" />
+                        Specialized
+                      </h3>
+                      <div className="space-y-2">
+                        {specializedServices.slice(0, 8).map((service) => (
                           <Link
                             key={service.name}
                             to={service.href}
@@ -196,7 +248,7 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-3 gap-4">
                       <Link
                         to="/services"
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
@@ -206,11 +258,19 @@ const Navigation: React.FC = () => {
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                       <Link
-                        to="/specialized-services"
+                        to="/pricing"
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
-                        <span>Specialized Solutions</span>
+                        <span>Pricing Plans</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                      <Link
+                        to="/contact"
+                        className="flex items-center justify-center space-x-2 text-green-400 hover:text-white transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        <span>Get Started</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
@@ -275,11 +335,14 @@ const Navigation: React.FC = () => {
                 </button>
                 
                 {isServicesOpen && (
-                  <div className="mt-4 pl-4 space-y-3">
+                  <div className="mt-4 pl-4 space-y-4">
                     <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
+                      <h4 className="text-cyan-400 font-semibold mb-2 flex items-center">
+                        <Zap className="w-4 h-4 mr-2" />
+                        Micro SAAS
+                      </h4>
                       <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
+                        {microSAASServices.slice(0, 6).map((service) => (
                           <Link
                             key={service.name}
                             to={service.href}
@@ -292,9 +355,12 @@ const Navigation: React.FC = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
+                      <h4 className="text-cyan-400 font-semibold mb-2 flex items-center">
+                        <Brain className="w-4 h-4 mr-2" />
+                        AI Services
+                      </h4>
                       <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
+                        {aiServices.slice(0, 6).map((service) => (
                           <Link
                             key={service.name}
                             to={service.href}
@@ -306,13 +372,58 @@ const Navigation: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    <Link
-                      to="/services"
-                      className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services →
-                    </Link>
+                    <div>
+                      <h4 className="text-cyan-400 font-semibold mb-2 flex items-center">
+                        <Settings className="w-4 h-4 mr-2" />
+                        IT Services
+                      </h4>
+                      <div className="space-y-2">
+                        {itServices.slice(0, 6).map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-cyan-400 font-semibold mb-2 flex items-center">
+                        <Sparkles className="w-4 h-4 mr-2" />
+                        Specialized
+                      </h4>
+                      <div className="space-y-2">
+                        {specializedServices.slice(0, 6).map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="pt-2 border-t border-gray-700 space-y-2">
+                      <Link
+                        to="/services"
+                        className="block text-cyan-400 hover:text-white transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        View All Services →
+                      </Link>
+                      <Link
+                        to="/pricing"
+                        className="block text-purple-400 hover:text-white transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        Pricing Plans →
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>

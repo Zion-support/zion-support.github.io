@@ -9,7 +9,13 @@ const Footer: React.FC = () => {
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' }
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
+    { name: 'AI HR Assistant Pro', url: '/ai-hr-assistant', description: 'HR process automation' },
+    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Smart inventory control' },
+    { name: 'AI Video Editor', url: '/ai-video-editor', description: 'AI-powered video editing' },
+    { name: 'AI Legal Assistant', url: '/ai-legal-assistant', description: 'Legal document analysis' },
+    { name: 'AI Healthcare Assistant', url: '/ai-healthcare-assistant', description: 'Medical data analysis' },
+    { name: 'AI Real Estate Assistant', url: '/ai-real-estate-assistant', description: 'Property management' }
   ];
 
   const aiServices = [
@@ -18,7 +24,13 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'Quantum AI Computing', url: '/quantum-ai', description: 'Next-gen algorithms' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Advanced forecasting' },
+    { name: 'AI Voice & Speech', url: '/ai-voice-speech', description: 'Voice recognition & synthesis' },
+    { name: 'AI Recommendation Engine', url: '/ai-recommendation-engine', description: 'Personalization systems' },
+    { name: 'AI Data Mining', url: '/ai-data-mining', description: 'Pattern recognition' },
+    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Edge AI solutions' },
+    { name: 'AI Fraud Detection', url: '/ai-fraud-detection', description: 'Advanced fraud prevention' }
   ];
 
   const itServices = [
@@ -27,7 +39,13 @@ const Footer: React.FC = () => {
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
     { name: 'Database Services', url: '/database-services', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking' },
-    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' }
+    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' },
+    { name: 'Cloud Security', url: '/cloud-security', description: 'Cloud security solutions' },
+    { name: 'Data Center Services', url: '/data-center-services', description: 'Data center management' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT consulting' },
+    { name: 'Mobile App Development', url: '/mobile-app-development', description: 'Native & cross-platform apps' },
+    { name: 'Web Development', url: '/web-development', description: 'Modern web applications' },
+    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle management' }
   ];
 
   const specializedServices = [
@@ -36,7 +54,13 @@ const Footer: React.FC = () => {
     { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' }
+    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' },
+    { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
+    { name: 'Digital Twin Technology', url: '/digital-twin-technology', description: 'Digital asset replicas' },
+    { name: '5G Network Solutions', url: '/5g-network-solutions', description: 'Next-gen connectivity' },
+    { name: 'AI Ethics & Governance', url: '/ai-ethics-governance', description: 'Responsible AI' },
+    { name: 'Space Technology Solutions', url: '/space-technology-solutions', description: 'Satellite technology' },
+    { name: 'Neuromorphic Computing', url: '/neuromorphic-computing', description: 'Brain-inspired computing' }
   ];
 
   const additionalServices = [
@@ -80,9 +104,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -90,7 +114,7 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
