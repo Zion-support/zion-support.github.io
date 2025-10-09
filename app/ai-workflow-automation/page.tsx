@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
 
 const AIWorkflowAutomationPage: React.FC = () => {
@@ -209,13 +208,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
-      <Helmet>
-        <title>AI Workflow Automation Services | Zion Tech Group</title>
-        <meta name="description" content="Intelligent workflow automation solutions that streamline business processes, reduce costs, and improve efficiency. AI-powered automation for every industry." />
-        <meta name="keywords" content="workflow automation, business process automation, RPA, AI automation, process optimization, digital transformation" />
-      </Helmet>
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>

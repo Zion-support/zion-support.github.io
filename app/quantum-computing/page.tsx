@@ -38,7 +38,7 @@ const QuantumComputingPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"></div>

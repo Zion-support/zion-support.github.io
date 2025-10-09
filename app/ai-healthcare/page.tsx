@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Heart, Brain, Shield, Zap, Target, Users } from 'lucide-react';
 
 const AIHealthcarePage: React.FC = () => {
@@ -141,14 +140,7 @@ const AIHealthcarePage: React.FC = () => {
   const categories = [...new Set(aiHealthcareServices.map(service => service.category))];
 
   return (
-    <>
-      <Helmet>
-        <title>AI Healthcare Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered healthcare solutions including medical imaging, drug discovery, personalized medicine, and clinical decision support systems." />
-        <meta name="keywords" content="AI healthcare, medical AI, healthcare automation, medical imaging AI, drug discovery AI, telemedicine" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -366,8 +358,7 @@ const AIHealthcarePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+    </div>
   );
 };
 

@@ -535,10 +535,9 @@ const HomePage: React.FC = () => {
         </Suspense>
       </main>
 
-        {/* Footer */}
-        <Footer />
-      </div>
-    </>
+      {/* Footer */}
+      <Footer />
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react';
 
 const AIMarketingPage: React.FC = () => {
@@ -141,14 +140,7 @@ const AIMarketingPage: React.FC = () => {
   const categories = [...new Set(aiMarketingServices.map(service => service.category))];
 
   return (
-    <>
-      <Helmet>
-        <title>AI Marketing Services - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered marketing solutions including ad optimization, content generation, social media management, and customer journey mapping." />
-        <meta name="keywords" content="AI marketing, marketing automation, ad optimization, content generation, social media AI, email marketing AI" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-pink-600 to-rose-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -367,7 +359,6 @@ const AIMarketingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 
