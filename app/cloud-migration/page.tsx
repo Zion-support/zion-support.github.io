@@ -1,19 +1,13 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { Cloud, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap, Database, Server } from 'lucide-react';
-=======
 import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
 
 const CloudMigrationPage: React.FC = () => {
   const features = [
     {
       icon: Cloud,
-<<<<<<< HEAD
       title: 'Seamless Migration',
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption',
       benefits: ['Zero downtime', 'Data integrity', 'Rollback capability']
@@ -29,7 +23,6 @@ const CloudMigrationPage: React.FC = () => {
       title: 'Infrastructure Setup',
       description: 'Complete cloud infrastructure setup and configuration',
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
-=======
       title: 'Seamless Cloud Migration',
       description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
       benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']
@@ -51,13 +44,11 @@ const CloudMigrationPage: React.FC = () => {
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
       benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
     }
   ];
 
   const migrationSteps = [
     {
-<<<<<<< HEAD
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of current infrastructure and migration strategy',
       icon: CheckCircle,
@@ -74,7 +65,6 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Post-migration optimization and ongoing support',
       icon: Shield,
       features: ['Performance tuning', 'Cost optimization', '24/7 support']
-=======
       step: '01',
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of your current infrastructure and migration requirements.',
@@ -181,13 +171,11 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Scale resources up or down based on demand automatically.',
       icon: Target,
       percentage: 'Unlimited'
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="cyber-grid"></div>
@@ -247,7 +235,6 @@ const CloudMigrationPage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
       <Navigation />
       
       {/* Hero Section */}
@@ -312,7 +299,6 @@ const CloudMigrationPage: React.FC = () => {
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
                       {benefit}
                     </li>
                   ))}
@@ -321,7 +307,6 @@ const CloudMigrationPage: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </div>
 
       {/* Migration Steps Section */}
@@ -350,7 +335,6 @@ const CloudMigrationPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
       </section>
 
       {/* Migration Process Section */}
@@ -375,12 +359,10 @@ const CloudMigrationPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
                 <p className="text-gray-300 mb-4">{step.description}</p>
                 <div className="text-cyan-400 font-semibold">Duration: {step.duration}</div>
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </div>
 
       {/* Benefits Section */}
@@ -472,7 +454,6 @@ const CloudMigrationPage: React.FC = () => {
           </div>
         </div>
       </div>
-=======
       </section>
 
       {/* Benefits Section */}
@@ -564,13 +545,9 @@ const CloudMigrationPage: React.FC = () => {
       </section>
 
       <Footer />
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default CloudMigrationPage;
-=======
 export default CloudMigrationPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-572b

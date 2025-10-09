@@ -1,26 +1,11 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Bot, Settings, BarChart } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React from 'react';
-import { CheckCircle, Star, Phone, Mail, MapPin, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-db8c
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Phone, Mail, MapPin, ArrowRight, Zap, Shield, Clock, Users, Award, TrendingUp, Brain, Target, BarChart, Code, Cloud, Globe, Lock, Cpu, Database, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Lightning, Crosshair, Security, People, StarIcon, Check, Arrow, PhoneIcon, MailIcon, Location } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIAutomationPage: React.FC = () => {
-=======
-const AIAutomationPage: React.FC = () => {
-<<<<<<< HEAD
   const features = [
     'Intelligent process automation',
     'Workflow optimization',
@@ -66,9 +51,6 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-db8c
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
   return (
     <>
       <Helmet>
@@ -79,7 +61,6 @@ const AIAutomationPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
-<<<<<<< HEAD
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -97,8 +78,6 @@ const AIAutomationPage: React.FC = () => {
 };
 
 export default AIAutomationPage;
-=======
-<<<<<<< HEAD
         
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -127,7 +106,6 @@ export default AIAutomationPage;
                 </a>
               </div>
             </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
 
             {/* Features Section */}
             <section className="mb-16">
@@ -226,7 +204,6 @@ export default AIAutomationPage;
   );
 };
 
-=======
         <main className="pt-16">
           <div className="container mx-auto px-4 py-16 text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -251,5 +228,4 @@ export default AIAutomationPage;
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-db8c
 export default AIAutomationPage;
