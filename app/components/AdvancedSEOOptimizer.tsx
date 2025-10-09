@@ -48,37 +48,36 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
     const baseStructuredData = {
       '@context': 'https://schema.org',
-      '@type': 'TechCompany',
-      name: 'Zion Tech Group',
+      '@type': 'Organization',
+      name: seoData.title,
       description: seoData.description,
       url: seoData.canonicalUrl,
-      logo: 'https://ziontechgroup.com/logo.png',
+      logo: seoData.ogImage || '/logo.png',
       sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
+        'https://www.linkedin.com/company/zion-tech-group',
         'https://twitter.com/ziontechgroup',
-        'https://github.com/zion-tech-group',
+        'https://github.com/ziontechgroup'
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+1-555-ZION-TECH',
+        telephone: '+1-555-0123',
         contactType: 'customer service',
-        availableLanguage: 'English',
+        availableLanguage: 'English'
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '123 Tech Innovation Drive',
+        streetAddress: '123 Tech Street',
         addressLocality: 'San Francisco',
         addressRegion: 'CA',
         postalCode: '94105',
-        addressCountry: 'US',
+        addressCountry: 'US'
       },
-      ...seoData.structuredData,
     };
 
     if (seoData.author) {
       baseStructuredData.author = {
         '@type': 'Person',
-        name: seoData.author,
+        name: seoData.author
       };
     }
 
@@ -101,22 +100,20 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
 
-  // Generate Open Graph data
   const generateOpenGraphData = useCallback(() => {
     if (!enableOpenGraph) return {};
 
     return {
       'og:title': seoData.ogTitle || seoData.title,
       'og:description': seoData.ogDescription || seoData.description,
+      'og:image': seoData.ogImage || '/og-image.jpg',
       'og:url': seoData.canonicalUrl,
       'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.jpg',
       'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US',
+      'og:locale': 'en_US'
     };
   }, [seoData, enableOpenGraph]);
 
-  // Generate Twitter Card data
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
 
@@ -129,32 +126,40 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
+            text: 'We offer comprehensive AI and IT solutions including custom software development, AI integration, cloud services, and digital transformation consulting.'
           },
         },
         {
           '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
+          name: 'How can I get started with your services?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
+            text: 'Contact us through our website or call us directly. We offer free consultations to discuss your specific needs and provide tailored solutions.'
           },
         },
         {
           '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
+          name: 'Do you provide ongoing support?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
+            text: 'Yes, we provide comprehensive ongoing support and maintenance for all our solutions to ensure optimal performance and reliability.'
           },
         },
-      ],
+      ]
+    };
+
+    return {
+      'twitter:card': seoData.twitterCard || 'summary_large_image',
+      'twitter:title': seoData.twitterTitle || seoData.title,
+      'twitter:description': seoData.twitterDescription || seoData.description,
+      'twitter:image': seoData.twitterImage || seoData.ogImage || '/twitter-image.jpg',
+      'twitter:site': '@ziontechgroup',
+      'twitter:creator': '@ziontechgroup'
     };
   }, [seoData, enableTwitterCards]);
 
-  // Generate meta tags
   const generateMetaTags = useCallback(() => {
-    const metaTags = [
+    return [
       { name: 'description', content: seoData.description },
       { name: 'keywords', content: seoData.keywords.join(', ') },
       { name: 'author', content: seoData.author || 'Zion Tech Group' },
@@ -163,51 +168,54 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'theme-color', content: '#3B82F6' },
       { name: 'msapplication-TileColor', content: '#3B82F6' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }
     ];
-    return metaTags;
   }, [seoData]);
 
-  const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
-
+  // Update document title and meta description
   useEffect(() => {
-    // Update page title and meta description for better SEO
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
       
-      let metaDescription = document.querySelector('meta[name="description"]');
+      const metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
+        const meta = document.createElement('meta');
+        meta.name = 'description';
+        meta.content = seoData.description;
+        document.head.appendChild(meta);
+      } else {
+        metaDescription.setAttribute('content', seoData.description);
       }
-      metaDescription.setAttribute('content', seoData.description);
 
-      // Update canonical URL
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
+        const link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = seoData.canonicalUrl;
+        document.head.appendChild(link);
+      } else {
+        canonicalLink.setAttribute('href', seoData.canonicalUrl);
       }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
-
-    return metaTags;
   }, [seoData]);
 
   const addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
     }
-    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
+    script.id = 'structured-data';
+    structuredDataRef.current = script;
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+  };
+
+  const structuredData = generateStructuredData();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
+  const metaTags = generateMetaTags();
 
   useEffect(() => {
     if (structuredData) {
@@ -216,28 +224,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, [structuredData]);
 
   useEffect(() => {
-    if (breadcrumbData) {
-      addStructuredData(breadcrumbData);
-    }
-  }, [breadcrumbData]);
-
-  useEffect(() => {
-    if (faqData) {
-      addStructuredData(faqData);
-    }
-  }, [faqData]);
-
-  useEffect(() => {
-    // Track page performance
+    // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (perfData) {
-        // Track performance metrics
         if (typeof (window as any).gtag === 'function') {
           (window as any).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+            value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
           });
         }
       }
@@ -270,8 +265,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {/* Additional SEO Tags */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-touch-fullscreen" content="yes" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
 
       {/* Favicon and Icons */}

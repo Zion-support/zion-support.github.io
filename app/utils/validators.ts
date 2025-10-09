@@ -253,3 +253,167 @@ export function sanitizeInput(input: string | null | undefined, maxLength?: numb
   
   return sanitized || null;
 }
+
+// Additional validation functions for tests
+export interface ValidationResult {
+  isValid: boolean;
+  error?: string;
+}
+
+export function validateEmail(email: string): ValidationResult {
+  if (!email) {
+    return { isValid: false, error: 'Email is required' };
+  }
+  if (email.length > 254) {
+    return { isValid: false, error: 'Email is too long' };
+  }
+  return { isValid: isValidEmail(email), error: isValidEmail(email) ? undefined : 'Invalid email format' };
+}
+
+export function validateURL(url: string): ValidationResult {
+  if (!url) {
+    return { isValid: false, error: 'URL is required' };
+  }
+  return { isValid: isValidUrl(url), error: isValidUrl(url) ? undefined : 'Invalid URL format' };
+}
+
+export function validateLength(value: string, min: number, max: number, fieldName = 'Field'): ValidationResult {
+  if (!value) {
+    return { isValid: false, error: `${fieldName} is required` };
+  }
+  if (value.length < min) {
+    return { isValid: false, error: `${fieldName} must be at least ${min} characters` };
+  }
+  if (value.length > max) {
+    return { isValid: false, error: `${fieldName} must be no more than ${max} characters` };
+  }
+  return { isValid: true };
+}
+
+export function validatePassword(password: string): ValidationResult {
+  if (!password) {
+    return { isValid: false, error: 'Password is required' };
+  }
+  if (password.length < 8) {
+    return { isValid: false, error: 'Password must be at least 8 characters' };
+  }
+  if (password.length > 128) {
+    return { isValid: false, error: 'Password must be no more than 128 characters' };
+  }
+  
+  // Check for required character types
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumbers = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  
+  if (!hasUpperCase) {
+    return { isValid: false, error: 'Password must contain at least one uppercase letter' };
+  }
+  if (!hasLowerCase) {
+    return { isValid: false, error: 'Password must contain at least one lowercase letter' };
+  }
+  if (!hasNumbers) {
+    return { isValid: false, error: 'Password must contain at least one number' };
+  }
+  if (!hasSpecialChar) {
+    return { isValid: false, error: 'Password must contain at least one special character' };
+  }
+  
+  return { isValid: true };
+}
+
+export function sanitizeHTML(input: string): string {
+  if (typeof input !== 'string') return '';
+  // More comprehensive HTML sanitization
+  return input
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;')
+    .replace(/\//g, '&#x2F;');
+}
+
+export function validateDate(dateString: string): ValidationResult {
+  if (!dateString) {
+    return { isValid: false, error: 'Date is required' };
+  }
+  
+  // Check if it's a valid ISO date format (YYYY-MM-DD)
+  const isoRegex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!isoRegex.test(dateString)) {
+    return { isValid: false, error: 'Date must be in YYYY-MM-DD format' };
+  }
+  
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) {
+    return { isValid: false, error: 'Invalid date format' };
+  }
+  
+  // Check if the date is valid (e.g., 2025-02-30 should be invalid)
+  const year = parseInt(dateString.substring(0, 4));
+  const month = parseInt(dateString.substring(5, 7));
+  const day = parseInt(dateString.substring(8, 10));
+  
+  const actualDate = new Date(year, month - 1, day);
+  if (actualDate.getFullYear() !== year || 
+      actualDate.getMonth() !== month - 1 || 
+      actualDate.getDate() !== day) {
+    return { isValid: false, error: 'Invalid date' };
+  }
+  
+  return { isValid: true };
+}
+
+export function validateCreditCard(cardNumber: string): ValidationResult {
+  if (!cardNumber) {
+    return { isValid: false, error: 'Credit card number is required' };
+  }
+  // Remove spaces and dashes for validation
+  const cleaned = cardNumber.replace(/[\s-]/g, '');
+  return { isValid: isValidCreditCard(cleaned), error: isValidCreditCard(cleaned) ? undefined : 'Invalid credit card number' };
+}
+
+export function validateJSON(jsonString: string): ValidationResult {
+  if (!jsonString) {
+    return { isValid: false, error: 'JSON string is required' };
+  }
+  try {
+    JSON.parse(jsonString);
+    return { isValid: true };
+  } catch {
+    return { isValid: false, error: 'Invalid JSON format' };
+  }
+}
+
+export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {
+  for (const validator of validators) {
+    const result = validator(value);
+    if (!result.isValid) {
+      return result;
+    }
+  }
+  return { isValid: true };
+}
+
+export function validateRequired(value: unknown, fieldName = 'Field'): ValidationResult {
+  if (value === null || value === undefined) {
+    return { isValid: false, error: `${fieldName} is required` };
+  }
+  if (typeof value === 'string' && value.trim().length === 0) {
+    return { isValid: false, error: `${fieldName} is required` };
+  }
+  return { isValid: true };
+}
+
+export async function validateAsync<T>(
+  validator: (value: T) => Promise<ValidationResult>,
+  value: T
+): Promise<ValidationResult> {
+  try {
+    return await validator(value);
+  } catch (error) {
+    return { isValid: false, error: error instanceof Error ? error.message : 'Validation failed' };
+  }
+}

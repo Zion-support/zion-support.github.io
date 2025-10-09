@@ -9,6 +9,22 @@ import {
   isRequired,
   isValidPassword,
   sanitizeInput,
+  isStrongPassword,
+  isValidCreditCard,
+  sanitizeHtml,
+  minLength,
+  maxLength,
+  validateEmail,
+  validateURL,
+  validateLength,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateComposite,
+  validateAsync,
+  validateRequired,
 } from '../app/utils/validators';
 
 describe('Email Validation', () => {
