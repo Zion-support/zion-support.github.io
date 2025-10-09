@@ -80,12 +80,9 @@ export default function Page() {
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
             </div>
-            <Link
-              href='/contact'
-              className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
-            >
-              Engage <RefreshCw />
-            </Link>
+            <a href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Engage <RefreshCw className="w-4 h-4 inline ml-2" />
+            </a>
           </div>
         </div>
       </section>

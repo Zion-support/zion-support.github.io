@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Database, Zap, Shield, Brain, Star } from 'lucide-react';
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
     {
@@ -138,13 +137,7 @@ const BlockchainWeb3Page: React.FC = () => {
   ];
   // const categories = [...new Set(blockchainServices.map(service => service.category))];
   return (
-    <>
-      <Helmet>
-        <title>Blockchain & Web3 Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced blockchain and Web3 development services including DeFi, NFTs, smart contracts, and metaverse solutions." />
-        <meta name="keywords" content="blockchain development, Web3, DeFi, NFTs, smart contracts, DAOs, cryptocurrency, metaverse" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -181,7 +174,7 @@ const BlockchainWeb3Page: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Link className="w-8 h-8 text-purple-600" />
+                  <Shield className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3>
                 <p className="text-gray-600">Certified developers with deep blockchain expertise</p>
@@ -293,7 +286,6 @@ const BlockchainWeb3Page: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
-                <Link className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3>
                 <p className="text-gray-600">Secure, audited smart contracts for any use case</p>
               </div>
@@ -354,7 +346,6 @@ const BlockchainWeb3Page: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 export default BlockchainWeb3Page;

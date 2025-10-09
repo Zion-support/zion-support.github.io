@@ -93,17 +93,13 @@ const OfflinePage: React.FC = () => {
         </div>
         <div className='space-y-3'>
           <button
-            onClick={() => window.location.reload()}
             className='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
           >
             Try Again
           </button>
-          <Link
-            href="/"
-            className="block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >
+          <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Go to Homepage
-          </Link>
+          </a>
         </div>
         <div className='mt-8 text-sm text-gray-500'>
           <p>

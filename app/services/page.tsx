@@ -304,13 +304,10 @@ const ServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href={service.link}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
-                >
+                <a href="/contact" className="text-blue-600 hover:text-blue-800 font-semibold flex items-center">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </a>
               </div>
             ))}
           </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
@@ -70,19 +69,14 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
   return (
-    <>
-      <Helmet>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            <a href="/" className="text-blue-600 hover:text-blue-800 flex items-center">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
-            </Link>
+            </a>
           </div>
         </header>
         {/* Hero Section */}
@@ -144,12 +138,9 @@ const CaseStudiesPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <Link 
-                        href="/contact"
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
-                      >
+                      <a href="/contact" className="text-blue-600 hover:text-blue-800 font-semibold">
                         Learn More
-                      </Link>
+                      </a>
                       <div className="flex items-center text-green-600">
                         <CheckCircle className="w-4 h-4 mr-1" />
                         <span className="text-sm font-semibold">Verified Results</span>
@@ -202,24 +193,17 @@ const CaseStudiesPage: React.FC = () => {
               Join the companies that have transformed their business with our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
+              <a href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
                 Start Your Project
                 <TrendingUp className="w-4 h-4 ml-2" />
-              </Link>
-              <Link 
-                href="/services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
+              </a>
+              <a href="/services" className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
                 View Our Services
-              </Link>
+              </a>
             </div>
           </div>
         </section>
       </div>
-    </>
   );
 };
 export default CaseStudiesPage;

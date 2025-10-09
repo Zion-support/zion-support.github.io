@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
@@ -219,12 +219,9 @@ export default function BlogPage() {
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
               and breakthrough content delivered directly to your inbox.
             </p>
-            <Link
-              href="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-            >
+            <a href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Subscribe to Newsletter
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -20,15 +20,12 @@ const EnterprisePage: React.FC = () => {
               uptime with enterprise-grade security and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-              >
+              <a href="/contact" className="group bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center">
                 <span>Schedule Enterprise Demo</span>
                 <span className="group-hover:translate-x-1 transition-transform">
                   &rarr;
                 </span>
-              </Link>
+              </a>
               <a
                 href="#solutions"
                 className="group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-700"
@@ -98,12 +95,9 @@ const EnterprisePage: React.FC = () => {
             </div>
           </div>
           <div className="text-center mt-12">
-            <Link
-              href="/contact"
-              className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
+            <a href="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
               Get Started Today
-            </Link>
+            </a>
           </div>
         </div>
       </section>
