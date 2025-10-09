@@ -6,6 +6,16 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
+  const microSaasServices = [
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
+    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
+    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
+  ];
 
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -50,6 +60,7 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
+
 
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
@@ -147,7 +158,7 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
 
-          {/* AI Services */}
+          {/* Micro SAAS Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
@@ -201,8 +212,7 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-<<<<<<< HEAD
-          {/* Emerging Technologies */}
+          {/* Emerging Tech */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>
             <ul className="space-y-3">
@@ -210,16 +220,6 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     to={service.url}
-=======
-          {/* Micro SAAS Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SAAS</h3>
-            <ul className="space-y-3">
-              {microSaasServices.slice(0, 6).map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    href={service.url}
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -230,17 +230,10 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-<<<<<<< HEAD
-                  to="/quantum-computing"
+                  to="/emerging-tech"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
-                  View All Technologies →
-=======
-                  href="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
-                  View All Solutions →
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
+                  View All Emerging Tech →
                 </Link>
               </li>
             </ul>
