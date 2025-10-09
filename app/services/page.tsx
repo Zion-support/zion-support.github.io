@@ -91,7 +91,7 @@ const ServicesPage: React.FC = () => {
       description: 'Decentralized applications, smart contracts, and Web3 solutions.',
       icon: '🔗',
       link: '/blockchain',
-      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],cursor/add-new-services-and-deploy-updates-f159
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],
       price: 'Starting at $8,000/project'
     },
     {
@@ -165,6 +165,41 @@ const ServicesPage: React.FC = () => {
       link: '/cybersecurity',
       features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
       price: 'Starting at $2,500/month'
+    },
+    {
+      title: 'AI Content Generation',
+      description: 'Create high-quality content 10x faster with our advanced AI platform.',
+      icon: '✍️',
+      link: '/ai-content-generation',
+      features: ['10x Faster Content', '50+ Languages', 'SEO Optimized', 'Brand Voice Training'],
+      price: 'Starting at $29/month',
+      popular: true
+    },
+    {
+      title: 'AI Customer Support',
+      description: 'Provide 24/7 intelligent customer support with AI that never sleeps.',
+      icon: '💬',
+      link: '/ai-customer-support',
+      features: ['24/7 AI Chat', '90% Faster Response', 'Multi-language', 'Human Handoff'],
+      price: 'Starting at $199/month',
+      popular: true
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Automate your sales process and close more deals with AI-powered tools.',
+      icon: '📈',
+      link: '/ai-sales-automation',
+      features: ['Lead Scoring', 'Auto Follow-ups', 'Predictive Analytics', 'Performance Optimization'],
+      price: 'Starting at $299/month',
+      popular: true
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Transform your data into stunning visual insights with AI-powered analytics.',
+      icon: '📊',
+      link: '/ai-data-visualization',
+      features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates'],
+      price: 'Starting at $149/month'
     }
   ];
 

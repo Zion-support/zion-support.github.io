@@ -398,7 +398,7 @@ if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { `); } }
+if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Retrying network error'); } }
         // Add your retry logic here
       }
     } catch {

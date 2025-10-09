@@ -259,7 +259,11 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(aiServices.map(service => service.category))];
+<<<<<<< HEAD
+  // const categories = [...new Set(aiServices.map(service => service.category))];
+=======
+  const categories = [...new Set(aiServices.map(service => service.category))];
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
 
   return (
     <>
