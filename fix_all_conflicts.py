@@ -1,79 +1,79 @@
 #!/usr/bin/env python3
-"""
-Advanced Merge Conflict Resolver
-Resolves all types of merge conflicts including nested ones
-"""
-
+import os
 import re
-from pathlib import Path
+import glob
 
-def resolve_all_conflicts(file_path):
-    """Resolve all merge conflicts in a file"""
+def fix_merge_conflicts(file_path):
+    """Fix merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
-        max_iterations = 10
-        iteration = 0
         
-        while iteration < max_iterations:
-            # Pattern for standard conflicts
-            pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
+        # Handle simple cases where it's just the same content on both sides
+        simple_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n\1\n>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03'
+        content = re.sub(simple_pattern, r'\1', content, flags=re.DOTALL)
+        
+        # Handle cases where one side is empty
+        empty_head_pattern = r'<<<<<<< HEAD\n=======\n(.*?)\n>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03'
+        content = re.sub(empty_head_pattern, r'\1', content, flags=re.DOTALL)
+        
+        empty_origin_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n\n>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03'
+        content = re.sub(empty_origin_pattern, r'\1', content, flags=re.DOTALL)
+        
+        # Handle cases where we need to choose the longer/more complete content
+        complex_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03'
+        
+        def resolve_complex_conflict(match):
+            head_content = match.group(1).strip()
+            origin_content = match.group(2).strip()
             
-            # Replace with incoming version (group 2)
-            new_content = re.sub(pattern1, r'\2\n', content, flags=re.DOTALL)
+            # If both sides are identical, keep one
+            if head_content == origin_content:
+                return head_content
             
-            # Check if we made any changes
-            if new_content == content:
-                break
-                
-            content = new_content
-            iteration += 1
+            # If one side is empty, keep the non-empty one
+            if not head_content:
+                return origin_content
+            if not origin_content:
+                return head_content
+            
+            # For about page, prefer the more complete version
+            if 'About Zion Tech Group' in head_content and 'min-h-screen bg-gradient-to-br from-slate-900' in head_content:
+                return head_content
+            if 'About Zion Tech Group' in origin_content and 'min-h-screen bg-gradient-to-br from-slate-900' in origin_content:
+                return origin_content
+            
+            # If head content is more substantial, keep it
+            if len(head_content) > len(origin_content):
+                return head_content
+            else:
+                return origin_content
         
-        # Remove any remaining conflict markers (in case of malformed conflicts)
-        content = re.sub(r'<<<<<<< HEAD\n', '', content)
-        content = re.sub(r'=======\n', '', content)
-        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
+        content = re.sub(complex_pattern, resolve_complex_conflict, content, flags=re.DOTALL)
         
-        # Write back if changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"✓ Fixed {file_path}")
+            print(f"Fixed merge conflicts in {file_path}")
             return True
-        else:
-            print(f"- No changes needed for {file_path}")
-            return False
-            
+        return False
+        
     except Exception as e:
-        print(f"✗ Error processing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function"""
-    files = [
-        'app/components/NewestContent2025Banner.tsx',
-        'app/enterprise/page.tsx',
-        'app/page-optimized.tsx',
-        'src/hooks/usePerformance.ts',
-        'src/utils/analytics.ts',
-        'src/utils/codeSplitting.ts',
-        'src/utils/errorHandler.ts',
-    ]
+    # Get all TypeScript/JavaScript files in src directory
+    src_files = glob.glob('src/**/*.{ts,tsx,js,jsx}', recursive=True)
     
     fixed_count = 0
-    for file_path in files:
-        full_path = Path('/workspace') / file_path
-        if full_path.exists():
-            if resolve_all_conflicts(full_path):
-                fixed_count += 1
-        else:
-            print(f"! File not found: {file_path}")
+    for file_path in src_files:
+        if fix_merge_conflicts(file_path):
+            fixed_count += 1
     
-    print(f"\n{'='*60}")
-    print(f"Fixed {fixed_count} file(s)")
-    print(f"{'='*60}")
+    print(f"Fixed merge conflicts in {fixed_count} files")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

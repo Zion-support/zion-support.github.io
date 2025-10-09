@@ -23,6 +23,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ttfb: null,
     memory: null
   });
+
+  useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [];
@@ -111,16 +113,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory
       }));
     } catch (error) {
-       
-      }
+      console.error('Performance measurement error:', error);
+    }
+    
     // Cleanup observers
     return () => {
       observers.forEach(observer => {
         try {
           observer.disconnect();
         } catch (error) {
-           
-          }
+          console.error('Observer cleanup error:', error);
+        }
       });
     };
   }, []);

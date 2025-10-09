@@ -45,6 +45,82 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   organizationData,
   websiteData
 }) => {
+  const updateMetaTag = (name: string, content: string) => {
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.querySelector(`meta[property="${name}"]`) as HTMLMetaElement;
+    }
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attribute, name);
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
+  };
+
+  const updateCanonicalUrl = (url: string) => {
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = url;
+  };
+
+  const addAlternateLanguageLinks = (locales: { locale: string; url: string }[]) => {
+    locales.forEach(({ locale, url }) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = locale;
+      link.href = url;
+      document.head.appendChild(link);
+    });
+  };
+
+  const addBreadcrumbStructuredData = (breadcrumbs: { name: string; url: string }[]) => {
+    if (breadcrumbs.length === 0) return;
+    
+    const breadcrumbData = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((crumb, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": crumb.name,
+        "item": crumb.url
+      }))
+    };
+    
+    addStructuredData(breadcrumbData);
+  };
+
+  const addFAQStructuredData = (faqData: { question: string; answer: string }[]) => {
+    if (faqData.length === 0) return;
+    
+    const faqStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+    
+    addStructuredData(faqStructuredData);
+  };
+
+  const addStructuredData = (data: any) => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
+  };
+
   useEffect(() => {
     // Update page title
     document.title = title;
@@ -121,71 +197,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     // Add additional SEO meta tags
     
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
-
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
-  };
-
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = url;
-  };
-
-  const addAlternateLanguageLinks = (locales: { locale: string; url: string }[]) => {
-    locales.forEach(({ locale, url }) => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
-      link.hreflang = locale;
-      link.href = url;
-      document.head.appendChild(link);
-    });
-  };
-
-  const addBreadcrumbStructuredData = (breadcrumbs: { name: string; url: string }[]) => {
-    const breadcrumbData = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((crumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: crumb.name,
-        item: crumb.url
-      }))
-    };
-    addStructuredData(breadcrumbData);
-  };
-
-  const addFAQStructuredData = (faqData: { question: string; answer: string }[]) => {
-    const faqStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faqData.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    };
-    addStructuredData(faqStructuredData);
-  };
-
-  const addStructuredData = (data: any) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-  };
 
   const addAdditionalSEOTags = () => {
     // Add viewport meta tag if not present

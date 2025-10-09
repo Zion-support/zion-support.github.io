@@ -3,8 +3,6 @@ import React from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-<<<<<<< HEAD
-=======
 // Fallback component
 const EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional
@@ -26,7 +24,6 @@ const ContentShowcase = lazy(() =>
     default: EmptyComponent
   }))
 );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
 export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
