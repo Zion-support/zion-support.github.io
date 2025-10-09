@@ -21,16 +21,6 @@ const ConsultationPage = lazy(() => import('./app/consultation/page'));
 const CompliancePage = lazy(() => import('./app/compliance/page'));
 const GdprPage = lazy(() => import('./app/gdpr/page'));
 
-<<<<<<< HEAD
-// Lazy load components
-const Navigation = React.lazy(() => import('./app/components/Navigation'));
-const Footer = React.lazy(() => import('./app/components/Footer'));
-const PerformanceMonitor = React.lazy(() => import('./app/components/PerformanceMonitor'));
-const AccessibilityEnhancer = React.lazy(() => import('./app/components/AccessibilityEnhancer'));
-
-// Main page component
-const HomePage = React.lazy(() => import('./app/page'));
-=======
 // AI Services
 const AiServicesPage = lazy(() => import('./app/ai-services/page'));
 const AiMarketingPage = lazy(() => import('./app/ai-marketing/page'));
@@ -54,7 +44,6 @@ const RoboticsPage = lazy(() => import('./app/robotics/page'));
 
 // Micro SaaS
 const MicroSaasPage = lazy(() => import('./app/micro-saas/page'));
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
 
 // Loading component
 const LoadingSpinner = memo(() => (
@@ -83,11 +72,7 @@ class ErrorBoundary extends React.Component<
     this.setState({ error, errorInfo });
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-      // Error logging would be handled by error tracking service in production
-=======
       console.error('Error caught by boundary:', error, errorInfo);
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
     }
   }
 
