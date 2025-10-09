@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/Navigation.tsx
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-=======
-=======
 'use client';
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
 import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
@@ -134,15 +127,9 @@ const Navigation: React.FC = memo(() => {
             </div>
           </Link>
 
-<<<<<<< HEAD
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">              
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
@@ -163,11 +150,7 @@ const Navigation: React.FC = memo(() => {
               </button>
               
               {servicesOpen && (
-<<<<<<< HEAD
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-=======
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl z-50">
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
                     <div className="grid grid-cols-2 gap-4">
@@ -181,11 +164,7 @@ const Navigation: React.FC = memo(() => {
                             {category.services.slice(0, 6).map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
-<<<<<<< HEAD
                                 to={service.path}
-=======
-                                href={service.path}
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
                                 className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
                                 onClick={closeAllMenus}
                               >
@@ -197,11 +176,7 @@ const Navigation: React.FC = memo(() => {
                             ))}
                             {category.services.length > 6 && (
                               <Link
-<<<<<<< HEAD
                                 to={`/${category.title.toLowerCase().replace(' ', '-')}`}
-=======
-                                href={`/${category.title.toLowerCase().replace(' ', '-')}`}
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
                                 className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                                 onClick={closeAllMenus}
                               >
@@ -214,11 +189,7 @@ const Navigation: React.FC = memo(() => {
                     </div>
                     <div className="border-t border-gray-700 mt-6 pt-4 px-6">
                       <Link
-<<<<<<< HEAD
                         to="/services"
-=======
-                        href="/services"
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                         onClick={closeAllMenus}
                       >
@@ -253,7 +224,6 @@ const Navigation: React.FC = memo(() => {
             >
               Contact
             </Link>
-<<<<<<< HEAD
 
             {/* CTA Button */}
             <Link
@@ -344,33 +314,6 @@ const Navigation: React.FC = memo(() => {
               >
                 Case Studies
               </Link>
-=======
-          </div>
-
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">+1 302 464 0950</span>
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors duration-300"
-            >
-              <Mail className="w-4 h-4" />
-              <span className="text-sm font-medium">Email</span>
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button px-4 py-2 text-sm font-medium"
-            >
-              Get Started
-            </a>
-          </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
 
               <Link
                 to="/blog"

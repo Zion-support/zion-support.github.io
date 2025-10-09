@@ -517,7 +517,6 @@ body {
     padding: 8px 16px;
     font-size: 0.8rem;
   }
-<<<<<<< HEAD
 }
 
 /* Loading Animations */
@@ -890,8 +889,6 @@ body {
   .quantum-field {
     animation-duration: 3s;
   }
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
   
   .holographic-text {
     font-size: 2rem;
@@ -908,14 +905,7 @@ body {
 
 @media (max-width: 480px) {
   .cyber-grid {
-<<<<<<< HEAD
-<<<<<<< HEAD:src/globals.css
-<<<<<<< HEAD
-=======
-    background-size: 10px 10px;
-=======
     background-size: 15px 15px;
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a:app/globals.css
   }
   
   .neon-text {
@@ -953,12 +943,8 @@ body {
   .quantum-field {
     animation: none;
   }
-<<<<<<< HEAD:src/globals.css
   
   .cyber-grid {
->>>>>>> cursor/website-audit-and-update-with-deployment-33eb
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
     background-size: 15px 15px;
   }
   
@@ -971,8 +957,6 @@ body {
     letter-spacing: 0.25px;
   }
 =======
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a:app/globals.css
-  
   .cyber-card {
     padding: 0.5rem;
     margin: 0.25rem;
@@ -1101,10 +1085,7 @@ body {
     border-color: rgba(0, 0, 0, 0.1);
   }
 }
-<<<<<<< HEAD:src/globals.css
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 /* Performance optimizations */
 * {
   box-sizing: border-box;
@@ -1180,9 +1161,3 @@ img {
     text-shadow: none;
   }
 }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-33eb
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a:app/globals.css
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
