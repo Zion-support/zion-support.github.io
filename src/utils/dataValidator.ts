@@ -35,27 +35,55 @@ export class ValidationError extends Error {
 /**
  * Validate email address
  */
-export function validateEmail(email: string): boolean {
+export function validateEmail(email: string): { isValid: boolean; error?: string } {
+  if (!email) return { isValid: false, error: 'Email is required' };
+  if (email.length > 254) return { isValid: false, error: 'Email is too long' };
+  
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+  const isValid = emailRegex.test(email);
+  return {
+    isValid,
+    error: isValid ? undefined : 'Invalid email format'
+  };
 }
 /**
  * Validate URL
  */
-export function validateURL(url: string): boolean {
+export function validateURL(url: string, requireProtocol: boolean = true): { isValid: boolean; error?: string } {
+  if (!url) {
+    return { isValid: false, error: 'URL is required' };
+  }
+  
   try {
-    const parsed = new URL(url);
-    return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+    // If protocol is not required, add http:// prefix for validation
+    const urlToValidate = requireProtocol ? url : `http://${url}`;
+    const parsed = new URL(urlToValidate);
+    const isValid = requireProtocol ? 
+      (parsed.protocol === 'http:' || parsed.protocol === 'https:') : 
+      true;
+    return {
+      isValid,
+      error: isValid ? undefined : 'Invalid URL format or protocol'
+    };
   } catch {
-    return false;
+    return { isValid: false, error: 'Invalid URL format' };
   }
 }
 /**
  * Validate phone number (US format)
  */
-export function validatePhoneNumber(phone: string): boolean {
-  const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-  return phoneRegex.test(phone);
+export function validatePhoneNumber(phone: string): { isValid: boolean; error?: string } {
+  if (!phone) {
+    return { isValid: false, error: 'Phone number is required' };
+  }
+  
+  // More flexible phone regex that handles various formats
+  const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;
+  const isValid = phoneRegex.test(phone);
+  return {
+    isValid,
+    error: isValid ? undefined : 'Invalid phone number format'
+  };
 }
 /**
  * Validate string length
@@ -289,3 +317,164 @@ class DataValidator {
 }
 export const dataValidator = DataValidator.getInstance();
 export default DataValidator;
+
+// Additional validation functions for tests
+export function validateLength(value: string, min: number, max?: number, fieldName: string = 'Field'): { isValid: boolean; error?: string } {
+  if (max !== undefined) {
+    const isValid = value.length >= min && value.length <= max;
+    return {
+      isValid,
+      error: isValid ? undefined : `${fieldName} must be between ${min} and ${max} characters`
+    };
+  }
+  const isValid = value.length >= min;
+  return {
+    isValid,
+    error: isValid ? undefined : `${fieldName} must be at least ${min} characters`
+  };
+}
+
+export function validateRequired(value: unknown, fieldName: string = 'Field'): { isValid: boolean; error?: string } {
+  if (value === null || value === undefined) return { isValid: false, error: `${fieldName} is required` };
+  if (typeof value === 'string' && value.trim() === '') return { isValid: false, error: `${fieldName} is required` };
+  // Note: Empty arrays are considered valid for required fields (they exist, just empty)
+  return { isValid: true };
+}
+
+export function validateNumberRange(value: number, min: number, max: number): { isValid: boolean; error?: string } {
+  if (typeof value !== 'number' || isNaN(value)) {
+    return { isValid: false, error: 'Value must be a valid number' };
+  }
+  const isValid = value >= min && value <= max;
+  return {
+    isValid,
+    error: isValid ? undefined : `Value must be between ${min} and ${max}`
+  };
+}
+
+export function validatePassword(password: string): { isValid: boolean; error?: string } {
+  if (!password) return { isValid: false, error: 'Password is required' };
+  if (password.length < 8) return { isValid: false, error: 'Password must be at least 8 characters' };
+  if (password.length > 128) return { isValid: false, error: 'Password must be less than 128 characters' };
+  if (!/[A-Z]/.test(password)) return { isValid: false, error: 'Password must contain at least one uppercase letter' };
+  if (!/[a-z]/.test(password)) return { isValid: false, error: 'Password must contain at least one lowercase letter' };
+  if (!/\d/.test(password)) return { isValid: false, error: 'Password must contain at least one number' };
+  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) return { isValid: false, error: 'Password must contain at least one special character' };
+  return { isValid: true };
+}
+
+export function sanitizeHTML(html: string): string {
+  if (!html || typeof html !== 'string') return '';
+  
+  // First escape HTML entities
+  let clean = html.replace(/&/g, '&amp;');
+  clean = clean.replace(/</g, '&lt;');
+  clean = clean.replace(/>/g, '&gt;');
+  clean = clean.replace(/"/g, '&quot;');
+  clean = clean.replace(/'/g, '&#x27;');
+  clean = clean.replace(/\//g, '&#x2F;');
+  
+  return clean;
+}
+
+export function sanitizeInput(input: string, maxLength: number = 1000): string | null {
+  if (!input || typeof input !== 'string') return null;
+  if (input.trim() === '') return null;
+  
+  // Remove null bytes and control characters
+  let clean = input.replace(/\x00/g, '').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+  
+  // Trim and limit length
+  clean = clean.trim();
+  if (clean.length > maxLength) {
+    clean = clean.substring(0, maxLength);
+  }
+  
+  return clean || null;
+}
+
+export function validateDate(dateString: string): { isValid: boolean; error?: string } {
+  if (!dateString) return { isValid: false, error: 'Date is required' };
+  
+  // Check format first
+  if (!dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' };
+  }
+  
+  const date = new Date(dateString);
+  const isValid = !isNaN(date.getTime());
+  
+  // Additional check for invalid dates like 2025-02-30
+  if (isValid) {
+    const [year, month, day] = dateString.split('-').map(Number);
+    const actualDate = new Date(year, month - 1, day);
+    const isRealDate = actualDate.getFullYear() === year && 
+                      actualDate.getMonth() === month - 1 && 
+                      actualDate.getDate() === day;
+    return {
+      isValid: isRealDate,
+      error: isRealDate ? undefined : 'Invalid date'
+    };
+  }
+  
+  return {
+    isValid: false,
+    error: 'Invalid date'
+  };
+}
+
+export function validateCreditCard(cardNumber: string): { isValid: boolean; error?: string } {
+  if (!cardNumber) return { isValid: false, error: 'Card number is required' };
+  
+  // Remove all non-digit characters (spaces, dashes, etc.)
+  const cleaned = cardNumber.replace(/\D/g, '');
+  if (!/^\d+$/.test(cleaned)) return { isValid: false, error: 'Card number must contain only digits' };
+  if (cleaned.length < 13 || cleaned.length > 19) return { isValid: false, error: 'Card number must be between 13 and 19 digits' };
+  
+  let sum = 0;
+  let isEven = false;
+  for (let i = cleaned.length - 1; i >= 0; i--) {
+    let digit = parseInt(cleaned[i], 10);
+    if (isEven) {
+      digit *= 2;
+      if (digit > 9) digit -= 9;
+    }
+    sum += digit;
+    isEven = !isEven;
+  }
+  
+  const isValid = sum % 10 === 0;
+  return {
+    isValid,
+    error: isValid ? undefined : 'Invalid card number'
+  };
+}
+
+export function validateJSON(jsonString: string): { isValid: boolean; error?: string } {
+  if (!jsonString) return { isValid: false, error: 'JSON string is required' };
+  
+  try {
+    JSON.parse(jsonString);
+    return { isValid: true };
+  } catch (error) {
+    return { isValid: false, error: 'Invalid JSON format' };
+  }
+}
+
+export function validateComposite(value: string, validators: Array<(val: string) => { isValid: boolean; error?: string }>): { isValid: boolean; error?: string } {
+  for (const validator of validators) {
+    const result = validator(value);
+    if (!result.isValid) {
+      return result;
+    }
+  }
+  return { isValid: true };
+}
+
+export async function validateAsync(validator: (value: string) => Promise<{ isValid: boolean; error?: string }>, value: string): Promise<{ isValid: boolean; error?: string }> {
+  try {
+    return await validator(value);
+  } catch (error) {
+    return { isValid: false, error: 'Validation failed' };
+  }
+}

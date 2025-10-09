@@ -213,16 +213,13 @@ export class ErrorHandler {
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
-          // console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
-          // console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
           if (process.env['NODE_ENV'] === 'development') {
             if (import.meta.env.DEV) {
-              console.info(logMessage, error);
-            }
+              }
           }
           break;
       }
@@ -243,8 +240,7 @@ export class ErrorHandler {
         body: JSON.stringify(error)
       });
     } catch (err) {
-      // console.error('Failed to log error to network:', err);
-    }
+      }
   }
   // Report error
   private async reportError(error: AppError) {
@@ -261,8 +257,7 @@ export class ErrorHandler {
         })
       });
     } catch (err) {
-      // console.error('Failed to report error:', err);
-    }
+      }
   }
   // Notify user
   private notifyUser(error: AppError) {
@@ -347,7 +342,7 @@ export class ErrorHandler {
         // Retry network request
         if (process.env['NODE_ENV'] === 'development') {
           if (import.meta.env.DEV) {
-            // console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
+            `);
           }
         }
         // Add your retry logic here
@@ -356,8 +351,7 @@ export class ErrorHandler {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-        // console.error('Max retries exceeded for error:', retryItem.error);
-      }
+        }
     }
   }
   // Get all errors
