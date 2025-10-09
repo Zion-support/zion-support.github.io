@@ -8,12 +8,15 @@ const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+const EnhancedServicesShowcase = lazy(() => import('./components/EnhancedServicesShowcase'));
 
-// Preload critical components
+// Preload critical components with better timing
 const preloadComponents = () => {
-  setTimeout(() => {
-    // Preload components after initial render
-  }, 100);
+  if (typeof window !== 'undefined') {
+    setTimeout(() => {
+      // Preload components
+    }, 100);
+  }
 };
 
 // Loading skeleton component

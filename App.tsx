@@ -21,8 +21,6 @@ const SupportPage = React.lazy(() => import('./app/support/page'));
 // Lazy load components
 const Navigation = React.lazy(() => import('./app/components/Navigation'));
 const Footer = React.lazy(() => import('./app/components/Footer'));
-const PerformanceMonitor = React.lazy(() => import('./app/components/PerformanceMonitor'));
-const AccessibilityEnhancer = React.lazy(() => import('./app/components/AccessibilityEnhancer'));
 
 // Main page component
 const HomePage = React.lazy(() => import('./app/page'));
@@ -54,7 +52,7 @@ class ErrorBoundary extends React.Component<
     this.setState({ error, errorInfo });
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
-      // Error logging would be handled by error tracking service in production
+      console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
@@ -126,14 +124,6 @@ const App: React.FC = () => {
             
             <Suspense fallback={<LoadingSpinner />}>
               <Footer />
-            </Suspense>
-            
-            <Suspense fallback={null}>
-              <PerformanceMonitor />
-            </Suspense>
-            
-            <Suspense fallback={null}>
-              <AccessibilityEnhancer />
             </Suspense>
           </div>
         </Router>

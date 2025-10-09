@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Mail } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,17 +45,37 @@ const Navigation: React.FC = memo(() => {
       icon: Brain,
       color: 'text-purple-400',
       services: [
-        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
-        { name: 'AI Project Management', path: '/ai-project-management', description: 'AI-powered project management' }
+        { name: 'AI Business Intelligence', path: '/ai-services/business-intelligence', description: 'Advanced analytics & insights' },
+        { name: 'AI Document Processing', path: '/ai-services/document-processing', description: 'Intelligent document analysis' },
+        { name: 'AI Customer Experience', path: '/ai-services/customer-experience', description: 'AI-powered customer interactions' },
+        { name: 'AI Marketing Automation', path: '/ai-services/marketing-automation', description: 'Intelligent marketing campaigns' },
+        { name: 'AI Predictive Maintenance', path: '/ai-services/predictive-maintenance', description: 'Equipment failure prevention' },
+        { name: 'AI Supply Chain', path: '/ai-services/supply-chain', description: 'Supply chain optimization' },
+        { name: 'AI Fraud Detection', path: '/ai-services/fraud-detection', description: 'Advanced fraud prevention' },
+        { name: 'AI Content Generation', path: '/ai-services/content-generation', description: 'AI content creation' },
+        { name: 'AI HR Analytics', path: '/ai-services/hr-analytics', description: 'Human resources optimization' },
+        { name: 'AI Process Automation', path: '/ai-services/process-automation', description: 'Intelligent workflow automation' },
+        { name: 'AI Quality Assurance', path: '/ai-services/quality-assurance', description: 'AI-powered quality control' },
+        { name: 'AI Energy Management', path: '/ai-services/energy-management', description: 'Energy optimization solutions' }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      icon: Code,
+      color: 'text-green-400',
+      services: [
+        { name: 'AI Analytics Dashboard', path: '/micro-saas/analytics-dashboard', description: 'Real-time business intelligence' },
+        { name: 'Smart Support Bot', path: '/micro-saas/support-bot', description: 'AI customer service automation' },
+        { name: 'Social Media Manager', path: '/micro-saas/social-manager', description: 'AI social media automation' },
+        { name: 'Email Marketing Suite', path: '/micro-saas/email-marketing', description: 'AI email campaigns' },
+        { name: 'Inventory Management', path: '/micro-saas/inventory-management', description: 'Smart inventory optimization' },
+        { name: 'Lead Scoring System', path: '/micro-saas/lead-scoring', description: 'Intelligent lead qualification' },
+        { name: 'Document Processor', path: '/micro-saas/document-processor', description: 'AI document analysis' },
+        { name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', description: 'AI SEO automation' },
+        { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', description: 'Smart scheduling system' },
+        { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', description: 'Conversation analysis' },
+        { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', description: 'AI expense management' },
+        { name: 'Content Generator', path: '/micro-saas/content-generator', description: 'AI content creation' }
       ]
     },
     {
@@ -81,14 +101,6 @@ const Navigation: React.FC = memo(() => {
         { name: 'Blockchain', path: '/blockchain', description: 'Decentralized solutions' },
         { name: 'IoT Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
         { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' }
-      ]
-    },
-    {
-      title: 'Micro SaaS',
-      icon: Code,
-      color: 'text-green-400',
-      services: [
-        { name: 'Micro SaaS Solutions', path: '/micro-saas', description: 'Custom SaaS applications' }
       ]
     }
   ];
@@ -120,7 +132,29 @@ const Navigation: React.FC = memo(() => {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
             </Link>
+<<<<<<< HEAD
             
+=======
+            <Link to="/services" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Services
+            </Link>
+            <Link to="/ai-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              AI Services
+            </Link>
+            <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Micro SAAS
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Pricing
+            </Link>
+            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Case Studies
+            </Link>
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Blog
+            </Link>
+
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-66f0
             {/* Services Dropdown */}
             <div className="relative group">
               <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium">
@@ -177,6 +211,7 @@ const Navigation: React.FC = memo(() => {
           </div>
 
           {/* Mobile Menu Button */}
+<<<<<<< HEAD
           <button
             onClick={toggleMenu}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors"
@@ -187,6 +222,20 @@ const Navigation: React.FC = memo(() => {
         </div>
 
         {/* Mobile Menu */}
+=======
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-66f0
         {isOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
@@ -204,7 +253,53 @@ const Navigation: React.FC = memo(() => {
               >
                 About
               </Link>
+<<<<<<< HEAD
               
+=======
+              <Link
+                to="/services"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Services
+              </Link>
+              <Link
+                to="/ai-services"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                AI Services
+              </Link>
+              <Link
+                to="/micro-saas"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Micro SAAS
+              </Link>
+              <Link
+                to="/pricing"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+              <Link
+                to="/case-studies"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Case Studies
+              </Link>
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-66f0
               {/* Mobile Services */}
               <div>
                 <button
@@ -262,6 +357,7 @@ const Navigation: React.FC = memo(() => {
               >
                 Contact
               </Link>
+<<<<<<< HEAD
               
               <div className="pt-4 border-t border-cyan-400/20">
                 <Link
@@ -272,6 +368,17 @@ const Navigation: React.FC = memo(() => {
                   Get Started
                 </Link>
               </div>
+=======
+
+              <a
+                href="tel:+13024640950"
+                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
+                onClick={closeAllMenus}
+              >
+                <Phone className="w-4 h-4 inline mr-2" />
+                (302) 464-0950
+              </a>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-66f0
             </div>
           </div>
         )}
@@ -281,5 +388,9 @@ const Navigation: React.FC = memo(() => {
 });
 
 Navigation.displayName = 'Navigation';
+<<<<<<< HEAD
 
 export default Navigation;
+=======
+export default Navigation;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-66f0
