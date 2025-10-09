@@ -32,6 +32,29 @@ const AISalesAutomationPage: React.FC = () => {
     }
   ];
 
+  const useCases = [
+    {
+      icon: Building,
+      title: 'Enterprise Sales',
+      description: 'Streamline complex B2B sales processes with intelligent automation and predictive analytics.'
+    },
+    {
+      icon: ShoppingCart,
+      title: 'E-commerce',
+      description: 'Boost online sales with personalized recommendations and automated customer engagement.'
+    },
+    {
+      icon: Cloud,
+      title: 'SaaS Sales',
+      description: 'Optimize subscription sales with automated lead nurturing and customer success workflows.'
+    },
+    {
+      icon: Home,
+      title: 'Real Estate',
+      description: 'Automate property lead management and client communication for faster closings.'
+    }
+  ];
+
   const pricing = [
     {
       name: 'Starter',

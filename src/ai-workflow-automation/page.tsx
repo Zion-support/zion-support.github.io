@@ -31,7 +31,31 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
   ];
-  const pricingPlans = [
+
+  const useCases = [
+    {
+      icon: Database,
+      title: 'Data Processing',
+      description: 'Automate data collection, validation, and transformation across multiple systems.'
+    },
+    {
+      icon: Globe,
+      title: 'Customer Onboarding',
+      description: 'Streamline customer onboarding with automated workflows and intelligent routing.'
+    },
+    {
+      icon: Settings,
+      title: 'IT Operations',
+      description: 'Automate routine IT tasks, monitoring, and incident response processes.'
+    },
+    {
+      icon: BarChart,
+      title: 'Financial Reporting',
+      description: 'Automate financial data collection, processing, and report generation.'
+    }
+  ];
+
+  const pricing = [
     {
       name: 'Starter',
       price: '$299/month',

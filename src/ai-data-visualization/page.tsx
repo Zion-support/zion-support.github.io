@@ -4,6 +4,29 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
+
+const useCases = [
+  {
+    icon: BarChart,
+    title: 'Business Intelligence',
+    description: 'Transform raw data into actionable business insights with interactive dashboards and real-time analytics.'
+  },
+  {
+    icon: TrendingUp,
+    title: 'Financial Analytics', 
+    description: 'Monitor financial performance, track KPIs, and generate comprehensive financial reports automatically.'
+  },
+  {
+    icon: Eye,
+    title: 'Marketing Performance',
+    description: 'Analyze campaign effectiveness, track customer journeys, and optimize marketing ROI with data visualization.'
+  },
+  {
+    icon: Settings,
+    title: 'Operations Monitoring',
+    description: 'Monitor operational metrics, identify bottlenecks, and optimize processes with real-time performance dashboards.'
+  }
+];
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
