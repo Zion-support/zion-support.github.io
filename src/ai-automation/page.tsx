@@ -185,10 +185,4 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-}
-
-export default AiAutomationPage;
-=======
 export default AIAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf
