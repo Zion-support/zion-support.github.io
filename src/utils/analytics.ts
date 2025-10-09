@@ -1,5 +1,11 @@
 'use client';
 import React from 'react'
+
+// Declare gtag function
+declare global {
+  function gtag(command: string, targetId: string, config?: any): void;
+}
+
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
@@ -19,6 +25,7 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
+  private config: { gaId: string } = { gaId: '' }
   /**
    * Initialize analytics service
    */
