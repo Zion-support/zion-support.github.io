@@ -112,7 +112,7 @@ const HomePage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}
         <Navigation />
       
@@ -141,7 +141,8 @@ const HomePage: React.FC = () => {
         >
           <h1 
             id="hero-heading" 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text glitch"
+            data-text="Zion Tech Group"
           >
             Zion Tech Group
           </h1>
@@ -155,20 +156,23 @@ const HomePage: React.FC = () => {
           
           {/* Key Benefits */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">🚀</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
+            <div className="cyber-card hologram-card holographic p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-2xl sm:text-3xl mb-3 cyber-scan-line">🚀</div>
+              <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">AI-Powered Solutions</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+              <div className="mt-4 text-cyan-400 text-sm font-semibold">Starting at $79/month</div>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
+            <div className="cyber-card hologram-card holographic p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-2xl sm:text-3xl mb-3 cyber-scan-line">⚡</div>
+              <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Proven Results</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+              <div className="mt-4 text-green-400 text-sm font-semibold">300% Average ROI</div>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-              <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
+            <div className="cyber-card hologram-card holographic p-4 sm:p-6 sm:col-span-2 lg:col-span-1 hover:scale-105 transition-all duration-300">
+              <div className="text-2xl sm:text-3xl mb-3 cyber-scan-line">🔒</div>
+              <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Enterprise Security</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
+              <div className="mt-4 text-red-400 text-sm font-semibold">99.9% Uptime SLA</div>
             </div>
           </div>
           
@@ -189,13 +193,55 @@ const HomePage: React.FC = () => {
             >
               Get Free Consultation
             </a>
+            <a
+              href="/micro-saas"
+              className="cyber-button w-full sm:w-auto text-center"
+              style={{background: 'linear-gradient(45deg, #10b981, #3b82f6)'}}
+            >
+              View 50+ Micro SAAS Tools
+            </a>
+          </div>
+        </section>
+
+        {/* Micro SAAS Showcase */}
+        <section className="mb-16" aria-labelledby="micro-saas-heading">
+          <div className="text-center mb-12">
+            <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
+              🚀 50+ Ready-to-Use Micro SAAS Tools
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-4xl mx-auto px-4">
+              Powerful AI-driven applications starting at just $49/month. No development needed - deploy instantly and start saving time and money today.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+              <div className="cyber-card holographic p-6 text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold text-white mb-2">Instant Setup</h3>
+                <p className="text-gray-300 text-sm">Deploy in minutes, not months</p>
+              </div>
+              <div className="cyber-card holographic p-6 text-center">
+                <div className="text-4xl mb-4">💰</div>
+                <h3 className="text-xl font-bold text-white mb-2">Cost Effective</h3>
+                <p className="text-gray-300 text-sm">Save 60-80% vs custom development</p>
+              </div>
+              <div className="cyber-card holographic p-6 text-center">
+                <div className="text-4xl mb-4">🔧</div>
+                <h3 className="text-xl font-bold text-white mb-2">Always Updated</h3>
+                <p className="text-gray-300 text-sm">Latest AI features automatically</p>
+              </div>
+            </div>
+            <a
+              href="/micro-saas"
+              className="cyber-button inline-block"
+            >
+              Explore All 50+ Tools →
+            </a>
           </div>
         </section>
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services
+            Enterprise AI Solutions
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Comprehensive AI and IT solutions designed to transform your business operations
@@ -534,6 +580,96 @@ const HomePage: React.FC = () => {
           <ContentNewsletterSignup />
         </Suspense>
       </main>
+
+        {/* Pricing Comparison Section */}
+        <section className="mb-16" aria-labelledby="pricing-heading">
+          <div className="text-center mb-12">
+            <h2 id="pricing-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
+              💰 Transparent Pricing - Save 60-80% vs Market Rates
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-3xl mx-auto px-4">
+              Compare our competitive pricing with industry standards. We deliver enterprise-grade solutions at startup-friendly prices.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Micro SAAS Pricing */}
+            <div className="cyber-card holographic p-8 text-center">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Micro SAAS Tools</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">$49-499/month</div>
+              <div className="text-green-400 text-sm mb-6">Save 60-80% vs custom development</div>
+              <ul className="text-left text-gray-300 space-y-2 mb-8">
+                <li>✅ 50+ ready-to-use applications</li>
+                <li>✅ Instant deployment</li>
+                <li>✅ No development needed</li>
+                <li>✅ 24/7 support included</li>
+                <li>✅ Regular updates & new features</li>
+              </ul>
+              <a href="/micro-saas" className="cyber-button w-full text-center">
+                View All Tools
+              </a>
+            </div>
+
+            {/* Enterprise AI Pricing */}
+            <div className="cyber-card holographic p-8 text-center border-2 border-cyan-400">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise AI</h3>
+              <div className="text-4xl font-bold text-purple-400 mb-2">$1,500-5,000/month</div>
+              <div className="text-green-400 text-sm mb-6">Save 40-60% vs market rates</div>
+              <ul className="text-left text-gray-300 space-y-2 mb-8">
+                <li>✅ Custom AI development</li>
+                <li>✅ Dedicated support team</li>
+                <li>✅ 99.9% uptime SLA</li>
+                <li>✅ Advanced security</li>
+                <li>✅ Scalable infrastructure</li>
+              </ul>
+              <a href="/ai-services" className="cyber-button w-full text-center">
+                Get Custom Quote
+              </a>
+            </div>
+
+            {/* IT Services Pricing */}
+            <div className="cyber-card holographic p-8 text-center">
+              <div className="text-4xl mb-4">⚙️</div>
+              <h3 className="text-2xl font-bold text-white mb-4">IT Infrastructure</h3>
+              <div className="text-4xl font-bold text-blue-400 mb-2">$999-2,999/month</div>
+              <div className="text-green-400 text-sm mb-6">Save 30-50% vs competitors</div>
+              <ul className="text-left text-gray-300 space-y-2 mb-8">
+                <li>✅ Cloud migration & setup</li>
+                <li>✅ Cybersecurity solutions</li>
+                <li>✅ DevOps automation</li>
+                <li>✅ 24/7 monitoring</li>
+                <li>✅ Disaster recovery</li>
+              </ul>
+              <a href="/it-services" className="cyber-button w-full text-center">
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          {/* Contact CTA */}
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-300 mb-6">
+              Need a custom solution? Get a free consultation and personalized quote.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button"
+              >
+                📞 Call: (302) 464-0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="cyber-button"
+                style={{background: 'linear-gradient(45deg, #10b981, #3b82f6)'}}
+              >
+                ✉️ Email: kleber@ziontechgroup.com
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* Footer */}
         <Footer />
