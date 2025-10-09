@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -422,3 +423,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
 
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 export default AIInvoiceGeneratorPage;
+=======
+import React, { memo } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

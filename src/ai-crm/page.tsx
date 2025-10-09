@@ -1,10 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 const AICRMPage: React.FC = () => {
+=======
+
+const AiCrmPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">AI-Powered CRM</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Intelligent customer relationship management with AI insights</p>
+        <h1 className="text-4xl font-bold text-white mb-4">Ai Crm</h1>
+        <p className="text-gray-300 mb-8">Coming Soon - Advanced ai crm solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us
         </a>
@@ -13,4 +18,4 @@ const AICRMPage: React.FC = () => {
   );
 };
 
-export default AICRMPage;
+export default AiCrmPage;

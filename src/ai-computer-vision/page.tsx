@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 
 const AIComputerVisionPage: React.FC = () => {
@@ -277,3 +278,6 @@ const AIComputerVisionPage: React.FC = () => {
 };
 
 export default AIComputerVisionPage;
+=======
+import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

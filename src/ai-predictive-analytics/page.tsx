@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+<<<<<<< HEAD
 import Footer from '../components/Footer';
 
 const AIPredictiveAnalyticsPage: React.FC = () => {
@@ -101,3 +102,6 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
 };
 
 export default AIPredictiveAnalyticsPage;
+=======
+import Footer from '../components/Footer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

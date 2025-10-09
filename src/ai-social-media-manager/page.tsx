@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AISocialMediaManagerPage: React.FC = () => {
@@ -297,3 +298,6 @@ const AISocialMediaManagerPage: React.FC = () => {
 };
 
 export default AISocialMediaManagerPage;
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 
 const AISchedulerPage: React.FC = () => {
@@ -319,3 +320,6 @@ const AISchedulerPage: React.FC = () => {
 };
 
 export default AISchedulerPage;
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

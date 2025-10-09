@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const SmartAnalyticsPage: React.FC = () => {
@@ -238,3 +239,6 @@ const SmartAnalyticsPage: React.FC = () => {
 };
 
 export default SmartAnalyticsPage;
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
