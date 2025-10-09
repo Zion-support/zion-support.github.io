@@ -253,14 +253,14 @@ const Navigation: React.FC = () => {
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="grid grid-cols-2 gap-4">
-                      <a
-                        href="/services"
+                      <Link
+                        to="/services"
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
-                      </a>
+                      </Link>
                       <a
                         href="/specialized-services"
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
@@ -299,11 +299,11 @@ const Navigation: React.FC = () => {
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">+1 302 464 0950</span>
               </a>
-              <a href="/contact"
+              <Link to="/contact"
                 className="cyber-button px-4 py-2 text-sm"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
           </div>
 
