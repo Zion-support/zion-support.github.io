@@ -1,16 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
-=======
-import { CheckCircle, Star, Zap, Settings, Clock, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -38,12 +31,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
     }
   ];
-<<<<<<< HEAD
-  const pricingPlans = [
-=======
 
   const pricing = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
     {
       name: 'Starter',
       price: '$399/month',
@@ -63,88 +52,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
       features: ['Unlimited workflows', 'Custom development', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
   ];
-<<<<<<< HEAD
-  const stats = [
-    { number: '90%', label: 'Time Savings' },
-    { number: '75%', label: 'Error Reduction' },
-    { number: '500+', label: 'Integrations' },
-    { number: '24/7', label: 'Processing' }
-  ];
-  const useCases = [
-    {
-      title: 'Customer Onboarding',
-      description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
-      icon: Users
-    },
-    {
-      title: 'Invoice Processing',
-      description: 'Automatically process invoices, validate data, route for approval, and update accounting systems.',
-      icon: Database
-    },
-    {
-      title: 'Lead Management',
-      description: 'Automate lead scoring, assignment, follow-up sequences, and CRM updates based on lead behavior.',
-      icon: Globe
-    },
-    {
-      title: 'Employee Onboarding',
-      description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
-      icon: Settings
-    }
-  ];
-  return (
-    <>
-      <SEOOptimizer
-        title="AI Workflow Automation Platform - Zion Tech Group"
-        description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
-        keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}
-        canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="pt-16">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Workflow Automation Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Automate any business process with intelligent workflows
-              </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered workflow automation platform helps businesses eliminate manual tasks, 
-                reduce errors by 75%, and save 90% of processing time with intelligent automation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
-                </a>
-              </div>
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -175,7 +82,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
               >
                 Learn More
               </a>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
             </div>
           </section>
           {/* Features Section */}
@@ -201,25 +107,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
-          {/* Use Cases Section */}
-          <section className="container mx-auto px-4 py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Automate Any Business Process
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -279,18 +167,11 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </a>
             </div>
           </section>
-<<<<<<< HEAD
-        </main>
-        <Footer />
-      </div>
-    </>
-=======
         </div>
       </main>
       
       <Footer />
     </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   );
 };
 
