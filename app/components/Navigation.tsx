@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-=======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, MessageSquare, Eye, Bot, Share2, Mail as EmailIcon, BarChart3, Projector, Headphones } from 'lucide-react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Award, MessageSquare, Palette, Search, Mail as MailIcon, CreditCard, Headphones, Camera, Music, Gamepad2, BookOpen, ShieldCheck, Wifi, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Microphone, Speaker, Battery, Power, Wrench, Hammer, Screwdriver, Tool, Cog, Gear, Settings2 } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,7 +69,6 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       hoverColor: 'hover:bg-purple-500/20',
       services: [
-<<<<<<< HEAD
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
@@ -94,24 +85,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-<<<<<<< HEAD
-        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
-        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
-        { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
-        { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
-        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
-=======
-        { name: 'Machine Learning Solutions', path: '/ai-services', description: 'Custom ML models and algorithms', icon: Brain },
-        { name: 'Natural Language Processing', path: '/ai-services', description: 'Advanced text analysis and understanding', icon: MessageSquare },
-        { name: 'Computer Vision', path: '/ai-services', description: 'Image and video analysis solutions', icon: Eye },
-        { name: 'AI Automation', path: '/ai-services', description: 'Intelligent process automation', icon: Zap },
-        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions', icon: '🏥' },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications', icon: '💳' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions', icon: Shield },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights', icon: BarChart3 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
-=======
         { name: 'AI Voice Cloning', path: '/ai-voice-cloning', description: 'AI voice synthesis' },
         { name: 'AI Video Generation', path: '/ai-video-generation', description: 'AI video creation' },
         { name: 'AI 3D Generation', path: '/ai-3d-generation', description: 'AI 3D modeling' },
@@ -120,7 +93,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Intelligent scheduling' },
         { name: 'AI Fitness Coach', path: '/ai-fitness-coach', description: 'AI fitness training' },
         { name: 'AI Email Assistant', path: '/ai-email-assistant', description: 'AI email management' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
       ]
     },
     {

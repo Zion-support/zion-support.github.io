@@ -1,10 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-=======
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Brain, Cloud, Code, BarChart, Users, Globe, Shield, TrendingUp, Target, Settings, Database, Smartphone, Lock, Calendar, FileText, Sparkles, Cpu, Award } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -51,10 +47,7 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-<<<<<<< HEAD
   // Analytics tracking for phone clicks - optimized
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
@@ -64,7 +57,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -197,9 +189,6 @@ const HomePage: React.FC = () => {
       color: 'text-purple-400'
     }
   ];
-
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   return (
     <>
       <SEOOptimizer
@@ -292,11 +281,7 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-<<<<<<< HEAD
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
-=======
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
@@ -333,7 +318,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/contact"
@@ -349,26 +333,6 @@ const HomePage: React.FC = () => {
                   <Phone className="w-5 h-5" />
                   +1 302 464 0950
                 </a>
-=======
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="/contact"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                  onClick={handlePhoneClick}
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get Free Consultation
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                  onClick={handlePhoneClick}
-                >
-                  <Phone className="w-4 h-4 mr-2" />
-                  (302) 464-0950
-                </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
               </div>
             </div>
           </section>
