@@ -1,41 +1,237 @@
-const CACHE_NAME = 'zion-tech-v1';
-const urlsToCache = [
+const CACHE_NAME = 'zion-tech-group-v1.0.0';
+const STATIC_CACHE = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
+
+// Assets to cache immediately
+const STATIC_ASSETS = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
+  '/index.html',
+  '/src/main.tsx',
+  '/src/App.tsx',
+  '/src/page.tsx',
+  '/src/globals.css',
   '/manifest.json',
-  '/favicon.ico'
+  '/favicon.svg',
+  '/apple-touch-icon.png',
+  '/icon-192x192.png',
+  '/icon-512x512.png'
 ];
 
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
+  console.log('Service Worker: Installing...');
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(STATIC_CACHE)
       .then((cache) => {
-        return cache.addAll(urlsToCache);
+        console.log('Service Worker: Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
+      })
+      .then(() => {
+        console.log('Service Worker: Static assets cached');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Service Worker: Failed to cache static assets', error);
       })
   );
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
-      })
-  );
-});
-
+// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Activating...');
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Service Worker: Deleting old cache', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service Worker: Activated');
+        return self.clients.claim();
+      })
   );
 });
+
+// Fetch event - serve from cache, fallback to network
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
+  event.respondWith(
+    caches.match(request)
+      .then((cachedResponse) => {
+        // Return cached version if available
+        if (cachedResponse) {
+          console.log('Service Worker: Serving from cache', request.url);
+          return cachedResponse;
+        }
+
+        // Otherwise, fetch from network
+        return fetch(request)
+          .then((response) => {
+            // Don't cache non-successful responses
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clone the response for caching
+            const responseToCache = response.clone();
+
+            // Cache dynamic content
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => {
+                cache.put(request, responseToCache);
+              });
+
+            return response;
+          })
+          .catch((error) => {
+            console.error('Service Worker: Fetch failed', error);
+            
+            // Return offline page for navigation requests
+            if (request.mode === 'navigate') {
+              return caches.match('/index.html');
+            }
+            
+            throw error;
+          });
+      })
+  );
+});
+
+// Background sync for offline form submissions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    console.log('Service Worker: Background sync triggered');
+    event.waitUntil(
+      // Handle offline form submissions here
+      handleBackgroundSync()
+    );
+  }
+});
+
+// Push notifications
+self.addEventListener('push', (event) => {
+  console.log('Service Worker: Push notification received');
+  
+  const options = {
+    body: event.data ? event.data.text() : 'New update from Zion Tech Group',
+    icon: '/icon-192x192.png',
+    badge: '/icon-192x192.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'Explore Services',
+        icon: '/icon-192x192.png'
+      },
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/icon-192x192.png'
+      }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+});
+
+// Notification click handler
+self.addEventListener('notificationclick', (event) => {
+  console.log('Service Worker: Notification clicked');
+  event.notification.close();
+
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/services')
+    );
+  } else if (event.action === 'close') {
+    // Just close the notification
+    return;
+  } else {
+    // Default action - open the app
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+// Helper function for background sync
+async function handleBackgroundSync() {
+  try {
+    // Get pending form submissions from IndexedDB
+    const pendingSubmissions = await getPendingSubmissions();
+    
+    for (const submission of pendingSubmissions) {
+      try {
+        // Attempt to submit the form
+        const response = await fetch(submission.url, {
+          method: submission.method,
+          headers: submission.headers,
+          body: submission.body
+        });
+
+        if (response.ok) {
+          // Remove from pending submissions
+          await removePendingSubmission(submission.id);
+          console.log('Service Worker: Background sync successful for submission', submission.id);
+        }
+      } catch (error) {
+        console.error('Service Worker: Background sync failed for submission', submission.id, error);
+      }
+    }
+  } catch (error) {
+    console.error('Service Worker: Background sync error', error);
+  }
+}
+
+// Helper functions for IndexedDB operations
+async function getPendingSubmissions() {
+  // Implementation would depend on your IndexedDB setup
+  return [];
+}
+
+async function removePendingSubmission(id) {
+  // Implementation would depend on your IndexedDB setup
+  console.log('Service Worker: Removing pending submission', id);
+}
+
+// Performance monitoring
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'PERFORMANCE_METRICS') {
+    console.log('Service Worker: Performance metrics received', event.data.metrics);
+    
+    // Send metrics to analytics
+    if (event.data.metrics) {
+      // Implementation for sending metrics to analytics service
+      sendMetricsToAnalytics(event.data.metrics);
+    }
+  }
+});
+
+function sendMetricsToAnalytics(metrics) {
+  // Implementation for sending metrics to your analytics service
+  console.log('Service Worker: Sending metrics to analytics', metrics);
+}

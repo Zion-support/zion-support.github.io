@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo, useMemo } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-  const microSAASServices = [
+  const microSAASServices = useMemo(() => [
     {
       title: 'AI Project Manager',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
@@ -118,9 +118,9 @@ const HomePage: React.FC = () => {
       link: '/ai-code-generation',
       popular: false
     }
-  ];
+  ], []);
 
-  const aiServices = [
+  const aiServices = useMemo(() => [
     {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making',
@@ -153,9 +153,9 @@ const HomePage: React.FC = () => {
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400'
     }
-  ];
+  ], []);
 
-  const itServices = [
+  const itServices = useMemo(() => [
     {
       title: 'Cloud Services',
       description: 'Cloud migration, setup, and optimization services',
@@ -188,7 +188,7 @@ const HomePage: React.FC = () => {
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
       color: 'text-purple-400'
     }
-  ];
+  ], []);
 
   return (
     <>
@@ -259,7 +259,8 @@ const HomePage: React.FC = () => {
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-md z-50 transition-all duration-300"
+          aria-label="Skip to main content"
         >
           Skip to main content
         </a>
@@ -347,29 +348,35 @@ const HomePage: React.FC = () => {
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" role="list" aria-label="Micro SAAS Solutions">
               {microSAASServices.map((service, index) => (
-                <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <article 
+                  key={index} 
+                  className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}
+                  role="listitem"
+                  aria-labelledby={`service-title-${index}`}
+                  aria-describedby={`service-desc-${index}`}
+                >
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
+                      <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold" role="img" aria-label="Popular service">
                         Popular
                       </div>
                     </div>
                   )}
-                  <div className="text-4xl mb-4 text-center">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  <div className="text-4xl mb-4 text-center" role="img" aria-label={`${service.title} icon`}>{service.icon}</div>
+                  <h3 id={`service-title-${index}`} className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
+                  <p id={`service-desc-${index}`} className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
                     {service.description}
                   </p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" role="list" aria-label={`${service.title} features`}>
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                        <li key={featureIndex} className="flex items-center text-xs text-gray-300" role="listitem">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" aria-hidden="true" />
+                          <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -377,21 +384,22 @@ const HomePage: React.FC = () => {
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" role="list" aria-label={`${service.title} benefits`}>
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
-                          <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
-                          {benefit}
+                        <li key={benefitIndex} className="flex items-center text-xs text-gray-300" role="listitem">
+                          <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" aria-hidden="true" />
+                          <span>{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text" aria-label={`Price: ${service.price}`}>{service.price}</div>
                     <a 
                       href={service.link} 
-                      className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+                      className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                      aria-label={`Learn more about ${service.title}`}
                     >
                       Learn More
                     </a>
