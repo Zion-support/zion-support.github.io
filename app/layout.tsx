@@ -5,6 +5,7 @@ import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
 
 export default function RootLayout({
   children,
@@ -185,6 +186,23 @@ export default function RootLayout({
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                      console.log('SW registration failed: ', registrationError);
+                    });
+                });
+              }
+            `
+          }}
+        />
       </head>
       <body className='antialiased'>
         <GlobalErrorBoundary>
@@ -192,6 +210,7 @@ export default function RootLayout({
             <AccessibilityEnhancer>
               <PerformanceMonitor />
               <PerformanceOptimizer />
+              <SEOOptimizer />
               <PWAInstaller />
               {children}
             </AccessibilityEnhancer>
