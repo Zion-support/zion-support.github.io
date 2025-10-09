@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, Package } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,6 +72,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check, category: 'Productivity' },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity' },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity' },
+    { name: 'AI Meeting Assistant', href: '/ai-meeting-assistant', icon: MessageSquare, category: 'Productivity' },
     
     // Content & Marketing
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText, category: 'Content' },
@@ -88,6 +89,8 @@ const Navigation: React.FC = () => {
     { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance' },
     { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator, category: 'Finance' },
     { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, category: 'Business' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Package, category: 'Business' },
+    { name: 'AI Customer Insights', href: '/ai-customer-insights', icon: Users, category: 'Business' },
     
     // Customer Service
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, category: 'Support' },
@@ -116,7 +119,13 @@ const Navigation: React.FC = () => {
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, category: 'Health' },
     
     // Sales & Business
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, category: 'Sales' }
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, category: 'Sales' },
+    
+    // Sustainability & Energy
+    { name: 'AI Energy Optimizer', href: '/ai-energy-optimizer', icon: Zap, category: 'Sustainability' },
+    
+    // Blockchain & Web3
+    { name: 'AI Smart Contracts', href: '/ai-smart-contracts', icon: FileCode, category: 'Blockchain' }
   ];
 
   const aiServices = [
@@ -219,7 +228,7 @@ const Navigation: React.FC = () => {
                         Micro SAAS
                       </h3>
                       <div className="space-y-3">
-                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance'].map(category => (
+                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Sustainability'].map(category => (
                           <div key={category}>
                             <h4 className="text-xs font-medium text-purple-400 mb-2 uppercase tracking-wide">{category}</h4>
                             <div className="space-y-1">

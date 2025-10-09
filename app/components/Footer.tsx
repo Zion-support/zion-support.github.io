@@ -66,6 +66,9 @@ const Footer: React.FC = () => {
     ],
     'Sales': [
       { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
+    ],
+    'Sustainability': [
+      { name: 'AI Energy Optimizer', url: '/ai-energy-optimizer', description: 'Energy consumption optimization' }
     ]
   };
 
