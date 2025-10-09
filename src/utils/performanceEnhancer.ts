@@ -4,29 +4,28 @@
  */
 
 interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-  tbt: number;
+  lcp: number;,
+      fid: number;,
+      cls: number;,
+      fcp: number;,
+      ttfb: number;,
+      tbt: number;
 }
 
 interface OptimizationConfig {
-  enableImageOptimization: boolean;
-  enableLazyLoading: boolean;
-  enableCodeSplitting: boolean;
-  enablePrefetching: boolean;
-  enableServiceWorker: boolean;
-  enableResourceHints: boolean;
-  enableCompression: boolean;
-  enableCaching: boolean;
+  enableImageOptimization: boolean;,
+      enableLazyLoading: boolean;,
+      enableCodeSplitting: boolean;,
+      enablePrefetching: boolean;,
+      enableServiceWorker: boolean;,
+      enableResourceHints: boolean;,
+      enableCompression: boolean;,
+      enableCaching: boolean;
 }
 
 class PerformanceEnhancer {
   private config: OptimizationConfig;
   private metrics: PerformanceMetrics | null = null;
-
   constructor(config: OptimizationConfig) {
     this.config = config;
     this.init();
@@ -47,7 +46,6 @@ class PerformanceEnhancer {
             console.log('Performance entry:', entry.name, entry.duration);
           });
         });
-        
         observer.observe({ entryTypes: ['measure', 'navigation'] });
       } catch (error) {
         console.warn('PerformanceObserver not supported:', error);

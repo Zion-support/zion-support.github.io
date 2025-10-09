@@ -22,11 +22,11 @@ const _UltimateBusinessIntelligence2025Banner = () => {
   // TODO: Add content
 };
   efficiency: '300%',
-        accuracy: '99.7%',
-        timeline: '6 months',
-        adoption: '95%'
+      accuracy: '99.7%',
+      timeline: '6 months',
+      adoption: '95%'
       },
-      tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
+      tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025'];
       id: 'fortune-500-case-study',
       title: 'Fortune 500 Ultimate Business Intelligence Success',
       description: 'Real-world case study: How a Fortune 500 company achieved 30,000% ROI through AI-powered business intelligence transformation.',
@@ -36,7 +36,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {
       title: 'Enterprise Automation Suite 2025',
       description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
       url: '/services/automation',;
-      type: 'Service',
+      type: 'Service'
                   {tag}
             {/* CTA Buttons */}
             
@@ -52,9 +52,9 @@ const _UltimateBusinessIntelligence2025Banner = () => {
                 href={currentContent.url}
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
         {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mt-16 grid grid-cols-2 md: grid-cols-4 gap-8">
           {[
-  // TODO: Add items,
+  // TODO: Add items
 ]
             { value: '500+', label: 'Enterprise Clients' },
             { value: '30,000%', label: 'Average ROI' },

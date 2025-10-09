@@ -1,13 +1,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Target, Shield,  Eye,  Camera,  Target,  Shield,  Settings from 'lucide-react';
+import { Target, Shield, Eye, Camera, Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
-const features = [
+  const features = [
     {
-  // TODO: Add content
-};
-  icon: Eye,
+      icon: Eye,
       title: 'Object Detection',
       description: 'Advanced object detection and recognition with high accuracy',
       benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training'];
@@ -15,11 +13,11 @@ const features = [
       icon: Camera,
       title: 'Image Classification',
       description: 'Automated image categorization and content analysis',
-      benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories']
+      benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories'];
       icon: Target,
       title: 'Facial Recognition',
       description: 'Secure and accurate facial recognition technology',
-      benefits: ['Identity verification', 'Access control', 'Privacy protection']
+      benefits: ['Identity verification', 'Access control', 'Privacy protection'];
     }
   ];
   const applications = [
@@ -30,13 +28,13 @@ const features = [
       title: 'Manufacturing',
       description: 'Quality control and automated inspection systems',
       icon: Settings,
-      useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
+      useCases: ['Defect detection', 'Quality assurance', 'Process monitoring'];
   const pricing = [
       name: 'Starter',
       price: '$499/month',
       description: 'Perfect for small projects',
       features: [
-  // TODO: Add items,
+  // TODO: Add items
 ];
 //         'Up to 1,000 images/month',
 //         'Basic models',
@@ -44,20 +42,18 @@ const features = [
 //         'Standard API'
 //       ],
       popular: false,
-
       name: 'Professional',
       price: '$1,999/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing businesses'
         'Up to 10,000 images/month',
         'Advanced models',
         'Priority support',
         'Custom training',
         'API access'
       popular: true,
-
       name: 'Enterprise',
       price: 'Custom',
-      description: 'For large organizations',
+      description: 'For large organizations'
         'Unlimited images',
         'Custom models',
         'Dedicated support',
@@ -80,7 +76,7 @@ const features = [
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Computer Vision
           
           
@@ -105,7 +101,7 @@ const features = [
           
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
+Transform your business with cutting-edge computer vision technology. From object detection to facial recognition
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

@@ -13,11 +13,11 @@ const ContactPage: React.FC = () => {
   // TODO: Add content
 };
   name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent
@@ -57,7 +57,7 @@ const ContactPage: React.FC = () => {
   const services = [
   // TODO: Add items
 ];;
-//     'AI Services',
+//     'AI Services'
 //     'IT Services',
 //     'Micro SAAS Solutions',
 //     'Cloud Migration',

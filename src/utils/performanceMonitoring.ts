@@ -37,9 +37,9 @@ export interface PerformanceMetric {
   // TODO: Add content
 };
   name: string;,
-    value: number;,
-    rating: 'good' | 'needs-improvement' | 'poor';,
-    timestamp: number;
+      value: number;,
+      rating: 'good' | 'needs-improvement' | 'poor';,
+      timestamp: number;
 }
 export interface WebVitals {
   // TODO: Add content
@@ -55,9 +55,9 @@ export interface CustomMetric {
   // TODO: Add content
 };
   name: string;,
-    value: number;,
-    unit: 'ms' | 'bytes' | 'count' | 'percentage';,
-    timestamp: number;
+      value: number;,
+      unit: 'ms' | 'bytes' | 'count' | 'percentage';,
+      timestamp: number;
 }
 class PerformanceMonitoringService {
   // TODO: Add content
@@ -279,7 +279,7 @@ const navObserver = new PerformanceObserver((list) => {
   // TODO: Add content
 };
   method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(metric)
         });
       }
@@ -334,9 +334,9 @@ const navObserver = new PerformanceObserver((list) => {
   // TODO: Add content
 };
   score: number;,
-    webVitals: WebVitals;,
-    customMetrics: CustomMetric[];,
-    recommendations: string[];
+      webVitals: WebVitals;,
+      customMetrics: CustomMetric[];,
+      recommendations: string[];
   } {
   // TODO: Add content
 }
@@ -373,7 +373,7 @@ const navObserver = new PerformanceObserver((list) => {
 }
 //       score,
       webVitals: this.webVitals,
-      customMetrics: this.customMetrics,
+      customMetrics: this.customMetrics
 //       recommendations
     };
   }

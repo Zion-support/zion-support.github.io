@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone,  Receipt,  TrendingUp,  Zap,  Shield from 'lucide-react';
+import { Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone, Shield from 'lucide-react';
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
@@ -16,12 +16,10 @@ const ExpenseTrackerPage: React.FC = () => {
       title: 'Real-time Analytics',
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by 25%',
-
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
       benefit: 'Process expenses 5x faster',
-
       icon: Shield,
       title: 'Compliance & Security',
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
@@ -39,7 +37,7 @@ const ExpenseTrackerPage: React.FC = () => {
       name: 'David Chen',
       company: 'Consulting Firm',
       role: 'Operations Director',
-      content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.',
+      content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.'
   return (
     
           
@@ -101,7 +99,7 @@ Transform your expense management with AI-powered receipt scanning, automated ca
           
           
           
-          <Phone className="w-5 h-5 mr-2" />,
+          <Phone className="w-5 h-5 mr-2" />
  Call: (302) 464-0950
             </a>
             <Link

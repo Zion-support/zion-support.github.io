@@ -46,7 +46,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   // TODO: Add content
 };
   values: T;,
-    errors: Record
+      errors: Record
           
           
           
@@ -58,16 +58,16 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
           <keyof T, string[]>;
   touched: Record<keyof T, boolean>;
   isSubmitting: boolean;,
-    isValid: boolean;,
-    handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;,
-    handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;,
-    handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;,
-    setFieldValue: (field: keyof T, value: T[keyof T]) => void;,
-    setFieldError: (field: keyof T, errors: string[]) => void;,
-    setFieldTouched: (field: keyof T, touched: boolean) => void;,
-    resetForm: () => void;,
-    validateField: (field: keyof T) => void;,
-    validateAllFields: () => boolean;
+      isValid: boolean;,
+      handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;,
+      handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;,
+      handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;,
+      setFieldValue: (field: keyof T, value: T[keyof T]) => void;,
+      setFieldError: (field: keyof T, errors: string[]) => void;,
+      setFieldTouched: (field: keyof T, touched: boolean) => void;,
+      resetForm: () => void;,
+      validateField: (field: keyof T) => void;,
+      validateAllFields: () => boolean;
 export function useForm<T extends Record<string, unknown>>({
   // TODO: Add content
 }
@@ -271,6 +271,6 @@ values,
     setFieldError,
     setFieldTouched,
     resetForm,
-    validateField: validateSingleField,
+    validateField: validateSingleField
     validateAllFields
   };

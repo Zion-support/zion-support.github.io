@@ -15,11 +15,11 @@ const AISEOOptimizerPage: React.FC = () => {
       icon: Target,
       title: 'Content Optimization',
       description: 'AI-powered content optimization for search engines',
-      benefits: ['Content scoring', 'Keyword density', 'Readability']
+      benefits: ['Content scoring', 'Keyword density', 'Readability'];
       icon: Settings,
       title: 'Ranking Tracking',
       description: 'Track and monitor search engine rankings',
-      benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports']
+      benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports'];
     }
   ];
   return (

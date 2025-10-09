@@ -7,24 +7,24 @@ export interface A11yReport {
   // TODO: Add content
 };
   errors: A11yError[];,
-    warnings: A11yWarning[];,
-    score: number;
+      warnings: A11yWarning[];,
+      score: number;
 }
 export interface A11yError {
   // TODO: Add content
 };
   type: string;,
-    element: string;,
-    message: string;,
-    wcag: string;
+      element: string;,
+      message: string;,
+      wcag: string;
 }
 export interface A11yWarning {
   // TODO: Add content
 };
   type: string;,
-    element: string;,
-    message: string;,
-    suggestion: string;
+      element: string;,
+      message: string;,
+      suggestion: string;
 }
 class AccessibilityService {
   // TODO: Add content
@@ -32,12 +32,12 @@ class AccessibilityService {
   // Check color contrast ratio
 //   public checkColorContrast();
   foreground: string,
-    background: string,
+      background: string
 ): {
   // TODO: Add content
 };
   ratio: number;,
-    passes: { normal: boolean; large: boolean };
+      passes: { normal: boolean; large: boolean };
   } {
     const rgb2 = this.hexToRgb(background);
     const l1 = this.getLuminance(rgb1);
@@ -106,9 +106,9 @@ class AccessibilityService {
   // TODO: Add content
 };
   type: 'missing-alt',
-          element: img['src'] || 'unknown',
-          message: 'Image missing alt attribute',
-          wcag: '1.1.1 (Level A)'
+      element: img['src'] || 'unknown',
+      message: 'Image missing alt attribute',
+      wcag: '1.1.1 (Level A)'
         });
       } else if (img.alt === '') {
   // TODO: Add content
@@ -117,9 +117,9 @@ class AccessibilityService {
   // TODO: Add content
 };
   type: 'empty-alt',
-          element: img['src'] || 'unknown',
-          message: 'Image has empty alt text',
-          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
+      element: img['src'] || 'unknown',
+      message: 'Image has empty alt text',
+      suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
         });
       }
     });
@@ -138,9 +138,9 @@ class AccessibilityService {
   // TODO: Add content
 };
   type: 'missing-label',
-          element: input.tagName.toLowerCase(),
-          message: 'Form element missing label',
-          wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
+      element: input.tagName.toLowerCase(),
+      message: 'Form element missing label',
+      wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
         });
       }
     });
@@ -157,8 +157,8 @@ class AccessibilityService {
   // TODO: Add content
 };
   type: 'heading-hierarchy',
-          element: heading.tagName.toLowerCase(),
-          message: `Heading level skipped from h${prevLevel} to h${level}`,
+      element: heading.tagName.toLowerCase(),
+      message: `Heading level skipped from h${prevLevel} to h${level}`,
           suggestion: 'Maintain proper heading hierarchy'
         });
       }
@@ -173,9 +173,9 @@ const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]');
   // TODO: Add content
 };
   type: 'missing-skip-link',
-        element: 'body',
-        message: 'No skip navigation link found',
-        suggestion: 'Add a skip link to main content for keyboard users'
+      element: 'body',
+      message: 'No skip navigation link found',
+      suggestion: 'Add a skip link to main content for keyboard users'
       });
     }
     // Check for language attribute;
@@ -187,9 +187,9 @@ const html = document.documentElement;
   // TODO: Add content
 };
   type: 'missing-lang',
-        element: 'html',
-        message: 'Missing lang attribute on html element',
-        wcag: '3.1.1 (Level A)'
+      element: 'html',
+      message: 'Missing lang attribute on html element',
+      wcag: '3.1.1 (Level A)'
       });
     }
     // Check for sufficient link text
@@ -205,9 +205,9 @@ const html = document.documentElement;
   // TODO: Add content
 };
   type: 'empty-link',
-          element: link.href || 'unknown',
-          message: 'Link has no accessible text',
-          wcag: '2.4.4 (Level A)'
+      element: link.href || 'unknown',
+      message: 'Link has no accessible text',
+      wcag: '2.4.4 (Level A)'
         });
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {
   // TODO: Add content
@@ -216,9 +216,9 @@ const html = document.documentElement;
   // TODO: Add content
 };
   type: 'generic-link-text',
-          element: text,
-          message: 'Link text is not descriptive',
-          suggestion: 'Use more descriptive link text that makes sense out of context'
+      element: text,
+      message: 'Link text is not descriptive',
+      suggestion: 'Use more descriptive link text that makes sense out of context'
         });
       }
     });
@@ -243,8 +243,8 @@ const html = document.documentElement;
   // TODO: Add content
 };
   type: 'small-touch-target',
-          element: element.tagName.toLowerCase(),
-          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
+      element: element.tagName.toLowerCase(),
+      message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
           suggestion: 'Increase touch target size to at least 44x44px'
         });
       }

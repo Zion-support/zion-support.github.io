@@ -23,9 +23,9 @@ export interface CacheEntry
   // TODO: Add content
 };
   value: T;,
-    expiry: number;,
-    hits: number;,
-    lastAccessed: number;
+      expiry: number;,
+      hits: number;,
+      lastAccessed: number;
 }
 class AdvancedCache
           
@@ -115,7 +115,7 @@ class AdvancedCache
   // TODO: Add content
 };
   cache: Object.fromEntries(this.cache.entries()),
-        accessOrder: this.accessOrder
+      accessOrder: this.accessOrder
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
@@ -275,9 +275,9 @@ class AdvancedCache
   // TODO: Add content
 };
   size: number;,
-    maxSize: number;,
-    hitRate: number;,
-    entries: Array
+      maxSize: number;,
+      hitRate: number;,
+      entries: Array
           
           
           
@@ -290,8 +290,8 @@ class AdvancedCache
   // TODO: Add content
 };
   key: string;,
-    hits: number;,
-    age: number;
+      hits: number;,
+      age: number;
     }>;
   } {
   // TODO: Add content
@@ -316,7 +316,7 @@ class AdvancedCache
 }
 //         key,
         hits: entry.hits,
-        age: now - entry.lastAccessed
+      age: now - entry.lastAccessed
       });
     });
     return {
@@ -340,8 +340,8 @@ class AdvancedCache
           
           <R extends T>()
     key: string,
-    fetcher: () => Promise
-          <R>,
+      fetcher: () => Promise
+          <R>
     ttl?: number,
 ): Promise<R> {
   // TODO: Add content

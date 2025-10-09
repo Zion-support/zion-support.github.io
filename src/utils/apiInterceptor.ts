@@ -26,11 +26,11 @@ export interface APIConfig {
   // TODO: Add content
 };
   baseURL: string;,
-    timeout: number;,
-    retryAttempts: number;,
-    retryDelay: number;,
-    enableCaching: boolean;,
-    cacheTimeout: number;
+      timeout: number;,
+      retryAttempts: number;,
+      retryDelay: number;,
+      enableCaching: boolean;,
+      cacheTimeout: number;
   headers?: Record
           
           
@@ -62,7 +62,7 @@ export interface RequestConfig {
   // TODO: Add content
 };
   url: string;,
-    method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+      method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   headers?: Record
           
           
@@ -83,18 +83,17 @@ export interface APIResponse<T = unknown> {
   // TODO: Add content
 };
   data: T;,
-    status: number;,
-    statusText: string;,
-    headers: Headers;,
-    config: RequestConfig;
+      status: number;,
+      statusText: string;,
+      headers: Headers;,
+      config: RequestConfig;
 }
 export interface CacheEntry {
   // TODO: Add content
 };
   data: unknown,
-
-  timestamp: number;,
-    expiresAt: number;
+      timestamp: number;,
+      expiresAt: number;
 }
 export class APIInterceptor {
   // TODO: Add content
@@ -245,9 +244,9 @@ const requestPromise = this.executeRequest
     const startTime = performance.now();
     try {
         method: finalConfig.method,
-        headers: this.buildHeaders(finalConfig),
-        body: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined,
-        signal: this.createAbortSignal(finalConfig.timeout || this.config.timeout)
+      headers: this.buildHeaders(finalConfig),
+      body: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined,
+      signal: this.createAbortSignal(finalConfig.timeout || this.config.timeout)
       };
       const response = await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
@@ -282,9 +281,9 @@ const data = await this.parseResponse
 }
 //         data,
         status: finalResponse.status,
-        statusText: finalResponse.statusText,
-        headers: finalResponse.headers,
-        config: finalConfig
+      statusText: finalResponse.statusText,
+      headers: finalResponse.headers,
+      config: finalConfig
       };
     } catch (error) {
   // TODO: Add content
@@ -344,7 +343,7 @@ const data = await this.parseResponse
           
           <T = unknown>()
     url: string,
-    config: Partial
+      config: Partial
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {
   // TODO: Add content
@@ -364,7 +363,7 @@ const data = await this.parseResponse
    * POST request
    */
   async post<T = unknown>()
-    url: string,
+    url: string
     body?: unknown,
     config: Partial
           <RequestConfig> = {}
@@ -386,7 +385,7 @@ const data = await this.parseResponse
    * PUT request
    */
   async put<T = unknown>()
-    url: string,
+    url: string
     body?: unknown,
     config: Partial
           <RequestConfig> = {}
@@ -409,7 +408,7 @@ const data = await this.parseResponse
    */
   async delete<T = unknown>()
     url: string,
-    config: Partial
+      config: Partial
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {
   // TODO: Add content
@@ -429,7 +428,7 @@ const data = await this.parseResponse
    * PATCH request
    */
   async patch<T = unknown>()
-    url: string,
+    url: string
     body?: unknown,
     config: Partial
           <RequestConfig> = {}
@@ -629,7 +628,7 @@ const data = await this.parseResponse
     return {
   // TODO: Add content
 };
-  total: entries.length,
+  total: entries.length
 //       valid,
 //       expired,
       size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0)

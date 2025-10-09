@@ -3,7 +3,7 @@ interface LazyImageProps {
   // TODO: Add content
 };
   src: string;,
-    alt: string;
+      alt: string;
   className?: string;
   placeholder?: string;
   width?: number;
@@ -58,7 +58,7 @@ const LazyImage: React.FC
   // TODO: Add content
 };
   threshold: 0.1,
-        rootMargin: '50px',
+      rootMargin: '50px'
       }
     );
     if (imgRef.current) {

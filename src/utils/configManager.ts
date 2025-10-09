@@ -8,103 +8,103 @@ export interface AppConfig {
   // TODO: Add content
 };
   environment: Environment;,
-    api: {
+      api: {
   // TODO: Add content
 };
   baseURL: string;,
-    timeout: number;,
-    retryAttempts: number;,
-    enableCaching: boolean;
+      timeout: number;,
+      retryAttempts: number;,
+      enableCaching: boolean;
   };
   features: {
   // TODO: Add content
 };
   enableAnalytics: boolean;,
-    enableErrorReporting: boolean;,
-    enablePerformanceMonitoring: boolean;,
-    enableAccessibility: boolean;,
-    enableSEO: boolean;,
-    enablePWA: boolean;
+      enableErrorReporting: boolean;,
+      enablePerformanceMonitoring: boolean;,
+      enableAccessibility: boolean;,
+      enableSEO: boolean;,
+      enablePWA: boolean;
   };
   performance: {
   // TODO: Add content
 };
   enableCodeSplitting: boolean;,
-    enableLazyLoading: boolean;,
-    enableImageOptimization: boolean;,
-    enableCaching: boolean;
+      enableLazyLoading: boolean;,
+      enableImageOptimization: boolean;,
+      enableCaching: boolean;
   };
   security: {
   // TODO: Add content
 };
   enableCSP: boolean;,
-    enableCORS: boolean;,
-    enableRateLimiting: boolean;,
-    maxRequestsPerMinute: number;
+      enableCORS: boolean;,
+      enableRateLimiting: boolean;,
+      maxRequestsPerMinute: number;
   };
   ui: {
   // TODO: Add content
 };
   theme: 'light' | 'dark' | 'auto';,
-    language: string;,
-    timezone: string;
+      language: string;,
+      timezone: string;
   };
   logging: {
   // TODO: Add content
 };
   level: 'debug' | 'info' | 'warn' | 'error';,
-    enableConsole: boolean;,
-    enableNetwork: boolean;
+      enableConsole: boolean;,
+      enableNetwork: boolean;
   };
 }
   environment: 'development',
-  api: {
+      api: {
   // TODO: Add content
 };
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
-    timeout: 30000,
-    retryAttempts: 3,
-    enableCaching: true
+      timeout: 30000,
+      retryAttempts: 3,
+      enableCaching: true
   },
   features: {
   // TODO: Add content
 };
   enableAnalytics: false,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: true,
-    enablePWA: true
+      enableErrorReporting: true,
+      enablePerformanceMonitoring: true,
+      enableAccessibility: true,
+      enableSEO: true,
+      enablePWA: true
   },
   performance: {
   // TODO: Add content
 };
   enableCodeSplitting: true,
-    enableLazyLoading: true,
-    enableImageOptimization: true,
-    enableCaching: true
+      enableLazyLoading: true,
+      enableImageOptimization: true,
+      enableCaching: true
   },
   security: {
   // TODO: Add content
 };
   enableCSP: true,
-    enableCORS: true,
-    enableRateLimiting: true,
-    maxRequestsPerMinute: 100
+      enableCORS: true,
+      enableRateLimiting: true,
+      maxRequestsPerMinute: 100
   },
   ui: {
   // TODO: Add content
 };
   theme: 'auto',
-    language: 'en',
-    timezone: 'UTC'
+      language: 'en',
+      timezone: 'UTC'
   },
   logging: {
   // TODO: Add content
 };
   level: 'info',
-    enableConsole: true,
-    enableNetwork: false
+      enableConsole: true,
+      enableNetwork: false
   }
 };
 const developmentConfig: Partial
@@ -120,30 +120,30 @@ const developmentConfig: Partial
   // TODO: Add content
 };
   environment: 'development',
-  api: {
+      api: {
   // TODO: Add content
 };
   baseURL: 'http://localhost:3000/api',
-    timeout: 30000,
-    retryAttempts: 1,
-    enableCaching: false
+      timeout: 30000,
+      retryAttempts: 1,
+      enableCaching: false
   },
   features: {
   // TODO: Add content
 };
   enableAnalytics: false,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: false,
-    enablePWA: false
+      enableErrorReporting: true,
+      enablePerformanceMonitoring: true,
+      enableAccessibility: true,
+      enableSEO: false,
+      enablePWA: false
   },
   logging: {
   // TODO: Add content
 };
   level: 'debug',
-    enableConsole: true,
-    enableNetwork: false
+      enableConsole: true,
+      enableNetwork: false
   }
 };
 const stagingConfig: Partial
@@ -159,30 +159,30 @@ const stagingConfig: Partial
   // TODO: Add content
 };
   environment: 'staging',
-  api: {
+      api: {
   // TODO: Add content
 };
   baseURL: 'https://staging-api.ziontech.com',
-    timeout: 30000,
-    retryAttempts: 3,
-    enableCaching: true
+      timeout: 30000,
+      retryAttempts: 3,
+      enableCaching: true
   },
   features: {
   // TODO: Add content
 };
   enableAnalytics: true,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: true,
-    enablePWA: true
+      enableErrorReporting: true,
+      enablePerformanceMonitoring: true,
+      enableAccessibility: true,
+      enableSEO: true,
+      enablePWA: true
   },
   logging: {
   // TODO: Add content
 };
   level: 'info',
-    enableConsole: true,
-    enableNetwork: true
+      enableConsole: true,
+      enableNetwork: true
   }
 };
 const productionConfig: Partial
@@ -198,38 +198,38 @@ const productionConfig: Partial
   // TODO: Add content
 };
   environment: 'production',
-  api: {
+      api: {
   // TODO: Add content
 };
   baseURL: 'https://api.ziontech.com',
-    timeout: 30000,
-    retryAttempts: 3,
-    enableCaching: true
+      timeout: 30000,
+      retryAttempts: 3,
+      enableCaching: true
   },
   features: {
   // TODO: Add content
 };
   enableAnalytics: true,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: true,
-    enablePWA: true
+      enableErrorReporting: true,
+      enablePerformanceMonitoring: true,
+      enableAccessibility: true,
+      enableSEO: true,
+      enablePWA: true
   },
   logging: {
   // TODO: Add content
 };
   level: 'error',
-    enableConsole: false,
-    enableNetwork: true
+      enableConsole: false,
+      enableNetwork: true
   },
   security: {
   // TODO: Add content
 };
   enableCSP: true,
-    enableCORS: true,
-    enableRateLimiting: true,
-    maxRequestsPerMinute: 60
+      enableCORS: true,
+      enableRateLimiting: true,
+      maxRequestsPerMinute: 60
   }
 };
 const testConfig: Partial
@@ -245,30 +245,30 @@ const testConfig: Partial
   // TODO: Add content
 };
   environment: 'test',
-  api: {
+      api: {
   // TODO: Add content
 };
   baseURL: 'http://localhost:3000/api',
-    timeout: 5000,
-    retryAttempts: 0,
-    enableCaching: false
+      timeout: 5000,
+      retryAttempts: 0,
+      enableCaching: false
   },
   features: {
   // TODO: Add content
 };
   enableAnalytics: false,
-    enableErrorReporting: false,
-    enablePerformanceMonitoring: false,
-    enableAccessibility: true,
-    enableSEO: false,
-    enablePWA: false
+      enableErrorReporting: false,
+      enablePerformanceMonitoring: false,
+      enableAccessibility: true,
+      enableSEO: false,
+      enablePWA: false
   },
   logging: {
   // TODO: Add content
 };
   level: 'error',
-    enableConsole: false,
-    enableNetwork: false
+      enableConsole: false,
+      enableNetwork: false
   }
 };
 export class ConfigManager {
@@ -410,7 +410,7 @@ export class ConfigManager {
           
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     key: K,
-    nestedKey: NK,
+      nestedKey: NK
 ): AppConfig[K][NK];
 // get
           
@@ -422,7 +422,7 @@ export class ConfigManager {
           
           
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-    key: K,
+    key: K
     nestedKey?: NK,
 ): AppConfig[K] | AppConfig[K][NK] {
   // TODO: Add content
@@ -458,8 +458,8 @@ export class ConfigManager {
           
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     key: K,
-    nestedKey: NK,
-    value: AppConfig[K][NK]
+      nestedKey: NK,
+      value: AppConfig[K][NK]
   ): void;
 // set
           
@@ -472,7 +472,7 @@ export class ConfigManager {
           
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     key: K,
-    nestedKeyOrValue: NK | AppConfig[K],
+      nestedKeyOrValue: NK | AppConfig[K]
     value?: AppConfig[K][NK]
   ): void {
   // TODO: Add content
@@ -533,49 +533,49 @@ const defaultValue = this.getDefaultForKey(key);
   // TODO: Add content
 };
   baseURL: '',
-        timeout: 30000,
-        retryAttempts: 3,
-        enableCaching: true
+      timeout: 30000,
+      retryAttempts: 3,
+      enableCaching: true
       },
       features: {
   // TODO: Add content
 };
   enableAnalytics: false,
-        enableErrorReporting: true,
-        enablePerformanceMonitoring: false,
-        enableAccessibility: true,
-        enableSEO: true,
-        enablePWA: false
+      enableErrorReporting: true,
+      enablePerformanceMonitoring: false,
+      enableAccessibility: true,
+      enableSEO: true,
+      enablePWA: false
       },
       performance: {
   // TODO: Add content
 };
   enableCodeSplitting: true,
-        enableLazyLoading: true,
-        enableImageOptimization: true,
-        enableCaching: true
+      enableLazyLoading: true,
+      enableImageOptimization: true,
+      enableCaching: true
       },
       security: {
   // TODO: Add content
 };
   enableCSP: true,
-        enableCORS: false,
-        enableRateLimiting: true,
-        maxRequestsPerMinute: 100
+      enableCORS: false,
+      enableRateLimiting: true,
+      maxRequestsPerMinute: 100
       },
       ui: {
   // TODO: Add content
 };
   theme: 'light',
-        language: 'en',
-        timezone: 'UTC'
+      language: 'en',
+      timezone: 'UTC'
       },
       logging: {
   // TODO: Add content
 };
   level: 'info',
-        enableConsole: true,
-        enableNetwork: false
+      enableConsole: true,
+      enableNetwork: false
       }
     };
     return defaultValues[key];
@@ -771,7 +771,7 @@ const defaultValue = this.getDefaultForKey(key);
     return {
   // TODO: Add content
 };
-  valid: errors.length === 0,
+  valid: errors.length === 0
 //       errors
     };
   }

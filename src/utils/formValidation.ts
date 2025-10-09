@@ -7,13 +7,13 @@ export interface ValidationRule<T = unknown> {
   // TODO: Add content
 };
   validate: (value: T) => boolean;,
-    message: string;
+      message: string;
 }
 export interface ValidationResult {
   // TODO: Add content
 };
   valid: boolean;,
-    errors: string[];
+      errors: string[];
 }
 export interface FieldValidation {
   // TODO: Add content
@@ -41,7 +41,7 @@ export const _validationRules = {
           <string> => ({
   // TODO: Add content
 };
-  validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
+  validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0
 //     message
   }),
   /**
@@ -83,7 +83,7 @@ export const _validationRules = {
   // TODO: Add content
 };
   validate: (value: string) => value.length >= min,
-    message: message || `Must be at least ${min} characters`
+      message: message || `Must be at least ${min} characters`
   }),
   /**
    * Validate maximum length
@@ -109,7 +109,7 @@ export const _validationRules = {
           
           
           
-          <= max,
+          <= max
     message: message || `Must be no more than ${max} characters`
   }),
   /**
@@ -181,7 +181,7 @@ export const _validationRules = {
           
           
           
-          <= max,
+          <= max
     message: message || `Must be between ${min} and ${max}`
   }),
   /**
@@ -190,7 +190,7 @@ export const _validationRules = {
   pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({
   // TODO: Add content
 };
-  validate: (value: string) => regex.test(value),
+  validate: (value: string) => regex.test(value)
 //     message
   }),
   /**
@@ -208,7 +208,7 @@ export const _validationRules = {
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
   // TODO: Add content
 };
-  validate: validator,
+  validate: validator
 //     message
   }),
   /**
@@ -265,7 +265,7 @@ export const _validationRules = {
   // TODO: Add content
 };
   validate: (value: string) => value === otherFieldValue,
-    message: `Must match ${fieldName}`
+      message: `Must match ${fieldName}`
   }),
   /**
    * Validate file size
@@ -306,7 +306,7 @@ export const _validationRules = {
   // TODO: Add content
 };
   validate: (file: File) => allowedTypes.includes(file.type),
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}`
+      message: message || `File type must be one of: ${allowedTypes.join(', ')}`
   })
 };
 /**
@@ -337,7 +337,7 @@ export function validateField
   return {
   // TODO: Add content
 };
-  valid: errors.length === 0,
+  valid: errors.length === 0
 //     errors
   };
 }
@@ -355,7 +355,7 @@ export function validateForm
           
           <T extends Record<string, unknown>>()
   formData: T,
-  validationSchema: Record
+      validationSchema: Record
           <keyof T, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {
   // TODO: Add content
@@ -472,8 +472,8 @@ export function debounce
           
           
           <T extends (...args: Parameters<T>) => ReturnType<T>>(),
-    func: T,
-  wait: number,
+      func: T,
+      wait: number
 ): (...args: Parameters
           <T>) => void {
   // TODO: Add content

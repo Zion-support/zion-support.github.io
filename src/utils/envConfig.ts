@@ -7,11 +7,11 @@ export interface EnvConfig {
   // TODO: Add content
 };
   nodeEnv: 'development' | 'production' | 'test';,
-    apiUrl: string;
-  apiKey?: string;,
+      apiUrl: string;
+  apiKey?: string;
     enableAnalytics: boolean;,
-    enableLogging: boolean;,
-    logLevel: 'debug' | 'info' | 'warn' | 'error';
+      enableLogging: boolean;,
+      logLevel: 'debug' | 'info' | 'warn' | 'error';
   sentryDsn?: string;
   gaTrackingId?: string;
 }
@@ -32,14 +32,12 @@ class EnvironmentConfig {
   // TODO: Add content
 }
 //       nodeEnv,
-      apiUrl:
-        process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
+      apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
-      enableAnalytics:
-        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
+      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
       enableLogging: nodeEnv !== 'test',
       logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
+        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel']
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID
     };
@@ -109,7 +107,7 @@ class EnvironmentConfig {
   // TODO: Add content
 };
   valid: boolean;,
-    missing: string[];
+      missing: string[];
   } {
   // TODO: Add content
 }
@@ -126,7 +124,7 @@ class EnvironmentConfig {
     return {
   // TODO: Add content
 };
-  valid: missing.length === 0,
+  valid: missing.length === 0
 //       missing
     };
   }
@@ -179,7 +177,7 @@ class EnvironmentConfig {
       console.table({
   // TODO: Add content
 };
-  Environment: this.config.nodeEnv,
+  Environment: this.config.nodeEnv
         'API URL': this.config.apiUrl,
         'Analytics Enabled': this.config.enableAnalytics,
         'Logging Enabled': this.config.enableLogging,

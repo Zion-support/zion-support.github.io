@@ -16,7 +16,7 @@ export function generateId(prefix = 'a11y'): string {
  */
 export function announceToScreenReader()
   message: string,
-  priority: 'polite' | 'assertive' = 'polite'
+      priority: 'polite' | 'assertive' = 'polite'
 ): void {
   // TODO: Add content
 }
@@ -131,8 +131,8 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
  */
 export function makeKeyboardAccessible()
   element: HTMLElement,
-  onClick: (e: Event) => void,
-  options: {
+      onClick: (e: Event) => void,
+      options: {
   // TODO: Add content
 }
     role?: string;
@@ -204,9 +204,9 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
  */
 export function meetsContrastRequirements()
   color1: string,
-  color2: string,
-  level: 'AA' | 'AAA' = 'AA',
-  fontSize: 'normal' | 'large' = 'normal'
+      color2: string,
+      level: 'AA' | 'AAA' = 'AA',
+      fontSize: 'normal' | 'large' = 'normal'
 ): boolean {
   // TODO: Add content
 }
@@ -289,8 +289,8 @@ export function getAriaInvalid(hasError: boolean): {
  */
 export function createAccessibleTooltip()
   trigger: HTMLElement,
-  content: string,
-  placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
+      content: string,
+      placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
 ): () => void {
   // TODO: Add content
 }

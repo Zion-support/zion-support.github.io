@@ -7,7 +7,7 @@ export interface AnalyticsEvent {
   // TODO: Add content
 };
   category: string;,
-    action: string;
+      action: string;
   label?: string;
   value?: number;
   metadata?: Record
@@ -91,7 +91,7 @@ class EnhancedAnalytics {
   // TODO: Add content
 }
 //       ...this.userProperties,
-      sessionId: this.sessionId,
+      sessionId: this.sessionId
 //       ...config
     };
     // Track initialization
@@ -104,7 +104,7 @@ class EnhancedAnalytics {
   // TODO: Add content
 };
   timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent
+      userAgent: navigator.userAgent
       }
     });
   }
@@ -130,8 +130,8 @@ class EnhancedAnalytics {
 }
 //         ...event.metadata,
         sessionId: this.sessionId,
-        timestamp: new Date().toISOString(),
-        url: typeof window !== 'undefined' ? window.location.href : ''
+      timestamp: new Date().toISOString(),
+      url: typeof window !== 'undefined' ? window.location.href : ''
       }
     };
     // Add to queue
@@ -188,8 +188,8 @@ class EnhancedAnalytics {
   // TODO: Add content
 };
   event_category: event.category,
-        event_label: event.label,
-        value: event.value,
+      event_label: event.label,
+      value: event.value
 //         ...event.metadata
       });
     }
@@ -207,7 +207,7 @@ class EnhancedAnalytics {
   // TODO: Add content
 };
   pageTitle: pageTitle || document.title,
-        referrer: document.referrer
+      referrer: document.referrer
       }
     });
   }
@@ -217,7 +217,7 @@ class EnhancedAnalytics {
     this.trackEvent({
   // TODO: Add content
 };
-  category: 'User Interaction',
+  category: 'User Interaction'
 //       action,
 //       label,
 //       value
@@ -244,7 +244,7 @@ class EnhancedAnalytics {
       metadata: {
   // TODO: Add content
 };
-  stack: error.stack,
+  stack: error.stack
 //         ...context
       }
     });
@@ -272,7 +272,7 @@ class EnhancedAnalytics {
   // TODO: Add content
 };
   category: 'Conversion',
-      action: conversionType,
+      action: conversionType
 //       value,
       metadata: {
   // TODO: Add content
@@ -283,7 +283,7 @@ class EnhancedAnalytics {
   }
 //   public trackCustomEvent()
     category: string,
-    action: string,
+      action: string
     label?: string,
     value?: number,
     metadata?: Record
@@ -358,9 +358,9 @@ class EnhancedAnalytics {
   // TODO: Add content
 };
   queueSize: number;,
-    offlineQueueSize: number;,
-    sessionId: string;,
-    userProperties: UserProperties;
+      offlineQueueSize: number;,
+      sessionId: string;,
+      userProperties: UserProperties;
   } {
   // TODO: Add content
 }

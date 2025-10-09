@@ -11,8 +11,8 @@ export const _debounce =
           
           
           <T extends (...args: any[]) => any>(),
-    func: T,
-  wait: number,
+      func: T,
+      wait: number
 ): ((...args: Parameters
           <T>) => void) => {
   // TODO: Add content
@@ -45,8 +45,8 @@ export const throttle =
           
           
           <T extends (...args: any[]) => any>(),
-    func: T,
-  limit: number,
+      func: T,
+      limit: number
 ): ((...args: Parameters
           <T>) => void) => {
   // TODO: Add content
@@ -76,7 +76,7 @@ export const throttle =
 // Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = ()
   callback: (entries: IntersectionObserverEntry[]) => void,
-  _options: IntersectionObserverInit = {}
+      _options: IntersectionObserverInit = {}
 ) => {
   // TODO: Add content
 }
@@ -87,7 +87,7 @@ export const useIntersectionObserver = ()
   // TODO: Add content
 };
   threshold: 0.1,
-            rootMargin: '50px',
+      rootMargin: '50px'
 //             ...options
           })
         : null,
@@ -267,8 +267,8 @@ export const useMemoryMonitoring = () => {
   // TODO: Add content
 };
   usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit
+      totalJSHeapSize: memory.totalJSHeapSize,
+      jsHeapSizeLimit: memory.jsHeapSizeLimit
         });
       }
     };

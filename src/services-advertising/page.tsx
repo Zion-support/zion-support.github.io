@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {ArrowLeft, ArrowRight, Target, CheckCircle, Star} from 'lucide-react';
+import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
 export default function ServicesAdvertisingPage() {
   // TODO: Add content
 }
@@ -38,7 +38,7 @@ export default function ServicesAdvertisingPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
               <Target className="w-4 h-4 mr-2" />
@@ -68,7 +68,7 @@ AI-Powered Advertising Solutions
           
           </p>
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-// Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
+// Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy
 //               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             

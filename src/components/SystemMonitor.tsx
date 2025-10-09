@@ -17,7 +17,7 @@ const __collectPerformanceMetrics = () => {
   // TODO: Add content
 };
   loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+      firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
   };
 // Helper functions
 const calculatePerformanceScore = () => {
@@ -54,17 +54,17 @@ interface SystemMetrics {
   performance: {
   // TODO: Add content
 };
-  score: number;
-    loadTime: number;,
-    firstContentfulPaint: number;,
-    largestContentfulPaint: number;,
-    firstInputDelay: number;,
-    cumulativeLayoutShift: number;,
-    errors: {
+  score: number;,
+      loadTime: number;,
+      firstContentfulPaint: number;,
+      largestContentfulPaint: number;,
+      firstInputDelay: number;,
+      cumulativeLayoutShift: number;,
+      errors: {
   // TODO: Add content
 };
   total: number;,
-    byType: Record
+      byType: Record
           
           
           
@@ -80,24 +80,24 @@ interface SystemMetrics {
   // TODO: Add content
 };
   id: string;,
-    message: string;,
-    type: string;,
-    severity: string;,
-    timestamp: string;
+      message: string;,
+      type: string;,
+      severity: string;,
+      timestamp: string;
     }>;
   memory: {
   // TODO: Add content
 };
   used: number;,
-    limit: number;,
-    percentage: number;,
-    network: {
+      limit: number;,
+      percentage: number;,
+      network: {
   // TODO: Add content
 };
   effectiveType: string;,
-    downlink: number;,
-    rtt: number;,
-    saveData: boolean;
+      downlink: number;,
+      rtt: number;,
+      saveData: boolean;
 interface SystemMonitorProps {
   // TODO: Add content
 }
@@ -153,28 +153,28 @@ const updateMetrics = useCallback(() => {
       const newMetrics: SystemMetrics = {
       const _networkInfo = getNetworkInfo();
       const _newMetrics: SystemMetrics = {,
-    score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
-          largestContentfulPaint: 0, // Not available in current metrics,
+      score: performanceScore,
+      loadTime: performanceMetrics?.loadTime || 0,
+      firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
+      largestContentfulPaint: 0, // Not available in current metrics,
   firstInputDelay: 0, // Not available in current metrics,
   cumulativeLayoutShift: 0, // Not available in current metrics
         },
           total: errorStats.totalErrors,
-          byType: errorStats.errorsByType,
-          byCategory: errorStats.errorsByCategory,
-          bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
+      byType: errorStats.errorsByType,
+      byCategory: errorStats.errorsByCategory,
+      bySeverity: errorStats.errorsBySeverity,
+      recent: errorStats.recentErrors.map(error => ({
   // TODO: Add content
 };
   id: error.id,
-            message: error.message,
-            type: error.type,
-            severity: error.severity,
-            timestamp: error.context.timestamp
+      message: error.message,
+      type: error.type,
+      severity: error.severity,
+      timestamp: error.context.timestamp
           }));
   memory: memoryInfo,
-        network: networkInfo
+      network: networkInfo
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {

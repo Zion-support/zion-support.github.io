@@ -29,13 +29,11 @@ export interface LogEntry {
 }
   /** Unique identifier for the log entry */;
   id: string;
-  /** Log level */,
+  /** Log level */
     level: LogLevel;
-  /** Log message */,
-
+  /** Log message */
   message: string;
-  /** Timestamp when the log was created */,
-
+  /** Timestamp when the log was created */
   timestamp: Date;
   /** Optional data associated with the log */
   data?: Record
@@ -67,33 +65,31 @@ export interface LoggerConfig {
 }
   /** Minimum log level to output */;
   minLevel: LogLevel;
-  /** Enable console logging */,
+  /** Enable console logging */
     enableConsole: boolean;
-  /** Enable remote logging */,
+  /** Enable remote logging */
     enableRemote: boolean;
   /** Remote logging endpoint */
   remoteEndpoint?: string;
-  /** Enable structured logging */,
+  /** Enable structured logging */
     enableStructured: boolean;
-  /** Maximum number of logs to store in memory */,
+  /** Maximum number of logs to store in memory */
     maxLogs: number;
-  /** Enable performance tracking */,
-
+  /** Enable performance tracking */
   enablePerformance: boolean;
-  /** Environment name */,
-
+  /** Environment name */
   environment: string;
 }
 /**
  * Default logger configuration
  */
   minLevel: LogLevel.INFO,
-  enableConsole: true,
-  enableRemote: false,
-  enableStructured: true,
-  maxLogs: 1000,
-  enablePerformance: true,
-  environment: process.env['NODE_ENV'] || 'development'
+      enableConsole: true,
+      enableRemote: false,
+      enableStructured: true,
+      maxLogs: 1000,
+      enablePerformance: true,
+      environment: process.env['NODE_ENV'] || 'development'
 };
 /**
  * Enhanced Logger class
@@ -264,7 +260,7 @@ export class EnhancedLogger {
    * ```
    */
 //   public error()
-    message: string,
+    message: string
     data?: Record
           
           
@@ -288,8 +284,8 @@ export class EnhancedLogger {
   // TODO: Add content
 };
   name: error.name,
-        message: error.message,
-        stack: error.stack
+      message: error.message,
+      stack: error.stack
       };
     }
     this.log(LogLevel.ERROR, message, logData, source, error?.stack);
@@ -303,7 +299,7 @@ export class EnhancedLogger {
    * @param source - Optional source identifier
    */
 //   public fatal()
-    message: string,
+    message: string
     data?: Record
           
           
@@ -327,8 +323,8 @@ export class EnhancedLogger {
   // TODO: Add content
 };
   name: error.name,
-        message: error.message,
-        stack: error.stack
+      message: error.message,
+      stack: error.stack
       };
     }
     this.log(LogLevel.FATAL, message, logData, source, error?.stack);
@@ -403,7 +399,7 @@ export class EnhancedLogger {
    */
 //   private log()
     level: LogLevel,
-    message: string,
+      message: string
     data?: Record
           
           
@@ -433,10 +429,10 @@ export class EnhancedLogger {
     const logEntry: LogEntry = {
   // TODO: Add content
 };
-  id: this.generateLogId(),
+  id: this.generateLogId()
 //       level,
 //       message,
-      timestamp: new Date(),
+      timestamp: new Date()
 //       data,
 //       source,
 //       stack,
@@ -496,10 +492,10 @@ export class EnhancedLogger {
   // TODO: Add content
 };
   timestamp: entry.timestamp,
-        level: levelName,
-        message: entry.message,
-        source: entry.source,
-        data: entry.data
+      level: levelName,
+      message: entry.message,
+      source: entry.source,
+      data: entry.data
       };
       switch (entry.level) {
   // TODO: Add content
@@ -586,7 +582,7 @@ export class EnhancedLogger {
   // TODO: Add content
 };
   method: 'POST',
-        headers: {
+      headers: {
   // TODO: Add content
 }
           'Content-Type': 'application/json'
@@ -700,7 +696,7 @@ export class EnhancedLogger {
   // TODO: Add content
 };
   total: number;,
-    byLevel: Record
+      byLevel: Record
           
           
           
@@ -739,7 +735,7 @@ export class EnhancedLogger {
     return {
   // TODO: Add content
 };
-  total: this.logs.length,
+  total: this.logs.length
 //       byLevel,
 //       bySource
     };

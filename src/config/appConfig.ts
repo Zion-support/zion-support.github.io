@@ -9,47 +9,47 @@ export interface AppConfig {
   // TODO: Add content
 };
   name: string;,
-    version: string;,
-    environment: 'development' | 'production' | 'test';
+      version: string;,
+      environment: 'development' | 'production' | 'test';
   };
   api: {
   // TODO: Add content
 };
   baseUrl: string;,
-    timeout: number;,
-    retryAttempts: number;,
-    features: {
+      timeout: number;,
+      retryAttempts: number;,
+      features: {
   // TODO: Add content
 };
   analytics: boolean;,
-    monitoring: boolean;,
-    errorTracking: boolean;,
-    performanceOptimization: boolean;,
-    performance: {
+      monitoring: boolean;,
+      errorTracking: boolean;,
+      performanceOptimization: boolean;,
+      performance: {
   // TODO: Add content
 };
   enableLazyLoading: boolean;,
-    imageLazyLoadThreshold: number;,
-    componentLazyLoadThreshold: number;,
-    cacheMaxAge: number;,
-    security: {
+      imageLazyLoadThreshold: number;,
+      componentLazyLoadThreshold: number;,
+      cacheMaxAge: number;,
+      security: {
   // TODO: Add content
 };
   enableCSP: boolean;,
-    enableHSTS: boolean;,
-    enableXSSProtection: boolean;
+      enableHSTS: boolean;,
+      enableXSSProtection: boolean;
 }
     name: 'Zion Tech Group',
-    version: '1.0.0',
-    environment:
+      version: '1.0.0',
+      environment:
 //       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
   },
     enableLazyLoading: true,
-    imageLazyLoadThreshold: 0.5,
-    componentLazyLoadThreshold: 0.25,
-    cacheMaxAge: 3600000, // 1 hour in milliseconds
-// enableCSP: true,
-// enableHSTS: true,
+      imageLazyLoadThreshold: 0.5,
+      componentLazyLoadThreshold: 0.25,
+      cacheMaxAge: 3600000, // 1 hour in milliseconds
+// enableCSP: true
+// enableHSTS: true
 // enableXSSProtection: true
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'

@@ -3,11 +3,11 @@ interface PerformanceMetrics {
   // TODO: Add content
 };
   loadTime: number;,
-    domContentLoaded: number;,
-    firstContentfulPaint: number;,
-    largestContentfulPaint: number;,
-    cumulativeLayoutShift: number;,
-    firstInputDelay: number;
+      domContentLoaded: number;,
+      firstContentfulPaint: number;,
+      largestContentfulPaint: number;,
+      cumulativeLayoutShift: number;,
+      firstInputDelay: number;
 }
 export const _usePerformance = () => {
   // TODO: Add content
@@ -81,8 +81,7 @@ export const _usePerformance = () => {
         observer.observe({ entryTypes: ['first-input'] });
       }
         loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded:
-//           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      domContentLoaded: //           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
 //         firstContentfulPaint,
 //         largestContentfulPaint,
 //         cumulativeLayoutShift,

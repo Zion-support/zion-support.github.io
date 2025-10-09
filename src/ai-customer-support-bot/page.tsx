@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone,  Bot,  MessageSquare,  BarChart,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
-import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart, Star from 'lucide-react';
+import { Bot } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AICustomerSupportBotPage: React.FC = () => {
@@ -17,17 +17,17 @@ const features = [
       icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
-      benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
+      benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support'];
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to track performance and improve customer experience',
-      benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
+      benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement'];
     }
   ];
   const pricingPlans = [
       name: 'Professional',
       price: '$299',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing companies'
         'Up to 10,000 conversations/month',
         'Advanced AI responses',
         'Priority support',
@@ -35,10 +35,9 @@ const features = [
         'Custom integrations',
         'Multi-language support'
       popular: true,
-
       name: 'Enterprise',
       price: '$599',
-      description: 'For large organizations',
+      description: 'For large organizations'
 'Unlimited conversations',
         'Premium AI features',
         '24/7 support',

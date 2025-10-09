@@ -174,7 +174,7 @@ export const useBreakpoint = () => {
 //     isTablet,
 //     isDesktop,
 //     isLargeDesktop,
-    current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',
+    current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm'
   };
 };
 export default ResponsiveContainer;

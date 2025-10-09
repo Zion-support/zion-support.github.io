@@ -12,7 +12,7 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefits: [
-  // TODO: Add items,
+  // TODO: Add items
 ];
 //         '95% accuracy in predictions',
 //         'Real-time data processing',
@@ -22,21 +22,21 @@ const AIAnalyticsPage: React.FC = () => {
     },
 icon: BarChart,
       title: 'Real-time Dashboards',
-      description: 'Interactive dashboards that provide instant insights into your business performance',
+      description: 'Interactive dashboards that provide instant insights into your business performance'
         'Live data visualization',
         'Customizable metrics',
         'Mobile-responsive design',
         'Role-based access control'
       icon: Target,
       title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with AI-powered insights',
+      description: 'Generate comprehensive reports automatically with AI-powered insights'
         'Scheduled report generation',
         'Natural language summaries',
         'Executive briefings',
         'Custom report templates'
       icon: Zap,
       title: 'Anomaly Detection',
-      description: 'Identify unusual patterns and potential issues before they impact your business',
+      description: 'Identify unusual patterns and potential issues before they impact your business'
         'Real-time anomaly alerts',
         'Pattern recognition',
         'Risk assessment',
@@ -48,14 +48,12 @@ icon: BarChart,
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
       color: 'text-green-400',
-
       title: 'Financial Forecasting',
       description: 'Predict revenue, expenses, and cash flow with high accuracy',
       color: 'text-purple-400',
-
       name: 'Professional',
       price: '$3,500',
-      description: 'Ideal for growing businesses with complex analytics needs',
+      description: 'Ideal for growing businesses with complex analytics needs'
         'Up to 50 data sources',
         'Advanced dashboards',
         'Real-time reporting',
@@ -65,11 +63,10 @@ icon: BarChart,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       popular: true,
-
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'Tailored solutions for large organizations with extensive requirements',
+      description: 'Tailored solutions for large organizations with extensive requirements'
 'Unlimited data sources',
         'Custom dashboards',
         'Real-time analytics',
@@ -79,15 +76,12 @@ icon: BarChart,
         'SLA guarantees'
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10'
-  const benefits = [,
-
+  const benefits = [
       icon: Star,
       title: '95% Accuracy',
       description: 'Industry-leading accuracy in predictions and insights',
-
       title: 'Real-time Processing',
       description: 'Instant analysis of data as it comes in',
-
       title: 'Actionable Insights',
       description: 'Clear, actionable recommendations for business improvement'
       icon: Award,

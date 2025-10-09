@@ -8,7 +8,7 @@ export const _performanceConfig = {
   // Core Web Vitals thresholds,
   metrics: {
 // lcp: {
-// good: 2500,
+// good: 2500
 // needsImprovement: 4000
     },
     fid: {
@@ -55,13 +55,13 @@ export const _performanceConfig = {
   },
   // Resource hints,
   preload: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
 //   ],
   prefetch: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
 //     '/api/health',
 //     '/api/config',
 //   ],
@@ -70,36 +70,36 @@ export const _performanceConfig = {
 // deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 // formats: ['image/avif', 'image/webp'],
-// minimumCacheTTL: 60,
+// minimumCacheTTL: 60
 // dangerouslyAllowSVG: false
   },
   // Bundle optimization,
   bundle: {
-// minChunkSize: 20000,
-// maxChunkSize: 244000,
+// minChunkSize: 20000
+// maxChunkSize: 244000
 // splitChunks: {
 // cacheGroups: {
 // vendor: {
-// test: /[\\/]node_modules[\\/]/,
-// priority: -10,
+// test: /[\\/]node_modules[\\/]/
+// priority: -10
 // reuseExistingChunk: true
         },
         default: {
   // TODO: Add content
 };
   minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true
+      priority: -20,
+      reuseExistingChunk: true
         }
       }
     }
   },
   // Performance monitoring,
   monitoring: {
-// enabled: true,
+// enabled: true
 // sampleRate: 1.0, // 100% in production
 // reportInterval: 30000, // 30 seconds
-// sendToAnalytics: true,
+// sendToAnalytics: true
 // logThreshold: 'needsImprovement'
   }
 };

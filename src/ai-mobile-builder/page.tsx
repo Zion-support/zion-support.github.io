@@ -15,11 +15,11 @@ const AIMobileBuilderPage: React.FC = () => {
       icon: Target,
       title: 'Cross-Platform Support',
       description: 'Build for iOS and Android with a single codebase',
-      benefits: ['iOS development', 'Android development', 'Unified codebase']
+      benefits: ['iOS development', 'Android development', 'Unified codebase'];
       icon: Settings,
       title: 'App Analytics',
       description: 'Comprehensive app performance and user analytics',
-      benefits: ['User behavior', 'Performance metrics', 'Crash reporting']
+      benefits: ['User behavior', 'Performance metrics', 'Crash reporting'];
     }
   ];
   return (

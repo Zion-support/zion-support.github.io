@@ -15,8 +15,8 @@ export interface ErrorLogEntry {
   // TODO: Add content
 };
   timestamp: string;,
-    severity: ErrorSeverity;,
-    message: string;
+      severity: ErrorSeverity;,
+      message: string;
   error?: Error;
   context?: Record
           
@@ -40,9 +40,9 @@ class ErrorLogger {
   /**
    * Log an error with context
    */
-//   log(),
+//   log()
     message: string,
-    _severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+      _severity: ErrorSeverity = ErrorSeverity.MEDIUM
     error?: Error,
     context?: Record
           
@@ -60,7 +60,7 @@ class ErrorLogger {
     const entry: ErrorLogEntry = {
   // TODO: Add content
 };
-  timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString()
 //       severity,
 //       message,
 //       error,
@@ -107,9 +107,9 @@ class ErrorLogger {
           <ErrorSeverity, string> = {
   // TODO: Add content
 }
-      [ErrorSeverity.LOW]: 'color: #4ade80',
-      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
-      [ErrorSeverity.HIGH]: 'color: #fb923c',
+      [ErrorSeverity.LOW]: 'color: #4ade80'
+      [ErrorSeverity.MEDIUM]: 'color: #fbbf24'
+      [ErrorSeverity.HIGH]: 'color: #fb923c'
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'
     };
     console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
@@ -154,7 +154,7 @@ class ErrorLogger {
   // TODO: Add content
 };
   method: 'POST',
-        headers: {
+      headers: {
   // TODO: Add content
 }
           'Content-Type': 'application/json'
@@ -168,8 +168,8 @@ class ErrorLogger {
   // TODO: Add content
 };
   message: entry.error.message,
-                name: entry.error.name,
-                stack: entry.error.stack
+      name: entry.error.name,
+      stack: entry.error.stack
               }
             : undefined
         })

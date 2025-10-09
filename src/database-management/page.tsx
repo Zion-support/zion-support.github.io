@@ -15,11 +15,11 @@ const DatabaseManagementPage: React.FC = () => {
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security for your data assets',
-      benefits: ['Encryption', 'Access control', 'Audit logging']
+      benefits: ['Encryption', 'Access control', 'Audit logging'];
       icon: Settings,
       title: 'Automated Maintenance',
       description: 'Automated database maintenance and updates',
-      benefits: ['Automated backups', 'Patch management', 'Health checks']
+      benefits: ['Automated backups', 'Patch management', 'Health checks'];
     }
   ];
   return (

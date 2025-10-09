@@ -15,11 +15,11 @@ const AINLPPage: React.FC = () => {
       icon: Brain,
       title: 'Language Understanding',
       description: 'Deep understanding of human language and context',
-      benefits: ['Intent recognition', 'Context analysis', 'Semantic understanding']
+      benefits: ['Intent recognition', 'Context analysis', 'Semantic understanding'];
       icon: Globe,
       title: 'Multi-language Support',
       description: 'Support for 100+ languages and dialects',
-      benefits: ['Translation', 'Cross-language analysis', 'Cultural adaptation']
+      benefits: ['Translation', 'Cross-language analysis', 'Cultural adaptation'];
     }
   ];
   return (

@@ -15,11 +15,11 @@ const ITInfrastructureDesignPage: React.FC = () => {
       icon: Target,
       title: 'Capacity Planning',
       description: 'Strategic capacity planning and resource allocation',
-      benefits: ['Growth planning', 'Resource optimization', 'Cost analysis']
+      benefits: ['Growth planning', 'Resource optimization', 'Cost analysis'];
       icon: Shield,
       title: 'Security Design',
       description: 'Security-first infrastructure design principles',
-      benefits: ['Security architecture', 'Compliance design', 'Risk mitigation']
+      benefits: ['Security architecture', 'Compliance design', 'Risk mitigation'];
     }
   ];
   return (

@@ -26,15 +26,15 @@ const script = document.createElement('script');
   // TODO: Add content
 };
   page_title: document.title,
-        page_location: window.location.href,
+      page_location: window.location.href
       });
       // Track page views
       gtag('event', 'page_view', {
   // TODO: Add content
 };
   page_title: document.title,
-        page_location: window.location.href,
-        page_path: pathname,
+      page_location: window.location.href,
+      page_path: pathname
       });
     }
     // Track performance metrics
@@ -59,7 +59,7 @@ const script = document.createElement('script');
   // TODO: Add content
 };
   name: 'load',
-                value: Math.round(loadTime),
+      value: Math.round(loadTime)
               });
             }
           }
@@ -78,7 +78,7 @@ const trackInteraction = (eventName: string, category: string, label?: string) =
   // TODO: Add content
 };
   event_category: category,
-          event_label: label,
+      event_label: label
         });
       }
     };
@@ -136,7 +136,7 @@ declare global {
 }
   interface Window {;
   dataLayer: unknown[];,
-    gtag: (...args: any[]) => void;
+      gtag: (...args: any[]) => void;
   }
 }
 export default Analytics;

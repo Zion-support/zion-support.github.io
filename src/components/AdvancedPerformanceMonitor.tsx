@@ -3,11 +3,11 @@ interface PerformanceMetrics {
   // TODO: Add content
 };
   fcp: number | null;,
-    lcp: number | null;,
-    fid: number | null;,
-    cls: number | null;,
-    ttfb: number | null;,
-    memory: number | null;
+      lcp: number | null;,
+      fid: number | null;,
+      cls: number | null;,
+      ttfb: number | null;,
+      memory: number | null;
 }
 interface PerformanceMonitorProps {
   // TODO: Add content
@@ -45,11 +45,11 @@ const AdvancedPerformanceMonitor: React.FC
   // TODO: Add content
 };
   fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memory: null
+      lcp: null,
+      fid: null,
+      cls: null,
+      ttfb: null,
+      memory: null
   });
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
@@ -169,7 +169,7 @@ const memory =
   // TODO: Add content
 }
 //         ...prev,
-        fcp: _fcp,
+        fcp: _fcp
 //         ttfb,
 //         memory
       }));
@@ -201,15 +201,15 @@ const memory =
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter()
-      (resource: PerformanceResourceTiming) => resource.duration > 1000,
+      (resource: PerformanceResourceTiming) => resource.duration > 1000
 );
     if (slowResources.length > 0) {
   // TODO: Add content
 }
       // eslint-disable-next-line no-console
 // console.log('Slow resources:', slowResources.map(r => ({
-      //   name: r.name,
-      //   duration: r.duration,
+      //   name: r.name
+      //   duration: r.duration
       //   size: r.transferSize
       // })));
     }
@@ -282,7 +282,7 @@ const memory =
       clearInterval(interval);
     };
   }, [
-  // TODO: Add items,
+  // TODO: Add items
 ]
 //     enableRealTimeMonitoring,
 //     measureWebVitals,

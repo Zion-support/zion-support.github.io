@@ -16,9 +16,9 @@ interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-  errorId?: string;,
+  errorId?: string;
     retryCount: number;,
-    isRetrying: boolean;
+      isRetrying: boolean;
 }
 class ComprehensiveErrorBoundary extends Component
           
@@ -62,7 +62,7 @@ class ComprehensiveErrorBoundary extends Component
     return {
   // TODO: Add content
 };
-  hasError: true,
+  hasError: true
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0,
@@ -90,7 +90,7 @@ class ComprehensiveErrorBoundary extends Component
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-// Enhanced error reporting,
+// Enhanced error reporting
  message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -108,12 +108,12 @@ class ComprehensiveErrorBoundary extends Component
   // TODO: Add content
 };
   description: error.message,
-        fatal: false,
-        custom_map: {
+      fatal: false,
+      custom_map: {
   // TODO: Add content
 };
   error_id: this.state.errorId,
-          retry_count: this.state.retryCount
+      retry_count: this.state.retryCount
         }
       });
     }
@@ -145,10 +145,10 @@ class ComprehensiveErrorBoundary extends Component
   // TODO: Add content
 };
   hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1,
-        isRetrying: false
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: prevState.retryCount + 1,
+      isRetrying: false
       }));
     }
   };

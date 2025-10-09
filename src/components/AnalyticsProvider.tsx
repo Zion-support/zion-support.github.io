@@ -14,7 +14,7 @@ interface AnalyticsContextType {
           <string, unknown>) => void;
   trackPageView: (pageName: string, pagePath?: string) => void;
   setUserId: (userId: string) => void;,
-    setUserProperties: (properties: Record<string, unknown>) => void;
+      setUserProperties: (properties: Record<string, unknown>) => void;
 }
 interface AnalyticsProviderProps {
   // TODO: Add content
@@ -75,7 +75,7 @@ const script = document.createElement('script');
   // TODO: Add content
 };
   page_title: document.title,
-        page_location: window.location.href,
+      page_location: window.location.href
       });
       setIsInitialized(true);
       if (enableDebug) {
@@ -119,7 +119,7 @@ const script = document.createElement('script');
   // TODO: Add content
 };
   page_title: pageName,
-        page_location: pagePath || window.location.href,
+      page_location: pagePath || window.location.href
       });
     }
   };
@@ -133,7 +133,7 @@ const script = document.createElement('script');
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', trackingId, {
   // TODO: Add content
 };
-  user_id: userId,
+  user_id: userId
       });
     }
   };
@@ -173,11 +173,11 @@ const script = document.createElement('script');
   // TODO: Add content
 };
   description: error.message,
-        fatal: false,
-        custom_map: {
+      fatal: false,
+      custom_map: {
   // TODO: Add content
 };
-  context: context || 'unknown',
+  context: context || 'unknown'
         },
       });
     }

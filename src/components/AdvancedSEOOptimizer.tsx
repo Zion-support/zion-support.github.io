@@ -38,8 +38,8 @@ const AdvancedSEOOptimizer: React.FC
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  canonicalUrl = 'https: //ziontechgroup.com'
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg'
 //   structuredData,
   author = 'Zion Tech Group',
 //   publishedTime,
@@ -184,15 +184,15 @@ const AdvancedSEOOptimizer: React.FC
     const breadcrumbData = {
   // TODO: Add content
 }
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org'
       '@type': 'BreadcrumbList',
       itemListElement: breadcrumbs.map((crumb, index) => ({
   // TODO: Add content
 }
         '@type': 'ListItem',
         position: index + 1,
-        name: crumb.name,
-        item: crumb.url
+      name: crumb.name,
+      item: crumb.url
       }))
     };
     addStructuredData(breadcrumbData);
@@ -203,14 +203,14 @@ const AdvancedSEOOptimizer: React.FC
     const faqStructuredData = {
   // TODO: Add content
 }
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org'
       '@type': 'FAQPage',
       mainEntity: faqData.map(faq => ({
   // TODO: Add content
 }
         '@type': 'Question',
         name: faq.question,
-        acceptedAnswer: {
+      acceptedAnswer: {
   // TODO: Add content
 }
           '@type': 'Answer',

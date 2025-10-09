@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone,  CheckSquare,  Users,  Zap,  BarChart from 'lucide-react';
+import { CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone, BarChart from 'lucide-react';
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
   const features = [
@@ -16,12 +16,10 @@ const TaskManagerProPage: React.FC = () => {
       title: 'Team Collaboration',
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%',
-
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
       benefit: 'Reduce manual work by 70%',
-
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
@@ -39,7 +37,7 @@ const TaskManagerProPage: React.FC = () => {
       name: 'Lisa Park',
       company: 'Consulting Firm',
       role: 'Operations Director',
-      content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
+      content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.'
   return (
     
           
@@ -101,7 +99,7 @@ Supercharge your productivity with our AI-powered task management platform.
           
           
           
-          <Phone className="w-5 h-5 mr-2" />,
+          <Phone className="w-5 h-5 mr-2" />
  Call: (302) 464-0950
             </a>
             <Link
@@ -217,10 +215,10 @@ Most Popular
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
 {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Supercharge Your Productivity?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using Task Manager Pro to achieve more,
+            Join thousands of professionals using Task Manager Pro to achieve more
             work smarter, and reach their goals faster.
   );
 };

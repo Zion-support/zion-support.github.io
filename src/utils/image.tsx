@@ -5,7 +5,7 @@ interface ImageProps {
   // TODO: Add content
 };
   src: string;,
-    alt: string;
+      alt: string;
   width?: number;
   height?: number;
   className?: string;

@@ -2,13 +2,13 @@
 interface AccessibilitySettings {
   // TODO: Add content
 };
-  highContrast: boolean;
-    largeText: boolean;,
-    reducedMotion: boolean;,
-    screenReader: boolean;,
-    focusVisible: boolean;,
-    zoomLevel: number;,
-    colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+  highContrast: boolean;,
+      largeText: boolean;,
+      reducedMotion: boolean;,
+      screenReader: boolean;,
+      focusVisible: boolean;,
+      zoomLevel: number;,
+      colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 interface AccessibilityProps {
   // TODO: Add content
@@ -56,12 +56,12 @@ const EnhancedAccessibility: React.FC
   // TODO: Add content
 };
   highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: false,
-    focusVisible: true,
-    zoomLevel: 100,
-    colorBlind: 'none',
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      focusVisible: true,
+      zoomLevel: 100,
+      colorBlind: 'none'
   });
   const [isVisible, setIsVisible] = useState(false);
   // Load settings from localStorage
@@ -286,7 +286,7 @@ const toggleHighContrast = () => {
       screenReader: false,
       focusVisible: true,
       zoomLevel: 100,
-      colorBlind: 'none',
+      colorBlind: 'none'
     };
     saveSettings(defaultSettings);
     announceToScreenReader('Accessibility settings reset to default');

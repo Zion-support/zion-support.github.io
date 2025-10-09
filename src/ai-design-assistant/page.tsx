@@ -15,11 +15,11 @@ const AIDesignAssistantPage: React.FC = () => {
       icon: Target,
       title: 'Design Recommendations',
       description: 'Intelligent design suggestions and improvements',
-      benefits: ['Layout optimization', 'Color suggestions', 'Typography advice']
+      benefits: ['Layout optimization', 'Color suggestions', 'Typography advice'];
       icon: Settings,
       title: 'Design Analytics',
       description: 'Comprehensive design performance analytics',
-      benefits: ['Performance metrics', 'User feedback', 'A/B testing']
+      benefits: ['Performance metrics', 'User feedback', 'A/B testing'];
     }
   ];
   return (

@@ -15,11 +15,11 @@ const AIVoiceAssistantPage: React.FC = () => {
       icon: Target,
       title: 'Natural Language Processing',
       description: 'Intelligent conversation and understanding',
-      benefits: ['Context understanding', 'Intent recognition', 'Response generation']
+      benefits: ['Context understanding', 'Intent recognition', 'Response generation'];
       icon: Settings,
       title: 'Custom Integration',
       description: 'Custom voice assistant integration',
-      benefits: ['API integration', 'Custom commands', 'Third-party apps']
+      benefits: ['API integration', 'Custom commands', 'Third-party apps'];
     }
   ];
   return (

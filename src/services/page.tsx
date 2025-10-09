@@ -23,7 +23,6 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
       price: 'Starting at $2,000/month',
       popular: false,
-
       icon: BarChart,
       title: 'AI Data Analytics',
       description: 'Transform data into actionable insights with AI',
@@ -50,19 +49,16 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       title: 'E-commerce Tools',
       description: 'Complete e-commerce solutions and automation',
       features: ['Inventory Management', 'Order Processing', 'Customer Service', 'Analytics'],
-      price: 'Starting at $30/month',
+      price: 'Starting at $30/month'
   const benefits = [
       icon: TrendingUp,
       title: 'Proven ROI',
       description: 'Average 300% return on investment for our clients',
-
       icon: Users,
       title: 'Expert Team',
       description: '50+ certified professionals with 10+ years experience',
-
       title: '24/7 Support',
       description: 'Round-the-clock support with guaranteed response times',
-
       icon: Clock,
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'

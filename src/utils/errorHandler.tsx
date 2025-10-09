@@ -31,10 +31,10 @@ export interface AppError {
   // TODO: Add content
 };
   id: string;,
-    type: ErrorType;,
-    severity: ErrorSeverity;,
-    message: string;
-  stack?: string;,
+      type: ErrorType;,
+      severity: ErrorSeverity;,
+      message: string;
+  stack?: string;
     timestamp: Date;
   userId?: string;
   sessionId?: string;
@@ -58,15 +58,15 @@ export interface AppError {
 export interface ErrorHandlerConfig {
   // TODO: Add content
 };
-  enableLogging: boolean;
-    enableReporting: boolean;
-    enableRetry: boolean;
-    maxRetries: number;,
-    retryDelay: number;,
-    enableUserNotification: boolean;,
-    enableConsoleLogging: boolean;,
-    enableNetworkLogging: boolean;
-  reportEndpoint?: string;,
+  enableLogging: boolean;,
+      enableReporting: boolean;,
+      enableRetry: boolean;,
+      maxRetries: number;,
+      retryDelay: number;,
+      enableUserNotification: boolean;,
+      enableConsoleLogging: boolean;,
+      enableNetworkLogging: boolean;
+  reportEndpoint?: string;
     logLevel: 'debug' | 'info' | 'warn' | 'error';
 }
 // Default configuration;
@@ -74,14 +74,14 @@ export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
   // TODO: Add content
 };
   enableLogging: true,
-  enableReporting: true,
-  enableRetry: true,
-  maxRetries: 3,
-  retryDelay: 1000,
-  enableUserNotification: true,
-  enableConsoleLogging: true,
-  enableNetworkLogging: true,
-  logLevel: 'error'
+      enableReporting: true,
+      enableRetry: true,
+      maxRetries: 3,
+      retryDelay: 1000,
+      enableUserNotification: true,
+      enableConsoleLogging: true,
+      enableNetworkLogging: true,
+      logLevel: 'error'
 };
 // Error Handler class;
 export class ErrorHandler {
@@ -148,7 +148,7 @@ export class ErrorHandler {
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      componentStack: errorInfo?.componentStack ?? undefined,
+      componentStack: errorInfo?.componentStack ?? undefined
 //       context,
       resolved: false,
       retryCount: 0
@@ -357,7 +357,7 @@ export class ErrorHandler {
   // TODO: Add content
 };
   method: 'POST',
-        headers: {
+      headers: {
   // TODO: Add content
 }
           'Content-Type': 'application/json'
@@ -380,7 +380,7 @@ export class ErrorHandler {
   // TODO: Add content
 };
   method: 'POST',
-        headers: {
+      headers: {
   // TODO: Add content
 }
           'Content-Type': 'application/json'
@@ -405,11 +405,11 @@ export class ErrorHandler {
     notification.className = 'error-notification';
     notification.style.cssText = `
       position: fixed;,
-    top: 20px;,
-    right: 20px;,
-    background: ${this.getNotificationColor(error.severity)};
+      top: 20px;,
+      right: 20px;,
+      background: ${this.getNotificationColor(error.severity)};,
       color: white;,
-    padding: 15px;
+      padding: 15px;
       border-radius: 5px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
       z-index: 10000;
@@ -426,12 +426,12 @@ export class ErrorHandler {
           
           
           
-          <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
-          background: none;,
-    border: none;,
-    color: white;
+          <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style=",
+      background: none;,
+      border: none;,
+      color: white;
           font-size: 18px;,
-    cursor: pointer;
+      cursor: pointer;
           margin-left: 10px;
 ">×</button></div>
     `;
@@ -464,7 +464,7 @@ export class ErrorHandler {
       case ErrorSeverity.MEDIUM:
         return '#ffc107';
       case ErrorSeverity.LOW: return '#28a745';,
-    default:
+      default:
         return '#6c757d';
     }
   }
@@ -737,11 +737,11 @@ this.props.fallback || (
   // TODO: Add content
 };
   padding: '10px 20px',
-                backgroundColor: '#007bff',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer'
+      backgroundColor: '#007bff',
+      color: 'white',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer'
               }}
 >
               Try again
@@ -806,8 +806,8 @@ export const useErrorHandler = () => {
 //     handleNetworkError,
 //     handleValidationError,
     getErrors: () => errorHandler.getErrors(),
-    getErrorStatistics: () => errorHandler.getErrorStatistics(),
-    clearResolvedErrors: () => errorHandler.clearResolvedErrors()
+      getErrorStatistics: () => errorHandler.getErrorStatistics(),
+      clearResolvedErrors: () => errorHandler.clearResolvedErrors()
   };
 };
 export default ErrorHandler;

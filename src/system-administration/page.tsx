@@ -15,11 +15,11 @@ const SystemAdministrationPage: React.FC = () => {
       icon: Shield,
       title: 'Security Administration',
       description: 'System security hardening and compliance',
-      benefits: ['Security patches', 'Access control', 'Compliance monitoring']
+      benefits: ['Security patches', 'Access control', 'Compliance monitoring'];
       icon: Zap,
       title: 'Automation',
       description: 'Automated system administration tasks',
-      benefits: ['Automated backups', 'Patch management', 'Health checks']
+      benefits: ['Automated backups', 'Patch management', 'Health checks'];
     }
   ];
   return (

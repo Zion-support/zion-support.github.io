@@ -21,9 +21,9 @@ interface State {
   // TODO: Add content
 };
   hasError: boolean;,
-    error: Error | null;,
-    errorInfo: ErrorInfo | null;,
-    errorId: string;
+      error: Error | null;,
+      errorInfo: ErrorInfo | null;,
+      errorId: string;
 }
 class OptimizedErrorBoundary extends Component
           
@@ -69,7 +69,7 @@ class OptimizedErrorBoundary extends Component
     return {
   // TODO: Add content
 };
-  hasError: true,
+  hasError: true
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
@@ -150,9 +150,9 @@ class OptimizedErrorBoundary extends Component
   // TODO: Add content
 };
   gtag: (),
-    command: string,
-            action: string,
-            parameters: Record
+      command: string,
+      action: string,
+      parameters: Record
           
           
           
@@ -169,12 +169,12 @@ class OptimizedErrorBoundary extends Component
   // TODO: Add content
 };
   description: error.message,
-        fatal: false,
-        custom_map: {
+      fatal: false,
+      custom_map: {
   // TODO: Add content
 };
   error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack
+      component_stack: errorInfo.componentStack
         }
       });
     }
@@ -194,9 +194,9 @@ class OptimizedErrorBoundary extends Component
   // TODO: Add content
 };
   hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: ''
+      error: null,
+      errorInfo: null,
+      errorId: ''
       });
     }, 100);
   };
@@ -243,9 +243,9 @@ interface ErrorFallbackProps {
   // TODO: Add content
 };
   error: Error | null;,
-    errorInfo: ErrorInfo | null;,
-    errorId: string;,
-    onRetry: () => void;
+      errorInfo: ErrorInfo | null;,
+      errorId: string;,
+      onRetry: () => void;
 }
 const ErrorFallback = memo
           

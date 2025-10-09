@@ -2,14 +2,14 @@
 interface PerformanceMetrics {
   // TODO: Add content
 };
-  fcp: number | null;
-    lcp: number | null;
-    fid: number | null;,
-    cls: number | null;,
-    ttfb: number | null;,
-    fmp: number | null;,
-    tbt: number | null;,
-    si: number | null;
+  fcp: number | null;,
+      lcp: number | null;,
+      fid: number | null;,
+      cls: number | null;,
+      ttfb: number | null;,
+      fmp: number | null;,
+      tbt: number | null;,
+      si: number | null;
 }
 interface PerformanceMonitorProps {
   // TODO: Add content
@@ -49,13 +49,13 @@ const EnhancedPerformanceMonitor: React.FC
   // TODO: Add content
 };
   fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    fmp: null,
-    tbt: null,
-    si: null,
+      lcp: null,
+      fid: null,
+      cls: null,
+      ttfb: null,
+      fmp: null,
+      tbt: null,
+      si: null
   });
   const [isVisible, setIsVisible] = useState(false);
 // Web Vitals measurement
@@ -189,7 +189,7 @@ const analyzeResourceTiming = useCallback(() => {
   totalResources: resources.length,
       totalSize: 0,
       slowResources: 0,
-      cachedResources: 0,
+      cachedResources: 0
     };
     resources.forEach((resource: any) => {
   // TODO: Add content
@@ -211,7 +211,7 @@ const getMemoryUsage = useCallback(() => {
 };
   usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
-      jsHeapSizeLimit: memory.jsHeapSizeLimit,
+      jsHeapSizeLimit: memory.jsHeapSizeLimit
     };
   }, []);
   // Network information;
@@ -226,7 +226,7 @@ const getNetworkInfo = useCallback(() => {
   effectiveType: connection.effectiveType,
       downlink: connection.downlink,
       rtt: connection.rtt,
-      saveData: connection.saveData,
+      saveData: connection.saveData
     };
   }, []);
   // Performance score calculation;
@@ -278,14 +278,14 @@ const reportMetrics = useCallback(() => {
     const report = {
   // TODO: Add content
 };
-  timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString()
 //       metrics,
 //       performanceScore,
 //       resourceMetrics,
 //       memoryUsage,
 //       networkInfo,
       userAgent: navigator.userAgent,
-      url: window.location.href,
+      url: window.location.href
     };
     // Send to analytics (replace with your analytics service)
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -295,15 +295,15 @@ const reportMetrics = useCallback(() => {
   // TODO: Add content
 };
   event_category: 'performance',
-        event_label: 'web_vitals',
-        value: performanceScore,
-        custom_map: {
+      event_label: 'web_vitals',
+      value: performanceScore,
+      custom_map: {
   // TODO: Add content
 };
   fcp: metrics.fcp,
-          lcp: metrics.lcp,
-          fid: metrics.fid,
-          cls: metrics.cls,
+      lcp: metrics.lcp,
+      fid: metrics.fid,
+      cls: metrics.cls
         },
       });
     }

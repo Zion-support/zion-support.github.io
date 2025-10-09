@@ -15,11 +15,11 @@ const AIEdgeComputingPage: React.FC = () => {
       icon: Zap,
       title: 'Optimized Models',
       description: 'Lightweight AI models optimized for edge deployment',
-      benefits: ['Small footprint', 'Fast inference', 'Resource efficient']
+      benefits: ['Small footprint', 'Fast inference', 'Resource efficient'];
       icon: Shield,
       title: 'Secure Edge Computing',
       description: 'Enterprise-grade security for edge AI deployments',
-      benefits: ['Data privacy', 'Secure communication', 'Access control']
+      benefits: ['Data privacy', 'Secure communication', 'Access control'];
     }
   ];
   return (

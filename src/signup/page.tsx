@@ -1,4 +1,4 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe,  Shield,  Award,  Globe from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe, Globe from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -12,14 +12,14 @@ const SignupPage: React.FC = () => {
   // TODO: Add content
 };
   firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    password: '',
-    confirmPassword: '',
-    agreeToTerms: false,
-    subscribeNewsletter: false
+      lastName: '',
+      email: '',
+      company: '',
+      phone: '',
+      password: '',
+      confirmPassword: '',
+      agreeToTerms: false,
+      subscribeNewsletter: false
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -75,13 +75,12 @@ const handleInputChange = (e: React.ChangeEvent
 icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',
-
       icon: Globe,
       title: 'Global Support',
       description: '24/7 support and services across multiple time zones'
   ];
   const benefits = [
-'Free 14-day trial',
+'Free 14-day trial'
     'No setup fees',
     '24/7 expert support',
     'Custom integrations',

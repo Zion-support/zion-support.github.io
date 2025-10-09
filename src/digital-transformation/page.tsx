@@ -15,11 +15,11 @@ const DigitalTransformationPage: React.FC = () => {
       icon: Zap,
       title: 'Process Automation',
       description: 'Automate and optimize business processes',
-      benefits: ['Workflow automation', 'Process optimization', 'Efficiency gains']
+      benefits: ['Workflow automation', 'Process optimization', 'Efficiency gains'];
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Data-driven insights and business intelligence',
-      benefits: ['Data analytics', 'Business intelligence', 'Performance metrics']
+      benefits: ['Data analytics', 'Business intelligence', 'Performance metrics'];
     }
   ];
   return (
@@ -38,7 +38,7 @@ const DigitalTransformationPage: React.FC = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // Digital Transformation
           
           
@@ -54,7 +54,7 @@ const DigitalTransformationPage: React.FC = () => {
             Transform Your Business for the Digital Age
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Accelerate your digital transformation journey with our comprehensive solutions. From strategy development to implementation,
+            Accelerate your digital transformation journey with our comprehensive solutions. From strategy development to implementation
             we help you modernize your business and stay competitive in the digital economy.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

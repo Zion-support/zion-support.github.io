@@ -9,8 +9,8 @@ interface ErrorContext {
   userId?: string;
   sessionId?: string;
   url: string;,
-    userAgent: string;,
-    timestamp: string;
+      userAgent: string;,
+      timestamp: string;
   component?: string;
   action?: string;
   props?: Record
@@ -28,20 +28,20 @@ interface ErrorContext {
 interface ErrorReport {
   // TODO: Add content
 };
-  id: string;
-    type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';
-    message: string;
-  stack?: string;,
+  id: string;,
+      type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';,
+      message: string;
+  stack?: string;
     context: ErrorContext;,
-    severity: 'low' | 'medium' | 'high' | 'critical';,
-    category: //     | 'syntax'
+      severity: 'low' | 'medium' | 'high' | 'critical';,
+      category: //     | 'syntax'
 //     | 'runtime'
 //     | 'network'
 //     | 'security'
 //     | 'performance'
-    | 'unknown';,
+    | 'unknown';
     tags: string[];,
-    metadata: Record
+      metadata: Record
           
           
           
@@ -58,14 +58,14 @@ interface ErrorReport {
 interface ErrorHandlerConfig {
   // TODO: Add content
 };
-  enableConsoleLogging: boolean;
-    enableRemoteReporting: boolean;
-    enableErrorRecovery: boolean;,
-    enableErrorCategorization: boolean;,
-    enableErrorAggregation: boolean;,
-    enablePerformanceImpact: boolean;,
-    maxErrorsPerMinute: number;,
-    errorRetentionDays: number;
+  enableConsoleLogging: boolean;,
+      enableRemoteReporting: boolean;,
+      enableErrorRecovery: boolean;,
+      enableErrorCategorization: boolean;,
+      enableErrorAggregation: boolean;,
+      enablePerformanceImpact: boolean;,
+      maxErrorsPerMinute: number;,
+      errorRetentionDays: number;
   remoteEndpoint?: string;
   apiKey?: string;
 }
@@ -101,7 +101,7 @@ class EnhancedErrorHandler {
       enableErrorAggregation: true,
       enablePerformanceImpact: true,
       maxErrorsPerMinute: 10,
-      errorRetentionDays: 30,
+      errorRetentionDays: 30
 //       ...config
     };
     this.initialize();
@@ -139,12 +139,12 @@ class EnhancedErrorHandler {
   // TODO: Add content
 };
   type: 'javascript',
-        message: event.message,
-        stack: event.error?.stack,
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
-        error: event.error
+      message: event.message,
+      stack: event.error?.stack,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+      error: event.error
       });
     });
   }
@@ -161,9 +161,9 @@ class EnhancedErrorHandler {
   // TODO: Add content
 };
   type: 'promise',
-        message: event.reason?.message || String(event.reason),
-        stack: event.reason?.stack,
-        reason: event.reason
+      message: event.reason?.message || String(event.reason),
+      stack: event.reason?.stack,
+      reason: event.reason
       });
     });
   }
@@ -186,9 +186,9 @@ class EnhancedErrorHandler {
   // TODO: Add content
 };
   type: 'resource',
-            message: `Failed to load resource: ${target?.src || target?.href}`,
+      message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
-            src: target?.src || target?.href
+      src: target?.src || target?.href
           });
         }
       },
@@ -226,10 +226,10 @@ const originalFetch = window.fetch;
   // TODO: Add content
 };
   type: 'network',
-            message: `Network request failed: ${response.status} ${response.statusText}`,
+      message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
-            status: response.status,
-            statusText: response.statusText
+      status: response.status,
+      statusText: response.statusText
           });
         }
         return response;
@@ -240,9 +240,9 @@ const originalFetch = window.fetch;
   // TODO: Add content
 };
   type: 'network',
-          message: `Network request failed: ${error}`,
+      message: `Network request failed: ${error}`,
           url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error))
+      error: error instanceof Error ? error : new Error(String(error))
         });
         throw error;
       }
@@ -276,9 +276,9 @@ const originalFetch = window.fetch;
   // TODO: Add content
 };
   type: 'custom',
-                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+      message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
-                category: 'performance'
+      category: 'performance'
               });
             }
           });
@@ -451,7 +451,7 @@ const originalFetch = window.fetch;
   // TODO: Add content
 };
   method: 'POST',
-        headers: {
+      headers: {
   // TODO: Add content
 }
           'Content-Type': 'application/json',
@@ -555,7 +555,7 @@ const originalFetch = window.fetch;
   // TODO: Add content
 };
   totalErrors: number;,
-    errorsByType: Record
+      errorsByType: Record
           
           
           
@@ -603,7 +603,7 @@ const originalFetch = window.fetch;
     return {
   // TODO: Add content
 };
-  totalErrors: this.errors.length,
+  totalErrors: this.errors.length
 //       errorsByType,
 //       errorsByCategory,
 //       errorsBySeverity,
@@ -621,9 +621,9 @@ const originalFetch = window.fetch;
   // TODO: Add content
 };
   errors: this.errors,
-        statistics: this.getErrorStatistics(),
-        config: this.config,
-        timestamp: new Date().toISOString()
+      statistics: this.getErrorStatistics(),
+      config: this.config,
+      timestamp: new Date().toISOString()
       },
 //       null,
 //       2,
@@ -647,7 +647,7 @@ const originalFetch = window.fetch;
     const errorReport = this.createErrorReport({
   // TODO: Add content
 };
-  type: 'custom',
+  type: 'custom'
 //       message,
 //       ...context
     });

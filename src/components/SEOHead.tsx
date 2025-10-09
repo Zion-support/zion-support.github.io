@@ -29,7 +29,7 @@ const SEOHead: React.FC
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, business intelligence, machine learning, automation',
   image = '/og-image.svg',
-  url = 'https://ziontechgroup.com',
+  url = 'https: //ziontechgroup.com'
   type = 'website',
 //   structuredData,
 //   canonical,

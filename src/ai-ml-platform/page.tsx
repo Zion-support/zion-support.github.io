@@ -1,7 +1,7 @@
 import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star ,  Brain,  TrendingUp,  Users,  Clock,  Star from 'lucide-react';
+import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star, Star from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone } from 'lucide-react';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -18,17 +18,17 @@ const features = [
       icon: TrendingUp,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics and monitoring for machine learning models',
-      benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
+      benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization'];
       icon: Users,
       title: 'Team Collaboration',
       description: 'Collaborative tools for data scientists and ML engineers',
-      benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
+      benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing'];
     }
   ];
   const pricingPlans = [
       name: 'Team',
       price: '$2,499',
-      description: 'Ideal for development teams',
+      description: 'Ideal for development teams'
         'Up to 25 models',
         'Advanced ML tools',
         'Priority support',
@@ -36,10 +36,9 @@ const features = [
         'Advanced analytics',
         'Team collaboration'
       popular: true,
-
       name: 'Enterprise',
       price: '$4,999',
-      description: 'For large organizations',
+      description: 'For large organizations'
 'Unlimited models',
         'Premium ML features',
         '24/7 support',

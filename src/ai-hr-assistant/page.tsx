@@ -15,11 +15,11 @@ const AIHRAssistantPage: React.FC = () => {
       icon: Target,
       title: 'Talent Management',
       description: 'Intelligent talent acquisition and management',
-      benefits: ['Candidate screening', 'Skill matching', 'Career development']
+      benefits: ['Candidate screening', 'Skill matching', 'Career development'];
       icon: Settings,
       title: 'HR Analytics',
       description: 'Comprehensive HR analytics and insights',
-      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
+      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights'];
     }
   ];
   return (

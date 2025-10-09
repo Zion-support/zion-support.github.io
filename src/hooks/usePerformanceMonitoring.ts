@@ -165,12 +165,11 @@ const resourceObserver = new PerformanceObserver(list => {
         const metrics = {
   // TODO: Add content
 };
-  domContentLoaded:
-//             navigation.domContentLoadedEventEnd -
-//             navigation.domContentLoadedEventStart,
+  domContentLoaded: //             navigation.domContentLoadedEventEnd -
+//             navigation.domContentLoadedEventStart
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          domInteractive: navigation.domInteractive - navigation.fetchStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
+      domInteractive: navigation.domInteractive - navigation.fetchStart,
+      totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
         };
         Object.entries(metrics).forEach(([key, value]) => {
   // TODO: Add content

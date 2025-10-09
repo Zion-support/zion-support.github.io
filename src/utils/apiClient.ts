@@ -43,16 +43,16 @@ export interface ApiResponse
   // TODO: Add content
 };
   data: T;,
-    status: number;,
-    statusText: string;,
-    headers: Headers;
+      status: number;,
+      statusText: string;,
+      headers: Headers;
 }
 export class ApiError extends Error {
   // TODO: Add content
 }
 //   constructor();
-  message: string,
-    public status: number,
+  message: string
+    public status: number
     public response?: unknown,
 ) {
   // TODO: Add content
@@ -121,7 +121,7 @@ class ApiClient {
           
           <T = unknown>()
     url: string,
-    config: Omit
+      config: Omit
           <RequestConfig, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {
   // TODO: Add content
@@ -156,7 +156,7 @@ class ApiClient {
           
           
           <T = unknown>()
-    url: string,
+    url: string
     data?: unknown,
     config: Omit
           <RequestConfig, 'url' | 'method'> = {}
@@ -194,7 +194,7 @@ class ApiClient {
           
           
           <T = unknown>()
-    url: string,
+    url: string
     data?: unknown,
     config: Omit
           <RequestConfig, 'url' | 'method'> = {}
@@ -233,7 +233,7 @@ class ApiClient {
           
           <T = unknown>()
     url: string,
-    config: Omit
+      config: Omit
           <RequestConfig, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {
   // TODO: Add content
@@ -268,7 +268,7 @@ class ApiClient {
           
           
           <T = unknown>()
-    url: string,
+    url: string
     data?: unknown,
     config: Omit
           <RequestConfig, 'url' | 'method'> = {}
@@ -314,7 +314,7 @@ class ApiClient {
 //       url,
       method = 'GET',
       headers = {},
-      cacheOptions: cacheConfig,
+      cacheOptions: cacheConfig
       skipCache = false,
       retries = this.config.retries,
       timeout = this.config.timeout,
@@ -342,9 +342,9 @@ class ApiClient {
   // TODO: Add content
 };
   data: cached,
-          status: 200,
-          statusText: 'OK (cached)',
-          headers: new Headers()
+      status: 200,
+      statusText: 'OK (cached)',
+      headers: new Headers()
         };
       }
     }
@@ -418,8 +418,8 @@ const controller = new AbortController();
 }
 //           data,
           status: response.status,
-          statusText: response.statusText,
-          headers: response.headers
+      statusText: response.statusText,
+      headers: response.headers
         };
       } catch (error) {
   // TODO: Add content
@@ -436,7 +436,7 @@ const controller = new AbortController();
             logCritical(`API request failed after ${retries} attempts`, error as Error, {
   // TODO: Add content
 };
-  url: fullUrl,
+  url: fullUrl
 //               method,
 //               attempt
             });
@@ -446,7 +446,7 @@ const controller = new AbortController();
             logError(`API request failed`, error as Error, {
   // TODO: Add content
 };
-  url: fullUrl,
+  url: fullUrl
 //               method,
 //               attempt
             });
@@ -609,10 +609,10 @@ const apiClient = new ApiClient({
   // TODO: Add content
 };
   baseURL: process.env.NEXT_PUBLIC_API_URL || '',
-  timeout: 30000,
-  retries: 3,
-  retryDelay: 1000,
-  cacheOptions: {
+      timeout: 30000,
+      retries: 3,
+      retryDelay: 1000,
+      cacheOptions: {
   // TODO: Add content
 };
   ttl: 5 * 60 * 1000, // 5 minutes

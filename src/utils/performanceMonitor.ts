@@ -311,8 +311,8 @@ class PerformanceMonitor {
   // TODO: Add content
 };
   metric_name: name,
-        metric_value: Math.round(value),
-        event_category: 'performance'
+      metric_value: Math.round(value),
+      event_category: 'performance'
       });
     }
   }

@@ -15,11 +15,11 @@ const AIContentStudioPage: React.FC = () => {
       icon: Target,
       title: 'Content Strategy',
       description: 'Intelligent content planning and strategy',
-      benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
+      benefits: ['Content planning', 'Audience targeting', 'Performance tracking'];
       icon: Settings,
       title: 'Content Analytics',
       description: 'Comprehensive content performance analytics',
-      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
+      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis'];
     }
   ];
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Mail, Target, Send, BarChart, Users, TrendingUp ,  Mail,  Target,  Send,  BarChart,  Users,  TrendingUp from 'lucide-react';
+import { Mail, Target, Send, BarChart, Users, TrendingUp, TrendingUp from 'lucide-react';
 const AiEmailMarketingPage: React.FC = () => {
-import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
+import {Mail, CheckCircle, ArrowRight, Star } from 'lucide-react';
 const AIEmailMarketingPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
@@ -20,19 +20,15 @@ const AIEmailMarketingPage: React.FC = () => {
 icon: Target,
       title: 'Smart Segmentation',
       description: 'AI-powered audience segmentation for highly targeted campaigns',
-
       icon: Send,
       title: 'Optimal Send Times',
       description: 'AI determines the best time to send emails for maximum engagement',
-
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'Forecast campaign performance and optimize for better results',
-
       icon: Users,
       title: 'Behavioral Triggers',
       description: 'Automated email sequences based on user behavior and actions',
-
       icon: TrendingUp,
       title: 'A/B Testing',
       description: 'Intelligent A/B testing with AI-powered optimization'
@@ -57,7 +53,7 @@ icon: Target,
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-  // TODO: Add items,
+  // TODO: Add items
 ];
 //         '1,000 subscribers',
 //         '10,000 emails/month',
@@ -67,10 +63,9 @@ icon: Target,
 //         'Email support'
 //       ],
       popular: false,
-
       name: 'Professional',
       price: '$79',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing businesses'
         '10,000 subscribers',
         '100,000 emails/month',
         'Advanced AI features',
@@ -79,10 +74,9 @@ icon: Target,
         'Priority support',
         'A/B testing'
       popular: true,
-
       name: 'Enterprise',
       price: '$199',
-      description: 'For large organizations',
+      description: 'For large organizations'
 'Unlimited subscribers',
         'Unlimited emails',
         'Full AI suite',

@@ -3,8 +3,8 @@ interface HeroSectionProps {
   // TODO: Add content
 };
   isLoaded: boolean;,
-    isVisible: boolean;,
-    onPhoneClick: () => void;
+      isVisible: boolean;,
+      onPhoneClick: () => void;
 }
 const HeroSection: React.FC
           
@@ -121,7 +121,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             onClick={onPhoneClick}
             className="cyber-button w-full sm: w-auto text-center"
             aria-label="Call us at (302) 464-0950"
-// >,
+// >
  Call: (302) 464-0950
           
           

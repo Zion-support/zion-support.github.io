@@ -23,21 +23,21 @@ const SEOEnhancer: React.FC
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
+  image = "https: //ziontechgroup.com/og-image.jpg"
+  url = "https: //ziontechgroup.com"
 //   children
 }) => {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org"
     "@type": "TechCompany",
     "name": "Zion Tech Group",
     "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
+    "logo": "https: //ziontechgroup.com/logo.png"
     "description": description,
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
     "industry": "Technology",
     "services": [
-  // TODO: Add items,
+  // TODO: Add items
 ]
 //       "AI Solutions",
 //       "Quantum Computing",
@@ -57,11 +57,11 @@ const SEOEnhancer: React.FC
       "availableLanguage": "en"
     },
     "sameAs": [
-  // TODO: Add items,
+  // TODO: Add items
 ]
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-//     ],
+      "https: //twitter.com/ziontechgroup"
+      "https: //linkedin.com/company/ziontechgroup"
+//     ]
     "address": {
   // TODO: Add content
 }
@@ -73,7 +73,7 @@ const SEOEnhancer: React.FC
       "addressCountry": "US"
     },
     "offers": [
-  // TODO: Add items,
+  // TODO: Add items
 ]
       {
   // TODO: Add content

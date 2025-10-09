@@ -15,11 +15,11 @@ const ITDisasterRecoveryPage: React.FC = () => {
       icon: Zap,
       title: 'Rapid Recovery',
       description: 'Fast disaster recovery and business continuity',
-      benefits: ['RTO optimization', 'RPO minimization', 'Quick restoration']
+      benefits: ['RTO optimization', 'RPO minimization', 'Quick restoration'];
       icon: BarChart,
       title: 'Monitoring & Alerts',
       description: 'Real-time monitoring and alerting for disaster recovery',
-      benefits: ['Health monitoring', 'Alert systems', 'Status reporting']
+      benefits: ['Health monitoring', 'Alert systems', 'Status reporting'];
     }
   ];
   return (

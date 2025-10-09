@@ -8,7 +8,7 @@ export interface RateLimitConfig {
   // TODO: Add content
 };
   windowMs: number; // Time window in milliseconds,
-  max: number; // Maximum number of requests per window
+      max: number; // Maximum number of requests per window
   message?: string; // Custom error message
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
@@ -17,7 +17,7 @@ interface RequestRecord {
   // TODO: Add content
 };
   count: number;,
-    resetTime: number;
+      resetTime: number;
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
 export class RateLimiter {
@@ -42,7 +42,7 @@ export class RateLimiter {
 };
   message: 'Too many requests, please try again later.',
       skipSuccessfulRequests: false,
-      skipFailedRequests: false,
+      skipFailedRequests: false
 //       ...config
     };
     // Cleanup old entries every minute
@@ -81,8 +81,8 @@ const now = Date.now();
   // TODO: Add content
 };
   allowed: true,
-        remaining: this.config.max - record.count,
-        resetTime: record.resetTime
+      remaining: this.config.max - record.count,
+      resetTime: record.resetTime
     // Limit exceeded
     return { allowed: false, remaining: 0, resetTime: record.resetTime };
    * Reset rate limit for identifier
@@ -110,39 +110,34 @@ export const rateLimiters = {
   // TODO: Add content
 }
   // Strict: 10 requests per minute,
-  strict: new RateLimiter({
+      strict: new RateLimiter({
   // TODO: Add content
 };
   windowMs: 60 * 1000,
-    max: 10,
-    message: 'Too many requests. Please try again in a minute.'
+      max: 10,
+      message: 'Too many requests. Please try again in a minute.'
   }),
   // Standard: 100 requests per 15 minutes,
-  standard: new RateLimiter({
+      standard: new RateLimiter({
   // TODO: Add content
 };
   windowMs: 15 * 60 * 1000,
-    max: 100
+      max: 100
   // Lenient: 1000 requests per hour,
-
-    lenient: new RateLimiter({
+      lenient: new RateLimiter({
   // TODO: Add content
 };
   windowMs: 60 * 60 * 1000,
-    max: 1000
+      max: 1000
 // API: 60 requests per minute,
-
-    api: new RateLimiter({,
-
-    max: 60,
-    message: 'API rate limit exceeded. Please try again later.'
+      api: new RateLimiter({,
+      max: 60,
+      message: 'API rate limit exceeded. Please try again later.'
   // Authentication: 5 login attempts per 15 minutes,
-
-    auth: new RateLimiter({,
-
-    max: 5,
-    message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true
+      auth: new RateLimiter({,
+      max: 5,
+      message: 'Too many login attempts. Please try again later.',
+      skipSuccessfulRequests: true
   })
  * Get client identifier from request
  * @param request - Request object
@@ -188,12 +183,12 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
   // TODO: Add content
 };
   error: 'Rate limit exceeded',
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
+      retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
         {
   // TODO: Add content
 };
   status: 429,
-          headers: {
+      headers: {
   // TODO: Add content
 }
             'Content-Type': 'application/json',

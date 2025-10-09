@@ -15,7 +15,7 @@ export const _wait = (ms: number): Promise<void> => {
  * Wait for a condition to be true
  */
 export const waitFor = async ()
-  condition: () => boolean,
+  condition: () => boolean
   timeout = 5000,
   interval = 100,
 ): Promise
@@ -46,7 +46,7 @@ export const waitFor = async ()
  * Mock fetch for testing
  */
 export const mockFetch = ()
-  response: unknown,
+  response: unknown
   status = 200,
   headers: Record
           
@@ -77,11 +77,11 @@ export const mockFetch = ()
           
           
           
-          < 300,
+          < 300
 // status,
         headers: new Headers(headers),
-        json: async () => response,
-        text: async () => JSON.stringify(response)
+      json: async () => response,
+      text: async () => JSON.stringify(response)
       } as Response)
     ) as typeof fetch;
   }
@@ -184,7 +184,7 @@ export const createMockPerformance = (): Performance => {
   // TODO: Add content
 };
   now: () => Date.now(),
-    mark: (name: string) => {
+      mark: (name: string) => {
   // TODO: Add content
 }
       entries.push({
@@ -192,9 +192,9 @@ export const createMockPerformance = (): Performance => {
 }
 //         name,
         entryType: 'mark',
-        startTime: Date.now(),
-        duration: 0,
-        toJSON: () => ({})
+      startTime: Date.now(),
+      duration: 0,
+      toJSON: () => ({})
       } as PerformanceEntry);
     },
 measure: (name: string, startMark?: string, endMark?: string) => {
@@ -203,15 +203,15 @@ measure: (name: string, startMark?: string, endMark?: string) => {
 }
 //         name,
         entryType: 'measure',
-        startTime: Date.now(),
-        duration: 100,
-        toJSON: () => ({})
+      startTime: Date.now(),
+      duration: 100,
+      toJSON: () => ({})
       } as PerformanceEntry);
     },
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
-    getEntries: () => entries,
-    clearMarks: () => {
+      getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
+      getEntries: () => entries,
+      clearMarks: () => {
   // TODO: Add content
 }
       entries.length = 0;
@@ -227,8 +227,8 @@ measure: (name: string, startMark?: string, endMark?: string) => {
     addEventListener: () => {},
     removeEventListener: () => {},
     dispatchEvent: () => true,
-    onresourcetimingbufferfull: null,
-    timeOrigin: Date.now()
+      onresourcetimingbufferfull: null,
+      timeOrigin: Date.now()
   } as unknown as Performance;
 };
 /**
@@ -398,9 +398,9 @@ export interface Deferred
           
           
           
-          <T>;,
+          <T>;
     resolve: (value: T) => void;,
-    reject: (reason?: unknown) => void;
+      reject: (reason?: unknown) => void;
 }
 export const createDeferred = <T>(): Deferred<T> => {
   // TODO: Add content
@@ -438,7 +438,7 @@ export const retryWithBackoff = async
           
           <T>()
   fn: () => Promise
-          <T>,
+          <T>
   maxRetries = 3,
   initialDelay = 1000,
 ): Promise<T> => {

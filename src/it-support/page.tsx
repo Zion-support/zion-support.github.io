@@ -15,11 +15,11 @@ const ITSupportPage: React.FC = () => {
       icon: Shield,
       title: 'Security Support',
       description: 'Comprehensive security monitoring and incident response',
-      benefits: ['Threat monitoring', 'Incident response', 'Security updates']
+      benefits: ['Threat monitoring', 'Incident response', 'Security updates'];
       icon: Settings,
       title: 'System Maintenance',
       description: 'Regular maintenance and optimization services',
-      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']
+      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates'];
     }
   ];
   return (

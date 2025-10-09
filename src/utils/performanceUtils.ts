@@ -7,8 +7,8 @@
  * Debounce function to limit execution rate
  */
 export function debounce<T extends (...args: unknown[]) => unknown>(),
-    func: T,
-  wait: number,
+      func: T,
+      wait: number
 ): (...args: Parameters
           <T>) => void {
   // TODO: Add content
@@ -48,8 +48,8 @@ export function throttle
           
           
           <T extends (...args: unknown[]) => unknown>(),
-    func: T,
-  limit: number,
+      func: T,
+      limit: number
 ): (...args: Parameters
           <T>) => void {
   // TODO: Add content
@@ -89,7 +89,7 @@ export function memoize
           
           
           <T extends (...args: unknown[]) => unknown>(),
-    func: T,
+      func: T
 ): T {
   // TODO: Add content
 }
@@ -158,7 +158,7 @@ export async function measureTime
           
           <T>()
   name: string,
-  func: () => T | Promise
+      func: () => T | Promise
           <T>
 ): Promise<{ result: T; duration: number }> {
   // TODO: Add content
@@ -183,8 +183,8 @@ export async function batchAsync
           
           <T, R>()
   items: T[],
-  operation: (item: T) => Promise
-          <R>,
+      operation: (item: T) => Promise
+          <R>
   batchSize = 10,
 ): Promise<R[]> {
   // TODO: Add content
@@ -243,7 +243,7 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
  * Idle callback wrapper
  */
 export function runWhenIdle()
-  callback: () => void,
+  callback: () => void
   options?: IdleRequestOptions,
 ): number {
   // TODO: Add content
@@ -437,8 +437,8 @@ export function getMemoryUsage(): {
   // TODO: Add content
 };
   used: number;,
-    total: number;,
-    limit: number;
+      total: number;,
+      limit: number;
 } | null {
   // TODO: Add content
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Code,  Zap,  BarChart,  Target,  Users,  TrendingUp } from 'lucide-react';
+import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {
   return (
     <div>Coming Soon</div>

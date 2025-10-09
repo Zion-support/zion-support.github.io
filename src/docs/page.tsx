@@ -1,13 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {Star, Phone} from 'lucide-react';
+import { Star, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Docs: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-  );
-};
   return (
     <div>Coming Soon</div>
   )

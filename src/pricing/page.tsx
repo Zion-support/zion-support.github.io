@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Zap,  Brain,  Cloud } from 'lucide-react';
+import { Zap, Brain, Cloud } from 'lucide-react';
 const PricingPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
@@ -19,8 +19,8 @@ const PricingPage: React.FC = () => {
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
 //         'Basic AI Analytics',
 //         'Email Support',
 //         '5 AI Models',
@@ -40,8 +40,8 @@ const PricingPage: React.FC = () => {
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
 //         'Advanced AI Analytics',
 //         'Priority Support',
 //         '20 AI Models',
@@ -63,8 +63,8 @@ const PricingPage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
 //         'Unlimited AI Models',
 //         '24/7 Dedicated Support',
 //         'Custom AI Development',

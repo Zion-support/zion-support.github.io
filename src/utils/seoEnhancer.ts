@@ -4,10 +4,10 @@
  */
 
 interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
+  title: string;,
+      description: string;,
+      keywords: string[];,
+      canonicalUrl: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -21,7 +21,6 @@ interface SEOConfig {
 
 class SEOEnhancer {
   private config: SEOConfig;
-
   constructor(config: SEOConfig) {
     this.config = config;
     this.init();
@@ -36,7 +35,6 @@ class SEOEnhancer {
     if (typeof document !== 'undefined') {
       // Update title
       document.title = this.config.title;
-      
       // Update meta description
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {

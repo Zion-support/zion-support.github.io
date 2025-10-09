@@ -1,5 +1,5 @@
 import React from 'react';
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users,  BarChart,  Brain,  Zap,  Shield from 'lucide-react';
+import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users, Shield from 'lucide-react';
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
@@ -15,12 +15,10 @@ const SmartAnalyticsPage: React.FC = () => {
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities',
-
       icon: Zap,
       title: 'Automated Alerts',
       description: 'Get instant notifications when important metrics change or when action is needed.',
       benefit: 'Never miss critical changes',
-
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
@@ -30,7 +28,7 @@ const SmartAnalyticsPage: React.FC = () => {
   const pricingPlans = [
       name: 'Professional',
       price: '$799',
-      description: 'Advanced analytics for growing businesses',
+      description: 'Advanced analytics for growing businesses'
                 {plan.popular && ()
                   
           

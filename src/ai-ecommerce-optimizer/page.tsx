@@ -15,11 +15,11 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       icon: Target,
       title: 'Product Recommendations',
       description: 'Intelligent product recommendation engine',
-      benefits: ['Personalized recommendations', 'Cross-selling', 'Upselling']
+      benefits: ['Personalized recommendations', 'Cross-selling', 'Upselling'];
       icon: Settings,
       title: 'Analytics & Insights',
       description: 'Comprehensive e-commerce analytics and insights',
-      benefits: ['Sales analytics', 'Customer behavior', 'Performance metrics']
+      benefits: ['Sales analytics', 'Customer behavior', 'Performance metrics'];
     }
   ];
   return (

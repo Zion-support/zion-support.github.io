@@ -15,11 +15,11 @@ const InnovationLabsPage: React.FC = () => {
       icon: Target,
       title: 'Innovation Consulting',
       description: 'Strategic innovation consulting and guidance',
-      benefits: ['Innovation strategy', 'Technology roadmaps', 'Market analysis']
+      benefits: ['Innovation strategy', 'Technology roadmaps', 'Market analysis'];
       icon: Settings,
       title: 'Technology Incubation',
       description: 'Incubate and accelerate new technologies',
-      benefits: ['Technology incubation', 'Startup support', 'Mentorship']
+      benefits: ['Technology incubation', 'Startup support', 'Mentorship'];
     }
   ];
   return (
@@ -38,7 +38,7 @@ const InnovationLabsPage: React.FC = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // Innovation Labs
           
           
@@ -63,7 +63,7 @@ const InnovationLabsPage: React.FC = () => {
           
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Drive innovation with our research and development labs. From concept to prototype,
+            Drive innovation with our research and development labs. From concept to prototype
             we help you explore new technologies and bring innovative ideas to life.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

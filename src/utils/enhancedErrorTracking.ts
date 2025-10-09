@@ -25,11 +25,11 @@ export interface TrackedError {
   // TODO: Add content
 };
   message: string;
-  stack?: string;,
+  stack?: string;
     context: ErrorContext;,
-    timestamp: string;,
-    userAgent: string;,
-    url: string;
+      timestamp: string;,
+      userAgent: string;,
+      url: string;
 }
 class EnhancedErrorTracker {
   // TODO: Add content
@@ -61,7 +61,7 @@ class EnhancedErrorTracker {
   // TODO: Add content
 };
   component: 'Global',
-          action: 'Uncaught Error'
+      action: 'Uncaught Error'
         });
       });
       window.addEventListener('unhandledrejection', event => {
@@ -71,7 +71,7 @@ class EnhancedErrorTracker {
   // TODO: Add content
 };
   component: 'Global',
-          action: 'Unhandled Promise Rejection'
+      action: 'Unhandled Promise Rejection'
         });
       });
     }
@@ -152,8 +152,8 @@ class EnhancedErrorTracker {
   // TODO: Add content
 };
   description: error.message,
-        fatal: false,
-        component: error.context.component
+      fatal: false,
+      component: error.context.component
       });
     }
   }
@@ -171,7 +171,7 @@ class EnhancedErrorTracker {
   // TODO: Add content
 };
   total: number;,
-    byComponent: Record
+      byComponent: Record
           
           
           
@@ -201,7 +201,7 @@ class EnhancedErrorTracker {
     return {
   // TODO: Add content
 };
-  total: this.errors.length,
+  total: this.errors.length
 //       byComponent,
       recent: this.errors.slice(-10)
     };

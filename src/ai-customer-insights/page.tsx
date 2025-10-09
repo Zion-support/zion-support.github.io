@@ -15,11 +15,11 @@ const AICustomerInsightsPage: React.FC = () => {
       icon: Target,
       title: 'Segmentation',
       description: 'Intelligent customer segmentation and targeting',
-      benefits: ['Smart segmentation', 'Persona creation', 'Targeted marketing']
+      benefits: ['Smart segmentation', 'Persona creation', 'Targeted marketing'];
       icon: Settings,
       title: 'Personalization',
       description: 'AI-driven personalization and recommendations',
-      benefits: ['Personalized experiences', 'Product recommendations', 'Content customization']
+      benefits: ['Personalized experiences', 'Product recommendations', 'Content customization'];
     }
   ];
   return (

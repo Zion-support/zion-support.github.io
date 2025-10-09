@@ -54,190 +54,190 @@ const ResearchDevelopmentPage: React.FC = () => {
   // TODO: Add content
 };
   ai: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
       {
   // TODO: Add content
 };
   title: 'Consensus Intelligence Framework',
-        description: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',
-        status: 'In Progress',
-        timeline: '2025-2026',
-        team: '12 Researchers',
-        funding: '$2.5M',
-        outcomes: [
-  // TODO: Add items,
-]
+      description: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',
+      status: 'In Progress',
+      timeline: '2025-2026',
+      team: '12 Researchers',
+      funding: '$2.5M',
+      outcomes: [
+  // TODO: Add items
+];
 //           'Improved decision accuracy by 40%',
 //           'Reduced computational overhead by 30%',
 //           'Published 3 papers in top-tier conferences'
 //         ],
         icon: Brain,
-        color: 'text-purple-400'
+      color: 'text-purple-400'
       },
       {
   // TODO: Add content
 };
   title: 'Autonomous Business Intelligence',
-        description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
-        status: 'Completed',
-        timeline: '2024-2025',
-        team: '8 Researchers',
-        funding: '$1.8M',
-        outcomes: [
-  // TODO: Add items,
-]
+      description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
+      status: 'Completed',
+      timeline: '2024-2025',
+      team: '8 Researchers',
+      funding: '$1.8M',
+      outcomes: [
+  // TODO: Add items
+];
 //           '95% automation of business processes',
 //           '300% improvement in decision speed',
           'Patent filed for core algorithms'
 //         ],
         icon: Target,
-        color: 'text-green-400'
+      color: 'text-green-400'
       },
       {
   // TODO: Add content
 };
   title: 'Neural Architecture Search for Enterprise',
-        description: 'Developing automated neural architecture search specifically optimized for enterprise applications',
-        status: 'In Progress',
-        timeline: '2025-2027',
-        team: '15 Researchers',
-        funding: '$3.2M',
-        outcomes: [
-  // TODO: Add items,
-]
+      description: 'Developing automated neural architecture search specifically optimized for enterprise applications',
+      status: 'In Progress',
+      timeline: '2025-2027',
+      team: '15 Researchers',
+      funding: '$3.2M',
+      outcomes: [
+  // TODO: Add items
+];
 //           '50% reduction in model development time',
 //           '25% improvement in model performance',
 //           'Open-source framework released'
 //         ],
         icon: Microscope,
-        color: 'text-blue-400'
+      color: 'text-blue-400'
       }
 //     ],
     quantum: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
       {
   // TODO: Add content
 };
   title: 'Quantum Machine Learning Algorithms',
-        description: 'Developing quantum algorithms for machine learning that leverage quantum advantage',
-        status: 'In Progress',
-        timeline: '2025-2028',
-        team: '10 Researchers',
-        funding: '$4.1M',
-        outcomes: [
-  // TODO: Add items,
-]
+      description: 'Developing quantum algorithms for machine learning that leverage quantum advantage',
+      status: 'In Progress',
+      timeline: '2025-2028',
+      team: '10 Researchers',
+      funding: '$4.1M',
+      outcomes: [
+  // TODO: Add items
+];
           'Quantum speedup demonstrated for specific problems',
 //           'Novel quantum ML algorithms developed',
 //           'Partnership with leading quantum hardware companies'
 //         ],
         icon: Atom,
-        color: 'text-blue-400'
+      color: 'text-blue-400'
       },
       {
   // TODO: Add content
 };
   title: 'Quantum Error Correction for Business Applications',
-        description: 'Researching practical quantum error correction methods for commercial quantum computing',
-        status: 'Planning',
-        timeline: '2026-2029',
-        team: '12 Researchers',
-        funding: '$5.5M',
-        outcomes: [
-  // TODO: Add items,
-]
+      description: 'Researching practical quantum error correction methods for commercial quantum computing',
+      status: 'Planning',
+      timeline: '2026-2029',
+      team: '12 Researchers',
+      funding: '$5.5M',
+      outcomes: [
+  // TODO: Add items
+];
 //           'Improved quantum error rates',
 //           'Practical implementation strategies',
           'Industry collaboration established'
 //         ],
         icon: Zap,
-        color: 'text-yellow-400'
+      color: 'text-yellow-400'
       }
 //     ],
     autonomous: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
       {
   // TODO: Add content
 };
   title: 'Autonomous Enterprise Operations',
-        description: 'Developing fully autonomous systems for enterprise operations and decision-making',
-        status: 'In Progress',
-        timeline: '2025-2027',
-        team: '20 Researchers',
-        funding: '$6.8M',
-        outcomes: [
-  // TODO: Add items,
-]
+      description: 'Developing fully autonomous systems for enterprise operations and decision-making',
+      status: 'In Progress',
+      timeline: '2025-2027',
+      team: '20 Researchers',
+      funding: '$6.8M',
+      outcomes: [
+  // TODO: Add items
+];
 //           '90% reduction in manual operations',
 //           'Self-healing system capabilities',
 //           'Real-world deployment in 5 enterprises'
 //         ],
         icon: Rocket,
-        color: 'text-green-400'
+      color: 'text-green-400'
       },
       {
   // TODO: Add content
 };
   title: 'Multi-Agent Coordination Systems',
-        description: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',
-        status: 'Completed',
-        timeline: '2023-2024',
-        team: '6 Researchers',
-        funding: '$1.2M',
-        outcomes: [
-  // TODO: Add items,
-]
+      description: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',
+      status: 'Completed',
+      timeline: '2023-2024',
+      team: '6 Researchers',
+      funding: '$1.2M',
+      outcomes: [
+  // TODO: Add items
+];
 //           'Novel coordination algorithms developed',
 //           'Scalability demonstrated up to 1000 agents',
 //           'Published in Nature Communications'
 //         ],
         icon: Users,
-        color: 'text-purple-400'
+      color: 'text-purple-400'
       }
 //     ],
     emerging: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
       {
   // TODO: Add content
 };
   title: 'Neuromorphic Computing for AI',
-        description: 'Exploring brain-inspired computing architectures for more efficient AI processing',
-        status: 'In Progress',
-        timeline: '2025-2028',
-        team: '14 Researchers',
-        funding: '$3.7M',
-        outcomes: [
-  // TODO: Add items,
-]
+      description: 'Exploring brain-inspired computing architectures for more efficient AI processing',
+      status: 'In Progress',
+      timeline: '2025-2028',
+      team: '14 Researchers',
+      funding: '$3.7M',
+      outcomes: [
+  // TODO: Add items
+];
 //           'Novel neuromorphic algorithms',
 //           'Hardware-software co-design',
           'Industry partnerships established'
 //         ],
         icon: Lightbulb,
-        color: 'text-yellow-400'
+      color: 'text-yellow-400'
       },
       {
   // TODO: Add content
 };
   title: 'Edge AI for IoT Systems',
-        description: 'Developing ultra-efficient AI systems for edge computing and IoT applications',
-        status: 'Completed',
-        timeline: '2024-2025',
-        team: '8 Researchers',
-        funding: '$2.1M',
-        outcomes: [
-  // TODO: Add items,
-]
+      description: 'Developing ultra-efficient AI systems for edge computing and IoT applications',
+      status: 'Completed',
+      timeline: '2024-2025',
+      team: '8 Researchers',
+      funding: '$2.1M',
+      outcomes: [
+  // TODO: Add items
+];
 //           '10x reduction in power consumption',
 //           'Real-time processing capabilities',
 //           'Commercial product launched'
 //         ],
         icon: Globe,
-        color: 'text-blue-400'
+      color: 'text-blue-400'
       }
 //     ]
   };

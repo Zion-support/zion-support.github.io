@@ -1,4 +1,4 @@
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon,  Brain,  Zap,  BarChart,  Smartphone,  ShoppingCart,  Building from 'lucide-react';
+import { Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
@@ -17,15 +17,15 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       icon: Zap,
       title: 'Instant Processing',
       description: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
-      benefits: ['Real-time generation', 'Batch processing', 'Template optimization', 'Error reduction']
+      benefits: ['Real-time generation', 'Batch processing', 'Template optimization', 'Error reduction'];
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Track payment patterns, identify trends, and get AI-powered insights to improve your cash flow.',
-      benefits: ['Payment analytics', 'Trend analysis', 'Cash flow predictions', 'Client insights']
+      benefits: ['Payment analytics', 'Trend analysis', 'Cash flow predictions', 'Client insights'];
       icon: Smartphone,
       title: 'Mobile Optimized',
       description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
-      benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
+      benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications'];
     }
   ];
   const pricingPlans = [
@@ -39,7 +39,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       title: 'Agencies & Studios',
       description: 'Manage complex client billing with AI that handles multiple projects and billing structures.',
       icon: Building,
-      benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
+      benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting'];
   return (
     
           

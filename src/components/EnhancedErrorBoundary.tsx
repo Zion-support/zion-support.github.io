@@ -12,9 +12,9 @@ interface State {
   // TODO: Add content
 };
   hasError: boolean;,
-    error: Error | null;,
-    errorInfo: ErrorInfo | null;,
-    errorId: string | null;
+      error: Error | null;,
+      errorInfo: ErrorInfo | null;,
+      errorId: string | null;
 }
 class EnhancedErrorBoundary extends Component
           
@@ -38,7 +38,7 @@ class EnhancedErrorBoundary extends Component
   hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null,
+      errorId: null
     };
   }
   static getDerivedStateFromError(error: Error): Partial
@@ -56,7 +56,7 @@ class EnhancedErrorBoundary extends Component
     return {
   // TODO: Add content
 };
-  hasError: true,
+  hasError: true
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
@@ -84,7 +84,7 @@ class EnhancedErrorBoundary extends Component
     this.props.onError?.(error, errorInfo);
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {,
- errorId: this.state.errorId,
+      errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -92,7 +92,7 @@ class EnhancedErrorBoundary extends Component
       userAgent: navigator.userAgent,
       url: window.location.href,
       userId: this.getUserId(),
-      sessionId: this.getSessionId(),
+      sessionId: this.getSessionId()
     };
     // Send to error reporting service
     this.sendErrorReport(errorReport);
@@ -104,11 +104,11 @@ class EnhancedErrorBoundary extends Component
   // TODO: Add content
 };
   description: error.message,
-        fatal: false,
-        custom_map: {
+      fatal: false,
+      custom_map: {
   // TODO: Add content
 };
-  error_id: this.state.errorId,
+  error_id: this.state.errorId
         },
       });
     }
@@ -135,7 +135,7 @@ class EnhancedErrorBoundary extends Component
   hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null,
+      errorId: null
     });
   };
   private handleReload = () => {
@@ -158,7 +158,7 @@ class EnhancedErrorBoundary extends Component
       message: this.state.error?.message,
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()
     };
 //     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {

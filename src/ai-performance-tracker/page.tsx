@@ -15,11 +15,11 @@ const AIPerformanceTrackerPage: React.FC = () => {
       icon: Target,
       title: 'Goal Tracking',
       description: 'Intelligent goal setting and progress monitoring',
-      benefits: ['Smart goals', 'Progress tracking', 'Achievement metrics']
+      benefits: ['Smart goals', 'Progress tracking', 'Achievement metrics'];
       icon: Settings,
       title: 'Custom Dashboards',
       description: 'Customizable performance dashboards and reports',
-      benefits: ['Custom metrics', 'Visualization', 'Reporting']
+      benefits: ['Custom metrics', 'Visualization', 'Reporting'];
     }
   ];
   return (

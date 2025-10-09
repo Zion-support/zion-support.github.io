@@ -15,11 +15,11 @@ const SmartCitiesPage: React.FC = () => {
       icon: Target,
       title: 'IoT Integration',
       description: 'Internet of Things solutions for urban environments',
-      benefits: ['Sensor networks', 'Data collection', 'Real-time monitoring']
+      benefits: ['Sensor networks', 'Data collection', 'Real-time monitoring'];
       icon: Settings,
       title: 'Citizen Services',
       description: 'Digital services and citizen engagement platforms',
-      benefits: ['Mobile apps', 'Digital services', 'Citizen engagement']
+      benefits: ['Mobile apps', 'Digital services', 'Citizen engagement'];
     }
   ];
   return (
@@ -38,7 +38,7 @@ const SmartCitiesPage: React.FC = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // Smart Cities
           
           
@@ -63,7 +63,7 @@ const SmartCitiesPage: React.FC = () => {
           
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Build the cities of the future with our smart city solutions. From intelligent infrastructure to citizen services,
+            Build the cities of the future with our smart city solutions. From intelligent infrastructure to citizen services
             we help create sustainable, efficient, and connected urban environments.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

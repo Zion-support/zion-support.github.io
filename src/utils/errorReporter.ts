@@ -9,11 +9,11 @@ export interface ErrorReport {
 };
   message: string;
   stack?: string;
-  componentStack?: string;,
+  componentStack?: string;
     timestamp: string;,
-    userAgent: string;,
-    url: string;,
-    severity: 'low' | 'medium' | 'high' | 'critical';
+      userAgent: string;,
+      url: string;,
+      severity: 'low' | 'medium' | 'high' | 'critical';
   context?: Record
           
           
@@ -29,15 +29,15 @@ export interface ErrorReporterConfig {
   // TODO: Add content
 };
   enableConsoleLogging: boolean;,
-    enableRemoteLogging: boolean;
-  remoteEndpoint?: string;,
+      enableRemoteLogging: boolean;
+  remoteEndpoint?: string;
     maxErrorsInMemory: number;,
-    captureContext: boolean;
+      captureContext: boolean;
 }
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50,
-  captureContext: true
+      enableRemoteLogging: process.env['NODE_ENV'] === 'production',
+      maxErrorsInMemory: 50,
+      captureContext: true
 };
 /**
  * ErrorReporter class for comprehensive error handling
@@ -90,7 +90,7 @@ export class ErrorReporter {
    */
 //   reportError()
     error: Error,
-    severity: ErrorReport['severity'] = 'medium',
+      severity: ErrorReport['severity'] = 'medium'
     context?: Record
           
           
@@ -111,7 +111,7 @@ export class ErrorReporter {
       stack: error.stack,
       timestamp: new Date().toISOString(),
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
 //       severity,
       context: this.config.captureContext ? context : undefined
     };
@@ -214,7 +214,7 @@ export class ErrorReporter {
   // TODO: Add content
 };
   method: 'POST',
-        headers: {
+      headers: {
   // TODO: Add content
 }
           'Content-Type': 'application/json'
@@ -247,8 +247,8 @@ export class ErrorReporter {
   // TODO: Add content
 };
   totalErrors: number;,
-    uniqueErrors: number;,
-    errorsByType: Record
+      uniqueErrors: number;,
+      errorsByType: Record
           
           
           
@@ -289,8 +289,8 @@ export class ErrorReporter {
   // TODO: Add content
 };
   timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
-        errors: this.errorQueue
+      stats: this.getErrorStats(),
+      errors: this.errorQueue
       },
 //       null,
 //       2,
@@ -301,7 +301,7 @@ export class ErrorReporter {
  * Convenience function to report errors
  */
 export const reportError = ()
-  error: Error,
+  error: Error
   severity?: ErrorReport['severity'],
   context?: Record
           
@@ -323,8 +323,8 @@ export const reportError = ()
  */
 export const captureComponentError = ()
   error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string,
+      errorInfo: { componentStack: string },
+  componentName: string
 ): void => {
   // TODO: Add content
 }

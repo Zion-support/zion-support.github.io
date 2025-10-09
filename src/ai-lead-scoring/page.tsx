@@ -15,11 +15,11 @@ const AILeadScoringPage: React.FC = () => {
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'Predict lead conversion probability',
-      benefits: ['Conversion prediction', 'Risk assessment', 'Opportunity scoring']
+      benefits: ['Conversion prediction', 'Risk assessment', 'Opportunity scoring'];
       icon: Settings,
       title: 'Performance Analytics',
       description: 'Comprehensive lead performance analytics',
-      benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports']
+      benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports'];
     }
   ];
   return (

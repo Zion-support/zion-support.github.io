@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
-import {CheckCircle, Star, Phone} from 'lucide-react';
+import { CheckCircle, Star, Phone } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 interface ServicePageProps {
   // TODO: Add content
 };
   title: string;,
-    description: string;,
-    icon: React.ComponentType
+      description: string;,
+      icon: React.ComponentType
           
           
           
@@ -20,9 +20,8 @@ interface ServicePageProps {
           
           <{ className?: string }>;
   services: Array<{,
-
-  features: string[];,
-    price: string;
+      features: string[];,
+      price: string;
   }>;
   benefits: string[];
 }

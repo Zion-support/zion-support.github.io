@@ -7,10 +7,10 @@ export interface PerformanceMetric {
   // TODO: Add content
 };
   name: string;,
-    value: number;,
-    unit: string;,
-    timestamp: Date;,
-    category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
+      value: number;,
+      unit: string;,
+      timestamp: Date;,
+      category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
   metadata?: Record
           
           
@@ -36,14 +36,14 @@ export interface PerformanceReport {
   // TODO: Add content
 };
   metrics: PerformanceMetric[];,
-    webVitals: WebVitalsMetrics;,
-    summary: {
+      webVitals: WebVitalsMetrics;,
+      summary: {
   // TODO: Add content
 };
   avgLoadTime: number;,
-    totalMetrics: number;,
-    performanceScore: number;,
-    recommendations: string[];
+      totalMetrics: number;,
+      performanceScore: number;,
+      recommendations: string[];
   };
   timestamp: Date;
 }
@@ -96,15 +96,15 @@ export class PerformanceMetrics {
   // TODO: Add content
 };
   name: 'pageLoadTime',
-                value: navEntry.loadEventEnd - navEntry.fetchStart,
-                unit: 'ms',
-                timestamp: new Date(),
-                category: 'load',
-                metadata: {
+      value: navEntry.loadEventEnd - navEntry.fetchStart,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+      metadata: {
   // TODO: Add content
 };
   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
-                  domInteractive: navEntry.domInteractive - navEntry.fetchStart
+      domInteractive: navEntry.domInteractive - navEntry.fetchStart
                 }
               });
             }
@@ -127,10 +127,10 @@ const paintObserver = new PerformanceObserver(list => {
   // TODO: Add content
 };
   name: 'FCP',
-                value: entry.startTime,
-                unit: 'ms',
-                timestamp: new Date(),
-                category: 'load'
+      value: entry.startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load'
               });
             }
           }
@@ -151,10 +151,10 @@ const lcpObserver = new PerformanceObserver(list => {
   // TODO: Add content
 };
   name: 'LCP',
-              value: lastEntry.startTime,
-              unit: 'ms',
-              timestamp: new Date(),
-              category: 'load'
+      value: lastEntry.startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load'
             });
           }
         });
@@ -173,10 +173,10 @@ const lcpObserver = new PerformanceObserver(list => {
   // TODO: Add content
 };
   name: 'CLS',
-            value: clsValue,
-            unit: 'score',
-            timestamp: new Date(),
-            category: 'runtime'
+      value: clsValue,
+      unit: 'score',
+      timestamp: new Date(),
+      category: 'runtime'
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -222,9 +222,9 @@ const lcpObserver = new PerformanceObserver(list => {
   // TODO: Add content
 };
   dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
-        tcpConnection: perfData.connectEnd - perfData.connectStart,
-        serverResponse: perfData.responseEnd - perfData.requestStart,
-        domParsing: perfData.domComplete - perfData.domLoading
+      tcpConnection: perfData.connectEnd - perfData.connectStart,
+      serverResponse: perfData.responseEnd - perfData.requestStart,
+      domParsing: perfData.domComplete - perfData.domLoading
       }
     });
   }
@@ -271,8 +271,8 @@ const lcpObserver = new PerformanceObserver(list => {
   // TODO: Add content
 };
   total: memory.totalJSHeapSize,
-        limit: memory.jsHeapSizeLimit,
-        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+      limit: memory.jsHeapSizeLimit,
+      percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       }
     });
   }
@@ -458,8 +458,8 @@ const lcpObserver = new PerformanceObserver(list => {
 }
 //         avgLoadTime,
         totalMetrics: this.metrics.length,
-        performanceScore: this.calculatePerformanceScore(),
-        recommendations: this.getRecommendations()
+      performanceScore: this.calculatePerformanceScore(),
+      recommendations: this.getRecommendations()
       },
       timestamp: new Date()
     };
@@ -506,7 +506,7 @@ interface LayoutShift extends PerformanceEntry {
   // TODO: Add content
 };
   value: number;,
-    hadRecentInput: boolean;
+      hadRecentInput: boolean;
 }
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance();

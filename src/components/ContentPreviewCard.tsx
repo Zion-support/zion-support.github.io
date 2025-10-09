@@ -1,20 +1,20 @@
 interface ContentPreviewCardProps {
   // TODO: Add content
 };
-  id: string;
-    title: string;
-    description: string;,
-    category: string;,
-    readTime: string;,
-    date: string;,
-    path: string;,
-    image: string;
+  id: string;,
+      title: string;,
+      description: string;,
+      category: string;,
+      readTime: string;,
+      date: string;,
+      path: string;,
+      image: string;
   featured?: boolean;
   stats?: {
   // TODO: Add content
 };
   views: number;,
-    engagement: number;
+      engagement: number;
   };
   excerpt?: string;
 }

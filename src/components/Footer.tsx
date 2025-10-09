@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const aiServices = [
   // TODO: Add items

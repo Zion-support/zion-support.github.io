@@ -52,9 +52,9 @@ export function validateURL(url: string): ValidationResult {
 // String length validation;
 export function validateLength()
   value: string,
-  minLength: number,
-  maxLength: number,
-  fieldName: string = 'Field'
+      minLength: number,
+      maxLength: number,
+      fieldName: string = 'Field'
 ): ValidationResult {
   // TODO: Add content
 }
@@ -272,7 +272,7 @@ export function validateJSON(jsonString: string): ValidationResult {
 // Composite validation;
 export function validateComposite()
   value: string,
-  validators: Array
+      validators: Array
           
           
           
@@ -308,8 +308,8 @@ export async function validateAsync()
           
           
           
-          <ValidationResult>,
-  value: string,
+          <ValidationResult>
+  value: string
 ): Promise<ValidationResult> {
   // TODO: Add content
 }

@@ -11,8 +11,8 @@ export interface MiddlewareContext {
   // TODO: Add content
 };
   url: string;,
-    method: string;,
-    headers: Record
+      method: string;,
+      headers: Record
           
           
           
@@ -43,7 +43,7 @@ export interface MiddlewareContext {
 }
 export type Middleware = ()
   context: MiddlewareContext,
-  next: NextFunction,
+      next: NextFunction
 ) => Promise
           <unknown> | unknown;
  * Middleware executor
@@ -88,8 +88,8 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
   // TODO: Add content
 };
   component: 'RequestMiddleware',
-    method: context.request.method,
-    url: context.request.url
+      method: context.request.method,
+      url: context.request.url
   });
   try {
   // TODO: Add content
@@ -98,7 +98,7 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
     const duration = Date.now() - startTime;
     logger.info('Request completed', 'RequestMiddleware', {
 url: context.request.url,
-      status: context.response?.status,
+      status: context.response?.status
       duration
     return result;
   } catch (error) {
@@ -129,7 +129,7 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
   // TODO: Add content
 };
-  component: 'ErrorHandlingMiddleware',
+  component: 'ErrorHandlingMiddleware'
 ...standardError
     throw standardError;
  * Rate limiting middleware
@@ -218,14 +218,14 @@ let lastError: Error | null = null;
             {
   // TODO: Add content
 };
-  component: 'RetryMiddleware',
+  component: 'RetryMiddleware'
           );
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
     throw lastError;
  * Timeout middleware
 export const timeoutMiddleware = (timeoutMs: number): Middleware => {
     return await Promise.race([
-  // TODO: Add items,
+  // TODO: Add items
 ]
 //       next(),
       new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),

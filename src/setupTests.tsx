@@ -29,17 +29,17 @@ Object.defineProperty(window, 'matchMedia', {
   // TODO: Add content
 };
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+      value: jest.fn().mockImplementation(query => ({
   // TODO: Add content
 };
   matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(), // deprecated,
   removeListener: jest.fn(), // deprecated,
   addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn()
   }))
 });
 // Mock requestAnimationFrame
@@ -50,9 +50,9 @@ const localStorageMock = {
   // TODO: Add content
 };
   getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn()
+      setItem: jest.fn(),
+      removeItem: jest.fn(),
+      clear: jest.fn()
 Object.defineProperty(window, 'localStorage', {
   // TODO: Add content
 };
@@ -92,14 +92,14 @@ delete (window as unknown as Record
   // TODO: Add content
 };
   href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn()
+      origin: 'http: //localhost:3000',
+      protocol: 'http: ',
+      host: 'localhost: 3000',
+      hostname: 'localhost',
+      port: '3000',
+      pathname: '/',
+      search: '',
+      hash: '',
+      reload: jest.fn(),
+      assign: jest.fn(),
+      replace: jest.fn()

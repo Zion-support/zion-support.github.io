@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target,  Calendar,  Users,  Zap,  Shield from 'lucide-react';
+import { Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target, Shield from 'lucide-react';
 import { Link } from 'react-router-dom';
 const AISchedulerPage: React.FC = () => {
   const features = [
@@ -16,12 +16,10 @@ const AISchedulerPage: React.FC = () => {
       title: 'Team Coordination',
       description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
       benefit: 'Eliminate scheduling conflicts',
-
       icon: Zap,
       title: 'Automated Reminders',
       description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
       benefit: 'Reduce no-shows by 60%',
-
       icon: Shield,
       title: 'Privacy & Security',
       description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
@@ -39,7 +37,7 @@ const AISchedulerPage: React.FC = () => {
       name: 'Amanda Chen',
       company: 'Digital Agency',
       role: 'Project Manager',
-      content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
+      content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.'
   return (
     
           
@@ -110,7 +108,7 @@ const AISchedulerPage: React.FC = () => {
           
           
           
-          <Phone className="w-5 h-5 mr-2" />,
+          <Phone className="w-5 h-5 mr-2" />
  Call: (302) 464-0950
             </a>
             <Link

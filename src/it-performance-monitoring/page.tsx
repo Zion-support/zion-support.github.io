@@ -15,11 +15,11 @@ const ITPerformanceMonitoringPage: React.FC = () => {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Automated performance optimization and tuning',
-      benefits: ['Auto-tuning', 'Bottleneck detection', 'Optimization recommendations']
+      benefits: ['Auto-tuning', 'Bottleneck detection', 'Optimization recommendations'];
       icon: Settings,
       title: 'Custom Dashboards',
       description: 'Customizable dashboards and reporting',
-      benefits: ['Custom metrics', 'Visualization', 'Reporting']
+      benefits: ['Custom metrics', 'Visualization', 'Reporting'];
     }
   ];
   return (

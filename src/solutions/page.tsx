@@ -54,179 +54,179 @@ const SolutionsPage: React.FC = () => {
   // TODO: Add content
 };
   ai: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
       {
   // TODO: Add content
 };
   title: 'AI-Powered Analytics',
-        description: 'Transform raw data into actionable insights with advanced AI analytics',
-        features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
+      description: 'Transform raw data into actionable insights with advanced AI analytics',
+      features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricing: 'Starting at $1,500/month',
         icon: BarChart,
-        color: 'text-blue-400'
+      color: 'text-blue-400'
       },
       {
   // TODO: Add content
 };
   title: 'AI Marketing Automation',
-        description: 'Revolutionize your marketing with AI-powered automation and personalization',
-        features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
+      description: 'Revolutionize your marketing with AI-powered automation and personalization',
+      features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricing: 'Starting at $199/month',
-        icon: Target,
-        color: 'text-pink-400'
+      icon: Target,
+      color: 'text-pink-400'
       },
       {
   // TODO: Add content
 };
   title: 'AI Customer Support',
-        description: 'Enhance customer experience with intelligent AI-powered support systems',
-        features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
+      description: 'Enhance customer experience with intelligent AI-powered support systems',
+      features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
         pricing: 'Starting at $299/month',
-        icon: Users,
-        color: 'text-green-400'
+      icon: Users,
+      color: 'text-green-400'
       },
       {
   // TODO: Add content
 };
   title: 'AI Process Automation',
-        description: 'Automate complex business processes with intelligent decision-making capabilities',
-        features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
+      description: 'Automate complex business processes with intelligent decision-making capabilities',
+      features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricing: 'Starting at $399/month',
-        icon: Zap,
-        color: 'text-yellow-400'
+      icon: Zap,
+      color: 'text-yellow-400'
       }
 //     ],
     it: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
       {
   // TODO: Add content
 };
   title: 'Cloud Migration',
-        description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
-        features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
+      description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
+      features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricing: 'Starting at $1,299/month',
         icon: Cloud,
-        color: 'text-blue-400'
+      color: 'text-blue-400'
       },
       {
   // TODO: Add content
 };
   title: 'IT Infrastructure Management',
-        description: 'Comprehensive IT infrastructure management and optimization services',
-        features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
+      description: 'Comprehensive IT infrastructure management and optimization services',
+      features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricing: 'Starting at $799/month',
-        icon: Globe,
-        color: 'text-green-400'
+      icon: Globe,
+      color: 'text-green-400'
       },
       {
   // TODO: Add content
 };
   title: 'DevOps & CI/CD',
-        description: 'Streamline development workflows with automated testing and deployment',
-        features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
+      description: 'Streamline development workflows with automated testing and deployment',
+      features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricing: 'Starting at $599/month',
-        icon: Zap,
-        color: 'text-purple-400'
+      icon: Zap,
+      color: 'text-purple-400'
       },
       {
   // TODO: Add content
 };
   title: 'Database Management',
-        description: 'Optimize and manage your databases with AI-powered performance tuning',
-        features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
+      description: 'Optimize and manage your databases with AI-powered performance tuning',
+      features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricing: 'Starting at $399/month',
-        icon: BarChart,
-        color: 'text-orange-400'
+      icon: BarChart,
+      color: 'text-orange-400'
       }
 //     ],
     security: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
       {
   // TODO: Add content
 };
   title: 'Cybersecurity Suite',
-        description: 'Comprehensive security solutions with threat detection and response',
-        features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
+      description: 'Comprehensive security solutions with threat detection and response',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricing: 'Starting at $799/month',
-        icon: Shield,
-        color: 'text-red-400'
+      icon: Shield,
+      color: 'text-red-400'
       },
       {
   // TODO: Add content
 };
   title: 'AI Security Monitoring',
-        description: 'Real-time security monitoring with AI-powered threat detection',
-        features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
+      description: 'Real-time security monitoring with AI-powered threat detection',
+      features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricing: 'Starting at $299/month',
-        icon: Brain,
-        color: 'text-purple-400'
+      icon: Brain,
+      color: 'text-purple-400'
       },
       {
   // TODO: Add content
 };
   title: 'Compliance Management',
-        description: 'Ensure regulatory compliance with automated compliance monitoring',
-        features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
+      description: 'Ensure regulatory compliance with automated compliance monitoring',
+      features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricing: 'Starting at $499/month',
-        icon: CheckCircle,
-        color: 'text-green-400'
+      icon: CheckCircle,
+      color: 'text-green-400'
       },
       {
   // TODO: Add content
 };
   title: 'Security Training',
-        description: 'Comprehensive security awareness training for your organization',
-        features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
+      description: 'Comprehensive security awareness training for your organization',
+      features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricing: 'Starting at $199/month',
-        icon: Users,
-        color: 'text-blue-400'
+      icon: Users,
+      color: 'text-blue-400'
       }
 //     ],
     automation: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
       {
   // TODO: Add content
 };
   title: 'Business Process Automation',
-        description: 'Automate complex business processes with intelligent workflow management',
-        features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
+      description: 'Automate complex business processes with intelligent workflow management',
+      features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricing: 'Starting at $399/month',
-        icon: Zap,
-        color: 'text-yellow-400'
+      icon: Zap,
+      color: 'text-yellow-400'
       },
       {
   // TODO: Add content
 };
   title: 'IT Automation',
-        description: 'Automate IT operations and reduce manual tasks with intelligent automation',
-        features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
+      description: 'Automate IT operations and reduce manual tasks with intelligent automation',
+      features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricing: 'Starting at $299/month',
-        icon: Cloud,
-        color: 'text-blue-400'
+      icon: Cloud,
+      color: 'text-blue-400'
       },
       {
   // TODO: Add content
 };
   title: 'Marketing Automation',
-        description: 'Automate marketing campaigns and customer engagement processes',
-        features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
+      description: 'Automate marketing campaigns and customer engagement processes',
+      features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricing: 'Starting at $199/month',
-        icon: Target,
-        color: 'text-pink-400'
+      icon: Target,
+      color: 'text-pink-400'
       },
       {
   // TODO: Add content
 };
   title: 'Data Automation',
-        description: 'Automate data processing, analysis, and reporting workflows',
+      description: 'Automate data processing, analysis, and reporting workflows',
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricing: 'Starting at $249/month',
-        icon: BarChart,
-        color: 'text-green-400'
+      icon: BarChart,
+      color: 'text-green-400'
       }
 //     ]
   };

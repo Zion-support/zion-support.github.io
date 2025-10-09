@@ -1,13 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react';
+import { Shield, Settings, Zap, Clock, Users, TrendingUp, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAutomationPage: React.FC = () => {
-const features = [
+  const features = [
     {
-  // TODO: Add content
-};
+      icon: Shield,
   icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
@@ -19,7 +18,7 @@ const features = [
   icon: Zap,
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
-      benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
+      benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization'];
     },
     {
   // TODO: Add content
@@ -27,7 +26,7 @@ const features = [
   icon: Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
-      benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
+      benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance'];
     },
     {
   // TODO: Add content
@@ -35,7 +34,7 @@ const features = [
   icon: Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
-      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
+      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities'];
     }
   ];
   const pricingPlans = [
@@ -49,8 +48,8 @@ const features = [
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
 //         'Up to 10 automated processes',
 //         'Basic AI decision making',
 //         'Email support',
@@ -67,8 +66,8 @@ const features = [
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
 //         'Up to 50 automated processes',
 //         'Advanced AI decision making',
 //         'Priority support',
@@ -86,8 +85,8 @@ const features = [
       period: '/month',
       description: 'For large organizations',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items
+];
 //         'Unlimited processes',
 //         'Premium AI features',
 //         '24/7 support',

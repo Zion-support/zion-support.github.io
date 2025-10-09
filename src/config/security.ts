@@ -8,26 +8,26 @@ export const _securityHeaders = {
   // Content Security Policy,
   contentSecurityPolicy: {
 // directives: {
-// defaultSrc: ["'self'"],
+// defaultSrc: ["'self'"];
 // scriptSrc: [
-// "'self'",
+// "'self'"
 // "'unsafe-inline'",
 // "'unsafe-eval'",
-// 'https://www.googletagmanager.com',
-// 'https://www.google-analytics.com',
+// 'https: //www.googletagmanager.com'
+// 'https: //www.google-analytics.com'
 // ],
-// styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-// fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-// imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
-// connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
-// frameSrc: ["'self'"],
-// objectSrc: ["'none'"],
+// styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'];
+// fontSrc: ["'self'", 'https: //fonts.gstatic.com'];
+// imgSrc: ["'self'", 'data:', 'https:', 'blob: '];
+// connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'];
+// frameSrc: ["'self'"];
+// objectSrc: ["'none'"];
 // upgradeInsecureRequests: true
     }
   },
   // Security Headers,
   headers: {
-// 'X-DNS-Prefetch-Control': 'on',
+// 'X-DNS-Prefetch-Control': 'on'
 // 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
 // 'X-XSS-Protection': '1; mode=block',
 // 'X-Frame-Options': 'SAMEORIGIN',
@@ -46,24 +46,24 @@ export const rateLimitConfig = {
 export const corsConfig = {
   // TODO: Add content
 };
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-  maxAge: 86400, // 24 hours
+      maxAge: 86400, // 24 hours
  * Session configuration
 export const sessionConfig = {
   // TODO: Add content
 };
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
+      resave: false,
+      saveUninitialized: false,
+      cookie: {
   // TODO: Add content
 };
   secure: process.env['NODE_ENV'] === 'production',
-    httpOnly: true,
-maxAge: 24 * 60 * 60 * 1000, // 24 hours
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
     sameSite: 'strict' as const
  * Input validation patterns
 export const validationPatterns = {
@@ -73,7 +73,7 @@ export const validationPatterns = {
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   alphanumeric: /^[a-zA-Z0-9]+$/,
-  noSpecialChars: /^[a-zA-Z0-9\s]+$/
+      noSpecialChars: /^[a-zA-Z0-9\s]+$/
  * Sanitize user input
 export function sanitizeInput(input: string): string {
   // TODO: Add content

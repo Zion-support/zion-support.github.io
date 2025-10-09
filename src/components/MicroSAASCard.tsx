@@ -5,16 +5,16 @@ interface MicroSAASCardProps {
   service: {
   // TODO: Add content
 };
-  title: string;
-    description: string;
-    icon: string;
-    price: string;,
-    features: string[];,
-    benefits: string[];
-    marketPrice?: string;,
+  title: string;,
+      description: string;,
+      icon: string;,
+      price: string;,
+      features: string[];,
+      benefits: string[];
+    marketPrice?: string;
     category: string;,
-    technologies: string[];,
-    contactInfo: string;
+      technologies: string[];,
+      contactInfo: string;
     link?: string;
     popular?: boolean;
   };

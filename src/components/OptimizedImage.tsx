@@ -3,7 +3,7 @@ interface OptimizedImageProps {
   // TODO: Add content
 };
   src: string;,
-    alt: string;
+      alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -71,7 +71,7 @@ const OptimizedImage: React.FC
   // TODO: Add content
 };
   rootMargin: '50px',
-        threshold: 0.1,
+      threshold: 0.1
       }
     );
     if (imgRef.current) {
@@ -172,8 +172,8 @@ onError={handleError} className={`transition-opacity duration-300 ${
   // TODO: Add content
 };
   width: '100%',
-            height: '100%',
-            objectFit: 'cover',
+      height: '100%',
+      objectFit: 'cover'
           }}
 //         />
       )}

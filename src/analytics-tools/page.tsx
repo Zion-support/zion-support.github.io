@@ -19,14 +19,12 @@ const AnalyticsToolsPage: React.FC = () => {
       features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
       icon: '',
       category: 'Web Analytics',
-
       title: 'AI Sales Analytics',
       price: '$199/month',
       description: 'Sales performance analytics with AI-powered forecasting and optimization.',
       features: ['Sales forecasting', 'Pipeline analysis', 'Performance tracking', 'Lead scoring', 'Conversion optimization', 'Revenue insights'],
       icon: '',
       category: 'Sales Analytics',
-
       title: 'AI Financial Analytics',
       price: '$349/month',
       description: 'Financial performance analytics with AI-powered insights and risk assessment.',
@@ -39,15 +37,12 @@ const AnalyticsToolsPage: React.FC = () => {
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
       description: 'Make informed decisions with comprehensive analytics and AI insights',
-
       icon: Target,
       title: 'Predictive Insights',
       description: 'Anticipate trends and opportunities with AI-powered predictions',
-
       icon: BarChart,
       title: 'Real-Time Monitoring',
       description: 'Track performance in real-time with live dashboards and alerts',
-
       icon: Brain,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'

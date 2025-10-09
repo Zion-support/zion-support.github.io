@@ -4,9 +4,9 @@ interface ErrorBoundaryState {
   // TODO: Add content
 };
   hasError: boolean;,
-    error: Error | null;,
-    errorInfo: ErrorInfo | null;,
-    errorId: string | null;
+      error: Error | null;,
+      errorInfo: ErrorInfo | null;,
+      errorId: string | null;
 }
 interface ErrorBoundaryProps {
   // TODO: Add content
@@ -20,17 +20,17 @@ interface ErrorBoundaryProps {
 interface ErrorReport {
   // TODO: Add content
 };
-  errorId: string | null;
-    error: Error;
-    errorInfo: ErrorInfo;
-    message: string;
-    stack: string | undefined;
-    componentStack: string | null | undefined;,
-    timestamp: string;,
-    userAgent: string;,
-    url: string;,
-    userId: string | null;,
-    sessionId: string;
+  errorId: string | null;,
+      error: Error;,
+      errorInfo: ErrorInfo;,
+      message: string;,
+      stack: string | undefined;,
+      componentStack: string | null | undefined;,
+      timestamp: string;,
+      userAgent: string;,
+      url: string;,
+      userId: string | null;,
+      sessionId: string;
 }
 class AdvancedErrorBoundary extends Component
           
@@ -77,7 +77,7 @@ class AdvancedErrorBoundary extends Component
     return {
   // TODO: Add content
 };
-  hasError: true,
+  hasError: true
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
@@ -99,7 +99,7 @@ class AdvancedErrorBoundary extends Component
   // TODO: Add content
 };
   context: 'ErrorBoundary',
-        error: error.message,
+      error: error.message
 //         errorInfo
       });
     }
@@ -122,7 +122,7 @@ class AdvancedErrorBoundary extends Component
     const _errorReport: ErrorReport = {
   // TODO: Add content
 };
-  errorId: this.state.errorId || this.generateErrorId(),
+  errorId: this.state.errorId || this.generateErrorId()
 //       error,
 //       errorInfo,
       message: error.message,
@@ -188,7 +188,7 @@ class AdvancedErrorBoundary extends Component
   // TODO: Add content
 };
   method: 'POST',
-        headers: {
+      headers: {
   // TODO: Add content
 }
           'Content-Type': 'application/json'
@@ -202,7 +202,7 @@ class AdvancedErrorBoundary extends Component
   // TODO: Add content
 };
   context: 'ErrorReporting',
-        error: reportError
+      error: reportError
       });
     }
   };
@@ -226,9 +226,9 @@ class AdvancedErrorBoundary extends Component
   // TODO: Add content
 };
   hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: null
+      error: null,
+      errorInfo: null,
+      errorId: null
       });
     }
   };

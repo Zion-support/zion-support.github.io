@@ -15,11 +15,11 @@ const ITTrainingPage: React.FC = () => {
       icon: BookOpen,
       title: 'Custom Training',
       description: 'Tailored training programs for your specific needs',
-      benefits: ['Custom curriculum', 'On-site training', 'Online learning']
+      benefits: ['Custom curriculum', 'On-site training', 'Online learning'];
       icon: Award,
       title: 'Expert Instructors',
       description: 'Learn from industry experts and certified professionals',
-      benefits: ['Real-world experience', 'Industry insights', 'Mentorship']
+      benefits: ['Real-world experience', 'Industry insights', 'Mentorship'];
     }
   ];
   return (

@@ -243,7 +243,7 @@ export function unflattenObject()
  */
 export function pick<T extends Record<string, unknown>, K extends keyof T>()
   obj: T,
-  keys: K[]
+      keys: K[]
 ): Pick
           <T, K> {
   // TODO: Add content
@@ -283,7 +283,7 @@ export function omit
           
           <T extends Record<string, unknown>, K extends keyof T>()
   obj: T,
-  keys: K[]
+      keys: K[]
 ): Omit
           <T, K> {
   // TODO: Add content
@@ -310,7 +310,7 @@ export function omit
  */
 export function groupBy<T>()
   array: T[],
-  key: keyof T | ((item: T) => string | number)
+      key: keyof T | ((item: T) => string | number)
 ): Record
           <string, T[]> {
   // TODO: Add content
@@ -374,9 +374,9 @@ export function sortBy
           
           <T>()
   array: T[],
-  keys: Array
+      keys: Array
           <keyof T | ((item: T) => unknown)>,
-  orders: Array<'asc' | 'desc'> = []
+      orders: Array<'asc' | 'desc'> = []
 ): T[] {
   // TODO: Add content
 }
@@ -525,7 +525,7 @@ export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US
   return new Intl.NumberFormat(locale, {
   // TODO: Add content
 };
-  style: 'currency',
+  style: 'currency'
 //     currency
   }).format(amount);
 }
@@ -534,7 +534,7 @@ export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US
  */
 export function formatDate()
   date: Date | string | number,
-  options: Intl.DateTimeFormatOptions = {},
+      options: Intl.DateTimeFormatOptions = {},
   locale = 'en-US'
 ): string {
   // TODO: Add content

@@ -6,20 +6,20 @@ import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
   // TODO: Add content
 };
-  id: string;
-    title: string;
-    description: string;
-    category: string;,
-    readTime: string;,
-    date: string;,
-    path: string;,
-    image: string;,
-    featured: boolean;
+  id: string;,
+      title: string;,
+      description: string;,
+      category: string;,
+      readTime: string;,
+      date: string;,
+      path: string;,
+      image: string;,
+      featured: boolean;
   stats?: {
   // TODO: Add content
 };
   views: number;,
-    engagement: number;
+      engagement: number;
   };
 }
 export default function BlogPage() {
@@ -38,7 +38,7 @@ export default function BlogPage() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const blogPosts: BlogPost[] = useMemo(() => [
-  // TODO: Add items,
+  // TODO: Add items
 ]
     {
   // TODO: Add content
@@ -67,4 +67,4 @@ export default function BlogPage() {
       category: 'Intelligence',
       readTime: '14 min read',
       date: '2026-02-15',
-      path: '/blog/ai-2026-consensus-intelligence-breakthrough',
+      path: '/blog/ai-2026-consensus-intelligence-breakthrough'

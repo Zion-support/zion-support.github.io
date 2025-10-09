@@ -15,11 +15,11 @@ const ITAutomationPage: React.FC = () => {
       icon: Zap,
       title: 'Infrastructure Automation',
       description: 'Automate infrastructure provisioning and management',
-      benefits: ['Auto-provisioning', 'Configuration management', 'Scaling']
+      benefits: ['Auto-provisioning', 'Configuration management', 'Scaling'];
       icon: BarChart,
       title: 'Monitoring Automation',
       description: 'Automated monitoring and alerting systems',
-      benefits: ['Auto-monitoring', 'Smart alerts', 'Performance tracking']
+      benefits: ['Auto-monitoring', 'Smart alerts', 'Performance tracking'];
     }
   ];
   return (
@@ -38,7 +38,7 @@ const ITAutomationPage: React.FC = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // IT Automation
           
           
@@ -63,7 +63,7 @@ const ITAutomationPage: React.FC = () => {
           
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Streamline your IT operations with intelligent automation solutions. Reduce manual work,
+            Streamline your IT operations with intelligent automation solutions. Reduce manual work
             improve efficiency, and ensure consistency across all IT processes.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

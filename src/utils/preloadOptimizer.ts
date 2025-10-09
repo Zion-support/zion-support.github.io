@@ -10,7 +10,7 @@ export const _preloadCriticalResources = () => {
 const fontPreloads = [
   // TODO: Add items
 ];;
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
   ];
   fontPreloads.forEach(href => {
@@ -27,7 +27,7 @@ const fontPreloads = [
 const criticalImages = [
   // TODO: Add items
 ];;
-//     '/images/hero-bg.jpg',
+//     '/images/hero-bg.jpg'
 //     '/images/logo.png',
 //     '/images/favicon.ico'
   ];

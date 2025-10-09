@@ -37,7 +37,7 @@ class ErrorBoundary extends Component
     return {
   // TODO: Add content
 };
-  hasError: true,
+  hasError: true
 //       error
     };
   }
@@ -62,7 +62,7 @@ class ErrorBoundary extends Component
   // TODO: Add content
 };
   description: error.message,
-        fatal: true
+      fatal: true
       });
     }
     // Call custom error handler
@@ -116,7 +116,7 @@ class ErrorBoundary extends Component
     // fetch('/api/errors', {
   // TODO: Add content
 }
-    //   method: 'POST',
+    //   method: 'POST'
     //   headers: {
   // TODO: Add content
 }

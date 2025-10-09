@@ -55,7 +55,7 @@ const CareersPage: React.FC = () => {
   const benefits = [
   // TODO: Add items
 ];;
-//     'Competitive salary and equity',
+//     'Competitive salary and equity'
 //     'Comprehensive health insurance',
 //     'Flexible remote work options',
 //     'Professional development budget',

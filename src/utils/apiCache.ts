@@ -32,7 +32,7 @@ interface PendingRequest
           
           
           
-          <T>;,
+          <T>;
     timestamp: number;
 }
 /**
@@ -93,7 +93,7 @@ export class ApiCache {
           
           <T>()
     url: string,
-    options: RequestInit = {},
+      options: RequestInit = {},
     cacheConfig?: Partial
           <ApiCacheConfig>
   ): Promise<T> {
@@ -158,7 +158,7 @@ const requestPromise = this.fetchWithRetry
   // TODO: Add content
 };
   promise: requestPromise,
-        timestamp: Date.now()
+      timestamp: Date.now()
       });
     }
     try {
@@ -189,9 +189,9 @@ const requestPromise = this.fetchWithRetry
           
           <T>()
     url: string,
-    options: RequestInit,
-    maxRetries: number,
-    retryDelay: number,
+      options: RequestInit,
+      maxRetries: number,
+      retryDelay: number
     attempt = 1,
 ): Promise
           <T> {
@@ -323,7 +323,7 @@ const requestPromise = this.fetchWithRetry
           
           <T>()
     url: string,
-    options: RequestInit = {},
+      options: RequestInit = {},
     cacheConfig?: Partial
           <ApiCacheConfig>
   ): Promise<void> {
@@ -402,8 +402,8 @@ export const defaultApiCache = new ApiCache({
 };
   ttl: 5 * 60 * 1000, // 5 minutes,
   maxRetries: 3,
-  retryDelay: 1000,
-  deduplicate: true
+      retryDelay: 1000,
+      deduplicate: true
 });
 /**
  * Cached fetch helper
@@ -418,7 +418,7 @@ export async function cachedFetch
           
           
           <T>()
-  url: string,
+  url: string
   options?: RequestInit,
   cacheConfig?: Partial
           <ApiCacheConfig>
@@ -464,7 +464,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
 //         ...defaultOptions,
 //         ...options,
         method: 'POST',
-        headers: {
+      headers: {
   // TODO: Add content
 }
           'Content-Type': 'application/json',
@@ -489,7 +489,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
 //         ...defaultOptions,
 //         ...options,
         method: 'PUT',
-        headers: {
+      headers: {
   // TODO: Add content
 }
           'Content-Type': 'application/json',
@@ -510,9 +510,9 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
           <T>(path: string, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),
     invalidate: (pattern: string | RegExp) => cache.invalidate(pattern),
-    clear: () => cache.clear(),
-    stats: () => cache.getStats(),
-    prefetch: <T>(path: string, options?: RequestInit) =>
+      clear: () => cache.clear(),
+      stats: () => cache.getStats(),
+      prefetch: <T>(path: string, options?: RequestInit) =>
       cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
   };
 }

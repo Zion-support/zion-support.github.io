@@ -21,11 +21,11 @@ interface PerformanceMetrics {
   // TODO: Add content
 };
   loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    bundleSize: number;,
-    cacheHitRate: number;,
-    lazyLoading: boolean;
+      renderTime: number;,
+      memoryUsage: number;,
+      bundleSize: number;,
+      cacheHitRate: number;,
+      lazyLoading: boolean;
   firstContentfulPaint?: number;
   fcp?: number;
   lcp?: number;
@@ -39,10 +39,10 @@ interface OptimizationConfig {
   // TODO: Add content
 };
   enableLazyLoading: boolean;,
-    enableCodeSplitting: boolean;,
-    enableImageOptimization: boolean;,
-    enableCaching: boolean;,
-    enableCompression: boolean;
+      enableCodeSplitting: boolean;,
+      enableImageOptimization: boolean;,
+      enableCaching: boolean;,
+      enableCompression: boolean;
 }
 interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {
@@ -52,20 +52,20 @@ class PerformanceOptimizer {
   // TODO: Add content
 };
   loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0,
-    cacheHitRate: 0,
-    lazyLoading: false
+      renderTime: 0,
+      memoryUsage: 0,
+      bundleSize: 0,
+      cacheHitRate: 0,
+      lazyLoading: false
   };
   private config: OptimizationConfig = {
   // TODO: Add content
 };
   enableLazyLoading: true,
-    enableCodeSplitting: true,
-    enableImageOptimization: true,
-    enableCaching: true,
-    enableCompression: true
+      enableCodeSplitting: true,
+      enableImageOptimization: true,
+      enableCaching: true,
+      enableCompression: true
   };
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
@@ -321,8 +321,8 @@ const observer = new PerformanceObserver((list) => {
   // TODO: Add content
 };
   usedJSHeapSize: number;,
-    totalJSHeapSize: number;,
-    jsHeapSizeLimit: number;
+      totalJSHeapSize: number;,
+      jsHeapSizeLimit: number;
       };
     }).memory;
     if (memory) {
@@ -606,8 +606,8 @@ const observer = new PerformanceObserver((list) => {
   // TODO: Add content
 };
   metric_name: key,
-            metric_value: value,
-            metric_rating: value 
+      metric_value: value,
+      metric_rating: value 
           
           
           
@@ -647,8 +647,8 @@ Load Time: ${metrics.loadTime.toFixed(2)}ms
 Render Time: ${metrics.renderTime.toFixed(2)}ms
 Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
 Bundle Size: ${metrics.bundleSize}KB
-Cache Hit Rate: ${metrics.cacheHitRate}%;
-  Recommendations:
+Cache Hit Rate: ${metrics.cacheHitRate}%;,
+      Recommendations:
 ${score 
           
           

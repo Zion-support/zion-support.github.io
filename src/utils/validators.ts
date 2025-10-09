@@ -7,7 +7,7 @@ export interface ValidationResult {
   // TODO: Add content
 };
   isValid: boolean;,
-    errors: string[];
+      errors: string[];
 }
 /**
  * Email validation regex pattern
@@ -205,7 +205,7 @@ export function validateObject
           
           <T extends Record<string, unknown>>()
   obj: T,
-  schema: Record
+      schema: Record
           <keyof T, (value: unknown) => boolean>
 ): ValidationResult {
   // TODO: Add content
@@ -225,7 +225,7 @@ export function validateObject
   return {
   // TODO: Add content
 };
-  isValid: errors.length === 0,
+  isValid: errors.length === 0
 //     errors
   };
 }
@@ -236,7 +236,7 @@ export interface FormField {
   // TODO: Add content
 };
   value: string;,
-    validators: Array
+      validators: Array
           
           
           
@@ -249,7 +249,7 @@ export interface FormField {
   // TODO: Add content
 };
   validate: (value: string) => boolean;,
-    message: string;
+      message: string;
   }>;
 }
 export function validateForm()
@@ -307,19 +307,19 @@ export const validators = {
   required: (message = 'This field is required') => ({
   // TODO: Add content
 };
-  validate: isRequired,
+  validate: isRequired
 //     message
   }),
   email: (message = 'Please enter a valid email address') => ({
   // TODO: Add content
 };
-  validate: isValidEmail,
+  validate: isValidEmail
 //     message
   }),
   phone: (message = 'Please enter a valid phone number') => ({
   // TODO: Add content
 };
-  validate: isValidPhone,
+  validate: isValidPhone
 //     message
   }),
   minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
@@ -337,7 +337,7 @@ export const validators = {
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
   // TODO: Add content
 };
-  validate: isStrongPassword,
+  validate: isStrongPassword
 //     message
   })
 };

@@ -36,7 +36,7 @@ const EnhancedSEO: React.FC
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
 //   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg'
   ogType = 'website',
   twitterCard = 'summary_large_image',
   twitterSite = '@ziontechgroup',

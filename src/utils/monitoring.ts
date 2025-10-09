@@ -20,10 +20,10 @@ export interface ErrorReport {
 };
   message: string;
   stack?: string;
-  component?: string;,
+  component?: string;
     timestamp: number;,
-    userAgent: string;,
-    url: string;
+      userAgent: string;,
+      url: string;
 class MonitoringService {
   // TODO: Add content
 }
@@ -51,7 +51,7 @@ class MonitoringService {
   // TODO: Add content
 };
   value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
+      event_category: 'Web Vitals'
   public logError(error: ErrorReport): void {
 this.errors.push(error)
     // Keep only last 50 errors;

@@ -15,11 +15,11 @@ const AIResearchDevelopmentPage: React.FC = () => {
       icon: Code,
       title: 'Prototype Development',
       description: 'Rapid prototyping and development of AI solutions',
-      benefits: ['Fast iteration', 'Proof of concept', 'MVP development']
+      benefits: ['Fast iteration', 'Proof of concept', 'MVP development'];
       icon: Target,
       title: 'Innovation Consulting',
       description: 'Strategic consulting for AI adoption and implementation',
-      benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
+      benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis'];
     }
   ];
   return (

@@ -22,16 +22,16 @@ const CompliancePage: React.FC = () => {
   icon: Shield,
       title: 'Data Protection',
       description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
-      features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
+      features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability'];
     },
       icon: FileText,
       title: 'Regulatory Compliance',
       description: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
-      features: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
+      features: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits'];
       icon: Users,
       title: 'Privacy Rights',
       description: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
-      features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
+      features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms'];
     }
   return (
     

@@ -15,11 +15,11 @@ const AISecurityMonitorPage: React.FC = () => {
       icon: Target,
       title: 'Vulnerability Assessment',
       description: 'Automated vulnerability scanning and assessment',
-      benefits: ['Security scanning', 'Risk assessment', 'Compliance checking']
+      benefits: ['Security scanning', 'Risk assessment', 'Compliance checking'];
       icon: Settings,
       title: 'Security Analytics',
       description: 'Comprehensive security analytics and reporting',
-      benefits: ['Security metrics', 'Threat intelligence', 'Performance reports']
+      benefits: ['Security metrics', 'Threat intelligence', 'Performance reports'];
     }
   ];
   return (

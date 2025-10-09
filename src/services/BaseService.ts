@@ -10,7 +10,7 @@ const apiClient = axios.create({
   // TODO: Add content
 };
   timeout: 30000,
-  headers: {
+      headers: {
   // TODO: Add content
 }
     'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ export interface CacheEntry
   // TODO: Add content
 };
   data: T;,
-    timestamp: number;
+      timestamp: number;
 export class BaseService {
   // TODO: Add content
 }
@@ -163,7 +163,7 @@ const entry = this.cache.get(key);
   // TODO: Add content
 };
   timeout: this.options.timeout,
-        retries: this.options.retries
+      retries: this.options.retries
         this.setInCache(cacheKey, response.data);
       return response.data;
     } catch (error) {
@@ -172,7 +172,7 @@ const entry = this.cache.get(key);
       logger.error('GET request failed', error as Error, {
   // TODO: Add content
 };
-  component: 'BaseService',
+  component: 'BaseService'
 endpoint
       throw error;
    * Make a POST request
@@ -211,5 +211,5 @@ logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
     logger.error('Service error', error, {
   // TODO: Add content
 };
-  component: this.constructor.name,
+  component: this.constructor.name
 ...context

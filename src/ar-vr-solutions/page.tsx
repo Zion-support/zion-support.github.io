@@ -15,11 +15,11 @@ const ARVRSolutionsPage: React.FC = () => {
       icon: Target,
       title: 'VR Solutions',
       description: 'Virtual reality platforms and immersive experiences',
-      benefits: ['VR environments', 'Training simulations', 'Virtual meetings']
+      benefits: ['VR environments', 'Training simulations', 'Virtual meetings'];
       icon: Settings,
       title: 'Hardware Integration',
       description: 'Integration with AR/VR hardware and devices',
-      benefits: ['Device compatibility', 'Performance optimization', 'Hardware support']
+      benefits: ['Device compatibility', 'Performance optimization', 'Hardware support'];
     }
   ];
   return (
@@ -38,7 +38,7 @@ const ARVRSolutionsPage: React.FC = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AR/VR Solutions
           
           
@@ -63,7 +63,7 @@ const ARVRSolutionsPage: React.FC = () => {
           
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Create immersive experiences with our AR/VR solutions. From augmented reality applications to virtual reality platforms,
+            Create immersive experiences with our AR/VR solutions. From augmented reality applications to virtual reality platforms
             we help you build the future of interactive technology.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

@@ -25,7 +25,7 @@ export interface ErrorMetadata {
   // TODO: Add content
 };
   category: ErrorCategory;,
-    severity: ErrorSeverity;
+      severity: ErrorSeverity;
   userId?: string;
   sessionId?: string;
   context?: Record
@@ -48,11 +48,11 @@ export interface TrackedError {
   // TODO: Add content
 };
   id: string;,
-    message: string;,
-    metadata: ErrorMetadata;,
-    occurrences: number;,
-    firstSeen: number;,
-    lastSeen: number;
+      message: string;,
+      metadata: ErrorMetadata;,
+      occurrences: number;,
+      firstSeen: number;,
+      lastSeen: number;
 }
 class ErrorTrackingService {
   // TODO: Add content
@@ -100,13 +100,13 @@ class ErrorTrackingService {
   // TODO: Add content
 };
   category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.High,
-        context: {
+      severity: ErrorSeverity.High,
+      context: {
   // TODO: Add content
 };
   filename: event.filename,
-          lineno: event.lineno,
-          colno: event.colno
+      lineno: event.lineno,
+      colno: event.colno
         }
       });
     });
@@ -118,8 +118,8 @@ class ErrorTrackingService {
   // TODO: Add content
 };
   category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.Critical,
-        context: { reason: event.reason }
+      severity: ErrorSeverity.Critical,
+      context: { reason: event.reason }
       });
     });
   }
@@ -128,7 +128,7 @@ class ErrorTrackingService {
    */
 //   trackError()
     error: Error,
-    metadata: Partial
+      metadata: Partial
           
           
           
@@ -162,11 +162,11 @@ const trackedError: TrackedError = {
   // TODO: Add content
 };
   id: errorId,
-        message: error.message,
-        metadata: fullMetadata,
-        occurrences: 1,
-        firstSeen: timestamp,
-        lastSeen: timestamp
+      message: error.message,
+      metadata: fullMetadata,
+      occurrences: 1,
+      firstSeen: timestamp,
+      lastSeen: timestamp
       };
       this.errors.set(errorId, trackedError);
       // Notify listeners
@@ -184,7 +184,7 @@ const trackedError: TrackedError = {
   // TODO: Add content
 };
   error_id: errorId,
-      category: metadata.category,
+      category: metadata.category
 //       ...metadata.context
     });
     // Send to external service if critical
@@ -281,7 +281,7 @@ const trackedError: TrackedError = {
   // TODO: Add content
 };
   method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(error)
         });
       }
@@ -322,7 +322,7 @@ const trackedError: TrackedError = {
   // TODO: Add content
 };
   total: number;,
-    byCategory: Record
+      byCategory: Record
           
           
           
@@ -361,7 +361,7 @@ const trackedError: TrackedError = {
     return {
   // TODO: Add content
 };
-  total: errors.length,
+  total: errors.length
 //       byCategory,
 //       bySeverity,
 //       topErrors

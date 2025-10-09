@@ -2,7 +2,7 @@ interface ServiceCardProps {
   // TODO: Add content
 };
   title: string;,
-    description: string;
+      description: string;
   icon?: React.ReactNode;
   className?: string;
 }

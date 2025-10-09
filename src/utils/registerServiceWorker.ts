@@ -215,8 +215,8 @@ export async function getServiceWorkerStatus(): Promise
   // TODO: Add content
 };
   supported: boolean;,
-    registered: boolean;,
-    active: boolean;
+      registered: boolean;,
+      active: boolean;
 }> {
   // TODO: Add content
 }

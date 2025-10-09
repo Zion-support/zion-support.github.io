@@ -12,11 +12,11 @@ export interface ErrorBoundaryConfig {
   logErrors: boolean;
   /**
    * Whether to show detailed error messages
-   */,
+   */
     showDetails: boolean;
   /**
    * Whether to send errors to external service
-   */,
+   */
     reportErrors: boolean;
   /**
    * Error reporting endpoint
@@ -24,17 +24,15 @@ export interface ErrorBoundaryConfig {
   reportingEndpoint?: string;
   /**
    * Whether to show error overlay in development
-   */,
+   */
     showErrorOverlay: boolean;
   /**
    * Maximum number of errors to store
-   */,
-
+   */
   maxStoredErrors: number;
   /**
    * Custom error messages by error type
-   */,
-
+   */
   customMessages: Record
           
           
@@ -60,20 +58,20 @@ export interface ErrorBoundaryConfig {
           
           
           
-          <{ error: Error; resetError: () => void }>;
-    network: React.ComponentType<{ error: Error; resetError: () => void }>;
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
+          <{ error: Error; resetError: () => void }>;,
+      network: React.ComponentType<{ error: Error; resetError: () => void }>;,
+      notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
   };
 }
 /**
  * Default error messages
  */
   default: 'Something went wrong. Please try again.',
-  network: 'Network connection issue. Please check your internet connection.',
-  notFound: 'The requested resource was not found.',
-  timeout: 'Request timed out. Please try again.',
-  serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.'
+      network: 'Network connection issue. Please check your internet connection.',
+      notFound: 'The requested resource was not found.',
+      timeout: 'Request timed out. Please try again.',
+      serverError: 'Server error occurred. Please try again later.',
+      validation: 'Validation error. Please check your input.'
 };
 /**
  * Get error boundary configuration based on environment
@@ -86,13 +84,13 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   // TODO: Add content
 };
   logErrors: true,
-    showDetails: isDevelopment,
-    reportErrors: !isDevelopment,
-    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
-    showErrorOverlay: isDevelopment,
-    maxStoredErrors: 50,
-    customMessages: DEFAULT_ERROR_MESSAGES,
-    fallbackComponents: {
+      showDetails: isDevelopment,
+      reportErrors: !isDevelopment,
+      reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
+      showErrorOverlay: isDevelopment,
+      maxStoredErrors: 50,
+      customMessages: DEFAULT_ERROR_MESSAGES,
+      fallbackComponents: {
   // TODO: Add content
 };
   default: DefaultErrorFallback,
@@ -400,11 +398,11 @@ export function formatErrorForLogging(error: Error): Record
   // TODO: Add content
 };
   message: error.message,
-    stack: error.stack,
-    name: error.name,
-    type: getErrorType(error),
-    timestamp: new Date().toISOString(),
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+      stack: error.stack,
+      name: error.name,
+      type: getErrorType(error),
+      timestamp: new Date().toISOString(),
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
   };
 }

@@ -9,8 +9,8 @@ const LoginPage: React.FC = () => {
   // TODO: Add content
 };
   email: '',
-    password: '',
-    rememberMe: false
+      password: '',
+      rememberMe: false
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

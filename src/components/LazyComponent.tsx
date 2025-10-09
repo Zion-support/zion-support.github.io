@@ -20,7 +20,7 @@ export const _withLazyLoading =
           
           <P extends object>()
   Component: ComponentType
-          <P>,
+          <P>
   fallback?: ReactNode,
 ) => {
   // TODO: Add content
@@ -210,8 +210,8 @@ export const preloadCriticalResources = () => {
 const fontPreloads = [
   // TODO: Add items
 ];;
-    'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap',
-    'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap'
+    'https: //fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap'
   ];
   fontPreloads.forEach((href) => {
   // TODO: Add content
@@ -226,7 +226,7 @@ const fontPreloads = [
 const imagePreloads = [
   // TODO: Add items
 ];;
-//     '/og-image.jpg',
+//     '/og-image.jpg'
 //     '/favicon.ico',
   ];
   imagePreloads.forEach((src) => {

@@ -15,11 +15,11 @@ const AISalesForecastingPage: React.FC = () => {
       icon: Target,
       title: 'Goal Setting',
       description: 'Intelligent goal setting and tracking',
-      benefits: ['Smart goals', 'Progress tracking', 'Performance metrics']
+      benefits: ['Smart goals', 'Progress tracking', 'Performance metrics'];
       icon: Settings,
       title: 'Scenario Planning',
       description: 'What-if analysis and scenario planning',
-      benefits: ['Scenario modeling', 'Risk assessment', 'Strategy optimization']
+      benefits: ['Scenario modeling', 'Risk assessment', 'Strategy optimization'];
     }
   ];
   return (

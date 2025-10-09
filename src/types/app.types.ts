@@ -40,10 +40,10 @@ export interface PerformanceReport {
           
           
           
-          <PerformanceMetrics>;,
+          <PerformanceMetrics>;
     resources: ResourceStats;,
-    memory: MemoryStats | null;,
-    timestamp: number;
+      memory: MemoryStats | null;,
+      timestamp: number;
 }
 /**
  * Resource Statistics Interface;
@@ -53,10 +53,10 @@ export interface ResourceStats {
   // TODO: Add content
 };
   total: number;,
-    scripts: number;,
-    styles: number;,
-    images: number;,
-    fonts: number;
+      scripts: number;,
+      styles: number;,
+      images: number;,
+      fonts: number;
 }
 /**
  * Memory Statistics Interface;
@@ -66,8 +66,8 @@ export interface MemoryStats {
   // TODO: Add content
 };
   usedJSHeapSize: number;,
-    totalJSHeapSize: number;,
-    jsHeapSizeLimit: number;
+      totalJSHeapSize: number;,
+      jsHeapSizeLimit: number;
 }
 /**
  * Performance Alert Interface;
@@ -77,11 +77,11 @@ export interface PerformanceAlert {
   // TODO: Add content
 };
   type: 'warning' | 'error' | 'info';,
-    message: string;,
-    metric: keyof PerformanceMetrics;,
-    value: number;,
-    threshold: number;,
-    timestamp: number;
+      message: string;,
+      metric: keyof PerformanceMetrics;,
+      value: number;,
+      threshold: number;,
+      timestamp: number;
 }
 /**
  * Layout Shift Interface;
@@ -91,7 +91,7 @@ export interface LayoutShift extends PerformanceEntry {
   // TODO: Add content
 };
   value: number;,
-    hadRecentInput: boolean;
+      hadRecentInput: boolean;
 }
 /**
  * Performance with Memory Interface;
@@ -104,7 +104,7 @@ export interface PerformanceWithMemory extends Performance {
   // TODO: Add content
 };
   usedJSHeapSize: number;,
-    totalJSHeapSize: number;,
-    jsHeapSizeLimit: number;
+      totalJSHeapSize: number;,
+      jsHeapSizeLimit: number;
   }
 }

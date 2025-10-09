@@ -15,11 +15,11 @@ const AIDocumentProcessorPage: React.FC = () => {
       icon: Target,
       title: 'Intelligent Classification',
       description: 'Automated document classification and sorting',
-      benefits: ['Auto categorization', 'Smart routing', 'Metadata extraction']
+      benefits: ['Auto categorization', 'Smart routing', 'Metadata extraction'];
       icon: Settings,
       title: 'Document Analytics',
       description: 'Comprehensive document analytics and insights',
-      benefits: ['Processing metrics', 'Quality analysis', 'Performance tracking']
+      benefits: ['Processing metrics', 'Quality analysis', 'Performance tracking'];
     }
   ];
   return (

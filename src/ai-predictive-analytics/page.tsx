@@ -15,11 +15,11 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
       icon: Target,
       title: 'Data Analysis',
       description: 'Advanced data analysis and pattern recognition',
-      benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation']
+      benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation'];
       icon: Settings,
       title: 'Custom Models',
       description: 'Custom predictive models and algorithms',
-      benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
+      benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization'];
     }
   ];
   return (

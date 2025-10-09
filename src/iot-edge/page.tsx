@@ -1,5 +1,5 @@
 import React from 'react';
-import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
+import { CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
@@ -13,7 +13,7 @@ const IoTEdgePage: React.FC = () => {
       benefits: ['Reduce management overhead by 70%', 'Improve device reliability', 'Enable remote operations'],
       marketPrice: '$5,000-15,000/month',
       category: 'Device Management',
-      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT']
+      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT'];
     },
       title: 'Edge Computing Solutions',
       description: 'Real-time data processing at the edge with low latency and high performance.',
@@ -23,7 +23,7 @@ const IoTEdgePage: React.FC = () => {
       benefits: ['Reduce latency by 90%', 'Lower bandwidth costs', 'Enable offline operations'],
       marketPrice: '$7,000-20,000/month',
       category: 'Edge Computing',
-      technologies: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'OpenVINO', 'Edge TPU']
+      technologies: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'OpenVINO', 'Edge TPU'];
       title: 'Smart City Solutions',
       description: 'Comprehensive smart city infrastructure with traffic, energy, and environmental monitoring.',
       icon: '',
@@ -32,7 +32,7 @@ const IoTEdgePage: React.FC = () => {
       benefits: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen experience'],
       marketPrice: '$20,000-60,000/month',
       category: 'Smart Cities',
-      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Big Data', 'AI Analytics']
+      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Big Data', 'AI Analytics'];
       title: 'Real-Time Data Analytics',
       description: 'Streaming analytics for IoT data with real-time insights and alerting.',
       icon: '',
@@ -40,7 +40,7 @@ const IoTEdgePage: React.FC = () => {
       features: ['Stream processing', 'Real-time dashboards', 'Anomaly detection', 'Predictive analytics', 'Alert systems'],
       benefits: ['Make faster decisions', 'Identify issues early', 'Optimize operations'],
       category: 'Analytics',
-      technologies: ['Apache Kafka', 'Apache Flink', 'Apache Spark', 'InfluxDB', 'Grafana']
+      technologies: ['Apache Kafka', 'Apache Flink', 'Apache Spark', 'InfluxDB', 'Grafana'];
       title: 'Predictive Maintenance Systems',
       description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
       icon: '',
@@ -49,7 +49,7 @@ const IoTEdgePage: React.FC = () => {
       benefits: ['Prevent unplanned downtime', 'Reduce maintenance costs', 'Extend equipment life'],
       marketPrice: '$8,000-25,000/month',
       category: 'Predictive Maintenance',
-      technologies: ['Machine Learning', 'Time Series Analysis', 'Vibration Sensors', 'Thermal Cameras', 'AI Models']
+      technologies: ['Machine Learning', 'Time Series Analysis', 'Vibration Sensors', 'Thermal Cameras', 'AI Models'];
       title: 'Smart Agriculture Solutions',
       description: 'Precision agriculture with IoT sensors, drones, and AI-powered crop management.',
       icon: '',
@@ -58,7 +58,7 @@ const IoTEdgePage: React.FC = () => {
       benefits: ['Increase crop yields by 25%', 'Reduce water usage by 30%', 'Optimize fertilizer use'],
       marketPrice: '$6,000-18,000/month',
       category: 'Agriculture',
-      technologies: ['Soil Sensors', 'Drones', 'Satellite Imagery', 'Machine Learning', 'Precision Agriculture']
+      technologies: ['Soil Sensors', 'Drones', 'Satellite Imagery', 'Machine Learning', 'Precision Agriculture'];
       title: 'IoT Device Development',
       description: 'Custom IoT device design and development for specific business requirements.',
       icon: '',
@@ -67,14 +67,14 @@ const IoTEdgePage: React.FC = () => {
       benefits: ['Custom solutions', 'Competitive advantage', 'Optimized performance'],
       marketPrice: '$25,000-100,000/project',
       category: 'Device Development',
-      technologies: ['Arduino', 'Raspberry Pi', 'ESP32', 'ARM Cortex', 'Custom PCBs']
+      technologies: ['Arduino', 'Raspberry Pi', 'ESP32', 'ARM Cortex', 'Custom PCBs'];
 title: 'IoT Data Management',
       description: 'Comprehensive data management for IoT with storage, processing, and analytics.',
       icon: '🗄️',
       features: ['Data ingestion', 'Storage optimization', 'Data processing', 'Quality management', 'Analytics'],
       benefits: ['Handle massive data volumes', 'Ensure data quality', 'Enable advanced analytics'],
       category: 'Data Management',
-      technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
+      technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools'];
     }
   ];
   const categories = [...new Set(iotServices.map(service => service.category))];

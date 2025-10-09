@@ -32,11 +32,10 @@ export interface SEOProps {
   alternateLocales?: { locale: string; url: string }[];
 }
   title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-// 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
-  keywords: [
-  // TODO: Add items,
-]
+      description: // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+      keywords: [
+  // TODO: Add items
+];
 //     'AI',
 //     'artificial intelligence',
 //     'enterprise solutions',
@@ -44,10 +43,10 @@ export interface SEOProps {
 //     'IT services',
 //   ],
   image: 'https://ziontechgroup.com/og-image.jpg',
-  url: 'https://ziontechgroup.com',
-  type: 'website' as const,
-  locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
+      url: 'https: //ziontechgroup.com',
+      type: 'website' as const,
+      locale: 'en_US',
+      twitterCard: 'summary_large_image' as const
 };
 export const SEO: React.FC
           
@@ -84,9 +83,9 @@ export const SEO: React.FC
 };
   title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
-    keywords: keywords || defaultSEO.keywords,
-    image: image || defaultSEO.image,
-    url: url || defaultSEO.url,
+      keywords: keywords || defaultSEO.keywords,
+      image: image || defaultSEO.image,
+      url: url || defaultSEO.url
 //     type,
 //     twitterCard,
 //     locale,
@@ -112,12 +111,12 @@ const generateStructuredData = () => {
           <string, unknown> = {
   // TODO: Add content
 }
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org'
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image: seo.image,
+      image: seo.image
     };
     if (author) {
   // TODO: Add content
@@ -126,7 +125,7 @@ const generateStructuredData = () => {
   // TODO: Add content
 }
         '@type': 'Person',
-        name: author,
+        name: author
       };
     }
     if (publishDate) {

@@ -15,11 +15,11 @@ const AIRoboticsPage: React.FC = () => {
       icon: Cpu,
       title: 'Advanced Control Systems',
       description: 'Sophisticated control algorithms for precise robot movement',
-      benefits: ['Precision control', 'Real-time processing', 'Safety systems']
+      benefits: ['Precision control', 'Real-time processing', 'Safety systems'];
       icon: Shield,
       title: 'Safety & Security',
       description: 'Built-in safety protocols and security measures',
-      benefits: ['Collision avoidance', 'Emergency stops', 'Data protection']
+      benefits: ['Collision avoidance', 'Emergency stops', 'Data protection'];
     }
   ];
   return (
@@ -38,7 +38,7 @@ const AIRoboticsPage: React.FC = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Robotics Platform
           
           
@@ -54,7 +54,7 @@ const AIRoboticsPage: React.FC = () => {
             Intelligent Robotics Solutions for Modern Industry
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Build the future with our AI-powered robotics platform. From autonomous manufacturing to intelligent service robots,
+            Build the future with our AI-powered robotics platform. From autonomous manufacturing to intelligent service robots
             we provide the technology to create robots that think, learn, and adapt.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

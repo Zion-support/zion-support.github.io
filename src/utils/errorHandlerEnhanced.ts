@@ -4,8 +4,8 @@ export class AppError extends Error {
   // TODO: Add content
 };
   statusCode: number;,
-    isOperational: boolean;,
-    timestamp: string;
+      isOperational: boolean;,
+      timestamp: string;
   constructor(message: string, statusCode = 500, isOperational = true) {
   // TODO: Add content
 }
@@ -23,15 +23,15 @@ export const _errorHandler = (error: AppError | Error) => {
   const appError = error instanceof AppError ? error : new AppError(error.message)
 // console.error({
     message: appError.message,
-    stack: isDevelopment ? appError.stack : undefined,
-    timestamp: new Date().toISOString(),
-    statusCode: appError.statusCode || 500
+      stack: isDevelopment ? appError.stack : undefined,
+      timestamp: new Date().toISOString(),
+      statusCode: appError.statusCode || 500
   });
   return {
   // TODO: Add content
 };
   message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-    statusCode: appError.statusCode || 500
+      statusCode: appError.statusCode || 500
   };
 };
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {

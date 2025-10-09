@@ -14,7 +14,7 @@ const PartnersPage: React.FC = () => {
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       partners: [
-  // TODO: Add items,
+  // TODO: Add items
 ];
         { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '' },
         { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '' },
@@ -28,18 +28,18 @@ const PartnersPage: React.FC = () => {
       description: 'Specialized solution providers that complement our offerings',
       icon: Handshake,
       color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
+      bgColor: 'bg-green-500/10'
         { name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️' },
         { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️' },
         { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },
         { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
         { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
-        { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' };
-  title: 'Integration Partners',
+        { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' };,
+      title: 'Integration Partners',
       description: 'Partners that help us integrate with existing enterprise systems',
       icon: Award,
       color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
+      bgColor: 'bg-purple-500/10'
 { name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾' },
         { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐' },
         { name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️' },
@@ -52,25 +52,21 @@ const PartnersPage: React.FC = () => {
 icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',
-
       icon: Users,
       title: 'Expertise Sharing',
       description: 'Collaborative knowledge sharing and best practices across industries',
-
       icon: Star,
       title: 'Innovation',
       description: 'Joint innovation initiatives and cutting-edge technology development',
-
       icon: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
-  const partnershipTiers = [,
-
+  const partnershipTiers = [
       name: 'Strategic Partners',
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
       benefits: [
-  // TODO: Add items,
+  // TODO: Add items
 ];
 //         'Joint marketing and sales initiatives',
 //         'Co-development of solutions',
@@ -80,10 +76,9 @@ icon: Globe,
 //       ],
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-
       name: 'Solution Partners',
       level: 'Gold',
-      description: 'Technology integration and solution delivery partnerships',
+      description: 'Technology integration and solution delivery partnerships'
         'Technical integration support',
         'Joint solution development',
         'Marketing support and co-marketing',
@@ -91,10 +86,9 @@ icon: Globe,
         'Preferred pricing'
       color: 'text-gray-400',
       bgColor: 'bg-gray-500/10',
-
       name: 'Channel Partners',
       level: 'Silver',
-      description: 'Reseller and referral partnerships for market expansion',
+      description: 'Reseller and referral partnerships for market expansion'
         'Reseller program access',
         'Sales training and support',
         'Marketing materials and tools',

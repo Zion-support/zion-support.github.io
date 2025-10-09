@@ -12,19 +12,15 @@ const AISocialMediaManagerPage: React.FC = () => {
 icon: TrendingUp,
       title: 'Trend Analysis',
       description: 'Real-time trend monitoring and content suggestions based on viral topics',
-
       icon: Users,
       title: 'Audience Insights',
       description: 'Deep analytics on your audience behavior and engagement patterns',
-
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-optimized posting times for maximum engagement across all platforms',
-
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Comprehensive reporting with actionable insights and ROI tracking',
-
       icon: MessageSquare,
       title: 'Auto-Responses',
       description: 'Intelligent chatbot responses and comment management'
@@ -49,7 +45,7 @@ icon: TrendingUp,
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-  // TODO: Add items,
+  // TODO: Add items
 ];
 //         '3 social media accounts',
 //         '50 posts per month',
@@ -58,10 +54,9 @@ icon: TrendingUp,
 //         'Email support'
 //       ],
       popular: false,
-
       name: 'Professional',
       price: '$79',
-      description: 'Ideal for growing brands',
+      description: 'Ideal for growing brands'
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                     : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
                   {plan.popular ? 'Start Free Trial' : 'Get Started'}

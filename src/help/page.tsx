@@ -1,4 +1,4 @@
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users,  BookOpen,  HelpCircle,  MessageSquare,  Video,  Mail,  Users from 'lucide-react';
+import { HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users, Users from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -25,7 +25,6 @@ const categories = [
       icon: HelpCircle,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10',
-
       id: 'technical',
       name: 'Technical Support',
       icon: MessageSquare,
@@ -38,29 +37,26 @@ const categories = [
 }
     'getting-started': [;
   title: 'Setting Up Your First Dashboard',
-        description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
-        readTime: '3 min read',
-        title: 'Integration with Existing Systems',
-        description: 'How to integrate our AI services with your current business systems',
-        readTime: '7 min read',
-        difficulty: 'Intermediate',
-        title: 'Security Best Practices',
-        description: 'Implement security measures to protect your data and systems',
-        readTime: '8 min read',
+      description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
+      readTime: '3 min read',
+      title: 'Integration with Existing Systems',
+      description: 'How to integrate our AI services with your current business systems',
+      readTime: '7 min read',
+      difficulty: 'Intermediate',
+      title: 'Security Best Practices',
+      description: 'Implement security measures to protect your data and systems',
+      readTime: '8 min read',
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
       count: '50+ videos',
-
       title: 'API Reference',
       description: 'Complete API documentation with examples',
       count: '100+ endpoints',
-
       title: 'Email Support',
       description: 'Send us a detailed message and we\'ll respond quickly',
       icon: Mail,
       responseTime: 'Within 4 hours',
-
       title: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,

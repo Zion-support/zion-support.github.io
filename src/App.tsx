@@ -1,9 +1,7 @@
 import React, { useEffect, useState, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
-
 // Loading component
 const LoadingSpinner: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -13,19 +11,15 @@ const LoadingSpinner: React.FC = () => (
     </div>
   </div>
 );
-
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-
   useEffect(() => {
     // Simulate initialization
     const timer = setTimeout(() => {
       setIsInitialized(true);
     }, 1000);
-    
     return () => clearTimeout(timer);
   }, []);
-
   if (!isInitialized) {
     return <LoadingSpinner />;
   }
@@ -38,5 +32,4 @@ const App: React.FC = () => {
     </div>
   );
 };
-
 export default App;

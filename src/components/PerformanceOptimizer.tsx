@@ -34,11 +34,11 @@ const PerformanceOptimizer: React.FC
   // TODO: Add content
 };
   imagesOptimized: 0,
-    lazyLoaded: 0,
-    preloaded: 0,
-    codeSplit: false,
-    resourceHints: 0,
-    serviceWorker: false
+      lazyLoaded: 0,
+      preloaded: 0,
+      codeSplit: false,
+      resourceHints: 0,
+      serviceWorker: false
   });
   useEffect(() => {
   // TODO: Add content
@@ -118,7 +118,7 @@ if ('IntersectionObserver' in window) {}
   // TODO: Add content
 };
   rootMargin: '50px 0px',
-        threshold: 0.1
+      threshold: 0.1
       });
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach((img) => observer.observe(img));
@@ -135,15 +135,15 @@ if ('IntersectionObserver' in window) {}
   // TODO: Add content
 };
   href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-        as: 'style',
-        type: 'text/css'
+      as: 'style',
+      type: 'text/css'
       },
       {
   // TODO: Add content
 };
   href: '/styles/critical.css',
-        as: 'style',
-        type: 'text/css'
+      as: 'style',
+      type: 'text/css'
       }
     ];
     criticalResources.forEach((resource) => {
@@ -238,8 +238,8 @@ if ('IntersectionObserver' in window) {}
   // TODO: Add content
 };
   name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Performance'
+      value: Math.round(entry.startTime),
+      event_category: 'Performance'
               });
             }
           }

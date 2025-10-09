@@ -15,11 +15,11 @@ const NetworkSolutionsPage: React.FC = () => {
       icon: Shield,
       title: 'Network Security',
       description: 'Comprehensive network security solutions',
-      benefits: ['Firewall management', 'Intrusion detection', 'VPN solutions']
+      benefits: ['Firewall management', 'Intrusion detection', 'VPN solutions'];
       icon: Settings,
       title: 'Network Management',
       description: '24/7 network monitoring and management',
-      benefits: ['Proactive monitoring', 'Issue resolution', 'Performance reporting']
+      benefits: ['Proactive monitoring', 'Issue resolution', 'Performance reporting'];
     }
   ];
   return (

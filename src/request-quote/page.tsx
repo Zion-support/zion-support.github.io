@@ -9,22 +9,22 @@ const RequestQuotePage: React.FC = () => {
   // TODO: Add content
 };
   name: '',
-    email: '',
-    company: '',
-    phone: '',
-    serviceType: '',
-    projectSize: '',
-    timeline: '',
-    budget: '',
-    description: '',
-    requirements: ''
+      email: '',
+      company: '',
+      phone: '',
+      serviceType: '',
+      projectSize: '',
+      timeline: '',
+      budget: '',
+      description: '',
+      requirements: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
   // TODO: Add items
 ];;
-//     'AI Services',
+//     'AI Services'
 //     'IT Infrastructure',
 //     'Cybersecurity',
 //     'Cloud Migration',
@@ -37,7 +37,7 @@ const RequestQuotePage: React.FC = () => {
   const projectSizes = [
   // TODO: Add items
 ];;
-//     'Small (1-10 employees)',
+//     'Small (1-10 employees)'
 //     'Medium (11-100 employees)',
 //     'Large (101-1000 employees)',
 //     'Enterprise (1000+ employees)'
@@ -45,7 +45,7 @@ const RequestQuotePage: React.FC = () => {
   const timelines = [
   // TODO: Add items
 ];;
-//     'ASAP',
+//     'ASAP'
 //     '1-3 months',
 //     '3-6 months',
 //     '6-12 months',

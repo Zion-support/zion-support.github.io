@@ -126,7 +126,7 @@ const links = document.querySelectorAll('a[href]');
   // TODO: Add content
 };
   description: event.error?.message || 'Unknown error',
-            fatal: false
+      fatal: false
           });
         }
       };
@@ -139,7 +139,7 @@ const links = document.querySelectorAll('a[href]');
   // TODO: Add content
 };
   description: event.reason?.message || 'Unhandled promise rejection',
-            fatal: false
+      fatal: false
           });
         }
       };
@@ -221,7 +221,7 @@ const handleVisibilityChange = () => {
   // TODO: Add content
 };
   event_category: 'engagement',
-                value: 25
+      value: 25
               });
             }
           } else if (maxScrollDepth >= 50 && maxScrollDepth 
@@ -243,7 +243,7 @@ const handleVisibilityChange = () => {
   // TODO: Add content
 };
   event_category: 'engagement',
-                value: 50
+      value: 50
               });
             }
           } else if (maxScrollDepth >= 75 && maxScrollDepth 
@@ -265,7 +265,7 @@ const handleVisibilityChange = () => {
   // TODO: Add content
 };
   event_category: 'engagement',
-                value: 75
+      value: 75
               });
             }
           } else if (maxScrollDepth >= 90) {
@@ -278,7 +278,7 @@ const handleVisibilityChange = () => {
   // TODO: Add content
 };
   event_category: 'engagement',
-                value: 90
+      value: 90
               });
             }
           }
@@ -297,8 +297,8 @@ const startTime = Date.now();
   // TODO: Add content
 };
   name: 'time_on_page',
-            value: timeOnPage,
-            event_category: 'engagement'
+      value: timeOnPage,
+      event_category: 'engagement'
           });
         }
       };
@@ -363,8 +363,8 @@ const observer = new PerformanceObserver((list) => {
   // TODO: Add content
 };
   name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Performance'
+      value: Math.round(entry.startTime),
+      event_category: 'Performance'
               });
             }
           } else if (entry.entryType === 'first-input') {
@@ -377,8 +377,8 @@ const observer = new PerformanceObserver((list) => {
   // TODO: Add content
 };
   name: 'FID',
-                value: Math.round(entry.processingStart - entry.startTime),
-                event_category: 'Performance'
+      value: Math.round(entry.processingStart - entry.startTime),
+      event_category: 'Performance'
               });
             }
           } else if (entry.entryType === 'layout-shift') {
@@ -394,8 +394,8 @@ const observer = new PerformanceObserver((list) => {
   // TODO: Add content
 };
   name: 'CLS',
-                  value: Math.round((entry as any).value * 1000),
-                  event_category: 'Performance'
+      value: Math.round((entry as any).value * 1000),
+      event_category: 'Performance'
                 });
               }
             }

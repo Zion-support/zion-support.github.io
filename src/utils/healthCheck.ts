@@ -7,15 +7,15 @@ export interface HealthStatus {
   // TODO: Add content
 };
   status: 'healthy' | 'degraded' | 'unhealthy';,
-    timestamp: number;,
-    uptime: number;,
-    checks: HealthCheck[];
+      timestamp: number;,
+      uptime: number;,
+      checks: HealthCheck[];
 }
 export interface HealthCheck {
   // TODO: Add content
 };
   name: string;,
-    status: 'pass' | 'warn' | 'fail';
+      status: 'pass' | 'warn' | 'fail';
   message?: string;
   details?: Record
           
@@ -152,7 +152,7 @@ constructor() {
 }
 //           name,
           status: 'fail',
-          message: error instanceof Error ? error.message : 'Unknown error'
+      message: error instanceof Error ? error.message : 'Unknown error'
         })
       }
     }
@@ -178,7 +178,7 @@ const hasFailures = checks.some((c) => c.status === 'fail')
 }
 //       status,
       timestamp: now,
-      uptime: now - this.startTime,
+      uptime: now - this.startTime
 //       checks
     };
     // Cache the result
@@ -226,8 +226,8 @@ const hasFailures = checks.some((c) => c.status === 'fail')
   // TODO: Add content
 };
   name: 'memory',
-        status: 'pass',
-        message: 'Memory API not available'
+      status: 'pass',
+      message: 'Memory API not available'
       };
     }
     try {
@@ -250,15 +250,15 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       return {
   // TODO: Add content
 };
-  name: 'memory',
+  name: 'memory'
 //         status,
 //         message,
         details: {
   // TODO: Add content
 };
   used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit,
+      total: memory.totalJSHeapSize,
+      limit: memory.jsHeapSizeLimit
 //           usedPercent
         }
       }
@@ -269,8 +269,8 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   // TODO: Add content
 };
   name: 'memory',
-        status: 'warn',
-        message: 'Could not check memory usage'
+      status: 'warn',
+      message: 'Could not check memory usage'
       };
     }
   }
@@ -301,14 +301,14 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       return {
   // TODO: Add content
 };
-  name: 'performance',
+  name: 'performance'
 //         status,
 //         message,
         details: {
   // TODO: Add content
 };
   metrics: report.metrics,
-          summary: report.summary
+      summary: report.summary
         }
       }
     } catch (error) {
@@ -318,8 +318,8 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   // TODO: Add content
 };
   name: 'performance',
-        status: 'warn',
-        message: 'Could not check performance'
+      status: 'warn',
+      message: 'Could not check performance'
       }
     }
   }
@@ -353,8 +353,8 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   // TODO: Add content
 };
   name: 'browser-apis',
-        status: 'warn',
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
+      status: 'warn',
+      message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
         details: { missingAPIs }
       }
     }
@@ -388,8 +388,8 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   // TODO: Add content
 };
   name: 'storage',
-          status: 'fail',
-          message: 'LocalStorage not working correctly'
+      status: 'fail',
+      message: 'LocalStorage not working correctly'
         }
       }
       // Check available space (approximate)
@@ -406,16 +406,16 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   // TODO: Add content
 };
   name: 'storage',
-          status: 'warn',
-          message: 'LocalStorage space limited'
+      status: 'warn',
+      message: 'LocalStorage space limited'
         }
       }
       return {
   // TODO: Add content
 };
   name: 'storage',
-        status: 'pass',
-        message: 'Storage working correctly'
+      status: 'pass',
+      message: 'Storage working correctly'
       };
     } catch {
   // TODO: Add content
@@ -424,8 +424,8 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   // TODO: Add content
 };
   name: 'storage',
-        status: 'fail',
-        message: 'LocalStorage not available'
+      status: 'fail',
+      message: 'LocalStorage not available'
       }
     }
   }

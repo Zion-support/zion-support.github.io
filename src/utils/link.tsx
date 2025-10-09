@@ -2,7 +2,7 @@ interface LinkProps {
   // TODO: Add content
 };
   href: string;,
-    children: React.ReactNode;
+      children: React.ReactNode;
   className?: string;
   target?: string;
   rel?: string;

@@ -36,17 +36,17 @@ export interface CacheEntry
   // TODO: Add content
 };
   value: T;,
-    timestamp: number;,
-    ttl: number;
+      timestamp: number;,
+      ttl: number;
 }
 export interface CacheStats {
   // TODO: Add content
 };
   hits: number;,
-    misses: number;,
-    hitRate: number;,
-    count: number;,
-    entries: number;
+      misses: number;,
+      hitRate: number;,
+      count: number;,
+      entries: number;
 }
 export class CacheManager {
   // TODO: Add content
@@ -222,7 +222,7 @@ export class CacheManager {
   // TODO: Add content
 }
 //       value,
-      timestamp: Date.now(),
+      timestamp: Date.now()
 //       ttl
     };
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
@@ -508,8 +508,8 @@ export class CacheManager {
           
           <T>()
     key: string,
-    fn: () => T | Promise
-          <T>,
+      fn: () => T | Promise
+          <T>
     options: { ttl?: number } = {}
   ): T | Promise<T> {
   // TODO: Add content
@@ -561,8 +561,8 @@ export class CacheManager {
           
           <T>()
     key: string,
-    fn: () => Promise
-          <T> | T,
+      fn: () => Promise
+          <T> | T
     options: { ttl?: number } = {}
   ): Promise<T> {
   // TODO: Add content
@@ -603,7 +603,7 @@ export class CacheManager {
           
           <TArgs extends unknown[], TResult>()
     fn: (...args: TArgs) => TResult,
-    options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
+      options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
   ): (...args: TArgs) => TResult {
   // TODO: Add content
 }
@@ -641,8 +641,8 @@ export class CacheManager {
   // TODO: Add content
 };
   memorySize: number;,
-    localStorageSize: number;,
-    sessionStorageSize: number;
+      localStorageSize: number;,
+      sessionStorageSize: number;
   } {
   // TODO: Add content
 }
@@ -701,7 +701,7 @@ export class CacheManager {
     return {
   // TODO: Add content
 };
-  memorySize: this.memoryCache.size,
+  memorySize: this.memoryCache.size
 //       localStorageSize,
 //       sessionStorageSize
     };

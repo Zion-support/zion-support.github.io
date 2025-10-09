@@ -15,11 +15,11 @@ const FutureTechnologiesPage: React.FC = () => {
       icon: Target,
       title: 'Technology Forecasting',
       description: 'Predict and prepare for future technology trends',
-      benefits: ['Trend analysis', 'Market prediction', 'Strategic planning']
+      benefits: ['Trend analysis', 'Market prediction', 'Strategic planning'];
       icon: Settings,
       title: 'Technology Integration',
       description: 'Integrate emerging technologies with existing systems',
-      benefits: ['System integration', 'Migration support', 'Compatibility']
+      benefits: ['System integration', 'Migration support', 'Compatibility'];
     }
   ];
   return (
@@ -38,7 +38,7 @@ const FutureTechnologiesPage: React.FC = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // Future Technologies
           
           
@@ -63,7 +63,7 @@ const FutureTechnologiesPage: React.FC = () => {
           
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-// Stay ahead of the curve with our future technology solutions. From AI advancement to quantum computing,
+// Stay ahead of the curve with our future technology solutions. From AI advancement to quantum computing
             we help you prepare for and adopt the technologies of tomorrow.
           
           

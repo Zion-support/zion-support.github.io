@@ -15,11 +15,11 @@ const SustainabilityTechPage: React.FC = () => {
       icon: Target,
       title: 'Sustainability Analytics',
       description: 'Data-driven sustainability insights and reporting',
-      benefits: ['Environmental metrics', 'Sustainability reporting', 'Impact analysis']
+      benefits: ['Environmental metrics', 'Sustainability reporting', 'Impact analysis'];
       icon: Settings,
       title: 'Circular Economy',
       description: 'Circular economy solutions and waste management',
-      benefits: ['Waste reduction', 'Resource optimization', 'Recycling systems']
+      benefits: ['Waste reduction', 'Resource optimization', 'Recycling systems'];
     }
   ];
   return (
@@ -38,7 +38,7 @@ const SustainabilityTechPage: React.FC = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // Sustainability Tech
           
           
@@ -63,7 +63,7 @@ const SustainabilityTechPage: React.FC = () => {
           
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-// Build a sustainable future with our green technology solutions. From renewable energy to circular economy,
+// Build a sustainable future with our green technology solutions. From renewable energy to circular economy
             we help you reduce environmental impact while driving business growth.
           
           

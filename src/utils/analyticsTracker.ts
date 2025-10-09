@@ -7,7 +7,7 @@ interface AnalyticsEvent {
   // TODO: Add content
 };
   category: string;,
-    action: string;
+      action: string;
   label?: string;
   value?: number;
   nonInteraction?: boolean;
@@ -16,7 +16,7 @@ interface PerformanceMetrics {
   // TODO: Add content
 };
   metric: string;,
-    value: number;
+      value: number;
   rating?: 'good' | 'needs-improvement' | 'poor';
 }
 interface ErrorReport {
@@ -24,7 +24,7 @@ interface ErrorReport {
 };
   message: string;
   stack?: string;
-  componentStack?: string;,
+  componentStack?: string;
     severity: 'low' | 'medium' | 'high' | 'critical';
 }
 class AnalyticsTracker {
@@ -69,9 +69,9 @@ class AnalyticsTracker {
   // TODO: Add content
 };
   event_category: event.category,
-          event_label: event.label,
-          value: event.value,
-          non_interaction: event.nonInteraction
+      event_label: event.label,
+      value: event.value,
+      non_interaction: event.nonInteraction
         });
       }
       // Also log to console in development
@@ -104,9 +104,9 @@ class AnalyticsTracker {
   // TODO: Add content
 };
   event_category: 'Web Vitals',
-          event_label: metrics.metric,
-          value: Math.round(metrics.value),
-          metric_rating: metrics.rating
+      event_label: metrics.metric,
+      value: Math.round(metrics.value),
+      metric_rating: metrics.rating
         });
       }
       if (process.env.NODE_ENV === 'development') {
@@ -138,9 +138,9 @@ class AnalyticsTracker {
   // TODO: Add content
 };
   name: variable,
-          value: Math.round(value),
-          event_category: category,
-          event_label: label
+      value: Math.round(value),
+      event_category: category,
+      event_label: label
         });
       }
       if (process.env.NODE_ENV === 'development') {

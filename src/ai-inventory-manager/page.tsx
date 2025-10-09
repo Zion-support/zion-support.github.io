@@ -15,11 +15,11 @@ const AIInventoryManagerPage: React.FC = () => {
       icon: Target,
       title: 'Demand Forecasting',
       description: 'Intelligent demand prediction and planning',
-      benefits: ['Demand prediction', 'Seasonal analysis', 'Trend forecasting']
+      benefits: ['Demand prediction', 'Seasonal analysis', 'Trend forecasting'];
       icon: Settings,
       title: 'Inventory Analytics',
       description: 'Comprehensive inventory analytics and insights',
-      benefits: ['Performance metrics', 'Cost analysis', 'Optimization recommendations']
+      benefits: ['Performance metrics', 'Cost analysis', 'Optimization recommendations'];
     }
   ];
   return (

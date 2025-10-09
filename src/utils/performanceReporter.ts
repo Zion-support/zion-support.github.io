@@ -7,19 +7,19 @@ export interface PerformanceMetric {
   // TODO: Add content
 };
   name: string;,
-    value: number;,
-    rating: 'good' | 'needs-improvement' | 'poor';,
-    timestamp: number;
+      value: number;,
+      rating: 'good' | 'needs-improvement' | 'poor';,
+      timestamp: number;
 }
 export interface PerformanceReport {
   // TODO: Add content
 };
   metrics: PerformanceMetric[];
   navigation?: PerformanceNavigationTiming;
-  resources?: PerformanceResourceTiming[];,
+  resources?: PerformanceResourceTiming[];
     timestamp: number;,
-    userAgent: string;,
-    url: string;
+      userAgent: string;,
+      url: string;
 }
 class PerformanceReporter {
   // TODO: Add content
@@ -216,7 +216,7 @@ const slowResources = resources
   // TODO: Add content
 };
   name: resource.name,
-            duration: resource.duration,;
+      duration: resource.duration,;
             type: resource.initiatorType
           });
         })
@@ -328,9 +328,9 @@ const slowResources = resources
   // TODO: Add content
 };
   event_category: 'Web Vitals',
-        value: Math.round(metric.value),
-        event_label: metric.rating,
-        non_interaction: true
+      value: Math.round(metric.value),
+      event_label: metric.rating,
+      non_interaction: true
       })
     }
   }
@@ -350,7 +350,7 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
     return {
   // TODO: Add content
 };
-  metrics: this.metrics,
+  metrics: this.metrics
 //       navigation,
       resources: resources.slice(0, 50), // Limit to 50 resources,
   timestamp: Date.now(),
@@ -383,7 +383,7 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
   // TODO: Add content
 };
   ttfb: report.navigation?.responseStart ?
-          report.navigation.responseStart - report.navigation.requestStart : null,
+          report.navigation.responseStart - report.navigation.requestStart : null
         domContentLoaded: report.navigation?.domContentLoadedEventEnd ?
           report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null
       }
@@ -415,7 +415,7 @@ if (typeof window !== 'undefined') {
   // TODO: Add content
 };
   enabled: process.env['NODE_ENV'] === 'production',
-    reportInterval: 60000, // Report every minute
+      reportInterval: 60000, // Report every minute
   })
 }
 export default performanceReporter

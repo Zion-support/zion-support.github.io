@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
+import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
@@ -23,7 +23,7 @@ const MicroSAASPage: React.FC = () => {
       category: 'Developer Tools',
       technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      link: 'https://ziontechgroup.com/ai-code-review',
+      link: 'https: //ziontechgroup.com/ai-code-review',
       popular: true
     },
     {
@@ -2454,7 +2454,7 @@ const realEstateSaaS = [
       benefits: ['Assess risks', 'Optimize pricing', 'Recommend policies'],
       marketPrice: '$250-500/month',
       category: 'Insurance Underwriting',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2467,7 +2467,7 @@ const realEstateSaaS = [
       benefits: ['Automate onboarding', 'Verify identity', 'Ensure compliance'],
       marketPrice: '$200-500/month',
       category: 'Customer Onboarding',
-      technologies: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+      technologies: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2480,7 +2480,7 @@ const realEstateSaaS = [
       benefits: ['Predict churn', 'Optimize engagement', 'Increase loyalty'],
       marketPrice: '$200-400/month',
       category: 'Customer Retention',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2493,7 +2493,7 @@ const realEstateSaaS = [
       benefits: ['Optimize support', 'Improve satisfaction', 'Automate responses'],
       marketPrice: '$180-350/month',
       category: 'Customer Support',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2506,7 +2506,7 @@ const realEstateSaaS = [
       benefits: ['Analyze feedback', 'Identify trends', 'Recommend actions'],
       marketPrice: '$150-300/month',
       category: 'Customer Feedback',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2519,7 +2519,7 @@ const realEstateSaaS = [
       benefits: ['Map journeys', 'Optimize touchpoints', 'Enhance experience'],
       marketPrice: '$200-500/month',
       category: 'Customer Journey',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2532,7 +2532,7 @@ const realEstateSaaS = [
       benefits: ['Predict CLV', 'Segment customers', 'Optimize targeting'],
       marketPrice: '$200-400/month',
       category: 'Customer Analytics',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2545,7 +2545,7 @@ const realEstateSaaS = [
       benefits: ['Segment customers', 'Create personas', 'Optimize targeting'],
       marketPrice: '$180-350/month',
       category: 'Customer Segmentation',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2558,7 +2558,7 @@ const realEstateSaaS = [
       benefits: ['Personalize experiences', 'Recommend content', 'Optimize engagement'],
       marketPrice: '$250-450/month',
       category: 'Customer Personalization',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2571,7 +2571,7 @@ const realEstateSaaS = [
       benefits: ['Integrate data', 'Clean data', 'Enable analytics'],
       marketPrice: '$300-600/month',
       category: 'Customer Data',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2584,7 +2584,7 @@ const realEstateSaaS = [
       benefits: ['Track consent', 'Protect data', 'Ensure compliance'],
       marketPrice: '$200-500/month',
       category: 'Customer Privacy',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2597,7 +2597,7 @@ const realEstateSaaS = [
       benefits: ['Optimize channels', 'Personalize messages', 'Track engagement'],
       marketPrice: '$200-400/month',
       category: 'Customer Communication',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2610,7 +2610,7 @@ const realEstateSaaS = [
       benefits: ['Map experiences', 'Recommend improvements', 'Track satisfaction'],
       marketPrice: '$250-450/month',
       category: 'Customer Experience',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2623,7 +2623,7 @@ const realEstateSaaS = [
       benefits: ['Score health', 'Recommend interventions', 'Optimize outcomes'],
       marketPrice: '$250-500/month',
       category: 'Customer Success',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2636,7 +2636,7 @@ const realEstateSaaS = [
       benefits: ['Track referrals', 'Collect testimonials', 'Optimize advocacy'],
       marketPrice: '$200-400/month',
       category: 'Customer Advocacy',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2649,7 +2649,7 @@ const realEstateSaaS = [
       benefits: ['Analyze behavior', 'Identify trends', 'Provide recommendations'],
       marketPrice: '$200-500/month',
       category: 'Customer Insights',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2662,7 +2662,7 @@ const realEstateSaaS = [
       benefits: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights'],
       marketPrice: '$400-800/month',
       category: 'Customer Intelligence',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES
     {
@@ -2676,7 +2676,7 @@ const realEstateSaaS = [
       benefits: ['Save 5+ hours/week', 'Never miss important details', 'Improve meeting productivity'],
       marketPrice: '$120-250/month',
       category: 'Productivity',
-      technologies: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
+      technologies: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC'];
     },
     {
   // TODO: Add content
@@ -2689,7 +2689,7 @@ const realEstateSaaS = [
       benefits: ['Save 10+ hours/month', 'Reduce expense errors by 90%', 'Optimize spending patterns'],
       marketPrice: '$150-300/month',
       category: 'Finance',
-      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
+      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'];
     },
     {
   // TODO: Add content
@@ -2702,7 +2702,7 @@ const realEstateSaaS = [
       benefits: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management'],
       marketPrice: '$80-150/month',
       category: 'Security',
-      technologies: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+      technologies: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2715,7 +2715,7 @@ const realEstateSaaS = [
       benefits: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates'],
       marketPrice: '$100-200/month',
       category: 'Productivity',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2728,7 +2728,7 @@ const realEstateSaaS = [
       benefits: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity'],
       marketPrice: '$150-300/month',
       category: 'Design',
-      technologies: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2741,7 +2741,7 @@ const realEstateSaaS = [
       benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing'],
       marketPrice: '$100-200/month',
       category: 'Finance',
-      technologies: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
+      technologies: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation'];
     },
     {
   // TODO: Add content
@@ -2754,7 +2754,7 @@ const realEstateSaaS = [
       benefits: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design'],
       marketPrice: '$300-600/month',
       category: 'Web Development',
-      technologies: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
+      technologies: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2767,7 +2767,7 @@ const realEstateSaaS = [
       benefits: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs'],
       marketPrice: '$250-500/month',
       category: 'Legal',
-      technologies: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
+      technologies: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2780,7 +2780,7 @@ const realEstateSaaS = [
       benefits: ['Professional email presence', 'Consistent branding', 'Easy team management'],
       marketPrice: '$60-120/month',
       category: 'Marketing',
-      technologies: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
+      technologies: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics'];
     },
     {
   // TODO: Add content
@@ -2793,7 +2793,7 @@ const realEstateSaaS = [
       benefits: ['Track engagement', 'Customize branding', 'Manage campaigns effectively'],
       marketPrice: '$80-150/month',
       category: 'Marketing',
-      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools'];
     },
     {
   // TODO: Add content
@@ -2806,7 +2806,7 @@ const realEstateSaaS = [
       benefits: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend'],
       marketPrice: '$100-200/month',
       category: 'Design',
-      technologies: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+      technologies: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2819,7 +2819,7 @@ const realEstateSaaS = [
       benefits: ['Professional business cards', 'Consistent branding', 'Easy contact sharing'],
       marketPrice: '$120-250/month',
       category: 'Design',
-      technologies: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
+      technologies: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates'];
     },
     {
   // TODO: Add content
@@ -2832,7 +2832,7 @@ const realEstateSaaS = [
       benefits: ['Create engaging newsletters', 'Increase subscriber engagement', 'Save 15+ hours/week'],
       marketPrice: '$150-300/month',
       category: 'Marketing',
-      technologies: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
+      technologies: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics'];
     },
     {
   // TODO: Add content
@@ -2845,7 +2845,7 @@ const realEstateSaaS = [
       benefits: ['Convert any document format', 'Extract text from images', 'Optimize file sizes'],
       marketPrice: '$150-300/month',
       category: 'Productivity',
-      technologies: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2858,7 +2858,7 @@ const realEstateSaaS = [
       benefits: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization'],
       marketPrice: '$120-250/month',
       category: 'Video Marketing',
-      technologies: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
+      technologies: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2871,7 +2871,7 @@ const realEstateSaaS = [
       benefits: ['Increase engagement by 60%', 'Save 20+ hours/week', 'Optimize posting times'],
       marketPrice: '$200-400/month',
       category: 'Social Media',
-      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'];
     },
     {
   // TODO: Add content
@@ -2884,7 +2884,7 @@ const realEstateSaaS = [
       benefits: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy'],
       marketPrice: '$80-150/month',
       category: 'Social Media',
-      technologies: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2897,7 +2897,7 @@ const realEstateSaaS = [
       benefits: ['Create professional emails', 'Improve open rates', 'Consistent branding'],
       marketPrice: '$150-300/month',
       category: 'Email Marketing',
-      technologies: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']
+      technologies: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2910,7 +2910,7 @@ const realEstateSaaS = [
       benefits: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities'],
       marketPrice: '$300-600/month',
       category: 'Market Research',
-      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics'];
     },
     {
   // TODO: Add content
@@ -2923,7 +2923,7 @@ const realEstateSaaS = [
       benefits: ['Understand customer sentiment', 'Improve products/services', 'Increase customer satisfaction'],
       marketPrice: '$200-400/month',
       category: 'Customer Analytics',
-      technologies: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2936,7 +2936,7 @@ const realEstateSaaS = [
       benefits: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience'],
       marketPrice: '$250-500/month',
       category: 'Conversion Optimization',
-      technologies: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2949,7 +2949,7 @@ const realEstateSaaS = [
       benefits: ['Professional product photos', 'Save 20+ hours/week', 'Consistent image quality'],
       marketPrice: '$150-300/month',
       category: 'E-commerce',
-      technologies: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2962,7 +2962,7 @@ const realEstateSaaS = [
       benefits: ['Stay competitive', 'Optimize pricing', 'Increase profit margins'],
       marketPrice: '$120-250/month',
       category: 'E-commerce',
-      technologies: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
+      technologies: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems'];
     },
     {
   // TODO: Add content
@@ -2975,7 +2975,7 @@ const realEstateSaaS = [
       benefits: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience'],
       marketPrice: '$100-200/month',
       category: 'Scheduling',
-      technologies: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
+      technologies: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -2988,7 +2988,7 @@ const realEstateSaaS = [
       benefits: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances'],
       marketPrice: '$100-200/month',
       category: 'Career Tools',
-      technologies: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
+      technologies: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3001,7 +3001,7 @@ const realEstateSaaS = [
       benefits: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations'],
       marketPrice: '$150-300/month',
       category: 'Weather Services',
-      technologies: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3014,7 +3014,7 @@ const realEstateSaaS = [
       benefits: ['Break language barriers', 'Improve global reach', 'Professional translations'],
       marketPrice: '$150-300/month',
       category: 'Translation',
-      technologies: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3027,7 +3027,7 @@ const realEstateSaaS = [
       benefits: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery'],
       marketPrice: '$120-250/month',
       category: 'Data Management',
-      technologies: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+      technologies: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3040,7 +3040,7 @@ const realEstateSaaS = [
       benefits: ['Create complex forms easily', 'Gather better data', 'Improve user experience'],
       marketPrice: '$150-300/month',
       category: 'Form Management',
-      technologies: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3053,7 +3053,7 @@ const realEstateSaaS = [
       benefits: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs'],
       marketPrice: '$100-200/month',
       category: 'Monitoring',
-      technologies: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+      technologies: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3066,7 +3066,7 @@ const realEstateSaaS = [
       benefits: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights'],
       marketPrice: '$120-250/month',
       category: 'Survey Tools',
-      technologies: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3079,7 +3079,7 @@ const realEstateSaaS = [
       benefits: ['Convert any file format', 'Maintain quality', 'Process files in bulk'],
       marketPrice: '$100-200/month',
       category: 'File Management',
-      technologies: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+      technologies: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3092,7 +3092,7 @@ const realEstateSaaS = [
       benefits: ['Track QR code performance', 'Customize designs', 'Gather business insights'],
       marketPrice: '$80-150/month',
       category: 'QR Code Tools',
-      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools'];
     },
     {
   // TODO: Add content
@@ -3105,7 +3105,7 @@ const realEstateSaaS = [
       benefits: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management'],
       marketPrice: '$60-120/month',
       category: 'Security',
-      technologies: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+      technologies: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3118,7 +3118,7 @@ const realEstateSaaS = [
       benefits: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency'],
       marketPrice: '$80-150/month',
       category: 'Design Tools',
-      technologies: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
+      technologies: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3131,7 +3131,7 @@ const realEstateSaaS = [
       benefits: ['Save reading time', 'Extract key insights', 'Process large documents'],
       marketPrice: '$100-200/month',
       category: 'Text Processing',
-      technologies: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3144,7 +3144,7 @@ const realEstateSaaS = [
       benefits: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk'],
       marketPrice: '$100-200/month',
       category: 'Image Processing',
-      technologies: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+      technologies: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3157,7 +3157,7 @@ const realEstateSaaS = [
       benefits: ['Track link performance', 'Customize URLs', 'Manage campaigns'],
       marketPrice: '$60-120/month',
       category: 'URL Management',
-      technologies: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
+      technologies: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation'];
     },
     {
   // TODO: Add content
@@ -3170,7 +3170,7 @@ const realEstateSaaS = [
       benefits: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes'],
       marketPrice: '$80-150/month',
       category: 'Web Development',
-      technologies: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
+      technologies: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3183,7 +3183,7 @@ const realEstateSaaS = [
       benefits: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance'],
       marketPrice: '$100-200/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3196,7 +3196,7 @@ const realEstateSaaS = [
       benefits: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines'],
       marketPrice: '$100-200/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3209,7 +3209,7 @@ const realEstateSaaS = [
       benefits: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues'],
       marketPrice: '$60-120/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3222,7 +3222,7 @@ const realEstateSaaS = [
       benefits: ['Improve search visibility', 'Rich snippets', 'Better search results'],
       marketPrice: '$120-250/month',
       category: 'SEO Tools',
-      technologies: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+      technologies: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3235,7 +3235,7 @@ const realEstateSaaS = [
       benefits: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text'],
       marketPrice: '$80-150/month',
       category: 'SEO Tools',
-      technologies: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+      technologies: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3248,7 +3248,7 @@ const realEstateSaaS = [
       benefits: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure'],
       marketPrice: '$150-300/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3261,7 +3261,7 @@ const realEstateSaaS = [
       benefits: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies'],
       marketPrice: '$120-250/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3274,7 +3274,7 @@ const realEstateSaaS = [
       benefits: ['Improve page speed', 'Better user experience', 'Higher search rankings'],
       marketPrice: '$250-500/month',
       category: 'Performance Optimization',
-      technologies: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3287,7 +3287,7 @@ const realEstateSaaS = [
       benefits: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings'],
       marketPrice: '$150-300/month',
       category: 'Performance Monitoring',
-      technologies: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+      technologies: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3300,7 +3300,7 @@ const realEstateSaaS = [
       benefits: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions'],
       marketPrice: '$200-400/month',
       category: 'Mobile Optimization',
-      technologies: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
+      technologies: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3313,7 +3313,7 @@ const realEstateSaaS = [
       benefits: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic'],
       marketPrice: '$200-400/month',
       category: 'Local SEO',
-      technologies: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
+      technologies: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3326,7 +3326,7 @@ const realEstateSaaS = [
       benefits: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance'],
       marketPrice: '$300-600/month',
       category: 'Competitive Analysis',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3339,7 +3339,7 @@ const realEstateSaaS = [
       benefits: ['Analyze backlink profile', 'Improve link quality', 'Build better links'],
       marketPrice: '$250-500/month',
       category: 'Link Building',
-      technologies: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3352,7 +3352,7 @@ const realEstateSaaS = [
       benefits: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic'],
       marketPrice: '$300-600/month',
       category: 'Content Strategy',
-      technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3365,7 +3365,7 @@ const realEstateSaaS = [
       benefits: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops'],
       marketPrice: '$300-600/month',
       category: 'Technical SEO',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3378,7 +3378,7 @@ const realEstateSaaS = [
       benefits: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales'],
       marketPrice: '$400-800/month',
       category: 'E-commerce SEO',
-      technologies: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
+      technologies: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3391,7 +3391,7 @@ const realEstateSaaS = [
       benefits: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility'],
       marketPrice: '$250-500/month',
       category: 'Voice Search SEO',
-      technologies: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
+      technologies: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3404,7 +3404,7 @@ const realEstateSaaS = [
       benefits: ['Improve video visibility', 'Increase video traffic', 'Optimize video content'],
       marketPrice: '$300-600/month',
       category: 'Video SEO',
-      technologies: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
+      technologies: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3417,7 +3417,7 @@ const realEstateSaaS = [
       benefits: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates'],
       marketPrice: '$200-400/month',
       category: 'Featured Snippets',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3430,7 +3430,7 @@ const realEstateSaaS = [
       benefits: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance'],
       marketPrice: '$150-300/month',
       category: 'Image SEO',
-      technologies: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
+      technologies: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3443,7 +3443,7 @@ const realEstateSaaS = [
       benefits: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites'],
       marketPrice: '$300-600/month',
       category: 'International SEO',
-      technologies: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
+      technologies: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models'];
     },
     {
   // TODO: Add content
@@ -3456,7 +3456,7 @@ const realEstateSaaS = [
       benefits: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],
       marketPrice: '$250-500/month',
       category: 'SEO Reporting',
-      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models'];
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES
     // AI Productivity & Time Management

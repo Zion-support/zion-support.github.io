@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
@@ -12,7 +11,7 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
+  children
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
@@ -33,7 +32,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       setupKeyboardNavigation();
     }
   }, []);
-
   const addSkipLinks = () => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
@@ -41,17 +39,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
       position: absolute;,
-    top: -40px;,
-    left: 6px;,
-    background: #000;,
-    color: #fff;,
-    padding: 8px;
+      top: -40px;,
+      left: 6px;,
+      background: #000;,
+      color: #fff;,
+      padding: 8px;
       text-decoration: none;
       z-index: 1000;
     `;
     document.body.insertBefore(skipLink, document.body.firstChild);
   };
-
   const addFocusIndicators = () => {
     const style = document.createElement('style');
     style.textContent = `
@@ -62,19 +59,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     `;
     document.head.appendChild(style);
   };
-
   const setupKeyboardNavigation = () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
     });
-
     document.addEventListener('mousedown', () => {
       document.body.classList.remove('keyboard-navigation');
     });
   };
-
   return 
           
           
@@ -86,5 +80,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           
           <>{children}</>;
 };
-
 export default AccessibilityEnhancer;

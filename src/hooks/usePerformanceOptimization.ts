@@ -3,10 +3,10 @@ interface PerformanceMetrics {
   // TODO: Add content
 };
   loadTime: number;,
-    firstContentfulPaint: number;,
-    largestContentfulPaint: number;,
-    cumulativeLayoutShift: number;,
-    firstInputDelay: number;
+      firstContentfulPaint: number;,
+      largestContentfulPaint: number;,
+      cumulativeLayoutShift: number;,
+      firstInputDelay: number;
 }
 export const _usePerformanceOptimization = () => {
   // TODO: Add content
@@ -29,10 +29,9 @@ export const _usePerformanceOptimization = () => {
 };
   loadTime: navigation
 //         ? navigation.loadEventEnd - navigation.loadEventStart
-        : 0,
-      firstContentfulPaint:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
-//           ?.startTime || 0,
+        : 0
+      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')
+//           ?.startTime || 0
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
       firstInputDelay: 0

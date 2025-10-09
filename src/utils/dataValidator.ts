@@ -7,13 +7,13 @@ export interface ValidationRule<T = unknown> {
   // TODO: Add content
 };
   validate: (value: T) => boolean;,
-    message: string;
+      message: string;
 }
 export interface FieldRule {
   // TODO: Add content
 };
   type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';,
-    message: string;
+      message: string;
   min?: number;
   max?: number;
   minLength?: number;
@@ -34,7 +34,7 @@ export interface ValidationResult {
   // TODO: Add content
 };
   isValid: boolean;,
-    errors: Record
+      errors: Record
           
           
           
@@ -49,8 +49,8 @@ export class ValidationError extends Error {
   // TODO: Add content
 }
 //   constructor();
-  message: string,
-    public field: string,
+  message: string
+    public field: string
     public errors: string[]
   ) {
   // TODO: Add content
@@ -240,7 +240,7 @@ export function createCustomValidator
           
           <T>()
   validator: (value: T) => boolean,
-  message: string,
+      message: string
 ): (value: T) => { isValid: boolean; errors: string[] } {
   // TODO: Add content
 }
@@ -304,7 +304,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
  */
 export function validateForm<T extends Record<string, unknown>>()
   data: T,
-  rules: ValidationRules,
+      rules: ValidationRules
 ): ValidationResult {
   // TODO: Add content
 }
@@ -344,8 +344,8 @@ export function validateForm<T extends Record<string, unknown>>()
   // TODO: Add content
 };
   category: ErrorCategory.Validation,
-          severity: ErrorSeverity.Low,
-          context: {
+      severity: ErrorSeverity.Low,
+      context: {
   // TODO: Add content
 }
 //             field,
@@ -358,7 +358,7 @@ export function validateForm<T extends Record<string, unknown>>()
   return {
   // TODO: Add content
 };
-  isValid: Object.keys(errors).length === 0,
+  isValid: Object.keys(errors).length === 0
 //     errors
   };
 }
@@ -403,7 +403,7 @@ export const ValidationRulesBuilder = {
   // TODO: Add content
 };
   validate: (value: string) => validateEmail(value),
-    message: 'Please enter a valid email address'
+      message: 'Please enter a valid email address'
   }),
   url: (): ValidationRule
           
@@ -418,7 +418,7 @@ export const ValidationRulesBuilder = {
   // TODO: Add content
 };
   validate: (value: string) => validateURL(value),
-    message: 'Please enter a valid URL'
+      message: 'Please enter a valid URL'
   }),
   minLength: (min: number): ValidationRule
           
@@ -433,7 +433,7 @@ export const ValidationRulesBuilder = {
   // TODO: Add content
 };
   validate: (value: string) => value.length >= min,
-    message: `Must be at least ${min} characters long`
+      message: `Must be at least ${min} characters long`
   }),
   maxLength: (max: number): ValidationRule
           
@@ -456,13 +456,13 @@ export const ValidationRulesBuilder = {
           
           
           
-          <= max,
+          <= max
     message: `Must be no more than ${max} characters long`
   }),
   pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({
   // TODO: Add content
 };
-  validate: (value: string) => pattern.test(value),
+  validate: (value: string) => pattern.test(value)
 //     message
   }),
   range: (min: number, max: number): ValidationRule
@@ -492,7 +492,7 @@ export const ValidationRulesBuilder = {
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
   // TODO: Add content
 };
-  validate: validator,
+  validate: validator
 //     message
   })
 };

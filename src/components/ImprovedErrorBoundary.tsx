@@ -24,9 +24,9 @@ interface State {
   // TODO: Add content
 };
   hasError: boolean;,
-    error: Error | null;,
-    errorInfo: ErrorInfo | null;,
-    errorCount: number;
+      error: Error | null;,
+      errorInfo: ErrorInfo | null;,
+      errorCount: number;
 }
 class ImprovedErrorBoundary extends Component
           
@@ -68,7 +68,7 @@ class ImprovedErrorBoundary extends Component
     return {
   // TODO: Add content
 };
-  hasError: true,
+  hasError: true
 //       error
     };
   }
@@ -293,63 +293,63 @@ const styles = {
   // TODO: Add content
 };
   minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    backgroundColor: '#f5f5f5',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '20px',
+      backgroundColor: '#f5f5f5',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   },
   content: {
   // TODO: Add content
 };
   maxWidth: '600px',
-    width: '100%',
-    backgroundColor: 'white',
-    borderRadius: '8px',
-    padding: '40px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+      width: '100%',
+      backgroundColor: 'white',
+      borderRadius: '8px',
+      padding: '40px',
+      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     textAlign: 'center' as const
   },
   icon: {
   // TODO: Add content
 };
   fontSize: '48px',
-    marginBottom: '20px'
+      marginBottom: '20px'
   },
   title: {
   // TODO: Add content
 };
   fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: '16px'
+      fontWeight: 'bold',
+      color: '#333',
+      marginBottom: '16px'
   },
   message: {
   // TODO: Add content
 };
   fontSize: '16px',
-    color: '#666',
-    marginBottom: '32px',
-    lineHeight: '1.6'
+      color: '#666',
+      marginBottom: '32px',
+      lineHeight: '1.6'
   },
   details: {
   // TODO: Add content
 };
   textAlign: 'left' as const,
-    marginBottom: '24px',
-    backgroundColor: '#f9f9f9',
-    padding: '16px',
-    borderRadius: '4px',
-    border: '1px solid #e0e0e0'
+      marginBottom: '24px',
+      backgroundColor: '#f9f9f9',
+      padding: '16px',
+      borderRadius: '4px',
+      border: '1px solid #e0e0e0'
   },
   summary: {
   // TODO: Add content
 };
   cursor: 'pointer',
-    fontWeight: 'bold',
-    marginBottom: '12px',
-    userSelect: 'none' as const
+      fontWeight: 'bold',
+      marginBottom: '12px',
+      userSelect: 'none' as const
   },
   errorDetails: {
   // TODO: Add content
@@ -360,40 +360,40 @@ const styles = {
   // TODO: Add content
 };
   marginBottom: '12px',
-    color: '#d32f2f'
+      color: '#d32f2f'
   },
   stack: {
   // TODO: Add content
 };
   backgroundColor: '#f5f5f5',
-    padding: '12px',
-    borderRadius: '4px',
-    fontSize: '12px',
-    overflowX: 'auto' as const,
-    fontFamily: 'monospace',
-    whiteSpace: 'pre-wrap' as const,
-    wordBreak: 'break-all' as const
+      padding: '12px',
+      borderRadius: '4px',
+      fontSize: '12px',
+      overflowX: 'auto' as const,
+      fontFamily: 'monospace',
+      whiteSpace: 'pre-wrap' as const,
+      wordBreak: 'break-all' as const
   },
   actions: {
   // TODO: Add content
 };
   display: 'flex',
-    gap: '12px',
-    justifyContent: 'center',
-    flexWrap: 'wrap' as const
+      gap: '12px',
+      justifyContent: 'center',
+      flexWrap: 'wrap' as const
   },
   button: {
   // TODO: Add content
 };
   padding: '12px 24px',
-    fontSize: '16px',
-    fontWeight: '500',
-    color: 'white',
-    backgroundColor: '#007bff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    transition: 'background-color 0.2s'
+      fontSize: '16px',
+      fontWeight: '500',
+      color: 'white',
+      backgroundColor: '#007bff',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      transition: 'background-color 0.2s'
   },
   secondaryButton: {
   // TODO: Add content
@@ -404,7 +404,7 @@ const styles = {
   // TODO: Add content
 };
   marginTop: '24px',
-    fontSize: '14px',
-    color: '#999'
+      fontSize: '14px',
+      color: '#999'
   }
 };

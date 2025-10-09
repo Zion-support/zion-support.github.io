@@ -23,12 +23,12 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
 };
   roi: '30,000%',
         efficiency: '500%',
-        accuracy: '99.9%',
-        timeline: '12 months'
+      accuracy: '99.9%',
+      timeline: '12 months'
       },
       readingTime: '35 min read',
       featured: true,
-      tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
+      tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI'];
       id: 'fortune-500-business-intelligence-success',
       title: 'Fortune 500 Ultimate Business Intelligence Success',
       description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
@@ -40,7 +40,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
       url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',;
       type: 'Implementation Guide',
-      category: 'resource',
+      category: 'resource'
               {/* Badge */}
                 
           

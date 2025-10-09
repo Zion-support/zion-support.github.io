@@ -113,7 +113,7 @@ class Logger {
    * Log an error message
    */
 //   error()
-    message: string,
+    message: string
     errorOrContextOrMetadata?: Error | string | Record
           
           
@@ -192,7 +192,7 @@ class Logger {
    */
 //   private log()
     level: LogLevel,
-    message: string,
+      message: string
     context?: LogContext,
     metadata?: Record
           
@@ -222,7 +222,7 @@ class Logger {
 }
       return;
     }
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()
 //       level,
 //       message,
 //       context,
@@ -310,9 +310,8 @@ class Logger {
         return 'color: #F59E0B; font-weight: bold;';
       case LogLevel.ERROR:
         return 'color: #EF4444; font-weight: bold;';
-      case LogLevel.FATAL:
-        return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';,
-    default:
+      case LogLevel.FATAL: return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';,
+      default:
         return 'color: #6B7280; font-weight: normal;';
     }
   }
@@ -328,7 +327,7 @@ class Logger {
     // fetch('/api/logs', {
   // TODO: Add content
 }
-    //   method: 'POST',
+    //   method: 'POST'
     //   headers: {// 'Content-Type': 'application/json'},
     //   body: JSON.stringify(entry)
     // }).catch(err => {
@@ -352,7 +351,7 @@ class Logger {
       case LogLevel.ERROR:
         return 'ERROR';
       case LogLevel.FATAL: return 'FATAL';,
-    default:
+      default:
         return 'UNKNOWN';
     }
   }

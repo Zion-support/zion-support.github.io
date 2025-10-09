@@ -3,9 +3,9 @@ interface SEOOptimizerProps {
   // TODO: Add content
 };
   title: string;,
-    description: string;,
-    keywords: string[];,
-    canonicalUrl: string;
+      description: string;,
+      keywords: string[];,
+      canonicalUrl: string;
   structuredData?: object;
   ogImage?: string;
   twitterCard?: string;
@@ -25,9 +25,9 @@ const SEOOptimizer: React.FC
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
+  canonicalUrl = 'https: //ziontechgroup.com'
 //   structuredData,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg'
   twitterCard = 'summary_large_image',
 }) => {
   useEffect(() => {

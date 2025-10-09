@@ -54,7 +54,7 @@ export const getAllPages = (): SitemapUrl[] => {
 }
   const currentDate = new Date().toISOString().split('T')[0];
   return [
-  // TODO: Add items,
+  // TODO: Add items
 ]
     // Main pages
     { loc: '/', priority: 1.0, changefreq: 'daily' },

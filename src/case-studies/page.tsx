@@ -20,9 +20,9 @@ const CaseStudiesPage: React.FC = () => {
   // TODO: Add content
 };
   roi: '340%',
-        conversion: '+85%',
-        costReduction: '-65%',
-        revenue: '+$2.3M'
+      conversion: '+85%',
+      costReduction: '-65%',
+      revenue: '+$2.3M'
       },
       image: '',
       description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
@@ -40,9 +40,9 @@ const CaseStudiesPage: React.FC = () => {
   // TODO: Add content
 };
   roi: '280%',
-        processingTime: '-80%',
-        accuracy: '+95%',
-        costSavings: '$1.8M'
+      processingTime: '-80%',
+      accuracy: '+95%',
+      costSavings: '$1.8M'
       },
       image: '',
       description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
@@ -60,9 +60,9 @@ const CaseStudiesPage: React.FC = () => {
   // TODO: Add content
 };
   roi: '420%',
-        patientOutcomes: '+70%',
-        efficiency: '+90%',
-        costSavings: '$3.2M'
+      patientOutcomes: '+70%',
+      efficiency: '+90%',
+      costSavings: '$3.2M'
       },
       image: '',
       description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
@@ -80,9 +80,9 @@ const CaseStudiesPage: React.FC = () => {
   // TODO: Add content
 };
   roi: '310%',
-        efficiency: '+75%',
-        defects: '-90%',
-        downtime: '-85%'
+      efficiency: '+75%',
+      defects: '-90%',
+      downtime: '-85%'
       },
       image: '',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'

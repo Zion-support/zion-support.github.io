@@ -15,11 +15,11 @@ const GlobalITSupportPage: React.FC = () => {
       icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
-      benefits: ['Always available', 'Fast response', 'Expert technicians']
+      benefits: ['Always available', 'Fast response', 'Expert technicians'];
       icon: Zap,
       title: 'Rapid Response',
       description: 'Quick problem resolution and escalation',
-      benefits: ['Fast resolution', 'Escalation procedures', 'SLA guarantees']
+      benefits: ['Fast resolution', 'Escalation procedures', 'SLA guarantees'];
     }
   ];
   return (
