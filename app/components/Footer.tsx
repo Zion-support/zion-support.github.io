@@ -117,7 +117,7 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network quantum-particle">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -125,11 +125,11 @@ const Footer: React.FC = memo(() => {
           <div className="space-y-6">
             <div>
               <Link to="/" className="flex items-center space-x-2 group">
-                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cyber-pulse">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
+                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse cyber-text-glow">Zion Tech Group</h3>
                   <p className="text-sm text-cyan-400">AI & IT Solutions</p>
                 </div>
               </Link>

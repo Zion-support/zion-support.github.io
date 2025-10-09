@@ -176,18 +176,18 @@ const Navigation: React.FC = memo(() => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20 cyber-scan' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cyber-pulse">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
+              <h1 className="text-xl font-bold text-white cyber-text neon-pulse cyber-text-glow">Zion Tech Group</h1>
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
@@ -293,7 +293,7 @@ const Navigation: React.FC = memo(() => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="cyber-button inline-flex items-center"
+              className="cyber-button-advanced inline-flex items-center px-4 py-2 rounded-lg"
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
