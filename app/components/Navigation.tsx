@@ -68,6 +68,8 @@ const Navigation: React.FC = () => {
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
         { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
         { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Advanced voice solutions' },
+        { name: 'AI Content Creation', path: '/ai-content-creation', description: 'Content creation tools' },
         { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
         { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
