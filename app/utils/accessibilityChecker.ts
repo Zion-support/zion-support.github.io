@@ -560,10 +560,8 @@ export class AccessibilityChecker {
       return 'No accessibility issues found. Great job!';
     }
     
-    const report = this.issues.map(issue => 
-      `- ${issue.type}: ${issue.message} (${issue.wcagLevel})`
+    return this.issues.map(issue => 
+      `- ${issue.type}: ${issue.message} (${issue.severity})`
     ).join('\n');
-    
-    return `Accessibility Issues Found:\n${report}`;
   }
 }
