@@ -1,356 +1,126 @@
 /**
  * Security Configuration
- * Content Security Policy, Security Headers, and Security Best Practices
+ * Defines security headers and policies for the application
  */
-
-export interface SecurityHeaders {
-  'Content-Security-Policy'?: string;
-  'X-Content-Type-Options'?: string;
-  'X-Frame-Options'?: string;
-  'X-XSS-Protection'?: string;
-  'Referrer-Policy'?: string;
-  'Permissions-Policy'?: string;
-  'Strict-Transport-Security'?: string;
-}
-
-/**
- * Content Security Policy Configuration
- */
-export const CSP_DIRECTIVES = {
-  // Default fallback for fetch directives
-  'default-src': ["'self'"],
-
-  // Scripts - Allow self and trusted CDNs
-  'script-src': [
-    "'self'",
-    "'unsafe-inline'", // Required for inline scripts (minimize usage)
-    "'unsafe-eval'", // Required for some frameworks (minimize usage)
-    'https://www.googletagmanager.com',
-    'https://www.google-analytics.com',
-    'https://cdn.jsdelivr.net',
-  ],
-
-  // Styles - Allow self and trusted sources
-  'style-src': [
-    "'self'",
-    "'unsafe-inline'", // Required for styled-components/emotion
-    'https://fonts.googleapis.com',
-  ],
-
-  // Images - Allow self, data URIs, and trusted CDNs
-  'img-src': [
-    "'self'",
-    'data:',
-    'blob:',
-    'https:',
-    'https://www.google-analytics.com',
-  ],
-
-  // Fonts - Allow self and Google Fonts
-  'font-src': ["'self'", 'data:', 'https://fonts.gstatic.com'],
-
-  // Media - Allow self
-  'media-src': ["'self'"],
-
-  // Objects - Disallow plugins
-  'object-src': ["'none'"],
-
-  // Connect - API endpoints and analytics
-  'connect-src': [
-    "'self'",
-    'https://www.google-analytics.com',
-    'https://api.github.com',
-  ],
-
-  // Frames - Control what can be framed
-  'frame-src': ["'self'"],
-
-  // Workers - Allow self
-  'worker-src': ["'self'", 'blob:'],
-
-  // Forms - Restrict form submission targets
-  'form-action': ["'self'"],
-
-  // Base URI - Restrict base tag
-  'base-uri': ["'self'"],
-
-  // Upgrade insecure requests
-  'upgrade-insecure-requests': [],
-
-  // Block all mixed content
-  'block-all-mixed-content': [],
-};
-
-/**
- * Generate CSP string from directives
- */
-export function generateCSP(
-  directives: typeof CSP_DIRECTIVES = CSP_DIRECTIVES
-): string {
-  return Object.entries(directives)
-    .map(([key, values]) => {
-      if (values.length === 0) return key;
-      return `${key} ${values.join(' ')}`;
-    })
-    .join('; ');
-}
-
-/**
- * Security Headers Configuration
- */
-export const SECURITY_HEADERS: SecurityHeaders = {
+export const securityHeaders = {
   // Content Security Policy
-  'Content-Security-Policy': generateCSP(),
-
-  // Prevent MIME type sniffing
-  'X-Content-Type-Options': 'nosniff',
-
-  // Prevent clickjacking
-  'X-Frame-Options': 'SAMEORIGIN',
-
-  // XSS Protection (legacy, but still useful)
-  'X-XSS-Protection': '1; mode=block',
-
-  // Referrer Policy - Control referrer information
-  'Referrer-Policy': 'strict-origin-when-cross-origin',
-
-  // Permissions Policy - Control browser features
-  'Permissions-Policy':
-    'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()',
-
-  // HSTS - Force HTTPS (only add if using HTTPS)
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-};
-
-/**
- * Sanitize HTML to prevent XSS
- */
-export function sanitizeHTML(html: string): string {
-  // Basic HTML sanitization - for production, use DOMPurify
-  return html
-    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-    .replace(/on\w+="[^"]*"/gi, '')
-    .replace(/on\w+='[^']*'/gi, '')
-    .replace(/javascript:/gi, '');
-}
-
-/**
- * Validate and sanitize URL
- */
-export function sanitizeURL(url: string): string {
-  try {
-    const parsed = new URL(url);
-
-    // Only allow http and https protocols
-    if (!['http:', 'https:'].includes(parsed.protocol)) {
-      return '';
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "'unsafe-eval'",
+        'https://www.googletagmanager.com',
+        'https://www.google-analytics.com',
+      ],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+      fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+      imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
+      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
+      frameSrc: ["'self'"],
+      objectSrc: ["'none'"],
+      upgradeInsecureRequests: true
     }
-
-    return parsed.toString();
-  } catch {
-    return '';
+  },
+  // Security Headers
+  headers: {
+    'X-DNS-Prefetch-Control': 'on',
+    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+    'X-XSS-Protection': '1; mode=block',
+    'X-Frame-Options': 'SAMEORIGIN',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
   }
-}
-
+};
 /**
- * Generate secure random string
+ * Rate limiting configuration
+ */
+export const rateLimitConfig = {
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per windowMs
+  message: 'Too many requests from this IP, please try again later.'
+};
+/**
+ * CORS configuration
+ */
+export const corsConfig = {
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  maxAge: 86400, // 24 hours
+};
+/**
+ * Session configuration
+ */
+export const sessionConfig = {
+  secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: process.env['NODE_ENV'] === 'production',
+    httpOnly: true,
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    sameSite: 'strict' as const
+  }
+};
+/**
+ * Input validation patterns
+ */
+export const validationPatterns = {
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
+  phone: /^\+?[1-9]\d{1,14}$/,
+  url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
+  alphanumeric: /^[a-zA-Z0-9]+$/,
+  noSpecialChars: /^[a-zA-Z0-9\s]+$/
+};
+/**
+ * Sanitize user input
+ */
+export function sanitizeInput(input: string): string {
+  return input
+    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/on\w+\s*=/gi, '') // Remove event handlers
+    .trim();
+}
+/**
+ * Validate email address
+ */
+export function validateEmail(email: string): boolean {
+  return validationPatterns.email.test(email);
+}
+/**
+ * Validate URL
+ */
+export function validateUrl(url: string): boolean {
+  return validationPatterns.url.test(url);
+}
+/**
+ * Generate secure token
  */
 export function generateSecureToken(length: number = 32): string {
+  const _array = new Uint8Array(length);
   if (typeof window !== 'undefined' && window.crypto) {
-    const array = new Uint8Array(length);
     window.crypto.getRandomValues(array);
-    return Array.from(array, (byte) => byte.toString(16).padStart(2, '0')).join(
-      ''
-    );
+  } else {
+    // Fallback for non-browser environments
+    for (let i = 0; i < length; i++) {
+      array[i] = Math.floor(Math.random() * 256);
+    }
   }
-
-  // Fallback for environments without crypto API
-  return Array.from({ length }, () =>
-    Math.floor(Math.random() * 16).toString(16)
-  ).join('');
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
-
-/**
- * Hash sensitive data (client-side hashing for non-critical use)
- */
-export async function hashData(data: string): Promise<string> {
-  if (typeof window !== 'undefined' && window.crypto && window.crypto.subtle) {
-    const encoder = new TextEncoder();
-    const dataBuffer = encoder.encode(data);
-    const hashBuffer = await window.crypto.subtle.digest('SHA-256', dataBuffer);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map((byte) => byte.toString(16).padStart(2, '0')).join('');
-  }
-
-  // Fallback: Basic hash (not cryptographically secure)
-  let hash = 0;
-  for (let i = 0; i < data.length; i++) {
-    const char = data.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash = hash & hash;
-  }
-  return hash.toString(16);
-}
-
-/**
- * Validate input against common injection patterns
- */
-export function validateInput(
-  input: string,
-  maxLength: number = 1000
-): { valid: boolean; reason?: string } {
-  // Check length
-  if (input.length > maxLength) {
-    return { valid: false, reason: 'Input too long' };
-  }
-
-  // Check for SQL injection patterns
-  const sqlPatterns = [
-    /(\b(SELECT|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|EXECUTE)\b)/gi,
-    /(;|--|\/\*|\*\/|xp_|sp_)/gi,
-  ];
-
-  for (const pattern of sqlPatterns) {
-    if (pattern.test(input)) {
-      return { valid: false, reason: 'Potentially malicious pattern detected' };
-    }
-  }
-
-  // Check for XSS patterns
-  const xssPatterns = [
-    /<script[^>]*>.*?<\/script>/gi,
-    /<iframe[^>]*>.*?<\/iframe>/gi,
-    /javascript:/gi,
-    /on\w+\s*=/gi,
-  ];
-
-  for (const pattern of xssPatterns) {
-    if (pattern.test(input)) {
-      return { valid: false, reason: 'Potentially malicious script detected' };
-    }
-  }
-
-  return { valid: true };
-}
-
-/**
- * Rate limiting implementation (client-side)
- */
-export class RateLimiter {
-  private requests: Map<string, number[]> = new Map();
-  private limit: number;
-  private windowMs: number;
-
-  constructor(limit: number = 10, windowMs: number = 60000) {
-    this.limit = limit;
-    this.windowMs = windowMs;
-  }
-
-  /**
-   * Check if request should be allowed
-   */
-  allowRequest(identifier: string): boolean {
-    const now = Date.now();
-    const requests = this.requests.get(identifier) || [];
-
-    // Remove old requests outside the window
-    const recentRequests = requests.filter(
-      (timestamp) => now - timestamp < this.windowMs
-    );
-
-    if (recentRequests.length >= this.limit) {
-      return false;
-    }
-
-    recentRequests.push(now);
-    this.requests.set(identifier, recentRequests);
-
-    return true;
-  }
-
-  /**
-   * Get remaining requests
-   */
-  getRemainingRequests(identifier: string): number {
-    const requests = this.requests.get(identifier) || [];
-    const now = Date.now();
-    const recentRequests = requests.filter(
-      (timestamp) => now - timestamp < this.windowMs
-    );
-
-    return Math.max(0, this.limit - recentRequests.length);
-  }
-
-  /**
-   * Clear rate limit for identifier
-   */
-  clear(identifier: string): void {
-    this.requests.delete(identifier);
-  }
-
-  /**
-   * Clear all rate limits
-   */
-  clearAll(): void {
-    this.requests.clear();
-  }
-}
-
-/**
- * CSRF Token Management
- */
-export class CSRFTokenManager {
-  private static TOKEN_KEY = '__csrf_token__';
-
-  /**
-   * Generate and store CSRF token
-   */
-  static generateToken(): string {
-    const token = generateSecureToken();
-
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem(this.TOKEN_KEY, token);
-    }
-
-    return token;
-  }
-
-  /**
-   * Get stored CSRF token
-   */
-  static getToken(): string | null {
-    if (typeof window !== 'undefined') {
-      return sessionStorage.getItem(this.TOKEN_KEY);
-    }
-    return null;
-  }
-
-  /**
-   * Validate CSRF token
-   */
-  static validateToken(token: string): boolean {
-    const storedToken = this.getToken();
-    return storedToken !== null && storedToken === token;
-  }
-
-  /**
-   * Clear CSRF token
-   */
-  static clearToken(): void {
-    if (typeof window !== 'undefined') {
-      sessionStorage.removeItem(this.TOKEN_KEY);
-    }
-  }
-}
-
 export default {
-  SECURITY_HEADERS,
-  generateCSP,
-  sanitizeHTML,
-  sanitizeURL,
-  generateSecureToken,
-  hashData,
-  validateInput,
-  RateLimiter,
-  CSRFTokenManager,
+  securityHeaders,
+  rateLimitConfig,
+  corsConfig,
+  sessionConfig,
+  validationPatterns,
+  sanitizeInput,
+  validateEmail,
+  validateUrl,
+  generateSecureToken
 };

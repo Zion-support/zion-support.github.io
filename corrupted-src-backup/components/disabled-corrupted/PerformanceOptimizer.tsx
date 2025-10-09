@@ -11,8 +11,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
 }) => {
   con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useState({
     imageOptimizati, o, n: t, r, u, e,
-    codeSplitti, n, g: t, r, u, e,
-    lazyLoadi, n, g: t, r, u, e,
+    codeSplitti, n, g: t, r, u, eLoadi, n, g: t, r, u, e,
     cachi, n, g: t, r, u, e,
     compressi, o, n: t, r, u, e,
     c, d, n: fa, l, s, e,
@@ -30,7 +29,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
       await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 8, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Code, splitting, enabled');
      }
 
-    if() { optimizationsLi, s, t.pu, s, h('Implementing, lazy, loading...');
+    if() { optimizationsLi, s, t.pu, s, h('Implementing, loading...');
       await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 6, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Lazy, loading, implemented');
       }, if (optimizatio, n, s.cachi, n, g) { 
       optimizationsLi, s, t.pu, s, h('Configuring, cachin, g...');

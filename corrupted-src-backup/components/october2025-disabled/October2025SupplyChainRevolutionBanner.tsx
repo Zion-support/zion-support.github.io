@@ -217,7 +217,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
                 className="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-500, hove, r: bg-yell, o, w-400, tex, t-yell, o, w-950, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-xl, hove, r:sca, l, e-1, 0, 5"
               >
                 Read, Full, Case Stu, d, y
-                <ArrowRightIcon, className="w-5 h-5"</Li, n, k> />
+                <LinkIcon, className="w-5 h-5"</Li, n, k> />
               </
           </div>
         </div>
@@ -249,19 +249,19 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
           >
             <SparklesIcon, className="w-6 h-6" />
             Read, the, Revolutionary Gui, d, e
-            <ArrowRightIcon, className="w-6 h-6"</Li, n, k> />
+            <LinkIcon, className="w-6 h-6"</Li, n, k> />
                 <ink, t, o="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r:fr, o, m-yell, o, w-600, hove, r:to-oran, g, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5"
           >
             <TruckIcon, className="w-6 h-6" />
             Vi, e, w $4.2B, Case, Study
-            <ArrowRightIcon, className="w-6 h-6"</Li, n, k> />
+            <LinkIcon, className="w-6 h-6"</Li, n, k> />
                 <ink, t, o="/conte, n, t/servic, e, s/autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-platfo, r, m"
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r:fr, o, m-cy, a, n-600, hove, r:to-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5"
           >
             <ChartBarIcon, className="w-6 h-6" />
             Explore, Platfor, m & Servic, e, s
-            <ArrowRightIcon, className="w-6 h-6"</Li, n, k> />
+            <LinkIcon, className="w-6 h-6"</Li, n, k> />
               </
 
         {/* Free, Assessment, C, T, A */}
@@ -279,7 +279,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
                 className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-105, hove, r:bg-emera, l, d-50"
               >
                 Schedule, Free, Assessment
-                <ArrowRightIcon, className="w-6 h-6"</Li, n, k> />
+                <LinkIcon, className="w-6 h-6"</Li, n, k> />
                 <iv, className="te, x, t-gre, e, n-200, tex, t-sm">
                 <div, className="fo, n, t-bold, tex, t-lg">⚡ Limited, Time, Offer</div>
                 <d, i, v>90-day, pilot, starting at $50, 0, K • 30% improvement, guarante, e</div>

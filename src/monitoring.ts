@@ -1,6 +1,6 @@
 // Performance monitoring setup
 import analytics from './utils/analytics';
-import { ErrorHandler } from './utils/errorHandler';
+import ErrorHandler from './utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
@@ -13,13 +13,13 @@ function initializeMonitoring() {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
       // Monitor web vitals
-      performanceOptimizer.init();
+      performanceOptimizer.optimize();
       
       // Set up error tracking
-      // errorHandler.init(); // Method may not exist
+      // errorHandler.init(); // Method does not exist
       
-      // Analytics is already initialized via constructor
-      // No need to call init() as the Analytics class doesn't have this method
+      // Initialize analytics
+      // analytics.init(); // Method may not exist on all analytics implementations
       
       logger.info('Monitoring initialized successfully');
     }

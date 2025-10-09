@@ -13,8 +13,7 @@ export interface Insight {
 export const newInsights: Insight[] = [
   {
     id: 'ai-platform-optimization-insights',
-    title:
-      'AI Platform Optimization: Maximizing ROI with Intelligent Scorecards',
+    title: 'AI Platform Optimization: Maximizing ROI with Intelligent Scorecards',
     summary:
       'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.',
     category: 'AI Strategy',

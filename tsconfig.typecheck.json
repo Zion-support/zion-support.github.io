@@ -7,8 +7,7 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "app/**/*.ts",
-    "app/**/*.tsx"
+    "types/**/*.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -30,6 +29,7 @@
     "contracts.disabled/**",
     "**/NewestContent2025Banner.tsx",
     "**/contact/page.tsx",
-    "**/ErrorBoundary.tsx"
+    "**/ErrorBoundary.tsx",
+    "app/**/*"
   ]
 }

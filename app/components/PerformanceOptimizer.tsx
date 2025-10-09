@@ -1,85 +1,71 @@
-'use client';
+import React, { useEffect } from 'react';
 
-import React, { useEffect, useCallback } from 'react';
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
-  children,
-}) => {
-  // Preload critical resources
+const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
+    // Preload critical resources
     const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href =
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-
-      // Preload critical images
       const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg',
+        '/og-image.jpg',
+        '/favicon.ico',
+        '/apple-touch-icon.png'
       ];
 
       criticalImages.forEach(src => {
-        const img = new Image();
-        img['src'] = src;
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
       });
     };
 
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events for better performance
-    let ticking = false;
-
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  // Add performance monitoring
-  useEffect(() => {
-    if ('performance' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          if (entry.entryType === 'navigation') {
-            // eslint-disable-next-line no-console
-            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
+    // Optimize images with lazy loading
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
           }
         });
       });
 
-      observer.observe({
-        entryTypes: ['navigation', 'paint', 'largest-contentful-paint'],
-      });
+      images.forEach(img => imageObserver.observe(img));
+    };
 
-      return () => observer.disconnect();
-    }
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+      
+      const updateScroll = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Update scroll-dependent elements
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
 
-    return undefined;
+      window.addEventListener('scroll', updateScroll, { passive: true });
+      return () => window.removeEventListener('scroll', updateScroll);
+    };
+
+    // Initialize optimizations
+    preloadCriticalResources();
+    optimizeImages();
+    const cleanupScroll = optimizeScroll();
+
+    return () => {
+      cleanupScroll();
+    };
   }, []);
 
-  return <>{children}</>;
+  return null;
 };
 
-export default PerformanceOptimizerComponent;
+export default PerformanceOptimizer;

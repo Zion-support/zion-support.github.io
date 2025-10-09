@@ -15,6 +15,6 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
                   {artic, l, e.t, i, t, l, e}
                   <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
                     Read, Mor, e
-                    <ArrowRight, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                    <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             View, All, Articles
-            <ArrowRight, classNam, e='w-6 h-6' />
+            <Link, classNam, e='w-6 h-6' />

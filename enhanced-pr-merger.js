@@ -3,18 +3,13 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 
-console.log('🚀 Starting Enhanced PR Merger...');
-
-//Function to safely execute git commands
+// //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-    console.log(`📋 Executing: ${description}`);
-    const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-    console.log(`✅ ${description} - Success`);
-    return { success: true, result };
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+//     return { success: true, result };
   } catch (error) {
-    console.log(`⚠️  ${description} - Warning: ${error.message}`);
-    return { success: false, error: error.message };
+//     return { success: false, error: error.message };
   }
 }
 
@@ -64,27 +59,23 @@ const prs = [
 ];
 
 //Ensure we're on main branch
-console.log('\n📍 Setting up environment...');
-safeGitCommand('git checkout main', 'Switch to main branch');
+// safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
-console.log('\n🔍 Checking PR branches...');
-
-let mergedCount = 0;
-let conflictCount = 0;
-let notFoundCount = 0;
-const results = [];
+// let mergedCount = 0;
+let _conflictCount = 0;
+let _notFoundCount = 0;
+const _results = [];
 
 //Process each PR
 for (const pr of prs) {
-  console.log(
+//   // console.log(
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
   );
 
   //Check if branch exists
   if (!branchExists(pr.branch)) {
-    console.log(`❌ Branch ${pr.branch} not found, skipping...`);
-    notFoundCount++;
+//     notFoundCount++;
     results.push({
       pr: pr.number,
       title: pr.title,
@@ -94,9 +85,7 @@ for (const pr of prs) {
     continue;
   }
 
-  console.log(`✅ Branch ${pr.branch} found`);
-
-  //Try to merge the branch
+//   //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
     `Merge ${pr.branch}`
@@ -104,8 +93,7 @@ for (const pr of prs) {
 
   if (mergeResult.success) {
     mergedCount++;
-    console.log(`🎉 Successfully merged PR #${pr.number}`);
-    results.push({
+//     results.push({
       pr: pr.number,
       title: pr.title,
       status: 'merged',
@@ -113,9 +101,7 @@ for (const pr of prs) {
     });
   } else {
     conflictCount++;
-    console.log(`⚠️  Merge conflict or error for PR #${pr.number}`);
-
-    //Try to abort the merge if there was a conflict
+//     //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
 
     results.push({
@@ -129,13 +115,12 @@ for (const pr of prs) {
 }
 
 //Run system checks
-console.log('\n🔧 Running system checks...');
-const typeCheck = safeGitCommand(
+// const typeCheck = safeGitCommand(
   'pnpm run type-check',
   'TypeScript type checking'
 );
-const lintCheck = safeGitCommand('pnpm run lint', 'ESLint linting');
-const testCheck = safeGitCommand('pnpm run test', 'Jest testing');
+const _lintCheck = safeGitCommand('pnpm run lint', 'ESLint linting');
+const _testCheck = safeGitCommand('pnpm run test', 'Jest testing');
 const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
   'Production build'
@@ -143,16 +128,13 @@ const buildCheck = safeGitCommand(
 
 //Push changes if any were merged
 if (mergedCount > 0) {
-  console.log('\n📤 Pushing changes to main...');
-  const pushResult = safeGitCommand(
+//   const pushResult = safeGitCommand(
     'git push origin main',
     'Push changes to main'
   );
   if (pushResult.success) {
-    console.log('✅ All changes pushed to main successfully');
-  } else {
-    console.log('❌ Error pushing changes to main');
-  }
+//     } else {
+//     }
 }
 
 //Generate comprehensive report
@@ -186,25 +168,8 @@ fs.writeFileSync(
   JSON.stringify(report, null, 2)
 );
 
-console.log('\n📊 === MERGE SUMMARY ===');
-console.log(`✅ Successfully merged: ${mergedCount} PRs`);
-console.log(`⚠️  Conflicts/Errors: ${conflictCount} PRs`);
-console.log(`❌ Not found: ${notFoundCount} PRs`);
-console.log(`📈 Success rate: ${report.summary.successRate}`);
+// // // // // // // // // // if (report.systemChecks.allPassed) {
+//   } else {
+//   }
 
-console.log('\n🔧 === SYSTEM CHECKS ===');
-console.log(`TypeScript: ${typeCheck.success ? '✅' : '❌'}`);
-console.log(`ESLint: ${lintCheck.success ? '✅' : '❌'}`);
-console.log(`Tests: ${testCheck.success ? '✅' : '❌'}`);
-console.log(`Build: ${buildCheck.success ? '✅' : '❌'}`);
-
-if (report.systemChecks.allPassed) {
-  console.log(
-    '\n🎉 All system checks passed! Repository is in excellent condition.'
-  );
-} else {
-  console.log('\n⚠️  Some system checks failed. Please review the issues.');
-}
-
-console.log('\n📄 Detailed report saved to: enhanced-pr-merge-report.json');
-console.log('\n🏁 Enhanced PR Merger completed!');
+// // 

@@ -1,4 +1,3 @@
-const { withSentry } = require('./withSentry.cjs');
 const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
@@ -26,16 +25,8 @@ async function handler(req, res) {
       return;
     }
 
-    const file = path.join(
-      process.cwd(),
-      'data',
-      'newsletter-subscriptions.json'
-    );
-<<<<<<< HEAD
-    
-=======
+    const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
     let existing = [];
 
     try {
@@ -47,15 +38,9 @@ async function handler(req, res) {
 
     existing.push({
       email,
-<<<<<<< HEAD
       name: name || '',
       source,
-      subscribedAt: new Date().toISOString()
-=======
-      name,
-      source,
       subscribedAt: new Date().toISOString(),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
     });
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
@@ -67,4 +52,4 @@ async function handler(req, res) {
   }
 }
 
-module.exports = withSentry(handler);
+module.exports = { handler };

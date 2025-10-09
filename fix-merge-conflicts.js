@@ -1,32 +1,36 @@
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Find all backup files
-const result = execSync('find app -name "*.backup" -type f', { encoding: 'utf-8' });
-const backupFiles = result.trim().split('\n').filter(f => f);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-console.log(`Found ${backupFiles.length} backup files`);
-
-backupFiles.forEach(backupFile => {
-  const targetFile = backupFile.replace('.backup', '');
-  console.log(`Processing: ${backupFile} -> ${targetFile}`);
-  
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(backupFile, 'utf-8');
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if backup has merge conflicts
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`  Backup has merge conflicts, keeping original`);
-      return;
-    }
+    // Remove merge conflict markers and keep the HEAD version
     
-    // If backup is clean, use it
-    fs.copyFileSync(backupFile, targetFile);
-    console.log(`  ✓ Restored from backup`);
-  } catch (err) {
-    console.log(`  ✗ Error: ${err.message}`);
+    fs.writeFileSync(filePath, content);
+    // console.log(`Fixed merge conflicts in: ${filePath}`);
+  } catch (error) {
+    // console.error(`Error fixing ${filePath}:`, error.message);
   }
-});
+}
 
-console.log('\\nDone!');
+// Find all TypeScript/TSX files with merge conflicts
+function findFilesWithConflicts(dir) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules')) {
+        scanDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        const content = fs.readFileSync(fullPath, 'utf8');

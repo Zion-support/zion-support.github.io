@@ -218,12 +218,12 @@ const, October2025FeaturedContentBanne, r = () => {
                     <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>
                     <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
                       Read, Full, Article;
-                      <ArrowRight, className="w-4 h-4, m, l-2  />
+                      <Link, className="w-4 h-4, m, l-2  />
                   <div, className="flex, item, s-center, justif, y-betwe, e, n">";
                     <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>";
                     <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
                       Read, Full, Article;
-                      <ArrowRight, className="w-4 h-4, m, l-2" />";
+                      <Link, className="w-4 h-4, m, l-2" />";
                     </d, i, v>
                   </d, i, v>
                 </d, i, v>
@@ -250,8 +250,8 @@ const, October2025FeaturedContentBanne, r = () => {
               classNa, m, e="px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r"
             >
               Get, a, Free Consultati, o, n;
-              <ArrowRight, className="w-5 h-5, m, l-2  />
-              <ArrowRight, className="w-5 h-5, m, l-2" />";
+              <Link, className="w-5 h-5, m, l-2  />
+              <Link, className="w-5 h-5, m, l-2" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
 export interface ComprehensiveItSolution {;
@@ -38,7 +38,7 @@ export interface ComprehensiveItSolution {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
   }
@@ -86,7 +86,7 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [,
     link: "/services/full-stack-development",
     category: "IT Solutions",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

@@ -57,7 +57,7 @@ class PerformanceOptimizer {
       const imageObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const img = entry.target;
+            const _img = entry.target;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.classList.remove('lazy');
@@ -87,11 +87,9 @@ class PerformanceOptimizer {
       navigator.serviceWorker
         .register('/sw.js')
         .then(registration => {
-          console.log('SW registered: ', registration);
-        })
+//           })
         .catch(registrationError => {
-          console.log('SW registration failed: ', registrationError);
-        });
+//           });
     }
   }
 
@@ -103,7 +101,7 @@ class PerformanceOptimizer {
     ];
 
     criticalResources.forEach(resource => {
-      const link = document.createElement('link');
+      const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = 'script';
@@ -113,13 +111,13 @@ class PerformanceOptimizer {
 
   setupLazyLoading() {
     // Lazy load non-critical components
-    const lazyComponents = document.querySelectorAll('[data-lazy]');
+    const _lazyComponents = document.querySelectorAll('[data-lazy]');
 
     if ('IntersectionObserver' in window) {
       const lazyObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const component = entry.target;
+            const _component = entry.target;
             this.loadLazyComponent(component);
             lazyObserver.unobserve(component);
           }
@@ -139,7 +137,7 @@ class PerformanceOptimizer {
     ];
 
     criticalFonts.forEach(font => {
-      const link = document.createElement('link');
+      const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = font;
       link.as = 'style';
@@ -183,12 +181,12 @@ class PerformanceOptimizer {
 
   preloadNextRoutes(routes) {
     // Preload likely next routes based on user behavior
-    const currentPath = window.location.pathname;
-    const likelyNextRoutes = this.getLikelyNextRoutes(currentPath);
+//     const currentPath = window.location.pathname;
+    const _likelyNextRoutes = this.getLikelyNextRoutes(currentPath);
 
     likelyNextRoutes.forEach(route => {
       if (routes[route]) {
-        routes[route]().catch(console.error);
+//         routes[route]().catch(console.error);
       }
     });
   }
@@ -241,32 +239,27 @@ class PerformanceOptimizer {
       ];
 
       if (staticallyImportedComponents.includes(componentName)) {
-        console.warn(
-          `Component ${componentName} is already statically imported, skipping dynamic import`
-        );
-        return;
+//         return;
       }
 
-      const component = await import(`../components/${componentName}.tsx`);
+      const _component = await import(`../components/${componentName}.tsx`);
       // Render component to element
       if (component.default) {
         element.innerHTML = component.default();
       }
     } catch (error) {
-      console.error(`Failed to load component ${componentName}:`, error);
-    }
+//       }
   }
 
   async loadLazyComponent(element) {
-    const componentPath = element.dataset.lazy;
+//     const componentPath = element.dataset.lazy;
     try {
-      const component = await import(componentPath);
+      const _component = await import(componentPath);
       if (component.default) {
         element.innerHTML = component.default();
       }
     } catch (error) {
-      console.error(`Failed to load lazy component:`, error);
-    }
+//       }
   }
 
   updateMetric(metricName, value) {
@@ -286,13 +279,12 @@ class PerformanceOptimizer {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.log('Performance Metrics:', this.metrics);
-    }
+//       }
   }
 
   // Performance optimization methods
   optimizeImages() {
-    const images = document.querySelectorAll('img');
+    const _images = document.querySelectorAll('img');
     images.forEach(img => {
       if (!img.loading) {
         img.loading = 'lazy';
@@ -304,7 +296,7 @@ class PerformanceOptimizer {
   }
 
   optimizeScripts() {
-    const scripts = document.querySelectorAll('script[src]');
+    const _scripts = document.querySelectorAll('script[src]');
     scripts.forEach(script => {
       if (!script.async && !script.defer) {
         script.defer = true;
@@ -329,7 +321,7 @@ class PerformanceOptimizer {
       .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     `;
 
-    const style = document.createElement('style');
+    const _style = document.createElement('style');
     style.textContent = criticalCSS;
     document.head.appendChild(style);
   }
@@ -388,7 +380,7 @@ class PerformanceOptimizer {
 }
 
 // Initialize performance optimizer
-const performanceOptimizer = new PerformanceOptimizer();
+const _performanceOptimizer = new PerformanceOptimizer();
 
 // Export for use in other modules
 export default performanceOptimizer;

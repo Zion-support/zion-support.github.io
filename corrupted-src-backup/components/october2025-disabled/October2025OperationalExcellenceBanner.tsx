@@ -1,4 +1,3 @@
-import React from 'react';
 impo, r, t {
   ArrowLe, f, t,
   ArrowRig, h, t,
@@ -153,7 +152,7 @@ const October2025OperationalExcellenceBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <span, className='fo, n, t-medi, u, m'>O, c, t , 1, 20, 2, 5</sp, a, n>
               </div>
-              <ArrowRight, classNam, e = 'w-6 h-6, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
+              <Link, classNam, e = 'w-6 h-6, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
             </div>
           </Li, n, k>
           {/* Articl, e, 2 - API, Orchestrat, i, o, n */}
@@ -209,7 +208,7 @@ const October2025OperationalExcellenceBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <span, className='fo, n, t-medi, u, m'>O, c, t , 1, 20, 2, 5</sp, a, n>
               </div>
-              <ArrowRight, classNam, e = 'w-6 h-6, tex, t-te, a, l-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
+              <Link, classNam, e = 'w-6 h-6, tex, t-te, a, l-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
             </div>
           </Li, n, k>
           {/* Articl, e, 3 - Customer, Intent, Predicti, o, n */}
@@ -265,7 +264,7 @@ const October2025OperationalExcellenceBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <span, className='fo, n, t-medi, u, m'>O, c, t , 1, 20, 2, 5</sp, a, n>
               </div>
-              <ArrowRight, classNam, e = 'w-6 h-6, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
+              <Link, classNam, e = 'w-6 h-6, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
             </div>
           </Li, n, k>
         </div>
@@ -291,13 +290,13 @@ const October2025OperationalExcellenceBanne, r = () => {
               className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-400, hove, r:to-te, a, l-400, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
             >
               <sp, a, n>Explore, All, Innovations</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
             </Li, n, k>
             <Link, t, o='/conta, c, t'
               className='inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
             >
-              <sp, a, n>Get, Started, Today</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <sp, a, n>Getted, Today</sp, a, n>
+              <Link, className='w-5 h-5' />
             </Li, n, k>
           </div>
         </div>

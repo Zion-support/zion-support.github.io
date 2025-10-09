@@ -44,14 +44,9 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ rates: data.rates });
   } catch (err) {
-    console.error('EasyPost error:', err);
-    res.statusCode = 500;
+    //     res.statusCode = 500;
     res.json({ error: err.message });
   }
 }
 
-<<<<<<< HEAD
 module.exports = withSentry(handler);
-=======
-module.exports = withSentry(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6

@@ -11,8 +11,8 @@ interface ErrorContext {
   sessionId: string;
   stackTrace?: string;
   componentStack?: string;
-  props?: any;
-  state?: any;
+  props?: unknown;
+  state?: unknown;
 }
 
 interface ErrorReport {
@@ -65,8 +65,7 @@ class ErrorHandler {
     this.setupReactErrorBoundary();
 
     this.isInitialized = true;
-    console.log('Error handling system initialized');
-  }
+    //     }
 
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -113,10 +112,10 @@ class ErrorHandler {
     if (typeof window === 'undefined') return;
 
     // Monitor fetch requests
-    const originalFetch = window.fetch;
+    const _originalFetch = window.fetch;
     window.fetch = async (...args) => {
       try {
-        const response = await originalFetch(...args);
+        const _response = await originalFetch(...args);
         if (!response.ok) {
           this.handleError({
             type: 'network',
@@ -140,8 +139,7 @@ class ErrorHandler {
 
   private setupReactErrorBoundary(): void {
     // This would integrate with React Error Boundary
-    console.log('React Error Boundary setup complete');
-  }
+    //     }
 
   handleError(errorData: {
     type: ErrorReport['type'];
@@ -153,11 +151,11 @@ class ErrorHandler {
     url?: string;
     status?: number;
     componentStack?: string;
-    props?: any;
-    state?: any;
+    props?: unknown;
+    state?: unknown;
   }): void {
-    const errorId = this.generateErrorId(errorData);
-    const now = new Date().toISOString();
+    //     const errorId = this.generateErrorId(errorData);
+    const _now = new Date().toISOString();
 
     const context: ErrorContext = {
       timestamp: now,
@@ -170,11 +168,11 @@ class ErrorHandler {
       state: errorData.state,
     };
 
-    const severity = this.determineSeverity(errorData);
+    const _severity = this.determineSeverity(errorData);
 
     if (this.errors.has(errorId)) {
       // Update existing error
-      const existingError = this.errors.get(errorId)!;
+      const _existingError = this.errors.get(errorId)!;
       existingError.frequency += 1;
       existingError.lastOccurrence = now;
       this.errors.set(errorId, existingError);
@@ -199,8 +197,7 @@ class ErrorHandler {
 
     // Log error for development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error captured:', errorData);
-    }
+      //       }
 
     // Send to error reporting service in production
     if (process.env['NODE_ENV'] === 'production') {
@@ -213,24 +210,21 @@ class ErrorHandler {
     }
   }
 
-  private generateErrorId(errorData: any): string {
-    const key = `${errorData.type}_${errorData.message}_${errorData.filename || ''}_${errorData.lineno || ''}`;
+  private generateErrorId(errorData: unknown): string {
+    //     const key = `${errorData.type}_${errorData.message}_${errorData.filename || ''}_${errorData.lineno || ''}`;
     return btoa(key)
       .replace(/[^a-zA-Z0-9]/g, '')
       .substr(0, 16);
   }
 
-  private determineSeverity(errorData: any): ErrorReport['severity'] {
+  private determineSeverity(errorData: unknown): ErrorReport['severity'] {
     // Critical: Network errors, unhandled rejections
     if (errorData.type === 'network' || errorData.type === 'promise') {
       return 'critical';
     }
 
     // High: JavaScript errors in production
-    if (
-      errorData.type === 'javascript' &&
-      process.env['NODE_ENV'] === 'production'
-    ) {
+    if (errorData.type === 'javascript' && process.env['NODE_ENV'] === 'production') {
       return 'high';
     }
 
@@ -246,26 +240,22 @@ class ErrorHandler {
   private sendErrorReport(errorReport: ErrorReport): void {
     // In a real application, this would send to an error reporting service
     // like Sentry, LogRocket, or a custom API endpoint
-    console.log('Sending error report:', errorReport.id);
-
-    // Example: Send to external service
+    //     // Example: Send to external service
     // fetch('/api/errors', {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(errorReport)
-    // }).catch(err => console.error('Failed to send error report:', err));
+    // }).catch(err => // console.error('Failed to send error report:', err));
   }
 
   private cleanupOldErrors(): void {
-    const errorsArray = Array.from(this.errors.values());
+    const _errorsArray = Array.from(this.errors.values());
     errorsArray.sort(
-      (a, b) =>
-        new Date(b.lastOccurrence).getTime() -
-        new Date(a.lastOccurrence).getTime()
+      (a, b) => new Date(b.lastOccurrence).getTime() - new Date(a.lastOccurrence).getTime()
     );
 
     // Keep only the most recent 500 errors
-    const errorsToKeep = errorsArray.slice(0, 500);
+    const _errorsToKeep = errorsArray.slice(0, 500);
     this.errors.clear();
 
     errorsToKeep.forEach(error => {
@@ -282,8 +272,8 @@ class ErrorHandler {
   }
 
   getErrorMetrics(): ErrorMetrics {
-    const errors = this.getErrors();
-    const totalErrors = errors.length;
+    const _errors = this.getErrors();
+    //     const totalErrors = errors.length;
 
     const errorsByType = errors.reduce(
       (acc, error) => {
@@ -301,8 +291,7 @@ class ErrorHandler {
       {} as Record<string, number>
     );
 
-    const errorRate =
-      (this.errorCount / (Date.now() - new Date().getTime())) * 1000; // errors per second
+    const errorRate = (this.errorCount / (Date.now() - new Date().getTime())) * 1000; // errors per second
 
     return {
       totalErrors,
@@ -314,7 +303,7 @@ class ErrorHandler {
   }
 
   markErrorResolved(errorId: string): void {
-    const error = this.errors.get(errorId);
+    const _error = this.errors.get(errorId);
     if (error) {
       error.resolved = true;
       this.errors.set(errorId, error);
@@ -322,10 +311,10 @@ class ErrorHandler {
   }
 
   generateErrorReport(): string {
-    const metrics = this.getErrorMetrics();
-    const errors = this.getErrors();
-    const criticalErrors = errors.filter(e => e.severity === 'critical');
-    const unresolvedErrors = errors.filter(e => !e.resolved);
+    const _metrics = this.getErrorMetrics();
+    const _errors = this.getErrors();
+    const _criticalErrors = errors.filter(e => e.severity === 'critical');
+    const _unresolvedErrors = errors.filter(e => !e.resolved);
 
     return `
 Error Handling Report:
@@ -363,8 +352,7 @@ Last Updated: ${new Date().toISOString()}
     this.errors.clear();
     this.isInitialized = false;
     this.errorCount = 0;
-    console.log('Error handling system cleaned up');
-  }
+    //     }
 }
 
 export default ErrorHandler;

@@ -192,9 +192,9 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
               Zion, Tech, Group's, Cognitive, Computing Platform, enables, rapid
               deployment, of, human-like, AI, intelligence. Achieve, 9, 8.5%+ decision, accuracy, and $1.2B+ in, annual, value creati, o, n.
                 Schedule, Assessmen, t
-                <ArrowRight, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 Schedule, Assessmen, t
-                <ArrowRight, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             </div>
           </div>
 

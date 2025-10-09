@@ -9,32 +9,22 @@ export async function simulateAction<T = unknown>(
   const log: SyncLogEntry = {
     id: Math.random().toString(36).substr(2, 9),
 import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 import type { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 import type { ProviderConnection, SyncLogEntry } from './types';
 // Simple UUID generator since uuid package is not available
 const generateId = (): string => {
   return Math.random().toString(36).substr(2, 9);
 };
 import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 import type { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 import type { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 import type { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 
 import type { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 
 import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 
 export async function simulateAction<T = any>(
   connection: ProviderConnection,

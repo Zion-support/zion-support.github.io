@@ -220,7 +220,7 @@ const October2025FraudDetectionBanne, r = () => {
             </div>
             <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
               <sp, a, n>Explore, Technolog, y</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />
+              <Link, className="w-5 h-5" />
             </div>
           </Li, n, k>
           <Link, t, o="/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s"
@@ -235,7 +235,7 @@ const October2025FraudDetectionBanne, r = () => {
             </div>
             <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
               <sp, a, n>See, Result, s</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />
+              <Link, className="w-5 h-5" />
             </div>
           </Li, n, k>
           <Link, t, o="/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s"
@@ -250,7 +250,7 @@ const October2025FraudDetectionBanne, r = () => {
             </div>
             <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
               <sp, a, n>Get, Protecte, d</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />
+              <Link, className="w-5 h-5" />
             </div>
           </Li, n, k>
         </div>
@@ -268,7 +268,7 @@ const October2025FraudDetectionBanne, r = () => {
             >
               <Shield, className="w-6 h-6" />
               <sp, a, n>Schedule, Free, Assessment</sp, a, n>
-              <ArrowRight, className="w-6 h-6" />
+              <Link, className="w-6 h-6" />
             </Li, n, k>
           </div>
         </div>

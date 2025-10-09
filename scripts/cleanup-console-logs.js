@@ -5,27 +5,25 @@ import { glob } from 'glob';
 // Function to remove console.log statements from a file
 function removeConsoleLogs(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
     
     // Remove console.log statements (but keep console.error and console.warn for debugging)
-    const consoleLogRegex = /^\s*console\.log\([^)]*\);\s*$/gm;
-    const consoleLogMultiLineRegex = /^\s*console\.log\(\s*[^)]*\s*\);\s*$/gm;
+    const _consoleLogRegex = /^\s*console\.log\([^)]*\);\s*$/gm;
+    const _consoleLogMultiLineRegex = /^\s*console\.log\(\s*[^)]*\s*\);\s*$/gm;
     
-    const originalContent = content;
+//     const originalContent = content;
     content = content.replace(consoleLogRegex, '');
     content = content.replace(consoleLogMultiLineRegex, '');
     
     if (content !== originalContent) {
       modified = true;
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned console.log statements from: ${filePath}`);
-    }
+//       }
     
     return modified;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+//     return false;
   }
 }
 
@@ -36,8 +34,8 @@ async function processFiles() {
     'app/**/*.{ts,tsx,js,jsx}'
   ];
   
-  let totalFiles = 0;
-  let modifiedFiles = 0;
+  let _totalFiles = 0;
+  let _modifiedFiles = 0;
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { 
@@ -58,10 +56,7 @@ async function processFiles() {
     });
   });
   
-  console.log(`\nCleanup complete!`);
-  console.log(`Total files processed: ${totalFiles}`);
-  console.log(`Files modified: ${modifiedFiles}`);
-}
+//   //   //   }
 
 // Run the cleanup
-processFiles().catch(console.error);
+// processFiles().catch(console.error);

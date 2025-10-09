@@ -1,8 +1,7 @@
 module.exports = {
   metaTags: {
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-    robots:
-      'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     canonical: true,
     alternate: true,
     ogTags: {
@@ -86,7 +85,7 @@ module.exports = {
     },
     fid: {
       target: 100,
-      optimization: 'code-splitting, lazy-loading, third-party-optimization',
+      optimization: 'code-splitting-loading, third-party-optimization',
     },
     cls: {
       target: 0.1,

@@ -33,7 +33,7 @@ const NewContentShowcas, e: React.FC = () => {
                   <div, className="flex, item, s-center, justif, y-between, tex, t-sm">
                     <span, className="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTime}</sp, a, n>
                     <span, className="te, x, t-indi, g, o-600, fon, t-semibold, flex, items-center, ga, p-1">
-                      Read, Mor, e <ArrowRight, className="w-4 h-4" />
+                      Read, Mor, e <Link, className="w-4 h-4" />
                     </sp, a, n>
                   </div>
                 </L, i, n, k>
@@ -44,7 +44,7 @@ const NewContentShowcas, e: React.FC = () => {
                 className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0"
               >
                 View, All, Articles
-                <ArrowRight, className="w-5 h-5" />
+                <Link, className="w-5 h-5" />
               </Li, n, k>
             </div>
           </div>
@@ -67,7 +67,7 @@ const NewContentShowcas, e: React.FC = () => {
                   <div, className="flex, item, s-center, justif, y-between, tex, t-sm">
                     <span, className="te, x, t-gr, a, y-700, fon, t-semibo, l, d">{servi, c, e.prici, n, g}</sp, a, n>
                     <span, className="te, x, t-purp, l, e-600, fon, t-semibold, flex, items-center, ga, p-1">
-                      Learn, Mor, e <ArrowRight, className="w-4 h-4" />
+                      Learn, Mor, e <Link, className="w-4 h-4" />
                     </sp, a, n>
                   </div>
                 </L, i, n, k>
@@ -78,7 +78,7 @@ const NewContentShowcas, e: React.FC = () => {
                 className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0"
               >
                 View, All, Services
-                <ArrowRight, className="w-5 h-5" />
+                <Link, className="w-5 h-5" />
               </Li, n, k>
             </div>
           </div>

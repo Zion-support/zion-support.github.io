@@ -2,42 +2,11 @@ const { withSentry } = require('./withSentry.cjs');
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
   const {
     name,
     email,
@@ -47,35 +16,18 @@ async function handler(req, res) {
     details: _details,
   } = req.body || {};
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
-  if (!name || !email || !location) {
-    res.statusCode = 400;
-    res.json({ error: 'Missing required fields' });
-    return;
+  if (!name || !email) {
+    return res.status(400).json({ error: 'Name and email are required' });
   }
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
+  const dir = path.dirname(file);
+
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+
   let existing = [];
-<<<<<<< HEAD
-  
-  
-  
-  
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
 
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -84,64 +36,21 @@ async function handler(req, res) {
     // File doesn't exist or is invalid, use empty array
   }
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
-  existing.push({
+  const newRequest = {
+    id: Date.now().toString(),
     name,
     email,
-    phone: _phone,
-    company: _company,
-    location,
-    details: _details,
-    createdAt: new Date().toISOString(),
-  });
+    phone: _phone || '',
+    company: _company || '',
+    location: location || '',
+    details: _details || '',
+    timestamp: new Date().toISOString(),
+  };
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
+  existing.push(newRequest);
   fs.writeFileSync(file, JSON.stringify(existing, null, 2));
   res.statusCode = 200;
   res.json({ success: true });
 }
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
 
 module.exports = withSentry(handler);
-
-module.exports = withSentry(handler);
-=======
-
-module.exports = withSentry(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6

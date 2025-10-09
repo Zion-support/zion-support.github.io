@@ -85,7 +85,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-2, transitio, n-a, l, l">"
-              Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              Explore, Technolog, y <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -118,7 +118,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {
               </d, i, v>
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
-              Discover, Innovatio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              Discover, Innovatio, n <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               Discover, Innovatio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -151,7 +151,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-indi, g, o-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-2, transitio, n-a, l, l">"
-              Learn, Mor, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              Learn, Mor, e <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-indi, g, o-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               Learn, Mor, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -184,7 +184,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {
               </d, i, v>
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-cy, a, n-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
-              Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              Read, Guid, e <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-cy, a, n-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -217,7 +217,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-r, e, d-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-2, transitio, n-a, l, l">"
-              View, Solutio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              View, Solutio, n <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-r, e, d-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               View, Solutio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -249,8 +249,8 @@ const, October2025UltimateBreakthroughBanne, r = () => {
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-yell, o, w-300, hove, r:to-oran, g, e-400, transitio, n-all, duratio, n-300, shado, w-lg, hov, e
   r:shad, o, w-xl"
             >
-              View, All, Innovations <ArrowRight, className="w-5 h-5  />
-              View, All, Innovations <ArrowRight, className="w-5 h-5" />";
+              View, All, Innovations <Link, className="w-5 h-5  />
+              View, All, Innovations <Link, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

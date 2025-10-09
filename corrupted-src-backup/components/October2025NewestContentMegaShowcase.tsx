@@ -140,7 +140,7 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
               {/* C, T, A */}
               <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                 <sp, a, n>Read, Complete, Guide</sp, a, n>
-                <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
+                <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                 <sp, a, n>Read, Complete, Guide</sp, a, n>
                 <ArrowRight, className="w-5 h-5, grou, p-ho, v, e

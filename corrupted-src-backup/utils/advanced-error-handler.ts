@@ -1,11 +1,9 @@
 const errorHandler = {
   setReportingEnabled: (enabled: boolean) => {
-    console.log('Error reporting enabled:', enabled);
-  },
+    //     },
 
-  handleError: (error: any) => {
-    console.error('Error handled:', error);
-  },
+  handleError: (error: unknown) => {
+    //     },
 };
 
 export default errorHandler;

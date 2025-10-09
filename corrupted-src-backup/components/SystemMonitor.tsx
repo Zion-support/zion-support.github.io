@@ -20,14 +20,11 @@ const SystemMonitor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className='fixed top-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50'>
-      <div className='mb-2 font-bold'>System Monitor</div>
+    <div className="fixed top-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <div className="mb-2 font-bold">System Monitor</div>
       <div>Status: Running</div>
       <div>
-        Memory:{' '}
-        {Math.round(
-          (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0
-        )}
+        Memory: {Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0)}
         MB
       </div>
       <div>Press Ctrl+Shift+M to toggle</div>

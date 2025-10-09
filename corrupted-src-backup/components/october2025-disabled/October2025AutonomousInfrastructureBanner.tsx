@@ -162,7 +162,7 @@ const October2025AutonomousInfrastructureBanner = () => {
           >
             <div className="flex items-center justify-between mb-3">
               <Cpu className="w-8 h-8" />
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
             <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>
             <div className="text-sm text-cyan-100">
@@ -175,7 +175,7 @@ const October2025AutonomousInfrastructureBanner = () => {
           >
             <div className="flex items-center justify-between mb-3">
               <Shield className="w-8 h-8" />
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
             <div className="font-bold text-lg mb-2">View $410M Success Story</div>
             <div className="text-sm text-blue-100">
@@ -188,7 +188,7 @@ const October2025AutonomousInfrastructureBanner = () => {
           >
             <div className="flex items-center justify-between mb-3">
               <Target className="w-8 h-8" />
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
             <div className="font-bold text-lg mb-2">Explore Services & Pricing</div>
             <div className="text-sm text-purple-100">
@@ -211,7 +211,7 @@ const October2025AutonomousInfrastructureBanner = () => {
               className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105"
             >
               Request Free Assessment
-              <ArrowRight className="w-5 h-5" />
+              <Link className="w-5 h-5" />
             </Link>
             <div className="text-white text-sm">
               <Clock className="w-4 h-4 inline mr-1" />

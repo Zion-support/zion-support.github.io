@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
 export interface Revolutionary2027ItService {;
@@ -38,7 +38,7 @@ export interface Revolutionary2027ItService {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
   }
@@ -86,7 +86,7 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [,
     link: "/services/2027-revolutionary-it",
     category: "Revolutionary 2027 IT",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

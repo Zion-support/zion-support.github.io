@@ -313,8 +313,8 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
   r:te, x, t-gre, e, n-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   View, Pricin, g;
-                  <ArrowRight, className="w-5 h-5, m, l-2  />
-                  <ArrowRight, className="w-5 h-5, m, l-2" />";
+                  <Link, className="w-5 h-5, m, l-2  />
+                  <Link, className="w-5 h-5, m, l-2" />";
                 </a>
               </d, i, v>
             </d, i, v>
@@ -554,8 +554,8 @@ pl, a, n.popul, a, r;
                 classNa, m, e="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, hove, r: te, x, t-gre, e, n-700, fon, t-semibo, l, d"
               >
                 Contact, our, Enterprise Te, a, m;
-                <ArrowRight, className="w-4 h-4, m, l-1  />
-                <ArrowRight, className="w-4 h-4, m, l-1" />";
+                <Link, className="w-4 h-4, m, l-1  />
+                <Link, className="w-4 h-4, m, l-1" />";
               </a>
             </d, i, v>
           </d, i, v>
@@ -631,8 +631,8 @@ pl, a, n.popul, a, r;
   r:te, x, t-gre, e, n-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 View, Case, Studies;
-                <ArrowRight, className="w-5 h-5, m, l-2  />
-                <ArrowRight, className="w-5 h-5, m, l-2" />";
+                <Link, className="w-5 h-5, m, l-2  />
+                <Link, className="w-5 h-5, m, l-2" />";
               </a>
             </d, i, v>
           </d, i, v>

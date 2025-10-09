@@ -49,7 +49,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
-    const selected = banners.slice(0, maxBanners);
+//     const selected = banners.slice(0, maxBanners);
     setVisibleBanners(selected);
   }, [banners, maxBanners]);
 
@@ -68,8 +68,8 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     return null;
   }
 
-  const currentBanner = visibleBanners[currentIndex];
-  const BannerComponent = bannerComponents[currentBanner];
+//   const currentBanner = visibleBanners[currentIndex];
+//   const BannerComponent = bannerComponents[currentBanner];
 
   return (
     <div className={`banner-rotation-manager ${className}`}></div>

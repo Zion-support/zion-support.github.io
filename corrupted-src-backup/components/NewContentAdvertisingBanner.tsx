@@ -173,7 +173,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                   <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
                     <Users, classNam, e="w-4 h-4" />
                     <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
-                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+                  <Link, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-indi, g, o-5, 0, 0/20, m, b-16">
           <div, classNam, e="te, x, t-cent, e, r">
             <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
@@ -185,7 +185,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Sparkles, classNam, e="w-5 h-5" />
-                  <ArrowRight, classNam, e="w-5 h-5" />
+                  <Link, classNam, e="w-5 h-5" />
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
                 <input, typ, e="ema, i, l"
-                  <ArrowRight, classNam, e="w-5 h-5" />
+                  <Link, classNam, e="w-5 h-5" />

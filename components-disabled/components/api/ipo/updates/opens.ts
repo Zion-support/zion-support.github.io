@@ -1,1 +1,1 @@
-const u = updates.find(("x": any) => x.id === id); if (!u) return res.status(404).json({ "error": "Not found" });" res.status(200).json({ "opens": u.opens |0 }); res.status(200).json({ "opens": u.opens |0 });
+const _u = updates.find(("x": unknown) => x.id === id); if (!u) return res.status(404).json({ "error": "Not found" });" res.status(200).json({ "opens": u.opens |0 }); res.status(200).json({ "opens": u.opens |0 });

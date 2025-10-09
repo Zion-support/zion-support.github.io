@@ -1,142 +1,76 @@
 #!/usr/bin/env python3
-"""Script to automatically resolve merge conflicts in the codebase."""
-
-import re
 import os
-from pathlib import Path
+import re
+import glob
 
-def remove_conflict_markers(content: str) -> str:
-    """Remove merge conflict markers and keep the most appropriate version."""
-    lines = content.split('\n')
-    result = []
-    i = 0
-    
-    while i < len(lines):
-        line = lines[i]
-        
-        # Check if this is a conflict marker
-        if line.startswith('<<<<<<<'):
-            # Found start of conflict
-            head_content = []
-            i += 1
-            
-            # Collect HEAD content
-            while i < len(lines) and not lines[i].startswith('======='):
-                head_content.append(lines[i])
-                i += 1
-            
-            # Skip the ======= line
-            if i < len(lines):
-                i += 1
-            
-            # Collect incoming content
-            incoming_content = []
-            while i < len(lines) and not lines[i].startswith('>>>>>>>'):
-                # Check for nested conflict markers
-                if lines[i].startswith('>>>>>>>'):
-                    break
-                incoming_content.append(lines[i])
-                i += 1
-            
-            # Skip the >>>>>>> line
-            if i < len(lines):
-                i += 1
-            
-            # Decision logic: prefer incoming (non-HEAD) version if it's not empty
-            # Otherwise keep HEAD version
-            if incoming_content and any(line.strip() for line in incoming_content):
-                # Use incoming content
-                result.extend(incoming_content)
-            elif head_content:
-                # Use HEAD content
-                result.extend(head_content)
-        else:
-            result.append(line)
-            i += 1
-    
-    return '\n'.join(result)
-
-def fix_jsx_syntax_errors(content: str, filename: str) -> str:
-    """Fix common JSX syntax errors."""
-    
-    # Remove any remaining conflict markers
-    content = re.sub(r'^<<<<<<< .*$', '', content, flags=re.MULTILINE)
-    content = re.sub(r'^=======\s*$', '', content, flags=re.MULTILINE)
-    content = re.sub(r'^>>>>>>> .*$', '', content, flags=re.MULTILINE)
-    
-    # Fix unterminated template literals (add closing backtick if missing)
-    # This is a simple heuristic - count backticks and add one if odd number
-    if filename.endswith('.ts') or filename.endswith('.tsx'):
-        # Count backticks not in strings
-        backtick_count = content.count('`')
-        # Simple fix: if odd number and file doesn't end with backtick, add one
-        if backtick_count % 2 == 1 and not content.rstrip().endswith('`'):
-            content = content.rstrip() + '`\n'
-    
-    return content
-
-def fix_file(filepath: Path) -> bool:
-    """Fix merge conflicts in a single file."""
+def fix_merge_conflicts(file_path):
+    """Fix merge conflicts in a file by keeping the enhanced version"""
     try:
-        with open(filepath, 'r', encoding='utf-8') as f:
+        with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has conflict markers
-        if '<<<<<<< ' not in content and '=======' not in content and '>>>>>>> ' not in content:
-            # Check for other syntax issues
-            if filepath.suffix in ['.ts', '.tsx', '.js', '.jsx']:
-                fixed_content = fix_jsx_syntax_errors(content, str(filepath))
-                if fixed_content != content:
-                    with open(filepath, 'w', encoding='utf-8') as f:
-                        f.write(fixed_content)
-                    print(f"Fixed syntax in: {filepath}")
-                    return True
-            return False
+        # Remove merge conflict markers and keep the enhanced version
+        # Pattern to match merge conflicts and keep the part after =======
+        pattern = r'<<<<<<< HEAD.*?=======\s*\n(.*?)>>>>>>>.*?cursor/.*?'
+        replacement = r'\1'
         
-        original_content = content
-        fixed_content = remove_conflict_markers(content)
-        fixed_content = fix_jsx_syntax_errors(fixed_content, str(filepath))
+        # Apply the pattern
+        new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
         
-        if fixed_content != original_content:
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(fixed_content)
-            print(f"Fixed conflicts in: {filepath}")
-            return True
+        # Clean up any remaining merge markers
+        new_content = re.sub(r'<<<<<<< HEAD.*?=======\s*\n', '', new_content, flags=re.DOTALL)
+        new_content = re.sub(r'>>>>>>>.*?cursor/.*?\n', '', new_content, flags=re.DOTALL)
         
-        return False
+        # Remove duplicate imports
+        lines = new_content.split('\n')
+        seen_imports = set()
+        cleaned_lines = []
+        
+        for line in lines:
+            if line.strip().startswith('import ') and line.strip() in seen_imports:
+                continue
+            if line.strip().startswith('import '):
+                seen_imports.add(line.strip())
+            cleaned_lines.append(line)
+        
+        new_content = '\n'.join(cleaned_lines)
+        
+        # Write the cleaned content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        
+        print(f"Fixed merge conflicts in {file_path}")
+        return True
+        
     except Exception as e:
-        print(f"Error fixing {filepath}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
-def find_and_fix_conflicts(root_dir: str) -> int:
-    """Find and fix all files with merge conflicts."""
-    root_path = Path(root_dir)
+def main():
+    # Find all TypeScript/TSX files with merge conflicts
+    files_with_conflicts = []
+    
+    for root, dirs, files in os.walk('/workspace/app'):
+        for file in files:
+            if file.endswith(('.tsx', '.ts')):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        if '<<<<<<< HEAD' in content:
+                            files_with_conflicts.append(file_path)
+                except:
+                    continue
+    
+    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
+    
+    # Fix each file
     fixed_count = 0
+    for file_path in files_with_conflicts:
+        if fix_merge_conflicts(file_path):
+            fixed_count += 1
     
-    # Files we know have conflicts from type-check
-    problem_files = [
-        'tsconfig.json',
-        'app/App.tsx',
-        'app/components/AccessibilityEnhancer.tsx',
-        'app/components/ErrorBoundary.tsx',
-        'app/components/NewestContent2025Banner.tsx',
-        'app/contact/page.tsx',
-        'app/enterprise/page.tsx',
-        'app/setupTests.tsx',
-        'app/utils/accessibilityEnhancer.ts',
-        'app/utils/performanceMonitor.ts',
-    ]
-    
-    for rel_path in problem_files:
-        filepath = root_path / rel_path
-        if filepath.exists():
-            if fix_file(filepath):
-                fixed_count += 1
-    
-    return fixed_count
+    print(f"Fixed merge conflicts in {fixed_count} files")
 
-if __name__ == '__main__':
-    workspace = '/workspace'
-    print("Fixing merge conflicts...")
-    fixed = find_and_fix_conflicts(workspace)
-    print(f"\nFixed {fixed} files")
+if __name__ == "__main__":
+    main()

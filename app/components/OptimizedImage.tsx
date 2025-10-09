@@ -1,5 +1,4 @@
-import React, { useState, useCallback, memo } from 'react';
-import Image from 'next/image';
+import React, { useState, useCallback } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -13,16 +12,16 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
   height,
   className = '',
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaZWlnaHQ9IjEwMCUiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
   onLoad,
-  onError
+  onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -37,44 +36,43 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
     onError?.();
   }, [onError]);
 
+  if (hasError) {
+    return (
+      <div 
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+        role="img"
+        aria-label={alt}
+      >
+        <span className="text-gray-500 text-sm">Image failed to load</span>
+      </div>
+    );
+  }
+
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      {!isLoaded && !hasError && (
+    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
+      {!isLoaded && (
         <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse"
-          style={{ width, height }}
-        />
-      )}
-      
-      {hasError ? (
-        <div 
-          className="flex items-center justify-center bg-gray-200 text-gray-500"
+          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
           style={{ width, height }}
         >
-          <span className="text-sm">Failed to load image</span>
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
         </div>
-      ) : (
-        <Image
-          src={src}
-          alt={alt}
-          width={width || 200}
-          height={height || 200}
-          priority={priority}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{
-            width: width ? `${width}px` : 'auto',
-            height: height ? `${height}px` : 'auto'
-          }}
-        />
       )}
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        onLoad={handleLoad}
+        onError={handleError}
+        style={{ width, height }}
+      />
     </div>
   );
-});
-
-OptimizedImage.displayName = 'OptimizedImage';
+};
 
 export default OptimizedImage;

@@ -51,7 +51,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [;
     link: "/services/2026-next-gen-ai",
     category: "Next-Gen AI 2026",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }

@@ -157,20 +157,20 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Read the Full Article"
-                <ArrowRight className="ml-2 w-5 h-5 " />
+                <Link className="ml-2 w-5 h-5 " />
               <a title= "Internal link
   href="#content"
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Read the Full Article"
-                <ArrowRight className="ml-2 w-5 h-5 " />
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Link className="ml-2 w-5 h-5 " />
+                <Link className="ml-2 w-5 h-5" />
   href="#content"
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Read the Full Article"
-                <ArrowRight className="ml-2 w-5 h-5 " />
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Link className="ml-2 w-5 h-5 " />
+                <Link className="ml-2 w-5 h-5" />
               </a>
             </motion.div>
           </div>
@@ -336,8 +336,8 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Explore Our Services"
-                <ArrowRight className="ml-2 w-5 h-5 " />
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Link className="ml-2 w-5 h-5 " />
+                <Link className="ml-2 w-5 h-5" />
               </a>
               <a title= "Internal link
   href="/contact"
@@ -355,8 +355,8 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Explore Our Services"
-                <ArrowRight className="ml-2 w-5 h-5 " />
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Link className="ml-2 w-5 h-5 " />
+                <Link className="ml-2 w-5 h-5" />
               </a>
               <a title= "Internal link
   href="/contact"
@@ -366,8 +366,8 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Explore Our Services"
-                <ArrowRight className="ml-2 w-5 h-5 " />
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Link className="ml-2 w-5 h-5 " />
+                <Link className="ml-2 w-5 h-5" />
               </a>
               <a title= "Internal link
   href="/contact"

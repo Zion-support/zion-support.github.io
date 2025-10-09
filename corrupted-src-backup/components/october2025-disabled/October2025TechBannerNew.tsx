@@ -84,7 +84,7 @@ const October2025TechBannerNe, w = () => {
                   {/* Read, More, Link */}
                   <div, className="flex, item, s-center, tex, t-purp, l, e-300, grou, p-hov, e, r: te, x, t-purp, l, e-100, transitio, n-colo, r, s">
                     <span, className="te, x, t-sm, fon, t-semibo, l, d">Read, Articl, e</sp, a, n>
-                    <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
+                    <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
                   </div>
                 </div>
               </Li, n, k>
@@ -98,7 +98,7 @@ const October2025TechBannerNe, w = () => {
               className="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-300, flex, items-center, ga, p-2"
             >
               <sp, a, n>Explore, All, Articles</sp, a, n>
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+              <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
             </Li, n, k>
             <Link, t, o="/conta, c, t"
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-lg, tex, t-white, fon, t-bold, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-3, 0, 0"

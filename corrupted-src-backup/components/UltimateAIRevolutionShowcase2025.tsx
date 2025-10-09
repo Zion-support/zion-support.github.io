@@ -55,10 +55,10 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
         >
           <Rocket, classNam, e="w-5 h-5" />
           Explore, Revolutionary, Content
-          <ArrowRight, classNam, e="w-5 h-5" />
+          <Link, classNam, e="w-5 h-5" />
           <Award, classNam, e="w-5 h-5" />
           View, Success, Stories
-          <ArrowRight, classNam, e="w-5 h-5" />
+          <Link, classNam, e="w-5 h-5" />
           <Globe, classNam, e="w-5 h-5" />
           Get, AI, Services
-          <ArrowRight, classNam, e="w-5 h-5" />
+          <Link, classNam, e="w-5 h-5" />

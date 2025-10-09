@@ -8,7 +8,7 @@ export interface ComprehensiveService {id: string;
   category: string;
   subcategory: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string}
     email: string}
     address: string};

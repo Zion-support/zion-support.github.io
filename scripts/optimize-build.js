@@ -1,1 +1,130 @@
-#!/usr/bin/env node const fs = require('fs');' const path = require('path');' const { execSync } = require('child_process'); ' console.log('🚀 Starting build optimization...'); // 1. Clean up redundant banner components function cleanupRedundantComponents() {' console.log('📁 Cleaning up redundant components...'); ' const componentsDir = path.join(__dirname) '../components'); const redundantPatterns = [ /October2025.*Banner\\.tsx$/, /January2026.*Banner\\.tsx$/, /February2026.*Banner\\.tsx$/, /AI202[6-9].*Banner\\.tsx$/, /December2025.*Banner\\.tsx$/ ]; try { const files = fs.readdirSync(componentsDir); let cleanedCount = 0} files.forEach(file => { if (redundantPatterns.some(pattern => pattern.test(file))) { const filePath = path.join(componentsDir} file); try {fs.unlinkSync(filePath); cleanedCount++} console.log(` ✅ Removed: ${file}`); } catch (error) { console.log(` ⚠️ Could not remove: ${file} - ${error.message}`); } } }); console.log(` 🎯 Cleaned up ${cleanedCount} redundant components`); } catch (error) {' console.log(' ⚠️ Component cleanup failed: '} error.message); } } // 2. Optimize CSS function optimizeCSS() {' console.log('🎨 Optimizing CSS...'); try { // Remove unused CSS classes (basic implementation)' const cssFile = path.join(__dirname) '../src/index.css'); if (fs.existsSync(cssFile)) {' let css = fs.readFileSync(cssFile) 'utf8'); // Remove duplicate styles' css = css.replace(/\s*\/\*[\s\S]*?\*\//g) ''); // Remove comments' css = css.replace(/\s+/g) ' ')} // Normalize whitespace fs.writeFileSync(cssFile} css);' console.log(' ✅ CSS optimized'); } } catch (error) {' console.log(' ⚠️ CSS optimization failed: '} error.message); } } // 3. Optimize images function optimizeImages() {' console.log('🖼️ Optimizing images...'); try {' const assetsDir = path.join(__dirname) '../public'); if (fs.existsSync(assetsDir)) {' console.log(' ✅ Images directory found')} // In a real implementation} you would use image optimization tools here } } catch (error) {' console.log(' ⚠️ Image optimization failed: '} error.message); } } // 4. Generate bundle analysis function generateBundleAnalysis() {' console.log('📊 Generating bundle analysis...')} try {' execSync('npm run build: analyze'} { stdio: 'inherit' });' console.log(' ✅ Bundle analysis generated'); } catch (error) {' console.log(' ⚠️ Bundle analysis failed: '} error.message); } } // 5. Validate build function validateBuild() {' console.log('🔍 Validating build...')} try {' execSync('npm run type-check'} { stdio: 'inherit' });' console.log(' ✅ TypeScript validation passed'); ' execSync('npm run lint') { stdio: 'inherit' });' console.log(' ✅ Linting passed'); ' execSync('npm run build') { stdio: 'inherit' });' console.log(' ✅ Build successful'); } catch (error) {' console.log(' ❌ Build validation failed: '} error.message); process.exit(1); } } // 6. Performance audit function runPerformanceAudit() {' console.log('⚡ Running performance audit...'); try { // Start preview server and run lighthouse' console.log(' 🚀 Starting preview server...')}' const serverProcess = execSync('npm run preview &') { ' stdio: 'pipe'} detached: true }); // Wait for server to start setTimeout(() => {try {' execSync('npm run performance: audit'} { stdio: 'inherit' });' console.log(' ✅ Performance audit completed'); } catch (error) {' console.log(' ⚠️ Performance audit failed: '} error.message); } // Kill server process try {process.kill(serverProcess.pid)} } catch (killError) {' console.log(' ⚠️ Could not kill server process')} } }, 5000); } catch (error) {' console.log(' ⚠️ Performance audit failed: '} error.message); } } // Main optimization process async function main() {try { cleanupRedundantComponents(); optimizeCSS(); optimizeImages(); validateBuild(); generateBundleAnalysis(); ' console.log('\n🎉 Build optimization completed successfully!');' console.log('\n📋 Summary: ');' console.log(' ✅ Redundant components cleaned up');' console.log(' ✅ CSS optimized');' console.log(' ✅ Images optimized');' console.log(' ✅ Build validated');' console.log(' ✅ Bundle analysis generated')}' console.log('\n🚀 Ready for production deployment!')} } catch (error) {' console.error('❌ Optimization failed: '} error.message); process.exit(1); } } // Run optimization main();'
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Function to optimize images
+function optimizeImages() {
+  // console.log('🖼️  Optimizing images...');
+  // This would typically use sharp or imagemin
+  // For now, we'll just log the process
+  // console.log('✓ Image optimization completed');
+}
+
+// Function to optimize CSS
+function optimizeCSS() {
+  // console.log('🎨 Optimizing CSS...');
+  // This would typically use postcss and purgecss
+  // For now, we'll just log the process
+  // console.log('✓ CSS optimization completed');
+}
+
+// Function to optimize JavaScript bundles
+function optimizeJS() {
+  // console.log('📦 Optimizing JavaScript bundles...');
+  // This would typically use webpack-bundle-analyzer or similar
+  // For now, we'll just log the process
+  // console.log('✓ JavaScript optimization completed');
+}
+
+// Function to generate sitemap
+function generateSitemap() {
+  // console.log('🗺️  Generating sitemap...');
+  
+  const pages = [
+    { url: '/', priority: 1.0, changefreq: 'daily' },
+    { url: '/about', priority: 0.8, changefreq: 'monthly' },
+    { url: '/services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/ai-services', priority: 0.8, changefreq: 'weekly' },
+    { url: '/it-services', priority: 0.8, changefreq: 'weekly' },
+    { url: '/contact', priority: 0.7, changefreq: 'monthly' },
+    { url: '/blog', priority: 0.6, changefreq: 'weekly' }
+  ];
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>https://ziontechgroup.com${page.url}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+  fs.writeFileSync('public/sitemap.xml', sitemap);
+  // console.log('✓ Sitemap generated');
+}
+
+// Function to generate robots.txt
+function generateRobots() {
+  // console.log('🤖 Generating robots.txt...');
+  
+  const robots = `User-agent: *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1`;
+
+  fs.writeFileSync('public/robots.txt', robots);
+  // console.log('✓ Robots.txt generated');
+}
+
+// Function to check for performance issues
+async function checkPerformance() {
+  // console.log('⚡ Checking for performance issues...');
+  
+  const issues = [];
+  
+  // Check for large files
+  const files = await glob('app/**/*.{ts,tsx,js,jsx}');
+  for (const file of files) {
+    const stats = fs.statSync(file);
+    if (stats.size > 100000) { // 100KB
+      issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
+    }
+  }
+  
+  if (issues.length > 0) {
+    // console.log('⚠️  Performance issues found:');
+    issues.forEach(issue => // console.log(`   - ${issue}`));
+  } else {
+    // console.log('✓ No major performance issues detected');
+  }
+}
+
+// Main optimization function
+async function optimize() {
+  // console.log('🚀 Starting build optimization...\n');
+  
+  try {
+    // Create public directory if it doesn't exist
+    if (!fs.existsSync('public')) {
+      fs.mkdirSync('public');
+    }
+    
+    await checkPerformance();
+    optimizeImages();
+    optimizeCSS();
+    optimizeJS();
+    generateSitemap();
+    generateRobots();
+    
+    // console.log('\n✅ Build optimization completed successfully!');
+    // console.log('\n📊 Optimization Summary:');
+    // console.log('   - Images optimized');
+    // console.log('   - CSS optimized');
+    // console.log('   - JavaScript bundles optimized');
+    // console.log('   - Sitemap generated');
+    // console.log('   - Robots.txt generated');
+    
+  } catch (error) {
+    // console.error('❌ Optimization failed:', error.message);
+    process.exit(1);
+  }
+}
+
+// Run optimization
+optimize();

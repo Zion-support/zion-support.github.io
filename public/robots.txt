@@ -1,45 +1,39 @@
-# Robots.txt for Zion Tech Group
-# Updated: 2025-10-08
-
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/
-Disallow: /private/
 
-# Crawl-delay for polite crawling
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay
 Crawl-delay: 1
 
-# Popular search engines
-User-agent: Googlebot
-Allow: /
-Disallow: /api/
+# Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
-
-User-agent: Bingbot
-Allow: /
 Disallow: /api/
-Disallow: /admin/
+Disallow: /_next/
+<<<<<<< HEAD
 Disallow: /private/
+Disallow: /internal/
 
-User-agent: Slurp
-Allow: /
-Disallow: /api/
-Disallow: /admin/
+# Allow important pages
+Allow: /ai-services
+Allow: /it-services
+Allow: /contact
+Allow: /about
+Allow: /blog
+Allow: /case-studies
+
+# Block specific file types
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+
+# Allow search engines to access CSS and JS files
+Allow: /static/
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+=======
 Disallow: /private/
-
-# Block bad bots
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
-
-# Sitemap location
-Sitemap: https://zion.app/sitemap.xml
-Sitemap: https://www.zion.app/sitemap.xml
+>>>>>>> origin/main

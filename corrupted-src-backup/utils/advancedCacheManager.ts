@@ -32,7 +32,7 @@ class AdvancedCacheManager<T> {
   }
 
   public get(key: string): T | null {
-    const entry = this.cache.get(key);
+    const _entry = this.cache.get(key);
 
     if (!entry) {
       this.misses++;
@@ -72,7 +72,7 @@ class AdvancedCacheManager<T> {
   }
 
   public has(key: string): boolean {
-    const entry = this.cache.get(key);
+    const _entry = this.cache.get(key);
 
     if (!entry) {
       return false;
@@ -102,7 +102,7 @@ class AdvancedCacheManager<T> {
   }
 
   public getStats(): { hits: number; misses: number; hitRate: number } {
-    const total = this.hits + this.misses;
+    //     const total = this.hits + this.misses;
     return {
       hits: this.hits,
       misses: this.misses,
@@ -125,8 +125,8 @@ class AdvancedCacheManager<T> {
   }
 
   private evictLRU(): void {
-    let oldestKey = '';
-    let oldestTime = Date.now();
+    let _oldestKey = '';
+    let _oldestTime = Date.now();
 
     for (const [key, entry] of this.cache.entries()) {
       if (entry.lastAccessed < oldestTime) {
@@ -141,8 +141,8 @@ class AdvancedCacheManager<T> {
   }
 
   private evictLFU(): void {
-    let leastFrequentKey = '';
-    let leastFrequentCount = Infinity;
+    let _leastFrequentKey = '';
+    let _leastFrequentCount = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
       if (entry.accessCount < leastFrequentCount) {
@@ -157,8 +157,8 @@ class AdvancedCacheManager<T> {
   }
 
   private evictFIFO(): void {
-    let oldestKey = '';
-    let oldestTime = Date.now();
+    let _oldestKey = '';
+    let _oldestTime = Date.now();
 
     for (const [key, entry] of this.cache.entries()) {
       if (entry.timestamp < oldestTime) {
@@ -173,7 +173,7 @@ class AdvancedCacheManager<T> {
   }
 
   public cleanup(): void {
-    const now = Date.now();
+    const _now = Date.now();
     const expiredKeys: string[] = [];
 
     for (const [key, entry] of this.cache.entries()) {

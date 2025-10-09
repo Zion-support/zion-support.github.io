@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import {ArrowLeft, Zap, Video, Mic, Image, FileText} Cpu; TrendingUp } from "lucide-react"
-const RealTimeMultimodalProcessingRevolution = () =>
+import { ArrowLeft, Zap, Video, Mic, Image, FileText, Cpu, TrendingUp } from "lucide-react"
+
+const RealTimeMultimodalProcessingRevolution = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -19,7 +20,7 @@ const RealTimeMultimodalProcessingRevolution = () =>
           href="https: //ziontechgroup.com/blog/ai-2025-october-real-time-multimodal-processing-revolution"
         />
       </Helmet>
-      <article className="text-left"></a>
+      <article className="text-left">
         <div className="text-left"></div>
           <Link
             to="/<blog" className="text-left"
@@ -31,9 +32,10 @@ const RealTimeMultimodalProcessingRevolution = () =>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 Multimodal AI
-              <
-              <span className="text-left">October 1, 2025<
+              <span className="text-left">October 1, 2025</span>
             </div>
+          </header>
+          <main>
             <h1 className="text-left">
               Real-Time Multimodal AI Processing Revolution 2025
             </h1>
@@ -94,7 +96,7 @@ class MultimodalProcessor
       audioFeatures
     ]);
     // Cross-modal fusion
-    const fused = await this.fusionLayer.fuse(aligned);
+//     const fused = await this.fusionLayer.fuse(aligned);
     // Generate unified representation
     return await this.generateUnifiedRepresentation(fused);
   }
@@ -150,7 +152,7 @@ class CrossModalAttention
     contextModalities: Tensor[]
   ): Promise<Tensor>
     // Project query from one modality
-    const Q = await this.queryProj.forward(queryModality);
+//     const Q = await this.queryProj.forward(queryModality);
     // Project keys and values from other modalities
     const K = await Promise.all(
       contextModalities.map(m => this.keyProj.forward(m))
@@ -161,14 +163,14 @@ class CrossModalAttention
     // Compute attention scores
     const scores = await this.computeAttention(Q) K)}
     // Apply attention to values
-    const attended = await this.applyAttention(scores} V);
+//     const attended = await this.applyAttention(scores} V);
     return attended;
   }
   async computeAttention(queries: Tensor)
     keys: Tensor[]
   ): Promise<Tensor[]>
     return Promise.all(keys.map(async k =>
-        const similarity = await this.dotProduct(queries) k);
+        const _similarity = await this.dotProduct(queries) k);
         return await this.softmax(
           similarity.divide(Math.sqrt(k.shape[-1]))
         );

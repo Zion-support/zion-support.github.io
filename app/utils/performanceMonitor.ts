@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Advanced Performance Monitoring Utility
  * Tracks Core Web Vitals and custom metrics
@@ -10,9 +12,7 @@ interface PerformanceMetrics {
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
-  tti?: number; // Time to Interactive
-  tbt?: number; // Total Blocking Time
-  customMetrics?: Record<string, number>;
+  customMetrics: Record<string, number>;
 }
 
 class PerformanceMonitor {
@@ -31,18 +31,58 @@ class PerformanceMonitor {
     this.setupResourceTiming();
   }
 
-  private setupWebVitals(): void {
-    // First Contentful Paint
-    this.observePaint('first-contentful-paint', 'fcp');
-    
-    // Largest Contentful Paint
-    this.observeLCP();
-    
-    // First Input Delay
-    this.observeFID();
-    
-    // Cumulative Layout Shift
-    this.observeCLS();
+  /**
+   * Initialize performance observers
+   */
+  private initializeObservers(): void {
+    try {
+      // Observe paint metrics
+      if ('PerformanceObserver' in window) {
+        // First Contentful Paint
+        this.observeEntry('paint', (entries) => {
+          entries.forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              this.recordMetric('FCP', entry.startTime);
+            }
+          });
+        });
+
+        // Largest Contentful Paint
+        this.observeEntry('largest-contentful-paint', entries => {
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            this.recordMetric(
+              'LCP',
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
+            );
+          }
+        });
+
+        // First Input Delay
+        this.observeEntry('first-input', entries => {
+          const firstInput = entries[0];
+          if (firstInput && (firstInput as any).processingStart !== undefined) {
+            const fid = (firstInput as any).processingStart - firstInput.startTime;
+            this.recordMetric('FID', fid);
+          }
+        });
+
+        // Cumulative Layout Shift
+        this.observeEntry('layout-shift', (entries) => {
+          let clsValue = 0;
+          entries.forEach((entry: PerformanceEntry) => {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          });
+          if (clsValue > 0) {
+            this.recordMetric('CLS', clsValue);
+          }
+        });
+      }
+    } catch (error) {
+      logger.error('Failed to initialize performance observers', error as Error);
+    }
   }
 
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
@@ -169,7 +209,6 @@ class PerformanceMonitor {
   }
 
   addCustomMetric(name: string, value: number): void {
-    if (!this.metrics.customMetrics) this.metrics.customMetrics = {};
     this.metrics.customMetrics[name] = value;
     this.logMetric(name, value);
   }
@@ -194,12 +233,11 @@ class PerformanceMonitor {
   }
 
   getScore(): number {
-    const scores: number[] = [];
+    const scores = [];
     
     // FCP scoring (0-100)
     if (this.metrics.fcp) {
       if (this.metrics.fcp <= 1800) scores.push(100);
-      else if (this.metrics.fcp <= 3000) scores.push(75);
       else if (this.metrics.fcp <= 4000) scores.push(50);
       else scores.push(25);
     }
@@ -236,16 +274,15 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     
     return `
-      Performance Report (Score: ${score}/100):
-      - First Contentful Paint: ${metrics.fcp?.toFixed(2)}ms
-      - Largest Contentful Paint: ${metrics.lcp?.toFixed(2)}ms
-      - First Input Delay: ${metrics.fid?.toFixed(2)}ms
-      - Cumulative Layout Shift: ${metrics.cls?.toFixed(4)}
-      - Time to Interactive: ${metrics.tti?.toFixed(2)}ms
-      - Total Blocking Time: ${metrics.tbt?.toFixed(2)}ms
-    `;
+Performance Report:
+- Overall Score: ${score}%
+- LCP: ${metrics.lcp}ms
+- FID: ${metrics.fid}ms
+- CLS: ${metrics.cls}
+- FCP: ${metrics.fcp}ms
+- TTFB: ${metrics.ttfb}ms
+- Memory Usage: ${metrics.memoryUsage}MB
+- Timestamp: ${new Date().toISOString()}
+`;
   }
 }
-
-export const performanceMonitor = new PerformanceMonitor();
-export default PerformanceMonitor;

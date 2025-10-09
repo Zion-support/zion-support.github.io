@@ -59,7 +59,7 @@ const contact =
 const contact =
   mobile: '+1 302 464 0950',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-const contact = {;
+// const contact = {;
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup && ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -133,7 +133,7 @@ export const realServicesQ32025: Q3Service[] = [,
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization',
-    market_position: any,
+    market_position: unknown,
       'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.',    features: [;
       'Churn and retention analysis_cohort and funnel dashboards_price testing and packaging experiments_revenue leakage detection_revenue forecasting models_weekly executive summaries'
     ];

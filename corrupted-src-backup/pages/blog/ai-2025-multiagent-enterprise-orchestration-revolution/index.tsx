@@ -173,9 +173,9 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
               Zion, Tech, Group's, Mult, i-Agent, Orchestration, Platform enables, rapid, deployment of, enterpris, e-grade, agent, systems. Achieve, 9, 7.8%
               automation, rates, and $84, 7, M+ in, annual, value creati, o, n.
                 Schedule, Assessmen, t
-                <ArrowRight, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 Schedule, Assessmen, t
-                <ArrowRight, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             </div>
           </div>
 

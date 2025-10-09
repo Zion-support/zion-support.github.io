@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 const UltimateAIRevolutionShowcase202, 5 = () => {
   const revolutionaryFeature, s = [
@@ -88,7 +87,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
           </div>
           <d, i, v>
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50, 0, K+</div>
-            <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Enterprise, User, s</div>
+            <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Enterprise, s</div>
           </div>
         </div>
       </div>
@@ -98,21 +97,21 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
         >
           <Rocket, className="w-5 h-5" />
           Explore, Revolutionary, Content
-          <ArrowRight, className="w-5 h-5" />
+          <Link, className="w-5 h-5" />
         </Li, n, k>
         <Link, t, o="/ca, s, e-studi, e, s/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-5, 0, 0-billi, o, n-succe, s, s" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
         >
           <Award, className="w-5 h-5" />
           View, Success, Stories
-          <ArrowRight, className="w-5 h-5" />
+          <Link, className="w-5 h-5" />
         </Li, n, k>
         <Link, t, o="/servic, e, s/quant, u, m-consciousne, s, s-ai-servic, e, s" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-oran, g, e-600, hove, r:to-r, e, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
         >
           <Globe, className="w-5 h-5" />
           Get, AI, Services
-          <ArrowRight, className="w-5 h-5" />
+          <Link, className="w-5 h-5" />
         </Li, n, k>
       </div>
       <div, className="mt-8, tex, t-cent, e, r">
