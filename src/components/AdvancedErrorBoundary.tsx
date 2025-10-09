@@ -1,6 +1,18 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-// import { logger } from '../utils/logger';
+
+// Simple logger implementation
+const logger = {
+  error: (message: string, error?: any) => {
+    console.error(message, error);
+  },
+  warn: (message: string, error?: any) => {
+    console.warn(message, error);
+  },
+  info: (message: string, error?: any) => {
+    console.info(message, error);
+  }
+};
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
