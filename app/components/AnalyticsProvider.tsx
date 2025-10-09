@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useEffect } from 'react';
+
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -87,6 +89,10 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     initAnalytics();
     trackPageView();
     trackInteractions();
+
+    const handleRouteChange = () => {
+      trackPageView();
+    };
 
     window.addEventListener('popstate', handleRouteChange);
 

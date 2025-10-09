@@ -1,0 +1,45 @@
+{
+  "analysisDate": "2025-10-09T01:18:17.899Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "summary": {
+    "totalPagesAnalyzed": 1,
+    "totalInternalLinks": 0,
+    "totalExternalLinks": 0,
+    "totalImages": 0,
+    "totalForms": 0,
+    "brokenLinks": 0,
+    "contentIssues": 2
+  },
+  "brokenLinks": [],
+  "contentIssues": [
+    {
+      "url": "https://ziontechgroup.com",
+      "issue": "Very little content found",
+      "type": "minimal_content"
+    },
+    {
+      "url": "https://ziontechgroup.com",
+      "issue": "Missing H1 heading",
+      "type": "seo"
+    }
+  ],
+  "missingPages": [],
+  "externalLinks": [],
+  "images": [],
+  "forms": [],
+  "navigation": [],
+  "pageTitles": {
+    "https://ziontechgroup.com": "Zion Tech Group - Technology Solutions"
+  },
+  "pageDescriptions": {
+    "https://ziontechgroup.com": "Zion Tech Group - Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
+  },
+  "recommendations": [
+    "Address content issues including placeholders and missing meta tags",
+    "Implement proper error handling for 404 pages",
+    "Add structured data markup for better SEO",
+    "Optimize images for better performance",
+    "Implement proper caching headers",
+    "Add security headers (CSP, HSTS, etc.)"
+  ]
+}
