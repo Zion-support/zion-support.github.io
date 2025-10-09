@@ -58,7 +58,16 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
+    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
+      <Navigation />
+      <SEOOptimizer 
+        title="About Us - Zion Tech Group | AI & IT Solutions"
+        description="Learn about Zion Tech Group's mission, values, and team. Leading provider of AI and IT solutions with 500+ projects completed."
+        keywords="about us, AI solutions, IT services, team, mission, values"
+      />
+      
+      {/* Hero Section */}
+      <section className='py-12 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
           <div className='text-center mb-12'>
             <h1 className='text-4xl font-bold text-gray-900 mb-4'>
