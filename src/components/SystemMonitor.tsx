@@ -7,7 +7,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 // Collect basic performance metrics
-const _collectPerformanceMetrics = () => {
+const collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   const navigation = window.performance.timing;
   const paint = window.performance.getEntriesByType('paint');
@@ -16,6 +16,7 @@ const _collectPerformanceMetrics = () => {
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
   };
 };
+
 // Helper functions
 const calculatePerformanceScore = () => {
   const metrics = performanceOptimizer.getMetrics();
