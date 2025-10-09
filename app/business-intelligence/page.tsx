@@ -138,3 +138,78 @@ const BusinessIntelligencePage: React.FC = () => {
     }
   ];
 
+  return (
+    <>
+      <Helmet>
+        <title>Business Intelligence Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced business intelligence solutions including real-time analytics, predictive modeling, and AI-powered insights." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Business Intelligence Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your data into actionable insights with our comprehensive BI solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {biServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <div className="mb-4">
+                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  <span className="text-sm text-gray-500 ml-2">({service.marketPrice} market rate)</span>
+                </div>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.technologies.map((tech, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="text-center">
+                  <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded">
+                    {service.category}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BusinessIntelligencePage;
