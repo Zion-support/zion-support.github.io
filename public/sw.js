@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
+=======
+const CACHE_NAME = 'zion-tech-group-v1';
+>>>>>>> cursor/analyze-improve-and-deploy-application-15c5
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json',
-  '/favicon.ico'
+  '/favicon.ico',
+  '/logo192.png',
+  '/logo512.png'
 ];
 
+<<<<<<< HEAD
 // Install event - cache resources
+=======
+// Install event
+>>>>>>> cursor/analyze-improve-and-deploy-application-15c5
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -18,7 +28,11 @@ self.addEventListener('install', (event) => {
   );
 });
 
+<<<<<<< HEAD
 // Fetch event - serve from cache when offline
+=======
+// Fetch event
+>>>>>>> cursor/analyze-improve-and-deploy-application-15c5
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -33,7 +47,11 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
+<<<<<<< HEAD
 // Activate event - clean up old caches
+=======
+// Activate event
+>>>>>>> cursor/analyze-improve-and-deploy-application-15c5
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -49,7 +67,11 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+<<<<<<< HEAD
 // Background sync for analytics
+=======
+// Background sync for offline form submissions
+>>>>>>> cursor/analyze-improve-and-deploy-application-15c5
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
@@ -57,6 +79,10 @@ self.addEventListener('sync', (event) => {
 });
 
 async function doBackgroundSync() {
+<<<<<<< HEAD
   // Sync analytics data when back online
+=======
+  // Handle offline form submissions
+>>>>>>> cursor/analyze-improve-and-deploy-application-15c5
   console.log('Background sync triggered');
 }
