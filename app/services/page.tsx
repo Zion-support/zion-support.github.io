@@ -16,7 +16,11 @@ const ServicesPage: React.FC = () => {
         { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding', features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'] },
         { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },
         { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },
-        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] }
+        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] },
+        { name: 'AI Voice Cloning', price: '$1,200/month', description: 'Advanced voice synthesis and cloning technology for personalized audio content', features: ['Voice Synthesis', 'Multi-language Support', 'Emotion Control', 'Real-time Processing'] },
+        { name: 'AI 3D Generation', price: '$2,200/month', description: 'AI-powered 3D model generation and animation for immersive experiences', features: ['3D Model Creation', 'Animation Generation', 'Texture Synthesis', 'VR/AR Integration'] },
+        { name: 'AI Fitness Coach', price: '$299/month', description: 'Personalized AI fitness training and health monitoring system', features: ['Custom Workouts', 'Progress Tracking', 'Nutrition Planning', 'Wearable Integration'] },
+        { name: 'AI Scheduler', price: '$199/month', description: 'Intelligent scheduling and calendar management with conflict resolution', features: ['Smart Scheduling', 'Conflict Resolution', 'Time Optimization', 'Integration APIs'] }
       ]
     },
     {
@@ -30,7 +34,11 @@ const ServicesPage: React.FC = () => {
         { name: 'Cybersecurity', price: '$1,599/month', description: 'Advanced security solutions with threat detection and prevention', features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'] },
         { name: 'DevOps & CI/CD', price: '$1,199/month', description: 'Streamlined development workflows with automated testing and deployment', features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'] },
         { name: 'Database Services', price: '$899/month', description: 'Database design, optimization, and management with AI-powered tuning', features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'] },
-        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions', features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'] }
+        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions', features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'] },
+        { name: 'Compliance & GDPR', price: '$1,299/month', description: 'Comprehensive compliance management and data protection services', features: ['GDPR Compliance', 'Audit Preparation', 'Data Protection', 'Policy Development'] },
+        { name: 'System Monitoring', price: '$599/month', description: '24/7 system monitoring and proactive issue resolution', features: ['Real-time Monitoring', 'Alert Management', 'Performance Tracking', 'Automated Responses'] },
+        { name: 'Backup & Recovery', price: '$799/month', description: 'Comprehensive backup solutions and disaster recovery planning', features: ['Automated Backups', 'Disaster Recovery', 'Data Encryption', 'Testing & Validation'] },
+        { name: 'IT Support', price: '$1,499/month', description: 'Comprehensive IT support and helpdesk services', features: ['24/7 Support', 'Remote Assistance', 'Hardware Management', 'Software Updates'] }
       ]
     },
     {
