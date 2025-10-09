@@ -147,6 +147,3 @@ const ITInfrastructurePage: React.FC = () => {
           </section>
 
 
-"
-
-
