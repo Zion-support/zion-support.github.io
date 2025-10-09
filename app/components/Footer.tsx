@@ -312,6 +312,7 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
               <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
               <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
+              <li><Link to="/sitemap" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Site Map</Link></li>
             </ul>
           </div>
           <div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -7,7 +7,28 @@ import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./page'));
+const HomePage = lazy(() => import('../app/page'));
+const AboutPage = lazy(() => import('../app/about/page'));
+const ContactPage = lazy(() => import('../app/contact/page'));
+const AiServicesPage = lazy(() => import('../app/ai-services/page'));
+const AiMarketingPage = lazy(() => import('../src/ai-marketing/page'));
+const AiAutomationPage = lazy(() => import('../app/ai-automation/page'));
+const AiHealthcarePage = lazy(() => import('../app/ai-healthcare/page'));
+const AiFintechPage = lazy(() => import('../app/ai-fintech/page'));
+const AiContentGenerationPage = lazy(() => import('../app/ai-content-generation/page'));
+const MicroSaasPage = lazy(() => import('../app/micro-saas/page'));
+const ItInfrastructurePage = lazy(() => import('../app/it-infrastructure/page'));
+const QuantumComputingPage = lazy(() => import('../app/quantum-computing/page'));
+const AiProjectManagerPage = lazy(() => import('../app/ai-project-manager/page'));
+const AiSocialMediaManagerPage = lazy(() => import('../app/ai-social-media-manager/page'));
+const AiAnalyticsDashboardPage = lazy(() => import('../app/ai-analytics-dashboard/page'));
+const AiEmailMarketingPage = lazy(() => import('../app/ai-email-marketing/page'));
+const AiCustomerSupportBotPage = lazy(() => import('../app/ai-customer-support-bot/page'));
+const BlogPage = lazy(() => import('../app/blog/page'));
+const CaseStudiesPage = lazy(() => import('../app/case-studies/page'));
+const CareersPage = lazy(() => import('../app/careers/page'));
+const ConsultationPage = lazy(() => import('../app/consultation/page'));
+const SitemapPage = lazy(() => import('../app/sitemap/page'));
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -66,11 +87,34 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/ai-services" element={<AiServicesPage />} />
+          <Route path="/ai-marketing" element={<AiMarketingPage />} />
+          <Route path="/ai-automation" element={<AiAutomationPage />} />
+          <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+          <Route path="/ai-fintech" element={<AiFintechPage />} />
+          <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+          <Route path="/micro-saas" element={<MicroSaasPage />} />
+          <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
+          <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+          <Route path="/ai-project-manager" element={<AiProjectManagerPage />} />
+          <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
+          <Route path="/ai-analytics-dashboard" element={<AiAnalyticsDashboardPage />} />
+          <Route path="/ai-email-marketing" element={<AiEmailMarketingPage />} />
+          <Route path="/ai-customer-support-bot" element={<AiCustomerSupportBotPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/consultation" element={<ConsultationPage />} />
+          <Route path="/sitemap" element={<SitemapPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 

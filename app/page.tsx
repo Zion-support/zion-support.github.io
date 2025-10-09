@@ -3,11 +3,13 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('../src/components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('../src/components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('../src/components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('../src/components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+const Navigation = lazy(() => import('./components/Navigation'));
+const Footer = lazy(() => import('./components/Footer'));
 
 // Preload critical components with better timing
 const preloadComponents = () => {
@@ -18,12 +20,16 @@ const preloadComponents = () => {
         import('./components/ContentPromotionBanner');
         import('./components/ContentCarousel');
         import('./components/DynamicContentShowcase');
+        import('./components/Navigation');
+        import('./components/Footer');
       });
     } else {
       setTimeout(() => {
         import('./components/ContentPromotionBanner');
         import('./components/ContentCarousel');
         import('./components/DynamicContentShowcase');
+        import('./components/Navigation');
+        import('./components/Footer');
       }, 100);
     }
   }
@@ -64,7 +70,9 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Navigation */}
-      <Navigation />
+      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+        <Navigation />
+      </Suspense>
       
       {/* Skip to main content for accessibility */}
       <a
@@ -374,7 +382,9 @@ const HomePage: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse"></div>}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
