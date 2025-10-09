@@ -1,36 +1,58 @@
 {
-  "timestamp": "2025-10-09T03:35:30.965Z",
-  "website": "Zion Tech Group",
-  "url": "https://ziontechgroup.com",
-  "seoScore": 98,
-  "improvements": [
-    "Enhanced meta tags with targeted keywords",
-    "Added comprehensive structured data",
-    "Optimized title tags for better CTR",
-    "Improved meta descriptions",
-    "Added Open Graph tags for social sharing",
-    "Generated comprehensive sitemap",
-    "Created robots.txt for better crawling",
-    "Added canonical URLs",
-    "Enhanced internal linking structure"
-  ],
-  "keywords": [
-    "AI solutions",
-    "artificial intelligence",
-    "enterprise AI",
-    "machine learning",
-    "quantum computing",
-    "autonomous systems",
-    "digital transformation",
-    "IT services",
-    "automation",
-    "business intelligence"
-  ],
+  "timestamp": "2025-10-09T21:13:39.001Z",
+  "site": {
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
+    "keywords": [
+      "AI solutions",
+      "quantum computing",
+      "autonomous systems",
+      "digital transformation",
+      "enterprise AI",
+      "machine learning",
+      "automation",
+      "cloud services",
+      "cybersecurity",
+      "IT consulting",
+      "business intelligence",
+      "data analytics",
+      "artificial intelligence",
+      "technology consulting",
+      "software development"
+    ],
+    "author": "Zion Tech Group",
+    "language": "en-US",
+    "locale": "en_US"
+  },
   "recommendations": [
-    "Regular content updates to maintain freshness",
-    "Monitor keyword rankings and adjust strategy",
-    "Track Core Web Vitals for better user experience",
-    "Build quality backlinks from relevant domains",
-    "Optimize for local SEO if targeting specific regions"
-  ]
+    "Implement structured data markup for better search visibility",
+    "Add Open Graph and Twitter Card meta tags",
+    "Create XML sitemap and robots.txt",
+    "Optimize page titles and meta descriptions",
+    "Implement breadcrumb navigation",
+    "Add FAQ schema markup",
+    "Create high-quality, keyword-rich content",
+    "Implement internal linking strategy",
+    "Add alt text to all images",
+    "Optimize page loading speed",
+    "Implement mobile-first responsive design",
+    "Add social media sharing buttons",
+    "Create compelling call-to-action buttons",
+    "Implement local SEO if applicable",
+    "Monitor and track SEO performance"
+  ],
+  "technical": {
+    "sitemap": "Generated sitemap.xml",
+    "robots": "Generated robots.txt",
+    "metaTags": "Created MetaTags component",
+    "structuredData": "Added organization and services schema",
+    "socialMedia": "Configured Open Graph and Twitter Cards"
+  },
+  "metrics": {
+    "targetPageSpeed": "90+",
+    "targetAccessibility": "95+",
+    "targetBestPractices": "95+",
+    "targetSEO": "95+"
+  }
 }

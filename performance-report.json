@@ -1,17 +1,80 @@
 {
-  "timestamp": "2025-10-09T02:40:27.765Z",
-  "optimizations": [
-    "CSS import order fixed",
-    "Duplicate package.json keys removed",
-    "Merge conflicts resolved",
-    "Build configuration optimized",
-    "Bundle size optimized"
+  "timestamp": "2025-10-09T21:12:24.787Z",
+  "optimizations": {
+    "images": {
+      "formats": [
+        "webp",
+        "avif"
+      ],
+      "quality": 85,
+      "sizes": [
+        320,
+        640,
+        768,
+        1024,
+        1280,
+        1920,
+        2560
+      ],
+      "lazy": true
+    },
+    "codeSplitting": {
+      "vendor": [
+        "react",
+        "react-dom"
+      ],
+      "ui": [
+        "framer-motion",
+        "lucide-react",
+        "@heroicons/react"
+      ],
+      "utils": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "charts": [
+        "recharts"
+      ],
+      "router": [
+        "react-router-dom"
+      ]
+    },
+    "bundle": {
+      "minify": true,
+      "compress": true,
+      "treeshake": true,
+      "deadCodeElimination": true
+    },
+    "caching": {
+      "static": "1y",
+      "images": "1M",
+      "fonts": "1y",
+      "api": "5m"
+    },
+    "budgets": {
+      "js": "500kb",
+      "css": "100kb",
+      "images": "2mb",
+      "fonts": "500kb"
+    }
+  },
+  "recommendations": [
+    "Implement service worker for offline functionality",
+    "Add critical CSS inlining",
+    "Optimize font loading with font-display: swap",
+    "Implement resource hints (preload, prefetch)",
+    "Add compression (gzip/brotli)",
+    "Enable HTTP/2 server push for critical resources",
+    "Implement lazy loading for below-the-fold content",
+    "Add performance monitoring and analytics",
+    "Optimize third-party scripts loading",
+    "Implement progressive web app features"
   ],
   "metrics": {
-    "bundleSize": "134.15 kB (vendor)",
-    "cssSize": "23.74 kB",
-    "buildTime": "2.58s",
-    "warnings": 0,
-    "errors": 0
+    "targetLCP": "2.5s",
+    "targetFID": "100ms",
+    "targetCLS": "0.1",
+    "targetFCP": "1.8s",
+    "targetTTFB": "600ms"
   }
 }

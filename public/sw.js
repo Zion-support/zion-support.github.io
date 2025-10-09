@@ -1,140 +1,94 @@
-// Service Worker for Zion Tech Group
-// Implements advanced caching strategies for optimal performance
+const CACHE_NAME = 'zion-tech-v1';
+const STATIC_CACHE = 'static-v1';
+const DYNAMIC_CACHE = 'dynamic-v1';
 
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'zion-static-v1';
-const DYNAMIC_CACHE = 'zion-dynamic-v1';
-
-// Critical resources to cache immediately
-const CRITICAL_RESOURCES = [
+const STATIC_ASSETS = [
   '/',
-  '/index.html',
-  '/css/critical.css',
-  '/fonts/inter.woff2',
-  '/js/vendor.js'
+  '/about',
+  '/services',
+  '/contact',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
 ];
 
-// Install event - cache critical resources
+// Install event
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
-      .then((cache) => {
-        return cache.addAll(CRITICAL_RESOURCES);
-      })
-      .then(() => {
-        return self.skipWaiting();
-      })
+      .then((cache) => cache.addAll(STATIC_ASSETS))
+      .then(() => self.skipWaiting())
   );
 });
 
-// Activate event - clean up old caches
+// Activate event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              return caches.delete(cacheName);
-            }
-          })
+          cacheNames
+            .filter((cacheName) => cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE)
+            .map((cacheName) => caches.delete(cacheName))
         );
       })
-      .then(() => {
-        return self.clients.claim();
-      })
+      .then(() => self.clients.claim())
   );
 });
 
-// Fetch event - implement caching strategies
+// Fetch event
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
   // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
+  if (request.method !== 'GET') return;
 
-  // Skip cross-origin requests
-  if (url.origin !== location.origin) {
-    return;
-  }
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) return;
 
-  // Handle different types of requests
-  if (request.destination === 'document') {
-    // HTML pages - network first, then cache
-    event.respondWith(networkFirstStrategy(request));
-  } else if (request.destination === 'image') {
-    // Images - cache first, then network
-    event.respondWith(cacheFirstStrategy(request));
-  } else if (request.destination === 'style' || request.destination === 'script') {
-    // CSS/JS - stale while revalidate
-    event.respondWith(staleWhileRevalidateStrategy(request));
-  } else {
-    // Other resources - network first
-    event.respondWith(networkFirstStrategy(request));
-  }
+  event.respondWith(
+    caches.match(request)
+      .then((cachedResponse) => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+
+        return fetch(request)
+          .then((response) => {
+            // Don't cache non-successful responses
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clone the response
+            const responseToCache = response.clone();
+
+            // Cache static assets
+            if (url.pathname.startsWith('/static/') || url.pathname.endsWith('.js') || url.pathname.endsWith('.css')) {
+              caches.open(STATIC_CACHE)
+                .then((cache) => cache.put(request, responseToCache));
+            } else {
+              // Cache dynamic content with size limit
+              caches.open(DYNAMIC_CACHE)
+                .then((cache) => {
+                  cache.put(request, responseToCache);
+                });
+            }
+
+            return response;
+          })
+          .catch(() => {
+            // Return offline page for navigation requests
+            if (request.mode === 'navigate') {
+              return caches.match('/offline');
+            }
+          });
+      })
+  );
 });
 
-// Network first strategy
-async function networkFirstStrategy(request) {
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    // Return offline page for navigation requests
-    if (request.destination === 'document') {
-      return caches.match('/offline.html');
-    }
-    throw error;
-  }
-}
-
-// Cache first strategy
-async function cacheFirstStrategy(request) {
-  const cachedResponse = await caches.match(request);
-  if (cachedResponse) {
-    return cachedResponse;
-  }
-
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(STATIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    // Return a placeholder image or fallback
-    return new Response('', { status: 404 });
-  }
-}
-
-// Stale while revalidate strategy
-async function staleWhileRevalidateStrategy(request) {
-  const cache = await caches.open(STATIC_CACHE);
-  const cachedResponse = await cache.match(request);
-
-  const fetchPromise = fetch(request).then((networkResponse) => {
-    if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  });
-
-  return cachedResponse || fetchPromise;
-}
-
-// Background sync for offline actions
+// Background sync for form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
@@ -142,45 +96,6 @@ self.addEventListener('sync', (event) => {
 });
 
 async function doBackgroundSync() {
-  // Handle offline actions when connection is restored
-  // This could include form submissions, analytics data, etc.
+  // Handle offline form submissions
+  console.log('Background sync triggered');
 }
-
-// Push notifications
-self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/icon-192x192.png',
-      badge: '/badge-72x72.png',
-      tag: 'zion-tech-group-notification',
-      requireInteraction: true,
-      actions: [
-        {
-          action: 'open',
-          title: 'Open Website'
-        },
-        {
-          action: 'close',
-          title: 'Close'
-        }
-      ]
-    };
-
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
-});
-
-// Notification click handler
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-
-  if (event.action === 'open') {
-    event.waitUntil(
-      clients.openWindow('/')
-    );
-  }
-});

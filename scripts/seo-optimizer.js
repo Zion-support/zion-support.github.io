@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -5,192 +7,370 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// SEO optimization script
-function optimizeSEO() {
-  // console.log('🔍 Starting SEO optimization...');
+// SEO optimization configurations
+const seoConfig = {
+  site: {
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+    keywords: [
+      'AI solutions',
+      'quantum computing',
+      'autonomous systems',
+      'digital transformation',
+      'enterprise AI',
+      'machine learning',
+      'automation',
+      'cloud services',
+      'cybersecurity',
+      'IT consulting',
+      'business intelligence',
+      'data analytics',
+      'artificial intelligence',
+      'technology consulting',
+      'software development'
+    ],
+    author: 'Zion Tech Group',
+    language: 'en-US',
+    locale: 'en_US'
+  },
   
-  // 1. Generate sitemap
-  // console.log('🗺️ Generating sitemap...');
-  generateSitemap();
+  social: {
+    twitter: '@ziontechgroup',
+    facebook: 'ziontechgroup',
+    linkedin: 'company/zion-tech-group',
+    instagram: 'ziontechgroup'
+  },
   
-  // 2. Optimize meta tags
-  // console.log('🏷️ Optimizing meta tags...');
-  optimizeMetaTags();
+  analytics: {
+    googleAnalytics: 'G-XXXXXXXXXX',
+    googleTagManager: 'GTM-XXXXXXX',
+    facebookPixel: 'XXXXXXXXXXXXXXX'
+  },
   
-  // 3. Generate robots.txt
-  // console.log('🤖 Generating robots.txt...');
-  generateRobotsTxt();
-  
-  // 4. Generate structured data
-  // console.log('📊 Generating structured data...');
-  generateStructuredData();
-  
-  // console.log('✅ SEO optimization completed!');
-}
+  structuredData: {
+    organization: {
+      '@context': 'https://schema.org',
+      '@type': 'TechCompany',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+      foundingDate: '2020',
+      numberOfEmployees: '50-100',
+      industry: 'Technology',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '364 E Main St STE 1008',
+        addressLocality: 'Middletown',
+        addressRegion: 'DE',
+        postalCode: '19709',
+        addressCountry: 'US'
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        contactType: 'Customer Service',
+        areaServed: 'US',
+        availableLanguage: 'en'
+      },
+      sameAs: [
+        'https://twitter.com/ziontechgroup',
+        'https://facebook.com/ziontechgroup',
+        'https://linkedin.com/company/zion-tech-group',
+        'https://instagram.com/ziontechgroup'
+      ]
+    },
+    
+    services: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'AI and IT Services',
+      description: 'Comprehensive AI and IT solutions for enterprise clients',
+      itemListElement: [
+        {
+          '@type': 'Service',
+          name: 'AI Solutions',
+          description: 'Advanced artificial intelligence solutions for enterprise applications',
+          provider: {
+            '@type': 'TechCompany',
+            name: 'Zion Tech Group'
+          }
+        },
+        {
+          '@type': 'Service',
+          name: 'Quantum Computing',
+          description: 'Next-generation quantum algorithms for complex problem solving',
+          provider: {
+            '@type': 'TechCompany',
+            name: 'Zion Tech Group'
+          }
+        },
+        {
+          '@type': 'Service',
+          name: 'Cloud Services',
+          description: 'Cloud migration, setup, and optimization services',
+          provider: {
+            '@type': 'TechCompany',
+            name: 'Zion Tech Group'
+          }
+        },
+        {
+          '@type': 'Service',
+          name: 'Cybersecurity',
+          description: 'Advanced security solutions with threat detection and prevention',
+          provider: {
+            '@type': 'TechCompany',
+            name: 'Zion Tech Group'
+          }
+        }
+      ]
+    }
+  }
+};
 
+// Generate sitemap
 function generateSitemap() {
   const pages = [
-    '/',
-    '/about',
-    '/ai-services',
-    '/it-services',
-    '/contact',
-    '/ai-analytics-dashboard',
-    '/ai-chatbot-builder',
-    '/ai-content-generation',
-    '/ai-crm',
-    '/ai-customer-support',
-    '/ai-cybersecurity',
-    '/ai-data-analytics',
-    '/ai-data-visualization',
-    '/ai-document-processing',
-    '/ai-ecommerce-solutions',
-    '/ai-email-assistant',
-    '/ai-fintech',
-    '/ai-healthcare',
-    '/ai-lead-generation',
-    '/ai-marketing',
-    '/ai-mobile-app-development',
-    '/ai-sales-automation',
-    '/ai-scheduler',
-    '/ai-workflow-automation',
-    '/ai-writing-assistant',
-    '/analytics-tools',
-    '/autonomous-systems',
-    '/blockchain',
-    '/business-intelligence',
-    '/careers',
-    '/case-studies',
-    '/cloud-services',
-    '/compliance',
-    '/cybersecurity',
-    '/database',
-    '/developer-tools',
-    '/devops',
-    '/enterprise',
-    '/expense-tracker',
-    '/iot-edge-computing',
-    '/it-infrastructure',
-    '/marketing-tools',
-    '/micro-saas',
-    '/networking',
-    '/news',
-    '/productivity',
-    '/quantum-computing',
-    '/robotics',
-    '/security',
-    '/smart-analytics',
-    '/support',
-    '/task-manager-pro',
-    '/team'
+    { url: '/', priority: '1.0', changefreq: 'daily' },
+    { url: '/about', priority: '0.8', changefreq: 'monthly' },
+    { url: '/services', priority: '0.9', changefreq: 'weekly' },
+    { url: '/contact', priority: '0.7', changefreq: 'monthly' },
+    { url: '/pricing', priority: '0.8', changefreq: 'weekly' },
+    { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
+    { url: '/it-services', priority: '0.9', changefreq: 'weekly' },
+    { url: '/blog', priority: '0.6', changefreq: 'daily' },
+    { url: '/case-studies', priority: '0.7', changefreq: 'weekly' },
+    { url: '/docs', priority: '0.6', changefreq: 'weekly' }
   ];
+
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>https://ziontechgroup.com${page}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
-  </url>`).join('\n')}
-</urlset>`;
+  pages.forEach(page => {
+    sitemap += '  <url>\n';
+    sitemap += `    <loc>${seoConfig.site.url}${page.url}</loc>\n`;
+    sitemap += `    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n`;
+    sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+    sitemap += `    <priority>${page.priority}</priority>\n`;
+    sitemap += '  </url>\n';
+  });
   
-  fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
-  // console.log('  - Sitemap generated: public/sitemap.xml');
+  sitemap += '</urlset>';
+  
+  return sitemap;
 }
 
-function optimizeMetaTags() {
-  const metaOptimizations = {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-    keywords: 'AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence',
-    canonical: 'https://ziontechgroup.com',
-    ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-    ogDescription: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-    twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-    twitterDescription: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
-  };
-  
-  fs.writeFileSync(
-    path.join(__dirname, '../seo-optimizations.json'),
-    JSON.stringify(metaOptimizations, null, 2)
-  );
-  
-  // console.log('  - Meta tags optimized: seo-optimizations.json');
-}
-
+// Generate robots.txt
 function generateRobotsTxt() {
-  const robotsTxt = `User-agent: *
+  return `User-agent: *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml
+# Sitemap
+Sitemap: ${seoConfig.site.url}/sitemap.xml
 
-# Disallow admin and private areas
+# Disallow admin areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
+Disallow: /static/
 
 # Allow important pages
 Allow: /
 Allow: /about
 Allow: /services
 Allow: /contact
+Allow: /pricing
 Allow: /ai-services
-Allow: /it-services`;
-  
-  fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
-  // console.log('  - Robots.txt generated: public/robots.txt');
+Allow: /it-services
+Allow: /blog
+Allow: /case-studies
+Allow: /docs
+
+# Crawl delay
+Crawl-delay: 1`;
 }
 
-function generateStructuredData() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "industry": "Technology",
-    "services": [
-      "AI Solutions",
-      "Quantum Computing", 
-      "Autonomous Systems",
-      "Digital Transformation",
-      "Cloud Services",
-      "Automation",
-      "Business Intelligence"
+// Generate meta tags component
+function generateMetaTagsComponent() {
+  return `import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface MetaTagsProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
+  noindex?: boolean;
+}
+
+const MetaTags: React.FC<MetaTagsProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+  keywords = [
+    'AI solutions',
+    'quantum computing',
+    'autonomous systems',
+    'digital transformation',
+    'enterprise AI',
+    'machine learning',
+    'automation',
+    'cloud services'
+  ],
+  canonicalUrl = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noindex = false
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;
+  
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#00ffff" />
+      <meta name="msapplication-TileColor" content="#00ffff" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    </Helmet>
+  );
+};
+
+export default MetaTags;`;
+}
+
+// Generate SEO report
+function generateSEOReport() {
+  const report = {
+    timestamp: new Date().toISOString(),
+    site: seoConfig.site,
+    recommendations: [
+      'Implement structured data markup for better search visibility',
+      'Add Open Graph and Twitter Card meta tags',
+      'Create XML sitemap and robots.txt',
+      'Optimize page titles and meta descriptions',
+      'Implement breadcrumb navigation',
+      'Add FAQ schema markup',
+      'Create high-quality, keyword-rich content',
+      'Implement internal linking strategy',
+      'Add alt text to all images',
+      'Optimize page loading speed',
+      'Implement mobile-first responsive design',
+      'Add social media sharing buttons',
+      'Create compelling call-to-action buttons',
+      'Implement local SEO if applicable',
+      'Monitor and track SEO performance'
     ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "Customer Service",
-      "areaServed": "US",
-      "availableLanguage": "en"
+    technical: {
+      sitemap: 'Generated sitemap.xml',
+      robots: 'Generated robots.txt',
+      metaTags: 'Created MetaTags component',
+      structuredData: 'Added organization and services schema',
+      socialMedia: 'Configured Open Graph and Twitter Cards'
     },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ]
+    metrics: {
+      targetPageSpeed: '90+',
+      targetAccessibility: '95+',
+      targetBestPractices: '95+',
+      targetSEO: '95+'
+    }
   };
   
-  fs.writeFileSync(
-    path.join(__dirname, '../public/structured-data.json'),
-    JSON.stringify(structuredData, null, 2)
-  );
-  
-  // console.log('  - Structured data generated: public/structured-data.json');
+  return report;
 }
 
-// Run SEO optimization
-optimizeSEO();
+// Main execution
+function main() {
+  console.log('🔍 Starting SEO optimization...');
+  
+  // Generate sitemap
+  const sitemap = generateSitemap();
+  fs.writeFileSync(
+    path.join(__dirname, '../public/sitemap.xml'),
+    sitemap
+  );
+  console.log('🗺️  Sitemap generated');
+  
+  // Generate robots.txt
+  const robots = generateRobotsTxt();
+  fs.writeFileSync(
+    path.join(__dirname, '../public/robots.txt'),
+    robots
+  );
+  console.log('🤖 Robots.txt generated');
+  
+  // Generate meta tags component
+  const metaTagsComponent = generateMetaTagsComponent();
+  fs.writeFileSync(
+    path.join(__dirname, '../src/components/MetaTags.tsx'),
+    metaTagsComponent
+  );
+  console.log('🏷️  MetaTags component created');
+  
+  // Generate SEO report
+  const report = generateSEOReport();
+  fs.writeFileSync(
+    path.join(__dirname, '../seo-report.json'),
+    JSON.stringify(report, null, 2)
+  );
+  console.log('📊 SEO report generated');
+  
+  console.log('✅ SEO optimization complete!');
+  console.log('📈 Check seo-report.json for detailed recommendations');
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { generateSitemap, generateRobotsTxt, generateMetaTagsComponent, generateSEOReport };
