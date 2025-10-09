@@ -137,6 +137,10 @@ class HealthCheckService {
       };
     }
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       const memory = (performance as any).memory;
       if (!memory) {
         return {
@@ -146,6 +150,13 @@ class HealthCheckService {
         };
       }
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+<<<<<<< HEAD
+=======
+=======
+      const memoryInfo = (performance as any).memory;
+      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {
@@ -179,13 +190,24 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
+<<<<<<< HEAD
       const vitals = performanceMonitor.getCoreWebVitals()
       const poor = Object.values(vitals).filter(v => v && v > 4000).length
       const needsImprovement = Object.values(vitals).filter(v => v && v > 2500 && v <= 4000).length
       const good = Object.values(vitals).filter(v => v && v <= 2500).length
+=======
+<<<<<<< HEAD
+      const coreWebVitals = performanceMonitor.getCoreWebVitals()
+      const metrics = performanceMonitor.getMetrics()
+=======
+      const report = performanceMonitor.getReport()
+      const reportData = JSON.parse(report)
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance metrics available`
+      let message = `Performance metrics available: ${Object.keys(coreWebVitals).length} vitals`
       
+<<<<<<< HEAD
       // Check if we have any performance data
       if (vitals && Object.keys(vitals).length > 0) {
         const values = Object.values(vitals).filter(v => typeof v === 'number') as number[]
@@ -201,6 +223,21 @@ class HealthCheckService {
         } else {
           message = `Performance: ${values.length - poorCount - needsImprovementCount} good, ${needsImprovementCount} needs improvement, ${poorCount} poor`
         }
+=======
+      // Check if any critical metrics are missing or poor
+      const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
+      const missingMetrics = criticalMetrics.filter(metric => !(metric in coreWebVitals))
+      
+      if (missingMetrics.length > 2) {
+        status = 'warn'
+        message = `Missing critical metrics: ${missingMetrics.join(', ')}`
+      }
+      
+      if (missingMetrics.length > 3) {
+        status = 'fail'
+        message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4846
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       }
       
       return {
@@ -208,10 +245,30 @@ class HealthCheckService {
         status,
         message,
         details: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          metrics: reportData,
+          summary: { good: 0, needsImprovement: 0, poor: 0 }
+=======
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
           vitals,
           poor,
           needsImprovement,
           good
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
+=======
+          coreWebVitals
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4846
+=======
+          metrics: reportData,
+          summary: { good: 0, needsImprovement: 0, poor: 0 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
         }
       }
     } catch (error) {

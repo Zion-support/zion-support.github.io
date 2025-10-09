@@ -108,12 +108,12 @@ const AIFraudDetectionPage: React.FC = () => {
         keywords={['AI fraud detection', 'fraud prevention', 'transaction monitoring', 'identity verification', 'AML compliance', 'fraud analytics']}
         canonicalUrl="https://ziontechgroup.com/ai-fraud-detection"
       />
-        <PerformanceOptimizer
-          enableImageOptimization={true}
-          enableLazyLoading={true}
-          enableCodeSplitting={true}
-          enablePrefetching={true}
-        />
+      <PerformanceOptimizer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enableCodeSplitting={true}
+        enablePrefetching={true}
+      />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}

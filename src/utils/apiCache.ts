@@ -34,7 +34,14 @@ export class ApiCache {
     };
     // Auto-cleanup every 5 minutes
     setInterval(() => {
+<<<<<<< HEAD
       // Cache cleanup is handled internally by CacheManager
+=======
+<<<<<<< HEAD
+=======
+      // Cache cleanup is handled internally by CacheManager
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       this.cleanupPendingRequests();
     }, 5 * 60 * 1000);
   }
@@ -134,7 +141,15 @@ export class ApiCache {
    * Invalidate cache entries matching a pattern
    */
   invalidate(pattern: string | RegExp): number {
+<<<<<<< HEAD
     // CacheManager doesn't have invalidate method, so we clear all cache
+=======
+<<<<<<< HEAD
+    // CacheManager doesn't have invalidate method, so we clear all cache
+=======
+    // Pattern-based invalidation not supported, clear all
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
     this.cache.clear();
     return 0;
   }
@@ -150,7 +165,11 @@ export class ApiCache {
    */
   getStats() {
     return {
+<<<<<<< HEAD
       ...this.cache.getStatistics(),
+=======
+      ...this.cache.getStats(),
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       pendingRequests: this.pendingRequests.size
     };
   }
@@ -248,7 +267,11 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       }),
     delete: <T>(path: string, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),
-    invalidate: (pattern: string | RegExp) => cache.invalidate(pattern),
+    invalidate: (pattern: string | RegExp) => {
+      // Clear all cache entries
+      cache.clear();
+      return 0;
+    },
     clear: () => cache.clear(),
     stats: () => cache.getStats(),
     prefetch: <T>(path: string, options?: RequestInit) =>

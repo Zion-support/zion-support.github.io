@@ -66,7 +66,11 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
+<<<<<<< HEAD
               clsValue += (entry as any).value;
+=======
+              clsValue += (entry as any).value || 0;
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -109,9 +113,17 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
+<<<<<<< HEAD
           entries.forEach((entry) => {
+=======
+          entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
+            if (entry.duration > 1000) {
+=======
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
             const resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration > 1000) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a806
               // console.warn('Slow resource detected:', {
               //   name: resourceEntry.name,
               //   duration: resourceEntry.duration,

@@ -106,7 +106,11 @@ class PerformanceOptimizer {
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart
       }
     } catch (error) {
+<<<<<<< HEAD
       // Ignore errors in performance measurement
+=======
+      // Ignore errors
+>>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
     }
   }
 
