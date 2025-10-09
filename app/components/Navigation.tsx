@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Home, DollarSign, Briefcase } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -46,7 +42,6 @@ const Navigation: React.FC = () => {
       closeAllMenus();
     }
   };
-<<<<<<< HEAD
 
   const serviceCategories = [
     {
@@ -96,7 +91,6 @@ const Navigation: React.FC = () => {
         { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
         { name: 'System Administration', path: '/system-administration', description: 'System management' },
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-<<<<<<< HEAD
         { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
         { name: 'IT Training', path: '/it-training', description: 'Staff development' },
         { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
