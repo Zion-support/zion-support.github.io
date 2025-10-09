@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -14,103 +13,35 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     const addFocusManagement = () => {
-      // Add focus management for better keyboard navigation
-      const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      
-      focusableElements.forEach((element) => {
-        element.addEventListener('focus', (e) => {
-          (e.target as HTMLElement).style.outline = '2px solid #06b6d4';
-        });
-        
-        element.addEventListener('blur', (e) => {
-          (e.target as HTMLElement).style.outline = 'none';
-        });
+      // Add focus management for modals and dropdowns
+      const modals = document.querySelectorAll('[role="dialog"]');
+      modals.forEach(modal => {
+        if (!modal.hasAttribute('tabindex')) {
+          modal.setAttribute('tabindex', '-1');
+        }
       });
-=======
-import React, { useEffect, useState } from 'react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  focusVisible: boolean;
-}
-
-const AccessibilityEnhancer: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    reducedMotion: false,
-    fontSize: 'medium',
-    focusVisible: false,
-  });
-
-  useEffect(() => {
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
-    setSettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast,
-    }));
-
-    // Apply accessibility settings
-    const root = document.documentElement;
-    
-    if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Font size
-    root.classList.remove('font-small', 'font-medium', 'font-large');
-    root.classList.add(`font-${settings.fontSize}`);
-
-    // Focus visible
-    if (settings.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-
-    // Add keyboard navigation support
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        const mainContent = document.querySelector('main, [role="main"]');
-        if (mainContent) {
-          (mainContent as HTMLElement).focus();
-          e.preventDefault();
-        }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
     };
 
+    const enhanceKeyboardNavigation = () => {
+      // Add keyboard navigation enhancements
+      const interactiveElements = document.querySelectorAll('a, button, input, select, textarea');
+      interactiveElements.forEach(element => {
+        if (!element.hasAttribute('tabindex')) {
+          element.setAttribute('tabindex', '0');
+        }
+      });
+    };
+
+    // Run enhancements
     addAriaLabels();
     addFocusManagement();
+    enhanceKeyboardNavigation();
 
-    // Re-run on DOM changes
+    // Set up observer for dynamic content
     const observer = new MutationObserver(() => {
       addAriaLabels();
       addFocusManagement();
+      enhanceKeyboardNavigation();
     });
 
     observer.observe(document.body, {
@@ -126,8 +57,4 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
-<<<<<<< HEAD
 export default AccessibilityEnhancer;
-=======
-export default AccessibilityEnhancer;
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
