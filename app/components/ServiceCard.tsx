@@ -2,110 +2,81 @@
 import React, { memo } from 'react';
 import { LucideIcon, ArrowRight } from 'lucide-react';
 
-interface ServiceCardProps {/* TODO: Fix JSX expression */}
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  features: string[];
+  price?: string;
+  isPopular?: boolean;
+  onSelect?: () => void;
 }
 
-const,
-  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  };
-
-  const bgColorClasses = {/* TODO: Fix JSX expression */}
-  };
-
-  return (<article></article>
-      className="quantum-card p-4,"
-  sm:p-6 energy-pulse group relative""
-      role="article")
-      aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
+const ServiceCard: React.FC<ServiceCardProps> = memo(({
+  title,
+  description,
+  icon: Icon,
+  features,
+  price,
+  isPopular = false,
+  onSelect
+}) => {
+  return (
+    <div
+      className={`
+        relative group cursor-pointer transition-all duration-300 transform hover:scale-105
+        ${isPopular ? 'ring-2 ring-cyan-400/50' : ''}
+      `}
+      onClick={onSelect}
     >
-      {/* TODO: Fix JSX expression */}
+      {isPopular && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+            Most Popular
+          </div>
+        </div>
       )}
-      "
-      <div className="text-4xl,
-  sm:text-5xl mb-4,"
-  sm:mb-6 text-center cyber-scan-line" aria-hidden="true"></div>"
-        {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
-      </div>
       
-      <h3></h3>`
-        id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}"
-        className="text-xl,
-  sm:text-2xl font-bold text-white mb-3,"
-  sm:mb-4 text-center neon-text"
-      >
-        {title}
-      </h3>
-      "
-      <p className="text-gray-300 mb-4,
-  sm:mb-6 text-center leading-relaxed text-sm,"
-  sm:text-base"></p>
-        {description}
-      </p>
-      "
-      <div className="mb-4"></div>"
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
-  Features:</h4>"
-        <ul className="text-sm text-gray-300 space-y-1"></ul>
-          {/* TODO: Fix JSX expression */}"
-            <li key={idx} className="flex items-center"></li>"
-              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" /></div>
-              {feature}
-            </li>
-          ))}
-          {/* TODO: Fix JSX expression */}
-              +{features.length - 3} more features;
-            </li>
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 h-full border border-white/20 hover:border-cyan-400/50 transition-colors">
+        <div className="text-center">
+          <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-cyan-500/20">
+            <Icon className="w-8 h-8 text-cyan-400" />
+          </div>
+          
+          <h3 className="text-2xl font-bold text-white mb-4">
+            {title}
+          </h3>
+          
+          <p className="text-gray-300 mb-6 leading-relaxed">
+            {description}
+          </p>
+          
+          <ul className="space-y-3 mb-8 text-left">
+            {features.map((feature, index) => (
+              <li key={index} className="flex items-center text-gray-300">
+                <ArrowRight className="w-4 h-4 mr-3 text-cyan-400 flex-shrink-0" />
+                <span className="text-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
+          
+          {price && (
+            <div className="text-center mb-6">
+              <span className="text-3xl font-bold text-white">{price}</span>
+              <span className="text-gray-400 ml-2">/month</span>
+            </div>
           )}
-        </ul>
-      </div>
-      "
-      <div className="mb-4"></div>"
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologie,
-  s:</h4>"
-        <div className="flex flex-wrap gap-1"></div>
-          {/* TODO: Fix JSX expression */}
-              key={idx} `
-              className={`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}
-            >
-              {tech}
-            </span>
-          ))}
-          {/* TODO: Fix JSX expression */}
-              +{technologies.length - 4}
-            </span>
-          )}
+          
+          <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-4 px-6 rounded-xl font-bold transition-colors flex items-center justify-center">
+            Get Started
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
       </div>
-      "
-      <div className="text-center mb-4"></div>"
-        <div className="text-lg,"
-  sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price"></div>
-          {price}
-        </div>"
-        <div className="text-xs text-gray-400">Categor,
-  y: {category}</div>
-      </div>
-      
-      <a></a>
-        href={href}`
-        className={`${colorClasses[color as keyof typeof colorClasses]} font-medium text-sm,
-  sm:text-base transition-all duration-300,
-  hover:neon-glow,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-cyan-400,
-  focus:ring-offset-2,`
-  focus:ring-offset-slate-900 rounded inline-flex items-center justify-center w-full py-2`}`
-        aria-label={`Learn more about ${title}`}
-      >
-        Learn More;"
-        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
-      </a>
-    </article>
+    </div>
   );
 });
 
 ServiceCard.displayName = 'ServiceCard';
 
-export default ServiceCard;"`
+export default ServiceCard;

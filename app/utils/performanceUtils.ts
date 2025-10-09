@@ -24,14 +24,14 @@ export const performanceMonitor = () => {
     // Monitor Core Web Vitals
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        console.log('Performance metric:', entry.name, entry.value);
+        // console.log('Performance metric:', entry.name, entry.value);
       }
     });
     
     try {
       observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
     } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
+      // console.warn('Performance monitoring not supported:', error);
     }
   }
 };
@@ -74,8 +74,8 @@ export const collectPerformanceMetrics = () => {
       setTimeout(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
-          console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
-          console.log('DOM content loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
+          // console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
+          // console.log('DOM content loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
         }
       }, 0);
     });
