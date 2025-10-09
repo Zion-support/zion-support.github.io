@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// not-found file
-// This file is under development
-
-export default function not_found() {
-  return null;
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Phone } from 'lucide-react';
@@ -88,5 +81,4 @@ export default function NotFound() {
       </div>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc
 }

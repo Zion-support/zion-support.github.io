@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// page-optimized file
-// This file is under development
-
-export default function page_optimized() {
-  return null;
-=======
 'use client';
 import React, { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
@@ -80,5 +73,4 @@ export default function OptimizedHomePage() {
       </main>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc
 }
