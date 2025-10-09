@@ -24,6 +24,9 @@ const Footer: React.FC = () => {
     { name: 'AI Sales Automation', href: '/ai-sales-automation' },
     { name: 'AI Content Writer', href: '/ai-content-writer' },
     { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager' },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant' },
+    { name: 'AI Legal Assistant', href: '/ai-legal-assistant' },
   ];
 
   const aiServices = [

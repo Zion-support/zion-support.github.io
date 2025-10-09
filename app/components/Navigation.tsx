@@ -36,6 +36,9 @@ const Navigation: React.FC = () => {
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
     { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Package },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Users },
+    { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: Scale },
   ];
 
   const aiServices = [
@@ -53,7 +56,7 @@ const Navigation: React.FC = () => {
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
     { name: 'IT Consulting', href: '/it-consulting', icon: Settings },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
+    { name: 'DevOps & CI/CD', href: '/devops', icon: GitBranch },
     { name: 'Database Services', href: '/database', icon: Database },
     { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
     { name: 'Web Development', href: '/web-development', icon: Code },
