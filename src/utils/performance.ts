@@ -11,7 +11,7 @@ export interface PerformanceMetrics {
 export const reportWebVitals = (metric: unknown) => {
   // Log to console in development
   if (process.env['NODE_ENV'] === 'development') {
-    console.log('Web Vitals metric:', metric);
+//     if (process.env.DEV) { }
   }
 
   // Send to analytics in production
@@ -63,7 +63,7 @@ export const logPerformance = (label: string) => {
       
       const measure = performance.getEntriesByName(label)[0];
       if (process.env.DEV) { 
-        console.log(`${label}: ${measure?.duration.toFixed(2)}ms`); 
+        console.log(`Performance: ${label} took ${measure.duration.toFixed(2)}ms`); 
       }
     };
   }

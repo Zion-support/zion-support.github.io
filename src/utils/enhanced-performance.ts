@@ -303,7 +303,7 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
     const result = fn(...args);
     const end = performance.now();
     
-    console.log(`${label || 'Execution'}: ${(end - start).toFixed(2)}ms`);
+    console.log(`Performance: ${name} took ${(end - start).toFixed(2)}ms`);
     
     return result;
   }) as T;
