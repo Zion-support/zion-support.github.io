@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Using anchor tags for Vite
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -151,21 +151,21 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
             <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
-          </Link>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            </a>
+            <a href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
-            </Link>
+            </a>
 
             {/* Services Dropdown */}
             <div className="relative">
@@ -192,7 +192,7 @@ const Navigation: React.FC = () => {
                         </div>
                         <div className="space-y-2">
                           {category.services.slice(0, 5).map((service, serviceIndex) => (
-                            <Link
+                            <a
                               key={serviceIndex}
                               href={service.path}
                               className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
@@ -202,67 +202,67 @@ const Navigation: React.FC = () => {
                               <div className="text-xs text-gray-500 group-hover:text-purple-500">
                                 {service.description}
                               </div>
-                            </Link>
+                            </a>
                           ))}
                           {category.services.length > 5 && (
-                            <Link
+                            <a
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
                               className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                               onClick={closeAllMenus}
                             >
                               View All →
-                            </Link>
+                            </a>
                           )}
                         </div>
                       </div>
                     ))}
                   </div>
                   <div className="border-t border-gray-700 mt-6 pt-4 px-6">
-                    <Link
+                    <a
                       href="/services"
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
                       View All Services
-                    </Link>
+                    </a>
                   </div>
                 </div>
               )}
             </div>
 
-            <Link 
+            <a 
               href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
               Case Studies
-            </Link>
+            </a>
 
-            <Link
+            <a
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
               Blog
-            </Link>
+            </a>
 
-            <Link
+            <a
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
               Contact
-            </Link>
+            </a>
 
             {/* CTA Button */}
-            <Link
+            <a
               href="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -281,20 +281,20 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
-              <Link
+              <a
                 href="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Home
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 About
-              </Link>
+              </a>
 
               {/* Mobile Services */}
               <div>
@@ -315,14 +315,14 @@ const Navigation: React.FC = () => {
                         <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
                         <div className="ml-4 space-y-1">
                           {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <Link
+                            <a
                               key={serviceIndex}
                               href={service.path}
                               className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                               onClick={closeAllMenus}
                             >
                               {service.name}
-                            </Link>
+                            </a>
                           ))}
                         </div>
                       </div>
@@ -331,29 +331,29 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <Link
+              <a
                 href="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Case Studies
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="/blog"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Blog
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="/contact"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Contact
-              </Link>
+              </a>
 
               <a
                 href="tel:+13024640950"
