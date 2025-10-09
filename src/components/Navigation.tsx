@@ -76,7 +76,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone },
     { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
+    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check },
     { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator },
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot },
     { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3 },
@@ -290,6 +290,10 @@ const Navigation: React.FC = () => {
             <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </a>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-de8d
+>>>>>>> origin/main
             
             <div className="flex items-center space-x-4">
               <a
@@ -384,6 +388,10 @@ const Navigation: React.FC = () => {
               <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </a>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-de8d
+>>>>>>> origin/main
               
               <div className="pt-4 border-t border-gray-700">
                 <a

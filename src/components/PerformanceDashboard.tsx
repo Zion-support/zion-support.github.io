@@ -1,18 +1,13 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
 }
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  [key: string]: number;
-}
+
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -21,6 +16,7 @@ const PerformanceDashboard: React.FC = () => {
     fps: 0
   });
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -29,20 +25,26 @@ const PerformanceDashboard: React.FC = () => {
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
+      
       // Measure render time
-      const _renderStart = performance.now();
-      const _renderTime = performance.now() - renderStart;
+      const renderStart = performance.now();
+      const renderTime = performance.now() - renderStart;
+<<<<<<< HEAD
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-815a
       // Measure memory usage
-      let _memoryUsage = 0;
+      let memoryUsage = 0;
       if ('memory' in performance) {
-        const _memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
+      
       // Measure FPS (simplified)
-      let _fps = 0;
+      let fps = 0;
       if ('requestAnimationFrame' in window) {
-        let _lastTime = performance.now();
-        let _frameCount = 0;
+        let lastTime = performance.now();
+        let frameCount = 0;
         const measureFPS = (currentTime: number) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {
@@ -54,6 +56,7 @@ const PerformanceDashboard: React.FC = () => {
         };
         requestAnimationFrame(measureFPS);
       }
+      
       setMetrics({
         loadTime,
         renderTime,
@@ -61,9 +64,10 @@ const PerformanceDashboard: React.FC = () => {
         fps
       });
     };
+    
     updateMetrics();
     // Update metrics every 5 seconds
-    const _interval = setInterval(updateMetrics, 5000);
+    const interval = setInterval(updateMetrics, 5000);
     return () => clearInterval(interval);
   }, []);
   if (!isVisible) {

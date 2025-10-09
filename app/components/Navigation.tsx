@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, Eye, Palette, Music, Heart, Cloud, Shield, Database, Menu, X } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, Eye, Palette, Music, Heart, Cloud, Shield, Database, Menu, X, TrendingUp, FileText, DollarSign, Box, Smartphone, Lock, Users, Globe, Building } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +17,11 @@ const Navigation: React.FC = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
     { name: 'Services', href: '/services', icon: Settings },
-    { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Cpu },
+    { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Contact', href: '/contact', icon: Phone },
   ];
 
@@ -33,17 +35,24 @@ const Navigation: React.FC = () => {
     { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
-  ];
-
-  const aiServices = [
-    { name: 'Machine Learning', href: '/ai-ml', icon: Brain },
-    { name: 'Natural Language Processing', href: '/ai-nlp', icon: MessageSquare },
-    { name: 'Computer Vision', href: '/ai-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
+    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer', icon: DollarSign },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
     { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
     { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+  ];
+
+  const aiServices = [
+    { name: 'Machine Learning', href: '/machine-learning', icon: Brain },
+    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
+    { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
+    { name: 'AI Fraud Detection', href: '/ai-cybersecurity', icon: Shield },
   ];
 
   const itServices = [
@@ -52,6 +61,13 @@ const Navigation: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database', icon: Database },
+    { name: 'Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
+    { name: 'Web Development', href: '/web-development', icon: Code },
+    { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
+    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
+    { name: 'IT Support', href: '/it-support', icon: Users },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
+    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
   ];
 
   return (

@@ -7,9 +7,11 @@ const Footer: React.FC = () => {
 
   const quickLinks = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'AI Solutions', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -20,15 +22,25 @@ const Footer: React.FC = () => {
     { name: 'AI Email Marketing', href: '/ai-email-marketing' },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
     { name: 'AI Code Review Assistant', href: '/ai-code-generation' },
+    { name: 'AI Video Generator', href: '/ai-video-generation' },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation' },
+    { name: 'AI Content Writer', href: '/ai-content-writer' },
+    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer' },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+    { name: 'AI Fashion Design', href: '/ai-fashion-design' },
+    { name: 'AI Music Composition', href: '/ai-music-composition' },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach' },
   ];
 
   const aiServices = [
-    { name: 'Machine Learning', href: '/ai-ml' },
-    { name: 'Natural Language Processing', href: '/ai-nlp' },
-    { name: 'Computer Vision', href: '/ai-vision' },
+    { name: 'Machine Learning', href: '/machine-learning' },
+    { name: 'Natural Language Processing', href: '/nlp' },
+    { name: 'Computer Vision', href: '/computer-vision' },
     { name: 'AI Automation', href: '/ai-automation' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
-    { name: 'AI Fashion Design', href: '/ai-fashion-design' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation' },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
+    { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
   ];
 
   const itServices = [
@@ -37,6 +49,13 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
     { name: 'Database Services', href: '/database' },
+    { name: 'Mobile App Development', href: '/ai-mobile-app-development' },
+    { name: 'Web Development', href: '/web-development' },
+    { name: 'Network Infrastructure', href: '/network-infrastructure' },
+    { name: 'IT Support', href: '/it-support' },
+    { name: 'Business Intelligence', href: '/business-intelligence' },
+    { name: 'Enterprise Solutions', href: '/enterprise' },
+    { name: 'Blockchain Solutions', href: '/blockchain' },
   ];
 
   const socialLinks = [
@@ -51,7 +70,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
