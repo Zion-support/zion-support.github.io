@@ -1,7 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Phone, Mail, MapPin, ArrowRight, Zap, Shield, Clock, Users, Award, TrendingUp, Brain, Target, BarChart, Code, Cloud, Globe, Lock, Cpu, Database, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Lightning, Crosshair, Security, People, StarIcon, Check, Arrow, PhoneIcon, MailIcon, Location } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

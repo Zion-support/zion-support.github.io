@@ -21,7 +21,7 @@ export interface ErrorReporterConfig {
   maxErrorsInMemory: number;
   captureContext: boolean;
 }
-const defaultConfig: ErrorReporterConfig = {
+const _defaultConfig: ErrorReporterConfig = {
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
@@ -65,7 +65,7 @@ export class ErrorReporter {
       context: this.config.captureContext ? context : undefined
     };
     // Track error frequency
-    const errorKey = `${error.name}:${error.message}`;
+    const _errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport);

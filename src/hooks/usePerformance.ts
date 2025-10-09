@@ -9,7 +9,7 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-export const usePerformance = () => {
+export const _usePerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {
@@ -24,7 +24,7 @@ export const usePerformance = () => {
       const largestContentfulPaint =
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
-      let _cumulativeLayoutShift = 0;
+      let __cumulativeLayoutShift = 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
@@ -51,7 +51,7 @@ export const usePerformance = () => {
         });
         observer.observe({ entryTypes: ['first-input'] });
       }
-      const performanceData: PerformanceMetrics = {
+      const _performanceData: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded:
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,

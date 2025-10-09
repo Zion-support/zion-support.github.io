@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { TestTube, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
 
 const AIABTestingPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: TestTube,
       title: 'A/B Testing',

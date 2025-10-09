@@ -13,7 +13,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   rounded = false,
   animated = true
 }) => {
-  const baseClasses = 'bg-gray-200';
+  const _baseClasses = 'bg-gray-200';
   const roundedClasses = rounded ? 'rounded' : '';
   const animatedClasses = animated ? 'animate-pulse' : '';
   return (

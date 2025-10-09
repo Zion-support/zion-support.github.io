@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { MessageSquare, Brain, FileText, Globe, Zap, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Database, BarChart, Settings, Code, Cloud, Users, Lock, Award } from 'lucide-react';
+import {MessageSquare, Brain, FileText, Globe, CheckCircle, Star} from 'lucide-react';
 
 const AINLPPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: MessageSquare,
       title: 'Text Analysis',

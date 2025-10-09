@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import {CheckCircle, Star} from 'lucide-react';
 
 const BusinessAppsPage: React.FC = () => {
-  const businessApps = [
+  const _businessApps = [
     {
       title: 'AI-Powered CRM System',
       description: 'Intelligent customer relationship management with AI-driven insights, automated follow-ups, and predictive analytics.',

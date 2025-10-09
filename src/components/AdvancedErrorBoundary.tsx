@@ -73,7 +73,7 @@ class AdvancedErrorBoundary extends Component<
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport: ErrorReport = {
+    const _errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
       error,
       errorInfo,
@@ -100,7 +100,7 @@ class AdvancedErrorBoundary extends Component<
   private getSessionId = (): string => {
     // Generate or retrieve session ID
     try {
-      let sessionId = sessionStorage.getItem('sessionId');
+      let _sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);

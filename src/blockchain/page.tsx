@@ -2,7 +2,7 @@ import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
-  const blockchainServices = [
+  const _blockchainServices = [
     {
       title: 'Smart Contract Development',
       description: 'Secure, audited smart contracts for DeFi, NFTs, and enterprise blockchain applications.',

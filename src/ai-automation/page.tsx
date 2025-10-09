@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIAutomationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Settings,
       title: 'Process Automation',

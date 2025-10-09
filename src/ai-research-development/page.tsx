@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Brain, Code, FlaskConical, Target, Zap, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, BarChart, Settings, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import {Brain, Code, FlaskConical, Target, CheckCircle, Star} from 'lucide-react';
 
 const AIResearchDevelopmentPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'Custom AI Research',

@@ -23,7 +23,7 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
   const [isClient, setIsClient] = useState(false);
   const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
 
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const _isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const isLargeDesktop = useMediaQuery({ minWidth: 1280 });

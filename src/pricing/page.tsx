@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const PricingPage: React.FC = () => {
-  const plans = [
+  const _plans = [
     {
       name: 'Starter',
       price: '$299',

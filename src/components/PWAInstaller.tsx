@@ -11,7 +11,7 @@ const PWAInstaller: React.FC = () => {
   const [isInstalled, setIsInstalled] = useState(false);
   useEffect(() => {
     // Check if app is already installed
-    const checkInstalled = () => {
+    const _checkInstalled = () => {
       if (window.matchMedia('(display-mode: standalone)').matches) {
         setIsInstalled(true);
       }

@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Service Worker Registration Utility
  */
@@ -11,14 +10,14 @@ export interface ServiceWorkerConfig {
  * Register service worker with lifecycle callbacks
  */
 export async function registerServiceWorker(
-  config: ServiceWorkerConfig = {}
+  _config: ServiceWorkerConfig = {}
 ): Promise<ServiceWorkerRegistration | undefined> {
   // Check if service workers are supported
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
     return;
   }
   // Only register in production or if explicitly enabled
-  const isLocalhost = Boolean(
+  const _isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)

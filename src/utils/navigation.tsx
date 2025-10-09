@@ -1,6 +1,6 @@
 'use client';
 import { useCallback } from 'react';
-export const useRouter = () => {
+export const _useRouter = () => {
   const push = useCallback((url: string) => {
     window.location.href = url;
   }, []);

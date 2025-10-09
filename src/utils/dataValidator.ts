@@ -36,7 +36,7 @@ export class ValidationError extends Error {
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const _emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 /**
@@ -79,7 +79,7 @@ export function validateCreditCard(cardNumber: string): boolean {
   const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(cleaned)) return false;
   if (cleaned.length < 13 || cleaned.length > 19) return false;
-  let sum = 0;
+  let _sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {
     let digit = parseInt(cleaned[i], 10);

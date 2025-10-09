@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 const Analytics: React.FC = () => {
-  const pathname = usePathname();
+  const _pathname = usePathname();
 
   useEffect(() => {
     // Google Analytics 4
@@ -86,7 +86,7 @@ const Analytics: React.FC = () => {
     });
 
     // Track scroll depth
-    let maxScroll = 0;
+    let _maxScroll = 0;
     const trackScroll = () => {
       const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {

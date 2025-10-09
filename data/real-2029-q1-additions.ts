@@ -333,7 +333,6 @@
 }
 		rating: 4.5;
 		reviews: 9,
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 // const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
@@ -448,7 +447,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	}
 ];
 ;
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 // const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';

@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Settings, Target, BarChart, Shield, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import {Settings, Target, BarChart, Shield, CheckCircle, Star} from 'lucide-react';
 
 const ITInfrastructureDesignPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Settings,
       title: 'Infrastructure Design',

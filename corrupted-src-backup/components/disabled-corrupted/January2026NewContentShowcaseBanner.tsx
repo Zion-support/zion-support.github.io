@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 const January2026NewContentShowcaseBanne, r: React.FC = () => {
   const features = [
     { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },

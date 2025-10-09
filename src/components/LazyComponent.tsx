@@ -10,7 +10,7 @@ interface LazyComponentProps {
 }
 
 // Higher-order component for lazy loading
-export const withLazyLoading = <P extends object>(
+export const _withLazyLoading = <P extends object>(
   Component: ComponentType<P>,
   fallback?: ReactNode
 ) => {

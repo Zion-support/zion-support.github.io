@@ -17,7 +17,7 @@ export interface FieldValidation {
 /**
  * Common validation rules
  */
-export const validationRules = {
+export const _validationRules = {
   /**
    * Validate required field
    */

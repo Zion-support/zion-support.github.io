@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { FlaskConical, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import {FlaskConical, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 
 const InnovationLabsPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: FlaskConical,
       title: 'Research & Development',

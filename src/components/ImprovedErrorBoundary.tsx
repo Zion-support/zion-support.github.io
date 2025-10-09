@@ -4,7 +4,6 @@
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import monitoring from '../utils/monitoring';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -34,8 +33,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log error to monitoring service
-    monitoring.logError({
+    // Log error to console for debugging
+    console.error('Error caught by ImprovedErrorBoundary:', {
       message: error.message,
       stack: error.stack,
       component: errorInfo.componentStack ?? undefined,
@@ -69,7 +68,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   componentDidUpdate(prevProps: Props): void {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
-      const resetKeysChanged = this.props.resetKeys.some(
+      const _resetKeysChanged = this.props.resetKeys.some(
         (key, index) => key !== prevProps.resetKeys![index]
       );
       if (resetKeysChanged && this.state.hasError) {

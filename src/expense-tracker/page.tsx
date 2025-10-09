@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart, Users } from 'lucide-react';
+import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ExpenseTrackerPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Receipt,
       title: 'Smart Receipt Scanning',

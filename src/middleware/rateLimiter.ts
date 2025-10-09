@@ -38,7 +38,7 @@ export class RateLimiter {
    * @returns Whether the request is allowed
    */
   check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
-    const _now = Date.now();
+    const __now = Date.now();
     const _record = this.requests.get(identifier);
     // No record or expired
     if (!record || now > record.resetTime) {

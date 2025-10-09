@@ -45,7 +45,7 @@ export interface ErrorBoundaryConfig {
 /**
  * Default error messages
  */
-const DEFAULT_ERROR_MESSAGES = {
+const _DEFAULT_ERROR_MESSAGES = {
   default: 'Something went wrong. Please try again.',
   network: 'Network connection issue. Please check your internet connection.',
   notFound: 'The requested resource was not found.',

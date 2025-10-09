@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { Calendar, Clock, Users, Zap, Brain, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Target, BarChart } from 'lucide-react';
+import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AISchedulerPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Calendar,
       title: 'Smart Scheduling',

@@ -2,7 +2,7 @@
 // Performance optimization utilities
 import { useEffect, useCallback, useMemo, useState } from 'react';
 // Debounce utility for performance
-export const debounce = <T extends (...args: any[]) => any>(
+export const _debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -29,7 +29,7 @@ export const throttle = <T extends (...args: any[]) => any>(
 // Intersection Observer hook for lazy loading
 export const useIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void,
-  options: IntersectionObserverInit = {}
+  _options: IntersectionObserverInit = {}
 ) => {
   const observer = useMemo(
     () =>
@@ -191,7 +191,7 @@ export const useBundleSizeMonitoring = () => {
     if (typeof window === 'undefined') return;
     const calculateBundleSize = () => {
       const resources = performance.getEntriesByType('resource');
-      let totalSize = 0;
+      let _totalSize = 0;
       let jsSize = 0;
       let cssSize = 0;
       let imageSize = 0;

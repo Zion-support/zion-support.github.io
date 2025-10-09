@@ -1,4 +1,3 @@
-import React from "react";
 const, NewContentPromotionalBanner202, 6 = () => {
   const, newConten, t = [
     {

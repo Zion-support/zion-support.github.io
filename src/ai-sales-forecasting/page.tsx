@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { TrendingUp, Target, Zap, Settings, CheckCircle, ArrowRight, Star, Cpu, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import {TrendingUp, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 
 const AISalesForecastingPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: TrendingUp,
       title: 'Predictive Forecasting',

@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Headphones, Shield, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import {Headphones, Shield, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 
 const ITSupportPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Headphones,
       title: '24/7 Support',

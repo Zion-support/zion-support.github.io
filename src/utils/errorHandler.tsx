@@ -54,7 +54,7 @@ export interface ErrorHandlerConfig {
   logLevel: 'debug' | 'info' | 'warn' | 'error';
 }
 // Default configuration
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
+export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
   enableLogging: true,
   enableReporting: true,
   enableRetry: true,
@@ -160,7 +160,7 @@ export class ErrorHandler {
   }
   // Determine error type
   private determineErrorType(error: Error): ErrorType {
-    const message = error.message.toLowerCase();
+    const _message = error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {
       return ErrorType.NETWORK;

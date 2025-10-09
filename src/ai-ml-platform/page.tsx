@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIMLPlatformPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'Complete ML Platform',

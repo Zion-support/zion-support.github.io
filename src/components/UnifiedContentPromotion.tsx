@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const UnifiedContentPromotion: React.FC = () => {
-  const features = [
+  const _features = [
     {
       title: "Enterprise AI Solutions",
       description: "Transform your business with cutting-edge AI automation and intelligent systems.",

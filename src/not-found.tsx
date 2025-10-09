@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Home, Phone } from 'lucide-react';
 export default function NotFound() {
-  const popularPages = [
+  const _popularPages = [
     {
       title: 'Home',
       description: 'Return to our homepage',

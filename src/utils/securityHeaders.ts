@@ -10,7 +10,7 @@ export interface SecurityHeadersConfig {
   referrerPolicy?: string;
   permissionsPolicy?: string;
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {
+export const _defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy
   contentSecurityPolicy: [
     "default-src 'self'",
@@ -51,7 +51,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
 export function getSecurityHeaders(
   customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string> {
-  const config = { ...defaultSecurityHeaders, ...customConfig };
+  const _config = { ...defaultSecurityHeaders, ...customConfig };
   const headers: Record<string, string> = {
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'

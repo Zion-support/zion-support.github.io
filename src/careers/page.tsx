@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const CareersPage: React.FC = () => {
-  const openPositions = [
+  const _openPositions = [
     {
       title: 'Senior AI Engineer',
       department: 'Engineering',

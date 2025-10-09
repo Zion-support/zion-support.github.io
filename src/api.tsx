@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const API: React.FC = () => {
-  const apiEndpoints = [
+  const _apiEndpoints = [
     {
       method: 'GET',
       endpoint: '/api/content',

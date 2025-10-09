@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Settings, Zap, Shield, BarChart, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import {Settings, Zap, Shield, BarChart, CheckCircle, Star} from 'lucide-react';
 
 const ITAutomationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Settings,
       title: 'Process Automation',

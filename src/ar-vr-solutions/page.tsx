@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Eye, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import {Eye, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 
 const ARVRSolutionsPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Eye,
       title: 'AR Development',

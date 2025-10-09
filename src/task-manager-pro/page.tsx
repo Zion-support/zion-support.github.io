@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Shield, Clock } from 'lucide-react';
+import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const TaskManagerProPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',

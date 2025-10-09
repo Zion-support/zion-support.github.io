@@ -1,13 +1,11 @@
 import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-import { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-import { IntegrationProviderMeta } from './types';
 import type { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
 import type { IntegrationProviderMeta } from './types';
@@ -26,10 +24,8 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-import { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-import { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 import type { IntegrationProviderMeta } from './types';
@@ -39,7 +35,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-import { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 import type { IntegrationProviderMeta } from './types';

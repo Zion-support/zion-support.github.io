@@ -512,7 +512,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     reviews: 26,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeBusinessSolution {;
   id: string;
   name: string;

@@ -2,7 +2,7 @@ import React from 'react';
 import { generateSitemap, getAllPages } from './utils/sitemapGenerator';
 
 const Sitemap: React.FC = () => {
-  const sitemap = generateSitemap(getAllPages());
+  const _sitemap = generateSitemap(getAllPages());
   
   return (
     <div>

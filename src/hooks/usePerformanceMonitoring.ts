@@ -2,7 +2,7 @@
 import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 // PerformanceMetrics interface removed as it's not used in this hook
-export const usePerformanceMonitoring = () => {
+export const _usePerformanceMonitoring = () => {
   const { trackPerformance } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
@@ -35,7 +35,7 @@ export const usePerformanceMonitoring = () => {
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       // CLS - Cumulative Layout Shift
-      let _clsValue = 0;
+      let __clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {
         const _entries = list.getEntries();
         entries.forEach(

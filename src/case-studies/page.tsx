@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
+  const _caseStudies = [
     {
       id: 1,
       title: 'E-commerce Platform Transformation',

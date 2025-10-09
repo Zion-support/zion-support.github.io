@@ -40,7 +40,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   section,
   tags = [],
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
 

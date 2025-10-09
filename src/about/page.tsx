@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Award, Target, Globe, Brain, Shield, Code, BarChart } from 'lucide-react';
-import Navigation from '../components/Navigation';
+import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
 const AboutPage: React.FC = () => {
-  const team = [
+  const _team = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -237,3 +235,5 @@ const AboutPage: React.FC = () => {
     </div>
   );
 };
+
+export default AboutPage;

@@ -1,10 +1,8 @@
 <<<<<<< HEAD
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap } from 'lucide-react';
 =======
 'use client';
-import React from 'react';
 import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
 >>>>>>> cursor/website-audit-and-update-with-deployment-572b
 import Navigation from '../components/Navigation';

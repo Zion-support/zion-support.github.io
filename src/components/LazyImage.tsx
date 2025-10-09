@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { cn } from '../utils/cn';
 
 interface LazyImageProps {
   src: string;
@@ -28,7 +27,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const _imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     if (priority) return;

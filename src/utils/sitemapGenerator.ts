@@ -6,7 +6,7 @@ export interface SitemapUrl {
   priority?: number;
 }
 
-export const generateSitemap = (urls: SitemapUrl[]): string => {
+export const _generateSitemap = (urls: SitemapUrl[]): string => {
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
 

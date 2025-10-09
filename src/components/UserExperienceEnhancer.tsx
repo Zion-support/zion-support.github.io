@@ -21,7 +21,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 
   // Handle online/offline status
   useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
+    const _handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
 
     window.addEventListener('online', handleOnline);
@@ -130,7 +130,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       };
 
       // Track scroll depth
-      let maxScrollDepth = 0;
+      let _maxScrollDepth = 0;
       const handleScroll = () => {
         const scrollDepth = Math.round(
           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100

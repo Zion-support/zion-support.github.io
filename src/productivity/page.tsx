@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import {CheckCircle, Star} from 'lucide-react';
 
 const ProductivityPage: React.FC = () => {
-  const productivityTools = [
+  const _productivityTools = [
     {
       title: 'AI Task Management Pro',
       description: 'Intelligent task management with AI-powered prioritization, automated scheduling, and smart reminders.',

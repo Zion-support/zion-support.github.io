@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, Clock, CheckCircle, ArrowRight, Users, Award, Globe } from 'lucide-react';
+import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -8,7 +8,7 @@ const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 
-  const categories = [
+  const _categories = [
     {
       id: 'getting-started',
       name: 'Getting Started',

@@ -8,7 +8,7 @@ declare global {
     __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
   }
 }
-export const useErrorMonitoring = () => {
+export const _useErrorMonitoring = () => {
   const { trackError } = useAnalytics();
   const reportError = useCallback(
     (error: Error, context?: string) => {

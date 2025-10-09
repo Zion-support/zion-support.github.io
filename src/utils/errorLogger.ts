@@ -27,7 +27,7 @@ class ErrorLogger {
    */
   log(
     message: string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+    _severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
     context?: Record<string, unknown>
   ): void {
@@ -81,7 +81,7 @@ class ErrorLogger {
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
     try {
       // In production, you would send to a service like Sentry, LogRocket, etc.
-      const endpoint = process.env.NEXT_PUBLIC_ERROR_LOG_ENDPOINT;
+      const _endpoint = process.env.NEXT_PUBLIC_ERROR_LOG_ENDPOINT;
       if (!endpoint) {
         return;
       }

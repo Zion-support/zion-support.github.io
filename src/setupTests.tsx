@@ -9,7 +9,7 @@ import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
-const _originalConsoleError = console.error;
+const __originalConsoleError = console.error;
 console.error = (...args) => {
   const _message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 

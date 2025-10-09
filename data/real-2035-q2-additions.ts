@@ -3753,7 +3753,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
 }
 		rating: 4.6;
 		reviews: 6,
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 // const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
@@ -4751,7 +4750,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 	}
 ];
 ;
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 // const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';

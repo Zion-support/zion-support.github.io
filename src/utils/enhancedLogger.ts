@@ -68,7 +68,7 @@ export interface LoggerConfig {
 /**
  * Default logger configuration
  */
-const defaultConfig: LoggerConfig = {
+const _defaultConfig: LoggerConfig = {
   minLevel: LogLevel.INFO,
   enableConsole: true,
   enableRemote: false,
@@ -85,7 +85,7 @@ const defaultConfig: LoggerConfig = {
  *
  * @example
  * ```typescript
- * const logger = EnhancedLogger.getInstance();
+ * const _logger = EnhancedLogger.getInstance();
  * logger.info('User logged in', undefined, { userId: '123' });
  * logger.error('API request failed', { error: err }, err);
  * ```
@@ -435,7 +435,7 @@ export class EnhancedLogger {
   private getSessionId(): string | undefined {
     if (typeof window === 'undefined') return undefined;
     try {
-      let sessionId = sessionStorage.getItem('sessionId');
+      let _sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);

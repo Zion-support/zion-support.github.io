@@ -24,7 +24,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ttfb: null,
     memory: null
   });
-  const measureWebVitals = useCallback(() => {
+  const _measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [];
@@ -73,7 +73,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
-        let _clsValue = 0;
+        let __clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const _entries = list.getEntries();
           _entries.forEach(entry => {

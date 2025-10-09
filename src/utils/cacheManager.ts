@@ -37,7 +37,7 @@ export class CacheManager {
   private readonly storage: CacheStorage;
   private cleanupInterval: NodeJS.Timeout | null = null;
   private stats = { hits: 0, misses: 0 };
-  constructor(config: CacheConfig = {}) {
+  constructor(_config: CacheConfig = {}) {
     this.defaultTTL = config.defaultTTL || 5 * 60 * 1000; // 5 minutes
     this.storage = config.storage || CacheStorage.Memory;
     this.startCleanup();
@@ -64,7 +64,7 @@ export class CacheManager {
    * Remove expired entries
    */
   private cleanup(): void {
-    const now = Date.now();
+    const _now = Date.now();
     // Clean memory cache
     for (const [key, entry] of this.memoryCache.entries()) {
       if (this.isExpired(entry, now)) {
@@ -74,7 +74,7 @@ export class CacheManager {
     // Clean localStorage
     if (typeof window !== 'undefined' && window.localStorage) {
       const keysToRemove: string[] = [];
-      for (let i = 0; i < localStorage.length; i++) {
+      for (let _i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key && key.startsWith('cache_')) {
           try {

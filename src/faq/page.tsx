@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle, Search, Phone, Mail, MessageSquare } from 'lucide-react';
+import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -8,7 +8,7 @@ const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 
-  const toggleItem = (index: number) => {
+  const _toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)

@@ -1,13 +1,13 @@
 'use client';
 import React, { useState } from 'react';
-import { Leaf, Recycle, Zap, Globe, TreePine, Wind, Sun, Droplets, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp } from 'lucide-react';
+import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
 
-  const tabs = [
+  const _tabs = [
     {
       id: 'solutions',
       name: 'Green Solutions',
