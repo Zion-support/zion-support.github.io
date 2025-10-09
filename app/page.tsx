@@ -127,7 +127,7 @@ const HomePage: React.FC = () => {
       />
       <Analytics />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-advanced neural-network-bg matrix-rain particle-field">
         {/* Navigation */}
         <Navigation />
         
@@ -157,7 +157,7 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch neon-text-advanced"
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
@@ -218,7 +218,7 @@ const HomePage: React.FC = () => {
 
           {/* AI Services Section */}
           <section className="mb-16" aria-labelledby="ai-services-heading">
-            <h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            <h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-advanced cyber-scan-vertical">
               AI Services & Solutions
             </h2>
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
@@ -228,7 +228,7 @@ const HomePage: React.FC = () => {
             {/* Primary AI Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <article className="quantum-field-advanced p-4 sm:p-6 energy-pulse cyber-border-glow">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -244,7 +244,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <article className="quantum-field-advanced p-4 sm:p-6 energy-pulse cyber-border-glow">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -260,7 +260,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <article className="quantum-field-advanced p-4 sm:p-6 energy-pulse cyber-border-glow">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -276,7 +276,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <article className="quantum-field-advanced p-4 sm:p-6 energy-pulse cyber-border-glow">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🏥</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Healthcare</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -295,7 +295,7 @@ const HomePage: React.FC = () => {
             {/* Additional AI Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -311,7 +311,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -327,7 +327,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔐</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Cybersecurity</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -343,7 +343,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Data Analytics</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -362,7 +362,7 @@ const HomePage: React.FC = () => {
 
           {/* Micro SAAS Services Section */}
           <section className="mb-16" aria-labelledby="micro-saas-heading">
-            <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-advanced cyber-scan-vertical">
               Micro SAAS Solutions
             </h2>
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
@@ -372,7 +372,7 @@ const HomePage: React.FC = () => {
             {/* Micro SAAS Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">👥</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI-Powered CRM</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -388,7 +388,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📈</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Analytics Dashboard</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -404,7 +404,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💬</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Chatbot Builder</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -420,7 +420,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Writing Assistant</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -436,7 +436,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📱</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Mobile App Builder</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -452,7 +452,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Design Studio</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -468,7 +468,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📧</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Email Marketing</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -484,7 +484,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔍</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI SEO Optimizer</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -498,12 +498,220 @@ const HomePage: React.FC = () => {
                   </div>
                 </article>
               </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Code Generator</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Generate clean, efficient code in multiple programming languages with AI assistance and best practices.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$79/month</div>
+                    <a href="/ai-code-generation" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎵</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Music Composer</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Create original music and soundtracks with AI-powered composition tools and royalty-free licensing.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2">$69/month</div>
+                    <a href="/ai-music-composition" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎬</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Video Generator</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Create professional videos from text prompts with AI-generated visuals, voiceovers, and editing.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$89/month</div>
+                    <a href="/ai-video-generation" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎯</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Project Manager</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Intelligent project management with AI-powered scheduling, resource allocation, and risk assessment.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">$59/month</div>
+                    <a href="/ai-project-manager" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💼</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Sales Automation</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Automate your sales process with AI-powered lead scoring, follow-ups, and pipeline management.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">$99/month</div>
+                    <a href="/ai-sales-automation" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Data Visualization</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Transform complex data into stunning visualizations with AI-powered insights and interactive dashboards.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2">$69/month</div>
+                    <a href="/ai-data-visualization" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare Assistant</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    AI-powered healthcare solutions for patient monitoring, diagnosis assistance, and medical data analysis.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-rose-400 mb-2">$199/month</div>
+                    <a href="/ai-healthcare" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fashion Designer</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Create fashion designs and trends with AI-powered style analysis, color matching, and trend forecasting.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-fuchsia-400 mb-2">$79/month</div>
+                    <a href="/ai-fashion-design" className="text-fuchsia-400 hover:text-fuchsia-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏃</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fitness Coach</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Personalized fitness coaching with AI-powered workout plans, nutrition advice, and progress tracking.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-lime-400 mb-2">$39/month</div>
+                    <a href="/ai-fitness-coach" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎮</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI 3D Generator</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Generate 3D models, animations, and virtual environments with AI-powered 3D creation tools.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">$89/month</div>
+                    <a href="/ai-3d-generation" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎤</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Voice Cloning</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Create realistic voice clones for narration, voiceovers, and audio content with advanced AI technology.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$59/month</div>
+                    <a href="/ai-voice-cloning" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚡</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Workflow Automation</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Automate complex business workflows with AI-powered process optimization and intelligent decision making.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$79/month</div>
+                    <a href="/ai-workflow-automation" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📱</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Social Media Manager</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Automate social media management with AI-powered content creation, scheduling, and engagement optimization.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">$49/month</div>
+                    <a href="/ai-social-media-manager" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
             </div>
           </section>
 
           {/* IT Services Section */}
           <section className="mb-16" aria-labelledby="it-services-heading">
-            <h2 id="it-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            <h2 id="it-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-advanced cyber-scan-vertical">
               IT Services & Infrastructure
             </h2>
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
@@ -513,7 +721,7 @@ const HomePage: React.FC = () => {
             {/* IT Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">☁️</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Cloud Migration</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -530,7 +738,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔒</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Cybersecurity Suite</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -546,7 +754,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚙️</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">DevOps & CI/CD</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -562,7 +770,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <article className="cyber-card-advanced holographic-float p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-pulse">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🗄️</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Database Management</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
