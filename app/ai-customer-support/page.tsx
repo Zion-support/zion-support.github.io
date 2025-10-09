@@ -267,10 +267,8 @@ const AICustomerSupportPage: React.FC = () => {
           </section>
         </div>
       </main>
-      
       <Footer />
     </div>
-    </>
   );
 };
 
