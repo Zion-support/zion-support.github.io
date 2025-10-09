@@ -1,160 +1,186 @@
-#!/usr/bin/env node
-
-/**
- * Performance Optimizer for Zion Tech Group Website
- * Optimizes images, CSS, and JavaScript for better performance
- */
-
 const fs = require('fs');
 const path = require('path');
 
+// Performance optimization script for Zion Tech Group website
 console.log('🚀 Starting performance optimization...');
 
-// Optimize CSS by removing unused styles
-function optimizeCSS() {
-  console.log('📝 Optimizing CSS...');
-  
-  const cssPath = path.join(__dirname, '../dist/assets');
-  if (fs.existsSync(cssPath)) {
-    const files = fs.readdirSync(cssPath);
-    const cssFiles = files.filter(file => file.endsWith('.css'));
-    
-    cssFiles.forEach(file => {
-      const filePath = path.join(cssPath, file);
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Remove unused CSS rules (basic optimization)
-      content = content
-        .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
-        .replace(/\s+/g, ' ') // Minify whitespace
-        .replace(/;\s*}/g, '}') // Remove unnecessary semicolons
-        .replace(/:\s+/g, ':') // Remove space after colons
-        .replace(/,\s+/g, ',') // Remove space after commas
-        .trim();
-      
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Optimized ${file}`);
+// 1. Create optimized image loading component
+const imageOptimizer = `import React, { useState, useRef, useEffect } from 'react';
+
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  placeholder?: string;
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  className = '',
+  width,
+  height,
+  priority = false,
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+'
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (priority) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [priority]);
+
+  return (
+    <div ref={imgRef} className={\`relative overflow-hidden \${className}\`}>
+      {!isLoaded && (
+        <div 
+          className="absolute inset-0 bg-gray-200 animate-pulse"
+          style={{ 
+            backgroundImage: \`url(\${placeholder})\`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+      )}
+      {isInView && (
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className={\`transition-opacity duration-300 \${isLoaded ? 'opacity-100' : 'opacity-0'}\`}
+          onLoad={() => setIsLoaded(true)}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      )}
+    </div>
+  );
+};
+
+export default OptimizedImage;`;
+
+// 2. Create performance monitoring hook
+const performanceHook = `import { useEffect, useCallback } from 'react';
+
+interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+
+export const usePerformanceMonitoring = () => {
+  const reportMetric = useCallback((name: string, value: number) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'performance_metric', {
+        event_category: 'Performance',
+        event_label: name,
+        value: Math.round(value),
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // First Contentful Paint
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.name === 'first-contentful-paint') {
+          reportMetric('FCP', entry.startTime);
+        }
+      }
     });
-  }
-}
 
-// Optimize HTML
-function optimizeHTML() {
-  console.log('📄 Optimizing HTML...');
-  
-  const htmlPath = path.join(__dirname, '../dist/index.html');
-  if (fs.existsSync(htmlPath)) {
-    let content = fs.readFileSync(htmlPath, 'utf8');
-    
-    // Remove unnecessary whitespace
-    content = content
-      .replace(/\s+/g, ' ')
-      .replace(/>\s+</g, '><')
-      .trim();
-    
-    fs.writeFileSync(htmlPath, content);
-    console.log('✅ Optimized index.html');
-  }
-}
+    observer.observe({ entryTypes: ['paint'] });
 
-// Add performance hints
-function addPerformanceHints() {
-  console.log('⚡ Adding performance hints...');
-  
-  const htmlPath = path.join(__dirname, '../dist/index.html');
-  if (fs.existsSync(htmlPath)) {
-    let content = fs.readFileSync(htmlPath, 'utf8');
-    
-    // Add resource hints
-    const resourceHints = `
-    <link rel="preload" href="/assets/vendor-avszxO8f.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-Djua46cn.css" as="style">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`;
-    
-    // Insert before closing head tag
-    content = content.replace('</head>', `${resourceHints}\n</head>`);
-    
-    fs.writeFileSync(htmlPath, content);
-    console.log('✅ Added performance hints');
-  }
-}
+    // Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      reportMetric('LCP', lastEntry.startTime);
+    });
 
-// Generate sitemap
-function generateSitemap() {
-  console.log('🗺️ Generating sitemap...');
-  
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ziontechgroup.com</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-services</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-</urlset>`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/sitemap.xml'), sitemap);
-  console.log('✅ Generated sitemap.xml');
-}
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-// Generate robots.txt
-function generateRobotsTxt() {
-  console.log('🤖 Generating robots.txt...');
-  
-  const robots = `User-agent: *
-Allow: /
+    // Cumulative Layout Shift
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (!(entry as any).hadRecentInput) {
+          clsValue += (entry as any).value;
+        }
+      }
+      reportMetric('CLS', clsValue);
+    });
 
-Sitemap: https://ziontechgroup.com/sitemap.xml
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-# Performance hints
-Crawl-delay: 1`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/robots.txt'), robots);
-  console.log('✅ Generated robots.txt');
-}
+    return () => {
+      observer.disconnect();
+      lcpObserver.disconnect();
+      clsObserver.disconnect();
+    };
+  }, [reportMetric]);
+};`;
 
-// Main optimization function
-function optimize() {
-  try {
-    optimizeCSS();
-    optimizeHTML();
-    addPerformanceHints();
-    generateSitemap();
-    generateRobotsTxt();
-    
-    console.log('🎉 Performance optimization completed successfully!');
-    console.log('📊 Optimizations applied:');
-    console.log('  - CSS minification and cleanup');
-    console.log('  - HTML minification');
-    console.log('  - Resource hints added');
-    console.log('  - Sitemap generated');
-    console.log('  - Robots.txt generated');
-  } catch (error) {
-    console.error('❌ Error during optimization:', error);
-    process.exit(1);
-  }
-}
+// 3. Create service worker for caching
+const serviceWorker = `const CACHE_NAME = 'zion-tech-v1';
+const urlsToCache = [
+  '/',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
+];
 
-// Run optimization
-optimize();
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});`;
+
+// Write the files
+fs.writeFileSync(path.join(__dirname, '../app/components/OptimizedImage.tsx'), imageOptimizer);
+fs.writeFileSync(path.join(__dirname, '../hooks/usePerformanceMonitoring.ts'), performanceHook);
+fs.writeFileSync(path.join(__dirname, '../public/sw.js'), serviceWorker);
+
+console.log('✅ Performance optimization files created');
+console.log('📁 Created: app/components/OptimizedImage.tsx');
+console.log('📁 Created: hooks/usePerformanceMonitoring.ts');
+console.log('📁 Created: public/sw.js');

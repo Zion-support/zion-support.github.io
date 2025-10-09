@@ -14,9 +14,9 @@ Disallow: /_next/
 Disallow: /static/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /case-studies
+Allow: /services/
+Allow: /ai-services/
+Allow: /it-services/
+Allow: /pricing/
+Allow: /contact/
+Allow: /about/
