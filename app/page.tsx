@@ -2396,6 +2396,83 @@ const HomePage: React.FC = () => {
             </div>
           </section>
 
+          {/* Market Comparison Section */}
+          <section className="mb-16" aria-labelledby="market-comparison-heading">
+            <h2 id="market-comparison-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
+              Market Comparison & Value
+            </h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              <div className="cyber-card p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 neon-text">Our Competitive Advantage</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Average Market Price (AI Services)</span>
+                    <span className="text-red-400 font-bold">$2,500/month</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Our Price (AI Services)</span>
+                    <span className="text-green-400 font-bold">$1,100/month</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Your Savings</span>
+                    <span className="text-cyan-400 font-bold">56% Less</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Average Market Price (Micro SAAS)</span>
+                    <span className="text-red-400 font-bold">$89/month</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Our Price (Micro SAAS)</span>
+                    <span className="text-green-400 font-bold">$14/month</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Your Savings</span>
+                    <span className="text-cyan-400 font-bold">84% Less</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="cyber-card p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 neon-text">What You Get</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-300">24/7 Technical Support</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-300">Free Setup & Migration</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-300">Regular Updates & Patches</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-300">Comprehensive Training</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-300">30-Day Money-Back Guarantee</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-300">SLA 99.9% Uptime</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-300">Enterprise Security</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-300">Custom Integration</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Contact Information */}
           <section className="mb-16" aria-labelledby="contact-heading">
             <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
