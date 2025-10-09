@@ -4,6 +4,18 @@ import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, Ha
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+interface ITService {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  features: string[];
+  price: string;
+  category: string;
+  benefits: string[];
+  technologies: string[];
+  contactInfo: string;
+}
+
 const ITServicesPage: React.FC = () => {
   const itServices = [
     // Infrastructure & Cloud Services
@@ -389,7 +401,10 @@ const ITServicesPage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
-                  <service.icon className="w-8 h-8" />
+                  {(() => {
+                    const IconComponent = service.icon as React.ComponentType<{ className?: string }>;
+                    return <IconComponent className="w-8 h-8" />;
+                  })()}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
@@ -438,10 +453,10 @@ const ITServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <div className={`text-lg font-bold ${service.color} mb-2`}>{service.price}</div>
+                  <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
                   <a
                     href="/contact"
-                    className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
+                    className="inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>

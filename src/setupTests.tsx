@@ -6,12 +6,12 @@ import React from 'react';
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
+(global as any).TextEncoder = TextEncoder;
+(global as any).TextDecoder = TextDecoder;
 // Suppress jsdom navigation warnings
-const _originalConsoleError = console.error;
-console.error = (...args) => {
-  const _message = args[0]?.toString?.() || args[0]?.message || '';
+const originalConsoleError = console.error;
+console.error = (...args: any[]) => {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;
@@ -58,17 +58,17 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-const _originalConsoleWarn = console.warn;
-const _originalConsoleInfo = console.info;
-console.warn = (...args) => {
-  const _message = args[0]?.toString?.() || '';
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
+console.warn = (...args: any[]) => {
+  const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
   originalConsoleWarn(...args);
 };
-console.info = (...args) => {
-  const _message = args[0]?.toString?.() || '';
+console.info = (...args: any[]) => {
+  const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
   }
@@ -85,7 +85,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   }
 };
 // Suppress JSDOM navigation warnings
-console.error = (...args) => {
+console.error = (...args: any[]) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
