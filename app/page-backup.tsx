@@ -157,11 +157,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
-<<<<<<< HEAD:app/page-backup.tsx
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
-=======
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
->>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
               data-text="Zion Tech Group"
             >
               Zion Tech Group
@@ -461,17 +457,10 @@ const HomePage: React.FC = () => {
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎯</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Lead Scoring</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-<<<<<<< HEAD:app/page-backup.tsx
                     Intelligent lead scoring and qualification with AI-powered predictive analytics and automated follow-ups.
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$89/month</div>
-=======
-                    Intelligent lead scoring and qualification with AI-powered predictive analytics and automated nurturing.
-                  </p>
-                  <div className="text-center">
-                    <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$149/month</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
                     <a href="/ai-lead-scoring" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>

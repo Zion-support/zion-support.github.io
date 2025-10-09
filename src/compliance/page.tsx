@@ -284,8 +284,8 @@ const CompliancePage: React.FC = () => {
           </div>
         </section>
       </main>
-      </div>
       <Footer />
+      </div>
     </>
   );
 };

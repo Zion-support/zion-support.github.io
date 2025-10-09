@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
 
@@ -314,5 +313,3 @@ const AIVoiceCloningPage: React.FC = () => {
 };
 
 export default AIVoiceCloningPage;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-10f7

@@ -467,10 +467,6 @@ const ITServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Support Tiers */}
         <section className="mb-16">
@@ -580,6 +576,7 @@ const ITServicesPage: React.FC = () => {
                 (302) 464-0950
               </a>
             </div>
+          </div>
           </section>
         </div>
       </main>
