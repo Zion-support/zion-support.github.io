@@ -13,8 +13,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNav = true,
   enableFocusIndicators = true,
 }) => {
-<<<<<<< HEAD
-=======
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -165,4 +163,3 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
