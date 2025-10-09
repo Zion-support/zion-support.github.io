@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Target, Users, Mail, BarChart, Zap, Brain, CheckCircle, Mail as MailIcon, Building, ShoppingCart, Cloud, Home } from 'lucide-react';;
+import { Target, Users, Mail, BarChart, Zap, Brain, CheckCircle, Mail as MailIcon, Phone as PhoneIcon, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
 const AILeadGenerationPage: React.FC = () => {
   const features = [
     {

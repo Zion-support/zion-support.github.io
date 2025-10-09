@@ -112,6 +112,12 @@ class SecurityEnhancer {
       info: console.info.bind(console)
     };
     // Override console methods to detect debugging
+    Object.keys(console).forEach((method) => {
+      const original = (console as any)[method];
+      (console as any)[method] = (...args: any[]) => {
+        this.metrics.securityViolations++;
+        original.apply(console, args);
+      };
     });
   }
   private monitorDOMManipulation(): void {

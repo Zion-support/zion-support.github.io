@@ -107,7 +107,6 @@ class EnhancedErrorMonitoring {
         }
         return response
       } catch (error) {
-<<<<<<< HEAD
         (self as any).handleError(error as Error, {
           url: args[0] as string,
           category: 'network'
@@ -351,5 +350,3 @@ ${stats.recent.map(error => `
 // Export singleton instance
 export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance()
 export default enhancedErrorMonitoring
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4b08

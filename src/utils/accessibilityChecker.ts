@@ -561,9 +561,6 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
-<<<<<<< HEAD
     return `Found ${this.issues.length} accessibility issues. Please review and fix them.`;
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4b08
   }
 }
