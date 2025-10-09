@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
-export default function AboutPage() {
+
+const AboutPage: React.FC = () => {
   const teamMembers = [
     {
       name: 'Kleber Santos',
@@ -126,7 +127,7 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -370,4 +371,6 @@ export default function AboutPage() {
       </section>
     </div>
   );
-}
+};
+
+export default AboutPage;

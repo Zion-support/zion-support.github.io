@@ -1,3 +1,4 @@
+/* eslint-env jest */
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
 const { TextEncoder, TextDecoder } = require('util');
@@ -6,7 +7,6 @@ const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-// Mock files that use import.meta.env
 jest.mock('./src/utils/logger.ts', () => ({
   logger: {
     info: jest.fn(),

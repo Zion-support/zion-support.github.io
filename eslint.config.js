@@ -30,7 +30,8 @@ export default [
       'clean-*.js',
       'fix-*.js',
       '*.cjs',
-      '*.js.broken'
+      '*.js.broken',
+      'jest.setup.js'
     ],
   },
   // Base JavaScript configuration
