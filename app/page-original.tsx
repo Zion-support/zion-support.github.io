@@ -152,9 +152,7 @@ const HomePage: React.FC = memo(() => {
               id="hero-heading" 
 <<<<<<< HEAD:app/page-original.tsx
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
-=======
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50:app/page.tsx
               data-text="Zion Tech Group"
             >
               Zion Tech Group

@@ -241,8 +241,6 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/it-services/page.tsx
   const services = [
     {
       icon: Cloud,
@@ -355,8 +353,6 @@ const ITServicesPage: React.FC = () => {
       description: 'Microsoft, AWS, and Google certified engineers'
     }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -411,9 +407,6 @@ const ITServicesPage: React.FC = () => {
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD:app/it-services/page.tsx
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
-=======
       
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -459,8 +452,6 @@ const ITServicesPage: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
->>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/it-services/page.tsx
                         {feature}
                       </li>
                     ))}
@@ -535,8 +526,6 @@ const ITServicesPage: React.FC = () => {
         </section>
 <<<<<<< HEAD:src/it-services/page.tsx
 <<<<<<< HEAD:app/it-services/page.tsx
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/it-services/page.tsx
               ))}
             </div>
           </div>
@@ -653,9 +642,6 @@ const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD:src/it-services/page.tsx
           </section>
         </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
       </main>
 
       <Footer />
