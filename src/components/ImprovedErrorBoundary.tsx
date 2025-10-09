@@ -250,4 +250,3 @@ const styles = {
     color: '#999'
   }
 };
-export default ImprovedErrorBoundary;

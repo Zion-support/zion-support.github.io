@@ -464,4 +464,3 @@ export class ConfigManager {
 }
 // Export singleton instance
 export const configManager = ConfigManager.getInstance();
-export default ConfigManager;

@@ -214,4 +214,3 @@ class AdvancedErrorBoundary extends Component<
     return this.props.children;
   }
 }
-export default AdvancedErrorBoundary;

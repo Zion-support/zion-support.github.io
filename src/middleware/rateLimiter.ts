@@ -168,4 +168,3 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
     return null;
   };
 }
-export default RateLimiter;

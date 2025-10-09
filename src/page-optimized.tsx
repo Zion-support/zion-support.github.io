@@ -74,4 +74,3 @@ export default function OptimizedHomePage() {
     </div>
   );
 };
-export default OptimizedHomePage;

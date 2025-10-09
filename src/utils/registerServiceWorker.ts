@@ -141,4 +141,3 @@ export async function getServiceWorkerStatus(): Promise<{
     };
   }
 }
-export default registerServiceWorker;

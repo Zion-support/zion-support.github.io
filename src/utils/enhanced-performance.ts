@@ -2,7 +2,6 @@
  * Enhanced Performance Monitoring
  * Comprehensive performance tracking and optimization utilities
  */
-
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
 /**
  * Performance Observer Wrapper
@@ -245,9 +244,7 @@ export class PerformanceMonitor {
     this.observers = [];
   }
 }
-
 // Types
-
 import type { 
   PerformanceReport, 
   ResourceStats, 
@@ -255,9 +252,7 @@ import type {
   PerformanceWithMemory, 
   LayoutShift 
 } from '../types/app.types';
-
 // Utility Functions
-
 /**
  * Measure function execution time
  */
@@ -275,7 +270,6 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
     return result;
   }) as T;
 }
-
 /**
  * Debounce function
  */
@@ -295,7 +289,6 @@ export function debounce<T extends (...args: unknown[]) => any>(
     }, delay);
   };
 }
-
 /**
  * Throttle function
  */
@@ -314,7 +307,6 @@ export function throttle<T extends (...args: unknown[]) => any>(
     }
   };
 }
-
 /**
  * Request idle callback wrapper
  */
@@ -329,10 +321,7 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
     setTimeout(callback, 0);
   }
 }
-
 /**
  * Default performance monitor instance
  */
 export const performanceMonitor = new PerformanceMonitor();
-
-export default PerformanceMonitor;

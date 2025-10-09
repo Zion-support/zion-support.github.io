@@ -223,4 +223,3 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     url: typeof window !== 'undefined' ? window.location.href : 'unknown'
   };
 }
-export default getErrorBoundaryConfig;
