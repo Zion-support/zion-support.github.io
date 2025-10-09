@@ -1,8 +1,36 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Heart } from 'lucide-react';
+=======
+=======
+
+
+
+'use client';
+
+import React, { useState, useMemo } from 'react';
+>>>>>>> origin/main
+=======
+>>>>>>> main
 import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import MicroSAASCard from '../components/MicroSAASCard';
 
+>>>>>>> origin/main
 const MicroSAASPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('popularity');
+
+  const microSAASServices = useMemo(() => [
+    // Featured Services
+
+
+
+
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES
     // AI Productivity & Time Management
@@ -401,6 +429,165 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
+<<<<<<< HEAD
+      title: 'AI-Powered SEO Reporting Dashboard',
+      description: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.',
+      icon: '📊',
+      price: '$149/month',
+      features: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis'],
+      benefits: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],
+      marketPrice: '$250-500/month',
+      category: 'SEO Reporting',
+      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+    },
+    // Additional Real Micro SAAS Services
+    {
+      title: 'AI Invoice Generator Pro',
+      description: 'Automatically generate professional invoices, track payments, and manage billing with AI-powered smart categorization.',
+      icon: '📄',
+      price: '$39/month',
+      features: ['Auto invoice generation', 'Payment tracking', 'Smart categorization', 'Multi-currency support', 'PDF export', 'Client portal'],
+      benefits: ['Save 10+ hours/month', 'Reduce billing errors', 'Faster payments', 'Professional appearance'],
+      marketPrice: '$79-150/month',
+      category: 'Finance & Billing',
+      technologies: ['React', 'Node.js', 'PDF Generation', 'Payment APIs', 'AI Classification'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-invoice-generator',
+      popular: true
+    },
+    {
+      title: 'Smart Meeting Scheduler AI',
+      description: 'Intelligent meeting scheduling that finds optimal times, handles timezone conflicts, and sends automated reminders.',
+      icon: '📅',
+      price: '$29/month',
+      features: ['Smart scheduling', 'Timezone handling', 'Calendar integration', 'Auto reminders', 'Meeting analytics', 'Team coordination'],
+      benefits: ['Reduce scheduling time by 80%', 'Eliminate double bookings', 'Improve attendance rates', 'Save 5+ hours/week'],
+      marketPrice: '$59-120/month',
+      category: 'Productivity',
+      technologies: ['Calendar APIs', 'AI Optimization', 'React', 'Node.js', 'Email Automation'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/smart-scheduler'
+    },
+    {
+      title: 'AI Document Analyzer',
+      description: 'Extract key information from documents, contracts, and forms using advanced AI text analysis and data extraction.',
+      icon: '📋',
+      price: '$79/month',
+      features: ['Document parsing', 'Data extraction', 'Contract analysis', 'Form processing', 'OCR capabilities', 'Export to databases'],
+      benefits: ['Process documents 10x faster', 'Reduce manual data entry', 'Improve accuracy', 'Save 20+ hours/week'],
+      marketPrice: '$150-300/month',
+      category: 'Document Management',
+      technologies: ['OCR APIs', 'NLP Models', 'React', 'Node.js', 'Database Integration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/document-analyzer'
+    },
+    {
+      title: 'AI Customer Feedback Analyzer',
+      description: 'Analyze customer feedback, reviews, and surveys to extract actionable insights and sentiment analysis.',
+      icon: '💬',
+      price: '$49/month',
+      features: ['Sentiment analysis', 'Topic extraction', 'Trend identification', 'Report generation', 'Multi-language support', 'Real-time monitoring'],
+      benefits: ['Understand customer needs', 'Improve products/services', 'Increase satisfaction', 'Make data-driven decisions'],
+      marketPrice: '$99-200/month',
+      category: 'Customer Analytics',
+      technologies: ['NLP APIs', 'Sentiment Analysis', 'React', 'Node.js', 'Analytics Dashboard'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/feedback-analyzer'
+    },
+    {
+      title: 'Smart Inventory Manager',
+      description: 'AI-powered inventory management with demand forecasting, automated reordering, and stock optimization.',
+      icon: '📦',
+      price: '$99/month',
+      features: ['Demand forecasting', 'Auto reordering', 'Stock optimization', 'Barcode scanning', 'Multi-location support', 'Analytics dashboard'],
+      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs', 'Improve cash flow', 'Save 15+ hours/week'],
+      marketPrice: '$199-400/month',
+      category: 'Inventory Management',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'Barcode APIs', 'Database Systems'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/inventory-manager',
+      popular: true
+    },
+    {
+      title: 'AI Lead Scoring Engine',
+      description: 'Automatically score and prioritize leads using AI to identify the most promising prospects for your sales team.',
+      icon: '🎯',
+      price: '$69/month',
+      features: ['Lead scoring', 'Behavioral analysis', 'Predictive modeling', 'CRM integration', 'Custom scoring rules', 'Performance tracking'],
+      benefits: ['Increase conversion by 40%', 'Focus on hot leads', 'Improve sales efficiency', 'Boost revenue'],
+      marketPrice: '$149-300/month',
+      category: 'Sales & Marketing',
+      technologies: ['Machine Learning', 'CRM APIs', 'React', 'Node.js', 'Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/lead-scoring'
+    },
+    {
+      title: 'AI Expense Tracker Pro',
+      description: 'Smart expense tracking with receipt scanning, automatic categorization, and compliance reporting.',
+      icon: '💰',
+      price: '$19/month',
+      features: ['Receipt scanning', 'Auto categorization', 'Compliance reporting', 'Multi-currency', 'Tax preparation', 'Team management'],
+      benefits: ['Save 8+ hours/month', 'Reduce errors', 'Improve compliance', 'Easier tax filing'],
+      marketPrice: '$39-80/month',
+      category: 'Finance & Billing',
+      technologies: ['OCR Technology', 'React', 'Node.js', 'Tax APIs', 'Mobile App'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/expense-tracker'
+    },
+    {
+      title: 'Smart Password Manager',
+      description: 'AI-powered password management with security analysis, breach monitoring, and automated password generation.',
+      icon: '🔐',
+      price: '$15/month',
+      features: ['Password generation', 'Security analysis', 'Breach monitoring', 'Multi-device sync', 'Team sharing', '2FA integration'],
+      benefits: ['Improve security', 'Reduce password fatigue', 'Prevent breaches', 'Easy team management'],
+      marketPrice: '$30-60/month',
+      category: 'Security',
+      technologies: ['Encryption', 'React', 'Node.js', 'Security APIs', 'Mobile Apps'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/password-manager'
+    },
+    {
+      title: 'AI Time Tracking Assistant',
+      description: 'Intelligent time tracking with automatic project detection, productivity insights, and team performance analytics.',
+      icon: '⏰',
+      price: '$25/month',
+      features: ['Auto time tracking', 'Project detection', 'Productivity insights', 'Team analytics', 'Integration support', 'Reporting'],
+      benefits: ['Accurate time tracking', 'Identify productivity patterns', 'Improve team efficiency', 'Better project management'],
+      marketPrice: '$49-100/month',
+      category: 'Productivity',
+      technologies: ['AI Detection', 'React', 'Node.js', 'Analytics', 'Integration APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/time-tracking'
+    },
+    {
+      title: 'AI Website Builder',
+      description: 'Create professional websites automatically using AI with custom designs, content generation, and SEO optimization.',
+      icon: '🌐',
+      price: '$79/month',
+      features: ['AI design generation', 'Content creation', 'SEO optimization', 'Mobile responsive', 'E-commerce integration', 'Analytics'],
+      benefits: ['Build websites 5x faster', 'Professional designs', 'SEO optimized', 'No coding required'],
+      marketPrice: '$149-300/month',
+      category: 'Web Development',
+      technologies: ['AI Design', 'React', 'Node.js', 'SEO Tools', 'E-commerce APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/website-builder',
+      popular: true  }
+  ];
+  const categories = [
+    { name: 'All', count: microSAASServices.length },
+    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
+    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
+    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length },
+    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },
+    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },
+    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length },
+    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length },
+    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
+    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
+    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
+    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length  }
+=======
       title: 'AI Streaming Content Optimizer',
       description: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.',
       icon: '📺',
@@ -411,6 +598,19 @@ const MicroSAASPage: React.FC = () => {
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+
+
+    { id: 'all', name: 'All Services', icon: Grid, count: microSAASServices.length },
+    { id: 'content', name: 'Content & SEO', icon: FileText, count: microSAASServices.filter(s => s.category === 'content' || s.category === 'seo').length },
+    { id: 'analytics', name: 'Analytics & Data', icon: BarChart, count: microSAASServices.filter(s => s.category === 'analytics').length },
+    { id: 'marketing', name: 'Marketing', icon: Target, count: microSAASServices.filter(s => s.category === 'marketing' || s.category === 'social').length },
+    { id: 'automation', name: 'Automation', icon: Zap, count: microSAASServices.filter(s => s.category === 'automation').length },
+    { id: 'productivity', name: 'Productivity', icon: Calendar, count: microSAASServices.filter(s => s.category === 'productivity').length },
+    { id: 'development', name: 'Development', icon: Code, count: microSAASServices.filter(s => s.category === 'development').length },
+    { id: 'finance', name: 'Finance', icon: CreditCard, count: microSAASServices.filter(s => s.category === 'finance').length },
+    { id: 'crm', name: 'CRM & Sales', icon: Users, count: microSAASServices.filter(s => s.category === 'crm').length },
+    { id: 'support', name: 'Support', icon: Headphones, count: microSAASServices.filter(s => s.category === 'support').length }
+>>>>>>> origin/main
   ];
 
   const filteredServices = selectedCategory === 'all' 
@@ -424,6 +624,129 @@ const MicroSAASPage: React.FC = () => {
   }, 0);
 
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */  }
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            Micro SAAS Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
+          </p>
+          {/* Stats */  }
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-gray-300">Applications</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-green-400 mb-2">$49</div>
+              <div className="text-gray-300">Starting Price</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-300">Support</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime</div>
+            </div>
+          </div>
+          {/* Contact Info */  }
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-5 h-5" />
+                <span className="text-white font-medium">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-5 h-5" />
+                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-5 h-5" />
+                <span className="text-white font-medium">Middletown, DE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Services Grid */  }
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Choose Your Perfect AI Tools
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {microSAASServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <div className="text-center mb-6">
+                  <div className="text-5xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 text-sm">{service.description}</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-2xl font-bold text-green-600">{service.price}</span>
+                    <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                  </div>
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
+                    {service.category  }
+                  </div>
+                </div>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature  }
+                      </li>
+                    ))  }
+                    {service.features.length > 4 && (
+                      <li className="text-sm text-gray-500">
+                        +{service.features.length - 4} more features
+                      </li>
+                    )  }
+                  </ul>
+                </div>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
+                        {benefit  }
+                      </li>
+                    ))  }
+                  </ul>
+                </div>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                        {tech  }
+                      </span>
+                    ))  }
+                  </div>
+                </div>
+                <div className="text-center">
+                  <a
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`  }
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
+                  >
+                    Get Started Now
+                  </a>
+                  <p className="text-xs text-gray-500 mt-2">
+                    {service.contactInfo  }
+                  </p>
+                </div>
+              </div>
+            ))  }
+=======
 
     <>
       <Helmet>
@@ -481,7 +804,46 @@ const MicroSAASPage: React.FC = () => {
             {filteredServices.map((service, index) => (
               <MicroSAASCard key={index} service={service} />
             ))}
+>>>>>>> origin/main
           </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        </div>
+      </section>
+      {/* CTA Section */  }
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Get started with our micro SAAS solutions today and see the difference AI can make.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+            >
+              Call (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              Email Us
+            </a>
+          </div>
+        </div>
+      </section>
+      </div>
+  );
+};
+export default MicroSAASPage;
+=======
+import React from "react"; export default function Page() { return <div>Micro SAAS</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+>>>>>>> main
 =======
 
           {/* CTA Section */}

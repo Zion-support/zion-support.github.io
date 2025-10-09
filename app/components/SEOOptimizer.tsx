@@ -90,10 +90,6 @@ const SEOOptimizer: React.FC = () => {
   }, []);
 
   return null;
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   title: string;

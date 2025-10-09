@@ -87,8 +87,12 @@ const PerformanceMonitor: React.FC = () => {
       case 'poor': return 'text-red-400';
       default: return 'text-gray-400';
     }
+<<<<<<< HEAD
+  }, []);
+=======
   };
 
+>>>>>>> origin/main
   return (
     <div className="fixed bottom-4 right-4 bg-black/90 backdrop-blur-lg rounded-lg p-4 text-white text-xs font-mono max-w-sm z-50 border border-white/20">
       <div className="flex items-center justify-between mb-3">

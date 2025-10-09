@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD:app/sitemap-page.tsx
+import { CheckCircle, Globe, Map, Search, FileText, Link as LinkIcon } from 'lucide-react';
+=======
 import { Helmet } from 'react-helmet-async';
 
+>>>>>>> origin/main:src/sitemap-page.tsx
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },
@@ -62,19 +66,23 @@ const SitemapPage: React.FC = () => {
                 {pages.map((page, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg p-4">
                     <Link
+<<<<<<< HEAD:app/sitemap-page.tsx
+                      href={page.url  }
+=======
                       to={page.url}
+>>>>>>> origin/main:src/sitemap-page.tsx
                       className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
                     >
-                      {page.title}
+                      {page.title  }
                     </Link>
                     <div className="text-sm text-gray-400">
-                      Priority: {page.priority}
+                      Priority: {page.priority  }
                     </div>
                     <div className="text-sm text-gray-500">
-                      {page.url}
+                      {page.url  }
                     </div>
                   </div>
-                ))}
+                ))  }
               </div>
               
               <div className="mt-8 text-center">
@@ -88,8 +96,7 @@ const SitemapPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+        </div>
   );
 };
 
