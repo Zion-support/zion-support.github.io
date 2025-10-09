@@ -152,18 +152,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      const canRetry = retryCount < this.maxRetries;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
 =======

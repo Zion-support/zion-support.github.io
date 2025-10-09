@@ -198,7 +198,9 @@ const HomePage: React.FC = () => {
             Our Services
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Comprehensive AI and IT solutions designed to transform your business operations
+            Comprehensive AI and IT solutions designed to transform your business operations. 
+            From micro SAAS applications to enterprise AI systems, we deliver cutting-edge technology 
+            that drives real business results and measurable ROI.
           </p>
           
           {/* Primary Services Grid */}
@@ -372,6 +374,34 @@ const HomePage: React.FC = () => {
 
             <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3>
+              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                Transform data into actionable insights with AI-powered analytics, reporting, and predictive modeling.
+              </p>
+              <div className="text-center">
+                <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,299/month</div>
+                <a href="/business-intelligence" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                  Learn More →
+                </a>
+              </div>
+            </article>
+
+            <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Robotics & Automation</h3>
+              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                Intelligent robotic solutions for manufacturing, logistics, and service industries with AI integration.
+              </p>
+              <div className="text-center">
+                <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
+                <a href="/robotics" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                  Learn More →
+                </a>
+              </div>
+            </article>
+
+            <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Data Analytics</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                 Transform raw data into actionable insights with AI-powered analytics, predictive modeling, and real-time dashboards.
@@ -518,6 +548,39 @@ const HomePage: React.FC = () => {
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentStatistics />
         </Suspense>
+
+        {/* Success Metrics Section */}
+        <section className="mb-16" aria-labelledby="metrics-heading">
+          <h2 id="metrics-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Proven Results
+          </h2>
+          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            Our AI and IT solutions deliver measurable business impact across industries
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
+            <div className="cyber-card hologram-card p-6 text-center">
+              <div className="text-4xl sm:text-5xl font-bold text-cyan-400 mb-2">$50M+</div>
+              <div className="text-white font-semibold mb-2">Annual Savings</div>
+              <div className="text-gray-300 text-sm">Generated for enterprise clients through AI automation and optimization</div>
+            </div>
+            <div className="cyber-card hologram-card p-6 text-center">
+              <div className="text-4xl sm:text-5xl font-bold text-pink-400 mb-2">95%</div>
+              <div className="text-white font-semibold mb-2">Process Automation</div>
+              <div className="text-gray-300 text-sm">Average automation rate achieved across all client implementations</div>
+            </div>
+            <div className="cyber-card hologram-card p-6 text-center">
+              <div className="text-4xl sm:text-5xl font-bold text-green-400 mb-2">300%</div>
+              <div className="text-white font-semibold mb-2">Average ROI</div>
+              <div className="text-gray-300 text-sm">Return on investment within the first year of implementation</div>
+            </div>
+            <div className="cyber-card hologram-card p-6 text-center">
+              <div className="text-4xl sm:text-5xl font-bold text-purple-400 mb-2">500+</div>
+              <div className="text-white font-semibold mb-2">Enterprise Clients</div>
+              <div className="text-gray-300 text-sm">Fortune 500 companies and growing businesses worldwide</div>
+            </div>
+          </div>
+        </section>
 
         {/* Content Carousel */}
         <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
