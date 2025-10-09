@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react';
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+  
   useEffect(() => {
     // Initialize Google Analytics
     const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
@@ -65,14 +67,16 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       // Track phone number clicks
       document.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
-        const href = (target as HTMLAnchorElement).href || target.getAttribute('href') || '';
-        if (href && href.startsWith('tel:')) {
-          if ((window as any).gtag) {
-            (window as any).gtag('event', 'phone_click', {
-              event_category: 'engagement',
-              event_label: 'phone_number',
-              value: href
-            });
+        if (target.tagName === 'A') {
+          const link = target as HTMLAnchorElement;
+          if (link.href && link.href.startsWith('tel:')) {
+            if ((window as { gtag: unknown }).gtag) {
+              (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
+                event_category: 'engagement',
+                event_label: 'phone_number',
+                value: link.href
+              });
+            }
           }
         }
       });
@@ -82,6 +86,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     const handleRouteChange = () => {
       trackPageView();
     };
+    
     // Initialize analytics
     initAnalytics();
     trackPageView();

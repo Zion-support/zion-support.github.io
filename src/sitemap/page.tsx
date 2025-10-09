@@ -2,6 +2,7 @@ import React from 'react';
 
 const SitemapPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-slate-900 text-white">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-8">Sitemap</h1>
@@ -31,6 +32,13 @@ const SitemapPage: React.FC = () => {
               <li><a href="/docs" className="text-blue-400 hover:text-cyan-400">Documentation</a></li>
             </ul>
           </div>
+=======
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Sitemap</h1>
+          <p className="text-lg text-gray-600">This is the sitemap page.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8461
         </div>
       </div>
     </div>
