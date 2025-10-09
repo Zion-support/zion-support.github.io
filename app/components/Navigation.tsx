@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-react';
@@ -32,10 +33,14 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
@@ -52,6 +57,8 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -65,6 +72,7 @@ const Navigation: React.FC = () => {
   const closeAllMenus = () => {
     setServicesOpen(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
     setAiServicesOpen(false);
     setItServicesOpen(false);
   };
@@ -75,6 +83,8 @@ const Navigation: React.FC = () => {
     if (isOpen) {
       closeAllMenus();
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
     setIsOpen(false);
   };
 
@@ -90,8 +100,17 @@ const Navigation: React.FC = () => {
         { name: 'AI Automation', path: '/ai-automation' },
         { name: 'AI Healthcare', path: '/ai-healthcare' },
         { name: 'AI Fintech', path: '/ai-fintech' },
+<<<<<<< HEAD
         { name: 'AI Content Generation', path: '/ai-content-generation' },
         { name: 'AI Analytics', path: '/ai-data-analytics' }
+=======
+        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
       ]
     },
     {
@@ -102,10 +121,18 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'IT Infrastructure', path: '/it-infrastructure' },
         { name: 'IT Services', path: '/it-services' },
+<<<<<<< HEAD
         { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
         { name: 'DevOps', path: '/ai-workflow-automation' },
         { name: 'Database Services', path: '/ai-data-analytics' }
+=======
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'Cloud Services', path: '/cloud-services' },
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Database Services', path: '/database' },
+        { name: 'Network Services', path: '/networking' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
       ]
     },
     {
@@ -147,6 +174,7 @@ const Navigation: React.FC = () => {
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: Cloud },
@@ -182,6 +210,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2152
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -190,6 +220,7 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +244,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2152
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
           <Link 
             to="/" 
             className="flex items-center space-x-2 text-2xl font-bold"
@@ -251,7 +284,13 @@ const Navigation: React.FC = () => {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+=======
+            <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+              Zion Tech Group
+            </span>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
           </Link>
 
 <<<<<<< HEAD
