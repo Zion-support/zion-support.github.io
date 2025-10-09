@@ -12,11 +12,11 @@ interface OptimizedImageProps {
   blurDataURL?: string;
   sizes?: string;
   loading?: 'lazy' | 'eager';
-  onLoad?: () => void;
-  onError?: () => void;
+  onLoad?: () =>void;
+  onError?: () => void
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const OptimizedImage: React.FC<OptimizedImageProps>= ({
   src,
   alt,
   width,
@@ -34,18 +34,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  // Intersection Observer for lazy loading
+    // Intersection Observer for lazy loading;
   useEffect(() => {
-    if (priority || isInView) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsInView(true);
-            observer.disconnect();
+    if (priority || isInView) return null;
+                observer.disconnect();
           }
         });
       },
@@ -62,49 +54,33 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return () => observer.disconnect();
   }, [priority, isInView]);
 
-  // Generate optimized image URL
-  const getOptimizedSrc = () => {
+  // Generate optimized image URL;
+  const _getOptimizedSrc = () => {
     if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
     
-    // In a real implementation, you would use an image optimization service
-    // like Cloudinary, ImageKit, or Next.js Image Optimization
+    // In a real implementation, you would use an image optimization service;
+    // like Cloudinary, ImageKit, or Next.js Image Optimization;
     return src;
-  };
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
+  }
+      onLoad?.();
+  }
+      onError?.()
+  }
   return (
-    <div
-      ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
-    >
+    <div>
       {/* Blur placeholder */}
       {placeholder === 'blur' && blurDataURL && !isLoaded && (
-        <div
-          className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
-          style={{
-            backgroundImage: `url(${blurDataURL})`,
-          }}
-        />
+        <div>
       )}
 
       {/* Loading skeleton */}
       {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+        <div>
       )}
 
       {/* Error state */}
       {hasError && (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+        <div>
           <div className="text-gray-400 text-sm">Failed to load image</div>
         </div>
       )}
@@ -130,8 +106,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           }}
         />
       )}
-    </div>
-  );
-};
-
-export default OptimizedImage;
+    </div>);
+}
+export default OptimizedImage

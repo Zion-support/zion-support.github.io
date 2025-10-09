@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 interface SEOProps {
   title?: string;
@@ -9,7 +9,7 @@ interface SEOProps {
   ogType?: string;
   twitterCard?: string;
   twitterSite?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   noindex?: boolean;
   nofollow?: boolean;
   lang?: string;
@@ -39,11 +39,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   section,
   tags = [],
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
-
-  return (
+        return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -105,8 +101,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
-  );
-};
-
-export default EnhancedSEO;
+    </Helmet>);
+}
+export default EnhancedSEO

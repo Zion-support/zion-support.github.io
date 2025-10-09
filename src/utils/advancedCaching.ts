@@ -1,12 +1,12 @@
 'use client';
 /**
- * Advanced Caching Utility
- * Provides intelligent caching with TTL, LRU eviction, and storage options
+ * Advanced Caching Utility;
+ * Provides intelligent caching with TTL, LRU eviction, and storage options;
  */
 export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
+  ttl?: number; // Time to live in milliseconds;
   storage?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries
+  maxSize?: number; // Maximum number of entries;
 }
 export interface CacheEntry<T> {
   value: T;
@@ -21,20 +21,20 @@ class AdvancedCache<T = unknown> {
   private storageKey = 'advanced-cache';
   constructor(options: CacheOptions = {}) {
     this.options = {
-      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
+      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes;
       storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100
-    };
-    // Load from persistent storage if needed
+      maxSize: options.maxSize || 100;
+    }
+    // Load from persistent storage if needed;
     if (this.options.storage !== 'memory') {
       this.loadFromStorage();
     }
-    // Setup periodic cleanup
+    // Setup periodic cleanup;
     this.setupCleanup();
   }
   private setupCleanup(): void {
     if (typeof window !== 'undefined') {
-      // Clean expired entries every minute
+      // Clean expired entries every minute;
       setInterval(() => {
         this.cleanExpired();
       }, 60 * 1000);
@@ -43,11 +43,8 @@ class AdvancedCache<T = unknown> {
   private loadFromStorage(): void {
     if (typeof window === 'undefined') return;
     try {
-      const storage = this.getStorage();
-      const data = storage?.getItem(this.storageKey);
-      if (data) {
-        const parsed = JSON.parse(data);
-        this.cache = new Map(Object.entries(parsed.cache));
+                  if (data) {
+                this.cache = new Map(Object.entries(parsed.cache));
         this.accessOrder = parsed.accessOrder || [];
       }
     } catch (error) {
@@ -56,12 +53,7 @@ class AdvancedCache<T = unknown> {
   private saveToStorage(): void {
     if (typeof window === 'undefined' || this.options.storage === 'memory') return;
     try {
-      const storage = this.getStorage();
-      const data = {
-        cache: Object.fromEntries(this.cache.entries()),
-        accessOrder: this.accessOrder
-      };
-      storage?.setItem(this.storageKey, JSON.stringify(data));
+                  storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
       }
   }
@@ -75,8 +67,7 @@ class AdvancedCache<T = unknown> {
     return null;
   }
   public set(key: string, value: T, ttl?: number): void {
-    const expiry = Date.now() + (ttl || this.options.ttl);
-    // Check if we need to evict
+        // Check if we need to evict;
     if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {
       this.evictLRU();
     }
@@ -86,34 +77,32 @@ class AdvancedCache<T = unknown> {
       hits: 0,
       lastAccessed: Date.now()
     });
-    // Update access order
+    // Update access order;
     this.updateAccessOrder(key);
-    // Save to storage if needed
+    // Save to storage if needed;
     if (this.options.storage !== 'memory') {
       this.saveToStorage();
     }
   }
   public get(key: string): T | null {
-    const entry = this.cache.get(key);
-    if (!entry) {
+        if (!entry) {
       return null;
     }
-    // Check if expired
+    // Check if expired;
     if (Date.now() > entry.expiry) {
       this.cache.delete(key);
       this.removeFromAccessOrder(key);
       return null;
     }
-    // Update stats
+    // Update stats;
     entry.hits++;
     entry.lastAccessed = Date.now();
     this.updateAccessOrder(key);
     return entry.value;
   }
   public has(key: string): boolean {
-    const entry = this.cache.get(key);
-    if (!entry) return false;
-    // Check if expired
+        if (!entry) return false;
+    // Check if expired;
     if (Date.now() > entry.expiry) {
       this.cache.delete(key);
       this.removeFromAccessOrder(key);
@@ -129,32 +118,28 @@ class AdvancedCache<T = unknown> {
     this.cache.clear();
     this.accessOrder = [];
     if (this.options.storage !== 'memory') {
-      const storage = this.getStorage();
-      storage?.removeItem(this.storageKey);
+            storage?.removeItem(this.storageKey);
     }
   }
   private updateAccessOrder(key: string): void {
-    // Remove if exists
+    // Remove if exists;
     this.removeFromAccessOrder(key);
     // Add to end (most recently used)
     this.accessOrder.push(key);
   }
   private removeFromAccessOrder(key: string): void {
-    const index = this.accessOrder.indexOf(key);
-    if (index > -1) {
+        if (index > -1) {
       this.accessOrder.splice(index, 1);
     }
   }
   private evictLRU(): void {
     // Remove least recently used (first in array)
     if (this.accessOrder.length > 0) {
-      const lruKey = this.accessOrder[0];
-      this.delete(lruKey);
+            this.delete(lruKey);
     }
   }
   private cleanExpired(): void {
-    const now = Date.now();
-    const keysToDelete: string[] = [];
+        const keysToDelete: string[] = [];
     this.cache.forEach((entry, key) => {
       if (now > entry.expiry) {
         keysToDelete.push(key);
@@ -176,14 +161,12 @@ class AdvancedCache<T = unknown> {
     }>;
   } {
     const entries: Array<{ key: string; hits: number; age: number }> = [];
-    let totalHits = 0;
-    const now = Date.now();
-    this.cache.forEach((entry, key) => {
+            this.cache.forEach((entry, key) => {
       totalHits += entry.hits;
       entries.push({
         key,
         hits: entry.hits,
-        age: now - entry.lastAccessed
+        age: now - entry.lastAccessed;
       });
     });
     return {
@@ -191,27 +174,24 @@ class AdvancedCache<T = unknown> {
       maxSize: this.options.maxSize,
       hitRate: totalHits / Math.max(this.cache.size, 1),
       entries: entries.sort((a, b) => b.hits - a.hits)
-    };
+    }
   }
-  // Utility method for async operations with caching
+  // Utility method for async operations with caching;
   public async getOrFetch<R extends T>(
     key: string,
     fetcher: () => Promise<R>,
-    ttl?: number
+    ttl?: number;
   ): Promise<R> {
-    const cached = this.get(key);
-    if (cached !== null) {
+        if (cached !== null) {
       return cached as unknown as R;
     }
-    const value = await fetcher();
-    this.set(key, value, ttl);
+        this.set(key, value, ttl);
     return value;
   }
 }
-// Export factory function
+// Export factory function;
 export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<T> {
   return new AdvancedCache<T>(options);
 }
-// Export default cache instance
-export const defaultCache = new AdvancedCache();
-export default AdvancedCache;
+// Export default cache instance;
+export export default AdvancedCache;

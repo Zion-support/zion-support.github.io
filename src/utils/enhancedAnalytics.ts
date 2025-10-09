@@ -1,7 +1,7 @@
 'use client';
 /**
- * Enhanced Analytics Utility
- * Provides comprehensive analytics tracking with event batching and offline support
+ * Enhanced Analytics Utility;
+ * Provides comprehensive analytics tracking with event batching and offline support;
  */
 export interface AnalyticsEvent {
   category: string;
@@ -18,11 +18,11 @@ export interface UserProperties {
 }
 class EnhancedAnalytics {
   private queue: AnalyticsEvent[] = [];
-  private userProperties: UserProperties = {};
+  private userProperties: UserProperties = {}
   private sessionId: string;
   private isInitialized = false;
   private batchSize = 10;
-  private flushInterval = 30000; // 30 seconds
+  private flushInterval = 30000; // 30 seconds;
   private offlineQueue: AnalyticsEvent[] = [];
   constructor() {
     this.sessionId = this.generateSessionId();
@@ -55,23 +55,23 @@ class EnhancedAnalytics {
     this.userProperties = {
       ...this.userProperties,
       sessionId: this.sessionId,
-      ...config
-    };
-    // Track initialization
+      ...config;
+    }
+    // Track initialization;
     this.trackEvent({
       category: 'System',
       action: 'Analytics Initialized',
       metadata: {
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent
+        userAgent: navigator.userAgent;
       }
     });
   }
   public setUserProperties(properties: UserProperties): void {
     this.userProperties = {
       ...this.userProperties,
-      ...properties
-    };
+      ...properties;
+    }
   }
   public trackEvent(event: AnalyticsEvent): void {
     const enrichedEvent: AnalyticsEvent = {
@@ -82,12 +82,12 @@ class EnhancedAnalytics {
         timestamp: new Date().toISOString(),
         url: typeof window !== 'undefined' ? window.location.href : ''
       }
-    };
-    // Add to queue
+    }
+    // Add to queue;
     this.queue.push(enrichedEvent);
-    // Send to gtag if available
+    // Send to gtag if available;
     this.sendToGtag(enrichedEvent);
-    // Check if we should flush
+    // Check if we should flush;
     if (this.queue.length >= this.batchSize) {
       this.flush();
     }
@@ -99,7 +99,7 @@ class EnhancedAnalytics {
         window as {
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
         }
-      ).gtag
+      ).gtag;
     ) {
       (
         window as unknown as {
@@ -109,7 +109,7 @@ class EnhancedAnalytics {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
-        ...event.metadata
+        ...event.metadata;
       });
     }
   }
@@ -120,7 +120,7 @@ class EnhancedAnalytics {
       label: pagePath,
       metadata: {
         pageTitle: pageTitle || document.title,
-        referrer: document.referrer
+        referrer: document.referrer;
       }
     });
   }
@@ -129,7 +129,7 @@ class EnhancedAnalytics {
       category: 'User Interaction',
       action,
       label,
-      value
+      value;
     });
   }
   public trackError(error: Error, context?: Record<string, unknown>): void {
@@ -139,7 +139,7 @@ class EnhancedAnalytics {
       label: error.message,
       metadata: {
         stack: error.stack,
-        ...context
+        ...context;
       }
     });
   }
@@ -149,7 +149,7 @@ class EnhancedAnalytics {
       action: metric,
       value: Math.round(value),
       metadata: {
-        rating
+        rating;
       }
     });
   }
@@ -175,29 +175,29 @@ class EnhancedAnalytics {
       action,
       label,
       value,
-      metadata
+      metadata;
     });
   }
   private flush(): void {
     if (this.queue.length === 0) return;
-    // Check if online
+    // Check if online;
     if (typeof navigator !== 'undefined' && !navigator.onLine) {
       this.offlineQueue.push(...this.queue);
       this.queue = [];
       return;
     }
-    // In a real implementation, send to analytics backend
+    // In a real implementation, send to analytics backend;
     if (process.env['NODE_ENV'] === 'development') {
       }
-    // Clear queue
+    // Clear queue;
     this.queue = [];
   }
   private flushOfflineQueue(): void {
     if (this.offlineQueue.length === 0) return;
-    // Merge offline queue into main queue
+    // Merge offline queue into main queue;
     this.queue.push(...this.offlineQueue);
     this.offlineQueue = [];
-    // Flush
+    // Flush;
     this.flush();
   }
   public getQueueSize(): number {
@@ -207,7 +207,7 @@ class EnhancedAnalytics {
     return this.sessionId;
   }
   public getUserProperties(): UserProperties {
-    return { ...this.userProperties };
+    return { ...this.userProperties }
   }
   public getAnalyticsSummary(): {
     queueSize: number;
@@ -220,9 +220,8 @@ class EnhancedAnalytics {
       offlineQueueSize: this.offlineQueue.length,
       sessionId: this.sessionId,
       userProperties: this.getUserProperties()
-    };
+    }
   }
 }
-// Export singleton instance
-export const analytics = new EnhancedAnalytics();
-export default analytics;
+// Export singleton instance;
+export export default analytics;

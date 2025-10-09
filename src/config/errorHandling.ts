@@ -1,7 +1,7 @@
 'use client';
 /**
- * Error Handling Configuration
- * Centralized error tracking and reporting settings
+ * Error Handling Configuration;
+ * Centralized error tracking and reporting settings;
  */
 export enum ErrorSeverity {
   LOW = 'low',
@@ -40,30 +40,9 @@ export const errorHandlingConfig: ErrorConfig = {
     /Non-Error promise rejection captured/i,
     /Loading chunk \d+ failed/i,
   ],
-  severityThreshold: ErrorSeverity.LOW
-};
-export const errorMessages = {
-  network: {
-    offline: 'You are currently offline. Please check your internet connection.',
-    timeout: 'Request timed out. Please try again.',
-    serverError: 'Server error occurred. Our team has been notified.'
-  },
-  validation: {
-    required: 'This field is required.',
-    invalid: 'Please enter a valid value.',
-    format: 'Invalid format. Please check your input.'
-  },
-  authentication: {
-    failed: 'Authentication failed. Please try logging in again.',
-    expired: 'Your session has expired. Please log in again.',
-    unauthorized: 'You are not authorized to access this resource.'
-  },
-  generic: {
-    unknown: 'An unexpected error occurred. Please try again.',
-    retry: 'Please try again in a few moments.'
-  }
-};
-export class AppError extends Error {
+  severityThreshold: ErrorSeverity.LOW;
+}
+export export class AppError extends Error {
   constructor(
     message: string,
     public category: ErrorCategory = ErrorCategory.UNKNOWN,

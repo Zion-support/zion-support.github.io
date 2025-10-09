@@ -7,7 +7,7 @@ interface AdvancedSEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -20,11 +20,11 @@ interface AdvancedSEOOptimizerProps {
   nofollow?: boolean;
   breadcrumbs?: { name: string; url: string }[];
   faqData?: { question: string; answer: string }[];
-  organizationData?: any;
-  websiteData?: any;
+  organizationData?: unknown;
+  websiteData?: unknown;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -44,19 +44,19 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   breadcrumbs = [],
   faqData = [],
   organizationData,
-  websiteData
+  websiteData;
 }) => {
   useEffect(() => {
-    // Update page title
+    // Update page title;
     document.title = title;
     
-    // Update meta description
+    // Update meta description;
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords.join(', '));
     updateMetaTag('author', author);
     updateMetaTag('robots', noindex ? 'noindex' : robots);
     
-    // Update Open Graph tags
+    // Update Open Graph tags;
     updateMetaTag('og:title', title, 'property');
     updateMetaTag('og:description', description, 'property');
     updateMetaTag('og:image', ogImage, 'property');
@@ -78,7 +78,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       updateMetaTag('og:tag', tags.join(', '), 'property');
     }
     
-    // Update Twitter tags
+    // Update Twitter tags;
     updateMetaTag('twitter:card', 'summary_large_image', 'name');
     updateMetaTag('twitter:title', title, 'name');
     updateMetaTag('twitter:description', description, 'name');
@@ -86,141 +86,100 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     updateMetaTag('twitter:site', '@ziontechgroup', 'name');
     updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
     
-    // Update canonical URL
+    // Update canonical URL;
     updateCanonicalUrl(canonicalUrl);
     
-    // Add alternate language links
+    // Add alternate language links;
     if (alternateLocales.length > 0) {
       addAlternateLanguageLinks(alternateLocales);
     }
     
-    // Add breadcrumbs structured data
+    // Add breadcrumbs structured data;
     if (breadcrumbs.length > 0) {
       addBreadcrumbStructuredData(breadcrumbs);
     }
     
-    // Add FAQ structured data
+    // Add FAQ structured data;
     if (faqData.length > 0) {
       addFAQStructuredData(faqData);
     }
     
-    // Add organization structured data
+    // Add organization structured data;
     if (organizationData) {
       addStructuredData(organizationData);
     }
     
-    // Add website structured data
+    // Add website structured data;
     if (websiteData) {
       addStructuredData(websiteData);
     }
     
-    // Add custom structured data
+    // Add custom structured data;
     if (structuredData) {
       addStructuredData(structuredData);
     }
     
-    // Add additional SEO meta tags
+    // Add additional SEO meta tags;
     addAdditionalSEOTags();
     
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
 
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    if (!meta) {
+      if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
     }
     meta.content = content;
-  };
-
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
+  }
+      if (!canonical) {
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
     canonical.href = url;
-  };
-
-  const addAlternateLanguageLinks = (locales: { locale: string; url: string }[]) => {
+  }
+  const _addAlternateLanguageLinks = (locales: { locale: string; url: string }[]) => {
     locales.forEach(({ locale, url }) => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
+            link.rel = 'alternate';
       link.hreflang = locale;
       link.href = url;
       document.head.appendChild(link);
     });
-  };
-
-  const addBreadcrumbStructuredData = (breadcrumbs: { name: string; url: string }[]) => {
-    const breadcrumbData = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((crumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: crumb.name,
-        item: crumb.url
-      }))
-    };
-    addStructuredData(breadcrumbData);
-  };
-
-  const addFAQStructuredData = (faqData: { question: string; answer: string }[]) => {
-    const faqStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faqData.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    };
-    addStructuredData(faqStructuredData);
-  };
-
-  const addStructuredData = (data: any) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+  }
+  const _addBreadcrumbStructuredData = (breadcrumbs: { name: string; url: string }[]) => {
+        addStructuredData(breadcrumbData);
+  }
+  const _addFAQStructuredData = (faqData: { question: string; answer: string }[]) => {
+        addStructuredData(faqStructuredData);
+  }
+      script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-  };
-
-  const addAdditionalSEOTags = () => {
-    // Add viewport meta tag if not present
-    if (!document.querySelector('meta[name="viewport"]')) {
-      const viewport = document.createElement('meta');
-      viewport.name = 'viewport';
+  }
+        viewport.name = 'viewport';
       viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
       document.head.appendChild(viewport);
     }
 
-    // Add theme color
+    // Add theme color;
     updateMetaTag('theme-color', '#4f46e5');
     updateMetaTag('msapplication-TileColor', '#4f46e5');
     
-    // Add mobile app meta tags
+    // Add mobile app meta tags;
     updateMetaTag('mobile-web-app-capable', 'yes');
     updateMetaTag('apple-mobile-web-app-capable', 'yes');
     updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
     updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
     
-    // Add format detection
+    // Add format detection;
     updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
     
-    // Add referrer policy
+    // Add referrer policy;
     updateMetaTag('referrer', 'strict-origin-when-cross-origin');
     
-    // Add content security policy
+    // Add content security policy;
     updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
-  };
-
+  }
   return null;
-};
-
-export default AdvancedSEOOptimizer;
+}
+export default AdvancedSEOOptimizer

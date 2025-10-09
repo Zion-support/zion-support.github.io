@@ -1,7 +1,7 @@
 'use client';
 /**
- * Advanced Analytics System for Zion Tech Group Website
- * Provides comprehensive user behavior tracking and insights
+ * Advanced Analytics System for Zion Tech Group Website;
+ * Provides comprehensive user behavior tracking and insights;
  */
 interface UserEvent {
   id: string;
@@ -57,8 +57,8 @@ class AdvancedAnalytics {
       enableConversionTracking: true,
       enablePerformanceTracking: true,
       enableErrorTracking: true,
-      enableUserJourneyTracking: true
-    };
+      enableUserJourneyTracking: true;
+    }
     this.currentSession = this.createNewSession();
     this.initializeTracking();
   }
@@ -69,33 +69,33 @@ class AdvancedAnalytics {
     return AdvancedAnalytics.instance;
   }
   /**
-   * Initialize comprehensive analytics tracking
+   * Initialize comprehensive analytics tracking;
    */
   private initializeTracking(): void {
     if (typeof window === 'undefined' || !this.config.enableTracking) return;
-    // Track page views
+    // Track page views;
     this.trackPageView();
-    // Track clicks
+    // Track clicks;
     this.trackClicks();
-    // Track scrolls
+    // Track scrolls;
     this.trackScrolls();
-    // Track form submissions
+    // Track form submissions;
     this.trackFormSubmissions();
-    // Track downloads
+    // Track downloads;
     this.trackDownloads();
-    // Track performance
+    // Track performance;
     if (this.config.enablePerformanceTracking) {
       this.trackPerformance();
     }
-    // Track user journey
+    // Track user journey;
     if (this.config.enableUserJourneyTracking) {
       this.trackUserJourney();
     }
-    // Setup network monitoring
+    // Setup network monitoring;
     this.setupNetworkMonitoring();
   }
   /**
-   * Create new user session
+   * Create new user session;
    */
   private createNewSession(): UserSession {
     return {
@@ -107,11 +107,11 @@ class AdvancedAnalytics {
       device: this.detectDevice(),
       browser: this.detectBrowser(),
       os: this.detectOS(),
-      referrer: document.referrer
-    };
+      referrer: document.referrer;
+    }
   }
   /**
-   * Track page views
+   * Track page views;
    */
   trackPageView(url?: string, title?: string): void {
     const event: UserEvent = {
@@ -128,21 +128,19 @@ class AdvancedAnalytics {
         referrer: document.referrer,
         viewport: {
           width: window.innerWidth,
-          height: window.innerHeight
+          height: window.innerHeight;
         }
       }
-    };
+    }
     this.trackEvent(event);
     this.currentSession.pageViews++;
   }
   /**
-   * Track clicks
+   * Track clicks;
    */
   private trackClicks(): void {
     document.addEventListener('click', event => {
-      const target = event.target as HTMLElement;
-      const element = this.getElementInfo(target);
-      const clickEvent: UserEvent = {
+                  const clickEvent: UserEvent = {
         id: this.generateEventId(),
         type: 'click',
         category: element.category,
@@ -159,15 +157,15 @@ class AdvancedAnalytics {
           text: element.text?.substring(0, 100),
           position: {
             x: event.clientX,
-            y: event.clientY
+            y: event.clientY;
           }
         }
-      };
+      }
       this.trackEvent(clickEvent);
     });
   }
   /**
-   * Track scrolls
+   * Track scrolls;
    */
   private trackScrolls(): void {
     let scrollTimeout: NodeJS.Timeout;
@@ -180,7 +178,7 @@ class AdvancedAnalytics {
           category: 'engagement',
           action: 'scroll',
           value: Math.round(
-            (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+            (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
           ),
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
@@ -189,23 +187,20 @@ class AdvancedAnalytics {
           metadata: {
             scrollY: window.scrollY,
             scrollPercentage: Math.round(
-              (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+              (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
             )
           }
-        };
+        }
         this.trackEvent(scrollEvent);
       }, 100);
     });
   }
   /**
-   * Track form submissions
+   * Track form submissions;
    */
   private trackFormSubmissions(): void {
     document.addEventListener('submit', event => {
-      const form = event.target as HTMLFormElement;
-      const formData = new FormData(form);
-      const formFields = Array.from(formData.keys());
-      const submitEvent: UserEvent = {
+                        const submitEvent: UserEvent = {
         id: this.generateEventId(),
         type: 'form_submit',
         category: 'conversion',
@@ -220,20 +215,18 @@ class AdvancedAnalytics {
           formClass: form.className,
           formAction: form.action,
           formMethod: form.method,
-          fields: formFields
+          fields: formFields;
         }
-      };
+      }
       this.trackEvent(submitEvent);
     });
   }
   /**
-   * Track downloads
+   * Track downloads;
    */
   private trackDownloads(): void {
     document.addEventListener('click', event => {
-      const target = event.target as HTMLElement;
-      const link = target.closest('a');
-      if (link && this.isDownloadLink(link)) {
+                  if (link && this.isDownloadLink(link)) {
         const downloadEvent: UserEvent = {
           id: this.generateEventId(),
           type: 'download',
@@ -248,17 +241,17 @@ class AdvancedAnalytics {
             downloadUrl: link.href,
             downloadText: link.textContent?.substring(0, 100)
           }
-        };
+        }
         this.trackEvent(downloadEvent);
       }
     });
   }
   /**
-   * Track performance metrics
+   * Track performance metrics;
    */
   private trackPerformance(): void {
     if ('PerformanceObserver' in window) {
-      // Track Core Web Vitals
+      // Track Core Web Vitals;
       new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'paint') {
@@ -274,19 +267,16 @@ class AdvancedAnalytics {
               url: window.location.href,
               metadata: {
                 metric: entry.name,
-                value: entry.startTime
+                value: entry.startTime;
               }
-            };
+            }
             this.trackEvent(paintEvent);
           }
         }
       }).observe({ entryTypes: ['paint'] });
-      // Track navigation timing
+      // Track navigation timing;
       window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType(
-          'navigation'
-        )[0] as PerformanceNavigationTiming;
-        const performanceEvent: UserEvent = {
+                const performanceEvent: UserEvent = {
           id: this.generateEventId(),
           type: 'custom',
           category: 'performance',
@@ -300,32 +290,28 @@ class AdvancedAnalytics {
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded:
               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            firstByte: navigation.responseStart - navigation.requestStart
+            firstByte: navigation.responseStart - navigation.requestStart;
           }
-        };
+        }
         this.trackEvent(performanceEvent);
       });
     }
   }
   /**
-   * Track user journey
+   * Track user journey;
    */
   private trackUserJourney(): void {
-    // Track page transitions
-    let lastUrl = window.location.href;
-    const observer = new MutationObserver(() => {
-      if (window.location.href !== lastUrl) {
-        this.trackPageView();
-        lastUrl = window.location.href;
+    // Track page transitions;
+                lastUrl = window.location.href;
       }
     });
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true;
     });
   }
   /**
-   * Setup network monitoring
+   * Setup network monitoring;
    */
   private setupNetworkMonitoring(): void {
     window.addEventListener('online', () => {
@@ -337,22 +323,22 @@ class AdvancedAnalytics {
     });
   }
   /**
-   * Track custom event
+   * Track custom event;
    */
   trackEvent(event: UserEvent): void {
     this.currentSession.events.push(event);
     this.eventQueue.push(event);
-    // Keep queue size manageable
+    // Keep queue size manageable;
     if (this.eventQueue.length > this.maxQueueSize) {
       this.eventQueue.shift();
     }
-    // Send to analytics service
+    // Send to analytics service;
     if (this.isOnline) {
       this.sendEvent(event);
     }
   }
   /**
-   * Send event to analytics service
+   * Send event to analytics service;
    */
   private async sendEvent(event: UserEvent): Promise<void> {
     try {
@@ -367,18 +353,17 @@ class AdvancedAnalytics {
       }
   }
   /**
-   * Flush event queue when back online
+   * Flush event queue when back online;
    */
   private async flushEventQueue(): Promise<void> {
     if (!this.isOnline) return;
-    const eventsToSend = [...this.eventQueue];
-    this.eventQueue = [];
+        this.eventQueue = [];
     for (const event of eventsToSend) {
       await this.sendEvent(event);
     }
   }
   /**
-   * Get element information for tracking
+   * Get element information for tracking;
    */
   private getElementInfo(element: HTMLElement): {
     category: string;
@@ -388,32 +373,26 @@ class AdvancedAnalytics {
     className: string;
     text?: string;
   } {
-    const tagName = element.tagName.toLowerCase();
-    const id = element.id || '';
-    const className = element.className || '';
-    const text = element.textContent?.trim();
-    // Determine category based on element type
-    let category = 'interaction';
-    if (tagName === 'button' || element.closest('button')) {
+                    // Determine category based on element type;
+        if (tagName === 'button' || element.closest('button')) {
       category = 'button';
     } else if (tagName === 'a' || element.closest('a')) {
       category = 'link';
     } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {
       category = 'form';
     }
-    // Create label
-    let label = id || className || text?.substring(0, 50) || tagName;
-    return {
+    // Create label;
+        return {
       category,
       label,
       tagName,
       id,
       className,
-      text
-    };
+      text;
+    }
   }
   /**
-   * Check if link is a download
+   * Check if link is a download;
    */
   private isDownloadLink(link: HTMLAnchorElement): boolean {
     return (
@@ -423,31 +402,28 @@ class AdvancedAnalytics {
     );
   }
   /**
-   * Detect device type
+   * Detect device type;
    */
   private detectDevice(): 'desktop' | 'mobile' | 'tablet' {
-    const width = window.innerWidth;
-    if (width < 768) return 'mobile';
+        if (width < 768) return 'mobile';
     if (width < 1024) return 'tablet';
     return 'desktop';
   }
   /**
-   * Detect browser
+   * Detect browser;
    */
   private detectBrowser(): string {
-    const userAgent = navigator.userAgent;
-    if (userAgent.includes('Chrome')) return 'Chrome';
+        if (userAgent.includes('Chrome')) return 'Chrome';
     if (userAgent.includes('Firefox')) return 'Firefox';
     if (userAgent.includes('Safari')) return 'Safari';
     if (userAgent.includes('Edge')) return 'Edge';
     return 'Unknown';
   }
   /**
-   * Detect operating system
+   * Detect operating system;
    */
   private detectOS(): string {
-    const userAgent = navigator.userAgent;
-    if (userAgent.includes('Windows')) return 'Windows';
+        if (userAgent.includes('Windows')) return 'Windows';
     if (userAgent.includes('Mac')) return 'macOS';
     if (userAgent.includes('Linux')) return 'Linux';
     if (userAgent.includes('Android')) return 'Android';
@@ -455,30 +431,29 @@ class AdvancedAnalytics {
     return 'Unknown';
   }
   /**
-   * Generate session ID
+   * Generate session ID;
    */
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   /**
-   * Generate event ID
+   * Generate event ID;
    */
   private generateEventId(): string {
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   /**
-   * Get user ID from storage or generate one
+   * Get user ID from storage or generate one;
    */
   private getUserId(): string | undefined {
-    let userId = localStorage.getItem('analytics_user_id');
-    if (!userId) {
+        if (!userId) {
       userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       localStorage.setItem('analytics_user_id', userId);
     }
     return userId;
   }
   /**
-   * Get analytics summary
+   * Get analytics summary;
    */
   getAnalyticsSummary(): {
     session: UserSession;
@@ -488,28 +463,15 @@ class AdvancedAnalytics {
     topPages: Array<{ url: string; views: number }>;
     conversionRate: number;
   } {
-    const events = this.currentSession.events;
-    const totalEvents = events.length;
-    const eventsByType = events.reduce(
-      (acc, event) => {
-        acc[event.type] = (acc[event.type] || 0) + 1;
-        return acc;
+                    return acc;
       },
       {} as Record<string, number>
     );
-    const eventsByCategory = events.reduce(
-      (acc, event) => {
-        acc[event.category] = (acc[event.category] || 0) + 1;
-        return acc;
+            return acc;
       },
       {} as Record<string, number>
     );
-    const pageViews = events.filter(e => e.type === 'page_view');
-    const topPages = pageViews
-      .reduce(
-        (acc, event) => {
-          const existing = acc.find(p => p.url === event.url);
-          if (existing) {
+                  if (existing) {
             existing.views++;
           } else {
             acc.push({ url: event.url, views: 1 });
@@ -519,19 +481,17 @@ class AdvancedAnalytics {
         [] as Array<{ url: string; views: number }>
       )
       .sort((a, b) => b.views - a.views);
-    const conversions = events.filter(e => e.category === 'conversion').length;
-    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
-    return {
+            return {
       session: this.currentSession,
       totalEvents,
       eventsByType,
       eventsByCategory,
       topPages: topPages.slice(0, 10),
-      conversionRate
-    };
+      conversionRate;
+    }
   }
   /**
-   * Send session data to analytics service
+   * Send session data to analytics service;
    */
   private async sendSessionData(session: UserSession): Promise<void> {
     try {
@@ -546,21 +506,20 @@ class AdvancedAnalytics {
       }
   }
   /**
-   * End current session
+   * End current session;
    */
   endSession(): void {
     this.currentSession.endTime = new Date().toISOString();
     this.currentSession.duration =
       new Date(this.currentSession.endTime).getTime() -
       new Date(this.currentSession.startTime).getTime();
-    // Send session data
+    // Send session data;
     if (this.isOnline) {
       this.sendSessionData(this.currentSession);
     }
-    // Create new session
+    // Create new session;
     this.currentSession = this.createNewSession();
   }
 }
-// Export singleton instance
-export const advancedAnalytics = AdvancedAnalytics.getInstance();
-export default advancedAnalytics;
+// Export singleton instance;
+export export default advancedAnalytics;

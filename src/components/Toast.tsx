@@ -5,23 +5,21 @@ export interface ToastProps {
   message: string;
   type?: ToastType;
   duration?: number;
-  onClose?: () => void;
-  show: boolean;
+  onClose?: () =>void;
+  show: boolean
 }
-const Toast: React.FC<ToastProps> = ({
+const Toast: React.FC<ToastProps>= ({
   message,
   type = 'success',
   duration = 3000,
   onClose,
-  show
+  show;
 }) => {
   const [isVisible, setIsVisible] = useState(show);
   useEffect(() => {
     setIsVisible(show);
     if (show && duration > 0) {
-      const timer = setTimeout(() => {
-        setIsVisible(false);
-        if (onClose) {
+              if (onClose) {
           onClose();
         }
       }, duration);
@@ -30,11 +28,7 @@ const Toast: React.FC<ToastProps> = ({
     return undefined;
   }, [show, duration, onClose]);
   if (!isVisible) return null;
-  const getToastStyles = () => {
-    switch (type) {
-      case 'success':
-        return 'bg-green-600 text-white';
-      case 'error':
+        case 'error':
         return 'bg-red-600 text-white';
       case 'warning':
         return 'bg-yellow-500 text-white';
@@ -43,63 +37,47 @@ const Toast: React.FC<ToastProps> = ({
       default:
         return 'bg-gray-800 text-white';
     }
-  };
-  const getIcon = () => {
-    switch (type) {
-      case 'success':
-        return '✓';
-      case 'error':
+  }
+        case 'error':
         return '✕';
       case 'warning':
         return '⚠';
       case 'info':
         return 'ℹ';
       default:
-        return '';
+        return ''
     }
-  };
+  }
   return (
-    <div
-      className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
-      role="alert"
-      aria-live="polite"
-    >
+    <div>
       <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button
-        onClick={() => {
+        onClick={() =>{
           setIsVisible(false);
-          if (onClose) onClose();
+          if (onClose) onClose()
         }}
         className="ml-4 hover:opacity-80 transition-opacity"
         aria-label="Close notification"
       >
         ✕
       </button>
-    </div>
-  );
-};
+    </div>);
+}
 export default Toast;
-// Toast Hook for easy usage
-export const useToast = () => {
-  const [toast, setToast] = useState<{
-    show: boolean;
-    message: string;
+// Toast Hook for easy usage;
+export     message: string;
     type: ToastType;
   }>({
     show: false,
     message: '',
     type: 'success'
   });
-  const showToast = (message: string, type: ToastType = 'success') => {
-    setToast({ show: true, message, type });
-  };
-  const hideToast = () => {
-    setToast(prev => ({ ...prev, show: false }));
-  };
+    }
+    }
   return {
     toast,
     showToast,
     hideToast
-  };
-};
+  }
+}

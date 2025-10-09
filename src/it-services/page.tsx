@@ -1,83 +1,10 @@
-import React from 'react';
-<<<<<<< HEAD
-=======
-import { Cloud, CheckCircle, ArrowRight, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const ITServicesPage: React.FC = () => {
-  const itServices = [
-    {
-      title: 'Cloud Services',
-      description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
-      icon: Cloud,
-      features: ['Cloud migration', 'Infrastructure setup', 'Cost optimization', 'Security configuration', 'Monitoring', '24/7 support'],
-      price: 'Starting at $1,500/month',
-      category: 'Infrastructure',
-      benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Advanced Threat Protection',
-      description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
-      icon: Shield,
-      features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Security monitoring', 'Compliance reporting', 'Penetration testing'],
-      price: 'Starting at $2,000/month',
-      category: 'Security',
-      benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', 'Peace of mind'],
-      technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Firewalls', 'Intrusion Detection'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'IT Infrastructure',
-      description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
-      icon: Server,
-      features: ['Network setup', 'Server management', 'Backup solutions', 'Disaster recovery', 'Performance monitoring', '24/7 support'],
-      price: 'Starting at $1,200/month',
-      category: 'Infrastructure',
-      benefits: ['Reliable infrastructure', 'Reduced downtime', 'Improved efficiency', 'Cost savings'],
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Database Management',
-      description: 'Expert database administration, optimization, and migration services for all major database platforms.',
-      icon: Database,
-      features: ['Database design', 'Performance tuning', 'Migration services', 'Backup & recovery', 'Security hardening', 'Monitoring'],
-      price: 'Starting at $800/month',
-      category: 'Data Management',
-      benefits: ['Optimized performance', 'Data security', 'Reduced costs', 'Improved reliability'],
-      technologies: ['SQL Server', 'MySQL', 'PostgreSQL', 'Oracle', 'MongoDB', 'Redis'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Business Intelligence',
-      description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
-      icon: BarChart,
-      features: ['Data visualization', 'Report generation', 'Dashboard creation', 'Data warehousing', 'ETL processes', 'Predictive analytics'],
-      price: 'Starting at $1,000/month',
-      category: 'Analytics',
-      benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost optimization'],
-      technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'IT Consulting',
-      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
-      icon: Users,
-      features: ['Technology assessment', 'Strategic planning', 'Vendor evaluation', 'Cost analysis', 'Implementation guidance', 'Training'],
-      price: 'Starting at $150/hour',
-      category: 'Consulting',
-      benefits: ['Strategic guidance', 'Cost optimization', 'Risk mitigation', 'Technology alignment'],
-      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
-  ];
-
-  return (
+    return (
     <>
       <SEOOptimizer
         title="IT Services - Zion Tech Group"
@@ -86,15 +13,13 @@ const ITServicesPage: React.FC = () => {
         canonicalUrl="https://ziontechgroup.com/it-services"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div>
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              IT Services & Solutions
-            </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">IT Services & Solutions</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive IT services to support and optimize your business infrastructure. 
               From cloud migration to cybersecurity, we provide end-to-end solutions.
@@ -103,17 +28,16 @@ const ITServicesPage: React.FC = () => {
 
           {/* Services Grid */}
           <section className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
               {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
+                <div>
+                  <div>
                     <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
                     <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                   </div>
-                  
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
-                  <div className="mb-4">
+                  <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="text-sm text-gray-300 space-y-1">
                       {service.features.map((feature, idx) => (
@@ -124,10 +48,9 @@ const ITServicesPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
-                  <div className="mb-4">
+                  <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div>
                       {service.technologies.map((tech, idx) => (
                         <span key={idx} className="px-2 py-1 bg-cyan-400/20 text-cyan-300 text-xs rounded">
                           {tech}
@@ -135,18 +58,14 @@ const ITServicesPage: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  
-                  <div className="mb-4">
+                  <div>
                     <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
                     <div className="text-sm text-gray-400">Category: {service.category}</div>
                   </div>
-                  
                   <a
                     href="/contact"
                     className="inline-flex items-center px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                  >Learn More<ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
               ))}
@@ -161,23 +80,19 @@ const ITServicesPage: React.FC = () => {
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free consultation and discover how our IT services can optimize your business operations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div>
               <a
                 href="/contact"
                 className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors inline-flex items-center"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation
-              </a>
+                <Phone className="w-5 h-5 mr-2" />Get Free Consultation</a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
+                <Phone className="w-4 h-4 mr-2" />(302) 464-0950</a>
             </div>
-            <div className="mt-8 text-sm text-gray-400">
+            <div>
               <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </section>
@@ -185,8 +100,6 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
-  );
-};
-
-export default ITServicesPage;
+    </>);
+}
+export default ITServicesPage

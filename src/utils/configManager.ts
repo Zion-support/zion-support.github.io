@@ -1,7 +1,7 @@
 'use client';
 /**
- * Configuration Manager
- * Centralized configuration management with environment-based settings
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
  */
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {
@@ -11,7 +11,7 @@ export interface AppConfig {
     timeout: number;
     retryAttempts: number;
     enableCaching: boolean;
-  };
+  }
   features: {
     enableAnalytics: boolean;
     enableErrorReporting: boolean;
@@ -19,29 +19,29 @@ export interface AppConfig {
     enableAccessibility: boolean;
     enableSEO: boolean;
     enablePWA: boolean;
-  };
+  }
   performance: {
     enableCodeSplitting: boolean;
     enableLazyLoading: boolean;
     enableImageOptimization: boolean;
     enableCaching: boolean;
-  };
+  }
   security: {
     enableCSP: boolean;
     enableCORS: boolean;
     enableRateLimiting: boolean;
     maxRequestsPerMinute: number;
-  };
+  }
   ui: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
     timezone: string;
-  };
+  }
   logging: {
     level: 'debug' | 'info' | 'warn' | 'error';
     enableConsole: boolean;
     enableNetwork: boolean;
-  };
+  }
 }
 const defaultConfig: AppConfig = {
   environment: 'development',
@@ -49,7 +49,7 @@ const defaultConfig: AppConfig = {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true
+    enableCaching: true;
   },
   features: {
     enableAnalytics: false,
@@ -57,19 +57,19 @@ const defaultConfig: AppConfig = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true
+    enablePWA: true;
   },
   performance: {
     enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableCaching: true
+    enableCaching: true;
   },
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 100
+    maxRequestsPerMinute: 100;
   },
   ui: {
     theme: 'auto',
@@ -79,16 +79,16 @@ const defaultConfig: AppConfig = {
   logging: {
     level: 'info',
     enableConsole: true,
-    enableNetwork: false
+    enableNetwork: false;
   }
-};
+}
 const developmentConfig: Partial<AppConfig> = {
   environment: 'development',
   api: {
     baseURL: 'http://localhost:3000/api',
     timeout: 30000,
     retryAttempts: 1,
-    enableCaching: false
+    enableCaching: false;
   },
   features: {
     enableAnalytics: false,
@@ -96,21 +96,21 @@ const developmentConfig: Partial<AppConfig> = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: false,
-    enablePWA: false
+    enablePWA: false;
   },
   logging: {
     level: 'debug',
     enableConsole: true,
-    enableNetwork: false
+    enableNetwork: false;
   }
-};
+}
 const stagingConfig: Partial<AppConfig> = {
   environment: 'staging',
   api: {
     baseURL: 'https://staging-api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true
+    enableCaching: true;
   },
   features: {
     enableAnalytics: true,
@@ -118,21 +118,21 @@ const stagingConfig: Partial<AppConfig> = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true
+    enablePWA: true;
   },
   logging: {
     level: 'info',
     enableConsole: true,
-    enableNetwork: true
+    enableNetwork: true;
   }
-};
+}
 const productionConfig: Partial<AppConfig> = {
   environment: 'production',
   api: {
     baseURL: 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true
+    enableCaching: true;
   },
   features: {
     enableAnalytics: true,
@@ -140,27 +140,27 @@ const productionConfig: Partial<AppConfig> = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true
+    enablePWA: true;
   },
   logging: {
     level: 'error',
     enableConsole: false,
-    enableNetwork: true
+    enableNetwork: true;
   },
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 60
+    maxRequestsPerMinute: 60;
   }
-};
+}
 const testConfig: Partial<AppConfig> = {
   environment: 'test',
   api: {
     baseURL: 'http://localhost:3000/api',
     timeout: 5000,
     retryAttempts: 0,
-    enableCaching: false
+    enableCaching: false;
   },
   features: {
     enableAnalytics: false,
@@ -168,19 +168,19 @@ const testConfig: Partial<AppConfig> = {
     enablePerformanceMonitoring: false,
     enableAccessibility: true,
     enableSEO: false,
-    enablePWA: false
+    enablePWA: false;
   },
   logging: {
     level: 'error',
     enableConsole: false,
-    enableNetwork: false
+    enableNetwork: false;
   }
-};
+}
 export class ConfigManager {
   private static instance: ConfigManager;
   private config: AppConfig;
   private environment: Environment;
-  private overrides: Partial<AppConfig> = {};
+  private overrides: Partial<AppConfig> = {}
   constructor() {
     this.environment = this.detectEnvironment();
     this.config = this.loadConfig();
@@ -192,13 +192,11 @@ export class ConfigManager {
     return ConfigManager.instance;
   }
   /**
-   * Detect current environment
+   * Detect current environment;
    */
   private detectEnvironment(): Environment {
     if (typeof process !== 'undefined') {
-      const nodeEnv = process.env['NODE_ENV'];
-      const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;
-      if (nextEnv) {
+                  if (nextEnv) {
         return nextEnv as Environment;
       }
       if (nodeEnv === 'test') return 'test';
@@ -208,11 +206,10 @@ export class ConfigManager {
     return 'development';
   }
   /**
-   * Load configuration based on environment
+   * Load configuration based on environment;
    */
   private loadConfig(): AppConfig {
-    let config = { ...defaultConfig };
-    switch (this.environment) {
+        switch (this.environment) {
       case 'development':
         config = this.mergeConfig(config, developmentConfig);
         break;
@@ -226,27 +223,24 @@ export class ConfigManager {
         config = this.mergeConfig(config, testConfig);
         break;
     }
-    // Apply overrides
+    // Apply overrides;
     config = this.mergeConfig(config, this.overrides);
     return config;
   }
   /**
-   * Deep merge two config objects
+   * Deep merge two config objects;
    */
   private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
-    const result = { ...base } as AppConfig;
-    (Object.keys(override) as Array<keyof AppConfig>).forEach(
+        (Object.keys(override) as Array<keyof AppConfig>).forEach(
       <K extends keyof AppConfig>(key: K) => {
-        const value = override[key];
-        if (value !== undefined) {
-          const baseValue = result[key];
-          if (
+                if (value !== undefined) {
+                    if (
             typeof value === 'object' &&
             !Array.isArray(value) &&
             value !== null &&
             typeof baseValue === 'object' &&
             !Array.isArray(baseValue) &&
-            baseValue !== null
+            baseValue !== null;
           ) {
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
           } else {
@@ -258,16 +252,16 @@ export class ConfigManager {
     return result;
   }
   /**
-   * Get configuration value
+   * Get configuration value;
    */
   get<K extends keyof AppConfig>(key: K): AppConfig[K];
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
     key: K,
-    nestedKey: NK
+    nestedKey: NK;
   ): AppConfig[K][NK];
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
     key: K,
-    nestedKey?: NK
+    nestedKey?: NK;
   ): AppConfig[K] | AppConfig[K][NK] {
     if (nestedKey !== undefined) {
       return this.config[key][nestedKey];
@@ -275,7 +269,7 @@ export class ConfigManager {
     return this.config[key];
   }
   /**
-   * Set configuration value
+   * Set configuration value;
    */
   set<K extends keyof AppConfig>(key: K, value: AppConfig[K]): void;
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
@@ -289,20 +283,18 @@ export class ConfigManager {
     value?: AppConfig[K][NK]
   ): void {
     if (value !== undefined && typeof nestedKeyOrValue === 'string') {
-      const currentValue = this.config[key];
-      if (
+            if (
         typeof currentValue === 'object' &&
         !Array.isArray(currentValue) &&
-        currentValue !== null
+        currentValue !== null;
       ) {
         this.config[key] = Object.assign({}, currentValue, {
-          [nestedKeyOrValue]: value
+          [nestedKeyOrValue]: value;
         }) as AppConfig[K];
       } else {
-        // If current value is not an object, create a new object by merging with default
-        const defaultValue = this.getDefaultForKey(key);
-        this.config[key] = Object.assign({}, defaultValue, {
-          [nestedKeyOrValue]: value
+        // If current value is not an object, create a new object by merging with default;
+                this.config[key] = Object.assign({}, defaultValue, {
+          [nestedKeyOrValue]: value;
         }) as AppConfig[K];
       }
     } else {
@@ -310,7 +302,7 @@ export class ConfigManager {
     }
   }
   /**
-   * Get default value for a config key
+   * Get default value for a config key;
    */
   private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {
     const defaultValues: AppConfig = {
@@ -319,7 +311,7 @@ export class ConfigManager {
         baseURL: '',
         timeout: 30000,
         retryAttempts: 3,
-        enableCaching: true
+        enableCaching: true;
       },
       features: {
         enableAnalytics: false,
@@ -327,19 +319,19 @@ export class ConfigManager {
         enablePerformanceMonitoring: false,
         enableAccessibility: true,
         enableSEO: true,
-        enablePWA: false
+        enablePWA: false;
       },
       performance: {
         enableCodeSplitting: true,
         enableLazyLoading: true,
         enableImageOptimization: true,
-        enableCaching: true
+        enableCaching: true;
       },
       security: {
         enableCSP: true,
         enableCORS: false,
         enableRateLimiting: true,
-        maxRequestsPerMinute: 100
+        maxRequestsPerMinute: 100;
       },
       ui: {
         theme: 'light',
@@ -349,103 +341,103 @@ export class ConfigManager {
       logging: {
         level: 'info',
         enableConsole: true,
-        enableNetwork: false
+        enableNetwork: false;
       }
-    };
+    }
     return defaultValues[key];
   }
   /**
-   * Get full configuration
+   * Get full configuration;
    */
   getConfig(): AppConfig {
-    return { ...this.config };
+    return { ...this.config }
   }
   /**
-   * Get environment
+   * Get environment;
    */
   getEnvironment(): Environment {
     return this.environment;
   }
   /**
-   * Check if feature is enabled
+   * Check if feature is enabled;
    */
   isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
     return this.config.features[feature];
   }
   /**
-   * Enable feature
+   * Enable feature;
    */
   enableFeature(feature: keyof AppConfig['features']): void {
     this.config.features[feature] = true;
   }
   /**
-   * Disable feature
+   * Disable feature;
    */
   disableFeature(feature: keyof AppConfig['features']): void {
     this.config.features[feature] = false;
   }
   /**
-   * Get API configuration
+   * Get API configuration;
    */
   getAPIConfig() {
-    return { ...this.config.api };
+    return { ...this.config.api }
   }
   /**
-   * Update API configuration
+   * Update API configuration;
    */
   updateAPIConfig(config: Partial<AppConfig['api']>): void {
-    this.config.api = { ...this.config.api, ...config };
+    this.config.api = { ...this.config.api, ...config }
   }
   /**
-   * Check if in production
+   * Check if in production;
    */
   isProduction(): boolean {
     return this.environment === 'production';
   }
   /**
-   * Check if in development
+   * Check if in development;
    */
   isDevelopment(): boolean {
     return this.environment === 'development';
   }
   /**
-   * Check if in test
+   * Check if in test;
    */
   isTest(): boolean {
     return this.environment === 'test';
   }
   /**
-   * Check if in staging
+   * Check if in staging;
    */
   isStaging(): boolean {
     return this.environment === 'staging';
   }
   /**
-   * Override configuration
+   * Override configuration;
    */
   override(config: Partial<AppConfig>): void {
     this.overrides = config;
     this.config = this.loadConfig();
   }
   /**
-   * Reset configuration
+   * Reset configuration;
    */
   reset(): void {
-    this.overrides = {};
+    this.overrides = {}
     this.config = this.loadConfig();
   }
   /**
-   * Export configuration as JSON
+   * Export configuration as JSON;
    */
   export(): string {
     return JSON.stringify(this.config, null, 2);
   }
   /**
-   * Validate configuration
+   * Validate configuration;
    */
   validate(): { valid: boolean; errors: string[] } {
     const errors: string[] = [];
-    // Validate API configuration
+    // Validate API configuration;
     if (!this.config.api.baseURL) {
       errors.push('API baseURL is required');
     }
@@ -455,16 +447,15 @@ export class ConfigManager {
     if (this.config.api.retryAttempts < 0) {
       errors.push('API retryAttempts must be non-negative');
     }
-    // Validate security configuration
+    // Validate security configuration;
     if (this.config.security.maxRequestsPerMinute < 1) {
       errors.push('Security maxRequestsPerMinute must be at least 1');
     }
     return {
       valid: errors.length === 0,
-      errors
-    };
+      errors;
+    }
   }
 }
-// Export singleton instance
-export const configManager = ConfigManager.getInstance();
-export default ConfigManager;
+// Export singleton instance;
+export export default ConfigManager;

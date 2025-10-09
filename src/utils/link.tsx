@@ -1,14 +1,14 @@
-import React from 'react';
+
 interface LinkProps {
   href: string;
   children: React.ReactNode;
   className?: string;
   target?: string;
   rel?: string;
-  onClick?: () => void;
-  'aria-label'?: string;
+  onClick?: () =>void;
+  'aria-label'?: string
 }
-export const Link: React.FC<LinkProps> = ({
+export const Link: React.FC<LinkProps>= ({
   href,
   children,
   className,
@@ -16,18 +16,15 @@ export const Link: React.FC<LinkProps> = ({
   rel,
   onClick,
   'aria-label': ariaLabel,
-  ...props
+  ...props;
 }) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (onClick) {
-      onClick();
-    }
-    // Handle internal navigation
+      }
+    // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {
       e.preventDefault();
-      window.location.href = href;
+      window.location.href = href
     }
-  };
+  }
   return (
     <a
       href={href}
@@ -39,7 +36,6 @@ export const Link: React.FC<LinkProps> = ({
       {...props}
     >
       {children}
-    </a>
-  );
-};
-export default Link;
+    </a>);
+}
+export default Link

@@ -1,6 +1,6 @@
 /**
- * Advanced Performance Enhancer
- * Optimizes website performance through various techniques
+ * Advanced Performance Enhancer;
+ * Optimizes website performance through various techniques;
  */
 
 interface PerformanceMetrics {
@@ -55,7 +55,7 @@ class PerformanceEnhancer {
         }
       });
 
-      // Monitor Core Web Vitals
+      // Monitor Core Web Vitals;
       this.observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
     } catch (error) {
       console.warn('Performance monitoring setup failed:', error);
@@ -81,8 +81,7 @@ class PerformanceEnhancer {
         }
         break;
       case 'navigation':
-        const navEntry = entry as PerformanceNavigationTiming;
-        this.metrics = { ...this.metrics, ttfb: navEntry.responseStart - navEntry.requestStart } as PerformanceMetrics;
+                this.metrics = { ...this.metrics, ttfb: navEntry.responseStart - navEntry.requestStart } as PerformanceMetrics;
         break;
     }
   }
@@ -90,28 +89,25 @@ class PerformanceEnhancer {
   private optimizeImages(): void {
     if (!this.config.enableImageOptimization) return;
 
-    const images = document.querySelectorAll('img[data-src]');
-    images.forEach((img) => {
-      const imageElement = img as HTMLImageElement;
-      if (imageElement.dataset.src) {
+        images.forEach((img) => {
+            if (imageElement.dataset.src) {
         imageElement.src = imageElement.dataset.src;
         imageElement.removeAttribute('data-src');
       }
     });
 
-    // Add WebP support detection
+    // Add WebP support detection;
     this.detectWebPSupport();
   }
 
   private detectWebPSupport(): void {
-    const webP = new Image();
-    webP.onload = webP.onerror = () => {
+        webP.onload = webP.onerror = () => {
       if (webP.height === 2) {
         document.documentElement.classList.add('webp');
       } else {
         document.documentElement.classList.add('no-webp');
       }
-    };
+    }
     webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
   }
 
@@ -119,11 +115,7 @@ class PerformanceEnhancer {
     if (!this.config.enableLazyLoading) return;
 
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
+                  if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
               imageObserver.unobserve(img);
@@ -141,38 +133,23 @@ class PerformanceEnhancer {
   private setupResourceHints(): void {
     if (!this.config.enableResourceHints) return;
 
-    // Preconnect to external domains
-    const domains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-      'https://www.googletagmanager.com',
-      'https://www.google-analytics.com'
-    ];
-
-    domains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
+    // Preconnect to external domains;
+        domains.forEach(domain => {
+            link.rel = 'preconnect';
       link.href = domain;
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     });
 
-    // Prefetch critical resources
+    // Prefetch critical resources;
     this.prefetchCriticalResources();
   }
 
   private prefetchCriticalResources(): void {
     if (!this.config.enablePrefetching) return;
 
-    const criticalResources = [
-      '/assets/index.css',
-      '/assets/vendor.js',
-      '/assets/index.js'
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
+        criticalResources.forEach(resource => {
+            link.rel = 'prefetch';
       link.href = resource;
       document.head.appendChild(link);
     });
@@ -195,9 +172,8 @@ class PerformanceEnhancer {
   }
 
   private optimizeFonts(): void {
-    // Add font-display: swap to all font faces
-    const style = document.createElement('style');
-    style.textContent = `
+    // Add font-display: swap to all font faces;
+        style.textContent = `
       @font-face {
         font-family: 'Orbitron';
         font-display: swap;
@@ -215,16 +191,15 @@ class PerformanceEnhancer {
   }
 
   private setupCriticalCSS(): void {
-    // Inline critical CSS for above-the-fold content
-    const criticalCSS = `
+    // Inline critical CSS for above-the-fold content;
+    const _criticalCSS = `
       .hero-section { contain: layout style paint; }
       .cyber-card { contain: layout style; }
       .neon-text { will-change: transform; }
       .cyber-text-3d { will-change: transform; }
     `;
 
-    const style = document.createElement('style');
-    style.textContent = criticalCSS;
+        style.textContent = criticalCSS;
     style.setAttribute('data-critical', 'true');
     document.head.insertBefore(style, document.head.firstChild);
   }
@@ -234,23 +209,10 @@ class PerformanceEnhancer {
   }
 
   public optimizeBundle(): void {
-    // Dynamic imports for non-critical components
-    const lazyComponents = [
-      'ContentPromotionBanner',
-      'ContentCarousel',
-      'DynamicContentShowcase',
-      'ContentStatistics',
-      'ContentNewsletterSignup'
-    ];
-
-    lazyComponents.forEach(component => {
-      const element = document.querySelector(`[data-component="${component}"]`);
-      if (element && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              this.loadComponent(component);
-              observer.unobserve(entry.target);
+    // Dynamic imports for non-critical components;
+        lazyComponents.forEach(component => {
+            if (element && 'IntersectionObserver' in window) {
+                      observer.unobserve(entry.target);
             }
           });
         });
@@ -261,8 +223,7 @@ class PerformanceEnhancer {
 
   private async loadComponent(componentName: string): Promise<void> {
     try {
-      const module = await import(`../components/${componentName}.tsx`);
-      // Component loaded successfully
+            // Component loaded successfully;
       console.log(`${componentName} loaded dynamically`);
     } catch (error) {
       console.warn(`Failed to load ${componentName}:`, error);

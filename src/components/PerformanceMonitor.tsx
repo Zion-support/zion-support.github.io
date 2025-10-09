@@ -16,10 +16,10 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-    // Measure Core Web Vitals
+    // Measure Core Web Vitals;
     onCLS((metric) => {
       setMetrics(prev => ({ ...prev, cls: metric.value }));
-      // Send to analytics
+      // Send to analytics;
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Performance',
@@ -62,14 +62,9 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
-    // Monitor resource loading performance
+    // Monitor resource loading performance;
     if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'resource') {
-            const resource = entry as PerformanceResourceTiming;
-            
-            // Log slow resources
+                  // Log slow resources;
             if (resource.duration > 1000) {
               console.warn('Slow resource detected:', {
                 name: resource.name,
@@ -86,8 +81,7 @@ const PerformanceMonitor: React.FC = () => {
 
     // Monitor memory usage (if available)
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      console.log('Memory usage:', {
+            console.log('Memory usage:', {
         used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
         total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
         limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB',
@@ -96,8 +90,7 @@ const PerformanceMonitor: React.FC = () => {
 
   }, []);
 
-  // Don't render anything - this is a monitoring component
+  // Don't render anything - this is a monitoring component;
   return null;
-};
-
-export default PerformanceMonitor;
+}
+export default PerformanceMonitor

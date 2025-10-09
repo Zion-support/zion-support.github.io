@@ -1,74 +1,55 @@
-import React from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ApiDocs: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <Navigation />
       
       <main className="pt-20">
         <section className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Api Docs
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            API documentation and developer resources
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Api Docs</h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">API documentation and developer resources</p>
+          <div>
             <Link
               to="/contact"
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              Get Free Consultation
-            </Link>
+              <Phone className="w-5 h-5 mr-2" />Get Free Consultation</Link>
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
             >
-              <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
-            </a>
+              <Phone className="w-4 h-4 mr-2" />(302) 464-0950</a>
           </div>
         </section>
 
         <section className="container mx-auto px-4 py-16">
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          <div>
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today for a free consultation and discover how our solutions can help your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div>
               <Link
                 to="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation
-              </Link>
+                <Phone className="w-5 h-5 mr-2" />Get Free Consultation</Link>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
+                <Phone className="w-4 h-4 mr-2" />(302) 464-0950</a>
             </div>
           </div>
         </section>
       </main>
 
       <Footer />
-    </div>
-  );
-};
-
-export default ApiDocs;
+    </div>);
+}
+export default ApiDocs

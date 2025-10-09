@@ -1,7 +1,7 @@
 'use client';
 /**
- * Environment Variables Validator
- * Ensures all required environment variables are present and valid
+ * Environment Variables Validator;
+ * Ensures all required environment variables are present and valid;
  */
 export interface EnvConfig {
   NODE_ENV: 'development' | 'production' | 'test';
@@ -13,49 +13,39 @@ class EnvValidator {
   private errors: string[] = []
   private warnings: string[] = []
   /**
-   * Validate all environment variables
+   * Validate all environment variables;
    */
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
     this.errors = []
     this.warnings = []
-    // Validate NODE_ENV
+    // Validate NODE_ENV;
     this.validateNodeEnv()
-    // Validate optional but recommended variables
+    // Validate optional but recommended variables;
     this.validateOptionalVars()
     return {
       isValid: this.errors.length === 0,
       errors: this.errors,
-      warnings: this.warnings
-    };
+      warnings: this.warnings;
+    }
   }
   /**
-   * Get validated environment configuration
+   * Get validated environment configuration;
    */
   getConfig(): EnvConfig {
-    const validation = this.validate()
-    if (!validation.isValid) {
-      throw new Error(
-        `Environment validation failed:\n${validation.errors.join('\n')}`
-      )
-    }
-    if (validation.warnings.length > 0) {
-      console.warn(
-        `Environment warnings:\n${validation.warnings.join('\n')}`
-      );
-    }
+        }
     return {
       NODE_ENV: this.getNodeEnv(),
       NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
       NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
       NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']
-    };
+    }
   }
   private validateNodeEnv(): void {
-    const nodeEnv = process.env['NODE_ENV']
-    const validEnvs = ['development', 'production', 'test']
+    const _nodeEnv = process.env['NODE_ENV']
+    const _validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {
       this.errors.push('NODE_ENV is not set')
-      return
+      return;
     }
     if (!validEnvs.includes(nodeEnv)) {
       this.errors.push(
@@ -64,8 +54,8 @@ class EnvValidator {
     }
   }
   private validateOptionalVars(): void {
-    const nodeEnv = this.getNodeEnv()
-    // In production, these should be set
+    const _nodeEnv = this.getNodeEnv()
+    // In production, these should be set;
     if (nodeEnv === 'production') {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(
@@ -80,14 +70,14 @@ class EnvValidator {
     }
   }
   private getNodeEnv(): 'development' | 'production' | 'test' {
-    const env = process.env['NODE_ENV'] || 'development'
+    const _env = process.env['NODE_ENV'] || 'development'
     return env as 'development' | 'production' | 'test'
   }
 }
-// Export singleton instance
-export const envValidator = new EnvValidator()
-// Export convenience function
+// Export singleton instance;
+export const _envValidator = new EnvValidator()
+// Export convenience function;
 export function validateEnv(): EnvConfig {
   return envValidator.getConfig()
 }
-export default envValidator
+export default envValidator;

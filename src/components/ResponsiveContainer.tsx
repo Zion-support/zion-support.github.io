@@ -9,31 +9,25 @@ interface ResponsiveContainerProps {
     lg?: string;
     xl?: string;
     '2xl'?: string;
-  };
+  }
   fallback?: React.ReactNode;
 }
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
+const ResponsiveContainer: React.FC<ResponsiveContainerProps>= ({
   children,
   className = '',
   breakpoints = {},
   fallback,
 }) => {
-  const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(false)
   const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
 
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
-  const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
-
-  useEffect(() => {
+          useEffect(() => {
     setIsClient(true);
   }, []);
 
   useEffect(() => {
-    if (!isClient) return;
-
+    if (!isClient) return null;
     if (isLargeDesktop) {
       setScreenSize('2xl');
     } else if (isDesktop) {
@@ -43,40 +37,26 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
     } else {
       setScreenSize('sm');
     }
-  }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
-
+  }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop])
   if (!isClient) {
     return fallback || <div className={className}>{children}</div>;
   }
 
-  const getResponsiveClasses = () => {
-    const baseClasses = className;
-    const responsiveClasses = breakpoints[screenSize] || '';
-    return `${baseClasses} ${responsiveClasses}`.trim();
-  };
-
+          return `${baseClasses} ${responsiveClasses}`.trim()
+  }
   return (
-    <div className={getResponsiveClasses()}>
+    <div>
       {children}
-    </div>
-  );
-};
-
-// Hook for responsive values
-export const useResponsiveValue = <T,>(values: {
-  sm?: T;
-  md?: T;
+    </div>);
+}
+// Hook for responsive values;
+export   md?: T;
   lg?: T;
   xl?: T;
   '2xl'?: T;
   default?: T;
 }): T => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
-  const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
-
-  if (isLargeDesktop && values['2xl'] !== undefined) {
+          if (isLargeDesktop && values['2xl'] !== undefined) {
     return values['2xl'];
   }
   if (isDesktop && values.xl !== undefined) {
@@ -89,22 +69,14 @@ export const useResponsiveValue = <T,>(values: {
     return values.sm;
   }
   return values.default || values.lg || values.md || values.sm || ({} as T);
-};
-
-// Hook for responsive breakpoints
-export const useBreakpoint = () => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
-  const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
-
-  return {
+}
+// Hook for responsive breakpoints;
+export const rateLimitingMiddleware = {
     isMobile,
     isTablet,
     isDesktop,
     isLargeDesktop,
     current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',
-  };
-};
-
-export default ResponsiveContainer;
+  }
+}
+export default ResponsiveContainer

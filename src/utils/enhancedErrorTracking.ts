@@ -1,7 +1,7 @@
 'use client';
 /**
- * Enhanced Error Tracking Utility
- * Provides comprehensive error tracking with detailed context
+ * Enhanced Error Tracking Utility;
+ * Provides comprehensive error tracking with detailed context;
  */
 export interface ErrorContext {
   component?: string;
@@ -52,22 +52,22 @@ class EnhancedErrorTracker {
       stack: error.stack,
       context: {
         ...context,
-        sessionId: this.sessionId
+        sessionId: this.sessionId;
       },
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
-    };
+      url: window.location.href;
+    }
     this.errors.push(trackedError);
-    // Keep only the most recent errors
+    // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {
       this.errors.shift();
     }
-    // Log to console in development
+    // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {
       // console.error('Tracked Error:', trackedError);
     }
-    // Send to analytics if available
+    // Send to analytics if available;
     this.sendToAnalytics(trackedError);
   }
   private sendToAnalytics(error: TrackedError): void {
@@ -77,7 +77,7 @@ class EnhancedErrorTracker {
         window as {
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
         }
-      ).gtag
+      ).gtag;
     ) {
       (
         window as unknown as {
@@ -86,7 +86,7 @@ class EnhancedErrorTracker {
       ).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        component: error.context.component
+        component: error.context.component;
       });
     }
   }
@@ -101,18 +101,16 @@ class EnhancedErrorTracker {
     byComponent: Record<string, number>;
     recent: TrackedError[];
   } {
-    const byComponent: Record<string, number> = {};
+    const byComponent: Record<string, number> = {}
     this.errors.forEach(error => {
-      const component = error.context.component || 'Unknown';
-      byComponent[component] = (byComponent[component] || 0) + 1;
+            byComponent[component] = (byComponent[component] || 0) + 1;
     });
     return {
       total: this.errors.length,
       byComponent,
       recent: this.errors.slice(-10)
-    };
+    }
   }
 }
-// Export singleton instance
-export const errorTracker = new EnhancedErrorTracker();
-export default errorTracker;
+// Export singleton instance;
+export export default errorTracker;

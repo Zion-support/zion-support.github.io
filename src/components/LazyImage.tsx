@@ -9,11 +9,11 @@ interface LazyImageProps {
   width?: number;
   height?: number;
   priority?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
+  onLoad?: () =>void;
+  onError?: () => void
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({
+const LazyImage: React.FC<LazyImageProps>= ({
   src,
   alt,
   className,
@@ -27,16 +27,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
+    useEffect(() => {
+    if (priority) return null;
+              observer.disconnect();
         }
       },
       {
@@ -52,22 +45,12 @@ const LazyImage: React.FC<LazyImageProps> = ({
     return () => observer.disconnect();
   }, [priority]);
 
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
+      onLoad?.();
+  }
+      onError?.()
+  }
   return (
-    <div
-      ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
-      style={{ width, height }}
-    >
+    <div>
       {!isInView ? (
         <img
           src={placeholder}
@@ -90,14 +73,12 @@ const LazyImage: React.FC<LazyImageProps> = ({
             decoding="async"
           />
           {!isLoaded && !hasError && (
-            <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center">
-              <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" />
+            <div>
+              <div>
             </div>
           )}
         </>
       )}
-    </div>
-  );
-};
-
-export default LazyImage;
+    </div>);
+}
+export default LazyImage

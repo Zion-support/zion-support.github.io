@@ -1,6 +1,6 @@
 /**
- * Advanced SEO Enhancer
- * Comprehensive SEO optimization utilities
+ * Advanced SEO Enhancer;
+ * Comprehensive SEO optimization utilities;
  */
 
 interface SEOConfig {
@@ -11,13 +11,13 @@ interface SEOConfig {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   robots?: string;
   language?: string;
   author?: string;
   publisher?: string;
   lastModified?: string;
-  alternateUrls?: { [key: string]: string };
+  alternateUrls?: { [key: string]: string }
 }
 
 interface MetaTag {
@@ -51,10 +51,9 @@ class SEOEnhancer {
   }
 
   private setTitle(): void {
-    const title = this.config.title || 'Zion Tech Group - Advanced AI and IT Solutions';
-    document.title = title;
+        document.title = title;
     
-    // Update meta title
+    // Update meta title;
     this.updateOrCreateMetaTag('name', 'title', title);
   }
 
@@ -130,29 +129,25 @@ class SEOEnhancer {
   private setStructuredData(): void {
     if (!this.config.structuredData) return;
 
-    // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (existingScript) {
+    // Remove existing structured data;
+        if (existingScript) {
       existingScript.remove();
     }
 
-    // Add new structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    // Add new structured data;
+        script.type = 'application/ld+json';
     script.textContent = JSON.stringify(this.config.structuredData);
     document.head.appendChild(script);
   }
 
   private setCanonicalUrl(): void {
-    // Remove existing canonical
-    const existingCanonical = document.querySelector('link[rel="canonical"]');
-    if (existingCanonical) {
+    // Remove existing canonical;
+        if (existingCanonical) {
       existingCanonical.remove();
     }
 
-    // Add new canonical
-    const canonical = document.createElement('link');
-    canonical.rel = 'canonical';
+    // Add new canonical;
+        canonical.rel = 'canonical';
     canonical.href = this.config.canonicalUrl;
     document.head.appendChild(canonical);
   }
@@ -161,8 +156,7 @@ class SEOEnhancer {
     if (!this.config.alternateUrls) return;
 
     Object.entries(this.config.alternateUrls).forEach(([hreflang, url]) => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
+            link.rel = 'alternate';
       link.hreflang = hreflang;
       link.href = url;
       document.head.appendChild(link);
@@ -174,15 +168,14 @@ class SEOEnhancer {
   }
 
   private optimizeImages(): void {
-    // Add loading="lazy" to images below the fold
-    const images = document.querySelectorAll('img:not([loading])');
-    images.forEach((img, index) => {
+    // Add loading="lazy" to images below the fold;
+        images.forEach((img, index) => {
       if (index > 2) { // Skip first 3 images (likely above the fold)
         img.setAttribute('loading', 'lazy');
       }
     });
 
-    // Add alt attributes to images without them
+    // Add alt attributes to images without them;
     images.forEach(img => {
       if (!img.getAttribute('alt')) {
         img.setAttribute('alt', this.config.title);
@@ -191,31 +184,14 @@ class SEOEnhancer {
   }
 
   private setupBreadcrumbs(): void {
-    const breadcrumbSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: this.baseUrl
-        }
-      ]
-    };
-
-    // Add breadcrumb structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+        // Add breadcrumb structured data;
+        script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbSchema);
     document.head.appendChild(script);
   }
 
   private updateOrCreateMetaTag(attribute: 'name' | 'property', value: string, content: string): void {
-    const selector = `meta[${attribute}="${value}"]`;
-    let meta = document.querySelector(selector) as HTMLMetaElement;
-
-    if (meta) {
+            if (meta) {
       meta.content = content;
     } else {
       meta = document.createElement('meta');
@@ -226,16 +202,7 @@ class SEOEnhancer {
   }
 
   public generateSitemap(): string {
-    const pages = [
-      { url: '/', priority: '1.0', changefreq: 'daily' },
-      { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
-      { url: '/it-services', priority: '0.9', changefreq: 'weekly' },
-      { url: '/contact', priority: '0.8', changefreq: 'monthly' },
-      { url: '/about', priority: '0.7', changefreq: 'monthly' }
-    ];
-
-    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+            sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
     pages.forEach(page => {
       sitemap += '  <url>\n';
@@ -253,9 +220,8 @@ class SEOEnhancer {
     return `User-agent: *
 Allow: /
 
-Sitemap: ${this.baseUrl}/sitemap.xml
-
-# Disallow admin areas
+Sitemap: ${this.baseUrl}/sitemap.xml;
+# Disallow admin areas;
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
@@ -263,27 +229,20 @@ Disallow: /private/`;
   }
 
   public optimizeForCoreWebVitals(): void {
-    // Optimize LCP
+    // Optimize LCP;
     this.optimizeLCP();
     
-    // Optimize FID
+    // Optimize FID;
     this.optimizeFID();
     
-    // Optimize CLS
+    // Optimize CLS;
     this.optimizeCLS();
   }
 
   private optimizeLCP(): void {
-    // Preload critical resources
-    const criticalResources = [
-      '/assets/index.css',
-      '/assets/vendor.js',
-      '/assets/index.js'
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+    // Preload critical resources;
+        criticalResources.forEach(resource => {
+            link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script';
       document.head.appendChild(link);
@@ -291,9 +250,8 @@ Disallow: /private/`;
   }
 
   private optimizeFID(): void {
-    // Defer non-critical JavaScript
-    const scripts = document.querySelectorAll('script[src]:not([defer]):not([async])');
-    scripts.forEach(script => {
+    // Defer non-critical JavaScript;
+        scripts.forEach(script => {
       if (!script.src.includes('critical')) {
         script.defer = true;
       }
@@ -301,9 +259,8 @@ Disallow: /private/`;
   }
 
   private optimizeCLS(): void {
-    // Add dimensions to images to prevent layout shift
-    const images = document.querySelectorAll('img:not([width]):not([height])');
-    images.forEach(img => {
+    // Add dimensions to images to prevent layout shift;
+        images.forEach(img => {
       img.addEventListener('load', () => {
         img.style.width = img.naturalWidth + 'px';
         img.style.height = img.naturalHeight + 'px';

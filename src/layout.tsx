@@ -8,113 +8,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'TechCompany',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-    services: [
-      'AI Solutions',
-      'Quantum Computing',
-      'Autonomous Systems',
-      'Digital Transformation',
-      'Cloud Services',
-      'Automation',
-      'Business Intelligence'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'Customer Service',
-      areaServed: 'US',
-      availableLanguage: 'en',
-    },
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US',
-    },
-    offers: [
-      {
-        '@type': 'Offer',
-        category: 'AI Solutions',
-        description: 'Enterprise AI solutions, digital transformation, and cloud services',
-        price: '1500',
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          price: '1500',
-          priceCurrency: 'USD',
-          billingIncrement: 'P1M'
-        }
-      },
-      {
-        '@type': 'Offer',
-        category: 'Digital Transformation',
-        description: 'Process automation, legacy system modernization, and workflow optimization',
-        price: '2500',
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          price: '2500',
-          priceCurrency: 'USD',
-          billingIncrement: 'P1M'
-        }
-      }
-    ],
-    serviceArea: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: '39.8283',
-        longitude: '-75.5795'
-      },
-      geoRadius: '1000000'
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'AI Technology Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Digital Automation',
-            description: 'Process automation and workflow optimization services'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Cloud Infrastructure',
-            description: 'Cloud migration and infrastructure optimization services'
-          }
-        }
-      ]
-    }
-  };
-  return (
+    return (
     <html lang='en'>
       <head>
         <meta charSet="UTF-8" />
@@ -185,10 +79,5 @@ export default function RootLayout({
           {children}
         </ErrorBoundary>
       </body>
-    </html>
-  );
-<<<<<<< HEAD
+    </html>)
 }
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-9296

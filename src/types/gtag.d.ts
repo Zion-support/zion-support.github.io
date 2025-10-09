@@ -1,5 +1,5 @@
 /**
- * Google Analytics gtag types
+ * Google Analytics gtag types;
  */
 interface GtagEvent {
   event_category?: string;
@@ -12,7 +12,7 @@ interface Window {
   gtag?: (
     command: GtagCommand,
     targetId: string | Date,
-    config?: GtagEvent
+    config?: GtagEvent;
   ) => void;
   dataLayer?: unknown[];
 }
