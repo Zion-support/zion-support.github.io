@@ -26,6 +26,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       []
     );
+    
+    const baseClasses = useMemo(
+      () => `bg-${color}-500 ${sizeClasses[size]}`,
+      [color, size, sizeClasses]
+    );
     const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
@@ -112,9 +117,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
     const containerClasses = useMemo(() => {
-      const _baseClasses = 'flex items-center justify-center';
-      const _fullScreenClasses = fullScreen ? 'min-h-screen' : '';
-      return `${baseClasses} ${fullScreenClasses} ${className}`;
+      const baseContainerClasses = 'flex items-center justify-center';
+      const fullScreenClasses = fullScreen ? 'min-h-screen' : '';
+      return `${baseContainerClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
     return (
       <div className={containerClasses}>

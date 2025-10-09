@@ -59,6 +59,29 @@ const AISalesAutomationPage: React.FC = () => {
     { number: '200%', label: 'ROI Improvement' }
   ];
 
+  const useCases = [
+    {
+      icon: TrendingUp,
+      title: 'Lead Generation',
+      description: 'Automatically identify and qualify high-value prospects using AI-powered lead scoring.'
+    },
+    {
+      icon: Brain,
+      title: 'Sales Forecasting',
+      description: 'Predict sales outcomes with 90%+ accuracy using machine learning algorithms.'
+    },
+    {
+      icon: Star,
+      title: 'Customer Segmentation',
+      description: 'Automatically segment customers based on behavior, value, and engagement patterns.'
+    },
+    {
+      icon: ArrowRight,
+      title: 'Pipeline Management',
+      description: 'Optimize your sales pipeline with intelligent automation and tracking.'
+    }
+  ];
+
   return (
     <>
       <SEOOptimizer

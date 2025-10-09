@@ -58,6 +58,50 @@ const AIWorkflowAutomationPage: React.FC = () => {
     { number: '99.9%', label: 'Reliability' }
   ];
 
+  const useCases = [
+    {
+      icon: Zap,
+      title: 'Document Processing',
+      description: 'Automatically process, classify, and route documents with AI-powered recognition.'
+    },
+    {
+      icon: Clock,
+      title: 'Approval Workflows',
+      description: 'Streamline approval processes with intelligent routing and escalation rules.'
+    },
+    {
+      icon: Shield,
+      title: 'Compliance Automation',
+      description: 'Ensure regulatory compliance with automated monitoring and reporting.'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhance team productivity with intelligent task assignment and tracking.'
+    }
+  ];
+
+  const pricing = [
+    {
+      name: 'Starter',
+      price: '$299/month',
+      description: 'Perfect for small teams',
+      features: ['Up to 5 workflows', 'Basic automation', 'Email notifications', 'Standard integrations']
+    },
+    {
+      name: 'Professional',
+      price: '$599/month',
+      description: 'Ideal for growing businesses',
+      features: ['Up to 25 workflows', 'Advanced AI features', 'Custom integrations', 'Analytics dashboard', 'Priority support']
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,299/month',
+      description: 'For large organizations',
+      features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
+    }
+  ];
+
   return (
     <>
       <SEOOptimizer
