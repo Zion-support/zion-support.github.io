@@ -1,11 +1,11 @@
-export default {
+module.exports = {
   presets: [
     ['@babel/preset-env', { targets: { node: 'current' } }],
     ['@babel/preset-react', { runtime: 'automatic' }],
     '@babel/preset-typescript',
   ],
   plugins: [
-    ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
-    '@babel/plugin-transform-class-properties',
+    '@babel/plugin-proposal-decorators',
+    'babel-plugin-transform-import-meta',
   ],
 };

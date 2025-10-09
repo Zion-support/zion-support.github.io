@@ -1,0 +1,67 @@
+{
+  "name": "zion-website",
+  "version": "1.0.0",
+  "description": "Zion Tech Group - Advanced AI and IT Solutions Website",
+  "type": "module",
+  "preinstall": "pnpm approve-builds --unsafe-perm || true",
+  "scripts": {
+    "start": "vite preview --host 0.0.0.0 --port 3000",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=4096\" vite build --mode production --minify terser",
+    "build:analyze": "NODE_OPTIONS=\"--max-old-space-size=4096\" vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
+    "preview": "vite preview --host 0.0.0.0 --port 3000",
+    "health-check": "curl -f http://localhost:3000 || exit 1"
+  },
+  "dependencies": {
+    "@esbuild/linux-x64": "^0.25.10",
+    "@heroicons/react": "^2.2.0",
+    "@tailwindcss/postcss": "^4.1.14",
+    "clsx": "^2.1.1",
+    "esbuild": "^0.25.10",
+    "framer-motion": "^12.23.22",
+    "gray-matter": "^4.0.3",
+    "jsdom": "^27.0.0",
+    "lucide-react": "^0.544.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-error-boundary": "^6.0.0",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^7.9.4",
+    "recharts": "^3.2.1",
+    "tailwind-merge": "^3.3.1",
+    "web-vitals": "^5.1.0"
+  },
+  "devDependencies": {},
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss",
+    "ai",
+    "it-solutions",
+    "website"
+  ],
+  "author": "Zion Tech Group",
+  "license": "MIT",
+  "pnpm": {
+    "allowedBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "unrs-resolver"
+    ],
+    "ignoredBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "unrs-resolver"
+    ]
+  }
+}

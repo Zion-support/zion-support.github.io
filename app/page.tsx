@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
+import EnhancedNavigation from './components/EnhancedNavigation';
 import Footer from './components/Footer';
+import EnhancedLoadingSpinner from './components/EnhancedLoadingSpinner';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -9,9 +10,9 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Loading skeleton component
+// Enhanced loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+  <div className="cyber-card hologram-card p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
@@ -43,8 +44,8 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
-      {/* Navigation */}
-      <Navigation />
+      {/* Enhanced Navigation */}
+      <EnhancedNavigation />
       
       {/* Skip to main content for accessibility */}
       <a
@@ -55,7 +56,7 @@ const HomePage: React.FC = () => {
       </a>
 
       {/* Content Promotion Banner */}
-      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+      <Suspense fallback={<EnhancedLoadingSpinner size="medium" text="Loading content..." />}>
         <ContentPromotionBanner />
       </Suspense>
 

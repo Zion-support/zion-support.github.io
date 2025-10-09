@@ -1,127 +1,135 @@
-// Learn more: https://github.com/testing-library/jest-dom
-require('@testing-library/jest-dom');
-const React = require('react');
-const { TextEncoder, TextDecoder } = require('util');
-
-// Polyfills for Node.js environment
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-
-// Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
-  logger: {
-    debug: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    error: jest.fn(),
-    log: jest.fn(),
-  },
-}));
-
-jest.mock('./src/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
-}));
-
-jest.mock('./src/utils/errorTracking.ts', () => ({
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
-
-jest.mock('./src/hooks/usePerformance.ts', () => ({
-  usePerformance: jest.fn(() => ({
-    metrics: {},
-    optimize: jest.fn(),
-  })),
-}));
-
-jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
-  usePerformanceMonitoring: jest.fn(() => ({
-    metrics: {},
-    report: {},
-  })),
-}));
-
-// Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  const React = require('react');
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-    }),
-    useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    NavLink: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
-      const { createMemoryRouter, RouterProvider } = actual;
-      const router = createMemoryRouter([
-        {
-          path: '/',
-          element: children,
-        },
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0,
-      });
-      return React.createElement(RouterProvider, { router });
-    },
-    RouterProvider: ({ router }) => null,
-  };
-});
-
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
+import '@testing-library/jest-dom';
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  takeRecords() {
-    return [];
-  }
   unobserve() {}
 };
 
-// Suppress console errors in tests
-const originalError = console.error;
-beforeAll(() => {
-  console.error = jest.fn((...args) => {
-    if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning: ReactDOM.render') ||
-        args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
-    ) {
-      return;
-    }
-    originalError.call(console, ...args);
-  });
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
 });
 
-afterAll(() => {
-  console.error = originalError;
+// Mock localStorage
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+global.localStorage = localStorageMock;
+
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+global.sessionStorage = sessionStorageMock;
+
+// Mock fetch
+global.fetch = jest.fn();
+
+// Mock console methods to reduce noise in tests
+global.console = {
+  ...console,
+  log: jest.fn(),
+  debug: jest.fn(),
+  info: jest.fn(),
+  warn: jest.fn(),
+  error: jest.fn(),
+};
+
+// Mock performance API
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    getEntriesByType: jest.fn(() => []),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    memory: {
+      usedJSHeapSize: 1000000,
+      totalJSHeapSize: 2000000,
+      jsHeapSizeLimit: 4000000,
+    },
+  },
+});
+
+// Mock navigator
+Object.defineProperty(navigator, 'userAgent', {
+  writable: true,
+  value: 'Mozilla/5.0 (compatible; Test Browser)',
+});
+
+// Mock service worker
+Object.defineProperty(navigator, 'serviceWorker', {
+  writable: true,
+  value: {
+    register: jest.fn(() => Promise.resolve()),
+    unregister: jest.fn(() => Promise.resolve()),
+    ready: Promise.resolve(),
+  },
+});
+
+// Mock speech synthesis
+Object.defineProperty(window, 'speechSynthesis', {
+  writable: true,
+  value: {
+    getVoices: jest.fn(() => []),
+    speak: jest.fn(),
+    cancel: jest.fn(),
+    pause: jest.fn(),
+    resume: jest.fn(),
+  },
+});
+
+// Mock clipboard API
+Object.defineProperty(navigator, 'clipboard', {
+  writable: true,
+  value: {
+    writeText: jest.fn(() => Promise.resolve()),
+    readText: jest.fn(() => Promise.resolve('')),
+  },
+});
+
+// Mock gtag
+global.gtag = jest.fn();
+
+// Mock web-vitals
+jest.mock('web-vitals', () => ({
+  getCLS: jest.fn((callback) => callback({ value: 0.1, id: 'test-cls' })),
+  getFID: jest.fn((callback) => callback({ value: 50, id: 'test-fid' })),
+  getFCP: jest.fn((callback) => callback({ value: 1000, id: 'test-fcp' })),
+  getLCP: jest.fn((callback) => callback({ value: 2000, id: 'test-lcp' })),
+  getTTFB: jest.fn((callback) => callback({ value: 300, id: 'test-ttfb' })),
+}));
+
+// Setup test cleanup
+afterEach(() => {
+  jest.clearAllMocks();
+  localStorageMock.clear();
+  sessionStorageMock.clear();
 });
