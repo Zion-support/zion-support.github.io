@@ -6,33 +6,13 @@ interface SEOProps {
   keywords?: string[];
   canonicalUrl?: string;
 }
-<<<<<<< HEAD
-const SEOEnhancer: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <SEOEnhancerProps> = ({
-  // TODO: Add content
-}
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
-  keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
-//   children
-=======
 
 const SEOEnhancer: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions for modern enterprises',
   keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
   canonicalUrl
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
 }) => {
   useEffect(() => {
     // Update document title
@@ -45,25 +25,7 @@ const SEOEnhancer: React.FC<SEOProps> = ({
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-<<<<<<< HEAD
-  };
-  return (
-    
-          
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
-  )
-    
-          <>
-      {children}
-    </>
-  );
-=======
+
     metaDescription.setAttribute('content', description);
     
     // Update meta keywords
@@ -88,7 +50,7 @@ const SEOEnhancer: React.FC<SEOProps> = ({
   }, [title, description, keywords, canonicalUrl]);
 
   return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
 };
 
 export default SEOEnhancer;

@@ -11,7 +11,7 @@ function resolveMergeConflicts(filePath) {
     let modified = false;
     
     // Pattern to match merge conflict blocks - more flexible
-    const conflictPattern = /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> cursor\/fix-errors-and-merge-to-main-[a-f0-9]+/gs;
+    const conflictPattern = /\n(.*?)\n
     
     // Replace merge conflicts with the HEAD version (first part)
     let resolvedContent = content.replace(conflictPattern, (match, headContent, cursorContent) => {
@@ -21,7 +21,7 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Handle nested conflicts with multiple HEAD sections
-    const nestedConflictPattern = /<<<<<<< HEAD\n(.*?)\n<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> cursor\/fix-errors-and-merge-to-main-[a-f0-9]+\n=======\n(.*?)\n>>>>>>> cursor\/fix-errors-and-merge-to-main-[a-f0-9]+/gs;
+    const nestedConflictPattern = /\n(.*?)\n
     
     resolvedContent = resolvedContent.replace(nestedConflictPattern, (match, head1, head2, cursor1, cursor2) => {
       modified = true;
@@ -30,7 +30,7 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Handle simple conflicts without branch names
-    const simpleConflictPattern = /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+/gs;
+    const simpleConflictPattern = /\n(.*?)\n
     
     resolvedContent = resolvedContent.replace(simpleConflictPattern, (match, headContent, cursorContent) => {
       modified = true;
@@ -38,7 +38,7 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Handle conflicts that start with just <<<<<<< without HEAD
-    const noHeadConflictPattern = /<<<<<<< [^\n]*\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+/gs;
+    const noHeadConflictPattern = /<<<<<<< [^\n]*\n(.*?)\n
     
     const finalContent = resolvedContent.replace(noHeadConflictPattern, (match, headContent, cursorContent) => {
       modified = true;

@@ -19,7 +19,7 @@ def resolve_all_conflicts(file_path):
         
         while iteration < max_iterations:
             # Pattern for standard conflicts
-            pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
+            pattern1 = r'\n(.*?)\n
             
             # Replace with incoming version (group 2)
             new_content = re.sub(pattern1, r'\2\n', content, flags=re.DOTALL)
@@ -32,9 +32,8 @@ def resolve_all_conflicts(file_path):
             iteration += 1
         
         # Remove any remaining conflict markers (in case of malformed conflicts)
-        content = re.sub(r'<<<<<<< HEAD\n', '', content)
-        content = re.sub(r'=======\n', '', content)
-        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
+        content = re.sub(r'\n', '', content)
+        content = re.sub(r'
         
         # Write back if changed
         if content != original_content:

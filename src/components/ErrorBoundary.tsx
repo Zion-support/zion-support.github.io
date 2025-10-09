@@ -1,36 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-<<<<<<< HEAD
-interface Props {
-  // TODO: Add content
-};
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
-interface State {
-  // TODO: Add content
-};
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
-class ErrorBoundary extends Component
-          
-          
-          
-          
-          
-          
-          
-          
-          <Props, State> {
-  // TODO: Add content
-}
-  constructor(props: Props) {
-  // TODO: Add content
-=======
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -40,7 +10,7 @@ interface ErrorBoundaryState {
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
 }
 
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -48,233 +18,27 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
-<<<<<<< HEAD
-  static getDerivedStateFromError(error: Error): State {
-  // TODO: Add content
-}
-    return {
-  // TODO: Add content
-};
-  hasError: true,
-//       error
-    };
-=======
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return { hasError: true, error };
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-  // TODO: Add content
-}
-    this.setState({
-  // TODO: Add content
-}
-//       error,
-//       errorInfo
-    });
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-// console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-    // Report error to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
-      (window as any).gtag('event', 'exception', {
-  // TODO: Add content
-};
-  description: error.message,
-        fatal: true
-      });
-    }
-    // Call custom error handler
-    if (this.props.onError) {
-  // TODO: Add content
-}
-      this.props.onError(error, errorInfo);
-    }
-    // Report error to error tracking service
-    this.reportError(error, errorInfo);
-=======
+
     this.setState({ error, errorInfo });
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
   }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
-  // TODO: Add content
-}
-      // Custom fallback UI
-      if (this.props.fallback) {
-  // TODO: Add content
-}
-        return this.props.fallback;
-      }
-      // Default error UI
-      return (
-    
-          
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
-  )
-        
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full">
-            <div className="cyber-card p-8 text-center">
-              <div className="text-6xl mb-6"></div>
-              <h1 className="text-3xl font-bold text-white mb-4 neon-text">
-// Oops! Something went wrong
-              
-          
-          
-          
-          
-          
-          
-          
-          
-          </h1>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-// We're sorry, but something unexpected happened. Our team has been notified
-//                 and is working to fix the issue.
-              
-          
-          
-          
-          
-          
-          
-          
-          
-          </p>
-              {process.env.NODE_ENV === 'development' && this.state.error && ()
-                
-          <details className="mb-6 text-left">
-                  <summary className="text-cyan-400 cursor-pointer mb-2">
-// Error Details (Development Only)
-                  
-          
-          
-          
-          
-          
-          
-          
-          
-          </summary>
-                  <div className="bg-gray-800 p-4 rounded-lg text-sm text-gray-300 overflow-auto">
-                    <div className="mb-2">
-                      <strong>Error:</strong> {this.state.error.message}
-                    </div>
-                    <div className="mb-2">
-                      <strong>Stack:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">{this.state.error.stack}</pre>
-                    </div>
-                    {this.state.errorInfo && ()
-                      
-          <div>
-                        <strong>Component Stack:</strong>
-                        <pre className="mt-1 whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
-                      </div>
-                    )}
-                  </div>
-                </details>
-              )}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={this.handleRetry}
-                  className="cyber-button px-6 py-3 text-lg font-semibold"
-// >
-//                   Try Again
-                
-          
-          
-          
-          
-          
-          
-          
-          
-          </button>
-                <button
-                  onClick={this.handleReload}
-                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-// >
-//                   Reload Page
-                
-          
-          
-          
-          
-          
-          
-          
-          
-          </button>
-                <button
-                  onClick={this.handleGoHome}
-                  className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
-// >
-//                   Go Home
-                
-          
-          
-          
-          
-          
-          
-          
-          
-          </button>
-              </div>
-              <div className="mt-8 text-sm text-gray-400">
-                <p>If this problem persists, please contact our support team:</p>
-                <p className="mt-2">
-                   <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-// support@ziontechgroup.com
-                  
-          
-          
-          
-          
-          
-          
-          
-          
-          </a>
-                </p>
-                <p>
-                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-// +1 (302) 464-0950
-                  
-          
-          
-          
-          
-          
-          
-          
-          
-          </a>
-                </p>
-              </div>
-            </div>
-=======
+
       return this.props.fallback || (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300">Please refresh the page and try again.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
           </div>
         </div>
       );

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield from 'lucide-react'
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const testPagetsx: React.FC = () => {

@@ -1,24 +1,17 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { TestTube, Target, Settings, CheckCircle ,  TestTube,  Target,  Settings from 'lucide-react';
 
-const AIABTestingPage: React.FC = () => {
-  const features = [
-    {,
- icon: TestTube,
-=======
 import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
 
 const AIABTestingPage: React.FC = () => {
   const features = [
     {
       icon: TestTube,
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
-      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation'];
+      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
     },
     {
       icon: Target,

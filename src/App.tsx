@@ -25,9 +25,7 @@ const App: React.FC = () => {
     
     return () => clearTimeout(timer);
   }, []);
-<<<<<<< HEAD
 
-=======
   const initializeEnhancers = async () => {
     try {
       // Initialize enhancers
@@ -54,7 +52,7 @@ const App: React.FC = () => {
       setIsInitialized(true);
     }
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
   if (!isInitialized) {
     return <LoadingSpinner />;
   }

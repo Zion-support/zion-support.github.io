@@ -23,19 +23,6 @@ const PagePage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-}
-const AiCrmPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-  );
-};
-const AICRMPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-  );
-};
-=======
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+

@@ -15,7 +15,7 @@ function fixFile(filePath) {
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version
-    const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
+    const conflictRegex = /\n([\s\S]*?)\n
     const originalContent = content;
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
       modified = true;
@@ -25,8 +25,7 @@ function fixFile(filePath) {
     // Fix common syntax issues
     content = content
       // Remove any remaining conflict markers
-      .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '')
+      .replace(/[\s\S]*?
       // Fix common syntax patterns
       .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n}')
       .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]')

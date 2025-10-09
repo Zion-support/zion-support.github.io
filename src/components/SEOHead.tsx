@@ -3,31 +3,10 @@ import React, { useEffect } from 'react';
 interface SEOProps {
   title?: string;
   description?: string;
-<<<<<<< HEAD
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  structuredData?: object;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-}
-const SEOHead: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <SEOHeadProps> = ({
-  // TODO: Add content
-=======
+
   keywords?: string[];
   canonicalUrl?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
 }
 
 const SEOHead: React.FC<SEOProps> = ({

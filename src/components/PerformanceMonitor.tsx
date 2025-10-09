@@ -1,20 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-  // TODO: Add content
-};
-  cls: number | null;,
-    fcp: number | null;,
-    lcp: number | null;,
-    ttfb: number | null;
-=======
+
   fcp: number | null;
   lcp: number | null;
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+
 }
 
 interface PerformanceProps {

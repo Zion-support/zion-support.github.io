@@ -1,16 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
+
 >>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -186,7 +176,6 @@ export default AIAutomationPage;
                   +1 302 464 0950
               <div className="mt-8 text-sm opacity-90">
                 <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
-
 
         <main className="pt-16">
           <div className="container mx-auto px-4 py-16 text-center">
