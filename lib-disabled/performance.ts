@@ -54,13 +54,6 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
   TTFB: { good: 800, poor: 1800 },
   TTFB: { good: 800, poor: 1800 },
   TTFB: { good: 800, poor: 1800 },
@@ -98,32 +91,12 @@ function sendToAnalytics(metric: Metric): void {
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
     id: metric.id
-    id: metric.id,
-    id: metric.id,
-    id: metric.id,
-    id: metric.id,
-    id: metric.id
-    id: metric.id
-    id: metric.id
-    id: metric.id
-    id: metric.id
-    id: metric.id,
-    id: metric.id,
-    id: metric.id
-    id: metric.id,
-    id: metric.id,
   };
 
   // Log in development
-//     }
-
-    id: metric.id,
-  };
-
-  // Log in development
-  if (process.env['NODE_ENV'] === 'development') {
-    // eslint-disable-next-line no-console
-//     }
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Performance metric:', performanceMetric);
+  }
 
   // Send to analytics
   if (typeof window !== 'undefined' && window.gtag) {

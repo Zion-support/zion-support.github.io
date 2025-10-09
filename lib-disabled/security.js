@@ -13,12 +13,6 @@ import crypto from 'crypto';
 export class SecurityUtils {
   static sanitizeInput(input) {
     if (typeof input !== 'string') return input;
-    return input
-      .replace(/[<>]/g, '') // Remove potential HTML tags
-
-export class SecurityUtils {
-  static sanitizeInput(input) {
-    if (typeof input !== 'string') return input;
 
     return input
       .replace(/[<>]/g, '') // Remove potential HTML tags
@@ -26,7 +20,9 @@ export class SecurityUtils {
       .replace(/on\w+=/gi, '') // Remove event handlers
       .trim();
   }
-    const _passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
+
+  static validatePassword(password) {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
     return passwordRegex.test(password);
   }
 

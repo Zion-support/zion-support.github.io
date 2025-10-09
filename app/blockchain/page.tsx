@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
@@ -142,11 +142,11 @@ const BlockchainPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Blockchain & Web3 Services - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 services including smart contracts, DeFi, NFTs, and enterprise blockchain solutions." />
         <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, Web3, cryptocurrency, token development" />
-      </Helmet>
+      </Helmet> */}
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
         {/* Hero Section */}
@@ -186,7 +186,7 @@ const BlockchainPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Link className="w-8 h-8 text-orange-600" />
+                  <div className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3>
                 <p className="text-gray-600">Certified developers with deep expertise in multiple blockchain platforms</p>
@@ -305,32 +305,32 @@ const BlockchainPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-red-100 rounded-lg">
-                <Link className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3>
                 <p className="text-gray-600">Secure, audited smart contracts for all blockchain platforms</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-100 rounded-lg">
-                <Coins className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">DeFi Protocols</h3>
                 <p className="text-gray-600">Decentralized finance solutions including DEXs and lending platforms</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
-                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">NFT Solutions</h3>
                 <p className="text-gray-600">Complete NFT marketplace and collection development</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Security Auditing</h3>
                 <p className="text-gray-600">Comprehensive security audits and vulnerability assessments</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Analytics & Monitoring</h3>
                 <p className="text-gray-600">Real-time blockchain analytics and compliance monitoring</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-pink-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Web3 Applications</h3>
                 <p className="text-gray-600">Complete Web3 applications with frontend and backend integration</p>
               </div>

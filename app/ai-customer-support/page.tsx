@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, MessageCircle, Clock, Users, Shield, Zap } from 'lucide-react';
+// import { Link } from 'react-router-dom';
+import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
 
 const AICustomerSupportPage: React.FC = () => {
   const features = [

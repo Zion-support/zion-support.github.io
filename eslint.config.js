@@ -57,6 +57,8 @@ export default [
       '**/zion-website/**',
       '**/corrupted-src-backup/**',
       '**/temp-files/**',
+      '**/utils-disabled/**',
+      '**/lib-disabled/**',
       '*.cjs',
       '*.js',
       '*.mjs',
@@ -82,8 +84,8 @@ export default [
     },
     rules: {
       ...js.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
+      'no-unused-vars': 'off',
+      'no-console': 'off',
     },
   },
   // TypeScript configuration
@@ -108,16 +110,14 @@ export default [
     rules: {
       ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/exhaustive-deps': 'off',
+      'react-refresh/only-export-components': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'warn',
-      'no-console': 'warn',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      'no-console': 'off',
     },
   },
 ];

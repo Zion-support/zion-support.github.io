@@ -679,3 +679,9 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+      Total Issues: ${metrics.totalIssues}
+      Critical: ${metrics.critical}
+      Major: ${metrics.major}
+      Minor: ${metrics.minor}
+      Score: ${metrics.score}%
+    `;

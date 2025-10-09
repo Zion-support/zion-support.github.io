@@ -1,18 +1,6 @@
 import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-import { IntegrationProviderMeta } from './types';
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
-import type { IntegrationProviderMeta } from './types';
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
-import { IntegrationProviderMeta } from './types';
-import type { IntegrationProviderMeta } from './types';
-export const PROVIDERS: IntegrationProviderMeta[] = [
-import type { IntegrationProviderMeta } from './types';
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
   { id: 'zoho', name: 'Zoho CRM', category: 'crm', description: 'All-in-one CRM' },
