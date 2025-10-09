@@ -26,18 +26,18 @@ class MonitoringService {
   private observer: PerformanceObserver | null = null
   constructor() {
     if (typeof window !== 'undefined') {
-//       this.initializeMonitoring()
+    this.initializeMonitoring()
     }
   }
   private initializeMonitoring(): void {
     // Monitor Web Vitals
-//     this.monitorWebVitals()
+    this.monitorWebVitals()
     // Monitor Long Tasks
-//     this.monitorLongTasks()
+    this.monitorLongTasks()
     // Monitor Resource Loading
-//     this.monitorResourceTiming()
+    this.monitorResourceTiming()
     // Global Error Handler
-//     this.setupErrorHandling()
+    this.setupErrorHandling()
   }
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
@@ -47,7 +47,7 @@ class MonitoringService {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
-//           this.reportMetric('lcp', this.metrics.lcp)
+    this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay
@@ -82,7 +82,7 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        // console.error('Error setting up performance observers:', error);
+            console.error('Error setting up performance observers:', error);
       }
     }
   }
@@ -148,8 +148,7 @@ class MonitoringService {
   private reportMetric(name: string, value: number): void {
     // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
-//       return
-    }
+    return }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
@@ -173,7 +172,7 @@ class MonitoringService {
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
-    // console.error('[Error]', error)
+        console.error('[Error]', error)
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {

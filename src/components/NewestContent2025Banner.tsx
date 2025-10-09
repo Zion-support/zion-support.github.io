@@ -37,9 +37,9 @@ const NewestContent2025Banner: React.FC = () => {
             <Link 
               href="/blog/ai-edge-computing-real-time-intelligence-2025"
               className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors inline-flex items-center gap-2"
-//             >
-//               Learn More →
-            </Link>
+>
+        Learn More →
+      </
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="text-purple-400 text-4xl mb-4">⚡</div>
@@ -53,9 +53,9 @@ const NewestContent2025Banner: React.FC = () => {
             <Link 
               href="/blog/quantum-enhanced-neural-networks-2025"
               className="text-purple-400 hover:text-purple-300 font-semibold transition-colors inline-flex items-center gap-2"
-//             >
-//               Explore →
-            </Link>
+>
+        Explore →
+      </
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="text-blue-400 text-4xl mb-4">🔒</div>
@@ -69,9 +69,9 @@ const NewestContent2025Banner: React.FC = () => {
             <Link 
               href="/blog/quantum-secure-ai-infrastructure-2025"
               className="text-blue-400 hover:text-blue-300 font-semibold transition-colors inline-flex items-center gap-2"
-//             >
-//               Discover →
-            </Link>
+>
+        Discover →
+      </
           </div>
         </div>
         <div className="mt-16 pt-12 border-t border-white/20">
@@ -86,15 +86,15 @@ const NewestContent2025Banner: React.FC = () => {
             <Link 
               href="/services/ai-services"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center"
-//             >
-//               Explore AI Services
-            </Link>
+>
+        Explore AI Services
+      </
             <Link 
               href="/contact"
               className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300 text-center"
-//             >
-//               Schedule Consultation
-            </Link>
+>
+        Schedule Consultation
+      </
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">

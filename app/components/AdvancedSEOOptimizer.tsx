@@ -281,6 +281,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, []);
 
+  const metaTags = generateMetaTags();
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}

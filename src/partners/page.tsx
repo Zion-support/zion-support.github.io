@@ -85,11 +85,11 @@ const PartnersPage: React.FC = () => {
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
       benefits: [
-//         'Joint marketing and sales initiatives',
-//         'Co-development of solutions',
-//         'Priority support and resources',
-//         'Executive relationship management',
-//         'Custom pricing and terms'
+            'Joint marketing and sales initiatives',
+            'Co-development of solutions',
+            'Priority support and resources',
+            'Executive relationship management',
+            'Custom pricing and terms',
 //       ],
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10'
@@ -99,11 +99,11 @@ const PartnersPage: React.FC = () => {
       level: 'Gold',
       description: 'Technology integration and solution delivery partnerships',
       benefits: [
-//         'Technical integration support',
-//         'Joint solution development',
-//         'Marketing support and co-marketing',
-//         'Training and certification',
-//         'Preferred pricing'
+            'Technical integration support',
+            'Joint solution development',
+            'Marketing support and co-marketing',
+            'Training and certification',
+            'Preferred pricing',
 //       ],
       color: 'text-gray-400',
       bgColor: 'bg-gray-500/10'
@@ -113,11 +113,11 @@ const PartnersPage: React.FC = () => {
       level: 'Silver',
       description: 'Reseller and referral partnerships for market expansion',
       benefits: [
-//         'Reseller program access',
-//         'Sales training and support',
-//         'Marketing materials and tools',
-//         'Lead sharing and referrals',
-//         'Competitive margins'
+            'Reseller program access',
+            'Sales training and support',
+            'Marketing materials and tools',
+            'Lead sharing and referrals',
+            'Competitive margins',
 //       ],
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'

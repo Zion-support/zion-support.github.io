@@ -50,11 +50,11 @@ const SmartAnalyticsPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses getting started with analytics',
       features: [
-//         'Up to 5 data sources',
-//         'Basic dashboards',
-//         'Email support',
-//         'Standard reports',
-//         '1 user account'
+            'Up to 5 data sources',
+            'Basic dashboards',
+            'Email support',
+            'Standard reports',
+            '1 user account',
 //       ],
       popular: false
     },
@@ -64,13 +64,13 @@ const SmartAnalyticsPage: React.FC = () => {
       period: '/month',
       description: 'Advanced analytics for growing businesses',
       features: [
-//         'Unlimited data sources',
-//         'Advanced AI insights',
-//         'Custom dashboards',
-//         'Priority support',
-//         'Up to 10 user accounts',
-//         'API access',
-//         'Advanced reporting'
+            'Unlimited data sources',
+            'Advanced AI insights',
+            'Custom dashboards',
+            'Priority support',
+            'Up to 10 user accounts',
+            'API access',
+            'Advanced reporting',
 //       ],
       popular: true
     },
@@ -80,13 +80,13 @@ const SmartAnalyticsPage: React.FC = () => {
       period: '',
       description: 'Full-scale analytics solution for large organizations',
       features: [
-//         'Everything in Professional',
-//         'Dedicated account manager',
-//         'Custom integrations',
-//         '24/7 phone support',
-//         'Unlimited users',
-//         'White-label options',
-//         'SLA guarantee'
+            'Everything in Professional',
+            'Dedicated account manager',
+            'Custom integrations',
+            '24/7 phone support',
+            'Unlimited users',
+            'White-label options',
+            'SLA guarantee',
 //       ],
       popular: false
     }
@@ -113,9 +113,9 @@ const SmartAnalyticsPage: React.FC = () => {
             <Link
               to="/contact"
               className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-//             >
-//               Get Free Consultation
-            </Link>
+>
+        Get Free Consultation
+      </
           </div>
         </section>
 
@@ -179,9 +179,9 @@ const SmartAnalyticsPage: React.FC = () => {
                       ? 'bg-cyan-600 text-white hover:bg-cyan-700'
                       : 'bg-gray-600 text-white hover:bg-gray-700'
                   }`}
-//                 >
-//                   Get Started
-                </a>
+>
+        Get Started
+      </
               </div>
             ))}
           </div>
@@ -205,9 +205,9 @@ const SmartAnalyticsPage: React.FC = () => {
             <Link
               to="/contact"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-//             >
-//               Get Free Demo
-            </Link>
+>
+        Get Free Demo
+      </
           </div>
         </section>
 

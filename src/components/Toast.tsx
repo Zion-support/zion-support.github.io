@@ -73,9 +73,9 @@ const Toast: React.FC<ToastProps> = ({
         }}
         className="ml-4 hover:opacity-80 transition-opacity"
         aria-label="Close notification"
-//       >
-//         ✕
-      </button>
+>
+        ✕
+      </
     </div>
   );
 };

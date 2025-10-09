@@ -203,9 +203,9 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
               <Link
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
-//               >
-//                 Learn More
-              </Link>
+>
+        Learn More
+      </
             </div>
           </div>
         </div>

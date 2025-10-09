@@ -81,20 +81,20 @@ class AccessibilityEnhancer {
 
   private updateFocusableElements(): void {
     const selectors = [
-//       'a[href]',
+            'a[href]',
       'button:not([disabled])',
       'input:not([disabled])',
       'select:not([disabled])',
       'textarea:not([disabled])',
       '[tabindex]:not([tabindex="-1"])',
-//       'area[href]',
-//       'iframe',
-//       'object',
-//       'embed'
+            'area[href]',
+            'iframe',
+            'object',
+            'embed',
     ];
 
     this.focusableElements = Array.from(
-//       document.querySelectorAll(selectors.join(', '))
+    document.querySelectorAll(selectors.join(', '))
     ) as HTMLElement[];
 
     this.metrics.focusableElements = this.focusableElements.length;
@@ -202,7 +202,7 @@ class AccessibilityEnhancer {
       const icon = button.querySelector('svg, i, [class*="icon"]');
       if (icon && !button.textContent?.trim()) {
         const iconName = icon.getAttribute('data-icon') || 
-//                         icon.getAttribute('aria-label') || 
+    icon.getAttribute('aria-label') || 
                         'button';
         button.setAttribute('aria-label', iconName);
       }

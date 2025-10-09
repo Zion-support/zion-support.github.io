@@ -40,10 +40,10 @@ const AIServicesPage: React.FC = () => {
   ];
 
   const benefits = [
-//     '300% Average ROI Increase',
-//     '95% Process Automation',
-//     '50% Cost Reduction',
-//     '99.9% Uptime Guarantee'
+            '300% Average ROI Increase',
+            '95% Process Automation',
+            '50% Cost Reduction',
+            '99.9% Uptime Guarantee',
   ];
 
   return (

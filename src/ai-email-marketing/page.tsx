@@ -36,11 +36,11 @@ const AIEmailMarketingPage: React.FC = () => {
   ];
 
   const benefits = [
-//     'Increase open rates by 200%',
-//     'Boost click-through rates by 150%',
-//     'Reduce unsubscribe rates by 60%',
-//     'Improve conversion rates by 180%',
-//     'Save 15+ hours per week'
+            'Increase open rates by 200%',
+            'Boost click-through rates by 150%',
+            'Reduce unsubscribe rates by 60%',
+            'Improve conversion rates by 180%',
+            'Save 15+ hours per week',
   ];
 
   const emailTypes = [
@@ -59,12 +59,12 @@ const AIEmailMarketingPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-//         '1,000 subscribers',
-//         '10,000 emails/month',
-//         'Basic AI features',
-//         'Email templates',
-//         'Basic analytics',
-//         'Email support'
+            '1,000 subscribers',
+            '10,000 emails/month',
+            'Basic AI features',
+            'Email templates',
+            'Basic analytics',
+            'Email support',
 //       ],
       popular: false
     },
@@ -74,13 +74,13 @@ const AIEmailMarketingPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-//         '10,000 subscribers',
-//         '100,000 emails/month',
-//         'Advanced AI features',
-//         'Custom templates',
-//         'Advanced analytics',
-//         'Priority support',
-//         'A/B testing'
+            '10,000 subscribers',
+            '100,000 emails/month',
+            'Advanced AI features',
+            'Custom templates',
+            'Advanced analytics',
+            'Priority support',
+            'A/B testing',
 //       ],
       popular: true
     },
@@ -90,13 +90,13 @@ const AIEmailMarketingPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-//         'Unlimited subscribers',
-//         'Unlimited emails',
-//         'Full AI suite',
-//         'White-label options',
-//         'Custom integrations',
-//         'Dedicated support',
-//         'Advanced automation'
+            'Unlimited subscribers',
+            'Unlimited emails',
+            'Full AI suite',
+            'White-label options',
+            'Custom integrations',
+            'Dedicated support',
+            'Advanced automation',
 //       ],
       popular: false
     }

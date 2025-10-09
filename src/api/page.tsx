@@ -17,9 +17,9 @@ const DevelopertoolsPage: React.FC = () => {
           <a
             href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-//           >
-//             Contact Us
-          </a>
+>
+        Contact Us
+      </
         </section>
       </main>
       

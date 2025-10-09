@@ -27,27 +27,26 @@ class PerformanceReporter {
    */
   init(config?: { enabled?: boolean; reportInterval?: number }): void {
     if (typeof window === 'undefined') {
-//       return
-    }
+    return }
     this.isEnabled = config?.enabled ?? process.env['NODE_ENV'] === 'production'
     if (!this.isEnabled) {
 //       return
     }
     // Monitor Core Web Vitals
-//     this.monitorWebVitals()
+    this.monitorWebVitals()
     // Monitor navigation timing
-//     this.monitorNavigationTiming()
+    this.monitorNavigationTiming()
     // Monitor resource timing
-//     this.monitorResourceTiming()
+    this.monitorResourceTiming()
     // Setup periodic reporting
     if (config?.reportInterval) {
       this.reportingInterval = setInterval(() => {
-//         this.report()
+    this.report()
       }, config.reportInterval)
     }
     // Report on page unload
     window.addEventListener('beforeunload', () => {
-//       this.report()
+    this.report()
     })
   }
   /**
@@ -88,7 +87,7 @@ class PerformanceReporter {
             clsValue += (entry as any).value;
           }
         })
-//         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
+    this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
       })
       clsObserver.observe({ type: 'layout-shift', buffered: true })
       // First Contentful Paint (FCP)
@@ -96,7 +95,7 @@ class PerformanceReporter {
         const entries = entryList.getEntries()
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-//             this.addMetric('FCP', entry.startTime, this.getRating('fcp', entry.startTime))
+    this.addMetric('FCP', entry.startTime, this.getRating('fcp', entry.startTime))
           }
         })
       })
@@ -110,21 +109,20 @@ class PerformanceReporter {
    */
   private monitorNavigationTiming(): void {
     if (typeof window === 'undefined' || !window.performance) {
-//       return
-    }
+    return }
     window.addEventListener('load', () => {
       setTimeout(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (navigation) {
           // Time to First Byte (TTFB)
           const ttfb = navigation.responseStart - navigation.requestStart
-//           this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb))
+    this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb))
           // DOM Content Loaded
           const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-//           this.addMetric('DCL', dcl, this.getRating('dcl', dcl))
+    this.addMetric('DCL', dcl, this.getRating('dcl', dcl))
           // Load Complete
           const loadComplete = navigation.loadEventEnd - navigation.loadEventStart
-//           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
+    this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
         }
       }, 0)
     })
@@ -170,7 +168,7 @@ class PerformanceReporter {
       logger.warn(`Poor ${name} performance`, { value, rating })
     }
     // Send to analytics
-//     this.sendToAnalytics(metric)
+    this.sendToAnalytics(metric)
   }
   /**
    * Get performance rating based on thresholds
@@ -253,7 +251,7 @@ class PerformanceReporter {
       }
     })
     // Send to remote endpoint if configured
-    // this.sendToEndpoint(report)
+        this.sendToEndpoint(report)
   }
   /**
    * Cleanup and stop reporting

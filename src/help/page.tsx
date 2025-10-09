@@ -368,7 +368,7 @@ const HelpPage: React.FC = () => {
                     <span className={`px-2 py-1 rounded text-xs ${
                       article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
                       article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-//                       'bg-red-500/20 text-red-400'
+            'bg-red-500/20 text-red-400',
                     }`}>
                       {article.difficulty}
                     </span>

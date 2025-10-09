@@ -22,9 +22,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneC
           id="hero-heading" 
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
           data-text="Zion Tech Group"
-//         >
-//           Zion Tech Group
-        </h1>
+>
+        Zion Tech Group
+      </
         <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
 //           Advanced AI and IT Solutions
         </p>
@@ -70,9 +70,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneC
           <a 
             href="/contact"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//           >
-//             Get Free Consultation
-          </a>
+>
+        Get Free Consultation
+      </
         </div>
       </div>
     </section>

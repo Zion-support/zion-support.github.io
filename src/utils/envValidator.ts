@@ -19,9 +19,9 @@ class EnvValidator {
     this.errors = []
     this.warnings = []
     // Validate NODE_ENV
-//     this.validateNodeEnv()
+    this.validateNodeEnv()
     // Validate optional but recommended variables
-//     this.validateOptionalVars()
+    this.validateOptionalVars()
     return {
       isValid: this.errors.length === 0,
       errors: this.errors,
@@ -39,7 +39,7 @@ class EnvValidator {
 //       )
     }
     if (validation.warnings.length > 0) {
-//       console.warn(
+    console.warn(
         `Environment warnings:\n${validation.warnings.join('\n')}`
       );
     }
@@ -74,7 +74,7 @@ class EnvValidator {
       }
       if (!process.env['NEXT_PUBLIC_GA_ID']) {
 //         this.warnings.push(
-//           'NEXT_PUBLIC_GA_ID is not set (analytics will be disabled)'
+            'NEXT_PUBLIC_GA_ID is not set (analytics will be disabled)',
 //         )
       }
     }

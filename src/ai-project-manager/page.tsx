@@ -47,11 +47,11 @@ const AiProjectManagerPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small teams',
       features: [
-//         'Up to 5 projects',
-//         'Basic AI planning',
-//         'Team collaboration',
-//         'Email support',
-//         'Basic analytics'
+            'Up to 5 projects',
+            'Basic AI planning',
+            'Team collaboration',
+            'Email support',
+            'Basic analytics',
 //       ],
       popular: false
     },
@@ -61,12 +61,12 @@ const AiProjectManagerPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-//         'Up to 25 projects',
-//         'Advanced AI planning',
-//         'Full team collaboration',
-//         'Priority support',
-//         'Advanced analytics',
-//         'Custom integrations'
+            'Up to 25 projects',
+            'Advanced AI planning',
+            'Full team collaboration',
+            'Priority support',
+            'Advanced analytics',
+            'Custom integrations',
 //       ],
       popular: true
     },
@@ -76,13 +76,13 @@ const AiProjectManagerPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-//         'Unlimited projects',
-//         'Premium AI features',
-//         'Enterprise collaboration',
-//         '24/7 support',
-//         'Custom analytics',
-//         'White-label options',
-//         'API access'
+            'Unlimited projects',
+            'Premium AI features',
+            'Enterprise collaboration',
+            '24/7 support',
+            'Custom analytics',
+            'White-label options',
+            'API access',
 //       ],
       popular: false
     }

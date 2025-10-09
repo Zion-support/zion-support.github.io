@@ -14,10 +14,10 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefits: [
-//         '95% accuracy in predictions',
-//         'Real-time data processing',
-//         'Automated trend detection',
-//         'Custom prediction models'
+            '95% accuracy in predictions',
+            'Real-time data processing',
+            'Automated trend detection',
+            'Custom prediction models',
 //       ]
     },
     {
@@ -25,10 +25,10 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
       benefits: [
-//         'Live data visualization',
-//         'Customizable metrics',
-//         'Mobile-responsive design',
-//         'Role-based access control'
+            'Live data visualization',
+            'Customizable metrics',
+            'Mobile-responsive design',
+            'Role-based access control',
 //       ]
     },
     {
@@ -36,10 +36,10 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-powered insights',
       benefits: [
-//         'Scheduled report generation',
-//         'Natural language summaries',
-//         'Executive briefings',
-//         'Custom report templates'
+            'Scheduled report generation',
+            'Natural language summaries',
+            'Executive briefings',
+            'Custom report templates',
 //       ]
     },
     {
@@ -47,10 +47,10 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Anomaly Detection',
       description: 'Identify unusual patterns and potential issues before they impact your business',
       benefits: [
-//         'Real-time anomaly alerts',
-//         'Pattern recognition',
-//         'Risk assessment',
-//         'Automated responses'
+            'Real-time anomaly alerts',
+            'Pattern recognition',
+            'Risk assessment',
+            'Automated responses',
 //       ]
     }
   ];
@@ -89,11 +89,11 @@ const AIAnalyticsPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses getting started with AI analytics',
       features: [
-//         'Up to 10 data sources',
-//         'Basic dashboards',
-//         'Monthly reports',
-//         'Email support',
-//         'Standard integrations'
+            'Up to 10 data sources',
+            'Basic dashboards',
+            'Monthly reports',
+            'Email support',
+            'Standard integrations',
 //       ],
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10'
@@ -104,12 +104,12 @@ const AIAnalyticsPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses with complex analytics needs',
       features: [
-//         'Up to 50 data sources',
-//         'Advanced dashboards',
-//         'Real-time reporting',
-//         'Priority support',
-//         'Custom integrations',
-//         'API access'
+            'Up to 50 data sources',
+            'Advanced dashboards',
+            'Real-time reporting',
+            'Priority support',
+            'Custom integrations',
+            'API access',
 //       ],
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
@@ -121,13 +121,13 @@ const AIAnalyticsPage: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with extensive requirements',
       features: [
-//         'Unlimited data sources',
-//         'Custom dashboards',
-//         'Real-time analytics',
-//         '24/7 dedicated support',
-//         'Custom development',
-//         'On-premise deployment',
-//         'SLA guarantees'
+            'Unlimited data sources',
+            'Custom dashboards',
+            'Real-time analytics',
+            '24/7 dedicated support',
+            'Custom development',
+            'On-premise deployment',
+            'SLA guarantees',
 //       ],
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10'
@@ -273,9 +273,9 @@ const AIAnalyticsPage: React.FC = () => {
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-//                   >
-//                     Get Started
-                  </a>
+>
+        Get Started
+      </
                 </div>
               ))}
             </div>

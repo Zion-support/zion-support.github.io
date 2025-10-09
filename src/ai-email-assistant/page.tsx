@@ -31,9 +31,9 @@ export default function AIEmailAssistantPage() {
             <a 
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//             >
-//               Get Free Demo
-            </a>
+>
+        Get Free Demo
+      </
           </div>
         </section>
 
@@ -174,9 +174,9 @@ export default function AIEmailAssistantPage() {
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
-//             >
-//               📧 Email Us
-            </a>
+>
+        📧 Email Us
+      </
           </div>
         </section>
       </main>

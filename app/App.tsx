@@ -18,11 +18,11 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
-// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-// const InteractiveContentShowcase2026 = lazy(
+  const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+  const InteractiveContentShowcase2026 = lazy(
 //   () => import('./components/InteractiveContentShowcase2026')
 // );
-// const InteractiveAIROICalculator = lazy(
+  const InteractiveAIROICalculator = lazy(
 //   () => import('./components/InteractiveAIROICalculator')
 // );
 

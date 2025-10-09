@@ -135,9 +135,9 @@ const CompliancePage: React.FC = () => {
             <a
               href="mailto:compliance@ziontechgroup.com"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
-//             >
-//               Contact Compliance Team
-            </a>
+>
+        Contact Compliance Team
+      </
             <div className="mt-8 text-sm text-blue-200">
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
             </div>

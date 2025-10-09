@@ -206,28 +206,28 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const getPerformanceRecommendations = useCallback(() => {
     const recommendations: string[] = [];
     if (metrics.fcp && metrics.fcp > 1800) {
-//       recommendations.push(
-//         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
+    recommendations.push(
+            'First Contentful Paint is slow. Consider optimizing critical rendering path.',
       );
     }
     if (metrics.lcp && metrics.lcp > 2500) {
-//       recommendations.push(
-//         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
+    recommendations.push(
+            'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.',
       );
     }
     if (metrics.fid && metrics.fid > 100) {
-//       recommendations.push(
-//         'First Input Delay is high. Reduce JavaScript execution time.'
+    recommendations.push(
+            'First Input Delay is high. Reduce JavaScript execution time.',
       );
     }
     if (metrics.cls && metrics.cls > 0.1) {
-//       recommendations.push(
-//         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
+    recommendations.push(
+            'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.',
       );
     }
     if (metrics.ttfb && metrics.ttfb > 600) {
-//       recommendations.push(
-//         'Time to First Byte is slow. Optimize server response time.'
+    recommendations.push(
+            'Time to First Byte is slow. Optimize server response time.',
       );
     }
     return recommendations;

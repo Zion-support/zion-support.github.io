@@ -162,8 +162,8 @@ describe('performanceMonitoring', () => {
       recordMetric('FCP', 3000);
       const recommendations = getRecommendations();
       expect(recommendations.some(r => 
-//         r.includes('critical CSS') || 
-//         r.includes('render-blocking')
+    r.includes('critical CSS') || 
+    r.includes('render-blocking')
       )).toBe(true);
     });
   });

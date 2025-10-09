@@ -46,8 +46,8 @@ export const _performanceConfig = {
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
 //   ],
   prefetch: [
-//     '/api/health',
-//     '/api/config',
+            '/api/health',
+            '/api/config',
 //   ],
   // Image optimization
   images: {

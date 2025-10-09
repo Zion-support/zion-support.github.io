@@ -130,23 +130,23 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 onClick={this.resetErrorBoundary}
                 style={styles.button}
                 aria-label="Try Again"
-//               >
-//                 Try Again
-              </button>
+>
+        Try Again
+      </
               <button
                 onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Reload Page"
-//               >
-//                 Reload Page
-              </button>
+>
+        Reload Page
+      </
               <button
                 onClick={this.handleGoHome}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Go to Homepage"
-//               >
-//                 Go Home
-              </button>
+>
+        Go Home
+      </
             </div>
             {this.state.errorCount > 1 && (
               <p style={styles.errorCount}>

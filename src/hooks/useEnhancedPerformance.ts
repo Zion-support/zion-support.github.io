@@ -31,9 +31,9 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
         const duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component
-//           analytics.trackCustomEvent(
-//             'Performance',
-//             'Long Component Lifetime',
+    analytics.trackCustomEvent(
+            'Performance',
+            'Long Component Lifetime',
 //             component,
 //             Math.round(duration)
           );
@@ -50,9 +50,9 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     renderCountRef.current++;
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-//       analytics.trackCustomEvent(
-//         'Performance',
-//         'High Render Count',
+    analytics.trackCustomEvent(
+            'Performance',
+            'High Render Count',
 //         component,
 //         renderCountRef.current
       );
@@ -85,7 +85,7 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
         end: () => {
           const duration = performance.now() - startTime;
           if (trackPerformance) {
-//             analytics.trackPerformance(
+    analytics.trackPerformance(
               `${component}-${operationName}`,
 //               duration,
               duration > 1000 ? 'slow' : 'fast'

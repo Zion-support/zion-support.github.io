@@ -125,9 +125,9 @@ const LoginPage: React.FC = () => {
                   <a
                     href="/forgot-password"
                     className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
-//                   >
-//                     Forgot password?
-                  </a>
+>
+        Forgot password?
+      </
                 </div>
 
                 <button
@@ -141,7 +141,7 @@ const LoginPage: React.FC = () => {
 //                       Signing In...
                     </div>
                   ) : (
-//                     'Sign In'
+            'Sign In',
                   )}
                 </button>
               </form>
@@ -152,9 +152,9 @@ const LoginPage: React.FC = () => {
                   <a
                     href="/signup"
                     className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-//                   >
-//                     Sign up here
-                  </a>
+>
+        Sign up here
+      </
                 </p>
               </div>
 

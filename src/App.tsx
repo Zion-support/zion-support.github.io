@@ -30,8 +30,6 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
-'use client';
-
 // Lazy load components for better performance
 const _HomePage = lazy(() => import('../app/page'));
 
@@ -132,14 +130,14 @@ const App: React.FC = () => {
           numberOfEmployees: '50-100',
           industry: 'Technology',
           services: [
-//             'AI Solutions',
-//             'Quantum Computing',
-//             'Autonomous Systems',
-//             'Digital Transformation',
-//             'Cloud Services',
-//             'Automation',
-//             'Business Intelligence'
-//           ],
+            'AI Solutions',
+            'Quantum Computing',
+            'Autonomous Systems',
+            'Digital Transformation',
+            'Cloud Services',
+            'Automation',
+            'Business Intelligence'
+          ],
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
@@ -322,8 +320,8 @@ const NotFoundPage: React.FC = () => (
       <a
         href="/"
         className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold"
-//       >
-//         Go Home
+      >
+        Go Home
       </a>
     </div>
   </div>

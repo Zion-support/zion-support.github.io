@@ -13,11 +13,11 @@ const PricingPage: React.FC = () => {
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       features: [
-//         'Basic AI Analytics',
-//         'Email Support',
-//         '5 AI Models',
-//         'Monthly Reports',
-//         'Basic Integration'
+            'Basic AI Analytics',
+            'Email Support',
+            '5 AI Models',
+            'Monthly Reports',
+            'Basic Integration',
 //       ],
       popular: false
     },
@@ -30,13 +30,13 @@ const PricingPage: React.FC = () => {
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10',
       features: [
-//         'Advanced AI Analytics',
-//         'Priority Support',
-//         '20 AI Models',
-//         'Real-time Reports',
-//         'API Access',
-//         'Custom Integrations',
-//         'Training Sessions'
+            'Advanced AI Analytics',
+            'Priority Support',
+            '20 AI Models',
+            'Real-time Reports',
+            'API Access',
+            'Custom Integrations',
+            'Training Sessions',
 //       ],
       popular: true
     },
@@ -49,15 +49,15 @@ const PricingPage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       features: [
-//         'Unlimited AI Models',
-//         '24/7 Dedicated Support',
-//         'Custom AI Development',
-//         'Real-time Analytics',
-//         'Full API Access',
-//         'White-label Solutions',
-//         'Dedicated Account Manager',
-//         'On-site Training',
-//         'SLA Guarantee'
+            'Unlimited AI Models',
+            '24/7 Dedicated Support',
+            'Custom AI Development',
+            'Real-time Analytics',
+            'Full API Access',
+            'White-label Solutions',
+            'Dedicated Account Manager',
+            'On-site Training',
+            'SLA Guarantee',
 //       ],
       popular: false
     }

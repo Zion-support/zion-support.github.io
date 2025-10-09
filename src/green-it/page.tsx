@@ -41,10 +41,10 @@ const GreenITPage: React.FC = () => {
       icon: Zap,
       color: 'text-yellow-400',
       features: [
-//         'PUE (Power Usage Effectiveness) optimization',
-//         'Renewable energy integration',
-//         'Cooling system optimization',
-//         'Smart power management'
+            'PUE (Power Usage Effectiveness) optimization',
+            'Renewable energy integration',
+            'Cooling system optimization',
+            'Smart power management',
 //       ],
       impact: 'Reduce energy consumption by up to 40%',
       pricing: 'Starting at $2,500/month'
@@ -55,10 +55,10 @@ const GreenITPage: React.FC = () => {
       icon: Cloud,
       color: 'text-blue-400',
       features: [
-//         'Carbon footprint monitoring',
-//         'Green cloud migration',
-//         'Resource optimization',
-//         'Renewable energy sourcing'
+            'Carbon footprint monitoring',
+            'Green cloud migration',
+            'Resource optimization',
+            'Renewable energy sourcing',
 //       ],
       impact: 'Reduce carbon footprint by up to 60%',
       pricing: 'Starting at $1,800/month'
@@ -69,10 +69,10 @@ const GreenITPage: React.FC = () => {
       icon: Recycle,
       color: 'text-green-400',
       features: [
-//         'Equipment refurbishment',
-//         'Responsible disposal',
-//         'Asset tracking and optimization',
-//         'Circular economy implementation'
+            'Equipment refurbishment',
+            'Responsible disposal',
+            'Asset tracking and optimization',
+            'Circular economy implementation',
 //       ],
       impact: 'Extend equipment lifecycle by 50%',
       pricing: 'Starting at $1,200/month'
@@ -83,10 +83,10 @@ const GreenITPage: React.FC = () => {
       icon: Code,
       color: 'text-purple-400',
       features: [
-//         'Energy-efficient coding practices',
-//         'Performance optimization',
-//         'Resource usage monitoring',
-//         'Sustainable architecture design'
+            'Energy-efficient coding practices',
+            'Performance optimization',
+            'Resource usage monitoring',
+            'Sustainable architecture design',
 //       ],
       impact: 'Reduce software energy consumption by 30%',
       pricing: 'Starting at $1,500/month'
@@ -97,10 +97,10 @@ const GreenITPage: React.FC = () => {
       icon: Users,
       color: 'text-cyan-400',
       features: [
-//         'Virtual desktop infrastructure',
-//         'Collaboration tools optimization',
-//         'Energy-efficient hardware',
-//         'Digital workspace management'
+            'Virtual desktop infrastructure',
+            'Collaboration tools optimization',
+            'Energy-efficient hardware',
+            'Digital workspace management',
 //       ],
       impact: 'Reduce commuting emissions by 80%',
       pricing: 'Starting at $800/month'
@@ -111,10 +111,10 @@ const GreenITPage: React.FC = () => {
       icon: Globe,
       color: 'text-emerald-400',
       features: [
-//         'Carbon footprint tracking',
-//         'Energy consumption monitoring',
-//         'Sustainability reporting',
-//         'Environmental compliance'
+            'Carbon footprint tracking',
+            'Energy consumption monitoring',
+            'Sustainability reporting',
+            'Environmental compliance',
 //       ],
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month'
@@ -127,10 +127,10 @@ const GreenITPage: React.FC = () => {
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
       details: [
-//         'Up to 40% reduction in energy costs',
-//         'Lower maintenance and replacement costs',
-//         'Improved resource utilization',
-//         'Reduced waste management costs'
+            'Up to 40% reduction in energy costs',
+            'Lower maintenance and replacement costs',
+            'Improved resource utilization',
+            'Reduced waste management costs',
 //       ]
     },
     {
@@ -138,10 +138,10 @@ const GreenITPage: React.FC = () => {
       title: 'Environmental Impact',
       description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
       details: [
-//         '60% reduction in carbon emissions',
-//         '50% less electronic waste',
-//         '100% renewable energy options',
-//         'Carbon neutral operations'
+            '60% reduction in carbon emissions',
+            '50% less electronic waste',
+            '100% renewable energy options',
+            'Carbon neutral operations',
 //       ]
     },
     {
@@ -149,10 +149,10 @@ const GreenITPage: React.FC = () => {
       title: 'Compliance & Certification',
       description: 'Meet environmental regulations and achieve sustainability certifications',
       details: [
-//         'ISO 14001 environmental management',
-//         'LEED certification support',
-//         'Carbon Trust certification',
-//         'ESG reporting compliance'
+            'ISO 14001 environmental management',
+            'LEED certification support',
+            'Carbon Trust certification',
+            'ESG reporting compliance',
 //       ]
     },
     {
@@ -160,10 +160,10 @@ const GreenITPage: React.FC = () => {
       title: 'Brand Reputation',
       description: 'Enhance your brand image and attract environmentally conscious customers',
       details: [
-//         'Improved brand perception',
-//         'Customer loyalty increase',
-//         'Investor confidence boost',
-//         'Talent attraction and retention'
+            'Improved brand perception',
+            'Customer loyalty increase',
+            'Investor confidence boost',
+            'Talent attraction and retention',
 //       ]
     }
   ];
@@ -233,10 +233,10 @@ const GreenITPage: React.FC = () => {
       challenge: 'High energy consumption in data centers',
       solution: 'Implemented energy-efficient data center design with renewable energy integration',
       results: [
-//         '45% reduction in energy consumption',
-//         '$2.3M annual cost savings',
-//         'Carbon neutral operations achieved',
-//         'LEED Platinum certification obtained'
+            '45% reduction in energy consumption',
+            '$2.3M annual cost savings',
+            'Carbon neutral operations achieved',
+            'LEED Platinum certification obtained',
 //       ],
       icon: Factory,
       color: 'text-blue-400'
@@ -247,10 +247,10 @@ const GreenITPage: React.FC = () => {
       challenge: 'Large carbon footprint from IT operations',
       solution: 'Green cloud migration and sustainable IT asset management',
       results: [
-//         '55% reduction in carbon emissions',
-//         '60% improvement in energy efficiency',
-//         'ISO 14001 certification achieved',
-//         'Enhanced brand reputation'
+            '55% reduction in carbon emissions',
+            '60% improvement in energy efficiency',
+            'ISO 14001 certification achieved',
+            'Enhanced brand reputation',
 //       ],
       icon: Building,
       color: 'text-green-400'

@@ -108,9 +108,9 @@ const _UltimateBusinessIntelligence2025Banner = () => {
             <Link
               to="/contact"
               className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
-//             >
-//               Schedule Consultation
-            </Link>
+>
+        Schedule Consultation
+      </
           </div>
           {/* Key Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

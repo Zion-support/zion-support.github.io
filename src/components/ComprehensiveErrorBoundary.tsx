@@ -144,16 +144,16 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 onClick={this.handleReload}
                 className="cyber-button"
                 aria-label="Reload the entire page"
-//               >
-//                 🔄 Reload Page
-              </button>
+>
+        🔄 Reload Page
+      </
               <a
                 href="/contact"
                 className="cyber-button"
                 aria-label="Contact support for help with this error"
-//               >
-//                 📞 Contact Support
-              </a>
+>
+        📞 Contact Support
+      </
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && (
               <details className="mt-6 text-left">

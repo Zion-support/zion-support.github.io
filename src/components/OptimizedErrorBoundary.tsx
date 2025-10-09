@@ -193,15 +193,15 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           <button
             onClick={onRetry}
             className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
-//           >
-//             Try Again
-          </button>
+>
+        Try Again
+      </
           <button
             onClick={() => window.location.reload()}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
-//           >
-//             Reload Page
-          </button>
+>
+        Reload Page
+      </
         </div>
         {errorId && (
           <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>

@@ -43,14 +43,14 @@ const CareersPage: React.FC = () => {
   ];
 
   const benefits = [
-//     'Competitive salary and equity',
-//     'Comprehensive health insurance',
-//     'Flexible remote work options',
-//     'Professional development budget',
-//     'Unlimited PTO',
-//     'Latest technology equipment',
-//     'Team building events',
-//     'Mentorship programs'
+            'Competitive salary and equity',
+            'Comprehensive health insurance',
+            'Flexible remote work options',
+            'Professional development budget',
+            'Unlimited PTO',
+            'Latest technology equipment',
+            'Team building events',
+            'Mentorship programs',
   ];
 
   return (

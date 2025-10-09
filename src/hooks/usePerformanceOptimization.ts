@@ -12,7 +12,7 @@ export const _usePerformanceOptimization = () => {
       return null;
     }
     const navigation = performance.getEntriesByType(
-//       'navigation'
+            'navigation',
     )[0] as PerformanceNavigationTiming;
     const _paintEntries = performance.getEntriesByType('paint');
     const _metrics: PerformanceMetrics = {

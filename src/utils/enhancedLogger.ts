@@ -250,13 +250,13 @@ export class EnhancedLogger {
     }
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);
-//     this.info(
+    this.info(
       `Performance: ${markName}`,
       {
         duration: `${duration.toFixed(2)}ms`,
 //         ...data
       },
-//       'PerformanceMonitor'
+            'PerformanceMonitor',
     );
     return duration;
   }

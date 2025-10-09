@@ -13,7 +13,7 @@ const FAQPage: React.FC = () => {
 
   const _toggleItem = (index: number) => {
     setOpenItems(prev => 
-//       prev.includes(index) 
+    prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );

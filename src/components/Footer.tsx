@@ -166,9 +166,9 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     to="/ai-services" 
                     className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium flex items-center"
-//                   >
-//                     View All AI Services →
-                  </Link>
+>
+        View All AI Services →
+      </
                 </li>
               </ul>
             </div>
@@ -193,9 +193,9 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     to="/it-services" 
                     className="text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm font-medium flex items-center"
-//                   >
-//                     View All IT Services →
-                  </Link>
+>
+        View All IT Services →
+      </
                 </li>
               </ul>
             </div>
@@ -220,9 +220,9 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     to="/micro-saas" 
                     className="text-green-400 hover:text-green-300 transition-colors duration-300 text-sm font-medium flex items-center"
-//                   >
-//                     View All Micro SAAS →
-                  </Link>
+>
+        View All Micro SAAS →
+      </
                 </li>
               </ul>
             </div>

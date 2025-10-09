@@ -44,8 +44,8 @@ class PerformanceMonitor {
         this.observeEntry('largest-contentful-paint', entries => {
           const _lastEntry = entries[entries.length - 1];
           if (lastEntry) {
-//             this.recordMetric(
-//               'LCP',
+    this.recordMetric(
+            'LCP',
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
             );
           }

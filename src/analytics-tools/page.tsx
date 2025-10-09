@@ -162,9 +162,9 @@ const AnalyticsToolsPage: React.FC = () => {
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
-//                   >
-//                     Get Started
-                  </a>
+>
+        Get Started
+      </
                 </div>
               </div>
             ))}
@@ -201,15 +201,15 @@ const AnalyticsToolsPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-//             >
-//               Call (302) 464-0950
-            </a>
+>
+        Call (302) 464-0950
+      </
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-//             >
-//               Email Us
-            </a>
+>
+        Email Us
+      </
           </div>
         </div>
       </section>

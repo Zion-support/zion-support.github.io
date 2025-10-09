@@ -9,7 +9,7 @@ export class AppError extends Error {
     this.statusCode = statusCode
     this.isOperational = isOperational
     this.timestamp = new Date().toISOString()
-//     Error.captureStackTrace(this, this.constructor)
+    Error.captureStackTrace(this, this.constructor)
   }
 }
 export const _errorHandler = (error: AppError | Error) => {

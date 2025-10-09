@@ -21,40 +21,40 @@ const RequestQuotePage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const _serviceTypes = [
-//     'AI Services',
-//     'IT Infrastructure',
-//     'Cybersecurity',
-//     'Cloud Migration',
-//     'Micro SAAS Solutions',
-//     'Digital Transformation',
-//     'Custom Development',
-//     'Consulting Services',
-//     'Other'
+            'AI Services',
+            'IT Infrastructure',
+            'Cybersecurity',
+            'Cloud Migration',
+            'Micro SAAS Solutions',
+            'Digital Transformation',
+            'Custom Development',
+            'Consulting Services',
+            'Other',
   ];
 
   const projectSizes = [
-//     'Small (1-10 employees)',
-//     'Medium (11-100 employees)',
-//     'Large (101-1000 employees)',
-//     'Enterprise (1000+ employees)'
+            'Small (1-10 employees)',
+            'Medium (11-100 employees)',
+            'Large (101-1000 employees)',
+            'Enterprise (1000+ employees)',
   ];
 
   const timelines = [
-//     'ASAP',
-//     '1-3 months',
-//     '3-6 months',
-//     '6-12 months',
-//     '12+ months',
-//     'Flexible'
+            'ASAP',
+            '1-3 months',
+            '3-6 months',
+            '6-12 months',
+            '12+ months',
+            'Flexible',
   ];
 
   const budgetRanges = [
-//     'Under $10,000',
-//     '$10,000 - $50,000',
-//     '$50,000 - $100,000',
-//     '$100,000 - $500,000',
-//     '$500,000+',
-//     'To be discussed'
+            'Under $10,000',
+            '$10,000 - $50,000',
+            '$50,000 - $100,000',
+            '$100,000 - $500,000',
+            '$500,000+',
+            'To be discussed',
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -374,7 +374,7 @@ const RequestQuotePage: React.FC = () => {
 //                         Submitting...
                       </div>
                     ) : (
-//                       'Request Quote'
+            'Request Quote',
                     )}
                   </button>
                 </form>

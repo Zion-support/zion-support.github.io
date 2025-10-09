@@ -25,7 +25,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     <div className={cn('flex flex-col items-center justify-center gap-3', className)}>
       <div
         className={cn(
-//           'border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin',
+            'border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin',
 //           sizeClasses[size]
         )}
         role="status"

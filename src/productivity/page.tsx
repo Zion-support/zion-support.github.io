@@ -137,15 +137,15 @@ const ProductivityPage: React.FC = () => {
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-//             >
-//               Get Productivity Suite
-            </a>
+>
+        Get Productivity Suite
+      </
             <a
               href="/micro-saas"
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all"
-//             >
-//               View All Tools
-            </a>
+>
+        View All Tools
+      </
           </div>
         </section>
 
@@ -236,9 +236,9 @@ const ProductivityPage: React.FC = () => {
                       <a
                         href="/contact"
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all text-sm inline-block"
-//                       >
-//                         Get This Tool
-                      </a>
+>
+        Get This Tool
+      </
                     </div>
                   </div>
                 ))}
@@ -258,15 +258,15 @@ const ProductivityPage: React.FC = () => {
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-//             >
-//               Get Started Today
-            </a>
+>
+        Get Started Today
+      </
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all"
-//             >
-//               Call (302) 464-0950
-            </a>
+>
+        Call (302) 464-0950
+      </
           </div>
         </section>
       </main>

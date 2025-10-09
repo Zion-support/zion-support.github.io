@@ -289,9 +289,9 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
-//         >
-//           ×
-        </button>
+>
+        ×
+      </
       </div>
       
       <div className="space-y-1">

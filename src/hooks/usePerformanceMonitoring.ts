@@ -23,7 +23,7 @@ export const _usePerformanceMonitoring = () => {
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-//         entries.forEach(
+    entries.forEach(
           (entry: PerformanceEntry & { processingStart?: number }) => {
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime;
@@ -36,7 +36,7 @@ export const _usePerformanceMonitoring = () => {
       let __clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-//         entries.forEach(
+    entries.forEach(
 //           (
             entry: PerformanceEntry & {
               hadRecentInput?: boolean;
@@ -106,7 +106,7 @@ export const _usePerformanceMonitoring = () => {
     const handleLoad = () => {
       if (typeof window === 'undefined') return;
       const navigation = performance.getEntriesByType(
-//         'navigation'
+            'navigation',
       )[0] as PerformanceNavigationTiming;
       if (navigation) {
         const metrics = {

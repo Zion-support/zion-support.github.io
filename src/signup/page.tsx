@@ -73,12 +73,12 @@ const SignupPage: React.FC = () => {
   ];
 
   const benefits = [
-//     'Free 14-day trial',
-//     'No setup fees',
-//     '24/7 expert support',
-//     'Custom integrations',
-//     'Scalable solutions',
-//     'Regular updates'
+            'Free 14-day trial',
+            'No setup fees',
+            '24/7 expert support',
+            'Custom integrations',
+            'Scalable solutions',
+            'Regular updates',
   ];
 
   return (
@@ -285,7 +285,7 @@ const SignupPage: React.FC = () => {
 //                       Creating Account...
                     </div>
                   ) : (
-//                     'Create Account'
+            'Create Account',
                   )}
                 </button>
               </form>
@@ -296,9 +296,9 @@ const SignupPage: React.FC = () => {
                   <a
                     href="/login"
                     className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-//                   >
-//                     Sign in here
-                  </a>
+>
+        Sign in here
+      </
                 </p>
               </div>
             </div>

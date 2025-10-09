@@ -417,29 +417,29 @@ export class AccessibilityChecker {
    */
   private checkARIA(element: Element): void {
     const elementsWithAria = element.querySelectorAll(
-//       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
+            '[role], [aria-label], [aria-labelledby], [aria-describedby]',
     );
     elementsWithAria.forEach(el => {
       const role = el.getAttribute('role');
       // Check for invalid ARIA roles
       const validRoles = [
-//         'alert',
-//         'button',
-//         'checkbox',
-//         'dialog',
-//         'link',
-//         'navigation',
-//         'region',
-//         'search',
-//         'tabpanel',
-//         'banner',
-//         'complementary',
-//         'contentinfo',
-//         'form',
-//         'main',
-//         'article',
-//         'note',
-//         'presentation',
+            'alert',
+            'button',
+            'checkbox',
+            'dialog',
+            'link',
+            'navigation',
+            'region',
+            'search',
+            'tabpanel',
+            'banner',
+            'complementary',
+            'contentinfo',
+            'form',
+            'main',
+            'article',
+            'note',
+            'presentation',
       ];
       if (role && !validRoles.includes(role)) {
         this.addIssue({
@@ -478,7 +478,7 @@ export class AccessibilityChecker {
    */
   private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
-    // const hasNav = element.querySelector('nav, [role="navigation"]');
+      const hasNav = element.querySelector('nav, [role="navigation"]');
     if (!hasMain) {
       this.addIssue({
         type: 'missing-main-landmark',

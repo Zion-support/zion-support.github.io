@@ -29,12 +29,12 @@ const CloudServicesPage: React.FC = () => {
     }
   ];
   const benefits = [
-//     '99.9% Uptime Guarantee',
-//     '24/7 Expert Support',
-//     'Cost Optimization',
-//     'Scalable Infrastructure',
-//     'Enhanced Security',
-//     'Global CDN'
+            '99.9% Uptime Guarantee',
+            '24/7 Expert Support',
+            'Cost Optimization',
+            'Scalable Infrastructure',
+            'Enhanced Security',
+            'Global CDN',
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -53,15 +53,15 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-//             >
-//               Get Started Today
-            </a>
+>
+        Get Started Today
+      </
             <a
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-//             >
-//               Learn More
-            </a>
+>
+        Learn More
+      </
           </div>
         </section>
         {/* Services Grid */}
@@ -111,15 +111,15 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-//             >
-//               Call (302) 464-0950
-            </a>
+>
+        Call (302) 464-0950
+      </
             <a
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-//             >
-//               Get Free Consultation
-            </a>
+>
+        Get Free Consultation
+      </
           </div>
         </section>
       </main>

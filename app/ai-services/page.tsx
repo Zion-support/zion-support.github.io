@@ -626,7 +626,7 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-  // const categories = [
+    const categories = [
   //   { name: 'All', count: aiServices.length },
   //   { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
   //   { name: 'Machine Learning', count: aiServices.filter(s => s.category === 'Machine Learning').length },

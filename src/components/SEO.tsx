@@ -28,13 +28,13 @@ export interface SEOProps {
 const _defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
-//     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+            'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
-//     'AI',
-//     'artificial intelligence',
-//     'enterprise solutions',
-//     'digital transformation',
-//     'IT services',
+            'AI',
+            'artificial intelligence',
+            'enterprise solutions',
+            'digital transformation',
+            'IT services',
 //   ],
   image: 'https://ziontechgroup.com/og-image.jpg',
   url: 'https://ziontechgroup.com',

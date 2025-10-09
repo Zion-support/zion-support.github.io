@@ -14,7 +14,7 @@ export const _usePerformance = () => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType(
-//         'navigation'
+            'navigation',
       )[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       const firstContentfulPaint =
@@ -63,19 +63,19 @@ export const _usePerformance = () => {
       // Report to analytics using trackTiming
       analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
       analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
-//       analytics.trackTiming(
-//         'performance',
-//         'first_contentful_paint',
+    analytics.trackTiming(
+            'performance',
+            'first_contentful_paint',
 //         performanceData.firstContentfulPaint
       );
-//       analytics.trackTiming(
-//         'performance',
-//         'largest_contentful_paint',
+    analytics.trackTiming(
+            'performance',
+            'largest_contentful_paint',
 //         performanceData.largestContentfulPaint
       );
-//       analytics.trackTiming(
-//         'performance',
-//         'cumulative_layout_shift',
+    analytics.trackTiming(
+            'performance',
+            'cumulative_layout_shift',
 //         performanceData.cumulativeLayoutShift
       );
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);

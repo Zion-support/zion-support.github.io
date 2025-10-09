@@ -103,9 +103,9 @@ const Navigation: React.FC = () => {
                         to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                         onClick={closeAllMenus}
-//                       >
-//                         View All Services
-                      </Link>
+>
+        View All Services
+      </
                     </div>
                   </div>
                 </div>
@@ -116,9 +116,9 @@ const Navigation: React.FC = () => {
               to="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
-//             >
-//               Case Studies
-            </Link>
+>
+        Case Studies
+      </
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
 //               Contact
             </Link>
@@ -157,30 +157,30 @@ const Navigation: React.FC = () => {
                   to="/"
                   className="block text-white hover:text-cyan-400 transition-colors py-2"
                   onClick={closeAllMenus}
-//                 >
-//                   Home
-                </Link>
+>
+        Home
+      </
                 <Link
                   to="/about"
                   className="block text-white hover:text-cyan-400 transition-colors py-2"
                   onClick={closeAllMenus}
-//                 >
-//                   About
-                </Link>
+>
+        About
+      </
                 <Link
                   to="/services"
                   className="block text-white hover:text-cyan-400 transition-colors py-2"
                   onClick={closeAllMenus}
-//                 >
-//                   Services
-                </Link>
+>
+        Services
+      </
                 <Link
                   to="/contact"
                   className="block text-white hover:text-cyan-400 transition-colors py-2"
                   onClick={closeAllMenus}
-//                 >
-//                   Contact
-                </Link>
+>
+        Contact
+      </
               </div>
 
               {/* Contact Info */}

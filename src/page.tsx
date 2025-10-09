@@ -491,13 +491,13 @@ const HomePage: React.FC = () => {
           numberOfEmployees: '50-100',
           industry: 'Technology',
           services: [
-//             'AI Solutions',
-//             'Quantum Computing',
-//             'Autonomous Systems',
-//             'Digital Transformation',
-//             'Cloud Services',
-//             'Automation',
-//             'Business Intelligence'
+            'AI Solutions',
+            'Quantum Computing',
+            'Autonomous Systems',
+            'Digital Transformation',
+            'Cloud Services',
+            'Automation',
+            'Business Intelligence',
 //           ],
           contactPoint: {
             '@type': 'ContactPoint',
@@ -544,9 +544,9 @@ const HomePage: React.FC = () => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-//         >
-//           Skip to main content
-        </a>
+>
+        Skip to main content
+      </
 
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
@@ -568,9 +568,9 @@ const HomePage: React.FC = () => {
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-advanced neon-pulse glitch"
                 data-text="Zion Tech Group"
-//               >
-//                 Zion Tech Group
-              </h1>
+>
+        Zion Tech Group
+      </
               <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-6 sm:mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
 //                 Advanced AI and IT Solutions
               </p>
@@ -607,9 +607,9 @@ const HomePage: React.FC = () => {
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-//                 >
-//                   Get Started Today
-                </Link>
+>
+        Get Started Today
+      </
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
@@ -687,9 +687,9 @@ const HomePage: React.FC = () => {
                     <Link 
                       to={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
-//                     >
-//                       Learn More
-                    </Link>
+>
+        Learn More
+      </
                   </div>
                 </article>
               ))}
@@ -699,9 +699,9 @@ const HomePage: React.FC = () => {
               <a 
                 href="/micro-saas" 
                 className="cyber-button px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
-//               >
-//                 View All Micro SAAS Solutions
-              </a>
+>
+        View All Micro SAAS Solutions
+      </
             </div>
           </section>
 
@@ -755,9 +755,9 @@ const HomePage: React.FC = () => {
                     <Link 
                       to="/ai-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-//                     >
-//                       Learn More
-                    </Link>
+>
+        Learn More
+      </
                   </div>
                 </article>
               ))}
@@ -767,9 +767,9 @@ const HomePage: React.FC = () => {
               <a 
                 href="/ai-services" 
                 className="cyber-button px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
-//               >
-//                 View All AI Services
-              </a>
+>
+        View All AI Services
+      </
             </div>
           </section>
 
@@ -823,9 +823,9 @@ const HomePage: React.FC = () => {
                     <Link 
                       to="/it-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-//                     >
-//                       Learn More
-                    </Link>
+>
+        Learn More
+      </
                   </div>
                 </article>
               ))}
@@ -835,9 +835,9 @@ const HomePage: React.FC = () => {
               <a 
                 href="/it-services" 
                 className="cyber-button px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
-//               >
-//                 View All IT Services
-              </a>
+>
+        View All IT Services
+      </
             </div>
           </section>
 
@@ -911,9 +911,9 @@ const HomePage: React.FC = () => {
                   <a 
                     href="/quantum-computing" 
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-purple-400 border border-purple-400 hover:bg-purple-400 hover:text-slate-900"
-//                   >
-//                     Learn More
-                  </a>
+>
+        Learn More
+      </
                 </div>
               </article>
 
@@ -951,9 +951,9 @@ const HomePage: React.FC = () => {
                   <a 
                     href="/autonomous-systems" 
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-cyan-400 border border-cyan-400 hover:bg-cyan-400 hover:text-slate-900"
-//                   >
-//                     Learn More
-                  </a>
+>
+        Learn More
+      </
                 </div>
               </article>
 
@@ -991,9 +991,9 @@ const HomePage: React.FC = () => {
                   <a 
                     href="/blockchain-web3" 
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-green-400 border border-green-400 hover:bg-green-400 hover:text-slate-900"
-//                   >
-//                     Learn More
-                  </a>
+>
+        Learn More
+      </
                 </div>
               </article>
 
@@ -1031,9 +1031,9 @@ const HomePage: React.FC = () => {
                   <a 
                     href="/iot-edge-computing" 
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-orange-400 border border-orange-400 hover:bg-orange-400 hover:text-slate-900"
-//                   >
-//                     Learn More
-                  </a>
+>
+        Learn More
+      </
                 </div>
               </article>
 
@@ -1071,9 +1071,9 @@ const HomePage: React.FC = () => {
                   <a 
                     href="/business-intelligence" 
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-indigo-400 border border-indigo-400 hover:bg-indigo-400 hover:text-slate-900"
-//                   >
-//                     Learn More
-                  </a>
+>
+        Learn More
+      </
                 </div>
               </article>
 
@@ -1111,9 +1111,9 @@ const HomePage: React.FC = () => {
                   <a 
                     href="/robotics" 
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-gray-400 border border-gray-400 hover:bg-gray-400 hover:text-slate-900"
-//                   >
-//                     Learn More
-                  </a>
+>
+        Learn More
+      </
                 </div>
               </article>
             </div>
@@ -1137,9 +1137,9 @@ const HomePage: React.FC = () => {
                   href="tel:+13024640950" 
                   onClick={handlePhoneClick}
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-//                 >
-//                   Call Now
-                </a>
+>
+        Call Now
+      </
               </div>
               
               <div className="holographic-card-advanced p-6 text-center hover:scale-105 transition-all duration-300">
@@ -1149,9 +1149,9 @@ const HomePage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
                   className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
-//                 >
-//                   Send Email
-                </a>
+>
+        Send Email
+      </
               </div>
               
               <div className="quantum-entanglement p-6 text-center hover:scale-105 transition-all duration-300">
@@ -1163,9 +1163,9 @@ const HomePage: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-400 hover:text-green-300 font-medium transition-colors"
-//                 >
-//                   View on Map
-                </a>
+>
+        View on Map
+      </
               </div>
             </div>
             
@@ -1179,9 +1179,9 @@ const HomePage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105"
-//                 >
-//                   Get Free Consultation
-                </a>
+>
+        Get Free Consultation
+      </
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}

@@ -53,12 +53,12 @@ const ExpenseTrackerPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for individuals',
       features: [
-//         'Unlimited receipts',
-//         'Basic AI categorization',
-//         'Expense reports',
-//         'Mobile app access',
-//         'Email support',
-//         '1 year data retention'
+            'Unlimited receipts',
+            'Basic AI categorization',
+            'Expense reports',
+            'Mobile app access',
+            'Email support',
+            '1 year data retention',
 //       ],
       popular: false
     },
@@ -68,14 +68,14 @@ const ExpenseTrackerPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for small businesses',
       features: [
-//         'Up to 10 users',
-//         'Advanced AI features',
-//         'Team collaboration',
-//         'Custom categories',
-//         'Priority support',
-//         'API access',
-//         'Advanced reporting',
-//         '2 years data retention'
+            'Up to 10 users',
+            'Advanced AI features',
+            'Team collaboration',
+            'Custom categories',
+            'Priority support',
+            'API access',
+            'Advanced reporting',
+            '2 years data retention',
 //       ],
       popular: true
     },
@@ -85,14 +85,14 @@ const ExpenseTrackerPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-//         'Unlimited users',
-//         'Premium AI features',
-//         'Custom workflows',
-//         'Advanced integrations',
-//         'Dedicated support',
-//         'White-label options',
-//         'Unlimited data retention',
-//         'Custom compliance rules'
+            'Unlimited users',
+            'Premium AI features',
+            'Custom workflows',
+            'Advanced integrations',
+            'Dedicated support',
+            'White-label options',
+            'Unlimited data retention',
+            'Custom compliance rules',
 //       ],
       popular: false
     }
@@ -163,9 +163,9 @@ const ExpenseTrackerPage: React.FC = () => {
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//             >
-//               Start Free Trial
-            </Link>
+>
+        Start Free Trial
+      </
           </div>
         </div>
 
@@ -313,9 +313,9 @@ const ExpenseTrackerPage: React.FC = () => {
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//             >
-//               Start Free Trial
-            </Link>
+>
+        Start Free Trial
+      </
           </div>
         </section>
       </section>

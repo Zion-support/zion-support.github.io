@@ -74,9 +74,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
                 <Link
                   to="/contact"
                   className="cyber-button w-full text-center inline-block"
-//                 >
-//                   Get Started
-                </Link>
+>
+        Get Started
+      </
               </div>
             ))}
           </div>

@@ -161,21 +161,21 @@ class ErrorBoundary extends Component<Props, State> {
                 <button
                   onClick={this.handleRetry}
                   className="cyber-button px-6 py-3 text-lg font-semibold"
-//                 >
-//                   Try Again
-                </button>
+>
+        Try Again
+      </
                 <button
                   onClick={this.handleReload}
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-//                 >
-//                   Reload Page
-                </button>
+>
+        Reload Page
+      </
                 <button
                   onClick={this.handleGoHome}
                   className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
-//                 >
-//                   Go Home
-                </button>
+>
+        Go Home
+      </
               </div>
 
               <div className="mt-8 text-sm text-gray-400">

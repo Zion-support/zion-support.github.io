@@ -65,10 +65,10 @@ const AIComputerVisionPage: React.FC = () => {
       price: '$499/month',
       description: 'Perfect for small projects',
       features: [
-//         'Up to 1,000 images/month',
-//         'Basic models',
-//         'Email support',
-//         'Standard API'
+            'Up to 1,000 images/month',
+            'Basic models',
+            'Email support',
+            'Standard API',
 //       ],
       popular: false
     },
@@ -77,11 +77,11 @@ const AIComputerVisionPage: React.FC = () => {
       price: '$1,999/month',
       description: 'Ideal for growing businesses',
       features: [
-//         'Up to 10,000 images/month',
-//         'Advanced models',
-//         'Priority support',
-//         'Custom training',
-//         'API access'
+            'Up to 10,000 images/month',
+            'Advanced models',
+            'Priority support',
+            'Custom training',
+            'API access',
 //       ],
       popular: true
     },
@@ -90,11 +90,11 @@ const AIComputerVisionPage: React.FC = () => {
       price: 'Custom',
       description: 'For large organizations',
       features: [
-//         'Unlimited images',
-//         'Custom models',
-//         'Dedicated support',
-//         'On-premise deployment',
-//         'White-label solutions'
+            'Unlimited images',
+            'Custom models',
+            'Dedicated support',
+            'On-premise deployment',
+            'White-label solutions',
 //       ],
       popular: false
     }
@@ -122,9 +122,9 @@ const AIComputerVisionPage: React.FC = () => {
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-//             >
-//               Get Started
-            </a>
+>
+        Get Started
+      </
             <a
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -236,9 +236,9 @@ const AIComputerVisionPage: React.FC = () => {
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}
-//                 >
-//                   Get Started
-                </a>
+>
+        Get Started
+      </
               </div>
             ))}
           </div>
@@ -257,9 +257,9 @@ const AIComputerVisionPage: React.FC = () => {
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-//               >
-//                 Start Your Vision Journey
-              </a>
+>
+        Start Your Vision Journey
+      </
               <a
                 href="/demo"
                 className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"

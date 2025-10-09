@@ -25,23 +25,23 @@ class HealthCheckService {
   private cachedStatus?: HealthStatus
   private cacheTimeout: number = 5000; // 5 seconds
   constructor() {
-//     this.registerDefaultChecks()
+    this.registerDefaultChecks()
   }
   /**
    * Register default health checks
    */
   private registerDefaultChecks(): void {
     // Memory usage check
-//     this.register('memory', this.checkMemory.bind(this))
+    this.register('memory', this.checkMemory.bind(this))
     // Performance check
-//     this.register('performance', this.checkPerformance.bind(this))
+    this.register('performance', this.checkPerformance.bind(this))
     // Browser API availability check
     if (typeof window !== 'undefined') {
-//       this.register('browser-apis', this.checkBrowserAPIs.bind(this))
+    this.register('browser-apis', this.checkBrowserAPIs.bind(this))
     }
     // Local storage check
     if (typeof window !== 'undefined') {
-//       this.register('storage', this.checkStorage.bind(this))
+    this.register('storage', this.checkStorage.bind(this))
     }
   }
   /**
@@ -202,16 +202,16 @@ class HealthCheckService {
    */
   private checkBrowserAPIs(): HealthCheck {
     const requiredAPIs = [
-//       'fetch',
-//       'localStorage',
-//       'sessionStorage',
-//       'console',
-//       'navigator'
+            'fetch',
+            'localStorage',
+            'sessionStorage',
+            'console',
+            'navigator',
 //     ]
     const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {
       if (typeof window !== 'undefined' && !(api in window)) {
-//         missingAPIs.push(api)
+    missingAPIs.push(api)
       }
     })
     if (missingAPIs.length > 0) {
@@ -236,9 +236,9 @@ class HealthCheckService {
       const testKey = '_health_check_test'
       const testValue = 'test'
       // Test localStorage
-//       localStorage.setItem(testKey, testValue)
+    localStorage.setItem(testKey, testValue)
       const retrieved = localStorage.getItem(testKey)
-//       localStorage.removeItem(testKey)
+    localStorage.removeItem(testKey)
       if (retrieved !== testValue) {
         return {
           name: 'storage',
@@ -310,7 +310,7 @@ export const healthCheck = new HealthCheckService()
 export const runHealthChecks = () => healthCheck.runChecks()
 export const getHealthStatus = () => healthCheck.getStatus()
 export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) =>
-//   healthCheck.register(name, checkFn)
+    healthCheck.register(name, checkFn)
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck

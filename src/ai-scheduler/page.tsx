@@ -53,12 +53,12 @@ const AISchedulerPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for individuals',
       features: [
-//         'Unlimited personal meetings',
-//         'Basic AI scheduling',
-//         'Calendar integration',
-//         'Email reminders',
-//         'Mobile app access',
-//         'Standard support'
+            'Unlimited personal meetings',
+            'Basic AI scheduling',
+            'Calendar integration',
+            'Email reminders',
+            'Mobile app access',
+            'Standard support',
 //       ],
       popular: false
     },
@@ -68,14 +68,14 @@ const AISchedulerPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for small teams',
       features: [
-//         'Up to 10 team members',
-//         'Advanced AI scheduling',
-//         'Team coordination',
-//         'Custom meeting types',
-//         'Analytics dashboard',
-//         'Priority support',
-//         'API access',
-//         'Custom branding'
+            'Up to 10 team members',
+            'Advanced AI scheduling',
+            'Team coordination',
+            'Custom meeting types',
+            'Analytics dashboard',
+            'Priority support',
+            'API access',
+            'Custom branding',
 //       ],
       popular: true
     },
@@ -85,14 +85,14 @@ const AISchedulerPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-//         'Unlimited team members',
-//         'Premium AI features',
-//         'Advanced analytics',
-//         'Custom integrations',
-//         'Dedicated support',
-//         'White-label options',
-//         'SSO integration',
-//         'Custom workflows'
+            'Unlimited team members',
+            'Premium AI features',
+            'Advanced analytics',
+            'Custom integrations',
+            'Dedicated support',
+            'White-label options',
+            'SSO integration',
+            'Custom workflows',
 //       ],
       popular: false
     }
@@ -163,9 +163,9 @@ const AISchedulerPage: React.FC = () => {
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//             >
-//               Start Free Trial
-            </Link>
+>
+        Start Free Trial
+      </
           </div>
         </div>
 
@@ -313,9 +313,9 @@ const AISchedulerPage: React.FC = () => {
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//             >
-//               Start Free Trial
-            </Link>
+>
+        Start Free Trial
+      </
           </div>
         </section>
       </section>

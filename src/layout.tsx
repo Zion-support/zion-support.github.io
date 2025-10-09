@@ -20,13 +20,13 @@ export default function RootLayout({
     numberOfEmployees: '50-100',
     industry: 'Technology',
     services: [
-//       'AI Solutions',
-//       'Quantum Computing',
-//       'Autonomous Systems',
-//       'Digital Transformation',
-//       'Cloud Services',
-//       'Automation',
-//       'Business Intelligence'
+            'AI Solutions',
+            'Quantum Computing',
+            'Autonomous Systems',
+            'Digital Transformation',
+            'Cloud Services',
+            'Automation',
+            'Business Intelligence',
 //     ],
     contactPoint: {
       '@type': 'ContactPoint',

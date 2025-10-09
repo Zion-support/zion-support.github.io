@@ -53,12 +53,12 @@ const TaskManagerProPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for personal use',
       features: [
-//         'Unlimited personal tasks',
-//         'Basic AI prioritization',
-//         'Mobile app access',
-//         'Basic reporting',
-//         'Email support',
-//         '1 year data retention'
+            'Unlimited personal tasks',
+            'Basic AI prioritization',
+            'Mobile app access',
+            'Basic reporting',
+            'Email support',
+            '1 year data retention',
 //       ],
       popular: false
     },
@@ -68,14 +68,14 @@ const TaskManagerProPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for small teams',
       features: [
-//         'Up to 10 team members',
-//         'Advanced AI features',
-//         'Team collaboration',
-//         'Custom workflows',
-//         'Priority support',
-//         'Advanced analytics',
-//         'API access',
-//         '2 years data retention'
+            'Up to 10 team members',
+            'Advanced AI features',
+            'Team collaboration',
+            'Custom workflows',
+            'Priority support',
+            'Advanced analytics',
+            'API access',
+            '2 years data retention',
 //       ],
       popular: true
     },
@@ -85,14 +85,14 @@ const TaskManagerProPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-//         'Unlimited team members',
-//         'Premium AI features',
-//         'Custom integrations',
-//         'Dedicated support',
-//         'White-label options',
-//         'Advanced security',
-//         'Unlimited data retention',
-//         'Custom compliance'
+            'Unlimited team members',
+            'Premium AI features',
+            'Custom integrations',
+            'Dedicated support',
+            'White-label options',
+            'Advanced security',
+            'Unlimited data retention',
+            'Custom compliance',
 //       ],
       popular: false
     }
@@ -163,9 +163,9 @@ const TaskManagerProPage: React.FC = () => {
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//             >
-//               Start Free Trial
-            </Link>
+>
+        Start Free Trial
+      </
           </div>
         </div>
 
@@ -313,9 +313,9 @@ const TaskManagerProPage: React.FC = () => {
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//             >
-//               Start Free Trial
-            </Link>
+>
+        Start Free Trial
+      </
           </div>
         </section>
       </section>

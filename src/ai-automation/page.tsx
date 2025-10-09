@@ -39,11 +39,11 @@ const AIAutomationPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-//         'Up to 10 automated processes',
-//         'Basic AI decision making',
-//         'Email support',
-//         'Standard integrations',
-//         'Basic analytics'
+            'Up to 10 automated processes',
+            'Basic AI decision making',
+            'Email support',
+            'Standard integrations',
+            'Basic analytics',
 //       ],
       popular: false
     },
@@ -53,12 +53,12 @@ const AIAutomationPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-//         'Up to 50 automated processes',
-//         'Advanced AI decision making',
-//         'Priority support',
-//         'Custom integrations',
-//         'Advanced analytics',
-//         'Workflow optimization'
+            'Up to 50 automated processes',
+            'Advanced AI decision making',
+            'Priority support',
+            'Custom integrations',
+            'Advanced analytics',
+            'Workflow optimization',
 //       ],
       popular: true
     },
@@ -68,13 +68,13 @@ const AIAutomationPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-//         'Unlimited processes',
-//         'Premium AI features',
-//         '24/7 support',
-//         'Custom development',
-//         'White-label options',
-//         'API access',
-//         'Dedicated support'
+            'Unlimited processes',
+            'Premium AI features',
+            '24/7 support',
+            'Custom development',
+            'White-label options',
+            'API access',
+            'Dedicated support',
 //       ],
       popular: false
     }

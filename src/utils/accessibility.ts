@@ -84,8 +84,8 @@ class AccessibilityService {
     // Check for missing form labels
     document.querySelectorAll('input, select, textarea').forEach(input => {
       const hasLabel =
-//         input.hasAttribute('aria-label') ||
-//         input.hasAttribute('aria-labelledby') ||
+    input.hasAttribute('aria-label') ||
+    input.hasAttribute('aria-labelledby') ||
         document.querySelector(`label[for="${input.id}"]`);
       if (!hasLabel) {
         errors.push({
@@ -261,7 +261,7 @@ class AccessibilityService {
       style.display === 'none' ||
       style.visibility === 'hidden' ||
       style.opacity === '0' ||
-//       element.hasAttribute('hidden') ||
+    element.hasAttribute('hidden') ||
       element.getAttribute('aria-hidden') === 'true'
     );
   }

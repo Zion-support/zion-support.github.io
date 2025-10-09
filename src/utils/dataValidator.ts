@@ -190,7 +190,7 @@ export function validateForm<T extends Record<string, unknown>>(
     if (fieldErrors.length > 0) {
       errors[field] = fieldErrors;
       // Track validation errors
-//       errorTracking.trackError(
+    errorTracking.trackError(
         new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
         {
           category: ErrorCategory.Validation,

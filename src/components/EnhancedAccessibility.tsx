@@ -250,9 +250,9 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
           aria-label="Close accessibility settings"
-//         >
-//           ×
-        </button>
+>
+        ×
+      </
       </div>
 
       <div className="space-y-3">
@@ -368,9 +368,9 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
         <button
           onClick={resetSettings}
           className="w-full mt-4 px-3 py-2 bg-red-600 hover:bg-red-700 text-white rounded text-sm"
-//         >
-//           Reset Settings
-        </button>
+>
+        Reset Settings
+      </
       </div>
 
       <div className="mt-4 text-xs text-gray-400">

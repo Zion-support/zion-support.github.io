@@ -284,7 +284,7 @@ class AdvancedAnalytics {
       // Track navigation timing
       window.addEventListener('load', () => {
         const navigation = performance.getEntriesByType(
-//           'navigation'
+            'navigation',
         )[0] as PerformanceNavigationTiming;
         const performanceEvent: UserEvent = {
           id: this.generateEventId(),

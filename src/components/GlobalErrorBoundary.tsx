@@ -78,21 +78,21 @@ class GlobalErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleRetry}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
-//               >
-//                 Try Again
-              </button>
+>
+        Try Again
+      </
               <button
                 onClick={() => window.location.reload()}
                 className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300 font-medium"
-//               >
-//                 Refresh Page
-              </button>
+>
+        Refresh Page
+      </
               <a
                 href="/"
                 className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
-//               >
-//                 Go Home
-              </a>
+>
+        Go Home
+      </
             </div>
             {/* Contact Information */}
             <div className="mt-8 pt-6 border-t border-gray-700">
@@ -102,9 +102,9 @@ class GlobalErrorBoundary extends Component<Props, State> {
               <a
                 href="tel:+13024640950"
                 className="text-cyan-400 hover:text-cyan-300 font-medium"
-//               >
-//                 (302) 464-0950
-              </a>
+>
+        (302) 464-0950
+      </
             </div>
           </div>
         </div>

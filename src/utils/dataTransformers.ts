@@ -69,7 +69,7 @@ export function flattenObject(
       const value = obj[key];
       const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {
-//         Object.assign(
+    Object.assign(
 //           flattened,
 //           flattenObject(value as Record<string, unknown>, newKey, separator)
         );

@@ -117,8 +117,8 @@ class EnhancedErrorHandler {
    * Setup resource error handler
    */
   private setupResourceErrorHandler(): void {
-//     window.addEventListener(
-//       'error',
+    window.addEventListener(
+            'error',
       event => {
         if (event.target !== window) {
           const _target = event.target as HTMLElement & {
@@ -463,14 +463,14 @@ class EnhancedErrorHandler {
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity);
     console.group(`${emoji} Error Report: ${errorReport.id}`);
-    // console.error('Message:', errorReport.message);
-    // console.error('Type:', errorReport.type);
-    // console.error('Severity:', errorReport.severity);
-    // console.error('Category:', errorReport.category);
-    // console.error('Context:', errorReport.context);
-    // console.error('Metadata:', errorReport.metadata);
+        console.error('Message:', errorReport.message);
+        console.error('Type:', errorReport.type);
+        console.error('Severity:', errorReport.severity);
+        console.error('Category:', errorReport.category);
+        console.error('Context:', errorReport.context);
+        console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {
-      // console.error('Stack:', errorReport.stack);
+          console.error('Stack:', errorReport.stack);
     }
     console.groupEnd();
   }
@@ -531,7 +531,7 @@ class EnhancedErrorHandler {
     const recentErrors = this.errors.filter(
       error =>
 //         !error.resolved &&
-//         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
+    Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
     );
     if (recentErrors.length > 5) {
       if (process.env['NODE_ENV'] === 'development') { 

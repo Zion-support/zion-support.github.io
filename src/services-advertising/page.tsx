@@ -45,9 +45,9 @@ export default function ServicesAdvertisingPage() {
               <Link 
                 href="#services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-//               >
-//                 View Our Services
-              </Link>
+>
+        View Our Services
+      </
             </div>
           </div>
         </div>
@@ -336,9 +336,9 @@ export default function ServicesAdvertisingPage() {
             <Link 
               href="/case-studies"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-//             >
-//               View Success Stories
-            </Link>
+>
+        View Success Stories
+      </
           </div>
         </div>
       </section>

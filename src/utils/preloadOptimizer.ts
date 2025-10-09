@@ -19,9 +19,9 @@ export const _preloadCriticalResources = () => {
   })
   // Preload critical images
   const criticalImages = [
-//     '/images/hero-bg.jpg',
-//     '/images/logo.png',
-//     '/images/favicon.ico'
+            '/images/hero-bg.jpg',
+            '/images/logo.png',
+            '/images/favicon.ico',
   ];
   criticalImages.forEach(src => {
     const link = document.createElement('link')
@@ -54,7 +54,7 @@ export const optimizeImages = () => {
   // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {
-//     img.setAttribute('loading', 'lazy')
+    img.setAttribute('loading', 'lazy')
   })
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {
@@ -64,8 +64,8 @@ export const optimizeImages = () => {
           const img = entry.target as HTMLImageElement
           if (img.dataset['src']) {
             img['src'] = img.dataset['src']
-//             img.removeAttribute('data-src')
-//             imageObserver.unobserve(img)
+    img.removeAttribute('data-src')
+    imageObserver.unobserve(img)
           }
         }
       })
@@ -79,7 +79,7 @@ export const optimizeThirdPartyScripts = () => {
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {
-//     script.setAttribute('defer', '')
+    script.setAttribute('defer', '')
   })
   // Load analytics after page load
   if (document.readyState === 'loading') {

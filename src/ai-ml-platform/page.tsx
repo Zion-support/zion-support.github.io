@@ -42,11 +42,11 @@ const AIMLPlatformPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for individual developers',
       features: [
-//         'Up to 5 models',
-//         'Basic ML tools',
-//         'Email support',
-//         'Standard compute',
-//         'Basic analytics'
+            'Up to 5 models',
+            'Basic ML tools',
+            'Email support',
+            'Standard compute',
+            'Basic analytics',
 //       ],
       popular: false
     },
@@ -56,12 +56,12 @@ const AIMLPlatformPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for development teams',
       features: [
-//         'Up to 25 models',
-//         'Advanced ML tools',
-//         'Priority support',
-//         'High-performance compute',
-//         'Advanced analytics',
-//         'Team collaboration'
+            'Up to 25 models',
+            'Advanced ML tools',
+            'Priority support',
+            'High-performance compute',
+            'Advanced analytics',
+            'Team collaboration',
 //       ],
       popular: true
     },
@@ -71,13 +71,13 @@ const AIMLPlatformPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-//         'Unlimited models',
-//         'Premium ML features',
-//         '24/7 support',
-//         'Custom compute',
-//         'Custom analytics',
-//         'White-label options',
-//         'API access'
+            'Unlimited models',
+            'Premium ML features',
+            '24/7 support',
+            'Custom compute',
+            'Custom analytics',
+            'White-label options',
+            'API access',
 //       ],
       popular: false
     }

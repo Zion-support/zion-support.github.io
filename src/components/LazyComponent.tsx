@@ -112,8 +112,8 @@ export const preloadCriticalResources = () => {
 
   // Preload critical images
   const imagePreloads = [
-//     '/og-image.jpg',
-//     '/favicon.ico',
+            '/og-image.jpg',
+            '/favicon.ico',
   ];
 
   imagePreloads.forEach((src) => {

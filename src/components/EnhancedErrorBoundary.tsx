@@ -218,9 +218,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     <button
                       onClick={this.copyErrorDetails}
                       className="mt-2 text-xs text-cyan-400 hover:text-cyan-300"
-//                     >
-//                       Copy Error Details
-                    </button>
+>
+        Copy Error Details
+      </
                   </div>
                 </details>
               )}

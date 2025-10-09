@@ -100,9 +100,9 @@ const EnterprisePage: React.FC = () => {
             <Link
               href="/contact"
               className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-//             >
-//               Get Started Today
-            </Link>
+>
+        Get Started Today
+      </
           </div>
         </div>
       </section>

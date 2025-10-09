@@ -51,9 +51,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         team: '12 Researchers',
         funding: '$2.5M',
         outcomes: [
-//           'Improved decision accuracy by 40%',
-//           'Reduced computational overhead by 30%',
-//           'Published 3 papers in top-tier conferences'
+            'Improved decision accuracy by 40%',
+            'Reduced computational overhead by 30%',
+            'Published 3 papers in top-tier conferences',
 //         ],
         icon: Brain,
         color: 'text-purple-400'
@@ -66,8 +66,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         team: '8 Researchers',
         funding: '$1.8M',
         outcomes: [
-//           '95% automation of business processes',
-//           '300% improvement in decision speed',
+            '95% automation of business processes',
+            '300% improvement in decision speed',
           'Patent filed for core algorithms'
 //         ],
         icon: Target,
@@ -81,9 +81,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         team: '15 Researchers',
         funding: '$3.2M',
         outcomes: [
-//           '50% reduction in model development time',
-//           '25% improvement in model performance',
-//           'Open-source framework released'
+            '50% reduction in model development time',
+            '25% improvement in model performance',
+            'Open-source framework released',
 //         ],
         icon: Microscope,
         color: 'text-blue-400'
@@ -99,8 +99,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         funding: '$4.1M',
         outcomes: [
           'Quantum speedup demonstrated for specific problems',
-//           'Novel quantum ML algorithms developed',
-//           'Partnership with leading quantum hardware companies'
+            'Novel quantum ML algorithms developed',
+            'Partnership with leading quantum hardware companies',
 //         ],
         icon: Atom,
         color: 'text-blue-400'
@@ -113,8 +113,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         team: '12 Researchers',
         funding: '$5.5M',
         outcomes: [
-//           'Improved quantum error rates',
-//           'Practical implementation strategies',
+            'Improved quantum error rates',
+            'Practical implementation strategies',
           'Industry collaboration established'
 //         ],
         icon: Zap,
@@ -130,9 +130,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         team: '20 Researchers',
         funding: '$6.8M',
         outcomes: [
-//           '90% reduction in manual operations',
-//           'Self-healing system capabilities',
-//           'Real-world deployment in 5 enterprises'
+            '90% reduction in manual operations',
+            'Self-healing system capabilities',
+            'Real-world deployment in 5 enterprises',
 //         ],
         icon: Rocket,
         color: 'text-green-400'
@@ -145,9 +145,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         team: '6 Researchers',
         funding: '$1.2M',
         outcomes: [
-//           'Novel coordination algorithms developed',
-//           'Scalability demonstrated up to 1000 agents',
-//           'Published in Nature Communications'
+            'Novel coordination algorithms developed',
+            'Scalability demonstrated up to 1000 agents',
+            'Published in Nature Communications',
 //         ],
         icon: Users,
         color: 'text-purple-400'
@@ -162,8 +162,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         team: '14 Researchers',
         funding: '$3.7M',
         outcomes: [
-//           'Novel neuromorphic algorithms',
-//           'Hardware-software co-design',
+            'Novel neuromorphic algorithms',
+            'Hardware-software co-design',
           'Industry partnerships established'
 //         ],
         icon: Lightbulb,
@@ -177,9 +177,9 @@ const ResearchDevelopmentPage: React.FC = () => {
         team: '8 Researchers',
         funding: '$2.1M',
         outcomes: [
-//           '10x reduction in power consumption',
-//           'Real-time processing capabilities',
-//           'Commercial product launched'
+            '10x reduction in power consumption',
+            'Real-time processing capabilities',
+            'Commercial product launched',
 //         ],
         icon: Globe,
         color: 'text-blue-400'
@@ -370,9 +370,9 @@ const ResearchDevelopmentPage: React.FC = () => {
                       <a
                         href={pub.link}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
-//                       >
-//                         Read Paper →
-                      </a>
+>
+        Read Paper →
+      </
                     </div>
                   </div>
                 ))}
