@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare } from 'lucide-react';
+import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare, Target, Zap, Stethoscope, CreditCard, FileText, BarChart, Atom, Bot, Link as LinkIcon, Smartphone } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
     'Emerging Tech': [
       { name: 'Quantum Computing', href: '/quantum-computing', icon: Atom, description: 'Next-Gen Computing' },
       { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Bot, description: 'Self-Managing Systems' },
-      { name: 'Blockchain', href: '/blockchain', icon: Link, description: 'Decentralized Solutions' },
+      { name: 'Blockchain', href: '/blockchain-web3', icon: LinkIcon, description: 'Decentralized Solutions' },
       { name: 'IoT Edge Computing', href: '/iot-edge-computing', icon: Smartphone, description: 'Connected Devices' },
       { name: 'Robotics', href: '/robotics', icon: Bot, description: 'Intelligent Robots' }
     ],
