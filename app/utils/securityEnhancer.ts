@@ -1,236 +1,450 @@
-'use client';
-import React from 'react'
 /**
- * Security Enhancer
- * Provides comprehensive security utilities and monitoring
+ * Security Enhancement Utilities
+ * Comprehensive security measures and monitoring
  */
-interface SecurityConfig {
+
+export interface SecurityConfig {
   enableCSP: boolean;
   enableHSTS: boolean;
   enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
-  allowedOrigins: string[];
-  trustedDomains: string[];
+  enableClickjackingProtection: boolean;
+  enableReferrerPolicy: boolean;
+  enablePermissionsPolicy: boolean;
+  enableSecureCookies: boolean;
+  enableContentTypeOptions: boolean;
+  enableFrameOptions: boolean;
 }
-interface SecurityMetrics {
-  blockedRequests: number;
-  suspiciousActivity: number;
-  securityViolations: number;
-  lastScanTime: number;
+
+export interface SecurityReport {
+  timestamp: number;
+  violations: SecurityViolation[];
+  recommendations: SecurityRecommendation[];
+  score: number;
 }
-class SecurityEnhancer {
+
+export interface SecurityViolation {
+  type: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+  recommendation: string;
+}
+
+export interface SecurityRecommendation {
+  category: string;
+  title: string;
+  description: string;
+  priority: 'low' | 'medium' | 'high';
+}
+
+export class SecurityEnhancer {
+  private static instance: SecurityEnhancer;
   private config: SecurityConfig;
-  private metrics: SecurityMetrics;
-  private eventListeners: Array<() => void> = [];
-  constructor(config: Partial<SecurityConfig> = {}) {
-    this.config = {
-      enableCSP: true,
-      enableHSTS: true,
-      enableXSSProtection: true,
-      enableCSRFProtection: true,
-      enableContentSecurityPolicy: true,
-      allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
-      trustedDomains: ['zion.app', 'www.zion.app'],
-      ...config
-    };
-    this.metrics = {
-      blockedRequests: 0,
-      suspiciousActivity: 0,
-      securityViolations: 0,
-      lastScanTime: Date.now()
+  private violations: SecurityViolation[] = [];
+  private recommendations: SecurityRecommendation[] = [];
+
+  private constructor(config: SecurityConfig) {
+    this.config = config;
+    this.initialize();
+  }
+
+  public static getInstance(config?: SecurityConfig): SecurityEnhancer {
+    if (!SecurityEnhancer.instance && config) {
+      SecurityEnhancer.instance = new SecurityEnhancer(config);
     }
-    this.initializeSecurity()
+    return SecurityEnhancer.instance;
   }
-  private initializeSecurity(): void {
-    if (typeof window === 'undefined') return
-    this.setupContentSecurityPolicy()
-    this.setupXSSProtection()
-    this.setupCSRFProtection()
-    this.monitorSuspiciousActivity()
-    this.setupSecureHeaders()
+
+  private initialize(): void {
+    if (typeof window === 'undefined') return;
+
+    this.setupSecurityHeaders();
+    this.setupContentSecurityPolicy();
+    this.setupXSSProtection();
+    this.setupClickjackingProtection();
+    this.setupReferrerPolicy();
+    this.setupPermissionsPolicy();
+    this.monitorSecurityViolations();
+    this.generateSecurityRecommendations();
   }
-  private setupContentSecurityPolicy(): void {
-    if (!this.config.enableContentSecurityPolicy) return
-    const csp = [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https:",
-      "connect-src 'self' https://api.zion.app",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'"
-    ].join('; ')
-    const meta = document.createElement('meta')
-    meta.httpEquiv = 'Content-Security-Policy'
-    meta.content = csp
-    document.head.appendChild(meta)
+
+  private setupSecurityHeaders(): void {
+    if (typeof document === 'undefined') return;
+
+    // These would typically be set by the server, but we can add client-side checks
+    this.checkSecurityHeaders();
   }
-  private setupXSSProtection(): void {
-    if (!this.config.enableXSSProtection) return
-    const meta = document.createElement('meta')
-    meta.httpEquiv = 'X-XSS-Protection'
-    meta.content = '1; mode=block'
-    document.head.appendChild(meta)
+
+  private checkSecurityHeaders(): void {
+    const requiredHeaders = [
+      'content-security-policy',
+      'x-frame-options',
+      'x-content-type-options',
+      'x-xss-protection',
+      'strict-transport-security',
+      'referrer-policy',
+      'permissions-policy'
+    ];
+
+    // Note: In a real application, these headers would be checked via a server request
+    // For client-side, we can only validate what's available
+    this.validateClientSideSecurity();
   }
-  private setupCSRFProtection(): void {
-    if (!this.config.enableCSRFProtection) return
-    // Generate CSRF token
-    const token = this.generateCSRFToken()
-    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`
-    // Add token to all forms
-    this.addCSRFTokenToForms(token)
+
+  private validateClientSideSecurity(): void {
+    // Check for secure context
+    if (!window.isSecureContext) {
+      this.addViolation({
+        type: 'insecure_context',
+        severity: 'high',
+        description: 'Application is not running in a secure context',
+        recommendation: 'Ensure the application is served over HTTPS'
+      });
+    }
+
+    // Check for mixed content
+    this.checkMixedContent();
+
+    // Check for insecure protocols
+    this.checkInsecureProtocols();
   }
-  private generateCSRFToken(): string {
-    const array = new Uint8Array(32)
-    crypto.getRandomValues(array)
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
-  }
-  private addCSRFTokenToForms(token: string): void {
-    const forms = document.querySelectorAll('form')
-    forms.forEach(form => {
-      const input = document.createElement('input')
-      input.type = 'hidden'
-      input.name = 'csrf-token'
-      input.value = token
-      form.appendChild(input)
-    })
-  }
-  private monitorSuspiciousActivity(): void {
-    // Monitor for suspicious patterns
-    this.monitorConsoleAccess()
-    this.monitorDOMManipulation()
-    this.monitorNetworkRequests()
-  }
-  private monitorConsoleAccess(): void {
-    const originalConsole = { ...console }
-    // Override console methods to detect debugging
-    ['log', 'warn', 'error', 'info'].forEach(method => {
-      (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
-        this.metrics.suspiciousActivity++;
-        originalConsole[method](...args);
+
+  private checkMixedContent(): void {
+    const images = document.querySelectorAll('img');
+    const scripts = document.querySelectorAll('script');
+    const links = document.querySelectorAll('link');
+
+    [...images, ...scripts, ...links].forEach(element => {
+      const src = element.getAttribute('src') || element.getAttribute('href');
+      if (src && src.startsWith('http://')) {
+        this.addViolation({
+          type: 'mixed_content',
+          severity: 'medium',
+          description: `Mixed content detected: ${src}`,
+          recommendation: 'Use HTTPS for all resources'
+        });
       }
     });
   }
-  private monitorDOMManipulation(): void {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              const element = node as Element
-              if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
-                this.metrics.securityViolations++
-                }
-            }
-          })
+
+  private checkInsecureProtocols(): void {
+    if (window.location.protocol !== 'https:') {
+      this.addViolation({
+        type: 'insecure_protocol',
+        severity: 'high',
+        description: 'Application is not using HTTPS',
+        recommendation: 'Redirect all HTTP traffic to HTTPS'
+      });
+    }
+  }
+
+  private setupContentSecurityPolicy(): void {
+    if (!this.config.enableCSP) return;
+
+    // CSP violations are typically handled by the browser
+    // We can monitor them if the server sets up a reporting endpoint
+    this.monitorCSPViolations();
+  }
+
+  private monitorCSPViolations(): void {
+    if (typeof document === 'undefined') return;
+
+    // Listen for CSP violation events
+    document.addEventListener('securitypolicyviolation', (event) => {
+      this.addViolation({
+        type: 'csp_violation',
+        severity: 'medium',
+        description: `CSP violation: ${event.violatedDirective}`,
+        recommendation: 'Review and update Content Security Policy'
+      });
+    });
+  }
+
+  private setupXSSProtection(): void {
+    if (!this.config.enableXSSProtection) return;
+
+    // XSS protection is typically handled by the browser
+    // We can add additional client-side validation
+    this.setupXSSValidation();
+  }
+
+  private setupXSSValidation(): void {
+    if (typeof document === 'undefined') return;
+
+    // Sanitize user input
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('input', (event) => {
+        const target = event.target as HTMLInputElement;
+        const sanitized = this.sanitizeInput(target.value);
+        if (sanitized !== target.value) {
+          target.value = sanitized;
+          this.addViolation({
+            type: 'xss_attempt',
+            severity: 'high',
+            description: 'Potential XSS attempt detected',
+            recommendation: 'Input was sanitized automatically'
+          });
         }
-      })
-    })
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    })
-    this.eventListeners.push(() => observer.disconnect())
+      });
+    });
   }
-  private monitorNetworkRequests(): void {
-    const originalFetch = window.fetch
-    window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString()
-      // Check if request is to allowed origins
-      if (!this.isAllowedOrigin(url)) {
-        this.metrics.blockedRequests++
-        throw new Error('Request blocked: Origin not allowed')
-      }
-      return originalFetch(input, init)
-    }
-  }
-  private isAllowedOrigin(url: string): boolean {
-    try {
-      const urlObj = new URL(url)
-      return this.config.allowedOrigins.some(origin => 
-        urlObj.origin === origin || urlObj.hostname.endsWith(origin.replace('https://', ''))
-      )
-    } catch {
-      return false
-    }
-  }
-  private setupSecureHeaders(): void {
-    // These would typically be set by the server, but we can add meta tags
-    const headers = [
-      { name: 'X-Frame-Options', content: 'DENY' },
-      { name: 'X-Content-Type-Options', content: 'nosniff' },
-      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-      { name: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=()' }
-    ]
-    headers.forEach(header => {
-      const meta = document.createElement('meta')
-      meta.httpEquiv = header.name
-      meta.content = header.content
-      document.head.appendChild(meta)
-    })
-  }
-  public sanitizeInput(input: string): string {
+
+  private sanitizeInput(input: string): string {
     return input
-      .replace(/[<>]/g, '') // Remove potential HTML tags
-      .replace(/javascript:/gi, '') // Remove javascript: protocol,
-      .replace(/on\w+=/gi, '') // Remove event handlers
-      .trim()
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+\s*=/gi, '');
   }
-  public validateInput(input: string, type: 'email' | 'url' | 'text'): boolean {
-    switch (type) {
-      case 'email':
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input)
-      case 'url':
-        try {
-          new URL(input)
-          return true
-        } catch {
-          return false
+
+  private setupClickjackingProtection(): void {
+    if (!this.config.enableClickjackingProtection) return;
+
+    // Check if the page is being framed
+    if (window !== window.top) {
+      this.addViolation({
+        type: 'clickjacking_risk',
+        severity: 'medium',
+        description: 'Page is being loaded in a frame',
+        recommendation: 'Implement X-Frame-Options header'
+      });
+    }
+  }
+
+  private setupReferrerPolicy(): void {
+    if (!this.config.enableReferrerPolicy) return;
+
+    // Referrer policy is typically set by the server
+    // We can add client-side validation
+    this.validateReferrerPolicy();
+  }
+
+  private validateReferrerPolicy(): void {
+    // Check for sensitive data in URL
+    const sensitiveParams = ['password', 'token', 'key', 'secret', 'auth'];
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    sensitiveParams.forEach(param => {
+      if (urlParams.has(param)) {
+        this.addViolation({
+          type: 'sensitive_data_in_url',
+          severity: 'high',
+          description: `Sensitive parameter '${param}' found in URL`,
+          recommendation: 'Use POST requests for sensitive data'
+        });
+      }
+    });
+  }
+
+  private setupPermissionsPolicy(): void {
+    if (!this.config.enablePermissionsPolicy) return;
+
+    // Permissions policy is typically set by the server
+    // We can add client-side validation
+    this.validatePermissionsPolicy();
+  }
+
+  private validatePermissionsPolicy(): void {
+    // Check for unnecessary permissions
+    if ('geolocation' in navigator) {
+      this.addRecommendation({
+        category: 'permissions',
+        title: 'Geolocation Permission',
+        description: 'Consider if geolocation access is necessary',
+        priority: 'medium'
+      });
+    }
+
+    if ('camera' in navigator) {
+      this.addRecommendation({
+        category: 'permissions',
+        title: 'Camera Permission',
+        description: 'Consider if camera access is necessary',
+        priority: 'medium'
+      });
+    }
+  }
+
+  private monitorSecurityViolations(): void {
+    if (typeof window === 'undefined') return;
+
+    // Monitor for suspicious activities
+    this.monitorSuspiciousActivity();
+    this.monitorConsoleErrors();
+    this.monitorNetworkRequests();
+  }
+
+  private monitorSuspiciousActivity(): void {
+    // Monitor for rapid clicks (potential bot activity)
+    let clickCount = 0;
+    let lastClickTime = 0;
+
+    document.addEventListener('click', (event) => {
+      const now = Date.now();
+      if (now - lastClickTime < 100) {
+        clickCount++;
+        if (clickCount > 10) {
+          this.addViolation({
+            type: 'suspicious_activity',
+            severity: 'medium',
+            description: 'Rapid clicking detected',
+            recommendation: 'Implement rate limiting'
+          });
         }
-      case 'text':
-        return input.length > 0 && input.length < 1000
-      default:
-        return false
+      } else {
+        clickCount = 0;
+      }
+      lastClickTime = now;
+    });
+  }
+
+  private monitorConsoleErrors(): void {
+    const originalError = console.error;
+    console.error = (...args) => {
+      // Check for security-related errors
+      const message = args.join(' ');
+      if (message.includes('CSP') || message.includes('XSS') || message.includes('security')) {
+        this.addViolation({
+          type: 'console_security_error',
+          severity: 'low',
+          description: `Security-related console error: ${message}`,
+          recommendation: 'Review console errors for security issues'
+        });
+      }
+      originalError.apply(console, args);
+    };
+  }
+
+  private monitorNetworkRequests(): void {
+    // Monitor for suspicious network requests
+    const originalFetch = window.fetch;
+    window.fetch = async (...args) => {
+      const url = args[0] as string;
+      
+      // Check for suspicious URLs
+      if (this.isSuspiciousUrl(url)) {
+        this.addViolation({
+          type: 'suspicious_request',
+          severity: 'high',
+          description: `Suspicious network request to: ${url}`,
+          recommendation: 'Review and validate all network requests'
+        });
+      }
+
+      return originalFetch.apply(window, args);
+    };
+  }
+
+  private isSuspiciousUrl(url: string): boolean {
+    const suspiciousPatterns = [
+      /\.onion$/,
+      /\.bit$/,
+      /malware/i,
+      /phishing/i,
+      /suspicious/i
+    ];
+
+    return suspiciousPatterns.some(pattern => pattern.test(url));
+  }
+
+  private addViolation(violation: SecurityViolation): void {
+    this.violations.push(violation);
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Security Violation:', violation);
     }
   }
-  public generateSecurePassword(length: number = 16): string {
-    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'
-    let password = ''
-    for (let i = 0; i < length; i++) {
-      password += charset.charAt(Math.floor(Math.random() * charset.length))
+
+  private addRecommendation(recommendation: SecurityRecommendation): void {
+    this.recommendations.push(recommendation);
+  }
+
+  private generateSecurityRecommendations(): void {
+    // Generate recommendations based on current configuration
+    if (!this.config.enableCSP) {
+      this.addRecommendation({
+        category: 'headers',
+        title: 'Content Security Policy',
+        description: 'Implement Content Security Policy to prevent XSS attacks',
+        priority: 'high'
+      });
     }
-    return password
+
+    if (!this.config.enableHSTS) {
+      this.addRecommendation({
+        category: 'headers',
+        title: 'HTTP Strict Transport Security',
+        description: 'Implement HSTS to enforce HTTPS connections',
+        priority: 'high'
+      });
+    }
+
+    if (!this.config.enableClickjackingProtection) {
+      this.addRecommendation({
+        category: 'headers',
+        title: 'X-Frame-Options',
+        description: 'Implement X-Frame-Options to prevent clickjacking',
+        priority: 'medium'
+      });
+    }
   }
-  public hashPassword(password: string): Promise<string> {
-    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(password))
-      .then(hash => {
-        return Array.from(new Uint8Array(hash))
-          .map(b => b.toString(16).padStart(2, '0'))
-          .join('')
-      })
+
+  public generateReport(): SecurityReport {
+    const score = this.calculateSecurityScore();
+    
+    return {
+      timestamp: Date.now(),
+      violations: [...this.violations],
+      recommendations: [...this.recommendations],
+      score
+    };
   }
-  public getMetrics(): SecurityMetrics {
-    return { ...this.metrics }
+
+  private calculateSecurityScore(): number {
+    let score = 100;
+    
+    // Deduct points for violations
+    this.violations.forEach(violation => {
+      switch (violation.severity) {
+        case 'critical':
+          score -= 25;
+          break;
+        case 'high':
+          score -= 15;
+          break;
+        case 'medium':
+          score -= 10;
+          break;
+        case 'low':
+          score -= 5;
+          break;
+      }
+    });
+
+    // Deduct points for missing security features
+    if (!this.config.enableCSP) score -= 20;
+    if (!this.config.enableHSTS) score -= 15;
+    if (!this.config.enableXSSProtection) score -= 10;
+    if (!this.config.enableClickjackingProtection) score -= 10;
+
+    return Math.max(0, score);
   }
-  public generateSecurityReport(): string {
-    const metrics = this.getMetrics()
-    return `
-Security Report:
-- Blocked Requests: ${metrics.blockedRequests}
-- Suspicious Activity: ${metrics.suspiciousActivity}
-- Security Violations: ${metrics.securityViolations}
-- Last Scan: ${new Date(metrics.lastScanTime).toLocaleString()}
-    `.trim()
+
+  public getViolations(): SecurityViolation[] {
+    return [...this.violations];
   }
-  public cleanup(): void {
-    this.eventListeners.forEach(cleanup => cleanup())
-    this.eventListeners = []
+
+  public getRecommendations(): SecurityRecommendation[] {
+    return [...this.recommendations];
+  }
+
+  public clearViolations(): void {
+    this.violations = [];
+  }
+
+  public clearRecommendations(): void {
+    this.recommendations = [];
   }
 }
-// Export singleton instance
-export const securityEnhancer = new SecurityEnhancer()
-// Export class for custom instances
-export { SecurityEnhancer, type SecurityConfig, type SecurityMetrics }
+
+export default SecurityEnhancer;

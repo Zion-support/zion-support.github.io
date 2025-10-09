@@ -7,7 +7,7 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -80,7 +80,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     canonical.setAttribute('href', url);
   };
 
-  const addStructuredData = (data: any) => {
+  const addStructuredData = (data: Record<string, unknown>) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);

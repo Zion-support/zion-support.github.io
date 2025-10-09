@@ -39,12 +39,18 @@ const Analytics: React.FC<AnalyticsProps> = ({
     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
     document.head.appendChild(script);
 
-    // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
+    // Initialize gtag with proper typing
+    interface WindowWithGtag extends Window {
+      dataLayer: unknown[];
+      gtag: (...args: unknown[]) => void;
     }
-    (window as any).gtag = gtag;
+    
+    const windowWithGtag = window as WindowWithGtag;
+    windowWithGtag.dataLayer = windowWithGtag.dataLayer || [];
+    function gtag(...args: unknown[]) {
+      windowWithGtag.dataLayer.push(args);
+    }
+    windowWithGtag.gtag = gtag;
     
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {
@@ -62,11 +68,13 @@ const Analytics: React.FC<AnalyticsProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));
           } else if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
+            const fidEntry = entry as PerformanceEventTiming;
+            const fid = fidEntry.processingStart - fidEntry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid));
           } else if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              trackEvent('web_vitals', 'CLS', (entry as any).value);
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!clsEntry.hadRecentInput) {
+              trackEvent('web_vitals', 'CLS', clsEntry.value || 0);
             }
           }
         }
@@ -107,9 +115,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
     // Track resource loading errors
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
+        const target = event.target as HTMLElement;
+        const src = 'src' in target ? (target as HTMLImageElement).src : 
+                   'href' in target ? (target as HTMLAnchorElement).href : '';
         trackEvent('error', 'resource_error', {
-          type: (event.target as any).tagName,
-          src: (event.target as any).src || (event.target as any).href,
+          type: target.tagName,
+          src: src,
           error: event.type
         });
       }
@@ -173,9 +184,10 @@ const Analytics: React.FC<AnalyticsProps> = ({
     });
   };
 
-  const trackEvent = (category: string, action: string, value?: any) => {
+  const trackEvent = (category: string, action: string, value?: number | Record<string, unknown>) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', action, {
+      const windowWithGtag = window as WindowWithGtag;
+      windowWithGtag.gtag('event', action, {
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined
