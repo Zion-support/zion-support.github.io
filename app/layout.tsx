@@ -17,18 +17,35 @@ export default function RootLayout({
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+    description: 'Leading provider of AI-powered enterprise solutions, micro SAAS tools, quantum computing, autonomous systems, and digital transformation services. 50+ AI tools starting at $29/month.',
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology',
     services: [
       'AI Solutions',
+      'Micro SAAS Tools',
+      'AI Consulting',
+      'Machine Learning',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Predictive Analytics',
+      'AI Automation',
+      'AI Chatbots',
+      'AI Content Generation',
+      'AI E-commerce Solutions',
+      'AI Financial Solutions',
+      'AI Healthcare Solutions',
+      'AI Infrastructure & MLOps',
       'Quantum Computing',
       'Autonomous Systems',
       'Digital Transformation',
       'Cloud Services',
-      'Automation',
-      'Business Intelligence'
+      'Cybersecurity',
+      'Blockchain & Web3',
+      'IoT & Edge Computing',
+      'Robotics',
+      'Business Intelligence',
+      'Data Visualization'
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -124,8 +141,8 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
+        <meta name="description" content="Zion Tech Group - Leading AI and IT solutions provider offering micro SAAS tools, enterprise AI services, quantum computing, and digital transformation. 50+ AI tools starting at $29/month. Call (302) 464-0950." />
+        <meta name="keywords" content="AI solutions, micro SAAS, AI tools, machine learning, artificial intelligence, quantum computing, autonomous systems, digital transformation, enterprise AI, automation, cloud services, business intelligence, AI consulting, AI development, AI marketing, AI content generation, AI customer support, AI sales automation, AI data analytics, AI cybersecurity, AI healthcare, AI fintech, AI e-commerce, AI mobile development, AI workflow automation, AI cloud infrastructure, IT services, cybersecurity, blockchain, Web3, IoT, edge computing, robotics, business intelligence, data visualization, predictive analytics, natural language processing, computer vision, MLOps, AI infrastructure" />
         <meta name="theme-color" content="#4f46e5" />
         <meta name="color-scheme" content="dark light" />
         <meta name="author" content="Zion Tech Group" />
