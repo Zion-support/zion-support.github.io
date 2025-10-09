@@ -9,6 +9,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -126,6 +127,7 @@ const HomePage: React.FC = () => {
         enableNotifications={true}
       />
       <Analytics />
+      <PerformanceMonitor />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
         {/* Navigation */}

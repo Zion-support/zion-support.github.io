@@ -1,5 +1,4 @@
-'use client';
-import React, { useState, useCallback, memo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -8,85 +7,131 @@ interface OptimizedImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
+  quality?: number;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
   onLoad?: () => void;
   onError?: () => void;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
   height,
   className = '',
   priority = false,
+  quality = 75,
   placeholder = 'empty',
   blurDataURL,
+  sizes = '100vw',
+  loading = 'lazy',
   onLoad,
-  onError
+  onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
-  const handleLoad = useCallback(() => {
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if (priority || isInView) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: '50px',
+        threshold: 0.1,
+      }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [priority, isInView]);
+
+  // Generate optimized image URL
+  const getOptimizedSrc = () => {
+    if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
+    
+    // In a real implementation, you would use an image optimization service
+    // like Cloudinary, ImageKit, or Next.js Image Optimization
+    return src;
+  };
+
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
-  }, [onLoad]);
+  };
 
-  const handleError = useCallback(() => {
+  const handleError = () => {
     setHasError(true);
     onError?.();
-  }, [onError]);
-
-  if (hasError) {
-    return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-        role="img"
-        aria-label={`Failed to load image: ${alt}`}
-      >
-        <span className="text-gray-500 text-sm">Image failed to load</span>
-      </div>
-    );
-  }
+  };
 
   return (
-    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
+    <div
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+    >
+      {/* Blur placeholder */}
       {placeholder === 'blur' && blurDataURL && !isLoaded && (
-        <img
-          src={blurDataURL}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover filter blur-sm scale-110"
-          aria-hidden="true"
+        <div
+          className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
+          style={{
+            backgroundImage: `url(${blurDataURL})`,
+          }}
         />
       )}
-      <img
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        loading={priority ? 'eager' : 'lazy'}
-        decoding="async"
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
-        style={{
-          width: width ? `${width}px` : '100%',
-          height: height ? `${height}px` : 'auto'
-        }}
-      />
+
+      {/* Loading skeleton */}
       {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-400 rounded-full animate-spin" />
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+      )}
+
+      {/* Error state */}
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+          <div className="text-gray-400 text-sm">Failed to load image</div>
         </div>
+      )}
+
+      {/* Actual image */}
+      {isInView && (
+        <img
+          src={getOptimizedSrc()}
+          alt={alt}
+          width={width}
+          height={height}
+          sizes={sizes}
+          loading={loading}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
       )}
     </div>
   );
-});
+};
 
-OptimizedImage.displayName = 'OptimizedImage';
 export default OptimizedImage;
