@@ -1,14 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-export default function AboutPage() {
-=======
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-db8c
   const team = [
     {
       name: 'Kleber Santos',
@@ -87,39 +82,7 @@ const AboutPage: React.FC = () => {
               to deliver solutions that drive real business value.
             </p>
           </div>
-<<<<<<< HEAD
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </div>
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5cff
-=======
-          <div className='prose prose-lg max-w-none'>
-            <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                Our Mission
-              </h2>
-              <p className='text-gray-600 mb-4'>
-                At Zion Tech Group, we are dedicated to transforming
-                businesses through cutting-edge AI and IT solutions. Our
-                mission is to empower organizations with the technology they
-                need to thrive in the digital age.
-              </p>
-              <p className='text-gray-600'>
-                We combine deep technical expertise with innovative thinking
-                to deliver solutions that drive real business value.
-              </p>
-            </div>
-          </div>
-      </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-5599
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-19c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-db8c
 
         {/* Stats Section */}
         <section className="py-16 bg-white">

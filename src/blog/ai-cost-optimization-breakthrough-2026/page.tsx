@@ -158,3 +158,6 @@ export default function AICostOptimizationBreakthrough2026() {
       </div>
     </div>
   );
+};
+
+export default AICostOptimizationBreakthrough2026Page;
