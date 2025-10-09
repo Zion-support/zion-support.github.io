@@ -176,7 +176,6 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
         if (attempt < maxRetries) {
           logger.warn(
             `Request failed, retrying (${attempt + 1}/${maxRetries})`,
-            'RetryMiddleware',
             {
               component: 'RetryMiddleware',
               url: context.request.url
