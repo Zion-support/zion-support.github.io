@@ -41,6 +41,12 @@ const AIEmailMarketingPage = lazy(() => import('./ai-email-marketing/page'));
 const AICustomerSupportBotPage = lazy(() => import('./ai-customer-support-bot/page'));
 const AISEOOptimizerPage = lazy(() => import('./ai-seo-optimizer/page'));
 const AIFinancialAnalyzerPage = lazy(() => import('./ai-financial-analyzer/page'));
+const AIVideoGenerationPage = lazy(() => import('./ai-video-generation/page'));
+const AIVoiceCloningPage = lazy(() => import('./ai-voice-cloning/page'));
+const AIMusicCompositionPage = lazy(() => import('./ai-music-composition/page'));
+const AIFashionDesignPage = lazy(() => import('./ai-fashion-design/page'));
+const AIFitnessCoachPage = lazy(() => import('./ai-fitness-coach/page'));
+const AI3DGenerationPage = lazy(() => import('./ai-3d-generation/page'));
 const MachineLearningPage = lazy(() => import('./machine-learning/page'));
 const NLPPage = lazy(() => import('./nlp/page'));
 const ComputerVisionPage = lazy(() => import('./computer-vision/page'));
@@ -198,6 +204,12 @@ const App: React.FC = () => {
             <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
             <Route path="/ai-seo-optimizer" element={<AISEOOptimizerPage />} />
             <Route path="/ai-financial-analyzer" element={<AIFinancialAnalyzerPage />} />
+            <Route path="/ai-video-generation" element={<AIVideoGenerationPage />} />
+            <Route path="/ai-voice-cloning" element={<AIVoiceCloningPage />} />
+            <Route path="/ai-music-composition" element={<AIMusicCompositionPage />} />
+            <Route path="/ai-fashion-design" element={<AIFashionDesignPage />} />
+            <Route path="/ai-fitness-coach" element={<AIFitnessCoachPage />} />
+            <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
             <Route path="/machine-learning" element={<MachineLearningPage />} />
             <Route path="/nlp" element={<NLPPage />} />
             <Route path="/computer-vision" element={<ComputerVisionPage />} />
