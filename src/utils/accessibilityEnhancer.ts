@@ -578,14 +578,14 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
-Overall Score: ${metrics.overallScore}/100
-Focusable Elements: ${metrics.focusableElements}
-Images Without Alt: ${metrics.imagesWithoutAlt}
-Links Without Text: ${metrics.linksWithoutText}
-Headings Without Content: ${metrics.headingsWithoutContent}
-Color Contrast Issues: ${metrics.colorContrastIssues}
-Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
-Screen Reader Score: ${metrics.screenReaderScore}/100
+- Overall Score: ${metrics.overallScore}
+- Focusable Elements: ${metrics.focusableElements}
+- Images Without Alt: ${metrics.imagesWithoutAlt}
+- Links Without Text: ${metrics.linksWithoutText}
+- Headings Without Content: ${metrics.headingsWithoutContent}
+- Color Contrast Issues: ${metrics.colorContrastIssues}
+- Keyboard Navigation Score: ${metrics.keyboardNavigationScore}
+- Screen Reader Score: ${metrics.screenReaderScore}
 `;
   }
 }

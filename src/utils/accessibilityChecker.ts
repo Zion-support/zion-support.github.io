@@ -559,6 +559,9 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
-    return `Found ${this.issues.length} accessibility issues that need attention.`;
+    
+    return this.issues.map(issue => 
+      `- ${issue.type}: ${issue.message} (${issue.severity})`
+    ).join('\n');
   }
 }
