@@ -341,7 +341,8 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+        </div>
+    </>
   );
 };
 
