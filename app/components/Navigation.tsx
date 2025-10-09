@@ -40,29 +40,57 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-blue-400 transition-colors">
+          <div className="hidden md:flex items-center space-x-6">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-all duration-300 cyber-glow">
               Home
             </Link>
-            <Link href="/services" className="text-white hover:text-blue-400 transition-colors">
-              Services
-            </Link>
-            <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
+            <div className="relative group">
+              <Link href="/services" className="text-white hover:text-cyan-400 transition-all duration-300 cyber-glow flex items-center">
+                Services
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+              {/* Services Dropdown */}
+              <div className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="p-4 grid grid-cols-2 gap-4">
+                  <div>
+                    <h3 className="text-cyan-400 font-semibold mb-2">AI Services</h3>
+                    <div className="space-y-1">
+                      <Link href="/ai-content-generation" className="block text-sm text-gray-300 hover:text-white transition-colors">Content Generation</Link>
+                      <Link href="/ai-customer-support" className="block text-sm text-gray-300 hover:text-white transition-colors">Customer Support</Link>
+                      <Link href="/ai-sales-automation" className="block text-sm text-gray-300 hover:text-white transition-colors">Sales Automation</Link>
+                      <Link href="/ai-data-analytics" className="block text-sm text-gray-300 hover:text-white transition-colors">Data Analytics</Link>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-cyan-400 font-semibold mb-2">IT Solutions</h3>
+                    <div className="space-y-1">
+                      <Link href="/it-services" className="block text-sm text-gray-300 hover:text-white transition-colors">IT Services</Link>
+                      <Link href="/cybersecurity" className="block text-sm text-gray-300 hover:text-white transition-colors">Cybersecurity</Link>
+                      <Link href="/quantum-computing" className="block text-sm text-gray-300 hover:text-white transition-colors">Quantum Computing</Link>
+                      <Link href="/autonomous-systems" className="block text-sm text-gray-300 hover:text-white transition-colors">Autonomous Systems</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-all duration-300 cyber-glow">
               About
             </Link>
-            <Link href="/blog" className="text-white hover:text-blue-400 transition-colors">
+            <Link href="/blog" className="text-white hover:text-cyan-400 transition-all duration-300 cyber-glow">
               Blog
             </Link>
-            <Link href="/contact" className="text-white hover:text-blue-400 transition-colors">
+            <Link href="/contact" className="text-white hover:text-cyan-400 transition-all duration-300 cyber-glow">
               Contact
             </Link>
-            <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-600">
+            <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-cyan-500/30">
               <a 
-                href="tel:+13026009898" 
-                className="flex items-center space-x-1 text-blue-400 hover:text-blue-300 transition-colors"
+                href="tel:+13024640950" 
+                className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-all duration-300 cyber-glow"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">(302) 600-9898</span>
+                <span className="text-sm">(302) 464-0950</span>
               </a>
             </div>
           </div>
@@ -118,20 +146,20 @@ const Navigation: React.FC = () => {
               >
                 Contact
               </Link>
-              <div className="border-t border-gray-600 pt-2 mt-2">
+              <div className="border-t border-cyan-500/30 pt-2 mt-2">
                 <a 
-                  href="tel:+13026009898" 
-                  className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
+                  href="tel:+13024640950" 
+                  className="flex items-center space-x-2 px-3 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>(302) 600-9898</span>
+                  <span>(302) 464-0950</span>
                 </a>
                 <a 
-                  href="mailto:info@ziontechgroup.com" 
-                  className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="flex items-center space-x-2 px-3 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>info@ziontechgroup.com</span>
+                  <span>kleber@ziontechgroup.com</span>
                 </a>
               </div>
             </div>

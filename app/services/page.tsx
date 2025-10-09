@@ -5,11 +5,135 @@ import { ArrowRight, Star, CheckCircle } from 'lucide-react';
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
+      title: 'AI Content Generator Pro',
+      description: 'Advanced AI-powered content creation platform with 50+ templates and multi-language support.',
+      icon: '✍️',
+      link: '/ai-content-generation',
+      features: ['50+ Content Templates', 'Multi-language Support', 'SEO Optimization', 'Brand Voice Training', 'Plagiarism Checker'],
+      price: 'Starting at $29/month',
+      popular: true
+    },
+    {
+      title: 'Smart Analytics Dashboard',
+      description: 'Real-time business intelligence with AI-powered insights and predictive analytics.',
+      icon: '📊',
+      link: '/ai-data-analytics',
+      features: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Automated Reports', 'Data Visualization'],
+      price: 'Starting at $149/month',
+      popular: true
+    },
+    {
+      title: 'AI Customer Support Bot',
+      description: '24/7 intelligent customer support with 90% faster response times and human handoff.',
+      icon: '💬',
+      link: '/ai-customer-support',
+      features: ['24/7 AI Chat', '90% Faster Response', 'Multi-language', 'Human Handoff', 'Sentiment Analysis'],
+      price: 'Starting at $199/month',
+      popular: true
+    },
+    {
+      title: 'Automated Email Marketing',
+      description: 'AI-powered email campaigns with personalization, A/B testing, and advanced analytics.',
+      icon: '📧',
+      link: '/ai-marketing',
+      features: ['Smart Segmentation', 'Auto Personalization', 'A/B Testing', 'Send Time Optimization', 'ROI Tracking'],
+      price: 'Starting at $99/month'
+    },
+    {
+      title: 'AI Sales Pipeline Manager',
+      description: 'Intelligent sales automation with lead scoring, follow-up reminders, and deal prediction.',
+      icon: '📈',
+      link: '/ai-sales-automation',
+      features: ['Lead Scoring', 'Auto Follow-ups', 'Deal Prediction', 'Performance Analytics', 'CRM Integration'],
+      price: 'Starting at $299/month',
+      popular: true
+    },
+    {
+      title: 'Smart Inventory Management',
+      description: 'AI-powered inventory optimization with demand forecasting and automated reordering.',
+      icon: '📦',
+      link: '/ai-ecommerce-solutions',
+      features: ['Demand Forecasting', 'Auto Reordering', 'Stock Optimization', 'Waste Reduction', 'Real-time Tracking'],
+      price: 'Starting at $199/month'
+    },
+    {
+      title: 'AI Social Media Manager',
+      description: 'Automated social media posting, engagement, and content optimization across platforms.',
+      icon: '📱',
+      link: '/ai-marketing',
+      features: ['Auto Posting', 'Content Optimization', 'Engagement Tracking', 'Hashtag Research', 'Competitor Analysis'],
+      price: 'Starting at $149/month'
+    },
+    {
+      title: 'Smart Document Processor',
+      description: 'AI-powered document analysis, extraction, and automated data entry from any format.',
+      icon: '📄',
+      link: '/ai-workflow-automation',
+      features: ['OCR Technology', 'Data Extraction', 'Auto Classification', 'Version Control', 'Search & Retrieval'],
+      price: 'Starting at $79/month'
+    },
+    {
+      title: 'AI Meeting Assistant',
+      description: 'Automated meeting transcription, action items, and intelligent follow-up scheduling.',
+      icon: '🎯',
+      link: '/ai-workflow-automation',
+      features: ['Live Transcription', 'Action Items', 'Meeting Summaries', 'Auto Scheduling', 'Integration Tools'],
+      price: 'Starting at $99/month'
+    },
+    {
+      title: 'Smart Expense Tracker',
+      description: 'AI-powered expense management with receipt scanning and automated categorization.',
+      icon: '💰',
+      link: '/ai-fintech',
+      features: ['Receipt Scanning', 'Auto Categorization', 'Expense Reports', 'Budget Tracking', 'Tax Preparation'],
+      price: 'Starting at $49/month'
+    },
+    {
+      title: 'AI Website Builder',
+      description: 'Intelligent website creation with drag-and-drop interface and AI content suggestions.',
+      icon: '🌐',
+      link: '/ai-mobile-app-development',
+      features: ['Drag & Drop Builder', 'AI Content', 'Mobile Responsive', 'SEO Optimization', 'Analytics Integration'],
+      price: 'Starting at $199/month'
+    },
+    {
+      title: 'Smart HR Management',
+      description: 'AI-powered HR solutions with resume screening, interview scheduling, and employee analytics.',
+      icon: '👥',
+      link: '/ai-workflow-automation',
+      features: ['Resume Screening', 'Interview Scheduling', 'Employee Analytics', 'Performance Tracking', 'Compliance Management'],
+      price: 'Starting at $299/month'
+    },
+    {
+      title: 'AI Project Manager',
+      description: 'Intelligent project management with resource allocation, timeline prediction, and risk assessment.',
+      icon: '📋',
+      link: '/ai-workflow-automation',
+      features: ['Resource Allocation', 'Timeline Prediction', 'Risk Assessment', 'Team Collaboration', 'Progress Tracking'],
+      price: 'Starting at $199/month'
+    },
+    {
+      title: 'Smart Backup & Recovery',
+      description: 'AI-powered data backup with intelligent scheduling, compression, and disaster recovery.',
+      icon: '💾',
+      link: '/it-services',
+      features: ['Auto Backup', 'Data Compression', 'Disaster Recovery', 'Version Control', 'Security Encryption'],
+      price: 'Starting at $79/month'
+    },
+    {
+      title: 'AI Code Assistant',
+      description: 'Intelligent code generation, debugging, and optimization for developers.',
+      icon: '💻',
+      link: '/ai-services',
+      features: ['Code Generation', 'Bug Detection', 'Performance Optimization', 'Documentation', 'Code Review'],
+      price: 'Starting at $149/month'
+    },
+    {
       title: 'Micro SAAS Solutions',
       description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
       icon: '💻',
       link: '/micro-saas',
-      features: ['12+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
+      features: ['15+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support', 'White-label Options'],
       price: 'Starting at $79/month',
       popular: true
     },

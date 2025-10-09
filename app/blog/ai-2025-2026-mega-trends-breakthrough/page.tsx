@@ -1,21 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+
+export const dynamic = 'force-dynamic';
+
 
 const AIMegaTrends20252026: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>
-          AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation
-        </title>
-
-        <meta
-          name="description"
-          content="Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026."
-        />
-
-        <meta property="og:type" content="article" />
-      </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-8">

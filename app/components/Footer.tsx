@@ -49,21 +49,35 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Services</h3>
+            <h3 className="text-lg font-semibold text-cyan-400">AI Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
-              <li><Link href="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">Quantum Computing</Link></li>
-              <li><Link href="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">Autonomous Systems</Link></li>
-              <li><Link href="/business-intelligence" className="text-gray-300 hover:text-white transition-colors">Business Intelligence</Link></li>
-              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li><Link href="/ai-content-generation" className="text-gray-300 hover:text-cyan-400 transition-colors">Content Generation</Link></li>
+              <li><Link href="/ai-customer-support" className="text-gray-300 hover:text-cyan-400 transition-colors">Customer Support</Link></li>
+              <li><Link href="/ai-sales-automation" className="text-gray-300 hover:text-cyan-400 transition-colors">Sales Automation</Link></li>
+              <li><Link href="/ai-data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors">Data Analytics</Link></li>
+              <li><Link href="/ai-marketing" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Marketing</Link></li>
+              <li><Link href="/ai-workflow-automation" className="text-gray-300 hover:text-cyan-400 transition-colors">Workflow Automation</Link></li>
+            </ul>
+          </div>
+
+          {/* IT Solutions */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-cyan-400">IT Solutions</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
+              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity</Link></li>
+              <li><Link href="/quantum-computing" className="text-gray-300 hover:text-cyan-400 transition-colors">Quantum Computing</Link></li>
+              <li><Link href="/autonomous-systems" className="text-gray-300 hover:text-cyan-400 transition-colors">Autonomous Systems</Link></li>
+              <li><Link href="/blockchain" className="text-gray-300 hover:text-cyan-400 transition-colors">Blockchain & Web3</Link></li>
+              <li><Link href="/iot-edge" className="text-gray-300 hover:text-cyan-400 transition-colors">IoT & Edge Computing</Link></li>
             </ul>
           </div>
 
           {/* Company */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Company</h3>
+            <h3 className="text-lg font-semibold text-cyan-400">Company</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
@@ -75,22 +89,22 @@ const Footer: React.FC = memo(() => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Contact</h3>
+            <h3 className="text-lg font-semibold text-cyan-400">Contact</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-gray-400" />
-                <a href="tel:+13026009898" className="text-gray-300 hover:text-white transition-colors">
-                  (302) 600-9898
+                <Phone className="h-4 w-4 text-cyan-400" />
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-gray-400" />
-                <a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  info@ziontechgroup.com
+                <Mail className="h-4 w-4 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-4 w-4 text-gray-400 mt-0.5" />
+                <MapPin className="h-4 w-4 text-cyan-400 mt-0.5" />
                 <div className="text-gray-300">
                   <div>364 E Main St STE 1008</div>
                   <div>Middletown, DE 19709</div>
