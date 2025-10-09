@@ -81,6 +81,7 @@
     "api/**/*.ts",
     "components/**/*",
     "src/**/*",
+    "app/**/*",
     ".next/types/**/*.ts"
   ],
   "exclude": [

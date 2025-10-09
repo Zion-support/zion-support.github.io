@@ -36,46 +36,37 @@ const Footer: React.FC = memo(() => {
     { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
+    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '100+ AI-powered tools' },
+    { name: 'AI Code Generator', url: '/ai-code-generator', description: 'AI code generation' },
+    { name: 'AI Music Composer', url: '/ai-music-composer', description: 'AI music creation' },
+    { name: 'AI Video Creator', url: '/ai-video-creator', description: 'AI video production' },
+    { name: 'AI Art Generator', url: '/ai-art-generator', description: 'AI digital art' },
+    { name: 'AI Research Assistant', url: '/ai-research-assistant', description: 'AI research tools' },
+    { name: 'AI Language Tutor', url: '/ai-language-tutor', description: 'AI language learning' },
+    { name: 'AI Market Predictor', url: '/ai-market-predictor', description: 'AI market analysis' },
+    { name: 'AI Stock Trader', url: '/ai-stock-trader', description: 'AI trading automation' },
+    { name: 'AI Smart Home Manager', url: '/ai-smart-home-manager', description: 'AI home automation' },
+    { name: 'AI Personal Trainer', url: '/ai-personal-trainer', description: 'AI fitness coaching' },
+    { name: 'AI Health Monitor', url: '/ai-health-monitor', description: 'AI health tracking' },
     { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI writing tool' },
     { name: 'Smart Analytics', url: '/smart-analytics', description: 'Business analytics' },
     { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
-    { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
-    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
-    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
-    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
-    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
-    { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
-    { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
-    { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
-    { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
-    { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
+    { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' }
   ];
+
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
+    { name: 'AI Supply Chain Optimizer', url: '/ai-supply-chain-optimizer', description: 'AI supply chain' },
+    { name: 'AI HR Management', url: '/ai-hr-management', description: 'AI human resources' },
+    { name: 'AI Energy Optimizer', url: '/ai-energy-optimizer', description: 'AI energy management' },
+    { name: 'AI Fleet Management', url: '/ai-fleet-management', description: 'AI fleet optimization' },
+    { name: 'AI Manufacturing Optimizer', url: '/ai-manufacturing-optimizer', description: 'AI manufacturing' },
+    { name: 'AI Banking Solutions', url: '/ai-banking-solutions', description: 'AI banking' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
-  ];
-
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI Tools' },
-    { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
-    { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
-    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
-    { name: 'Developer Tools', url: '/developer-tools', description: 'Development Tools' }
-  ];
-
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum Solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent Robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' }
   ];
 
   const companyLinks = [
