@@ -168,16 +168,13 @@ const ServicesPage: React.FC = () => {
 const ServicesPage: React.FC = () => {
   return (
     <>
-      <SEOOptimizer
-        title="Services - Zion Tech Group"
-        description="Professional AI and IT services for your business transformation."
-        keywords={['AI services', 'IT solutions', 'business transformation']}
-        canonicalUrl="https://ziontechgroup.com/services"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main className="pt-16">
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Professional AI and IT services for your business transformation." />
+        <meta name="keywords" content="AI services, IT solutions, business transformation" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
+        <div className="container mx-auto px-4 py-8">
           {/* Hero Section */}
           <section className="text-center mb-16 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
@@ -213,50 +210,33 @@ const ServicesPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Stats Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                      <stat.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Service Categories */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-                Our Service Categories
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+                Service Categories
               </h2>
               <div className="space-y-16">
                 {serviceCategories.map((category, categoryIndex) => (
-                  <div key={categoryIndex} className="cyber-card p-8">
+                  <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
                     <div className="flex items-center mb-8">
                       <div className={`w-16 h-16 ${category.bgColor} rounded-xl flex items-center justify-center mr-6`}>
                         <category.icon className={`w-8 h-8 ${category.color}`} />
                       </div>
                       <div>
-                        <h3 className="text-3xl font-bold text-white mb-2 neon-text">{category.title}</h3>
-                        <p className="text-gray-300 text-lg">{category.description}</p>
+                        <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
+                        <p className="text-gray-300">Comprehensive solutions for your business needs</p>
                       </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {category.services.map((service, serviceIndex) => (
-                        <div key={serviceIndex} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                          <h4 className="text-xl font-bold text-white mb-3 neon-text">{service.name}</h4>
-                          <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                        <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+                          <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
+                          <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                          
+                          {/* Features */}
                           <div className="mb-4">
-                            <div className={`text-lg font-bold mb-2 neon-text ${category.color}`}>{service.price}</div>
+                            <h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
                             <ul className="space-y-1">
                               {service.features.map((feature, featureIndex) => (
                                 <li key={featureIndex} className="flex items-center text-xs text-gray-300">
@@ -266,12 +246,16 @@ const ServicesPage: React.FC = () => {
                               ))}
                             </ul>
                           </div>
-                          <a
-                            href="/contact"
-                            className={`inline-flex items-center text-sm font-medium transition-all duration-300 hover:scale-105 ${category.color} border border-current hover:bg-current hover:text-slate-900 px-4 py-2 rounded-lg`}
-                          >
-                            Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                          </a>
+                          
+                          <div className="flex items-center justify-between">
+                            <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                            <a
+                              href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.name}`}
+                              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                            >
+                              Get Started
+                            </a>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -281,41 +265,18 @@ const ServicesPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Process Section */}
-          <section className="container mx-auto px-4 py-16 bg-slate-800/50">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-                Our Process
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {processSteps.map((step, index) => (
-                  <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                      <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{step.step}</div>
-                    <h3 className="text-xl font-bold text-white mb-4 neon-text">{step.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{step.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Benefits Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
                 Why Choose Our Services?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                      <benefit.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-4 neon-text">{benefit.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
+                    <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                    <p className="text-gray-300 text-sm">{benefit.description}</p>
                   </div>
                 ))}
               </div>
@@ -323,36 +284,31 @@ const ServicesPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-lg text-gray-300 mb-12">
-                Let our expert team help you choose the right services and create a customized solution that drives your business forward.
+              <p className="text-xl text-purple-100 mb-8">
+                Get started with our services today and see the difference AI and IT solutions can make.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
-                  className="cyber-button flex items-center justify-center space-x-2"
+                  href="tel:+13024640950"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Get Free Consultation</span>
+                  Call (302) 464-0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  <Mail className="w-5 h-5" />
-                  <span>Contact Us</span>
+                  Email Us
                 </a>
               </div>
             </div>
           </section>
-        </main>
-        
-        <Footer />
+        </div>
       </div>
     </>
   );

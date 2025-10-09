@@ -1,11 +1,10 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, MapPin, ChevronDown, Zap, Brain, Cpu, Shield, Cloud, Code, Bot, Star, ArrowRight } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, ChevronDown, Brain, Cpu, Zap, Shield, Heart, CreditCard, BarChart3, Eye, Settings, Users, Globe, Award, Lock, Database, Cloud, Code, Smartphone, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, Building, Factory, Car, Plane, Ship, Train, Home, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,209 +14,230 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  const closeDropdown = () => {
-    setActiveDropdown(null);
-  };
-
-  const navigationItems = [
+  const serviceCategories = [
     {
-      name: 'AI Services',
-      href: '/ai-services',
+      title: 'AI Services',
       icon: Brain,
-      dropdown: [
-        { name: 'AI Analytics', href: '/ai-analytics', price: '$299/mo' },
-        { name: 'AI Automation', href: '/ai-automation', price: '$399/mo' },
-        { name: 'AI Code Generation', href: '/ai-code-generation', price: '$199/mo' },
-        { name: 'AI Customer Support', href: '/ai-customer-support', price: '$149/mo' },
-        { name: 'AI Data Visualization', href: '/ai-data-visualization', price: '$249/mo' },
-        { name: 'AI Email Marketing', href: '/ai-email-marketing', price: '$59/mo' },
-        { name: 'AI Fashion Design', href: '/ai-fashion-design', price: '$79/mo' },
-        { name: 'AI Fitness Coach', href: '/ai-fitness-coach', price: '$39/mo' },
-        { name: 'AI Music Composition', href: '/ai-music-composition', price: '$89/mo' },
-        { name: 'AI Project Manager', href: '/ai-project-manager', price: '$199/mo' },
-        { name: 'AI Sales Automation', href: '/ai-sales-automation', price: '$299/mo' },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', price: '$149/mo' },
-        { name: 'AI Video Generation', href: '/ai-video-generation', price: '$199/mo' },
-        { name: 'AI Voice Cloning', href: '/ai-voice-cloning', price: '$99/mo' },
-        { name: 'AI Workflow Automation', href: '/ai-workflow-automation', price: '$399/mo' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation', price: '$299/mo' }
+      color: 'text-purple-400',
+      services: [
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+        { name: 'AI Fintech', href: '/ai-fintech', icon: CreditCard },
+        { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart },
+        { name: 'AI Marketing', href: '/ai-marketing', icon: Target },
+        { name: 'AI Automation', href: '/ai-automation', icon: Zap },
+        { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart3 },
+        { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users },
+        { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: PieChart },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
+        { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingDown },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Globe },
+        { name: 'AI Video Generation', href: '/ai-video-generation', icon: Video },
+        { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Music },
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
+        { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Camera },
+        { name: 'AI Code Generation', href: '/ai-code-generation', icon: Code },
+        { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
+        { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
+        { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Activity },
+        { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: Briefcase }
       ]
     },
     {
-      name: 'IT Services',
-      href: '/it-services',
+      title: 'IT Services',
       icon: Cpu,
-      dropdown: [
-        { name: 'Cloud Migration', href: '/cloud-migration', price: '$1,299/mo' },
-        { name: 'IT Consulting', href: '/it-consulting', price: '$199/hr' },
-        { name: 'Cybersecurity Suite', href: '/cybersecurity-suite', price: '$799/mo' },
-        { name: 'DevOps & CI/CD', href: '/devops-cicd', price: '$599/mo' },
-        { name: 'Database Management', href: '/database-management', price: '$399/mo' }
+      color: 'text-blue-400',
+      services: [
+        { name: 'IT Consulting', href: '/it-consulting', icon: Settings },
+        { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+        { name: 'DevOps & CI/CD', href: '/devops', icon: Code },
+        { name: 'Database Services', href: '/database-services', icon: Database },
+        { name: 'Network Services', href: '/network-services', icon: Globe }
       ]
     },
     {
-      name: 'Micro SAAS',
-      href: '/micro-saas',
+      title: 'Micro SAAS',
       icon: Zap,
-      dropdown: [
-        { name: 'AI Writing Assistant', href: '/ai-writing-assistant', price: '$19/mo' },
-        { name: 'AI Mobile App Builder', href: '/ai-mobile-app-builder', price: '$99/mo' },
-        { name: 'AI Design Studio', href: '/ai-design-studio', price: '$39/mo' },
-        { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', price: '$49/mo' },
-        { name: 'AI Fintech Solutions', href: '/ai-fintech', price: '$1,499/mo' },
-        { name: 'Quantum Computing', href: '/quantum-computing', price: 'Custom' },
-        { name: 'AI Cybersecurity', href: '/ai-cybersecurity', price: '$299/mo' },
-        { name: 'AI Data Analytics', href: '/ai-data-analytics', price: '$199/mo' }
+      color: 'text-green-400',
+      services: [
+        { name: 'AI Code Review Assistant', href: '/ai-code-review', icon: Code },
+        { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3 },
+        { name: 'AI Marketing Automation', href: '/ai-marketing-automation', icon: Target },
+        { name: 'AI Document Processing', href: '/ai-document-processing', icon: FileText },
+        { name: 'AI Content Generator', href: '/ai-content-generator', icon: FileText },
+        { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
+        { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Users },
+        { name: 'AI E-commerce Solutions', href: '/ai-ecommerce', icon: ShoppingCart }
       ]
-    },
-    { name: 'About', href: '/about', icon: Star },
-    { name: 'Contact', href: '/contact', icon: Phone }
+    }
+  ];
+
+  const mainPages = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' }
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20' 
-        : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+          <div className="flex items-center">
+            <a href="/" className="text-2xl font-bold text-white hover:text-cyan-400 transition-colors">
+              Zion Tech Group
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <button
-                  className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                  onClick={() => item.dropdown ? toggleDropdown(item.name) : null}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.dropdown && <ChevronDown className="w-4 h-4" />}
-                </button>
-                
-                {/* Dropdown Menu */}
-                {item.dropdown && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 z-50">
-                    <div className="grid grid-cols-1 gap-2">
-                      {item.dropdown.map((subItem) => (
-                        <a
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="flex items-center justify-between p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                          onClick={closeDropdown}
-                        >
-                          <div className="flex items-center space-x-3">
-                            <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                            <span className="text-white group-hover:text-cyan-400 transition-colors">
-                              {subItem.name}
-                            </span>
-                          </div>
-                          <span className="text-cyan-400 text-sm font-medium">
-                            {subItem.price}
-                          </span>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+            {mainPages.map((page) => (
+              <a
+                key={page.name}
+                href={page.href}
+                className="text-white hover:text-cyan-400 transition-colors font-medium"
+              >
+                {page.name}
+              </a>
             ))}
-          </div>
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-white hover:text-cyan-400 transition-colors font-medium flex items-center">
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="p-6">
+                  {serviceCategories.map((category, categoryIndex) => (
+                    <div key={categoryIndex} className="mb-6 last:mb-0">
+                      <div className="flex items-center mb-3">
+                        <category.icon className={`w-5 h-5 ${category.color} mr-2`} />
+                        <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                      </div>
+                      <div className="grid grid-cols-1 gap-2">
+                        {category.services.slice(0, 6).map((service, serviceIndex) => (
+                          <a
+                            key={serviceIndex}
+                            href={service.href}
+                            className="flex items-center p-2 rounded hover:bg-slate-700 transition-colors group"
+                          >
+                            <service.icon className="w-4 h-4 text-gray-400 mr-3 group-hover:text-cyan-400" />
+                            <span className="text-sm text-gray-300 group-hover:text-white">{service.name}</span>
+                          </a>
+                        ))}
+                        {category.services.length > 6 && (
+                          <a
+                            href="/services"
+                            className="text-sm text-cyan-400 hover:text-cyan-300 mt-2 font-medium"
+                          >
+                            View All {category.title} →
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
 
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">(302) 464-0950</span>
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              <Mail className="w-4 h-4" />
-              <span className="text-sm font-medium">Email</span>
-            </a>
+            {/* Contact Info */}
+            <div className="flex items-center space-x-4 ml-4">
+              <a
+                href="tel:+13024640950"
+                className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                <Phone className="w-4 h-4 mr-1" />
+                <span className="text-sm font-medium">(302) 464-0950</span>
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white hover:text-cyan-400 transition-colors"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-500/20">
+          <div className="lg:hidden absolute top-16 left-0 right-0 bg-slate-900/95 backdrop-blur-sm shadow-lg">
             <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <a
-                    href={item.href}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                  </a>
-                  {item.dropdown && (
-                    <div className="ml-6 mt-2 space-y-2">
-                      {item.dropdown.map((subItem) => (
-                        <a
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="flex items-center justify-between text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <span>{subItem.name}</span>
-                          <span className="text-cyan-400">{subItem.price}</span>
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              
-              {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-cyan-500/20 space-y-2">
+              {mainPages.map((page) => (
                 <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                  key={page.name}
+                  href={page.href}
+                  className="block text-white hover:text-cyan-400 transition-colors font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Phone className="w-4 h-4" />
-                  <span>(302) 464-0950</span>
+                  {page.name}
+                </a>
+              ))}
+              
+              {/* Mobile Services */}
+              <div className="pt-4 border-t border-gray-700">
+                <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+                {serviceCategories.map((category, categoryIndex) => (
+                  <div key={categoryIndex} className="mb-6">
+                    <div className="flex items-center mb-3">
+                      <category.icon className={`w-5 h-5 ${category.color} mr-2`} />
+                      <h4 className="text-md font-semibold text-white">{category.title}</h4>
+                    </div>
+                    <div className="space-y-2 ml-7">
+                      {category.services.slice(0, 4).map((service, serviceIndex) => (
+                        <a
+                          key={serviceIndex}
+                          href={service.href}
+                          className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors py-1"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {service.name}
+                        </a>
+                      ))}
+                      {category.services.length > 4 && (
+                        <a
+                          href="/services"
+                          className="block text-sm text-cyan-400 hover:text-cyan-300 font-medium py-1"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          View All →
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile Contact */}
+              <div className="pt-4 border-t border-gray-700">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  <span className="font-medium">(302) 464-0950</span>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors py-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Mail className="w-4 h-4" />
-                  <span>kleber@ziontechgroup.com</span>
+                  <Mail className="w-4 h-4 mr-2" />
+                  <span className="font-medium">kleber@ziontechgroup.com</span>
                 </a>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
               </div>
             </div>
           </div>
