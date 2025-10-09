@@ -84,9 +84,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <button onClick={this.handleRetry}>
               Retry ({this.maxRetries - this.state.retryCount} attempts left)
             </button>
-          )}
- cursor/analyze-improve-and-deploy-application-cde4
-        </div>
+          )}        </div>
       );
     }
 
