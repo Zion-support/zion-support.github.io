@@ -578,16 +578,10 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
           </section>
-<<<<<<< HEAD
-        </main>
-        <Footer />
-      </div>
-=======
       </main>
 
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-d937
   );
 };
 
