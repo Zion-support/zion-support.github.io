@@ -124,8 +124,7 @@ const Navigation: React.FC = memo(() => {
             </div>
           </Link>
 
-<<<<<<< HEAD
-          {/* Desktop Menu */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Home
@@ -142,7 +141,7 @@ const Navigation: React.FC = memo(() => {
             <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Micro SAAS
             </Link>
-            <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
+            <Link to="/it-consulting" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               IT Services
             </Link>
             <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
@@ -164,7 +163,7 @@ const Navigation: React.FC = memo(() => {
                 aria-haspopup="true"
               >
                 <Brain className="w-4 h-4" />
-                <span>Services</span>
+                <span>More Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
@@ -218,22 +217,6 @@ const Navigation: React.FC = memo(() => {
                 </div>
               )}
             </div>
-
-            <Link 
-              to="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-              onClick={closeAllMenus}
-            >
-              Case Studies
-            </Link>
-
-            <Link 
-              to="/blog" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Blog
-            </Link>
 
             <Link 
               to="/contact" 
@@ -306,6 +289,13 @@ const Navigation: React.FC = memo(() => {
                 Micro SAAS
               </Link>
               <Link
+                to="/it-consulting"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                IT Services
+              </Link>
+              <Link
                 to="/pricing"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
@@ -335,7 +325,7 @@ const Navigation: React.FC = memo(() => {
                 >
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
-                    <span>Services</span>
+                    <span>More Services</span>
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -362,54 +352,10 @@ const Navigation: React.FC = memo(() => {
                           </Link>
                         </div>
                       </div>
-=======
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
-            {Object.entries(navigation).map(([category, items]) => (
-              <div
-                key={category}
-                className="relative group"
-                onMouseEnter={() => setServicesOpen(category === 'Services')}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors py-2">
-                  <span>{category}</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                
-                {servicesOpen && category === 'Services' && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 py-2 z-50">
-                    {items.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.href}
-                        className="flex items-center space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors text-gray-300"
-                      >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                      </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
                     ))}
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-
-              <Link
-                to="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Case Studies
-              </Link>
-
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
 
               <Link
                 to="/contact"
@@ -419,14 +365,6 @@ const Navigation: React.FC = memo(() => {
                 Contact
               </Link>
 
-=======
-            ))}
-          </div>
-
-          {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-4 text-sm">
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
@@ -435,84 +373,6 @@ const Navigation: React.FC = memo(() => {
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
               </a>
-<<<<<<< HEAD
-=======
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>info@ziontechgroup.com</span>
-              </a>
-            </div>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Quote
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden border-t border-white/10 py-4">
-            <div className="space-y-4">
-              {Object.entries(navigation).map(([category, items]) => (
-                <div key={category}>
-                  <h3 className="text-cyan-400 font-semibold mb-2 px-4">{category}</h3>
-                  <div className="space-y-1">
-                    {items.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.href}
-                        className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-slate-700/50 transition-colors text-gray-300"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-              
-              {/* Mobile Contact Info */}
-              <div className="border-t border-white/10 pt-4 px-4">
-                <div className="space-y-2">
-                  <a
-                    href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <Phone className="w-4 h-4" />
-                    <span>(302) 464-0950</span>
-                  </a>
-                  <a
-                    href="mailto:info@ziontechgroup.com"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <Mail className="w-4 h-4" />
-                    <span>info@ziontechgroup.com</span>
-                  </a>
-                </div>
-                <Link
-                  to="/contact"
-                  className="block mt-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Quote
-                </Link>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
             </div>
           </div>
         )}
