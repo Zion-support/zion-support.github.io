@@ -13,7 +13,6 @@ const CompliancePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
@@ -299,17 +298,11 @@ const CompliancePage: React.FC = () => {
           <div className="mt-8 text-sm text-blue-200">
             <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-=======
-        </section>
       </main>
       
       <Footer />
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     </div>
   );
 };

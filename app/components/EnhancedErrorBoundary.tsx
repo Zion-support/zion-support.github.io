@@ -12,28 +12,24 @@ interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-  errorId?: string;
   retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private maxRetries: number;
+  private retryTimeoutId?: NodeJS.Timeout;
 
   constructor(props: Props) {
     super(props);
-    this.state = { 
-      hasError: false, 
-      retryCount: 0,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    this.state = {
+      hasError: false,
+      retryCount: 0
     };
-    this.maxRetries = props.maxRetries || 3;
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { 
-      hasError: true, 
+    return {
+      hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0
     };
   }
@@ -43,10 +39,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-<<<<<<< HEAD
-
- cursor/analyze-improve-and-deploy-application-cde4
-=======
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -54,39 +46,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
 
     // Call custom error handler if provided
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-<<<<<<< HEAD
- cursor/analyze-improve-and-deploy-application-cde4
-=======
     // Enhanced error reporting
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-<<<<<<< HEAD
-
-    // Error reporting logic would go here
-    console.error('Error reported:', error, errorInfo);
-  };
-
-  private handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-    }
-=======
-    // Enhanced error reporting logic
+    // Enhanced error reporting with more context
     const errorReport = {
       message: error.message,
       stack: error.stack,
@@ -94,25 +65,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
+      retryCount: this.state.retryCount
     };
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Component Stack:', errorInfo.componentStack);
-      console.groupEnd();
+      console.error('Error Report:', errorReport);
     }
 
     // Send to error reporting service (implement as needed)
     try {
-      // In a real app, you would send this to your error reporting service
-      // For now, we'll just log it
-      // eslint-disable-next-line no-console
-      console.log('Error Report:', errorReport);
-      // Example: Send to error reporting service
-      // await fetch('/api/errors', {
+      // Example: Send to external service
+      // fetch('/api/error-reporting', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorReport)
@@ -121,154 +85,110 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Failed to report error:', reportingError);
     }
   };
-  private getUserId = (): string | null => {
-    // Get user ID from localStorage, cookies, or context
-    return localStorage.getItem('userId') || null;
-  };
-  private getSessionId = (): string => {
-    let sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  };
+
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    const maxRetries = this.props.maxRetries || 3;
+    
+    if (this.state.retryCount < maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: prevState.retryCount + 1
+      }));
+    }
   };
 
-  private handleReload = () => {
-    window.location.reload();
+  private handleReset = () => {
+    this.setState({
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: 0
+    });
   };
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-  private copyErrorDetails = () => {
-    const errorDetails = {
-      errorId: this.state.errorId,
-      message: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
-      url: window.location.href,
-    };
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-      .then(() => {
-        // Show success message
-        const button = document.getElementById('copy-error-details');
-        if (button) {
-          const originalText = button.textContent;
-          button.textContent = 'Copied!';
-          setTimeout(() => {
-            button.textContent = originalText;
-          }, 2000);
-        }
-      })
-      .catch(() => {
-        // eslint-disable-next-line no-console
-        console.warn('Failed to copy error details');
-      });
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
-  };
+
+  componentWillUnmount() {
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId);
+    }
+  }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div className="error-boundary">
-          <h2>Something went wrong</h2>
-          <p>Error ID: {this.state.errorId}</p>
-          {this.state.retryCount < this.maxRetries && (
-            <button onClick={this.handleRetry}>
-              Retry ({this.maxRetries - this.state.retryCount} attempts left)
-            </button>
-          )}
- cursor/analyze-improve-and-deploy-application-cde4
-=======
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      const { retryCount, error, errorId } = this.state;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      const canRetry = retryCount < this.maxRetries;
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
-      const canRetry = retryCount < this.maxRetries;
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
-      const canRetry = retryCount < this.maxRetries;
+      const maxRetries = this.props.maxRetries || 3;
+      const canRetry = this.state.retryCount < maxRetries;
 
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-xl p-6 text-center">
+            <div className="w-16 h-16 mx-auto mb-4 bg-red-500 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            
+            <h2 className="text-xl font-bold text-white mb-2">
+              Something went wrong
+            </h2>
+            
+            <p className="text-gray-300 mb-4">
+              We're sorry, but something unexpected happened. Please try again.
             </p>
-            <div className="space-y-4">
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mb-4 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300">
+                  Error Details (Development)
+                </summary>
+                <div className="mt-2 p-3 bg-gray-700 rounded text-xs text-red-300 font-mono overflow-auto max-h-32">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.error.stack && (
+                    <div>
+                      <strong>Stack:</strong>
+                      <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
+                    </div>
+                  )}
+                </div>
+              </details>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               {canRetry && (
                 <button
                   onClick={this.handleRetry}
-                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
                 >
-                  Try Again ({this.maxRetries - retryCount} attempts left)
+                  Try Again ({this.state.retryCount + 1}/{maxRetries})
                 </button>
               )}
+              
               <button
-                onClick={this.handleReload}
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                onClick={this.handleReset}
+                className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition-colors"
               >
-                Try Again
+                Reset
               </button>
+              
               <button
-                onClick={this.handleGoHome}
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+                onClick={() => window.location.reload()}
+                className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
               >
-                Go Home
+                Reload Page
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-                <button
-                  id="copy-error-details"
-                  onClick={this.copyErrorDetails}
-                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
-                >
-                  Copy Error Details
-                </button>
-              </details>
-            )}
+
+            <div className="mt-4 text-xs text-gray-500">
+              If this problem persists, please contact support.
+            </div>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
         </div>
       );
     }

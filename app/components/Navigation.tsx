@@ -31,11 +31,13 @@ const Navigation: React.FC = () => {
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Shield, description: 'Medical AI Solutions' },
     { name: 'AI Fintech', href: '/ai-fintech', icon: TrendingUp, description: 'Financial AI' },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Code, description: 'Content Creation' },
+    { name: 'AI Content Studio', href: '/ai-content-studio', icon: Code, description: 'Content Creation Suite' },
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
     { name: 'AI E-commerce', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI' },
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security AI' },
-    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' }
+    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' },
+    { name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'AI-Powered CRM' },
+    { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Settings, description: 'Voice AI' }
   ];
 
   const itServices = [
@@ -43,16 +45,29 @@ const Navigation: React.FC = () => {
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
     { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' }
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Cloud Migration' },
+    { name: 'Network Infrastructure', href: '/networking', icon: Globe, description: 'Network Solutions' },
+    { name: 'Performance Optimization', href: '/performance-optimization', icon: Zap, description: 'Performance Tuning' },
+    { name: 'System Integration', href: '/system-integration', icon: Code, description: 'System Integration' },
+    { name: 'IT Monitoring', href: '/it-monitoring', icon: BarChart, description: '24/7 Monitoring' },
+    { name: 'Backup & Recovery', href: '/backup-recovery', icon: Shield, description: 'Data Protection' },
+    { name: 'IT Support', href: '/it-support', icon: Users, description: 'Technical Support' },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp, description: 'Digital Transformation' }
   ];
 
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
-    { name: 'Business Apps', href: '/business-apps', icon: Users, description: 'Business Applications' },
-    { name: 'Productivity Tools', href: '/productivity', icon: Zap, description: 'Productivity Suite' },
-    { name: 'Marketing Tools', href: '/marketing-tools', icon: Target, description: 'Marketing Suite' },
-    { name: 'Developer Tools', href: '/developer-tools', icon: Code, description: 'Development Tools' }
+    { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Intelligent CRM' },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: BarChart, description: 'Business Intelligence' },
+    { name: 'AI Content Studio', href: '/ai-content-studio', icon: Code, description: 'Content Creation' },
+    { name: 'AI Invoice Manager', href: '/ai-invoice-manager', icon: TrendingUp, description: 'Financial Management' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Email Automation' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media', icon: Globe, description: 'Social Media AI' },
+    { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Target, description: 'Lead Qualification' },
+    { name: 'AI Document AI', href: '/ai-document-ai', icon: Settings, description: 'Document Processing' },
+    { name: 'AI Design Assistant', href: '/ai-design-assistant', icon: Code, description: 'Design Tools' },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'No-Code Chatbots' },
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Zap, description: 'Project Management' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: BarChart, description: 'Inventory Optimization' }
   ];
 
   const emergingTech = [
