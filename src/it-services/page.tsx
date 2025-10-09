@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -16,7 +16,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Infrastructure',
       benefits: ['Reliable infrastructure', 'Reduced capital costs', 'Expert management', 'Compliance support'],
       technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-blue-400'
     },
     {
       title: 'Cloud Infrastructure & Migration',
@@ -27,7 +28,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Infrastructure',
       benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     // Cybersecurity Services
     {
@@ -39,7 +41,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Security',
       benefits: ['Prevent 99.9% of threats', 'Reduce response time by 80%', 'Compliance assurance', '24/7 monitoring'],
       technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'AI/ML', 'Threat Intelligence'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-red-400'
     },
     {
       title: 'Identity & Access Management',
@@ -50,7 +53,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Security',
       benefits: ['Enhanced security', 'Improved user experience', 'Compliance support', 'Reduced IT overhead'],
       technologies: ['Azure AD', 'Okta', 'Ping Identity', 'CyberArk', 'SailPoint', 'ForgeRock'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-red-400'
     },
     {
       title: 'Security Compliance & Audit',
@@ -577,18 +581,11 @@ const ITServicesPage: React.FC = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
       </main>
 
       <Footer />
     </div>
-=======
-          </section>
-        </main>
-        <Footer />
-      </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-eb01
   );
 };
 
