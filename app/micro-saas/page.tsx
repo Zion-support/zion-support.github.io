@@ -540,6 +540,188 @@ const MicroSAASPage: React.FC = () => {
       category: 'Contract Management',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Gaming & Entertainment
+    {
+      title: 'AI Game Development Suite',
+      description: 'Complete AI-powered game development platform with procedural generation, NPCs, and dynamic storytelling.',
+      icon: '🎮',
+      price: '$399/month',
+      features: ['Procedural content generation', 'AI NPCs', 'Dynamic storytelling', 'Level design automation', 'Balancing algorithms', 'Multi-platform export'],
+      benefits: ['Reduce development time by 60%', 'Create infinite content', 'Improve player engagement', 'Lower development costs'],
+      marketPrice: '$600-1500/month',
+      category: 'Gaming',
+      technologies: ['Unity AI', 'Unreal Engine', 'TensorFlow', 'OpenAI GPT', 'Custom ML Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Music Composition Platform',
+      description: 'AI-powered music creation with genre adaptation, mood matching, and royalty-free generation.',
+      icon: '🎵',
+      price: '$199/month',
+      features: ['Genre-specific composition', 'Mood-based generation', 'Instrument selection', 'Royalty-free licensing', 'Collaboration tools', 'Export in multiple formats'],
+      benefits: ['Create music 10x faster', 'Unlimited royalty-free tracks', 'Professional quality output', 'Reduce licensing costs'],
+      marketPrice: '$300-800/month',
+      category: 'Music & Audio',
+      technologies: ['Magenta', 'OpenAI Jukebox', 'React', 'Web Audio API', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Transportation & Logistics
+    {
+      title: 'AI Fleet Management System',
+      description: 'Intelligent fleet optimization with route planning, fuel efficiency, and predictive maintenance.',
+      icon: '🚛',
+      price: '$299/month',
+      features: ['Route optimization', 'Fuel efficiency tracking', 'Predictive maintenance', 'Driver behavior analysis', 'Real-time monitoring', 'Cost optimization'],
+      benefits: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Prevent breakdowns', 'Optimize routes'],
+      marketPrice: '$500-1200/month',
+      category: 'Transportation',
+      technologies: ['Machine Learning', 'GPS APIs', 'IoT Sensors', 'React', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'End-to-end supply chain optimization with demand forecasting, inventory management, and supplier analytics.',
+      icon: '📦',
+      price: '$399/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Supplier performance', 'Risk assessment', 'Cost analysis', 'Sustainability tracking'],
+      benefits: ['Reduce inventory costs by 30%', 'Improve supplier relationships', 'Minimize supply disruptions', 'Optimize logistics'],
+      marketPrice: '$600-1500/month',
+      category: 'Supply Chain',
+      technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Energy & Sustainability
+    {
+      title: 'AI Energy Management Platform',
+      description: 'Smart energy optimization for buildings and facilities with consumption prediction and cost reduction.',
+      icon: '⚡',
+      price: '$249/month',
+      features: ['Energy consumption prediction', 'Cost optimization', 'Renewable integration', 'Peak demand management', 'Carbon footprint tracking', 'Real-time monitoring'],
+      benefits: ['Reduce energy costs by 35%', 'Improve sustainability', 'Optimize renewable usage', 'Lower carbon footprint'],
+      marketPrice: '$400-1000/month',
+      category: 'Energy',
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Time Series DB', 'Energy APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Carbon Footprint Tracker',
+      description: 'Comprehensive carbon footprint monitoring and reduction recommendations for businesses and individuals.',
+      icon: '🌱',
+      price: '$99/month',
+      features: ['Carbon footprint calculation', 'Reduction recommendations', 'Sustainability reporting', 'Goal tracking', 'Industry benchmarking', 'ESG compliance'],
+      benefits: ['Achieve sustainability goals', 'Improve ESG ratings', 'Reduce environmental impact', 'Comply with regulations'],
+      marketPrice: '$150-400/month',
+      category: 'Sustainability',
+      technologies: ['Machine Learning', 'Carbon APIs', 'React', 'PostgreSQL', 'Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Sports & Fitness
+    {
+      title: 'AI Sports Analytics Platform',
+      description: 'Advanced sports performance analysis with injury prediction, training optimization, and team strategy insights.',
+      icon: '🏃',
+      price: '$199/month',
+      features: ['Performance analysis', 'Injury prediction', 'Training optimization', 'Team strategy insights', 'Player comparison', 'Real-time statistics'],
+      benefits: ['Improve performance by 20%', 'Reduce injury risk', 'Optimize training', 'Gain competitive advantage'],
+      marketPrice: '$300-800/month',
+      category: 'Sports',
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'Sports APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Personal Trainer Pro',
+      description: 'AI-powered personal training with form analysis, workout optimization, and nutrition recommendations.',
+      icon: '💪',
+      price: '$79/month',
+      features: ['Form analysis', 'Workout optimization', 'Nutrition planning', 'Progress tracking', 'Injury prevention', 'Personalized coaching'],
+      benefits: ['Achieve fitness goals faster', 'Prevent injuries', 'Optimize workouts', 'Personalized guidance'],
+      marketPrice: '$120-300/month',
+      category: 'Fitness',
+      technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Wearable APIs', 'Nutrition APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Travel & Hospitality
+    {
+      title: 'AI Travel Planning Assistant',
+      description: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
+      icon: '✈️',
+      price: '$149/month',
+      features: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Real-time updates', 'Multi-language support', 'Group planning'],
+      benefits: ['Save 20+ hours on planning', 'Find best deals', 'Optimize travel routes', 'Personalized experiences'],
+      marketPrice: '$200-500/month',
+      category: 'Travel',
+      technologies: ['Travel APIs', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Hotel Revenue Optimizer',
+      description: 'Dynamic pricing and revenue optimization for hotels with demand forecasting and competitor analysis.',
+      icon: '🏨',
+      price: '$299/month',
+      features: ['Dynamic pricing', 'Demand forecasting', 'Competitor analysis', 'Revenue optimization', 'Guest segmentation', 'Seasonal adjustments'],
+      benefits: ['Increase revenue by 25%', 'Optimize occupancy rates', 'Stay competitive', 'Maximize profits'],
+      marketPrice: '$500-1200/month',
+      category: 'Hospitality',
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Hotel APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Agriculture & Food
+    {
+      title: 'AI Precision Agriculture Suite',
+      description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
+      icon: '🌾',
+      price: '$399/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Soil analysis', 'Weather integration'],
+      benefits: ['Increase crop yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Optimize resources'],
+      marketPrice: '$600-1500/month',
+      category: 'Agriculture',
+      technologies: ['Satellite Imagery', 'IoT Sensors', 'Machine Learning', 'React', 'Time Series DB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Food Safety Monitor',
+      description: 'Automated food safety compliance monitoring with contamination detection and traceability tracking.',
+      icon: '🍎',
+      price: '$199/month',
+      features: ['Contamination detection', 'Traceability tracking', 'Compliance monitoring', 'Quality control', 'Alert systems', 'Reporting tools'],
+      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Improve traceability', 'Reduce waste'],
+      marketPrice: '$300-800/month',
+      category: 'Food Safety',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Blockchain', 'React', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Construction & Architecture
+    {
+      title: 'AI Construction Project Manager',
+      description: 'Intelligent construction project management with progress tracking, resource optimization, and risk assessment.',
+      icon: '🏗️',
+      price: '$349/month',
+      features: ['Progress tracking', 'Resource optimization', 'Risk assessment', 'Schedule management', 'Quality control', 'Safety monitoring'],
+      benefits: ['Complete projects 25% faster', 'Reduce costs by 20%', 'Improve safety', 'Better resource utilization'],
+      marketPrice: '$500-1200/month',
+      category: 'Construction',
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'PostgreSQL', 'IoT Sensors'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Architectural Design Assistant',
+      description: 'AI-powered architectural design with space optimization, energy efficiency, and code compliance checking.',
+      icon: '🏛️',
+      price: '$299/month',
+      features: ['Space optimization', 'Energy efficiency analysis', 'Code compliance', '3D modeling', 'Material optimization', 'Cost estimation'],
+      benefits: ['Design 3x faster', 'Improve energy efficiency', 'Ensure compliance', 'Optimize costs'],
+      marketPrice: '$400-1000/month',
+      category: 'Architecture',
+      technologies: ['CAD APIs', 'Machine Learning', 'React', 'Three.js', 'Building Codes API'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
