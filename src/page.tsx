@@ -125,173 +125,143 @@ const HomePage: React.FC = () => {
       popular: false
     },
     {
-      title: 'AI Content Generator',
-      description: 'Create high-quality content with AI-powered writing assistance and optimization',
-      icon: '✍️',
-      price: '$69/month',
-      features: ['AI writing assistance', 'Content optimization', 'SEO integration', 'Multi-language support'],
-      benefits: ['300% content output increase', '50% time saved', '40% better SEO rankings'],
-      link: '/ai-content-generation',
-      popular: true
-    },
-    {
-      title: 'AI SEO Optimizer',
-      description: 'Boost your search rankings with AI-powered SEO analysis and optimization',
-      icon: '🎯',
-      price: '$79/month',
-      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis'],
-      benefits: ['60% ranking improvement', '80% organic traffic increase', '35% conversion boost'],
-      link: '/ai-marketing',
-      popular: true
-    },
-    {
       title: 'AI Invoice Generator',
-      description: 'Automate invoicing with AI-powered invoice creation and payment tracking',
+      description: 'Automated invoice creation with AI-powered pricing optimization and payment tracking',
       icon: '💰',
       price: '$49/month',
-      features: ['Auto invoice generation', 'Payment tracking', 'Tax calculations', 'Multi-currency support'],
-      benefits: ['90% time saved', '100% accuracy', '50% faster payments'],
+      features: ['Auto-invoice generation', 'Smart pricing', 'Payment tracking', 'Tax calculations'],
+      benefits: ['90% time saved', '30% faster payments', 'Zero errors'],
       link: '/ai-invoice-generator',
-      popular: false
+      popular: true
     },
     {
       title: 'AI Lead Scoring',
-      description: 'Identify high-value prospects with AI-powered lead qualification and scoring',
+      description: 'Intelligent lead qualification and scoring with predictive analytics',
       icon: '🎯',
-      price: '$89/month',
-      features: ['Lead qualification', 'Behavioral analysis', 'Scoring algorithms', 'CRM integration'],
-      benefits: ['45% conversion increase', '60% sales efficiency', '35% revenue growth'],
+      price: '$79/month',
+      features: ['Predictive scoring', 'Behavioral analysis', 'CRM integration', 'Real-time updates'],
+      benefits: ['50% higher conversion', '35% more qualified leads', '60% time saved'],
       link: '/ai-lead-scoring',
       popular: true
     },
     {
       title: 'AI Sales Forecasting',
-      description: 'Predict sales outcomes with AI-powered forecasting and trend analysis',
+      description: 'Advanced sales predictions with machine learning and trend analysis',
       icon: '📊',
-      price: '$119/month',
-      features: ['Sales predictions', 'Trend analysis', 'Risk assessment', 'Performance tracking'],
-      benefits: ['85% forecast accuracy', '40% better planning', '25% revenue increase'],
+      price: '$129/month',
+      features: ['ML predictions', 'Trend analysis', 'Scenario planning', 'ROI forecasting'],
+      benefits: ['85% accuracy', '40% better planning', '25% revenue increase'],
       link: '/ai-sales-forecasting',
       popular: true
     },
     {
       title: 'AI E-commerce Optimizer',
-      description: 'Maximize online sales with AI-powered product recommendations and optimization',
+      description: 'Complete e-commerce optimization with AI-powered recommendations and pricing',
       icon: '🛒',
-      price: '$129/month',
-      features: ['Product recommendations', 'Price optimization', 'Inventory management', 'Customer insights'],
-      benefits: ['35% sales increase', '50% cart abandonment reduction', '40% customer satisfaction'],
+      price: '$199/month',
+      features: ['Product recommendations', 'Dynamic pricing', 'Inventory optimization', 'Customer insights'],
+      benefits: ['35% sales increase', '20% higher AOV', '50% inventory efficiency'],
       link: '/ai-ecommerce-optimizer',
       popular: true
     },
     {
       title: 'AI Design Assistant',
-      description: 'Create stunning visuals with AI-powered design tools and templates',
+      description: 'AI-powered design tool for logos, graphics, and marketing materials',
       icon: '🎨',
-      price: '$79/month',
-      features: ['AI design generation', 'Template library', 'Brand consistency', 'Export options'],
-      benefits: ['70% design time saved', 'Professional quality', 'Brand consistency'],
+      price: '$69/month',
+      features: ['Logo generation', 'Graphic design', 'Brand consistency', 'Template library'],
+      benefits: ['80% design time saved', 'Professional quality', 'Unlimited revisions'],
       link: '/ai-design-assistant',
       popular: false
     },
     {
       title: 'AI Document Processor',
-      description: 'Extract and process information from documents with AI-powered automation',
+      description: 'Intelligent document processing with OCR and data extraction',
       icon: '📄',
-      price: '$99/month',
-      features: ['Document extraction', 'Data validation', 'Format conversion', 'Batch processing'],
-      benefits: ['80% processing time saved', '99% accuracy', '50% cost reduction'],
+      price: '$89/month',
+      features: ['OCR processing', 'Data extraction', 'Document classification', 'Workflow automation'],
+      benefits: ['95% accuracy', '90% time saved', 'Zero manual entry'],
       link: '/ai-document-processor',
       popular: true
     },
     {
       title: 'AI Security Monitor',
-      description: 'Protect your business with AI-powered security monitoring and threat detection',
+      description: 'Real-time security monitoring with AI-powered threat detection',
       icon: '🔒',
-      price: '$199/month',
-      features: ['Real-time monitoring', 'Threat detection', 'Incident response', 'Compliance reporting'],
-      benefits: ['99.9% security uptime', '90% threat reduction', '24/7 protection'],
+      price: '$149/month',
+      features: ['Threat detection', 'Real-time alerts', 'Vulnerability scanning', 'Compliance monitoring'],
+      benefits: ['99.9% uptime', 'Zero breaches', '24/7 monitoring'],
       link: '/ai-security-monitor',
       popular: true
     },
     {
       title: 'AI Performance Tracker',
-      description: 'Monitor and optimize business performance with AI-powered analytics',
-      icon: '📈',
-      price: '$89/month',
-      features: ['Performance metrics', 'KPI tracking', 'Automated reports', 'Trend analysis'],
-      benefits: ['30% performance improvement', '50% reporting time saved', 'Data-driven decisions'],
+      description: 'Comprehensive performance tracking with AI insights and recommendations',
+      icon: '⚡',
+      price: '$99/month',
+      features: ['Performance metrics', 'AI insights', 'Optimization tips', 'Real-time monitoring'],
+      benefits: ['40% performance boost', 'Proactive optimization', 'Detailed analytics'],
       link: '/ai-performance-tracker',
       popular: false
     },
     {
       title: 'AI Voice Assistant',
-      description: 'Build custom voice assistants with AI-powered speech recognition and processing',
+      description: 'Custom voice assistants for business operations and customer service',
       icon: '🎤',
-      price: '$149/month',
-      features: ['Voice recognition', 'Natural language processing', 'Custom commands', 'Multi-language support'],
-      benefits: ['60% task automation', '24/7 availability', 'Improved user experience'],
+      price: '$179/month',
+      features: ['Voice commands', 'Natural language', 'Multi-language', 'Custom training'],
+      benefits: ['Hands-free operation', '24/7 availability', 'Multilingual support'],
       link: '/ai-voice-assistant',
       popular: true
     },
     {
       title: 'AI HR Assistant',
-      description: 'Streamline HR processes with AI-powered recruitment and employee management',
+      description: 'Intelligent HR management with recruitment and employee analytics',
       icon: '👥',
       price: '$119/month',
-      features: ['Resume screening', 'Candidate matching', 'Employee analytics', 'Performance tracking'],
-      benefits: ['50% hiring time reduction', '40% better candidate quality', '30% HR efficiency'],
+      features: ['Resume screening', 'Employee analytics', 'Performance tracking', 'Compliance monitoring'],
+      benefits: ['60% faster hiring', 'Better candidate matching', 'Reduced bias'],
       link: '/ai-hr-assistant',
       popular: true
     },
     {
       title: 'AI Inventory Manager',
-      description: 'Optimize inventory with AI-powered demand forecasting and stock management',
+      description: 'Smart inventory management with predictive analytics and optimization',
       icon: '📦',
-      price: '$99/month',
-      features: ['Demand forecasting', 'Stock optimization', 'Reorder alerts', 'Analytics dashboard'],
-      benefits: ['25% inventory cost reduction', '40% stockout prevention', '60% efficiency gain'],
+      price: '$89/month',
+      features: ['Demand forecasting', 'Stock optimization', 'Reorder alerts', 'Cost analysis'],
+      benefits: ['30% inventory reduction', 'Zero stockouts', '20% cost savings'],
       link: '/ai-inventory-manager',
-      popular: false
+      popular: true
     },
     {
       title: 'AI Customer Insights',
-      description: 'Understand customers better with AI-powered behavior analysis and insights',
+      description: 'Deep customer insights with AI-powered analytics and segmentation',
       icon: '👤',
-      price: '$109/month',
-      features: ['Customer segmentation', 'Behavior analysis', 'Predictive modeling', 'Personalization'],
-      benefits: ['35% customer retention', '50% personalization accuracy', '40% engagement increase'],
+      price: '$99/month',
+      features: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Personalization'],
+      benefits: ['25% higher retention', '40% better targeting', 'Personalized experiences'],
       link: '/ai-customer-insights',
       popular: true
     },
     {
       title: 'AI A/B Testing Platform',
-      description: 'Optimize conversions with AI-powered A/B testing and experimentation',
+      description: 'Advanced A/B testing with AI-powered optimization and insights',
       icon: '🧪',
       price: '$79/month',
-      features: ['Automated testing', 'Statistical analysis', 'Winner selection', 'Performance tracking'],
-      benefits: ['45% conversion improvement', '70% testing efficiency', 'Data-driven optimization'],
+      features: ['Automated testing', 'Statistical analysis', 'AI optimization', 'Real-time results'],
+      benefits: ['50% faster testing', 'Higher conversion rates', 'Data-driven decisions'],
       link: '/ai-ab-testing',
       popular: false
     },
     {
       title: 'AI Predictive Analytics',
-      description: 'Predict future outcomes with AI-powered forecasting and trend analysis',
+      description: 'Future outcome predictions with machine learning and trend analysis',
       icon: '🔮',
       price: '$159/month',
-      features: ['Predictive modeling', 'Trend analysis', 'Risk assessment', 'Scenario planning'],
-      benefits: ['80% prediction accuracy', '50% better planning', '30% risk reduction'],
+      features: ['Future predictions', 'Trend analysis', 'Risk assessment', 'Scenario modeling'],
+      benefits: ['90% prediction accuracy', 'Proactive planning', 'Risk mitigation'],
       link: '/ai-predictive-analytics',
-      popular: true
-    },
-    {
-      title: 'AI Workflow Automation',
-      description: 'Automate business processes with AI-powered workflow optimization',
-      icon: '⚙️',
-      price: '$129/month',
-      features: ['Process automation', 'Workflow optimization', 'Task routing', 'Performance monitoring'],
-      benefits: ['60% process efficiency', '50% time saved', '40% error reduction'],
-      link: '/ai-workflow-automation',
       popular: true
     }
   ];
@@ -338,34 +308,66 @@ const HomePage: React.FC = () => {
     {
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis, treatment planning, and patient care optimization',
-      icon: Stethoscope,
+      icon: Heart,
       price: '$2,500/month',
-      features: ['Medical Imaging Analysis', 'Drug Discovery', 'Patient Monitoring', 'Treatment Optimization'],
+      features: ['Medical Imaging AI', 'Diagnostic Assistance', 'Treatment Planning', 'Patient Monitoring'],
       color: 'text-red-400'
     },
     {
       title: 'AI Financial Services',
-      description: 'Fintech AI for fraud detection, risk assessment, and algorithmic trading',
+      description: 'Fintech AI solutions for fraud detection, risk assessment, and trading',
       icon: CreditCard,
       price: '$2,200/month',
       features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring'],
       color: 'text-yellow-400'
     },
     {
-      title: 'AI E-commerce Platform',
-      description: 'Complete e-commerce AI solution with personalization and optimization',
-      icon: ShoppingCart,
+      title: 'AI Cybersecurity',
+      description: 'Advanced AI security solutions for threat detection and prevention',
+      icon: Shield,
       price: '$1,800/month',
-      features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'],
+      features: ['Threat Detection', 'Anomaly Detection', 'Security Analytics', 'Incident Response'],
       color: 'text-orange-400'
     },
     {
-      title: 'AI Mobile Development',
-      description: 'AI-powered mobile app development with intelligent features',
-      icon: Smartphone,
+      title: 'AI Content Generation',
+      description: 'AI-powered content creation for marketing, blogs, and social media',
+      icon: FileText,
+      price: '$1,100/month',
+      features: ['Content Writing', 'SEO Optimization', 'Social Media Posts', 'Video Scripts'],
+      color: 'text-pink-400'
+    },
+    {
+      title: 'AI Data Analytics',
+      description: 'Advanced data analysis with AI insights and predictive modeling',
+      icon: BarChart,
       price: '$1,600/month',
-      features: ['AI App Development', 'Voice Integration', 'Image Recognition', 'Predictive Features'],
+      features: ['Data Mining', 'Predictive Modeling', 'Business Intelligence', 'Real-time Analytics'],
       color: 'text-indigo-400'
+    },
+    {
+      title: 'AI Voice & Speech',
+      description: 'Voice recognition, synthesis, and conversational AI solutions',
+      icon: Music,
+      price: '$1,300/month',
+      features: ['Speech Recognition', 'Voice Synthesis', 'Conversational AI', 'Multi-language Support'],
+      color: 'text-teal-400'
+    },
+    {
+      title: 'AI Robotics',
+      description: 'Intelligent robotics solutions for manufacturing and automation',
+      icon: Settings,
+      price: '$3,000/month',
+      features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems'],
+      color: 'text-gray-400'
+    },
+    {
+      title: 'AI Edge Computing',
+      description: 'AI solutions optimized for edge devices and IoT applications',
+      icon: Smartphone,
+      price: '$1,700/month',
+      features: ['Edge AI Models', 'IoT Integration', 'Real-time Processing', 'Offline Capabilities'],
+      color: 'text-emerald-400'
     }
   ];
 
@@ -410,35 +412,67 @@ const HomePage: React.FC = () => {
     },
     {
       title: 'IT Infrastructure',
-      description: 'Complete IT infrastructure design, implementation, and management',
-      icon: Building,
-      price: '$1,800/month',
-      features: ['Network Design', 'Server Setup', 'Storage Solutions', 'Infrastructure Monitoring'],
+      description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee',
+      icon: Cpu,
+      price: '$999/month',
+      features: ['Server Management', 'Network Setup', 'Security Hardening', 'Backup Solutions'],
       color: 'text-cyan-400'
     },
     {
       title: 'Network Solutions',
-      description: 'Advanced networking solutions with security and performance optimization',
+      description: 'Network design, implementation, and monitoring solutions',
       icon: Globe,
-      price: '$1,400/month',
-      features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring'],
+      price: '$1,099/month',
+      features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'],
       color: 'text-orange-400'
     },
     {
-      title: 'System Administration',
-      description: 'Comprehensive system administration and maintenance services',
-      icon: Wrench,
-      price: '$1,100/month',
-      features: ['System Monitoring', 'Performance Tuning', 'Security Updates', 'Backup Management'],
+      title: 'IT Consulting',
+      description: 'Strategic IT planning and technology roadmap development',
+      icon: Target,
+      price: '$1,400/month',
+      features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Digital Transformation'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'IT Support & Maintenance',
+      description: '24/7 IT support and proactive maintenance services',
+      icon: Users,
+      price: '$1,299/month',
+      features: ['24/7 Support', 'Proactive Monitoring', 'Remote Management', 'Help Desk Services'],
+      color: 'text-pink-400'
+    },
+    {
+      title: 'IT Training & Certification',
+      description: 'Staff development and technology training programs',
+      icon: GraduationCap,
+      price: '$799/month',
+      features: ['Technology Training', 'Certification Programs', 'Skill Assessment', 'Custom Curriculum'],
       color: 'text-yellow-400'
     },
     {
-      title: 'IT Consulting',
-      description: 'Strategic IT planning and technology consulting services',
-      icon: Target,
-      price: '$1,500/month',
-      features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Digital Transformation'],
-      color: 'text-pink-400'
+      title: 'IT Disaster Recovery',
+      description: 'Comprehensive disaster recovery and business continuity solutions',
+      icon: Lock,
+      price: '$1,499/month',
+      features: ['Backup Strategies', 'Recovery Planning', 'Testing & Validation', 'Business Continuity'],
+      color: 'text-red-400'
+    },
+    {
+      title: 'IT Automation',
+      description: 'IT process automation and workflow optimization',
+      icon: Zap,
+      price: '$1,199/month',
+      features: ['Process Automation', 'Workflow Optimization', 'Script Development', 'Integration Services'],
+      color: 'text-teal-400'
+    },
+    {
+      title: 'Global IT Support',
+      description: 'Worldwide IT support with multi-language capabilities',
+      icon: Globe,
+      price: '$1,599/month',
+      features: ['Multi-language Support', 'Global Coverage', 'Time Zone Coverage', 'Local Expertise'],
+      color: 'text-emerald-400'
     }
   ];
 
@@ -832,6 +866,258 @@ const HomePage: React.FC = () => {
                 <div className="text-3xl font-bold text-green-400 mb-2 neon-text">300%</div>
                 <div className="text-sm text-gray-300">Average ROI</div>
               </div>
+            </div>
+          </section>
+
+          {/* Specialized Solutions Section */}
+          <section className="mb-16" aria-labelledby="specialized-heading">
+            <h2 id="specialized-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              Specialized Solutions
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+              Cutting-edge technologies for next-generation business solutions
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Quantum Computing</h3>
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  Next-generation quantum algorithms and quantum security implementations
+                </p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Quantum Algorithm Development
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Quantum Security
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Optimization Problems
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Research & Development
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold mb-2 neon-text text-purple-400">Custom Pricing</div>
+                  <a 
+                    href="/quantum-computing" 
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-purple-400 border border-purple-400 hover:bg-purple-400 hover:text-slate-900"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </article>
+
+              <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <Settings className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Autonomous Systems</h3>
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  Self-managing and self-optimizing systems for enterprise operations
+                </p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Self-Healing Systems
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Predictive Maintenance
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Resource Optimization
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Performance Monitoring
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold mb-2 neon-text text-cyan-400">Custom Pricing</div>
+                  <a 
+                    href="/autonomous-systems" 
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-cyan-400 border border-cyan-400 hover:bg-cyan-400 hover:text-slate-900"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </article>
+
+              <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Blockchain & Web3</h3>
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  Decentralized solutions, smart contracts, and Web3 applications
+                </p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-green-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Smart Contract Development
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      DApp Creation
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Token Economics
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      DeFi Solutions
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold mb-2 neon-text text-green-400">$1,999/month</div>
+                  <a 
+                    href="/blockchain-web3" 
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-green-400 border border-green-400 hover:bg-green-400 hover:text-slate-900"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </article>
+
+              <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <Smartphone className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">IoT & Edge Computing</h3>
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  Connected devices and edge computing solutions
+                </p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-orange-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Device Management
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Edge Analytics
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Real-time Processing
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Security Implementation
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold mb-2 neon-text text-orange-400">$1,499/month</div>
+                  <a 
+                    href="/iot-edge-computing" 
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-orange-400 border border-orange-400 hover:bg-orange-400 hover:text-slate-900"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </article>
+
+              <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <BarChart className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Business Intelligence</h3>
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  Data-driven insights and predictive analytics for decision-making
+                </p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-indigo-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Data Warehousing
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      ETL Processes
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Advanced Analytics
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Executive Dashboards
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold mb-2 neon-text text-indigo-400">$1,799/month</div>
+                  <a 
+                    href="/business-intelligence" 
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-indigo-400 border border-indigo-400 hover:bg-indigo-400 hover:text-slate-900"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </article>
+
+              <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-slate-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <Settings className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Robotics Solutions</h3>
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  Intelligent robotic solutions for manufacturing and service industries
+                </p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Robotic Process Automation
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Computer Vision Integration
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Human-Robot Collaboration
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Maintenance Systems
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold mb-2 neon-text text-gray-400">Custom Pricing</div>
+                  <a 
+                    href="/robotics" 
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-gray-400 border border-gray-400 hover:bg-gray-400 hover:text-slate-900"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </article>
             </div>
           </section>
 

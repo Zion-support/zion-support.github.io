@@ -1,6 +1,6 @@
-import React, { useState, useEffect, memo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Zap, Sparkles } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Heart, CreditCard, Music, GraduationCap } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +31,35 @@ const Navigation: React.FC = () => {
 
   const serviceCategories = [
     {
+      title: 'Micro SAAS Solutions',
+      icon: Zap,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      hoverColor: 'hover:bg-cyan-500/20',
+      services: [
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
+        { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoice creation', icon: '💰', popular: true },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification', icon: '🎯', popular: true },
+        { name: 'AI Sales Forecasting', path: '/ai-sales-forecasting', description: 'Advanced sales predictions', icon: '📊', popular: true },
+        { name: 'AI E-commerce Optimizer', path: '/ai-ecommerce-optimizer', description: 'E-commerce optimization', icon: '🛒', popular: true },
+        { name: 'AI Design Assistant', path: '/ai-design-assistant', description: 'AI-powered design tool', icon: '🎨', popular: false },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing', icon: '📄', popular: true },
+        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring', icon: '🔒', popular: true },
+        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking', icon: '⚡', popular: false },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants', icon: '🎤', popular: true },
+        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management', icon: '👥', popular: true },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management', icon: '📦', popular: true },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights', icon: '👤', popular: true },
+        { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing', icon: '🧪', popular: false },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions', icon: '🔮', popular: true }
+      ]
+    },
+    {
       title: 'AI Services',
       icon: Brain,
       color: 'text-purple-400',
@@ -39,9 +68,23 @@ const Navigation: React.FC = () => {
         { name: 'Natural Language Processing', path: '/ai-nlp', description: 'Advanced text analysis and understanding' },
         { name: 'Computer Vision', path: '/ai-computer-vision', description: 'Image and video analysis solutions' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' }
+        { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI for diagnosis and treatment' },
+        { name: 'AI Financial Services', path: '/ai-fintech', description: 'Fintech AI for fraud detection and trading' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions and threat detection' },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI-powered content creation' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data analysis with AI insights' },
+        { name: 'AI Voice & Speech', path: '/ai-voice-speech', description: 'Voice recognition and synthesis' },
+        { name: 'AI Robotics', path: '/ai-robotics', description: 'Intelligent robotics solutions' },
+        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI optimized for edge devices' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
+        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' }
       ]
     },
     {
@@ -49,12 +92,18 @@ const Navigation: React.FC = () => {
       icon: Cloud,
       color: 'text-blue-400',
       services: [
-        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
-        { name: 'Database Management', path: '/database-management', description: 'Database management' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' }
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration, setup, and optimization' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions' },
+        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Streamlined development workflows' },
+        { name: 'Database Services', path: '/database-services', description: 'Database design and optimization' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise-grade infrastructure' },
+        { name: 'Network Solutions', path: '/network-solutions', description: 'Network design and implementation' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
+        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT support and maintenance' },
+        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development programs' },
+        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery solutions' },
+        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
+        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide IT support' }
       ]
     },
     {
@@ -62,25 +111,18 @@ const Navigation: React.FC = () => {
       icon: Zap,
       color: 'text-cyan-400',
       services: [
-        { name: 'AI CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
-        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'AI-assisted app development' },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' }
-      ]
-    },
-    {
-      title: 'Specialized',
-      icon: Sparkles,
-      color: 'text-pink-400',
-      services: [
-        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
+        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-generation quantum algorithms' },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' }
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices and edge computing' },
+        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights and analytics' },
+        { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent robotic solutions' },
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
+        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
+        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
+        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
+        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
   ];
@@ -128,7 +170,7 @@ const Navigation: React.FC = () => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl opacity-100 visible transition-all duration-300 transform translate-y-0">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
                     <div className="grid grid-cols-2 gap-4">
@@ -230,84 +272,58 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-6">
-              <Link
-                to="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                About
-              </Link>
-
-              {/* Mobile Services */}
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+              {/* Main Navigation */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
+                <Link
+                  to="/"
+                  onClick={closeAllMenus}
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                 >
-                  <span className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
-                    <span>Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}>
-                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                          <Link
-                            to="/services"
-                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
-                          >
-                            View All →
-                          </Link>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                  <span className="text-lg">🏠</span>
+                  <span className="font-medium">Home</span>
+                </Link>
+                <Link
+                  to="/about"
+                  onClick={closeAllMenus}
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                >
+                  <span className="text-lg">ℹ️</span>
+                  <span className="font-medium">About</span>
+                </Link>
+                <Link
+                  to="/services"
+                  onClick={closeAllMenus}
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                >
+                  <span className="text-lg">🧠</span>
+                  <span className="font-medium">Services</span>
+                </Link>
+                <Link
+                  to="/case-studies"
+                  onClick={closeAllMenus}
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                >
+                  <span className="text-lg">📊</span>
+                  <span className="font-medium">Case Studies</span>
+                </Link>
+                <Link
+                  to="/blog"
+                  onClick={closeAllMenus}
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                >
+                  <span className="text-lg">📝</span>
+                  <span className="font-medium">Blog</span>
+                </Link>
+                <Link
+                  to="/contact"
+                  onClick={closeAllMenus}
+                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                >
+                  <span className="text-lg">📞</span>
+                  <span className="font-medium">Contact</span>
+                </Link>
               </div>
-
-              <Link
-                to="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Case Studies
-              </Link>
-
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
-
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Contact
-              </Link>
 
               <a
                 href="tel:+13024640950"
