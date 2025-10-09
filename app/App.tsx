@@ -18,7 +18,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
-const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
   () => import('./components/InteractiveContentShowcase2026')
 );
@@ -27,16 +27,16 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Lazy load pages for better performance
-const _HomePage = lazy(() => import('./page'));
-const _AboutPage = lazy(() => import('./about/page'));
-const _ServicesPage = lazy(() => import('./services/page'));
-const _ContactPage = lazy(() => import('./contact/page'));
-const _TeamPage = lazy(() => import('./team/page'));
-const _PrivacyPage = lazy(() => import('./privacy/page'));
-const _TermsPage = lazy(() => import('./terms/page'));
-const _EnterprisePage = lazy(() => import('./enterprise/page'));
-const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
-const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ServicesPage = lazy(() => import('./services/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const TeamPage = lazy(() => import('./team/page'));
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const EnterprisePage = lazy(() => import('./enterprise/page'));
+const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
+const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
 // AI Services
 const _AiServicesPage = lazy(() => import('./ai-services/page'));
@@ -192,6 +192,7 @@ const App: React.FC = () => {
                   <main id="main-content">
                     <Suspense fallback={<LoadingSpinner />}>
                       <Routes>
+<<<<<<< HEAD
                         {/* Main Pages */}
                         <Route path="/" element={<_HomePage />} />
                         <Route path="/about" element={<_AboutPage />} />
@@ -235,11 +236,45 @@ const App: React.FC = () => {
                         
                         {/* Utility Pages */}
                         <Route path="/sitemap" element={<_SitemapPage />} />
+=======
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/team" element={<TeamPage />} />
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/terms" element={<TermsPage />} />
+                        <Route path="/enterprise" element={<EnterprisePage />} />
+                        <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        
+                        {/* Service Pages */}
+                        <Route path="/ai-services" element={<AiServicesPage />} />
+                        <Route path="/it-services" element={<ItServicesPage />} />
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                        <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                        <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                        <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                        <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} />
+                        
+                        {/* Additional Pages */}
+                        <Route path="/blog" element={<BlogPage />} />
+                        <Route path="/guides" element={<GuidesPage />} />
+                        <Route path="/sitemap" element={<SitemapPage />} />
+                        <Route path="/offline" element={<OfflinePage />} />
+                        <Route path="*" element={<NotFoundPage />} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-4a8b
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
+<<<<<<< HEAD
 
+=======
+                  
+>>>>>>> cursor/fix-errors-and-merge-to-main-4a8b
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />
                   
