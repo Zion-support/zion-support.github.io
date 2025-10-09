@@ -1,212 +1,737 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Share2 } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, 
+  Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, 
+  TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, 
+  Mail, Phone, DollarSign, Clock, Award, CheckCircle, 
+  Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, 
+  CreditCard, Building, Factory, Car, Plane, Ship, Train, 
+  Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, 
+  Hammer, Paintbrush, Scissors, BookOpen, Calculator, 
+  Compass, PieChart, TrendingDown, Activity, Zap as Lightning, 
+  Target as Crosshair, Shield as Security, Users as People, 
+  Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, 
+  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location,
+  Eye, Search, MessageSquare, PieChart as Chart, 
+  Download, Upload, RefreshCw, Play, Pause, Stop,
+  Volume2, VolumeX, Mic, MicOff, Headphones, 
+  Wifi, WifiOff, Battery, BatteryCharging, 
+  Sun, Moon, Sunrise, Sunset, CloudRain, 
+  Snowflake, Wind, Thermometer, Droplets,
+  Lightbulb, LightbulbOff, Power, PowerOff,
+  Wrench as Tool, Hammer as HammerIcon, 
+  Paintbrush as Brush, Scissors as ScissorIcon,
+  BookOpen as Book, Calculator as Calc,
+  Compass as CompassIcon, PieChart as PieChartIcon,
+  TrendingDown as TrendingDownIcon, Activity as ActivityIcon
+} from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const microSaasApps = [
+  const microSaasServices = [
+    // AI-Powered Business Tools
     {
-      id: 1,
-      title: 'AI Expense Tracker',
-      description: 'Smart expense tracking with AI-powered categorization and insights.',
-      category: 'finance',
-      icon: DollarSign,
-      price: '$9.99/month',
-      rating: 4.8,
-      users: '2.5K',
-      features: ['AI Categorization', 'Receipt Scanning', 'Budget Alerts', 'Analytics Dashboard'],
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 2,
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content for blogs, social media, and marketing.',
-      category: 'content',
-      icon: FileText,
-      price: '$19.99/month',
-      rating: 4.9,
-      users: '5.2K',
-      features: ['Multiple Templates', 'SEO Optimization', 'Brand Voice', 'Bulk Generation'],
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 3,
-      title: 'AI Project Manager',
-      description: 'Intelligent project management with automated task assignment and tracking.',
-      category: 'productivity',
-      icon: Target,
-      price: '$14.99/month',
-      rating: 4.7,
-      users: '3.8K',
-      features: ['Smart Scheduling', 'Team Collaboration', 'Progress Tracking', 'Risk Analysis'],
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 4,
-      title: 'AI Social Media Manager',
-      description: 'Automate your social media presence with AI-powered content and scheduling.',
-      category: 'marketing',
-      icon: Share2,
-      price: '$24.99/month',
-      rating: 4.6,
-      users: '4.1K',
-      features: ['Auto Posting', 'Engagement Analysis', 'Content Calendar', 'Hashtag Optimization'],
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 5,
-      title: 'AI Customer Support Bot',
-      description: 'Intelligent chatbot for 24/7 customer support and lead generation.',
-      category: 'support',
-      icon: MessageSquare,
-      price: '$29.99/month',
-      rating: 4.8,
-      users: '1.9K',
-      features: ['Natural Language Processing', 'Multi-language Support', 'Lead Qualification', 'Analytics'],
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 6,
-      title: 'AI Analytics Dashboard',
-      description: 'Comprehensive business analytics with AI-powered insights and predictions.',
-      category: 'analytics',
+      id: 'ai-analytics-dashboard',
+      name: 'AI Analytics Dashboard',
+      description: 'Real-time business intelligence with predictive analytics and automated insights',
+      category: 'ai-business',
       icon: BarChart,
-      price: '$39.99/month',
-      rating: 4.9,
-      users: '2.3K',
-      features: ['Real-time Data', 'Predictive Analytics', 'Custom Reports', 'Data Visualization'],
-      image: '/api/placeholder/400/300'
+      price: '$99/month',
+      features: [
+        'Real-time data visualization',
+        'Predictive analytics',
+        'Custom dashboard creation',
+        'Automated reporting',
+        'Multi-source data integration',
+        'Mobile app included'
+      ],
+      benefits: [
+        'Increase decision-making speed by 300%',
+        'Reduce manual reporting by 90%',
+        'Identify trends before competitors',
+        'Custom alerts and notifications'
+      ],
+      targetAudience: 'Small to medium businesses',
+      setupTime: '24 hours',
+      freeTrial: '14 days',
+      support: '24/7 email and chat support',
+      integrations: ['Google Analytics', 'Salesforce', 'HubSpot', 'Stripe', 'Shopify'],
+      link: 'https://ziontechgroup.com/ai-analytics-dashboard'
+    },
+    {
+      id: 'ai-customer-support-bot',
+      name: 'AI Customer Support Bot',
+      description: 'Intelligent chatbot with natural language processing for 24/7 customer service',
+      category: 'ai-business',
+      icon: Bot,
+      price: '$149/month',
+      features: [
+        'Natural language processing',
+        'Multi-language support',
+        'Integration with existing systems',
+        'Custom training on your data',
+        'Escalation to human agents',
+        'Analytics and insights'
+      ],
+      benefits: [
+        'Reduce support costs by 60%',
+        '24/7 customer availability',
+        'Instant response times',
+        'Consistent service quality'
+      ],
+      targetAudience: 'E-commerce, SaaS, Service businesses',
+      setupTime: '48 hours',
+      freeTrial: '30 days',
+      support: 'Dedicated account manager',
+      integrations: ['Zendesk', 'Intercom', 'Slack', 'Microsoft Teams', 'WhatsApp'],
+      link: 'https://ziontechgroup.com/ai-customer-support-bot'
+    },
+    {
+      id: 'ai-social-media-manager',
+      name: 'AI Social Media Manager',
+      description: 'Automated social media posting, engagement, and content optimization',
+      category: 'ai-marketing',
+      icon: MessageSquare,
+      price: '$79/month',
+      features: [
+        'Automated posting schedule',
+        'Content optimization',
+        'Hashtag suggestions',
+        'Engagement tracking',
+        'Multi-platform support',
+        'AI-generated captions'
+      ],
+      benefits: [
+        'Save 10+ hours per week',
+        'Increase engagement by 200%',
+        'Consistent brand voice',
+        'Optimal posting times'
+      ],
+      targetAudience: 'Small businesses, influencers, agencies',
+      setupTime: '2 hours',
+      freeTrial: '7 days',
+      support: 'Email support',
+      integrations: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok'],
+      link: 'https://ziontechgroup.com/ai-social-media-manager'
+    },
+    {
+      id: 'ai-email-marketing-suite',
+      name: 'AI Email Marketing Suite',
+      description: 'Intelligent email campaigns with personalization and automation',
+      category: 'ai-marketing',
+      icon: Mail,
+      price: '$129/month',
+      features: [
+        'AI-powered subject lines',
+        'Personalized content',
+        'Send time optimization',
+        'A/B testing automation',
+        'Segmentation intelligence',
+        'Deliverability optimization'
+      ],
+      benefits: [
+        'Increase open rates by 40%',
+        'Boost click-through rates by 60%',
+        'Reduce unsubscribe rates',
+        'Automated campaign optimization'
+      ],
+      targetAudience: 'E-commerce, SaaS, Content creators',
+      setupTime: '4 hours',
+      freeTrial: '14 days',
+      support: 'Priority support',
+      integrations: ['Mailchimp', 'Constant Contact', 'Klaviyo', 'HubSpot', 'Salesforce'],
+      link: 'https://ziontechgroup.com/ai-email-marketing-suite'
+    },
+    {
+      id: 'ai-inventory-management',
+      name: 'AI Inventory Management',
+      description: 'Smart inventory optimization with demand forecasting and automated reordering',
+      category: 'ai-business',
+      icon: Package,
+      price: '$199/month',
+      features: [
+        'Demand forecasting',
+        'Automated reorder points',
+        'Supplier management',
+        'Cost optimization',
+        'Multi-location support',
+        'Mobile barcode scanning'
+      ],
+      benefits: [
+        'Reduce stockouts by 80%',
+        'Lower inventory costs by 25%',
+        'Eliminate manual counting',
+        'Improve cash flow'
+      ],
+      targetAudience: 'Retail, Manufacturing, Distribution',
+      setupTime: '1 week',
+      freeTrial: '30 days',
+      support: 'Implementation specialist',
+      integrations: ['QuickBooks', 'Xero', 'Shopify', 'WooCommerce', 'SAP'],
+      link: 'https://ziontechgroup.com/ai-inventory-management'
+    },
+    {
+      id: 'ai-lead-scoring-system',
+      name: 'AI Lead Scoring System',
+      description: 'Intelligent lead qualification and prioritization for sales teams',
+      category: 'ai-sales',
+      icon: Target,
+      price: '$89/month',
+      features: [
+        'Behavioral scoring',
+        'Demographic analysis',
+        'Engagement tracking',
+        'Predictive scoring',
+        'CRM integration',
+        'Custom scoring models'
+      ],
+      benefits: [
+        'Increase conversion rates by 35%',
+        'Prioritize high-value leads',
+        'Reduce sales cycle time',
+        'Improve sales team efficiency'
+      ],
+      targetAudience: 'B2B companies, Sales teams',
+      setupTime: '24 hours',
+      freeTrial: '14 days',
+      support: 'Sales specialist',
+      integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics'],
+      link: 'https://ziontechgroup.com/ai-lead-scoring-system'
+    },
+    {
+      id: 'ai-document-processor',
+      name: 'AI Document Processor',
+      description: 'Intelligent document analysis, extraction, and organization',
+      category: 'ai-productivity',
+      icon: FileText,
+      price: '$119/month',
+      features: [
+        'OCR text extraction',
+        'Document classification',
+        'Data extraction',
+        'Automated workflows',
+        'Multi-format support',
+        'Cloud storage integration'
+      ],
+      benefits: [
+        'Process documents 10x faster',
+        'Eliminate manual data entry',
+        'Improve accuracy by 95%',
+        'Reduce processing costs'
+      ],
+      targetAudience: 'Legal, Finance, Healthcare, Real Estate',
+      setupTime: '48 hours',
+      freeTrial: '14 days',
+      support: 'Technical specialist',
+      integrations: ['Google Drive', 'Dropbox', 'OneDrive', 'Box', 'SharePoint'],
+      link: 'https://ziontechgroup.com/ai-document-processor'
+    },
+    {
+      id: 'ai-seo-optimizer',
+      name: 'AI SEO Optimizer',
+      description: 'Automated SEO analysis, optimization, and content suggestions',
+      category: 'ai-marketing',
+      icon: Search,
+      price: '$69/month',
+      features: [
+        'Keyword research',
+        'Content optimization',
+        'Technical SEO audit',
+        'Competitor analysis',
+        'Ranking tracking',
+        'Automated reports'
+      ],
+      benefits: [
+        'Improve search rankings',
+        'Increase organic traffic by 150%',
+        'Save 15+ hours per week',
+        'Stay ahead of algorithm changes'
+      ],
+      targetAudience: 'Website owners, Agencies, Content creators',
+      setupTime: '2 hours',
+      freeTrial: '7 days',
+      support: 'SEO specialist',
+      integrations: ['Google Search Console', 'Google Analytics', 'WordPress', 'Shopify', 'Wix'],
+      link: 'https://ziontechgroup.com/ai-seo-optimizer'
+    },
+    {
+      id: 'ai-appointment-scheduler',
+      name: 'AI Appointment Scheduler',
+      description: 'Smart scheduling with automated reminders and calendar optimization',
+      category: 'ai-productivity',
+      icon: Calendar,
+      price: '$49/month',
+      features: [
+        'Automated scheduling',
+        'Smart time suggestions',
+        'Multi-timezone support',
+        'Reminder automation',
+        'Calendar integration',
+        'Custom booking forms'
+      ],
+      benefits: [
+        'Reduce no-shows by 50%',
+        'Eliminate double bookings',
+        'Save 5+ hours per week',
+        'Improve customer experience'
+      ],
+      targetAudience: 'Service businesses, Consultants, Healthcare',
+      setupTime: '1 hour',
+      freeTrial: '14 days',
+      support: 'Email support',
+      integrations: ['Google Calendar', 'Outlook', 'Calendly', 'Acuity', 'Square'],
+      link: 'https://ziontechgroup.com/ai-appointment-scheduler'
+    },
+    {
+      id: 'ai-chat-analytics',
+      name: 'AI Chat Analytics',
+      description: 'Advanced conversation analysis and customer insights',
+      category: 'ai-analytics',
+      icon: MessageSquare,
+      price: '$79/month',
+      features: [
+        'Sentiment analysis',
+        'Conversation insights',
+        'Performance metrics',
+        'Agent coaching',
+        'Customer satisfaction tracking',
+        'Real-time monitoring'
+      ],
+      benefits: [
+        'Improve customer satisfaction',
+        'Identify training needs',
+        'Optimize response strategies',
+        'Reduce resolution time'
+      ],
+      targetAudience: 'Customer service teams, Call centers',
+      setupTime: '24 hours',
+      freeTrial: '14 days',
+      support: 'Analytics specialist',
+      integrations: ['Zendesk', 'Intercom', 'Freshdesk', 'LiveChat', 'Crisp'],
+      link: 'https://ziontechgroup.com/ai-chat-analytics'
+    },
+    {
+      id: 'ai-expense-tracker',
+      name: 'AI Expense Tracker',
+      description: 'Intelligent expense management with receipt scanning and categorization',
+      category: 'ai-finance',
+      icon: CreditCard,
+      price: '$39/month',
+      features: [
+        'Receipt scanning',
+        'Automatic categorization',
+        'Expense reporting',
+        'Policy compliance',
+        'Multi-currency support',
+        'Mobile app'
+      ],
+      benefits: [
+        'Save 8+ hours per month',
+        'Improve accuracy by 90%',
+        'Ensure policy compliance',
+        'Simplify tax preparation'
+      ],
+      targetAudience: 'Small businesses, Freelancers, Consultants',
+      setupTime: '30 minutes',
+      freeTrial: '30 days',
+      support: 'Email support',
+      integrations: ['QuickBooks', 'Xero', 'Expensify', 'Concur', 'SAP'],
+      link: 'https://ziontechgroup.com/ai-expense-tracker'
+    },
+    {
+      id: 'ai-content-generator',
+      name: 'AI Content Generator',
+      description: 'AI-powered content creation for blogs, social media, and marketing',
+      category: 'ai-content',
+      icon: FileText,
+      price: '$59/month',
+      features: [
+        'Blog post generation',
+        'Social media content',
+        'Email templates',
+        'Product descriptions',
+        'SEO-optimized content',
+        'Multi-language support'
+      ],
+      benefits: [
+        'Create content 5x faster',
+        'Maintain consistent quality',
+        'Scale content production',
+        'Improve SEO performance'
+      ],
+      targetAudience: 'Content creators, Marketers, Agencies',
+      setupTime: '1 hour',
+      freeTrial: '7 days',
+      support: 'Content specialist',
+      integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer'],
+      link: 'https://ziontechgroup.com/ai-content-generator'
+    },
+    // Industry-Specific Solutions
+    {
+      id: 'ai-healthcare-assistant',
+      name: 'AI Healthcare Assistant',
+      description: 'Patient management and medical record analysis for healthcare providers',
+      category: 'ai-healthcare',
+      icon: Stethoscope,
+      price: '$299/month',
+      features: [
+        'Patient data analysis',
+        'Appointment optimization',
+        'Medical record insights',
+        'Compliance monitoring',
+        'Billing optimization',
+        'HIPAA compliance'
+      ],
+      benefits: [
+        'Improve patient outcomes',
+        'Reduce administrative burden',
+        'Ensure compliance',
+        'Optimize scheduling'
+      ],
+      targetAudience: 'Healthcare providers, Clinics, Hospitals',
+      setupTime: '2 weeks',
+      freeTrial: '30 days',
+      support: 'Healthcare specialist',
+      integrations: ['Epic', 'Cerner', 'Allscripts', 'NextGen', 'athenahealth'],
+      link: 'https://ziontechgroup.com/ai-healthcare-assistant'
+    },
+    {
+      id: 'ai-education-platform',
+      name: 'AI Education Platform',
+      description: 'Personalized learning and student progress tracking',
+      category: 'ai-education',
+      icon: GraduationCap,
+      price: '$199/month',
+      features: [
+        'Personalized learning paths',
+        'Progress tracking',
+        'Automated assessments',
+        'Parent communication',
+        'Curriculum optimization',
+        'Multi-language support'
+      ],
+      benefits: [
+        'Improve student outcomes',
+        'Reduce teacher workload',
+        'Personalize education',
+        'Track progress effectively'
+      ],
+      targetAudience: 'Schools, Universities, Online learning platforms',
+      setupTime: '1 week',
+      freeTrial: '30 days',
+      support: 'Education specialist',
+      integrations: ['Canvas', 'Blackboard', 'Moodle', 'Google Classroom', 'Microsoft Teams'],
+      link: 'https://ziontechgroup.com/ai-education-platform'
+    },
+    {
+      id: 'ai-real-estate-analyzer',
+      name: 'AI Real Estate Analyzer',
+      description: 'Property valuation and market analysis for real estate professionals',
+      category: 'ai-real-estate',
+      icon: Home,
+      price: '$149/month',
+      features: [
+        'Property valuation',
+        'Market analysis',
+        'Investment recommendations',
+        'Price predictions',
+        'Neighborhood insights',
+        'Client reports'
+      ],
+      benefits: [
+        'Accurate property valuations',
+        'Identify investment opportunities',
+        'Improve client service',
+        'Stay ahead of market trends'
+      ],
+      targetAudience: 'Real estate agents, Investors, Property managers',
+      setupTime: '48 hours',
+      freeTrial: '14 days',
+      support: 'Real estate specialist',
+      integrations: ['MLS', 'Zillow', 'Realtor.com', 'Redfin', 'LoopNet'],
+      link: 'https://ziontechgroup.com/ai-real-estate-analyzer'
+    },
+    {
+      id: 'ai-fitness-coach',
+      name: 'AI Fitness Coach',
+      description: 'Personalized workout plans and nutrition guidance',
+      category: 'ai-fitness',
+      icon: Heart,
+      price: '$29/month',
+      features: [
+        'Personalized workouts',
+        'Nutrition tracking',
+        'Progress monitoring',
+        'Goal setting',
+        'Wearable integration',
+        'Community features'
+      ],
+      benefits: [
+        'Achieve fitness goals faster',
+        'Personalized guidance',
+        'Track progress effectively',
+        'Stay motivated'
+      ],
+      targetAudience: 'Fitness enthusiasts, Gyms, Personal trainers',
+      setupTime: '1 hour',
+      freeTrial: '14 days',
+      support: 'Fitness specialist',
+      integrations: ['Apple Health', 'Google Fit', 'Fitbit', 'MyFitnessPal', 'Strava'],
+      link: 'https://ziontechgroup.com/ai-fitness-coach'
+    },
+    {
+      id: 'ai-restaurant-manager',
+      name: 'AI Restaurant Manager',
+      description: 'Menu optimization and customer experience enhancement',
+      category: 'ai-hospitality',
+      icon: Utensils,
+      price: '$179/month',
+      features: [
+        'Menu optimization',
+        'Demand forecasting',
+        'Customer feedback analysis',
+        'Staff scheduling',
+        'Inventory management',
+        'Revenue optimization'
+      ],
+      benefits: [
+        'Increase revenue by 20%',
+        'Reduce food waste',
+        'Improve customer satisfaction',
+        'Optimize operations'
+      ],
+      targetAudience: 'Restaurants, Cafes, Food service',
+      setupTime: '1 week',
+      freeTrial: '30 days',
+      support: 'Hospitality specialist',
+      integrations: ['Square', 'Toast', 'Resy', 'OpenTable', 'Grubhub'],
+      link: 'https://ziontechgroup.com/ai-restaurant-manager'
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Apps', icon: Globe },
-    { id: 'finance', name: 'Finance', icon: DollarSign },
-    { id: 'content', name: 'Content', icon: FileText },
-    { id: 'productivity', name: 'Productivity', icon: Target },
-    { id: 'marketing', name: 'Marketing', icon: Share2 },
-    { id: 'support', name: 'Support', icon: MessageSquare },
-    { id: 'analytics', name: 'Analytics', icon: BarChart }
+    { id: 'all', name: 'All Services', icon: Grid3X3 },
+    { id: 'ai-business', name: 'AI Business', icon: Building },
+    { id: 'ai-marketing', name: 'AI Marketing', icon: Target },
+    { id: 'ai-sales', name: 'AI Sales', icon: TrendingUp },
+    { id: 'ai-productivity', name: 'AI Productivity', icon: CheckSquare },
+    { id: 'ai-analytics', name: 'AI Analytics', icon: BarChart },
+    { id: 'ai-finance', name: 'AI Finance', icon: DollarSign },
+    { id: 'ai-content', name: 'AI Content', icon: FileText },
+    { id: 'ai-healthcare', name: 'AI Healthcare', icon: Stethoscope },
+    { id: 'ai-education', name: 'AI Education', icon: GraduationCap },
+    { id: 'ai-real-estate', name: 'AI Real Estate', icon: Home },
+    { id: 'ai-fitness', name: 'AI Fitness', icon: Heart },
+    { id: 'ai-hospitality', name: 'AI Hospitality', icon: Utensils }
   ];
 
-  const filteredApps = activeTab === 'all' 
-    ? microSaasApps 
-    : microSaasApps.filter(app => app.category === activeTab);
+  const filteredServices = microSaasServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
-    <>
-      <Helmet>
-        <title>Micro SaaS Apps - Zion Tech Group</title>
-        <meta name="description" content="Discover our collection of AI-powered micro SaaS applications designed to solve specific business problems." />
-        <meta name="keywords" content="micro SaaS, AI apps, business tools, productivity, automation" />
-      </Helmet>
-      
-      <Header />
-      
-      <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold mb-6">
-                Micro SaaS Apps
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Discover our collection of AI-powered micro SaaS applications designed to solve specific business problems.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                  Browse Apps
-                </button>
-                <button className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                  Request Custom App
-                </button>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse">
+            Micro <span className="holographic-text">SaaS</span> Solutions
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
+            Powerful, affordable AI-powered micro SaaS tools designed to solve specific business problems. 
+            Start with a free trial and scale as you grow.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+            >
+              <Phone className="w-5 h-5 inline mr-2" />
+              Call (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+            >
+              <Mail className="w-5 h-5 inline mr-2" />
+              Get Free Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Search and Filter Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 mb-8">
+            {/* Search */}
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search micro SaaS services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Category Filter */}
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveTab(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg font-semibold transition-colors ${
-                    activeTab === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
-                  }`}
-                >
-                  <category.icon className="h-5 w-5 mr-2" />
-                  {category.name}
-                </button>
-              ))}
+            
+            {/* Category Filter */}
+            <div className="lg:w-64">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+              >
+                {categories.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.name}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
-        </section>
 
-        {/* Apps Grid */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredApps.map((app) => (
-                <div key={app.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                    <app.icon className="h-16 w-16 text-blue-600" />
+          {/* Category Pills */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <service.icon className="w-12 h-12" />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-semibold text-gray-900">{app.title}</h3>
-                      <div className="flex items-center">
-                        <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                        <span className="ml-1 text-sm text-gray-600">{app.rating}</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 mb-4">{app.description}</p>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-2xl font-bold text-blue-600">{app.price}</span>
-                      <span className="text-sm text-gray-500">{app.users} users</span>
-                    </div>
-                    <ul className="space-y-2 mb-6">
-                      {app.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                          {feature}
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">{service.price}</div>
+                    <div className="text-sm text-gray-400">per month</div>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                
+                <div className="space-y-3 mb-6">
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                          <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
-                      Try Now
-                    </button>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-4">Need a Custom Micro SaaS App?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              We can build a custom micro SaaS application tailored to your specific business needs.
-            </p>
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Request Custom App
-            </button>
+                <div className="space-y-2 mb-6 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Setup Time:</span>
+                    <span className="text-white">{service.setupTime}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Free Trial:</span>
+                    <span className="text-green-400">{service.freeTrial}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Target:</span>
+                    <span className="text-white">{service.targetAudience}</span>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <a
+                    href={service.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Start Free Trial
+                  </a>
+                  <a
+                    href="tel:+13024640950"
+                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  >
+                    <Phone className="w-4 h-4 inline mr-2" />
+                    Get Demo
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-cyan-400 mb-8 neon-glow">
+            Choose from our comprehensive suite of AI-powered micro SaaS solutions. 
+            All services include free trials, setup assistance, and ongoing support.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+            >
+              <Phone className="w-5 h-5" />
+              Call (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+            >
+              <Mail className="w-5 h-5" />
+              Get Custom Quote
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
