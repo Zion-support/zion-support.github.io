@@ -1,6 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -254,33 +254,118 @@ const HomePage: React.FC = () => {
       title: 'Cloud Services',
       description: 'Cloud migration, setup, and optimization services',
       icon: Cloud,
-      price: '$1,299/month',
-      features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration'],
-      color: 'text-blue-400'
+      price: '$1,999/month',
+      features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration', 'Auto-scaling', 'Disaster Recovery'],
+      color: 'text-blue-400',
+      benefits: ['50% cost reduction', '99.9% uptime', 'Global deployment', '24/7 monitoring']
     },
     {
       title: 'Cybersecurity',
       description: 'Advanced security solutions with threat detection and prevention',
       icon: Shield,
-      price: '$1,599/month',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'],
-      color: 'text-red-400'
+      price: '$2,499/month',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Penetration Testing', 'Compliance Auditing'],
+      color: 'text-red-400',
+      benefits: ['99.9% threat detection', 'Real-time monitoring', 'Zero-day protection', 'Compliance ready']
     },
     {
       title: 'DevOps & CI/CD',
       description: 'Streamlined development workflows with automated testing and deployment',
       icon: Settings,
-      price: '$1,199/month',
-      features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'],
-      color: 'text-green-400'
+      price: '$1,799/month',
+      features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup', 'Infrastructure as Code', 'Blue-Green Deployments'],
+      color: 'text-green-400',
+      benefits: ['80% faster deployments', '90% fewer errors', 'Automated rollbacks', 'Zero-downtime updates']
     },
     {
       title: 'Database Services',
       description: 'Database design, optimization, and management with AI-powered tuning',
       icon: Database,
+      price: '$1,299/month',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Data Migration', 'Query Optimization'],
+      color: 'text-purple-400',
+      benefits: ['300% performance boost', '99.99% availability', 'Automated backups', 'Real-time monitoring']
+    },
+    {
+      title: 'Network Infrastructure',
+      description: 'Enterprise-grade network design, implementation, and management',
+      icon: Globe,
+      price: '$1,599/month',
+      features: ['Network Design', 'SD-WAN Implementation', 'Load Balancing', 'VPN Setup', 'Network Monitoring', 'Bandwidth Optimization'],
+      color: 'text-cyan-400',
+      benefits: ['40% faster speeds', '99.9% reliability', 'Global connectivity', 'Cost optimization']
+    },
+    {
+      title: 'IT Support & Helpdesk',
+      description: '24/7 technical support and helpdesk services',
+      icon: Users,
       price: '$899/month',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
-      color: 'text-purple-400'
+      features: ['24/7 Support', 'Remote Assistance', 'Ticket Management', 'Knowledge Base', 'User Training', 'System Maintenance'],
+      color: 'text-orange-400',
+      benefits: ['Instant response', '95% satisfaction', 'Proactive monitoring', 'User empowerment']
+    }
+  ];
+
+  const specializedServices = [
+    {
+      title: 'Quantum Computing Solutions',
+      description: 'Next-generation quantum algorithms and quantum security implementations',
+      icon: Atom,
+      price: 'Custom Pricing',
+      features: ['Quantum Algorithm Development', 'Quantum Security', 'Optimization Problems', 'Research & Development', 'Quantum Machine Learning', 'Cryptography'],
+      color: 'text-yellow-400',
+      benefits: ['Exponential speedup', 'Unbreakable security', 'Future-proof technology', 'Competitive advantage'],
+      category: 'Quantum'
+    },
+    {
+      title: 'Autonomous Systems',
+      description: 'Self-managing and self-optimizing systems for enterprise operations',
+      icon: Cpu,
+      price: 'Custom Pricing',
+      features: ['Self-Healing Systems', 'Predictive Maintenance', 'Resource Optimization', 'Performance Monitoring', 'Adaptive Learning', 'Intelligent Automation'],
+      color: 'text-green-400',
+      benefits: ['Zero-downtime operations', 'Predictive maintenance', 'Cost optimization', 'Scalable intelligence'],
+      category: 'Autonomous'
+    },
+    {
+      title: 'Blockchain & Web3',
+      description: 'Decentralized solutions, smart contracts, and Web3 applications',
+      icon: Lock,
+      price: '$2,999/month',
+      features: ['Smart Contract Development', 'DApp Creation', 'Token Economics', 'DeFi Solutions', 'NFT Platforms', 'DAO Implementation'],
+      color: 'text-purple-400',
+      benefits: ['Decentralized security', 'Transparent operations', 'Tokenization', 'Community governance'],
+      category: 'Blockchain'
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Connected devices and edge computing solutions',
+      icon: Globe,
+      price: '$1,999/month',
+      features: ['Device Management', 'Edge Analytics', 'Real-time Processing', 'Security Implementation', 'Data Collection', 'Remote Monitoring'],
+      color: 'text-cyan-400',
+      benefits: ['Real-time insights', 'Reduced latency', 'Cost efficiency', 'Scalable connectivity'],
+      category: 'IoT'
+    },
+    {
+      title: 'Business Intelligence',
+      description: 'Data-driven insights and predictive analytics for decision-making',
+      icon: BarChart,
+      price: '$2,299/month',
+      features: ['Data Warehousing', 'ETL Processes', 'Advanced Analytics', 'Executive Dashboards', 'Predictive Modeling', 'Real-time Reporting'],
+      color: 'text-blue-400',
+      benefits: ['Data-driven decisions', 'Predictive insights', 'Real-time analytics', 'Competitive intelligence'],
+      category: 'Analytics'
+    },
+    {
+      title: 'Robotics Solutions',
+      description: 'Intelligent robotic solutions for manufacturing and service industries',
+      icon: Settings,
+      price: 'Custom Pricing',
+      features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems', 'Quality Control', 'Assembly Automation'],
+      color: 'text-orange-400',
+      benefits: ['Increased productivity', 'Consistent quality', '24/7 operation', 'Cost reduction'],
+      category: 'Robotics'
     }
   ];
 
@@ -577,6 +662,64 @@ const HomePage: React.FC = () => {
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                     <a 
                       href="/it-services" 
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
+                    >
+                      Learn More
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          {/* Specialized Services Section */}
+          <section className="mb-16" aria-labelledby="specialized-services-heading">
+            <h2 id="specialized-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              Specialized Solutions
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+              Cutting-edge technologies for next-generation business solutions
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {specializedServices.map((service, index) => (
+                <article key={index} className="quantum-card p-6 hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
+                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
+                          <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
+                    <a 
+                      href="/specialized-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >
                       Learn More
