@@ -68,24 +68,18 @@ export default function HomePage() {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      {/* Navigation */}
-      <Navigation />
-=======
     <ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         {/* Navigation */}
         <Navigation />
       
-      {/* Skip to main content for accessibility */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-      >
-        Skip to main content
-      </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
+        {/* Skip to main content for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        >
+          Skip to main content
+        </a>
 
       <main className="relative z-10">
         {/* Hero Section */}
@@ -93,53 +87,10 @@ export default function HomePage() {
           className="relative py-20 px-4 text-center overflow-hidden"
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
-=======
-          <h1 
-            id="hero-heading" 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
-          >
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow" role="doc-subtitle">
-            Advanced AI and IT Solutions
-          </p>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-            Transform your business with our cutting-edge technology and achieve unprecedented growth.
-          </p>
-          
-          {/* Key Benefits */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">🚀</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
-            </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-            </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-              <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-            </div>
-          </div>
-          
-          {/* CTA Buttons */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              onClick={handlePhoneClick}
-              className="cyber-button w-full sm:w-auto text-center"
-              aria-label="Call us at (302) 464-0950"
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
             >
               Zion Tech Group
             </h1>
@@ -148,12 +99,18 @@ export default function HomePage() {
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+              Transform your business with our cutting-edge technology and achieve unprecedented growth.
             </p>
             
-            {/* Key Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 max-w-4xl mx-auto">
+            {/* Key Benefits */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
               <div className="cyber-card hologram-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-3xl mb-3">💰</div>
+                <div className="text-2xl sm:text-3xl mb-3">🚀</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+              </div>
+              <div className="cyber-card hologram-card p-4 sm:p-6">
+                <div className="text-2xl sm:text-3xl mb-3">⚡</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
               </div>
@@ -162,31 +119,28 @@ export default function HomePage() {
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-                <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Rapid Deployment</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Get your AI solutions up and running in weeks, not months</p>
-              </div>
             </div>
-
-<<<<<<< HEAD
+            
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13026009898"
+            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="tel:+13024640950"
                 onClick={handlePhoneClick}
-                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                aria-label="Call us at (302) 464-0950"
               >
-                Call: (302) 600-9898
+                <span>Call: (302) 464-0950</span>
               </a>
               <a 
                 href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
               >
                 Get Free Consultation
               </a>
             </div>
-=======
+          </div>
+        </section>
+
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -349,6 +303,57 @@ export default function HomePage() {
             </Suspense>
           </div>
 
+          {/* IT Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🖥️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">IT Services</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Comprehensive IT solutions including infrastructure, security, and support services.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $999/month</div>
+                  <a href="/it-services" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔒</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Cybersecurity</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Advanced security solutions including threat detection, prevention, and compliance management.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">Starting at $1,299/month</div>
+                  <a href="/cybersecurity" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Business Intelligence</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Data-driven insights and analytics to help you make informed business decisions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,199/month</div>
+                  <a href="/business-intelligence" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+          </div>
+
           {/* Additional Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <article className="cyber-card hologram-card p-4 sm:p-6">
@@ -394,7 +399,6 @@ export default function HomePage() {
                 <li>• Disaster Recovery</li>
               </ul>
             </article>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
           </div>
         </section>
 

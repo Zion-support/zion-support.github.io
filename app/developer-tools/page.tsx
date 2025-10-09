@@ -1,30 +1,8 @@
+'use client';
+
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const Developer-toolsPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Developer-tools</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under construction. Please check back soon for updates.
-          </p>
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-          >
-            Contact Us
-          </a>
-        </section>
-      </main>
-      
-      <Footer />
-=======
 import { ArrowRight, Star, CheckCircle, Code, Zap, Shield, Clock, Users } from 'lucide-react';
 
 const DeveloperToolsPage: React.FC = () => {
@@ -37,296 +15,249 @@ const DeveloperToolsPage: React.FC = () => {
       features: [
         'Real-time code suggestions',
         'Automated bug detection',
-        'Code refactoring assistance',
-        'Multi-language support (Python, JavaScript, Java, C++, Go, Rust)',
-        'Git integration and version control',
-        'Performance optimization tips',
-        'Code documentation generation',
-        'Security vulnerability scanning'
+        'Code refactoring',
+        'Multi-language support',
+        'IDE integration'
       ],
-      benefits: 'Save 40% development time',
-      popular: true,
-      rating: 4.9,
-      users: '10,000+'
+      popular: true
     },
     {
       title: 'API Testing Suite',
-      description: 'Comprehensive API testing and monitoring platform with automated test generation.',
+      description: 'Comprehensive API testing and debugging tools with automated test generation and performance monitoring.',
       icon: '🔧',
-      price: '$19/month',
+      price: '$49/month',
       features: [
-        'Automated API test generation',
+        'Automated test generation',
         'Performance monitoring',
-        'Load testing capabilities',
-        'API documentation generation',
         'Mock server creation',
-        'Integration with CI/CD pipelines',
-        'Real-time monitoring dashboard',
-        'Alert system for failures'
+        'API documentation',
+        'Team collaboration'
       ],
-      benefits: 'Reduce API bugs by 60%',
-      popular: true,
-      rating: 4.8,
-      users: '5,000+'
+      popular: false
     },
     {
-      title: 'Database Management Pro',
-      description: 'AI-powered database management with query optimization and performance monitoring.',
+      title: 'Database Management Tool',
+      description: 'Powerful database administration and optimization tools with AI-powered query optimization.',
       icon: '🗄️',
       price: '$39/month',
       features: [
-        'Query optimization suggestions',
-        'Database performance monitoring',
-        'Automated backup scheduling',
-        'Schema migration tools',
-        'Data visualization',
-        'Multi-database support',
-        'Security auditing',
-        'Capacity planning'
+        'Query optimization',
+        'Database monitoring',
+        'Backup automation',
+        'Performance analytics',
+        'Multi-database support'
       ],
-      benefits: 'Optimize database performance by 50%',
-      rating: 4.7,
-      users: '3,500+'
+      popular: true
     },
     {
-      title: 'Code Review Assistant',
-      description: 'Automated code review with AI-powered suggestions and best practices enforcement.',
-      icon: '👁️',
-      price: '$25/month',
+      title: 'Cloud Deployment Manager',
+      description: 'Streamlined cloud deployment and infrastructure management with automated scaling and monitoring.',
+      icon: '☁️',
+      price: '$59/month',
       features: [
-        'Automated code review',
-        'Best practices enforcement',
-        'Security vulnerability detection',
-        'Code quality metrics',
-        'Team collaboration tools',
-        'Integration with GitHub/GitLab',
-        'Custom rule configuration',
-        'Performance impact analysis'
+        'Automated deployments',
+        'Infrastructure as code',
+        'Auto-scaling',
+        'Cost optimization',
+        'Multi-cloud support'
       ],
-      benefits: 'Improve code quality by 45%',
-      rating: 4.6,
-      users: '7,200+'
-    },
-    {
-      title: 'DevOps Automation',
-      description: 'Complete DevOps automation platform with CI/CD, monitoring, and deployment tools.',
-      icon: '🚀',
-      price: '$49/month',
-      features: [
-        'Automated CI/CD pipelines',
-        'Container orchestration',
-        'Infrastructure as Code',
-        'Monitoring and alerting',
-        'Auto-scaling capabilities',
-        'Multi-cloud deployment',
-        'Security scanning',
-        'Cost optimization'
-      ],
-      benefits: 'Deploy 5x faster with 99.9% uptime',
-      rating: 4.9,
-      users: '8,500+'
+      popular: false
     },
     {
       title: 'Security Scanner Pro',
-      description: 'Comprehensive security scanning for applications, dependencies, and infrastructure.',
+      description: 'Comprehensive security scanning and vulnerability assessment tools for applications and infrastructure.',
       icon: '🔒',
-      price: '$35/month',
+      price: '$79/month',
       features: [
         'Vulnerability scanning',
-        'Dependency security checks',
-        'Infrastructure security audit',
-        'Compliance reporting',
-        'Penetration testing tools',
-        'Real-time threat monitoring',
-        'Security policy enforcement',
-        'Incident response automation'
+        'Security monitoring',
+        'Compliance checking',
+        'Threat detection',
+        'Automated patching'
       ],
-      benefits: 'Reduce security risks by 70%',
-      rating: 4.8,
-      users: '6,800+'
+      popular: true
+    },
+    {
+      title: 'Performance Profiler',
+      description: 'Advanced application performance profiling and optimization tools with real-time monitoring.',
+      icon: '📊',
+      price: '$69/month',
+      features: [
+        'Real-time monitoring',
+        'Performance profiling',
+        'Bottleneck detection',
+        'Optimization suggestions',
+        'Historical analysis'
+      ],
+      popular: false
     }
   ];
 
   const categories = [
-    { name: 'Code Editors', count: 8, icon: Code },
-    { name: 'Testing Tools', count: 12, icon: CheckCircle },
-    { name: 'Database Tools', count: 6, icon: Users },
-    { name: 'DevOps Tools', count: 10, icon: Zap },
-    { name: 'Security Tools', count: 7, icon: Shield },
-    { name: 'Monitoring Tools', count: 9, icon: Clock }
+    { name: 'AI Tools', count: 12, icon: '🤖' },
+    { name: 'API Tools', count: 8, icon: '🔌' },
+    { name: 'Database Tools', count: 6, icon: '🗄️' },
+    { name: 'Cloud Tools', count: 10, icon: '☁️' },
+    { name: 'Security Tools', count: 7, icon: '🔒' },
+    { name: 'Performance Tools', count: 5, icon: '📊' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <main className="relative z-10">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 text-center overflow-hidden">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text">
               Developer Tools
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Powerful AI-driven development tools that accelerate your coding workflow 
-              and improve code quality.
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
+              Powerful Development Utilities
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Start Free Trial
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Documentation
-              </button>
-            </div>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Accelerate your AI and IT projects with our comprehensive suite of developer tools and utilities.
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Categories Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        {/* Tool Categories */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Tool Categories
             </h2>
-            <p className="text-xl text-gray-600">
-              Browse our comprehensive collection of developer tools
-            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {categories.map((category, index) => (
+                <div key={index} className="cyber-card hologram-card p-6 text-center">
+                  <div className="text-4xl mb-3">{category.icon}</div>
+                  <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
+                  <p className="text-cyan-400 text-sm">{category.count} tools</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {categories.map((category, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
-                <category.icon className="w-8 h-8 mx-auto mb-3 text-blue-600" />
-                <h3 className="font-semibold text-gray-900 mb-1">{category.name}</h3>
-                <p className="text-sm text-gray-600">{category.count} tools</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Tools */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        {/* Featured Tools */}
+        <section className="py-16 px-4 bg-gradient-to-r from-gray-900/50 to-slate-900/50">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Featured Developer Tools
             </h2>
-            <p className="text-xl text-gray-600">
-              Hand-picked tools that boost developer productivity
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tools.map((tool, index) => (
-              <div key={index} className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow relative ${tool.popular ? 'ring-2 ring-blue-500' : ''}`}>
-                {tool.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-4xl">{tool.icon}</div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-blue-600">{tool.price}</div>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                      {tool.rating} ({tool.users} users)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {tools.map((tool, index) => (
+                <div key={index} className="cyber-card hologram-card p-6 relative group hover:scale-105 transition-all duration-300">
+                  {tool.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-1 rounded-full text-sm font-bold flex items-center space-x-1">
+                        <Star className="w-4 h-4" />
+                        <span>POPULAR</span>
+                      </div>
                     </div>
+                  )}
+                  
+                  <div className="text-4xl mb-4">{tool.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {tool.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {tool.description}
+                  </p>
+                  
+                  <div className="space-y-2 mb-6">
+                    {tool.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{tool.price}</div>
+                    <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2">
+                      <span>Get Started</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{tool.title}</h3>
-                <p className="text-gray-600 mb-4">{tool.description}</p>
-                <div className="mb-4">
-                  <div className="text-sm font-medium text-green-600 mb-2">{tool.benefits}</div>
-                  <ul className="space-y-1">
-                    {tool.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center">
-                  Try Free
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Trusted by Developers Worldwide
+        {/* Stats Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+              Developer Success Metrics
             </h2>
-            <p className="text-xl text-gray-600">
-              Join thousands of developers who have improved their productivity
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">50,000+</div>
-              <div className="text-gray-600">Active Developers</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">1M+</div>
-              <div className="text-gray-600">Lines of Code Analyzed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">99.9%</div>
-              <div className="text-gray-600">Uptime Guarantee</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support Available</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+                <div className="text-gray-300">Developer Tools</div>
+              </div>
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">10K+</div>
+                <div className="text-gray-300">Active Developers</div>
+              </div>
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime</div>
+              </div>
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+                <div className="text-gray-300">Support</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Boost Your Development?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Start your free trial today and experience the power of AI-driven development tools
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-            >
-              📞 +1 302 464 0950
-            </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              ✉️ kleber@ziontechgroup.com
-            </a>
+        {/* Contact Section */}
+        <section className="py-16 px-4 bg-gradient-to-r from-gray-900/50 to-slate-900/50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
+              Ready to Boost Your Development?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12">
+              Get started with our developer tools today and accelerate your AI and IT projects.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="cyber-card hologram-card p-6">
+                <h3 className="text-xl font-bold text-white mb-2">Email Support</h3>
+                <p className="text-gray-300 mb-4">Get detailed help via email</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              
+              <div className="cyber-card hologram-card p-6">
+                <h3 className="text-xl font-bold text-white mb-2">Phone Support</h3>
+                <p className="text-gray-300 mb-4">Speak with our experts</p>
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold">
+                  +1 302 464 0950
+                </a>
+              </div>
+              
+              <div className="cyber-card hologram-card p-6">
+                <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
+                <p className="text-gray-300 mb-4">Our headquarters</p>
+                <p className="text-cyan-400 font-semibold">
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="mt-8 text-sm text-blue-200">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
+        </section>
+      </main>
+      
+      <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default Developer-toolsPage;
-=======
 export default DeveloperToolsPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
