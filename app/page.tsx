@@ -104,7 +104,7 @@ const HomePage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain hologram-effect">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -131,12 +131,12 @@ const HomePage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch neon-text quantum-shift"
               data-text="Zion Tech Group"
             >
               Zion Tech Group
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text energy-pulse" role="doc-subtitle">
               Advanced AI and IT Solutions
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -146,24 +146,24 @@ const HomePage: React.FC = () => {
             
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
-              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl mb-3">🚀</div>
-                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
+              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 data-stream cyber-border energy-pulse">
+                <div className="text-2xl sm:text-3xl mb-3 cyber-rotate">🚀</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">AI-Powered Solutions</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
+              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 data-stream cyber-border energy-pulse">
+                <div className="text-2xl sm:text-3xl mb-3 cyber-rotate">⚡</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Proven Results</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
+              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 data-stream cyber-border energy-pulse">
+                <div className="text-2xl sm:text-3xl mb-3 cyber-rotate">🔒</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Enterprise Security</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
               </div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
-                <div className="text-2xl sm:text-3xl mb-3">🌐</div>
-                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
+              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1 data-stream cyber-border energy-pulse">
+                <div className="text-2xl sm:text-3xl mb-3 cyber-rotate">🌐</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Global Reach</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
               </div>
             </div>

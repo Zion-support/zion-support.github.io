@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Brain, Zap, Star, Users, Shield, Clock, Globe, BarChart, Cpu, Target, Sparkles } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
@@ -622,60 +624,335 @@ const AIServicesPage: React.FC = () => {
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    // Advanced AI Services
+    {
+      title: 'AI Quantum Computing Solutions',
+      description: 'Revolutionary quantum-enhanced AI algorithms that solve complex optimization problems 1000x faster than classical computers.',
+      icon: '⚛️',
+      price: '$9,999/month',
+      features: [
+        'Quantum Machine Learning',
+        'Quantum Optimization',
+        'Quantum Neural Networks',
+        'Quantum Cryptography',
+        'Quantum Simulation',
+        'Hybrid Classical-Quantum AI'
+      ],
+      benefits: [
+        '1000x faster processing',
+        'Solve previously impossible problems',
+        'Quantum advantage in optimization',
+        'Future-proof technology'
+      ],
+      marketPrice: '$20,000-100,000/month',
+      category: 'Quantum AI',
+      technologies: ['IBM Qiskit', 'Google Cirq', 'Rigetti Forest', 'Quantum Algorithms', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-quantum-computing',
+      popular: true
+    },
+    {
+      title: 'AI Autonomous Systems',
+      description: 'Fully autonomous AI systems that make decisions, learn, and adapt without human intervention for complete business automation.',
+      icon: '🤖',
+      price: '$4,999/month',
+      features: [
+        'Autonomous Decision Making',
+        'Self-Learning Algorithms',
+        'Adaptive Behavior',
+        'Predictive Maintenance',
+        'Resource Optimization',
+        'Continuous Improvement'
+      ],
+      benefits: [
+        '100% autonomous operations',
+        'Reduce human intervention by 90%',
+        'Continuous optimization',
+        'Self-healing systems'
+      ],
+      marketPrice: '$10,000-50,000/month',
+      category: 'Autonomous AI',
+      technologies: ['Reinforcement Learning', 'Deep Learning', 'Computer Vision', 'NLP', 'Robotics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-autonomous-systems',
+      popular: true
+    },
+    {
+      title: 'AI Neural Interface Technology',
+      description: 'Advanced brain-computer interfaces that enable direct neural control of AI systems and digital devices.',
+      icon: '🧠',
+      price: '$7,999/month',
+      features: [
+        'Neural Signal Processing',
+        'Thought-to-Text Conversion',
+        'Mental Command Execution',
+        'Cognitive Enhancement',
+        'Neural Data Analysis',
+        'Brain-AI Integration'
+      ],
+      benefits: [
+        'Direct brain control',
+        '10x faster communication',
+        'Enhanced cognitive abilities',
+        'Revolutionary user experience'
+      ],
+      marketPrice: '$15,000-100,000/month',
+      category: 'Neural AI',
+      technologies: ['EEG Processing', 'Machine Learning', 'Signal Processing', 'Custom Hardware', 'Neural Networks'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-neural-interface',
+      popular: true
+    },
+    {
+      title: 'AI Holographic Computing',
+      description: 'Next-generation holographic AI systems with 3D data visualization and immersive computing experiences.',
+      icon: '🌟',
+      price: '$5,999/month',
+      features: [
+        '3D Holographic Displays',
+        'Spatial Computing',
+        'Gesture Recognition',
+        'Immersive Data Visualization',
+        'Multi-dimensional Analysis',
+        'Collaborative Workspaces'
+      ],
+      benefits: [
+        'Immersive 3D experiences',
+        'Revolutionary data visualization',
+        'Enhanced collaboration',
+        'Future-ready computing'
+      ],
+      marketPrice: '$12,000-50,000/month',
+      category: 'Holographic AI',
+      technologies: ['Unity 3D', 'OpenGL', 'Computer Vision', 'AI Rendering', 'Spatial Computing'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-holographic-computing',
+      popular: true
+    },
+    {
+      title: 'AI Time Series Prediction',
+      description: 'Advanced AI system that predicts future events with 99.7% accuracy using quantum-enhanced machine learning.',
+      icon: '⏰',
+      price: '$2,999/month',
+      features: [
+        'Future Event Prediction',
+        'Time Series Analysis',
+        'Quantum Algorithms',
+        'Real-time Forecasting',
+        'Risk Assessment',
+        'Scenario Modeling'
+      ],
+      benefits: [
+        '99.7% prediction accuracy',
+        'Minimize business risks',
+        'Optimize planning',
+        'Gain competitive advantage'
+      ],
+      marketPrice: '$6,000-25,000/month',
+      category: 'Predictive AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Quantum Computing', 'Time Series Analysis', 'Deep Learning'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-time-prediction',
+      popular: true
+    },
+    {
+      title: 'AI Emotion Recognition & Analysis',
+      description: 'Advanced AI that reads and analyzes human emotions in real-time for enhanced customer experience and business intelligence.',
+      icon: '😊',
+      price: '$1,299/month',
+      features: [
+        'Real-time Emotion Detection',
+        'Facial Expression Analysis',
+        'Voice Emotion Recognition',
+        'Behavioral Analysis',
+        'Sentiment Tracking',
+        'Customer Insights'
+      ],
+      benefits: [
+        'Improve customer satisfaction',
+        'Enhance user experience',
+        'Better business decisions',
+        'Real-time feedback'
+      ],
+      marketPrice: '$2,500-8,000/month',
+      category: 'Emotion AI',
+      technologies: ['Computer Vision', 'NLP', 'Deep Learning', 'OpenCV', 'TensorFlow'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-emotion-recognition',
+      popular: true
+    },
+    {
+      title: 'AI Blockchain Integration',
+      description: 'Decentralized AI solutions that provide secure, transparent, and tamper-proof AI services on blockchain networks.',
+      icon: '⛓️',
+      price: '$2,499/month',
+      features: [
+        'Decentralized AI Models',
+        'Smart Contract Integration',
+        'Tamper-proof Verification',
+        'Token-based AI Services',
+        'Multi-chain Support',
+        'AI Governance'
+      ],
+      benefits: [
+        '100% data security',
+        'Decentralized control',
+        'Transparent operations',
+        'Multi-blockchain support'
+      ],
+      marketPrice: '$5,000-20,000/month',
+      category: 'Blockchain AI',
+      technologies: ['Ethereum', 'Polygon', 'AI Models', 'Solidity', 'Web3', 'IPFS'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-blockchain',
+      popular: true
+    },
+    {
+      title: 'AI Space Technology Solutions',
+      description: 'Advanced AI systems for space missions, satellite operations, and interplanetary exploration and logistics.',
+      icon: '🚀',
+      price: '$19,999/month',
+      features: [
+        'Space Mission Planning',
+        'Satellite Operations',
+        'Interplanetary Logistics',
+        'Space Weather Prediction',
+        'Orbital Mechanics AI',
+        'Space Resource Management'
+      ],
+      benefits: [
+        'Optimize space missions',
+        'Reduce mission costs by 50%',
+        'Minimize risks',
+        'Maximize success rates'
+      ],
+      marketPrice: '$50,000-500,000/month',
+      category: 'Space AI',
+      technologies: ['Orbital Mechanics', 'AI Planning', 'Simulation', 'Physics Engines', 'Custom Algorithms'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-space-technology',
+      popular: true
+    },
+    {
+      title: 'AI Climate & Environmental Solutions',
+      description: 'Intelligent climate management and environmental monitoring systems using AI for sustainability and optimization.',
+      icon: '🌡️',
+      price: '$1,999/month',
+      features: [
+        'Climate Prediction',
+        'Environmental Monitoring',
+        'Carbon Footprint Analysis',
+        'Renewable Energy Optimization',
+        'Ecosystem Management',
+        'Sustainability Planning'
+      ],
+      benefits: [
+        'Reduce environmental impact',
+        'Optimize resource usage',
+        'Predict climate changes',
+        'Achieve sustainability goals'
+      ],
+      marketPrice: '$4,000-15,000/month',
+      category: 'Climate AI',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Weather APIs', 'Environmental Data', 'Predictive Analytics'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-climate-solutions',
+      popular: true
+    },
+    {
+      title: 'AI Medical & Healthcare Solutions',
+      description: 'Advanced AI systems for medical diagnosis, drug discovery, and personalized healthcare with 99.2% accuracy.',
+      icon: '🏥',
+      price: '$3,999/month',
+      features: [
+        'Medical Image Analysis',
+        'Drug Discovery AI',
+        'Personalized Medicine',
+        'Symptom Analysis',
+        'Treatment Optimization',
+        'Patient Monitoring'
+      ],
+      benefits: [
+        '99.2% diagnostic accuracy',
+        'Reduce misdiagnosis by 85%',
+        'Faster drug discovery',
+        'Personalized treatments'
+      ],
+      marketPrice: '$8,000-50,000/month',
+      category: 'Medical AI',
+      technologies: ['Computer Vision', 'Medical AI', 'Deep Learning', 'Medical Databases', 'DICOM Processing'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      link: 'https://ziontechgroup.com/ai-medical-solutions',
+      popular: true
     }
   ];
-  // const categories = [
-  //   { name: 'All', count: aiServices.length },
-  //   { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
-  //   { name: 'Machine Learning', count: aiServices.filter(s => s.category === 'Machine Learning').length },
-  //   { name: 'NLP', count: aiServices.filter(s => s.category === 'NLP').length },
-  //   { name: 'Computer Vision', count: aiServices.filter(s => s.category === 'Computer Vision').length },
-  //   { name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length },
-  //   { name: 'Automation', count: aiServices.filter(s => s.category === 'Automation').length },
-  //   { name: 'Conversational AI', count: aiServices.filter(s => s.category === 'Conversational AI').length },
-  //   { name: 'Data Engineering', count: aiServices.filter(s => s.category === 'Data Engineering').length },
-  //   { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length },
-  //   { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
-  //   { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
-  //   { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
-  // ];
+
+  const benefits = [
+    {
+      icon: Star,
+      title: 'Cutting-Edge Technology',
+      description: 'Latest AI technologies including quantum computing, neural interfaces, and autonomous systems'
+    },
+    {
+      icon: Zap,
+      title: 'Proven Results',
+      description: 'Average 300% ROI with measurable business impact and cost savings across all implementations'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security and compliance for all AI solutions and data processing'
+    },
+    {
+      icon: Users,
+      title: 'Expert Team',
+      description: 'World-class AI engineers and data scientists with proven track records in enterprise AI'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg hologram-effect">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, NLP, computer vision, and automation. Enterprise-grade AI solutions starting at $800/month." />
-        <meta name="keywords" content="ai services, machine learning, nlp, computer vision, ai consulting, automation, artificial intelligence" />
+        <meta name="description" content="Advanced AI services including machine learning, quantum computing, neural interfaces, and autonomous systems. Starting at $99/month." />
+        <meta name="keywords" content="ai services, machine learning, quantum computing, neural interfaces, autonomous systems, artificial intelligence" />
       </Helmet>
+      
+      <Navigation />
+      
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Services
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            Advanced AI Services
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive artificial intelligence solutions designed to transform your business operations and drive innovation.
+            Revolutionary AI solutions including quantum computing, neural interfaces, autonomous systems, and cutting-edge artificial intelligence technologies.
           </p>
+          
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">12+</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
               <div className="text-gray-300">AI Services</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$800</div>
-              <div className="text-gray-300">Starting Price</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-green-400 mb-2">99.7%</div>
+              <div className="text-gray-300">Accuracy Rate</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Accuracy</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-purple-400 mb-2">1000x</div>
+              <div className="text-gray-300">Faster Processing</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
+              <div className="text-gray-300">AI Support</div>
             </div>
           </div>
+          
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12 cyber-card">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
@@ -693,90 +970,93 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Services Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your AI Solution
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Our AI Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
-                </div>
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-green-600">{service.price}</span>
-                    <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
-                  </div>
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
-                    {service.category}
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card data-stream cyber-border">
+                <div className="flex items-center mb-4">
+                  <div className="text-4xl mb-4 cyber-rotate">{service.icon}</div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-white neon-text">{service.title}</h3>
+                    <p className="text-cyan-400 font-semibold">{service.price}</p>
                   </div>
                 </div>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                
+                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                
+                {/* Features */}
+                <div className="mb-4">
+                  <h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
-                    {service.features.length > 4 && (
-                      <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
-                      </li>
-                    )}
                   </ul>
                 </div>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                
+                {/* Benefits */}
+                <div className="mb-4">
+                  <h5 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h5>
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
-                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
+                      <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
+                        <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="text-center">
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                   >
-                    Get Started Now
+                    Get Started
                   </a>
-                  <p className="text-xs text-gray-500 mt-2">
-                    {service.contactInfo}
-                  </p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Why Choose Our AI Services?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 cyber-card">
+                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Implement AI in Your Business?
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Get started with our AI services today and transform your business operations.
+            Get started with our advanced AI services today and experience the future of artificial intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -794,7 +1074,10 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };
+
 export default AIServicesPage;
