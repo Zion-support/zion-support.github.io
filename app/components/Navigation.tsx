@@ -300,25 +300,25 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-glow-effect' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center cyber-pulse">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl neon-text holographic-text-enhanced">Zion Tech Group</span>
           </Link>
 
 <<<<<<< HEAD
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium cyber-glow-effect">
               Home
             </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium cyber-glow-effect">              
               About
             </Link>
 
@@ -541,7 +541,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="cyber-button inline-flex items-center"
+              className="cyber-button-enhanced inline-flex items-center"
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -714,7 +714,7 @@ const Navigation: React.FC = () => {
 
               <a
                 href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
+                className="block w-full text-center cyber-button-enhanced mt-4"
                 onClick={closeAllMenus}
               >
                 <Phone className="w-4 h-4 inline mr-2" />

@@ -161,7 +161,11 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
+<<<<<<< HEAD
               {aiServices.slice(0, 8).map((service, index) => (
+=======
+              {aiServices.slice(0, 6).map((service, index) => (
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-acd7
                 <li key={index}>
                   <a 
                     href={service.url}
@@ -214,6 +218,9 @@ const Footer: React.FC = memo(() => {
           {/* Micro SAAS & Emerging Tech */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-acd7
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Solutions</h3>
             <div className="space-y-4">
               <div>
@@ -221,12 +228,17 @@ const Footer: React.FC = memo(() => {
                 <ul className="space-y-2">
                   {microSaasServices.slice(0, 3).map((service, index) => (
                     <li key={index}>
+<<<<<<< HEAD
                       <a 
+=======
+                      <Link 
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-acd7
                         href={service.url}
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                       >
                         <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                         {service.name}
+<<<<<<< HEAD
                       </a>
                     </li>
                   ))}
@@ -315,6 +327,12 @@ const Footer: React.FC = memo(() => {
                   {contactInfo.phone}
                 </a>
 >>>>>>> cursor/website-audit-and-update-with-deployment-6266
+=======
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-acd7
               </div>
               <div className="flex items-center text-sm text-gray-300">
                 <Mail className="w-4 h-4 mr-2" />
