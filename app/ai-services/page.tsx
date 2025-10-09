@@ -210,9 +210,6 @@ const AIServicesPage: React.FC = () => {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3845
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b8f2
               </div>
             </div>
             
@@ -342,7 +339,6 @@ const AIServicesPage: React.FC = () => {
                   <div className="flex justify-between">
                     <span className="text-gray-400">Free Trial:</span>
                     <span className="text-green-400">{service.freeTrial}</span>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3845
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400">Target:</span>
