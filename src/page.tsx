@@ -1,6 +1,40 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { 
+  Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, 
+  BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, 
+  Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, 
+  Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, 
+  Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, 
+  GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, 
+  Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, 
+  Activity, Atom, Rocket, Microscope, Layers, Server, Network, HardDrive, 
+  Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Scanner, Router, Switch, 
+  Firewall, Antivirus, Backup, Recovery, Migration, Integration, Consulting, 
+  Support, Maintenance, Upgrade, Security, Compliance, Audit, Training, 
+  Documentation, Testing, Quality, Performance, Scalability, Reliability, 
+  Availability, Monitoring, Alerting, Logging, Analytics, Reporting, Dashboard, 
+  API, SDK, Framework, Library, Tool, Platform, Service, Solution, Product, 
+  Technology, Innovation, Digital, Transformation, Automation, Optimization, 
+  Efficiency, Productivity, Growth, Success, Future, Next, Generation, Advanced, 
+  Cutting, Edge, State, Art, Revolutionary, Breakthrough, Game, Changing, 
+  Disruptive, Innovative, Intelligent, Smart, AI, ML, Deep, Learning, Neural, 
+  Network, Algorithm, Model, Data, Science, Analytics, Big, Data, Cloud, 
+  Computing, Edge, Computing, Quantum, Computing, Blockchain, Cryptocurrency, 
+  NFT, Metaverse, AR, VR, IoT, Cybersecurity, Privacy, GDPR, Compliance, 
+  Regulatory, Standards, Best, Practices, Methodology, Process, Workflow, 
+  Pipeline, Architecture, Design, Pattern, Framework, Methodology, Agile, 
+  DevOps, CI, CD, Microservices, Serverless, Container, Kubernetes, Docker, 
+  AWS, Azure, GCP, IBM, Oracle, Salesforce, Microsoft, Google, Amazon, Apple, 
+  Facebook, Meta, Twitter, LinkedIn, Instagram, TikTok, YouTube, Netflix, 
+  Spotify, Uber, Airbnb, Tesla, SpaceX, OpenAI, Anthropic, Google, DeepMind, 
+  NVIDIA, Intel, AMD, Qualcomm, ARM, Apple, Samsung, Huawei, Xiaomi, OnePlus, 
+  Sony, LG, Dell, HP, Lenovo, Asus, Acer, MSI, Razer, Logitech, Corsair, 
+  SteelSeries, HyperX, Kingston, Samsung, WD, Seagate, Crucial, 
+  ASUS, Gigabyte, MSI, EVGA, Zotac, Sapphire, PowerColor, XFX, ASRock, 
+  Biostar, ECS, Foxconn, Supermicro, Tyan, Intel, AMD, NVIDIA, Qualcomm, 
+  MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink 
+} from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -58,6 +92,17 @@ const HomePage: React.FC = () => {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
+      });
+    }
+  }, []);
+
+  // Enhanced error handling
+  const handleError = useCallback((error: Error) => {
+    console.error('Application error:', error);
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
       });
     }
   }, []);
@@ -553,13 +598,56 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */}
-      <PerformanceOptimizer />
+      <PerformanceOptimizer 
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enablePreloading={true}
+        enableCodeSplitting={true}
+        enableResourceHints={true}
+        enableServiceWorker={true}
+      />
       
       {/* SEO Optimizer */}
-      <SEOOptimizer />
+      <SEOOptimizer 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Get 300% ROI with our AI solutions."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'IT services']}
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
+          "foundingDate": "2020",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "Customer Service",
+            "areaServed": "US",
+            "availableLanguage": "en"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          }
+        }}
+      />
       
       {/* Accessibility Enhancer */}
-      <AccessibilityEnhancer />
+      <AccessibilityEnhancer 
+        enableKeyboardNavigation={true}
+        enableScreenReaderSupport={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+        enableSkipLinks={true}
+        enableARIALabels={true}
+      />
       
       {/* Analytics */}
       <Analytics />
@@ -571,59 +659,88 @@ const HomePage: React.FC = () => {
       <Navigation />
 
       {/* Hero Section with Futuristic Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        role="banner"
+        aria-label="Zion Tech Group - AI and IT Solutions"
+      >
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div 
+          className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"
+          aria-hidden="true"
+        ></div>
+        <div 
+          className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"
+          aria-hidden="true"
+        ></div>
         
         {/* Neon Grid Overlay */}
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px'
-        }}></div>
+        <div 
+          className="absolute inset-0 cyber-grid" 
+          aria-hidden="true"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }}
+        ></div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
               ZION TECH GROUP
             </h1>
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
               AI-Powered Enterprise Solutions & Digital Transformation
             </p>
+            <p className="text-lg text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with cutting-edge AI solutions, quantum computing, and autonomous systems. 
+              Get up to 300% ROI with our proven enterprise-grade technology.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
-                <Phone className="w-6 h-6 mr-2" />
-                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
+                <Phone className="w-6 h-6 mr-2" aria-hidden="true" />
+                <a 
+                  href="tel:+13024640950" 
+                  onClick={handlePhoneClick} 
+                  className="hover:text-cyan-300 transition-colors"
+                  aria-label="Call us at +1 302 464 0950"
+                >
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-center text-purple-400 text-lg">
-                <Mail className="w-6 h-6 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
+                <Mail className="w-6 h-6 mr-2" aria-hidden="true" />
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="hover:text-purple-300 transition-colors"
+                  aria-label="Email us at kleber@ziontechgroup.com"
+                >
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center text-pink-400 text-lg">
-                <MapPin className="w-6 h-6 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <MapPin className="w-6 h-6 mr-2" aria-hidden="true" />
+                <address className="not-italic">
+                  364 E Main St STE 1008, Middletown DE 19709
+                </address>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">🚀</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" role="region" aria-label="Key Performance Metrics">
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105" role="article">
+                <div className="text-4xl mb-4" aria-hidden="true">🚀</div>
                 <h3 className="text-xl font-bold text-white mb-2">300% ROI</h3>
                 <p className="text-gray-300">Average return on AI investments</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">⚡</div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105" role="article">
+                <div className="text-4xl mb-4" aria-hidden="true">⚡</div>
                 <h3 className="text-xl font-bold text-white mb-2">70% Cost Reduction</h3>
                 <p className="text-gray-300">Through intelligent automation</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">🎯</div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 hover:scale-105" role="article">
+                <div className="text-4xl mb-4" aria-hidden="true">🎯</div>
                 <h3 className="text-xl font-bold text-white mb-2">90% Efficiency</h3>
                 <p className="text-gray-300">Gains with our AI solutions</p>
               </div>
@@ -633,10 +750,10 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Micro SAAS Services Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" role="region" aria-labelledby="micro-saas-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 id="micro-saas-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Micro SAAS Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -645,19 +762,19 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" role="list">
             {microSAASServices.map((service, index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <article key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20" role="listitem">
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                    <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg" aria-label="Popular service">
                       🔥 POPULAR
                     </div>
                   </div>
                 )}
                 
                 <div className="text-center mb-4">
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -708,22 +825,23 @@ const HomePage: React.FC = () => {
                   <a 
                     href={service.link}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    aria-label={`Get started with ${service.title}`}
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
                   </a>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       {/* AI Services Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900" role="region" aria-labelledby="ai-services-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 id="ai-services-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               AI Services & Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -732,11 +850,11 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
             {aiServices.map((service, index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+              <article key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20" role="listitem">
                 <div className="text-center mb-6">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`} aria-hidden="true">
                     <service.icon className={`w-8 h-8 ${service.color}`} />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
@@ -787,22 +905,23 @@ const HomePage: React.FC = () => {
                   <a 
                     href={`mailto:${service.contact}?subject=Interest in ${service.title}`}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    aria-label={`Contact us about ${service.title}`}
                   >
                     Contact Us
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
                   </a>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       {/* IT Services Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" role="region" aria-labelledby="it-services-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 id="it-services-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               IT Services & Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -811,11 +930,11 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
             {itServices.map((service, index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+              <article key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20" role="listitem">
                 <div className="text-center mb-6">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`} aria-hidden="true">
                     <service.icon className={`w-8 h-8 ${service.color}`} />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
@@ -871,7 +990,7 @@ const HomePage: React.FC = () => {
                     <Phone className="w-4 h-4 ml-2" />
                   </a>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
@@ -957,10 +1076,10 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" role="region" aria-labelledby="contact-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 id="contact-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -968,33 +1087,42 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" role="list">
+            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300" role="listitem">
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" aria-hidden="true" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
+              <a 
+                href="tel:+13024640950" 
+                onClick={handlePhoneClick} 
+                className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold"
+                aria-label="Call us at +1 302 464 0950"
+              >
                 +1 302 464 0950
               </a>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300" role="listitem">
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" aria-hidden="true" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-purple-400 hover:text-purple-300 text-lg font-semibold"
+                aria-label="Email us at kleber@ziontechgroup.com"
+              >
                 kleber@ziontechgroup.com
               </a>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
-              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300" role="listitem">
+              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" aria-hidden="true" />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
-              <p className="text-pink-400 text-sm">
+              <address className="text-pink-400 text-sm not-italic">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
-              </p>
+              </address>
             </div>
           </div>
         </div>
