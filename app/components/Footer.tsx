@@ -4,18 +4,35 @@ import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, 
 
 const Footer: React.FC = () => {
   const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
-    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
-    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
-    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
-    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
-    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
-    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+    // Productivity
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', category: 'Productivity' },
+    { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'AI-powered task management', category: 'Productivity' },
+    { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Smart scheduling & calendar', category: 'Productivity' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation', category: 'Productivity' },
+    
+    // Content & Marketing
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI-powered writing', category: 'Content' },
+    { name: 'AI Content Writer', url: '/ai-content-writer', description: 'Professional content creation', category: 'Content' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', category: 'Marketing' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns', category: 'Marketing' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation', category: 'Marketing' },
+    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation', category: 'Content' },
+    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis', category: 'Content' },
+    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music', category: 'Content' },
+    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation', category: 'Content' },
+    
+    // Business & Analytics
+    { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart customer management', category: 'Business' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics', category: 'Analytics' },
+    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Interactive data charts', category: 'Analytics' },
+    { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights', category: 'Finance' },
+    { name: 'AI Expense Tracker', url: '/expense-tracker', description: 'AI expense management', category: 'Finance' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Automated sales processes', category: 'Sales' },
+    
+    // Support & Customer Service
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', category: 'Support' },
+    { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management', category: 'Support' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Build custom chatbots', category: 'Support' }
   ];
 
   const aiServices = [
@@ -142,20 +159,30 @@ const Footer: React.FC = () => {
               <Zap className="w-4 h-4 mr-2" />
               Micro SAAS
             </h3>
-            <ul className="space-y-2">
-              {microSaasServices.map((service) => (
-                <li key={service.name}>
-                  <a href={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </li>
+            <div className="space-y-4">
+              {['Productivity', 'Content', 'Marketing', 'Business', 'Analytics'].map(category => (
+                <div key={category}>
+                  <h4 className="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">{category}</h4>
+                  <ul className="space-y-1">
+                    {microSaasServices
+                      .filter(service => service.category === category)
+                      .slice(0, 3)
+                      .map((service) => (
+                      <li key={service.name}>
+                        <a href={service.url}
+                          className="group flex items-center text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+                        >
+                          <span>{service.name}</span>
+                          <ArrowRight className="w-2 h-2 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
             <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4 text-sm"
             >
               View All Micro SAAS →
             </a>
