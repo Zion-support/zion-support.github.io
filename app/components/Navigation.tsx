@@ -37,11 +37,15 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
-    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer', icon: DollarSign },
+    { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
     { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
     { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Building },
+    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager', icon: Settings },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Heart },
+    { name: 'AI Education Platform', href: '/ai-education-platform', icon: Users },
   ];
 
   const aiServices = [
@@ -52,7 +56,11 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
-    { name: 'AI Fraud Detection', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Car },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Smartphone },
+    { name: 'AI Climate Intelligence', href: '/ai-climate-intelligence', icon: Globe },
   ];
 
   const itServices = [
@@ -61,13 +69,17 @@ const Navigation: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database', icon: Database },
-    { name: 'Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
+    { name: 'Mobile App Development', href: '/mobile-app-development', icon: Smartphone },
     { name: 'Web Development', href: '/web-development', icon: Code },
     { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
     { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
     { name: 'IT Support', href: '/it-support', icon: Users },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
     { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
+    { name: '5G Networks', href: '/5g-networks', icon: Globe },
+    { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Eye },
+    { name: 'Digital Twins', href: '/digital-twins', icon: Database },
   ];
 
   return (
