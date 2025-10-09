@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/offline/page.tsx
 'use client';
 =======
@@ -131,3 +132,5 @@ export default OfflinePage;
 =======
 import React from "react"; export default function Page() { return <div>Offline</div>; }
 >>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+>>>>>>> main

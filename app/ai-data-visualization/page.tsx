@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> origin/main
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
@@ -384,11 +379,6 @@ const AIDataVisualizationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AIDataVisualizationPage;
-=======
-import React from "react"; export default function Page() { return <div>Page</div>; }
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 =======
 export default AIDataVisualizationPage;
 >>>>>>> origin/main

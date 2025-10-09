@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/robotics/page.tsx
 import React from "react"; export default function Page() { return <div>Page</div>; }
 =======
@@ -396,3 +397,5 @@ const RoboticsPage: React.FC = () => {
 
 export default RoboticsPage;
 >>>>>>> origin/main:src/robotics/page.tsx
+=======
+>>>>>>> main

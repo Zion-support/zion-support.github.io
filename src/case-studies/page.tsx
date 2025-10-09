@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/case-studies/page.tsx
 import React from "react"; export default function Page() { return <div>Case Studies</div>; }
 =======
@@ -255,3 +256,6 @@ const CaseStudiesPage: React.FC = () => {
 
 export default CaseStudiesPage;
 >>>>>>> origin/main:src/case-studies/page.tsx
+=======
+import React from "react"; export default function CaseStudiesPage() { return <div>Case Studies</div>; }
+>>>>>>> main

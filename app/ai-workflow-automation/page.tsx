@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 <<<<<<< HEAD
@@ -549,6 +550,8 @@ export default AIWorkflowAutomationPage;
 =======
 import React from "react"; export default function Page() { return <div>Page</div>; }
 >>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+>>>>>>> main
 =======
 export default AIWorkflowAutomationPage;
 >>>>>>> origin/main

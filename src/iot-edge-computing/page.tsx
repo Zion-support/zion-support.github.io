@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/iot-edge-computing/page.tsx
 import React from "react"; export default function Page() { return <div>Page</div>; }
 =======
@@ -398,3 +399,5 @@ const IoTEdgeComputingPage: React.FC = () => {
 
 export default IoTEdgeComputingPage;
 >>>>>>> origin/main:src/iot-edge-computing/page.tsx
+=======
+>>>>>>> main

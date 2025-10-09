@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/ai-mobile-app-development/page.tsx
 import React from "react"; export default function Page() { return <div>Page</div>; }
 =======
@@ -457,3 +458,5 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
 
 export default AIMobileAppDevelopmentPage;
 >>>>>>> origin/main:src/ai-mobile-app-development/page.tsx
+=======
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/blog/ai-enterprise-transformation-2025/page.tsx
 import React from "react"; export default function Page() { return <div>Blog Post</div>; }
 =======
@@ -128,3 +129,5 @@ const EnterpriseTransformationPage: React.FC = () => {
 
 export default EnterpriseTransformationPage;
 >>>>>>> origin/main:src/blog/ai-enterprise-transformation-2025/page.tsx
+=======
+>>>>>>> main

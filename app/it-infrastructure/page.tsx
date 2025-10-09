@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
 const ITInfrastructurePage: React.FC = () => {
@@ -447,3 +448,5 @@ import React from "react"; export default function Page() { return <div>Page</di
 
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/ai-ecommerce-solutions/page.tsx
 import React from "react"; export default function Page() { return <div>AI E-commerce Solutions</div>; }
 =======
@@ -429,3 +430,5 @@ const AIEcommerceSolutionsPage: React.FC = () => {
 
 export default AIEcommerceSolutionsPage;
 >>>>>>> origin/main:src/ai-ecommerce-solutions/page.tsx
+=======
+>>>>>>> main

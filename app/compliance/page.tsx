@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 import Link from 'next/link';
@@ -374,3 +375,5 @@ export default CompliancePage;
 =======
 import React from "react"; export default function Page() { return <div>Compliance</div>; }
 >>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+>>>>>>> main

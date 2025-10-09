@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
-const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-=======
->>>>>>> origin/main
 import React, { useState } from 'react';
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-af41

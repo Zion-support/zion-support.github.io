@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/ai-marketing/page.tsx
 import React from "react"; export default function Page() { return <div>Page</div>; }
 =======
@@ -391,3 +392,5 @@ const AIMarketingPage: React.FC = () => {
 
 export default AIMarketingPage;
 >>>>>>> origin/main:src/ai-marketing/page.tsx
+=======
+>>>>>>> main

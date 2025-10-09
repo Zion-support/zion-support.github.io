@@ -1,8 +1,3 @@
-<<<<<<< HEAD:app/ai-fintech/page.tsx
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> origin/main:src/ai-fintech/page.tsx
 import React from 'react';
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
 
@@ -390,12 +385,5 @@ const AIFintechPage: React.FC = () => {
 >>>>>>> origin/main:src/ai-fintech/page.tsx
   );
 };
-<<<<<<< HEAD:app/ai-fintech/page.tsx
-export default AIFintechPage;
-=======
-import React from "react"; export default function Page() { return <div>Page</div>; }
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
-=======
 
 export default AIFintechPage;
->>>>>>> origin/main:src/ai-fintech/page.tsx

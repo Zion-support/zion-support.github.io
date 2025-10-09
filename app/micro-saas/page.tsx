@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Heart } from 'lucide-react';
@@ -12,6 +13,8 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain,
 
 import React, { useState, useMemo } from 'react';
 >>>>>>> origin/main
+=======
+>>>>>>> main
 import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import MicroSAASCard from '../components/MicroSAASCard';
@@ -804,6 +807,7 @@ const MicroSAASPage: React.FC = () => {
 >>>>>>> origin/main
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </section>
       {/* CTA Section */  }
@@ -838,6 +842,8 @@ export default MicroSAASPage;
 =======
 import React from "react"; export default function Page() { return <div>Micro SAAS</div>; }
 >>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+>>>>>>> main
 =======
 
           {/* CTA Section */}

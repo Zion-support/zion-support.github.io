@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import Navigation from '../components/Navigation';
@@ -657,6 +658,10 @@ const AIServicesPage: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+
+const AIServicesPage: React.FC = () => {
+>>>>>>> main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -690,6 +695,7 @@ const AIServicesPage: React.FC = () => {
           {/* Stats */  }
 =======
           
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20">
@@ -885,13 +891,10 @@ const AIServicesPage: React.FC = () => {
       </div>
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> main
     </div>
 >>>>>>> origin/main
   );
 };
 
-<<<<<<< HEAD
-export default AIServicesPage;
-=======
-export default AIServicesPage;
->>>>>>> origin/main

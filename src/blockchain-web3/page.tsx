@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/blockchain-web3/page.tsx
 import React from "react"; export default function Page() { return <div>Page</div>; }
 =======
@@ -393,3 +394,5 @@ const BlockchainWeb3Page: React.FC = () => {
 
 export default BlockchainWeb3Page;
 >>>>>>> origin/main:src/blockchain-web3/page.tsx
+=======
+>>>>>>> main

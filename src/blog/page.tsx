@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/blog/page.tsx
 import React from "react"; export default function Page() { return <div>Blog Post</div>; }
 =======
@@ -252,3 +253,6 @@ export default function BlogPage() {
   );
 };
 >>>>>>> origin/main:src/blog/page.tsx
+=======
+import React from "react"; export default function BlogPage() { return <div>Blog</div>; }
+>>>>>>> main

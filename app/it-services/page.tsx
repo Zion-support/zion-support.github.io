@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 import React from 'react';
@@ -900,6 +901,8 @@ export default ITServicesPage;
 =======
 import React from "react"; export default function Page() { return <div>IT Services</div>; }
 >>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+>>>>>>> main
 =======
 export default ITServicesPage;
 >>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx
 import React from "react"; export default function Page() { return <div>Blog Post</div>; }
 =======
@@ -85,3 +86,5 @@ const OperationalTrustScorecardsPage: React.FC = () => {
 
 export default OperationalTrustScorecardsPage;
 >>>>>>> origin/main:src/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx
+=======
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx
 import React from "react"; export default function Page() { return <div>Blog Post</div>; }
 =======
@@ -122,3 +123,5 @@ const AIMegaTrends20252026: React.FC = () => {
 
 export default AIMegaTrends20252026;
 >>>>>>> origin/main:src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx
+=======
+>>>>>>> main

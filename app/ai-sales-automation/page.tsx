@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> origin/main
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Target, BarChart3, Zap } from 'lucide-react';
@@ -372,11 +367,6 @@ const AISalesAutomationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AISalesAutomationPage;
-=======
-import React from "react"; export default function Page() { return <div>Page</div>; }
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 =======
 export default AISalesAutomationPage;
 >>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:app/cybersecurity/page.tsx
 import React from "react"; export default function Page() { return <div>Cybersecurity</div>; }
 =======
@@ -387,3 +388,5 @@ const CybersecurityPage: React.FC = () => {
 
 export default CybersecurityPage;
 >>>>>>> origin/main:src/cybersecurity/page.tsx
+=======
+>>>>>>> main
