@@ -7,17 +7,16 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay
 Crawl-delay: 1
 
-# Disallow admin and private areas
+# Disallow admin areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /*.xml$
+Disallow: /static/
 
 # Allow important pages
-Allow: /contact
-Allow: /about
-Allow: /services
-Allow: /ai-services
-Allow: /blog
+Allow: /services/
+Allow: /ai-services/
+Allow: /it-services/
+Allow: /micro-saas/
+Allow: /blog/
+Allow: /case-studies/

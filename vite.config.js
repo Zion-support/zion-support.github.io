@@ -99,10 +99,6 @@ export default defineConfig({
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'vendor';
           }
-          // Router library
-          if (id.includes('node_modules/react-router-dom')) {
-            return 'router';
-          }
           // UI libraries
           if (
             id.includes('node_modules/framer-motion') ||
@@ -134,7 +130,7 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
   },
   css: {
     devSourcemap: false,
