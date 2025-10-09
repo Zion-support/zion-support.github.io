@@ -1,16 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
-=======
-import { CheckCircle, Star, Zap, Settings, Clock, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -38,12 +31,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
     }
   ];
-<<<<<<< HEAD
-  const pricingPlans = [
-=======
 
   const pricing = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
     {
       name: 'Starter',
       price: '$399/month',
@@ -63,7 +52,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
       features: ['Unlimited workflows', 'Custom development', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
   ];
-<<<<<<< HEAD
   const stats = [
     { number: '90%', label: 'Time Savings' },
     { number: '75%', label: 'Error Reduction' },
@@ -144,7 +132,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -175,7 +162,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
               >
                 Learn More
               </a>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
             </div>
           </section>
           {/* Features Section */}
@@ -201,7 +187,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -217,9 +202,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -279,18 +262,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </a>
             </div>
           </section>
-<<<<<<< HEAD
         </main>
         <Footer />
       </div>
     </>
-=======
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   );
 };
 
