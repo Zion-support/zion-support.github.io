@@ -1,11 +1,19 @@
 import React from 'react';
-// import { Metadata } from 'next'; // Removed for Vite
-
-// Metadata removed for Vite compatibility
+import SEOHead from '../components/SEOHead';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const ContactPage: React.FC = () => {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
+    <>
+      <SEOHead
+        title="Contact Zion Tech Group - Get Expert AI and IT Solutions"
+        description="Contact Zion Tech Group for expert AI and IT solutions. Get in touch with our team of specialists for consultation, support, and custom technology solutions."
+        keywords="contact zion tech group, AI consultation, IT support, technology solutions, expert consultation, business transformation"
+        canonical="https://ziontechgroup.com/contact"
+      />
+      <Navigation />
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>
@@ -75,9 +83,11 @@ const ContactPage: React.FC = () => {
                 Send Message
               </button>
             </form>
-          </div>
         </div>
       </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 

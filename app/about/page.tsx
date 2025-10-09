@@ -1,9 +1,18 @@
 import React from 'react';
-
+import SEOHead from '../components/SEOHead';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function AboutPage() {
   return (
     <>
+      <SEOHead
+        title="About Zion Tech Group - Leading AI and IT Solutions Provider"
+        description="Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI and IT solutions. Discover our expertise, team, and commitment to innovation."
+        keywords="about zion tech group, AI company, IT solutions provider, enterprise technology, digital transformation, team expertise"
+        canonical="https://ziontechgroup.com/about"
+      />
+      <Navigation />
       <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
           <div className='text-center mb-12'>
@@ -106,6 +115,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
