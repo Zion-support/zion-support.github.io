@@ -578,3 +578,16 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
+Score: ${metrics.score || 'N/A'}
+Issues: ${metrics.issues || 0}
+Recommendations: ${metrics.recommendations || 0}
+
+Detailed metrics:
+- Color contrast: ${metrics.colorContrast || 'N/A'}
+- Keyboard navigation: ${metrics.keyboardNavigation || 'N/A'}
+- Screen reader compatibility: ${metrics.screenReaderCompatibility || 'N/A'}
+- Focus management: ${metrics.focusManagement || 'N/A'}
+- ARIA implementation: ${metrics.ariaImplementation || 'N/A'}
+`;
+  }
+}
