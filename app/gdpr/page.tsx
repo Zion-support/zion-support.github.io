@@ -232,5 +232,3 @@ const GdprPage: React.FC = () => {
 };
 
 export default GdprPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

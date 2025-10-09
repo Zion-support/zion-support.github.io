@@ -37,6 +37,12 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield, description: 'AI security solutions' },
     { name: 'AI Cloud Infrastructure', url: '/ai-cloud-infrastructure', icon: Cloud, description: 'Cloud AI solutions' },
+    { name: 'AI Email Automation', url: '/ai-email-automation', icon: Mail, description: 'AI email marketing' },
+    { name: 'AI Social Media Management', url: '/ai-social-media-management', icon: Users, description: 'AI social media' },
+    { name: 'AI Project Management', url: '/ai-project-management', icon: BarChart, description: 'AI project tools' },
+    { name: 'AI CRM Automation', url: '/ai-crm-automation', icon: Users, description: 'AI CRM solutions' },
+    { name: 'AI Inventory Management', url: '/ai-inventory-management', icon: BarChart, description: 'AI inventory tools' },
+    { name: 'AI Document Processing', url: '/ai-document-processing', icon: BarChart, description: 'AI document automation' },
   ];
 
   const itServices = [

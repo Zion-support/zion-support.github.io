@@ -200,6 +200,56 @@ const ServicesPage: React.FC = () => {
       link: '/ai-data-visualization',
       features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates'],
       price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI Email Automation',
+      description: 'Revolutionary AI-powered email marketing with smart sequences, segmentation, and analytics.',
+      icon: '📧',
+      link: '/ai-email-automation',
+      features: ['Smart Email Sequences', 'Advanced Segmentation', 'Real-time Analytics', 'Perfect Timing'],
+      price: 'Starting at $49/month',
+      popular: true
+    },
+    {
+      title: 'AI Social Media Management',
+      description: 'Dominate social media with AI-powered content creation, scheduling, and analytics.',
+      icon: '📱',
+      link: '/ai-social-media-management',
+      features: ['AI Content Creation', 'Optimal Posting Times', 'Audience Intelligence', 'Performance Analytics'],
+      price: 'Starting at $79/month',
+      popular: true
+    },
+    {
+      title: 'AI Project Management',
+      description: 'Revolutionize project management with AI-powered automation, predictive analytics, and resource allocation.',
+      icon: '📋',
+      link: '/ai-project-management',
+      features: ['AI Task Automation', 'Smart Resource Allocation', 'Predictive Analytics', 'Real-time Insights'],
+      price: 'Starting at $99/month'
+    },
+    {
+      title: 'AI CRM Automation',
+      description: 'Transform your sales process with AI-powered CRM automation, lead scoring, and predictive analytics.',
+      icon: '👥',
+      link: '/ai-crm-automation',
+      features: ['AI Lead Scoring', 'Predictive Analytics', 'Customer Journey Mapping', 'Sales Forecasting'],
+      price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI Inventory Management',
+      description: 'Optimize inventory with AI-powered forecasting, automated reordering, and cost optimization.',
+      icon: '📦',
+      link: '/ai-inventory-management',
+      features: ['AI Demand Forecasting', 'Smart Reorder Points', 'Cost Optimization', 'Real-time Analytics'],
+      price: 'Starting at $199/month'
+    },
+    {
+      title: 'AI Document Processing',
+      description: 'Automate document processing with AI-powered OCR, data extraction, and workflow automation.',
+      icon: '📄',
+      link: '/ai-document-processing',
+      features: ['Intelligent OCR', 'Smart Data Extraction', 'Document Classification', 'Workflow Automation'],
+      price: 'Starting at $79/month'
     }
   ];
 

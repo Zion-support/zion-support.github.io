@@ -305,5 +305,3 @@ const DocsPage: React.FC = () => {
 };
 
 export default DocsPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

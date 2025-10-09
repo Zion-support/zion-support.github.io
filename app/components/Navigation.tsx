@@ -78,7 +78,13 @@ const Navigation: React.FC = () => {
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
         { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'Cloud AI solutions' },
         { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI apps' }
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI apps' },
+        { name: 'AI Email Automation', path: '/ai-email-automation', description: 'AI email marketing' },
+        { name: 'AI Social Media Management', path: '/ai-social-media-management', description: 'AI social media' },
+        { name: 'AI Project Management', path: '/ai-project-management', description: 'AI project tools' },
+        { name: 'AI CRM Automation', path: '/ai-crm-automation', description: 'AI CRM solutions' },
+        { name: 'AI Inventory Management', path: '/ai-inventory-management', description: 'AI inventory tools' },
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'AI document automation' }
       ]
     },
     {

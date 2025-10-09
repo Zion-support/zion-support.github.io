@@ -81,4 +81,3 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
- cursor/analyze-improve-and-deploy-application-cde4
