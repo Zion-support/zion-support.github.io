@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
@@ -141,12 +140,7 @@ const BlockchainPage: React.FC = () => {
   const categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
-    <>
-      <Helmet>
-        <title>Blockchain & Web3 Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced blockchain and Web3 services including smart contracts, DeFi, NFTs, and enterprise blockchain solutions." />
-        <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, Web3, cryptocurrency, token development" />
-      </Helmet>
+
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
         {/* Hero Section */}
@@ -367,7 +361,7 @@ const BlockchainPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+
   );
 };
 

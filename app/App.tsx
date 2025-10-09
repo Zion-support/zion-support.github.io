@@ -1,7 +1,6 @@
 'use client';
 
 import React, { Suspense, lazy, useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
@@ -145,7 +144,6 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <HelmetProvider>
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
@@ -248,7 +246,6 @@ const App: React.FC = () => {
           </SEOEnhancer>
         </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
-    </HelmetProvider>
   );
 };
 

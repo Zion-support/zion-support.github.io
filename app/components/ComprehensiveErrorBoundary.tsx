@@ -181,7 +181,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && (
               <details className="mt-6 text-left">
-                <summary className="text-white cursor-pointer hover:text-cyan-400">
+                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-400">
                   Technical Details (Development)
                 </summary>
                 <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto">

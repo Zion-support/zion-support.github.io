@@ -202,7 +202,7 @@ const HomePage: React.FC = () => {
           </p>
           
           {/* Primary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
@@ -253,7 +253,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Secondary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
@@ -304,7 +304,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Micro SAAS Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>

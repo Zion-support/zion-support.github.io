@@ -195,7 +195,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
               Error Details (Development)
             </summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>

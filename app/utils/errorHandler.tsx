@@ -346,7 +346,6 @@ export class ErrorHandler {
           border: none;
           color: white;
           font-size: 18px;
-          cursor: pointer;
           margin-left: 10px;
         ">×</button>
       </div>
@@ -549,7 +548,6 @@ export class ErrorBoundary extends React.Component<
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px',
-                cursor: 'pointer',
               }}
             >
               Try again

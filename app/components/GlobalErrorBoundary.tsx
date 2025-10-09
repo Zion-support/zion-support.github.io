@@ -69,7 +69,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
             {/* Error Details (Development Only) */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
                   Error Details (Development)
                 </summary>
                 <div className="mt-2 p-4 bg-slate-800 rounded-lg text-xs text-red-300 font-mono overflow-auto">

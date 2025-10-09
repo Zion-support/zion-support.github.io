@@ -229,7 +229,6 @@ const styles = {
     border: '1px solid #e0e0e0',
   },
   summary: {
-    cursor: 'pointer',
     fontWeight: 'bold',
     marginBottom: '12px',
     userSelect: 'none' as const,
@@ -265,7 +264,6 @@ const styles = {
     backgroundColor: '#007bff',
     border: 'none',
     borderRadius: '4px',
-    cursor: 'pointer',
     transition: 'background-color 0.2s',
   },
   secondaryButton: {

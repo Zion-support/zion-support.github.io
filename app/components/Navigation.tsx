@@ -88,8 +88,8 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },

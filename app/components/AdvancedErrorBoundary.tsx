@@ -218,7 +218,6 @@ class AdvancedErrorBoundary extends Component<
                       <strong>Message:</strong> {this.state.error?.message}
                     </p>
                     <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
                         Stack Trace
                       </summary>
                       <pre className='mt-2 text-xs overflow-auto'>
@@ -226,7 +225,6 @@ class AdvancedErrorBoundary extends Component<
                       </pre>
                     </details>
                     <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
                         Component Stack
                       </summary>
                       <pre className='mt-2 text-xs overflow-auto'>

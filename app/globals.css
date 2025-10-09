@@ -285,6 +285,133 @@ a {
       0 0 6px #00ffff,
       0 0 9px #00ffff;
   }
+  
+  /* Mobile Navigation Improvements */
+  .mobile-nav {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  /* Mobile Service Cards */
+  .service-card-mobile {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Mobile Text Sizing */
+  .mobile-text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .mobile-text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  /* Mobile Grid Adjustments */
+  .mobile-grid-1 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Mobile Spacing */
+  .mobile-p-4 {
+    padding: 1rem;
+  }
+  
+  .mobile-p-6 {
+    padding: 1.5rem;
+  }
+  
+  .mobile-mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-mb-6 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Tablet Design */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .tablet-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  .tablet-p-6 {
+    padding: 1.5rem;
+  }
+}
+
+/* Large Screen Optimizations */
+@media (min-width: 1024px) {
+  .desktop-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .desktop-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .desktop-text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+/* Ultra-wide Screen Support */
+@media (min-width: 1536px) {
+  .ultra-wide-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .ultra-wide-container {
+    max-width: 1400px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-text-black {
+    color: #000000 !important;
+  }
+  
+  .print-bg-white {
+    background-color: #ffffff !important;
+  }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-text {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .landscape-mobile-nav {
+    max-height: 60vh;
+  }
+  
+  .landscape-mobile-text {
+    font-size: 0.875rem;
+  }
 }
 
 /* Loading Animation */
