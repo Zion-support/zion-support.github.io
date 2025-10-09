@@ -19,7 +19,13 @@ const Footer: React.FC = () => {
     { name: 'AI Analytics Dashboard', href: '/ai-analytics' },
     { name: 'AI Email Marketing', href: '/ai-email-marketing' },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation' },
+    { name: 'AI Content Writer', href: '/ai-content-writer' },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation' },
+    { name: 'AI Website Builder', href: '/ai-website-builder' },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant' },
+    { name: 'AI Financial Planner', href: '/ai-financial-planner' },
+    { name: 'AI Video Editor', href: '/ai-video-editor' },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer' },
   ];
 
   const aiServices = [
@@ -27,16 +33,21 @@ const Footer: React.FC = () => {
     { name: 'Natural Language Processing', href: '/ai-nlp' },
     { name: 'Computer Vision', href: '/ai-vision' },
     { name: 'AI Automation', href: '/ai-automation' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization' },
-    { name: 'AI Fashion Design', href: '/ai-fashion-design' },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+    { name: 'AI Cloud Solutions', href: '/ai-cloud-solutions' },
+    { name: 'AI IoT Solutions', href: '/ai-iot-solutions' },
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', href: '/cloud-migration' },
-    { name: 'IT Consulting', href: '/it-consulting' },
+    { name: 'Cloud Services', href: '/cloud-services' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
     { name: 'Database Services', href: '/database' },
+    { name: 'IT Consulting', href: '/it-consulting' },
+    { name: 'Network Solutions', href: '/network-solutions' },
+    { name: 'Software Development', href: '/software-development' },
+    { name: 'IT Support & Maintenance', href: '/it-support' },
   ];
 
   const socialLinks = [
