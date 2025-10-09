@@ -1,142 +1,65 @@
 'use client';
 import React, { useEffect } from 'react';
+
 const Analytics: React.FC = () => {
   useEffect(() => {
-  // TODO: Add content
-}
     // Google Analytics 4
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-  // TODO: Add content
-}
-      // Load Google Analytics;
-const script = document.createElement('script');
+      // Load Google Analytics
+      const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
       document.head.appendChild(script);
+
       // Initialize GA
-      window.dataLayer = window.dataLayer || [];
+      (window as any).dataLayer = (window as any).dataLayer || [];
       function gtag(...args: any[]) {
-  // TODO: Add content
-}
-        window.dataLayer.push(args);
+        (window as any).dataLayer.push(args);
       }
-      window.gtag = gtag;
+      (window as any).gtag = gtag;
       gtag('js', new Date());
       gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
-  // TODO: Add content
-}
         page_title: document.title,
         page_location: window.location.href,
       });
-      // Track page views
-      gtag('event', 'page_view', {
-  // TODO: Add content
-}
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: pathname,
-      });
     }
-    // Track performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-  // TODO: Add content
-}
-      const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
-        for (const entry of list.getEntries()) {
-  // TODO: Add content
-}
-          if (entry.entryType === 'navigation') {
-  // TODO: Add content
-}
-            const navEntry = entry as PerformanceNavigationTiming;
-            const loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
-            if (window.gtag) {
-  // TODO: Add content
-}
-              window.gtag('event', 'timing_complete', {
-  // TODO: Add content
-}
-                name: 'load',
-                value: Math.round(loadTime),
-              });
-            }
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
+
+    // Hotjar Analytics
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      const hotjarScript = document.createElement('script');
+      hotjarScript.innerHTML = `
+        (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:${process.env.NEXT_PUBLIC_HOTJAR_ID},hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      `;
+      document.head.appendChild(hotjarScript);
     }
-    // Track user interactions;
-const trackInteraction = (eventName: string, category: string, label?: string) => {
-  // TODO: Add content
-}
-      if (window.gtag) {
-  // TODO: Add content
-}
-        window.gtag('event', eventName, {
-  // TODO: Add content
-}
-          event_category: category,
-          event_label: label,
-        });
-      }
-    };
-    // Track button clicks;
-const buttons = document.querySelectorAll('button, a[href^="tel:"], a[href^="mailto:"]');
-    buttons.forEach((button) => {
-  // TODO: Add content
-}
-      button.addEventListener('click', (e) => {
-  // TODO: Add content
-}
-        const target = e.target as HTMLElement;
-        const text = target.textContent || target.getAttribute('aria-label') || 'Unknown';
-        trackInteraction('click', 'button', text);
-      });
-    });
-    // Track form submissions;
-const forms = document.querySelectorAll('form');
-    forms.forEach((form) => {
-  // TODO: Add content
-}
-      form.addEventListener('submit', (e) => {
-  // TODO: Add content
-}
-        const formData = new FormData(form as HTMLFormElement);
-        const formName = form.getAttribute('name') || 'contact_form';
-        trackInteraction('form_submit', 'form', formName);
-      });
-    });
-    // Track scroll depth;
-let _maxScroll = 0;
-    const trackScroll = () => {
-  // TODO: Add content
-}
-      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {
-  // TODO: Add content
-}
-        maxScroll = scrollPercent;
-        trackInteraction('scroll', 'engagement', `${scrollPercent}%`);
-      }
-    };
-    window.addEventListener('scroll', trackScroll, { passive: true });
-    return () => {
-  // TODO: Add content
-}
-      window.removeEventListener('scroll', trackScroll);
-    };
-  }, [pathname]);
+
+    // Facebook Pixel
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      const fbScript = document.createElement('script');
+      fbScript.innerHTML = `
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '${process.env.NEXT_PUBLIC_FB_PIXEL_ID}');
+        fbq('track', 'PageView');
+      `;
+      document.head.appendChild(fbScript);
+    }
+  }, []);
+
   return null;
 };
-// Extend Window interface for TypeScript
-declare global {
-  // TODO: Add content
-}
-  interface Window {
-dataLayer: unknown[];
-    gtag: (...args: any[]) => void;
-  }
-}
+
 export default Analytics;

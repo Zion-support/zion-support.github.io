@@ -1,7 +1,7 @@
+'use client';
+import React, { useState, useEffect } from 'react';
 
 interface AccessibilitySettings {
-  // TODO: Add content
-}
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -10,9 +10,8 @@ interface AccessibilitySettings {
   zoomLevel: number;
   colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
+
 interface AccessibilityProps {
-  // TODO: Add content
-}
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
@@ -21,338 +20,314 @@ interface AccessibilityProps {
   enableColorBlindSupport?: boolean;
   enableZoomControl?: boolean;
 }
+
 const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
-  // TODO: Add content
-}
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
   enableReducedMotion = true,
   enableColorBlindSupport = true,
-  enableZoomControl = true,
+  enableZoomControl = true
 }) => {
-  // TODO: Add content
-}
   const [settings, setSettings] = useState<AccessibilitySettings>({
-  // TODO: Add content
-}
     highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
     focusVisible: true,
     zoomLevel: 100,
-    colorBlind: 'none',
+    colorBlind: 'none'
   });
-  const [isVisible, setIsVisible] = useState(false);
-  // Load settings from localStorage
+
   useEffect(() => {
+    // Load saved settings from localStorage
+    const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-  // TODO: Add content
-}
       try {
-  // TODO: Add content
-}
-        setSettings(JSON.parse(savedSettings));
+        const parsed = JSON.parse(savedSettings);
+        setSettings(prev => ({ ...prev, ...parsed }));
       } catch (error) {
-        // console.error('Failed to load accessibility settings:', error);
+        console.warn('Failed to parse accessibility settings:', error);
       }
     }
+
+    // Detect screen reader
+    const hasScreenReader = window.speechSynthesis !== undefined;
+    setSettings(prev => ({ ...prev, screenReader: hasScreenReader }));
+
+    // Apply initial settings
+    applyAccessibilitySettings(settings);
   }, []);
-  // Save settings to localStorage;
-const saveSettings = useCallback((newSettings: AccessibilitySettings) => {
-  // TODO: Add content
-}
-    setSettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
-  // Apply high contrast mode
+
   useEffect(() => {
-  // TODO: Add content
-}
-    if (settings.highContrast) {
-  // TODO: Add content
-}
-      document.documentElement.classList.add('high-contrast');
+    applyAccessibilitySettings(settings);
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
+  }, [settings]);
+
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+    
+    // High contrast
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
     } else {
-  // TODO: Add content
-}
-      document.documentElement.classList.remove('high-contrast');
+      root.classList.remove('high-contrast');
     }
-  }, [settings.highContrast]);
-  // Apply large text mode
-  useEffect(() => {
-  // TODO: Add content
-}
-    if (settings.largeText) {
-  // TODO: Add content
-}
-      document.documentElement.style.fontSize = '1.2rem';
+
+    // Large text
+    if (newSettings.largeText) {
+      root.classList.add('large-text');
     } else {
-  // TODO: Add content
-}
-      document.documentElement.style.fontSize = '1rem';
+      root.classList.remove('large-text');
     }
-  }, [settings.largeText]);
-  // Apply reduced motion
-  useEffect(() => {
-  // TODO: Add content
-}
-    if (settings.reducedMotion) {
-  // TODO: Add content
-}
-      document.documentElement.classList.add('reduced-motion');
+
+    // Reduced motion
+    if (newSettings.reducedMotion) {
+      root.classList.add('reduced-motion');
     } else {
-  // TODO: Add content
-}
-      document.documentElement.classList.remove('reduced-motion');
+      root.classList.remove('reduced-motion');
     }
-  }, [settings.reducedMotion]);
-  // Apply color blind support
-  useEffect(() => {
-  // TODO: Add content
-}
-    document.documentElement.setAttribute('data-color-blind', settings.colorBlind);
-  }, [settings.colorBlind]);
-  // Apply zoom level
-  useEffect(() => {
-  // TODO: Add content
-}
-    document.documentElement.style.zoom = `${settings.zoomLevel}%`;
-  }, [settings.zoomLevel]);
+
+    // Focus visible
+    if (newSettings.focusVisible) {
+      root.classList.add('focus-visible');
+    } else {
+      root.classList.remove('focus-visible');
+    }
+
+    // Zoom level
+    root.style.zoom = `${newSettings.zoomLevel}%`;
+
+    // Color blind support
+    root.setAttribute('data-color-blind', newSettings.colorBlind);
+  };
+
+  const toggleHighContrast = () => {
+    setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }));
+  };
+
+  const toggleLargeText = () => {
+    setSettings(prev => ({ ...prev, largeText: !prev.largeText }));
+  };
+
+  const toggleReducedMotion = () => {
+    setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }));
+  };
+
+  const setZoomLevel = (level: number) => {
+    setSettings(prev => ({ ...prev, zoomLevel: Math.max(50, Math.min(200, level)) }));
+  };
+
+  const setColorBlind = (type: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia') => {
+    setSettings(prev => ({ ...prev, colorBlind: type }));
+  };
+
   // Keyboard navigation
   useEffect(() => {
-  // TODO: Add content
-}
     if (!enableKeyboardNavigation) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-  // TODO: Add content
-}
+
+    const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.altKey) {
-  // TODO: Add content
-}
-        e.preventDefault();
-        const mainContent = document.querySelector('main, [role="main"]');
-        if (mainContent) {
-  // TODO: Add content
-}
-          (mainContent as HTMLElement).focus();
+      if (event.key === 'Tab' && event.shiftKey && event.altKey) {
+        event.preventDefault();
+        const main = document.querySelector('main');
+        if (main) {
+          main.focus();
         }
       }
-      // Toggle accessibility panel
-      if (e.key === 'Tab' && e.altKey && e.key === 'a') {
-  // TODO: Add content
-}
-        e.preventDefault();
-        setIsVisible(prev => !prev);
-      }
-      // Escape key to close panel
-      if (e.key === 'Escape' && isVisible) {
-  // TODO: Add content
-}
-        setIsVisible(false);
+
+      // Skip to navigation
+      if (event.key === 'Tab' && event.altKey) {
+        event.preventDefault();
+        const nav = document.querySelector('nav');
+        if (nav) {
+          nav.focus();
+        }
       }
     };
+
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardNavigation, isVisible]);
+  }, [enableKeyboardNavigation]);
+
   // Focus management
   useEffect(() => {
-  // TODO: Add content
-}
     if (!enableFocusManagement) return;
-    const handleFocusIn = (e: FocusEvent) => {
-  // TODO: Add content
-}
-      const target = e.target as HTMLElement;
-      if (target && settings.focusVisible) {
-  // TODO: Add content
-}
-        target.classList.add('focus-visible');
+
+    const handleFocusIn = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      if (target && target.classList.contains('focus-trap')) {
+        target.style.outline = '2px solid #0066cc';
       }
     };
-    const handleFocusOut = (e: FocusEvent) => {
-  // TODO: Add content
-}
-      const target = e.target as HTMLElement;
-      if (target) {
-  // TODO: Add content
-}
-        target.classList.remove('focus-visible');
+
+    const handleFocusOut = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      if (target && target.classList.contains('focus-trap')) {
+        target.style.outline = '';
       }
     };
+
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
     return () => {
-  // TODO: Add content
-}
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     };
-  }, [enableFocusManagement, settings.focusVisible]);
-  // Screen reader announcements;
-const announceToScreenReader = useCallback((message: string) => {
-  // TODO: Add content
-}
-    if (!enableScreenReader) return;
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
-    setTimeout(() => {
-  // TODO: Add content
-}
-      document.body.removeChild(announcement);
-    }, 1000);
-  }, [enableScreenReader]);
-  // Toggle functions;
-const toggleHighContrast = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, highContrast: !settings.highContrast };
-    saveSettings(newSettings);
-    announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
-  };
-  const toggleLargeText = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, largeText: !settings.largeText };
-    saveSettings(newSettings);
-    announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
-  };
-  const toggleReducedMotion = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, reducedMotion: !settings.reducedMotion };
-    saveSettings(newSettings);
-    announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`);
-  };
-  const toggleScreenReader = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, screenReader: !settings.screenReader };
-    saveSettings(newSettings);
-    announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`);
-  };
-  const toggleFocusVisible = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, focusVisible: !settings.focusVisible };
-    saveSettings(newSettings);
-    announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`);
-  };
-  const adjustZoom = (delta: number) => {
-  // TODO: Add content
-}
-    const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
-    const newSettings = { ...settings, zoomLevel: newZoom };
-    saveSettings(newSettings);
-    announceToScreenReader(`Zoom level set to ${newZoom}%`);
-  };
-  const setColorBlind = (type: AccessibilitySettings['colorBlind']) => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, colorBlind: type };
-    saveSettings(newSettings);
-    announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
-  };
-// Reset all settings
-  const resetSettings = () => {
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-      screenReader: false,
-      focusVisible: true,
-      zoomLevel: 100,
-      colorBlind: 'none',
-    };
-    saveSettings(defaultSettings);
-    announceToScreenReader('Accessibility settings reset to default');
-  };
-  if (!isVisible) {
-  // TODO: Add content
-}
-    return (
-  // TODO: Add parameters,
-)
-      <button
-        onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white hover:bg-slate-800 transition-colors duration-200 z-50"
-        aria-label="Open accessibility settings"
-        title="Open accessibility settings (Alt + A)"
-><Eye className="w-5 h-5" /></button>
-    );
-  }
+  }, [enableFocusManagement]);
+
   return (
-<div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button
-          onClick={() => setIsVisible(false)} className="text-gray-400 hover:text-white"
-          aria-label="Close accessibility settings"
-        >
-          ×
-        </button></div><div className="space-y-3">
-        {enableHighContrast && (
-          <div className="flex items-center justify-between"><span className="text-sm">High Contrast</span><button
-              onClick={toggleHighContrast} className={`flex items-center px-3 py-1 rounded ${
-                settings.highContrast ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'
-              }`}
-              aria-pressed={settings.highContrast}
-//             >
-              {settings.highContrast ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
-            </button></div>
-        )}
-<div className="flex items-center justify-between"><span className="text-sm">Large Text</span><button
-            onClick={toggleLargeText} className={`flex items-center px-3 py-1 rounded ${
-              settings.largeText ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'
-            }`}
-            aria-pressed={settings.largeText}
-          ><Type className="w-4 h-4" /></button></div>
-        {enableReducedMotion && (
-          <div className="flex items-center justify-between"><span className="text-sm">Reduced Motion</span><button
-              onClick={toggleReducedMotion} className={`flex items-center px-3 py-1 rounded ${
-                settings.reducedMotion ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'
-              }`}
-              aria-pressed={settings.reducedMotion}
-//             >
-              {settings.reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-            </button></div>
-        )}
-        {enableScreenReader && (
-<div className="flex items-center justify-between"><span className="text-sm">Screen Reader</span><button
-              onClick={toggleScreenReader} className={`flex items-center px-3 py-1 rounded ${
-                settings.screenReader ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'
-              }`}
-              aria-pressed={settings.screenReader}
-            ><Eye className="w-4 h-4" /></button></div>
-        )}
-        <div className="flex items-center justify-between"><span className="text-sm">Focus Indicators</span><button
-            onClick={toggleFocusVisible} className={`flex items-center px-3 py-1 rounded ${
-              settings.focusVisible ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'
-            }`}
-            aria-pressed={settings.focusVisible}
-          ><Contrast className="w-4 h-4" /></button></div>
-        {enableZoomControl && (
-          <div className="flex items-center justify-between"><span className="text-sm">Zoom: {settings.zoomLevel}%</span><div className="flex space-x-1"><button
-                onClick={() => adjustZoom(-10)} className="p-1 bg-gray-700 hover:bg-gray-600 rounded"
-                aria-label="Decrease zoom"
-              ><ZoomOut className="w-4 h-4" /></button><button
-                onClick={() => adjustZoom(10)} className="p-1 bg-gray-700 hover:bg-gray-600 rounded"
-                aria-label="Increase zoom"
-              ><ZoomIn className="w-4 h-4" /></button></div></div>
-        )}
-        {enableColorBlindSupport && (
-<div className="flex items-center justify-between"><span className="text-sm">Color Blind Support</span><select
-              value={settings.colorBlind}
-              onChange={(e) => setColorBlind(e.target.value as AccessibilitySettings['colorBlind'])} className="bg-gray-700 text-white text-xs px-2 py-1 rounded"
-            ><option value="none">None</option><option value="protanopia">Protanopia</option><option value="deuteranopia">Deuteranopia</option><option value="tritanopia">Tritanopia</option></select></div>
-        )}
-        <button
-onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600 hover:bg-red-700 text-white rounded text-sm"
-        >
-          Reset Settings
-        </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
+    <div className="accessibility-controls">
+      <style jsx>{`
+        .accessibility-controls {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          z-index: 1000;
+          background: white;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          padding: 16px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          max-width: 300px;
+        }
+
+        .accessibility-controls h3 {
+          margin: 0 0 16px 0;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .control-group {
+          margin-bottom: 12px;
+        }
+
+        .control-group label {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          cursor: pointer;
+        }
+
+        .control-group input[type="checkbox"] {
+          margin-right: 8px;
+        }
+
+        .control-group select {
+          margin-left: 8px;
+          padding: 4px 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        .control-group input[type="range"] {
+          width: 100%;
+          margin-top: 4px;
+        }
+
+        .zoom-display {
+          font-size: 12px;
+          color: #666;
+          margin-top: 4px;
+        }
+
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+
+        .large-text {
+          font-size: 1.2em;
+        }
+
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .focus-visible *:focus {
+          outline: 2px solid #0066cc !important;
+          outline-offset: 2px !important;
+        }
+
+        [data-color-blind="protanopia"] {
+          filter: hue-rotate(90deg);
+        }
+
+        [data-color-blind="deuteranopia"] {
+          filter: hue-rotate(120deg);
+        }
+
+        [data-color-blind="tritanopia"] {
+          filter: hue-rotate(180deg);
+        }
+      `}</style>
+
+      <h3>Accessibility Controls</h3>
+      
+      <div className="control-group">
+        <label>
+          <input
+            type="checkbox"
+            checked={settings.highContrast}
+            onChange={toggleHighContrast}
+          />
+          High Contrast
+        </label>
+      </div>
+
+      <div className="control-group">
+        <label>
+          <input
+            type="checkbox"
+            checked={settings.largeText}
+            onChange={toggleLargeText}
+          />
+          Large Text
+        </label>
+      </div>
+
+      <div className="control-group">
+        <label>
+          <input
+            type="checkbox"
+            checked={settings.reducedMotion}
+            onChange={toggleReducedMotion}
+          />
+          Reduced Motion
+        </label>
+      </div>
+
+      <div className="control-group">
+        <label>
+          Zoom Level: {settings.zoomLevel}%
+          <input
+            type="range"
+            min="50"
+            max="200"
+            value={settings.zoomLevel}
+            onChange={(e) => setZoomLevel(Number(e.target.value))}
+          />
+        </label>
+      </div>
+
+      <div className="control-group">
+        <label>
+          Color Blind Support:
+          <select
+            value={settings.colorBlind}
+            onChange={(e) => setColorBlind(e.target.value as any)}
+          >
+            <option value="none">None</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+          </select>
+        </label>
+      </div>
+    </div>
   );
 };
+
 export default EnhancedAccessibility;
