@@ -1,26 +1,27 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-const PROD_DOMAIN = 'http,
-  s://ziontechgroup.com';
+const PROD_DOMAIN = 'https://ziontechgroup.com';
 
-async function handler(req, res) {/* TODO: Fix JSX expression */}
-  }
+async function handler(req, res) {
+  try {
+    const { productId, userId } = req.body || {};
 
-  const { productId, userId } = req.body || {};
+    if (!productId) {
+      return res.status(400).json({ error: 'Product ID is required' });
+    }
 
-  if (!productId) {/* TODO: Fix JSX expression */}
-  r: 'Product ID is required' });
-    return;
-  }
-
-  try {/* TODO: Fix JSX expression */}
+    // Create checkout session logic here
+    const session = {
+      id: 'session_' + Date.now(),
+      productId,
+      userId,
+      status: 'pending'
     };
 
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({/* TODO: Fix JSX expression */})
-  n: sessionData }));
-  } catch {/* TODO: Fix JSX expression */}
+    res.status(200).json({ session });
+  } catch (error) {
+    console.error('Error creating checkout session:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 }
 

@@ -1,22 +1,25 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-async function handler(req, res) {/* TODO: Fix JSX expression */}
-  }
+async function handler(req, res) {
+  try {
+    const { amount, currency = 'usd' } = req.body || {};
 
-  const { amount, currency = 'usd' } = req.body || {};
+    if (!amount) {
+      return res.status(400).json({ error: 'Amount is required' });
+    }
 
-  if (!amount) {/* TODO: Fix JSX expression */}
-  r: 'Amount is required' });
-    return;
-  }
-
-  try {/* TODO: Fix JSX expression */}
+    // Create payment intent logic here
+    const paymentIntent = {
+      id: 'pi_' + Date.now(),
+      amount,
+      currency,
+      status: 'requires_payment_method'
     };
 
-    res.statusCode = 200;
-    res.json({ paymentIntent });
-  } catch {/* TODO: Fix JSX expression */}
-  r: 'Failed to create payment intent' });
+    res.status(200).json({ paymentIntent });
+  } catch (error) {
+    console.error('Error creating payment intent:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 }
 
