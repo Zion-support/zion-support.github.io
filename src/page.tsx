@@ -1,6 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Rocket, Microscope, Layers, Database as DbIcon, Server, Network, Cpu as Processor, HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Scanner, Router, Switch, Firewall, Antivirus, Backup, Recovery, Migration, Integration, Consulting, Support, Maintenance, Upgrade, Security, Compliance, Audit, Training, Documentation, Testing, Quality, Performance, Scalability, Reliability, Availability, Monitoring, Alerting, Logging, Analytics, Reporting, Dashboard, API, SDK, Framework, Library, Tool, Platform, Service, Solution, Product, Technology, Innovation, Digital, Transformation, Automation, Optimization, Efficiency, Productivity, Growth, Success, Future, Next, Generation, Advanced, Cutting, Edge, State, Art, Revolutionary, Breakthrough, Game, Changing, Disruptive, Innovative, Intelligent, Smart, AI, ML, Deep, Learning, Neural, Network, Algorithm, Model, Data, Science, Analytics, Big, Data, Cloud, Computing, Edge, Computing, Quantum, Computing, Blockchain, Cryptocurrency, NFT, Metaverse, AR, VR, IoT, 5G, 6G, Cybersecurity, Privacy, GDPR, Compliance, Regulatory, Standards, Best, Practices, Methodology, Process, Workflow, Pipeline, Architecture, Design, Pattern, Framework, Methodology, Agile, DevOps, CI, CD, Microservices, Serverless, Container, Kubernetes, Docker, AWS, Azure, GCP, IBM, Oracle, Salesforce, Microsoft, Google, Amazon, Apple, Facebook, Meta, Twitter, LinkedIn, Instagram, TikTok, YouTube, Netflix, Spotify, Uber, Airbnb, Tesla, SpaceX, OpenAI, Anthropic, Google, DeepMind, NVIDIA, Intel, AMD, Qualcomm, ARM, Apple, Samsung, Huawei, Xiaomi, OnePlus, Sony, LG, Dell, HP, Lenovo, Asus, Acer, MSI, Razer, Logitech, Corsair, SteelSeries, HyperX, Kingston, Samsung, WD, Seagate, Crucial, G.Skill, ASUS, Gigabyte, MSI, EVGA, Zotac, Sapphire, PowerColor, XFX, ASRock, Biostar, ECS, Foxconn, Supermicro, Tyan, Intel, AMD, NVIDIA, Qualcomm, MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink, Intel, AMD, NVIDIA, Qualcomm, MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink } from 'lucide-react';
+import * as Icons from './utils/icons';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -8,6 +8,9 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOHead from './components/SEOHead';
+import { initPerformanceMonitoring } from './utils/performanceMonitor';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
@@ -48,6 +51,7 @@ const HomePage: React.FC = () => {
     
     // Initialize performance optimizations
     initializePerformanceOptimizations();
+    initPerformanceMonitoring();
     
     return () => clearTimeout(timer);
   }, []);
@@ -279,7 +283,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
-      icon: Brain,
+      icon: Icons.Brain,
       price: '$2,500/month',
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization', 'Real-time Inference', 'AutoML'],
       color: 'text-purple-400',
@@ -291,7 +295,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis and language understanding with 95%+ accuracy',
-      icon: MessageSquare,
+      icon: Icons.MessageSquare,
       price: '$1,800/month',
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Document Processing', 'Voice Recognition', 'Entity Extraction', 'Topic Modeling'],
       color: 'text-blue-400',
@@ -303,7 +307,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Computer Vision',
       description: 'Image and video analysis solutions for object detection and recognition with 99%+ accuracy',
-      icon: Eye,
+      icon: Icons.Eye,
       price: '$2,200/month',
       features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition', 'Quality Control', 'Medical Imaging', 'OCR', '3D Vision'],
       color: 'text-green-400',
@@ -315,7 +319,7 @@ const HomePage: React.FC = () => {
     {
       title: 'AI Automation',
       description: 'Intelligent process automation with decision-making capabilities and 90%+ efficiency gains',
-      icon: Zap,
+      icon: Icons.Zap,
       price: '$1,900/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling', 'RPA Integration', 'Smart Routing', 'Cognitive Automation', 'Self-healing'],
       color: 'text-cyan-400',
@@ -327,7 +331,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Quantum AI Computing',
       description: 'Next-generation quantum algorithms for complex problem solving with exponential speedup',
-      icon: Atom,
+      icon: Icons.Atom,
       price: '$5,000/month',
       features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation', 'Research & Development', 'Custom Solutions', 'Quantum ML', 'Quantum Annealing'],
       color: 'text-yellow-400',
@@ -339,7 +343,7 @@ const HomePage: React.FC = () => {
     {
       title: 'AI Cybersecurity',
       description: 'AI-powered threat detection and prevention systems with 99.9% threat detection rate',
-      icon: Shield,
+      icon: Icons.Shield,
       price: '$2,800/month',
       features: ['Threat Detection', 'Anomaly Detection', 'Behavioral Analysis', 'Incident Response', 'Risk Assessment', 'Compliance Monitoring', 'Zero Trust', 'AI Forensics'],
       color: 'text-red-400',
@@ -351,7 +355,7 @@ const HomePage: React.FC = () => {
     {
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis, treatment planning, and patient care with FDA compliance',
-      icon: Stethoscope,
+      icon: Icons.Stethoscope,
       price: '$3,500/month',
       features: ['Medical Imaging', 'Diagnosis Support', 'Treatment Planning', 'Drug Discovery', 'Patient Monitoring', 'Clinical Trials', 'FDA Compliance', 'HIPAA Security'],
       color: 'text-pink-400',
@@ -363,7 +367,7 @@ const HomePage: React.FC = () => {
     {
       title: 'AI Financial Services',
       description: 'FinTech AI solutions for trading, risk management, and fraud detection',
-      icon: CreditCard,
+      icon: Icons.CreditCard,
       price: '$2,200/month',
       features: ['Algorithmic Trading', 'Risk Management', 'Fraud Detection', 'Credit Scoring', 'Regulatory Compliance', 'Real-time Analytics', 'Blockchain Integration', 'API Banking'],
       color: 'text-emerald-400',
@@ -379,7 +383,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Cloud Migration & Management',
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
-      icon: Cloud,
+      icon: Icons.Cloud,
       price: '$1,500/month',
       features: ['Cloud Strategy', 'Migration Planning', 'Infrastructure Setup', 'Security Configuration', 'Cost Optimization', '24/7 Monitoring', 'Disaster Recovery', 'Compliance'],
       color: 'text-blue-400',
@@ -391,7 +395,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security services including threat detection, incident response, and compliance',
-      icon: Shield,
+      icon: Icons.Shield,
       price: '$2,200/month',
       features: ['Security Assessment', 'Threat Detection', 'Incident Response', 'Penetration Testing', 'Compliance Audit', 'Security Training', 'Vulnerability Management', 'Zero Trust'],
       color: 'text-red-400',
@@ -403,7 +407,7 @@ const HomePage: React.FC = () => {
     {
       title: 'IT Infrastructure Management',
       description: 'Complete IT infrastructure setup, maintenance, and optimization services',
-      icon: Server,
+      icon: Icons.Server,
       price: '$1,800/month',
       features: ['Network Setup', 'Server Management', 'Database Administration', 'Backup Solutions', 'Performance Monitoring', 'Capacity Planning', 'Disaster Recovery', 'Maintenance'],
       color: 'text-green-400',
@@ -415,7 +419,7 @@ const HomePage: React.FC = () => {
     {
       title: 'DevOps & CI/CD',
       description: 'Modern DevOps practices with automated deployment and continuous integration',
-      icon: Settings,
+      icon: Icons.Settings,
       price: '$1,600/month',
       features: ['CI/CD Pipeline', 'Container Orchestration', 'Infrastructure as Code', 'Monitoring & Logging', 'Security Integration', 'Performance Optimization', 'Auto-scaling', 'GitOps'],
       color: 'text-cyan-400',
@@ -427,7 +431,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Database Services',
       description: 'Database design, optimization, and management for all major database systems',
-      icon: Database,
+      icon: Icons.Database,
       price: '$1,200/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration Services', 'Security Hardening', 'Monitoring', 'Scaling', 'Consulting'],
       color: 'text-purple-400',
@@ -439,7 +443,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Network Infrastructure',
       description: 'Complete network design, implementation, and management services',
-      icon: Network,
+      icon: Icons.Network,
       price: '$1,400/month',
       features: ['Network Design', 'Security Implementation', 'Performance Optimization', 'Monitoring', 'Troubleshooting', 'Upgrades', 'Documentation', 'Training'],
       color: 'text-orange-400',
@@ -451,7 +455,7 @@ const HomePage: React.FC = () => {
     {
       title: 'IT Consulting',
       description: 'Strategic IT consulting for digital transformation and technology optimization',
-      icon: Briefcase,
+      icon: Icons.Briefcase,
       price: '$200/hour',
       features: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Technology Selection', 'Implementation Planning', 'Change Management', 'Training', 'Ongoing Support'],
       color: 'text-indigo-400',
@@ -463,7 +467,7 @@ const HomePage: React.FC = () => {
     {
       title: 'IT Support & Maintenance',
       description: '24/7 IT support and maintenance services for all your technology needs',
-      icon: Wrench,
+      icon: Icons.Wrench,
       price: '$800/month',
       features: ['24/7 Support', 'Remote Assistance', 'Hardware Maintenance', 'Software Updates', 'Security Patches', 'Performance Monitoring', 'Preventive Maintenance', 'Emergency Response'],
       color: 'text-yellow-400',
@@ -479,7 +483,7 @@ const HomePage: React.FC = () => {
     {
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable business insights with advanced AI analytics',
-      icon: BarChart,
+      icon: Icons.BarChart,
       price: '$2,500/month',
       features: ['Advanced Analytics', 'Predictive Modeling', 'Real-time Dashboards', 'Custom Reports', 'Data Integration', 'Machine Learning', 'Natural Language Queries', 'Mobile Access'],
       color: 'text-purple-400',
@@ -491,7 +495,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Blockchain & Web3 Solutions',
       description: 'Complete blockchain development and Web3 integration services',
-      icon: Layers,
+      icon: Icons.Layers,
       price: '$3,000/month',
       features: ['Smart Contracts', 'DApp Development', 'NFT Platforms', 'DeFi Solutions', 'Token Development', 'Blockchain Integration', 'Security Audits', 'Consulting'],
       color: 'text-cyan-400',
@@ -503,7 +507,7 @@ const HomePage: React.FC = () => {
     {
       title: 'IoT & Edge Computing',
       description: 'Internet of Things solutions with edge computing for real-time processing',
-      icon: Cpu,
+      icon: Icons.Cpu,
       price: '$2,200/month',
       features: ['IoT Device Development', 'Edge Computing', 'Data Processing', 'Real-time Analytics', 'Device Management', 'Security', 'Integration', 'Monitoring'],
       color: 'text-green-400',
@@ -515,7 +519,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile app development with AI integration',
-      icon: Smartphone,
+      icon: Icons.Smartphone,
       price: '$1,800/month',
       features: ['iOS Development', 'Android Development', 'Cross-platform', 'AI Integration', 'Backend Development', 'API Development', 'Testing', 'App Store Optimization'],
       color: 'text-blue-400',
@@ -527,7 +531,7 @@ const HomePage: React.FC = () => {
     {
       title: 'E-commerce Solutions',
       description: 'Complete e-commerce platform development with AI-powered features',
-      icon: ShoppingCart,
+      icon: Icons.ShoppingCart,
       price: '$2,000/month',
       features: ['Platform Development', 'Payment Integration', 'Inventory Management', 'AI Recommendations', 'Analytics', 'Mobile Optimization', 'Security', 'SEO'],
       color: 'text-orange-400',
@@ -539,7 +543,7 @@ const HomePage: React.FC = () => {
     {
       title: 'API Development & Integration',
       description: 'Custom API development and third-party integration services',
-      icon: Code,
+      icon: Icons.Code,
       price: '$1,500/month',
       features: ['RESTful APIs', 'GraphQL APIs', 'Third-party Integration', 'API Documentation', 'Testing', 'Security', 'Rate Limiting', 'Monitoring'],
       color: 'text-indigo-400',
@@ -551,21 +555,28 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Performance Optimizer */}
-      <PerformanceOptimizer />
-      
-      {/* SEO Optimizer */}
-      <SEOOptimizer />
-      
-      {/* Accessibility Enhancer */}
-      <AccessibilityEnhancer />
-      
-      {/* Analytics */}
-      <Analytics />
-      
-      {/* Security Enhancer */}
-      <SecurityEnhancer />
+    <ErrorBoundary>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        canonicalUrl="https://ziontechgroup.com"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Performance Optimizer */}
+        <PerformanceOptimizer />
+        
+        {/* SEO Optimizer */}
+        <SEOOptimizer />
+        
+        {/* Accessibility Enhancer */}
+        <AccessibilityEnhancer />
+        
+        {/* Analytics */}
+        <Analytics />
+        
+        {/* Security Enhancer */}
+        <SecurityEnhancer />
 
       {/* Navigation */}
       <Navigation />
@@ -574,7 +585,12 @@ const HomePage: React.FC = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 opacity-30">
+          <div className="w-full h-full" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px)`,
+            backgroundSize: '60px 60px'
+          }}></div>
+        </div>
         
         {/* Neon Grid Overlay */}
         <div className="absolute inset-0" style={{
@@ -595,19 +611,19 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
-                <Phone className="w-6 h-6 mr-2" />
+                <Icons.Phone className="w-6 h-6 mr-2" />
                 <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-center text-purple-400 text-lg">
-                <Mail className="w-6 h-6 mr-2" />
+                <Icons.Mail className="w-6 h-6 mr-2" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center text-pink-400 text-lg">
-                <MapPin className="w-6 h-6 mr-2" />
+                <Icons.MapPin className="w-6 h-6 mr-2" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -686,7 +702,7 @@ const HomePage: React.FC = () => {
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <Icons.CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -710,7 +726,7 @@ const HomePage: React.FC = () => {
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <Icons.ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
               </div>
@@ -765,7 +781,7 @@ const HomePage: React.FC = () => {
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <Icons.CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -789,7 +805,7 @@ const HomePage: React.FC = () => {
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Contact Us
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <Icons.ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
               </div>
@@ -844,7 +860,7 @@ const HomePage: React.FC = () => {
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <Icons.CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -868,7 +884,7 @@ const HomePage: React.FC = () => {
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Call Now
-                    <Phone className="w-4 h-4 ml-2" />
+                    <Icons.Phone className="w-4 h-4 ml-2" />
                   </a>
                 </div>
               </div>
@@ -923,7 +939,7 @@ const HomePage: React.FC = () => {
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <Icons.CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -947,7 +963,7 @@ const HomePage: React.FC = () => {
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <Icons.ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
               </div>
@@ -970,7 +986,7 @@ const HomePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <Icons.Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
@@ -979,7 +995,7 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <Icons.Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
@@ -988,7 +1004,7 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
-              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+              <Icons.MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
@@ -1000,9 +1016,10 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 };
 

@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
-import { performanceMonitor } from './utils/performanceMonitor';
+import { PerformanceMonitor } from './utils/performanceMonitor';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page.tsx'));
@@ -146,7 +146,8 @@ const MainLoadingSpinner = () => (
 const App: React.FC = () => {
   // Initialize performance monitoring
   React.useEffect(() => {
-    performanceMonitor.reportMetrics();
+    const monitor = PerformanceMonitor.getInstance();
+    // Monitor is already initialized in the main page
   }, []);
 
   return (

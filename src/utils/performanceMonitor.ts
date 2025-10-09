@@ -2,137 +2,116 @@
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
-  private observers: PerformanceObserver[] = [];
 
-  private constructor() {
-    this.initializeObservers();
-  }
-
-  public static getInstance(): PerformanceMonitor {
+  static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor();
     }
     return PerformanceMonitor.instance;
   }
 
-  private initializeObservers(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
-    }
+  // Measure page load performance
+  measurePageLoad(): void {
+    if (typeof window === 'undefined') return;
 
-    // Monitor Largest Contentful Paint
-    try {
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        this.metrics.set('lcp', lastEntry.startTime);
+    window.addEventListener('load', () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      
+      this.metrics.set('pageLoadTime', navigation.loadEventEnd - navigation.fetchStart);
+      this.metrics.set('domContentLoaded', navigation.domContentLoadedEventEnd - navigation.fetchStart);
+      this.metrics.set('firstPaint', this.getFirstPaint());
+      this.metrics.set('firstContentfulPaint', this.getFirstContentfulPaint());
+      
+      // Log performance metrics
+      console.log('Performance Metrics:', {
+        pageLoadTime: this.metrics.get('pageLoadTime'),
+        domContentLoaded: this.metrics.get('domContentLoaded'),
+        firstPaint: this.metrics.get('firstPaint'),
+        firstContentfulPaint: this.metrics.get('firstContentfulPaint')
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(lcpObserver);
-    } catch (e) {
-      console.warn('LCP observer not supported');
-    }
+    });
+  }
 
-    // Monitor First Input Delay
-    try {
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          this.metrics.set('fid', entry.processingStart - entry.startTime);
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      this.observers.push(fidObserver);
-    } catch (e) {
-      console.warn('FID observer not supported');
-    }
-
-    // Monitor Cumulative Layout Shift
-    try {
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        this.metrics.set('cls', clsValue);
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(clsObserver);
-    } catch (e) {
-      console.warn('CLS observer not supported');
+  // Measure component render time
+  measureComponent(componentName: string, startTime: number): void {
+    const renderTime = performance.now() - startTime;
+    this.metrics.set(`${componentName}_renderTime`, renderTime);
+    
+    if (renderTime > 100) { // Log slow renders
+      console.warn(`Slow render detected: ${componentName} took ${renderTime}ms`);
     }
   }
 
-  public getMetrics(): Record<string, number> {
+  // Measure API call performance
+  measureApiCall(endpoint: string, startTime: number): void {
+    const duration = performance.now() - startTime;
+    this.metrics.set(`api_${endpoint}`, duration);
+    
+    if (duration > 2000) { // Log slow API calls
+      console.warn(`Slow API call: ${endpoint} took ${duration}ms`);
+    }
+  }
+
+  // Get First Paint time
+  private getFirstPaint(): number {
+    const paintEntries = performance.getEntriesByType('paint');
+    const firstPaint = paintEntries.find(entry => entry.name === 'first-paint');
+    return firstPaint ? firstPaint.startTime : 0;
+  }
+
+  // Get First Contentful Paint time
+  private getFirstContentfulPaint(): number {
+    const paintEntries = performance.getEntriesByType('paint');
+    const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    return firstContentfulPaint ? firstContentfulPaint.startTime : 0;
+  }
+
+  // Get all metrics
+  getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
   }
 
-  public getCoreWebVitals(): {
-    lcp?: number;
-    fid?: number;
-    cls?: number;
-    fcp?: number;
-    ttfb?: number;
-  } {
-    const metrics = this.getMetrics();
-    const vitals: any = {};
-
-    // Get FCP from performance API
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-      if (fcpEntry) {
-        vitals.fcp = fcpEntry.startTime;
-      }
-
-      // Get TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        vitals.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      }
-    }
-
-    return {
-      ...vitals,
-      lcp: metrics.lcp,
-      fid: metrics.fid,
-      cls: metrics.cls,
-    };
-  }
-
-  public reportMetrics(): void {
-    const vitals = this.getCoreWebVitals();
-    console.log('Core Web Vitals:', vitals);
-
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      Object.entries(vitals).forEach(([metric, value]) => {
-        if (value !== undefined) {
-          (window as any).gtag('event', metric, {
-            event_category: 'Web Vitals',
-            value: Math.round(value),
-            non_interaction: true,
-          });
-        }
-      });
-    }
-  }
-
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+  // Clear metrics
+  clearMetrics(): void {
+    this.metrics.clear();
   }
 }
+
+// Web Vitals monitoring
+export const measureWebVitals = (): void => {
+  if (typeof window === 'undefined') return;
+
+  // Measure Largest Contentful Paint
+  new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    const lastEntry = entries[entries.length - 1];
+    console.log('LCP:', lastEntry.startTime);
+  }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+  // Measure First Input Delay
+  new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    entries.forEach((entry) => {
+      console.log('FID:', entry.processingStart - entry.startTime);
+    });
+  }).observe({ entryTypes: ['first-input'] });
+
+  // Measure Cumulative Layout Shift
+  let clsValue = 0;
+  new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    entries.forEach((entry: any) => {
+      if (!entry.hadRecentInput) {
+        clsValue += entry.value;
+      }
+    });
+    console.log('CLS:', clsValue);
+  }).observe({ entryTypes: ['layout-shift'] });
+};
 
 // Initialize performance monitoring
-export const performanceMonitor = PerformanceMonitor.getInstance();
-
-// Report metrics after page load
-if (typeof window !== 'undefined') {
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      performanceMonitor.reportMetrics();
-    }, 1000);
-  });
-}
+export const initPerformanceMonitoring = (): void => {
+  const monitor = PerformanceMonitor.getInstance();
+  monitor.measurePageLoad();
+  measureWebVitals();
+};

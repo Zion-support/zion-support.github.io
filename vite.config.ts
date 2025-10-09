@@ -22,13 +22,16 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more aggressive splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
@@ -36,9 +39,12 @@ export default defineConfig({
             if (id.includes('react-router-dom')) {
               return 'vendor-router';
             }
-            return 'vendor';
+            if (id.includes('react-helmet-async')) {
+              return 'vendor-seo';
+            }
+            return 'vendor-utils';
           }
-          // Page chunks - group similar pages
+          // Page chunks - group by service type
           if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
             return 'pages-ai';
           }
@@ -47,6 +53,9 @@ export default defineConfig({
           }
           if (id.includes('/src/blog/')) {
             return 'pages-blog';
+          }
+          if (id.includes('/src/components/')) {
+            return 'components';
           }
           if (id.includes('/src/')) {
             return 'pages-other';

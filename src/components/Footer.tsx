@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Calculator, TrendingUp, CheckCircle } from 'lucide-react';
+import { BarChart3, FileText, Search, Bot, Calculator, TrendingUp } from 'lucide-react';
+import * as Icons from '../utils/icons';
 
 const Footer: React.FC = () => {
   const microSaasServices = [
@@ -109,7 +110,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+                <Icons.Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
             </div>
@@ -118,19 +119,19 @@ const Footer: React.FC = () => {
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-cyan-400" />
+                <Icons.Phone className="w-4 h-4 text-cyan-400" />
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-cyan-400" />
+                <Icons.Mail className="w-4 h-4 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-cyan-400" />
+                <Icons.MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -139,7 +140,7 @@ const Footer: React.FC = () => {
           {/* Micro SAAS Services */}
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
+              <Icons.Zap className="w-4 h-4 mr-2" />
               Micro SAAS
             </h3>
             <ul className="space-y-2">
@@ -149,7 +150,7 @@ const Footer: React.FC = () => {
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                    <Icons.ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </li>
               ))}
@@ -164,7 +165,7 @@ const Footer: React.FC = () => {
           {/* AI & IT Services */}
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Brain className="w-4 h-4 mr-2" />
+              <Icons.Brain className="w-4 h-4 mr-2" />
               AI & IT Services
             </h3>
             <div className="space-y-4">
@@ -207,7 +208,7 @@ const Footer: React.FC = () => {
           {/* Additional AI Services */}
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
+              <Icons.Zap className="w-4 h-4 mr-2" />
               AI Tools
             </h3>
             <ul className="space-y-2">
@@ -218,7 +219,7 @@ const Footer: React.FC = () => {
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                    <Icons.ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </li>
               ))}
