@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 =======
 'use client';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03
+=======
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 import React from 'react';
 
 'use client';

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 'use client';
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03

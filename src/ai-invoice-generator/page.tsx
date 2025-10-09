@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 'use client';
 import React, { memo } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03

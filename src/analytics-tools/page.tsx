@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 import React from 'react';
 
 const AnalyticsToolsPage: React.FC = () => {

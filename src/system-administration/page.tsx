@@ -1,9 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Settings, Shield, BarChart, Zap, CheckCircle, Star} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 import Footer from '../components/Footer';
 
 

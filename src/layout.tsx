@@ -188,6 +188,7 @@ export default function RootLayout({
     </html>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default RootLayout;
 }
@@ -196,3 +197,6 @@ export default RootLayout;
 }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf

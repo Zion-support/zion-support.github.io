@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 'use client';
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03

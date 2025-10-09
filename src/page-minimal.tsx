@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 export const _metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
+=======
+import React from 'react';
+import Link from 'next/link';
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">

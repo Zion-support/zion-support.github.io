@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {Star, Phone} from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';

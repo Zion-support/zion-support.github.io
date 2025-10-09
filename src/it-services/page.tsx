@@ -1,8 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Cloud } from 'lucide-react';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 
 <<<<<<< HEAD
 const ITServicesPage: React.FC = () => {
@@ -75,21 +82,42 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 const ItServicesPage: React.FC = () => {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">It Services</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced it services solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>IT Services | Zion Tech Group</title>
+        <meta name="description" content="Advanced IT services solutions by Zion Tech Group." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">IT Services</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Coming Soon - Advanced IT services solutions that will transform your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+              Contact Us
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+              Learn More
+            </button>
+          </div>
+        </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
 }
 
-export default ItServicesPage;
+export default ITServicesPage;

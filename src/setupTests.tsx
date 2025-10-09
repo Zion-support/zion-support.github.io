@@ -2,11 +2,13 @@
 /**
  * Jest setup file for testing environment
  */
+/* eslint-disable no-console */
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
+<<<<<<< HEAD
 <<<<<<< HEAD
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
@@ -18,6 +20,9 @@ const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03
+=======
+const originalConsoleError = console.error;
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -67,6 +72,7 @@ Object.defineProperty(window, 'sessionStorage', {
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
 <<<<<<< HEAD
+<<<<<<< HEAD
 // eslint-disable-next-line no-console
 const originalConsoleWarn = console.warn;
 // eslint-disable-next-line no-console
@@ -81,6 +87,10 @@ const originalConsoleInfo = console.info;
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03
+=======
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
@@ -88,7 +98,6 @@ console.warn = (...args) => {
   }
   originalConsoleWarn(...args);
 };
-// eslint-disable-next-line no-console
 console.info = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
@@ -107,6 +116,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Additional JSDOM navigation warning suppression
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const suppressNavigationWarnings = (...args: unknown[]) => {
@@ -117,6 +127,11 @@ const suppressNavigationWarnings = (...args: unknown[]) => {
 console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-3a03
+=======
+// Suppress JSDOM navigation warnings
+console.error = (...args) => {
+  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-55cf
     return; // Suppress JSDOM navigation warnings
   }
   originalConsoleError(...args);
