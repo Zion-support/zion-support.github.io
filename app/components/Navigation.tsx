@@ -40,13 +40,45 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-white hover:text-blue-400 transition-colors">
               Home
             </Link>
-            <Link href="/services" className="text-white hover:text-blue-400 transition-colors">
-              Services
-            </Link>
+            <div className="relative group">
+              <Link href="/services" className="text-white hover:text-blue-400 transition-colors flex items-center">
+                Services
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+              {/* Services Dropdown */}
+              <div className="absolute top-full left-0 mt-2 w-96 bg-gray-900 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="p-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <h3 className="text-blue-400 font-semibold mb-2">AI Services</h3>
+                      <div className="space-y-1">
+                        <Link href="/ai-services" className="block text-sm text-gray-300 hover:text-white">AI Solutions</Link>
+                        <Link href="/ai-marketing" className="block text-sm text-gray-300 hover:text-white">AI Marketing</Link>
+                        <Link href="/ai-automation" className="block text-sm text-gray-300 hover:text-white">AI Automation</Link>
+                        <Link href="/ai-healthcare" className="block text-sm text-gray-300 hover:text-white">AI Healthcare</Link>
+                        <Link href="/ai-fintech" className="block text-sm text-gray-300 hover:text-white">AI Fintech</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-blue-400 font-semibold mb-2">Micro SAAS</h3>
+                      <div className="space-y-1">
+                        <Link href="/micro-saas" className="block text-sm text-gray-300 hover:text-white">All Micro SAAS</Link>
+                        <Link href="/ai-content-generation" className="block text-sm text-gray-300 hover:text-white">Content Generation</Link>
+                        <Link href="/ai-customer-support" className="block text-sm text-gray-300 hover:text-white">Customer Support</Link>
+                        <Link href="/ai-sales-automation" className="block text-sm text-gray-300 hover:text-white">Sales Automation</Link>
+                        <Link href="/ai-data-analytics" className="block text-sm text-gray-300 hover:text-white">Data Analytics</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
               About
             </Link>
@@ -58,11 +90,11 @@ const Navigation: React.FC = () => {
             </Link>
             <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-600">
               <a 
-                href="tel:+13026009898" 
+                href="tel:+13024640950" 
                 className="flex items-center space-x-1 text-blue-400 hover:text-blue-300 transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">(302) 600-9898</span>
+                <span className="text-sm">(302) 464-0950</span>
               </a>
             </div>
           </div>
@@ -120,18 +152,18 @@ const Navigation: React.FC = () => {
               </Link>
               <div className="border-t border-gray-600 pt-2 mt-2">
                 <a 
-                  href="tel:+13026009898" 
+                  href="tel:+13024640950" 
                   className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>(302) 600-9898</span>
+                  <span>(302) 464-0950</span>
                 </a>
                 <a 
-                  href="mailto:info@ziontechgroup.com" 
+                  href="mailto:kleber@ziontechgroup.com" 
                   className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>info@ziontechgroup.com</span>
+                  <span>kleber@ziontechgroup.com</span>
                 </a>
               </div>
             </div>

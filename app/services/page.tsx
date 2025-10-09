@@ -261,12 +261,18 @@ const ServicesPage: React.FC = () => {
               Comprehensive AI, IT, and micro SAAS solutions designed to transform your business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <a 
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
                 Get Free Consultation
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View All Services
-              </button>
+              </a>
+              <a 
+                href="/micro-saas"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                View Micro SAAS
+              </a>
             </div>
           </div>
         </div>
