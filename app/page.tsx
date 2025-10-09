@@ -60,6 +60,14 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
+  // Contact information
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown, DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
   const microSAASServices = [
     {
       title: 'AI Project Manager Pro',
@@ -335,6 +343,215 @@ const HomePage: React.FC = () => {
       link: '/ai-ecommerce-optimizer',
       popular: true,
       category: 'E-commerce'
+    },
+    {
+      title: 'AI Real Estate Assistant',
+      description: 'AI-powered property analysis, market insights, and investment recommendations',
+      icon: '🏠',
+      price: '$199/month',
+      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield calculator', 'Neighborhood insights', 'Price predictions'],
+      benefits: ['Better investment decisions', '20% higher returns', 'Risk reduction', 'Market timing optimization'],
+      link: '/ai-real-estate-assistant',
+      popular: true,
+      category: 'Real Estate'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Optimize supply chain operations with AI-powered demand forecasting and logistics',
+      icon: '🚚',
+      price: '$249/month',
+      features: ['Demand forecasting', 'Route optimization', 'Inventory management', 'Supplier analytics', 'Risk assessment', 'Cost optimization'],
+      benefits: ['30% cost reduction', '99% on-time delivery', 'Reduced waste', 'Better supplier relationships'],
+      link: '/ai-supply-chain-optimizer',
+      popular: true,
+      category: 'Supply Chain'
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'AI-powered medical diagnosis support, patient monitoring, and treatment recommendations',
+      icon: '🏥',
+      price: '$399/month',
+      features: ['Symptom analysis', 'Medical imaging analysis', 'Drug interaction checker', 'Patient monitoring', 'Treatment recommendations', 'Health risk assessment'],
+      benefits: ['Faster diagnosis', 'Reduced errors', 'Better patient outcomes', 'Cost savings'],
+      link: '/ai-healthcare-assistant',
+      popular: true,
+      category: 'Healthcare'
+    },
+    {
+      title: 'AI Education Tutor',
+      description: 'Personalized AI tutoring with adaptive learning and progress tracking',
+      icon: '🎓',
+      price: '$129/month',
+      features: ['Personalized learning paths', 'Adaptive assessments', 'Progress tracking', 'Multi-subject support', 'Interactive lessons', 'Performance analytics'],
+      benefits: ['40% better learning outcomes', 'Personalized pace', '24/7 availability', 'Engaging content'],
+      link: '/ai-education-tutor',
+      popular: true,
+      category: 'Education'
+    },
+    {
+      title: 'AI Travel Planner',
+      description: 'Intelligent travel planning with personalized recommendations and real-time updates',
+      icon: '✈️',
+      price: '$89/month',
+      features: ['Personalized itineraries', 'Price monitoring', 'Weather integration', 'Local recommendations', 'Real-time updates', 'Budget optimization'],
+      benefits: ['Better travel experiences', 'Cost savings', 'Time efficiency', 'Personalized suggestions'],
+      link: '/ai-travel-planner',
+      popular: false,
+      category: 'Travel'
+    },
+    {
+      title: 'AI Energy Manager',
+      description: 'Optimize energy consumption with AI-powered monitoring and smart recommendations',
+      icon: '⚡',
+      price: '$159/month',
+      features: ['Energy monitoring', 'Usage optimization', 'Cost analysis', 'Renewable integration', 'Smart scheduling', 'Carbon tracking'],
+      benefits: ['25% energy savings', 'Reduced costs', 'Environmental impact', 'Smart automation'],
+      link: '/ai-energy-manager',
+      popular: false,
+      category: 'Energy'
+    },
+    {
+      title: 'AI Agriculture Assistant',
+      description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization',
+      icon: '🌾',
+      price: '$299/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Weather analysis', 'Pest detection', 'Resource optimization', 'Market insights'],
+      benefits: ['20% higher yields', 'Reduced costs', 'Better crop health', 'Sustainable farming'],
+      link: '/ai-agriculture-assistant',
+      popular: false,
+      category: 'Agriculture'
+    },
+    {
+      title: 'AI Insurance Analyzer',
+      description: 'AI-powered insurance analysis, claims processing, and risk assessment',
+      icon: '🛡️',
+      price: '$189/month',
+      features: ['Policy analysis', 'Claims processing', 'Risk assessment', 'Premium optimization', 'Fraud detection', 'Customer insights'],
+      benefits: ['Faster claims processing', 'Reduced fraud', 'Better risk management', 'Cost optimization'],
+      link: '/ai-insurance-analyzer',
+      popular: false,
+      category: 'Insurance'
+    },
+    {
+      title: 'AI Restaurant Manager',
+      description: 'Complete restaurant management with AI-powered inventory, staff scheduling, and customer insights',
+      icon: '🍽️',
+      price: '$199/month',
+      features: ['Inventory management', 'Staff scheduling', 'Customer analytics', 'Menu optimization', 'Waste reduction', 'Revenue forecasting'],
+      benefits: ['Reduced waste', 'Better staff utilization', 'Higher customer satisfaction', 'Increased profits'],
+      link: '/ai-restaurant-manager',
+      popular: false,
+      category: 'Hospitality'
+    },
+    {
+      title: 'AI Event Planner',
+      description: 'Intelligent event planning with vendor management, budget optimization, and attendee insights',
+      icon: '🎉',
+      price: '$149/month',
+      features: ['Event planning', 'Vendor management', 'Budget tracking', 'Attendee analytics', 'Venue optimization', 'Timeline management'],
+      benefits: ['Seamless events', 'Cost optimization', 'Better attendee experience', 'Time savings'],
+      link: '/ai-event-planner',
+      popular: false,
+      category: 'Events'
+    },
+    {
+      title: 'AI Personal Finance Manager',
+      description: 'Comprehensive personal finance management with budgeting, investment advice, and goal tracking',
+      icon: '💰',
+      price: '$79/month',
+      features: ['Budget tracking', 'Investment advice', 'Goal setting', 'Expense categorization', 'Bill reminders', 'Financial planning'],
+      benefits: ['Better financial health', 'Goal achievement', 'Cost awareness', 'Investment growth'],
+      link: '/ai-personal-finance-manager',
+      popular: true,
+      category: 'Personal Finance'
+    },
+    {
+      title: 'AI Home Automation',
+      description: 'Smart home control with AI-powered automation, energy management, and security',
+      icon: '🏡',
+      price: '$119/month',
+      features: ['Smart device control', 'Energy optimization', 'Security monitoring', 'Voice commands', 'Automated routines', 'Remote access'],
+      benefits: ['Convenience', 'Energy savings', 'Enhanced security', 'Cost reduction'],
+      link: '/ai-home-automation',
+      popular: false,
+      category: 'Smart Home'
+    },
+    {
+      title: 'AI Language Learning',
+      description: 'AI-powered language learning with personalized lessons and real-time pronunciation feedback',
+      icon: '🗣️',
+      price: '$99/month',
+      features: ['Personalized lessons', 'Pronunciation feedback', 'Conversation practice', 'Progress tracking', 'Multiple languages', 'Cultural insights'],
+      benefits: ['Faster learning', 'Better pronunciation', 'Confidence building', 'Cultural understanding'],
+      link: '/ai-language-learning',
+      popular: true,
+      category: 'Education'
+    },
+    {
+      title: 'AI Mental Health Coach',
+      description: 'AI-powered mental health support with mood tracking, meditation guidance, and wellness insights',
+      icon: '🧠',
+      price: '$149/month',
+      features: ['Mood tracking', 'Meditation guidance', 'Stress management', 'Sleep analysis', 'Wellness insights', 'Crisis support'],
+      benefits: ['Better mental health', 'Stress reduction', 'Improved sleep', 'Emotional well-being'],
+      link: '/ai-mental-health-coach',
+      popular: true,
+      category: 'Health & Wellness'
+    },
+    {
+      title: 'AI Pet Care Assistant',
+      description: 'Comprehensive pet care with health monitoring, feeding schedules, and veterinary insights',
+      icon: '🐕',
+      price: '$89/month',
+      features: ['Health monitoring', 'Feeding schedules', 'Exercise tracking', 'Veterinary insights', 'Behavior analysis', 'Care reminders'],
+      benefits: ['Better pet health', 'Preventive care', 'Peace of mind', 'Cost savings'],
+      link: '/ai-pet-care-assistant',
+      popular: false,
+      category: 'Pet Care'
+    },
+    {
+      title: 'AI Wedding Planner',
+      description: 'Complete wedding planning with vendor management, timeline optimization, and budget tracking',
+      icon: '💍',
+      price: '$299/month',
+      features: ['Wedding planning', 'Vendor management', 'Timeline creation', 'Budget tracking', 'Guest management', 'Checklist automation'],
+      benefits: ['Stress-free planning', 'Cost optimization', 'Perfect timeline', 'Memorable experience'],
+      link: '/ai-wedding-planner',
+      popular: false,
+      category: 'Events'
+    },
+    {
+      title: 'AI Stock Trader',
+      description: 'AI-powered stock trading with market analysis, portfolio optimization, and risk management',
+      icon: '📈',
+      price: '$199/month',
+      features: ['Market analysis', 'Portfolio optimization', 'Risk management', 'Trading signals', 'Performance tracking', 'News analysis'],
+      benefits: ['Better returns', 'Risk reduction', 'Informed decisions', 'Automated trading'],
+      link: '/ai-stock-trader',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Job Search Assistant',
+      description: 'AI-powered job search with resume optimization, interview prep, and career guidance',
+      icon: '💼',
+      price: '$79/month',
+      features: ['Resume optimization', 'Job matching', 'Interview prep', 'Salary negotiation', 'Career guidance', 'Skill assessment'],
+      benefits: ['Better job matches', 'Higher success rate', 'Career advancement', 'Confidence building'],
+      link: '/ai-job-search-assistant',
+      popular: true,
+      category: 'Career'
+    },
+    {
+      title: 'AI Dating Coach',
+      description: 'AI-powered dating assistance with profile optimization, conversation tips, and relationship advice',
+      icon: '💕',
+      price: '$99/month',
+      features: ['Profile optimization', 'Conversation tips', 'Date planning', 'Relationship advice', 'Compatibility analysis', 'Confidence building'],
+      benefits: ['Better matches', 'Improved conversations', 'Dating success', 'Relationship growth'],
+      link: '/ai-dating-coach',
+      popular: false,
+      category: 'Dating'
     }
   ];
 
@@ -482,6 +699,105 @@ const HomePage: React.FC = () => {
       features: ['Energy Optimization', 'Renewable Integration', 'Grid Management', 'Carbon Tracking', 'Predictive Maintenance', 'Smart Buildings'],
       color: 'text-yellow-500',
       category: 'Energy AI'
+    },
+    {
+      title: 'AI Quantum Computing',
+      description: 'Quantum computing solutions for complex optimization, cryptography, and scientific simulations',
+      icon: Cpu,
+      price: '$5,000/month',
+      features: ['Quantum Algorithms', 'Cryptography', 'Optimization Problems', 'Scientific Simulations', 'Quantum Machine Learning', 'Quantum Security'],
+      color: 'text-purple-600',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI Autonomous Systems',
+      description: 'Self-driving vehicles, drones, and autonomous robots with advanced AI navigation',
+      icon: Car,
+      price: '$3,500/month',
+      features: ['Autonomous Navigation', 'Object Detection', 'Path Planning', 'Collision Avoidance', 'Sensor Fusion', 'Real-time Decision Making'],
+      color: 'text-blue-600',
+      category: 'Autonomous AI'
+    },
+    {
+      title: 'AI Blockchain Solutions',
+      description: 'Blockchain integration with AI for smart contracts, DeFi, and decentralized applications',
+      icon: Lock,
+      price: '$2,500/month',
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Generation', 'Decentralized AI', 'Crypto Trading', 'Blockchain Analytics'],
+      color: 'text-yellow-600',
+      category: 'Blockchain AI'
+    },
+    {
+      title: 'AI Edge Computing',
+      description: 'AI processing at the edge for real-time applications and IoT devices',
+      icon: Cpu,
+      price: '$1,800/month',
+      features: ['Edge AI Processing', 'Real-time Inference', 'IoT Integration', 'Low Latency', 'Offline Capability', 'Resource Optimization'],
+      color: 'text-green-600',
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI Metaverse Solutions',
+      description: 'Virtual worlds, avatars, and immersive experiences powered by AI',
+      icon: Cube,
+      price: '$2,200/month',
+      features: ['Virtual Worlds', 'AI Avatars', 'Immersive Experiences', 'Virtual Events', 'Digital Twins', 'Spatial Computing'],
+      color: 'text-pink-600',
+      category: 'Metaverse AI'
+    },
+    {
+      title: 'AI Climate Solutions',
+      description: 'Climate change mitigation and environmental monitoring with AI technology',
+      icon: Globe,
+      price: '$1,900/month',
+      features: ['Climate Modeling', 'Carbon Footprint Analysis', 'Environmental Monitoring', 'Sustainability Planning', 'Green Energy Optimization', 'Climate Risk Assessment'],
+      color: 'text-emerald-600',
+      category: 'Climate AI'
+    },
+    {
+      title: 'AI Space Technology',
+      description: 'Space exploration, satellite management, and space-based AI applications',
+      icon: Globe,
+      price: '$4,000/month',
+      features: ['Satellite Management', 'Space Exploration', 'Orbital Mechanics', 'Space Weather', 'Planetary Analysis', 'Space Communication'],
+      color: 'text-indigo-600',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI Biotechnology',
+      description: 'AI-powered drug discovery, genetic analysis, and biotechnology applications',
+      icon: Stethoscope,
+      price: '$3,000/month',
+      features: ['Drug Discovery', 'Genetic Analysis', 'Protein Folding', 'Molecular Design', 'Biomarker Detection', 'Therapeutic Development'],
+      color: 'text-teal-600',
+      category: 'Bio AI'
+    },
+    {
+      title: 'AI Robotics',
+      description: 'Advanced robotics with AI for manufacturing, healthcare, and service industries',
+      icon: Settings,
+      price: '$2,800/month',
+      features: ['Robotic Control', 'Manipulation', 'Human-Robot Interaction', 'Swarm Robotics', 'Robotic Vision', 'Autonomous Operation'],
+      color: 'text-orange-600',
+      category: 'Robotics AI'
+    },
+    {
+      title: 'AI Cybersecurity Advanced',
+      description: 'Next-generation cybersecurity with AI-powered threat detection and response',
+      icon: Shield,
+      price: '$2,200/month',
+      features: ['Advanced Threat Detection', 'Behavioral Analysis', 'Zero-day Protection', 'Incident Response', 'Threat Intelligence', 'Security Automation'],
+      color: 'text-red-600',
+      category: 'Security AI'
+    },
+    {
+      title: 'AI Digital Twin',
+      description: 'Digital replicas of physical systems for simulation, monitoring, and optimization',
+      icon: Cube,
+      price: '$2,500/month',
+      features: ['Digital Replication', 'Real-time Monitoring', 'Predictive Maintenance', 'Simulation', 'Optimization', 'Performance Analysis'],
+      color: 'text-cyan-600',
+      category: 'Digital Twin AI'
     }
   ];
 
@@ -629,6 +945,141 @@ const HomePage: React.FC = () => {
       features: ['Compliance Management', 'Audit Preparation', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting', 'Governance Framework'],
       color: 'text-indigo-500',
       category: 'Compliance'
+    },
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup, optimization, and integration services',
+      icon: Cpu,
+      price: '$5,000/month',
+      features: ['Quantum Hardware Setup', 'Quantum Software Development', 'Quantum Algorithm Implementation', 'Quantum Security', 'Quantum Optimization', 'Quantum Machine Learning'],
+      color: 'text-purple-600',
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'Autonomous Systems Development',
+      description: 'Development and deployment of autonomous vehicles, drones, and robotic systems',
+      icon: Car,
+      price: '$4,500/month',
+      features: ['Autonomous Vehicle Development', 'Drone Systems', 'Robotic Automation', 'Sensor Integration', 'AI Navigation', 'Safety Systems'],
+      color: 'text-blue-600',
+      category: 'Autonomous Systems'
+    },
+    {
+      title: 'Metaverse Development',
+      description: 'Virtual world creation, VR/AR applications, and immersive experiences',
+      icon: Cube,
+      price: '$3,500/month',
+      features: ['Virtual World Creation', 'VR/AR Development', '3D Asset Creation', 'Avatar Systems', 'Virtual Events', 'Spatial Computing'],
+      color: 'text-pink-600',
+      category: 'Metaverse'
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Edge computing infrastructure and real-time processing systems',
+      icon: Cpu,
+      price: '$2,200/month',
+      features: ['Edge Infrastructure', 'Real-time Processing', 'IoT Integration', 'Low Latency Networks', 'Distributed Computing', 'Edge AI Deployment'],
+      color: 'text-green-600',
+      category: 'Edge Computing'
+    },
+    {
+      title: 'Climate Technology Solutions',
+      description: 'Environmental monitoring, carbon tracking, and sustainability technology',
+      icon: Globe,
+      price: '$2,000/month',
+      features: ['Environmental Monitoring', 'Carbon Footprint Tracking', 'Sustainability Analytics', 'Green Energy Systems', 'Climate Data Analysis', 'ESG Reporting'],
+      color: 'text-emerald-600',
+      category: 'Climate Tech'
+    },
+    {
+      title: 'Space Technology Services',
+      description: 'Satellite systems, space communication, and space-based applications',
+      icon: Globe,
+      price: '$4,000/month',
+      features: ['Satellite Systems', 'Space Communication', 'Orbital Mechanics', 'Space Data Analysis', 'Ground Station Management', 'Space Applications'],
+      color: 'text-indigo-600',
+      category: 'Space Technology'
+    },
+    {
+      title: 'Biotechnology IT Solutions',
+      description: 'IT infrastructure for biotechnology, genomics, and pharmaceutical research',
+      icon: Stethoscope,
+      price: '$3,200/month',
+      features: ['Genomics Computing', 'Drug Discovery Systems', 'Laboratory Automation', 'Biomedical Data Management', 'Research Collaboration Tools', 'Regulatory Compliance'],
+      color: 'text-teal-600',
+      category: 'Biotech IT'
+    },
+    {
+      title: 'Advanced Robotics Systems',
+      description: 'Industrial robotics, service robots, and human-robot interaction systems',
+      icon: Settings,
+      price: '$3,800/month',
+      features: ['Industrial Robotics', 'Service Robots', 'Human-Robot Interaction', 'Robotic Vision Systems', 'Swarm Robotics', 'Robotic Process Automation'],
+      color: 'text-orange-600',
+      category: 'Robotics'
+    },
+    {
+      title: 'Digital Twin Development',
+      description: 'Digital replicas of physical systems for simulation and optimization',
+      icon: Cube,
+      price: '$2,800/month',
+      features: ['Digital Twin Creation', 'Real-time Synchronization', 'Predictive Modeling', 'Simulation Systems', 'Performance Optimization', 'Maintenance Planning'],
+      color: 'text-cyan-600',
+      category: 'Digital Twin'
+    },
+    {
+      title: 'Advanced Cybersecurity',
+      description: 'Next-generation cybersecurity with AI-powered threat detection and response',
+      icon: Shield,
+      price: '$2,500/month',
+      features: ['AI-Powered Security', 'Zero Trust Architecture', 'Advanced Threat Detection', 'Security Orchestration', 'Incident Response', 'Threat Intelligence'],
+      color: 'text-red-600',
+      category: 'Advanced Security'
+    },
+    {
+      title: 'Smart City Solutions',
+      description: 'IoT infrastructure and AI systems for smart city development',
+      icon: Building,
+      price: '$3,000/month',
+      features: ['Smart Infrastructure', 'IoT Networks', 'Traffic Management', 'Energy Management', 'Public Safety Systems', 'Citizen Services'],
+      color: 'text-blue-500',
+      category: 'Smart Cities'
+    },
+    {
+      title: 'FinTech Solutions',
+      description: 'Financial technology infrastructure and digital banking systems',
+      icon: DollarSign,
+      price: '$2,500/month',
+      features: ['Digital Banking', 'Payment Systems', 'Blockchain Integration', 'Risk Management', 'Compliance Systems', 'Financial Analytics'],
+      color: 'text-green-500',
+      category: 'FinTech'
+    },
+    {
+      title: 'HealthTech Infrastructure',
+      description: 'Healthcare technology systems and medical data management',
+      icon: Stethoscope,
+      price: '$2,800/month',
+      features: ['Electronic Health Records', 'Telemedicine Systems', 'Medical Imaging', 'Patient Monitoring', 'Health Analytics', 'HIPAA Compliance'],
+      color: 'text-emerald-500',
+      category: 'HealthTech'
+    },
+    {
+      title: 'EdTech Solutions',
+      description: 'Educational technology platforms and learning management systems',
+      icon: GraduationCap,
+      price: '$1,800/month',
+      features: ['Learning Management Systems', 'Virtual Classrooms', 'Student Analytics', 'Assessment Tools', 'Content Management', 'Collaboration Platforms'],
+      color: 'text-purple-500',
+      category: 'EdTech'
+    },
+    {
+      title: 'RetailTech Solutions',
+      description: 'Retail technology systems and e-commerce platforms',
+      icon: ShoppingCart,
+      price: '$2,200/month',
+      features: ['E-commerce Platforms', 'Inventory Management', 'Customer Analytics', 'Point of Sale Systems', 'Supply Chain Integration', 'Omnichannel Solutions'],
+      color: 'text-pink-500',
+      category: 'RetailTech'
     }
   ];
 
@@ -725,6 +1176,78 @@ const HomePage: React.FC = () => {
         >
           Skip to main content
         </a>
+
+        {/* Hero Section */}
+        <section className="relative py-20 lg:py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center max-w-6xl mx-auto">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Advanced AI & IT Solutions
+                </span>
+                <br />
+                <span className="text-3xl md:text-5xl text-gray-300">
+                  Transform Your Business
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
+                and digital transformation services. Achieve 300% ROI with our cutting-edge technology.
+              </p>
+              
+              {/* Contact Information */}
+              <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl p-8 mb-12 border border-cyan-400/20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                    <a 
+                      href={`tel:${contactInfo.phone}`}
+                      className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg font-medium"
+                      onClick={handlePhoneClick}
+                    >
+                      {contactInfo.phone}
+                    </a>
+                  </div>
+                  <div className="text-center">
+                    <Mail className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                    <a 
+                      href={`mailto:${contactInfo.email}`}
+                      className="text-purple-400 hover:text-purple-300 transition-colors text-lg font-medium"
+                    >
+                      {contactInfo.email}
+                    </a>
+                  </div>
+                  <div className="text-center">
+                    <MapPin className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                    <address className="text-green-400 text-lg font-medium not-italic">
+                      {contactInfo.address}
+                    </address>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  Get Free Consultation
+                </a>
+                <a
+                  href="/services"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 hover:scale-105"
+                >
+                  View All Services
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>

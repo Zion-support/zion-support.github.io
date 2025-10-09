@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-f693
+import { Link } from 'react-router-dom';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, Cloud, Database, Smartphone, Lock, Users, Palette, Music, Heart, Globe, Building, Truck, Stethoscope, GraduationCap, Plane, Calendar, Briefcase } from 'lucide-react';
 
 const Navigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isAIOpen, setIsAIOpen] = useState(false);
-  const [isITOpen, setIsITOpen] = useState(false);
-  const [isSpecializedOpen, setIsSpecializedOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,385 +15,283 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const closeAllMenus = () => {
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-    setIsAIOpen(false);
-    setIsITOpen(false);
-    setIsSpecializedOpen(false);
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (isMenuOpen) {
-      closeAllMenus();
-    }
-  };
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-    if (isServicesOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleAI = () => {
-    setIsAIOpen(!isAIOpen);
-    if (isAIOpen) {
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleIT = () => {
-    setIsITOpen(!isITOpen);
-    if (isITOpen) {
-      setIsAIOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleSpecialized = () => {
-    setIsSpecializedOpen(!isSpecializedOpen);
-    if (isSpecializedOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-    }
-  };
+  const navigationItems = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
+    { name: 'IT Services', href: '/it-services', icon: Cpu },
+    { name: 'Blog', href: '/blog', icon: FileText },
+    { name: 'Contact', href: '/contact', icon: Phone },
+  ];
 
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText },
-    { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users },
-    { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart },
-    { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard },
-    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone },
-    { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check },
-    { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot },
-    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3 },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: PieChart },
     { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
     { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette },
+    { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
+    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer', icon: DollarSign },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+    { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
+    { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Building },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Truck },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Stethoscope },
+    { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: GraduationCap },
+    { name: 'AI Travel Planner', href: '/ai-travel-planner', icon: Plane },
+    { name: 'AI Energy Manager', href: '/ai-energy-manager', icon: Zap },
+    { name: 'AI Agriculture Assistant', href: '/ai-agriculture-assistant', icon: Globe },
+    { name: 'AI Insurance Analyzer', href: '/ai-insurance-analyzer', icon: Shield },
+    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager', icon: Building },
+    { name: 'AI Event Planner', href: '/ai-event-planner', icon: Calendar },
+    { name: 'AI Personal Finance Manager', href: '/ai-personal-finance-manager', icon: DollarSign },
+    { name: 'AI Home Automation', href: '/ai-home-automation', icon: Home },
+    { name: 'AI Language Learning', href: '/ai-language-learning', icon: MessageSquare },
+    { name: 'AI Mental Health Coach', href: '/ai-mental-health-coach', icon: Heart },
+    { name: 'AI Pet Care Assistant', href: '/ai-pet-care-assistant', icon: Heart },
+    { name: 'AI Wedding Planner', href: '/ai-wedding-planner', icon: Heart },
+    { name: 'AI Stock Trader', href: '/ai-stock-trader', icon: TrendingUp },
+    { name: 'AI Job Search Assistant', href: '/ai-job-search-assistant', icon: Briefcase },
+    { name: 'AI Dating Coach', href: '/ai-dating-coach', icon: Heart },
   ];
 
   const aiServices = [
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
-    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
-    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe },
-    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield },
-    { name: 'AI Human Resources', href: '/ai-hr', icon: Users },
-    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText },
-    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home },
-    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory },
-    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck },
-    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap },
-    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap },
-    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield },
+    { name: 'Machine Learning', href: '/machine-learning', icon: Brain },
     { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
-    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
-    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
-    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
+    { name: 'AI Fraud Detection', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Car },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Cpu },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions', icon: Box },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions', icon: Globe },
+    { name: 'AI Space Technology', href: '/ai-space-technology', icon: Globe },
+    { name: 'AI Biotechnology', href: '/ai-biotechnology', icon: Stethoscope },
+    { name: 'AI Robotics', href: '/ai-robotics', icon: Settings },
+    { name: 'AI Digital Twin', href: '/ai-digital-twin', icon: Box },
   ];
 
   const itServices = [
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
-    { name: 'Enterprise Security Solutions', href: '/enterprise-security', icon: Shield },
-    { name: 'IT Infrastructure Management', href: '/it-infrastructure', icon: Settings },
-    { name: 'Data Center Solutions', href: '/data-center', icon: Database },
-    { name: 'Network Security & Firewall', href: '/network-security', icon: Lock },
-    { name: 'IT Consulting & Strategy', href: '/it-consulting', icon: Briefcase },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Users },
-    { name: 'Cloud Security & Compliance', href: '/cloud-security', icon: Shield },
-    { name: 'IT Asset Management', href: '/it-asset-management', icon: BarChart },
-    { name: 'Backup & Disaster Recovery', href: '/backup-recovery', icon: Database },
-    { name: 'IT Training & Support', href: '/it-training', icon: GraduationCap },
-    { name: 'IT Performance Optimization', href: '/it-performance', icon: Zap },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Settings },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
-    { name: 'Database Services', href: '/database-services', icon: Database },
+    { name: 'Database Services', href: '/database', icon: Database },
+    { name: 'Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
+    { name: 'Web Development', href: '/web-development', icon: Code },
+    { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
     { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-    { name: 'Compliance & Governance', href: '/compliance', icon: FileText },
-    { name: 'Developer Tools', href: '/developer-tools', icon: Code },
-    { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
+    { name: 'IT Support', href: '/it-support', icon: Users },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
+    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure', icon: Cpu },
+    { name: 'Autonomous Systems Development', href: '/autonomous-systems-development', icon: Car },
+    { name: 'Metaverse Development', href: '/metaverse-development', icon: Box },
+    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: Cpu },
+    { name: 'Climate Technology Solutions', href: '/climate-technology-solutions', icon: Globe },
+    { name: 'Space Technology Services', href: '/space-technology-services', icon: Globe },
+    { name: 'Biotechnology IT Solutions', href: '/biotechnology-it-solutions', icon: Stethoscope },
+    { name: 'Advanced Robotics Systems', href: '/advanced-robotics-systems', icon: Settings },
+    { name: 'Digital Twin Development', href: '/digital-twin-development', icon: Box },
+    { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity', icon: Shield },
+    { name: 'Smart City Solutions', href: '/smart-city-solutions', icon: Building },
+    { name: 'FinTech Solutions', href: '/fintech-solutions', icon: DollarSign },
+    { name: 'HealthTech Infrastructure', href: '/healthtech-infrastructure', icon: Stethoscope },
+    { name: 'EdTech Solutions', href: '/edtech-solutions', icon: GraduationCap },
+    { name: 'RetailTech Solutions', href: '/retailtech-solutions', icon: Building },
   ];
 
-  const specializedServices = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
-    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-    { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart3 },
-    { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
-    { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
-  ];
+  const handlePhoneClick = () => {
+    if (typeof window !== 'undefined') {
+      window.location.href = 'tel:+13024640950';
+    }
+  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
+        : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+          <div className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+              <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-          </a>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <div className="relative group">
-              <button
-                onClick={toggleServices}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
+            {navigationItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1 group"
               >
+                <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                <span>{item.name}</span>
+              </a>
+            ))}
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1">
+                <Settings className="w-4 h-4" />
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                <svg className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
               </button>
               
-              {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
-                  <div className="grid grid-cols-3 gap-6">
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-4">
+                  <div className="grid grid-cols-1 gap-4">
+                    {/* Micro SAAS Services */}
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Zap className="w-4 h-4 mr-2" />
-                        Micro SAAS
-                      </h3>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Brain className="w-4 h-4 mr-2" />
-                        AI Services
-                      </h3>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Settings className="w-4 h-4 mr-2" />
-                        IT Services
-                      </h3>
-                      <div className="space-y-2">
-                        {itServices.slice(0, 6).map((service) => (
+                      <h3 className="text-cyan-400 font-semibold mb-2 text-sm">Micro SAAS Solutions</h3>
+                      <div className="grid grid-cols-1 gap-1">
+                        {microSAASServices.slice(0, 4).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                           >
                             <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
+                            <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
                       </div>
                     </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-2 gap-4">
-                      <a
-                        href="/services"
-                        className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <span>View All Services</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                      <a
-                        href="/specialized-services"
-                        className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <span>Specialized Solutions</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
-              About
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
-              Blog
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
-            </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
-              Pricing
-            </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
-              Contact
-            </a>
-            
-            <div className="flex items-center space-x-4">
-              <a
-                href="tel:+13024640950"
-                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">+1 302 464 0950</span>
-              </a>
-              <a href="/contact"
-                className="cyber-button px-4 py-2 text-sm"
-              >
-                Get Started
-              </a>
-            </div>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-4">
-              <div>
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="mt-4 pl-4 space-y-3">
+                    
+                    {/* AI Services */}
                     <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
+                      <h3 className="text-purple-400 font-semibold mb-2 text-sm">AI Services</h3>
+                      <div className="grid grid-cols-1 gap-1">
                         {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
+                          <a
+                            key={service.name}
                             href={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                           >
-                            {service.name}
+                            <service.icon className="w-3 h-3" />
+                            <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
                       </div>
                     </div>
-                    <a href="/services"
-                      className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
+                    
+                    {/* IT Services */}
+                    <div>
+                      <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
+                      <div className="grid grid-cols-1 gap-1">
+                        {itServices.slice(0, 4).map((service) => (
+                          <a
+                            key={service.name}
+                            href={service.href}
+                            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                          >
+                            <service.icon className="w-3 h-3" />
+                            <span className="text-xs">{service.name}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-4 pt-4 border-t border-gray-600">
+                    <a
+                      href="/services"
+                      className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                     >
                       View All Services →
                     </a>
                   </div>
-                )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a
+              href="tel:+13024640950"
+              className="flex items-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+              onClick={handlePhoneClick}
+            >
+              <Phone className="w-4 h-4" />
+              <span>Call Now</span>
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-400/20">
+            <div className="px-4 py-6 space-y-4">
+              {navigationItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <item.icon className="w-5 h-5" />
+                  <span>{item.name}</span>
+                </a>
+              ))}
+              
+              {/* Mobile Services */}
+              <div className="pt-4 border-t border-gray-600">
+                <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS Solutions</h3>
+                <div className="grid grid-cols-1 gap-2">
+                  {microSAASServices.slice(0, 6).map((service) => (
+                    <a
+                      key={service.name}
+                      href={service.href}
+                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <service.icon className="w-4 h-4" />
+                      <span className="text-sm">{service.name}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
-              </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
-              </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
-              </a>
-              
-              <div className="pt-4 border-t border-gray-700">
+              {/* Mobile Contact */}
+              <div className="pt-4 border-t border-gray-600">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
+                  className="flex items-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-3 rounded-lg transition-all duration-300"
+                  onClick={handlePhoneClick}
                 >
-                  <Phone className="w-4 h-4" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                <a href="/contact"
-                  className="block cyber-button px-4 py-2 text-center"
-                  onClick={closeAllMenus}
-                >
-                  Get Started
+                  <Phone className="w-5 h-5" />
+                  <span>Call +1 302 464 0950</span>
                 </a>
               </div>
             </div>
