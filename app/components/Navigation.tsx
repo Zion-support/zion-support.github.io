@@ -330,14 +330,23 @@ const Navigation: React.FC = () => {
             <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
             </a>
+            <a href="/team" className="text-white hover:text-cyan-400 transition-colors">
+              Team
+            </a>
             <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
             </a>
             <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
             </a>
+            <a href="/demo" className="text-white hover:text-cyan-400 transition-colors">
+              Demo
+            </a>
             <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
+            </a>
+            <a href="/careers" className="text-white hover:text-cyan-400 transition-colors">
+              Careers
             </a>
             <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
@@ -424,14 +433,23 @@ const Navigation: React.FC = () => {
               <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
               </a>
+              <a href="/team" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Team
+              </a>
               <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
               </a>
               <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Case Studies
               </a>
+              <a href="/demo" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Demo
+              </a>
               <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Pricing
+              </a>
+              <a href="/careers" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Careers
               </a>
               <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact

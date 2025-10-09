@@ -59,9 +59,9 @@ const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/pa
 const ITSupportPage = lazy(() => import('./it-support/page'));
 
 // New Pages
-const WebDevelopmentPage = lazy(() => import('../app/web-development/page'));
-const AIFraudDetectionPage = lazy(() => import('../app/ai-fraud-detection/page'));
-const AIContentWriterPage = lazy(() => import('../app/ai-content-writer/page'));
+const WebDevelopmentPage = lazy(() => import('./web-development/page'));
+const AIFraudDetectionPage = lazy(() => import('./ai-fraud-detection/page'));
+const AIContentWriterPage = lazy(() => import('./ai-content-writer/page'));
 
 // Missing Pages
 const AICodeGenerationPage = lazy(() => import('./ai-code-generation/page'));
@@ -70,6 +70,8 @@ const ITConsultingPage = lazy(() => import('./it-consulting/page'));
 const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const CareersPage = lazy(() => import('./careers/page'));
+const DemoPage = lazy(() => import('./demo/page'));
+const AIAnalyticsPage = lazy(() => import('./ai-analytics/page'));
 
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
@@ -84,10 +86,9 @@ const CloudServicesPage = lazy(() => import('./cloud-services/page'));
 const CompliancePage = lazy(() => import('./compliance/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
-const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
-const DatabasePage = lazy(() => import('./database/page'));
-const DemoPage = lazy(() => import('./demo/page'));
-const DeveloperToolsPage = lazy(() => import('./developer-tools/page'));
+  const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+  const DatabasePage = lazy(() => import('./database/page'));
+  const DeveloperToolsPage = lazy(() => import('./developer-tools/page'));
 const DevOpsPage = lazy(() => import('./devops/page'));
 const DocsPage = lazy(() => import('./docs/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
@@ -230,6 +231,8 @@ const App: React.FC = () => {
             <Route path="/cloud-migration" element={<CloudMigrationPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/careers" element={<CareersPage />} />
+            <Route path="/demo" element={<DemoPage />} />
+            <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
             
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
@@ -246,7 +249,6 @@ const App: React.FC = () => {
             <Route path="/cookies" element={<CookiesPage />} />
             <Route path="/cybersecurity" element={<CybersecurityPage />} />
             <Route path="/database" element={<DatabasePage />} />
-            <Route path="/demo" element={<DemoPage />} />
             <Route path="/developer-tools" element={<DeveloperToolsPage />} />
             <Route path="/devops" element={<DevOpsPage />} />
             <Route path="/docs" element={<DocsPage />} />
