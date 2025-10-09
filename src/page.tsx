@@ -13,11 +13,12 @@ import {
 } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import OptimizedPerformanceMonitor from './components/OptimizedPerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import OptimizedErrorBoundary from './components/OptimizedErrorBoundary';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
@@ -561,21 +562,22 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Performance Optimizer */}
-      <PerformanceOptimizer />
-      
-      {/* SEO Optimizer */}
-      <SEOOptimizer />
-      
-      {/* Accessibility Enhancer */}
-      <AccessibilityEnhancer />
-      
-      {/* Analytics */}
-      <Analytics />
-      
-      {/* Security Enhancer */}
-      <SecurityEnhancer />
+    <OptimizedErrorBoundary level="page">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Enhanced Performance Monitor */}
+        <OptimizedPerformanceMonitor />
+        
+        {/* Enhanced SEO */}
+        <EnhancedSEO />
+        
+        {/* Enhanced Accessibility */}
+        <EnhancedAccessibility />
+        
+        {/* Analytics */}
+        <Analytics />
+        
+        {/* Security Enhancer */}
+        <SecurityEnhancer />
 
       {/* Navigation */}
       <Navigation />
@@ -1010,9 +1012,10 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </OptimizedErrorBoundary>
   );
 };
 
