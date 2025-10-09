@@ -44,16 +44,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Report error if enabled
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-    // Log error for debugging
-    console.error('Error caught by boundary:', error, errorInfo);
+    if (this.props.enableErrorReporting) {
+      this.reportError(error, errorInfo);
+    }
   }
 
-  handleRetry = () => {
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Error reporting logic
+    console.error('Error caught by boundary:', error, errorInfo);
+  };
+
+  private handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
@@ -66,27 +71,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
+      return this.props.fallback || (
         <div className="error-boundary">
-          <h2>Something went wrong</h2>
-          <p>An error occurred while rendering this component.</p>
+          <h2>Something went wrong.</h2>
+          <details>
+            <summary>Error Details</summary>
+            <pre>{this.state.error?.toString()}</pre>
+          </details>
           {this.state.retryCount < this.maxRetries && (
             <button onClick={this.handleRetry}>
-              Try Again ({this.maxRetries - this.state.retryCount} retries left)
+              Try Again ({this.maxRetries - this.state.retryCount} attempts left)
             </button>
-          )}
-          {process.env.NODE_ENV === 'development' && this.state.error && (
-            <details>
-              <summary>Error Details</summary>
-              <pre>{this.state.error.toString()}</pre>
-              {this.state.errorInfo && (
-                <pre>{this.state.errorInfo.componentStack}</pre>
-              )}
-            </details>
           )}
         </div>
       );

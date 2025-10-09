@@ -1,6 +1,10 @@
+import { Navigation } from 'lucide-react';
 import React from 'react';
+import { redirect } from 'next/navigation';
+
 const BlogPage: React.FC = () => {
   // Redirect to the main blog page
-  return <Navigate href="/blog" replace />;
+  redirect('/blog');
 };
+
 export default BlogPage;

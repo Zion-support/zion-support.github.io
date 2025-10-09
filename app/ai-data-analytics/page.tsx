@@ -1,5 +1,6 @@
 import React from 'react';
-import { CheckCircle, Database, Brain, BarChart3, Target } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Database, Brain, BarChart3, Target } from 'lucide-react';;
 
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [
@@ -160,6 +161,7 @@ const AIDataAnalyticsPage: React.FC = () => {
       useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage']
     }
   ];
+
   const additionalFeatures = [
     {
       title: 'Advanced Data Processing',
@@ -182,8 +184,15 @@ const AIDataAnalyticsPage: React.FC = () => {
       icon: <Target className="w-8 h-8 text-orange-600" />
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <Helmet>
+        <title>AI Data Analytics Services | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered data analytics solutions for business intelligence, predictive modeling, and data-driven decision making. Real-time insights and automated reporting." />
+        <meta name="keywords" content="AI analytics, business intelligence, predictive analytics, data visualization, machine learning, data science" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -212,6 +221,7 @@ const AIDataAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Services Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -223,21 +233,25 @@ const AIDataAnalyticsPage: React.FC = () => {
               Comprehensive AI-powered analytics platforms for every business need
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsServices.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
+                
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
                 </div>
+                
                 <div className="mb-4">
                   <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
                     {service.category}
                   </span>
                 </div>
+                
                 <ul className="space-y-2 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -246,12 +260,14 @@ const AIDataAnalyticsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+                
                 <div className="space-y-2 mb-6">
                   <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
+                
                 <a 
                   href="/contact"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
@@ -263,6 +279,7 @@ const AIDataAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,6 +291,7 @@ const AIDataAnalyticsPage: React.FC = () => {
               Advanced technology and expert implementation for maximum ROI
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {additionalFeatures.map((feature, index) => (
               <div key={index} className="text-center">
@@ -287,6 +305,7 @@ const AIDataAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Contact Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -318,4 +337,5 @@ const AIDataAnalyticsPage: React.FC = () => {
     </div>
   );
 };
+
 export default AIDataAnalyticsPage;

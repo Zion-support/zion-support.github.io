@@ -23,7 +23,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Add skip links functionality
     }
     if (enableKeyboardNav) {
-      // Add keyboard navigation
+      // Add keyboard navigation enhancements
     }
     if (enableFocusIndicators) {
       // Add focus indicators

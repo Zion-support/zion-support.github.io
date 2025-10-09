@@ -1,5 +1,5 @@
-import Link from 'next/link';
 'use client';
+
 /**
  * Accessibility Checker Utility
  *
@@ -21,7 +21,7 @@ export enum A11ySeverity {
   /** Serious issue that significantly impacts accessibility */
   SERIOUS = 'SERIOUS',
   /** Critical issue that makes content inaccessible */
-  CRITICAL = 'CRITICAL'
+  CRITICAL = 'CRITICAL',
 }
 /**
  * WCAG success criteria levels
@@ -32,7 +32,7 @@ export enum WCAGLevel {
   /** Level AA - Recommended level (most common requirement) */
   AA = 'AA',
   /** Level AAA - Enhanced accessibility */
-  AAA = 'AAA'
+  AAA = 'AAA',
 }
 /**
  * Accessibility issue interface
@@ -110,7 +110,7 @@ export class AccessibilityChecker {
       issueCount: this.issues.length,
       issues: [...this.issues],
       timestamp: new Date(),
-      score
+      score,
     };
   }
   /**
@@ -125,7 +125,7 @@ export class AccessibilityChecker {
         issueCount: 0,
         issues: [],
         timestamp: new Date(),
-        score: 100
+        score: 100,
       };
     }
     return this.checkElement(document.body);
@@ -151,7 +151,7 @@ export class AccessibilityChecker {
           message: `Image ${index + 1} is missing alt text`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />'
+          codeExample: '<img src="..." alt="Description of image" />',
         });
       }
       // Check for empty alt on decorative images without role
@@ -164,7 +164,7 @@ export class AccessibilityChecker {
           message: `Image ${index + 1} has empty alt without role="presentation"`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />'
+          codeExample: '<img src="..." alt="" role="presentation" />',
         });
       }
     });
@@ -191,7 +191,7 @@ export class AccessibilityChecker {
           message: `Heading level skipped from h${previousLevel} to h${level}`,
           element: heading.tagName.toLowerCase(),
           fix: 'Maintain sequential heading hierarchy',
-          codeExample: `Use h${previousLevel + 1} instead of h${level}`
+          codeExample: `Use h${previousLevel + 1} instead of h${level}`,
         });
       }
       // Check for empty headings
@@ -203,7 +203,7 @@ export class AccessibilityChecker {
           wcagCriterion: '2.4.6',
           message: `Empty ${heading.tagName} at position ${index + 1}`,
           element: heading.tagName.toLowerCase(),
-          fix: 'Add descriptive text to the heading'
+          fix: 'Add descriptive text to the heading',
         });
       }
       previousLevel = level;
@@ -218,7 +218,7 @@ export class AccessibilityChecker {
         wcagCriterion: '2.4.6',
         message: `Found ${h1Count} h1 elements (should have only one)`,
         element: 'h1',
-        fix: 'Use only one h1 per page for the main heading'
+        fix: 'Use only one h1 per page for the main heading',
       });
     }
   }
@@ -243,9 +243,9 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has no accessible text`,
-          element: `a[href="${link.getAttribute('href')}"]`,
+          element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '<Link href="..." aria-label="Description">...</Link>',
+          codeExample: '<Link to="..." aria-label="Description">...</Link>',
         });
       }
       // Check for generic link text
@@ -256,9 +256,9 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has generic text: "${text}"`,
-          element: `a[href="${link.getAttribute('href')}"]`,
+          element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Use descriptive link text that explains the destination',
-          codeExample: 'Use "Read full article" instead of "Read more"'
+          codeExample: 'Use "Read full article" instead of "Read more"',
         });
       }
       // Check for links opening in new window without warning
@@ -274,10 +274,10 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.AAA,
           wcagCriterion: '3.2.5',
           message: `Link ${index + 1} opens in new window without warning`,
-          element: `a[href="${link.getAttribute('href')}"]`,
+          element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
           codeExample:
-            '<Link href="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>',
+            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>',
         });
       }
     });
@@ -304,7 +304,7 @@ export class AccessibilityChecker {
           message: `Button ${index + 1} has no accessible text`,
           element: 'button',
           fix: 'Add text content or aria-label to the button',
-          codeExample: '<button aria-label="Close dialog">×</button>'
+          codeExample: '<button aria-label="Close dialog">×</button>',
         });
       }
     });
@@ -335,7 +335,7 @@ export class AccessibilityChecker {
           message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
           element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
           fix: 'Associate a label with the form control',
-          codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
+          codeExample: '<label for="email">Email:</label><input id="email" name="email" />',
         });
       }
     });
@@ -360,7 +360,7 @@ export class AccessibilityChecker {
           wcagCriterion: '1.4.3',
           message: 'Element has inline color without explicit background',
           element: el.tagName.toLowerCase(),
-          fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
+          fix: 'Ensure sufficient color contrast (4.5:1 for normal text)',
         });
       }
     });
@@ -385,7 +385,7 @@ export class AccessibilityChecker {
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
           element: el.tagName.toLowerCase(),
           fix: 'Remove tabindex="-1" or use tabindex="0"',
-          codeExample: '<button tabindex="0">Accessible button</button>'
+          codeExample: '<button tabindex="0">Accessible button</button>',
         });
       }
     });
@@ -404,7 +404,7 @@ export class AccessibilityChecker {
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '<button onClick={handleClick}>Click me</button>'
+          codeExample: '<button onClick={handleClick}>Click me</button>',
         });
       }
     });
@@ -449,7 +449,7 @@ export class AccessibilityChecker {
           wcagCriterion: '4.1.2',
           message: `Invalid ARIA role: "${role}"`,
           element: el.tagName.toLowerCase(),
-          fix: 'Use a valid ARIA role or remove the role attribute'
+          fix: 'Use a valid ARIA role or remove the role attribute',
         });
       }
       // Check aria-labelledby references
@@ -464,7 +464,7 @@ export class AccessibilityChecker {
             wcagCriterion: '4.1.2',
             message: `aria-labelledby references non-existent element: "${labelledBy}"`,
             element: el.tagName.toLowerCase(),
-            fix: 'Ensure the referenced element exists'
+            fix: 'Ensure the referenced element exists',
           });
         }
       }
@@ -487,7 +487,7 @@ export class AccessibilityChecker {
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
         fix: 'Add a <main> element or role="main"',
-        codeExample: '<main><!-- Main content --></main>'
+        codeExample: '<main><!-- Main content --></main>',
       });
     }
   }
@@ -500,7 +500,7 @@ export class AccessibilityChecker {
   private addIssue(issue: Omit<A11yIssue, 'id'>): void {
     this.issues.push({
       id: this.generateIssueId(),
-      ...issue
+      ...issue,
     });
   }
   /**
@@ -524,7 +524,7 @@ export class AccessibilityChecker {
       [A11ySeverity.MINOR]: 1,
       [A11ySeverity.MODERATE]: 3,
       [A11ySeverity.SERIOUS]: 7,
-      [A11ySeverity.CRITICAL]: 15
+      [A11ySeverity.CRITICAL]: 15,
     };
     const totalPenalty = this.issues.reduce((sum, issue) => {
       return sum + severityWeights[issue.severity];
@@ -560,13 +560,19 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
+    let report = `Accessibility Report - ${this.issues.length} issues found:\n\n`;
+    
+    this.issues.forEach((issue, index) => {
+      report += `${index + 1}. ${issue.type}: ${issue.message}\n`;
+      if (issue.element) {
+        report += `   Element: ${issue.element}\n`;
+      }
+      if (issue.suggestion) {
+        report += `   Suggestion: ${issue.suggestion}\n`;
+      }
+      report += "\n";
+    });
 
-    const report = this.issues.map(issue => 
-      `- ${issue.type.toUpperCase()}: ${issue.message} (${issue.element || 'global'})`
-    ).join('\n');
-
-    return `Accessibility Issues Found:\n${report}`;
+    return report;
   }
 }
-
-export default AccessibilityChecker;
