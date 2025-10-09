@@ -7,7 +7,7 @@ export const usePerformanceMonitoring = () => {
     if (navigator.sendBeacon) {
       navigator.sendBeacon(url, body);
     } else {
-      fetch(url, { body: body, method: 'POST', keepalive: true }).catch(console.error);
+      fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
     }
   }, []);
   useEffect(() => {

@@ -11,12 +11,18 @@ global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
 console.error = (...args) => {
+<<<<<<< HEAD
+  const _message = args[0]?.toString?.() || args[0]?.message || '';
+  if (_message.includes('Not implemented: navigation') || 
+      _message.includes('navigation (except hash changes)')) {
+=======
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     return;
   }
-  originalConsoleError(...args);
+  _originalConsoleError(...args);
 };
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -61,18 +67,28 @@ global.fetch = jest.fn();
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 console.warn = (...args) => {
+<<<<<<< HEAD
+  const _message = args[0]?.toString?.() || '';
+  if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
+=======
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     return;
   }
-  originalConsoleWarn(...args);
+  _originalConsoleWarn(...args);
 };
 console.info = (...args) => {
+<<<<<<< HEAD
+  const _message = args[0]?.toString?.() || '';
+  if (_message.includes('ReactDOM.render is no longer supported')) {
+=======
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     return;
   }
-  originalConsoleInfo(...args);
+  _originalConsoleInfo(...args);
 };
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
@@ -89,7 +105,7 @@ console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
-  originalConsoleError.apply(console, args);
+  _originalConsoleError.apply(console, args);
 };
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;

@@ -117,24 +117,24 @@ const AIServicesPage: React.FC = () => {
         keywords={['AI services', 'machine learning', 'NLP', 'computer vision', 'AI automation', 'predictive analytics', 'AI consulting']}
         canonicalUrl="https://ziontechgroup.com/ai-services"
       />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enableCodeSplitting={true}
-        enablePrefetching={true}
-      />
-      <AccessibilityEnhancer
-        enableKeyboardNavigation={true}
-        enableScreenReader={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
-      />
-      <SecurityEnhancer
-        enableCSP={true}
-        enableHSTS={true}
-        enableXSSProtection={true}
-        enableClickjackingProtection={true}
-      />
+        <PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        />
+        <AccessibilityEnhancer 
+          enableKeyboardNavigation={true}
+          enableScreenReaderSupport={true}
+          enableHighContrast={true}
+          enableFocusManagement={true}
+        />
+        <SecurityEnhancer 
+          enableCSP={true}
+          enableHTTPSRedirect={true}
+          enableXSSProtection={true}
+          enableClickjackingProtection={true}
+        />
       <Analytics />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

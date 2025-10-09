@@ -44,8 +44,16 @@ export class MiddlewareExecutor {
       if (index >= this.middlewares.length) {
         return context.response?.data;
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const _middleware = this.middlewares[index++];
+      return await _middleware(context, next);
+=======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6103
       const middleware = this.middlewares[index++];
       return await middleware(context, next);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
     };
     return await next();
   }

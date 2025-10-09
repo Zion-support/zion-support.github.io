@@ -45,7 +45,7 @@ export function useForm<T extends Record<string, unknown>>(config: UseFormConfig
   // Validate a single field
   const validateSingleField = useCallback(
     (field: keyof T): void => {
-      const fieldRules = validationSchema[field];
+      const fieldRules = validationSchema?.[field as keyof typeof validationSchema];
       if (!fieldRules) return;
       const fieldValue = values[field];
       const rules = fieldRules as ValidationRule<T[keyof T]>[];
@@ -59,7 +59,7 @@ export function useForm<T extends Record<string, unknown>>(config: UseFormConfig
   );
   // Validate all fields
   const validateAllFields = useCallback((): boolean => {
-    if (Object.keys(validationSchema).length === 0) return true;
+    if (!validationSchema || Object.keys(validationSchema).length === 0) return true;
     const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
     const formErrors = getFormErrors(validationResults);
     setErrors(formErrors);
@@ -118,7 +118,7 @@ export function useForm<T extends Record<string, unknown>>(config: UseFormConfig
       }
       setIsSubmitting(true);
       try {
-        await onSubmit(values);
+        await _onSubmit(values);
       } catch (error) {
       } finally {
         setIsSubmitting(false);
