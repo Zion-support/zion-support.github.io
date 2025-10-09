@@ -231,7 +231,7 @@ const Footer: React.FC = memo(() => {
               {emergingTech.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -242,7 +242,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  href="/quantum-computing"
+                  to="/quantum-computing"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All Technologies →

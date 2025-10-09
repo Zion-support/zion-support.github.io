@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect, memo } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
@@ -156,9 +157,9 @@ const Navigation: React.FC = memo(() => {
             </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
@@ -179,7 +180,7 @@ const Navigation: React.FC = memo(() => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl z-50">
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
                     <div className="grid grid-cols-2 gap-4">
@@ -193,7 +194,7 @@ const Navigation: React.FC = memo(() => {
                             {category.services.slice(0, 6).map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
-                                href={service.path}
+                                to={service.path}
                                 className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
                                 onClick={closeAllMenus}
                               >
@@ -205,7 +206,7 @@ const Navigation: React.FC = memo(() => {
                             ))}
                             {category.services.length > 6 && (
                               <Link
-                                href={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
                                 className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                                 onClick={closeAllMenus}
                               >
@@ -218,7 +219,7 @@ const Navigation: React.FC = memo(() => {
                     </div>
                     <div className="border-t border-gray-700 mt-6 pt-4 px-6">
                       <Link
-                        href="/services"
+                        to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                         onClick={closeAllMenus}
                       >
@@ -321,7 +322,71 @@ const Navigation: React.FC = memo(() => {
                               to={service.path}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
                             >
-                              {service.name}
+                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
+                            </Link>
+                          ))}
+                          <Link
+                            to="/services"
+                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
+                          >
+                            View All →
+                          </Link>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link
+                to="/case-studies"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Case Studies
+              </Link>
+
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+
+              <Link
+                to="/contact"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Contact
+              </Link>
+
+              {/* Mobile Services */}
+              <div>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                >
+                  <span className="flex items-center space-x-2">
+                    <Brain className="w-4 h-4" />
+                    <span>Services</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {servicesOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {serviceCategories.map((category, categoryIndex) => (
+                      <div key={categoryIndex}>
+                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
+                        <div className="ml-4 space-y-1">
+                          {category.services.slice(0, 3).map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              href={service.path}
+                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
+                            >
+                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
                             </Link>
                           ))}
                           <Link
