@@ -1,4 +1,6 @@
 'use client';
+import React, { useEffect } from 'react';
+
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -12,7 +14,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: unknown[]) {
-        window.dataLayer.push(args);
+        window.dataLayer?.push(args);
       }
       (window as { gtag: typeof gtag }).gtag = gtag;
       gtag('js', new Date());
@@ -24,6 +26,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     };
     // Track page views
     const trackPageView = () => {
+      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
       if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
         (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
           page_title: document.title,
@@ -61,7 +64,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       });
       // Track phone number clicks
       document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
+        const target = e.target as HTMLAnchorElement;
         if (target.href && target.href.startsWith('tel:')) {
           if ((window as { gtag: unknown }).gtag) {
             (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
@@ -77,6 +80,11 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     initAnalytics();
     trackPageView();
     trackInteractions();
+    
+    const handleRouteChange = () => {
+      trackPageView();
+    };
+    
     window.addEventListener('popstate', handleRouteChange);
     return () => {
       window.removeEventListener('popstate', handleRouteChange);
