@@ -1,0 +1,77 @@
+[
+  {
+    "route": "//fonts.googleapis.com",
+    "filePath": "app//fonts.googleapis.com/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "//www.google-analytics.com",
+    "filePath": "app//www.google-analytics.com/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "//www.googletagmanager.com",
+    "filePath": "app//www.googletagmanager.com/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/blog/ai-edge-computing-real-time-intelligence-2025",
+    "filePath": "app/blog/ai-edge-computing-real-time-intelligence-2025/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/blog/quantum-enhanced-neural-networks-2025",
+    "filePath": "app/blog/quantum-enhanced-neural-networks-2025/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/blog/quantum-secure-ai-infrastructure-2025",
+    "filePath": "app/blog/quantum-secure-ai-infrastructure-2025/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/services/ai-services",
+    "filePath": "app/services/ai-services/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/docs/quick-start",
+    "filePath": "app/docs/quick-start/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/docs/api",
+    "filePath": "app/docs/api/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/docs/sdk",
+    "filePath": "app/docs/sdk/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/favicon.ico",
+    "filePath": "app/favicon.ico/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/apple-touch-icon.png",
+    "filePath": "app/apple-touch-icon.png/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/favicon-32x32.png",
+    "filePath": "app/favicon-32x32.png/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/favicon-16x16.png",
+    "filePath": "app/favicon-16x16.png/page.tsx",
+    "status": "missing"
+  },
+  {
+    "route": "/site.webmanifest",
+    "filePath": "app/site.webmanifest/page.tsx",
+    "status": "missing"
+  }
+]
