@@ -3,7 +3,7 @@
  * Request Middleware System
  * Provides middleware for handling requests and responses
  */
-import logger from '../utils/logger';
+// import logger from '../utils/logger';
 export type NextFunction = () => Promise<unknown> | unknown;
 export interface MiddlewareContext {
   request: {
