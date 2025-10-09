@@ -1,588 +1,522 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
+import { CheckCircle, Star, Phone, Mail, ArrowRight, Zap, Shield, Cloud, Brain, Code, Users, Building, Crown, Rocket, DollarSign, Clock, Award, Target, BarChart, MessageSquare, Eye, Settings, FileText, Calendar, PieChart, TrendingUp, Activity, Globe, Database, Smartphone, Lock, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Package, Truck, Box, Archive, Folder, File, Image, Film, Headphones, Mic, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, Repeat, Shuffle, Radio, Tv, Tablet, Watch, Headphones as Headset, Gamepad2 as Gamepad, Joystick, Mouse, Keyboard, Webcam, Wifi, Bluetooth, Usb, Hdmi, Ethernet, WifiOff, Signal, SignalZero, SignalLow, SignalMedium, SignalHigh, SignalFull, Send, Reply, Forward, Share, Copy, Paste, Cut, Save, Download, Upload, Refresh, RotateCcw, RotateCw, Maximize, Minimize, X, Plus, Minus, Divide, Equal, Percent, Hash, AtSign, Euro, Pound, Yen, Bitcoin, Wallet, Banknote, Coins, Receipt, Archive as ArchiveIcon, Folder as FolderIcon, File as FileIcon, Image as ImageIcon, Film as FilmIcon, Music as MusicIcon, Headphones as HeadphoneIcon, Mic as Microphone, Speaker as SpeakerIcon, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Repeat as RepeatIcon, Shuffle as ShuffleIcon, Radio as RadioIcon, Tv as TvIcon, Monitor, Laptop, Printer, Key, AlertTriangle, Headphones as Headphone, MessageSquare as Message, Calendar as CalendarIcon, FileText as FileTextIcon, Download as DownloadIcon, Upload as UploadIcon, Refresh as RefreshIcon, RotateCcw as RotateCcwIcon, RotateCw as RotateCwIcon, Maximize as MaximizeIcon, Minimize as MinimizeIcon, X as XIcon, Plus as PlusIcon, Minus as MinusIcon, Divide as DivideIcon, Equal as EqualIcon, Percent as PercentIcon, Hash as HashIcon, AtSign as AtSignIcon, Euro as EuroIcon, Pound as PoundIcon, Yen as YenIcon, Bitcoin as BitcoinIcon, Wallet as WalletIcon, Banknote as BanknoteIcon, Coins as CoinsIcon, Receipt as ReceiptIcon, Archive as ArchiveIcon2, Folder as FolderIcon2, File as FileIcon2, Image as ImageIcon2, Film as FilmIcon2, Music as MusicIcon2, Headphones as HeadphoneIcon2, Mic as MicrophoneIcon, Speaker as SpeakerIcon2, Volume2 as Volume2Icon2, VolumeX as VolumeXIcon2, Play as PlayIcon2, Pause as PauseIcon2, Stop as StopIcon2, SkipBack as SkipBackIcon2, SkipForward as SkipForwardIcon2, Repeat as RepeatIcon2, Shuffle as ShuffleIcon2, Radio as RadioIcon2, Tv as TvIcon2, Monitor as MonitorIcon, Laptop as LaptopIcon, Smartphone as PhoneIcon, Tablet as TabletIcon, Watch as WatchIcon, Headphones as HeadsetIcon, Gamepad2 as GamepadIcon, Joystick as JoystickIcon, Mouse as MouseIcon, Keyboard as KeyboardIcon, Webcam as WebcamIcon, Wifi as WifiSignalIcon, Bluetooth as BluetoothIcon, Usb as UsbIcon, Hdmi as HdmiIcon, Ethernet as EthernetIcon, WifiOff as WifiOffSignalIcon, Signal as SignalIcon, SignalZero as Signal0Icon, SignalLow as Signal1Icon, SignalMedium as Signal2Icon, SignalHigh as Signal3Icon, SignalFull as Signal4Icon, Wifi as WifiIcon2, WifiOff as WifiOffIcon2 } from 'lucide-react';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { 
-  Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, 
-  TrendingUp, Building, Clock, Phone, Mail, MapPin, Target, Globe, Database, 
-  Smartphone, Lock, Settings, FileText, Search, Bot, Palette, Camera, Music, 
-  Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, 
-  Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, 
-  Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, 
-  Activity, DollarSign, Zap as Lightning, Target as Crosshair, Shield as Security, 
-  Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, 
-  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Monitor, Smartphone as Mobile,
-  Laptop, Server, Wifi, Database as DB, Cpu, HardDrive, MemoryStick, Router, 
-  Headphones, Mic, Speaker, Printer, Scanner, Keyboard, Mouse, Webcam, 
-  Wrench as Tools, Settings as Config, Cog, Gear, Sliders, ToggleLeft, 
-  ToggleRight, Power, Battery, Plug, Cable, Wifi as Network, Signal, 
-  Radio, Bluetooth, Usb, Hdmi, Ethernet, WifiOff, SignalZero, SignalLow, 
-  SignalMedium, SignalHigh, SignalFull, Wifi as WifiIcon, WifiOff as WifiOffIcon,
-  Eye, Ear, Hand, Foot, Fingerprint, Scan, QrCode, Barcode, Tag, Label,
-  MessageSquare, Send, Reply, Forward, Share, Copy, Paste, Cut, Save, Download,
-  Upload, Refresh, RotateCcw, RotateCw, Maximize, Minimize, X, Plus, Minus,
-  Divide, Equal, Percent, Hash, AtSign, DollarSign as Dollar, Euro, Pound,
-  Yen, Bitcoin, CreditCard as Card, Wallet, Banknote, Coins, Receipt,
-  Package, Truck, Box, Archive, Folder, File, Image, Film, Music as MusicIcon,
-  Headphones as Headphone, Mic as Microphone, Speaker as SpeakerIcon,
-  Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, Repeat,
-  Shuffle, Radio as RadioIcon, Tv, Monitor as MonitorIcon, Laptop as LaptopIcon,
-  Smartphone as PhoneIcon, Tablet, Watch, Headphones as Headset, Gamepad2 as Gamepad,
-  Joystick, Mouse as MouseIcon, Keyboard as KeyboardIcon, Wifi as WifiSignal,
-  Bluetooth as BluetoothIcon, Usb as UsbIcon, Hdmi as HdmiIcon, Ethernet as EthernetIcon,
-  WifiOff as WifiOffSignal, Signal as SignalIcon, SignalZero as Signal0,
-  SignalLow as Signal1, SignalMedium as Signal2, SignalHigh as Signal3,
-  SignalFull as Signal4, Wifi as WifiIcon2, WifiOff as WifiOffIcon2,
-  Crown, Award, Trophy, Medal, Badge, Certificate, Diploma, GraduationCap as Cap,
-  BookOpen as Book, Library, School, University, College, Academy, Institute,
-  Office, Building as OfficeBuilding, Factory as FactoryIcon, Warehouse,
-  Store, Shop, Market, Mall, ShoppingCenter, ShoppingCart as Cart,
-  Basket, Bag, Handbag, Backpack, Suitcase, Luggage, Briefcase as BriefcaseIcon,
-  Folder as FolderIcon, File as FileIcon, Document, Paper, Clipboard,
-  Notepad, Notebook, Journal, Diary, Calendar as CalendarIcon, Schedule,
-  Agenda, Planner, Organizer, Timer, Stopwatch, Hourglass, Sandglass,
-  Clock as ClockIcon, Watch as WatchIcon, Alarm, Bell, Notification,
-  Alert, Warning, Error, Success, Info, Help, Question, Exclamation,
-  Check as CheckIcon, X as XIcon, Plus as PlusIcon, Minus as MinusIcon,
-  Multiply, Divide as DivideIcon, Equal as EqualIcon, NotEqual, GreaterThan,
-  LessThan, GreaterThanOrEqual, LessThanOrEqual, Infinity, Pi, Sigma,
-  Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa,
-  Lambda, Mu, Nu, Xi, Omicron, Rho, Sigma as SigmaIcon, Tau, Upsilon,
-  Phi, Chi, Psi, Omega, Infinity as InfinityIcon, Pi as PiIcon,
-  Sigma as SigmaSymbol, Alpha as AlphaIcon, Beta as BetaIcon, Gamma as GammaIcon,
-  Delta as DeltaIcon, Epsilon as EpsilonIcon, Zeta as ZetaIcon, Eta as EtaIcon,
-  Theta as ThetaIcon, Iota as IotaIcon, Kappa as KappaIcon, Lambda as LambdaIcon,
-  Mu as MuIcon, Nu as NuIcon, Xi as XiIcon, Omicron as OmicronIcon,
-  Rho as RhoIcon, Tau as TauIcon, Upsilon as UpsilonIcon, Phi as PhiIcon,
-  Chi as ChiIcon, Psi as PsiIcon, Omega as OmegaIcon
-} from 'lucide-react';
 
 const PricingPage: React.FC = () => {
+  const [selectedPlan, setSelectedPlan] = useState('ai-services');
+  const [billingCycle, setBillingCycle] = useState('monthly');
+
   const aiServicesPricing = [
     {
-      name: 'AI Business Intelligence',
-      starter: '$299',
-      professional: '$599',
-      enterprise: '$1,299',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API access']
+      name: 'AI Starter',
+      description: 'Perfect for small businesses getting started with AI',
+      price: { monthly: 199, yearly: 1990 },
+      icon: Brain,
+      popular: false,
+      features: [
+        'Basic AI automation',
+        'Email support',
+        'Standard templates',
+        'Up to 5 users',
+        'Basic analytics',
+        '1 AI model'
+      ],
+      limitations: [
+        'Limited customizations',
+        'Basic reporting',
+        'Standard response time'
+      ],
+      cta: 'Start Free Trial',
+      link: '/contact'
     },
     {
-      name: 'AI Document Processing',
-      starter: '$199',
-      professional: '$399',
-      enterprise: '$899',
-      features: ['OCR processing', 'Document classification', 'Workflow automation', 'Compliance checking']
+      name: 'AI Professional',
+      description: 'Advanced AI solutions for growing businesses',
+      price: { monthly: 499, yearly: 4990 },
+      icon: Zap,
+      popular: true,
+      features: [
+        'Advanced AI automation',
+        'Priority support',
+        'Custom templates',
+        'Up to 25 users',
+        'Advanced analytics',
+        '5 AI models',
+        'API access',
+        'Custom integrations'
+      ],
+      limitations: [
+        'Limited custom development',
+        'Standard SLA'
+      ],
+      cta: 'Get Started',
+      link: '/contact'
     },
     {
-      name: 'AI Customer Experience',
-      starter: '$149',
-      professional: '$299',
-      enterprise: '$699',
-      features: ['Intelligent chatbots', 'Sentiment analysis', 'Multi-language support', 'Voice recognition']
-    },
-    {
-      name: 'AI Marketing Automation',
-      starter: '$179',
-      professional: '$349',
-      enterprise: '$799',
-      features: ['Behavioral analysis', 'Content personalization', 'Campaign optimization', 'ROI tracking']
-    },
-    {
-      name: 'AI Predictive Maintenance',
-      starter: '$399',
-      professional: '$799',
-      enterprise: '$1,599',
-      features: ['Equipment monitoring', 'Failure prediction', 'Maintenance scheduling', 'IoT integration']
-    },
-    {
-      name: 'AI Supply Chain Optimization',
-      starter: '$349',
-      professional: '$699',
-      enterprise: '$1,399',
-      features: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Risk assessment']
+      name: 'AI Enterprise',
+      description: 'Complete AI transformation for large organizations',
+      price: { monthly: 1299, yearly: 12990 },
+      icon: Crown,
+      popular: false,
+      features: [
+        'Full AI suite',
+        '24/7 dedicated support',
+        'Unlimited customizations',
+        'Unlimited users',
+        'Enterprise analytics',
+        'Unlimited AI models',
+        'Full API access',
+        'Custom development',
+        'Dedicated account manager',
+        'SLA guarantees'
+      ],
+      limitations: [],
+      cta: 'Contact Sales',
+      link: '/contact'
     }
   ];
 
-  const microSaaSPricing = [
+  const microSaasPricing = [
     {
-      name: 'AI Analytics Dashboard',
-      starter: '$99',
-      professional: '$199',
-      enterprise: '$399',
-      features: ['Real-time visualization', 'AI predictions', 'Custom reports', 'White-label options']
+      name: 'Micro SaaS Basic',
+      description: 'Essential tools for small teams',
+      price: { monthly: 29, yearly: 290 },
+      icon: Settings,
+      popular: false,
+      features: [
+        '1 micro SaaS tool',
+        'Basic support',
+        'Standard templates',
+        'Up to 3 users',
+        'Basic analytics',
+        'Email support'
+      ],
+      limitations: [
+        'Limited integrations',
+        'Basic customization'
+      ],
+      cta: 'Start Free',
+      link: '/contact'
     },
     {
-      name: 'Smart Support Bot',
-      starter: '$149',
-      professional: '$299',
-      enterprise: '$599',
-      features: ['24/7 automation', 'Multi-language', 'Ticket management', 'Performance analytics']
+      name: 'Micro SaaS Pro',
+      description: 'Powerful tools for growing businesses',
+      price: { monthly: 79, yearly: 790 },
+      icon: Rocket,
+      popular: true,
+      features: [
+        'Up to 5 micro SaaS tools',
+        'Priority support',
+        'Custom templates',
+        'Up to 15 users',
+        'Advanced analytics',
+        'API access',
+        'Custom integrations',
+        'Phone support'
+      ],
+      limitations: [
+        'Limited custom development'
+      ],
+      cta: 'Get Started',
+      link: '/contact'
     },
     {
-      name: 'Social Media Manager',
-      starter: '$79',
-      professional: '$159',
-      enterprise: '$319',
-      features: ['Content automation', 'AI generation', 'Engagement tracking', 'Multi-platform']
-    },
-    {
-      name: 'Email Marketing Suite',
-      starter: '$129',
-      professional: '$259',
-      enterprise: '$519',
-      features: ['AI personalization', 'Behavioral triggers', 'A/B testing', 'ROI tracking']
-    },
-    {
-      name: 'Inventory Management',
-      starter: '$199',
-      professional: '$399',
-      enterprise: '$799',
-      features: ['Demand forecasting', 'Automated reordering', 'Cost analysis', 'Multi-location']
-    },
-    {
-      name: 'Lead Scoring System',
-      starter: '$89',
-      professional: '$179',
-      enterprise: '$359',
-      features: ['Behavioral analysis', 'Conversion prediction', 'CRM integration', 'Performance tracking']
+      name: 'Micro SaaS Enterprise',
+      description: 'Complete micro SaaS suite for enterprises',
+      price: { monthly: 199, yearly: 1990 },
+      icon: Building,
+      popular: false,
+      features: [
+        'Unlimited micro SaaS tools',
+        '24/7 dedicated support',
+        'Unlimited customizations',
+        'Unlimited users',
+        'Enterprise analytics',
+        'Full API access',
+        'Custom development',
+        'Dedicated account manager',
+        'SLA guarantees'
+      ],
+      limitations: [],
+      cta: 'Contact Sales',
+      link: '/contact'
     }
   ];
 
   const itServicesPricing = [
     {
-      name: 'IT Infrastructure',
-      starter: '$499',
-      professional: '$999',
-      enterprise: '$1,999',
-      features: ['Server management', 'Network setup', 'Cloud migration', '24/7 monitoring']
+      name: 'IT Support Basic',
+      description: 'Essential IT support for small businesses',
+      price: { monthly: 99, yearly: 990 },
+      icon: Headphones,
+      popular: false,
+      features: [
+        'Email support',
+        'Basic monitoring',
+        'Standard response time',
+        'Up to 10 devices',
+        'Basic security',
+        'Monthly reports'
+      ],
+      limitations: [
+        'Limited remote support',
+        'Business hours only'
+      ],
+      cta: 'Get Started',
+      link: '/contact'
     },
     {
-      name: 'Cybersecurity',
-      starter: '$299',
-      professional: '$599',
-      enterprise: '$1,199',
-      features: ['Security audits', 'Threat detection', 'Compliance management', 'Incident response']
+      name: 'IT Support Professional',
+      description: 'Comprehensive IT support for growing businesses',
+      price: { monthly: 199, yearly: 1990 },
+      icon: Shield,
+      popular: true,
+      features: [
+        '24/7 phone & email support',
+        'Proactive monitoring',
+        'Fast response time',
+        'Up to 50 devices',
+        'Advanced security',
+        'Weekly reports',
+        'Remote support',
+        'Priority support'
+      ],
+      limitations: [
+        'Limited on-site visits'
+      ],
+      cta: 'Get Started',
+      link: '/contact'
     },
     {
-      name: 'Cloud Infrastructure',
-      starter: '$399',
-      professional: '$799',
-      enterprise: '$1,599',
-      features: ['Cloud migration', 'Infrastructure as Code', 'Cost optimization', 'Security hardening']
-    },
-    {
-      name: 'Database Management',
-      starter: '$199',
-      professional: '$399',
-      enterprise: '$799',
-      features: ['Database design', 'Performance tuning', 'Backup & recovery', 'Data migration']
-    },
-    {
-      name: 'Managed IT',
-      starter: '$599',
-      professional: '$1,199',
-      enterprise: '$2,399',
-      features: ['Proactive monitoring', 'Patch management', 'Security updates', 'Performance optimization']
-    },
-    {
-      name: 'IT Support',
-      starter: '$149',
-      professional: '$299',
-      enterprise: '$599',
-      features: ['24/7 support', 'Help desk', 'System maintenance', 'Troubleshooting']
+      name: 'IT Support Enterprise',
+      description: 'Complete IT management for large organizations',
+      price: { monthly: 399, yearly: 3990 },
+      icon: Globe,
+      popular: false,
+      features: [
+        '24/7 dedicated support',
+        'Full monitoring suite',
+        'Immediate response',
+        'Unlimited devices',
+        'Enterprise security',
+        'Real-time reports',
+        'On-site support',
+        'Dedicated account manager',
+        'SLA guarantees'
+      ],
+      limitations: [],
+      cta: 'Contact Sales',
+      link: '/contact'
     }
   ];
 
-  const pricingTiers = [
+  const cloudServicesPricing = [
     {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      icon: Star,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-400',
+      name: 'Cloud Starter',
+      description: 'Basic cloud infrastructure for small businesses',
+      price: { monthly: 149, yearly: 1490 },
+      icon: Cloud,
+      popular: false,
       features: [
-        'Up to 5 users',
-        'Basic AI features',
+        'Basic cloud setup',
         'Email support',
-        'Standard templates',
-        'Basic analytics',
-        '1TB storage',
-        'API access (limited)'
+        'Standard monitoring',
+        'Up to 5 servers',
+        'Basic backup',
+        'Monthly optimization'
       ],
       limitations: [
         'Limited customization',
-        'Basic reporting',
-        'Standard SLA'
-      ]
+        'Basic security'
+      ],
+      cta: 'Get Started',
+      link: '/contact'
     },
     {
-      name: 'Professional',
-      description: 'Ideal for growing businesses',
-      icon: Crown,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-400',
+      name: 'Cloud Professional',
+      description: 'Advanced cloud solutions for growing businesses',
+      price: { monthly: 299, yearly: 2990 },
+      icon: Zap,
+      popular: true,
       features: [
-        'Up to 25 users',
-        'Advanced AI features',
+        'Advanced cloud setup',
         'Priority support',
-        'Custom templates',
-        'Advanced analytics',
-        '10TB storage',
-        'Full API access',
-        'White-label options',
-        'Custom integrations',
-        'Advanced security'
+        'Advanced monitoring',
+        'Up to 25 servers',
+        'Advanced backup',
+        'Weekly optimization',
+        'Auto-scaling',
+        'Load balancing'
       ],
       limitations: [
-        'Monthly usage limits',
-        'Standard customization'
+        'Limited custom development'
       ],
-      popular: true
+      cta: 'Get Started',
+      link: '/contact'
     },
     {
-      name: 'Enterprise',
-      description: 'For large organizations',
-      icon: Trophy,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-400',
+      name: 'Cloud Enterprise',
+      description: 'Complete cloud transformation for enterprises',
+      price: { monthly: 599, yearly: 5990 },
+      icon: Crown,
+      popular: false,
       features: [
-        'Unlimited users',
-        'Full AI capabilities',
+        'Full cloud transformation',
         '24/7 dedicated support',
-        'Custom development',
-        'Advanced analytics',
-        'Unlimited storage',
-        'Full API access',
-        'White-label options',
-        'Custom integrations',
-        'Enterprise security',
+        'Enterprise monitoring',
+        'Unlimited servers',
+        'Enterprise backup',
+        'Real-time optimization',
+        'Custom auto-scaling',
+        'Advanced load balancing',
         'Dedicated account manager',
-        'Custom SLA',
-        'On-premise deployment'
+        'SLA guarantees'
       ],
-      limitations: []
+      limitations: [],
+      cta: 'Contact Sales',
+      link: '/contact'
     }
   ];
 
-  const addOnServices = [
+  const cybersecurityPricing = [
     {
-      name: 'Custom AI Development',
-      price: '$299/hour',
-      description: 'Bespoke AI solutions tailored to your specific needs',
-      icon: Code
+      name: 'Security Basic',
+      description: 'Essential security for small businesses',
+      price: { monthly: 79, yearly: 790 },
+      icon: Shield,
+      popular: false,
+      features: [
+        'Basic firewall',
+        'Email security',
+        'Standard monitoring',
+        'Up to 10 devices',
+        'Basic backup',
+        'Monthly reports'
+      ],
+      limitations: [
+        'Limited threat detection',
+        'Basic compliance'
+      ],
+      cta: 'Get Started',
+      link: '/contact'
     },
     {
-      name: 'Data Migration',
-      price: '$199/hour',
-      description: 'Seamless migration of your existing data and systems',
-      icon: Database
+      name: 'Security Professional',
+      description: 'Advanced security for growing businesses',
+      price: { monthly: 149, yearly: 1490 },
+      icon: Lock,
+      popular: true,
+      features: [
+        'Advanced firewall',
+        'Comprehensive email security',
+        'Advanced monitoring',
+        'Up to 50 devices',
+        'Advanced backup',
+        'Weekly reports',
+        'Threat detection',
+        'Compliance monitoring'
+      ],
+      limitations: [
+        'Limited custom policies'
+      ],
+      cta: 'Get Started',
+      link: '/contact'
     },
     {
-      name: 'Training & Support',
-      price: '$149/hour',
-      description: 'Comprehensive training for your team and ongoing support',
-      icon: GraduationCap
-    },
-    {
-      name: 'Integration Services',
-      price: '$249/hour',
-      description: 'Connect our solutions with your existing tools and workflows',
-      icon: Settings
-    },
-    {
-      name: 'Performance Optimization',
-      price: '$199/hour',
-      description: 'Optimize performance and efficiency of your AI solutions',
-      icon: Zap
-    },
-    {
-      name: 'Security Audit',
-      price: '$399/hour',
-      description: 'Comprehensive security assessment and hardening',
-      icon: Shield
+      name: 'Security Enterprise',
+      description: 'Complete security suite for enterprises',
+      price: { monthly: 299, yearly: 2990 },
+      icon: Globe,
+      popular: false,
+      features: [
+        'Enterprise firewall',
+        'Full email security suite',
+        'Enterprise monitoring',
+        'Unlimited devices',
+        'Enterprise backup',
+        'Real-time reports',
+        'Advanced threat detection',
+        'Full compliance suite',
+        'Dedicated security manager',
+        'SLA guarantees'
+      ],
+      limitations: [],
+      cta: 'Contact Sales',
+      link: '/contact'
     }
+  ];
+
+  const getCurrentPricing = () => {
+    switch (selectedPlan) {
+      case 'ai-services':
+        return aiServicesPricing;
+      case 'micro-saas':
+        return microSaasPricing;
+      case 'it-services':
+        return itServicesPricing;
+      case 'cloud-services':
+        return cloudServicesPricing;
+      case 'cybersecurity':
+        return cybersecurityPricing;
+      default:
+        return aiServicesPricing;
+    }
+  };
+
+  const pricingPlans = [
+    { id: 'ai-services', name: 'AI Services', icon: Brain },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: Settings },
+    { id: 'it-services', name: 'IT Services', icon: Headphones },
+    { id: 'cloud-services', name: 'Cloud Services', icon: Cloud },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Service Pricing</title>
-        <meta name="description" content="Transparent pricing for AI services, micro SAAS solutions, and IT services. Choose the perfect plan for your business needs with flexible options." />
-        <meta name="keywords" content="AI pricing, micro saas pricing, IT services pricing, business intelligence pricing, automation pricing" />
+        <title>Pricing - Zion Tech Group | Transparent Pricing for AI & IT Solutions</title>
+        <meta name="description" content="Transparent pricing for AI services, micro SaaS solutions, IT support, cloud infrastructure, and cybersecurity. Choose the perfect plan for your business needs." />
+        <meta name="keywords" content="pricing, AI services pricing, micro SaaS pricing, IT services pricing, cloud services pricing, cybersecurity pricing" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
+        <Header />
         
         <main className="pt-24">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-                Transparent Pricing
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pricing</span>
               </h1>
               <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
-                Choose the perfect plan for your business needs. All our pricing is transparent with no hidden fees. 
-                Start with a free consultation to determine the best solution for your organization.
+                Choose the perfect plan for your business needs. All plans include our commitment to excellence and 24/7 support.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center justify-center"
+            </div>
+          </section>
+
+          {/* Plan Selection */}
+          <section className="container mx-auto px-4 py-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              {pricingPlans.map((plan) => (
+                <button
+                  key={plan.id}
+                  onClick={() => setSelectedPlan(plan.id)}
+                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedPlan === plan.id
+                      ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get Free Consultation
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  <plan.icon className="w-5 h-5" />
+                  <span>{plan.name}</span>
+                </button>
+              ))}
+            </div>
+          </section>
+
+          {/* Billing Toggle */}
+          <section className="container mx-auto px-4 py-4">
+            <div className="flex justify-center mb-8">
+              <div className="bg-white/10 rounded-lg p-1 flex">
+                <button
+                  onClick={() => setBillingCycle('monthly')}
+                  className={`px-6 py-2 rounded-md font-semibold transition-all duration-300 ${
+                    billingCycle === 'monthly'
+                      ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white'
+                      : 'text-gray-300 hover:text-white'
+                  }`}
                 >
-                  Contact Sales
-                </a>
+                  Monthly
+                </button>
+                <button
+                  onClick={() => setBillingCycle('yearly')}
+                  className={`px-6 py-2 rounded-md font-semibold transition-all duration-300 ${
+                    billingCycle === 'yearly'
+                      ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white'
+                      : 'text-gray-300 hover:text-white'
+                  }`}
+                >
+                  Yearly
+                  <span className="ml-2 px-2 py-1 bg-green-500 text-white text-xs rounded-full">Save 20%</span>
+                </button>
               </div>
             </div>
           </section>
 
-          {/* Main Pricing Tiers */}
+          {/* Pricing Cards */}
           <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Choose Your Plan</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing tiers designed to scale with your business growth and needs.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${tier.popular ? 'border-2 border-cyan-400 scale-105' : ''}`}>
-                  {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {getCurrentPricing().map((plan, index) => (
+                <div
+                  key={index}
+                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                    plan.popular
+                      ? 'border-cyan-400/50 ring-2 ring-cyan-400/20'
+                      : 'border-white/20 hover:border-cyan-400/50'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="flex justify-center mb-4">
+                      <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-600 to-purple-600 text-white">
+                        <Star className="w-4 h-4 mr-2" />
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
-                    <div className={`w-16 h-16 ${tier.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <tier.icon className="w-8 h-8 text-slate-900" />
+                  <div className="text-center mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <plan.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                    <p className="text-gray-300 mb-4">{tier.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-5xl font-bold text-cyan-400">
+                        ${billingCycle === 'yearly' ? plan.price.yearly : plan.price.monthly}
+                      </span>
+                      <span className="text-gray-400 ml-2">
+                        /{billingCycle === 'yearly' ? 'year' : 'month'}
+                      </span>
+                    </div>
+                    {billingCycle === 'yearly' && (
+                      <p className="text-green-400 text-sm mt-2">Save ${(plan.price.monthly * 12) - plan.price.yearly} per year</p>
+                    )}
                   </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
 
-                  {tier.limitations.length > 0 && (
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Limitations:</h4>
-                      <ul className="space-y-1">
-                        {tier.limitations.map((limitation, limitationIndex) => (
-                          <li key={limitationIndex} className="flex items-center text-sm text-gray-500">
-                            <X className="w-3 h-3 text-red-400 mr-2" />
-                            {limitation}
-                          </li>
-                        ))}
-                      </ul>
+                  <div className="space-y-4 mb-8">
+                    <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
+                    {plan.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {plan.limitations.length > 0 && (
+                    <div className="space-y-2 mb-8">
+                      <h4 className="text-lg font-semibold text-white mb-4">Limitations:</h4>
+                      {plan.limitations.map((limitation, limitationIndex) => (
+                        <div key={limitationIndex} className="flex items-center text-gray-400">
+                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                          <span>{limitation}</span>
+                        </div>
+                      ))}
                     </div>
                   )}
-                  
+
                   <a
-                    href="/contact"
-                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
-                      tier.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                    href={plan.link}
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 transform hover:scale-105 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-700 hover:to-purple-700'
+                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                     }`}
                   >
-                    Get Started
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* AI Services Pricing */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">AI Services Pricing</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI solutions with transparent, scalable pricing based on your specific needs.
-              </p>
-            </div>
-            
-            <div className="overflow-x-auto">
-              <table className="w-full cyber-card">
-                <thead>
-                  <tr className="border-b border-gray-700">
-                    <th className="text-left py-4 px-6 text-white font-semibold">Service</th>
-                    <th className="text-center py-4 px-6 text-cyan-400 font-semibold">Starter</th>
-                    <th className="text-center py-4 px-6 text-purple-400 font-semibold">Professional</th>
-                    <th className="text-center py-4 px-6 text-yellow-400 font-semibold">Enterprise</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {aiServicesPricing.map((service, index) => (
-                    <tr key={index} className="border-b border-gray-700/50">
-                      <td className="py-4 px-6">
-                        <div>
-                          <div className="text-white font-semibold">{service.name}</div>
-                          <div className="text-sm text-gray-400 mt-1">
-                            {service.features.slice(0, 2).join(' • ')}
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center py-4 px-6">
-                        <div className="text-cyan-400 font-bold text-lg">{service.starter}</div>
-                        <div className="text-sm text-gray-400">/month</div>
-                      </td>
-                      <td className="text-center py-4 px-6">
-                        <div className="text-purple-400 font-bold text-lg">{service.professional}</div>
-                        <div className="text-sm text-gray-400">/month</div>
-                      </td>
-                      <td className="text-center py-4 px-6">
-                        <div className="text-yellow-400 font-bold text-lg">{service.enterprise}</div>
-                        <div className="text-sm text-gray-400">/month</div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          {/* Micro SAAS Pricing */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Micro SAAS Pricing</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Affordable micro SAAS solutions designed for small to medium businesses.
-              </p>
-            </div>
-            
-            <div className="overflow-x-auto">
-              <table className="w-full cyber-card">
-                <thead>
-                  <tr className="border-b border-gray-700">
-                    <th className="text-left py-4 px-6 text-white font-semibold">Service</th>
-                    <th className="text-center py-4 px-6 text-cyan-400 font-semibold">Starter</th>
-                    <th className="text-center py-4 px-6 text-purple-400 font-semibold">Professional</th>
-                    <th className="text-center py-4 px-6 text-yellow-400 font-semibold">Enterprise</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {microSaaSPricing.map((service, index) => (
-                    <tr key={index} className="border-b border-gray-700/50">
-                      <td className="py-4 px-6">
-                        <div>
-                          <div className="text-white font-semibold">{service.name}</div>
-                          <div className="text-sm text-gray-400 mt-1">
-                            {service.features.slice(0, 2).join(' • ')}
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center py-4 px-6">
-                        <div className="text-cyan-400 font-bold text-lg">{service.starter}</div>
-                        <div className="text-sm text-gray-400">/month</div>
-                      </td>
-                      <td className="text-center py-4 px-6">
-                        <div className="text-purple-400 font-bold text-lg">{service.professional}</div>
-                        <div className="text-sm text-gray-400">/month</div>
-                      </td>
-                      <td className="text-center py-4 px-6">
-                        <div className="text-yellow-400 font-bold text-lg">{service.enterprise}</div>
-                        <div className="text-sm text-gray-400">/month</div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          {/* IT Services Pricing */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">IT Services Pricing</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive IT services with flexible pricing options for all business sizes.
-              </p>
-            </div>
-            
-            <div className="overflow-x-auto">
-              <table className="w-full cyber-card">
-                <thead>
-                  <tr className="border-b border-gray-700">
-                    <th className="text-left py-4 px-6 text-white font-semibold">Service</th>
-                    <th className="text-center py-4 px-6 text-cyan-400 font-semibold">Starter</th>
-                    <th className="text-center py-4 px-6 text-purple-400 font-semibold">Professional</th>
-                    <th className="text-center py-4 px-6 text-yellow-400 font-semibold">Enterprise</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {itServicesPricing.map((service, index) => (
-                    <tr key={index} className="border-b border-gray-700/50">
-                      <td className="py-4 px-6">
-                        <div>
-                          <div className="text-white font-semibold">{service.name}</div>
-                          <div className="text-sm text-gray-400 mt-1">
-                            {service.features.slice(0, 2).join(' • ')}
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center py-4 px-6">
-                        <div className="text-cyan-400 font-bold text-lg">{service.starter}</div>
-                        <div className="text-sm text-gray-400">/month</div>
-                      </td>
-                      <td className="text-center py-4 px-6">
-                        <div className="text-purple-400 font-bold text-lg">{service.professional}</div>
-                        <div className="text-sm text-gray-400">/month</div>
-                      </td>
-                      <td className="text-center py-4 px-6">
-                        <div className="text-yellow-400 font-bold text-lg">{service.enterprise}</div>
-                        <div className="text-sm text-gray-400">/month</div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          {/* Add-On Services */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Add-On Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Additional services to enhance your implementation and maximize your ROI.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {addOnServices.map((service, index) => (
-                <div key={index} className="cyber-card p-6 group hover:scale-105 transition-transform duration-300">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
-                      <p className="text-cyan-400 font-semibold">{service.price}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                    {plan.cta}
                   </a>
                 </div>
               ))}
@@ -591,65 +525,62 @@ const PricingPage: React.FC = () => {
 
           {/* FAQ Section */}
           <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300">Common questions about our pricing and services</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Do you offer custom pricing?</h3>
-                <p className="text-gray-300">Yes, we offer custom pricing for enterprise clients with specific requirements. Contact our sales team for a personalized quote.</p>
-              </div>
-              <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Can I change plans anytime?</h3>
-                <p className="text-gray-300">Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</p>
-              </div>
-              <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Is there a free trial available?</h3>
-                <p className="text-gray-300">Yes, we offer a 14-day free trial for all our services. No credit card required to get started.</p>
-              </div>
-              <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">What payment methods do you accept?</h3>
-                <p className="text-gray-300">We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.</p>
-              </div>
-              <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Do you offer discounts for annual billing?</h3>
-                <p className="text-gray-300">Yes, we offer a 20% discount for annual billing and additional discounts for multi-year commitments.</p>
-              </div>
-              <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">What's included in support?</h3>
-                <p className="text-gray-300">Support includes email support for Starter, priority support for Professional, and 24/7 dedicated support for Enterprise plans.</p>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-4xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">Can I change plans anytime?</h3>
+                  <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">Do you offer custom pricing?</h3>
+                  <p className="text-gray-300">Yes, we offer custom pricing for enterprise clients with specific requirements. Contact our sales team to discuss your needs.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">What's included in support?</h3>
+                  <p className="text-gray-300">All plans include email support. Professional and Enterprise plans include phone support, and Enterprise includes 24/7 dedicated support.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">Is there a free trial?</h3>
+                  <p className="text-gray-300">Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">What payment methods do you accept?</h3>
+                  <p className="text-gray-300">We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also pay via invoice.</p>
+                </div>
               </div>
             </div>
           </section>
 
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16">
-            <div className="cyber-card text-center p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Contact our team for a free consultation and custom pricing based on your specific needs and requirements.
+            <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Join thousands of businesses that trust Zion Tech Group for their AI and IT needs. 
+                Start your free trial today or contact us for a custom solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+                >
+                  Start Free Trial
+                </a>
+                <a
                   href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center justify-center"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  Get Free Quote
                 </a>
               </div>
             </div>
           </section>
         </main>
-
+        
         <Footer />
       </div>
     </>
