@@ -2,11 +2,9 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Cloud } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
 
-const ItServicesPage: React.FC = () => {
 const ITServicesPage: React.FC = () => {
   const _itServices = [
     {
@@ -20,6 +18,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
+    {
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
       icon: Shield,
@@ -27,14 +26,19 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $2,000/month',
       category: 'Security',
       benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', 'Peace of mind'],
-      technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Firewalls', 'Intrusion Detection'],
+      technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Firewalls', 'Intrusion Detection']
+    },
+    {
       title: 'IT Infrastructure',
       description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
       icon: Server,
       features: ['Network setup', 'Server management', 'Backup solutions', 'Disaster recovery', 'Performance monitoring', '24/7 support'],
       price: 'Starting at $1,200/month',
+      category: 'Infrastructure',
       benefits: ['Reliable infrastructure', 'Reduced downtime', 'Improved efficiency', 'Cost savings'],
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
+      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange']
+    },
+    {
       title: 'Database Management',
       description: 'Expert database administration, optimization, and migration services for all major database platforms.',
       icon: Database,
@@ -42,7 +46,9 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $800/month',
       category: 'Data Management',
       benefits: ['Optimized performance', 'Data security', 'Reduced costs', 'Improved reliability'],
-      technologies: ['SQL Server', 'MySQL', 'PostgreSQL', 'Oracle', 'MongoDB', 'Redis'],
+      technologies: ['SQL Server', 'MySQL', 'PostgreSQL', 'Oracle', 'MongoDB', 'Redis']
+    },
+    {
       title: 'Business Intelligence',
       description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
       icon: BarChart,
@@ -50,7 +56,9 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $1,000/month',
       category: 'Analytics',
       benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost optimization'],
-      technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS'],
+      technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS']
+    },
+    {
       title: 'IT Consulting',
       description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
       icon: Users,
@@ -58,7 +66,7 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $150/hour',
       category: 'Consulting',
       benefits: ['Strategic guidance', 'Cost optimization', 'Risk mitigation', 'Technology alignment'],
-      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
+      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management']
     }
   ];
 
@@ -83,9 +91,13 @@ const ITServicesPage: React.FC = () => {
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
+            </button>
           </div>
+        </div>
+      </div>
       
       <Footer />
+    </div>
   );
 };
 

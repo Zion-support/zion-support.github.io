@@ -13,14 +13,19 @@ const AICustomerSupportBotPage: React.FC = () => {
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
+    {
       icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
+    },
+    {
       icon: Users,
       title: 'Human Handoff',
       description: 'Seamless escalation to human agents when complex issues arise',
       benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
+    },
+    {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to track performance and improve customer experience',
@@ -29,6 +34,7 @@ const AICustomerSupportBotPage: React.FC = () => {
   ];
 
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$149',
       period: '/month',
@@ -41,19 +47,26 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Standard integrations'
       ],
       popular: false
+    },
+    {
       name: 'Professional',
       price: '$299',
       description: 'Ideal for growing companies',
+      features: [
         'Up to 10,000 conversations/month',
         'Advanced AI responses',
         'Priority support',
         'Advanced analytics',
         'Custom integrations',
         'Multi-language support'
+      ],
       popular: true
+    },
+    {
       name: 'Enterprise',
       price: '$599',
       description: 'For large organizations',
+      features: [
         'Unlimited conversations',
         'Premium AI features',
         '24/7 support',
@@ -61,6 +74,10 @@ const AICustomerSupportBotPage: React.FC = () => {
         'White-label options',
         'API access',
         'Custom training'
+      ],
+      popular: false
+    }
+  ];
 
   const stats = [
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
