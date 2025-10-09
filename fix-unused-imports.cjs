@@ -2,98 +2,67 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { execSync } = require('child_process');
 
-// Files to fix
-const filesToFix = [
-  'app/blog/ai-2025-january-cutting-edge-trends-breakthrough/page.tsx',
-  'app/blog/ai-2025-march-autonomous-enterprise-operations-revolution/page.tsx',
-  'app/blog/ai-2026-adaptive-neural-architectures-breakthrough/page.tsx',
-  'app/blog/ai-2026-advanced-neural-optimization-revolution/page.tsx',
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-april-ultimate-breakthrough-revolution/page.tsx',
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
-  'app/blog/ai-2026-autonomous-business-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx',
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-breakthrough/page.tsx',
-  'app/blog/ai-2026-february-mega-breakthrough-revolution/page.tsx',
-  'app/blog/ai-2026-february-ultimate-consciousness-breakthrough/page.tsx',
-  'app/blog/ai-2026-hyperconscious-computing-revolution/page.tsx',
-  'app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx',
-  'app/blog/ai-trends-2026-future-enterprise-transformation/page.tsx',
-  'app/contact/page.tsx',
-  'app/privacy/page.tsx',
-  'app/team/page.tsx',
-  'app/terms/page.tsx'
-];
+// Get all TypeScript/JavaScript files
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat && stat.isDirectory()) {
+      // Skip node_modules and other directories
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
+        results = results.concat(getAllFiles(filePath, extensions));
+      }
+    } else {
+      const ext = path.extname(file);
+      if (extensions.includes(ext)) {
+        results.push(filePath);
+      }
+    }
+  });
+  
+  return results;
+}
 
-// Fix unused Link imports
-filesToFix.forEach(filePath => {
+// Remove unused imports from a file
+function removeUnusedImports(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (fs.existsSync(fullPath)) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      
-      // Remove unused Link import
-      content = content.replace(/import { Link } from 'react-router-dom';\n/g, '');
-      content = content.replace(/import { Link } from 'react-router-dom';\r\n/g, '');
-      content = content.replace(/import { Link } from 'react-router-dom';\n\n/g, '');
-      
-      // Remove unused Link from multi-import
-      content = content.replace(/import { [^}]*Link[^}]* } from 'react-router-dom';\n/g, '');
-      content = content.replace(/import { [^}]*Link[^}]* } from 'react-router-dom';\r\n/g, '');
-      
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Skip if file has merge conflicts or other issues
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`Skipping ${filePath} - contains merge conflicts`);
+      return;
+    }
+    
+    // Run ESLint with --fix to remove unused imports
+    try {
+      execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });
+      console.log(`Fixed unused imports in ${filePath}`);
+    } catch (error) {
+      // ESLint might fail on some files, that's okay
+      console.log(`Could not auto-fix ${filePath}: ${error.message}`);
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.log(`Error processing ${filePath}: ${error.message}`);
   }
+}
+
+// Main execution
+console.log('Starting unused imports cleanup...');
+
+// Get all files
+const files = getAllFiles('./src');
+console.log(`Found ${files.length} files to process`);
+
+// Process each file
+files.forEach(file => {
+  removeUnusedImports(file);
 });
 
-// Fix other common issues
-const otherFiles = [
-  'app/not-found.tsx',
-  'app/guides/ai-2026-implementation-roadmap/page.tsx',
-  'app/guides/ai-2027-implementation-roadmap/page.tsx'
-];
-
-otherFiles.forEach(filePath => {
-  try {
-    const fullPath = path.join(__dirname, filePath);
-    if (fs.existsSync(fullPath)) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      
-      // Remove unused icon imports
-      if (filePath.includes('not-found.tsx')) {
-        content = content.replace(/import { [^}]*ArrowLeft[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Search[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*BookOpen[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Users[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      if (filePath.includes('ai-2026-implementation-roadmap')) {
-        content = content.replace(/import { [^}]*Target[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*CheckCircle[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      if (filePath.includes('ai-2027-implementation-roadmap')) {
-        content = content.replace(/import { [^}]*Calendar[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*User[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Tag[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Cpu[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-});
-
-console.log('Fixed unused imports!');
+console.log('Unused imports cleanup completed!');

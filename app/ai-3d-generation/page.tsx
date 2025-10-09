@@ -162,7 +162,6 @@ const AI3DGenerationPage: React.FC = () => {
                   <p className="text-gray-300 text-sm">
                     Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
                   </p>
-
                 </div>
               ))}
             </div>
