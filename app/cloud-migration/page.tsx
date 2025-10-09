@@ -13,6 +13,7 @@ const CloudMigrationPage: React.FC = () => {
       benefits: ['Zero downtime', 'Data integrity', 'Rollback capability']
     },
     {
+<<<<<<< HEAD
       icon: Database,
       title: 'Data Migration',
       description: 'Secure and efficient migration of databases and data warehouses',
@@ -28,14 +29,17 @@ const CloudMigrationPage: React.FC = () => {
       benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']
     },
     {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
       icon: Shield,
-      title: 'Security-First Approach',
-      description: 'Ensure your cloud infrastructure meets the highest security standards and compliance requirements.',
-      benefits: ['End-to-end encryption', 'Compliance management', 'Security monitoring', 'Access controls']
+      title: 'Security First',
+      description: 'Enterprise-grade security throughout the migration process',
+      benefits: ['Data encryption', 'Access controls', 'Compliance']
     },
     {
       icon: Zap,
       title: 'Performance Optimization',
+<<<<<<< HEAD
       description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
       benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']
     },
@@ -44,23 +48,33 @@ const CloudMigrationPage: React.FC = () => {
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
       benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
+=======
+      description: 'Optimize your applications for cloud performance',
+      benefits: ['Faster load times', 'Better scalability', 'Cost efficiency']
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
     }
   ];
 
   const migrationSteps = [
     {
+<<<<<<< HEAD
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of current infrastructure and migration strategy',
       icon: CheckCircle,
       features: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
+=======
+      step: '1',
+      title: 'Assessment',
+      description: 'Analyze current infrastructure and identify migration requirements'
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
     },
     {
-      title: 'Migration Execution',
-      description: 'Careful execution of migration with continuous monitoring',
-      icon: Zap,
-      features: ['Phased migration', 'Real-time monitoring', 'Issue resolution']
+      step: '2',
+      title: 'Planning',
+      description: 'Create detailed migration plan with timelines and rollback strategies'
     },
     {
+<<<<<<< HEAD
       title: 'Optimization & Support',
       description: 'Post-migration optimization and ongoing support',
       icon: Shield,
@@ -171,10 +185,21 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Scale resources up or down based on demand automatically.',
       icon: Target,
       percentage: 'Unlimited'
+=======
+      step: '3',
+      title: 'Migration',
+      description: 'Execute migration with minimal downtime and maximum data integrity'
+    },
+    {
+      step: '4',
+      title: 'Optimization',
+      description: 'Fine-tune cloud resources for optimal performance and cost'
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
     }
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <div className="relative overflow-hidden">
@@ -235,64 +260,60 @@ const CloudMigrationPage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
+      <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               Cloud Migration Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Seamlessly migrate your infrastructure to the cloud with our expert team. Reduce costs, improve performance, and enhance security.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Seamlessly migrate your applications and data to the cloud with our expert migration services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button px-8 py-4 text-lg">
-                Get Free Assessment
-              </button>
-              <button className="cyber-button-outline px-8 py-4 text-lg">
-                View Case Studies
-              </button>
+              <a
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a
+                href="/demo"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center"
+              >
+                View Demo
+              </a>
             </div>
-          </div>
+          </section>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-gray-300">Successful Migrations</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
-              <div className="text-gray-300">Average Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime Guarantee</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support Available</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Migration Services</h2>
-            <p className="text-xl text-gray-300">Everything you need for a successful cloud migration</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+          {/* Features Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
+              Our Migration Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="w-8 h-8 text-blue-400 mr-3" />
+                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -308,15 +329,39 @@ const CloudMigrationPage: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+              ))}
+            </div>
+          </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
 
-      {/* Migration Steps Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Migration Process</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven methodology that ensures successful cloud migration with minimal risk
+          {/* Migration Process */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
+              Our Migration Process
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {migrationSteps.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                    {step.step}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Migrate to the Cloud?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our experts help you migrate to the cloud safely and efficiently
             </p>
+<<<<<<< HEAD
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -439,20 +484,18 @@ const CloudMigrationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
+=======
+            <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
               href="/contact"
-              className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
             >
-              Get Started Today
+              Start Your Migration
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              href="/pricing"
-              className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-            >
-              View Pricing
-            </Link>
-          </div>
+            </a>
+          </section>
         </div>
+<<<<<<< HEAD
       </div>
       </section>
 
@@ -544,10 +587,17 @@ const CloudMigrationPage: React.FC = () => {
         </div>
       </section>
 
+=======
+      </main>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
       <Footer />
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default CloudMigrationPage;
 export default CloudMigrationPage;
+=======
+export default CloudMigrationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5

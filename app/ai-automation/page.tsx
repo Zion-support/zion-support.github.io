@@ -11,43 +11,34 @@ const AIAutomationPage: React.FC = () => {
     'Workflow optimization',
     'Data processing automation',
     'Customer service automation',
-    'Marketing automation',
-    'Report generation',
+    'Document processing',
+    'Email automation',
     'Task scheduling',
-    'Error handling and recovery',
-    'Integration with existing systems',
-    'Real-time monitoring and analytics'
+    'Report generation',
+    'Data validation',
+    'Integration management'
   ];
 
   const benefits = [
-    'Reduce manual work by 80%',
-    'Increase productivity by 300%',
-    'Eliminate human errors',
-    '24/7 automated operations',
-    'Faster response times',
-    'Cost reduction',
-    'Improved accuracy',
-    'Scalable solutions'
-  ];
-
-  const automationTypes = [
     {
-      title: 'Business Process Automation',
-      description: 'Automate repetitive business tasks and workflows',
-      icon: Settings,
-      examples: ['Invoice processing', 'Data entry', 'Report generation', 'Approval workflows']
+      title: 'Increased Efficiency',
+      description: 'Reduce manual work by up to 80%',
+      icon: Zap
     },
     {
-      title: 'Customer Service Automation',
-      description: 'AI-powered customer support and engagement',
-      icon: Bot,
-      examples: ['Chatbots', 'Email responses', 'Ticket routing', 'FAQ automation']
+      title: 'Cost Savings',
+      description: 'Lower operational costs significantly',
+      icon: TrendingUp
     },
     {
-      title: 'Marketing Automation',
-      description: 'Automated marketing campaigns and lead management',
-      icon: BarChart,
-      examples: ['Email campaigns', 'Social media posting', 'Lead scoring', 'Content scheduling']
+      title: 'Scalability',
+      description: 'Handle growing workloads automatically',
+      icon: BarChart
+    },
+    {
+      title: 'Accuracy',
+      description: 'Minimize human errors in repetitive tasks',
+      icon: Shield
     }
   ];
 
@@ -77,6 +68,7 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutomationPage;
         
         <main className="pt-24 pb-16 px-4">
@@ -228,4 +220,6 @@ export default AIAutomationPage;
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
 export default AIAutomationPage;
