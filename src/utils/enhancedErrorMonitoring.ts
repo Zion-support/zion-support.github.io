@@ -1,5 +1,23 @@
 'use client';
 import React from 'react'
+
+// Declare memory API for performance monitoring
+declare global {
+  interface PerformanceMemory {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  }
+  
+  interface Performance {
+    memory?: PerformanceMemory;
+  }
+  
+  interface Window {
+    handleError?: (error: Error, context?: any) => void;
+  }
+}
+
 /**
  * Enhanced Error Monitoring System for Zion Tech Group Website
  * Provides comprehensive error tracking, reporting, and recovery
@@ -107,10 +125,14 @@ class EnhancedErrorMonitoring {
         }
         return response
       } catch (error) {
-        self.handleError(error as Error, {
-          url: args[0] as string,
-          category: 'network'
-        })
+        if (self.handleError) {
+          self.handleError(error as Error, {
+            sessionId: self.sessionId,
+            url: args[0] as string,
+            userAgent: navigator.userAgent,
+            category: 'network'
+          });
+        }
         throw error
       }
     }
@@ -136,8 +158,12 @@ class EnhancedErrorMonitoring {
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'memory') {
-            if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
+            const memory = (entry as any).memory;
+            if (memory && memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
               this.handleError(new Error(`High memory usage detected: ${memory.usedJSHeapSize / 1024 / 1024}MB`), {
+                sessionId: this.sessionId,
+                url: window.location.href,
+                userAgent: navigator.userAgent,
                 memoryUsage: memory.usedJSHeapSize,
                 category: 'performance'
               })

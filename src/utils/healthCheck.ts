@@ -1,4 +1,18 @@
 'use client';
+
+// Declare memory API for performance monitoring
+declare global {
+  interface PerformanceMemory {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  }
+  
+  interface Performance {
+    memory?: PerformanceMemory;
+  }
+}
+
 /**
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
@@ -171,16 +185,21 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
-      const report = performanceMonitor.getReport()
-      const { poor, needsImprovement, good } = report.summary
+      const report = performanceMonitor.getMetrics()
+      const lcp = report.lcp || 0
+      const fid = report.fid || 0
+      const cls = report.cls || 0
+      
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-      if (poor > 0) {
+      let message = `Performance metrics: LCP=${lcp}ms, FID=${fid}ms, CLS=${cls}`
+      
+      if (lcp > 4000 || fid > 300 || cls > 0.25) {
         status = 'warn'
+        message = `Performance issues detected: LCP=${lcp}ms, FID=${fid}ms, CLS=${cls}`
       }
-      if (poor > 2) {
+      if (lcp > 6000 || fid > 500 || cls > 0.5) {
         status = 'fail'
-        message = `Critical performance issues: ${poor} poor metrics`
+        message = `Critical performance issues: LCP=${lcp}ms, FID=${fid}ms, CLS=${cls}`
       }
       return {
         name: 'performance',

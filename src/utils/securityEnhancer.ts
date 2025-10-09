@@ -107,12 +107,16 @@ class SecurityEnhancer {
   private monitorConsoleAccess(): void {
     const originalConsole = { ...console }
     // Override console methods to detect debugging
-    ['log', 'warn', 'error', 'info'].forEach(method => {
-      (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
+    const consoleMethods = ['log', 'warn', 'error', 'info'];
+    consoleMethods.forEach(method => {
+      const originalMethod = originalConsole[method as keyof Console];
+      (console as any)[method] = (...args: unknown[]) => {
         this.metrics.suspiciousActivity++;
-        originalConsole[method](...args);
-      }
-    });
+        if (typeof originalMethod === 'function') {
+          originalMethod(...args);
+        }
+      };
+    });;
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
