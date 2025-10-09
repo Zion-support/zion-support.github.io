@@ -112,7 +112,11 @@ class PerformanceMonitoringService {
       timestamp: Date.now()
     };
     this.webVitals[name] = metric;
+<<<<<<< HEAD
     logger.info(`Web Vital: ${name}`, { component: 'PerformanceMonitoring', value, rating });
+=======
+    logger.info(`Web Vital: ${name}`, { value, rating });
+>>>>>>> origin/main
     // Send to analytics
     this.sendToAnalytics(metric);
   }
@@ -149,7 +153,11 @@ class PerformanceMonitoringService {
     if (this.customMetrics.length > this.maxMetrics) {
       this.customMetrics.shift();
     }
+<<<<<<< HEAD
     logger.debug(`Custom Metric: ${name}`, { component: 'PerformanceMonitoring', value, unit });
+=======
+    logger.debug(`Custom Metric: ${name}`, { value, unit });
+>>>>>>> origin/main
   }
   /**
    * Send metric to analytics service

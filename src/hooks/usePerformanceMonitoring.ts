@@ -3,12 +3,16 @@ import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 // PerformanceMetrics interface removed as it's not used in this hook
 export const usePerformanceMonitoring = () => {
-  const { trackPerformance } = useAnalytics();
+  const { trackEvent } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
-      trackPerformance(name, value);
+      trackEvent('performance_metric', {
+        metric_name: name,
+        metric_value: value,
+        timestamp: Date.now()
+      });
     },
-    [trackPerformance]
+    [trackEvent]
   );
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {

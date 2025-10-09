@@ -76,7 +76,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone },
     { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
+    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check },
     { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator },
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot },
     { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3 },
@@ -369,9 +369,21 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
-              </Link>
+              </a>
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Blog
+              </a>
+              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Case Studies
+              </a>
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Pricing
+              </a>
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Contact
+              </a>
               <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
               </Link>

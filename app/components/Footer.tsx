@@ -1,15 +1,17 @@
-'use client';
-import React from 'react';
-import { Phone, Mail, MapPin, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube, ArrowRight } from 'lucide-react';
+import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, ExternalLink, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'AI Solutions', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -23,18 +25,51 @@ const Footer: React.FC = () => {
     { name: 'AI Video Generator', href: '/ai-video-generation' },
     { name: 'AI Sales Automation', href: '/ai-sales-automation' },
     { name: 'AI Content Writer', href: '/ai-content-writer' },
-    { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
+    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer' },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+    { name: 'AI Fashion Design', href: '/ai-fashion-design' },
+    { name: 'AI Music Composition', href: '/ai-music-composition' },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach' },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant' },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant' },
+    { name: 'AI Education Tutor', href: '/ai-education-tutor' },
+    { name: 'AI Travel Planner', href: '/ai-travel-planner' },
+    { name: 'AI Energy Manager', href: '/ai-energy-manager' },
+    { name: 'AI Agriculture Assistant', href: '/ai-agriculture-assistant' },
+    { name: 'AI Insurance Analyzer', href: '/ai-insurance-analyzer' },
+    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager' },
+    { name: 'AI Event Planner', href: '/ai-event-planner' },
+    { name: 'AI Personal Finance Manager', href: '/ai-personal-finance-manager' },
+    { name: 'AI Home Automation', href: '/ai-home-automation' },
+    { name: 'AI Language Learning', href: '/ai-language-learning' },
+    { name: 'AI Mental Health Coach', href: '/ai-mental-health-coach' },
+    { name: 'AI Pet Care Assistant', href: '/ai-pet-care-assistant' },
+    { name: 'AI Wedding Planner', href: '/ai-wedding-planner' },
+    { name: 'AI Stock Trader', href: '/ai-stock-trader' },
+    { name: 'AI Job Search Assistant', href: '/ai-job-search-assistant' },
+    { name: 'AI Dating Coach', href: '/ai-dating-coach' },
   ];
 
   const aiServices = [
-    { name: 'Machine Learning', href: '/ai-ml' },
-    { name: 'Natural Language Processing', href: '/ai-nlp' },
-    { name: 'Computer Vision', href: '/ai-vision' },
+    { name: 'Machine Learning', href: '/machine-learning' },
+    { name: 'Natural Language Processing', href: '/nlp' },
+    { name: 'Computer Vision', href: '/computer-vision' },
     { name: 'AI Automation', href: '/ai-automation' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis' },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
+    { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing' },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions' },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions' },
+    { name: 'AI Space Technology', href: '/ai-space-technology' },
+    { name: 'AI Biotechnology', href: '/ai-biotechnology' },
+    { name: 'AI Robotics', href: '/ai-robotics' },
+    { name: 'AI Digital Twin', href: '/ai-digital-twin' },
   ];
 
   const itServices = [
@@ -43,9 +78,28 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
     { name: 'Database Services', href: '/database' },
-    { name: 'Mobile App Development', href: '/mobile-development' },
+    { name: 'Mobile App Development', href: '/ai-mobile-app-development' },
     { name: 'Web Development', href: '/web-development' },
+    { name: 'Network Infrastructure', href: '/network-infrastructure' },
+    { name: 'IT Support', href: '/it-support' },
+    { name: 'Business Intelligence', href: '/business-intelligence' },
+    { name: 'Enterprise Solutions', href: '/enterprise' },
     { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
+    { name: 'Autonomous Systems Development', href: '/autonomous-systems-development' },
+    { name: 'Metaverse Development', href: '/metaverse-development' },
+    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions' },
+    { name: 'Climate Technology Solutions', href: '/climate-technology-solutions' },
+    { name: 'Space Technology Services', href: '/space-technology-services' },
+    { name: 'Biotechnology IT Solutions', href: '/biotechnology-it-solutions' },
+    { name: 'Advanced Robotics Systems', href: '/advanced-robotics-systems' },
+    { name: 'Digital Twin Development', href: '/digital-twin-development' },
+    { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity' },
+    { name: 'Smart City Solutions', href: '/smart-city-solutions' },
+    { name: 'FinTech Solutions', href: '/fintech-solutions' },
+    { name: 'HealthTech Infrastructure', href: '/healthtech-infrastructure' },
+    { name: 'EdTech Solutions', href: '/edtech-solutions' },
+    { name: 'RetailTech Solutions', href: '/retailtech-solutions' },
   ];
 
   const socialLinks = [
@@ -125,7 +179,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold text-cyan-400 mb-4">Micro SAAS Solutions</h3>
             <ul className="space-y-2">
-              {microSAASServices.map((service) => (
+              {microSAASServices.slice(0, 8).map((service) => (
                 <li key={service.name}>
                   <a
                     href={service.href}
@@ -145,7 +199,7 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
                 <ul className="space-y-1">
-                  {aiServices.slice(0, 3).map((service) => (
+                  {aiServices.slice(0, 4).map((service) => (
                     <li key={service.name}>
                       <a
                         href={service.href}
@@ -160,7 +214,7 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-sm font-medium text-green-300 mb-2">IT Services</h4>
                 <ul className="space-y-1">
-                  {itServices.slice(0, 3).map((service) => (
+                  {itServices.slice(0, 4).map((service) => (
                     <li key={service.name}>
                       <a
                         href={service.href}
@@ -176,31 +230,58 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Social Links */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-4 mb-4 md:mb-0">
+        {/* Newsletter Signup */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-4 text-cyan-400">Stay Updated</h3>
+            <p className="text-gray-300 mb-6">
+              Get the latest insights on AI, technology trends, and industry updates delivered to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 border border-gray-600"
+              />
+              <button className="bg-cyan-600 text-white px-6 py-3 rounded-lg hover:bg-cyan-700 transition-colors font-medium">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Footer */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="flex flex-col lg:flex-row justify-between items-center">
+            <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 mb-4 lg:mb-0">
+              <p className="text-gray-300 text-sm">
+                &copy; {currentYear} Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                  Privacy Policy
+                </a>
+                <a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                  Terms of Service
+                </a>
+                <a href="/sitemap" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                  Sitemap
+                </a>
+              </div>
+            </div>
+            
+            {/* Social Links */}
+            <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 p-2 rounded-lg hover:bg-slate-800"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
-            </div>
-            
-            <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </p>
-              <p className="text-gray-500 text-xs mt-1">
-                Transforming businesses with cutting-edge AI and IT solutions
-              </p>
             </div>
           </div>
         </div>

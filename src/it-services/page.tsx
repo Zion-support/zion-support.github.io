@@ -4,8 +4,21 @@ import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, Ha
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+interface ITService {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  features: string[];
+  price: string;
+  category: string;
+  benefits: string[];
+  technologies: string[];
+  contactInfo: string;
+  color?: string;
+}
+
 const ITServicesPage: React.FC = () => {
-  const itServices = [
+  const itServices: ITService[] = [
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
@@ -16,7 +29,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Infrastructure',
       benefits: ['Reliable infrastructure', 'Reduced capital costs', 'Expert management', 'Compliance support'],
       technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'Cloud Infrastructure & Migration',
@@ -27,7 +41,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Infrastructure',
       benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     // Cybersecurity Services
     {
@@ -39,18 +54,20 @@ const ITServicesPage: React.FC = () => {
       category: 'Security',
       benefits: ['Prevent 99.9% of threats', 'Reduce response time by 80%', 'Compliance assurance', '24/7 monitoring'],
       technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'AI/ML', 'Threat Intelligence'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'Identity & Access Management',
       description: 'Secure identity management with multi-factor authentication, single sign-on, and privileged access management.',
-      icon: Lock,
+      icon: ShieldCheck,
       features: ['SSO implementation', 'MFA setup', 'Privileged access management', 'Identity governance', 'Access reviews', 'Compliance reporting'],
       price: 'Starting at $1,800/month',
       category: 'Security',
       benefits: ['Enhanced security', 'Improved user experience', 'Compliance support', 'Reduced IT overhead'],
       technologies: ['Azure AD', 'Okta', 'Ping Identity', 'CyberArk', 'SailPoint', 'ForgeRock'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'Security Compliance & Audit',
@@ -61,7 +78,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Security',
       benefits: ['Achieve compliance', 'Reduce audit time', 'Minimize risks', 'Build trust'],
       technologies: ['GRC Tools', 'Risk Management', 'Compliance Frameworks', 'Audit Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'Security Operations Center (SOC)',
@@ -72,7 +90,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Security',
       benefits: ['Continuous protection', 'Rapid response', 'Expert analysis', 'Proactive defense'],
       technologies: ['SIEM', 'SOAR', 'EDR', 'Threat Intelligence', 'Forensic Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     // Database & Data Management
     {
@@ -84,7 +103,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Data',
       benefits: ['Improved performance', 'Reduced downtime', 'Cost optimization', 'Data protection'],
       technologies: ['SQL Server', 'Oracle', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'Data Backup & Disaster Recovery',
@@ -95,7 +115,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Data',
       benefits: ['Minimize data loss', 'Rapid recovery', 'Business continuity', 'Compliance support'],
       technologies: ['Veeam', 'Commvault', 'Rubrik', 'AWS Backup', 'Azure Backup', 'Google Cloud Backup'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'Data Migration Services',
@@ -106,7 +127,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Data',
       benefits: ['Risk-free migration', 'Minimal downtime', 'Data integrity', 'Cost savings'],
       technologies: ['AWS DMS', 'Azure Data Factory', 'Google Cloud Data Transfer', 'Custom Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     // DevOps & Development
     {
@@ -118,7 +140,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Development',
       benefits: ['Faster deployments', 'Improved quality', 'Reduced errors', 'Better collaboration'],
       technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Kubernetes', 'Docker', 'Terraform'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'Microservices Architecture',
@@ -129,7 +152,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Development',
       benefits: ['Improved scalability', 'Better maintainability', 'Faster development', 'Technology flexibility'],
       technologies: ['Kubernetes', 'Istio', 'Docker', 'API Gateway', 'Service Mesh', 'Monitoring Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'API Development & Management',
@@ -140,7 +164,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Development',
       benefits: ['Better integration', 'Improved security', 'Enhanced performance', 'Developer experience'],
       technologies: ['Node.js', 'Python', 'Java', 'Kong', 'Apigee', 'AWS API Gateway'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     // IT Support & Management
     {
@@ -152,7 +177,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Support',
       benefits: ['Reduced IT costs', 'Improved uptime', 'Expert support', 'Proactive maintenance'],
       technologies: ['RMM Tools', 'PSA Software', 'Remote Access', 'Monitoring Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'IT Strategy & Consulting',
@@ -163,7 +189,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Consulting',
       benefits: ['Strategic alignment', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],
       technologies: ['Strategy Frameworks', 'Assessment Tools', 'Planning Software'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'IT Asset Management',
@@ -174,7 +201,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Management',
       benefits: ['Cost savings', 'Compliance assurance', 'Better planning', 'Reduced risks'],
       technologies: ['Asset Management Tools', 'License Management', 'CMDB', 'Reporting Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     // Specialized Services
     {
@@ -186,7 +214,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Cloud Services',
       benefits: ['Improved collaboration', 'Enhanced security', 'Cost savings', 'Better productivity'],
       technologies: ['Microsoft 365', 'Azure AD', 'PowerShell', 'Migration Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'VoIP & Unified Communications',
@@ -197,7 +226,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Communications',
       benefits: ['Cost savings', 'Improved collaboration', 'Better mobility', 'Enhanced features'],
       technologies: ['Cisco', 'Microsoft Teams', 'Zoom', '8x8', 'RingCentral', 'Avaya'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'IT Training & Certification',
@@ -208,7 +238,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Training',
       benefits: ['Improved skills', 'Better productivity', 'Reduced support needs', 'Career development'],
       technologies: ['Learning Management Systems', 'Virtual Labs', 'Certification Programs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-cyan-400'
     },
     {
       title: 'IT Project Management',
@@ -339,7 +370,9 @@ const ITServicesPage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
-                  <service.icon className="w-8 h-8" />
+                  {React.isValidElement(service.icon) ? service.icon : 
+                   typeof service.icon === 'function' ? React.createElement(service.icon as any, { className: "w-8 h-8" }) : 
+                   <div className="w-8 h-8 bg-cyan-400 rounded" />}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>

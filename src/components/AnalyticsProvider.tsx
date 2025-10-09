@@ -102,12 +102,21 @@ export const useAnalytics = () => {
     }
   };
   
+<<<<<<< HEAD
   const trackPerformance = (metric: string, value: number) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'performance_metric', {
         event_category: 'performance',
         event_label: metric,
         value: Math.round(value)
+=======
+  const trackPerformance = (metricName: string, value: number) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_metric', {
+        event_category: 'performance',
+        event_label: metricName,
+        value: value
+>>>>>>> origin/main
       });
     }
   };

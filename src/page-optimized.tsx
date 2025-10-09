@@ -1,12 +1,21 @@
 'use client';
+<<<<<<< HEAD
 import React, { lazy } from 'react';
+=======
+import React, { lazy, Suspense } from 'react';
+>>>>>>> origin/main
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Fallback component
+<<<<<<< HEAD
 const EmptyComponent = () => null;
 
+=======
+<<<<<<< HEAD
+const EmptyComponent = () => <div />;
+>>>>>>> origin/main
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>
@@ -14,17 +23,35 @@ const UnifiedBanner = lazy(() =>
   )
 );
 const ContentPromotion = lazy(() =>
+<<<<<<< HEAD
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
     return { default: EmptyComponent };
   })
+=======
+  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({
+    default: EmptyComponent
+  }))
+>>>>>>> origin/main
 );
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
     default: () => <div>Component not available</div>
   }))
 );
+<<<<<<< HEAD
 
 function OptimizedHomePage() {
+=======
+function OptimizedHomePage() {
+=======
+const EmptyComponent = () => null;
+// Lazy load heavy components - these may not exist, so make them optional
+const UnifiedBanner = lazy(() => Promise.resolve({ default: EmptyComponent }));
+const ContentPromotion = lazy(() => Promise.resolve({ default: EmptyComponent }));
+const ContentShowcase = lazy(() => Promise.resolve({ default: EmptyComponent }));
+export default function OptimizedHomePage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
@@ -69,4 +96,3 @@ function OptimizedHomePage() {
     </div>
   );
 };
-export default OptimizedHomePage;
