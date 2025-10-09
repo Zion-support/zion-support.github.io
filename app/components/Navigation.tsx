@@ -72,21 +72,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-<<<<<<< HEAD
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
-        { name: 'AI Image Recognition', path: '/ai-image-recognition', description: 'Computer vision solutions' },
-        { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
-        { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
-        { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
-=======
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
         { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
         { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
         { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
         { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
         { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
       ]
     },
     {
