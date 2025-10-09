@@ -65,7 +65,7 @@ class EnhancedErrorHandler {
       enablePerformanceImpact: true,
       maxErrorsPerMinute: 10,
       errorRetentionDays: 30,
-      ...config,
+      ...config
     };
     this.initialize();
   }
@@ -97,7 +97,7 @@ class EnhancedErrorHandler {
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        error: event.error,
+        error: event.error
       });
     });
   }
@@ -110,7 +110,7 @@ class EnhancedErrorHandler {
         type: 'promise',
         message: event.reason?.message || String(event.reason),
         stack: event.reason?.stack,
-        reason: event.reason,
+        reason: event.reason
       });
     });
   }
@@ -130,7 +130,7 @@ class EnhancedErrorHandler {
             type: 'resource',
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
-            src: target?.src || target?.href,
+            src: target?.src || target?.href
           });
         }
       },
@@ -152,7 +152,7 @@ class EnhancedErrorHandler {
             message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
             status: response.status,
-            statusText: response.statusText,
+            statusText: response.statusText
           });
         }
         return response;
@@ -161,7 +161,7 @@ class EnhancedErrorHandler {
           type: 'network',
           message: `Network request failed: ${error}`,
           url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error)),
+          error: error instanceof Error ? error : new Error(String(error))
         });
         throw error;
       }
@@ -183,7 +183,7 @@ class EnhancedErrorHandler {
                 type: 'custom',
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
-                category: 'performance',
+                category: 'performance'
               });
             }
           });
@@ -284,9 +284,9 @@ class EnhancedErrorHandler {
         url: errorData.url,
         status: errorData.status,
         statusText: errorData.statusText,
-        duration: errorData.duration,
+        duration: errorData.duration
       },
-      resolved: false,
+      resolved: false
     };
   }
   /**
@@ -323,7 +323,7 @@ class EnhancedErrorHandler {
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString(),
       sessionId: this.getSessionId(),
-      userId: this.getUserId(),
+      userId: this.getUserId()
     };
   }
   /**
@@ -502,9 +502,9 @@ class EnhancedErrorHandler {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${this.config.apiKey}`,
+          Authorization: `Bearer ${this.config.apiKey}`
         },
-        body: JSON.stringify(errorReport),
+        body: JSON.stringify(errorReport)
       });
     } catch (error) {
       }
@@ -597,7 +597,7 @@ class EnhancedErrorHandler {
       errorsByType,
       errorsByCategory,
       errorsBySeverity,
-      recentErrors,
+      recentErrors
     };
   }
   /**
@@ -609,7 +609,7 @@ class EnhancedErrorHandler {
         errors: this.errors,
         statistics: this.getErrorStatistics(),
         config: this.config,
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toISOString()
       },
       null,
       2
@@ -622,7 +622,7 @@ class EnhancedErrorHandler {
     const errorReport = this.createErrorReport({
       type: 'custom',
       message,
-      ...context,
+      ...context
     });
     this.processError(errorReport);
     return errorReport.id;
@@ -635,5 +635,5 @@ export {
   EnhancedErrorHandler,
   type ErrorReport,
   type ErrorContext,
-  type ErrorHandlerConfig,
+  type ErrorHandlerConfig
 };

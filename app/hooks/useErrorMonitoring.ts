@@ -56,7 +56,7 @@ export const useErrorMonitoring = () => {
     };
   }, [reportError]);
   return {
-    reportError,
+    reportError
   };
 };
 export default useErrorMonitoring;

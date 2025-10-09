@@ -14,7 +14,7 @@ const _collectPerformanceMetrics = () => {
   const _paint = window.performance.getEntriesByType('paint');
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
   };
 };
 // Helper functions
@@ -87,7 +87,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   refreshInterval = 5000,
   showDetails = true,
   enableExport = true,
-  className = '',
+  className = ''
 }) => {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -121,11 +121,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             message: error.message,
             type: error.type,
             severity: error.severity,
-            timestamp: error.context.timestamp,
-          })),
+            timestamp: error.context.timestamp
+          }))
         },
         memory: memoryInfo,
-        network: networkInfo,
+        network: networkInfo
       };
       setMetrics(newMetrics);
       setLastUpdate(new Date());
@@ -172,14 +172,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
         rtt: connection?.rtt || 0,
-        saveData: connection?.saveData || false,
+        saveData: connection?.saveData || false
       };
     }
     return {
       effectiveType: 'unknown',
       downlink: 0,
       rtt: 0,
-      saveData: false,
+      saveData: false
     };
   };
   // Export data
@@ -189,10 +189,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()
     };
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json',
+      type: 'application/json'
     });
     const _url = URL.createObjectURL(blob);
     const _a = document.createElement('a');

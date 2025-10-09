@@ -8,7 +8,7 @@ import { performanceMonitoring } from './performanceMonitoring';
 export enum CacheStorage {
   Memory = 'memory',
   LocalStorage = 'localStorage',
-  SessionStorage = 'sessionStorage',
+  SessionStorage = 'sessionStorage'
 }
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
@@ -115,7 +115,7 @@ export class CacheManager {
     const entry: CacheEntry<T> = {
       value,
       timestamp: Date.now(),
-      ttl,
+      ttl
     };
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
     if (this.storage === CacheStorage.Memory) {
@@ -329,7 +329,7 @@ export class CacheManager {
       misses: this.stats.misses,
       hitRate: total > 0 ? this.stats.hits / total : 0,
       count: this.memoryCache.size,
-      entries: this.memoryCache.size,
+      entries: this.memoryCache.size
     };
   }
   /**
@@ -363,7 +363,7 @@ export class CacheManager {
     return {
       memorySize: this.memoryCache.size,
       localStorageSize,
-      sessionStorageSize,
+      sessionStorageSize
     };
   }
 }

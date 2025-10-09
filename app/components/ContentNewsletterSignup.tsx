@@ -1,50 +1,21 @@
-<<<<<<< HEAD
-import React from 'react';
-const ContentNewsletterSignup: React.FC = () => {
-  return (
-    <section className="py-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">
-          Stay Updated
-        </h2>
-        <p className="text-gray-300 mb-8">
-          Get the latest news and insights about AI and technology.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-          />
-          <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-            Subscribe
-          </button>
-=======
 'use client';
-
 import React, { useState } from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
-
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     setIsSubmitted(true);
     setIsSubmitting(false);
     setEmail('');
-    
     // Reset after 3 seconds
     setTimeout(() => setIsSubmitted(false), 3000);
   };
-
   if (isSubmitted) {
     return (
       <section className="mb-16" aria-labelledby="newsletter-heading">
@@ -56,7 +27,6 @@ const ContentNewsletterSignup: React.FC = () => {
       </section>
     );
   }
-
   return (
     <section className="mb-16" aria-labelledby="newsletter-heading">
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl">
@@ -67,7 +37,6 @@ const ContentNewsletterSignup: React.FC = () => {
           <p className="text-purple-100 mb-6">
             Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
           </p>
-          
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <div className="flex-1 relative">
               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -96,19 +65,12 @@ const ContentNewsletterSignup: React.FC = () => {
               )}
             </button>
           </form>
-          
           <p className="text-xs text-purple-200 mt-4">
             We respect your privacy. Unsubscribe at any time.
           </p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
         </div>
       </div>
     </section>
   );
 };
-<<<<<<< HEAD
 export default ContentNewsletterSignup;
-=======
-
-export default ContentNewsletterSignup;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d

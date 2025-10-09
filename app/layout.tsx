@@ -2,7 +2,7 @@ import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
@@ -30,7 +30,7 @@ export default function RootLayout({
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
-      availableLanguage: 'en',
+      availableLanguage: 'en'
     },
     sameAs: [
       'https://twitter.com/ziontechgroup',
@@ -42,7 +42,7 @@ export default function RootLayout({
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US',
+      addressCountry: 'US'
     },
     offers: [
       {

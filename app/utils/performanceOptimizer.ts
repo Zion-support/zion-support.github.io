@@ -7,7 +7,7 @@
 const logger = {
   info: (message: string, context?: string) => console.log('[INFO]', message, context),
   performance: (message: string, data: Record<string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
-  error: (message: string, error: Error) => console.error('[ERROR]', message, error),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
 };
 interface PerformanceMetrics {
   loadTime: number;
@@ -40,14 +40,14 @@ class PerformanceOptimizer {
     memoryUsage: 0,
     bundleSize: 0,
     cacheHitRate: 0,
-    lazyLoading: false,
+    lazyLoading: false
   };
   private config: OptimizationConfig = {
     enableLazyLoading: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
     enableCaching: true,
-    enableCompression: true,
+    enableCompression: true
   };
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
@@ -391,7 +391,7 @@ class PerformanceOptimizer {
       lcp: this.metrics.lcp || 0,
       fid: this.metrics.fid || 0,
       cls: this.metrics.cls || 0,
-      fmp: this.metrics.fmp || 0,
+      fmp: this.metrics.fmp || 0
     };
   }
   /**

@@ -10,13 +10,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true,
+  enableCodeSplitting = true
 }) => {
   const [optimizationStatus, setOptimizationStatus] = useState({
     imagesOptimized: 0,
     lazyLoaded: 0,
     preloaded: 0,
-    codeSplit: false,
+    codeSplit: false
   });
   useEffect(() => {
     if (enableImageOptimization) {

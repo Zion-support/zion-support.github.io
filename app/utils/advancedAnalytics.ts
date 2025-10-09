@@ -57,7 +57,7 @@ class AdvancedAnalytics {
       enableConversionTracking: true,
       enablePerformanceTracking: true,
       enableErrorTracking: true,
-      enableUserJourneyTracking: true,
+      enableUserJourneyTracking: true
     };
     this.currentSession = this.createNewSession();
     this.initializeTracking();
@@ -107,7 +107,7 @@ class AdvancedAnalytics {
       device: this.detectDevice(),
       browser: this.detectBrowser(),
       os: this.detectOS(),
-      referrer: document.referrer,
+      referrer: document.referrer
     };
   }
   /**
@@ -128,9 +128,9 @@ class AdvancedAnalytics {
         referrer: document.referrer,
         viewport: {
           width: window.innerWidth,
-          height: window.innerHeight,
-        },
-      },
+          height: window.innerHeight
+        }
+      }
     };
     this.trackEvent(event);
     this.currentSession.pageViews++;
@@ -159,9 +159,9 @@ class AdvancedAnalytics {
           text: element.text?.substring(0, 100),
           position: {
             x: event.clientX,
-            y: event.clientY,
-          },
-        },
+            y: event.clientY
+          }
+        }
       };
       this.trackEvent(clickEvent);
     });
@@ -190,8 +190,8 @@ class AdvancedAnalytics {
             scrollY: window.scrollY,
             scrollPercentage: Math.round(
               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-            ),
-          },
+            )
+          }
         };
         this.trackEvent(scrollEvent);
       }, 100);
@@ -220,8 +220,8 @@ class AdvancedAnalytics {
           formClass: form.className,
           formAction: form.action,
           formMethod: form.method,
-          fields: formFields,
-        },
+          fields: formFields
+        }
       };
       this.trackEvent(submitEvent);
     });
@@ -246,8 +246,8 @@ class AdvancedAnalytics {
           url: window.location.href,
           metadata: {
             downloadUrl: link.href,
-            downloadText: link.textContent?.substring(0, 100),
-          },
+            downloadText: link.textContent?.substring(0, 100)
+          }
         };
         this.trackEvent(downloadEvent);
       }
@@ -274,8 +274,8 @@ class AdvancedAnalytics {
               url: window.location.href,
               metadata: {
                 metric: entry.name,
-                value: entry.startTime,
-              },
+                value: entry.startTime
+              }
             };
             this.trackEvent(paintEvent);
           }
@@ -300,8 +300,8 @@ class AdvancedAnalytics {
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded:
               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            firstByte: navigation.responseStart - navigation.requestStart,
-          },
+            firstByte: navigation.responseStart - navigation.requestStart
+          }
         };
         this.trackEvent(performanceEvent);
       });
@@ -321,7 +321,7 @@ class AdvancedAnalytics {
     });
     observer.observe(document.body, {
       childList: true,
-      subtree: true,
+      subtree: true
     });
   }
   /**
@@ -359,9 +359,9 @@ class AdvancedAnalytics {
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(event),
+        body: JSON.stringify(event)
       });
     } catch (error) {
       }
@@ -409,7 +409,7 @@ class AdvancedAnalytics {
       tagName,
       id,
       className,
-      text,
+      text
     };
   }
   /**
@@ -527,7 +527,7 @@ class AdvancedAnalytics {
       eventsByType,
       eventsByCategory,
       topPages: topPages.slice(0, 10),
-      conversionRate,
+      conversionRate
     };
   }
   /**
@@ -538,9 +538,9 @@ class AdvancedAnalytics {
       await fetch('/api/analytics/session', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(session),
+        body: JSON.stringify(session)
       });
     } catch (error) {
       }

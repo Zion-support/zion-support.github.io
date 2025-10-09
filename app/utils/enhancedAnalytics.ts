@@ -55,7 +55,7 @@ class EnhancedAnalytics {
     this.userProperties = {
       ...this.userProperties,
       sessionId: this.sessionId,
-      ...config,
+      ...config
     };
     // Track initialization
     this.trackEvent({
@@ -63,14 +63,14 @@ class EnhancedAnalytics {
       action: 'Analytics Initialized',
       metadata: {
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-      },
+        userAgent: navigator.userAgent
+      }
     });
   }
   public setUserProperties(properties: UserProperties): void {
     this.userProperties = {
       ...this.userProperties,
-      ...properties,
+      ...properties
     };
   }
   public trackEvent(event: AnalyticsEvent): void {
@@ -80,8 +80,8 @@ class EnhancedAnalytics {
         ...event.metadata,
         sessionId: this.sessionId,
         timestamp: new Date().toISOString(),
-        url: typeof window !== 'undefined' ? window.location.href : '',
-      },
+        url: typeof window !== 'undefined' ? window.location.href : ''
+      }
     };
     // Add to queue
     this.queue.push(enrichedEvent);
@@ -109,7 +109,7 @@ class EnhancedAnalytics {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
-        ...event.metadata,
+        ...event.metadata
       });
     }
   }
@@ -120,8 +120,8 @@ class EnhancedAnalytics {
       label: pagePath,
       metadata: {
         pageTitle: pageTitle || document.title,
-        referrer: document.referrer,
-      },
+        referrer: document.referrer
+      }
     });
   }
   public trackUserInteraction(action: string, label?: string, value?: number): void {
@@ -129,7 +129,7 @@ class EnhancedAnalytics {
       category: 'User Interaction',
       action,
       label,
-      value,
+      value
     });
   }
   public trackError(error: Error, context?: Record<string, unknown>): void {
@@ -139,8 +139,8 @@ class EnhancedAnalytics {
       label: error.message,
       metadata: {
         stack: error.stack,
-        ...context,
-      },
+        ...context
+      }
     });
   }
   public trackPerformance(metric: string, value: number, rating?: string): void {
@@ -149,8 +149,8 @@ class EnhancedAnalytics {
       action: metric,
       value: Math.round(value),
       metadata: {
-        rating,
-      },
+        rating
+      }
     });
   }
   public trackConversion(conversionType: string, value?: number): void {
@@ -159,8 +159,8 @@ class EnhancedAnalytics {
       action: conversionType,
       value,
       metadata: {
-        conversionId: `conv-${Date.now()}`,
-      },
+        conversionId: `conv-${Date.now()}`
+      }
     });
   }
   public trackCustomEvent(
@@ -175,7 +175,7 @@ class EnhancedAnalytics {
       action,
       label,
       value,
-      metadata,
+      metadata
     });
   }
   private flush(): void {
@@ -219,7 +219,7 @@ class EnhancedAnalytics {
       queueSize: this.queue.length,
       offlineQueueSize: this.offlineQueue.length,
       sessionId: this.sessionId,
-      userProperties: this.getUserProperties(),
+      userProperties: this.getUserProperties()
     };
   }
 }

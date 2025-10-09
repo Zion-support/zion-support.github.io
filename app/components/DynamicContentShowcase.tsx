@@ -1,28 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-const DynamicContentShowcase: React.FC = () => {
-  return (
-    <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">
-          Latest Innovations
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Solutions</h3>
-            <p className="text-gray-200 mb-4">Revolutionary AI technology that transforms how businesses operate.</p>
-            <button className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Learn More
-            </button>
-          </div>
-          <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
-            <p className="text-gray-200 mb-4">Next-generation computing power for complex problem solving.</p>
-            <button className="bg-white text-cyan-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Explore
-            </button>
-=======
-
 const DynamicContentShowcase: React.FC = () => {
   const features = [
     {
@@ -50,13 +26,11 @@ const DynamicContentShowcase: React.FC = () => {
       benefits: ["Business Intelligence", "Predictive Modeling", "Custom Dashboards"]
     }
   ];
-
   return (
     <section className="mb-16" aria-labelledby="showcase-heading">
       <h2 id="showcase-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
         Why Choose Zion Tech Group?
       </h2>
-      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {features.map((feature, index) => (
           <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
@@ -79,16 +53,10 @@ const DynamicContentShowcase: React.FC = () => {
                 </ul>
               </div>
             </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
           </div>
         ))}
       </div>
     </section>
   );
 };
-<<<<<<< HEAD
 export default DynamicContentShowcase;
-=======
-
-export default DynamicContentShowcase;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d

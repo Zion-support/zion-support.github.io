@@ -51,7 +51,7 @@ const DEFAULT_ERROR_MESSAGES = {
   notFound: 'The requested resource was not found.',
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.',
+  validation: 'Validation error. Please check your input.'
 };
 /**
  * Get error boundary configuration based on environment
@@ -69,8 +69,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     fallbackComponents: {
       default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback,
-    },
+      notFound: NotFoundFallback
+    }
   };
 }
 /**
@@ -222,7 +222,7 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     type: getErrorType(error),
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown'
   };
 }
 export default getErrorBoundaryConfig;

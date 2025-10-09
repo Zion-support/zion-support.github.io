@@ -25,7 +25,7 @@ export const usePerformanceOptimization = () => {
           ?.startTime || 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
-      firstInputDelay: 0,
+      firstInputDelay: 0
     };
     // Measure LCP
     const lcpObserver = new PerformanceObserver(list => {
@@ -121,6 +121,6 @@ export const usePerformanceOptimization = () => {
   return {
     measurePerformance,
     optimizeImages,
-    preloadCriticalResources,
+    preloadCriticalResources
   };
 };

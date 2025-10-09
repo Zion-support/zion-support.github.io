@@ -117,7 +117,7 @@ export const usePerformanceMonitoring = () => {
             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
         };
         Object.entries(metrics).forEach(([key, value]) => {
           reportMetric(key.toUpperCase(), value);
@@ -128,7 +128,7 @@ export const usePerformanceMonitoring = () => {
     return () => window.removeEventListener('load', handleLoad);
   }, [reportMetric]);
   return {
-    reportMetric,
+    reportMetric
   };
 };
 export default usePerformanceMonitoring;

@@ -67,7 +67,7 @@ class AnalyticsService {
       if (this.hasGtag()) {
         gtag('config', this.config.gaId, {
           page_path: path,
-          page_title: title,
+          page_title: title
         })
       }
     } catch (error) {
@@ -118,7 +118,7 @@ class AnalyticsService {
           name: variable,
           value: Math.round(value),
           event_category: category,
-          event_label: label,
+          event_label: label
         });
       }
     } catch (error) {

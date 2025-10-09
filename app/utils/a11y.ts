@@ -194,7 +194,7 @@ export function getAriaInvalid(hasError: boolean): {
 } {
   return {
     'aria-invalid': hasError,
-    ...(hasError && { 'aria-describedby': generateId('error') }),
+    ...(hasError && { 'aria-describedby': generateId('error') })
   };
 }
 /**
