@@ -11,137 +11,105 @@ const HelpPage: React.FC = () => {
 
   const categories = [
     {
-      id: 'getting-started',
-      name: 'Getting Started',
-      icon: BookOpen,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
+      id: name, icon,
+    $4: BookOpen,
+      color: bgColor, 'bg-blue-500/10'
     },
-      id: 'troubleshooting',
-      name: 'Troubleshooting',
-      icon: HelpCircle,
-      color: 'text-red-400',
-      bgColor: 'bg-red-500/10'
-      id: 'billing',
-      name: 'Billing & Account',
-      icon: CheckCircle,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
-      id: 'technical',
-      name: 'Technical Support',
-      icon: MessageSquare,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10'
+      id: name, icon,
+    $4: HelpCircle,
+      color: bgColor, 'bg-red-500/10'
+      id: name, icon,
+    $4: CheckCircle,
+      color: bgColor, 'bg-green-500/10'
+      id: name, icon,
+    $4: MessageSquare,
+      color: bgColor, 'bg-purple-500/10'
     }
   ];
 
   const helpArticles = {
     'getting-started': [
-        title: 'How to Get Started with AI Services',
-        description: 'Complete guide to setting up your AI services and making the most of our platform',
-        category: 'Getting Started',
-        readTime: '5 min read',
-        difficulty: 'Beginner',
-        color: 'text-blue-400'
-        title: 'Setting Up Your First Dashboard',
-        description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
-        readTime: '3 min read',
-        title: 'Understanding AI Pricing Models',
-        description: 'Learn about our different pricing tiers and how to choose the right one for your needs',
-        readTime: '4 min read',
-        title: 'Integration with Existing Systems',
-        description: 'How to integrate our AI services with your current business systems',
-        readTime: '7 min read',
-        difficulty: 'Intermediate',
+        title: "Service",
+    description: "Complete guide to setting up your AI services and making the most of our platform",
+        category: "5 min read",
+        difficulty: color, 'text-blue-400'
+        title: "Service",
+    description: "Step-by-step instructions for creating and customizing your analytics dashboard",
+        readTime: title, description,
+    description: "Learn about our different pricing tiers and how to choose the right one for your needs",
+        readTime: title, description,
+    description: "How to integrate our AI services with your current business systems",
+        readTime: "Intermediate",
     ],
     'troubleshooting': [
-        title: 'Common Login Issues and Solutions',
-        description: 'Troubleshoot common authentication problems and access issues',
-        category: 'Troubleshooting',
-        color: 'text-red-400'
-        title: 'API Connection Problems',
-        description: 'Resolve API connectivity issues and authentication errors',
-        title: 'Performance Optimization',
-        description: 'Improve system performance and resolve slow response times',
-        readTime: '6 min read',
-        difficulty: 'Advanced',
-        title: 'Data Import/Export Issues',
-        description: 'Fix problems with data migration and file uploads',
+        title: "Service",
+    description: "Troubleshoot common authentication problems and access issues",
+        category: color, 'text-red-400'
+        title: "Service",
+    description: "Resolve API connectivity issues and authentication errors",
+        title: "Service",
+    description: "Improve system performance and resolve slow response times",
+        readTime: "Advanced",
+        title: "Service",
+    description: "Fix problems with data migration and file uploads",
     'billing': [
-        title: 'Understanding Your Bill',
-        description: 'Learn how to read and understand your monthly billing statement',
-        category: 'Billing',
-        color: 'text-green-400'
-        title: 'Upgrading or Downgrading Plans',
-        description: 'How to change your subscription plan and what to expect',
-        title: 'Payment Methods and Billing',
-        description: 'Manage your payment methods and billing information',
-        title: 'Refund and Cancellation Policy',
-        description: 'Understand our refund policy and how to cancel your subscription',
+        title: "Service",
+    description: "Learn how to read and understand your monthly billing statement",
+        category: color, 'text-green-400'
+        title: "Service",
+    description: "How to change your subscription plan and what to expect",
+        title: "Service",
+    description: "Manage your payment methods and billing information",
+        title: "Service",
+    description: "Understand our refund policy and how to cancel your subscription",
     'technical': [
-        title: 'API Documentation and Examples',
-        description: 'Complete API reference with code examples and best practices',
-        category: 'Technical',
-        readTime: '10 min read',
-        color: 'text-purple-400'
-        title: 'Security Best Practices',
-        description: 'Implement security measures to protect your data and systems',
-        readTime: '8 min read',
-        title: 'Custom Integration Guide',
-        description: 'Build custom integrations with our platform using webhooks and APIs',
-        readTime: '12 min read',
-        title: 'Monitoring and Logging',
-        description: 'Set up monitoring and logging for your AI services and applications',
+        title: "Service",
+    description: "Complete API reference with code examples and best practices",
+        category: "10 min read",
+        color: title, description,
+    description: "Implement security measures to protect your data and systems",
+        readTime: title, description,
+    description: "Build custom integrations with our platform using webhooks and APIs",
+        readTime: title, description,
+    description: "Set up monitoring and logging for your AI services and applications",
     ]
   };
 
   const resources = [
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides for all our services',
+      title: "Service",
+    description: "Step-by-step video guides for all our services",
       icon: Video,
-      count: '50+ videos'
-      title: 'Documentation',
-      description: 'Comprehensive technical documentation and guides',
-      count: '200+ articles'
-      title: 'API Reference',
-      description: 'Complete API documentation with examples',
-      count: '100+ endpoints'
-      title: 'Download Center',
-      description: 'SDKs, tools, and resources for developers',
+      count: title, description,
+    description: "Comprehensive technical documentation and guides",
+      count: title, description,
+    description: "Complete API documentation with examples",
+      count: title, description,
+    description: "SDKs, tools, and resources for developers",
       icon: Download,
       count: '25+ downloads'
 
   const supportChannels = [
-      title: 'Live Chat',
-      description: 'Get instant help from our support team',
-      color: 'text-cyan-400',
-      availability: '24/7',
-      responseTime: 'Instant'
-      title: 'Email Support',
-      description: 'Send us a detailed message and we\'ll respond quickly',
+      title: "Service",
+    description: "Get instant help from our support team",
+      color: "24/7",
+      responseTime: title, description,
+    $4: 'Send us a detailed message and we\'ll respond quickly',
       icon: Mail,
-      responseTime: 'Within 4 hours'
-      title: 'Phone Support',
-      description: 'Speak directly with our technical experts',
+      responseTime: title, description,
+    description: "Speak directly with our technical experts",
       icon: Phone,
-      availability: 'Mon-Fri 9AM-6PM EST',
-      responseTime: 'Immediate'
-      title: 'Community Forum',
-      description: 'Connect with other users and share knowledge',
+      availability: responseTime, 'Immediate'
+      title: "Service",
+    description: "Connect with other users and share knowledge",
       icon: Users,
       responseTime: 'Community driven'
 
   const faqs = [
-      question: 'How quickly can I get started with your AI services?',
-      answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
-      question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs including online courses, live workshops, and one-on-one sessions to help your team master our platform.'
-      question: 'What kind of support do you provide?',
-      answer: 'We offer 24/7 support through multiple channels including live chat, email, phone, and our community forum. Our response times vary by channel but we aim to respond within 4 hours for most inquiries.'
-      question: 'Can I integrate your services with my existing systems?',
-      answer: 'Absolutely! We provide extensive APIs, webhooks, and integration tools to seamlessly connect with your existing business systems and workflows.'
-      question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
+      question: answer, 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
+      question: answer, 'Yes, we provide comprehensive training programs including online courses, live workshops, and one-on-one sessions to help your team master our platform.'
+      question: answer, 'We offer 24/7 support through multiple channels including live chat, email, phone, and our community forum. Our response times vary by channel but we aim to respond within 4 hours for most inquiries.'
+      question: answer, 'Absolutely! We provide extensive APIs, webhooks, and integration tools to seamlessly connect with your existing business systems and workflows.'
+      question: answer, 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
 
   const getCurrentArticles = () => {
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];

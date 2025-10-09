@@ -5,39 +5,27 @@ import Footer from '../components/Footer';
 const CareersPage: React.FC = () => {
   const _openPositions = [
     {
-      title: 'Senior AI Engineer',
-      department: 'Engineering',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      description: 'Lead development of cutting-edge AI solutions and machine learning models',
-      requirements: ['5+ years AI/ML experience', 'Python, TensorFlow, PyTorch', 'PhD in Computer Science preferred'],
+      title: "Engineering",
+      location: "Full-time",
+      description: ['5+ years AI/ML experience', 'Python, TensorFlow, PyTorch', 'PhD in Computer Science preferred'],
       icon: Brain
     },
     {
-      title: 'Full-Stack Developer',
-      department: 'Engineering',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      description: 'Build scalable web applications and integrate AI solutions',
-      requirements: ['3+ years full-stack experience', 'React, Node.js, TypeScript', 'Cloud platform experience'],
+      title: "Engineering",
+      location: "Full-time",
+      description: ['3+ years full-stack experience', 'React, Node.js, TypeScript', 'Cloud platform experience'],
       icon: Code
     },
     {
-      title: 'AI Product Manager',
-      department: 'Product',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      description: 'Drive AI product strategy and work with cross-functional teams',
-      requirements: ['3+ years product management', 'AI/ML domain knowledge', 'Strong analytical skills'],
+      title: "Product",
+      location: "Full-time",
+      description: ['3+ years product management', 'AI/ML domain knowledge', 'Strong analytical skills'],
       icon: Users
     },
     {
-      title: 'Cybersecurity Specialist',
-      department: 'Security',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      description: 'Ensure security of AI systems and protect client data',
-      requirements: ['4+ years cybersecurity experience', 'AI security knowledge', 'Certifications preferred'],
+      title: "Security",
+      location: "Full-time",
+      description: ['4+ years cybersecurity experience', 'AI security knowledge', 'Certifications preferred'],
       icon: Shield
     }
   ];

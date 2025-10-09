@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
+import { Helmet, CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone } from 'react-helmet-async';
 import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -9,30 +8,28 @@ const AICustomerSupportBotPage: React.FC = () => {
   const features = [
     {
       icon: Bot,
-      title: '24/7 AI Support',
-      description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
+      title: "Service",
+    description: "Round-the-clock customer support with intelligent AI chatbot capabilities",
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
       icon: MessageSquare,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP for understanding and responding to customer queries naturally',
+      title: "Service",
+    description: "Advanced NLP for understanding and responding to customer queries naturally",
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
       icon: Users,
-      title: 'Human Handoff',
-      description: 'Seamless escalation to human agents when complex issues arise',
+      title: "Service",
+    description: "Seamless escalation to human agents when complex issues arise",
       benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
       icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track performance and improve customer experience',
+      title: "Service",
+    description: "Comprehensive analytics to track performance and improve customer experience",
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
   ];
 
   const pricingPlans = [
-      name: 'Starter',
-      price: '$149',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      name: "$149",
+      period: "Perfect for small businesses",
       features: [
         'Up to 1,000 conversations/month',
         'Basic AI responses',
@@ -41,8 +38,7 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Standard integrations'
       ],
       popular: false
-      name: 'Professional',
-      price: '$299',
+      name: "$299",
       description: 'Ideal for growing companies',
         'Up to 10,000 conversations/month',
         'Advanced AI responses',
@@ -51,8 +47,7 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Custom integrations',
         'Multi-language support'
       popular: true
-      name: 'Enterprise',
-      price: '$599',
+      name: "$599",
       description: 'For large organizations',
         'Unlimited conversations',
         'Premium AI features',
@@ -143,5 +138,4 @@ const AICustomerSupportBotPage: React.FC = () => {
 };
 
 
-export default AiCustomerSupportBotPage;
-export default AICustomerSupportBotPage;
+export default $1;

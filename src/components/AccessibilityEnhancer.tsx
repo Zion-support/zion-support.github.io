@@ -50,7 +50,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
         if (skipLink) {
           skipLink.focus();
-          event.preventDefault();
+      event.preventDefault();
         }
       }
 

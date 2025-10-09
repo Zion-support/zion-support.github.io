@@ -87,8 +87,7 @@ class AnalyticsTracker {
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'performance', {
-          event_category: 'Web Vitals',
-          event_label: metrics.metric,
+          event_category: event_label, metrics.metric,
           value: Math.round(metrics.value),
           metric_rating: metrics.rating
         });

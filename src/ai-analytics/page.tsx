@@ -8,21 +8,21 @@ const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization and insights',
+      title: "Service",
+    description: "Live data visualization and insights",
       benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
     },
       icon: Target,
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictions and forecasting',
+      title: "Service",
+    description: "AI-powered predictions and forecasting",
       benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
       icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation and distribution',
+      title: "Service",
+    description: "Intelligent report generation and distribution",
       benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
       icon: Settings,
-      title: 'Custom Metrics',
-      description: 'Customizable metrics and KPIs',
+      title: "Service",
+    description: "Customizable metrics and KPIs",
       benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
     }
   ];

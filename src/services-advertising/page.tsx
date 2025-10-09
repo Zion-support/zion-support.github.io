@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {ArrowLeft, ArrowRight, Target, CheckCircle, Star} from 'lucide-react';
+import { Link, ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'react-router-dom';
 
 export default function ServicesAdvertisingPage() {
   return (

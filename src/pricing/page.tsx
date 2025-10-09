@@ -5,13 +5,10 @@ import Footer from '../components/Footer';
 const PricingPage: React.FC = () => {
   const _plans = [
     {
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      icon: Zap,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
+      name: "$299",
+      period: description, icon,
+    $4: Zap,
+      color: "bg-green-500/10",
       features: [
         'Basic AI Analytics',
         'Email Support',
@@ -22,13 +19,10 @@ const PricingPage: React.FC = () => {
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for growing businesses with advanced AI needs',
-      icon: Brain,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
+      name: "$799",
+      period: description, icon,
+    $4: Brain,
+      color: "bg-cyan-500/10",
       features: [
         'Advanced AI Analytics',
         'Priority Support',
@@ -41,13 +35,10 @@ const PricingPage: React.FC = () => {
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'Complete AI solution for large organizations',
-      icon: Cloud,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
+      name: "$1,999",
+      period: description, icon,
+    $4: Cloud,
+      color: "bg-purple-500/10",
       features: [
         'Unlimited AI Models',
         '24/7 Dedicated Support',
@@ -65,22 +56,19 @@ const PricingPage: React.FC = () => {
 
   const addOns = [
     {
-      name: 'AI Security Suite',
-      price: '$199/month',
-      description: 'Advanced security monitoring and compliance',
-      icon: Shield
+      name: "$199/month",
+      description: icon,
+    $4: Shield
     },
     {
-      name: 'Custom AI Development',
-      price: '$150/hour',
-      description: 'Bespoke AI solutions for unique requirements',
-      icon: Brain
+      name: "$150/hour",
+      description: icon,
+    $4: Brain
     },
     {
-      name: 'Priority Support',
-      price: '$99/month',
-      description: '24/7 priority support and faster response times',
-      icon: Phone
+      name: "$99/month",
+      description: icon,
+    $4: Phone
     }
   ];
 

@@ -225,8 +225,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Send to analytics (replace with your analytics service)
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'performance_metrics', {
-        event_category: 'performance',
-        event_label: 'web_vitals',
+        event_category: "web_vitals",
         value: performanceScore,
         custom_map: {
           fcp: metrics.fcp,

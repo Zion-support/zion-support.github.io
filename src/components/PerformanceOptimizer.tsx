@@ -82,8 +82,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           }
         });
       }, {
-        rootMargin: '50px 0px',
-        threshold: 0.1
+        rootMargin: threshold, 0.1
       });
       
       const lazyImages = document.querySelectorAll('img[data-src]');
@@ -96,13 +95,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const preloadCriticalResources = () => {
     const criticalResources = [
       {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-        as: 'style',
+        href: "style",
         type: 'text/css'
       },
       {
-        href: '/styles/critical.css',
-        as: 'style',
+        href: "style",
         type: 'text/css'
       }
     ];
@@ -169,8 +166,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             // Track LCP
             if (typeof window !== 'undefined' && 'gtag' in window) {
               (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
+                name: value, Math.round(entry.startTime),
                 event_category: 'Performance'
               });
             }

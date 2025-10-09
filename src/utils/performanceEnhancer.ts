@@ -31,11 +31,11 @@ class PerformanceEnhancer {
   private init(): void {
     if (typeof window === 'undefined') return;
     this.setupPerformanceMonitoring();
-    this.optimizeImages();
+      this.optimizeImages();
     this.setupLazyLoading();
-    this.setupResourceHints();
+      this.setupResourceHints();
     this.setupServiceWorker();
-    this.optimizeFonts();
+      this.optimizeFonts();
     this.setupCriticalCSS();
   }
   private setupPerformanceMonitoring(): void {

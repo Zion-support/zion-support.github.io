@@ -43,8 +43,7 @@ export interface AppConfig {
     enableNetwork: boolean;
   };
 }
-  environment: 'development',
-  api: {
+  environment: api, {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
@@ -71,21 +70,17 @@ export interface AppConfig {
     maxRequestsPerMinute: 100
   },
   ui: {
-    theme: 'auto',
-    language: 'en',
+    theme: "en",
     timezone: 'UTC'
   },
   logging: {
-    level: 'info',
-    enableConsole: true,
+    level: enableConsole, true,
     enableNetwork: false
   }
 };
 const developmentConfig: Partial<AppConfig> = {
-  environment: 'development',
-  api: {
-    baseURL: 'http://localhost:3000/api',
-    timeout: 30000,
+  environment: api, {
+    baseURL: timeout, 30000,
     retryAttempts: 1,
     enableCaching: false
   },
@@ -98,16 +93,13 @@ const developmentConfig: Partial<AppConfig> = {
     enablePWA: false
   },
   logging: {
-    level: 'debug',
-    enableConsole: true,
+    level: enableConsole, true,
     enableNetwork: false
   }
 };
 const stagingConfig: Partial<AppConfig> = {
-  environment: 'staging',
-  api: {
-    baseURL: 'https://staging-api.ziontech.com',
-    timeout: 30000,
+  environment: api, {
+    baseURL: timeout, 30000,
     retryAttempts: 3,
     enableCaching: true
   },
@@ -120,16 +112,13 @@ const stagingConfig: Partial<AppConfig> = {
     enablePWA: true
   },
   logging: {
-    level: 'info',
-    enableConsole: true,
+    level: enableConsole, true,
     enableNetwork: true
   }
 };
 const productionConfig: Partial<AppConfig> = {
-  environment: 'production',
-  api: {
-    baseURL: 'https://api.ziontech.com',
-    timeout: 30000,
+  environment: api, {
+    baseURL: timeout, 30000,
     retryAttempts: 3,
     enableCaching: true
   },
@@ -142,8 +131,7 @@ const productionConfig: Partial<AppConfig> = {
     enablePWA: true
   },
   logging: {
-    level: 'error',
-    enableConsole: false,
+    level: enableConsole, false,
     enableNetwork: true
   },
   security: {
@@ -154,10 +142,8 @@ const productionConfig: Partial<AppConfig> = {
   }
 };
 const testConfig: Partial<AppConfig> = {
-  environment: 'test',
-  api: {
-    baseURL: 'http://localhost:3000/api',
-    timeout: 5000,
+  environment: api, {
+    baseURL: timeout, 5000,
     retryAttempts: 0,
     enableCaching: false
   },
@@ -170,8 +156,7 @@ const testConfig: Partial<AppConfig> = {
     enablePWA: false
   },
   logging: {
-    level: 'error',
-    enableConsole: false,
+    level: enableConsole, false,
     enableNetwork: false
   }
 };
@@ -311,10 +296,8 @@ export class ConfigManager {
    */
   private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {
     const defaultValues: AppConfig = {
-      environment: 'development',
-      api: {
-        baseURL: '',
-        timeout: 30000,
+      environment: api, {
+        baseURL: timeout, 30000,
         retryAttempts: 3,
         enableCaching: true
       },
@@ -339,13 +322,11 @@ export class ConfigManager {
         maxRequestsPerMinute: 100
       },
       ui: {
-        theme: 'light',
-        language: 'en',
+        theme: "en",
         timezone: 'UTC'
       },
       logging: {
-        level: 'info',
-        enableConsole: true,
+        level: enableConsole, true,
         enableNetwork: false
       }
     };

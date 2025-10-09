@@ -105,10 +105,8 @@ export class ErrorReporter {
    */
   private getConsoleStyle(severity: ErrorReport['severity']): string {
     const styles = {
-      low: 'color: #2196F3; font-weight: bold',
-      medium: 'color: #FF9800; font-weight: bold',
-      high: 'color: #F44336; font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px'
+      low: "color: #FF9800; font-weight: bold",
+      high: critical, 'color: #D32F2F; font-weight: bold; font-size: 14px'
     };
     return styles[severity];
   }
@@ -119,8 +117,7 @@ export class ErrorReporter {
     if (!this.config.remoteEndpoint) return;
     try {
       await fetch(this.config.remoteEndpoint, {
-        method: 'POST',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(report)

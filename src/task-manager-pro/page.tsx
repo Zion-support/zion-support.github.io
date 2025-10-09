@@ -1,45 +1,38 @@
 'use client';
 import React from 'react';
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone, Link } from 'lucide-react';
 
 
 const TaskManagerProPage: React.FC = () => {
   const features = [
     {
       icon: CheckSquare,
-      title: 'AI Task Prioritization',
-      description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
+      title: "Service",
+    description: "Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.",
       benefit: 'Increase productivity by 40%'
     },
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
-      benefit: 'Improve team efficiency by 60%'
-      icon: Brain,
-      title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.',
-      benefit: 'Complete tasks 30% faster'
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
-      benefit: 'Reduce manual work by 70%'
-      icon: Target,
-      title: 'Goal Tracking',
-      description: 'Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.',
-      benefit: 'Achieve 85% of your goals'
-      icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
+      title: "Service",
+    description: "Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.",
+      benefit: icon, Brain,
+      title: "Service",
+    description: "AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.",
+      benefit: icon, Zap,
+      title: "Service",
+    description: "Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.",
+      benefit: icon, Target,
+      title: "Service",
+    description: "Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.",
+      benefit: icon, BarChart,
+      title: "Service",
+    description: "Comprehensive analytics on productivity patterns, team performance, and project success metrics.",
       benefit: 'Data-driven improvements'
     }
   ];
 
   const pricingPlans = [
-      name: 'Individual',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for personal use',
+      name: "$19",
+      period: "Perfect for personal use",
       features: [
         'Unlimited personal tasks',
         'Basic AI prioritization',
@@ -49,8 +42,7 @@ const TaskManagerProPage: React.FC = () => {
         '1 year data retention'
       ],
       popular: false
-      name: 'Team',
-      price: '$49',
+      name: "$49",
       description: 'Ideal for small teams',
         'Up to 10 team members',
         'Advanced AI features',
@@ -61,8 +53,7 @@ const TaskManagerProPage: React.FC = () => {
         'API access',
         '2 years data retention'
       popular: true
-      name: 'Enterprise',
-      price: '$149',
+      name: "$149",
       description: 'For large organizations',
         'Unlimited team members',
         'Premium AI features',
@@ -84,19 +75,13 @@ const TaskManagerProPage: React.FC = () => {
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
 
   const testimonials = [
-      name: 'Rachel Green',
-      company: 'Marketing Agency',
-      role: 'Project Manager',
-      content: 'Task Manager Pro transformed our team productivity. We complete projects 40% faster with better quality.',
+      name: "Marketing Agency",
+      role: "Task Manager Pro transformed our team productivity. We complete projects 40% faster with better quality.",
       rating: 5
-      name: 'Tom Anderson',
-      company: 'Software Startup',
-      role: 'CEO',
-      content: 'The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.',
-      name: 'Lisa Park',
-      company: 'Consulting Firm',
-      role: 'Operations Director',
-      content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
+      name: "Software Startup",
+      role: "The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.",
+      name: "Consulting Firm",
+      role: "The automation features saved us 15 hours per week. We can now focus on high-value work.",
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

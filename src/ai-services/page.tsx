@@ -1,32 +1,28 @@
 import React from 'react';
-import { Brain, Zap, Shield, BarChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Brain, Zap, Shield, BarChart, Link } from 'lucide-react';
+import { Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone, Helmet } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIServicesPage: React.FC = () => {
   const services = [
     {
-      title: 'AI Strategy & Consulting',
-      description: 'Comprehensive AI strategy development and implementation consulting',
+      title: "Service",
+    description: "Comprehensive AI strategy development and implementation consulting",
       icon: Brain,
       features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
       price: 'Starting at $2,500/month'
     },
-      title: 'Machine Learning Solutions',
-      description: 'Custom machine learning models and algorithms for your business needs',
+      title: "Service",
+    description: "Custom machine learning models and algorithms for your business needs",
       icon: Zap,
       features: ['Custom Model Development', 'Data Preprocessing', 'Model Training', 'Performance Optimization'],
-      price: 'Starting at $1,500/month'
-      title: 'AI Security & Compliance',
-      description: 'Enterprise-grade AI security and compliance solutions',
+      price: title, description,
+    description: "Enterprise-grade AI security and compliance solutions",
       icon: Shield,
       features: ['AI Security Audit', 'Compliance Framework', 'Risk Assessment', 'Security Monitoring'],
-      price: 'Starting at $1,200/month'
-      title: 'AI Analytics & Insights',
-      description: 'Advanced analytics and business intelligence powered by AI',
+      price: title, description,
+    description: "Advanced analytics and business intelligence powered by AI",
       icon: BarChart,
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price: 'Starting at $800/month'
@@ -67,5 +63,4 @@ const AIServicesPage: React.FC = () => {
 };
 
 
-export default AiServicesPage;
-export default AIServicesPage;
+export default $1;

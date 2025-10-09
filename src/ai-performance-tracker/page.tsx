@@ -8,21 +8,21 @@ const AIPerformanceTrackerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'Performance Monitoring',
-      description: 'Comprehensive performance tracking and analysis',
+      title: "Service",
+    description: "Comprehensive performance tracking and analysis",
       benefits: ['Real-time metrics', 'Performance alerts', 'Trend analysis']
     },
       icon: Target,
-      title: 'Goal Tracking',
-      description: 'Intelligent goal setting and progress monitoring',
+      title: "Service",
+    description: "Intelligent goal setting and progress monitoring",
       benefits: ['Smart goals', 'Progress tracking', 'Achievement metrics']
       icon: Zap,
-      title: 'Automated Insights',
-      description: 'AI-powered performance insights and recommendations',
+      title: "Service",
+    description: "AI-powered performance insights and recommendations",
       benefits: ['Performance insights', 'Optimization tips', 'Action recommendations']
       icon: Settings,
-      title: 'Custom Dashboards',
-      description: 'Customizable performance dashboards and reports',
+      title: "Service",
+    description: "Customizable performance dashboards and reports",
       benefits: ['Custom metrics', 'Visualization', 'Reporting']
     }
   ];

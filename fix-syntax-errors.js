@@ -1,115 +1,134 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
+// Common syntax error patterns and their fixes
+const fixes = [
+  // Fix missing commas in arrays/objects
+  {
+    pattern: /(\s+)(name|title|description|icon|role|image|bio):\s*['"][^'"]*['"],?\s*\n\s*(name|title|description|icon|role|image|bio):/g,
+    replacement: '$1$2: $3,\n    $4:'
+  },
+  
+  // Fix missing closing brackets/parentheses
+  {
+    pattern: /(\s+)(\w+):\s*['"][^'"]*['"],?\s*\n\s*(\w+):/g,
+    replacement: '$1$2: $3,'
+  },
+  
+  // Fix duplicate imports
+  {
+    pattern: /import\s+\{[^}]+\}\s+from\s+['"][^'"]+['"];\s*\n\s*import\s+\{[^}]+\}\s+from\s+['"][^'"]+['"];/g,
+    replacement: (match) => {
+      const lines = match.split('\n');
+      const firstImport = lines[0];
+      const secondImport = lines[1];
+      
+      // Extract unique imports
+      const firstImports = firstImport.match(/\{([^}]+)\}/)[1].split(',').map(s => s.trim());
+      const secondImports = secondImport.match(/\{([^}]+)\}/)[1].split(',').map(s => s.trim());
+      
+      const allImports = [...new Set([...firstImports, ...secondImports])];
+      const source = firstImport.match(/from\s+(['"][^'"]+['"])/)[1];
+      
+      return `import { ${allImports.join(', ')} } from ${source};`;
+    }
+  },
+  
+  // Fix missing closing div tags
+  {
+    pattern: /(\s+)(<div[^>]*>)\s*\n\s*(<h1[^>]*>.*<\/h1>)\s*\n\s*(<p[^>]*>.*<\/p>)\s*\n\s*(<a[^>]*>.*<\/a>)\s*\n\s*(<\/div>)\s*\n\s*\);$/gm,
+    replacement: '$1$2\n$1  $3\n$1  $4\n$1  $5\n$1$6\n$1);'
+  },
+  
+  // Fix duplicate export statements
+  {
+    pattern: /export\s+default\s+\w+;\s*\n\s*export\s+default\s+\w+;/g,
+    replacement: 'export default $1;'
+  },
+  
+  // Fix missing semicolons after return statements
+  {
+    pattern: /(\s+)(return\s+\([^)]+\))\s*\n\s*(\}\);)/g,
+    replacement: '$1$2;\n$1$3'
+  },
+  
+  // Fix malformed function declarations
+  {
+    pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\n\s*const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g,
+    replacement: 'const $1: React.FC = () => {'
+  }
+];
+
+function fixFile(filePath) {
   try {
-
-    // Fix double brace imports
-    content = content.replace(
-      /import\s*{\s*{\s*([^}]+)\s*}\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-    );
-
-    // Fix malformed imports with extra braces
-    content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-      (match, imports1, module1, imports2, module2) => {
-        if (module1 === module2) {
-        } else {
-        }
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Apply fixes
+    fixes.forEach(fix => {
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
       }
-    );
-
-    // Fix empty imports
-    content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n/g, '');
-
-    // Fix malformed metadata exports
-    content = content.replace(/\/\/ Metadata moved to Helmet component\s*([^}]+)\s*};/g, '');
-
-    // Fix malformed function declarations
+    });
+    
+    // Additional specific fixes
+    // Fix missing closing div in simple page components
     content = content.replace(
-      /export\s+default\s+function\s+([^(]+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<Helmet>\s*([^<]+)\s*<\/Helmet>/g,
-      (match, funcName, helmetContent) => {
-        return `export default function ${funcName}() {\n  return (\n    <>\n      <Helmet>\n        ${helmetContent}\n      </Helmet>`;
-      }
+      /(\s+)(<div[^>]*>)\s*\n\s*(<div[^>]*>)\s*\n\s*(<h1[^>]*>.*<\/h1>)\s*\n\s*(<p[^>]*>.*<\/p>)\s*\n\s*(<a[^>]*>.*<\/a>)\s*\n\s*(<\/div>)\s*\n\s*\);$/gm,
+      '$1$2\n$1  $3\n$1    $4\n$1    $5\n$1    $6\n$1  $7\n$1);'
     );
-
-    // Fix missing semicolons and brackets
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
-
-    // Clean up excessive whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
-    // Fix React import issues
+    
+    // Fix missing closing div tags
     content = content.replace(
-      /import\s*{\s*React\s*,\s*([^}]+)\s*}\s*from\s*['"]react['"];?/g,
+      /(\s+)(<div[^>]*>)\s*\n\s*(<div[^>]*>)\s*\n\s*(<h1[^>]*>.*<\/h1>)\s*\n\s*(<p[^>]*>.*<\/p>)\s*\n\s*(<a[^>]*>.*<\/a>)\s*\n\s*\);$/gm,
+      '$1$2\n$1  $3\n$1    $4\n$1    $5\n$1    $6\n$1  $7\n$1);'
     );
-
-    // Fix Helmet import issues
+    
+    // Fix duplicate export statements
     content = content.replace(
-      /import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?/g,
-      "import { Helmet } from 'react-helmet-async';"
+      /export\s+default\s+(\w+);\s*\n\s*export\s+default\s+\w+;/g,
+      'export default $1;'
     );
-
-    // Fix Router import issues
+    
+    // Fix missing closing brackets in arrays
     content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]react-router-dom['"];?/g,
+      /(\s+)(\w+):\s*['"][^'"]*['"],?\s*\n\s*(\w+):\s*['"][^'"]*['"],?\s*\n\s*(\w+):\s*['"][^'"]*['"],?\s*\n\s*(\w+):\s*['"][^'"]*['"],?\s*\n\s*(\w+):/g,
+      '$1$2: $3,\n$1$4: $5,\n$1$6: $7,\n$1$8:'
     );
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-
+    
     return false;
   } catch (error) {
-
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Main execution
 async function main() {
+  // Find all TypeScript/JavaScript files
+  const files = await glob('src/**/*.{ts,tsx,js,jsx}');
 
+  console.log(`Found ${files.length} files to check...`);
 
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      cwd: process.cwd(),
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/*.disabled/**',
-        '**/*backup*/**',
-        '**/*corrupted*/**',
-        '**/*temp*/**',
-        '**/*.broken/**',
-      ],
-    });
-
-    for (const file of files) {
-      totalFiles++;
-      if (fixSyntaxErrors(file)) {
-        fixedFiles++;
-      }
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
     }
-  }
+  });
 
-
-
-
-  if (fixedFiles > 0) {
-
-  } else {
-
-  }
+  console.log(`Fixed ${fixedCount} files`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-}
-
-export { fixSyntaxErrors };
+main().catch(console.error);

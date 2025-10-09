@@ -74,11 +74,11 @@ class EnhancedErrorHandler {
   private initialize(): void {
     if (this.isInitialized) return;
     this.setupGlobalErrorHandlers();
-    this.setupUnhandledRejectionHandler();
+      this.setupUnhandledRejectionHandler();
     this.setupResourceErrorHandler();
-    this.setupNetworkErrorHandler();
+      this.setupNetworkErrorHandler();
     this.setupPerformanceErrorHandler();
-    this.setupErrorRecovery();
+      this.setupErrorRecovery();
     this.setupErrorCleanup();
     this.isInitialized = true;
     if (process.env['NODE_ENV'] === 'development') {
@@ -90,8 +90,7 @@ class EnhancedErrorHandler {
   private setupGlobalErrorHandlers(): void {
     window.addEventListener('error', event => {
       this.handleError({
-        type: 'javascript',
-        message: event.message,
+        type: message, event.message,
         stack: event.error?.stack,
         filename: event.filename,
         lineno: event.lineno,
@@ -106,8 +105,7 @@ class EnhancedErrorHandler {
   private setupUnhandledRejectionHandler(): void {
     window.addEventListener('unhandledrejection', event => {
       this.handleError({
-        type: 'promise',
-        message: event.reason?.message || String(event.reason),
+        type: message, event.reason?.message || String(event.reason),
         stack: event.reason?.stack,
         reason: event.reason
       });
@@ -125,8 +123,7 @@ class EnhancedErrorHandler {
             href?: string;
           };
           this.handleError({
-            type: 'resource',
-            message: `Failed to load resource: ${target?.src || target?.href}`,
+            type: message, `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
             src: target?.src || target?.href
           });
@@ -146,8 +143,7 @@ class EnhancedErrorHandler {
         const response = await originalFetch(...args);
         if (!response.ok) {
           this.handleError({
-            type: 'network',
-            message: `Network request failed: ${response.status} ${response.statusText}`,
+            type: message, `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText
@@ -156,8 +152,7 @@ class EnhancedErrorHandler {
         return response;
       } catch (error) {
         this.handleError({
-          type: 'network',
-          message: `Network request failed: ${error}`,
+          type: message, `Network request failed: ${error}`,
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error))
         });
@@ -178,8 +173,7 @@ class EnhancedErrorHandler {
             if (entry.duration > 100) {
               // Tasks longer than 100ms
               this.handleError({
-                type: 'custom',
-                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                type: message, `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
                 category: 'performance'
               });
@@ -496,8 +490,7 @@ class EnhancedErrorHandler {
     if (!this.config.remoteEndpoint) return;
     try {
       await fetch(this.config.remoteEndpoint, {
-        method: 'POST',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${this.config.apiKey}`
         },

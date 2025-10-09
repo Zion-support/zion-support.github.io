@@ -3,16 +3,11 @@ import React, { useState } from 'react';
 
 const RequestQuotePage: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    serviceType: '',
-    projectSize: '',
-    timeline: '',
-    budget: '',
-    description: '',
-    requirements: ''
+    name: "",
+    company: "",
+    serviceType: "",
+    timeline: "",
+    description: requirements, ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -77,46 +72,46 @@ const RequestQuotePage: React.FC = () => {
   const benefits = [
     {
       icon: Calculator,
-      title: 'Free Quote',
-      description: 'Get a detailed, no-obligation quote within 24 hours'
+      title: "Service",
+    $4: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {
       icon: Clock,
-      title: 'Quick Response',
-      description: 'We respond to all quote requests within 4 hours'
+      title: "Service",
+    $4: 'We respond to all quote requests within 4 hours'
     },
     {
       icon: CheckCircle,
-      title: 'Transparent Pricing',
-      description: 'Clear, detailed pricing with no hidden fees'
+      title: "Service",
+    $4: 'Clear, detailed pricing with no hidden fees'
     },
     {
       icon: Star,
-      title: 'Expert Consultation',
-      description: 'Free consultation with our technology experts'
+      title: "Service",
+    $4: 'Free consultation with our technology experts'
     }
   ];
 
   const whyChooseUs = [
     {
       icon: Users,
-      title: '50+ Successful Projects',
-      description: 'Proven track record of delivering results'
+      title: "Service",
+    $4: 'Proven track record of delivering results'
     },
     {
       icon: Award,
-      title: '300% Average ROI',
-      description: 'Our clients see significant returns on investment'
+      title: "Service",
+    $4: 'Our clients see significant returns on investment'
     },
     {
       icon: Clock,
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all our clients'
+      title: "Service",
+    $4: 'Round-the-clock support for all our clients'
     },
     {
       icon: Star,
-      title: '99.9% Uptime',
-      description: 'Reliable, high-performance solutions'
+      title: "Service",
+    $4: 'Reliable, high-performance solutions'
     }
   ];
 

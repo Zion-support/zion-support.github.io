@@ -58,12 +58,9 @@ export class PerformanceMetrics {
             if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({
-                name: 'pageLoadTime',
-                value: navEntry.loadEventEnd - navEntry.fetchStart,
-                unit: 'ms',
-                timestamp: new Date(),
-                category: 'load',
-                metadata: {
+                name: value, navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: timestamp, new Date(),
+                category: metadata, {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart
                 }
@@ -79,10 +76,8 @@ export class PerformanceMetrics {
             if (entry.name === 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime;
               this.recordMetric({
-                name: 'FCP',
-                value: entry.startTime,
-                unit: 'ms',
-                timestamp: new Date(),
+                name: value, entry.startTime,
+                unit: timestamp, new Date(),
                 category: 'load'
               });
             }
@@ -97,10 +92,8 @@ export class PerformanceMetrics {
           if (lastEntry) {
             this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({
-              name: 'LCP',
-              value: lastEntry.startTime,
-              unit: 'ms',
-              timestamp: new Date(),
+              name: value, lastEntry.startTime,
+              unit: timestamp, new Date(),
               category: 'load'
             });
           }
@@ -115,10 +108,8 @@ export class PerformanceMetrics {
           }
           this.webVitals.CLS = clsValue;
           this.recordMetric({
-            name: 'CLS',
-            value: clsValue,
-            unit: 'score',
-            timestamp: new Date(),
+            name: value, clsValue,
+            unit: timestamp, new Date(),
             category: 'runtime'
           });
         });
@@ -146,12 +137,9 @@ export class PerformanceMetrics {
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({
-      name: 'pageLoad',
-      value: pageLoadTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'load',
-      metadata: {
+      name: value, pageLoadTime,
+      unit: timestamp, new Date(),
+      category: metadata, {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
         serverResponse: perfData.responseEnd - perfData.requestStart,
@@ -164,12 +152,9 @@ export class PerformanceMetrics {
    */
   recordNetworkRequest(url: string, duration: number, status: number): void {
     this.recordMetric({
-      name: 'networkRequest',
-      value: duration,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'network',
-      metadata: {
+      name: value, duration,
+      unit: timestamp, new Date(),
+      category: metadata, {
         url,
         status
       }
@@ -183,12 +168,9 @@ export class PerformanceMetrics {
     if (!(performance as PerformanceWithMemory).memory) return;
     const memory = (performance as PerformanceWithMemory).memory;
     this.recordMetric({
-      name: 'memoryUsage',
-      value: memory.usedJSHeapSize,
-      unit: 'bytes',
-      timestamp: new Date(),
-      category: 'memory',
-      metadata: {
+      name: value, memory.usedJSHeapSize,
+      unit: timestamp, new Date(),
+      category: metadata, {
         total: memory.totalJSHeapSize,
         limit: memory.jsHeapSizeLimit,
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
@@ -205,8 +187,7 @@ export class PerformanceMetrics {
     this.recordMetric({
       name: `function:${name}`,
       value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
+      unit: timestamp, new Date(),
       category: 'runtime'
     });
     return result;
@@ -221,8 +202,7 @@ export class PerformanceMetrics {
     this.recordMetric({
       name: `async:${name}`,
       value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
+      unit: timestamp, new Date(),
       category: 'runtime'
     });
     return result;

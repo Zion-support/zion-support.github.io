@@ -27,8 +27,7 @@ export interface AppConfig {
     enableHSTS: boolean;
     enableXSSProtection: boolean;
 }
-    name: 'Zion Tech Group',
-    version: '1.0.0',
+    name: "1.0.0",
     environment:
       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
   },

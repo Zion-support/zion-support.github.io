@@ -1,8 +1,6 @@
 import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
-import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
+import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star, Helmet } from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -10,30 +8,28 @@ const AIMLPlatformPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Complete ML Platform',
-      description: 'End-to-end machine learning platform with model development, training, and deployment',
+      title: "Service",
+    description: "End-to-end machine learning platform with model development, training, and deployment",
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
     },
       icon: TrendingUp,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics and monitoring for machine learning models',
+      title: "Service",
+    description: "Comprehensive analytics and monitoring for machine learning models",
       benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for your machine learning infrastructure',
+      title: "Service",
+    description: "Bank-level security and compliance for your machine learning infrastructure",
       benefits: ['Data encryption', 'Access controls', 'Audit trails']
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Collaborative tools for data scientists and ML engineers',
+      title: "Service",
+    description: "Collaborative tools for data scientists and ML engineers",
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
 
   const pricingPlans = [
-      name: 'Developer',
-      price: '$999',
-      period: '/month',
-      description: 'Perfect for individual developers',
+      name: "$999",
+      period: "Perfect for individual developers",
       features: [
         'Up to 5 models',
         'Basic ML tools',
@@ -42,8 +38,7 @@ const AIMLPlatformPage: React.FC = () => {
         'Basic analytics'
       ],
       popular: false
-      name: 'Team',
-      price: '$2,499',
+      name: "$2,499",
       description: 'Ideal for development teams',
         'Up to 25 models',
         'Advanced ML tools',
@@ -52,8 +47,7 @@ const AIMLPlatformPage: React.FC = () => {
         'Advanced analytics',
         'Team collaboration'
       popular: true
-      name: 'Enterprise',
-      price: '$4,999',
+      name: "$4,999",
       description: 'For large organizations',
         'Unlimited models',
         'Premium ML features',
@@ -97,5 +91,4 @@ const AIMLPlatformPage: React.FC = () => {
 };
 
 
-export default AiMlPlatformPage;
-export default AIMLPlatformPage;
+export default $1;

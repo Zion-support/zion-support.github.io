@@ -60,7 +60,7 @@ class AdvancedAnalytics {
       enableUserJourneyTracking: true
     };
     this.currentSession = this.createNewSession();
-    this.initializeTracking();
+      this.initializeTracking();
   }
   static getInstance(): AdvancedAnalytics {
     if (!AdvancedAnalytics.instance) {
@@ -115,10 +115,8 @@ class AdvancedAnalytics {
    */
   trackPageView(url?: string, title?: string): void {
       id: this.generateEventId(),
-      type: 'page_view',
-      category: 'navigation',
-      action: 'page_view',
-      label: title || document.title,
+      type: "navigation",
+      action: label, title || document.title,
       timestamp: new Date().toISOString(),
       sessionId: this.currentSession.id,
       userId: this.getUserId(),
@@ -142,10 +140,8 @@ class AdvancedAnalytics {
       const element = this.getElementInfo(target);
       const clickEvent: UserEvent = {
         id: this.generateEventId(),
-        type: 'click',
-        category: element.category,
-        action: 'click',
-        label: element.label,
+        type: category, element.category,
+        action: label, element.label,
         timestamp: new Date().toISOString(),
         sessionId: this.currentSession.id,
         userId: this.getUserId(),
@@ -174,10 +170,8 @@ class AdvancedAnalytics {
       scrollTimeout = setTimeout(() => {
         const scrollEvent: UserEvent = {
           id: this.generateEventId(),
-          type: 'scroll',
-          category: 'engagement',
-          action: 'scroll',
-          value: Math.round(
+          type: "engagement",
+          action: value, Math.round(
             (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
           ),
           timestamp: new Date().toISOString(),
@@ -205,10 +199,8 @@ class AdvancedAnalytics {
       const formFields = Array.from(formData.keys());
       const submitEvent: UserEvent = {
         id: this.generateEventId(),
-        type: 'form_submit',
-        category: 'conversion',
-        action: 'form_submit',
-        label: form.id || form.className || 'unknown_form',
+        type: "conversion",
+        action: label, form.id || form.className || 'unknown_form',
         timestamp: new Date().toISOString(),
         sessionId: this.currentSession.id,
         userId: this.getUserId(),
@@ -234,10 +226,8 @@ class AdvancedAnalytics {
       if (link && this.isDownloadLink(link)) {
         const downloadEvent: UserEvent = {
           id: this.generateEventId(),
-          type: 'download',
-          category: 'conversion',
-          action: 'download',
-          label: link.href,
+          type: "conversion",
+          action: label, link.href,
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
@@ -262,8 +252,7 @@ class AdvancedAnalytics {
           if (entry.entryType === 'paint') {
             const paintEvent: UserEvent = {
               id: this.generateEventId(),
-              type: 'custom',
-              category: 'performance',
+              type: "performance",
               action: entry.name,
               value: entry.startTime,
               timestamp: new Date().toISOString(),
@@ -286,10 +275,8 @@ class AdvancedAnalytics {
         )[0] as PerformanceNavigationTiming;
         const performanceEvent: UserEvent = {
           id: this.generateEventId(),
-          type: 'custom',
-          category: 'performance',
-          action: 'page_load',
-          value: navigation.loadEventEnd - navigation.loadEventStart,
+          type: "performance",
+          action: value, navigation.loadEventEnd - navigation.loadEventStart,
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
@@ -354,8 +341,7 @@ class AdvancedAnalytics {
   private async sendEvent(event: UserEvent): Promise<void> {
     try {
       await fetch('/api/analytics', {
-        method: 'POST',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(event)
@@ -533,8 +519,7 @@ class AdvancedAnalytics {
   private async sendSessionData(session: UserSession): Promise<void> {
     try {
       await fetch('/api/analytics/session', {
-        method: 'POST',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(session)

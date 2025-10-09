@@ -26,7 +26,7 @@ class EnhancedAnalytics {
   private offlineQueue: AnalyticsEvent[] = [];
   constructor() {
     this.sessionId = this.generateSessionId();
-    this.setupOfflineHandling();
+      this.setupOfflineHandling();
     this.setupPeriodicFlush();
   }
   private generateSessionId(): string {
@@ -59,8 +59,7 @@ class EnhancedAnalytics {
     };
     // Track initialization
     this.trackEvent({
-      category: 'System',
-      action: 'Analytics Initialized',
+      category: "Analytics Initialized",
       metadata: {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent
@@ -115,8 +114,7 @@ class EnhancedAnalytics {
   }
   public trackPageView(pagePath: string, pageTitle?: string): void {
     this.trackEvent({
-      category: 'Navigation',
-      action: 'Page View',
+      category: "Page View",
       label: pagePath,
       metadata: {
         pageTitle: pageTitle || document.title,
@@ -134,8 +132,7 @@ class EnhancedAnalytics {
   }
   public trackError(error: Error, context?: Record<string, unknown>): void {
     this.trackEvent({
-      category: 'Error',
-      action: 'Error Occurred',
+      category: "Error Occurred",
       label: error.message,
       metadata: {
         stack: error.stack,
@@ -145,8 +142,7 @@ class EnhancedAnalytics {
   }
   public trackPerformance(metric: string, value: number, rating?: string): void {
     this.trackEvent({
-      category: 'Performance',
-      action: metric,
+      category: action, metric,
       value: Math.round(value),
       metadata: {
         rating
@@ -155,8 +151,7 @@ class EnhancedAnalytics {
   }
   public trackConversion(conversionType: string, value?: number): void {
     this.trackEvent({
-      category: 'Conversion',
-      action: conversionType,
+      category: action, conversionType,
       value,
       metadata: {
         conversionId: `conv-${Date.now()}`

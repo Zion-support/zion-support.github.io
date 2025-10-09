@@ -8,21 +8,21 @@ const AIRoboticsPage: React.FC = () => {
   const features = [
     {
       icon: Bot,
-      title: 'Intelligent Robotics',
-      description: 'AI-powered robots that learn and adapt to their environment',
+      title: "Service",
+    description: "AI-powered robots that learn and adapt to their environment",
       benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior']
     },
       icon: Cpu,
-      title: 'Advanced Control Systems',
-      description: 'Sophisticated control algorithms for precise robot movement',
+      title: "Service",
+    description: "Sophisticated control algorithms for precise robot movement",
       benefits: ['Precision control', 'Real-time processing', 'Safety systems']
       icon: Settings,
-      title: 'Automated Workflows',
-      description: 'Streamlined robotic processes for maximum efficiency',
+      title: "Service",
+    description: "Streamlined robotic processes for maximum efficiency",
       benefits: ['Process optimization', 'Error reduction', '24/7 operation']
       icon: Shield,
-      title: 'Safety & Security',
-      description: 'Built-in safety protocols and security measures',
+      title: "Service",
+    description: "Built-in safety protocols and security measures",
       benefits: ['Collision avoidance', 'Emergency stops', 'Data protection']
     }
   ];

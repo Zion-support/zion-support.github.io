@@ -8,21 +8,21 @@ const AICustomerInsightsPage: React.FC = () => {
   const features = [
     {
       icon: Eye,
-      title: 'Customer Analytics',
-      description: 'AI-powered customer behavior analysis',
+      title: "Service",
+    description: "AI-powered customer behavior analysis",
       benefits: ['Behavior tracking', 'Pattern recognition', 'Insight generation']
     },
       icon: Target,
-      title: 'Segmentation',
-      description: 'Intelligent customer segmentation and targeting',
+      title: "Service",
+    description: "Intelligent customer segmentation and targeting",
       benefits: ['Smart segmentation', 'Persona creation', 'Targeted marketing']
       icon: Zap,
-      title: 'Predictive Insights',
-      description: 'Predictive customer insights and recommendations',
+      title: "Service",
+    description: "Predictive customer insights and recommendations",
       benefits: ['Churn prediction', 'Lifetime value', 'Next best action']
       icon: Settings,
-      title: 'Personalization',
-      description: 'AI-driven personalization and recommendations',
+      title: "Service",
+    description: "AI-driven personalization and recommendations",
       benefits: ['Personalized experiences', 'Product recommendations', 'Content customization']
     }
   ];

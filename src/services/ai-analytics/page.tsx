@@ -9,8 +9,8 @@ const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
+      title: "Service",
+    description: "Forecast future trends and outcomes with advanced machine learning algorithms",
       benefits: [
         '95% accuracy in predictions',
         'Real-time data processing',
@@ -19,22 +19,22 @@ const AIAnalyticsPage: React.FC = () => {
       ]
     },
       icon: BarChart,
-      title: 'Real-time Dashboards',
-      description: 'Interactive dashboards that provide instant insights into your business performance',
+      title: "Service",
+    description: "Interactive dashboards that provide instant insights into your business performance",
         'Live data visualization',
         'Customizable metrics',
         'Mobile-responsive design',
         'Role-based access control'
       icon: Target,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with AI-powered insights',
+      title: "Service",
+    description: "Generate comprehensive reports automatically with AI-powered insights",
         'Scheduled report generation',
         'Natural language summaries',
         'Executive briefings',
         'Custom report templates'
       icon: Zap,
-      title: 'Anomaly Detection',
-      description: 'Identify unusual patterns and potential issues before they impact your business',
+      title: "Service",
+    description: "Identify unusual patterns and potential issues before they impact your business",
         'Real-time anomaly alerts',
         'Pattern recognition',
         'Risk assessment',
@@ -43,26 +43,21 @@ const AIAnalyticsPage: React.FC = () => {
   ];
 
   const useCases = [
-      title: 'Sales Performance Analysis',
-      description: 'Track sales metrics, identify top performers, and optimize sales strategies',
+      title: "Service",
+    description: "Track sales metrics, identify top performers, and optimize sales strategies",
       icon: TrendingUp,
-      color: 'text-green-400'
-      title: 'Customer Behavior Insights',
-      description: 'Understand customer preferences and behavior patterns for better targeting',
+      color: title, description,
+    description: "Understand customer preferences and behavior patterns for better targeting",
       icon: Users,
-      color: 'text-blue-400'
-      title: 'Financial Forecasting',
-      description: 'Predict revenue, expenses, and cash flow with high accuracy',
-      color: 'text-purple-400'
-      title: 'Operational Efficiency',
-      description: 'Optimize business processes and identify areas for improvement',
+      color: title, description,
+    description: "Predict revenue, expenses, and cash flow with high accuracy",
+      color: title, description,
+    description: "Optimize business processes and identify areas for improvement",
       color: 'text-yellow-400'
 
   const pricingTiers = [
-      name: 'Starter',
-      price: '$1,500',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI analytics',
+      name: "$1,500",
+      period: "Perfect for small businesses getting started with AI analytics",
       features: [
         'Up to 10 data sources',
         'Basic dashboards',
@@ -70,10 +65,8 @@ const AIAnalyticsPage: React.FC = () => {
         'Email support',
         'Standard integrations'
       ],
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
-      name: 'Professional',
-      price: '$3,500',
+      color: bgColor, 'bg-blue-500/10'
+      name: "$3,500",
       description: 'Ideal for growing businesses with complex analytics needs',
         'Up to 50 data sources',
         'Advanced dashboards',
@@ -81,13 +74,10 @@ const AIAnalyticsPage: React.FC = () => {
         'Priority support',
         'Custom integrations',
         'API access'
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
+      color: "bg-purple-500/10",
       popular: true
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored solutions for large organizations with extensive requirements',
+      name: "Custom",
+      period: "Tailored solutions for large organizations with extensive requirements",
         'Unlimited data sources',
         'Custom dashboards',
         'Real-time analytics',
@@ -95,20 +85,19 @@ const AIAnalyticsPage: React.FC = () => {
         'Custom development',
         'On-premise deployment',
         'SLA guarantees'
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10'
+      color: bgColor, 'bg-cyan-500/10'
 
   const benefits = [
       icon: Star,
-      title: '95% Accuracy',
-      description: 'Industry-leading accuracy in predictions and insights'
-      title: 'Real-time Processing',
-      description: 'Instant analysis of data as it comes in'
-      title: 'Actionable Insights',
-      description: 'Clear, actionable recommendations for business improvement'
+      title: "Service",
+    $4: 'Industry-leading accuracy in predictions and insights'
+      title: "Service",
+    $4: 'Instant analysis of data as it comes in'
+      title: "Service",
+    $4: 'Clear, actionable recommendations for business improvement'
       icon: Award,
-      title: 'Proven Results',
-      description: '300% average ROI for our analytics clients'
+      title: "Service",
+    $4: '300% average ROI for our analytics clients'
 
   return (
     <>

@@ -11,14 +11,11 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   text = 'Loading...',
   fullScreen = false
 }) => {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
+    sm: "w-8 h-8",
+    lg: xl, 'w-16 h-16'
   };
   const colorClasses = {
-    primary: 'text-cyan-400',
-    secondary: 'text-purple-400',
+    primary: "text-purple-400",
     accent: 'text-pink-400'
   };
   const spinnerClasses = `

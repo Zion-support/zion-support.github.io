@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
+import { Helmet, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -8,20 +7,20 @@ const testPagetsx: React.FC = () => {
   const _features = [
     {
       icon: Users,
-      title: 'Advanced Features',
-      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
+      title: "Service",
+    description: "Cutting-edge solutions powered by artificial intelligence and machine learning",
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
     },
     {
       icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimized performance and scalability for enterprise-grade applications',
+      title: "Service",
+    description: "Optimized performance and scalability for enterprise-grade applications",
       benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
     },
     {
       icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with full compliance and data protection',
+      title: "Service",
+    description: "Enterprise-grade security with full compliance and data protection",
       benefits: ['Data protection', 'Compliance', 'Secure operations']
     }
   ];

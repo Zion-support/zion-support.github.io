@@ -385,8 +385,7 @@ export class EnhancedLogger {
     if (!this.config.remoteEndpoint) return;
     try {
       await fetch(this.config.remoteEndpoint, {
-        method: 'POST',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({

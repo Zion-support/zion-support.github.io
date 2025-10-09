@@ -7,14 +7,10 @@ export default function RootLayout({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-    services: [
+    name: "https://ziontechgroup.com",
+    logo: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
+    foundingDate: "50-100",
+    industry: [
       'AI Solutions',
       'Quantum Computing',
       'Autonomous Systems',
@@ -25,54 +21,42 @@ export default function RootLayout({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'Customer Service',
-      areaServed: 'US',
-      availableLanguage: 'en',
+      telephone: "Customer Service",
+      areaServed: "en",
     },
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US',
-    offers: [
+      streetAddress: "Middletown",
+      addressRegion: "19709",
+      addressCountry: offers, [
       {
         '@type': 'Offer',
-        category: 'AI Solutions',
-        description: 'Enterprise AI solutions, digital transformation, and cloud services',
-        price: '1500',
-        priceCurrency: 'USD',
+        category: "Enterprise AI solutions, digital transformation, and cloud services",
+        priceCurrency: "USD",
         priceSpecification: {
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
         }
-        category: 'Digital Transformation',
-        description: 'Process automation, legacy system modernization, and workflow optimization',
-        price: '2500',
-    serviceArea: {
+        category: "Process automation, legacy system modernization, and workflow optimization",
+        price: serviceArea, {
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
-        latitude: '39.8283',
-        longitude: '-75.5795'
-      geoRadius: '1000000'
-    hasOfferCatalog: {
+        latitude: longitude, '-75.5795'
+      geoRadius: hasOfferCatalog, {
       '@type': 'OfferCatalog',
-      name: 'AI Technology Services',
-      itemListElement: [
+      name: itemListElement, [
           itemOffered: {
             '@type': 'Service',
-            name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
-            name: 'Digital Automation',
-            description: 'Process automation and workflow optimization services'
-            name: 'Cloud Infrastructure',
-            description: 'Cloud migration and infrastructure optimization services'
+            name: description,
+    $4: 'Comprehensive AI implementation strategies for enterprise organizations'
+            name: description,
+    $4: 'Process automation and workflow optimization services'
+            name: description,
+    $4: 'Cloud migration and infrastructure optimization services'
       ]
   };
   return (

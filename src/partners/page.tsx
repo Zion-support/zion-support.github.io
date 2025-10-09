@@ -8,11 +8,10 @@ import Footer from '../components/Footer';
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
-      title: 'Technology Partners',
-      description: 'Leading technology companies that provide the foundation for our solutions',
+      title: "Service",
+    description: "Leading technology companies that provide the foundation for our solutions",
       icon: Building,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
+      color: "bg-blue-500/10",
       partners: [
         { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
         { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️' },
@@ -22,22 +21,20 @@ const PartnersPage: React.FC = () => {
         { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }
       ]
     },
-      title: 'Solution Partners',
-      description: 'Specialized solution providers that complement our offerings',
+      title: "Service",
+    description: "Specialized solution providers that complement our offerings",
       icon: Handshake,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
+      color: "bg-green-500/10",
         { name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️' },
         { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️' },
         { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },
         { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
         { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
         { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' }
-      title: 'Integration Partners',
-      description: 'Partners that help us integrate with existing enterprise systems',
+      title: "Service",
+    description: "Partners that help us integrate with existing enterprise systems",
       icon: Award,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
+      color: "bg-purple-500/10",
         { name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾' },
         { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐' },
         { name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️' },
@@ -49,51 +46,44 @@ const PartnersPage: React.FC = () => {
 
   const benefits = [
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Access to worldwide markets and customers through our partner network'
+      title: "Service",
+    $4: 'Access to worldwide markets and customers through our partner network'
       icon: Users,
-      title: 'Expertise Sharing',
-      description: 'Collaborative knowledge sharing and best practices across industries'
+      title: "Service",
+    $4: 'Collaborative knowledge sharing and best practices across industries'
       icon: Star,
-      title: 'Innovation',
-      description: 'Joint innovation initiatives and cutting-edge technology development'
+      title: "Service",
+    $4: 'Joint innovation initiatives and cutting-edge technology development'
       icon: CheckCircle,
-      title: 'Quality Assurance',
-      description: 'Rigorous partner certification and quality standards'
+      title: "Service",
+    $4: 'Rigorous partner certification and quality standards'
 
   const partnershipTiers = [
-      name: 'Strategic Partners',
-      level: 'Platinum',
-      description: 'Long-term strategic relationships with joint go-to-market initiatives',
-      benefits: [
+      name: "Platinum",
+      description: [
         'Joint marketing and sales initiatives',
         'Co-development of solutions',
         'Priority support and resources',
         'Executive relationship management',
         'Custom pricing and terms'
       ],
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
-      name: 'Solution Partners',
-      level: 'Gold',
+      color: bgColor, 'bg-yellow-500/10'
+      name: "Gold",
       description: 'Technology integration and solution delivery partnerships',
         'Technical integration support',
         'Joint solution development',
         'Marketing support and co-marketing',
         'Training and certification',
         'Preferred pricing'
-      color: 'text-gray-400',
-      bgColor: 'bg-gray-500/10'
-      name: 'Channel Partners',
-      level: 'Silver',
+      color: bgColor, 'bg-gray-500/10'
+      name: "Silver",
       description: 'Reseller and referral partnerships for market expansion',
         'Reseller program access',
         'Sales training and support',
         'Marketing materials and tools',
         'Lead sharing and referrals',
         'Competitive margins'
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10'
+      color: bgColor, 'bg-orange-500/10'
 
   return (
     <>

@@ -39,15 +39,15 @@ class SEOEnhancer {
 
   private init(): void {
     this.setTitle();
-    this.setMetaTags();
+      this.setMetaTags();
     this.setOpenGraphTags();
-    this.setTwitterTags();
+      this.setTwitterTags();
     this.setStructuredData();
-    this.setCanonicalUrl();
+      this.setCanonicalUrl();
     this.setAlternateUrls();
-    this.setRobotsMeta();
+      this.setRobotsMeta();
     this.optimizeImages();
-    this.setupBreadcrumbs();
+      this.setupBreadcrumbs();
   }
 
   private setTitle(): void {
@@ -197,8 +197,7 @@ class SEOEnhancer {
         {
           '@type': 'ListItem',
           position: 1,
-          name: 'Home',
-          item: this.baseUrl
+          name: item, this.baseUrl
         }
       ]
     };

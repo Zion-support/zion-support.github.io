@@ -1,9 +1,7 @@
-import React from 'react';
-'use client';
-
-import React, { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
-import ContentPreviewCard from '../components/ContentPreviewCard';
+import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 interface BlogPost {
   id: string;
@@ -21,129 +19,165 @@ interface BlogPost {
   };
 }
 
-export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: 'ai-enterprise-transformation-2025',
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
+      title: 'AI Enterprise Transformation 2025',
       description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
-      category: 'Success Story',
+      category: 'AI Strategy',
       readTime: '50 min read',
-      date: '2025-01-28',
+      date: '2025-01-15',
       path: '/blog/ai-enterprise-transformation-2025',
-      image: '💰',
+      image: '/api/placeholder/600/400',
       featured: true,
       stats: { views: 18750, engagement: 97 }
     },
-      id: 'ai-2025-2026-mega-trends-breakthrough',
-      title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
+    {
+      id: 'ai-2025-2026-mega-trends',
+      title: 'AI Mega Trends 2025-2026',
       description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
-      category: 'Mega Trends',
+      category: 'AI Trends',
       readTime: '15 min read',
-      date: '2025-01-15',
+      date: '2025-01-10',
       path: '/blog/ai-2025-2026-mega-trends-breakthrough',
-      image: '🚀',
-      stats: { views: 12500, engagement: 94 }
-      id: 'ai-2026-autonomous-enterprise-architecture',
-      title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
-      description: 'Revolutionary autonomous enterprise architecture transforming business operations with self-healing systems and predictive infrastructure.',
-      category: 'Architecture',
-      readTime: '12 min read',
-      date: '2026-01-15',
-      path: '/blog/ai-2026-autonomous-enterprise-architecture',
-      image: '🏗️',
-      stats: { views: 8900, engagement: 91 }
-      id: 'ai-2026-autonomous-agent-factories',
-      title: 'AI 2026: Autonomous Agent Factories Revolution',
-      description: 'Revolutionary autonomous agent factories transforming business operations with self-managing AI systems.',
-      category: 'AI Agents',
-      readTime: '18 min read',
-      date: '2026-02-01',
-      path: '/blog/ai-2026-autonomous-agent-factories',
-      image: '🤖',
-      featured: false,
-      stats: { views: 7200, engagement: 88 }
-      id: 'ai-2026-consensus-intelligence-breakthrough',
-      title: 'AI 2026: Consensus Intelligence Breakthrough',
-      description: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
-      category: 'Intelligence',
-      readTime: '14 min read',
-      date: '2026-02-15',
-      path: '/blog/ai-2026-consensus-intelligence-breakthrough',
-      image: '🧠',
-      stats: { views: 6500, engagement: 85 }
-      id: 'ai-cost-optimization-breakthrough-2026',
-      title: 'AI Cost Optimization Breakthrough 2026',
-      description: 'Revolutionary cost optimization strategies delivering 90% reduction in operational expenses through intelligent AI systems.',
+      image: '/api/placeholder/600/400',
+      featured: true,
+      stats: { views: 12300, engagement: 89 }
+    },
+    {
+      id: 'ai-cost-optimization-breakthrough',
+      title: 'AI Cost Optimization Breakthrough',
+      description: 'Learn how AI-driven cost optimization strategies can reduce operational expenses by up to 60% while improving efficiency.',
       category: 'Cost Optimization',
-      readTime: '20 min read',
-      date: '2026-03-01',
+      readTime: '25 min read',
+      date: '2025-01-05',
       path: '/blog/ai-cost-optimization-breakthrough-2026',
-      image: '💡',
-      stats: { views: 9800, engagement: 92 }
-      id: 'ai-2026-hyperconscious-computing-revolution',
-      title: 'AI 2026: Hyperconscious Computing Revolution',
-      description: 'Revolutionary hyperconscious computing systems delivering unprecedented AI capabilities and enterprise transformation.',
-      category: 'Computing',
-      readTime: '16 min read',
-      date: '2026-03-15',
-      path: '/blog/ai-2026-hyperconscious-computing-revolution',
-      image: '⚡',
-      stats: { views: 5800, engagement: 87 }
-      id: 'ai-enterprise-transformation-ultimate-guide-2025',
-      title: 'AI Enterprise Transformation: Ultimate Guide 2025',
-      description: 'The complete guide to AI enterprise transformation with proven frameworks, implementation strategies, and success metrics.',
-      category: 'Transformation',
-      readTime: '45 min read',
-      date: '2025-02-10',
-      path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
-      image: '📚',
-      stats: { views: 11200, engagement: 93 }
+      image: '/api/placeholder/600/400',
+      featured: false,
+      stats: { views: 8900, engagement: 85 }
+    },
+    {
+      id: 'ai-autonomous-business-systems',
+      title: 'AI Autonomous Business Systems',
+      description: 'Explore how autonomous AI systems are reshaping business operations and creating self-managing organizations.',
+      category: 'Automation',
+      readTime: '30 min read',
+      date: '2024-12-28',
+      path: '/blog/ai-autonomous-business-systems-2026',
+      image: '/api/placeholder/600/400',
+      featured: false,
+      stats: { views: 15600, engagement: 92 }
+    }
   ], []);
 
-  useEffect(() => {
-    const _timer = setTimeout(() => {
-      setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
+  const categories = ['all', 'AI Strategy', 'AI Trends', 'Cost Optimization', 'Automation'];
 
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
-
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
-    ? posts 
-    : posts.filter(post => post.category === selectedCategory);
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
 
-  const featuredPosts = posts.filter(post => post.featured);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-12">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
+  return (
+    <>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              AI & Technology Blog
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Stay updated with the latest insights, trends, and breakthroughs in AI and technology.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-            ))}
-    );
 
-const BlogPage: React.FC = () => {
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced blog solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                {category === 'all' ? 'All Posts' : category}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPosts.map((post) => (
+              <article key={post.id} className={`bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all duration-300 ${post.featured ? 'md:col-span-2' : ''}`}>
+                <div className="relative">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  {post.featured && (
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Featured
+                      </span>
+                    </div>
+                  )}
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                    <span>{post.category}</span>
+                    <span>•</span>
+                    <span>{post.readTime}</span>
+                    <span>•</span>
+                    <span>{post.date}</span>
+                  </div>
+                  
+                  <h2 className="text-xl font-semibold text-white mb-3 line-clamp-2">
+                    {post.title}
+                  </h2>
+                  
+                  <p className="text-gray-300 mb-4 line-clamp-3">
+                    {post.description}
+                  </p>
+                  
+                  {post.stats && (
+                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                      <span>{post.stats.views.toLocaleString()} views</span>
+                      <span>•</span>
+                      <span>{post.stats.engagement}% engagement</span>
+                    </div>
+                  )}
+                  
+                  <Link
+                    to={post.path}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Read More
+                    <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {filteredPosts.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-300 text-lg">No posts found in this category.</p>
+            </div>
+          )}
+        </div>
+      </div>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default BlogPage;

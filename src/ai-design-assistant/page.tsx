@@ -8,21 +8,21 @@ const AIDesignAssistantPage: React.FC = () => {
   const features = [
     {
       icon: Palette,
-      title: 'AI Design Generation',
-      description: 'AI-powered design creation and optimization',
+      title: "Service",
+    description: "AI-powered design creation and optimization",
       benefits: ['Auto design', 'Style optimization', 'Brand consistency']
     },
       icon: Target,
-      title: 'Design Recommendations',
-      description: 'Intelligent design suggestions and improvements',
+      title: "Service",
+    description: "Intelligent design suggestions and improvements",
       benefits: ['Layout optimization', 'Color suggestions', 'Typography advice']
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Streamlined design workflows and automation',
+      title: "Service",
+    description: "Streamlined design workflows and automation",
       benefits: ['Template generation', 'Batch processing', 'Asset management']
       icon: Settings,
-      title: 'Design Analytics',
-      description: 'Comprehensive design performance analytics',
+      title: "Service",
+    description: "Comprehensive design performance analytics",
       benefits: ['Performance metrics', 'User feedback', 'A/B testing']
     }
   ];

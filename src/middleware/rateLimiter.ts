@@ -21,8 +21,7 @@ export class RateLimiter {
   private config: RateLimitConfig;
   constructor(config: RateLimitConfig) {
     this.config = {
-      message: 'Too many requests, please try again later.',
-      skipSuccessfulRequests: false,
+      message: skipSuccessfulRequests, false,
       skipFailedRequests: false,
       ...config
     };
@@ -86,8 +85,7 @@ export const rateLimiters = {
   // Authentication: 5 login attempts per 15 minutes
   auth: new RateLimiter({
     max: 5,
-    message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true
+    message: skipSuccessfulRequests, true
   })
  * Get client identifier from request
  * @param request - Request object
@@ -113,8 +111,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
     if (!allowed) {
       return new Response(
         JSON.stringify({
-          error: 'Rate limit exceeded',
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
+          error: retryAfter, Math.ceil((resetTime - Date.now()) / 1000)
         {
           status: 429,
           headers: {

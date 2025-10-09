@@ -8,21 +8,21 @@ const DatabaseManagementPage: React.FC = () => {
   const features = [
     {
       icon: Database,
-      title: 'Database Administration',
-      description: 'Comprehensive database management and optimization',
+      title: "Service",
+    description: "Comprehensive database management and optimization",
       benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening']
     },
       icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security for your data assets',
+      title: "Service",
+    description: "Enterprise-grade security for your data assets",
       benefits: ['Encryption', 'Access control', 'Audit logging']
       icon: BarChart,
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and performance optimization',
+      title: "Service",
+    description: "Real-time monitoring and performance optimization",
       benefits: ['Query optimization', 'Resource monitoring', 'Alerting']
       icon: Settings,
-      title: 'Automated Maintenance',
-      description: 'Automated database maintenance and updates',
+      title: "Service",
+    description: "Automated database maintenance and updates",
       benefits: ['Automated backups', 'Patch management', 'Health checks']
     }
   ];

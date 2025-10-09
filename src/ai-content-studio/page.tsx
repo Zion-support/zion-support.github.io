@@ -8,21 +8,21 @@ const AIContentStudioPage: React.FC = () => {
   const features = [
     {
       icon: FileText,
-      title: 'Content Creation',
-      description: 'AI-powered content generation and optimization',
+      title: "Service",
+    description: "AI-powered content generation and optimization",
       benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
     },
       icon: Target,
-      title: 'Content Strategy',
-      description: 'Intelligent content planning and strategy',
+      title: "Service",
+    description: "Intelligent content planning and strategy",
       benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
       icon: Zap,
-      title: 'Automated Publishing',
-      description: 'Automated content publishing and distribution',
+      title: "Service",
+    description: "Automated content publishing and distribution",
       benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']
       icon: Settings,
-      title: 'Content Analytics',
-      description: 'Comprehensive content performance analytics',
+      title: "Service",
+    description: "Comprehensive content performance analytics",
       benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
     }
   ];

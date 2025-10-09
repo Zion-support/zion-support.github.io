@@ -41,17 +41,17 @@ class UserExperienceEnhancer {
   }
   private init(): void {
     this.setupSmoothScrolling();
-    this.setupLoadingStates();
+      this.setupLoadingStates();
     this.setupErrorBoundaries();
-    this.setupAnalytics();
+      this.setupAnalytics();
     this.setupNotifications();
-    this.setupProgressiveWebApp();
+      this.setupProgressiveWebApp();
     this.setupOfflineSupport();
-    this.setupPushNotifications();
+      this.setupPushNotifications();
     this.setupDarkMode();
-    this.setupAnimations();
+      this.setupAnimations();
     this.setupUserPreferences();
-    this.setupPerformanceMonitoring();
+      this.setupPerformanceMonitoring();
     this.setupAccessibilityMonitoring();
   }
   private setupSmoothScrolling(): void {
@@ -66,8 +66,7 @@ class UserExperienceEnhancer {
         
         if (targetElement) {
           targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+            behavior: block, 'start'
           });
         }
       });
@@ -247,8 +246,7 @@ class UserExperienceEnhancer {
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
       const interactionData = {
-        type: 'click',
-        element: target.tagName,
+        type: element, target.tagName,
         id: target.id,
         className: target.className,
         text: target.textContent?.substring(0, 100),
@@ -261,8 +259,7 @@ class UserExperienceEnhancer {
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
       const formData = {
-        type: 'form_submit',
-        formId: form.id,
+        type: formId, form.id,
         formAction: form.action,
         timestamp: Date.now()
       };

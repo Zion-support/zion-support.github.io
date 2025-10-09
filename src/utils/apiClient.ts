@@ -75,8 +75,7 @@ class ApiClient {
     return this.request<T>({
       ...config,
       url,
-      method: 'POST',
-      body: JSON.stringify(data)
+      method: body, JSON.stringify(data)
     });
   }
   /**
@@ -90,8 +89,7 @@ class ApiClient {
     return this.request<T>({
       ...config,
       url,
-      method: 'PUT',
-      body: JSON.stringify(data)
+      method: body, JSON.stringify(data)
     });
   }
   /**
@@ -118,8 +116,7 @@ class ApiClient {
     return this.request<T>({
       ...config,
       url,
-      method: 'PATCH',
-      body: JSON.stringify(data)
+      method: body, JSON.stringify(data)
     });
   }
   /**
@@ -144,8 +141,7 @@ class ApiClient {
         return {
           data: cached,
           status: 200,
-          statusText: 'OK (cached)',
-          headers: new Headers()
+          statusText: headers, new Headers()
         };
       }
     }

@@ -24,9 +24,8 @@ export interface SEOProps {
   alternateLocales?: { locale: string; url: string }[];
 }
 
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+  title: "Service",
+    description: "Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.",
   keywords: [
     'AI',
     'artificial intelligence',
@@ -34,11 +33,9 @@ export interface SEOProps {
     'digital transformation',
     'IT services',
   ],
-  image: 'https://ziontechgroup.com/og-image.jpg',
-  url: 'https://ziontechgroup.com',
+  image: "https://ziontechgroup.com",
   type: 'website' as const,
-  locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
+  locale: twitterCard, 'summary_large_image' as const,
 };
 
 export const SEO: React.FC<SEOProps> = ({

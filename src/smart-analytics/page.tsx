@@ -1,44 +1,37 @@
 import React from 'react';
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users, Link } from 'lucide-react';
 
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'Real-time Dashboards',
-      description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
+      title: "Service",
+    description: "Monitor your business performance with live dashboards that update automatically and provide instant insights.",
       benefit: 'Make decisions 10x faster'
     },
       icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
-      benefit: 'Discover hidden opportunities'
-      icon: Target,
-      title: 'Custom Metrics',
-      description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
-      benefit: 'Focus on what drives growth'
-      icon: Zap,
-      title: 'Automated Alerts',
-      description: 'Get instant notifications when important metrics change or when action is needed.',
-      benefit: 'Never miss critical changes'
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Share insights and reports with your team with role-based access and collaborative features.',
-      benefit: 'Align your entire organization'
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
+      title: "Service",
+    description: "Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.",
+      benefit: icon, Target,
+      title: "Service",
+    description: "Track exactly what matters to your business with customizable KPIs and automated reporting.",
+      benefit: icon, Zap,
+      title: "Service",
+    description: "Get instant notifications when important metrics change or when action is needed.",
+      benefit: icon, Users,
+      title: "Service",
+    description: "Share insights and reports with your team with role-based access and collaborative features.",
+      benefit: icon, Shield,
+      title: "Service",
+    description: "Bank-level security with data encryption, access controls, and compliance with industry standards.",
       benefit: '100% data protection'
     }
   ];
 
   const pricingPlans = [
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with analytics',
+      name: "$299",
+      period: "Perfect for small businesses getting started with analytics",
       features: [
         'Up to 5 data sources',
         'Basic dashboards',
@@ -47,8 +40,7 @@ const SmartAnalyticsPage: React.FC = () => {
         '1 user account'
       ],
       popular: false
-      name: 'Professional',
-      price: '$799',
+      name: "$799",
       description: 'Advanced analytics for growing businesses',
         'Unlimited data sources',
         'Advanced AI insights',
@@ -58,10 +50,8 @@ const SmartAnalyticsPage: React.FC = () => {
         'API access',
         'Advanced reporting'
       popular: true
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Full-scale analytics solution for large organizations',
+      name: "Custom",
+      period: "Full-scale analytics solution for large organizations",
         'Everything in Professional',
         'Dedicated account manager',
         'Custom integrations',

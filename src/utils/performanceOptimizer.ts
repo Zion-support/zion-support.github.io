@@ -443,7 +443,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
    */
   optimize(): void {
     this.optimizeImages();
-    this.enableCodeSplitting();
+      this.enableCodeSplitting();
     this.enableCaching();
     if (process.env.NODE_ENV === 'development') { 
       logger.info('Performance optimization completed');

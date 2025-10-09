@@ -85,8 +85,7 @@ class ErrorLogger {
         return;
       }
       await fetch(endpoint, {
-        method: 'POST',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({

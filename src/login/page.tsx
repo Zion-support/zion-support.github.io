@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: "",
     rememberMe: false
   });
   const [showPassword, setShowPassword] = useState(false);
@@ -33,18 +32,18 @@ const LoginPage: React.FC = () => {
   const features = [
     {
       icon: Shield,
-      title: 'Secure Access',
-      description: 'Bank-level security with multi-factor authentication'
+      title: "Service",
+    $4: 'Bank-level security with multi-factor authentication'
     },
     {
       icon: CheckCircle,
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all your needs'
+      title: "Service",
+    $4: 'Round-the-clock support for all your needs'
     },
     {
       icon: Phone,
-      title: 'Mobile Ready',
-      description: 'Access your account from any device, anywhere'
+      title: "Service",
+    $4: 'Access your account from any device, anywhere'
     }
   ];
 

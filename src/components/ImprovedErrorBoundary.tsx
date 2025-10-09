@@ -160,93 +160,67 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 }
 const styles = {
   container: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    backgroundColor: '#f5f5f5',
+    minHeight: "flex",
+    alignItems: "center",
+    padding: "#f5f5f5",
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   },
   content: {
-    maxWidth: '600px',
-    width: '100%',
-    backgroundColor: 'white',
-    borderRadius: '8px',
-    padding: '40px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    maxWidth: "100%",
+    backgroundColor: "8px",
+    padding: "0 4px 6px rgba(0, 0, 0, 0.1)",
     textAlign: 'center' as const
   },
   icon: {
-    fontSize: '48px',
-    marginBottom: '20px'
+    fontSize: marginBottom, '20px'
   },
   title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: '16px'
+    fontSize: "bold",
+    color: marginBottom, '16px'
   },
   message: {
-    fontSize: '16px',
-    color: '#666',
-    marginBottom: '32px',
-    lineHeight: '1.6'
+    fontSize: "#666",
+    marginBottom: lineHeight, '1.6'
   },
   details: {
     textAlign: 'left' as const,
-    marginBottom: '24px',
-    backgroundColor: '#f9f9f9',
-    padding: '16px',
-    borderRadius: '4px',
+    marginBottom: "#f9f9f9",
+    padding: "4px",
     border: '1px solid #e0e0e0'
   },
   summary: {
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    marginBottom: '12px',
-    userSelect: 'none' as const
+    cursor: "bold",
+    marginBottom: userSelect, 'none' as const
   },
   errorDetails: {
     fontSize: '14px'
   },
   errorMessage: {
-    marginBottom: '12px',
-    color: '#d32f2f'
+    marginBottom: color, '#d32f2f'
   },
   stack: {
-    backgroundColor: '#f5f5f5',
-    padding: '12px',
-    borderRadius: '4px',
-    fontSize: '12px',
+    backgroundColor: "12px",
+    borderRadius: "12px",
     overflowX: 'auto' as const,
-    fontFamily: 'monospace',
-    whiteSpace: 'pre-wrap' as const,
+    fontFamily: whiteSpace, 'pre-wrap' as const,
     wordBreak: 'break-all' as const
   },
   actions: {
-    display: 'flex',
-    gap: '12px',
-    justifyContent: 'center',
-    flexWrap: 'wrap' as const
+    display: "12px",
+    justifyContent: flexWrap, 'wrap' as const
   },
   button: {
-    padding: '12px 24px',
-    fontSize: '16px',
-    fontWeight: '500',
-    color: 'white',
-    backgroundColor: '#007bff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
+    padding: "16px",
+    fontWeight: "white",
+    backgroundColor: "none",
+    borderRadius: "pointer",
     transition: 'background-color 0.2s'
   },
   secondaryButton: {
     backgroundColor: '#6c757d'
   },
   errorCount: {
-    marginTop: '24px',
-    fontSize: '14px',
+    marginTop: "14px",
     color: '#999'
   }
 };

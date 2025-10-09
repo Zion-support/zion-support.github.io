@@ -1,41 +1,34 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
-import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
+import { Helmet, CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIProjectManagerPage: React.FC = () => {
-  const _features = [
-
-const AiProjectManagerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'AI-Powered Planning',
-      description: 'Intelligent project planning with predictive analytics and resource optimization',
+      title: "Service",
+    description: "Intelligent project planning with predictive analytics and resource optimization",
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
     },
       icon: Target,
-      title: 'Smart Task Management',
-      description: 'Automated task assignment and priority management based on AI insights',
+      title: "Service",
+    description: "Automated task assignment and priority management based on AI insights",
       benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
       icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'Advanced analytics to predict project outcomes and identify potential risks',
+      title: "Service",
+    description: "Advanced analytics to predict project outcomes and identify potential risks",
       benefits: ['90% risk reduction', 'Data-driven decisions', 'Proactive problem solving']
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Enhanced team collaboration with AI-powered communication and coordination',
+      title: "Service",
+    description: "Enhanced team collaboration with AI-powered communication and coordination",
       benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
     }
   ];
 
   const pricingPlans = [
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small teams',
+      name: "$99",
+      period: "Perfect for small teams",
       features: [
         'Up to 5 projects',
         'Basic AI planning',
@@ -44,8 +37,7 @@ const AiProjectManagerPage: React.FC = () => {
         'Basic analytics'
       ],
       popular: false
-      name: 'Professional',
-      price: '$199',
+      name: "$199",
       description: 'Ideal for growing businesses',
         'Up to 25 projects',
         'Advanced AI planning',
@@ -54,8 +46,7 @@ const AiProjectManagerPage: React.FC = () => {
         'Advanced analytics',
         'Custom integrations'
       popular: true
-      name: 'Enterprise',
-      price: '$399',
+      name: "$399",
       description: 'For large organizations',
         'Unlimited projects',
         'Premium AI features',
@@ -99,5 +90,4 @@ const AiProjectManagerPage: React.FC = () => {
 };
 
 
-export default AiProjectManagerPage;
-export default AIProjectManagerPage;
+export default $1;

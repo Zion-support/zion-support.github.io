@@ -8,21 +8,21 @@ const ITPerformanceMonitoringPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'Real-time Monitoring',
-      description: 'Comprehensive real-time system performance monitoring',
+      title: "Service",
+    description: "Comprehensive real-time system performance monitoring",
       benefits: ['Live dashboards', 'Performance metrics', 'Alerting']
     },
       icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Automated performance optimization and tuning',
+      title: "Service",
+    description: "Automated performance optimization and tuning",
       benefits: ['Auto-tuning', 'Bottleneck detection', 'Optimization recommendations']
       icon: Shield,
-      title: 'Proactive Monitoring',
-      description: 'Proactive monitoring to prevent issues before they occur',
+      title: "Service",
+    description: "Proactive monitoring to prevent issues before they occur",
       benefits: ['Predictive analytics', 'Early warning', 'Preventive maintenance']
       icon: Settings,
-      title: 'Custom Dashboards',
-      description: 'Customizable dashboards and reporting',
+      title: "Service",
+    description: "Customizable dashboards and reporting",
       benefits: ['Custom metrics', 'Visualization', 'Reporting']
     }
   ];

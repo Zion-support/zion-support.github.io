@@ -173,8 +173,7 @@ class ErrorTrackingService {
     try {
       if (typeof window !== 'undefined' && 'fetch' in window) {
         await fetch('/api/error-report', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          method: headers, { 'Content-Type': 'application/json' },
           body: JSON.stringify(error)
         });
       }

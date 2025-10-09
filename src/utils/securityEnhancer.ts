@@ -35,22 +35,22 @@ class SecurityEnhancer {
   constructor(config: SecurityConfig) {
     this.config = config;
     this.headers = this.generateSecurityHeaders();
-    this.init();
+      this.init();
   }
 
   private init(): void {
     this.setupSecurityHeaders();
-    this.setupCSP();
+      this.setupCSP();
     this.setupHSTS();
-    this.setupXSSProtection();
+      this.setupXSSProtection();
     this.setupClickjackingProtection();
-    this.setupContentTypeOptions();
+      this.setupContentTypeOptions();
     this.setupReferrerPolicy();
-    this.setupPermissionsPolicy();
+      this.setupPermissionsPolicy();
     this.setupCORS();
-    this.setupSecureCookies();
+      this.setupSecureCookies();
     this.setupInputValidation();
-    this.setupOutputEncoding();
+      this.setupOutputEncoding();
     this.setupSessionSecurity();
   }
 
@@ -267,7 +267,7 @@ class SecurityEnhancer {
   private setupInputValidation(): void {
     // Sanitize user inputs
     this.sanitizeInputs();
-    this.validateForms();
+      this.validateForms();
     this.preventXSS();
   }
 
@@ -405,7 +405,7 @@ class SecurityEnhancer {
   private setupSessionSecurity(): void {
     // Implement session security measures
     this.setupSessionTimeout();
-    this.setupConcurrentSessionLimit();
+      this.setupConcurrentSessionLimit();
     this.setupSessionRegeneration();
   }
 
@@ -430,7 +430,7 @@ class SecurityEnhancer {
   private handleSessionTimeout(): void {
     // Clear sensitive data
     localStorage.clear();
-    sessionStorage.clear();
+      sessionStorage.clear();
     
     // Redirect to login or show timeout message
     const timeoutMessage = document.createElement('div');

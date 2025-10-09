@@ -1,45 +1,38 @@
 'use client';
 import React from 'react';
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone, Link } from 'lucide-react';
 
 
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
     {
       icon: Receipt,
-      title: 'Smart Receipt Scanning',
-      description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
+      title: "Service",
+    description: "AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.",
       benefit: 'Save 8+ hours per month'
     },
       icon: TrendingUp,
-      title: 'Real-time Analytics',
-      description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
-      benefit: 'Reduce expenses by 25%'
-      icon: Brain,
-      title: 'AI Categorization',
-      description: 'Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.',
-      benefit: '99% accurate categorization'
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
-      benefit: 'Process expenses 5x faster'
-      icon: Target,
-      title: 'Budget Management',
-      description: 'Create and track budgets with AI-powered alerts and recommendations for better financial control.',
-      benefit: 'Stay within budget 90% of the time'
-      icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
+      title: "Service",
+    description: "Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.",
+      benefit: icon, Brain,
+      title: "Service",
+    description: "Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.",
+      benefit: icon, Zap,
+      title: "Service",
+    description: "Set up automated expense approval workflows, reimbursement processes, and compliance checks.",
+      benefit: icon, Target,
+      title: "Service",
+    description: "Create and track budgets with AI-powered alerts and recommendations for better financial control.",
+      benefit: icon, Shield,
+      title: "Service",
+    description: "Ensure compliance with tax regulations and company policies with automated checks and audit trails.",
       benefit: '100% compliance guarantee'
     }
   ];
 
   const pricingPlans = [
-      name: 'Personal',
-      price: '$9',
-      period: '/month',
-      description: 'Perfect for individuals',
+      name: "$9",
+      period: "Perfect for individuals",
       features: [
         'Unlimited receipts',
         'Basic AI categorization',
@@ -49,8 +42,7 @@ const ExpenseTrackerPage: React.FC = () => {
         '1 year data retention'
       ],
       popular: false
-      name: 'Business',
-      price: '$29',
+      name: "$29",
       description: 'Ideal for small businesses',
         'Up to 10 users',
         'Advanced AI features',
@@ -61,8 +53,7 @@ const ExpenseTrackerPage: React.FC = () => {
         'Advanced reporting',
         '2 years data retention'
       popular: true
-      name: 'Enterprise',
-      price: '$99',
+      name: "$99",
       description: 'For large organizations',
         'Unlimited users',
         'Premium AI features',
@@ -84,19 +75,13 @@ const ExpenseTrackerPage: React.FC = () => {
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
 
   const testimonials = [
-      name: 'Michael Johnson',
-      company: 'Small Business Owner',
-      role: 'CEO',
-      content: 'Expense Tracker saved me 10 hours per month on bookkeeping. The AI categorization is incredibly accurate.',
+      name: "Small Business Owner",
+      role: "Expense Tracker saved me 10 hours per month on bookkeeping. The AI categorization is incredibly accurate.",
       rating: 5
-      name: 'Sarah Williams',
-      company: 'Marketing Agency',
-      role: 'Finance Manager',
-      content: 'Our expense processing time dropped from 2 days to 2 hours. The automated workflows are game-changing.',
-      name: 'David Chen',
-      company: 'Consulting Firm',
-      role: 'Operations Director',
-      content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.',
+      name: "Marketing Agency",
+      role: "Our expense processing time dropped from 2 days to 2 hours. The automated workflows are game-changing.",
+      name: "Consulting Firm",
+      role: "The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.",
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

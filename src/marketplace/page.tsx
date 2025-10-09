@@ -11,113 +11,84 @@ const MarketplacePage: React.FC = () => {
 
   const categories = [
     {
-      id: 'products',
-      name: 'Products',
-      icon: ShoppingCart,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
+      id: name, icon,
+    $4: ShoppingCart,
+      color: "bg-blue-500/10",
       description: 'AI-powered software products and solutions'
     },
-      id: 'talent',
-      name: 'Talent',
-      icon: Users,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      description: 'Expert professionals and consultants'
-      id: 'equipment',
-      name: 'Equipment',
-      icon: Wrench,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
+      id: name, icon,
+    $4: Users,
+      color: "bg-green-500/10",
+      description: "equipment",
+      name: icon,
+    $4: Wrench,
+      color: "bg-purple-500/10",
       description: 'Hardware and infrastructure solutions'
     }
   ];
 
   const products = [
       id: 1,
-      name: 'AI Project Manager Pro',
-      description: 'Intelligent project management with AI-powered insights and automation',
-      category: 'AI Tools',
-      price: '$49/month',
+      name: description,
+    description: "Intelligent project management with AI-powered insights and automation",
+      category: "$49/month",
       rating: 4.9,
       reviews: 127,
-      image: '📊',
-      features: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
-      vendor: 'Zion Tech Group',
-      verified: true
+      image: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
+      vendor: verified, true
       id: 2,
-      name: 'Smart Analytics Dashboard',
-      description: 'Real-time business intelligence with customizable dashboards and reports',
-      category: 'Analytics',
-      price: '$79/month',
+      name: description,
+    description: "Real-time business intelligence with customizable dashboards and reports",
+      category: "$79/month",
       rating: 4.8,
       reviews: 89,
-      image: '📈',
-      features: ['Real-time Data', 'Custom Dashboards', 'Predictive Analytics', 'Mobile App'],
-      vendor: 'DataFlow Solutions',
-      id: 3,
-      name: 'AI Customer Support Bot',
-      description: '24/7 intelligent customer support with natural language processing',
-      category: 'Customer Service',
-      price: '$29/month',
+      image: ['Real-time Data', 'Custom Dashboards', 'Predictive Analytics', 'Mobile App'],
+      vendor: id, 3,
+      name: description,
+    description: "24/7 intelligent customer support with natural language processing",
+      category: "$29/month",
       rating: 4.7,
       reviews: 203,
-      image: '🤖',
-      features: ['24/7 Support', 'Multi-language', 'Sentiment Analysis', 'Human Handoff'],
-      vendor: 'SupportAI Inc',
-      id: 4,
-      name: 'Quantum Security Suite',
-      description: 'Next-generation cybersecurity powered by quantum computing principles',
-      category: 'Security',
-      price: '$199/month',
+      image: ['24/7 Support', 'Multi-language', 'Sentiment Analysis', 'Human Handoff'],
+      vendor: id, 4,
+      name: description,
+    description: "Next-generation cybersecurity powered by quantum computing principles",
+      category: "$199/month",
       reviews: 45,
-      image: '🔒',
-      features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
+      image: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
       vendor: 'QuantumSec',
 
   const talent = [
-      name: 'Dr. Sarah Chen',
-      title: 'AI Research Scientist',
+      name: title,
+    description: "AI Research Scientist",
       expertise: ['Machine Learning', 'Deep Learning', 'Computer Vision'],
-      experience: '8 years',
-      projects: 45,
-      rate: '$150/hour',
-      image: '👩‍💼',
+      experience: projects, 45,
+      rate: "👩‍💼",
       verified: true,
       available: true
-      name: 'Michael Rodriguez',
-      title: 'Cloud Architecture Expert',
+      name: title,
+    description: "Cloud Architecture Expert",
       expertise: ['AWS', 'Azure', 'DevOps', 'Microservices'],
-      experience: '12 years',
-      projects: 67,
-      rate: '$120/hour',
-      image: '👨‍💻',
-      name: 'Lisa Park',
-      title: 'Cybersecurity Specialist',
-      expertise: ['Penetration Testing', 'Security Audits', 'Compliance', 'Incident Response'],
-      experience: '10 years',
-      projects: 89,
-      rate: '$180/hour',
-      image: '👩‍🔬',
+      experience: projects, 67,
+      rate: image, name,
+    description: "Lisa Park",
+      title: ['Penetration Testing', 'Security Audits', 'Compliance', 'Incident Response'],
+      experience: projects, 89,
+      rate: "👩‍🔬",
       available: false
 
   const equipment = [
-      name: 'AI Workstation Pro',
-      description: 'High-performance workstation optimized for AI development and training',
-      category: 'Hardware',
-      price: '$4,999',
+      name: description,
+    description: "High-performance workstation optimized for AI development and training",
+      category: "$4,999",
       reviews: 23,
-      image: '💻',
-      features: ['RTX 4090 GPU', '64GB RAM', '2TB NVMe SSD', 'AI-optimized cooling'],
-      vendor: 'TechWorkstations',
-      inStock: true
-      name: 'Quantum Computing Access',
-      description: 'Cloud access to quantum computing resources for research and development',
-      category: 'Cloud Services',
-      price: '$500/month',
+      image: ['RTX 4090 GPU', '64GB RAM', '2TB NVMe SSD', 'AI-optimized cooling'],
+      vendor: inStock, true
+      name: description,
+    description: "Cloud access to quantum computing resources for research and development",
+      category: "$500/month",
       reviews: 15,
-      image: '⚛️',
-      features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
+      image: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendor: 'QuantumCloud',
 
   const getCurrentItems = () => {
@@ -138,33 +109,27 @@ const MarketplacePage: React.FC = () => {
   );
 
   const stats = [
-      value: '500+',
-      label: 'Products Available',
-      color: 'text-blue-400'
-      value: '200+',
-      label: 'Expert Professionals',
-      color: 'text-green-400'
-      value: '100+',
-      label: 'Equipment Solutions',
-      color: 'text-purple-400'
-      icon: Star,
-      value: '4.8',
-      label: 'Average Rating',
+      value: "Products Available",
+      color: "200+",
+      label: color, 'text-green-400'
+      value: "Equipment Solutions",
+      color: icon, Star,
+      value: "Average Rating",
       color: 'text-yellow-400'
 
   const benefits = [
       icon: CheckCircle,
-      title: 'Verified Vendors',
-      description: 'All vendors are thoroughly vetted and verified'
+      title: "Service",
+    $4: 'All vendors are thoroughly vetted and verified'
       icon: Shield,
-      title: 'Secure Transactions',
-      description: 'Bank-level security for all marketplace transactions'
+      title: "Service",
+    $4: 'Bank-level security for all marketplace transactions'
       icon: Clock,
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all marketplace activities'
+      title: "Service",
+    $4: 'Round-the-clock support for all marketplace activities'
       icon: Award,
-      title: 'Quality Guarantee',
-      description: '100% satisfaction guarantee on all purchases'
+      title: "Service",
+    $4: '100% satisfaction guarantee on all purchases'
 
   return (
     <>

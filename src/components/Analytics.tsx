@@ -42,8 +42,7 @@ const Analytics: React.FC = () => {
             
             if (window.gtag) {
               window.gtag('event', 'timing_complete', {
-                name: 'load',
-                value: Math.round(loadTime),
+                name: value, Math.round(loadTime),
               });
             }
           }

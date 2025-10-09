@@ -8,21 +8,21 @@ const DevOpsCICDPage: React.FC = () => {
   const features = [
     {
       icon: Settings,
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment pipelines',
+      title: "Service",
+    description: "Automated build, test, and deployment pipelines",
       benefits: ['Automated testing', 'Continuous deployment', 'Quality gates']
     },
       icon: Zap,
-      title: 'Infrastructure as Code',
-      description: 'Manage infrastructure through code and automation',
+      title: "Service",
+    description: "Manage infrastructure through code and automation",
       benefits: ['Version control', 'Reproducible environments', 'Cost optimization']
       icon: Shield,
-      title: 'Security Integration',
-      description: 'Built-in security scanning and compliance checks',
+      title: "Service",
+    description: "Built-in security scanning and compliance checks",
       benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Security gates']
       icon: BarChart,
-      title: 'Monitoring & Analytics',
-      description: 'Comprehensive monitoring and performance analytics',
+      title: "Service",
+    description: "Comprehensive monitoring and performance analytics",
       benefits: ['Real-time monitoring', 'Performance metrics', 'Alerting']
     }
   ];

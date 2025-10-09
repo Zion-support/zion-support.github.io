@@ -8,21 +8,21 @@ const ITInfrastructureDesignPage: React.FC = () => {
   const features = [
     {
       icon: Settings,
-      title: 'Infrastructure Design',
-      description: 'Custom IT infrastructure design and architecture',
+      title: "Service",
+    description: "Custom IT infrastructure design and architecture",
       benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
       icon: Target,
-      title: 'Capacity Planning',
-      description: 'Strategic capacity planning and resource allocation',
+      title: "Service",
+    description: "Strategic capacity planning and resource allocation",
       benefits: ['Growth planning', 'Resource optimization', 'Cost analysis']
       icon: BarChart,
-      title: 'Performance Analysis',
-      description: 'Comprehensive performance analysis and optimization',
+      title: "Service",
+    description: "Comprehensive performance analysis and optimization",
       benefits: ['Performance monitoring', 'Bottleneck identification', 'Optimization']
       icon: Shield,
-      title: 'Security Design',
-      description: 'Security-first infrastructure design principles',
+      title: "Service",
+    description: "Security-first infrastructure design principles",
       benefits: ['Security architecture', 'Compliance design', 'Risk mitigation']
     }
   ];

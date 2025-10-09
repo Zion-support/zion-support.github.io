@@ -43,8 +43,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
 export const _loggingMiddleware: Middleware = async (context, next) => {
   const _startTime = Date.now();
   logger.info('Request started', 'RequestMiddleware', {
-    component: 'RequestMiddleware',
-    method: context.request.method,
+    component: method, context.request.method,
     url: context.request.url
   });
   try {

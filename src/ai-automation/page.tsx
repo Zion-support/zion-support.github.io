@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
+import { Helmet, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -8,36 +7,34 @@ const AIAutomationPage: React.FC = () => {
   const features = [
     {
       icon: Settings,
-      title: 'Process Automation',
-      description: 'Intelligent automation of complex business processes with decision-making capabilities',
+      title: "Service",
+    description: "Intelligent automation of complex business processes with decision-making capabilities",
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
     },
     {
       icon: Zap,
-      title: 'Workflow Optimization',
-      description: 'AI-powered workflow analysis and optimization for maximum productivity',
+      title: "Service",
+    description: "AI-powered workflow analysis and optimization for maximum productivity",
       benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
     },
     {
       icon: Shield,
-      title: 'Decision Trees',
-      description: 'Advanced decision-making algorithms for complex business scenarios',
+      title: "Service",
+    description: "Advanced decision-making algorithms for complex business scenarios",
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
     {
       icon: Clock,
-      title: 'Exception Handling',
-      description: 'Intelligent handling of exceptions and edge cases in automated processes',
+      title: "Service",
+    description: "Intelligent handling of exceptions and edge cases in automated processes",
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$1,400',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      name: "$1,400",
+      period: "Perfect for small businesses",
       features: [
         'Up to 10 automated processes',
         'Basic AI decision making',
@@ -48,10 +45,8 @@ const AIAutomationPage: React.FC = () => {
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$2,800',
-      period: '/month',
-      description: 'Ideal for growing companies',
+      name: "$2,800",
+      period: "Ideal for growing companies",
       features: [
         'Up to 50 automated processes',
         'Advanced AI decision making',
@@ -63,10 +58,8 @@ const AIAutomationPage: React.FC = () => {
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$5,600',
-      period: '/month',
-      description: 'For large organizations',
+      name: "$5,600",
+      period: "For large organizations",
       features: [
         'Unlimited processes',
         'Premium AI features',

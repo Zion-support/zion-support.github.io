@@ -6,35 +6,27 @@ const ResearchDevelopmentPage: React.FC = () => {
 
   const _researchAreas = [
     {
-      id: 'ai',
-      name: 'Artificial Intelligence',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
+      id: name, icon,
+    $4: Brain,
+      color: "bg-purple-500/10",
       description: 'Advancing the frontiers of AI and machine learning'
     },
     {
-      id: 'quantum',
-      name: 'Quantum Computing',
-      icon: Atom,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
+      id: name, icon,
+    $4: Atom,
+      color: "bg-blue-500/10",
       description: 'Exploring quantum algorithms and quantum advantage'
     },
     {
-      id: 'autonomous',
-      name: 'Autonomous Systems',
-      icon: Rocket,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
+      id: name, icon,
+    $4: Rocket,
+      color: "bg-green-500/10",
       description: 'Developing self-managing and intelligent systems'
     },
     {
-      id: 'emerging',
-      name: 'Emerging Technologies',
-      icon: Lightbulb,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10',
+      id: name, icon,
+    $4: Lightbulb,
+      color: "bg-yellow-500/10",
       description: 'Researching next-generation technologies'
     }
   ];
@@ -42,12 +34,10 @@ const ResearchDevelopmentPage: React.FC = () => {
   const researchProjects = {
     ai: [
       {
-        title: 'Consensus Intelligence Framework',
-        description: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',
-        status: 'In Progress',
-        timeline: '2025-2026',
-        team: '12 Researchers',
-        funding: '$2.5M',
+        title: "Service",
+    description: "Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions",
+        status: "2025-2026",
+        team: "$2.5M",
         outcomes: [
           'Improved decision accuracy by 40%',
           'Reduced computational overhead by 30%',
@@ -57,12 +47,10 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-purple-400'
       },
       {
-        title: 'Autonomous Business Intelligence',
-        description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
-        status: 'Completed',
-        timeline: '2024-2025',
-        team: '8 Researchers',
-        funding: '$1.8M',
+        title: "Service",
+    description: "Creating self-managing business intelligence systems that adapt and optimize without human intervention",
+        status: "2024-2025",
+        team: "$1.8M",
         outcomes: [
           '95% automation of business processes',
           '300% improvement in decision speed',
@@ -72,12 +60,10 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-green-400'
       },
       {
-        title: 'Neural Architecture Search for Enterprise',
-        description: 'Developing automated neural architecture search specifically optimized for enterprise applications',
-        status: 'In Progress',
-        timeline: '2025-2027',
-        team: '15 Researchers',
-        funding: '$3.2M',
+        title: "Service",
+    description: "Developing automated neural architecture search specifically optimized for enterprise applications",
+        status: "2025-2027",
+        team: "$3.2M",
         outcomes: [
           '50% reduction in model development time',
           '25% improvement in model performance',
@@ -89,12 +75,10 @@ const ResearchDevelopmentPage: React.FC = () => {
     ],
     quantum: [
       {
-        title: 'Quantum Machine Learning Algorithms',
-        description: 'Developing quantum algorithms for machine learning that leverage quantum advantage',
-        status: 'In Progress',
-        timeline: '2025-2028',
-        team: '10 Researchers',
-        funding: '$4.1M',
+        title: "Service",
+    description: "Developing quantum algorithms for machine learning that leverage quantum advantage",
+        status: "2025-2028",
+        team: "$4.1M",
         outcomes: [
           'Quantum speedup demonstrated for specific problems',
           'Novel quantum ML algorithms developed',
@@ -104,12 +88,10 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-blue-400'
       },
       {
-        title: 'Quantum Error Correction for Business Applications',
-        description: 'Researching practical quantum error correction methods for commercial quantum computing',
-        status: 'Planning',
-        timeline: '2026-2029',
-        team: '12 Researchers',
-        funding: '$5.5M',
+        title: "Service",
+    description: "Researching practical quantum error correction methods for commercial quantum computing",
+        status: "2026-2029",
+        team: "$5.5M",
         outcomes: [
           'Improved quantum error rates',
           'Practical implementation strategies',
@@ -121,12 +103,10 @@ const ResearchDevelopmentPage: React.FC = () => {
     ],
     autonomous: [
       {
-        title: 'Autonomous Enterprise Operations',
-        description: 'Developing fully autonomous systems for enterprise operations and decision-making',
-        status: 'In Progress',
-        timeline: '2025-2027',
-        team: '20 Researchers',
-        funding: '$6.8M',
+        title: "Service",
+    description: "Developing fully autonomous systems for enterprise operations and decision-making",
+        status: "2025-2027",
+        team: "$6.8M",
         outcomes: [
           '90% reduction in manual operations',
           'Self-healing system capabilities',
@@ -136,12 +116,10 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-green-400'
       },
       {
-        title: 'Multi-Agent Coordination Systems',
-        description: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',
-        status: 'Completed',
-        timeline: '2023-2024',
-        team: '6 Researchers',
-        funding: '$1.2M',
+        title: "Service",
+    description: "Researching coordination mechanisms for multiple autonomous agents in complex environments",
+        status: "2023-2024",
+        team: "$1.2M",
         outcomes: [
           'Novel coordination algorithms developed',
           'Scalability demonstrated up to 1000 agents',
@@ -153,12 +131,10 @@ const ResearchDevelopmentPage: React.FC = () => {
     ],
     emerging: [
       {
-        title: 'Neuromorphic Computing for AI',
-        description: 'Exploring brain-inspired computing architectures for more efficient AI processing',
-        status: 'In Progress',
-        timeline: '2025-2028',
-        team: '14 Researchers',
-        funding: '$3.7M',
+        title: "Service",
+    description: "Exploring brain-inspired computing architectures for more efficient AI processing",
+        status: "2025-2028",
+        team: "$3.7M",
         outcomes: [
           'Novel neuromorphic algorithms',
           'Hardware-software co-design',
@@ -168,12 +144,10 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-yellow-400'
       },
       {
-        title: 'Edge AI for IoT Systems',
-        description: 'Developing ultra-efficient AI systems for edge computing and IoT applications',
-        status: 'Completed',
-        timeline: '2024-2025',
-        team: '8 Researchers',
-        funding: '$2.1M',
+        title: "Service",
+    description: "Developing ultra-efficient AI systems for edge computing and IoT applications",
+        status: "2024-2025",
+        team: "$2.1M",
         outcomes: [
           '10x reduction in power consumption',
           'Real-time processing capabilities',
@@ -187,59 +161,47 @@ const ResearchDevelopmentPage: React.FC = () => {
 
   const publications = [
     {
-      title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
-      authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',
-      journal: 'Nature Machine Intelligence',
-      year: '2025',
-      impact: 'High',
-      link: '#'
+      title: "Dr. Sarah Chen, Dr. Michael Rodriguez, et al.",
+      journal: "2025",
+      impact: link, '#'
     },
     {
-      title: 'Autonomous Business Process Optimization Using Reinforcement Learning',
-      authors: 'Dr. James Wilson, Dr. Lisa Park, et al.',
-      journal: 'Journal of Artificial Intelligence Research',
-      year: '2025',
-      impact: 'High',
-      link: '#'
+      title: "Dr. James Wilson, Dr. Lisa Park, et al.",
+      journal: "2025",
+      impact: link, '#'
     },
     {
-      title: 'Quantum Machine Learning for Financial Risk Assessment',
-      authors: 'Dr. Alex Kumar, Dr. Maria Santos, et al.',
-      journal: 'Quantum Information Processing',
-      year: '2024',
-      impact: 'Medium',
-      link: '#'
+      title: "Dr. Alex Kumar, Dr. Maria Santos, et al.",
+      journal: "2024",
+      impact: link, '#'
     },
     {
-      title: 'Multi-Agent Coordination in Distributed Systems',
-      authors: 'Dr. Robert Kim, Dr. Jennifer Lee, et al.',
-      journal: 'Nature Communications',
-      year: '2024',
-      impact: 'High',
-      link: '#'
+      title: "Dr. Robert Kim, Dr. Jennifer Lee, et al.",
+      journal: "2024",
+      impact: link, '#'
     }
   ];
 
   const achievements = [
     {
       icon: Award,
-      title: '50+ Research Papers',
-      description: 'Published in top-tier conferences and journals'
+      title: "Service",
+    $4: 'Published in top-tier conferences and journals'
     },
     {
       icon: Users,
-      title: '100+ Researchers',
-      description: 'World-class research team across multiple disciplines'
+      title: "Service",
+    $4: 'World-class research team across multiple disciplines'
     },
     {
       icon: Target,
-      title: '15+ Patents',
-      description: 'Innovative technologies and methodologies'
+      title: "Service",
+    $4: 'Innovative technologies and methodologies'
     },
     {
       icon: Globe,
-      title: 'Global Collaborations',
-      description: 'Partnerships with leading universities and research institutions'
+      title: "Service",
+    $4: 'Partnerships with leading universities and research institutions'
     }
   ];
 

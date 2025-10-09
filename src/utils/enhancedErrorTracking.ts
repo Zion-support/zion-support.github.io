@@ -24,7 +24,7 @@ class EnhancedErrorTracker {
   private sessionId: string;
   constructor() {
     this.sessionId = this.generateSessionId();
-    this.setupGlobalErrorHandler();
+      this.setupGlobalErrorHandler();
   }
   private generateSessionId(): string {
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
@@ -33,14 +33,12 @@ class EnhancedErrorTracker {
     if (typeof window !== 'undefined') {
       window.addEventListener('error', event => {
         this.trackError(event.error, {
-          component: 'Global',
-          action: 'Uncaught Error'
+          component: action, 'Uncaught Error'
         });
       });
       window.addEventListener('unhandledrejection', event => {
         this.trackError(new Error(event.reason), {
-          component: 'Global',
-          action: 'Unhandled Promise Rejection'
+          component: action, 'Unhandled Promise Rejection'
         });
       });
     }

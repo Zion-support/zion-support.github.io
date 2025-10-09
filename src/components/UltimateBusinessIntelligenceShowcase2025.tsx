@@ -6,43 +6,27 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
     {
-      id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
-      type: 'Blog Post',
-      category: 'blog',
-      metrics: {
-        roi: '30,000%',
-        efficiency: '500%',
-        accuracy: '99.9%',
-        timeline: '12 months'
+      id: title, description,
+    description: "Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.",
+      url: "Blog Post",
+      category: metrics, {
+        roi: "500%",
+        accuracy: timeline, '12 months'
       },
-      readingTime: '35 min read',
-      featured: true,
+      readingTime: featured, true,
       tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
-      id: 'fortune-500-business-intelligence-success',
-      title: 'Fortune 500 Ultimate Business Intelligence Success',
-      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-success',
-      type: 'Case Study',
-      category: 'case-study',
-        savings: '$750B',
-        company: '$15.2B',
-        timeline: '18 months'
-      readingTime: '25 min read',
-      tags: ['Fortune 500', 'Success Story', '30,000% ROI', 'Manufacturing', 'Case Study']
-      id: 'business-intelligence-implementation-guide',
-      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
-      description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
-      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
-      type: 'Implementation Guide',
-      category: 'resource',
-        success: '99.8%',
-        timeline: '18 months',
-        adoption: '100%'
-      readingTime: '45 min read',
-      tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
+      id: title, description,
+    description: "How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.",
+      url: "Case Study",
+      category: "$750B",
+        company: timeline, '18 months'
+      readingTime: tags, ['Fortune 500', 'Success Story', '30,000% ROI', 'Manufacturing', 'Case Study']
+      id: title, description,
+    description: "Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.",
+      url: "Implementation Guide",
+      category: "99.8%",
+        timeline: adoption, '100%'
+      readingTime: tags, ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
   ];
   const categories = [

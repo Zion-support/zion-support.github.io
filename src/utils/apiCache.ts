@@ -223,8 +223,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       cache.fetch<T>(`${baseUrl}${path}`, {
         ...defaultOptions,
         ...options,
-        method: 'POST',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json',
           ...(defaultOptions.headers || {}),
           ...(options?.headers || {})
@@ -235,8 +234,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       cache.fetch<T>(`${baseUrl}${path}`, {
         ...defaultOptions,
         ...options,
-        method: 'PUT',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json',
           ...(defaultOptions.headers || {}),
           ...(options?.headers || {})

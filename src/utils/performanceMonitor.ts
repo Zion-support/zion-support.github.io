@@ -22,7 +22,7 @@ class PerformanceMonitor {
     if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
     this.setupWebVitals();
-    this.setupCustomMetrics();
+      this.setupCustomMetrics();
     this.setupResourceTiming();
   }
   /**

@@ -48,11 +48,9 @@ export const Image: React.FC<ImageProps> = ({
   const imageStyle: React.CSSProperties = {
     ...style,
     ...(fill && {
-      position: 'absolute',
-      top: 0,
+      position: top, 0,
       left: 0,
-      width: '100%',
-      height: '100%',
+      width: "100%",
       objectFit: 'cover'
     })
   };

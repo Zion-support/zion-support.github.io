@@ -90,11 +90,11 @@ export const _usePerformanceMonitoring = () => {
       // Cleanup
       return () => {
         lcpObserver.disconnect();
-        fidObserver.disconnect();
+      fidObserver.disconnect();
         clsObserver.disconnect();
-        fcpObserver.disconnect();
+      fcpObserver.disconnect();
         navigationObserver.disconnect();
-        resourceObserver.disconnect();
+      resourceObserver.disconnect();
       };
     } catch (error) {
       return () => {};

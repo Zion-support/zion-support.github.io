@@ -45,15 +45,15 @@ class AccessibilityEnhancer {
     if (typeof window === 'undefined') return;
 
     this.setupKeyboardNavigation();
-    this.setupScreenReaderSupport();
+      this.setupScreenReaderSupport();
     this.setupHighContrastMode();
-    this.setupFocusManagement();
+      this.setupFocusManagement();
     this.setupReducedMotion();
-    this.setupColorBlindSupport();
+      this.setupColorBlindSupport();
     this.setupVoiceControl();
-    this.auditAccessibility();
+      this.auditAccessibility();
     this.optimizeImages();
-    this.optimizeForms();
+      this.optimizeForms();
     this.optimizeHeadings();
   }
 
@@ -352,9 +352,9 @@ class AccessibilityEnhancer {
 
   private auditAccessibility(): void {
     this.checkHeadingStructure();
-    this.checkColorContrast();
+      this.checkColorContrast();
     this.checkAltTextCoverage();
-    this.checkKeyboardAccessibility();
+      this.checkKeyboardAccessibility();
     this.checkScreenReaderCompatibility();
   }
 

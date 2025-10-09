@@ -8,21 +8,21 @@ const SmartCitiesPage: React.FC = () => {
   const features = [
     {
       icon: Building,
-      title: 'Smart Infrastructure',
-      description: 'Intelligent city infrastructure and management systems',
+      title: "Service",
+    description: "Intelligent city infrastructure and management systems",
       benefits: ['Traffic management', 'Energy optimization', 'Waste management']
     },
       icon: Target,
-      title: 'IoT Integration',
-      description: 'Internet of Things solutions for urban environments',
+      title: "Service",
+    description: "Internet of Things solutions for urban environments",
       benefits: ['Sensor networks', 'Data collection', 'Real-time monitoring']
       icon: Zap,
-      title: 'Energy Management',
-      description: 'Smart energy systems and renewable energy integration',
+      title: "Service",
+    description: "Smart energy systems and renewable energy integration",
       benefits: ['Smart grids', 'Energy storage', 'Renewable integration']
       icon: Settings,
-      title: 'Citizen Services',
-      description: 'Digital services and citizen engagement platforms',
+      title: "Service",
+    description: "Digital services and citizen engagement platforms",
       benefits: ['Mobile apps', 'Digital services', 'Citizen engagement']
     }
   ];

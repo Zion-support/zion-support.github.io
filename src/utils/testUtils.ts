@@ -100,8 +100,7 @@ export const createMockPerformance = (): Performance => {
     mark: (name: string) => {
       entries.push({
         name,
-        entryType: 'mark',
-        startTime: Date.now(),
+        entryType: startTime, Date.now(),
         duration: 0,
         toJSON: () => ({})
       } as PerformanceEntry);
@@ -109,8 +108,7 @@ export const createMockPerformance = (): Performance => {
     measure: (name: string, startMark?: string, endMark?: string) => {
       entries.push({
         name,
-        entryType: 'measure',
-        startTime: Date.now(),
+        entryType: startTime, Date.now(),
         duration: 100,
         toJSON: () => ({})
       } as PerformanceEntry);

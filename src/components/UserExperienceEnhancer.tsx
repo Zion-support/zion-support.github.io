@@ -140,29 +140,25 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 25
+                event_category: value, 25
               });
             }
           } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 50
+                event_category: value, 50
               });
             }
           } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 75
+                event_category: value, 75
               });
             }
           } else if (maxScrollDepth >= 90) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 90
+                event_category: value, 90
               });
             }
           }
@@ -175,8 +171,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         const timeOnPage = Math.round((Date.now() - startTime) / 1000);
         if ('gtag' in window) {
           (window as any).gtag('event', 'timing_complete', {
-            name: 'time_on_page',
-            value: timeOnPage,
+            name: value, timeOnPage,
             event_category: 'engagement'
           });
         }
@@ -223,16 +218,14 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             if ('gtag' in window) {
               (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
+                name: value, Math.round(entry.startTime),
                 event_category: 'Performance'
               });
             }
           } else if (entry.entryType === 'first-input') {
             if ('gtag' in window) {
               (window as any).gtag('event', 'web_vitals', {
-                name: 'FID',
-                value: Math.round(entry.processingStart - entry.startTime),
+                name: value, Math.round(entry.processingStart - entry.startTime),
                 event_category: 'Performance'
               });
             }
@@ -240,8 +233,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
             if (!(entry as any).hadRecentInput) {
               if ('gtag' in window) {
                 (window as any).gtag('event', 'web_vitals', {
-                  name: 'CLS',
-                  value: Math.round((entry as any).value * 1000),
+                  name: value, Math.round((entry as any).value * 1000),
                   event_category: 'Performance'
                 });
               }

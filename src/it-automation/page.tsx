@@ -8,21 +8,21 @@ const ITAutomationPage: React.FC = () => {
   const features = [
     {
       icon: Settings,
-      title: 'Process Automation',
-      description: 'Automate repetitive IT processes and workflows',
+      title: "Service",
+    description: "Automate repetitive IT processes and workflows",
       benefits: ['Workflow automation', 'Task scheduling', 'Process optimization']
     },
       icon: Zap,
-      title: 'Infrastructure Automation',
-      description: 'Automate infrastructure provisioning and management',
+      title: "Service",
+    description: "Automate infrastructure provisioning and management",
       benefits: ['Auto-provisioning', 'Configuration management', 'Scaling']
       icon: Shield,
-      title: 'Security Automation',
-      description: 'Automated security monitoring and response',
+      title: "Service",
+    description: "Automated security monitoring and response",
       benefits: ['Threat detection', 'Automated response', 'Compliance']
       icon: BarChart,
-      title: 'Monitoring Automation',
-      description: 'Automated monitoring and alerting systems',
+      title: "Service",
+    description: "Automated monitoring and alerting systems",
       benefits: ['Auto-monitoring', 'Smart alerts', 'Performance tracking']
     }
   ];

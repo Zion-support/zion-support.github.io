@@ -10,28 +10,22 @@ const GreenITPage: React.FC = () => {
 
   const tabs = [
     {
-      id: 'solutions',
-      name: 'Green Solutions',
-      icon: Leaf,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
+      id: name, icon,
+    $4: Leaf,
+      color: bgColor, 'bg-green-500/10'
     },
-      id: 'benefits',
-      name: 'Benefits',
-      icon: Target,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
-      id: 'certifications',
-      name: 'Certifications',
-      icon: Award,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
+      id: name, icon,
+    $4: Target,
+      color: bgColor, 'bg-blue-500/10'
+      id: name, icon,
+    $4: Award,
+      color: bgColor, 'bg-yellow-500/10'
     }
   ];
 
   const greenSolutions = [
-      title: 'Energy-Efficient Data Centers',
-      description: 'Design and implement energy-efficient data centers with renewable energy integration',
+      title: "Service",
+    description: "Design and implement energy-efficient data centers with renewable energy integration",
       icon: Zap,
       features: [
         'PUE (Power Usage Effectiveness) optimization',
@@ -39,126 +33,107 @@ const GreenITPage: React.FC = () => {
         'Cooling system optimization',
         'Smart power management'
       ],
-      impact: 'Reduce energy consumption by up to 40%',
-      pricing: 'Starting at $2,500/month'
-      title: 'Cloud Carbon Footprint Reduction',
-      description: 'Optimize cloud infrastructure to minimize carbon emissions and environmental impact',
-      icon: Cloud,
-        'Carbon footprint monitoring',
+      impact: pricing, 'Starting at $2,500/month'
+      title: "Service",
+    description: "Optimize cloud infrastructure to minimize carbon emissions and environmental impact",
+      icon: "Carbon footprint monitoring",
         'Green cloud migration',
         'Resource optimization',
         'Renewable energy sourcing'
-      impact: 'Reduce carbon footprint by up to 60%',
-      pricing: 'Starting at $1,800/month'
-      title: 'Sustainable IT Asset Management',
-      description: 'Implement circular economy principles for IT equipment lifecycle management',
-      icon: Recycle,
-        'Equipment refurbishment',
+      impact: pricing, 'Starting at $1,800/month'
+      title: "Service",
+    description: "Implement circular economy principles for IT equipment lifecycle management",
+      icon: "Equipment refurbishment",
         'Responsible disposal',
         'Asset tracking and optimization',
         'Circular economy implementation'
-      impact: 'Extend equipment lifecycle by 50%',
-      pricing: 'Starting at $1,200/month'
-      title: 'Green Software Development',
-      description: 'Develop energy-efficient software applications and optimize existing systems',
+      impact: pricing, 'Starting at $1,200/month'
+      title: "Service",
+    description: "Develop energy-efficient software applications and optimize existing systems",
       icon: Code,
       color: 'text-purple-400',
         'Energy-efficient coding practices',
         'Performance optimization',
         'Resource usage monitoring',
         'Sustainable architecture design'
-      impact: 'Reduce software energy consumption by 30%',
-      pricing: 'Starting at $1,500/month'
-      title: 'Remote Work Infrastructure',
-      description: 'Enable sustainable remote work with optimized digital infrastructure',
+      impact: pricing, 'Starting at $1,500/month'
+      title: "Service",
+    description: "Enable sustainable remote work with optimized digital infrastructure",
       icon: Users,
       color: 'text-cyan-400',
         'Virtual desktop infrastructure',
         'Collaboration tools optimization',
         'Energy-efficient hardware',
         'Digital workspace management'
-      impact: 'Reduce commuting emissions by 80%',
-      pricing: 'Starting at $800/month'
-      title: 'Environmental Monitoring',
-      description: 'Real-time monitoring and reporting of environmental impact metrics',
+      impact: pricing, 'Starting at $800/month'
+      title: "Service",
+    description: "Real-time monitoring and reporting of environmental impact metrics",
       icon: Globe,
       color: 'text-emerald-400',
         'Carbon footprint tracking',
         'Energy consumption monitoring',
         'Sustainability reporting',
         'Environmental compliance'
-      impact: 'Achieve 100% environmental transparency',
-      pricing: 'Starting at $600/month'
+      impact: pricing, 'Starting at $600/month'
 
   const benefits = [
       icon: TrendingUp,
-      title: 'Cost Savings',
-      description: 'Reduce operational costs through energy efficiency and resource optimization',
+      title: "Service",
+    description: "Reduce operational costs through energy efficiency and resource optimization",
       details: [
         'Up to 40% reduction in energy costs',
         'Lower maintenance and replacement costs',
         'Improved resource utilization',
         'Reduced waste management costs'
       ]
-      title: 'Environmental Impact',
-      description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
+      title: "Service",
+    $4: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
         '60% reduction in carbon emissions',
         '50% less electronic waste',
         '100% renewable energy options',
         'Carbon neutral operations'
-      title: 'Compliance & Certification',
-      description: 'Meet environmental regulations and achieve sustainability certifications',
+      title: "Service",
+    description: "Meet environmental regulations and achieve sustainability certifications",
         'ISO 14001 environmental management',
         'LEED certification support',
         'Carbon Trust certification',
         'ESG reporting compliance'
-      title: 'Brand Reputation',
-      description: 'Enhance your brand image and attract environmentally conscious customers',
+      title: "Service",
+    description: "Enhance your brand image and attract environmentally conscious customers",
         'Improved brand perception',
         'Customer loyalty increase',
         'Investor confidence boost',
         'Talent attraction and retention'
 
   const certifications = [
-      name: 'ISO 14001:2015',
-      description: 'Environmental Management Systems',
-      status: 'Certified'
-      name: 'LEED Platinum',
-      description: 'Leadership in Energy and Environmental Design',
-      name: 'Carbon Trust Standard',
-      description: 'Carbon Footprint Management',
-      name: 'Green IT Certification',
-      description: 'Sustainable IT Practices',
+      name: description,
+    description: "Environmental Management Systems",
+      status: name, description,
+    description: "Leadership in Energy and Environmental Design",
+      name: description,
+    description: "Carbon Footprint Management",
+      name: description,
+    description: "Sustainable IT Practices",
 
   const stats = [
-      value: '60%',
-      label: 'Carbon Footprint Reduction',
-      color: 'text-green-400'
-      value: '40%',
-      label: 'Energy Cost Savings',
-      color: 'text-yellow-400'
-      value: '50%',
-      label: 'Waste Reduction',
-      color: 'text-blue-400'
-      value: '100%',
-      label: 'Renewable Energy Options',
-      color: 'text-purple-400'
+      value: "Carbon Footprint Reduction",
+      color: "40%",
+      label: color, 'text-yellow-400'
+      value: "Waste Reduction",
+      color: "100%",
+      label: color, 'text-purple-400'
 
   const caseStudies = [
-      company: 'TechCorp Manufacturing',
-      industry: 'Manufacturing',
-      challenge: 'High energy consumption in data centers',
-      solution: 'Implemented energy-efficient data center design with renewable energy integration',
+      company: "Manufacturing",
+      challenge: "Implemented energy-efficient data center design with renewable energy integration",
       results: [
         '45% reduction in energy consumption',
         '$2.3M annual cost savings',
         'Carbon neutral operations achieved',
         'LEED Platinum certification obtained'
       icon: Factory,
-      company: 'FinanceFirst Bank',
-      industry: 'Financial Services',
-      challenge: 'Large carbon footprint from IT operations',
-      solution: 'Green cloud migration and sustainable IT asset management',
+      company: "Financial Services",
+      challenge: "Green cloud migration and sustainable IT asset management",
         '55% reduction in carbon emissions',
         '60% improvement in energy efficiency',
         'ISO 14001 certification achieved',

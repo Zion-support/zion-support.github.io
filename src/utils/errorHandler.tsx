@@ -234,8 +234,7 @@ export class ErrorHandler {
     if (!this.config.reportEndpoint) return;
     try {
       await fetch(this.config.reportEndpoint, {
-        method: 'POST',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(error)
@@ -249,8 +248,7 @@ export class ErrorHandler {
     if (!this.config.reportEndpoint) return;
     try {
       await fetch(this.config.reportEndpoint, {
-        method: 'POST',
-        headers: {
+        method: headers, {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -455,12 +453,9 @@ export class ErrorBoundary extends React.Component<
           <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{
-                padding: '10px 20px',
-                backgroundColor: '#007bff',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer'
+                padding: "#007bff",
+                color: "none",
+                borderRadius: cursor, 'pointer'
               }}
             >
               Try again

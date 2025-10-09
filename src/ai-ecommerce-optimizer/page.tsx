@@ -8,21 +8,21 @@ const AIEcommerceOptimizerPage: React.FC = () => {
   const features = [
     {
       icon: ShoppingCart,
-      title: 'E-commerce Optimization',
-      description: 'AI-powered e-commerce optimization and enhancement',
+      title: "Service",
+    description: "AI-powered e-commerce optimization and enhancement",
       benefits: ['Conversion optimization', 'User experience', 'Performance tuning']
     },
       icon: Target,
-      title: 'Product Recommendations',
-      description: 'Intelligent product recommendation engine',
+      title: "Service",
+    description: "Intelligent product recommendation engine",
       benefits: ['Personalized recommendations', 'Cross-selling', 'Upselling']
       icon: Zap,
-      title: 'Automated Marketing',
-      description: 'Automated e-commerce marketing campaigns',
+      title: "Service",
+    description: "Automated e-commerce marketing campaigns",
       benefits: ['Email marketing', 'Retargeting', 'Promotional campaigns']
       icon: Settings,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive e-commerce analytics and insights',
+      title: "Service",
+    description: "Comprehensive e-commerce analytics and insights",
       benefits: ['Sales analytics', 'Customer behavior', 'Performance metrics']
     }
   ];
