@@ -956,8 +956,6 @@ const HomePage: React.FC = () => {
               </Suspense>
             </div>
           </section>
-              </Suspense>
-            </div>
 
           {/* Micro SAAS Services Section */}
           <section className="mb-16" aria-labelledby="micro-saas-heading">
@@ -2024,7 +2022,6 @@ const HomePage: React.FC = () => {
                 </Suspense>
               ))}
             </div>
-          </div>
 
           {/* IT Services & Infrastructure */}
           <div className="mb-12">
@@ -2391,21 +2388,21 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
-        </section>
-        {/* Micro SAAS Solutions Section */}
-        <section className="mb-16" aria-labelledby="micro-saas-heading">
-          <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Micro SAAS Solutions
-          </h2>
-          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
-          </p>
-          {/* Productivity Tools */}
-          <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Productivity & Business Tools
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+
+          {/* Micro SAAS Solutions Section */}
+          <section className="mb-16" aria-labelledby="micro-saas-heading">
+            <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              Micro SAAS Solutions
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+              Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
+            </p>
+            {/* Productivity Tools */}
+            <div className="mb-12">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
+                Productivity & Business Tools
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Writing Assistant</h3>
@@ -2633,6 +2630,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentStatistics />
@@ -2648,16 +2646,13 @@ const HomePage: React.FC = () => {
         {/* Newsletter Signup */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
+        </Suspense>
+      </main>
 
-
-
-
-
-
-      
-      {/* Enhanced Components */}
-      <EnhancedPerformanceMonitor />
-      <EnhancedAccessibility />
-    </EnhancedErrorBoundary>
+      <Footer />
+    </div>
+    </>
+  );
+};
 
 
