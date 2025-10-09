@@ -41,13 +41,13 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
       title: 'Web Development',
       description: 'Generate full-stack web applications and APIs',
       icon: '🌐',
-      examples: ['React components', 'Express APIs', 'Database schemas', 'Authentication systems']}
+      examples: ['React components', 'Express APIs', 'Database schemas', 'Authentication systems']
     },
     {
       title: 'Mobile Development',
       description: 'Create mobile apps for iOS and Android',
       icon: '📱',
-      examples: ['React Native apps', 'Flutter widgets', 'Native iOS code', 'Android components']}
+      examples: ['React Native apps', 'Flutter widgets', 'Native iOS code', 'Android components']
     },
     {
       title: 'Data Science',
