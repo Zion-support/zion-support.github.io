@@ -1,16 +1,15 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+'use client'
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
+import { Phone, Mail } from 'lucide-react';
 
-const AiWorkflowAutomationPage: React.FC = () => {
+const AiWorkflowAutomationPage: React.FC = React.memo((props) => {
   return (
     <>
       <SEOOptimizer
         title="AiWorkflowAutomation - Zion Tech Group"
-        description="Professional AI and IT ai-workflow-automations for your business transformation."
+        description="Professional AI and IT ai-workflow-automations for your business transformation."}
         keywords={['AI services', 'IT solutions', 'business transformation']}
         canonicalUrl="https://ziontechgroup.com/service"
       />
@@ -22,7 +21,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
             <div className="relative z-10 py-16 px-4">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"><span className="sr-only">Screen reader: </span>
                   Service
                 </span>
               </h1>
@@ -33,13 +32,17 @@ const AiWorkflowAutomationPage: React.FC = () => {
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-                >
+                 aria-label="
+                  Get Started Today
+                ">
                   Get Started Today
                 </a>
                 <a
                   href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-                >
+                 aria-label="
+                  Contact Us
+                ">
                   Contact Us
                 </a>
               </div>
@@ -75,7 +78,6 @@ const AiWorkflowAutomationPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default PageComponent;
+  )
+}
+export default PageComponent

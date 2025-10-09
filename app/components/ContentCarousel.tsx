@@ -1,7 +1,5 @@
-'use client';
-import React from 'react';
-
-const ContentCarousel: React.FC = () => {
+'use client'
+const ContentCarousel: React.FC = React.memo((props) => {
   return (
     <div className="py-8">
       <div className="container mx-auto px-4">
@@ -11,7 +9,6 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContentCarousel;
+  );}
+}
+export default ContentCarousel
