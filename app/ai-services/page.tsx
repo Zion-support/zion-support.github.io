@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, TrendingUp } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -625,7 +625,6 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = [...new Set(aiServices.map(service => service.category))];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

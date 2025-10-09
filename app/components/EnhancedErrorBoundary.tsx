@@ -141,25 +141,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
       .catch(() => {
         // eslint-disable-next-line no-console
-<<<<<<< HEAD
-        console.warn('Failed to copy error details');
-      });
-  };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-=======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
         console.error('Failed to copy error details');
       });
   };
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2152
   render() {
     if (this.state.hasError) {
@@ -168,26 +156,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      const canRetry = retryCount < this.maxRetries;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
       const canRetry = retryCount < this.maxRetries;
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
       const canRetry = retryCount < this.maxRetries;
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-2152
