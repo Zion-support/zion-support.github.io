@@ -60,6 +60,14 @@ const Navigation: React.FC = () => {
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
+        { name: 'AI Video Generation', path: '/ai-video-generation', description: 'AI video creation' },
+        { name: 'AI Music Composition', path: '/ai-music-composition', description: 'AI music generation' },
+        { name: 'AI Fashion Design', path: '/ai-fashion-design', description: 'AI fashion solutions' },
+        { name: 'AI Fitness Coach', path: '/ai-fitness-coach', description: 'AI fitness coaching' },
+        { name: 'AI Scheduler', path: '/ai-scheduler', description: 'AI scheduling automation' },
+        { name: 'AI Voice Cloning', path: '/ai-voice-cloning', description: 'AI voice synthesis' },
+        { name: 'AI Writing Assistant', path: '/ai-writing-assistant', description: 'AI writing support' },
+        { name: 'AI 3D Generation', path: '/ai-3d-generation', description: 'AI 3D model creation' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
         { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
         { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
@@ -130,7 +138,14 @@ const Navigation: React.FC = () => {
         { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
         { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' },
+        { name: 'AI Task Manager Pro', path: '/task-manager-pro', description: 'AI-powered task management' },
+        { name: 'AI Expense Tracker', path: '/expense-tracker', description: 'Smart expense management' },
+        { name: 'AI Marketing Tools', path: '/marketing-tools', description: 'Complete marketing suite' },
+        { name: 'AI Productivity Suite', path: '/productivity', description: 'AI productivity tools' },
+        { name: 'AI Developer Tools', path: '/developer-tools', description: 'AI development assistance' },
+        { name: 'AI Analytics Tools', path: '/analytics-tools', description: 'Advanced analytics platform' },
+        { name: 'AI Business Apps', path: '/business-apps', description: 'AI business applications' }
       ]
     },
     {
@@ -151,7 +166,10 @@ const Navigation: React.FC = () => {
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
         { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
-        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
+        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' },
+        { name: 'Compliance Solutions', path: '/compliance', description: 'Regulatory compliance' },
+        { name: 'Enterprise Solutions', path: '/enterprise', description: 'Large-scale implementations' },
+        { name: 'Consultation Services', path: '/consultation', description: 'Expert consulting' }
       ]
     }
   ];

@@ -15,6 +15,14 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
+    { name: 'AI Video Generation', url: '/ai-video-generation', description: 'AI video creation' },
+    { name: 'AI Music Composition', url: '/ai-music-composition', description: 'AI music generation' },
+    { name: 'AI Fashion Design', url: '/ai-fashion-design', description: 'AI fashion solutions' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'AI fitness coaching' },
+    { name: 'AI Scheduler', url: '/ai-scheduler', description: 'AI scheduling automation' },
+    { name: 'AI Voice Cloning', url: '/ai-voice-cloning', description: 'AI voice synthesis' },
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI writing support' },
+    { name: 'AI 3D Generation', url: '/ai-3d-generation', description: 'AI 3D model creation' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
     { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
     { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
@@ -74,7 +82,14 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Deep customer insights' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
     { name: 'AI A/B Testing Platform', url: '/ai-ab-testing', description: 'Advanced A/B testing' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Future outcome predictions' }
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Future outcome predictions' },
+    { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'AI-powered task management' },
+    { name: 'AI Expense Tracker', url: '/expense-tracker', description: 'Smart expense management' },
+    { name: 'AI Marketing Tools', url: '/marketing-tools', description: 'Complete marketing suite' },
+    { name: 'AI Productivity Suite', url: '/productivity', description: 'AI productivity tools' },
+    { name: 'AI Developer Tools', url: '/developer-tools', description: 'AI development assistance' },
+    { name: 'AI Analytics Tools', url: '/analytics-tools', description: 'Advanced analytics platform' },
+    { name: 'AI Business Apps', url: '/business-apps', description: 'AI business applications' }
   ];
 
   const emergingTech = [
@@ -89,7 +104,10 @@ const Footer: React.FC = memo(() => {
     { name: 'Digital Transformation', url: '/digital-transformation', description: 'Business modernization' },
     { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
-    { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
+    { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' },
+    { name: 'Compliance Solutions', url: '/compliance', description: 'Regulatory compliance' },
+    { name: 'Enterprise Solutions', url: '/enterprise', description: 'Large-scale implementations' },
+    { name: 'Consultation Services', url: '/consultation', description: 'Expert consulting' }
   ];
 
   const companyLinks = [
