@@ -11,15 +11,19 @@ const AboutPage: React.FC = () => {
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.',
     },
+    {
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',
       bio: 'Technical expert specializing in machine learning and cloud architecture.',
+    },
+    {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-import { Users, Target, Brain, Shield } from 'lucide-react';
+    }
+  ];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -29,35 +33,48 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
   ];
 
   const values = [
+    {
       icon: Brain,
       title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+    },
+    {
       icon: Shield,
       title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.',
+      description: 'Your data and systems are protected with enterprise-grade security measures.'
+    },
+    {
       icon: Target,
       title: 'Results',
-      description: 'We focus on delivering measurable business outcomes and ROI.',
+      description: 'We focus on delivering measurable business outcomes and ROI.'
+    },
+    {
       icon: Users,
       title: 'Partnership',
-      description: 'We work closely with our clients as strategic technology partners.',
-
-    { number: '150+', label: 'Happy Clients' },
-    { number: '99%', label: 'Client Satisfaction' },
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
-      title: 'Excellence',
-      description: 'We deliver solutions that exceed expectations and drive real business value.'
-      title: 'Integrity',
-      description: 'We maintain the highest ethical standards in all our business practices.'
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners in their success.'
+      description: 'We work closely with our clients as strategic technology partners.'
     }
+  ];
 
   const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      image: '/images/team/sarah.jpg',
       bio: 'Technical expert specializing in machine learning and cloud architecture.'
+    },
+    {
+      name: 'Michael Chen',
       role: 'Lead Developer',
+      image: '/images/team/michael.jpg',
       bio: 'Full-stack developer passionate about creating scalable solutions.'
+    }
+  ];
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>

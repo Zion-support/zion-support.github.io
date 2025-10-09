@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
-
-// Import enhancement utilities
-import {Routes, Route} from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -48,6 +45,7 @@ const LoadingSpinner: React.FC = () => (
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
     </div>
+  </div>
 );
 
 // AI Services Pages
@@ -171,10 +169,12 @@ const App: React.FC = () => {
             postalCode: '19709',
             addressCountry: 'US'
           }
+        },
         robots: 'index, follow',
         language: 'en',
         author: 'Zion Tech Group',
         publisher: 'Zion Tech Group'
+      });
 
       // Initialize accessibility enhancer
       const accessibilityEnhancer = new AccessibilityEnhancer({
@@ -185,6 +185,7 @@ const App: React.FC = () => {
         enableReducedMotion: true,
         enableColorBlindSupport: true,
         enableVoiceControl: true
+      });
 
       // Initialize security enhancer
       const securityEnhancer = new SecurityEnhancer({
@@ -197,6 +198,7 @@ const App: React.FC = () => {
         enablePermissionsPolicy: true,
         enableCORS: true,
         enableSecureCookies: true
+      });
 
       // Initialize UX enhancer
       const uxEnhancer = new UserExperienceEnhancer({
@@ -210,6 +212,7 @@ const App: React.FC = () => {
         enablePushNotifications: false,
         enableDarkMode: true,
         enableAnimations: true
+      });
 
       setEnhancers({
         performance: performanceEnhancer,
@@ -217,6 +220,7 @@ const App: React.FC = () => {
         accessibility: accessibilityEnhancer,
         security: securityEnhancer,
         ux: uxEnhancer
+      });
 
       // Optimize for Core Web Vitals
       seoEnhancer.optimizeForCoreWebVitals();
@@ -224,12 +228,13 @@ const App: React.FC = () => {
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
         // Reports generated silently in development
+      }
 
       setIsInitialized(true);
     } catch {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-      // Continue even if enhancers fail
+    }
   };
 
   if (!isInitialized) {
@@ -310,6 +315,8 @@ const App: React.FC = () => {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
+  );
+};
 
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
@@ -323,5 +330,8 @@ const NotFoundPage: React.FC = () => (
       >
         Go Home
       </a>
+    </div>
+  );
+};
 
 export default App;
