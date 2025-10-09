@@ -2,20 +2,18 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-const ServicesPage: React.FC = () => {
-import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock from 'lucide-react';
+const ServicesPage: React.FC = () => {import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock from 'lucide-react';}
   const _aiServices = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Brain,
       title: 'AI Services',
       description: 'Comprehensive AI solutions for every business need',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       price: 'Starting at $1,500/month',
-      popular: true
+      popular: true;
     },
       icon: Zap,
       title: 'AI Automation',
@@ -67,7 +65,7 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
   const stats = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { number: '500+', label: 'Projects Completed' },
     { number: '100+', label: 'Happy Clients' },
@@ -90,16 +88,7 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
         <h1 className="text-4xl font-bold text-white mb-4">Services</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced services solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us
-        
-          
-          
-          
-          
-          
-          
-          
-          
+// Contact Us;
           </a>
       </div>
   );

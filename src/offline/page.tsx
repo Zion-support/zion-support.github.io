@@ -1,15 +1,13 @@
 
 'use client';
 /**
- * Offline Page
- * Displayed when the user is offline and tries to access a page
+ * Offline Page;
+ * Displayed when the user is offline and tries to access a page;
  */
-const OfflinePage: React.FC = () => {
-const handleRetry = () => {
+const OfflinePage: React.FC = () => {const handleRetry = () => {}
     window.location.reload();
   };
-  const handleGoHome = () => {
-  // TODO: Add content
+  const handleGoHome = () => {// TODO: Add content;}
 }
     window.location.href = '/';
   return (
@@ -30,16 +28,7 @@ const handleRetry = () => {
           <WifiOff className="w-8 h-8 text-orange-400" />
         </div>
         <h1 className="text-2xl font-bold text-white mb-4">
-// You're Offline
-        
-          
-          
-          
-          
-          
-          
-          
-          
+// You're Offline;
           </h1>
         <p className="text-gray-300 mb-6">
           It looks like you're not connected to the internet. Please check your connection and try again.
@@ -59,25 +48,16 @@ const handleRetry = () => {
           
           
           <RefreshCw className="w-4 h-4" />
-// Try Again
-          
-          
-          
-          
-          
-          
-          
-          
-          
+// Try Again;
           </button>
 onClick={handleGoHome}
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20"
             <Home className="w-4 h-4" />
-            Go Home
+            Go Home;
         <div className="mt-6 text-sm text-gray-400">
           <p className="flex items-center justify-center gap-2">
             <Wifi className="w-4 h-4" />
-            Check your internet connection
+            Check your internet connection;
         <div className="mt-8 p-4 bg-black/20 rounded-lg">
           <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>
           <p className="text-xs text-gray-400">

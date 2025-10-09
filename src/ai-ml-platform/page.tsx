@@ -1,14 +1,12 @@
 import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star ,  Brain,  TrendingUp,  Users,  Clock,  Star from 'lucide-react';
+import {Brain, TrendingUp, Shield, BarChart, Users, Clock, Star, Star from 'lucide-react';}
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone } from 'lucide-react';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIMLPlatformPage: React.FC = () => {
-const features = [
-    {
-  // TODO: Add content
+const AIMLPlatformPage: React.FC = () => {const features = [}
+    {// TODO: Add content;}
 };
   icon: Brain,
       title: 'Complete ML Platform',
@@ -48,7 +46,7 @@ const features = [
         'White-label options',
         'API access'
   const stats = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
@@ -89,19 +87,10 @@ const features = [
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Contact Us;
           </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-Learn More
+Learn More;
           </div>
       <Footer />
   );

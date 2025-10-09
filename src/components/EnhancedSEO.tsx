@@ -1,6 +1,5 @@
 
-interface SEOProps {
-  // TODO: Add content
+interface SEOProps {// TODO: Add content;}
 }
   title?: string;
   description?: string;
@@ -20,17 +19,8 @@ interface SEOProps {
   section?: string;
   tags?: string[];
 }
-const EnhancedSEO: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <SEOProps> = ({
-  // TODO: Add content
+const EnhancedSEO: React.FC;
+          <SEOProps> = ({// TODO: Add content;}
 }
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
@@ -49,8 +39,7 @@ const EnhancedSEO: React.FC
 //   modifiedTime,
 //   section,
   tags = [],
-}) => {
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
+}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
     
@@ -77,13 +66,11 @@ const EnhancedSEO: React.FC
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map((tag, index) => ()
-        
+      {tags.length > 0 && tags.map((tag, index) => ()}
           <meta key={index} property="article:tag" content={tag} />
       ))}
       {/* Structured Data */}
-      {structuredData && ()
-        
+      {structuredData && ()}
           <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

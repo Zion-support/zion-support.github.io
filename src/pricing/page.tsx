@@ -1,15 +1,13 @@
 import React from 'react';
-import {  Zap,  Brain,  Cloud } from 'lucide-react';
-const PricingPage: React.FC = () => {
-  return (
+import { Zap, Brain, Cloud } from 'lucide-react';
+const PricingPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
   const _plans = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'Starter',
       price: '$299',
@@ -27,10 +25,9 @@ const PricingPage: React.FC = () => {
 //         'Monthly Reports',
 //         'Basic Integration'
 //       ],
-      popular: false
+      popular: false;
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'Professional',
       price: '$799',
@@ -50,10 +47,9 @@ const PricingPage: React.FC = () => {
 //         'Custom Integrations',
 //         'Training Sessions'
 //       ],
-      popular: true
+      popular: true;
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'Enterprise',
       price: '$1,999',
@@ -75,35 +71,32 @@ const PricingPage: React.FC = () => {
 //         'On-site Training',
 //         'SLA Guarantee'
 //       ],
-      popular: false
+      popular: false;
     }
   ];
   const addOns = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'AI Security Suite',
       price: '$199/month',
       description: 'Advanced security monitoring and compliance',
-      icon: Shield
+      icon: Shield;
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'Custom AI Development',
       price: '$150/hour',
       description: 'Bespoke AI solutions for unique requirements',
-      icon: Brain
+      icon: Brain;
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'Priority Support',
       price: '$99/month',
       description: '24/7 priority support and faster response times',
-      icon: Phone
+      icon: Phone;
     }
   ];
   return (
@@ -123,16 +116,7 @@ const PricingPage: React.FC = () => {
         <h1 className="text-4xl font-bold text-white mb-4">Pricing</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced pricing solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us
-        
-          
-          
-          
-          
-          
-          
-          
-          
+// Contact Us;
           </a>
       </div>
     </div>

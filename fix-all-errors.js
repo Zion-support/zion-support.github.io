@@ -3,9 +3,9 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix specific remaining issues
-function fixFinalIssues(content) {
-  // Fix malformed import statements with missing commas
+// Function to fix all remaining issues
+function fixAllIssues(content) {
+  // Fix duplicate imports with trailing comma and duplicates
   content = content.replace(
     /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
     (match, imports, source) => {
@@ -16,20 +16,6 @@ function fixFinalIssues(content) {
       const uniqueImports = [...new Set(importList)];
       
       return `import { ${uniqueImports.join(', ')} } from '${source}';`;
-    }
-  );
-  
-  // Fix malformed object literals that start with comma
-  content = content.replace(/\{\s*,/g, '{');
-  
-  // Fix missing closing braces in objects
-  content = content.replace(
-    /\{\s*([^}]+?)\s*$/gm,
-    (match, content) => {
-      if (!content.includes('}') && content.trim()) {
-        return `{${content.trim()}}`;
-      }
-      return match;
     }
   );
   
@@ -51,6 +37,20 @@ function fixFinalIssues(content) {
   content = content.replace(
     /return\s*\(<div[^>]*>([^<]+)<\/div>\s*\);\s*return\s*\(/g,
     'return ('
+  );
+  
+  // Fix objects that start with comma
+  content = content.replace(/\{\s*,/g, '{');
+  
+  // Fix missing closing braces in objects
+  content = content.replace(
+    /\{\s*([^}]+?)\s*$/gm,
+    (match, content) => {
+      if (!content.includes('}') && content.trim()) {
+        return `{${content.trim()}}`;
+      }
+      return match;
+    }
   );
   
   // Fix missing semicolons in JSX
@@ -75,29 +75,6 @@ function fixFinalIssues(content) {
     }
   );
   
-  // Fix specific patterns in blog files
-  content = content.replace(
-    /export\s+const\s+metadata\s*=\s*\{[^}]*\};\s*export\s+const\s+metadata\s*=\s*\{/g,
-    'export const metadata = {'
-  );
-  
-  // Fix malformed JSX attributes
-  content = content.replace(
-    /className="([^"]*)"\s*className="([^"]*)"/g,
-    'className="$1 $2"'
-  );
-  
-  // Fix missing closing parentheses
-  content = content.replace(
-    /(\w+)\s*=\s*\([^)]*$/gm,
-    (match, varName) => {
-      if (!match.includes(')')) {
-        return match + ')';
-      }
-      return match;
-    }
-  );
-  
   return content;
 }
 
@@ -108,7 +85,7 @@ function fixFile(filePath) {
     const originalContent = content;
     
     // Apply fixes
-    content = fixFinalIssues(content);
+    content = fixAllIssues(content);
     
     // Only write if content changed
     if (content !== originalContent) {

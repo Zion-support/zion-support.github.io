@@ -1,25 +1,22 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone,  BarChart,  Target,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
-import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone, Star from 'lucide-react';}
+import { BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIProjectManagerPage: React.FC = () => {
-  return (
+const AIProjectManagerPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
   const _features = [
-const AiProjectManagerPage: React.FC = () => {
-  return (
+const AiProjectManagerPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
   const features = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: BarChart,
       title: 'AI-Powered Planning',
@@ -59,7 +56,7 @@ const AiProjectManagerPage: React.FC = () => {
         'White-label options',
         'API access'
   const stats = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { icon: Users, value: '500+', label: 'Active Teams' },
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
@@ -100,19 +97,10 @@ const AiProjectManagerPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Contact Us;
           </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-Learn More
+Learn More;
           </div>
       <Footer />
   );

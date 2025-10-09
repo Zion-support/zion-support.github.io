@@ -1,10 +1,9 @@
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react';
-const Footer: React.FC = memo(() => {
-  const aiServices = [
-  // TODO: Add items
+import { Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+const Footer: React.FC = memo(() => {const aiServices = [}
+  // TODO: Add items;
 ];;
     { name: 'Machine Learning Solutions', url: '/ai-ml-solutions', description: 'Custom ML models and analytics' },
     { name: 'Natural Language Processing', url: '/ai-nlp', description: 'Advanced text analysis and understanding' },
@@ -16,7 +15,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI-powered content creation' }
   ];
   const itServices = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud migration, setup, and optimization' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' },
@@ -27,7 +26,7 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
     { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT support and maintenance' }
   const microSaasServices = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media management' },
@@ -38,7 +37,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoice creation' },
     { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' }
   const emergingTech = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
@@ -49,7 +48,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' }
   const companyLinks = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -58,7 +57,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Blog', url: '/blog' },
     { name: 'Contact', url: '/contact' }
   const supportLinks = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { name: 'Help Center', url: '/help' },
     { name: 'Documentation', url: '/docs' },
@@ -68,7 +67,7 @@ const Footer: React.FC = memo(() => {
     { name: 'System Requirements', url: '/requirements' },
     { name: 'Troubleshooting', url: '/troubleshooting' }
   const legalLinks = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
@@ -99,15 +98,15 @@ const Footer: React.FC = memo(() => {
               </p>
               {/* Contact Info */}
 <div className="space-y-3 mb-6"><div className="flex items-center space-x-3 text-gray-300"><Phone className="w-4 h-4 text-cyan-400" /><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                    +1 302 464-0950
+                    +1 302 464-0950;
                   </a></div><div className="flex items-center space-x-3 text-gray-300"><Mail className="w-4 h-4 text-cyan-400" /><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                    kleber@ziontechgroup.com
+                    kleber@ziontechgroup.com;
                   </a></div><div className="flex items-center space-x-3 text-gray-300"><MapPin className="w-4 h-4 text-cyan-400" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></div></div>
               {/* Social Links */}
               <div className="flex space-x-4"><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Facebook className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Linkedin className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Github className="w-5 h-5" /></a></div></div>
             {/* AI Services */}
             <div><h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3><ul className="space-y-3">
-                {aiServices.slice(0, 8).map((service, index) => (
+                {aiServices.slice(0, 8).map((service, index) => (}
 <li key={index}><Link
                       to={service.url} className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                     ><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -121,13 +120,13 @@ const Footer: React.FC = memo(() => {
                   </Link></li></ul></div>
             {/* IT Services */}
             <div><h3 className="text-lg font-semibold mb-6 text-blue-400 neon-text">IT Services</h3><ul className="space-y-3">
-                {itServices.slice(0, 8).map((service, index) => (
+                {itServices.slice(0, 8).map((service, index) => (}
 to={service.url} className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm group flex items-center"
                     to="/it-services" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm font-medium flex items-center"
                     View All IT Services →
             {/* Micro SAAS Solutions */}
             <div><h3 className="text-lg font-semibold mb-6 text-green-400 neon-text">Micro SAAS</h3><ul className="space-y-3">
-                {microSaasServices.slice(0, 8).map((service, index) => (
+                {microSaasServices.slice(0, 8).map((service, index) => (}
 to={service.url} className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm group flex items-center"
                     to="/micro-saas" className="text-green-400 hover:text-green-300 transition-colors duration-300 text-sm font-medium flex items-center"
                     View All Micro SAAS →
@@ -136,18 +135,18 @@ to={service.url} className="text-gray-300 hover:text-green-400 transition-colors
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Emerging Technologies */}
             <div><h3 className="text-lg font-semibold mb-6 text-purple-400 neon-text">Emerging Tech</h3><ul className="space-y-3">
-                {emergingTech.slice(0, 6).map((service, index) => (
+                {emergingTech.slice(0, 6).map((service, index) => (}
 to={service.url} className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm group flex items-center"
               </ul></div>
             {/* Company Links */}
             <div><h3 className="text-lg font-semibold mb-6 text-pink-400 neon-text">Company</h3><ul className="space-y-3">
-                {companyLinks.map((link, index) => (
+                {companyLinks.map((link, index) => (}
 to={link.url} className="text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm group flex items-center"
                       {link.name}
                     </Link></li>
             {/* Support Links */}
             <div><h3 className="text-lg font-semibold mb-6 text-orange-400 neon-text">Support</h3><ul className="space-y-3">
-                {supportLinks.map((link, index) => (
+                {supportLinks.map((link, index) => (}
 to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-sm group flex items-center"
               </ul></div></div>
           {/* Stats Section */}
@@ -156,8 +155,7 @@ to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors d
         <div className="border-t border-gray-700 bg-slate-800/30"><div className="container mx-auto px-4 py-6"><div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"><div className="text-gray-400 text-sm">
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div><div className="flex flex-wrap justify-center md:justify-end space-x-6">
-                {legalLinks.map((link, index) => ()
-                  
+                {legalLinks.map((link, index) => ()}
           <Link
                     key={index}
 to={link.url} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"

@@ -1,6 +1,5 @@
 import React from 'react';
-interface SkeletonProps {
-  // TODO: Add content
+interface SkeletonProps {// TODO: Add content;}
 }
   className?: string;
   width?: string | number;
@@ -8,25 +7,15 @@ interface SkeletonProps {
   rounded?: boolean;
   animated?: boolean;
 }
-const Skeleton: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <SkeletonProps> = ({
-  // TODO: Add content
+const Skeleton: React.FC;
+          <SkeletonProps> = ({// TODO: Add content;}
 }
   className = '',
 //   width,
 //   height,
   rounded = false,
-  animated = true
-}) => {
-const roundedClasses = rounded ? 'rounded' : '';
+  animated = true;
+}) => {const roundedClasses = rounded ? 'rounded' : '';}
   const animatedClasses = animated ? 'animate-pulse' : '';
   return (
     
@@ -80,8 +69,7 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
           
           </div>
 );
-export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
-  // TODO: Add content
+export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({// TODO: Add content;}
 }
   aspectRatio = '16/9'
 }) => (
@@ -108,11 +96,10 @@ export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
     ))}
   </div>
 );
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
-  // TODO: Add content
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({// TODO: Add content;}
 }
   rows = 5,
-  columns = 4
+  columns = 4;
 }) => (
 
           

@@ -1,5 +1,4 @@
-interface ServiceCardProps {
-  // TODO: Add content
+interface ServiceCardProps {// TODO: Add content;}
 };
   title: string;,
     description: string;
@@ -7,19 +6,10 @@ interface ServiceCardProps {
   className?: string;
 }
 /**
- * Reusable ServiceCard component with accessibility features
+ * Reusable ServiceCard component with accessibility features;
  */
-const ServiceCard: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <ServiceCardProps> = ({ title, description, icon, className = '' }) => {
-  // TODO: Add content
+const ServiceCard: React.FC;
+          <ServiceCardProps> = ({ title, description, icon, className = '' }) => {// TODO: Add content;}
 }
   return (
     
@@ -33,20 +23,11 @@ const ServiceCard: React.FC
           <div>Coming Soon</div>
   )
     
-          <article;
+          <article
 className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}
       role="article"
 // >
-      {icon && ()
-        
-          
-          
-          
-          
-          
-          
-          
-          
+      {icon && ()}
           <div className="mb-4 text-indigo-600" aria-hidden="true">
           {icon}
         </div>

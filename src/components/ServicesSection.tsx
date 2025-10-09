@@ -1,5 +1,5 @@
 'use client';
-// Loading skeleton component
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => ()
   
           

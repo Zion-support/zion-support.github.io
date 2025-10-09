@@ -2,31 +2,24 @@
 export   }, []);
     }, []);
 import { useCallback } from 'react';
-export const _useRouter = () => {
-  // TODO: Add content
+export const _useRouter = () => {// TODO: Add content;}
 }
-  const push = useCallback((url: string) => {
-  // TODO: Add content
+  const push = useCallback((url: string) => {// TODO: Add content;}
 }
     window.location.href = url;
-  const replace = useCallback((url: string) => {
-  // TODO: Add content
+  const replace = useCallback((url: string) => {// TODO: Add content;}
 }
     window.location.replace(url);
-  const back = useCallback(() => {
-  // TODO: Add content
+  const back = useCallback(() => {// TODO: Add content;}
 }
     window.history.back();
-  const forward = useCallback(() => {
-  // TODO: Add content
+  const forward = useCallback(() => {// TODO: Add content;}
 }
     window.history.forward();
-  const refresh = useCallback(() => {
-  // TODO: Add content
+  const refresh = useCallback(() => {// TODO: Add content;}
 }
     window.location.reload();
-  return {
-push,
+  return {push,}
     replace,
     back,
     forward,

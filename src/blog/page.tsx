@@ -3,8 +3,7 @@ import React from 'react';
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import ContentPreviewCard from '../components/ContentPreviewCard';
-interface BlogPost {
-  // TODO: Add content
+interface BlogPost {// TODO: Add content;}
 };
   id: string;
     title: string;
@@ -15,33 +14,22 @@ interface BlogPost {
     path: string;,
     image: string;,
     featured: boolean;
-  stats?: {
-  // TODO: Add content
+  stats?: {// TODO: Add content;}
 };
   views: number;,
     engagement: number;
   };
 }
-export default function BlogPage() {
-  // TODO: Add content
+export default function BlogPage() {// TODO: Add content;}
 }
-  const [posts, setPosts] = useState
-          
-          
-          
-          
-          
-          
-          
-          
+  const [posts, setPosts] = useState;
           <BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const blogPosts: BlogPost[] = useMemo(() => [
   // TODO: Add items,
 ]
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   id: 'ai-enterprise-transformation-2025',
       title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',

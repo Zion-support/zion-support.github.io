@@ -1,6 +1,5 @@
 
-interface OptimizedImageProps {
-  // TODO: Add content
+interface OptimizedImageProps {// TODO: Add content;}
 };
   src: string;,
     alt: string;
@@ -16,17 +15,8 @@ interface OptimizedImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-const OptimizedImage: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <OptimizedImageProps> = ({
-  // TODO: Add content
+const OptimizedImage: React.FC;
+          <OptimizedImageProps> = ({// TODO: Add content;}
 }
 //   src,
 //   alt,
@@ -41,63 +31,53 @@ const OptimizedImage: React.FC
   loading = 'lazy',
 //   onLoad,
 //   onError,
-}) => {
-  // TODO: Add content
+}) => {// TODO: Add content;}
 }
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-  // TODO: Add content
+  // Intersection Observer for lazy loading;
+  useEffect(() => {// TODO: Add content;}
 }
     if (priority || isInView) return;
     const observer = new IntersectionObserver()
-      (entries) => {
-  // TODO: Add content
+      (entries) => {// TODO: Add content;}
 }
-        entries.forEach((entry) => {
-  // TODO: Add content
+        entries.forEach((entry) => {// TODO: Add content;}
 }
-          if (entry.isIntersecting) {
-  // TODO: Add content
+          if (entry.isIntersecting) {// TODO: Add content;}
 }
             setIsInView(true);
             observer.disconnect();
           }
         });
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   rootMargin: '50px',
         threshold: 0.1,
       }
     );
-    if (imgRef.current) {
-  // TODO: Add content
+    if (imgRef.current) {// TODO: Add content;}
 }
       observer.observe(imgRef.current);
     }
     return () => observer.disconnect();
   }, [priority, isInView]);
   // Generate optimized image URL;
-const getOptimizedSrc = () => {
-  // TODO: Add content
+const getOptimizedSrc = () => {// TODO: Add content;}
 }
     if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
-    // In a real implementation, you would use an image optimization service
-    // like Cloudinary, ImageKit, or Next.js Image Optimization
+    // In a real implementation, you would use an image optimization service;
+    // like Cloudinary, ImageKit, or Next.js Image Optimization;
     return src;
   };
-  const handleLoad = () => {
-  // TODO: Add content
+  const handleLoad = () => {// TODO: Add content;}
 }
     setIsLoaded(true);
     onLoad?.();
   };
-  const handleError = () => {
-  // TODO: Add content
+  const handleError = () => {// TODO: Add content;}
 }
     setHasError(true);
     onError?.();
@@ -119,44 +99,25 @@ const getOptimizedSrc = () => {
       style={{ width, height }}
 // >
       {/* Blur placeholder */}
-      {placeholder === 'blur' && blurDataURL && !isLoaded && (
-
-          
-          
-          
-          
-          
-          
-          
-          
+      {placeholder === 'blur' && blurDataURL && !isLoaded && (}
           <div className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
-          style={{
-  // TODO: Add content
+          style={{}
+  // TODO: Add content;
 };
   backgroundImage: `url(${blurDataURL})`,
           }}
 //         />
       )}
       {/* Loading skeleton */}
-      {!isLoaded && !hasError && ()
-        
-          
-          
-          
-          
-          
-          
-          
-          
+      {!isLoaded && !hasError && ()}
           <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
       {/* Error state */}
-      {hasError && (
+      {hasError && (}
 <div className="absolute inset-0 bg-gray-100 flex items-center justify-center"><div className="text-gray-400 text-sm">Failed to load image</div></div>
       )}
       {/* Actual image */}
-      {isInView && ()
-        
+      {isInView && ()}
           <img
           src={getOptimizedSrc()}
           alt={alt}
@@ -165,11 +126,11 @@ const getOptimizedSrc = () => {
           sizes={sizes}
           loading={loading}
           onLoad={handleLoad}
-onError={handleError} className={`transition-opacity duration-300 ${
+onError={handleError} className={`transition-opacity duration-300 ${}
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{
-  // TODO: Add content
+          style={{}
+  // TODO: Add content;
 };
   width: '100%',
             height: '100%',

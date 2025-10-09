@@ -1,41 +1,36 @@
 import React from 'react';
-import {  Cloud,  Shield,  Zap,  BarChart } from 'lucide-react';
+import { Cloud, Shield, Zap, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const CloudServicesPage: React.FC = () => {
-  return (
+const CloudServicesPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
   const _services = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration of your infrastructure to leading cloud platforms',
       features: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Shield,
       title: 'Cloud Security',
       description: 'Comprehensive security solutions for your cloud infrastructure',
       features: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Zap,
       title: 'Auto Scaling',
       description: 'Dynamic resource allocation based on demand',
       features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: BarChart,
       title: 'Cloud Analytics',
@@ -44,7 +39,7 @@ const CloudServicesPage: React.FC = () => {
     }
   ];
   const benefits = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
 //     '99.9% Uptime Guarantee',
 //     '24/7 Expert Support',
@@ -71,16 +66,7 @@ const CloudServicesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-// Cloud Services
-          
-          
-          
-          
-          
-          
-          
-          
-          
+// Cloud Services;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 // Transform your business with our comprehensive cloud solutions.
@@ -100,31 +86,13 @@ const CloudServicesPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Get Started Today
-            
-          
-          
-          
-          
-          
-          
-          
-          
+//               Get Started Today;
           </a>
             <a
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Learn More
-            
-          
-          
-          
-          
-          
-          
-          
-          
+//               Learn More;
           </a>
           </div>
         </section>
@@ -132,15 +100,13 @@ const CloudServicesPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Cloud Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => ()
-              
+            {services.map((service, index) => ()}
           <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
                 <service.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => ()
-                    
+                  {service.features.map((feature, featureIndex) => ()}
           <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
@@ -155,8 +121,7 @@ const CloudServicesPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {benefits.map((benefit, index) => ()
-              
+            {benefits.map((benefit, index) => ()}
           <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-white" />
@@ -197,31 +162,13 @@ const CloudServicesPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Call (302) 464-0950
-            
-          
-          
-          
-          
-          
-          
-          
-          
+//               Call (302) 464-0950;
           </a>
             <a
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Get Free Consultation
-            
-          
-          
-          
-          
-          
-          
-          
-          
+//               Get Free Consultation;
           </a>
           </div>
         </section>

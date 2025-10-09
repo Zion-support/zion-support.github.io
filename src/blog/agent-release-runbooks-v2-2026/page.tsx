@@ -1,5 +1,4 @@
-export default function Page() {
-  // TODO: Add content
+export default function Page() {// TODO: Add content;}
 }
   return (
     
@@ -32,7 +31,7 @@ export default function Page() {
           
           
           </h1>
-<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
+<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
             canaries, approvals and one‑click rollback.
           </p>
           <div>
@@ -51,7 +50,7 @@ export default function Page() {
         <div>
           <h2>Release Safety Model</h2>
 <p>Operational safety hinges on three primitives: hard;
-            budgets, lightweight approvals and KPI-linked canaries that trigger
+            budgets, lightweight approvals and KPI-linked canaries that trigger;
             automatic rollback when thresholds are breached.
           </p>
           <h3>Runbook Outline</h3>
@@ -102,15 +101,7 @@ export default function Page() {
               href='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
 // >
-//               Engage 
-          
-          
-          
-          
-          
-          
-          
-          
+//               Engage;
           <RefreshCw />
             </Link>
           </div>

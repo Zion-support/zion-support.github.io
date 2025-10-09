@@ -1,5 +1,4 @@
-export default function NotFound() {
-return (
+export default function NotFound() {return (}
     <div>
       <div>
         {/* Error Code */}
@@ -26,8 +25,7 @@ return (
         </div>
         {/* Popular Pages */}
         <div>
-          {popularPages.map((page, index) => ()
-            
+          {popularPages.map((page, index) => ()}
           <Link
               key={index}
               href={page.href}

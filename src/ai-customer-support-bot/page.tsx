@@ -1,13 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone,  Bot,  MessageSquare,  BarChart,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
-import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart, Star from 'lucide-react';}
+import { Bot } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AICustomerSupportBotPage: React.FC = () => {
-const features = [
-    {
-  // TODO: Add content
+const AICustomerSupportBotPage: React.FC = () => {const features = [}
+    {// TODO: Add content;}
 };
   icon: Bot,
       title: '24/7 AI Support',
@@ -47,7 +45,7 @@ const features = [
         'API access',
         'Custom training'
   const stats = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
@@ -75,7 +73,7 @@ const features = [
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-// Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands
+// Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands;
 //             natural language and escalates complex issues to human agents seamlessly.
           
           
@@ -89,23 +87,20 @@ const features = [
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => ()
-            
+          {stats.map((stat, index) => ()}
           <div key={index} className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
           ))}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {features.map((feature, index) => ()
-            
+          {features.map((feature, index) => ()}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6">
               <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
-                {feature.benefits.map((benefit, benefitIndex) => ()
-                  
+                {feature.benefits.map((benefit, benefitIndex) => ()}
           <li key={benefitIndex} className="flex items-center text-gray-300">
                     <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     {benefit}
@@ -113,34 +108,22 @@ const features = [
               </ul>
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => ()
-              
+            {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {plan.popular && ()
-                  
+                {plan.popular && ()}
           <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-Most Popular
+Most Popular;
                 )}
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-white mb-1">
                   {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => ()
-                    
+                  {plan.features.map((feature, featureIndex) => ()}
           <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Get Started
-                
-          
-          
-          
-          
-          
-          
-          
-          
+// Get Started;
           </button>
 <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
@@ -148,9 +131,9 @@ Most Popular
             Contact our experts to discuss your support needs and get a custom AI solution.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Schedule Demo
+              Schedule Demo;
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              View Case Studies
+              View Case Studies;
       <Footer />
   );
 };

@@ -1,8 +1,7 @@
 'use client';
 import React, { useState, useCallback } from 'react';
-const Image: React.FC = () => {
-interface ImageProps {
-  // TODO: Add content
+const Image: React.FC = () => {interface ImageProps {}
+  // TODO: Add content;
 };
   src: string;,
     alt: string;
@@ -19,17 +18,8 @@ interface ImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-export const Image: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <ImageProps> = ({
-  // TODO: Add content
+export const Image: React.FC;
+          <ImageProps> = ({// TODO: Add content;}
 }
 //   src,
 //   alt,
@@ -45,30 +35,25 @@ quality = 75,
 //   style,
 //   onLoad,
 //   onError,
-//   ...props
-}) => {
-  // TODO: Add content
+//   ...props;
+}) => {// TODO: Add content;}
 }
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {
-  // TODO: Add content
+  const _handleLoad = useCallback(() => {// TODO: Add content;}
 }
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
-  const handleError = useCallback(() => {
-  // TODO: Add content
+  const handleError = useCallback(() => {// TODO: Add content;}
 }
     setHasError(true);
     if (onError) onError();
   }, [onError]);
-  const imageStyle: React.CSSProperties = {
-  // TODO: Add content
+  const imageStyle: React.CSSProperties = {// TODO: Add content;}
 }
 //     ...style,
-    ...(fill && {
-  // TODO: Add content
+    ...(fill && {// TODO: Add content;}
 };
   position: 'absolute',
       top: 0,
@@ -78,8 +63,7 @@ quality = 75,
       objectFit: 'cover'
     })
   };
-  if (hasError) {
-  // TODO: Add content
+  if (hasError) {// TODO: Add content;}
 }
     return (
     
@@ -93,7 +77,7 @@ quality = 75,
           <div>Coming Soon</div>
   )
       
-          <div;
+          <div
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}

@@ -1,12 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {
-  return (
+const RequestQuotePage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
-  const [formData, setFormData] = useState({
-  // TODO: Add content
+  const [formData, setFormData] = useState({// TODO: Add content;}
 };
   name: '',
     email: '',
@@ -22,7 +20,7 @@ const RequestQuotePage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
 //     'AI Services',
 //     'IT Infrastructure',
@@ -35,7 +33,7 @@ const RequestQuotePage: React.FC = () => {
 //     'Other'
   ];
   const projectSizes = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
@@ -43,7 +41,7 @@ const RequestQuotePage: React.FC = () => {
 //     'Enterprise (1000+ employees)'
   ];
   const timelines = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
 //     'ASAP',
 //     '1-3 months',
@@ -53,7 +51,7 @@ const RequestQuotePage: React.FC = () => {
 //     'Flexible'
   ];
   const budgetRanges = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
 //     'Under $10,000',
 //     '$10,000 - $50,000',
@@ -62,62 +60,47 @@ const RequestQuotePage: React.FC = () => {
 //     '$500,000+',
 //     'To be discussed'
   ];
-  const handleInputChange = (e: React.ChangeEvent
-          
-          
-          
-          
-          
-          
-          
-          
-          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  // TODO: Add content
+  const handleInputChange = (e: React.ChangeEvent;)
+          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {// TODO: Add content;}
 }
     const { name, value } = e.target;
-    setFormData(prev => ({
-  // TODO: Add content
+    setFormData(prev => ({// TODO: Add content;}
 }
 //       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {
-  // TODO: Add content
+  const handleSubmit = async (e: React.FormEvent) => {// TODO: Add content;}
 }
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
   const benefits = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Calculator,
       title: 'Free Quote',
       description: 'Get a detailed, no-obligation quote within 24 hours'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Clock,
       title: 'Quick Response',
       description: 'We respond to all quote requests within 4 hours'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: CheckCircle,
       title: 'Transparent Pricing',
       description: 'Clear, detailed pricing with no hidden fees'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Star,
       title: 'Expert Consultation',
@@ -125,39 +108,34 @@ const RequestQuotePage: React.FC = () => {
     }
   ];
   const whyChooseUs = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Users,
       title: '50+ Successful Projects',
       description: 'Proven track record of delivering results'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Award,
       title: '300% Average ROI',
       description: 'Our clients see significant returns on investment'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Clock,
       title: '24/7 Support',
       description: 'Round-the-clock support for all our clients'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Star,
       title: '99.9% Uptime',
       description: 'Reliable, high-performance solutions'
     }
   ];
-  if (isSubmitted) {
-  // TODO: Add content
+  if (isSubmitted) {// TODO: Add content;}
 }
     return (
     
@@ -192,7 +170,7 @@ const RequestQuotePage: React.FC = () => {
           
           </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Thank you for your interest in our services. We've received your quote request
+                Thank you for your interest in our services. We've received your quote request;
 // and will get back to you within 24 hours with a detailed proposal.
               
           
@@ -236,16 +214,7 @@ const RequestQuotePage: React.FC = () => {
           
           
           <Phone className="w-5 h-5 mr-2" />
-// Contact Us
-                
-          
-          
-          
-          
-          
-          
-          
-          
+// Contact Us;
           </a>
                 <a
                   href="/"
@@ -261,16 +230,7 @@ const RequestQuotePage: React.FC = () => {
           
           
           <ArrowRight className="w-4 h-4 mr-2" />
-// Back to Home
-                
-          
-          
-          
-          
-          
-          
-          
-          
+// Back to Home;
           </a>
               </div>
             </div>
@@ -291,16 +251,7 @@ const RequestQuotePage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Request a Quote
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Request a Quote;
           </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Get a detailed, no-obligation quote for your AI and IT project.
@@ -337,7 +288,7 @@ const RequestQuotePage: React.FC = () => {
           
           
           </label>
-                      <input;
+                      <input
 type="text"
                         name="name"
                         value={formData.name}
@@ -369,7 +320,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           </label>
-                      <input;
+                      <input
 type="email"
                         name="email"
                         value={formData.email}
@@ -392,18 +343,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-// Company Name
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+// Company Name;
           </label>
-                      <input;
+                      <input
 type="text"
                         name="company"
                         value={formData.company}
@@ -423,18 +365,9 @@ type="text"
           </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-// Phone Number
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+// Phone Number;
           </label>
-                      <input;
+                      <input
 type="tel"
                         name="phone"
                         value={formData.phone}
@@ -484,8 +417,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select a service type</option>
-                      {serviceTypes.map((type, index) => ()
-                        
+                      {serviceTypes.map((type, index) => ()}
           <option key={index} value={type}>{type}</option>
                       ))}
                     </select>
@@ -493,16 +425,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-// Project Size
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+// Project Size;
           </label>
                       <select
                         name="projectSize"
@@ -520,24 +443,14 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select project size</option>
-                        {projectSizes.map((size, index) => ()
-                          
+                        {projectSizes.map((size, index) => ()}
           <option key={index} value={size}>{size}</option>
                         ))}
                       </select>
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-// Timeline
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+// Timeline;
           </label>
                       <select
                         name="timeline"
@@ -555,8 +468,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select timeline</option>
-                        {timelines.map((timeline, index) => ()
-                          
+                        {timelines.map((timeline, index) => ()}
           <option key={index} value={timeline}>{timeline}</option>
                         ))}
                       </select>
@@ -564,16 +476,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-// Budget Range
-                    
-          
-          
-          
-          
-          
-          
-          
-          
+// Budget Range;
           </label>
                     <select
                       name="budget"
@@ -591,8 +494,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select budget range</option>
-                      {budgetRanges.map((range, index) => ()
-                        
+                      {budgetRanges.map((range, index) => ()}
           <option key={index} value={range}>{range}</option>
                       ))}
                     </select>
@@ -614,7 +516,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       name="description"
                       value={formData.description}
                       onChange={handleInputChange}
-// required
+// required;
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Describe your project requirements and goals..."
@@ -631,16 +533,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-// Specific Requirements
-                    
-          
-          
-          
-          
-          
-          
-          
-          
+// Specific Requirements;
           </label>
                     <textarea
                       name="requirements"
@@ -660,21 +553,12 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           </div>
-                  <button;
+                  <button
 type="submit"
                     disabled={isSubmitting}
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
 // >
-                    {isSubmitting ? ()
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+                    {isSubmitting ? ()}
           <div className="flex items-center justify-center">
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 // Submitting...
@@ -710,8 +594,7 @@ type="submit"
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>
                 <div className="space-y-4">
-                  {benefits.map((benefit, index) => ()
-                    
+                  {benefits.map((benefit, index) => ()}
           <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <benefit.icon className="w-4 h-4 text-cyan-400" />
@@ -728,8 +611,7 @@ type="submit"
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
                 <div className="space-y-4">
-                  {whyChooseUs.map((item, index) => ()
-                    
+                  {whyChooseUs.map((item, index) => ()}
           <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <item.icon className="w-4 h-4 text-purple-400" />

@@ -1,16 +1,14 @@
 'use client';
 import React, { useState } from 'react';
-const SolutionsPage: React.FC = () => {
-  return (
+const SolutionsPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
   const [activeTab, setActiveTab] = useState('ai');
   const _solutionCategories = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   id: 'ai',
       name: 'AI Solutions',
@@ -19,8 +17,7 @@ const SolutionsPage: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description: 'Transform your business with cutting-edge artificial intelligence'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   id: 'it',
       name: 'IT Infrastructure',
@@ -29,8 +26,7 @@ const SolutionsPage: React.FC = () => {
       bgColor: 'bg-blue-500/10',
       description: 'Robust and scalable IT infrastructure solutions'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   id: 'security',
       name: 'Cybersecurity',
@@ -39,8 +35,7 @@ const SolutionsPage: React.FC = () => {
       bgColor: 'bg-red-500/10',
       description: 'Comprehensive security solutions for your digital assets'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   id: 'automation',
       name: 'Automation',
@@ -50,14 +45,12 @@ const SolutionsPage: React.FC = () => {
       description: 'Streamline operations with intelligent automation'
     }
   ];
-  const solutions = {
-  // TODO: Add content
+  const solutions = {// TODO: Add content;}
 };
   ai: [
   // TODO: Add items,
 ]
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'AI-Powered Analytics',
         description: 'Transform raw data into actionable insights with advanced AI analytics',
@@ -66,8 +59,7 @@ const SolutionsPage: React.FC = () => {
         icon: BarChart,
         color: 'text-blue-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'AI Marketing Automation',
         description: 'Revolutionize your marketing with AI-powered automation and personalization',
@@ -76,8 +68,7 @@ const SolutionsPage: React.FC = () => {
         icon: Target,
         color: 'text-pink-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'AI Customer Support',
         description: 'Enhance customer experience with intelligent AI-powered support systems',
@@ -86,8 +77,7 @@ const SolutionsPage: React.FC = () => {
         icon: Users,
         color: 'text-green-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'AI Process Automation',
         description: 'Automate complex business processes with intelligent decision-making capabilities',
@@ -100,8 +90,7 @@ const SolutionsPage: React.FC = () => {
     it: [
   // TODO: Add items,
 ]
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'Cloud Migration',
         description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
@@ -110,8 +99,7 @@ const SolutionsPage: React.FC = () => {
         icon: Cloud,
         color: 'text-blue-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'IT Infrastructure Management',
         description: 'Comprehensive IT infrastructure management and optimization services',
@@ -120,8 +108,7 @@ const SolutionsPage: React.FC = () => {
         icon: Globe,
         color: 'text-green-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'DevOps & CI/CD',
         description: 'Streamline development workflows with automated testing and deployment',
@@ -130,8 +117,7 @@ const SolutionsPage: React.FC = () => {
         icon: Zap,
         color: 'text-purple-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'Database Management',
         description: 'Optimize and manage your databases with AI-powered performance tuning',
@@ -144,8 +130,7 @@ const SolutionsPage: React.FC = () => {
     security: [
   // TODO: Add items,
 ]
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'Cybersecurity Suite',
         description: 'Comprehensive security solutions with threat detection and response',
@@ -154,8 +139,7 @@ const SolutionsPage: React.FC = () => {
         icon: Shield,
         color: 'text-red-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'AI Security Monitoring',
         description: 'Real-time security monitoring with AI-powered threat detection',
@@ -164,8 +148,7 @@ const SolutionsPage: React.FC = () => {
         icon: Brain,
         color: 'text-purple-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'Compliance Management',
         description: 'Ensure regulatory compliance with automated compliance monitoring',
@@ -174,8 +157,7 @@ const SolutionsPage: React.FC = () => {
         icon: CheckCircle,
         color: 'text-green-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'Security Training',
         description: 'Comprehensive security awareness training for your organization',
@@ -188,8 +170,7 @@ const SolutionsPage: React.FC = () => {
     automation: [
   // TODO: Add items,
 ]
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'Business Process Automation',
         description: 'Automate complex business processes with intelligent workflow management',
@@ -198,8 +179,7 @@ const SolutionsPage: React.FC = () => {
         icon: Zap,
         color: 'text-yellow-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'IT Automation',
         description: 'Automate IT operations and reduce manual tasks with intelligent automation',
@@ -208,8 +188,7 @@ const SolutionsPage: React.FC = () => {
         icon: Cloud,
         color: 'text-blue-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'Marketing Automation',
         description: 'Automate marketing campaigns and customer engagement processes',
@@ -218,8 +197,7 @@ const SolutionsPage: React.FC = () => {
         icon: Target,
         color: 'text-pink-400'
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   title: 'Data Automation',
         description: 'Automate data processing, analysis, and reporting workflows',
@@ -231,31 +209,27 @@ const SolutionsPage: React.FC = () => {
 //     ]
   };
   const benefits = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Star,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security and compliance for all our solutions'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Globe,
       title: 'Global Support',
       description: '24/7 support and services across multiple time zones'
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Users,
       title: 'Expert Team',
@@ -281,19 +255,10 @@ const SolutionsPage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Our Solutions
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Our Solutions;
           </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// Comprehensive technology solutions designed to transform your business operations
+// Comprehensive technology solutions designed to transform your business operations;
 //               and drive innovation across every aspect of your organization.
             
           
@@ -309,15 +274,14 @@ const SolutionsPage: React.FC = () => {
           {/* Solution Categories Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {solutionCategories.map((category) => ()
-                
+              {solutionCategories.map((category) => ()}
           <button
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-  // TODO: Add content
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
+  // TODO: Add content;
 }
-                    activeTab === category.id
+                    activeTab === category.id;
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
@@ -345,8 +309,7 @@ const SolutionsPage: React.FC = () => {
           {/* Solutions Grid */}
           <div className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()
-                
+              {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
@@ -360,8 +323,7 @@ const SolutionsPage: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {solution.features.map((feature, featureIndex) => ()
-                        
+                      {solution.features.map((feature, featureIndex) => ()}
           <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -377,16 +339,7 @@ const SolutionsPage: React.FC = () => {
                       href="/contact"
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
 // >
-//                       Learn More
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+//                       Learn More;
           <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                   </div>
@@ -409,8 +362,7 @@ const SolutionsPage: React.FC = () => {
           
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => ()
-                
+              {benefits.map((benefit, index) => ()}
           <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
@@ -436,7 +388,7 @@ const SolutionsPage: React.FC = () => {
           
           </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-// Get a free consultation and discover how our solutions can revolutionize your operations
+// Get a free consultation and discover how our solutions can revolutionize your operations;
 //               and drive unprecedented growth.
             
           
@@ -463,16 +415,7 @@ const SolutionsPage: React.FC = () => {
           
           
           <Phone className="w-5 h-5 mr-2" />
-// Get Free Consultation
-              
-          
-          
-          
-          
-          
-          
-          
-          
+// Get Free Consultation;
           </a>
               <a
                 href="tel:+13024640950"
@@ -488,16 +431,7 @@ const SolutionsPage: React.FC = () => {
           
           
           <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950
-              
-          
-          
-          
-          
-          
-          
-          
-          
+// (302) 464-0950;
           </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
@@ -513,16 +447,7 @@ const SolutionsPage: React.FC = () => {
           
           
           <Mail className="w-4 h-4 mr-2" />
-// Email Us
-              
-          
-          
-          
-          
-          
-          
-          
-          
+// Email Us;
           </a>
             </div>
           </div>

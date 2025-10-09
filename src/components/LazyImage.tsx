@@ -1,6 +1,5 @@
 'use client';
-interface LazyImageProps {
-  // TODO: Add content
+interface LazyImageProps {// TODO: Add content;}
 };
   src: string;,
     alt: string;
@@ -12,17 +11,8 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-const LazyImage: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <LazyImageProps> = ({
-  // TODO: Add content
+const LazyImage: React.FC;
+          <LazyImageProps> = ({// TODO: Add content;}
 }
 //   src,
 //   alt,
@@ -33,49 +23,41 @@ const LazyImage: React.FC
   priority = false,
 //   onLoad,
 //   onError,
-}) => {
-  // TODO: Add content
+}) => {// TODO: Add content;}
 }
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  useEffect(() => {
-  // TODO: Add content
+  useEffect(() => {// TODO: Add content;}
 }
     if (priority) return;
     const observer = new IntersectionObserver()
-      ([entry]) => {
-  // TODO: Add content
+      ([entry]) => {// TODO: Add content;}
 }
-        if (entry.isIntersecting) {
-  // TODO: Add content
+        if (entry.isIntersecting) {// TODO: Add content;}
 }
           setIsInView(true);
           observer.disconnect();
         }
       },
-      {
-  // TODO: Add content
+      {// TODO: Add content;}
 };
   threshold: 0.1,
         rootMargin: '50px',
       }
     );
-    if (imgRef.current) {
-  // TODO: Add content
+    if (imgRef.current) {// TODO: Add content;}
 }
       observer.observe(imgRef.current);
     }
     return () => observer.disconnect();
   }, [priority]);
-  const handleLoad = () => {
-  // TODO: Add content
+  const handleLoad = () => {// TODO: Add content;}
 }
     setIsLoaded(true);
     onLoad?.();
   };
-  const handleError = () => {
-  // TODO: Add content
+  const handleError = () => {// TODO: Add content;}
 }
     setHasError(true);
     onError?.();
@@ -96,16 +78,7 @@ const LazyImage: React.FC
       ref={imgRef} className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
 // >
-      {!isInView ? ()
-        
-          
-          
-          
-          
-          
-          
-          
-          
+      {!isInView ? ()}
           <img
           src={placeholder}
           alt="" className="w-full h-full object-cover"
@@ -123,7 +96,7 @@ const LazyImage: React.FC
           
           <><img
             src={hasError ? placeholder : src}
-            alt={alt} className={cn(
+            alt={alt} className={cn(}
               'w-full h-full object-cover transition-opacity duration-300',
               isLoaded ? 'opacity-100' : 'opacity-0'
             )}
@@ -132,16 +105,7 @@ const LazyImage: React.FC
             loading={priority ? 'eager' : 'lazy'}
             decoding="async"
 // />
-          {!isLoaded && !hasError && (
-
-          
-          
-          
-          
-          
-          
-          
-          
+          {!isLoaded && !hasError && (}
           <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>
           )}
         </>

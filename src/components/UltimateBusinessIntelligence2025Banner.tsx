@@ -2,24 +2,21 @@
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
 import { Link } from 'react-router-dom';
-const _UltimateBusinessIntelligence2025Banner = () => {
-  // TODO: Add content
+const _UltimateBusinessIntelligence2025Banner = () => {// TODO: Add content;}
 }
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const content = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
       type: 'Blog Post',
-      metrics: {
-  // TODO: Add content
+      metrics: {// TODO: Add content;}
 };
   efficiency: '300%',
         accuracy: '99.7%',
@@ -53,7 +50,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
+          {[}
   // TODO: Add items,
 ]
             { value: '500+', label: 'Enterprise Clients' },

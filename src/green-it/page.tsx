@@ -1,17 +1,15 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp,  Leaf,  Target,  Zap,  Cloud,  Recycle,  Code,  Users,  Globe,  TrendingUp,  Factory,  Building from 'lucide-react';
+import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp, Cloud, Code, Factory, Building from 'lucide-react';}
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const GreenITPage: React.FC = () => {
-  return (
+const GreenITPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   id: 'solutions',
       name: 'Green Solutions',
@@ -183,19 +181,10 @@ const tabs = [
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Green IT Solutions
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Green IT Solutions;
           </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// Transform your IT infrastructure into a sustainable, environmentally friendly system
+// Transform your IT infrastructure into a sustainable, environmentally friendly system;
               that reduces costs while protecting our planet.
             
           
@@ -220,8 +209,7 @@ const tabs = [
                 <span className="font-medium">Certified Solutions</span>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => ()
-              
+            {stats.map((stat, index) => ()}
           <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
@@ -231,15 +219,14 @@ const tabs = [
           {/* Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {tabs.map((tab) => ()
-                
+              {tabs.map((tab) => ()}
           <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-  // TODO: Add content
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
+  // TODO: Add content;
 }
-                    activeTab === tab.id
+                    activeTab === tab.id;
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
@@ -257,24 +244,13 @@ const tabs = [
                   <span className="font-medium">{tab.name}</span>
                 </button>
           {/* Tab Content */}
-          {activeTab === 'solutions' && ()
-            
+          {activeTab === 'solutions' && ()}
           <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Our Green IT Solutions
-              
-          
-          
-          
-          
-          
-          
-          
-          
+// Our Green IT Solutions;
           </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {greenSolutions.map((solution, index) => ()
-                  
+                {greenSolutions.map((solution, index) => ()}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                     <div className="flex items-start mb-4">
                       <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
@@ -285,8 +261,7 @@ const tabs = [
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {solution.features.map((feature, featureIndex) => ()
-                          
+                        {solution.features.map((feature, featureIndex) => ()}
           <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {feature}
@@ -300,15 +275,14 @@ const tabs = [
                       <a
                         href="/contact"
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-Learn More
+Learn More;
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
           )}
-          {activeTab === 'benefits' && (
-Benefits of Green IT
+          {activeTab === 'benefits' && (}
+Benefits of Green IT;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => ()
-                  
+                {benefits.map((benefit, index) => ()}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
                         <benefit.icon className="w-6 h-6 text-cyan-400" />
@@ -316,15 +290,13 @@ Benefits of Green IT
                         <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300 mb-4">{benefit.description}</p>
                     <ul className="space-y-2">
-                      {benefit.details.map((detail, detailIndex) => ()
-                        
+                      {benefit.details.map((detail, detailIndex) => ()}
           <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
                           {detail}
-{activeTab === 'certifications' && (
-                Our Certifications
+{activeTab === 'certifications' && (}
+                Our Certifications;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {certifications.map((cert, index) => ()
-                  
+                {certifications.map((cert, index) => ()}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <cert.icon className={`w-8 h-8 ${cert.color}`} />
@@ -332,9 +304,9 @@ Benefits of Green IT
                     <p className="text-gray-300 text-sm mb-3">{cert.description}</p>
                     <div className="text-green-400 text-sm font-medium">{cert.status}</div>
 {/* Case Studies */}
-              Success Stories
+              Success Stories;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
+              {caseStudies.map((study, index) => (}
                       <study.icon className={`w-6 h-6 ${study.color}`} />
                       <h3 className="text-xl font-semibold text-white mb-1">{study.company}</h3>
                       <p className="text-gray-400 text-sm mb-3">{study.industry}</p>
@@ -343,8 +315,7 @@ Benefits of Green IT
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
-                      {study.results.map((result, resultIndex) => ()
-                        
+                      {study.results.map((result, resultIndex) => ()}
           <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
                           {result}
 {/* CTA Section */}
@@ -352,7 +323,7 @@ Benefits of Green IT
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Go Green?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-// Start your journey towards sustainable IT operations. Get a free environmental
+// Start your journey towards sustainable IT operations. Get a free environmental;
               assessment and discover how much you can save while protecting the planet.
             
           
@@ -365,15 +336,15 @@ Benefits of Green IT
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-Get Free Assessment
+Get Free Assessment;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+                (302) 464-0950;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+                Email Us;
       <Footer />
     </>
   );

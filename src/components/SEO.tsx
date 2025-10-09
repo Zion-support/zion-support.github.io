@@ -1,10 +1,9 @@
 'use client';
 /**
- * SEO Component
- * Provides comprehensive SEO meta tags and structured data
+ * SEO Component;
+ * Provides comprehensive SEO meta tags and structured data;
  */
-export interface SEOProps {
-  // TODO: Add content
+export interface SEOProps {// TODO: Add content;}
 }
   title?: string;
   description?: string;
@@ -17,15 +16,7 @@ export interface SEOProps {
   modifiedDate?: string;
   canonical?: string;
   noIndex?: boolean;
-  structuredData?: Record
-          
-          
-          
-          
-          
-          
-          
-          
+  structuredData?: Record;
           <string, unknown>;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
@@ -49,17 +40,8 @@ export interface SEOProps {
   locale: 'en_US',
   twitterCard: 'summary_large_image' as const,
 };
-export const SEO: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <SEOProps> = ({
-  // TODO: Add content
+export const SEO: React.FC;
+          <SEOProps> = ({// TODO: Add content;}
 }
 //   title,
 //   description,
@@ -76,11 +58,9 @@ export const SEO: React.FC
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
   alternateLocales = [],
-}) => {
-  // TODO: Add content
+}) => {// TODO: Add content;}
 }
-  const seo = {
-  // TODO: Add content
+  const seo = {// TODO: Add content;}
 };
   title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
@@ -92,25 +72,14 @@ export const SEO: React.FC
 //     locale,
   };
   // Generate structured data;
-const generateStructuredData = () => {
-  // TODO: Add content
+const generateStructuredData = () => {// TODO: Add content;}
 }
-    if (structuredData) {
-  // TODO: Add content
+    if (structuredData) {// TODO: Add content;}
 }
       return structuredData;
     }
-    const baseStructuredData: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown> = {
-  // TODO: Add content
+    const baseStructuredData: Record;
+          <string, unknown> = {// TODO: Add content;}
 }
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
@@ -119,23 +88,19 @@ const generateStructuredData = () => {
       url: seo.url,
       image: seo.image,
     };
-    if (author) {
-  // TODO: Add content
+    if (author) {// TODO: Add content;}
 }
-      baseStructuredData.author = {
-  // TODO: Add content
+      baseStructuredData.author = {// TODO: Add content;}
 }
         '@type': 'Person',
         name: author,
       };
     }
-    if (publishDate) {
-  // TODO: Add content
+    if (publishDate) {// TODO: Add content;}
 }
       baseStructuredData.datePublished = publishDate;
     }
-    if (modifiedDate) {
-  // TODO: Add content
+    if (modifiedDate) {// TODO: Add content;}
 }
       baseStructuredData.dateModified = modifiedDate;
     }

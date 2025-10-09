@@ -2,11 +2,10 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Cloud ,  Shield,  Server,  BarChart,  Users from 'lucide-react';
+import {Cloud, Shield, Server, BarChart, Users from 'lucide-react';}
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
-const ItServicesPage: React.FC = () => {,
- title: 'Advanced Threat Protection',
+const ItServicesPage: React.FC = () => {title: 'Advanced Threat Protection',}
       description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
       icon: Shield,
       features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Security monitoring', 'Compliance reporting', 'Penetration testing'],
@@ -66,19 +65,10 @@ const ItServicesPage: React.FC = () => {,
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Contact Us;
           </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-Learn More
+Learn More;
           </div>
       <Footer />
   );

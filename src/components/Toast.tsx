@@ -1,7 +1,6 @@
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
-export interface ToastProps {
-  // TODO: Add content
+export interface ToastProps {// TODO: Add content;}
 };
   message: string;
   type?: ToastType;
@@ -9,33 +8,21 @@ export interface ToastProps {
   onClose?: () => void;,
     show: boolean;
 }
-const Toast: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <ToastProps> = ({
-  // TODO: Add content
+const Toast: React.FC;
+          <ToastProps> = ({// TODO: Add content;}
 }
 //   message,
   type = 'success',
   duration = 3000,
 //   onClose,
-//   show
-}) => {
-  // TODO: Add content
+//   show;
+}) => {// TODO: Add content;}
 }
   const [isVisible, setIsVisible] = useState(show);
-  useEffect(() => {
-  // TODO: Add content
+  useEffect(() => {// TODO: Add content;}
 }
     setIsVisible(show);
-    if (show && duration > 0) {
-setIsVisible(false);
+    if (show && duration > 0) {setIsVisible(false);}
         if (onClose) {
         }
       }, duration);
@@ -44,11 +31,9 @@ setIsVisible(false);
     return undefined;
   }, [show, duration, onClose]);
   if (!isVisible) return null;
-  const getToastStyles = () => {
-  // TODO: Add content
+  const getToastStyles = () => {// TODO: Add content;}
 }
-    switch (type) {
-  // TODO: Add content
+    switch (type) {// TODO: Add content;}
 }
       case 'success':
         return 'bg-green-600 text-white';
@@ -62,11 +47,9 @@ setIsVisible(false);
         return 'bg-gray-800 text-white';
     }
   };
-  const getIcon = () => {
-  // TODO: Add content
+  const getIcon = () => {// TODO: Add content;}
 }
-    switch (type) {
-  // TODO: Add content
+    switch (type) {// TODO: Add content;}
 }
       case 'success':
         return '';
@@ -92,7 +75,7 @@ setIsVisible(false);
           <div>Coming Soon</div>
   )
     
-          <div;
+          <div
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert"
       aria-live="polite"
@@ -109,8 +92,8 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button
-        onClick={() => {
-  // TODO: Add content
+        onClick={() => {}
+  // TODO: Add content;
 }
           setIsVisible(false);
           if (onClose) onClose();

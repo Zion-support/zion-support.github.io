@@ -1,70 +1,50 @@
 'use client';
-interface Props {
-  // TODO: Add content
+interface Props {// TODO: Add content;}
 };
   children: ReactNode;
   fallback?: ReactNode;
 }
-interface State {
-  // TODO: Add content
+interface State {// TODO: Add content;}
 };
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-class GlobalErrorBoundary extends Component
-          
-          
-          
-          
-          
-          
-          
-          
-          <Props, State> {
-  // TODO: Add content
+class GlobalErrorBoundary extends Component;
+          <Props, State> {// TODO: Add content;}
 }
-  constructor(props: Props) {
-  // TODO: Add content
+  constructor(props: Props) {// TODO: Add content;}
 }
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error: Error): State {
-  // TODO: Add content
+  static getDerivedStateFromError(error: Error): State {// TODO: Add content;}
 }
     return { hasError: true, error };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {// TODO: Add content;}
 }
-    this.setState({
-  // TODO: Add content
+    this.setState({// TODO: Add content;}
 }
 //       error,
-//       errorInfo
+//       errorInfo;
     });
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
+    // Log error to console in development;
+    if (process.env.NODE_ENV === 'development') {// TODO: Add content;}
 }
       }
-    // In production, you might want to send this to an error reporting service
+    // In production, you might want to send this to an error reporting service;
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
-  handleRetry = () => {
-  // TODO: Add content
+  handleRetry = () => {// TODO: Add content;}
 }
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
-  render() {
-  // TODO: Add content
+  render() {// TODO: Add content;}
 }
-    if (this.state.hasError) {
-  // TODO: Add content
+    if (this.state.hasError) {// TODO: Add content;}
 }
-      if (this.props.fallback) {
-  // TODO: Add content
+      if (this.props.fallback) {// TODO: Add content;}
 }
         return this.props.fallback;
       }
@@ -90,23 +70,13 @@ class GlobalErrorBoundary extends Component
             </div>
             {/* Error Message */}
             <h1 className="text-2xl font-bold text-white mb-4">
-// Something went wrong
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Something went wrong;
           </h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             {/* Error Details (Development Only) */}
-            {process.env.NODE_ENV === 'development' && this.state.error && ()
-              
+            {process.env.NODE_ENV === 'development' && this.state.error && ()}
           <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
 // Error Details (Development)
@@ -124,8 +94,7 @@ class GlobalErrorBoundary extends Component
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
-                  {this.state.errorInfo && ()
-                    
+                  {this.state.errorInfo && ()}
           <div>
                       <strong>Stack:</strong>
                       <pre className="mt-1 whitespace-pre-wrap">
@@ -142,46 +111,19 @@ class GlobalErrorBoundary extends Component
                 onClick={this.handleRetry}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
 // >
-//                 Try Again
-              
-          
-          
-          
-          
-          
-          
-          
-          
+//                 Try Again;
           </button>
               <button
                 onClick={() => window.location.reload()}
                 className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300 font-medium"
 // >
-//                 Refresh Page
-              
-          
-          
-          
-          
-          
-          
-          
-          
+//                 Refresh Page;
           </button>
               <a
                 href="/"
                 className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
 // >
-//                 Go Home
-              
-          
-          
-          
-          
-          
-          
-          
-          
+//                 Go Home;
           </a>
             </div>
             {/* Contact Information */}
@@ -193,16 +135,7 @@ class GlobalErrorBoundary extends Component
                 href="tel:+13024640950"
                 className="text-cyan-400 hover:text-cyan-300 font-medium"
 // >
-//                 (302) 464-0950
-              
-          
-          
-          
-          
-          
-          
-          
-          
+//                 (302) 464-0950;
           </a>
             </div>
           </div>

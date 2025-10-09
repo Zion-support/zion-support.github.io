@@ -1,9 +1,7 @@
 import React from 'react';
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react';
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
-    {
-  // TODO: Add content
+import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react';}
+const AISocialMediaManagerPage: React.FC = () => {const features = [}
+    {// TODO: Add content;}
 };
   icon: Share2,
       title: 'AI Content Creation',
@@ -80,8 +78,8 @@ icon: TrendingUp,
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of brands already using AI Social Media Manager to grow their presence
-              Contact Sales
+            Join thousands of brands already using AI Social Media Manager to grow their presence;
+              Contact Sales;
   );
 };
 export default AISocialMediaManagerPage;

@@ -1,36 +1,31 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react';
+import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react';}
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIAutomationPage: React.FC = () => {
-const features = [
-    {
-  // TODO: Add content
+const AIAutomationPage: React.FC = () => {const features = [}
+    {// TODO: Add content;}
 };
   icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation'];
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Zap,
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
       benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Clock,
       title: 'Exception Handling',
@@ -39,10 +34,9 @@ const features = [
     }
   ];
   const pricingPlans = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'Starter',
       price: '$1,400',
@@ -57,10 +51,9 @@ const features = [
 //         'Standard integrations',
 //         'Basic analytics'
 //       ],
-      popular: false
+      popular: false;
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'Professional',
       price: '$2,800',
@@ -76,10 +69,9 @@ const features = [
 //         'Advanced analytics',
 //         'Workflow optimization'
 //       ],
-      popular: true
+      popular: true;
     },
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'Enterprise',
       price: '$5,600',
@@ -96,11 +88,11 @@ const features = [
 //         'API access',
 //         'Dedicated support'
 //       ],
-      popular: false
+      popular: false;
     }
   ];
   const stats = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
@@ -143,8 +135,7 @@ const features = [
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => ()
-            
+          {stats.map((stat, index) => ()}
           <div key={index} className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -153,15 +144,13 @@ const features = [
           ))}
         </div>
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {features.map((feature, index) => ()
-            
+          {features.map((feature, index) => ()}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6">
               <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
-                {feature.benefits.map((benefit, benefitIndex) => ()
-                  
+                {feature.benefits.map((benefit, benefitIndex) => ()}
           <li key={benefitIndex} className="flex items-center text-gray-300">
                     <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     {benefit}
@@ -174,22 +163,11 @@ const features = [
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => ()
-              
+            {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {plan.popular && ()
-                  
+                {plan.popular && ()}
           <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-// Most Popular
-                  
-          
-          
-          
-          
-          
-          
-          
-          
+// Most Popular;
           </div>
                 )}
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
@@ -198,8 +176,7 @@ const features = [
                 </div>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => ()
-                    
+                  {plan.features.map((feature, featureIndex) => ()}
           <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                       {feature}
@@ -207,16 +184,7 @@ const features = [
                   ))}
                 </ul>
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Get Started
-                
-          
-          
-          
-          
-          
-          
-          
-          
+// Get Started;
           </button>
               </div>
             ))}
@@ -238,28 +206,10 @@ const features = [
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Schedule Consultation
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Schedule Consultation;
           </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-// View Case Studies
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// View Case Studies;
           </button>
           </div>
         </div>

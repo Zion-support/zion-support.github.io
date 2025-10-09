@@ -1,6 +1,5 @@
 
-interface PerformanceMetrics {
-  // TODO: Add content
+interface PerformanceMetrics {// TODO: Add content;}
 };
   cls: number | null;,
     fcp: number | null;,

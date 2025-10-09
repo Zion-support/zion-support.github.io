@@ -1,27 +1,23 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
+import React from 'react';
+import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const FAQPage: React.FC = () => {
-  return (
+const FAQPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
-const toggleItem = (index: number) => {
-    setOpenItems(prev =>
+const toggleItem = (index: number) => {setOpenItems(prev =>}
       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
   };
   const faqData = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   category: 'General Questions',
       questions: [,
@@ -85,8 +81,7 @@ const toggleItem = (index: number) => {
           question: 'How quickly do you respond to support requests?',
           answer: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
-  const filteredData = faqData.map(category => ({
-  // TODO: Add content
+  const filteredData = faqData.map(category => ({// TODO: Add content;}
 }
 //     ...category,
     questions: category.questions.filter(q =>
@@ -113,16 +108,7 @@ const toggleItem = (index: number) => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Frequently Asked Questions
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Frequently Asked Questions;
           </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
 // Find answers to common questions about our AI and IT services, pricing, and support.
@@ -139,7 +125,7 @@ const toggleItem = (index: number) => {
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input;
+              <input
 type="text"
                 placeholder="Search FAQs..."
                 value={searchTerm}
@@ -158,15 +144,14 @@ type="text"
           </div>
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
-            {filteredData.map((category, categoryIndex) => ()
-              
+            {filteredData.map((category, categoryIndex) => ()}
           <div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
                 </h2>
                 <div className="space-y-4">
-                  {category.questions.map((item, itemIndex) => {
-  // TODO: Add content
+                  {category.questions.map((item, itemIndex) => {}
+  // TODO: Add content;
 }
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
@@ -194,16 +179,14 @@ type="text"
           
           
           <span className="text-white font-medium pr-4">{item.question}</span>
-                          {isOpen ? ()
-                            
+                          {isOpen ? ()}
           <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           ) : ()
                             
           <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           )}
                         </button>
-                        {isOpen && ()
-                          
+                        {isOpen && ()}
           <div className="px-6 pb-4">
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   })}
@@ -219,25 +202,16 @@ type="text"
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" />
-// Call (302) 464-0950
-              
-          
-          
-          
-          
-          
-          
-          
-          
+// Call (302) 464-0950;
           </a>
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+                Email Us;
                 href="/contact"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" />
-                Contact Form
+                Contact Form;
       <Footer />
     </>
 export default FAQPage;

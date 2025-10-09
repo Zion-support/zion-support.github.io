@@ -1,33 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
-import {CheckCircle, Star, Phone} from 'lucide-react';
+import { CheckCircle, Star, Phone } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-interface ServicePageProps {
-  // TODO: Add content
+interface ServicePageProps {// TODO: Add content;}
 };
   title: string;,
     description: string;,
-    icon: React.ComponentType
-          
-          
-          
-          
-          
-          
-          
-          
+    icon: React.ComponentType;
           <{ className?: string }>;
-  services: Array<{,
-
-  features: string[];,
+  services: Array<{features: string[];,}
     price: string;
   }>;
   benefits: string[];
 }
-const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {
-  // TODO: Add content
+const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {// TODO: Add content;}
 }
   return (
     
@@ -67,47 +55,27 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           
           
           <Phone className="w-5 h-5 mr-2" />
-// Get Free Consultation
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Get Free Consultation;
           </Link>
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// (302) 464-0950;
           </a>
           </div>
         </section>
         {/* Services Grid */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => ()
-              
+            {services.map((service, index) => ()}
           <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-6">
                   <service.icon className="w-12 h-12 text-cyan-400 mr-4" />
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => ()
-                    
+                  {service.features.map((feature, featureIndex) => ()}
           <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                       {feature}
@@ -116,14 +84,13 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
                 </ul>
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   className="cyber-button w-full text-center inline-block"
-Get Started
+Get Started;
         {/* Benefits Section */}
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
             Why Choose Our {title}?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => ()
-              
+            {benefits.map((benefit, index) => ()}
           <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-white" />

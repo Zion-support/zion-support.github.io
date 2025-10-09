@@ -4,10 +4,9 @@ import { Linkedin, Mail, Phone, Award, Users, Brain, Code, Shield } from 'lucide
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   const _teamMembers = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -38,7 +37,7 @@ import Footer from '../components/Footer';
     }
   ];
   const stats = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
     { number: '50+', label: 'Team Members', icon: Users },
     { number: '15+', label: 'Years Experience', icon: Award },
@@ -61,16 +60,7 @@ import Footer from '../components/Footer';
         <h1 className="text-4xl font-bold text-white mb-4">Team</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced team solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us
-        
-          
-          
-          
-          
-          
-          
-          
-          
+// Contact Us;
           </a>
       </div>
   );

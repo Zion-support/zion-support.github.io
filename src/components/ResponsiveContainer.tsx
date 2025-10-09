@@ -1,11 +1,9 @@
 
-interface ResponsiveContainerProps {
-  // TODO: Add content
+interface ResponsiveContainerProps {// TODO: Add content;}
 };
   children: React.ReactNode;
   className?: string;
-  breakpoints?: {
-  // TODO: Add content
+  breakpoints?: {// TODO: Add content;}
 }
     sm?: string;
     md?: string;
@@ -15,68 +13,43 @@ interface ResponsiveContainerProps {
   };
   fallback?: React.ReactNode;
 }
-const ResponsiveContainer: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <ResponsiveContainerProps> = ({
-  // TODO: Add content
+const ResponsiveContainer: React.FC;
+          <ResponsiveContainerProps> = ({// TODO: Add content;}
 }
 //   children,
   className = '',
   breakpoints = {},
 //   fallback,
-}) => {
-  // TODO: Add content
+}) => {// TODO: Add content;}
 }
   const [isClient, setIsClient] = useState(false);
-  const [screenSize, setScreenSize] = useState
-          
-          
-          
-          
-          
-          
-          
-          
+  const [screenSize, setScreenSize] = useState;
           <'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
-  useEffect(() => {
-  // TODO: Add content
+  useEffect(() => {// TODO: Add content;}
 }
     setIsClient(true);
   }, []);
-  useEffect(() => {
-  // TODO: Add content
+  useEffect(() => {// TODO: Add content;}
 }
     if (!isClient) return;
-    if (isLargeDesktop) {
-  // TODO: Add content
+    if (isLargeDesktop) {// TODO: Add content;}
 }
       setScreenSize('2xl');
-    } else if (isDesktop) {
-  // TODO: Add content
+    } else if (isDesktop) {// TODO: Add content;}
 }
       setScreenSize('xl');
-    } else if (isTablet) {
-  // TODO: Add content
+    } else if (isTablet) {// TODO: Add content;}
 }
       setScreenSize('md');
-    } else {
-  // TODO: Add content
+    } else {// TODO: Add content;}
 }
       setScreenSize('sm');
     }
   }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
-  if (!isClient) {
-  // TODO: Add content
+  if (!isClient) {// TODO: Add content;}
 }
     return fallback || 
           
@@ -89,8 +62,7 @@ const ResponsiveContainer: React.FC
           
           <div className={className}>{children}</div>;
   }
-  const getResponsiveClasses = () => {
-  // TODO: Add content
+  const getResponsiveClasses = () => {// TODO: Add content;}
 }
     const baseClasses = className;
     const responsiveClasses = breakpoints[screenSize] || '';
@@ -123,52 +95,44 @@ export const useResponsiveValue =
           
           
           
-          <T,>(values: {
-// sm?: T;
+          <T,>(values: {// sm?: T;}
 // md?: T;
 // lg?: T;
 // xl?: T;
 // '2xl'?: T;
 // default?: T;
-}): T => {
-  // TODO: Add content
+}): T => {// TODO: Add content;}
 }
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
-  if (isLargeDesktop && values['2xl'] !== undefined) {
-  // TODO: Add content
+  if (isLargeDesktop && values['2xl'] !== undefined) {// TODO: Add content;}
 }
     return values['2xl'];
   }
-  if (isDesktop && values.xl !== undefined) {
-  // TODO: Add content
+  if (isDesktop && values.xl !== undefined) {// TODO: Add content;}
 }
     return values.xl;
   }
-  if (isTablet && values.md !== undefined) {
-  // TODO: Add content
+  if (isTablet && values.md !== undefined) {// TODO: Add content;}
 }
     return values.md;
   }
-  if (isMobile && values.sm !== undefined) {
-  // TODO: Add content
+  if (isMobile && values.sm !== undefined) {// TODO: Add content;}
 }
     return values.sm;
   }
   return values.default || values.lg || values.md || values.sm || ({} as T);
 };
 // Hook for responsive breakpoints;
-export const useBreakpoint = () => {
-  // TODO: Add content
+export const useBreakpoint = () => {// TODO: Add content;}
 }
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
-  return {
-  // TODO: Add content
+  return {// TODO: Add content;}
 }
 //     isMobile,
 //     isTablet,

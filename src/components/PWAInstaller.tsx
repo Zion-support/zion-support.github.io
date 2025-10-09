@@ -1,16 +1,7 @@
 'use client';
-interface BeforeInstallPromptEvent extends Event {
-  // TODO: Add content
+interface BeforeInstallPromptEvent extends Event {// TODO: Add content;}
 }
-  prompt(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
+  prompt(): Promise;
           <void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }

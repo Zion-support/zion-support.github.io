@@ -1,17 +1,15 @@
 import React from 'react';
-import { Mail, Target, Send, BarChart, Users, TrendingUp ,  Mail,  Target,  Send,  BarChart,  Users,  TrendingUp from 'lucide-react';
+import {Mail, Target, Send, BarChart, Users, TrendingUp, TrendingUp from 'lucide-react';}
 const AiEmailMarketingPage: React.FC = () => {
-import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
-const AIEmailMarketingPage: React.FC = () => {
-  return (
+import { Mail, CheckCircle, ArrowRight, Star } from 'lucide-react';
+const AIEmailMarketingPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
   const _features = [
-  // TODO: Add items
+  // TODO: Add items;
 ];;
-    {
-  // TODO: Add content
+    {// TODO: Add content;}
 };
   icon: Mail,
       title: 'AI Content Generation',
@@ -128,19 +126,10 @@ import Footer from '../components/Footer';
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Contact Us;
           </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-Learn More
+Learn More;
           </div>
       <Footer />
   );

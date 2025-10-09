@@ -1,6 +1,5 @@
 'use client';
-interface PerformanceMetrics {
-  // TODO: Add content
+interface PerformanceMetrics {// TODO: Add content;}
 };
   loadTime: number;,
     domContentLoaded: number;,
@@ -9,26 +8,15 @@ interface PerformanceMetrics {
     cumulativeLayoutShift: number;,
     firstInputDelay: number;
 }
-export const _usePerformance = () => {
-  // TODO: Add content
+export const _usePerformance = () => {// TODO: Add content;}
 }
-  const [metrics, setMetrics] = useState
-          
-          
-          
-          
-          
-          
-          
-          
+  const [metrics, setMetrics] = useState;
           <PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  useEffect(() => {
-  // TODO: Add content
+  useEffect(() => {// TODO: Add content;}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
-    const measurePerformance = () => {
-  // TODO: Add content
+    const measurePerformance = () => {// TODO: Add content;}
 }
       const navigation = performance.getEntriesByType()
 //         'navigation'
@@ -39,20 +27,16 @@ export const _usePerformance = () => {
       const largestContentfulPaint =
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
-      if ('PerformanceObserver' in window) {
-  // TODO: Add content
+      if ('PerformanceObserver' in window) {// TODO: Add content;}
 }
-        const observer = new PerformanceObserver(list => {
-  // TODO: Add content
+        const observer = new PerformanceObserver(list => {// TODO: Add content;}
 }
-          for (const entry of list.getEntries()) {
-  // TODO: Add content
+          for (const entry of list.getEntries()) {// TODO: Add content;}
 }
             if ()
               entry.entryType === 'layout-shift' &&
               !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput,
-) {
-  // TODO: Add content
+) {// TODO: Add content;}
 }
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
             }
@@ -61,17 +45,13 @@ export const _usePerformance = () => {
         observer.observe({ entryTypes: ['layout-shift'] });
       }
       // Measure FID (First Input Delay)
-      if ('PerformanceObserver' in window) {
-  // TODO: Add content
+      if ('PerformanceObserver' in window) {// TODO: Add content;}
 }
-        const observer = new PerformanceObserver(list => {
-  // TODO: Add content
+        const observer = new PerformanceObserver(list => {// TODO: Add content;}
 }
-          for (const entry of list.getEntries()) {
-  // TODO: Add content
+          for (const entry of list.getEntries()) {// TODO: Add content;}
 }
-            if (entry.entryType === 'first-input') {
-  // TODO: Add content
+            if (entry.entryType === 'first-input') {// TODO: Add content;}
 }
               firstInputDelay =
                 (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
@@ -86,11 +66,11 @@ export const _usePerformance = () => {
 //         firstContentfulPaint,
 //         largestContentfulPaint,
 //         cumulativeLayoutShift,
-//         firstInputDelay
+//         firstInputDelay;
       };
       setMetrics(performanceData);
       setIsMonitoring(false);
-      // Report to analytics using trackTiming
+      // Report to analytics using trackTiming;
       analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
       analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
 //       analytics.trackTiming()
@@ -110,17 +90,15 @@ export const _usePerformance = () => {
 );
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
-    // Start monitoring
+    // Start monitoring;
     setIsMonitoring(true);
-    // Measure performance after page load
+    // Measure performance after page load;
     if (document.readyState === 'complete') {
-    } else {
-  // TODO: Add content
+    } else {// TODO: Add content;}
 }
       window.addEventListener('load', measurePerformance);
     }
-    return () => {
-  // TODO: Add content
+    return () => {// TODO: Add content;}
 }
       window.removeEventListener('load', measurePerformance);
     };

@@ -1,6 +1,5 @@
 
-export default function sitemap(): MetadataRoute.Sitemap {
-const _baseUrl = 'https://ziontechgroup.com'
+export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'https://ziontechgroup.com'}
   const _routes = [
     '',
     '/about',
@@ -37,8 +36,7 @@ const _baseUrl = 'https://ziontechgroup.com'
     '/terms',
     '/support',
   ];
-  return routes.map((route) => ({
-  // TODO: Add content
+  return routes.map((route) => ({// TODO: Add content;}
 };
   url: `${baseUrl}${route}`,
     lastModified: new Date(),

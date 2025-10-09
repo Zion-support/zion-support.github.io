@@ -1,5 +1,4 @@
-interface LinkProps {
-  // TODO: Add content
+interface LinkProps {// TODO: Add content;}
 };
   href: string;,
     children: React.ReactNode;
@@ -9,17 +8,8 @@ interface LinkProps {
   onClick?: () => void;
   'aria-label'?: string;
 }
-export const Link: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <LinkProps> = ({
-  // TODO: Add content
+export const Link: React.FC;
+          <LinkProps> = ({// TODO: Add content;}
 }
 //   href,
 //   children,
@@ -28,13 +18,11 @@ export const Link: React.FC
 //   rel,
 //   onClick,
   'aria-label': ariaLabel,
-//   ...props
-}) => {
-if (onClick) {
+//   ...props;
+}) => {if (onClick) {}
     }
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {
-  // TODO: Add content
+    // Handle internal navigation;
+    if (href.startsWith('/') && !href.startsWith('//')) {// TODO: Add content;}
 }
       e.preventDefault();
       window.location.href = href;
