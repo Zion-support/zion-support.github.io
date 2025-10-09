@@ -68,7 +68,10 @@ const AI3DGenerationPage: React.FC = () => {
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-db8c
   ];
 
 import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';

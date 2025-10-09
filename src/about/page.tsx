@@ -1,6 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import Footer from '../components/Footer';
 export default function AboutPage() {
+=======
+import { Link } from 'react-router-dom';
+import { Users, Target, Brain, Shield } from 'lucide-react';
+import Footer from '../components/Footer';
+
+const AboutPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-db8c
   const team = [
     {
       name: 'Kleber Santos',
@@ -83,6 +91,7 @@ export default function AboutPage() {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
 =======
         </div>
@@ -109,6 +118,8 @@ export default function AboutPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5599
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-19c2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-db8c
 
         {/* Stats Section */}
         <section className="py-16 bg-white">
