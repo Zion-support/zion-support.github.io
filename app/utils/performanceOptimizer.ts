@@ -5,8 +5,8 @@
 
 // Simple logger for performance optimizer
 const logger = {
-  info: (message: string, context?: string) => console.log('[INFO]', message, context),
-  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  info: (message: string, context?: string) => console.log(`[INFO${context ? ' - ' + context : ''}]`, message),
+  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log(`[PERF${context ? ' - ' + context : ''}]`, message, data),
   error: (message: string, error: Error) => console.error('[ERROR]', message, error),
 };
 
@@ -78,13 +78,6 @@ class PerformanceOptimizer {
   }
 
   /**
-   * Public init method for external initialization
-   */
-  public init(): void {
-    this.initializePerformanceMonitoring();
-  }
-
-  /**
    * Measure page load time
    */
   private measureLoadTime(): void {
@@ -97,32 +90,8 @@ class PerformanceOptimizer {
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
       }
     } catch (error) {
-      }
-  }
-
-  /**
-   * Measure render time using PerformanceObserver
-   */
-  private measureRenderTime(): void {
-    
-    // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined') return;
-
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'measure') {
-            this.metrics.renderTime = entry.duration;
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['measure'] });
-      this.observers.push(observer);
-    } catch (error) {
-      // PerformanceObserver may not support 'measure' entryType in some environments
-      }
+      console.warn('Performance API not fully supported:', error);
+    }
   }
 
   private observeLCP() {
@@ -220,6 +189,31 @@ class PerformanceOptimizer {
   }
 
   /**
+   * Measure render time using PerformanceObserver
+   */
+  private measureRenderTime(): void {
+    if (typeof window === 'undefined') return;
+    // Check if PerformanceObserver exists (may not be available in test environments)
+    if (typeof PerformanceObserver === 'undefined') return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'measure') {
+            this.metrics.renderTime = entry.duration;
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['measure'] });
+      this.observers.push(observer);
+    } catch (error) {
+      // PerformanceObserver may not support 'measure' entryType in some environments
+    }
+  }
+
+  /**
    * Measure memory usage
    */
   private measureMemoryUsage(): void {
@@ -285,7 +279,7 @@ class PerformanceOptimizer {
 
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations
-    if (process.env.NODE_ENV === 'development') { }
+    if (process.env.NODE_ENV === 'development') { console.log('Code splitting enabled for better performance'); }
   }
 
   /**
@@ -299,10 +293,10 @@ class PerformanceOptimizer {
     // Register service worker for caching
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        if (process.env.NODE_ENV === 'development') { }
+        if (process.env.NODE_ENV === 'development') { console.log('Service Worker registered:', registration); }
       })
       .catch((error) => {
-        if (process.env.NODE_ENV === 'development') { }
+        if (process.env.NODE_ENV === 'development') { console.log('Service Worker registration failed:', error); }
       });
   }
 
@@ -450,6 +444,7 @@ class PerformanceOptimizer {
 
     return `
 Performance Report - Zion Tech Group Website
+==========================================
 Performance Score: ${score}/100
 Load Time: ${metrics.loadTime.toFixed(2)}ms
 Render Time: ${metrics.renderTime.toFixed(2)}ms
@@ -473,7 +468,8 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCaching();
     
     if (process.env.NODE_ENV === 'development') { 
-      console.log('Performance optimization completed');
+      console.log('Performance optimization completed'); 
+      console.log(this.generateComprehensiveReport()); 
     }
   }
 }
