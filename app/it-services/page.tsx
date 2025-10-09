@@ -1,17 +1,12 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { CheckCircle, Star, Cloud, Shield, Database, Settings, HardDrive, Lock, FileText, Activity, ArrowRight, Code, Cog, Globe, Users, Target, Award, Rocket, Mail, Phone } from 'lucide-react';
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
   const itServices = [
     // Infrastructure & Cloud Services
     {
@@ -244,43 +239,10 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-=======
-  const services = [
-    {
-      icon: Cloud,
-      title: 'IT Infrastructure',
-      price: '$999/month',
-      description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee',
-      features: ['Server Management', 'Network Setup', 'Security Hardening', 'Backup Solutions']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      price: '$1,599/month',
-      description: 'Advanced security solutions with threat detection and prevention',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response']
-    },
-    {
-      icon: Database,
-      title: 'Database Services',
-      price: '$899/month',
-      description: 'Database design, optimization, and management with AI-powered tuning',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
-    },
-    {
-      icon: Settings,
-      title: 'DevOps & CI/CD',
-      price: '$1,199/month',
-      description: 'Streamlined development workflows with automated testing and deployment',
-      features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup']
-    }
-  ];
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-<<<<<<< HEAD
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
@@ -337,53 +299,6 @@ const ITServicesPage: React.FC = () => {
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-=======
-      
-      <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              IT Services
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions including infrastructure, cybersecurity, 
-              database management, and DevOps services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center space-x-2"
-              >
-                <Cloud className="w-4 h-4" />
-                <span>Get Started</span>
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Learn More
-              </a>
-            </div>
-          </section>
-
-          {/* Services Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Our IT Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <service.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                         {feature}
                       </li>
                     ))}
@@ -412,7 +327,6 @@ const ITServicesPage: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                </div>
                 <div className="text-center">
                   <a
                     href="/contact"
@@ -421,8 +335,6 @@ const ITServicesPage: React.FC = () => {
                     Get Started →
                   </a>
                 </div>
-<<<<<<< HEAD
-              </div>
             ))}
           </div>
         </section>
@@ -450,48 +362,6 @@ const ITServicesPage: React.FC = () => {
             </a>
           </div>
         </section>
-=======
-              ))}
-=======
-const ItItServicessPage: React.FC = () => {
-  return (
-    <>
-      <SEOOptimizer
-        title="Service - Zion Tech Group"
-        description="Professional AI and IT it-servicess for your business transformation."
-        keywords={['AI services', 'IT solutions', 'business transformation']}
-        canonicalUrl="https://ziontechgroup.com/service"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
-        <Navigation />
-        <div className="container mx-auto px-4 py-8">
-          {/* Hero Section */}
-          <section className="text-center mb-16 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
-            <div className="relative z-10 py-16 px-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Service
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Professional AI and IT services designed to transform your business operations.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-                >
-                  Get Started Today
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-                >
-                  Contact Us
-                </a>
-              </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
             </div>
           </section>
 
@@ -518,15 +388,9 @@ const ItItServicessPage: React.FC = () => {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-            </div>
           </section>
         </div>
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
       </main>
-=======
-      </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
       <Footer />
     </>
   );

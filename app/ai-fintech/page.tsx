@@ -140,15 +140,9 @@ const AIFintechPage: React.FC = () => {
   ];
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main>
-=======
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -211,8 +205,6 @@ const AIFintechPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-time Processing</h3>
                 <p className="text-gray-600">Millisecond-level decision making and transaction processing</p>
               </div>
-            </div>
-          </div>
         </section>
         {/* Services by Category */}
         {categories.map(category => (
@@ -242,7 +234,6 @@ const AIFintechPage: React.FC = () => {
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 60% vs market rates
                         </div>
-                      </div>
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
@@ -263,7 +254,6 @@ const AIFintechPage: React.FC = () => {
                             </span>
                           ))}
                         </div>
-                      </div>
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Financial Benefits:</h4>
                         <ul className="space-y-1">
@@ -281,7 +271,6 @@ const AIFintechPage: React.FC = () => {
                     </div>
                   ))}
               </div>
-            </div>
           </section>
         ))}
         {/* AI Fintech Capabilities */}
@@ -326,8 +315,6 @@ const AIFintechPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-time Processing</h3>
                 <p className="text-gray-600">High-frequency processing and real-time decision making</p>
               </div>
-            </div>
-          </div>
         </section>
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
@@ -355,17 +342,10 @@ const AIFintechPage: React.FC = () => {
             <div className="mt-8 text-sm text-indigo-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
-          </div>
         </section>
-<<<<<<< HEAD
       </main>
       <Footer />
     </div>
-=======
-      </div>
-      <Footer />
-    </>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
   );
 };
 export default AIFintechPage;

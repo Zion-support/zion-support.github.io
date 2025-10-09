@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
@@ -92,12 +91,6 @@ const ServicesPage: React.FC = () => {
       description: 'World-class engineers and data scientists with proven track records'
     }
   ];
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
 
 const ServicessPage: React.FC = () => {
   return (
@@ -137,10 +130,6 @@ const ServicessPage: React.FC = () => {
                   Contact Us
                 </a>
               </div>
-            </div>
-<<<<<<< HEAD
-          </div>
-        </div>
       </section>
 
       {/* Service Categories */}
@@ -160,7 +149,6 @@ const ServicessPage: React.FC = () => {
                     <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">Comprehensive solutions for your business needs</p>
                   </div>
-                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
@@ -189,40 +177,10 @@ const ServicessPage: React.FC = () => {
                           Get Started
                         </a>
                       </div>
-                    </div>
                   ))}
                 </div>
-=======
-          </section>
-
-          {/* CTA Section */}
-          <section className="text-center py-16">
-            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Contact us for a free consultation and discover how our services can help your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  <Mail className="w-5 h-5" />
-                  kleber@ziontechgroup.com
-                </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
-              </div>
-            </div>
           </section>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Benefits Section */}
@@ -240,7 +198,6 @@ const ServicessPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -266,14 +223,8 @@ const ServicessPage: React.FC = () => {
               Email Us
             </a>
           </div>
-        </div>
       </section>
     </div>
-=======
-      </div>
-      <Footer />
-    </>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
   );
 };
 

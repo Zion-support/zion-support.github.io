@@ -2,10 +2,8 @@ import React from 'react';
 <<<<<<< HEAD:app/guides/page.tsx
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-=======
 import Link from 'next/link';
 import { BookOpen, ArrowRight, Clock, User, Tag } from 'lucide-react';
->>>>>>> pr-26771:backup-problematic/guides/page.tsx
 
 const GuidesPage: React.FC = () => {
   const guides = [
@@ -27,7 +25,6 @@ const GuidesPage: React.FC = () => {
       description: 'Step-by-step guide to implementing autonomous business processes',
       url: '/guides/autonomous-business-processes-implementation-guide-2026',
       category: 'Process Automation'
-=======
       id: 'ai-2026-implementation-roadmap',
       title: 'AI 2026 Implementation Roadmap',
       description: 'Comprehensive guide to implementing AI solutions in 2026 with cutting-edge strategies and best practices.',
@@ -56,7 +53,6 @@ const GuidesPage: React.FC = () => {
       tags: ['Automation', 'Business Processes', '2026', 'Implementation'],
       href: '/guides/autonomous-business-processes-implementation-guide-2026',
       featured: false
->>>>>>> pr-26771:backup-problematic/guides/page.tsx
     }
   ];
 
@@ -128,12 +124,7 @@ const GuidesPage: React.FC = () => {
                   Contact Our Experts
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       {/* Header */}
       <div className="bg-white shadow-sm">
@@ -146,8 +137,6 @@ const GuidesPage: React.FC = () => {
               Comprehensive guides and implementation roadmaps for AI, automation, and cutting-edge technology solutions.
             </p>
           </div>
-        </div>
-      </div>
 
       {/* Featured Guides */}
       <div className="container mx-auto px-4 py-16">
@@ -183,8 +172,6 @@ const GuidesPage: React.FC = () => {
                         <User className="w-4 h-4 mr-1" />
                         {guide.author}
                       </div>
-                    </div>
-                  </div>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {guide.tags.map((tag) => (
@@ -205,10 +192,8 @@ const GuidesPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
 
         {/* All Guides */}
         <div>
@@ -243,8 +228,6 @@ const GuidesPage: React.FC = () => {
                         <User className="w-3 h-3 mr-1" />
                         {guide.author}
                       </div>
-                    </div>
-                  </div>
                   
                   <div className="flex flex-wrap gap-1 mb-4">
                     {guide.tags.slice(0, 3).map((tag) => (
@@ -265,10 +248,8 @@ const GuidesPage: React.FC = () => {
                     <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
 
         {/* Call to Action */}
         <div className="mt-16 bg-gradient-to-r from-indigo-600 to-purple-700 rounded-2xl p-12 text-center">
@@ -293,10 +274,6 @@ const GuidesPage: React.FC = () => {
               Enterprise Solutions
             </Link>
           </div>
-        </div>
-      </div>
-    </div>
->>>>>>> pr-26771:backup-problematic/guides/page.tsx
   );
 };
 
