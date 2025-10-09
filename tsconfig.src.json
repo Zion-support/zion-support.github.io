@@ -21,15 +21,15 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@/components/*": ["src/components/*"],
-      "@/pages/*": ["src/pages/*"],
-      "@/utils/*": ["src/utils/*"],
-      "@/types/*": ["src/types/*"],
-      "@/hooks/*": ["src/hooks/*"],
-      "@/config/*": ["src/config/*"],
-      "@/data/*": ["src/data/*"],
-      "@/content/*": ["src/content/*"]
+      "@/*": ["app/*"],
+      "@/components/*": ["app/components/*"],
+      "@/pages/*": ["app/pages/*"],
+      "@/utils/*": ["app/utils/*"],
+      "@/types/*": ["app/types/*"],
+      "@/hooks/*": ["app/hooks/*"],
+      "@/config/*": ["app/config/*"],
+      "@/data/*": ["app/data/*"],
+      "@/content/*": ["app/content/*"]
     },
     "incremental": true,
     "allowJs": true,
@@ -45,7 +45,7 @@
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": false
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["app/**/*.ts", "app/**/*.tsx", "components/**/*.ts", "components/**/*.tsx", "api/**/*.ts", "api/**/*.js", "*.ts", "*.tsx"],
   "exclude": [
     "node_modules",
     "dist",
@@ -56,6 +56,7 @@
     "**/*backup*/**",
     "**/*corrupted*/**",
     "**/*temp*/**",
-    "**/*.broken/**"
+    "**/*.broken/**",
+    "components-disabled-standalone/**"
   ]
 }
