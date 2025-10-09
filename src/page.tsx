@@ -117,6 +117,66 @@ const HomePage: React.FC = () => {
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
       popular: false
+    },
+    {
+      title: 'AI Financial Advisor',
+      description: 'Personalized financial planning and investment advice powered by advanced AI algorithms',
+      icon: '💰',
+      price: '$199/month',
+      features: ['Portfolio optimization', 'Risk assessment', 'Market analysis', 'Tax optimization'],
+      benefits: ['25% better returns', 'Reduced risk exposure', 'Automated rebalancing'],
+      link: '/ai-financial-advisor',
+      popular: true
+    },
+    {
+      title: 'AI HR Assistant',
+      description: 'Streamline HR processes with AI-powered recruitment, onboarding, and employee management',
+      icon: '👥',
+      price: '$129/month',
+      features: ['Resume screening', 'Interview scheduling', 'Performance tracking', 'Employee engagement'],
+      benefits: ['60% faster hiring', '50% cost reduction', 'Improved retention'],
+      link: '/ai-hr-assistant',
+      popular: true
+    },
+    {
+      title: 'AI Inventory Optimizer',
+      description: 'Smart inventory management with predictive analytics and automated reordering',
+      icon: '📦',
+      price: '$179/month',
+      features: ['Demand forecasting', 'Automated reordering', 'Waste reduction', 'Cost optimization'],
+      benefits: ['30% inventory reduction', '25% cost savings', '99% stock accuracy'],
+      link: '/ai-inventory-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI Legal Assistant',
+      description: 'AI-powered legal document analysis, contract review, and compliance monitoring',
+      icon: '⚖️',
+      price: '$299/month',
+      features: ['Contract analysis', 'Legal research', 'Compliance monitoring', 'Risk assessment'],
+      benefits: ['80% faster document review', '90% accuracy improvement', 'Reduced legal costs'],
+      link: '/ai-legal-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'AI-powered patient monitoring, diagnosis support, and treatment recommendations',
+      icon: '🏥',
+      price: '$399/month',
+      features: ['Symptom analysis', 'Treatment recommendations', 'Patient monitoring', 'Medical research'],
+      benefits: ['Improved diagnosis accuracy', 'Faster treatment decisions', 'Better patient outcomes'],
+      link: '/ai-healthcare-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Real Estate Analyzer',
+      description: 'Comprehensive property analysis and market insights powered by AI',
+      icon: '🏠',
+      price: '$149/month',
+      features: ['Property valuation', 'Market analysis', 'Investment potential', 'Risk assessment'],
+      benefits: ['95% accurate valuations', 'Better investment decisions', 'Market trend insights'],
+      link: '/ai-real-estate-analyzer',
+      popular: true
     }
   ];
 
@@ -152,6 +212,38 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400'
+    },
+    {
+      title: 'AI-Powered Cybersecurity',
+      description: 'Advanced threat detection and prevention using machine learning algorithms',
+      icon: Shield,
+      price: '$2,200/month',
+      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics'],
+      color: 'text-red-400'
+    },
+    {
+      title: 'AI Business Intelligence',
+      description: 'Transform raw data into strategic insights with AI-powered analytics',
+      icon: BarChart,
+      price: '$1,800/month',
+      features: ['Predictive Analytics', 'Data Visualization', 'Trend Analysis', 'Strategic Planning'],
+      color: 'text-yellow-400'
+    },
+    {
+      title: 'AI Voice & Speech Processing',
+      description: 'Advanced voice recognition, synthesis, and natural language understanding',
+      icon: MessageSquare,
+      price: '$1,600/month',
+      features: ['Voice Recognition', 'Speech Synthesis', 'Voice Cloning', 'Conversational AI'],
+      color: 'text-pink-400'
+    },
+    {
+      title: 'AI Edge Computing',
+      description: 'Deploy AI models at the edge for real-time processing and reduced latency',
+      icon: Cpu,
+      price: '$2,000/month',
+      features: ['Edge Deployment', 'Real-time Processing', 'Low Latency', 'Offline Capability'],
+      color: 'text-orange-400'
     }
   ];
 
@@ -187,6 +279,38 @@ const HomePage: React.FC = () => {
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
       color: 'text-purple-400'
+    },
+    {
+      title: 'IT Infrastructure Management',
+      description: 'Comprehensive IT infrastructure design, implementation, and maintenance',
+      icon: Cpu,
+      price: '$1,800/month',
+      features: ['Server Management', 'Network Design', 'Hardware Optimization', 'Performance Monitoring'],
+      color: 'text-cyan-400'
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services for modernizing business operations',
+      icon: Globe,
+      price: '$2,500/month',
+      features: ['Process Modernization', 'Legacy System Migration', 'Workflow Automation', 'Change Management'],
+      color: 'text-yellow-400'
+    },
+    {
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT planning and technology roadmap development',
+      icon: Target,
+      price: '$1,400/month',
+      features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'ROI Analysis'],
+      color: 'text-pink-400'
+    },
+    {
+      title: 'Managed IT Services',
+      description: '24/7 managed IT services with proactive monitoring and support',
+      icon: Users,
+      price: '$1,999/month',
+      features: ['24/7 Monitoring', 'Proactive Maintenance', 'Help Desk Support', 'SLA Guarantee'],
+      color: 'text-orange-400'
     }
   ];
 
@@ -490,6 +614,138 @@ const HomePage: React.FC = () => {
                   </div>
                 </article>
               ))}
+            </div>
+          </section>
+
+          {/* Emerging Technologies Section */}
+          <section className="mb-16" aria-labelledby="emerging-tech-heading">
+            <h2 id="emerging-tech-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              Emerging Technologies
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+              Cutting-edge technologies that will shape the future of business
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <article className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-2xl">⚛️</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Quantum Computing</h3>
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  Next-generation quantum algorithms and quantum security implementations for enterprise applications
+                </p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Quantum Algorithm Development
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Quantum Security
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Optimization Problems
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Research & Development
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold mb-2 neon-text text-purple-400">Custom Pricing</div>
+                  <a 
+                    href="/quantum-computing" 
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-purple-400 border border-purple-400 hover:bg-purple-400 hover:text-slate-900"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </article>
+
+              <article className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-2xl">🤖</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Autonomous Systems</h3>
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  Self-managing and self-optimizing systems for enterprise operations and decision-making
+                </p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Self-Healing Systems
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Predictive Maintenance
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Resource Optimization
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Performance Monitoring
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold mb-2 neon-text text-blue-400">Custom Pricing</div>
+                  <a 
+                    href="/autonomous-systems" 
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-blue-400 border border-blue-400 hover:bg-blue-400 hover:text-slate-900"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </article>
+
+              <article className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-2xl">🔗</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Blockchain & Web3</h3>
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  Decentralized solutions, smart contracts, and Web3 applications for modern businesses
+                </p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-green-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Smart Contract Development
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      DApp Creation
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      Token Economics
+                    </li>
+                    <li className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      DeFi Solutions
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold mb-2 neon-text text-green-400">$1,999/month</div>
+                  <a 
+                    href="/blockchain-web3" 
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-green-400 border border-green-400 hover:bg-green-400 hover:text-slate-900"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </article>
             </div>
           </section>
 
