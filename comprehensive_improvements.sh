@@ -10,13 +10,13 @@ find . -name "*.ts" -o -name "*.tsx" | while read file; do
         sed -i "s/process\.env\.NODE_ENV/process.env['NODE_ENV']/g" "$file"
         echo "  Fixed process.env access in $file"
     fi
-    
+
     # Fix property access issues
     if grep -q "\.src" "$file"; then
         sed -i "s/\.src/['src']/g" "$file"
         echo "  Fixed property access in $file"
     fi
-    
+
     # Fix dataset access
     if grep -q "\.dataset\." "$file"; then
         sed -i "s/\.dataset\./['dataset']['/g" "$file"
@@ -27,7 +27,7 @@ done
 # 2. Remove merge conflict markers
 echo "🧹 Cleaning up merge conflict markers..."
 find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
-    if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file"; then
+    if grep -q "\|>>>>>>> " "$file"; then
         sed -i '/^<<<<<<< HEAD/,/^>>>>>>> /d' "$file"
         echo "  Removed conflict markers from $file"
     fi
@@ -201,7 +201,7 @@ export class PerformanceMonitor {
 
   reportMetrics(): void {
     console.log('Performance Metrics:', this.metrics);
-    
+
     // Send to analytics service if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'performance_metrics', {
@@ -254,7 +254,7 @@ export class SEOUtils {
 
   static generateSitemap(pages: string[]): string {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ziontechgroup.com';
-    
+
     return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${pages.map(page => `

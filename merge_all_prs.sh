@@ -11,11 +11,10 @@ command_exists() {
 resolve_merge_conflicts() {
     local file="$1"
     echo "🔧 Resolving merge conflicts in: $file"
-    
+
     # Remove merge conflict markers and keep HEAD version
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======/,/^>>>>>>> /d' "$file"
-    
+    sed -i '/^/,/^>>>>>>> /d' "$file"
+
     echo "✅ Resolved conflicts in: $file"
 }
 
@@ -23,12 +22,12 @@ resolve_merge_conflicts() {
 fix_imports() {
     local file="$1"
     echo "🔄 Fixing imports in: $file"
-    
+
     # Replace Next.js imports with React Router
     sed -i "s/from 'next\/link'/from 'react-router-dom'/g" "$file"
     sed -i "s/import Link from/import { Link } from/g" "$file"
     sed -i "s/import { Link } from 'next\/link'/import { Link } from 'react-router-dom'/g" "$file"
-    
+
     echo "✅ Fixed imports in: $file"
 }
 
@@ -36,23 +35,23 @@ fix_imports() {
 clean_console() {
     local file="$1"
     echo "🧹 Cleaning console statements in: $file"
-    
+
     # Replace console.log with comments
     sed -i 's/console\.log(/\/\/ console.log(/g' "$file"
     sed -i 's/console\.warn(/\/\/ console.warn(/g' "$file"
     sed -i 's/console\.error(/\/\/ console.error(/g' "$file"
-    
+
     echo "✅ Cleaned console statements in: $file"
 }
 
 # Main execution
 echo "📋 Step 1: Finding all files with merge conflicts..."
-conflict_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " 2>/dev/null || true)
+conflict_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "\|>>>>>>> " 2>/dev/null || true)
 
 if [ -n "$conflict_files" ]; then
     echo "🔍 Found files with merge conflicts:"
     echo "$conflict_files"
-    
+
     echo "🔧 Resolving merge conflicts..."
     for file in $conflict_files; do
         resolve_merge_conflicts "$file"
@@ -67,7 +66,7 @@ import_files=$(find . -name "*.tsx" -o -name "*.ts" | xargs grep -l "from 'next/
 if [ -n "$import_files" ]; then
     echo "🔍 Found files with Next.js imports:"
     echo "$import_files"
-    
+
     echo "🔄 Fixing imports..."
     for file in $import_files; do
         fix_imports "$file"
@@ -82,7 +81,7 @@ console_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*
 if [ -n "$console_files" ]; then
     echo "🔍 Found files with console statements:"
     echo "$console_files"
-    
+
     echo "🧹 Cleaning console statements..."
     for file in $console_files; do
         clean_console "$file"
@@ -95,7 +94,7 @@ echo "📋 Step 4: Checking build status..."
 if command_exists npm; then
     echo "🔨 Running npm install..."
     npm install --silent
-    
+
     echo "🔨 Running build test..."
     if npm run build > /dev/null 2>&1; then
         echo "✅ Build successful!"
@@ -111,7 +110,7 @@ echo "📋 Step 5: Git operations..."
 if command_exists git; then
     echo "📝 Adding all changes..."
     git add .
-    
+
     echo "💾 Committing changes..."
     git commit -m "Auto-resolve: Fix merge conflicts, update imports, clean console statements
 
@@ -120,7 +119,7 @@ if command_exists git; then
 - Cleaned console statements for production
 - Ensured build compatibility
 - Ready for main branch merge" || echo "No changes to commit"
-    
+
     echo "📤 Pushing changes..."
     git push origin main || echo "Push failed, may need manual intervention"
 else

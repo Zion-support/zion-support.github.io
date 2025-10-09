@@ -22,10 +22,10 @@ function resolveConflicts(filePath) {
   }
 
   let content = fs.readFileSync(fullPath, 'utf8');
-  
+
   // Remove conflict markers and keep the origin/main version (theirs)
-  content = content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n([\s\S]*?)>>>>>>> origin\/main\n/g, '$1');
-  
+  content = content.replace(/\n([\s\S]*?)>>>>>>> origin\/main\n/g, '$1');
+
   fs.writeFileSync(fullPath, content, 'utf8');
   console.log(`Resolved conflicts in: ${filePath}`);
 }

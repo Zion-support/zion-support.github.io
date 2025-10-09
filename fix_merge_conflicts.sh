@@ -15,16 +15,15 @@ files=(
 
 for file in "${files[@]}"; do
     echo "Fixing merge conflicts in $file..."
-    
+
     # Remove merge conflict markers and keep the HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^/d' "$file"
     sed -i '/^>>>>>>> cursor\/enhance-app-with-new-services-and-futuristic-design-4856/d' "$file"
-    
+
     # Clean up any remaining merge conflict markers
-    sed -i '/^<<<<<<< HEAD/d' "$file"
-    sed -i '/^=======/d' "$file"
+    sed -i '/^/d' "$file"
     sed -i '/^>>>>>>> /d' "$file"
-    
+
     echo "Fixed $file"
 done
 

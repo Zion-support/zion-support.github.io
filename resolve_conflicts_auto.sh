@@ -19,17 +19,15 @@ files=(
 for file in "${files[@]}"; do
     if [ -f "$file" ]; then
         echo "Processing $file..."
-        
+
         # Remove conflict markers and keep HEAD version
-        # This pattern removes everything from <<<<<<< HEAD to ======= and keeps what's after =======
-        sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
-        sed -i '/^>>>>>>> origin\/cursor\/fix-errors-and-merge-to-main-[a-z0-9]*$/d' "$file"
-        
+        # This pattern removes everything from         sed -i '/^$/d' "$file"
+        sed -i '/^
+
         # Clean up any remaining conflict markers
-        sed -i '/^<<<<<<< HEAD$/d' "$file"
-        sed -i '/^=======$/d' "$file"
+        sed -i '/^$/d' "$file"
         sed -i '/^>>>>>>> origin/d' "$file"
-        
+
         echo "Fixed $file"
     else
         echo "File $file not found, skipping..."

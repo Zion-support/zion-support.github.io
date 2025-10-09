@@ -1,12 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD:app/guides/page.tsx
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const GuidesPage: React.FC = () => {
   const guides = [
     {
-<<<<<<< HEAD:app/guides/page.tsx
       title: 'AI 2026 Implementation Roadmap',
       description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026',
       url: '/guides/ai-2026-implementation-roadmap',
@@ -27,7 +25,6 @@ const GuidesPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD:app/guides/page.tsx
     <>
       <Helmet>
         <title>Technical Guides | Zion Tech Group</title>

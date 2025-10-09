@@ -10,12 +10,8 @@ in_conflict = False
 i = 0
 while i < len(lines):
     line = lines[i]
-    
-    if line.startswith('<<<<<<< HEAD'):
-        in_conflict = True
-        i += 1
-        continue
-    elif line.startswith('=======') and in_conflict:
+
+    if line.startswith('') and in_conflict:
         skip = True
         i += 1
         continue
@@ -24,10 +20,10 @@ while i < len(lines):
         skip = False
         i += 1
         continue
-    
+
     if not skip:
         result.append(line)
-    
+
     i += 1
 
 with open('app/App.tsx', 'w') as f:

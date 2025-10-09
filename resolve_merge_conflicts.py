@@ -11,25 +11,22 @@ def resolve_conflicts_in_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-        
+
         original_content = content
-        
-        # Pattern 1: Keep the main branch version (after =======)
-        pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
+
+        # Pattern 1: Keep the main branch version (after
         content = re.sub(pattern1, r'\2', content, flags=re.DOTALL)
-        
-        # Pattern 2: Keep everything after ======= if no HEAD content
-        pattern2 = r'<<<<<<< HEAD\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
+
+        # Pattern 2: Keep everything after
         content = re.sub(pattern2, r'\1', content, flags=re.DOTALL)
-        
+
         # Pattern 3: Remove standalone conflict markers
-        content = re.sub(r'^<<<<<<< HEAD\n', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^=======\n', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^\n', '', content, flags=re.MULTILINE)
         content = re.sub(r'^>>>>>>> [^\n]+\n', '', content, flags=re.MULTILINE)
-        
+
         # Clean up any remaining conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
-        
+        content = re.sub(r'.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
@@ -38,7 +35,7 @@ def resolve_conflicts_in_file(file_path):
         else:
             print(f"ℹ️  No conflicts found in {file_path}")
             return False
-            
+
     except Exception as e:
         print(f"❌ Error processing {file_path}: {e}")
         return False
@@ -46,49 +43,49 @@ def resolve_conflicts_in_file(file_path):
 def main():
     """Main function to resolve all merge conflicts"""
     print("🔍 Searching for files with merge conflicts...")
-    
+
     # Find all TypeScript/JavaScript files
     patterns = [
         '**/*.tsx',
-        '**/*.ts', 
+        '**/*.ts',
         '**/*.jsx',
         '**/*.js'
     ]
-    
+
     files_with_conflicts = []
-    
+
     for pattern in patterns:
         files = glob.glob(pattern, recursive=True)
         for file_path in files:
             # Skip node_modules and .git directories
             if 'node_modules' in file_path or '.git' in file_path:
                 continue
-                
+
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+                    if '' in content or '>>>>>>>' in content:
                         files_with_conflicts.append(file_path)
             except:
                 continue
-    
+
     if not files_with_conflicts:
         print("✅ No files with merge conflicts found!")
         return
-    
+
     print(f"📁 Found {len(files_with_conflicts)} files with conflicts:")
     for file_path in files_with_conflicts:
         print(f"  - {file_path}")
-    
+
     print("\n🔧 Resolving conflicts...")
-    
+
     resolved_count = 0
     for file_path in files_with_conflicts:
         if resolve_conflicts_in_file(file_path):
             resolved_count += 1
-    
+
     print(f"\n✅ Successfully resolved conflicts in {resolved_count} files")
-    
+
     # Verify no conflicts remain
     print("\n🔍 Verifying no conflicts remain...")
     remaining_conflicts = []
@@ -96,11 +93,11 @@ def main():
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+                if '' in content or '>>>>>>>' in content:
                     remaining_conflicts.append(file_path)
         except:
             continue
-    
+
     if remaining_conflicts:
         print(f"⚠️  {len(remaining_conflicts)} files still have conflicts:")
         for file_path in remaining_conflicts:
