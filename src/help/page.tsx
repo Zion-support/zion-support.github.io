@@ -1,4 +1,11 @@
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users,  BookOpen,  HelpCircle,  MessageSquare,  Video,  Mail,  Users from 'lucide-react';
+import {
+      HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video,
+      Download,
+      CheckCircle,
+      ArrowRight,
+      Users 
+    
+    } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -12,8 +19,7 @@ const HelpPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [
     {
-  // TODO: Add content
-};
+  ;
   id: 'getting-started',
       name: 'Getting Started',
       icon: BookOpen,
@@ -34,8 +40,7 @@ const categories = [
     }
   ];
   const helpArticles = {
-  // TODO: Add content
-}
+  
     'getting-started': [;
   title: 'Setting Up Your First Dashboard',
         description: 'Step-by-step instructions for creating and customizing your analytics dashboard',

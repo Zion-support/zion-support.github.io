@@ -1,7 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone,  BarChart,  Target,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
-import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
+import {
+      CheckCircle, Star, Users, TrendingUp,
+      Clock,
+      BarChart,
+      Target,
+      Phone 
+    
+    } from 'lucide-react';
+import {
+      BarChart, Target,
+      TrendingUp,
+      Users,
+      Clock,
+      Star 
+    
+    } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIProjectManagerPage: React.FC = () => {
@@ -17,10 +31,8 @@ const AiProjectManagerPage: React.FC = () => {
 };
   const features = [
   // TODO: Add items
-];;
-    {
-  // TODO: Add content
-};
+];{
+  ;
   icon: BarChart,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
@@ -60,8 +72,7 @@ const AiProjectManagerPage: React.FC = () => {
         'API access'
   const stats = [
   // TODO: Add items
-];;
-    { icon: Users, value: '500+', label: 'Active Teams' },
+];{ icon: Users, value: '500+', label: 'Active Teams' },
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }

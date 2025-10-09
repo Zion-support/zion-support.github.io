@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Smartphone, Target, Zap, Settings, CheckCircle, Star, Code,  Smartphone,  Target,  Settings from 'lucide-react';
+import {
+      Smartphone, Target, Zap,
+      Settings,
+      CheckCircle,
+      Star,
+      Code 
+    
+    } from 'lucide-react';
 const AIMobileBuilderPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Smartphone,
       title: 'AI-Assisted Development',
       description: 'Intelligent mobile app development with AI assistance',

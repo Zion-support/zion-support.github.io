@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {MessageSquare, Brain, FileText, Globe, CheckCircle, Star,  MessageSquare,  Brain,  Globe from 'lucide-react';
+import {
+      MessageSquare, Brain,
+      FileText,
+      Globe,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AINLPPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: MessageSquare,
       title: 'Text Analysis',
       description: 'Advanced text processing and sentiment analysis',

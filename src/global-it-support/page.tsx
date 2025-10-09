@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones,  Zap from 'lucide-react';
+import {
+      Globe, Headphones,
+      Shield,
+      Zap,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const GlobalITSupportPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Globe,
       title: 'Global Coverage',
       description: '24/7 IT support across multiple time zones',

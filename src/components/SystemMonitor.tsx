@@ -8,21 +8,18 @@ import React, { useState, useEffect, useCallback } from 'react';
 const collectPerformanceMetrics = () => {
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 const __collectPerformanceMetrics = () => {
-  // TODO: Add content
-}
+  
   if (typeof window === 'undefined' || !window.performance) return null;
   const navigation = window.performance.timing;
   const paint = window.performance.getEntriesByType('paint');
   return {
-  // TODO: Add content
-};
+  ;
   loadTime: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
   };
 // Helper functions
 const calculatePerformanceScore = () => {
-  // TODO: Add content
-}
+  
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   let __score = 100;
@@ -35,34 +32,27 @@ const calculatePerformanceScore = () => {
   return Math.max(0, score);
 // Network connection interface
 interface NetworkConnection {
-  // TODO: Add content
-}
+  
   effectiveType?: string;
   downlink?: number;
   rtt?: number;
   saveData?: boolean;
 }
 interface NavigatorWithConnection extends Navigator {
-  // TODO: Add content
-}
+  
   connection?: NetworkConnection;
   mozConnection?: NetworkConnection;
   webkitConnection?: NetworkConnection;
 interface SystemMetrics {
-  // TODO: Add content
-}
-  performance: {
-  // TODO: Add content
-};
-  score: number;
+  
+  performance: { score: number;
     loadTime: number;,
     firstContentfulPaint: number;,
     largestContentfulPaint: number;,
     firstInputDelay: number;,
     cumulativeLayoutShift: number;,
     errors: {
-  // TODO: Add content
-};
+  ;
   total: number;,
     byType: Record
           
@@ -77,30 +67,24 @@ interface SystemMetrics {
     byCategory: Record<string, number>;
     bySeverity: Record<string, number>;
     recent: Array<{
-  // TODO: Add content
-};
+  ;
   id: string;,
     message: string;,
     type: string;,
     severity: string;,
     timestamp: string;
-    }>;
-  memory: {
-  // TODO: Add content
-};
-  used: number;,
+     }>;
+  memory: { used: number;,
     limit: number;,
     percentage: number;,
     network: {
-  // TODO: Add content
-};
+  ;
   effectiveType: string;,
     downlink: number;,
     rtt: number;,
     saveData: boolean;
 interface SystemMonitorProps {
-  // TODO: Add content
-}
+  
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
@@ -115,15 +99,13 @@ const SystemMonitor: React.FC
           
           
           <SystemMonitorProps> = ({
-  // TODO: Add content
-}
-  refreshInterval = 5000,
-  showDetails = true,
-  enableExport = true,
-  className = ''
-}) => {
-  // TODO: Add content
-}
+      refreshInterval = 5000,
+      showDetails = true,
+      enableExport = true,
+      className = ''
+
+     }) => {
+  
   const [metrics, setMetrics] = useState
           
           
@@ -138,11 +120,9 @@ const SystemMonitor: React.FC
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   // Update metrics;
 const updateMetrics = useCallback(() => {
-  // TODO: Add content
-}
+  
     try {
-  // TODO: Add content
-}
+  
       const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
@@ -152,8 +132,8 @@ const updateMetrics = useCallback(() => {
       const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {
       const _networkInfo = getNetworkInfo();
-      const _newMetrics: SystemMetrics = {,
-    score: performanceScore,
+      const _newMetrics: SystemMetrics = {
+      score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics,
@@ -165,8 +145,7 @@ const updateMetrics = useCallback(() => {
           byCategory: errorStats.errorsByCategory,
           bySeverity: errorStats.errorsBySeverity,
           recent: errorStats.recentErrors.map(error => ({
-  // TODO: Add content
-};
+  ;
   id: error.id,
             message: error.message,
             type: error.type,
@@ -277,22 +256,13 @@ const updateMetrics = useCallback(() => {
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div;
 className={`h-2 rounded-full ${
-  // TODO: Add content
-}
+  
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
-                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
+                  style={
+      width: `${Math.min(metrics.memory.percentage, 100)}%` }
+    }<h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
           <div className="space-y-2 max-h-64 overflow-y-auto">
             {metrics.errors.recent.map((error) => ()
               

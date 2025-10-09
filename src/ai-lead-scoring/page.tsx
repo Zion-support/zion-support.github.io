@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Target, BarChart, Zap, Settings, CheckCircle, Star,  Target,  BarChart,  Settings from 'lucide-react';
+import {
+      Target, BarChart,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AILeadScoringPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Target,
       title: 'Intelligent Scoring',
       description: 'AI-powered lead scoring and qualification',

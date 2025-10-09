@@ -4,8 +4,7 @@
  * Provides comprehensive SEO meta tags and structured data
  */
 export interface SEOProps {
-  // TODO: Add content
-}
+  
   title?: string;
   description?: string;
   keywords?: string[];
@@ -59,9 +58,7 @@ export const SEO: React.FC
           
           
           <SEOProps> = ({
-  // TODO: Add content
-}
-//   title,
+      title,
 //   description,
 //   keywords,
 //   image,
@@ -73,15 +70,14 @@ export const SEO: React.FC
 //   canonical,
   noIndex = false,
 //   structuredData,
-  twitterCard = defaultSEO.twitterCard,
-  locale = defaultSEO.locale,
-  alternateLocales = [],
-}) => {
-  // TODO: Add content
-}
+      twitterCard = defaultSEO.twitterCard,
+      locale = defaultSEO.locale,
+      alternateLocales = [],
+       
+    }) => {
+  
   const seo = {
-  // TODO: Add content
-};
+  ;
   title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
     keywords: keywords || defaultSEO.keywords,
@@ -93,11 +89,9 @@ export const SEO: React.FC
   };
   // Generate structured data;
 const generateStructuredData = () => {
-  // TODO: Add content
-}
+  
     if (structuredData) {
-  // TODO: Add content
-}
+  
       return structuredData;
     }
     const baseStructuredData: Record
@@ -110,8 +104,7 @@ const generateStructuredData = () => {
           
           
           <string, unknown> = {
-  // TODO: Add content
-}
+  
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
@@ -120,23 +113,19 @@ const generateStructuredData = () => {
       image: seo.image,
     };
     if (author) {
-  // TODO: Add content
-}
+  
       baseStructuredData.author = {
-  // TODO: Add content
-}
+  
         '@type': 'Person',
         name: author,
       };
     }
     if (publishDate) {
-  // TODO: Add content
-}
+  
       baseStructuredData.datePublished = publishDate;
     }
     if (modifiedDate) {
-  // TODO: Add content
-}
+  
       baseStructuredData.dateModified = modifiedDate;
     }
     return baseStructuredData;

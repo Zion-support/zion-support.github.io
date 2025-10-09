@@ -1,12 +1,17 @@
 import React from 'react';
-import { Brain, Shield, Target, Users ,  Brain,  Shield,  Target,  Users from 'lucide-react';
+import {
+      Brain,
+      Shield,
+      Target,
+      Users 
+    } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
   const team = [
-    {,
- name: 'Kleber Santos',
+    {
+      name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.',

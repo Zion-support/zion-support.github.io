@@ -1,4 +1,11 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award,  ShoppingCart,  Users from 'lucide-react';
+import {
+      ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle,
+      ArrowRight,
+      Phone,
+      Mail,
+      Award 
+    
+    } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -12,8 +19,7 @@ const MarketplacePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {
-  // TODO: Add content
-};
+  ;
   id: 'products',
       name: 'Products',
       icon: ShoppingCart,

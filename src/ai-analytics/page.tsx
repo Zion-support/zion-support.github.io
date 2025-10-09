@@ -1,12 +1,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Target,  BarChart,  Target,  Settings from 'lucide-react';
+import { Target, BarChart, Settings } from 'lucide-react';
 const AIAnalyticsPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Live data visualization and insights',

@@ -1,7 +1,6 @@
 // Metadata removed for Vite compatibility
 export default function ConsensusIntelligencePage() {
-  // TODO: Add content
-}
+  
   return (
 
           

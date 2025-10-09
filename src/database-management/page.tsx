@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Database, Shield, BarChart, Settings, CheckCircle, Star,  Database,  Shield,  Settings from 'lucide-react';
+import {
+      Database, Shield,
+      BarChart,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const DatabaseManagementPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Database,
       title: 'Database Administration',
       description: 'Comprehensive database management and optimization',

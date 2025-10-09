@@ -1,7 +1,6 @@
 import React from 'react';
 interface SkeletonProps {
-  // TODO: Add content
-}
+  
   className?: string;
   width?: string | number;
   height?: string | number;
@@ -18,14 +17,14 @@ const Skeleton: React.FC
           
           
           <SkeletonProps> = ({
-  // TODO: Add content
-}
-  className = '',
-//   width,
-//   height,
-  rounded = false,
-  animated = true
-}) => {
+      className = '',
+      //   width,
+      //   height,
+      rounded = false,
+      animated = true
+
+    
+    }) => {
 const roundedClasses = rounded ? 'rounded' : '';
   const animatedClasses = animated ? 'animate-pulse' : '';
   return (
@@ -39,8 +38,9 @@ const roundedClasses = rounded ? 'rounded' : '';
           
           
           <div className={`${baseClasses} ${roundedClasses} ${animatedClasses} ${className}`}
-      style={{ width, height }}
-      role="status"
+      style={
+      width, height }
+    }role="status"
       aria-label="Loading content"
     ><span className="sr-only">Loading...</span></div>
   );
@@ -81,8 +81,7 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
           </div>
 );
 export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
-  // TODO: Add content
-}
+  
   aspectRatio = '16/9'
 }) => (
 
@@ -95,8 +94,9 @@ export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
           
           
           <div className="bg-gray-200 rounded-lg animate-pulse"
-    style={{ aspectRatio }}
-    role="status"
+    style={
+      aspectRatio }
+    }role="status"
     aria-label="Loading image"
   ><span className="sr-only">Loading image...</span></div>
 );
@@ -109,8 +109,7 @@ export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
   </div>
 );
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
-  // TODO: Add content
-}
+  
   rows = 5,
   columns = 4
 }) => (
@@ -123,7 +122,9 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
           
           
           
-          <div className="overflow-hidden"><div className="grid gap-4 mb-4" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
+          <div className="overflow-hidden"><div className="grid gap-4 mb-4" style={
+      gridTemplateColumns: `repeat(${columns}, 1fr)` }
+    }>
       {Array.from({ length: columns }).map((_, index) => ()
         
           <Skeleton key={index} height="20px" />
@@ -132,8 +133,9 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
     {Array.from({ length: rows }).map((_, rowIndex) => (
 <div
         key={rowIndex} className="grid gap-4 mb-2"
-        style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
-// >
+        style={
+      gridTemplateColumns: `repeat(${columns}, 1fr)` }
+    }// >
         {Array.from({ length: columns }).map((_, colIndex) => ()
           
           

@@ -1,7 +1,6 @@
 // Metadata removed for Vite compatibility
 export default function AI2026AutonomousEnterpriseArchitecture() {
-  // TODO: Add content
-}
+  
   return (
 
           

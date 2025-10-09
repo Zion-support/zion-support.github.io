@@ -1,13 +1,19 @@
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award,  Brain,  BarChart,  Target,  Zap,  TrendingUp,  Star,  Award from 'lucide-react';
+import {
+      BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail,
+      Star,
+      Users,
+      Award,
+      Award from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer 
+    
+    } from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Brain,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
@@ -226,8 +232,7 @@ icon: BarChart,
                   <a
                     href="/contact"
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
-  // TODO: Add content
-}
+  
 //                       tier.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'

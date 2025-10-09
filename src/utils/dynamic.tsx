@@ -1,7 +1,6 @@
 'use client';
 interface DynamicOptions {
-  // TODO: Add content
-}
+  
   loading?: () => React.ReactElement;
   ssr?: boolean;
 }

@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings from 'lucide-react';
+import {
+      Eye, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AICustomerInsightsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Eye,
       title: 'Customer Analytics',
       description: 'AI-powered customer behavior analysis',

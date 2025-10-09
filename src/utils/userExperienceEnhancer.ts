@@ -65,22 +65,16 @@ class UserExperienceEnhancer {
     if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {
       document.documentElement.style.scrollBehavior = 'smooth';
     }
-  }
-
-  private setupLoadingStates(): void {
+    }private setupLoadingStates(): void {
     if (typeof document !== 'undefined' && this.config.enableLoadingStates) {
       // Add loading state management
       console.log('Loading states enabled');
     }
-  }
-
-  public getMetrics(): UXMetrics {
+    }public getMetrics(): UXMetrics {
     return this.metrics;
   }
 
   public cleanup(): void {
     // Cleanup UX enhancements
   }
-}
-
-export default UserExperienceEnhancer;
+    }export default UserExperienceEnhancer;

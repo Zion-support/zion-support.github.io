@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Building, Target, Zap, Settings, CheckCircle, Star,  Building,  Target,  Settings from 'lucide-react';
+import {
+      Building, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const SmartCitiesPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Building,
       title: 'Smart Infrastructure',
       description: 'Intelligent city infrastructure and management systems',

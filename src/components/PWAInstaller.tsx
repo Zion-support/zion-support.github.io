@@ -1,7 +1,6 @@
 'use client';
 interface BeforeInstallPromptEvent extends Event {
-  // TODO: Add content
-}
+  
   prompt(): Promise
           
           

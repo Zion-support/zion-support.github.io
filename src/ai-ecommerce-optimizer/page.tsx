@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {ShoppingCart, Target, Zap, Settings, CheckCircle, Star,  ShoppingCart,  Target,  Settings from 'lucide-react';
+import {
+      ShoppingCart, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AIEcommerceOptimizerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: ShoppingCart,
       title: 'E-commerce Optimization',
       description: 'AI-powered e-commerce optimization and enhancement',

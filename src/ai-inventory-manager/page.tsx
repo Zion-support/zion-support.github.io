@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Package, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  Settings from 'lucide-react';
+import {
+      Package, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AIInventoryManagerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Package,
       title: 'Inventory Tracking',
       description: 'AI-powered inventory tracking and management',

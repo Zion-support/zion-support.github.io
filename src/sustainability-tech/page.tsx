@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Leaf, Target, Zap, Settings, CheckCircle, Star,  Leaf,  Target,  Settings from 'lucide-react';
+import {
+      Leaf, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const SustainabilityTechPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Leaf,
       title: 'Green Technology',
       description: 'Sustainable technology solutions for environmental impact',

@@ -46,12 +46,8 @@ class SEOEnhancer {
       }
       metaDescription.setAttribute('content', this.config.description);
     }
-  }
-
-  public updateConfig(newConfig: Partial<SEOConfig>): void {
+    }public updateConfig(newConfig: Partial<SEOConfig>): void {
     this.config = { ...this.config, ...newConfig };
     this.updateMetaTags();
   }
-}
-
-export default SEOEnhancer;
+    }export default SEOEnhancer;

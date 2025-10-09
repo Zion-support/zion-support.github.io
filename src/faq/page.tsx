@@ -1,4 +1,11 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
+import {
+      ChevronDown, ChevronUp,
+      Search,
+      Phone,
+      Mail,
+      MessageSquare
+    
+    } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -19,10 +26,8 @@ const toggleItem = (index: number) => {
   };
   const faqData = [
   // TODO: Add items
-];;
-    {
-  // TODO: Add content
-};
+];{
+  ;
   category: 'General Questions',
       questions: [,
 
@@ -85,15 +90,12 @@ const toggleItem = (index: number) => {
           question: 'How quickly do you respond to support requests?',
           answer: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
-  const filteredData = faqData.map(category => ({
-  // TODO: Add content
-}
-//     ...category,
+  const filteredData = faqData.map(category => ({ ...category,
     questions: category.questions.filter(q =>
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 //     )
-  })).filter(category => category.questions.length > 0);
+   })).filter(category => category.questions.length > 0);
   return (
     
           
@@ -166,8 +168,7 @@ type="text"
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
-  // TODO: Add content
-}
+  
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                       

@@ -12,15 +12,16 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
+      children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true,
-  enableSkipLinks = true,
-  enableKeyboardNav = true,
-  enableFocusIndicators = true,
-}) => {
+      enableSkipLinks = true,
+      enableKeyboardNav = true,
+      enableFocusIndicators = true,
+       
+    }) => {
   React.useEffect(() => {
     // Initialize accessibility features
     if (enableSkipLinks) {
@@ -32,7 +33,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableKeyboardNavigation) {
       setupKeyboardNavigation();
     }
-  }, []);
+    }, []);
 
   const addSkipLinks = () => {
     const skipLink = document.createElement('a');

@@ -1,4 +1,11 @@
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon,  Brain,  Zap,  BarChart,  Smartphone,  ShoppingCart,  Building from 'lucide-react';
+import {
+      Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon,
+      CheckCircle as Check,
+      Phone as PhoneIcon,
+      Receipt,
+      Calculator as CalculatorIcon 
+    
+    } from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
@@ -7,8 +14,7 @@ import SEOOptimizer from '../../components/SEOOptimizer';
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Brain,
       title: 'AI-Powered Invoice Generation',
       description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
@@ -56,7 +62,14 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       <SEOOptimizer
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
-        keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
+        keywords={
+      ['AI invoice generator', 'automated invoicing', 'invoice automation',
+      'AI billing',
+      'smart invoicing',
+      'invoice management',
+      'business automation']
+    
+    }
         canonicalUrl="https:// ziontechgroup.com/ai-invoice-generator"
 //       />
       
@@ -206,8 +219,7 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator
                 {pricingPlans.map((plan, index) => ()
                   
           <div key={index} className={`relative rounded-lg p-8 ${
-  // TODO: Add content
-}
+  
 //                     plan.popular
 //                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400'
                       : 'bg-slate-800/50 border border-slate-700'

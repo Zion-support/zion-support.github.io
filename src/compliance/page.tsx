@@ -1,9 +1,16 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users from 'lucide-react';
+import {
+      ArrowLeft, CheckCircle, Shield,
+      FileText,
+      Users,
+      Lock,
+      Users from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer 
+    
+    } from '../components/Footer';
 const CompliancePage: React.FC = () => {
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -15,10 +22,8 @@ const CompliancePage: React.FC = () => {
   ];
   const complianceAreas = [
   // TODO: Add items
-];;
-    {
-  // TODO: Add content
-};
+];{
+  ;
   icon: Shield,
       title: 'Data Protection',
       description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',

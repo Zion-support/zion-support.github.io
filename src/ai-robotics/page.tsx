@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Bot, Cpu, Settings, Shield, CheckCircle, Star,  Bot,  Cpu,  Shield from 'lucide-react';
+import {
+      Bot, Cpu,
+      Settings,
+      Shield,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AIRoboticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Bot,
       title: 'Intelligent Robotics',
       description: 'AI-powered robots that learn and adapt to their environment',

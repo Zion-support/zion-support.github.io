@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award from 'lucide-react';
+import {
+      GraduationCap, BookOpen,
+      Users,
+      Award,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const ITTrainingPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: GraduationCap,
       title: 'Certification Programs',
       description: 'Industry-recognized IT certification training programs',

@@ -1,8 +1,7 @@
 'use client';
 import ModernLoadingSpinner from './ModernLoadingSpinner';
 interface Props {
-  // TODO: Add content
-};
+  ;
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -11,8 +10,7 @@ interface Props {
   showRetryButton?: boolean;
 }
 interface State {
-  // TODO: Add content
-};
+  ;
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
@@ -30,16 +28,13 @@ class ComprehensiveErrorBoundary extends Component
           
           
           <Props, State> {
-  // TODO: Add content
-}
+  
   private maxRetries: number;
   constructor(props: Props) {
-  // TODO: Add content
-}
+  
     super(props);
     this.state = {
-  // TODO: Add content
-};
+  ;
   hasError: false,
       retryCount: 0,
       isRetrying: false,
@@ -57,11 +52,9 @@ class ComprehensiveErrorBoundary extends Component
           
           
           <State> {
-  // TODO: Add content
-}
+  
     return {
-  // TODO: Add content
-};
+  ;
   hasError: true,
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -70,26 +63,19 @@ class ComprehensiveErrorBoundary extends Component
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
-    this.setState({
-  // TODO: Add content
-}
-//       error,
+  
+    this.setState({ error,
 //       errorInfo
-    });
+     });
     if (this.props.onError) {
-  // TODO: Add content
-}
+  
       this.props.onError(error, errorInfo);
     }
     if (this.props.enableErrorReporting) {
-  // TODO: Add content
-}
+  
       this.reportError(error, errorInfo);
     }
-  }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    }private reportError = (error: Error, errorInfo: ErrorInfo) => {
 // Enhanced error reporting,
  message: error.message,
       stack: error.stack,
@@ -102,30 +88,23 @@ class ComprehensiveErrorBoundary extends Component
     };
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
+  
       (window as any).gtag('event', 'exception', {
-  // TODO: Add content
-};
+  ;
   description: error.message,
         fatal: false,
-        custom_map: {
-  // TODO: Add content
-};
-  error_id: this.state.errorId,
+        custom_map: { error_id: this.state.errorId,
           retry_count: this.state.retryCount
-        }
-      });
+         }
+    });
     }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
+  
       }
-  };
+    };
   private handleRetry = async () => {
-  // TODO: Add content
-}
+  
     if (this.state.retryCount 
           
           
@@ -136,14 +115,12 @@ class ComprehensiveErrorBoundary extends Component
           
           
           < this.maxRetries) {
-  // TODO: Add content
-}
+  
       this.setState({ isRetrying: true });
       // Simulate retry delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       this.setState(prevState => ({
-  // TODO: Add content
-};
+  ;
   hasError: false,
         error: undefined,
         errorInfo: undefined,
@@ -151,26 +128,21 @@ class ComprehensiveErrorBoundary extends Component
         isRetrying: false
       }));
     }
-  };
+    };
   private handleReload = () => {
-  // TODO: Add content
-}
+  
     window.location.reload();
   };
   render() {
-  // TODO: Add content
-}
+  
     if (this.state.hasError) {
-  // TODO: Add content
-}
+  
       if (this.props.fallback) {
-  // TODO: Add content
-}
+  
         return this.props.fallback;
       }
       if (this.state.isRetrying) {
-  // TODO: Add content
-}
+  
         return (
     
           
@@ -320,4 +292,4 @@ class ComprehensiveErrorBoundary extends Component
     }
     return this.props.children;
   }
-}
+    }

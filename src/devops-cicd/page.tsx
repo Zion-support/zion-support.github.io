@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Settings, Zap, Shield, BarChart, CheckCircle, Star, Code,  Settings,  Zap,  BarChart from 'lucide-react';
+import {
+      Settings, Zap, Shield,
+      BarChart,
+      CheckCircle,
+      Star,
+      Code 
+    
+    } from 'lucide-react';
 const DevOpsCICDPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Settings,
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment pipelines',

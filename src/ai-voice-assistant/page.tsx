@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Mic, Target, Zap, Settings, CheckCircle, Star,  Mic,  Target,  Settings from 'lucide-react';
+import {
+      Mic, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AIVoiceAssistantPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Mic,
       title: 'Voice Recognition',
       description: 'Advanced voice recognition and processing',

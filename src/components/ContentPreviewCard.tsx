@@ -1,6 +1,5 @@
 interface ContentPreviewCardProps {
-  // TODO: Add content
-};
+  ;
   id: string;
     title: string;
     description: string;,
@@ -10,12 +9,9 @@ interface ContentPreviewCardProps {
     path: string;,
     image: string;
   featured?: boolean;
-  stats?: {
-  // TODO: Add content
-};
-  views: number;,
+  stats?: { views: number;,
     engagement: number;
-  };
+   };
   excerpt?: string;
 }
 const ContentPreviewCard: React.FC
@@ -28,33 +24,30 @@ const ContentPreviewCard: React.FC
           
           
           <ContentPreviewCardProps> = ({
-  // TODO: Add content
-}
-  // id,
+      id,
 //   title,
 //   description,
 //   category,
 //   readTime,
 //   date,
 //   path,
-//   image,
-  featured = false,
-//   stats,
-//   excerpt
-}) => {
+      //   image,
+      featured = false,
+      //   stats,
+      //   excerpt
+
+     
+    }) => {
     if (num >= 1000) {
-  // TODO: Add content
-}
+  
       return (num / 1000).toFixed(1) + 'k';
     }
     return num.toString();
   };
   const getCategoryColor = (category: string): string => {
-  // TODO: Add content
-}
+  
     const colors: { [key: string]: string } = {
-  // TODO: Add content
-}
+  
       'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
       'Architecture': 'from-purple-500 to-pink-600',
@@ -79,8 +72,7 @@ const ContentPreviewCard: React.FC
   )
     
           <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
-  // TODO: Add content
-}
+  
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}>
       {/* Image/Visual Header */}

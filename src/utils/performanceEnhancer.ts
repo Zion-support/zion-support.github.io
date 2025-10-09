@@ -52,8 +52,7 @@ class PerformanceEnhancer {
       } catch (error) {
         console.warn('PerformanceObserver not supported:', error);
       }
-    }
-  }
+    }}
 
   public getMetrics(): PerformanceMetrics | null {
     return this.metrics;
@@ -62,6 +61,4 @@ class PerformanceEnhancer {
   public cleanup(): void {
     // Cleanup resources
   }
-}
-
-export default PerformanceEnhancer;
+    }export default PerformanceEnhancer;

@@ -1,10 +1,16 @@
 import React from 'react';
-import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
+import {
+      CheckCircle, Star, Wifi, Zap, Shield, Brain,
+      Target,
+      BarChart,
+      Settings,
+      Globe
+    
+    } from 'lucide-react';
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
-  // TODO: Add content
-};
+  ;
   title: 'IoT Device Management Platform',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
       icon: '',

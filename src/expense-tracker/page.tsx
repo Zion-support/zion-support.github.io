@@ -1,12 +1,18 @@
 'use client';
 import React from 'react';
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone,  Receipt,  TrendingUp,  Zap,  Shield from 'lucide-react';
+import {
+      Receipt, TrendingUp, Shield, Zap, Brain,
+      Target,
+      CheckCircle,
+      Star,
+      Phone 
+    
+    } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Receipt,
       title: 'Smart Receipt Scanning',
       description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
@@ -163,8 +169,7 @@ Integrates with Your Tools
             {pricingPlans.map((plan, index) => ()
               
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-  // TODO: Add content
-}
+  
 //                 plan.popular
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700 hover:border-cyan-500/50'

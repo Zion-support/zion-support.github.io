@@ -1,11 +1,17 @@
 import React from 'react';
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users,  BarChart,  Brain,  Zap,  Shield from 'lucide-react';
+import {
+      BarChart, Target, Zap, Brain, Shield, CheckCircle, Star,
+      Phone,
+      Mail,
+      MapPin,
+      Users 
+    
+    } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
@@ -69,8 +75,7 @@ const SmartAnalyticsPage: React.FC = () => {
                     </li>
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-  // TODO: Add content
-}
+  
 //                     plan.popular
                       ? 'bg-cyan-600 text-white hover:bg-cyan-700'
                       : 'bg-gray-600 text-white hover:bg-gray-700'

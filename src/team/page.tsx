@@ -1,14 +1,18 @@
 import React from 'react';
 const TeamPage: React.FC = () => {
-import { Linkedin, Mail, Phone, Award, Users, Brain, Code, Shield } from 'lucide-react';
+      import { Linkedin, Mail, Phone, Award,
+      Users,
+      Brain,
+      Code,
+      Shield 
+    
+    } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   const _teamMembers = [
   // TODO: Add items
-];;
-    {
-  // TODO: Add content
-};
+];{
+  ;
   name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
@@ -39,8 +43,7 @@ import Footer from '../components/Footer';
   ];
   const stats = [
   // TODO: Add items
-];;
-    { number: '50+', label: 'Team Members', icon: Users },
+];{ number: '50+', label: 'Team Members', icon: Users },
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '100+', label: 'AI Projects', icon: Brain },
     { number: '99.9%', label: 'Client Satisfaction', icon: Shield }

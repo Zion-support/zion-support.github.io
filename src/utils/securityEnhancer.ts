@@ -38,11 +38,7 @@ class SecurityEnhancer {
       metaCSP.setAttribute('content', "default-src 'self'");
       document.head.appendChild(metaCSP);
     }
-  }
-
-  public cleanup(): void {
+    }public cleanup(): void {
     // Cleanup security enhancements
   }
-}
-
-export default SecurityEnhancer;
+    }export default SecurityEnhancer;

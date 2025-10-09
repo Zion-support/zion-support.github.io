@@ -1,7 +1,20 @@
 import React from 'react';
-import { Mail, Target, Send, BarChart, Users, TrendingUp ,  Mail,  Target,  Send,  BarChart,  Users,  TrendingUp from 'lucide-react';
+import {
+      Mail, Target,
+      Send,
+      BarChart,
+      Users,
+      TrendingUp 
+    
+    } from 'lucide-react';
 const AiEmailMarketingPage: React.FC = () => {
-import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
+      import {Mail, Send, BarChart, Users, Target,
+      CheckCircle,
+      ArrowRight,
+      Star,
+      TrendingUp
+    
+    } from 'lucide-react';
 const AIEmailMarketingPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
@@ -9,10 +22,8 @@ const AIEmailMarketingPage: React.FC = () => {
 };
   const _features = [
   // TODO: Add items
-];;
-    {
-  // TODO: Add content
-};
+];{
+  ;
   icon: Mail,
       title: 'AI Content Generation',
       description: 'Automatically create compelling email content that resonates with your audience'

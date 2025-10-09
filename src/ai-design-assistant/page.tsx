@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Palette, Target, Zap, Settings, CheckCircle, Star,  Palette,  Target,  Settings from 'lucide-react';
+import {
+      Palette, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AIDesignAssistantPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Palette,
       title: 'AI Design Generation',
       description: 'AI-powered design creation and optimization',

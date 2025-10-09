@@ -38,8 +38,7 @@ const _baseUrl = 'https://ziontechgroup.com'
     '/support',
   ];
   return routes.map((route) => ({
-  // TODO: Add content
-};
+  ;
   url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === '' ? 'daily' : 'weekly',

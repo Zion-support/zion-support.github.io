@@ -3,42 +3,32 @@
  * Centralized configuration management for the Zion Tech Group application
  */
 export interface AppConfig {
-  // TODO: Add content
-}
-  app: {
-  // TODO: Add content
-};
-  name: string;,
+  
+  app: { name: string;,
     version: string;,
     environment: 'development' | 'production' | 'test';
-  };
-  api: {
-  // TODO: Add content
-};
-  baseUrl: string;,
+   };
+  api: { baseUrl: string;,
     timeout: number;,
     retryAttempts: number;,
     features: {
-  // TODO: Add content
-};
+  ;
   analytics: boolean;,
     monitoring: boolean;,
     errorTracking: boolean;,
     performanceOptimization: boolean;,
     performance: {
-  // TODO: Add content
-};
+  ;
   enableLazyLoading: boolean;,
     imageLazyLoadThreshold: number;,
     componentLazyLoadThreshold: number;,
     cacheMaxAge: number;,
     security: {
-  // TODO: Add content
-};
+  ;
   enableCSP: boolean;,
     enableHSTS: boolean;,
     enableXSSProtection: boolean;
-}
+ }
     name: 'Zion Tech Group',
     version: '1.0.0',
     environment:
@@ -67,11 +57,9 @@ const keys = keyPath.split('.');
   const __keys = keyPath.split('.');
   let value: unknown = config;
   for (const key of keys) {
-  // TODO: Add content
-}
+  
     if (value && typeof value === 'object' && key in value) {
-  // TODO: Add content
-}
+  
       value = (value as Record
           
           
@@ -83,28 +71,23 @@ const keys = keyPath.split('.');
           
           <string, unknown>)[key];
     } else {
-  // TODO: Add content
-}
+  
       throw new Error(`Configuration key "${keyPath}" not found`);
   return value as T;
  * Check if a feature is enabled
 export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-  // TODO: Add content
-}
+  
   return config.features[feature];
  * Get current environment
 export function getEnvironment(): string {
-  // TODO: Add content
-}
+  
   return config.app.environment;
  * Check if running in production
 export function isProduction(): boolean {
-  // TODO: Add content
-}
+  
   return config.app.environment === 'production';
  * Check if running in development
 export function isDevelopment(): boolean {
-  // TODO: Add content
-}
+  
   return config.app.environment === 'development';
 export default config;

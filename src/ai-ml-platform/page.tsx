@@ -1,15 +1,35 @@
 import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star ,  Brain,  TrendingUp,  Users,  Clock,  Star from 'lucide-react';
+import {
+      Brain, TrendingUp, Shield,
+      BarChart,
+      Users,
+      Clock,
+      Star 
+    
+    } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
-import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
+import {
+      CheckCircle, Star, Users, TrendingUp,
+      Clock,
+      Shield,
+      Brain,
+      Phone
+    
+    } from 'lucide-react';
+import {
+      Brain, TrendingUp,
+      Shield,
+      Users,
+      Clock,
+      Star 
+    
+    } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIMLPlatformPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Brain,
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
@@ -49,8 +69,7 @@ const features = [
         'API access'
   const stats = [
   // TODO: Add items
-];;
-    { icon: Users, value: '500+', label: 'Data Scientists' },
+];{ icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }

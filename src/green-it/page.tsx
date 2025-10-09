@@ -1,4 +1,11 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp,  Leaf,  Target,  Zap,  Cloud,  Recycle,  Code,  Users,  Globe,  TrendingUp,  Factory,  Building from 'lucide-react';
+import {
+      Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp,
+      Cloud,
+      Code,
+      Factory,
+      Building 
+    
+    } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -11,8 +18,7 @@ const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
     {
-  // TODO: Add content
-};
+  ;
   id: 'solutions',
       name: 'Green Solutions',
       icon: Leaf,
@@ -237,8 +243,7 @@ const tabs = [
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-  // TODO: Add content
-}
+  
                     activeTab === tab.id
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'

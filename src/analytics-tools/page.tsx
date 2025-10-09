@@ -1,11 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain from 'lucide-react';
+import {
+      CheckCircle, Star, TrendingUp, Brain, Target,
+      BarChart,
+      Phone,
+      Mail,
+      MapPin 
+    
+    } from 'lucide-react';
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
-  // TODO: Add content
-};
+  ;
   title: 'AI Business Intelligence',
       price: '$399/month',
       description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',

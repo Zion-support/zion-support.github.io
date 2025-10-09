@@ -2,8 +2,7 @@
 import React, { useState, useCallback } from 'react';
 const Image: React.FC = () => {
 interface ImageProps {
-  // TODO: Add content
-};
+  ;
   src: string;,
     alt: string;
   width?: number;
@@ -29,9 +28,7 @@ export const Image: React.FC
           
           
           <ImageProps> = ({
-  // TODO: Add content
-}
-//   src,
+      src,
 //   alt,
 //   width,
 //   height,
@@ -42,34 +39,31 @@ quality = 75,
   blurDataURL,
   fill = false,
 //   sizes,
-//   style,
-//   onLoad,
-//   onError,
-//   ...props
-}) => {
-  // TODO: Add content
-}
+      //   style,
+      //   onLoad,
+      //   onError,
+      //   ...props
+
+     
+    }) => {
+  
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const _handleLoad = useCallback(() => {
-  // TODO: Add content
-}
+  
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
   const handleError = useCallback(() => {
-  // TODO: Add content
-}
+  
     setHasError(true);
     if (onError) onError();
   }, [onError]);
   const imageStyle: React.CSSProperties = {
-  // TODO: Add content
-}
+  
 //     ...style,
     ...(fill && {
-  // TODO: Add content
-};
+  ;
   position: 'absolute',
       top: 0,
       left: 0,
@@ -79,8 +73,7 @@ quality = 75,
     })
   };
   if (hasError) {
-  // TODO: Add content
-}
+  
     return (
     
           

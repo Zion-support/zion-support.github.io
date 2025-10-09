@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Globe, Shield, Zap, Settings, CheckCircle, Star,  Globe,  Shield,  Settings from 'lucide-react';
+import {
+      Globe, Shield,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const NetworkSolutionsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Globe,
       title: 'Network Design',
       description: 'Custom network architecture design and implementation',

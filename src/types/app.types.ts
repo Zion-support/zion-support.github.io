@@ -29,8 +29,7 @@ fcp?: number; // First Contentful Paint;
  * Complete performance report structure;
  */
 export interface PerformanceReport {
-  // TODO: Add content
-};
+  ;
   webVitals: Partial
           
           
@@ -50,8 +49,7 @@ export interface PerformanceReport {
  * Tracks resource loading statistics;
  */
 export interface ResourceStats {
-  // TODO: Add content
-};
+  ;
   total: number;,
     scripts: number;,
     styles: number;,
@@ -63,8 +61,7 @@ export interface ResourceStats {
  * Browser memory usage statistics;
  */
 export interface MemoryStats {
-  // TODO: Add content
-};
+  ;
   usedJSHeapSize: number;,
     totalJSHeapSize: number;,
     jsHeapSizeLimit: number;
@@ -74,8 +71,7 @@ export interface MemoryStats {
  * Structure for performance alerts and warnings;
  */
 export interface PerformanceAlert {
-  // TODO: Add content
-};
+  ;
   type: 'warning' | 'error' | 'info';,
     message: string;,
     metric: keyof PerformanceMetrics;,
@@ -88,8 +84,7 @@ export interface PerformanceAlert {
  * Extends PerformanceEntry for layout shift tracking;
  */
 export interface LayoutShift extends PerformanceEntry {
-  // TODO: Add content
-};
+  ;
   value: number;,
     hadRecentInput: boolean;
 }
@@ -98,13 +93,9 @@ export interface LayoutShift extends PerformanceEntry {
  * Extends Performance API with memory information;
  */
 export interface PerformanceWithMemory extends Performance {
-  // TODO: Add content
-}
-  memory: {
-  // TODO: Add content
-};
-  usedJSHeapSize: number;,
+  
+  memory: { usedJSHeapSize: number;,
     totalJSHeapSize: number;,
     jsHeapSizeLimit: number;
-  }
-}
+   }
+    }

@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Target,  Shield from 'lucide-react';
+import {
+      Settings, Target,
+      BarChart,
+      Shield,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const ITInfrastructureDesignPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Settings,
       title: 'Infrastructure Design',
       description: 'Custom IT infrastructure design and architecture',

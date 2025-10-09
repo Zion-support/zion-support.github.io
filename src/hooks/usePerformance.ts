@@ -1,7 +1,6 @@
 'use client';
 interface PerformanceMetrics {
-  // TODO: Add content
-};
+  ;
   loadTime: number;,
     domContentLoaded: number;,
     firstContentfulPaint: number;,
@@ -10,8 +9,7 @@ interface PerformanceMetrics {
     firstInputDelay: number;
 }
 export const _usePerformance = () => {
-  // TODO: Add content
-}
+  
   const [metrics, setMetrics] = useState
           
           
@@ -24,12 +22,10 @@ export const _usePerformance = () => {
           <PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {
-  // TODO: Add content
-}
+  
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const measurePerformance = () => {
-  // TODO: Add content
-}
+  
       const navigation = performance.getEntriesByType()
 //         'navigation'
       )[0] as PerformanceNavigationTiming;
@@ -40,44 +36,34 @@ export const _usePerformance = () => {
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
       if ('PerformanceObserver' in window) {
-  // TODO: Add content
-}
+  
         const observer = new PerformanceObserver(list => {
-  // TODO: Add content
-}
+  
           for (const entry of list.getEntries()) {
-  // TODO: Add content
-}
+  
             if ()
               entry.entryType === 'layout-shift' &&
               !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput,
 ) {
-  // TODO: Add content
-}
+  
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
             }
-          }
-        });
+    }});
         observer.observe({ entryTypes: ['layout-shift'] });
       }
       // Measure FID (First Input Delay)
       if ('PerformanceObserver' in window) {
-  // TODO: Add content
-}
+  
         const observer = new PerformanceObserver(list => {
-  // TODO: Add content
-}
+  
           for (const entry of list.getEntries()) {
-  // TODO: Add content
-}
+  
             if (entry.entryType === 'first-input') {
-  // TODO: Add content
-}
+  
               firstInputDelay =
                 (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
             }
-          }
-        });
+    }});
         observer.observe({ entryTypes: ['first-input'] });
       }
         loadTime: navigation.loadEventEnd - navigation.fetchStart,
@@ -115,13 +101,11 @@ export const _usePerformance = () => {
     // Measure performance after page load
     if (document.readyState === 'complete') {
     } else {
-  // TODO: Add content
-}
+  
       window.addEventListener('load', measurePerformance);
     }
     return () => {
-  // TODO: Add content
-}
+  
       window.removeEventListener('load', measurePerformance);
     };
   }, []);

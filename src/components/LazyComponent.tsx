@@ -1,7 +1,6 @@
 import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {
-  // TODO: Add content
-};
+  ;
   children: ReactNode;
   fallback?: ReactNode;
   delay?: number;
@@ -23,8 +22,7 @@ export const _withLazyLoading =
           <P>,
   fallback?: ReactNode,
 ) => {
-  // TODO: Add content
-}
+  
   return (props: P) => ()
     
           
@@ -51,9 +49,7 @@ const LazyComponent: React.FC
           
           
           <LazyComponentProps> = ({
-  // TODO: Add content
-}
-//   children,
+      children,
   fallback = 
           
           
@@ -64,12 +60,12 @@ const LazyComponent: React.FC
           
           
           <LoadingSpinner />,
-  delay = 0,
-  threshold = 0.1,
-  rootMargin = '50px',
-}) => {
-  // TODO: Add content
-}
+      delay = 0,
+      threshold = 0.1,
+      rootMargin = '50px',
+       
+    }) => {
+  
   const [isVisible, setIsVisible] = React.useState(false);
   const [isLoaded, setIsLoaded] = React.useState(false);
   const elementRef = React.useRef
@@ -83,34 +79,28 @@ const LazyComponent: React.FC
           
           <HTMLDivElement>(null);
   React.useEffect(() => {
-  // TODO: Add content
-}
+  
     const observer = new IntersectionObserver()
       ([entry]) => {
-  // TODO: Add content
-}
+  
         if (entry.isIntersecting) {
-  // TODO: Add content
-}
+  
           setTimeout(() => {
-  // TODO: Add content
-}
+  
             setIsVisible(true);
             setIsLoaded(true);
           }, delay);
           observer.disconnect();
         }
-      },
+    },
       {
-  // TODO: Add content
-}
+  
 //         threshold,
 //         rootMargin,
       }
     );
     if (elementRef.current) {
-  // TODO: Add content
-}
+  
       observer.observe(elementRef.current);
     }
     return () => observer.disconnect();
@@ -159,11 +149,9 @@ export const preloadComponent = (importFunction: () => Promise
           
           
           <any>) => {
-  // TODO: Add content
-}
+  
   return () => {
-  // TODO: Add content
-}
+  
     const component = lazy(importFunction);
     return component;
   };
@@ -183,8 +171,7 @@ export const createLazyComponent =
           <{ default: ComponentType<P> }>,
   fallback?: ReactNode,
 ) => {
-  // TODO: Add content
-}
+  
   const LazyComponent = lazy(importFunction);
   return (props: P) => ()
     
@@ -203,19 +190,16 @@ export const createLazyComponent =
 };
 // Critical resource preloader;
 export const preloadCriticalResources = () => {
-  // TODO: Add content
-}
+  
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
 const fontPreloads = [
   // TODO: Add items
-];;
-    'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap',
+];'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap',
     'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
   ];
   fontPreloads.forEach((href) => {
-  // TODO: Add content
-}
+  
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'style';
@@ -225,13 +209,11 @@ const fontPreloads = [
   // Preload critical images;
 const imagePreloads = [
   // TODO: Add items
-];;
-//     '/og-image.jpg',
+];//     '/og-image.jpg',
 //     '/favicon.ico',
   ];
   imagePreloads.forEach((src) => {
-  // TODO: Add content
-}
+  
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';

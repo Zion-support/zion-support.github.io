@@ -1,11 +1,7 @@
 'use client';
 interface MicroSAASCardProps {
-  // TODO: Add content
-}
-  service: {
-  // TODO: Add content
-};
-  title: string;
+  
+  service: { title: string;
     description: string;
     icon: string;
     price: string;,
@@ -17,7 +13,7 @@ interface MicroSAASCardProps {
     contactInfo: string;
     link?: string;
     popular?: boolean;
-  };
+   };
 }
 const MicroSAASCard: React.FC
           
@@ -29,8 +25,7 @@ const MicroSAASCard: React.FC
           
           
           <MicroSAASCardProps> = ({ service }) => {
-  // TODO: Add content
-}
+  
   return (
     
           

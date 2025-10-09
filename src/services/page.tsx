@@ -3,13 +3,17 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 const ServicesPage: React.FC = () => {
-import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock from 'lucide-react';
+      import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code,
+      Settings,
+      BarChart3,
+      ShoppingCart,
+      Car 
+    
+    } from 'lucide-react';
   const _aiServices = [
   // TODO: Add items
-];;
-    {
-  // TODO: Add content
-};
+];{
+  ;
   icon: Brain,
       title: 'AI Services',
       description: 'Comprehensive AI solutions for every business need',
@@ -68,8 +72,7 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       description: 'Quick implementation with minimal downtime'
   const stats = [
   // TODO: Add items
-];;
-    { number: '500+', label: 'Projects Completed' },
+];{ number: '500+', label: 'Projects Completed' },
     { number: '100+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }

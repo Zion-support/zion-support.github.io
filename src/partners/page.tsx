@@ -1,13 +1,19 @@
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users,  Star,  CheckCircle from 'lucide-react';
+import {
+      Building, Handshake, Award, Users, Globe, Star,
+      CheckCircle,
+      Phone,
+      Mail,
+      CheckCircle from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer 
+    
+    } from '../components/Footer';
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
-  // TODO: Add content
-};
+  ;
   title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
@@ -46,8 +52,7 @@ const PartnersPage: React.FC = () => {
         { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩' },
         { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
-    }
-  ];
+    }];
   const benefits = [
 icon: Globe,
       title: 'Global Reach',

@@ -1,4 +1,11 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe,  Shield,  Award,  Globe from 'lucide-react';
+import {
+      Eye, EyeOff, Mail, Lock, User, Building, Phone,
+      CheckCircle,
+      Shield,
+      Award,
+      Globe 
+    
+    } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -9,8 +16,7 @@ const SignupPage: React.FC = () => {
   );
 };
   const [formData, setFormData] = useState({
-  // TODO: Add content
-};
+  ;
   firstName: '',
     lastName: '',
     email: '',
@@ -34,27 +40,25 @@ const handleInputChange = (e: React.ChangeEvent
           
           
           <HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-  // TODO: Add content
-}
-//       ...prev,
+      const { name,
+      value,
+      type,
+      checked 
+    } = e.target;
+    setFormData(prev => ({ ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
+     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {
-  // TODO: Add content
-}
+  
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
-  // TODO: Add content
-}
+  
       alert('Passwords do not match');
       return;
     }
     if (!formData.agreeToTerms) {
-  // TODO: Add content
-}
+  
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
     // Simulate signup process
@@ -64,10 +68,8 @@ const handleInputChange = (e: React.ChangeEvent
     window.location.href = '/';
   const features = [
   // TODO: Add items
-];;
-    {
-  // TODO: Add content
-};
+];{
+  ;
   icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance'

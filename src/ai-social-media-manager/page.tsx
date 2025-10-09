@@ -1,10 +1,16 @@
 import React from 'react';
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react';
+import {
+      Share2, TrendingUp, Users, Calendar, BarChart,
+      CheckCircle,
+      ArrowRight,
+      Star,
+      MessageSquare 
+    
+    } from 'lucide-react';
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Share2,
       title: 'AI Content Creation',
       description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'

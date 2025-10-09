@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Rocket, Target, Zap, Settings, CheckCircle, Star,  Rocket,  Target,  Settings from 'lucide-react';
+import {
+      Rocket, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const FutureTechnologiesPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Rocket,
       title: 'Emerging Technologies',
       description: 'Cutting-edge technologies and future innovations',

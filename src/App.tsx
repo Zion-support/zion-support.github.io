@@ -1,8 +1,5 @@
 import React, { useEffect, useState, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-
-// Lazy load components for better performance
-const HomePage = lazy(() => import('./page'));
+import { Routes, Route  } from 'react-router-dom';
 
 // Loading component
 const LoadingSpinner: React.FC = () => (

@@ -1,6 +1,5 @@
 interface LinkProps {
-  // TODO: Add content
-};
+  ;
   href: string;,
     children: React.ReactNode;
   className?: string;
@@ -18,10 +17,7 @@ export const Link: React.FC
           
           
           
-          <LinkProps> = ({
-  // TODO: Add content
-}
-//   href,
+          <LinkProps> = ({ href,
 //   children,
 //   className,
 //   target,
@@ -29,17 +25,16 @@ export const Link: React.FC
 //   onClick,
   'aria-label': ariaLabel,
 //   ...props
-}) => {
+ }) => {
 if (onClick) {
     }
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {
-  // TODO: Add content
-}
+  
       e.preventDefault();
       window.location.href = href;
     }
-  };
+    };
   return (
     
           

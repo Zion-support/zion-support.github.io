@@ -4,28 +4,24 @@
  * Provides common validation rules and form handling utilities
  */
 export interface ValidationRule<T = unknown> {
-  // TODO: Add content
-};
+  ;
   validate: (value: T) => boolean;,
     message: string;
 }
 export interface ValidationResult {
-  // TODO: Add content
-};
+  ;
   valid: boolean;,
     errors: string[];
 }
 export interface FieldValidation {
-  // TODO: Add content
-}
+  
   [fieldName: string]: ValidationRule[];
 }
 /**
  * Common validation rules
  */
 export const _validationRules = {
-  // TODO: Add content
-}
+  
   /**
    * Validate required field
    */
@@ -39,8 +35,7 @@ export const _validationRules = {
           
           
           <string> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
 //     message
   }),
@@ -57,11 +52,9 @@ export const _validationRules = {
           
           
           <string> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: string) => {
-  // TODO: Add content
-}
+  
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);
     },
@@ -80,8 +73,7 @@ export const _validationRules = {
           
           
           <string> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: string) => value.length >= min,
     message: message || `Must be at least ${min} characters`
   }),
@@ -98,8 +90,7 @@ export const _validationRules = {
           
           
           <string> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: string) => value.length 
           
           
@@ -116,11 +107,9 @@ export const _validationRules = {
    * Validate phone number (US format)
    */
   phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: string) => {
-  // TODO: Add content
-}
+  
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
     },
@@ -139,19 +128,15 @@ export const _validationRules = {
           
           
           <string> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: string) => {
-  // TODO: Add content
-}
+  
       try {
-  // TODO: Add content
-}
+  
         new URL(value);
         return true;
       } catch {
-  // TODO: Add content
-}
+  
         return false;
       }
     },
@@ -170,8 +155,7 @@ export const _validationRules = {
           
           
           <number> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: number) => value >= min && value 
           
           
@@ -188,8 +172,7 @@ export const _validationRules = {
    * Validate pattern match
    */
   pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: string) => regex.test(value),
 //     message
   }),
@@ -206,8 +189,7 @@ export const _validationRules = {
           
           
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
-  // TODO: Add content
-};
+  ;
   validate: validator,
 //     message
   }),
@@ -226,11 +208,9 @@ export const _validationRules = {
           
           
           <string> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: string) => {
-  // TODO: Add content
-}
+  
       const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);
@@ -262,8 +242,7 @@ export const _validationRules = {
           
           
           <string> => ({
-  // TODO: Add content
-};
+  ;
   validate: (value: string) => value === otherFieldValue,
     message: `Must match ${fieldName}`
   }),
@@ -280,11 +259,9 @@ export const _validationRules = {
           
           
           <File> => ({
-  // TODO: Add content
-};
+  ;
   validate: (file: File) => {
-  // TODO: Add content
-}
+  
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size 
           
@@ -303,8 +280,7 @@ export const _validationRules = {
    * Validate file type
    */
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({
-  // TODO: Add content
-};
+  ;
   validate: (file: File) => allowedTypes.includes(file.type),
     message: message || `File type must be one of: ${allowedTypes.join(', ')}`
   })
@@ -322,21 +298,16 @@ export function validateField
           
           
           <T>(value: T, rules: ValidationRule<T>[]): ValidationResult {
-  // TODO: Add content
-}
+  
   const errors: string[] = [];
   for (const rule of rules) {
-  // TODO: Add content
-}
+  
     if (!rule.validate(value)) {
-  // TODO: Add content
-}
+  
       errors.push(rule.message);
     }
-  }
-  return {
-  // TODO: Add content
-};
+    }return {
+  ;
   valid: errors.length === 0,
 //     errors
   };
@@ -358,8 +329,7 @@ export function validateForm
   validationSchema: Record
           <keyof T, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {
-  // TODO: Add content
-}
+  
   const results = {} as Record
           
           
@@ -371,8 +341,7 @@ export function validateForm
           
           <keyof T, ValidationResult>;
   for (const fieldName in validationSchema) {
-  // TODO: Add content
-}
+  
     const value = formData[fieldName];
     const rules = validationSchema[fieldName];
     results[fieldName] = validateField(value, rules);
@@ -395,8 +364,7 @@ export function isFormValid
   validationResults: Record
           <keyof T, ValidationResult>
 ): boolean {
-  // TODO: Add content
-}
+  
   return Object.values(validationResults).every(result => result.valid);
 }
 /**
@@ -415,8 +383,7 @@ export function getFormErrors
   validationResults: Record
           <keyof T, ValidationResult>
 ): Record<keyof T, string[]> {
-  // TODO: Add content
-}
+  
   const errors = {} as Record
           
           
@@ -428,24 +395,19 @@ export function getFormErrors
           
           <keyof T, string[]>;
   for (const fieldName in validationResults) {
-  // TODO: Add content
-}
+  
     const result = validationResults[fieldName];
     if (!result.valid) {
-  // TODO: Add content
-}
+  
       errors[fieldName] = result.errors;
     }
-  }
-  return errors;
+    }return errors;
 }
 /**
  * Sanitize input string
  */
 export function sanitizeInput(input: string): string {
-  // TODO: Add content
-}
-  return input
+      return input
 //     .trim()
 //     .replace(/[
           
@@ -457,8 +419,14 @@ export function sanitizeInput(input: string): string {
           
           
           <>]/g, '') // Remove potential HTML tags
-    .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
-}
+    .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric,
+      spaces,
+      @,
+      .,
+      -
+
+    
+    }
 /**
  * Debounce function for form validation
  */
@@ -476,8 +444,7 @@ export function debounce
   wait: number,
 ): (...args: Parameters
           <T>) => void {
-  // TODO: Add content
-}
+  
   let timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...args: Parameters
           
@@ -489,17 +456,14 @@ export function debounce
           
           
           <T>) {
-  // TODO: Add content
-}
+  
     const later = () => {
-  // TODO: Add content
-}
+  
       timeout = null;
       func(...args);
     };
     if (timeout) {
-  // TODO: Add content
-}
+  
       clearTimeout(timeout);
     }
     timeout = setTimeout(later, wait);

@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield from 'lucide-react';
+import {
+      Cpu, Zap,
+      Globe,
+      Shield,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AIEdgeComputingPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Cpu,
       title: 'Edge AI Processing',
       description: 'AI processing at the edge for real-time decision making',

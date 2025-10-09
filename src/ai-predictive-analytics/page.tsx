@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Target,  Settings from 'lucide-react';
+import {
+      TrendingUp, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AIPredictiveAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: TrendingUp,
       title: 'Predictive Modeling',
       description: 'AI-powered predictive modeling and forecasting',

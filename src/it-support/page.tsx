@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Headphones, Shield, Zap, Settings, CheckCircle, Star,  Headphones,  Shield,  Settings from 'lucide-react';
+import {
+      Headphones, Shield,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const ITSupportPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',

@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,  Settings from 'lucide-react';
+import {
+      BarChart, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AIPerformanceTrackerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: BarChart,
       title: 'Performance Monitoring',
       description: 'Comprehensive performance tracking and analysis',

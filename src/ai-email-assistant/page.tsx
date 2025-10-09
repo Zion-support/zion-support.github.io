@@ -1,7 +1,6 @@
 'use client';
 export default function AIEmailAssistantPage() {
-  // TODO: Add content
-}
+  
   return (
     
           

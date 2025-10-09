@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Search, Target, Zap, Settings, CheckCircle, Star,  Search,  Target,  Settings from 'lucide-react';
+import {
+      Search, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AISEOOptimizerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Search,
       title: 'SEO Analysis',
       description: 'Comprehensive SEO analysis and optimization',

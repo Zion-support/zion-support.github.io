@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {FileText, Target, Zap, Settings, CheckCircle, Star,  FileText,  Target,  Settings from 'lucide-react';
+import {
+      FileText, Target,
+      Zap,
+      Settings,
+      CheckCircle,
+      Star 
+    
+    } from 'lucide-react';
 const AIDocumentProcessorPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: FileText,
       title: 'Document Processing',
       description: 'AI-powered document processing and analysis',

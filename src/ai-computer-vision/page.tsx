@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Target, Shield,  Eye,  Camera,  Target,  Shield,  Settings from 'lucide-react';
+import {
+      Target,
+      Shield,
+      Eye,
+      Camera,
+      Settings 
+    
+    } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Eye,
       title: 'Object Detection',
       description: 'Advanced object detection and recognition with high accuracy',
@@ -206,8 +212,7 @@ Most Popular
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  // TODO: Add content
-}
+  
 //                     plan.popular
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'

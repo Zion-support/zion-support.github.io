@@ -39,11 +39,9 @@ class AccessibilityEnhancer {
           // Handle tab navigation
           console.log('Tab navigation detected');
         }
-      });
+    });
     }
-  }
-
-  private setupFocusIndicators(): void {
+    }private setupFocusIndicators(): void {
     if (typeof document !== 'undefined') {
       // Add focus indicators
       const style = document.createElement('style');
@@ -55,11 +53,7 @@ class AccessibilityEnhancer {
       `;
       document.head.appendChild(style);
     }
-  }
-
-  public cleanup(): void {
+    }public cleanup(): void {
     // Cleanup accessibility enhancements
   }
-}
-
-export default AccessibilityEnhancer;
+    }export default AccessibilityEnhancer;

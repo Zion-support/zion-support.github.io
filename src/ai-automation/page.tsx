@@ -1,37 +1,40 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react';
+import {
+      Shield, Settings, Zap,
+      Clock,
+      Users,
+      TrendingUp,
+      Star from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer 
+    
+    } from '../components/Footer';
 const AIAutomationPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
+  ;
   icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation'];
     },
     {
-  // TODO: Add content
-};
+  ;
   icon: Zap,
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
       benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
     },
     {
-  // TODO: Add content
-};
+  ;
   icon: Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
     {
-  // TODO: Add content
-};
+  ;
   icon: Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
@@ -40,10 +43,8 @@ const features = [
   ];
   const pricingPlans = [
   // TODO: Add items
-];;
-    {
-  // TODO: Add content
-};
+];{
+  ;
   name: 'Starter',
       price: '$1,400',
       period: '/month',
@@ -60,8 +61,7 @@ const features = [
       popular: false
     },
     {
-  // TODO: Add content
-};
+  ;
   name: 'Professional',
       price: '$2,800',
       period: '/month',
@@ -79,8 +79,7 @@ const features = [
       popular: true
     },
     {
-  // TODO: Add content
-};
+  ;
   name: 'Enterprise',
       price: '$5,600',
       period: '/month',
@@ -101,8 +100,7 @@ const features = [
   ];
   const stats = [
   // TODO: Add items
-];;
-    { icon: Users, value: '200+', label: 'Automated Processes' },
+];{ icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
