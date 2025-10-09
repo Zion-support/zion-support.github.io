@@ -1,11 +1,12 @@
 // PerformanceMonitoring.test utility
 // This file contains utility functions and configurations
 
-export const performanceMonitoring.test = {
-  // Add utility functions here
-  init: () => {
-    console.log('performanceMonitoring.test initialized');
-  }
-};
+import { performanceMonitoringTest } from '../performanceMonitoring';
 
-export default performanceMonitoring.test;
+describe('PerformanceMonitoring', () => {
+  test('should initialize correctly', () => {
+    expect(() => {
+      performanceMonitoringTest.init();
+    }).not.toThrow();
+  });
+});

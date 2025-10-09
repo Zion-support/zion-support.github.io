@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-// layout file
-// This file is under development
-
-export default function layout() {
-  return null;
-}
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -33,4 +25,3 @@ const SrcPage: React.FC = () => {
 };
 
 export default SrcPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc
