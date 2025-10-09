@@ -102,7 +102,17 @@ export const useAnalytics = () => {
     }
   };
   
-  return { trackEvent };
+  const trackPerformance = (metricName: string, value: number) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_metric', {
+        event_category: 'performance',
+        event_label: metricName,
+        value: value
+      });
+    }
+  };
+  
+  return { trackEvent, trackPerformance };
 };
 
 export default AnalyticsProvider;
