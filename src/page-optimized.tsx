@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
+import React, { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // Fallback component
-const _EmptyComponent = () => null;
+const EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>

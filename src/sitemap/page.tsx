@@ -1,1 +1,1 @@
-import React from 'react';
+// This file is intentionally minimal for sitemap generation

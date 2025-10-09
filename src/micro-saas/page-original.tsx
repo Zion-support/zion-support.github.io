@@ -1663,32 +1663,7 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
   
-  const realEstateSaaS = [
-    {
-      title: 'AI Property Valuation Platform',
-      description: 'Advanced property valuation using machine learning and real estate data analysis.',
-      icon: '🏠',
-      price: '$299/month',
-      features: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
-      benefits: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
-      marketPrice: '$300-600/month',
-      category: 'Real Estate',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Tenant Screening Platform',
-      description: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
-      icon: '🔍',
-      price: '$149/month',
-      features: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],
-      benefits: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],
-      marketPrice: '$200-400/month',
-      category: 'Property Management',
-      technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    // AI Agriculture & Food Tech
+  // Real Estate SaaS services removed as they were unused
     {
       title: 'AI Crop Monitoring System',
       description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
@@ -3368,30 +3343,7 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-  const categories = [
-    { name: 'All', count: microSAASServices.length },
-    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
-    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length },
-    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },
-    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length },
-    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
-    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length },
-    { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length },
-    { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication').length },
-    { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support').length },
-    { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-    { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-    { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-    { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },
-    { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
-    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ];
+  // Categories variable removed as it was unused
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
