@@ -415,6 +415,30 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .cyber-grid {
+    background-size: 40px 40px;
+  }
+  
+  .neon-text {
+    font-size: 2rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .cyber-card {
+    padding: 1.25rem;
+  }
+  
+  .cyber-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   .cyber-grid {
     background-size: 25px 25px;
@@ -437,19 +461,124 @@ body {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
+  
+  /* Improve mobile navigation */
+  .cyber-nav {
+    padding: 0.5rem 0;
+  }
+  
+  /* Better mobile spacing */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Mobile-friendly text sizes */
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  /* Mobile grid improvements */
+  .grid {
+    gap: 1rem;
+  }
+  
+  /* Mobile button improvements */
+  .cyber-button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .cyber-grid {
     background-size: 20px 20px;
   }
   
   .neon-text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   
   .cyber-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.8px;
+  }
+  
+  .cyber-card {
+    padding: 0.875rem;
+  }
+  
+  .cyber-button {
+    padding: 9px 18px;
+    font-size: 0.85rem;
+  }
+  
+  /* Extra small mobile improvements */
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Smaller text for very small screens */
+  h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+  
+  /* Stack elements vertically on very small screens */
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .space-x-4 > * + * {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  
+  .space-x-6 > * + * {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+  
+  .space-x-8 > * + * {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-grid {
+    background-size: 15px 15px;
+  }
+  
+  .neon-text {
+    font-size: 1.1rem;
+  }
+  
+  .cyber-text {
+    font-size: 0.95rem;
     letter-spacing: 0.5px;
   }
   
@@ -460,6 +589,55 @@ body {
   .cyber-button {
     padding: 8px 16px;
     font-size: 0.8rem;
+  }
+  
+  /* Ultra small screen optimizations */
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: 1.125rem;
+    line-height: 1.3;
+  }
+  
+  /* Reduce padding and margins for very small screens */
+  .py-16 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .py-12 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .py-8 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .mb-16 {
+    margin-bottom: 2rem;
+  }
+  
+  .mb-12 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mb-8 {
+    margin-bottom: 1rem;
   }
 }
 

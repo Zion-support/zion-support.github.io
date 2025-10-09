@@ -16,7 +16,11 @@ const ServicesPage: React.FC = () => {
         { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding', features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'] },
         { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },
         { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },
-        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] }
+        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] },
+        { name: 'AI Project Manager', price: '$79/month', description: 'AI-powered project management with intelligent planning and analytics', features: ['AI Planning', 'Real-time Analytics', 'Team Management', 'Risk Management'] },
+        { name: 'AI Social Media Manager', price: '$99/month', description: 'AI-powered social media management with content creation and scheduling', features: ['Content Creation', 'Multi-platform', 'Analytics', 'Automation'] },
+        { name: 'AI Email Marketing', price: '$79/month', description: 'AI-powered email marketing automation with personalization', features: ['Automation', 'Personalization', 'Analytics', 'A/B Testing'] },
+        { name: 'AI Customer Support', price: '$199/month', description: 'Advanced AI customer support chatbot with 24/7 availability', features: ['24/7 Support', 'NLP Processing', 'Multi-channel', 'Analytics'] }
       ]
     },
     {
@@ -27,10 +31,12 @@ const ServicesPage: React.FC = () => {
       services: [
         { name: 'IT Infrastructure', price: '$999/month', description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee', features: ['Server Management', 'Network Setup', 'Security Hardening', 'Backup Solutions'] },
         { name: 'Cloud Services', price: '$1,299/month', description: 'Cloud migration, setup, and optimization services', features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration'] },
+        { name: 'Cloud Migration Services', price: '$5,000+', description: 'Professional cloud migration with zero downtime and security', features: ['Multi-Cloud Strategy', 'Security-First Migration', 'Automated Migration', 'Performance Optimization'] },
         { name: 'Cybersecurity', price: '$1,599/month', description: 'Advanced security solutions with threat detection and prevention', features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'] },
         { name: 'DevOps & CI/CD', price: '$1,199/month', description: 'Streamlined development workflows with automated testing and deployment', features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'] },
         { name: 'Database Services', price: '$899/month', description: 'Database design, optimization, and management with AI-powered tuning', features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'] },
-        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions', features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'] }
+        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions', features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'] },
+        { name: 'Cloud Migration Services', price: '$25,000/project', description: 'Professional cloud migration with zero-downtime deployment', features: ['Zero Downtime', 'Security First', 'Automated Migration', 'Cost Optimization'] }
       ]
     },
     {
@@ -39,6 +45,10 @@ const ServicesPage: React.FC = () => {
       color: 'text-green-600',
       bgColor: 'bg-green-50',
       services: [
+        { name: 'AI Project Manager', price: '$79/month', description: 'AI-powered project management with intelligent planning and analytics', features: ['AI-Powered Planning', 'Real-time Analytics', 'Smart Team Management', 'Risk Management'] },
+        { name: 'AI Social Media Manager', price: '$99/month', description: 'AI-powered social media management with content creation and scheduling', features: ['AI Content Creation', 'Multi-Platform Management', 'Advanced Analytics', 'Smart Scheduling'] },
+        { name: 'AI Email Marketing Automation', price: '$79/month', description: 'AI-powered email marketing with automation and personalization', features: ['AI Content Generation', 'Smart Segmentation', 'Automated Workflows', 'Advanced Analytics'] },
+        { name: 'AI Customer Support Chatbot', price: '$199/month', description: 'AI-powered customer support chatbot with 24/7 availability', features: ['Natural Language Processing', '24/7 Availability', 'Multi-Channel Support', 'Smart Escalation'] },
         { name: 'AI Code Review Assistant', price: '$199/month', description: 'Automated code analysis and quality improvement suggestions', features: ['Code Quality Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practice Recommendations'] },
         { name: 'AI SEO Optimizer', price: '$299/month', description: 'AI-powered SEO analysis and optimization recommendations', features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis'] },
         { name: 'AI Analytics Dashboard', price: '$399/month', description: 'Business intelligence and analytics with AI insights', features: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Automated Reports'] },
@@ -50,7 +60,11 @@ const ServicesPage: React.FC = () => {
         { name: 'AI Email Assistant', price: '$99/month', description: 'Smart email management and response suggestions', features: ['Email Classification', 'Response Suggestions', 'Scheduling', 'Follow-up Reminders'] },
         { name: 'AI Lead Generation', price: '$349/month', description: 'Automated lead generation and qualification system', features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration'] },
         { name: 'AI Sales Automation', price: '$399/month', description: 'Intelligent sales process automation and optimization', features: ['Sales Pipeline Management', 'Deal Tracking', 'Forecasting', 'Performance Analytics'] },
-        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] }
+        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] },
+        { name: 'AI Project Manager', price: '$79/month', description: 'AI-powered project management with intelligent planning and analytics', features: ['AI Planning', 'Real-time Analytics', 'Team Management', 'Risk Management'] },
+        { name: 'AI Social Media Manager', price: '$99/month', description: 'AI-powered social media management with content creation and scheduling', features: ['Content Creation', 'Multi-platform', 'Analytics', 'Automation'] },
+        { name: 'AI Email Marketing', price: '$79/month', description: 'AI-powered email marketing automation with personalization', features: ['Automation', 'Personalization', 'Analytics', 'A/B Testing'] },
+        { name: 'AI Customer Support', price: '$199/month', description: 'Advanced AI customer support chatbot with 24/7 availability', features: ['24/7 Support', 'NLP Processing', 'Multi-channel', 'Analytics'] }
       ]
     },
     {

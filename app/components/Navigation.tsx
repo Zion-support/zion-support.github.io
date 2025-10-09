@@ -67,12 +67,20 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI-powered project management' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'AI social media automation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
+        { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', description: 'AI-powered support chatbot' },
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
         { name: 'AI Image Recognition', path: '/ai-image-recognition', description: 'Computer vision solutions' },
         { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
         { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
         { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' },
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI-powered project management' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'AI social media automation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', description: 'AI customer support chatbot' }
       ]
     },
     {
@@ -86,6 +94,7 @@ const Navigation: React.FC = () => {
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
+        { name: 'Cloud Migration', path: '/cloud-migration-services', description: 'Professional cloud migration' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
@@ -97,7 +106,8 @@ const Navigation: React.FC = () => {
         { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
         { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' },
+        { name: 'Cloud Migration Services', path: '/cloud-migration-services', description: 'Professional cloud migration' }
       ]
     },
     {
@@ -108,6 +118,10 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-green-100',
       services: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI-powered project management' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'AI social media automation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
+        { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', description: 'AI-powered support chatbot' },
         { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
         { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
@@ -118,7 +132,11 @@ const Navigation: React.FC = () => {
         { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
         { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
         { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' },
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI project management' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'AI social media automation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', description: 'AI customer support chatbot' }
       ]
     },
     {
@@ -159,7 +177,7 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
+          <div className="hidden lg:flex space-x-6 xl:space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
@@ -180,7 +198,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[900px] xl:w-[1000px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
@@ -280,7 +298,7 @@ const Navigation: React.FC = () => {
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2 max-h-[80vh] overflow-y-auto">
               <Link
                 href="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
