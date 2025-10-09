@@ -164,6 +164,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
         // Service Worker registration failed - handled silently in production
+        console.warn('Service Worker registration failed:', error);
       }
     }
   };
