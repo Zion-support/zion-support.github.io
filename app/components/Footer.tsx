@@ -9,16 +9,26 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Automation', url: '/ai-automation' },
     { name: 'AI Healthcare', url: '/ai-healthcare' },
     { name: 'AI Fintech', url: '/ai-fintech' },
+    { name: 'AI Content Generation', url: '/ai-content-generation' },
+    { name: 'AI Customer Support', url: '/ai-customer-support' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics' },
+    { name: 'AI Data Visualization', url: '/ai-data-visualization' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation' },
+    { name: 'AI Cloud Infrastructure', url: '/ai-cloud-infrastructure' },
+    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions' },
+    { name: 'AI Mobile App Development', url: '/ai-mobile-app-development' },
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services' },
+    { name: 'IT Infrastructure', url: '/it-infrastructure' },
     { name: 'Micro SAAS', url: '/micro-saas' },
     { name: 'Cybersecurity', url: '/cybersecurity' },
     { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure' },
+    { name: 'DevOps & CI/CD', url: '/ai-workflow-automation' },
+    { name: 'Database Services', url: '/ai-data-analytics' },
     { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions' },
     { name: 'Mobile App Development', url: '/ai-mobile-app-development' },
   ];
@@ -30,6 +40,15 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
     { name: 'News', url: '/news' },
+  ];
+
+  const specializedServices = [
+    { name: 'Quantum Computing', url: '/quantum-computing' },
+    { name: 'Autonomous Systems', url: '/autonomous-systems' },
+    { name: 'Blockchain & Web3', url: '/blockchain-web3' },
+    { name: 'IoT & Edge Computing', url: '/iot-edge-computing' },
+    { name: 'Business Intelligence', url: '/business-intelligence' },
+    { name: 'Robotics', url: '/robotics' },
   ];
 
   const supportLinks = [
@@ -54,7 +73,7 @@ const Footer: React.FC = memo(() => {
     <footer className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
@@ -80,7 +99,7 @@ const Footer: React.FC = memo(() => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">Delaware, USA</span>
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-blue-400" />
@@ -96,7 +115,7 @@ const Footer: React.FC = memo(() => {
               AI Services
             </h3>
             <ul className="space-y-2">
-              {aiServices.map((service, index) => (
+              {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.url}
@@ -117,6 +136,26 @@ const Footer: React.FC = memo(() => {
             </h3>
             <ul className="space-y-2">
               {itServices.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.url}
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Specialized Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Globe className="w-5 h-5 mr-2 text-blue-400" />
+              Specialized
+            </h3>
+            <ul className="space-y-2">
+              {specializedServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.url}
