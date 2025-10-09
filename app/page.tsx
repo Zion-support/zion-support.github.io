@@ -8,6 +8,8 @@ const ContentCarousel = lazy(() => import('../src/components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('../src/components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('../src/components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
+const Navigation = lazy(() => import('../src/components/Navigation'));
+const Footer = lazy(() => import('../src/components/Footer'));
 
 // Preload critical components with better timing
 const preloadComponents = () => {
@@ -37,10 +39,6 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-<<<<<<< HEAD
-export default HomePage;
-=======
-
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -383,4 +381,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
->>>>>>> origin/comprehensive-improvements-final
