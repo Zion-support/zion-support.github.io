@@ -1,15 +1,18 @@
-//Accessibility improvements;
-// //Add ARIA labels;
-const addARIALabels = () => {/* TODO: Fix JSX expression */}
+// Accessibility improvements
+// Add ARIA labels
+const addARIALabels = () => {
+  // Implementation for adding ARIA labels
 };
 
-//Improve keyboard navigation;
-const improveKeyboardNavigation = () => {/* TODO: Fix JSX expression */}
+// Improve keyboard navigation
+const improveKeyboardNavigation = () => {
+  // Implementation for improving keyboard navigation
 };
 
-//Add alt text;
-const addAltText = () => {/* TODO: Fix JSX expression */}
+// Add alt text
+const addAltText = () => {
+  // Implementation for adding alt text
 };
 
-// Run accessibility improvements;
-// 
+// Run accessibility improvements
+export { addARIALabels, improveKeyboardNavigation, addAltText };

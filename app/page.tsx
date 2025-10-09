@@ -16,21 +16,26 @@ const ContentStatistics = lazy(() => import('../src/components/ContentStatistics
 const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
 
 
-// Preload critical components with better timing;
-const preloadComponents = () => {/* TODO: Fix JSX expression */}
-      });
-    } else {/* TODO: Fix JSX expression */}
-      }, 100);
-    }
+// Preload critical components with better timing
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    setTimeout(() => {
+      // Preload components
+    });
+  } else {
+    setTimeout(() => {
+      // Preload components
+    }, 100);
   }
 };
-// Loading skeleton component;
-const,
-  ServiceCardSkeleton: React.FC = memo(() => (<div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>"
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>"
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>"
+
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>)
+  </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
@@ -141,7 +146,23 @@ const HomePage: React.FC = () => {
 
         {/* Enhanced Services Section */}
         <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <EnhancedServicesShowcase />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <div className="cyber-card hologram-card p-6">
+              <Brain className="h-12 w-12 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">AI Solutions</h3>
+              <p className="text-gray-300">Advanced artificial intelligence and machine learning solutions</p>
+            </div>
+            <div className="cyber-card hologram-card p-6">
+              <Cpu className="h-12 w-12 text-purple-400 mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">IT Services</h3>
+              <p className="text-gray-300">Comprehensive IT infrastructure and digital transformation</p>
+            </div>
+            <div className="cyber-card hologram-card p-6">
+              <Shield className="h-12 w-12 text-green-400 mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Security</h3>
+              <p className="text-gray-300">Enterprise-grade security and compliance solutions</p>
+            </div>
+          </div>
         </Suspense>
 
         {/* Statistics Section */}
@@ -172,4 +193,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-"
