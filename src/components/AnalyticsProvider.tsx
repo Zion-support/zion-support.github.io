@@ -1,9 +1,18 @@
 'use client';
+import React, { useEffect } from 'react';
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
     const initAnalytics = () => {
-      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+      const GA_TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID || 'G-XXXXXXXXXX';
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
@@ -11,12 +20,11 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       document.head.appendChild(script);
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) {
+      window.gtag = function(...args: any[]) {
         window.dataLayer.push(args);
-      }
-      (window as { gtag: typeof gtag }).gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', GA_TRACKING_ID, {
+      };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_TRACKING_ID, {
         page_title: document.title,
         page_location: window.location.href,
         send_page_view: true
@@ -77,6 +85,11 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     initAnalytics();
     trackPageView();
     trackInteractions();
+    
+    const handleRouteChange = () => {
+      trackPageView();
+    };
+    
     window.addEventListener('popstate', handleRouteChange);
     return () => {
       window.removeEventListener('popstate', handleRouteChange);

@@ -36,6 +36,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       []
     );
+
     const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
@@ -46,8 +47,18 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       []
     );
+
+    const baseClasses = useMemo(
+      () => `inline-block ${sizeClasses[size]} ${colorClasses[color]} ${className}`,
+      [sizeClasses, size, colorClasses, color, className]
+    );
+
+    const fullScreenClasses = useMemo(
+      () => `fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-75 ${baseClasses}`,
+      [baseClasses]
+    );
     const renderSpinner = useMemo(() => {
-      const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
+      const baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
       switch (variant) {
         case 'dots':
           return (

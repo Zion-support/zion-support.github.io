@@ -577,8 +577,7 @@ const ITServicesPage: React.FC = () => {
               </a>
             </div>
           </div>
-          </section>
-        </div>
+        </section>
       </main>
 
       <Footer />

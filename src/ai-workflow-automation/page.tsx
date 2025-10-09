@@ -58,6 +58,31 @@ const AIWorkflowAutomationPage: React.FC = () => {
     { number: '99.9%', label: 'Reliability' }
   ];
 
+  const useCases = [
+    {
+      icon: Zap,
+      title: 'Document Processing',
+      description: 'Automate document workflows with AI-powered data extraction and routing.'
+    },
+    {
+      icon: Users,
+      title: 'Customer Onboarding',
+      description: 'Streamline customer onboarding with automated verification and setup processes.'
+    },
+    {
+      icon: Database,
+      title: 'Data Management',
+      description: 'Automate data collection, validation, and synchronization across systems.'
+    },
+    {
+      icon: Globe,
+      title: 'Multi-Department Coordination',
+      description: 'Coordinate workflows across different departments and teams seamlessly.'
+    }
+  ];
+
+  const pricing = pricingPlans;
+
   return (
     <>
       <SEOOptimizer
