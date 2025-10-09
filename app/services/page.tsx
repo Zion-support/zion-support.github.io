@@ -11,46 +11,66 @@ const ServicesPage: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description: 'Cutting-edge artificial intelligence solutions',
       services: [
+        {
           name: 'Machine Learning Solutions',
           description: 'Custom ML models for predictive analytics and decision-making',
           price: 'Starting at $1,500/month',
           features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring']
         },
+        {
           name: 'Natural Language Processing',
           description: 'Advanced NLP solutions for text analysis and language understanding',
           price: 'Starting at $1,200/month',
           features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development']
+        },
+        {
           name: 'Computer Vision',
           description: 'Image and video analysis solutions for object detection and recognition',
           price: 'Starting at $1,800/month',
           features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition']
+        },
+        {
           name: 'AI Automation',
           description: 'Intelligent process automation with decision-making capabilities',
           price: 'Starting at $1,400/month',
           features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling']
         }
       ]
+    },
+    {
       title: 'IT Services',
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description: 'Comprehensive IT infrastructure and support',
+      services: [
+        {
           name: 'Cloud Migration & Management',
           description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee',
           price: 'Starting at $1,299/month',
           features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring']
+        },
+        {
           name: 'Cybersecurity',
           description: 'Advanced security solutions with threat detection and prevention',
           price: 'Starting at $1,599/month',
           features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response']
+        },
+        {
           name: 'DevOps & CI/CD',
           description: 'Streamlined development workflows with automated testing and deployment',
           price: 'Starting at $1,199/month',
           features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup']
+        },
+        {
           name: 'Database Management',
           description: 'Database design, optimization, and management with AI-powered tuning',
           price: 'Starting at $899/month',
           features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
+        }
+      ]
+    },
+    {
       title: 'Micro SAAS',
       icon: Zap,
       color: 'text-cyan-400',
