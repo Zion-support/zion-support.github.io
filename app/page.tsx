@@ -111,11 +111,11 @@ export default function HomePage() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+13026009898"
+                href="tel:+13024640950"
                 onClick={handlePhoneClick}
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
-                Call: (302) 600-9898
+                Call: +1 302 464 0950
               </a>
               <a 
                 href="/contact"

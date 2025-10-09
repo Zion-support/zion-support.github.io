@@ -200,6 +200,31 @@ const ServicesPage: React.FC = () => {
       link: '/ai-data-visualization',
       features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates'],
       price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI Voice Assistant Solutions',
+      description: 'Advanced conversational AI with natural language processing, multi-language support, and custom voice training.',
+      icon: '🎤',
+      link: '/ai-voice-assistant',
+      features: ['Natural Language Processing', 'Multi-language Support', 'Custom Voice Training', 'Real-time Speech Recognition'],
+      price: 'Starting at $199/month',
+      popular: true
+    },
+    {
+      title: 'AI Blockchain Solutions',
+      description: 'Revolutionary blockchain technology enhanced with artificial intelligence for transparent, secure, and intelligent systems.',
+      icon: '⛓️',
+      link: '/ai-blockchain-solutions',
+      features: ['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'Supply Chain Tracking'],
+      price: 'Starting at $1,299/month'
+    },
+    {
+      title: 'AI IoT Solutions',
+      description: 'Intelligent Internet of Things solutions that connect, analyze, and optimize devices and systems for maximum efficiency.',
+      icon: '🌐',
+      link: '/ai-iot-solutions',
+      features: ['Smart Cities', 'Industrial IoT', 'Healthcare IoT', 'Energy Management'],
+      price: 'Starting at $1,799/month'
     }
   ];
 

@@ -53,11 +53,12 @@ const Footer: React.FC = memo(() => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
-              <li><Link href="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">Quantum Computing</Link></li>
-              <li><Link href="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">Autonomous Systems</Link></li>
-              <li><Link href="/business-intelligence" className="text-gray-300 hover:text-white transition-colors">Business Intelligence</Link></li>
-              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">All Services</Link></li>
+              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SAAS Solutions</Link></li>
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link href="/ai-voice-assistant" className="text-gray-300 hover:text-white transition-colors">AI Voice Assistant</Link></li>
+              <li><Link href="/ai-blockchain-solutions" className="text-gray-300 hover:text-white transition-colors">AI Blockchain</Link></li>
+              <li><Link href="/ai-iot-solutions" className="text-gray-300 hover:text-white transition-colors">AI IoT Solutions</Link></li>
             </ul>
           </div>
 
@@ -79,14 +80,14 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-gray-400" />
-                <a href="tel:+13026009898" className="text-gray-300 hover:text-white transition-colors">
-                  (302) 600-9898
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                  +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-gray-400" />
-                <a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  info@ziontechgroup.com
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">

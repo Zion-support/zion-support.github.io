@@ -44,9 +44,36 @@ const Navigation: React.FC = () => {
             <Link href="/" className="text-white hover:text-blue-400 transition-colors">
               Home
             </Link>
-            <Link href="/services" className="text-white hover:text-blue-400 transition-colors">
-              Services
-            </Link>
+            <div className="relative group">
+              <button className="text-white hover:text-blue-400 transition-colors flex items-center">
+                Services
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-gray-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-2">
+                  <Link href="/services" className="block px-4 py-2 text-white hover:bg-blue-600 transition-colors">
+                    All Services
+                  </Link>
+                  <Link href="/micro-saas" className="block px-4 py-2 text-white hover:bg-blue-600 transition-colors">
+                    Micro SAAS Solutions
+                  </Link>
+                  <Link href="/ai-services" className="block px-4 py-2 text-white hover:bg-blue-600 transition-colors">
+                    AI Services
+                  </Link>
+                  <Link href="/ai-voice-assistant" className="block px-4 py-2 text-white hover:bg-blue-600 transition-colors">
+                    AI Voice Assistant
+                  </Link>
+                  <Link href="/ai-blockchain-solutions" className="block px-4 py-2 text-white hover:bg-blue-600 transition-colors">
+                    AI Blockchain
+                  </Link>
+                  <Link href="/ai-iot-solutions" className="block px-4 py-2 text-white hover:bg-blue-600 transition-colors">
+                    AI IoT Solutions
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
               About
             </Link>
@@ -58,11 +85,11 @@ const Navigation: React.FC = () => {
             </Link>
             <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-600">
               <a 
-                href="tel:+13026009898" 
+                href="tel:+13024640950" 
                 className="flex items-center space-x-1 text-blue-400 hover:text-blue-300 transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">(302) 600-9898</span>
+                <span className="text-sm">+1 302 464 0950</span>
               </a>
             </div>
           </div>
@@ -90,12 +117,48 @@ const Navigation: React.FC = () => {
               >
                 Home
               </Link>
+              <div className="px-3 py-2 text-white font-semibold">Services</div>
               <Link 
                 href="/services" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
                 onClick={closeMenu}
               >
-                Services
+                All Services
+              </Link>
+              <Link 
+                href="/micro-saas" 
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                Micro SAAS Solutions
+              </Link>
+              <Link 
+                href="/ai-services" 
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                AI Services
+              </Link>
+              <Link 
+                href="/ai-voice-assistant" 
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                AI Voice Assistant
+              </Link>
+              <Link 
+                href="/ai-blockchain-solutions" 
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                AI Blockchain
+              </Link>
+              <Link 
+                href="/ai-iot-solutions" 
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                AI IoT Solutions
               </Link>
               <Link 
                 href="/about" 
@@ -120,18 +183,18 @@ const Navigation: React.FC = () => {
               </Link>
               <div className="border-t border-gray-600 pt-2 mt-2">
                 <a 
-                  href="tel:+13026009898" 
+                  href="tel:+13024640950" 
                   className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>(302) 600-9898</span>
+                  <span>+1 302 464 0950</span>
                 </a>
                 <a 
-                  href="mailto:info@ziontechgroup.com" 
+                  href="mailto:kleber@ziontechgroup.com" 
                   className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>info@ziontechgroup.com</span>
+                  <span>kleber@ziontechgroup.com</span>
                 </a>
               </div>
             </div>
