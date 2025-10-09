@@ -4,8 +4,20 @@ import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, Ha
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+interface ITService {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  features: string[];
+  price: string;
+  category: string;
+  benefits: string[];
+  technologies: string[];
+  contactInfo: string;
+}
+
 const ITServicesPage: React.FC = () => {
-  const itServices = [
+  const itServices: ITService[] = [
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
