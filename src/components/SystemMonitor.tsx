@@ -150,7 +150,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   }, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information
   const getMemoryInfo = () => {
-    if ('memory' in performance) {
+    if ('memory' in performance) {}
+
       const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
@@ -162,7 +163,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   };
   // Get network information
   const getNetworkInfo = () => {
-    if ('connection' in navigator) {
+    if ('connection' in navigator) {}
+
       const nav = navigator as NavigatorWithConnection;
       const connection = nav.connection;
       return {

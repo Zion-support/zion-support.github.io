@@ -206,7 +206,7 @@ class HealthCheckService {
       'sessionStorage',
       'console',
       'navigator'
-    ]
+    ];
     const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {
       if (typeof window !== 'undefined' && !(api in window)) {

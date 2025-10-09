@@ -50,7 +50,7 @@ class EnvValidator {
     };
   }
   private validateNodeEnv(): void {
-    const nodeEnv = process.env['NODE_ENV']
+    const nodeEnv = process.env['NODE_ENV'];
     const validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {
       this.errors.push('NODE_ENV is not set')
