@@ -61,7 +61,11 @@ const _QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const _AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const _BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
 const _BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const _BlockchainPage = lazy(() => import('./blockchain/page'));
 const _IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const _IoTEdgePage = lazy(() => import('./iot-edge/page'));
+const _RoboticsPage = lazy(() => import('./robotics/page'));
+const _OfflinePage = lazy(() => import('./offline/page'));
 
 // Additional Pages
 const _BlogPage = lazy(() => import('./blog-index'));
@@ -188,7 +192,11 @@ const App: React.FC = () => {
                         <Route path="/autonomous-systems" element={<_AutonomousSystemsPage />} />
                         <Route path="/business-intelligence" element={<_BusinessIntelligencePage />} />
                         <Route path="/blockchain-web3" element={<_BlockchainWeb3Page />} />
+                        <Route path="/blockchain" element={<_BlockchainPage />} />
                         <Route path="/iot-edge-computing" element={<_IoTEdgeComputingPage />} />
+                        <Route path="/iot-edge" element={<_IoTEdgePage />} />
+                        <Route path="/robotics" element={<_RoboticsPage />} />
+                        <Route path="/offline" element={<_OfflinePage />} />
                         
                         {/* Additional Routes */}
                         <Route path="/blog" element={<_BlogPage />} />
