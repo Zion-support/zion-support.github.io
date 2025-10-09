@@ -14,8 +14,6 @@ const ApiDocsPage: React.FC = () => {
     setTimeout(() => setCopiedCode(null), 2000);
   };
 import React, { useState } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
