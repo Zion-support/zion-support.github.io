@@ -1,26 +1,44 @@
 {
-  "timestamp": "2025-10-09T03:43:14.281Z",
-  "optimizations": [
-    "React.memo applied to components",
-    "Lazy loading implemented",
-    "Image optimization added",
-    "Bundle splitting configured",
-    "SEO meta tags optimized",
-    "Accessibility improvements added",
-    "Error boundaries implemented",
-    "Performance monitoring added"
-  ],
-  "metrics": {
-    "bundleSize": "134.15 kB (vendor) + 3.87 kB (libs) + 1.17 kB (index)",
-    "cssSize": "27.88 kB",
-    "htmlSize": "4.19 kB",
-    "totalSize": "170.36 kB"
+  "timestamp": "2025-10-08T22:56:10.019Z",
+  "totalSize": 186047,
+  "totalSizeKB": 181.69,
+  "totalSizeMB": 0.18,
+  "files": {
+    "index.html": {
+      "size": 794,
+      "sizeKB": 0.78,
+      "sizeMB": 0
+    },
+    "performance-monitor.js": {
+      "size": 1159,
+      "sizeKB": 1.13,
+      "sizeMB": 0
+    },
+    "robots.txt": {
+      "size": 218,
+      "sizeKB": 0.21,
+      "sizeMB": 0
+    },
+    "site.webmanifest": {
+      "size": 1139,
+      "sizeKB": 1.11,
+      "sizeMB": 0
+    },
+    "sitemap.xml": {
+      "size": 3155,
+      "sizeKB": 3.08,
+      "sizeMB": 0
+    },
+    "stats.html": {
+      "size": 174662,
+      "sizeKB": 170.57,
+      "sizeMB": 0.17
+    },
+    "sw.js": {
+      "size": 4920,
+      "sizeKB": 4.8,
+      "sizeMB": 0
+    }
   },
-  "recommendations": [
-    "Consider implementing service worker for caching",
-    "Add more granular code splitting",
-    "Implement image lazy loading",
-    "Add preloading for critical resources",
-    "Consider using a CDN for static assets"
-  ]
+  "recommendations": []
 }

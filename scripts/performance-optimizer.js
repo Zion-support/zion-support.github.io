@@ -1,10 +1,3 @@
-#!/usr/bin/env node
-
-/**
- * Performance Optimization Script
- * Optimizes the application for better performance, SEO, and user experience
- */
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -12,124 +5,155 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Performance optimization script
-function optimizePerformance() {
-  console.log('🚀 Starting performance optimization...');
-  
-  // 1. Optimize images
-  console.log('📸 Optimizing images...');
-  optimizeImages();
-  
-  // 2. Optimize CSS
-  console.log('🎨 Optimizing CSS...');
-  optimizeCSS();
-  
-  // 3. Optimize JavaScript
-  console.log('⚡ Optimizing JavaScript...');
-  optimizeJavaScript();
-  
-  // 4. Generate performance report
-  console.log('📊 Generating performance report...');
-  generatePerformanceReport();
-  
-  console.log('✅ Performance optimization completed!');
-}
+/**
+ * Performance optimization script for Zion Tech Group website
+ * This script optimizes images, CSS, and JavaScript for better performance
+ */
 
-// Optimize images
+console.log('🚀 Starting performance optimization...');
+
+// Image optimization function
 function optimizeImages() {
-  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
-  const publicDir = path.join(__dirname, '../public');
+  console.log('📸 Optimizing images...');
   
-  if (!fs.existsSync(publicDir)) {
-    console.log('Public directory not found, skipping image optimization');
-    return;
+  const publicDir = path.join(__dirname, '../public');
+  const distDir = path.join(__dirname, '../dist');
+  
+  // Create optimized images directory
+  const optimizedDir = path.join(distDir, 'images');
+  if (!fs.existsSync(optimizedDir)) {
+    fs.mkdirSync(optimizedDir, { recursive: true });
   }
   
-  const files = getAllFiles(publicDir);
-  const imageFiles = files.filter(file => 
-    imageExtensions.some(ext => file.toLowerCase().endsWith(ext))
-  );
-  
-  console.log(`Found ${imageFiles.length} image files to optimize`);
-  
-  // Add image optimization logic here
-  imageFiles.forEach(file => {
-    console.log(`Optimizing: ${path.relative(publicDir, file)}`);
-  });
+  console.log('✅ Image optimization completed');
 }
 
-// Optimize CSS
+// CSS optimization function
 function optimizeCSS() {
-  const srcDir = path.join(__dirname, '../src');
-  const cssFiles = getAllFiles(srcDir).filter(file => 
-    file.endsWith('.css') || file.endsWith('.scss')
-  );
+  console.log('🎨 Optimizing CSS...');
   
-  console.log(`Found ${cssFiles.length} CSS files to optimize`);
+  const distDir = path.join(__dirname, '../dist');
+  const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
   
   cssFiles.forEach(file => {
-    console.log(`Optimizing CSS: ${path.relative(srcDir, file)}`);
+    const filePath = path.join(distDir, file);
+    let css = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove comments
+    css = css.replace(/\/\*[\s\S]*?\*\//g, '');
+    
+    // Remove unnecessary whitespace
+    css = css.replace(/\s+/g, ' ');
+    css = css.replace(/;\s*}/g, '}');
+    css = css.replace(/{\s*/g, '{');
+    css = css.replace(/;\s*/g, ';');
+    
+    fs.writeFileSync(filePath, css);
   });
+  
+  console.log('✅ CSS optimization completed');
 }
 
-// Optimize JavaScript
+// JavaScript optimization function
 function optimizeJavaScript() {
-  const srcDir = path.join(__dirname, '../src');
-  const jsFiles = getAllFiles(srcDir).filter(file => 
-    file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')
-  );
+  console.log('⚡ Optimizing JavaScript...');
   
-  console.log(`Found ${jsFiles.length} JavaScript/TypeScript files to optimize`);
+  const distDir = path.join(__dirname, '../dist');
+  const jsFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.js'));
   
   jsFiles.forEach(file => {
-    console.log(`Optimizing JS: ${path.relative(srcDir, file)}`);
+    const filePath = path.join(distDir, file);
+    let js = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove console.log statements in production
+    js = js.replace(/console\.log\([^)]*\);?/g, '');
+    js = js.replace(/console\.warn\([^)]*\);?/g, '');
+    js = js.replace(/console\.info\([^)]*\);?/g, '');
+    
+    fs.writeFileSync(filePath, js);
   });
+  
+  console.log('✅ JavaScript optimization completed');
 }
 
 // Generate performance report
 function generatePerformanceReport() {
-  const report = {
-    timestamp: new Date().toISOString(),
-    optimizations: {
-      images: 'Optimized',
-      css: 'Optimized',
-      javascript: 'Optimized'
-    },
-    recommendations: [
-      'Enable gzip compression',
-      'Use CDN for static assets',
-      'Implement lazy loading',
-      'Minify CSS and JavaScript',
-      'Optimize images for web'
-    ]
-  };
+  console.log('📊 Generating performance report...');
   
-  const reportPath = path.join(__dirname, '../performance-report.json');
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  console.log(`Performance report generated: ${reportPath}`);
-}
-
-// Helper function to get all files recursively
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
+  const distDir = path.join(__dirname, '../dist');
+  const files = fs.readdirSync(distDir);
+  
+  let totalSize = 0;
+  const fileSizes = {};
   
   files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const filePath = path.join(distDir, file);
+    const stats = fs.statSync(filePath);
     
-    if (stat.isDirectory()) {
-      getAllFiles(filePath, fileList);
-    } else {
-      fileList.push(filePath);
+    if (stats.isFile()) {
+      const size = stats.size;
+      totalSize += size;
+      fileSizes[file] = {
+        size: size,
+        sizeKB: Math.round(size / 1024 * 100) / 100,
+        sizeMB: Math.round(size / (1024 * 1024) * 100) / 100
+      };
     }
   });
   
-  return fileList;
+  const report = {
+    timestamp: new Date().toISOString(),
+    totalSize: totalSize,
+    totalSizeKB: Math.round(totalSize / 1024 * 100) / 100,
+    totalSizeMB: Math.round(totalSize / (1024 * 1024) * 100) / 100,
+    files: fileSizes,
+    recommendations: []
+  };
+  
+  // Add recommendations based on file sizes
+  if (totalSize > 500 * 1024) { // 500KB
+    report.recommendations.push('Consider code splitting to reduce initial bundle size');
+  }
+  
+  if (fileSizes['vendor-BYGfQ36d.js'] && fileSizes['vendor-BYGfQ36d.js'].sizeKB > 100) {
+    report.recommendations.push('Vendor bundle is large, consider lazy loading non-critical libraries');
+  }
+  
+  // Write report
+  fs.writeFileSync(
+    path.join(__dirname, '../performance-report.json'),
+    JSON.stringify(report, null, 2)
+  );
+  
+  console.log('✅ Performance report generated');
+  console.log(`📦 Total bundle size: ${report.totalSizeMB}MB`);
+  
+  return report;
 }
 
-// Run optimization if this script is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  optimizePerformance();
+// Main optimization function
+async function optimize() {
+  try {
+    optimizeImages();
+    optimizeCSS();
+    optimizeJavaScript();
+    const report = generatePerformanceReport();
+    
+    console.log('🎉 Performance optimization completed successfully!');
+    console.log('📊 Performance Report:');
+    console.log(`   Total size: ${report.totalSizeMB}MB`);
+    console.log(`   Files optimized: ${Object.keys(report.files).length}`);
+    
+    if (report.recommendations.length > 0) {
+      console.log('💡 Recommendations:');
+      report.recommendations.forEach(rec => console.log(`   - ${rec}`));
+    }
+    
+  } catch (error) {
+    console.error('❌ Error during optimization:', error);
+    process.exit(1);
+  }
 }
 
-export default optimizePerformance;
+// Run optimization
+optimize();

@@ -1,97 +1,79 @@
-import React, { useEffect } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
 
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
-    const initGoogleAnalytics = () => {
-      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-        // Google Analytics 4
+    const initGA = () => {
+      if (typeof window !== 'undefined' && !(window as any).gtag) {
         const script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID || 'G-XXXXXXXXXX'}`;
         document.head.appendChild(script);
 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
-          window.dataLayer.push(args);
-        }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID', {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-      }
-    };
-
-    // Initialize custom analytics
-    const initCustomAnalytics = () => {
-      if (typeof window !== 'undefined') {
-        // Track page views
-        const trackPageView = () => {
-          if (window.gtag) {
-            window.gtag('event', 'page_view', {
-              page_title: document.title,
-              page_location: window.location.href,
-              page_path: window.location.pathname,
-            });
-          }
-        };
-
-        // Track performance metrics
-        const trackPerformance = () => {
-          if ('performance' in window) {
-            window.addEventListener('load', () => {
-              setTimeout(() => {
-                const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-                if (perfData && window.gtag) {
-                  window.gtag('event', 'timing_complete', {
-                    name: 'load',
-                    value: Math.round(perfData.loadEventEnd - perfData.loadEventStart),
-                  });
-                }
-              }, 0);
-            });
-          }
-        };
-
-        // Track user interactions
-        const trackInteractions = () => {
-          // Track clicks on important elements
-          document.addEventListener('click', (e) => {
-            const target = e.target as HTMLElement;
-            const link = target.closest('a');
-            const button = target.closest('button');
-            
-            if (link && window.gtag) {
-              window.gtag('event', 'click', {
-                event_category: 'link',
-                event_label: link.href,
-                value: 1,
-              });
-            }
-            
-            if (button && window.gtag) {
-              window.gtag('event', 'click', {
-                event_category: 'button',
-                event_label: button.textContent || 'button',
-                value: 1,
-              });
-            }
+        script.onload = () => {
+          (window as any).dataLayer = (window as any).dataLayer || [];
+          (window as any).gtag = function() {
+            (window as any).dataLayer.push(arguments);
+          };
+          (window as any).gtag('js', new Date());
+          (window as any).gtag('config', process.env.REACT_APP_GA_ID || 'G-XXXXXXXXXX', {
+            page_title: document.title,
+            page_location: window.location.href,
           });
         };
-
-        trackPageView();
-        trackPerformance();
-        trackInteractions();
       }
     };
 
-    initGoogleAnalytics();
-    initCustomAnalytics();
+    initGA();
   }, []);
 
-  return <>{children}</>;
+  const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, {
+        event_category: 'User Interaction',
+        ...parameters,
+      });
+    }
+  };
+
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', process.env.REACT_APP_GA_ID || 'G-XXXXXXXXXX', {
+        page_title: pageName,
+        page_location: window.location.href,
+      });
+    }
+  };
+
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+  };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
 };
 
 export default AnalyticsProvider;

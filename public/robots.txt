@@ -7,27 +7,8 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay
 Crawl-delay: 1
 
-<<<<<<< HEAD
 # Disallow admin and private areas
-=======
-# Disallow admin areas
->>>>>>> cursor/analyze-improve-and-deploy-application-bc4a
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
-Disallow: /static/
-
-# Allow important pages
-<<<<<<< HEAD
-Allow: /ai-services
-Allow: /contact
-Allow: /about
-Allow: /pricing
-Allow: /blog
-=======
-Allow: /blog/
-Allow: /services/
-Allow: /about/
-Allow: /contact/
->>>>>>> cursor/analyze-improve-and-deploy-application-bc4a
