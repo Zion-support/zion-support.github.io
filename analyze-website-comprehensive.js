@@ -4,7 +4,7 @@ import https from 'https';
 import http from 'http';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
-import path from 'path';
+// import path from 'path'; // Unused import
 
 class WebsiteAnalyzer {
   constructor(baseUrl) {
@@ -135,7 +135,7 @@ class WebsiteAnalyzer {
   resolveUrl(href, baseUrl) {
     try {
       return new URL(href, baseUrl).href;
-    } catch (error) {
+    } catch {
       return href;
     }
   }
@@ -145,7 +145,7 @@ class WebsiteAnalyzer {
       const urlObj = new URL(url);
       const baseUrlObj = new URL(this.baseUrl);
       return urlObj.hostname === baseUrlObj.hostname;
-    } catch (error) {
+    } catch {
       return false;
     }
   }

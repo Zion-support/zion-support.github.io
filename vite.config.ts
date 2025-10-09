@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -17,22 +16,6 @@ export default defineConfig({
       '@/data': resolve(__dirname, './data'),
       '@/content': resolve(__dirname, './content')
     }
-  },
-  buil,
-  d: {/* TODO: Fix JSX expression */}
-export default defineConfig({
-  plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@app': resolve(__dirname, 'app'),
-    },
   },
   build: {
     target: 'esnext',
@@ -71,23 +54,6 @@ export default defineConfig({
           if (id.includes('/app/components/')) {
             return 'components';
           }
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-    },
-  },
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -116,9 +82,6 @@ export default defineConfig({
       },
       format: {
         comments: false,
-      },
-      format: {
-        comments: false
       }
     },
     chunkSizeWarningLimit: 500,

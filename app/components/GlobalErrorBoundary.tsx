@@ -27,7 +27,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // Error logging would go here in production
     }
 
     // Call onError callback if provided

@@ -2,12 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Search as SearchIcon, FileText as FileTextIcon } from 'lucide-react';
 
-export default function MicroSAASPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const microSAASServices = [
+const microSAASServices = [
     // AI-Powered Business Tools
     {
       id: 'ai-project-manager',
@@ -57,7 +52,12 @@ export default function MicroSAASPage() {
       icon: FileText,
       popular: true
     }
-  ];
+];
+
+export default function MicroSAASPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe },
@@ -100,7 +100,7 @@ export default function MicroSAASPage() {
     });
 
     return filtered;
-  }, [microSAASServices, selectedCategory, searchTerm, sortBy]);
+  }, [selectedCategory, searchTerm, sortBy]);
 
   const formatPrice = (price: typeof microSAASServices[0]['price']) => {
     return `$${price.starting}/${price.period === 'month' ? 'mo' : 'yr'}`;

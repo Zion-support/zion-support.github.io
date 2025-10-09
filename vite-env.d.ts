@@ -1,7 +1,10 @@
-/// <reference types="vite/client" /></reference>
-interface ImportMetaEnv {/* TODO: Fix JSX expression */}
+/// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  readonly VITE_API_URL: string;
+  readonly VITE_APP_TITLE: string;
 }
 
-interface ImportMeta {/* TODO: Fix JSX expression */}
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
 }
-"

@@ -1,2 +1,0 @@
-// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
-  d: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */}

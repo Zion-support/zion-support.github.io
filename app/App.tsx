@@ -11,7 +11,7 @@ const ServicesPage = lazy(() => import('./services/page'));
 const PricingPage = lazy(() => import('./pricing/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 const BlogPage = lazy(() => import('./blog/page'));
-const TeamPage = lazy(() => import('./team/page'));
+// const TeamPage = lazy(() => import('./team/page')); // Page doesn't exist
 const CareersPage = lazy(() => import('./careers/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
@@ -31,12 +31,12 @@ const ItSupportPage = lazy(() => import('./it-support/page'));
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 
-// Emerging Technologies
-const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
-const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
-const BlockchainPage = lazy(() => import('./blockchain/page'));
-const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
-const RoboticsPage = lazy(() => import('./robotics/page'));
+// Emerging Technologies - only include existing pages
+// const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+// const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+// const BlockchainPage = lazy(() => import('./blockchain/page'));
+// const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+// const RoboticsPage = lazy(() => import('./robotics/page'));
 
 // Micro SaaS
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
@@ -72,7 +72,7 @@ const App: React.FC = () => {
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/blog" element={<BlogPage />} />
-            <Route path="/team" element={<TeamPage />} />
+            {/* <Route path="/team" element={<TeamPage />} /> */}
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
@@ -92,12 +92,12 @@ const App: React.FC = () => {
             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
             <Route path="/cybersecurity" element={<CybersecurityPage />} />
 
-            {/* Emerging Technologies Routes */}
-            <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-            <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-            <Route path="/blockchain" element={<BlockchainPage />} />
-            <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} />
-            <Route path="/robotics" element={<RoboticsPage />} />
+            {/* Emerging Technologies Routes - commented out until pages exist */}
+            {/* <Route path="/quantum-computing" element={<QuantumComputingPage />} /> */}
+            {/* <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} /> */}
+            {/* <Route path="/blockchain" element={<BlockchainPage />} /> */}
+            {/* <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} /> */}
+            {/* <Route path="/robotics" element={<RoboticsPage />} /> */}
 
             {/* Micro SaaS Routes */}
             <Route path="/micro-saas" element={<MicroSaasPage />} />

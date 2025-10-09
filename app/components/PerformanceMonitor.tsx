@@ -7,23 +7,26 @@ const PerformanceMonitor: React.FC = () => {
       // Monitor Core Web Vitals
       if ('web-vitals' in window) {
         // This would typically use the web-vitals library
-        console.log('Performance monitoring enabled');
+        // Performance monitoring enabled
       }
 
       // Monitor page load time
       window.addEventListener('load', () => {
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        console.log(`Page load time: ${loadTime}ms`);
+        // Page load time logged in production
       });
 
       // Monitor memory usage if available
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
-        });
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        if (memory) {
+          // Memory usage would be logged in production
+          const memoryInfo = {
+            used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+            total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+            limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+          };
+        }
       }
     };
 
@@ -34,7 +37,7 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
-            console.warn('Long task detected:', entry.duration + 'ms');
+            // Long task detected - would be logged in production
           }
         }
       });

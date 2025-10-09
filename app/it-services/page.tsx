@@ -247,12 +247,7 @@ import {
   Bag as BagIcon
 } from 'lucide-react';
 
-const ITServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
-
-  const itServices = [
+const itServices = [
     // Core IT Services
     {
       id: 'it-consulting',
@@ -674,7 +669,12 @@ const ITServicesPage: React.FC = () => {
         'Cost reduction'
       ]
     }
-  ];
+];
+
+const ITServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popular');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Grid3X3, count: itServices.length },
