@@ -121,7 +121,7 @@ const HomePage: React.FC = () => {
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
-          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line scan-lines ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
@@ -129,20 +129,42 @@ const HomePage: React.FC = () => {
           aria-labelledby="hero-heading"
         >
           <div className="max-w-6xl mx-auto">
-            <h1 
-              id="hero-heading" 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
-              data-text="Zion Tech Group"
-            >
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
+            <div className="floating mb-8">
+              <h1 
+                id="hero-heading" 
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic neon-text glitch"
+                data-text="Zion Tech Group"
+              >
+                Zion Tech Group
+              </h1>
+            </div>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text pulse-neon" role="doc-subtitle">
               Advanced AI and IT Solutions
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth.
             </p>
+            
+            {/* Enhanced Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">100+</div>
+                <div className="text-gray-300 text-sm">AI Services</div>
+              </div>
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div className="text-3xl font-bold text-purple-400 mb-2">$99</div>
+                <div className="text-gray-300 text-sm">Starting Price</div>
+              </div>
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div className="text-3xl font-bold text-green-400 mb-2">300%</div>
+                <div className="text-gray-300 text-sm">Average ROI</div>
+              </div>
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+                <div className="text-gray-300 text-sm">Support</div>
+              </div>
+            </div>
             
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
@@ -291,10 +313,110 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
           </div>
+          {/* Featured Micro SAAS Services */}
+          <div className="mb-16">
+            <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center neon-text holographic">
+              Featured AI Micro SAAS Solutions
+            </h3>
+            <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              Discover our cutting-edge AI-powered micro SAAS tools designed to revolutionize your business operations
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {/* AI Code Review Assistant */}
+              <article className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 text-center">🔍</div>
+                <h4 className="text-xl font-bold text-white mb-3 text-center">AI Code Review Assistant</h4>
+                <p className="text-gray-300 mb-4 text-center text-sm">
+                  Automated code analysis and quality improvement suggestions powered by AI. Reduce bugs by 60% and save 40% development time.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">$199/month</div>
+                  <a href="/ai-code-review-assistant" className="cyber-button text-sm">
+                    Try Demo
+                  </a>
+                </div>
+              </article>
+
+              {/* AI SEO Optimizer */}
+              <article className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 text-center">🎯</div>
+                <h4 className="text-xl font-bold text-white mb-3 text-center">AI SEO Optimizer</h4>
+                <p className="text-gray-300 mb-4 text-center text-sm">
+                  AI-powered SEO analysis and optimization tool. Increase organic traffic by 150% and save 80% SEO time.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400 mb-2">$299/month</div>
+                  <a href="/ai-seo-optimizer" className="cyber-button text-sm">
+                    Try Demo
+                  </a>
+                </div>
+              </article>
+
+              {/* AI Analytics Dashboard */}
+              <article className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 text-center">📊</div>
+                <h4 className="text-xl font-bold text-white mb-3 text-center">AI Analytics Dashboard</h4>
+                <p className="text-gray-300 mb-4 text-center text-sm">
+                  AI-powered business intelligence and analytics dashboard. Increase revenue by 40% with intelligent insights.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400 mb-2">$399/month</div>
+                  <a href="/ai-analytics-dashboard" className="cyber-button text-sm">
+                    Try Demo
+                  </a>
+                </div>
+              </article>
+
+              {/* AI Content Generation */}
+              <article className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 text-center">✍️</div>
+                <h4 className="text-xl font-bold text-white mb-3 text-center">AI Content Generation</h4>
+                <p className="text-gray-300 mb-4 text-center text-sm">
+                  AI-powered content creation for blogs, social media, emails, and ads. Save 80% content time and increase engagement by 150%.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-pink-400 mb-2">$199/month</div>
+                  <a href="/ai-content-generation" className="cyber-button text-sm">
+                    Try Demo
+                  </a>
+                </div>
+              </article>
+
+              {/* AI Email Assistant */}
+              <article className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
+                <div className="text-4xl mb-4 text-center">📧</div>
+                <h4 className="text-xl font-bold text-white mb-3 text-center">AI Email Assistant</h4>
+                <p className="text-gray-300 mb-4 text-center text-sm">
+                  AI-powered email management and composition assistant. Save 70% email time with intelligent responses and automation.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-400 mb-2">$99/month</div>
+                  <a href="/ai-email-assistant" className="cyber-button text-sm">
+                    Try Demo
+                  </a>
+                </div>
+              </article>
+
+              {/* View All Services */}
+              <article className="cyber-card p-6 hover:scale-105 transition-all duration-300 group flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-4xl mb-4 text-center">🚀</div>
+                  <h4 className="text-xl font-bold text-white mb-3 text-center">100+ More Services</h4>
+                  <p className="text-gray-300 mb-4 text-center text-sm">
+                    Explore our complete suite of AI-powered micro SAAS solutions for every business need.
+                  </p>
+                  <a href="/micro-saas" className="cyber-button text-sm">
+                    View All Services
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
           {/* Micro SAAS Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Micro SAAS Solutions
+              Additional Micro SAAS Solutions
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <Suspense fallback={<ServiceCardSkeleton />}>

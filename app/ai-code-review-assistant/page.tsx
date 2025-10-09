@@ -1,97 +1,105 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mail, Send, Inbox, Archive, Star, CheckCircle, AlertTriangle, Zap, Shield, Clock, Users, ArrowRight, Phone, MapPin, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles } from 'lucide-react';
+import { Code, CheckCircle, AlertTriangle, Star, Zap, Shield, Clock, Users, TrendingUp, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles } from 'lucide-react';
 
-const AIEmailAssistant: React.FC = () => {
-  const [emailType, setEmailType] = useState('reply');
-  const [emailContent, setEmailContent] = useState('');
-  const [aiResponse, setAiResponse] = useState('');
-  const [isProcessing, setIsProcessing] = useState(false);
+const AICodeReviewAssistant: React.FC = () => {
+  const [codeInput, setCodeInput] = useState('');
+  const [analysisResult, setAnalysisResult] = useState(null);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-  const handleEmailProcessing = async () => {
-    setIsProcessing(true);
-    // Simulate AI email processing
+  const handleCodeAnalysis = async () => {
+    setIsAnalyzing(true);
+    // Simulate AI analysis
     setTimeout(() => {
-      const responses = {
-        reply: `Thank you for reaching out regarding this matter. I appreciate you taking the time to contact us.\n\nI understand your concerns and would be happy to help you resolve this issue. Based on the information you've provided, I recommend the following approach:\n\n1. First, let's schedule a brief call to discuss the details\n2. I'll prepare a customized solution for your specific needs\n3. We'll implement the solution and provide ongoing support\n\nWould you be available for a 15-minute call this week? I'm confident we can find a solution that works for you.\n\nBest regards,\n[Your Name]`,
-        compose: `Subject: [AI-Generated Subject]\n\nDear [Recipient],\n\nI hope this email finds you well. I wanted to reach out regarding [Topic] and share some valuable insights that could benefit your organization.\n\n**Key Points:**\n• [Point 1]\n• [Point 2]\n• [Point 3]\n\n**Next Steps:**\n1. [Action 1]\n2. [Action 2]\n3. [Action 3]\n\nI would love to discuss this further with you. Are you available for a brief call this week?\n\nBest regards,\n[Your Name]`,
-        summarize: `**Email Summary:**\n\n**Main Topic:** [Topic]\n**Key Points:**\n• [Point 1]\n• [Point 2]\n• [Point 3]\n\n**Action Items:**\n• [Action 1]\n• [Action 2]\n\n**Priority:** [High/Medium/Low]\n**Response Needed:** [Yes/No]\n**Follow-up Required:** [Yes/No]`,
-        optimize: `**Optimized Email:**\n\n**Subject:** [Improved subject line]\n\n**Body:**\n\n[Optimized content with better structure, clearer call-to-action, and improved readability]\n\n**Suggestions:**\n• Improved subject line for better open rates\n• Clearer structure and formatting\n• Stronger call-to-action\n• Better tone and professional language`
-      };
-      setAiResponse(responses[emailType] || '');
-      setIsProcessing(false);
+      setAnalysisResult({
+        quality: 85,
+        security: 92,
+        performance: 78,
+        maintainability: 88,
+        issues: [
+          { type: 'warning', message: 'Consider using const instead of let for immutable variables' },
+          { type: 'info', message: 'Function could be optimized for better performance' },
+          { type: 'success', message: 'Good error handling implementation' }
+        ],
+        suggestions: [
+          'Add JSDoc comments for better documentation',
+          'Consider breaking down large functions into smaller ones',
+          'Implement proper TypeScript types'
+        ]
+      });
+      setIsAnalyzing(false);
     }, 2000);
   };
 
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Email Intelligence',
-      description: 'Advanced AI analyzes email context and generates intelligent responses and suggestions',
-      benefits: ['Smart reply suggestions', 'Context understanding', 'Tone adaptation']
+      title: 'AI-Powered Analysis',
+      description: 'Advanced machine learning algorithms analyze your code for quality, security, and performance issues',
+      benefits: ['Real-time code analysis', 'Pattern recognition', 'Learning from best practices']
     },
     {
-      icon: Mail,
-      title: 'Email Management',
-      description: 'Automatically organize, prioritize, and manage your email inbox with AI assistance',
-      benefits: ['Smart categorization', 'Priority scoring', 'Auto-archiving']
+      icon: Shield,
+      title: 'Security Scanning',
+      description: 'Comprehensive security vulnerability detection and remediation suggestions',
+      benefits: ['OWASP compliance', 'Dependency scanning', 'Vulnerability assessment']
     },
     {
-      icon: Send,
-      title: 'Compose Assistant',
-      description: 'AI helps you write professional, engaging emails with optimal structure and tone',
-      benefits: ['Template suggestions', 'Grammar checking', 'Tone optimization']
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Identify performance bottlenecks and suggest optimizations for better code execution',
+      benefits: ['Performance metrics', 'Optimization suggestions', 'Memory usage analysis']
     },
     {
-      icon: Inbox,
-      title: 'Inbox Optimization',
-      description: 'Streamline your email workflow with intelligent filtering and organization',
-      benefits: ['Smart filters', 'Auto-responses', 'Scheduling']
+      icon: CheckCircle,
+      title: 'Quality Assurance',
+      description: 'Ensure code quality with automated testing and best practice recommendations',
+      benefits: ['Code quality metrics', 'Best practice enforcement', 'Automated testing']
     }
   ];
 
   const pricing = [
     {
       name: 'Starter',
-      price: '$99',
+      price: '$199',
       period: '/month',
-      description: 'Perfect for individual professionals',
+      description: 'Perfect for individual developers and small teams',
       features: [
-        'Up to 1,000 emails per month',
-        'Basic AI responses',
-        'Email organization',
+        'Up to 10,000 lines of code analysis per month',
+        'Basic security scanning',
+        'Performance analysis',
         'Email support',
-        'Mobile app access'
+        'Integration with GitHub/GitLab'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$199',
+      price: '$399',
       period: '/month',
-      description: 'Ideal for small teams and businesses',
+      description: 'Ideal for growing development teams',
       features: [
-        'Up to 10,000 emails per month',
-        'Advanced AI features',
-        'Team collaboration',
+        'Up to 100,000 lines of code analysis per month',
+        'Advanced security scanning',
+        'Performance optimization suggestions',
         'Priority support',
-        'Custom templates',
-        'Analytics dashboard'
+        'Custom rule configuration',
+        'Team collaboration features'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399',
+      price: '$799',
       period: '/month',
-      description: 'For large organizations with high email volume',
+      description: 'For large organizations with complex codebases',
       features: [
-        'Unlimited emails',
-        'Advanced AI features',
-        'White-label solution',
+        'Unlimited code analysis',
+        'Enterprise security scanning',
+        'Custom AI model training',
         '24/7 dedicated support',
-        'API access',
+        'On-premise deployment',
         'Custom integrations'
       ],
       popular: false
@@ -100,93 +108,98 @@ const AIEmailAssistant: React.FC = () => {
 
   const benefits = [
     {
+      icon: TrendingUp,
+      title: 'Reduce Bugs by 60%',
+      description: 'Catch potential issues before they reach production'
+    },
+    {
       icon: Clock,
-      title: 'Save 70% Email Time',
-      description: 'Automated responses and smart suggestions reduce email management time'
+      title: 'Save 40% Development Time',
+      description: 'Automated code review reduces manual review time'
     },
     {
-      icon: CheckCircle,
-      title: 'Improve Response Quality',
-      description: 'AI-generated responses are professional and contextually appropriate'
-    },
-    {
-      icon: Inbox,
-      title: 'Better Organization',
-      description: 'Smart categorization and prioritization keep your inbox organized'
+      icon: Shield,
+      title: 'Enhanced Security',
+      description: 'Proactive security vulnerability detection'
     },
     {
       icon: Users,
-      title: 'Enhanced Productivity',
-      description: 'Focus on important tasks while AI handles routine email management'
+      title: 'Team Collaboration',
+      description: 'Improve code quality across your entire team'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Helmet>
-        <title>AI Email Assistant - Zion Tech Group</title>
-        <meta name="description" content="AI-powered email management and composition assistant. Save 70% email time with intelligent responses, organization, and automation." />
-        <meta name="keywords" content="ai email assistant, email automation, email management, smart replies, email organization, productivity tools" />
+        <title>AI Code Review Assistant - Zion Tech Group</title>
+        <meta name="description" content="Automated code analysis and quality improvement suggestions powered by AI. Reduce bugs by 60% and save 40% development time." />
+        <meta name="keywords" content="ai code review, code analysis, automated testing, code quality, security scanning, performance optimization" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Email Assistant
+            AI Code Review Assistant
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            AI-powered email management and composition assistant that saves 70% email time 
-            with intelligent responses, organization, and automation.
+            Automated code analysis and quality improvement suggestions powered by advanced AI. 
+            Reduce bugs by 60% and save 40% development time with intelligent code review.
           </p>
           
-          {/* Live Email Assistant Demo */}
+          {/* Live Demo */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 cyber-card max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-6">Try Our AI Email Assistant</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Try Our AI Code Analysis</h3>
             <div className="space-y-4">
-              <div className="flex flex-wrap gap-2 mb-4">
-                {['reply', 'compose', 'summarize', 'optimize'].map((type) => (
-                  <button
-                    key={type}
-                    onClick={() => setEmailType(type)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                      emailType === type
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-                    }`}
-                  >
-                    {type.charAt(0).toUpperCase() + type.slice(1)}
-                  </button>
-                ))}
-              </div>
               <textarea
-                value={emailContent}
-                onChange={(e) => setEmailContent(e.target.value)}
-                placeholder="Paste your email content here for AI processing..."
+                value={codeInput}
+                onChange={(e) => setCodeInput(e.target.value)}
+                placeholder="Paste your code here for AI analysis..."
                 className="w-full h-32 p-4 bg-slate-800 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
               />
               <button
-                onClick={handleEmailProcessing}
-                disabled={isProcessing || !emailContent.trim()}
+                onClick={handleCodeAnalysis}
+                disabled={isAnalyzing || !codeInput.trim()}
                 className="cyber-button disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isProcessing ? 'Processing Email...' : 'Process with AI'}
+                {isAnalyzing ? 'Analyzing...' : 'Analyze Code with AI'}
               </button>
             </div>
             
-            {aiResponse && (
+            {analysisResult && (
               <div className="mt-6 p-6 bg-slate-800/50 rounded-lg">
-                <h4 className="text-lg font-bold text-white mb-4">AI Response:</h4>
-                <div className="bg-slate-900 p-4 rounded-lg">
-                  <pre className="text-gray-300 whitespace-pre-wrap text-sm">{aiResponse}</pre>
+                <h4 className="text-lg font-bold text-white mb-4">Analysis Results</h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-400">{analysisResult.quality}%</div>
+                    <div className="text-sm text-gray-300">Quality</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-400">{analysisResult.security}%</div>
+                    <div className="text-sm text-gray-300">Security</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-yellow-400">{analysisResult.performance}%</div>
+                    <div className="text-sm text-gray-300">Performance</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-purple-400">{analysisResult.maintainability}%</div>
+                    <div className="text-sm text-gray-300">Maintainability</div>
+                  </div>
                 </div>
-                <div className="flex gap-2 mt-4">
-                  <button className="px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
-                    Use Response
-                  </button>
-                  <button className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
-                    Edit Response
-                  </button>
+                <div className="space-y-2">
+                  {analysisResult.issues.map((issue, index) => (
+                    <div key={index} className={`flex items-center space-x-2 p-2 rounded ${
+                      issue.type === 'warning' ? 'bg-yellow-500/20' :
+                      issue.type === 'error' ? 'bg-red-500/20' : 'bg-green-500/20'
+                    }`}>
+                      {issue.type === 'warning' ? <AlertTriangle className="w-4 h-4 text-yellow-400" /> :
+                       issue.type === 'error' ? <AlertTriangle className="w-4 h-4 text-red-400" /> :
+                       <CheckCircle className="w-4 h-4 text-green-400" />}
+                      <span className="text-sm text-gray-300">{issue.message}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
@@ -216,7 +229,7 @@ const AIEmailAssistant: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Intelligent Email Features
+            Powerful AI Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -242,7 +255,7 @@ const AIEmailAssistant: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our AI Email Assistant?
+            Why Choose Our AI Code Review Assistant?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -260,7 +273,7 @@ const AIEmailAssistant: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Choose Your Email Plan
+            Simple, Transparent Pricing
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
@@ -289,7 +302,7 @@ const AIEmailAssistant: React.FC = () => {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan - AI Email Assistant`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan - AI Code Review Assistant`}
                   className="w-full cyber-button text-center block"
                 >
                   Get Started
@@ -304,10 +317,10 @@ const AIEmailAssistant: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Email Productivity?
+            Ready to Improve Your Code Quality?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join thousands of professionals using our AI email assistant to manage their inbox efficiently.
+            Join thousands of developers who trust our AI-powered code review assistant.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -329,4 +342,4 @@ const AIEmailAssistant: React.FC = () => {
   );
 };
 
-export default AIEmailAssistant;
+export default AICodeReviewAssistant;

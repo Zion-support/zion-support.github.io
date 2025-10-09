@@ -109,17 +109,17 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-green-100',
       services: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
+        { name: 'AI Code Review Assistant', path: '/ai-code-review-assistant', description: 'Automated code analysis' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-powered SEO analysis' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Business intelligence' },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
+        { name: 'AI Email Assistant', path: '/ai-email-assistant', description: 'Smart email management' },
         { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
         { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
         { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
         { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
-        { name: 'Productivity Tools', path: '/productivity', description: 'Time management & efficiency' },
-        { name: 'HR & Recruitment', path: '/hr-recruitment-tools', description: 'Human resources solutions' },
-        { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
-        { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
-        { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'Productivity Tools', path: '/productivity', description: 'Time management & efficiency' }
       ]
     },
     {
