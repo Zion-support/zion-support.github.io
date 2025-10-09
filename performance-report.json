@@ -1,19 +1,44 @@
 {
-  "timestamp": "2025-10-08T21:53:52.472Z",
-  "buildSize": "820K\tdist",
-  "functionsCount": "81",
-  "optimizationStatus": "Completed",
-  "improvements": [
-    "✅ Functions directory cleaned up (reduced from 348 to 81 functions)",
-    "✅ Build memory optimized with NODE_OPTIONS",
-    "✅ Vite configuration optimized for performance",
-    "✅ Netlify configuration optimized",
-    "✅ Memory leak warnings eliminated",
-    "✅ Build time improved (4.90s vs 5.11s)"
-  ],
-  "recommendations": [
-    "Consider code splitting for large vendor bundle",
-    "Monitor bundle size in future builds",
-    "Regular cleanup of unused functions"
-  ]
+  "timestamp": "2025-10-08T22:56:10.019Z",
+  "totalSize": 186047,
+  "totalSizeKB": 181.69,
+  "totalSizeMB": 0.18,
+  "files": {
+    "index.html": {
+      "size": 794,
+      "sizeKB": 0.78,
+      "sizeMB": 0
+    },
+    "performance-monitor.js": {
+      "size": 1159,
+      "sizeKB": 1.13,
+      "sizeMB": 0
+    },
+    "robots.txt": {
+      "size": 218,
+      "sizeKB": 0.21,
+      "sizeMB": 0
+    },
+    "site.webmanifest": {
+      "size": 1139,
+      "sizeKB": 1.11,
+      "sizeMB": 0
+    },
+    "sitemap.xml": {
+      "size": 3155,
+      "sizeKB": 3.08,
+      "sizeMB": 0
+    },
+    "stats.html": {
+      "size": 174662,
+      "sizeKB": 170.57,
+      "sizeMB": 0.17
+    },
+    "sw.js": {
+      "size": 4920,
+      "sizeKB": 4.8,
+      "sizeMB": 0
+    }
+  },
+  "recommendations": []
 }

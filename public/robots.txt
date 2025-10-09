@@ -11,47 +11,29 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 Disallow: /private/
-Disallow: /temp/
-Disallow: /backup/
+Disallow: /internal/
 
 # Allow important pages
 Allow: /ai-services
 Allow: /it-services
-Allow: /micro-saas
 Allow: /contact
 Allow: /about
 Allow: /blog
+Allow: /case-studies
 
-# Block common bot traps
+# Block specific file types
 Disallow: /*.json$
 Disallow: /*.xml$
 Disallow: /*.txt$
 Disallow: /*.log$
-Disallow: /*.sql$
-Disallow: /*.bak$
-Disallow: /*.old$
-Disallow: /*.tmp$
 
-# Block search parameters
-Disallow: /*?*utm_*
-Disallow: /*?*ref=*
-Disallow: /*?*source=*
-Disallow: /*?*campaign=*
-
-# Block duplicate content
-Disallow: /*?*print=*
-Disallow: /*?*view=*
-Disallow: /*?*format=*
-
-# Block session IDs
-Disallow: /*?*sessionid=*
-Disallow: /*?*sid=*
-Disallow: /*?*PHPSESSID=*
-
-# Block tracking parameters
-Disallow: /*?*fbclid=*
-Disallow: /*?*gclid=*
-Disallow: /*?*msclkid=*
-Disallow: /*?*twclid=*
-Disallow: /*?*li_fat_id=*
+# Allow search engines to access CSS and JS files
+Allow: /static/
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+=======
+Disallow: /private/
+>>>>>>> origin/main

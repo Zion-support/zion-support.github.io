@@ -137,7 +137,7 @@ for (const branch of newBranches) {
 
 //Generate report
 // // // // // // // // // // if (results.failed.length > 0) {
-//   //   results.failed.forEach(result => console.log(`  - ${result.branch}`));
+//   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
 }
 
 // Save report

@@ -1,306 +1,311 @@
-'use client';
 /**
- * Performance Optimization Utilities
- * Provides utilities for optimizing performance in React applications
+ * Performance Utilities
+ * Provides performance monitoring, optimization, and metrics collection
  */
-import React from 'react';
-/**
- * Debounce function to limit execution rate
- */
-export function debounce<T extends (...args: unknown[]) => unknown>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout | null = null;
-  return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
-      timeout = null;
-      func(...args);
-    };
-    if (timeout) {
-      clearTimeout(timeout);
-    }
-    timeout = setTimeout(later, wait);
-  };
+
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  totalBlockingTime: number;
+  speedIndex: number;
+  timeToInteractive: number;
 }
-/**
- * Throttle function to limit execution rate
- */
-export function throttle<T extends (...args: unknown[]) => unknown>(
-  func: T,
-  limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
-  return function executedFunction(...args: Parameters<T>) {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
+
+export interface PerformanceOptimizerConfig {
+  enableImageOptimization: boolean;
+  enableLazyLoading: boolean;
+  enableCodeSplitting: boolean;
+  enablePreloading: boolean;
+  enableCaching: boolean;
 }
-/**
- * Memoize function results
- */
-export function memoize<T extends (...args: unknown[]) => unknown>(
-  func: T
-): T {
-  const cache = new Map<string, ReturnType<T>>();
-  return ((...args: Parameters<T>): ReturnType<T> => {
-    const key = JSON.stringify(args);
-    if (cache.has(key)) {
-      return cache.get(key)!;
-    }
-    const result = func(...args) as ReturnType<T>;
-    cache.set(key, result);
-    return result;
-  }) as T;
-}
-/**
- * Lazy load a component with dynamic import
- */
-export function lazyLoad<T extends React.ComponentType<unknown>>(
-  importFunc: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode
-): React.LazyExoticComponent<T> {
-  const LazyComponent = React.lazy(importFunc);
-  if (fallback) {
-    return LazyComponent;
-  }
-  return LazyComponent;
-}
-/**
- * Measure function execution time
- */
-export async function measureTime<T>(
-  name: string,
-  func: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> {
-  const start = performance.now();
-  const result = await func();
-  const duration = performance.now() - start;
-  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
-  return { result, duration };
-}
-/**
- * Batch async operations
- */
-export async function batchAsync<T, R>(
-  items: T[],
-  operation: (item: T) => Promise<R>,
-  batchSize = 10
-): Promise<R[]> {
-  const results: R[] = [];
-  for (let i = 0; i < items.length; i += batchSize) {
-    const batch = items.slice(i, i + batchSize);
-    const batchResults = await Promise.all(batch.map(operation));
-    results.push(...batchResults);
-  }
-  return results;
-}
-/**
- * Create a request animation frame loop
- */
-export function rafLoop(callback: (time: number) => boolean | void): () => void {
-  let rafId: number;
-  let running = true;
-  function loop(time: number) {
-    if (!running) return;
-    const shouldContinue = callback(time);
-    if (shouldContinue !== false) {
-      rafId = requestAnimationFrame(loop);
-    }
-  }
-  rafId = requestAnimationFrame(loop);
-  return () => {
-    running = false;
-    if (rafId) {
-      cancelAnimationFrame(rafId);
-    }
-  };
-}
-/**
- * Idle callback wrapper
- */
-export function runWhenIdle(
-  callback: () => void,
-  options?: IdleRequestOptions
-): number {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    return window.requestIdleCallback(callback, options);
-  }
-  // Fallback for browsers that don't support requestIdleCallback
-  if (typeof window !== 'undefined') {
-    return (window as Window).setTimeout(callback, 1) as unknown as number;
-  }
-  return 0;
-}
-/**
- * Cancel idle callback
- */
-export function cancelIdle(id: number): void {
-  if (typeof window !== 'undefined') {
-    if ('cancelIdleCallback' in window) {
-      window.cancelIdleCallback(id);
-    } else {
-      (window as Window).clearTimeout(id);
-    }
-  }
-}
-/**
- * Virtual scroll helper
- */
-export class VirtualScroller<T> {
-  private itemHeight: number;
-  private containerHeight: number;
-  private items: T[];
-  constructor(items: T[], itemHeight: number, containerHeight: number) {
-    this.items = items;
-    this.itemHeight = itemHeight;
-    this.containerHeight = containerHeight;
-  }
-  getVisibleRange(scrollTop: number): { start: number; end: number; offsetY: number } {
-    const start = Math.floor(scrollTop / this.itemHeight);
-    const end = Math.ceil((scrollTop + this.containerHeight) / this.itemHeight);
-    const offsetY = start * this.itemHeight;
-    return {
-      start: Math.max(0, start),
-      end: Math.min(this.items.length, end),
-      offsetY
+
+class PerformanceOptimizer {
+  private config: PerformanceOptimizerConfig;
+  private metrics: PerformanceMetrics | null = null;
+
+  constructor(config: Partial<PerformanceOptimizerConfig> = {}) {
+    this.config = {
+      enableImageOptimization: true,
+      enableLazyLoading: true,
+      enableCodeSplitting: true,
+      enablePreloading: true,
+      enableCaching: true,
+      ...config,
     };
   }
-  getVisibleItems(scrollTop: number): T[] {
-    const { start, end } = this.getVisibleRange(scrollTop);
-    return this.items.slice(start, end);
+
+  init(): void {
+    if (typeof window === 'undefined') return;
+
+    // Initialize performance optimizations
+    if (this.config.enableImageOptimization) {
+      this.optimizeImages();
+    }
+
+    if (this.config.enableLazyLoading) {
+      this.setupLazyLoading();
+    }
+
+    if (this.config.enablePreloading) {
+      this.setupPreloading();
+    }
+
+    if (this.config.enableCaching) {
+      this.setupCaching();
+    }
   }
-  getTotalHeight(): number {
-    return this.items.length * this.itemHeight;
+
+  private optimizeImages(): void {
+    // Add image optimization logic here
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+    });
+  }
+
+  private setupLazyLoading(): void {
+    // Setup intersection observer for lazy loading
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            if (element.dataset.src) {
+              element.style.backgroundImage = `url(${element.dataset.src})`;
+              observer.unobserve(element);
+            }
+          }
+        });
+      });
+
+      document.querySelectorAll('[data-src]').forEach((el) => {
+        observer.observe(el);
+      });
+    }
+  }
+
+  private setupPreloading(): void {
+    // Preload critical resources
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/css/critical.css',
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  private setupCaching(): void {
+    // Setup service worker for caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {
+        // Service worker registration failed
+      });
+    }
+  }
+
+  getMetrics(): PerformanceMetrics | null {
+    return this.metrics;
+  }
+
+  collectMetrics(): PerformanceMetrics | null {
+    if (typeof window === 'undefined' || !('performance' in window)) {
+      return null;
+    }
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+
+    const firstContentfulPaint = paintEntries.find(
+      (entry) => entry.name === 'first-contentful-paint'
+    )?.startTime || 0;
+
+    const largestContentfulPaint = paintEntries.find(
+      (entry) => entry.name === 'largest-contentful-paint'
+    )?.startTime || 0;
+
+    this.metrics = {
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      firstContentfulPaint,
+      largestContentfulPaint,
+      firstInputDelay: 0, // Would need to be measured separately
+      cumulativeLayoutShift: 0, // Would need to be measured separately
+      totalBlockingTime: 0, // Would need to be measured separately
+      speedIndex: 0, // Would need to be measured separately
+      timeToInteractive: navigation.domInteractive - navigation.navigationStart,
+    };
+
+    return this.metrics;
+  }
+
+  cleanup(): void {
+    // Cleanup any performance monitoring
+    this.metrics = null;
   }
 }
-/**
- * Image lazy loading helper
- */
-export function setupLazyImages(
-  selector = 'img[data-src]',
-  options?: IntersectionObserverInit
-): () => void {
-  const images = document.querySelectorAll<HTMLImageElement>(selector);
-  const observer = new IntersectionObserver((entries) => {
+
+class PerformanceMonitor {
+  private metrics: PerformanceMetrics | null = null;
+  private observers: PerformanceObserver[] = [];
+
+  init(): void {
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+
+    // Monitor Core Web Vitals
+    this.observeLCP();
+    this.observeFID();
+    this.observeCLS();
+  }
+
+  private observeLCP(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (this.metrics) {
+          this.metrics.largestContentfulPaint = lastEntry.startTime;
+        }
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeFID(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (this.metrics) {
+            this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['first-input'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeCLS(): void {
+    if ('PerformanceObserver' in window) {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        });
+        if (this.metrics) {
+          this.metrics.cumulativeLayoutShift = clsValue;
+        }
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(observer);
+    }
+  }
+
+  getMetrics(): PerformanceMetrics | null {
+    return this.metrics;
+  }
+
+  getScore(): number {
+    if (!this.metrics) return 0;
+
+    // Simple scoring algorithm based on Core Web Vitals
+    let score = 100;
+    
+    if (this.metrics.largestContentfulPaint > 4000) score -= 20;
+    if (this.metrics.firstInputDelay > 300) score -= 20;
+    if (this.metrics.cumulativeLayoutShift > 0.25) score -= 20;
+    if (this.metrics.loadTime > 3000) score -= 20;
+    if (this.metrics.timeToInteractive > 5000) score -= 20;
+
+    return Math.max(0, score);
+  }
+
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.metrics = null;
+  }
+}
+
+// Utility functions
+export function lazyLoadImages(): void {
+  if (typeof window === 'undefined') return;
+
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        const src = img.dataset['src'];
-        if (src) {
-          img['src'] = src;
-          img.removeAttribute('data-src');
-          observer.unobserve(img);
-        }
+        img.src = img.dataset.src || '';
+        img.classList.remove('lazy');
+        imageObserver.unobserve(img);
       }
     });
-  }, options);
-  images.forEach((img) => observer.observe(img));
-  return () => observer.disconnect();
+  });
+
+  images.forEach((img) => imageObserver.observe(img));
 }
-/**
- * Preload critical resources
- */
-export function preloadResources(resources: Array<{ url: string; as: string }>): void {
-  resources.forEach(({ url, as }) => {
+
+export function preloadCriticalResources(): void {
+  if (typeof window === 'undefined') return;
+
+  const criticalResources = [
+    { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+    { href: '/css/critical.css', as: 'style' },
+  ];
+
+  criticalResources.forEach((resource) => {
     const link = document.createElement('link');
     link.rel = 'preload';
-    link.href = url;
-    link.as = as;
+    link.href = resource.href;
+    link.as = resource.as;
+    if (resource.type) link.type = resource.type;
+    if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
     document.head.appendChild(link);
   });
 }
-/**
- * Check if code splitting is supported
- */
-export function supportsCodeSplitting(): boolean {
-  // Dynamic imports are supported in modern browsers
-  // We can check by testing if Function constructor accepts import syntax
-  try {
-    new Function('return import("data:text/javascript,")');
-    return true;
-  } catch {
-    return false;
+
+export function collectPerformanceMetrics(): PerformanceMetrics | null {
+  if (typeof window === 'undefined' || !('performance' in window)) {
+    return null;
   }
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paintEntries = performance.getEntriesByType('paint');
+
+  const firstContentfulPaint = paintEntries.find(
+    (entry) => entry.name === 'first-contentful-paint'
+  )?.startTime || 0;
+
+  return {
+    loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+    firstContentfulPaint,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+    totalBlockingTime: 0,
+    speedIndex: 0,
+    timeToInteractive: navigation.domInteractive - navigation.navigationStart,
+  };
 }
-/**
- * Optimize bundle loading
- */
-export function prefetchBundle(url: string): void {
-  const link = document.createElement('link');
-  link.rel = 'prefetch';
-  link.href = url;
-  document.head.appendChild(link);
-}
-/**
- * Memory usage monitor
- */
-export function getMemoryUsage(): {
-  used: number;
-  total: number;
-  limit: number;
-} | null {
-  if ('memory' in performance) {
-    const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-    return {
-      used: memory.usedJSHeapSize,
-      total: memory.totalJSHeapSize,
-      limit: memory.jsHeapSizeLimit
-    };
-  }
-  return null;
-}
-/**
- * FPS Monitor
- */
-export class FPSMonitor {
-  private frames: number = 0;
-  private lastTime: number = performance.now();
-  private fps: number = 0;
-  private rafId: number = 0;
-  start(callback?: (fps: number) => void): void {
-    const loop = () => {
-      const now = performance.now();
-      this.frames++;
-      if (now >= this.lastTime + 1000) {
-        this.fps = Math.round((this.frames * 1000) / (now - this.lastTime));
-        this.frames = 0;
-        this.lastTime = now;
-        if (callback) {
-          callback(this.fps);
-        }
-      }
-      this.rafId = requestAnimationFrame(loop);
-    };
-    this.rafId = requestAnimationFrame(loop);
-  }
-  stop(): void {
-    if (this.rafId) {
-      cancelAnimationFrame(this.rafId);
-    }
-  }
-  getFPS(): number {
-    return this.fps;
-  }
-}
-export default {
-  debounce,
-  throttle,
-  memoize,
-  lazyLoad,
-  measureTime,
-  batchAsync,
-  rafLoop,
-  runWhenIdle,
-  cancelIdle,
-  VirtualScroller,
-  setupLazyImages,
-  preloadResources,
-  supportsCodeSplitting,
-  prefetchBundle,
-  getMemoryUsage,
-  FPSMonitor
-};
+
+// Export instances
+export const performanceOptimizer = new PerformanceOptimizer();
+export const performanceMonitor = new PerformanceMonitor();

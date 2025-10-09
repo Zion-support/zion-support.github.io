@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'topic_cluster_builder_runner'}
       });
     };
-//   } catch (error) {console.error('❌ topic_cluster_builder_runner function failed: ') error
+//   } catch (error) {// console.error('❌ topic_cluster_builder_runner function failed: ') error
       }
     return {
       statusCode: 500,

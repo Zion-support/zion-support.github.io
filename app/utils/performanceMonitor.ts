@@ -88,8 +88,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn(`Failed to observe ${name}:`, error);
-    }
+      }
   }
   private observeLCP(): void {
     try {
@@ -102,8 +101,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe LCP:', error);
-    }
+      }
   }
   private observeFID(): void {
     try {
@@ -116,8 +114,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe FID:', error);
-    }
+      }
   }
   private observeCLS(): void {
     try {
@@ -134,8 +131,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe CLS:', error);
-    }
+      }
   }
   private setupCustomMetrics(): void {
     // Time to First Byte
@@ -167,8 +163,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe resources:', error);
-    }
+      }
   }
   private analyzeResource(entry: PerformanceResourceTiming): void {
     const duration = entry.responseEnd - entry.startTime;
@@ -188,7 +183,7 @@ class PerformanceMonitor {
   }
   private logMetric(name: string, value: number): void {
     if (process.env.NODE_ENV === 'development') {
-      console.log(`[Performance] ${name}: ${value.toFixed(2)}ms`);
+      }ms`);
     }
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {

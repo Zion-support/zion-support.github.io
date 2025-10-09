@@ -23,6 +23,7 @@ const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
  * Validate email address
  */
 export function isValidEmail(email: string): boolean {
+  if (!email || email.length > 254) return false; // RFC 5321 limit
   return EMAIL_REGEX.test(email.trim());
 }
 /**
@@ -35,7 +36,12 @@ export function isValidPhone(phone: string): boolean {
  * Validate URL
  */
 export function isValidUrl(url: string): boolean {
-  return URL_REGEX.test(url.trim());
+  try {
+    const urlObj = new URL(url);
+    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+  } catch {
+    return URL_REGEX.test(url.trim());
+  }
 }
 /**
  * Validate required field
@@ -213,3 +219,37 @@ export const validators = {
     message
   })
 };
+
+/**
+ * Validate password strength
+ */
+export function isValidPassword(password: string): boolean {
+  if (!password || password.length < 8) return false;
+  
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumbers = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  
+  return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
+}
+
+/**
+ * Sanitize user input
+ */
+export function sanitizeInput(input: string | null | undefined, maxLength?: number): string | null {
+  if (!input) return null;
+  
+  // Trim whitespace
+  let sanitized = input.trim();
+  
+  // Remove null bytes and other control characters
+  sanitized = sanitized.replace(/[\x00-\x1F\x7F]/g, '');
+  
+  // Enforce maximum length if specified
+  if (maxLength && sanitized.length > maxLength) {
+    sanitized = sanitized.substring(0, maxLength);
+  }
+  
+  return sanitized || null;
+}

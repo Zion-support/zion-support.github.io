@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -6,6 +7,7 @@ interface Props {
   enableErrorReporting?: boolean;
   maxRetries?: number;
 }
+
 interface State {
   hasError: boolean;
   error?: Error;
@@ -13,8 +15,10 @@ interface State {
   errorId?: string;
   retryCount: number;
 }
+
 class EnhancedErrorBoundary extends Component<Props, State> {
   private maxRetries: number;
+
   constructor(props: Props) {
     super(props);
     this.state = { 
@@ -24,6 +28,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
     this.maxRetries = props.maxRetries || 3;
   }
+
   static getDerivedStateFromError(error: Error): State {
     return { 
       hasError: true, 
@@ -32,25 +37,47 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       retryCount: 0
     };
   }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
+
+ cursor/analyze-improve-and-deploy-application-cde4
+    
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
+
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+
+ cursor/analyze-improve-and-deploy-application-cde4
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
   }
+
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
+
+    // Error reporting logic would go here
+    console.error('Error reported:', error, errorInfo);
+  };
+
+  private handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: prevState.retryCount + 1
+      }));
+    }
     // Enhanced error reporting logic
     const errorReport = {
       message: error.message,
@@ -58,8 +85,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href,
     };
+
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
@@ -68,6 +96,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Component Stack:', errorInfo.componentStack);
       console.groupEnd();
     }
+
     // Send to error reporting service (implement as needed)
     try {
       // In a real app, you would send this to your error reporting service
@@ -99,6 +128,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
+
   private handleReload = () => {
     window.location.reload();
   };
@@ -112,7 +142,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
-      url: window.location.href
+      url: window.location.href,
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
@@ -131,16 +161,35 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         console.warn('Failed to copy error details');
       });
   };
+
   render() {
     if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="error-boundary">
+          <h2>Something went wrong</h2>
+          <p>Error ID: {this.state.errorId}</p>
+          {this.state.retryCount < this.maxRetries && (
+            <button onClick={this.handleRetry}>
+              Retry ({this.maxRetries - this.state.retryCount} attempts left)
+            </button>
+          )}        </div>
+          )}
+ cursor/analyze-improve-and-deploy-application-cde4
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
+      const _canRetry = retryCount < this.maxRetries;
+      const canRetry = retryCount < this.maxRetries;
+
       const canRetry = retryCount < this.maxRetries;
       const canRetry = retryCount < this.maxRetries;
-      const canRetry = retryCount < this.maxRetries;
+
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -195,7 +244,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
+
     return this.props.children;
   }
 }
+
 export default EnhancedErrorBoundary;

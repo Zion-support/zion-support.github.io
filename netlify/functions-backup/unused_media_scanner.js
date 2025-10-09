@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'unused_media_scanner'}
       });
     };
-//   } catch (error) {console.error('❌ unused_media_scanner function failed: ') error
+//   } catch (error) {// console.error('❌ unused_media_scanner function failed: ') error
       }
     return {
       statusCode: 500,

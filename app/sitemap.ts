@@ -1,60 +1,93 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
-  const routes = [
-    '',
-    '/about',
-    '/ai-services',
-    '/ai-marketing',
-    '/ai-automation',
-    '/ai-healthcare',
-    '/ai-fintech',
-    '/ai-content-generation',
-    '/ai-data-analytics',
-    '/ai-cybersecurity',
-    '/ai-workflow-automation',
-    '/ai-cloud-infrastructure',
-    '/ai-ecommerce-solutions',
-    '/ai-mobile-app-development',
-    '/ai-sales-automation',
-    '/ai-data-visualization',
-    '/ai-customer-support',
-    '/it-services',
-    '/it-infrastructure',
-    '/cybersecurity',
-    '/cloud-services',
-    '/devops',
-    '/database',
-    '/networking',
-    '/micro-saas',
-    '/quantum-computing',
-    '/autonomous-systems',
-    '/blockchain-web3',
-    '/iot-edge-computing',
-    '/business-intelligence',
-    '/robotics',
-    '/enterprise',
-    '/case-studies',
-    '/blog',
-    '/contact',
-    '/team',
-    '/careers',
-    '/news',
-    '/docs',
-    '/api-docs',
-    '/support',
-    '/status',
-    '/privacy',
-    '/terms',
-    '/cookies',
-    '/gdpr',
-    '/security',
-    '/compliance'
-  ]
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8
-  }))
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString();
+
+  return [
+    {
+      url: baseUrl,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ai-services`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/enterprise`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/ai-enterprise-transformation-2025`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2025-2026-mega-trends-breakthrough`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2026-autonomous-enterprise-architecture`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2026-autonomous-agent-factories`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/ai-cost-optimization-breakthrough-2026`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+  ];
 }
