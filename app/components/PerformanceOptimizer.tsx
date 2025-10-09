@@ -5,9 +5,9 @@ const PerformanceOptimizer: React.FC = () => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalResources = [
-        '/fonts/inter-var.woff2',
+        '/fonts/inter.woff2',
         '/images/hero-bg.webp',
-        '/images/logo.svg'
+        '/images/logo.webp'
       ];
 
       criticalResources.forEach(resource => {
@@ -39,44 +39,22 @@ const PerformanceOptimizer: React.FC = () => {
       images.forEach(img => imageObserver.observe(img));
     };
 
-    // Defer non-critical JavaScript
-    const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
-        newScript.async = true;
-        script.parentNode?.replaceChild(newScript, script);
+    // Add loading states
+    const addLoadingStates = () => {
+      const lazyElements = document.querySelectorAll('[data-lazy]');
+      lazyElements.forEach(element => {
+        element.classList.add('opacity-0', 'transition-opacity', 'duration-300');
       });
     };
 
-    // Initialize optimizations
+    // Initialize performance optimizations
     preloadCriticalResources();
     optimizeImages();
-    deferNonCriticalJS();
+    addLoadingStates();
 
-    // Performance monitoring
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported');
-      }
-    }
-
+    // Cleanup
     return () => {
-      // Cleanup if needed
+      // Cleanup any observers or timers if needed
     };
   }, []);
 
