@@ -6,14 +6,15 @@ import Footer from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Brain,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefits: [
-  // TODO: Add items,
-];
+  // TODO: Add items
+  ],
+    ;
 //         '95% accuracy in predictions',
 //         'Real-time data processing',
 //         'Automated trend detection',
@@ -79,9 +80,8 @@ icon: BarChart,
         'SLA guarantees'
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10'
-  const benefits = [,
-
-      icon: Star,
+  const benefits = [
+    icon: Star,
       title: '95% Accuracy',
       description: 'Industry-leading accuracy in predictions and insights',
 
@@ -226,8 +226,8 @@ icon: BarChart,
                   <a
                     href="/contact"
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                       tier.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'

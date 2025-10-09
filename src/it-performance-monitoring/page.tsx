@@ -5,22 +5,23 @@ import {BarChart, Zap, Shield, Settings, CheckCircle, Star,  BarChart,  Zap,  Se
 const ITPerformanceMonitoringPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: BarChart,
       title: 'Real-time Monitoring',
       description: 'Comprehensive real-time system performance monitoring',
-      benefits: ['Live dashboards', 'Performance metrics', 'Alerting'];
+      benefits: ['Live dashboards', 'Performance metrics', 'Alerting'],
+    ;
     },
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Automated performance optimization and tuning',
-      benefits: ['Auto-tuning', 'Bottleneck detection', 'Optimization recommendations']
-      icon: Settings,
+      benefits: ['Auto-tuning', 'Bottleneck detection', 'Optimization recommendations'],
+    icon: Settings,
       title: 'Custom Dashboards',
       description: 'Customizable dashboards and reporting',
-      benefits: ['Custom metrics', 'Visualization', 'Reporting']
-    }
+      benefits: ['Custom metrics', 'Visualization', 'Reporting'],
+     }
   ];
   return (
     

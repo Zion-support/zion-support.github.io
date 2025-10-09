@@ -5,22 +5,23 @@ import {MessageSquare, Brain, FileText, Globe, CheckCircle, Star,  MessageSquare
 const AINLPPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: MessageSquare,
       title: 'Text Analysis',
       description: 'Advanced text processing and sentiment analysis',
-      benefits: ['Sentiment detection', 'Entity extraction', 'Language detection'];
+      benefits: ['Sentiment detection', 'Entity extraction', 'Language detection'],
+    ;
     },
       icon: Brain,
       title: 'Language Understanding',
       description: 'Deep understanding of human language and context',
-      benefits: ['Intent recognition', 'Context analysis', 'Semantic understanding']
-      icon: Globe,
+      benefits: ['Intent recognition', 'Context analysis', 'Semantic understanding'],
+    icon: Globe,
       title: 'Multi-language Support',
       description: 'Support for 100+ languages and dialects',
-      benefits: ['Translation', 'Cross-language analysis', 'Cultural adaptation']
-    }
+      benefits: ['Translation', 'Cross-language analysis', 'Cultural adaptation'],
+     }
   ];
   return (
     

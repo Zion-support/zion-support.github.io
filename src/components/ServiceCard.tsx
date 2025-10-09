@@ -1,6 +1,6 @@
 interface ServiceCardProps {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: string;,
     description: string;
   icon?: React.ReactNode;
@@ -19,8 +19,8 @@ const ServiceCard: React.FC
           
           
           <ServiceCardProps> = ({ title, description, icon, className = '' }) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
     
           

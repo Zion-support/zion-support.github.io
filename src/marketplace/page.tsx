@@ -12,8 +12,8 @@ const MarketplacePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   id: 'products',
       name: 'Products',
       icon: ShoppingCart,

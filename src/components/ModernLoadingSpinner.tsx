@@ -1,7 +1,7 @@
 'use client';
 interface ModernLoadingSpinnerProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
@@ -17,8 +17,8 @@ const ModernLoadingSpinner: React.FC
           
           
           <ModernLoadingSpinnerProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   size = 'md',
   color = 'primary',
   text = 'Loading...',
@@ -30,8 +30,8 @@ const ModernLoadingSpinner: React.FC
     xl: 'w-16 h-16'
   };
   const colorClasses = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent: 'text-pink-400'

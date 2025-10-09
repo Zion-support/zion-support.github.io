@@ -1,7 +1,7 @@
 // Metadata removed for Vite compatibility
 export default function AI2026AutonomousAgentFactoriesPage() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           

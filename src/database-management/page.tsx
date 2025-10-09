@@ -5,22 +5,23 @@ import {Database, Shield, BarChart, Settings, CheckCircle, Star,  Database,  Shi
 const DatabaseManagementPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Database,
       title: 'Database Administration',
       description: 'Comprehensive database management and optimization',
-      benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening'];
+      benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening'],
+    ;
     },
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security for your data assets',
-      benefits: ['Encryption', 'Access control', 'Audit logging']
-      icon: Settings,
+      benefits: ['Encryption', 'Access control', 'Audit logging'],
+    icon: Settings,
       title: 'Automated Maintenance',
       description: 'Automated database maintenance and updates',
-      benefits: ['Automated backups', 'Patch management', 'Health checks']
-    }
+      benefits: ['Automated backups', 'Patch management', 'Health checks'],
+     }
   ];
   return (
     

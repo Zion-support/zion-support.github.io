@@ -9,8 +9,8 @@ const handleRetry = () => {
     window.location.reload();
   };
   const handleGoHome = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     window.location.href = '/';
   return (
     

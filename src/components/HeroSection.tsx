@@ -1,7 +1,7 @@
 'use client';
 interface HeroSectionProps {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   isLoaded: boolean;,
     isVisible: boolean;,
     onPhoneClick: () => void;
@@ -16,8 +16,8 @@ const HeroSection: React.FC
           
           
           <HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
     
           
@@ -32,8 +32,8 @@ const HeroSection: React.FC
     
           <section;
 className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //         isLoaded && isVisible
 //           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-8'

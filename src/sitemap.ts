@@ -35,14 +35,14 @@ const _baseUrl = 'https://ziontechgroup.com'
     '/careers',
     '/privacy',
     '/terms',
-    '/support',
+    '/support'
   ];
   return routes.map((route) => ({
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === '' ? 'daily' : 'weekly',
-    priority: route === '' ? 1 : 0.8,
+    priority: route === '' ? 1 : 0.8
   }))
 }

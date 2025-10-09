@@ -21,12 +21,11 @@ const toggleItem = (index: number) => {
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   category: 'General Questions',
-      questions: [,
-
-      question: 'What is Zion Tech Group?',
+      questions: [
+    question: 'What is Zion Tech Group?',
           answer: 'Zion Tech Group is a leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. We help businesses transform their operations with cutting-edge technology.'
         },
           question: 'What services do you offer?',
@@ -37,8 +36,8 @@ const toggleItem = (index: number) => {
           question: 'Do you offer custom solutions?',
           answer: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
         }
-      ]
-      category: 'AI Services',
+      ],
+    category: 'AI Services',
           question: 'What AI services do you provide?',
           answer: 'We provide comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, AI fintech applications, and custom AI development.'
           question: 'How much do AI services cost?',
@@ -86,8 +85,8 @@ const toggleItem = (index: number) => {
           answer: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
   const filteredData = faqData.map(category => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //     ...category,
     questions: category.questions.filter(q =>
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -166,8 +165,8 @@ type="text"
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                       

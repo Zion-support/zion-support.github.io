@@ -1,43 +1,24 @@
-
+import React from 'react';
 import Analytics from './components/Analytics';
+
 export default function RootLayout({
-  // TODO: Add content
-}
-//   children,
-}: {
-  // TODO: Add content
-};
+  children
+  }: {
   children: React.ReactNode;
 }) {
-    address: {
-  // TODO: Add content
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, digital transformation, and enterprise IT services." />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body>
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  );
 }
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US',
-    offers: [
-  // TODO: Add items,
-]
-      {
-  // TODO: Add content
-}
-        '@type': 'Offer',
-        category: 'AI Solutions',
-        description: 'Enterprise AI solutions, digital transformation, and cloud services',
-        price: '1500',
-        priceCurrency: 'USD',
-        priceSpecification: {
-  // TODO: Add content
-}
-          '@type': 'PriceSpecification',
-          billingIncrement: 'P1M'
-        };
-  itemOffered: {
-  // TODO: Add content
-}
-            '@type': 'Service',
-            name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'

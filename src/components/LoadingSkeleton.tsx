@@ -1,7 +1,7 @@
 import React from 'react';
 interface SkeletonProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   className?: string;
   width?: string | number;
   height?: string | number;
@@ -18,8 +18,8 @@ const Skeleton: React.FC
           
           
           <SkeletonProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   className = '',
 //   width,
 //   height,
@@ -81,8 +81,8 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
           </div>
 );
 export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   aspectRatio = '16/9'
 }) => (
 
@@ -109,8 +109,8 @@ export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
   </div>
 );
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   rows = 5,
   columns = 4
 }) => (

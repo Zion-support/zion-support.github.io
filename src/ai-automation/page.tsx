@@ -6,52 +6,53 @@ import Footer from '../components/Footer';
 const AIAutomationPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
-      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation'];
+      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation'],
+    ;
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Zap,
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
-      benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
-    },
+      benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization'],
+     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
-      benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
-    },
+      benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance'],
+     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
-      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
-    }
+      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities'],
+     }
   ];
   const pricingPlans = [
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   name: 'Starter',
       price: '$1,400',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-  // TODO: Add items,
-]
-//         'Up to 10 automated processes',
+  // TODO: Add items
+  ],
+    //         'Up to 10 automated processes',
 //         'Basic AI decision making',
 //         'Email support',
 //         'Standard integrations',
@@ -60,16 +61,16 @@ const features = [
       popular: false
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   name: 'Professional',
       price: '$2,800',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-  // TODO: Add items,
-]
-//         'Up to 50 automated processes',
+  // TODO: Add items
+  ],
+    //         'Up to 50 automated processes',
 //         'Advanced AI decision making',
 //         'Priority support',
 //         'Custom integrations',
@@ -79,16 +80,16 @@ const features = [
       popular: true
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   name: 'Enterprise',
       price: '$5,600',
       period: '/month',
       description: 'For large organizations',
       features: [
-  // TODO: Add items,
-]
-//         'Unlimited processes',
+  // TODO: Add items
+  ],
+    //         'Unlimited processes',
 //         'Premium AI features',
 //         '24/7 support',
 //         'Custom development',

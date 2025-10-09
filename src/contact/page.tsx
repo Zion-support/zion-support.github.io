@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield,  Users,  Award,  TrendingUp,  Shield from 'lucide-react';
+import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield,  Shield from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
@@ -10,8 +10,8 @@ const ContactPage: React.FC = () => {
   );
 };
   const [formData, setFormData] = useState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   name: '',
     email: '',
     company: '',
@@ -30,27 +30,27 @@ const ContactPage: React.FC = () => {
           
           
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const { name, value } = e.target;
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: value
     }));
   };
   const handleSubmit = (e: React.FormEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     e.preventDefault();
     // Here you would typically send the form data to your backend
     // console.log('Form submitted:', formData);
     setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       setIsSubmitted(false);
       setFormData({
 }, 3000);

@@ -1,15 +1,15 @@
 // Sitemap generator utility;
 export interface SitemapUrl {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   loc: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
 export const _generateSitemap = (urls: SitemapUrl[]): string => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
   const sitemap = `
@@ -25,8 +25,8 @@ export const _generateSitemap = (urls: SitemapUrl[]): string => {
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map((url) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
     return `  
           
@@ -50,12 +50,12 @@ ${urls
 };
 // Define all the pages for the sitemap;
 export const getAllPages = (): SitemapUrl[] => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const currentDate = new Date().toISOString().split('T')[0];
   return [
-  // TODO: Add items,
-]
+  // TODO: Add items
+  ]
     // Main pages
     { loc: '/', priority: 1.0, changefreq: 'daily' },
     { loc: '/about', priority: 0.9, changefreq: 'monthly' },
@@ -119,6 +119,6 @@ export const getAllPages = (): SitemapUrl[] => {
     { loc: '/terms', priority: 0.5, changefreq: 'yearly' },
     { loc: '/cookies', priority: 0.5, changefreq: 'yearly' },
     { loc: '/gdpr', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/accessibility', priority: 0.5, changefreq: 'yearly' },
+    { loc: '/accessibility', priority: 0.5, changefreq: 'yearly' }
   ];
 };

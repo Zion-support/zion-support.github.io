@@ -6,16 +6,17 @@ import Footer from '../components/Footer';
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       partners: [
-  // TODO: Add items,
-];
+  // TODO: Add items
+  ],
+    ;
         { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '' },
         { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '' },
         { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '' },
@@ -64,14 +65,14 @@ icon: Globe,
       icon: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
-  const partnershipTiers = [,
-
-      name: 'Strategic Partners',
+  const partnershipTiers = [
+    name: 'Strategic Partners',
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
       benefits: [
-  // TODO: Add items,
-];
+  // TODO: Add items
+  ],
+    ;
 //         'Joint marketing and sales initiatives',
 //         'Co-development of solutions',
 //         'Priority support and resources',

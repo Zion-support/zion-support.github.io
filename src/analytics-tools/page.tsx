@@ -4,8 +4,8 @@ import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, Map
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'AI Business Intelligence',
       price: '$399/month',
       description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',

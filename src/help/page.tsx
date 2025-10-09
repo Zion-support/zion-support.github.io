@@ -12,8 +12,8 @@ const HelpPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   id: 'getting-started',
       name: 'Getting Started',
       icon: BookOpen,
@@ -34,8 +34,8 @@ const categories = [
     }
   ];
   const helpArticles = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     'getting-started': [;
   title: 'Setting Up Your First Dashboard',
         description: 'Step-by-step instructions for creating and customizing your analytics dashboard',

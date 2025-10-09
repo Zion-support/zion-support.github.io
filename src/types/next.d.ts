@@ -1,7 +1,7 @@
 // Type definitions for Next.js compatibility in Vite;
 export interface Metadata {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   title?: string;
   description?: string;
   keywords?: string[];
@@ -18,21 +18,21 @@ export interface Metadata {
   creator?: string;
   publisher?: string;
   formatDetection?: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     email?: boolean;
     address?: boolean;
     telephone?: boolean;
   }
   metadataBase?: URL;
   alternates?: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     canonical?: string;
   }
   openGraph?: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     title?: string;
     description?: string;
     url?: string;
@@ -47,8 +47,8 @@ export interface Metadata {
           
           
           <{
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   url: string;
       width?: number;
       height?: number;
@@ -69,8 +69,8 @@ export interface Metadata {
     publishedTime?: string;
   }
   twitter?: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     card?: string;
     title?: string;
     description?: string;
@@ -79,13 +79,13 @@ export interface Metadata {
     creator?: string;
   }
   robots?: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     index?: boolean;
     follow?: boolean;
     googleBot?: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       index?: boolean;
       follow?: boolean;
       'max-video-preview'?: number;
@@ -94,22 +94,22 @@ export interface Metadata {
     }
   }
   verification?: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     google?: string;
   }
 }
 export interface MetadataRoute {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   sitemap?: string;
   robots?: string;
   manifest?: string;
 }
 export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
 export interface MetadataRouteSitemap {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   url: string;
   lastModified?: Date | string;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';

@@ -5,22 +5,23 @@ import {Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Targe
 const ITInfrastructureDesignPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Settings,
       title: 'Infrastructure Design',
       description: 'Custom IT infrastructure design and architecture',
-      benefits: ['Scalable design', 'High availability', 'Performance optimization'];
+      benefits: ['Scalable design', 'High availability', 'Performance optimization'],
+    ;
     },
       icon: Target,
       title: 'Capacity Planning',
       description: 'Strategic capacity planning and resource allocation',
-      benefits: ['Growth planning', 'Resource optimization', 'Cost analysis']
-      icon: Shield,
+      benefits: ['Growth planning', 'Resource optimization', 'Cost analysis'],
+    icon: Shield,
       title: 'Security Design',
       description: 'Security-first infrastructure design principles',
-      benefits: ['Security architecture', 'Compliance design', 'Risk mitigation']
-    }
+      benefits: ['Security architecture', 'Compliance design', 'Risk mitigation'],
+     }
   ];
   return (
     

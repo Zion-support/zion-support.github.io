@@ -5,22 +5,23 @@ import {Leaf, Target, Zap, Settings, CheckCircle, Star,  Leaf,  Target,  Setting
 const SustainabilityTechPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Leaf,
       title: 'Green Technology',
       description: 'Sustainable technology solutions for environmental impact',
-      benefits: ['Carbon reduction', 'Energy efficiency', 'Waste reduction'];
+      benefits: ['Carbon reduction', 'Energy efficiency', 'Waste reduction'],
+    ;
     },
       icon: Target,
       title: 'Sustainability Analytics',
       description: 'Data-driven sustainability insights and reporting',
-      benefits: ['Environmental metrics', 'Sustainability reporting', 'Impact analysis']
-      icon: Settings,
+      benefits: ['Environmental metrics', 'Sustainability reporting', 'Impact analysis'],
+    icon: Settings,
       title: 'Circular Economy',
       description: 'Circular economy solutions and waste management',
-      benefits: ['Waste reduction', 'Resource optimization', 'Recycling systems']
-    }
+      benefits: ['Waste reduction', 'Resource optimization', 'Recycling systems'],
+     }
   ];
   return (
     

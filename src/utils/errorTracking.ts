@@ -4,16 +4,16 @@
  * Provides comprehensive error tracking with categorization and analytics
  */
 export enum ErrorSeverity {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   Low = 'low',
   Medium = 'medium',
   High = 'high',
   Critical = 'critical'
 }
 export enum ErrorCategory {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   Network = 'network',
   Validation = 'validation',
   Authorization = 'authorization',
@@ -22,8 +22,8 @@ export enum ErrorCategory {
   ExternalService = 'external_service'
 }
 export interface ErrorMetadata {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   category: ErrorCategory;,
     severity: ErrorSeverity;
   userId?: string;
@@ -45,8 +45,8 @@ export interface ErrorMetadata {
   url?: string;
 }
 export interface TrackedError {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   id: string;,
     message: string;,
     metadata: ErrorMetadata;,
@@ -55,8 +55,8 @@ export interface TrackedError {
     lastSeen: number;
 }
 class ErrorTrackingService {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   private static instance: ErrorTrackingService;
   private errors: Map
           
@@ -71,16 +71,16 @@ class ErrorTrackingService {
   private errorListeners: Array<(error: TrackedError) => void> = [];
   private maxStoredErrors = 1000;
   private constructor() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setupGlobalErrorHandlers();
   }
   static getInstance(): ErrorTrackingService {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (!ErrorTrackingService.instance) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       ErrorTrackingService.instance = new ErrorTrackingService();
     }
     return ErrorTrackingService.instance;
@@ -89,21 +89,21 @@ class ErrorTrackingService {
    * Set up global error handlers
    */
   private setupGlobalErrorHandlers(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined') return;
     // Handle unhandled errors
     window.addEventListener('error', event => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.trackError(event.error || new Error(event.message), {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   category: ErrorCategory.Runtime,
         severity: ErrorSeverity.High,
         context: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   filename: event.filename,
           lineno: event.lineno,
           colno: event.colno
@@ -112,11 +112,11 @@ class ErrorTrackingService {
     });
     // Handle unhandled promise rejections
     window.addEventListener('unhandledrejection', event => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   category: ErrorCategory.Runtime,
         severity: ErrorSeverity.Critical,
         context: { reason: event.reason }
@@ -148,19 +148,19 @@ const timestamp = Date.now();
     };
     const existingError = this.errors.get(errorId);
     if (existingError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Update existing error
       existingError.occurrences++;
       existingError.lastSeen = timestamp;
       existingError.metadata = fullMetadata;
     } else {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Create new error entry;
 const trackedError: TrackedError = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   id: errorId,
         message: error.message,
         metadata: fullMetadata,
@@ -173,24 +173,24 @@ const trackedError: TrackedError = {
       this.notifyListeners(trackedError);
       // Maintain max stored errors
       if (this.errors.size > this.maxStoredErrors) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         const oldestKey = Array.from(this.errors.keys())[0];
         this.errors.delete(oldestKey);
       }
     }
     // Log the error
     logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   error_id: errorId,
       category: metadata.category,
 //       ...metadata.context
     });
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.Critical) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.reportToExternalService(errorId);
     }
     return errorId;
@@ -210,8 +210,8 @@ const trackedError: TrackedError = {
           
           
           < message.length; i++) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const char = message.charCodeAt(i);
       hash = (hash * 32) - hash + char;
       hash = hash & hash; // Convert to 32bit integer
@@ -222,34 +222,34 @@ const trackedError: TrackedError = {
    * Add an error listener
    */
   addListener(listener: (error: TrackedError) => void): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.errorListeners.push(listener);
   }
   /**
    * Remove an error listener
    */
   removeListener(listener: (error: TrackedError) => void): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.errorListeners = this.errorListeners.filter(l => l !== listener);
   }
   /**
    * Notify all listeners of a new error
    */
   private notifyListeners(error: TrackedError): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.errorListeners.forEach(listener => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         listener(error);
       } catch (listenerError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         logger.error('Error in error listener', listenerError as Error);
       }
     });
@@ -267,27 +267,27 @@ const trackedError: TrackedError = {
           
           
           <void> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const error = this.errors.get(errorId);
     if (!error) return;
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (typeof window !== 'undefined' && 'fetch' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         await fetch('/api/error-report', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(error)
         });
       }
     } catch (reportError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       logger.error('Failed to report error to external service', reportError as Error);
     }
   }
@@ -295,32 +295,32 @@ const trackedError: TrackedError = {
    * Get all tracked errors
    */
   getErrors(): TrackedError[] {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return Array.from(this.errors.values());
   }
   /**
    * Get errors by category
    */
   getErrorsByCategory(category: ErrorCategory): TrackedError[] {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return this.getErrors().filter(e => e.metadata.category === category);
   }
   /**
    * Get errors by severity
    */
   getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return this.getErrors().filter(e => e.metadata.severity === severity);
   }
   /**
    * Get error statistics
    */
   getStatistics(): {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   total: number;,
     byCategory: Record
           
@@ -335,8 +335,8 @@ const trackedError: TrackedError = {
     bySeverity: Record<ErrorSeverity, number>;
     topErrors: TrackedError[];
   } {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const errors = this.getErrors();
     const byCategory = {} as Record
           
@@ -350,8 +350,8 @@ const trackedError: TrackedError = {
           <ErrorCategory, number>;
     const bySeverity = {} as Record<ErrorSeverity, number>;
     errors.forEach(error => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       byCategory[error.metadata.category] =
         (byCategory[error.metadata.category] || 0) + error.occurrences;
       bySeverity[error.metadata.severity] =
@@ -359,8 +359,8 @@ const trackedError: TrackedError = {
     });
     const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   total: errors.length,
 //       byCategory,
 //       bySeverity,
@@ -371,23 +371,23 @@ const trackedError: TrackedError = {
    * Clear all errors
    */
   clearErrors(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.errors.clear();
   }
   /**
    * Clear errors older than specified time
    */
   clearOldErrors(maxAge: number): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const now = Date.now();
     for (const [id, error] of this.errors.entries()) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (now - error.lastSeen > maxAge) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         this.errors.delete(id);
       }
     }

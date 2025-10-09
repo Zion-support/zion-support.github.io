@@ -5,22 +5,23 @@ import {Building, Target, Zap, Settings, CheckCircle, Star,  Building,  Target, 
 const SmartCitiesPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Building,
       title: 'Smart Infrastructure',
       description: 'Intelligent city infrastructure and management systems',
-      benefits: ['Traffic management', 'Energy optimization', 'Waste management'];
+      benefits: ['Traffic management', 'Energy optimization', 'Waste management'],
+    ;
     },
       icon: Target,
       title: 'IoT Integration',
       description: 'Internet of Things solutions for urban environments',
-      benefits: ['Sensor networks', 'Data collection', 'Real-time monitoring']
-      icon: Settings,
+      benefits: ['Sensor networks', 'Data collection', 'Real-time monitoring'],
+    icon: Settings,
       title: 'Citizen Services',
       description: 'Digital services and citizen engagement platforms',
-      benefits: ['Mobile apps', 'Digital services', 'Citizen engagement']
-    }
+      benefits: ['Mobile apps', 'Digital services', 'Citizen engagement'],
+     }
   ];
   return (
     

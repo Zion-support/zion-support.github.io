@@ -1,14 +1,14 @@
 
 interface Props {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 interface State {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
@@ -23,30 +23,30 @@ class ErrorBoundary extends Component
           
           
           <Props, State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   constructor(props: Props) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     super(props);
     this.state = { hasError: false };
   }
   static getDerivedStateFromError(error: Error): State {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   hasError: true,
 //       error
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       error,
 //       errorInfo
     });
@@ -56,29 +56,29 @@ class ErrorBoundary extends Component
     }
     // Report error to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       (window as any).gtag('event', 'exception', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   description: error.message,
         fatal: true
       });
     }
     // Call custom error handler
     if (this.props.onError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.props.onError(error, errorInfo);
     }
     // Report error to error tracking service
     this.reportError(error, errorInfo);
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // In a real application, you would send this to your error tracking service
-    // For example: Sentry, LogRocket, Bugsnag, etc.
+    // For example: Sentry, LogRocket, Bugsnagc.
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -92,64 +92,64 @@ class ErrorBoundary extends Component
     this.sendToErrorService(errorReport);
   };
   private getUserId = (): string | null => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Get user ID from localStorage, session, or authentication context
     return localStorage.getItem('userId');
   };
   private getSessionId = (): string => {
 // Get or create session ID
     if (!sessionId) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36);
       sessionStorage.setItem('sessionId', sessionId);
     }
     return sessionId;
   };
   private sendToErrorService = (errorReport: any) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // In a real application, you would send this to your error tracking service
 // console.log('Error report:', errorReport);
     // Example: Send to your API endpoint
     // fetch('/api/errors', {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     //   method: 'POST',
     //   headers: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     //     'Content-Type': 'application/json',
     //   },
     //   body: JSON.stringify(errorReport)
     // }).catch(console.error);
   };
   private handleRetry = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
   private handleReload = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     window.location.reload();
   };
   private handleGoHome = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     window.location.href = '/';
   };
   render() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Custom fallback UI
       if (this.props.fallback) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         return this.props.fallback;
       }
       // Default error UI

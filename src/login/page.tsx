@@ -6,8 +6,8 @@ const LoginPage: React.FC = () => {
   );
 };
   const [formData, setFormData] = useState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   email: '',
     password: '',
     rememberMe: false
@@ -24,19 +24,19 @@ const LoginPage: React.FC = () => {
           
           
           <HTMLInputElement>) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     e.preventDefault();
     setIsLoading(true);
     // Simulate login process
@@ -49,22 +49,22 @@ const LoginPage: React.FC = () => {
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Shield,
       title: 'Secure Access',
       description: 'Bank-level security with multi-factor authentication'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: CheckCircle,
       title: '24/7 Support',
       description: 'Round-the-clock support for all your needs'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Phone,
       title: 'Mobile Ready',
       description: 'Access your account from any device, anywhere'

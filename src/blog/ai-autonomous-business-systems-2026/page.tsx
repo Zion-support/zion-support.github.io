@@ -1,8 +1,8 @@
 'use client';
 import { Link } from 'react-router-dom';
 export default function AIAutonomousBusinessSystems2026() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           

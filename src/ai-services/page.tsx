@@ -8,8 +8,8 @@ import Footer from '../components/Footer';
 const AIServicesPage: React.FC = () => {
   const services = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,

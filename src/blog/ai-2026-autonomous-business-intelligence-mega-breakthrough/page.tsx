@@ -1,7 +1,7 @@
 // Metadata removed for Vite compatibility
 export default function BlogPost() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           

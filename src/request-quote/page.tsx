@@ -6,8 +6,8 @@ const RequestQuotePage: React.FC = () => {
   );
 };
   const [formData, setFormData] = useState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   name: '',
     email: '',
     company: '',
@@ -72,19 +72,19 @@ const RequestQuotePage: React.FC = () => {
           
           
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const { name, value } = e.target;
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: value
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
@@ -96,29 +96,29 @@ const RequestQuotePage: React.FC = () => {
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Calculator,
       title: 'Free Quote',
       description: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Clock,
       title: 'Quick Response',
       description: 'We respond to all quote requests within 4 hours'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: CheckCircle,
       title: 'Transparent Pricing',
       description: 'Clear, detailed pricing with no hidden fees'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Star,
       title: 'Expert Consultation',
       description: 'Free consultation with our technology experts'
@@ -128,37 +128,37 @@ const RequestQuotePage: React.FC = () => {
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Users,
       title: '50+ Successful Projects',
       description: 'Proven track record of delivering results'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Award,
       title: '300% Average ROI',
       description: 'Our clients see significant returns on investment'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Clock,
       title: '24/7 Support',
       description: 'Round-the-clock support for all our clients'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Star,
       title: '99.9% Uptime',
       description: 'Reliable, high-performance solutions'
     }
   ];
   if (isSubmitted) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return (
     
           

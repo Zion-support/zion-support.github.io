@@ -11,8 +11,8 @@ const AIEmailMarketingPage: React.FC = () => {
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Mail,
       title: 'AI Content Generation',
       description: 'Automatically create compelling email content that resonates with your audience'
@@ -57,8 +57,9 @@ icon: Target,
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-  // TODO: Add items,
-];
+  // TODO: Add items
+  ],
+    ;
 //         '1,000 subscribers',
 //         '10,000 emails/month',
 //         'Basic AI features',

@@ -5,22 +5,23 @@ import {Bot, Cpu, Settings, Shield, CheckCircle, Star,  Bot,  Cpu,  Shield from 
 const AIRoboticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Bot,
       title: 'Intelligent Robotics',
       description: 'AI-powered robots that learn and adapt to their environment',
-      benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior'];
+      benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior'],
+    ;
     },
       icon: Cpu,
       title: 'Advanced Control Systems',
       description: 'Sophisticated control algorithms for precise robot movement',
-      benefits: ['Precision control', 'Real-time processing', 'Safety systems']
-      icon: Shield,
+      benefits: ['Precision control', 'Real-time processing', 'Safety systems'],
+    icon: Shield,
       title: 'Safety & Security',
       description: 'Built-in safety protocols and security measures',
-      benefits: ['Collision avoidance', 'Emergency stops', 'Data protection']
-    }
+      benefits: ['Collision avoidance', 'Emergency stops', 'Data protection'],
+     }
   ];
   return (
     

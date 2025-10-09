@@ -1,7 +1,7 @@
 'use client';
 interface LoadingSpinnerProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   text?: string;
@@ -17,17 +17,17 @@ const LoadingSpinner: React.FC
           
           
           <LoadingSpinnerProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   size = 'md',
 //   className,
   text = 'Loading...',
-  fullScreen = false,
-}) => {
+  fullScreen = false
+  }) => {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
+    xl: 'w-16 h-16'
   };
   const spinner = ()
     
@@ -65,8 +65,8 @@ className={cn()
     </div>
   );
   if (fullScreen) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return (
     
           

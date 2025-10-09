@@ -48,7 +48,8 @@ class PerformanceEnhancer {
           });
         });
         
-        observer.observe({ entryTypes: ['measure', 'navigation'] });
+        observer.observe({ entryTypes: ['measure', 'navigation'],
+     });
       } catch (error) {
         console.warn('PerformanceObserver not supported:', error);
       }

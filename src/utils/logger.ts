@@ -3,8 +3,8 @@
  * Provides structured logging with different levels and contexts
  */
 export enum LogLevel {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   DEBUG = 0,
   INFO = 1,
   WARN = 2,
@@ -12,8 +12,8 @@ export enum LogLevel {
   FATAL = 4
 }
 export interface LogContext {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   component?: string;
   action?: string;
   userId?: string;
@@ -22,8 +22,8 @@ export interface LogContext {
   [key: string]: unknown;
 }
 export interface LogMetadata {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   timestamp?: string;
   level?: LogLevel;
   message?: string;
@@ -32,13 +32,13 @@ export interface LogMetadata {
   [key: string]: unknown;
 }
 class Logger {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   private logLevel: LogLevel;
   private isDevelopment: boolean;
   constructor() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.logLevel = process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.INFO;
     this.isDevelopment = process.env.NODE_ENV === 'development';
   }
@@ -46,16 +46,16 @@ class Logger {
    * Set the minimum log level
    */
   setLogLevel(level: LogLevel): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.logLevel = level;
   }
   /**
    * Get the current log level
    */
   getLogLevel(): LogLevel {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return this.logLevel;
   }
   /**
@@ -71,8 +71,8 @@ class Logger {
           
           
           <string, unknown>): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.log(LogLevel.DEBUG, message, context, metadata);
   }
   /**
@@ -88,8 +88,8 @@ class Logger {
           
           
           <string, unknown>): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.log(LogLevel.INFO, message, context, metadata);
   }
   /**
@@ -105,8 +105,8 @@ class Logger {
           
           
           <string, unknown>): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.log(LogLevel.WARN, message, context, metadata);
   }
   /**
@@ -127,8 +127,8 @@ class Logger {
     contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     let error: Error | undefined;
     let context: LogContext | undefined;
     let meta: Record
@@ -143,14 +143,14 @@ class Logger {
           <string, unknown> | undefined;
     // Handle different parameter combinations
     if (errorOrContextOrMetadata instanceof Error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       error = errorOrContextOrMetadata;
       context = contextOrMetadata as LogContext;
       meta = metadata;
     } else if (typeof errorOrContextOrMetadata === 'string') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       context = { component: errorOrContextOrMetadata };
       meta = contextOrMetadata as Record
           
@@ -163,8 +163,8 @@ class Logger {
           
           <string, unknown>;
     } else if (typeof errorOrContextOrMetadata === 'object') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       context = errorOrContextOrMetadata as LogContext;
       meta = contextOrMetadata as Record
           
@@ -183,8 +183,8 @@ class Logger {
    * Log a fatal error message
    */
   fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.log(LogLevel.FATAL, message, context, metadata);
   }
   /**
@@ -205,8 +205,8 @@ class Logger {
           
           <string, unknown>
   ): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Check if we should log this level
     if (level 
           
@@ -218,8 +218,8 @@ class Logger {
           
           
           < this.logLevel) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       return;
     }
       timestamp: new Date().toISOString(),
@@ -231,14 +231,14 @@ class Logger {
     // Format the log entry
     // Output to console in development
     if (this.isDevelopment && typeof console !== 'undefined') {
-  // TODO: Add content
-}
-      this.outputToConsole(level, formattedMessage, logEntry);
+    // TODO: Add content
+  }
+      this.outputToConsole(level, formattedMessageogEntry);
     }
     // In production, you might want to send to a logging service
     if (!this.isDevelopment) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.sendToLoggingService(logEntry);
     }
   }
@@ -246,8 +246,8 @@ class Logger {
    * Format a log entry for output
    */
   private formatLogEntry(entry: LogMetadata): string {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const levelStr = this.getLevelString(entry.level || LogLevel.INFO);
     const timestamp = entry.timestamp || new Date().toISOString();
     const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';
@@ -258,8 +258,8 @@ class Logger {
    * Format context object for display
    */
   private formatContext(context: LogContext): string {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const parts: string[] = [];
     if (context.component) parts.push(`component:${context.component}`);
     if (context.action) parts.push(`action:${context.action}`);
@@ -272,13 +272,13 @@ class Logger {
    * Output to console with appropriate styling
    */
   private outputToConsole(level: LogLevel, message: string, entry: LogMetadata): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof console === 'undefined') return;
     const styles = this.getConsoleStyles(level);
     switch (level) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       case LogLevel.DEBUG:
         console.debug(`%c${message}`, styles, entry);
         break;
@@ -298,11 +298,11 @@ class Logger {
    * Get console styles for different log levels
    */
   private getConsoleStyles(level: LogLevel): string {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     switch (level) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       case LogLevel.DEBUG: return 'color: #6B7280; font-weight: normal;';
       case LogLevel.INFO:
         return 'color: #3B82F6; font-weight: normal;';
@@ -320,14 +320,14 @@ class Logger {
    * Send log entry to external logging service
    */
   private sendToLoggingService(entry: LogMetadata): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // In a real application, you would send this to your logging service
-    // For example: Sentry, LogRocket, DataDog, etc.
+    // For example: Sentry, LogRocket, DataDogc.
     // Example implementation:
     // fetch('/api/logs', {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     //   method: 'POST',
     //   headers: {// 'Content-Type': 'application/json'},
     //   body: JSON.stringify(entry)
@@ -339,11 +339,11 @@ class Logger {
    * Get string representation of log level
    */
   private getLevelString(level: LogLevel): string {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     switch (level) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       case LogLevel.DEBUG: return 'DEBUG';
       case LogLevel.INFO:
         return 'INFO';

@@ -5,22 +5,23 @@ import {Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings 
 const ARVRSolutionsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Eye,
       title: 'AR Development',
       description: 'Augmented reality applications and experiences',
-      benefits: ['AR apps', '3D visualization', 'Interactive experiences'];
+      benefits: ['AR apps', '3D visualization', 'Interactive experiences'],
+    ;
     },
       icon: Target,
       title: 'VR Solutions',
       description: 'Virtual reality platforms and immersive experiences',
-      benefits: ['VR environments', 'Training simulations', 'Virtual meetings']
-      icon: Settings,
+      benefits: ['VR environments', 'Training simulations', 'Virtual meetings'],
+    icon: Settings,
       title: 'Hardware Integration',
       description: 'Integration with AR/VR hardware and devices',
-      benefits: ['Device compatibility', 'Performance optimization', 'Hardware support']
-    }
+      benefits: ['Device compatibility', 'Performance optimization', 'Hardware support'],
+     }
   ];
   return (
     

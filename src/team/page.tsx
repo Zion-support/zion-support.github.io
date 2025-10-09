@@ -7,35 +7,35 @@ import Footer from '../components/Footer';
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/kleber-santos',
       email: 'kleber@ziontechgroup.com',
-      expertise: ['AI Strategy', 'Leadership', 'Innovation']
-    },
+      expertise: ['AI Strategy', 'Leadership', 'Innovation'],
+     },
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
       bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
       linkedin: 'https://linkedin.com/in/sarah-chen-ai',
       email: 'sarah@ziontechgroup.com',
-      expertise: ['Machine Learning', 'Deep Learning', 'Research']
-      name: 'Dr. Emily Watson',
+      expertise: ['Machine Learning', 'Deep Learning', 'Research'],
+    name: 'Dr. Emily Watson',
       role: 'Head of Data Science',
       bio: 'Data science expert specializing in predictive analytics and business intelligence',
       linkedin: 'https://linkedin.com/in/emily-watson-data',
       email: 'emily@ziontechgroup.com',
-      expertise: ['Data Science', 'Analytics', 'Statistics']
-      name: 'Lisa Thompson',
+      expertise: ['Data Science', 'Analytics', 'Statistics'],
+    name: 'Lisa Thompson',
       role: 'Head of Client Success',
       bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
       linkedin: 'https://linkedin.com/in/lisa-thompson-success',
       email: 'lisa@ziontechgroup.com',
-      expertise: ['Client Relations', 'Project Management', 'Customer Success']
-    }
+      expertise: ['Client Relations', 'Project Management', 'Customer Success'],
+     }
   ];
   const stats = [
   // TODO: Add items

@@ -1,28 +1,28 @@
 import React from 'react';
-import { Brain, Shield, Target, Users ,  Brain,  Shield,  Target,  Users from 'lucide-react';
+import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
   const team = [
-    {,
- name: 'Kleber Santos',
+    {
+      name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.',
-    },
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.'
+  },
     {
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',
-      bio: 'Technical expert specializing in machine learning and cloud architecture.',
-    },
+      bio: 'Technical expert specializing in machine learning and cloud architecture.'
+  },
     {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
-      bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-    }
+      bio: 'AI researcher and developer with expertise in deep learning and NLP.'
+  }
   ];
 
   const stats = [
@@ -36,23 +36,23 @@ const AboutPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
-    },
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+  },
     {
       icon: Shield,
       title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.',
-    },
+      description: 'Your data and systems are protected with enterprise-grade security measures.'
+  },
     {
       icon: Target,
       title: 'Results',
-      description: 'We focus on delivering measurable business outcomes and ROI.',
-    },
+      description: 'We focus on delivering measurable business outcomes and ROI.'
+  },
     {
       icon: Users,
       title: 'Partnership',
-      description: 'We work closely with our clients as strategic technology partners.',
-    }
+      description: 'We work closely with our clients as strategic technology partners.'
+  }
   ];
 
   return (

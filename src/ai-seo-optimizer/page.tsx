@@ -5,22 +5,23 @@ import {Search, Target, Zap, Settings, CheckCircle, Star,  Search,  Target,  Set
 const AISEOOptimizerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Search,
       title: 'SEO Analysis',
       description: 'Comprehensive SEO analysis and optimization',
-      benefits: ['Keyword research', 'On-page optimization', 'Technical SEO'];
+      benefits: ['Keyword research', 'On-page optimization', 'Technical SEO'],
+    ;
     },
       icon: Target,
       title: 'Content Optimization',
       description: 'AI-powered content optimization for search engines',
-      benefits: ['Content scoring', 'Keyword density', 'Readability']
-      icon: Settings,
+      benefits: ['Content scoring', 'Keyword density', 'Readability'],
+    icon: Settings,
       title: 'Ranking Tracking',
       description: 'Track and monitor search engine rankings',
-      benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports']
-    }
+      benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports'],
+     }
   ];
   return (
     

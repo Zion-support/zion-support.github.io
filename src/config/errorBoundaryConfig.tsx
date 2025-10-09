@@ -4,8 +4,8 @@
  * Centralized configuration for error handling across the application
  */
 export interface ErrorBoundaryConfig {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   /**
    * Whether to log errors to console
    */;
@@ -49,8 +49,8 @@ export interface ErrorBoundaryConfig {
    * Fallback UI components
    */
   fallbackComponents: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   default: React.ComponentType
           
           
@@ -79,12 +79,12 @@ export interface ErrorBoundaryConfig {
  * Get error boundary configuration based on environment
  */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const isDevelopment = process.env['NODE_ENV'] === 'development';
   return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   logErrors: true,
     showDetails: isDevelopment,
     reportErrors: !isDevelopment,
@@ -93,8 +93,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
     fallbackComponents: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   default: DefaultErrorFallback,
       network: NetworkErrorFallback,
       notFound: NotFoundFallback
@@ -105,8 +105,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
  * Default error fallback component
  */
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
     
           
@@ -213,8 +213,8 @@ className="w-6 h-6 text-red-600"
  * Network error fallback component
  */
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
     
           
@@ -291,8 +291,8 @@ className="w-6 h-6 text-yellow-600"
  * Not found error fallback component
  */
 function NotFoundFallback(): JSX.Element {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
     
           
@@ -352,31 +352,31 @@ function NotFoundFallback(): JSX.Element {
  * Get error type from error object
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   if (error.message.includes('Network') || error.message.includes('fetch')) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return 'network';
   }
   if (error.message.includes('404') || error.message.includes('not found')) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return 'notFound';
   }
   if (error.message.includes('timeout')) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return 'timeout';
   }
   if (error.message.includes('500') || error.message.includes('server')) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return 'serverError';
   }
   if (error.message.includes('validation')) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return 'validation';
   }
   return 'default';
@@ -394,11 +394,11 @@ export function formatErrorForLogging(error: Error): Record
           
           
           <string, unknown> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   message: error.message,
     stack: error.stack,
     name: error.name,

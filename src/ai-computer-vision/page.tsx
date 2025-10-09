@@ -5,39 +5,42 @@ import {Target, Shield,  Eye,  Camera,  Target,  Shield,  Settings from 'lucide-
 const AIComputerVisionPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Eye,
       title: 'Object Detection',
       description: 'Advanced object detection and recognition with high accuracy',
-      benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training'];
+      benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training'],
+    ;
     },
       icon: Camera,
       title: 'Image Classification',
       description: 'Automated image categorization and content analysis',
-      benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories']
-      icon: Target,
+      benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories'],
+    icon: Target,
       title: 'Facial Recognition',
       description: 'Secure and accurate facial recognition technology',
-      benefits: ['Identity verification', 'Access control', 'Privacy protection']
-    }
+      benefits: ['Identity verification', 'Access control', 'Privacy protection'],
+     }
   ];
   const applications = [
       title: 'Security & Surveillance',
       description: 'Intelligent security monitoring and threat detection systems',
       icon: Shield,
-      useCases: ['Intrusion detection', 'Person tracking', 'Anomaly detection'];
+      useCases: ['Intrusion detection', 'Person tracking', 'Anomaly detection'],
+    ;
       title: 'Manufacturing',
       description: 'Quality control and automated inspection systems',
       icon: Settings,
-      useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
-  const pricing = [
+      useCases: ['Defect detection', 'Quality assurance', 'Process monitoring'],
+    const pricing = [
       name: 'Starter',
       price: '$499/month',
       description: 'Perfect for small projects',
       features: [
-  // TODO: Add items,
-];
+  // TODO: Add items
+  ],
+    ;
 //         'Up to 1,000 images/month',
 //         'Basic models',
 //         'Email support',
@@ -206,8 +209,8 @@ Most Popular
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                     plan.popular
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'

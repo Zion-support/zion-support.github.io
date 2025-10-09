@@ -5,22 +5,23 @@ import {TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Targ
 const AIPredictiveAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: TrendingUp,
       title: 'Predictive Modeling',
       description: 'AI-powered predictive modeling and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk assessment'];
+      benefits: ['Trend prediction', 'Forecasting', 'Risk assessment'],
+    ;
     },
       icon: Target,
       title: 'Data Analysis',
       description: 'Advanced data analysis and pattern recognition',
-      benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation']
-      icon: Settings,
+      benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation'],
+    icon: Settings,
       title: 'Custom Models',
       description: 'Custom predictive models and algorithms',
-      benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
-    }
+      benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization'],
+     }
   ];
   return (
     

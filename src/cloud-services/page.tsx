@@ -11,37 +11,37 @@ const CloudServicesPage: React.FC = () => {
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration of your infrastructure to leading cloud platforms',
-      features: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
-    },
+      features: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime'],
+     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Shield,
       title: 'Cloud Security',
       description: 'Comprehensive security solutions for your cloud infrastructure',
-      features: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
-    },
+      features: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection'],
+     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Zap,
       title: 'Auto Scaling',
       description: 'Dynamic resource allocation based on demand',
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
-    },
+      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring'],
+     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: BarChart,
       title: 'Cloud Analytics',
       description: 'Advanced analytics and monitoring for cloud resources',
-      features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
-    }
+      features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights'],
+     }
   ];
   const benefits = [
   // TODO: Add items

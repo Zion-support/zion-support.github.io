@@ -5,22 +5,23 @@ import {ShoppingCart, Target, Zap, Settings, CheckCircle, Star,  ShoppingCart,  
 const AIEcommerceOptimizerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: ShoppingCart,
       title: 'E-commerce Optimization',
       description: 'AI-powered e-commerce optimization and enhancement',
-      benefits: ['Conversion optimization', 'User experience', 'Performance tuning'];
+      benefits: ['Conversion optimization', 'User experience', 'Performance tuning'],
+    ;
     },
       icon: Target,
       title: 'Product Recommendations',
       description: 'Intelligent product recommendation engine',
-      benefits: ['Personalized recommendations', 'Cross-selling', 'Upselling']
-      icon: Settings,
+      benefits: ['Personalized recommendations', 'Cross-selling', 'Upselling'],
+    icon: Settings,
       title: 'Analytics & Insights',
       description: 'Comprehensive e-commerce analytics and insights',
-      benefits: ['Sales analytics', 'Customer behavior', 'Performance metrics']
-    }
+      benefits: ['Sales analytics', 'Customer behavior', 'Performance metrics'],
+     }
   ];
   return (
     

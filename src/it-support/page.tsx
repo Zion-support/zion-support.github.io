@@ -5,22 +5,23 @@ import {Headphones, Shield, Zap, Settings, CheckCircle, Star,  Headphones,  Shie
 const ITSupportPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
-      benefits: ['24/7 availability', 'Fast response times', 'Expert technicians'];
+      benefits: ['24/7 availability', 'Fast response times', 'Expert technicians'],
+    ;
     },
       icon: Shield,
       title: 'Security Support',
       description: 'Comprehensive security monitoring and incident response',
-      benefits: ['Threat monitoring', 'Incident response', 'Security updates']
-      icon: Settings,
+      benefits: ['Threat monitoring', 'Incident response', 'Security updates'],
+    icon: Settings,
       title: 'System Maintenance',
       description: 'Regular maintenance and optimization services',
-      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']
-    }
+      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates'],
+     }
   ];
   return (
     

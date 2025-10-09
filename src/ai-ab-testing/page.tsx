@@ -1,28 +1,29 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { TestTube, Target, Settings, CheckCircle ,  TestTube,  Target,  Settings from 'lucide-react';
+import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
 
 const AIABTestingPage: React.FC = () => {
   const features = [
-    {,
- icon: TestTube,
+    {
+      icon: TestTube,
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
-      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation'];
+      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation'],
+    ;
     },
     {
       icon: Target,
       title: 'Multivariate Testing',
       description: 'Advanced multivariate testing capabilities',
-      benefits: ['Multiple variants', 'Complex testing', 'Interaction analysis']
-    },
+      benefits: ['Multiple variants', 'Complex testing', 'Interaction analysis'],
+     },
     {
       icon: Settings,
       title: 'Analytics & Reporting',
       description: 'Comprehensive testing analytics and reporting',
-      benefits: ['Test metrics', 'Performance reports', 'Insight generation']
-    }
+      benefits: ['Test metrics', 'Performance reports', 'Insight generation'],
+     }
   ];
 
   return (

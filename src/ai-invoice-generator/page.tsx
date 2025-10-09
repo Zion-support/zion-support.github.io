@@ -7,26 +7,27 @@ import SEOOptimizer from '../../components/SEOOptimizer';
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Brain,
       title: 'AI-Powered Invoice Generation',
       description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
-      benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency'];
+      benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency'],
+    ;
     },
       icon: Zap,
       title: 'Instant Processing',
       description: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
-      benefits: ['Real-time generation', 'Batch processing', 'Template optimization', 'Error reduction']
-      icon: BarChart,
+      benefits: ['Real-time generation', 'Batch processing', 'Template optimization', 'Error reduction'],
+    icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Track payment patterns, identify trends, and get AI-powered insights to improve your cash flow.',
-      benefits: ['Payment analytics', 'Trend analysis', 'Cash flow predictions', 'Client insights']
-      icon: Smartphone,
+      benefits: ['Payment analytics', 'Trend analysis', 'Cash flow predictions', 'Client insights'],
+    icon: Smartphone,
       title: 'Mobile Optimized',
       description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
-      benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
-    }
+      benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications'],
+     }
   ];
   const pricingPlans = [
       name: 'Professional',
@@ -35,12 +36,13 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       title: 'E-commerce Businesses',
       description: 'Automate invoice generation for online sales with AI-powered order processing.',
       icon: ShoppingCart,
-      benefits: ['Order integration', 'Inventory tracking', 'Tax calculations', 'Customer management'];
+      benefits: ['Order integration', 'Inventory tracking', 'Tax calculations', 'Customer management'],
+    ;
       title: 'Agencies & Studios',
       description: 'Manage complex client billing with AI that handles multiple projects and billing structures.',
       icon: Building,
-      benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
-  return (
+      benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting'],
+    return (
     
           
           
@@ -206,8 +208,8 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator
                 {pricingPlans.map((plan, index) => ()
                   
           <div key={index} className={`relative rounded-lg p-8 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                     plan.popular
 //                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400'
                       : 'bg-slate-800/50 border border-slate-700'

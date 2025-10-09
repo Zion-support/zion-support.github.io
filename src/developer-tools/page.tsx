@@ -9,8 +9,8 @@ const DeveloperToolsPage: React.FC = () => {
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'AI Code Generator',
       description: 'Generate high-quality code using advanced AI models',
       icon: Code,
@@ -19,8 +19,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $99/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'API Testing Suite',
       description: 'Comprehensive API testing and monitoring tools',
       icon: Zap,
@@ -29,8 +29,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $149/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'Database Management Tool',
       description: 'Advanced database administration and optimization',
       icon: BarChart,
@@ -39,8 +39,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $199/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'DevOps Automation',
       description: 'Streamline development and deployment processes',
       icon: Target,
@@ -49,8 +49,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $299/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'Code Review Assistant',
       description: 'AI-powered code review and quality assurance',
       icon: Users,
@@ -59,8 +59,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $79/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'Performance Profiler',
       description: 'Advanced application performance monitoring and optimization',
       icon: TrendingUp,

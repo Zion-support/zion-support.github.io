@@ -20,8 +20,8 @@ class SecurityEnhancer {
       enableHTTPS: true,
       enableXSSProtection: true,
       enableCSRFProtection: true,
-      enableContentSecurityPolicy: true,
-    };
+      enableContentSecurityPolicy: true
+  };
     this.init();
   }
 

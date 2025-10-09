@@ -5,22 +5,23 @@ import {TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Targ
 const AISalesForecastingPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: TrendingUp,
       title: 'Predictive Forecasting',
       description: 'AI-powered sales forecasting and prediction',
-      benefits: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting'];
+      benefits: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting'],
+    ;
     },
       icon: Target,
       title: 'Goal Setting',
       description: 'Intelligent goal setting and tracking',
-      benefits: ['Smart goals', 'Progress tracking', 'Performance metrics']
-      icon: Settings,
+      benefits: ['Smart goals', 'Progress tracking', 'Performance metrics'],
+    icon: Settings,
       title: 'Scenario Planning',
       description: 'What-if analysis and scenario planning',
-      benefits: ['Scenario modeling', 'Risk assessment', 'Strategy optimization']
-    }
+      benefits: ['Scenario modeling', 'Risk assessment', 'Strategy optimization'],
+     }
   ];
   return (
     

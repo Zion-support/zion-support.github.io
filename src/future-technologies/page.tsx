@@ -5,22 +5,23 @@ import {Rocket, Target, Zap, Settings, CheckCircle, Star,  Rocket,  Target,  Set
 const FutureTechnologiesPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Rocket,
       title: 'Emerging Technologies',
       description: 'Cutting-edge technologies and future innovations',
-      benefits: ['AI advancement', 'Quantum computing', 'Blockchain'];
+      benefits: ['AI advancement', 'Quantum computing', 'Blockchain'],
+    ;
     },
       icon: Target,
       title: 'Technology Forecasting',
       description: 'Predict and prepare for future technology trends',
-      benefits: ['Trend analysis', 'Market prediction', 'Strategic planning']
-      icon: Settings,
+      benefits: ['Trend analysis', 'Market prediction', 'Strategic planning'],
+    icon: Settings,
       title: 'Technology Integration',
       description: 'Integrate emerging technologies with existing systems',
-      benefits: ['System integration', 'Migration support', 'Compatibility']
-    }
+      benefits: ['System integration', 'Migration support', 'Compatibility'],
+     }
   ];
   return (
     

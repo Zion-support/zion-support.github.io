@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: CheckSquare,
       title: 'AI Task Prioritization',
       description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
@@ -163,8 +163,8 @@ Works with Your Tools
             {pricingPlans.map((plan, index) => ()
               
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                 plan.popular
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700 hover:border-cyan-500/50'

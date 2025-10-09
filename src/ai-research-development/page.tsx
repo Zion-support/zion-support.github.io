@@ -5,22 +5,23 @@ import {Brain, Code, FlaskConical, Target, CheckCircle, Star,  Brain,  Code,  Ta
 const AIResearchDevelopmentPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Brain,
       title: 'Custom AI Research',
       description: 'Tailored AI research solutions for your specific needs',
-      benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs'];
+      benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs'],
+    ;
     },
       icon: Code,
       title: 'Prototype Development',
       description: 'Rapid prototyping and development of AI solutions',
-      benefits: ['Fast iteration', 'Proof of concept', 'MVP development']
-      icon: Target,
+      benefits: ['Fast iteration', 'Proof of concept', 'MVP development'],
+    icon: Target,
       title: 'Innovation Consulting',
       description: 'Strategic consulting for AI adoption and implementation',
-      benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
-    }
+      benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis'],
+     }
   ];
   return (
     

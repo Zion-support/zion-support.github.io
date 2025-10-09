@@ -1,14 +1,14 @@
 'use client';
 // Enhanced Error Handler;
 export class AppError extends Error {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   statusCode: number;,
     isOperational: boolean;,
     timestamp: string;
   constructor(message: string, statusCode = 500, isOperational = true) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //     super(message)
     this.statusCode = statusCode
     this.isOperational = isOperational
@@ -17,8 +17,8 @@ export class AppError extends Error {
   }
 }
 export const _errorHandler = (error: AppError | Error) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message)
 // console.error({
@@ -28,21 +28,21 @@ export const _errorHandler = (error: AppError | Error) => {
     statusCode: appError.statusCode || 500
   });
   return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   message: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCode: appError.statusCode || 500
   };
 };
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (next && typeof next === 'function') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       next(error);
     }
   });

@@ -19,8 +19,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true,
   enableSkipLinks = true,
   enableKeyboardNav = true,
-  enableFocusIndicators = true,
-}) => {
+  enableFocusIndicators = true
+  }) => {
   React.useEffect(() => {
     // Initialize accessibility features
     if (enableSkipLinks) {

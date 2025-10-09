@@ -3,15 +3,15 @@ import React, { useState } from 'react';
         return (
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligenceShowcase2025 = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
@@ -19,8 +19,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       type: 'Blog Post',
       category: 'blog',
       metrics: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   roi: '30,000%',
         efficiency: '500%',
         accuracy: '99.9%',
@@ -28,8 +28,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       },
       readingTime: '35 min read',
       featured: true,
-      tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
-      id: 'fortune-500-business-intelligence-success',
+      tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI'],
+    id: 'fortune-500-business-intelligence-success',
       title: 'Fortune 500 Ultimate Business Intelligence Success',
       description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-success',

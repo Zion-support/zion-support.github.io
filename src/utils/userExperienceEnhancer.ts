@@ -40,8 +40,8 @@ class UserExperienceEnhancer {
       enableOfflineSupport: false,
       enablePushNotifications: false,
       enableDarkMode: false,
-      enableAnimations: true,
-    };
+      enableAnimations: true
+  };
     
     this.metrics = {
       pageLoadTime: 0,
@@ -49,8 +49,8 @@ class UserExperienceEnhancer {
       bounceRate: 0,
       userSatisfaction: 0,
       accessibilityScore: 0,
-      performanceScore: 0,
-    };
+      performanceScore: 0
+  };
     
     this.init();
   }

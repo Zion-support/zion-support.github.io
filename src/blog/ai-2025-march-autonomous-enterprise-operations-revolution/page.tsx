@@ -1,7 +1,7 @@
 // Metadata removed for Vite compatibility
 export default function March2025AutonomousEnterpriseOperationsRevolution() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           

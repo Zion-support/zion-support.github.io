@@ -5,22 +5,23 @@ import {BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target, 
 const AIPerformanceTrackerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: BarChart,
       title: 'Performance Monitoring',
       description: 'Comprehensive performance tracking and analysis',
-      benefits: ['Real-time metrics', 'Performance alerts', 'Trend analysis'];
+      benefits: ['Real-time metrics', 'Performance alerts', 'Trend analysis'],
+    ;
     },
       icon: Target,
       title: 'Goal Tracking',
       description: 'Intelligent goal setting and progress monitoring',
-      benefits: ['Smart goals', 'Progress tracking', 'Achievement metrics']
-      icon: Settings,
+      benefits: ['Smart goals', 'Progress tracking', 'Achievement metrics'],
+    icon: Settings,
       title: 'Custom Dashboards',
       description: 'Customizable performance dashboards and reports',
-      benefits: ['Custom metrics', 'Visualization', 'Reporting']
-    }
+      benefits: ['Custom metrics', 'Visualization', 'Reporting'],
+     }
   ];
   return (
     

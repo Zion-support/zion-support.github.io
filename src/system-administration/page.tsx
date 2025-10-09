@@ -5,22 +5,23 @@ import {Settings, Shield, BarChart, Zap, CheckCircle, Star,  Settings,  Shield, 
 const SystemAdministrationPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Settings,
       title: 'System Management',
       description: 'Comprehensive system administration and maintenance',
-      benefits: ['Server management', 'User administration', 'System monitoring'];
+      benefits: ['Server management', 'User administration', 'System monitoring'],
+    ;
     },
       icon: Shield,
       title: 'Security Administration',
       description: 'System security hardening and compliance',
-      benefits: ['Security patches', 'Access control', 'Compliance monitoring']
-      icon: Zap,
+      benefits: ['Security patches', 'Access control', 'Compliance monitoring'],
+    icon: Zap,
       title: 'Automation',
       description: 'Automated system administration tasks',
-      benefits: ['Automated backups', 'Patch management', 'Health checks']
-    }
+      benefits: ['Automated backups', 'Patch management', 'Health checks'],
+     }
   ];
   return (
     

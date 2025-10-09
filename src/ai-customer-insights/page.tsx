@@ -5,22 +5,23 @@ import {Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings 
 const AICustomerInsightsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Eye,
       title: 'Customer Analytics',
       description: 'AI-powered customer behavior analysis',
-      benefits: ['Behavior tracking', 'Pattern recognition', 'Insight generation'];
+      benefits: ['Behavior tracking', 'Pattern recognition', 'Insight generation'],
+    ;
     },
       icon: Target,
       title: 'Segmentation',
       description: 'Intelligent customer segmentation and targeting',
-      benefits: ['Smart segmentation', 'Persona creation', 'Targeted marketing']
-      icon: Settings,
+      benefits: ['Smart segmentation', 'Persona creation', 'Targeted marketing'],
+    icon: Settings,
       title: 'Personalization',
       description: 'AI-driven personalization and recommendations',
-      benefits: ['Personalized experiences', 'Product recommendations', 'Content customization']
-    }
+      benefits: ['Personalized experiences', 'Product recommendations', 'Content customization'],
+     }
   ];
   return (
     

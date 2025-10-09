@@ -5,8 +5,8 @@ import { ArrowLeft } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility;
 export default function AutonomousBusinessProcessesBlog() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           

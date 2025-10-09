@@ -1,7 +1,7 @@
 
 interface AccessibilitySettings {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   highContrast: boolean;
     largeText: boolean;,
     reducedMotion: boolean;,
@@ -11,8 +11,8 @@ interface AccessibilitySettings {
     colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 interface AccessibilityProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
@@ -31,18 +31,18 @@ const EnhancedAccessibility: React.FC
           
           
           <AccessibilityProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
   enableReducedMotion = true,
   enableColorBlindSupport = true,
-  enableZoomControl = true,
-}) => {
-  // TODO: Add content
-}
+  enableZoomControl = true
+  }) => {
+    // TODO: Add content
+  }
   const [settings, setSettings] = useState
           
           
@@ -53,25 +53,25 @@ const EnhancedAccessibility: React.FC
           
           
           <AccessibilitySettings>({
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
     focusVisible: true,
     zoomLevel: 100,
-    colorBlind: 'none',
+    colorBlind: 'none'
   });
   const [isVisible, setIsVisible] = useState(false);
   // Load settings from localStorage
   useEffect(() => {
     if (savedSettings) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
         // console.error('Failed to load accessibility settings:', error);
@@ -80,96 +80,96 @@ const EnhancedAccessibility: React.FC
   }, []);
   // Save settings to localStorage;
 const saveSettings = useCallback((newSettings: AccessibilitySettings) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     setSettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   }, []);
   // Apply high contrast mode
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (settings.highContrast) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       document.documentElement.classList.add('high-contrast');
     } else {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       document.documentElement.classList.remove('high-contrast');
     }
   }, [settings.highContrast]);
   // Apply large text mode
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (settings.largeText) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       document.documentElement.style.fontSize = '1.2rem';
     } else {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       document.documentElement.style.fontSize = '1rem';
     }
   }, [settings.largeText]);
   // Apply reduced motion
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (settings.reducedMotion) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       document.documentElement.classList.add('reduced-motion');
     } else {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       document.documentElement.classList.remove('reduced-motion');
     }
   }, [settings.reducedMotion]);
   // Apply color blind support
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     document.documentElement.setAttribute('data-color-blind', settings.colorBlind);
   }, [settings.colorBlind]);
   // Apply zoom level
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     document.documentElement.style.zoom = `${settings.zoomLevel}%`;
   }, [settings.zoomLevel]);
   // Keyboard navigation
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (!enableKeyboardNavigation) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         e.preventDefault();
         const mainContent = document.querySelector('main, [role="main"]');
         if (mainContent) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           (mainContent as HTMLElement).focus();
         }
       }
       // Toggle accessibility panel
       if (e.key === 'Tab' && e.altKey && e.key === 'a') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         e.preventDefault();
         setIsVisible(prev => !prev);
       }
       // Escape key to close panel
       if (e.key === 'Escape' && isVisible) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         setIsVisible(false);
       }
     };
@@ -178,42 +178,42 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {
   }, [enableKeyboardNavigation, isVisible]);
   // Focus management
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (!enableFocusManagement) return;
     const handleFocusIn = (e: FocusEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const target = e.target as HTMLElement;
       if (target && settings.focusVisible) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         target.classList.add('focus-visible');
       }
     };
     const handleFocusOut = (e: FocusEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const target = e.target as HTMLElement;
       if (target) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         target.classList.remove('focus-visible');
       }
     };
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
     return () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     };
   }, [enableFocusManagement, settings.focusVisible]);
   // Screen reader announcements;
 const announceToScreenReader = useCallback((message: string) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (!enableScreenReader) return;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
@@ -222,58 +222,58 @@ const announceToScreenReader = useCallback((message: string) => {
     announcement.textContent = message;
     document.body.appendChild(announcement);
     setTimeout(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       document.body.removeChild(announcement);
     }, 1000);
   }, [enableScreenReader]);
   // Toggle functions;
 const toggleHighContrast = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const newSettings = { ...settings, highContrast: !settings.highContrast };
     saveSettings(newSettings);
     announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
   };
   const toggleLargeText = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const newSettings = { ...settings, largeText: !settings.largeText };
     saveSettings(newSettings);
     announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
   };
   const toggleReducedMotion = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const newSettings = { ...settings, reducedMotion: !settings.reducedMotion };
     saveSettings(newSettings);
     announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`);
   };
   const toggleScreenReader = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const newSettings = { ...settings, screenReader: !settings.screenReader };
     saveSettings(newSettings);
     announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`);
   };
   const toggleFocusVisible = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const newSettings = { ...settings, focusVisible: !settings.focusVisible };
     saveSettings(newSettings);
     announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`);
   };
   const adjustZoom = (delta: number) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
     const newSettings = { ...settings, zoomLevel: newZoom };
     saveSettings(newSettings);
     announceToScreenReader(`Zoom level set to ${newZoom}%`);
   };
   const setColorBlind = (type: AccessibilitySettings['colorBlind']) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const newSettings = { ...settings, colorBlind: type };
     saveSettings(newSettings);
     announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
@@ -286,14 +286,14 @@ const toggleHighContrast = () => {
       screenReader: false,
       focusVisible: true,
       zoomLevel: 100,
-      colorBlind: 'none',
-    };
+      colorBlind: 'none'
+  };
     saveSettings(defaultSettings);
     announceToScreenReader('Accessibility settings reset to default');
   };
   if (!isVisible) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return (
     
           

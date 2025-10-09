@@ -7,7 +7,7 @@ const getAllPages = () => {
     { url: '/it-services', priority: 0.9, changefreq: 'weekly' },
     { url: '/contact', priority: 0.8, changefreq: 'monthly' },
     { url: '/about', priority: 0.7, changefreq: 'monthly' },
-    { url: '/blog', priority: 0.8, changefreq: 'weekly' },
+    { url: '/blog', priority: 0.8, changefreq: 'weekly' }
   ];
 };
 const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {

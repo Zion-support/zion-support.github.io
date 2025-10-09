@@ -3,8 +3,8 @@
  * Defines security headers and policies for the application
  */
 export const _securityHeaders = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   // Content Security Policy,
   contentSecurityPolicy: {
 // directives: {
@@ -37,15 +37,15 @@ export const _securityHeaders = {
 };
  * Rate limiting configuration
 export const rateLimitConfig = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   windowMs: 15 * 60 * 1000, // 15 minutes,
   max: 100, // Limit each IP to 100 requests per windowMs,
   message: 'Too many requests from this IP, please try again later.'
  * CORS configuration
 export const corsConfig = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -53,22 +53,22 @@ export const corsConfig = {
   maxAge: 86400, // 24 hours
  * Session configuration
 export const sessionConfig = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
   cookie: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   secure: process.env['NODE_ENV'] === 'production',
     httpOnly: true,
 maxAge: 24 * 60 * 60 * 1000, // 24 hours
     sameSite: 'strict' as const
  * Input validation patterns
 export const validationPatterns = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
@@ -76,8 +76,8 @@ export const validationPatterns = {
   noSpecialChars: /^[a-zA-Z0-9\s]+$/
  * Sanitize user input
 export function sanitizeInput(input: string): string {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return input
 //     .replace(/[
           
@@ -103,28 +103,28 @@ export function sanitizeInput(input: string): string {
     .trim();
  * Validate email address
 export function validateEmail(email: string): boolean {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return validationPatterns.email.test(email);
  * Validate URL
 export function validateUrl(url: string): boolean {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return validationPatterns.url.test(url);
  * Generate secure token
 export function generateSecureToken(length: number = 32): string {
   const array = new Uint8Array(length);
 export function generateSecureToken(_length: number = 32): string {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const _array = new Uint8Array(length);
   if (typeof window !== 'undefined' && window.crypto) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     window.crypto.getRandomValues(array);
   } else {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Fallback for non-browser environments
     for (let _i = 0; i 
           
@@ -136,8 +136,8 @@ export function generateSecureToken(_length: number = 32): string {
           
           
           < length; i++) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       array[i] = Math.floor(Math.random() * 256);
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 export default {

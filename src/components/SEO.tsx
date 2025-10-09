@@ -4,8 +4,8 @@
  * Provides comprehensive SEO meta tags and structured data
  */
 export interface SEOProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   title?: string;
   description?: string;
   keywords?: string[];
@@ -35,9 +35,9 @@ export interface SEOProps {
   description:
 // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
-  // TODO: Add items,
-]
-//     'AI',
+  // TODO: Add items
+  ],
+    //     'AI',
 //     'artificial intelligence',
 //     'enterprise solutions',
 //     'digital transformation',
@@ -47,8 +47,8 @@ export interface SEOProps {
   url: 'https://ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
-};
+  twitterCard: 'summary_large_image' as const
+  };
 export const SEO: React.FC
           
           
@@ -59,8 +59,8 @@ export const SEO: React.FC
           
           
           <SEOProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   title,
 //   description,
 //   keywords,
@@ -75,13 +75,13 @@ export const SEO: React.FC
 //   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = [],
-}) => {
-  // TODO: Add content
-}
+  alternateLocales = []
+  }) => {
+    // TODO: Add content
+  }
   const seo = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
     keywords: keywords || defaultSEO.keywords,
@@ -89,15 +89,15 @@ export const SEO: React.FC
     url: url || defaultSEO.url,
 //     type,
 //     twitterCard,
-//     locale,
+//     locale
   };
   // Generate structured data;
 const generateStructuredData = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (structuredData) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       return structuredData;
     }
     const baseStructuredData: Record
@@ -110,33 +110,33 @@ const generateStructuredData = () => {
           
           
           <string, unknown> = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image: seo.image,
-    };
+      image: seo.image
+  };
     if (author) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       baseStructuredData.author = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         '@type': 'Person',
-        name: author,
-      };
+        name: author
+  };
     }
     if (publishDate) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       baseStructuredData.datePublished = publishDate;
     }
     if (modifiedDate) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       baseStructuredData.dateModified = modifiedDate;
     }
     return baseStructuredData;

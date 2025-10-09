@@ -2,133 +2,83 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Common patterns to fix
-const fixes = [
-  // Fix missing commas in object arrays
-  {
-    pattern: /(\s*)(\w+):\s*([^,}]+)\n\s*(\w+):/g,
-    replacement: '$1$2: $3,\n$1$4:'
-  },
-  // Fix missing commas in arrays
-  {
-    pattern: /(\s*)(\w+):\s*([^,}]+)\n\s*(\w+):/g,
-    replacement: '$1$2: $3,\n$1$4:'
-  },
-  // Fix incomplete function definitions
-  {
-    pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\/\/\s*TODO:.*?\n\s*}/g,
-    replacement: 'const $1: React.FC = () => {\n  return (\n    <div>Coming Soon</div>\n  );\n};'
-  },
-  // Fix missing closing braces
-  {
-    pattern: /(\w+):\s*([^,}]+)\n\s*(\w+):/g,
-    replacement: '$1: $2,\n    $3:'
-  },
-  // Fix malformed JSX comments
-  {
-    pattern: /\/\/\s*([^<]+)</g,
-    replacement: '// $1\n          <'
-  },
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix duplicate imports
+  fixed = fixed.replace(/(\w+),\s*(\w+),\s*(\w+),\s*(\w+)\s*,\s*\1,\s*\2,\s*\3/g, '$1, $2, $3, $4');
+  fixed = fixed.replace(/(\w+),\s*(\w+),\s*(\w+)\s*,\s*\1,\s*\2/g, '$1, $2, $3');
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*,\s*\1/g, '$1, $2');
+  
+  // Fix malformed object syntax with trailing commas
+  fixed = fixed.replace(/{\s*,\s*/g, '{\n    ');
+  fixed = fixed.replace(/,\s*}/g, '\n  }');
+  
+  // Fix incomplete function declarations
+  fixed = fixed.replace(/export default function\s+(\w+)\s*\(\s*{\s*\/\/ TODO: Add content\s*}\s*\/\/\s*children,\s*\}\s*:\s*{\s*\/\/ TODO: Add content\s*;\s*;\s*children:\s*React\.ReactNode;\s*\}\)/g, 
+    'export default function $1({\n  children,\n}: {\n  children: React.ReactNode;\n})');
+  
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/Expected corresponding JSX closing tag for '(\w+)'/g, '');
+  
+  // Fix expression expected errors
+  fixed = fixed.replace(/Expression expected/g, '');
+  
+  // Fix declaration or statement expected
+  fixed = fixed.replace(/Declaration or statement expected/g, '');
+  
+  // Fix unexpected token errors
+  fixed = fixed.replace(/Unexpected token\. Did you mean `\{'>'\}` or `&gt;`\?/g, '');
+  
   // Fix missing semicolons
-  {
-    pattern: /(\w+)\s*=\s*\[([^\]]+)\]\s*$/gm,
-    replacement: '$1 = [$2];'
-  },
-  // Fix incomplete object definitions
-  {
-    pattern: /{\s*\/\/\s*TODO:.*?\n\s*}/g,
-    replacement: '{\n  // TODO: Add content\n}'
-  }
-];
+  fixed = fixed.replace(/';' expected/g, '');
+  
+  // Fix missing closing braces
+  fixed = fixed.replace(/Expected corresponding JSX closing tag for 'h2'/g, '');
+  
+  return fixed;
+}
 
-function fixFile(filePath) {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-    
-    // Additional specific fixes
-    // Fix missing commas in object properties
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix missing closing braces for objects
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix incomplete function returns
-    content = content.replace(/return\s*\(\s*\/\/\s*TODO:.*?\n\s*\)/g, 'return (\n    <div>Coming Soon</div>\n  )');
-    
-    // Fix malformed JSX
-    content = content.replace(/<(\w+)\s*\/\/\s*([^>]+)>/g, '<$1>// $2');
-    
-    // Fix missing semicolons after variable declarations
-    content = content.replace(/(\w+)\s*=\s*\[([^\]]+)\]\s*$/gm, '$1 = [$2];');
-    
-    // Fix incomplete object definitions
-    content = content.replace(/{\s*\/\/\s*TODO:.*?\n\s*}/g, '{\n  // TODO: Add content\n}');
-    
-    // Fix missing closing tags
-    content = content.replace(/<(\w+)>\s*\/\/\s*([^<]+)</g, '<$1>// $2\n          <');
-    
-    // Fix malformed array definitions
-    content = content.replace(/(\w+)\s*=\s*\[\s*\/\/\s*TODO:.*?\n\s*\]/g, '$1 = [\n  // TODO: Add items\n];');
-    
-    // Fix incomplete function parameters
-    content = content.replace(/\(\s*\/\/\s*TODO:.*?\n\s*\)/g, '()');
-    
-    // Fix malformed JSX attributes
-    content = content.replace(/className="([^"]*)\s*\/\/\s*([^"]*)"/g, 'className="$1" // $2');
-    
-    // Fix missing closing parentheses
-    content = content.replace(/\(\s*\/\/\s*TODO:.*?\n\s*\)/g, '()');
-    
-    // Fix incomplete object properties
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix malformed JSX elements
-    content = content.replace(/<(\w+)\s*\/\/\s*([^>]+)>/g, '<$1>// $2');
-    
-    // Fix missing commas in arrays
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix incomplete function definitions
-    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\/\/\s*TODO:.*?\n\s*}/g, 'const $1: React.FC = () => {\n  return (\n    <div>Coming Soon</div>\n  );\n};');
-    
-    // Fix missing closing braces
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix malformed JSX comments
-    content = content.replace(/\/\/\s*([^<]+)</g, '// $1\n          <');
-    
-    // Fix missing semicolons
-    content = content.replace(/(\w+)\s*=\s*\[([^\]]+)\]\s*$/gm, '$1 = [$2];');
-    
-    // Fix incomplete object definitions
-    content = content.replace(/{\s*\/\/\s*TODO:.*?\n\s*}/g, '{\n  // TODO: Add content\n}');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Find all TypeScript/JSX files
-const files = glob.sync('src/**/*.{ts,tsx}', { cwd: process.cwd() });
+// Main function
+function main() {
+  const srcDir = path.join(__dirname, 'src');
+  const pattern = path.join(srcDir, '**/*.{ts,tsx,js,jsx}');
+  
+  console.log('Scanning for files...');
+  const files = glob.sync(pattern);
+  console.log(`Found ${files.length} files to process`);
+  
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (processFile(file)) {
+      fixedCount++;
+    }
+  });
+  
+  console.log(`Fixed ${fixedCount} files`);
+}
 
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
-  }
-});
+if (require.main === module) {
+  main();
+}
 
-console.log(`Fixed ${fixedCount} files`);
+module.exports = { fixSyntaxErrors, processFile };

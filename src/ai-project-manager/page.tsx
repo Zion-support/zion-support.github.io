@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone,  BarChart,  Target,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -19,22 +19,22 @@ const AiProjectManagerPage: React.FC = () => {
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: BarChart,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
-      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
-    },
+      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation'],
+     },
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment and priority management based on AI insights',
-      benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
-      icon: Users,
+      benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows'],
+    icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team collaboration with AI-powered communication and coordination',
-      benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
-    }
+      benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning'],
+     }
   ];
   const pricingPlans = [
       name: 'Professional',

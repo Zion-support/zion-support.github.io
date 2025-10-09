@@ -5,22 +5,23 @@ import {Target, BarChart, Zap, Settings, CheckCircle, Star,  Target,  BarChart, 
 const AILeadScoringPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Target,
       title: 'Intelligent Scoring',
       description: 'AI-powered lead scoring and qualification',
-      benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking'];
+      benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking'],
+    ;
     },
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'Predict lead conversion probability',
-      benefits: ['Conversion prediction', 'Risk assessment', 'Opportunity scoring']
-      icon: Settings,
+      benefits: ['Conversion prediction', 'Risk assessment', 'Opportunity scoring'],
+    icon: Settings,
       title: 'Performance Analytics',
       description: 'Comprehensive lead performance analytics',
-      benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports']
-    }
+      benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports'],
+     }
   ];
   return (
     

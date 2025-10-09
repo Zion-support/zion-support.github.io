@@ -8,8 +8,8 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Brain,
       title: 'AI Services',
       description: 'Comprehensive AI solutions for every business need',
@@ -28,8 +28,8 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       title: 'AI Data Analytics',
       description: 'Transform data into actionable insights with AI',
       features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
-      price: 'Starting at $1,800/month',
-    }
+      price: 'Starting at $1,800/month'
+  }
   ];
   const itServices = [
       icon: Database,

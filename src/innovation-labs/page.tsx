@@ -5,22 +5,23 @@ import {FlaskConical, Target, Zap, Settings, CheckCircle, Star,  FlaskConical,  
 const InnovationLabsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: FlaskConical,
       title: 'Research & Development',
       description: 'Cutting-edge research and development projects',
-      benefits: ['Technology research', 'Prototype development', 'Innovation projects'];
+      benefits: ['Technology research', 'Prototype development', 'Innovation projects'],
+    ;
     },
       icon: Target,
       title: 'Innovation Consulting',
       description: 'Strategic innovation consulting and guidance',
-      benefits: ['Innovation strategy', 'Technology roadmaps', 'Market analysis']
-      icon: Settings,
+      benefits: ['Innovation strategy', 'Technology roadmaps', 'Market analysis'],
+    icon: Settings,
       title: 'Technology Incubation',
       description: 'Incubate and accelerate new technologies',
-      benefits: ['Technology incubation', 'Startup support', 'Mentorship']
-    }
+      benefits: ['Technology incubation', 'Startup support', 'Mentorship'],
+     }
   ];
   return (
     

@@ -8,8 +8,8 @@ const CareersPage: React.FC = () => {
   // TODO: Add items
 ];;
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'Senior AI Engineer',
       department: 'Engineering',
       location: 'Remote / Middletown, DE',;
@@ -19,8 +19,8 @@ const CareersPage: React.FC = () => {
       icon: Brain
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'Full-Stack Developer',
       department: 'Engineering',
       location: 'Remote / Middletown, DE',;
@@ -30,8 +30,8 @@ const CareersPage: React.FC = () => {
       icon: Code
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'AI Product Manager',
       department: 'Product',
       location: 'Remote / Middletown, DE',;
@@ -41,8 +41,8 @@ const CareersPage: React.FC = () => {
       icon: Users
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   title: 'Cybersecurity Specialist',
       department: 'Security',
       location: 'Remote / Middletown, DE',;

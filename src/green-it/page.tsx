@@ -11,8 +11,8 @@ const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   id: 'solutions',
       name: 'Green Solutions',
       icon: Leaf,
@@ -29,8 +29,9 @@ const tabs = [
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
       features: [
-  // TODO: Add items,
-];
+  // TODO: Add items
+  ],
+    ;
 //         'PUE (Power Usage Effectiveness) optimization',
 //         'Renewable energy integration',
 //         'Cooling system optimization',
@@ -87,9 +88,8 @@ const tabs = [
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month'
-  const benefits = [,
-
-      icon: TrendingUp,
+  const benefits = [
+    icon: TrendingUp,
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
       details: [
@@ -97,7 +97,8 @@ const tabs = [
         'Lower maintenance and replacement costs',
         'Improved resource utilization',
         'Reduced waste management costs'
-      ];
+      ],
+    ;
       title: 'Environmental Impact',
       description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
         '60% reduction in carbon emissions',
@@ -143,9 +144,8 @@ const tabs = [
       value: '100%',
       label: 'Renewable Energy Options',
       color: 'text-purple-400'
-  const caseStudies = [,
-
-      company: 'TechCorp Manufacturing',
+  const caseStudies = [
+    company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
       challenge: 'High energy consumption in data centers',
       solution: 'Implemented energy-efficient data center design with renewable energy integration',
@@ -237,8 +237,8 @@ const tabs = [
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
                     activeTab === tab.id
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'

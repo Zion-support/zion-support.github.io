@@ -5,22 +5,23 @@ import {Mic, Target, Zap, Settings, CheckCircle, Star,  Mic,  Target,  Settings 
 const AIVoiceAssistantPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  };
   icon: Mic,
       title: 'Voice Recognition',
       description: 'Advanced voice recognition and processing',
-      benefits: ['Speech-to-text', 'Voice commands', 'Multi-language support'];
+      benefits: ['Speech-to-text', 'Voice commands', 'Multi-language support'],
+    ;
     },
       icon: Target,
       title: 'Natural Language Processing',
       description: 'Intelligent conversation and understanding',
-      benefits: ['Context understanding', 'Intent recognition', 'Response generation']
-      icon: Settings,
+      benefits: ['Context understanding', 'Intent recognition', 'Response generation'],
+    icon: Settings,
       title: 'Custom Integration',
       description: 'Custom voice assistant integration',
-      benefits: ['API integration', 'Custom commands', 'Third-party apps']
-    }
+      benefits: ['API integration', 'Custom commands', 'Third-party apps'],
+     }
   ];
   return (
     
