@@ -8,7 +8,7 @@ export const _metadata = {
 };
 import React from 'react';
 import Link from 'next/link';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { Phone, CheckCircle, StarArrowRight } from 'lucide-react';
 export default function HomePage() {
   // TODO: Add content
 }

@@ -43,6 +43,9 @@ class SecurityEnhancer {
   public cleanup(): void {
     // Cleanup security enhancements
   }
+
 }
+
+
 
 export default SecurityEnhancer;

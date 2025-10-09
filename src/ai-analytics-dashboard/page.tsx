@@ -4,8 +4,8 @@ import {Phone} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AiAnalyticsDashboardPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   return (

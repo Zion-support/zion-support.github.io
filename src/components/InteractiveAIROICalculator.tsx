@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   const [currentCost, setCurrentCost] = useState(100000);
@@ -69,15 +69,6 @@ type='number'
                   onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 // />
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
 Expected Efficiency Gain (%)
                   type='range'

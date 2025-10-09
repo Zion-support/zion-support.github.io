@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Target,  BarChart,  Target,  Settings from 'lucide-react';
+import {Target, BarChartSettings from 'lucide-react';
 const AIAnalyticsPage: React.FC = () => {
 const features = [
     {

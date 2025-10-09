@@ -131,7 +131,7 @@ const updateMetaName = (name: string, content: string) => {
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
     }
-  }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]);
+  }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCardfullTitle]);
   return null;
 });
 SEOOptimizer.displayName = 'SEOOptimizer';

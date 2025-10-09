@@ -1,7 +1,7 @@
 import React from 'react';
-import { Brain, Zap, Shield, BarChart ,  Brain,  Zap,  BarChart from 'lucide-react';
+import { Brain, Zap, Shield, BarChartBarChart from 'lucide-react';
 import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
+import {Brain, Zap, Shield, BarChart, CheckCircle, StarPhone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

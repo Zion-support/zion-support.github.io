@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Palette, Target, Zap, Settings, CheckCircle, Star,  Palette,  Target,  Settings from 'lucide-react';
+import {Palette, Target, Zap, Settings, CheckCircle, StarSettings from 'lucide-react';
 const AIDesignAssistantPage: React.FC = () => {
   const features = [
     {

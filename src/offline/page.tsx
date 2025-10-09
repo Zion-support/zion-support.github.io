@@ -49,15 +49,6 @@ const handleRetry = () => {
             onClick={handleRetry}
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
 // >
-            
-          
-          
-          
-          
-          
-          
-          
-          
           <RefreshCw className="w-4 h-4" />
 // Try Again
           

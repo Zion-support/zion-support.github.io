@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield from 'lucide-react';
+import {Cpu, Zap, Globe, Shield, CheckCircle, StarShield from 'lucide-react';
 const AIEdgeComputingPage: React.FC = () => {
   const features = [
     {

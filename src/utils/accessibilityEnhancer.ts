@@ -60,6 +60,9 @@ class AccessibilityEnhancer {
   public cleanup(): void {
     // Cleanup accessibility enhancements
   }
+
 }
+
+
 
 export default AccessibilityEnhancer;

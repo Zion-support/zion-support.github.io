@@ -1,4 +1,4 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award,  ShoppingCart,  Users from 'lucide-react';
+import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, AwardUsers from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';

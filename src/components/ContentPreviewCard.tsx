@@ -45,7 +45,7 @@ const ContentPreviewCard: React.FC
     if (num >= 1000) {
   // TODO: Add content
 }
-      return (num / 1000).toFixed(1) + 'k';
+
     }
     return num.toString();
   };

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Package, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  Settings from 'lucide-react';
+import {Package, Target, Zap, Settings, CheckCircle, StarSettings from 'lucide-react';
 const AIInventoryManagerPage: React.FC = () => {
   const features = [
     {

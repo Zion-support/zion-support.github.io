@@ -1,11 +1,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { TestTube, Target, Settings, CheckCircle ,  TestTube,  Target,  Settings from 'lucide-react';
+import { TestTube, Target, Settings, CheckCircleSettings from 'lucide-react';
 
 const AIABTestingPage: React.FC = () => {
   const features = [
-    {,
+    {
  icon: TestTube,
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
@@ -56,7 +56,6 @@ const AIABTestingPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             A/B Testing Features

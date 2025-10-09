@@ -79,7 +79,7 @@ const OptimizedImage: React.FC
 }
       observer.observe(imgRef.current);
     }
-    return () => observer.disconnect();
+
   }, [priority, isInView]);
   // Generate optimized image URL;
 const getOptimizedSrc = () => {

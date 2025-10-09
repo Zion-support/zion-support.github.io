@@ -182,11 +182,7 @@ const script = document.createElement('script');
       });
     }
   };
-trackEvent,
-    trackPageView,
-    setUserId,
-    setUserProperties,
-  };
+trackEvent, trackPageView, setUserId, setUserProperties};
   return (
     
           

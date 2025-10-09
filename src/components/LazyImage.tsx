@@ -66,7 +66,7 @@ const LazyImage: React.FC
 }
       observer.observe(imgRef.current);
     }
-    return () => observer.disconnect();
+
   }, [priority]);
   const handleLoad = () => {
   // TODO: Add content

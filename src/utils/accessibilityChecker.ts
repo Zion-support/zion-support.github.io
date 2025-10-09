@@ -232,7 +232,7 @@ export class AccessibilityChecker {
   private checkHeadings(element: Element): void {
   // TODO: Add content
 }
-    const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5h6'));
     if (headings.length === 0) return;
     headings.forEach((heading, index) => {
   // TODO: Add content
@@ -520,7 +520,7 @@ const elementsWithColor = element.querySelectorAll('[style*="color"]');
   // TODO: Add content
 }
     // Check for interactive elements with tabindex="-1"
-    const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
+    const interactiveElements = element.querySelectorAll('a, button, input, selecttextarea');
     interactiveElements.forEach(el => {
   // TODO: Add content
 }

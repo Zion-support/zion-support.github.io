@@ -1,10 +1,10 @@
 import React from 'react';
-import { FileText, Scale, Shield, Phone, Mail } from 'lucide-react';
+import { FileText, Scale, Shield, PhoneMail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const TermsPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   return (

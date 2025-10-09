@@ -132,13 +132,13 @@ export const rateLimiters = {
     max: 1000
 // API: 60 requests per minute,
 
-    api: new RateLimiter({,
+    api: new RateLimiter({
 
     max: 60,
     message: 'API rate limit exceeded. Please try again later.'
   // Authentication: 5 login attempts per 15 minutes,
 
-    auth: new RateLimiter({,
+    auth: new RateLimiter({
 
     max: 5,
     message: 'Too many login attempts. Please try again later.',
@@ -188,8 +188,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
   // TODO: Add content
 };
   error: 'Rate limit exceeded',
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
-        {
+          retryAfter: Math.ceil((resetTime - Date.now()) / 1000) {
   // TODO: Add content
 };
   status: 429,

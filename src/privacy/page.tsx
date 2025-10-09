@@ -1,10 +1,10 @@
 import React from 'react';
-import { Shield, Eye, Lock, Database, Phone, Mail } from 'lucide-react';
+import { Shield, Eye, Lock, Database, PhoneMail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PrivacyPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   return (
@@ -23,7 +23,7 @@ const PrivacyPage: React.FC = () => {
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Deliver and maintain our AI services</li><li>Process transactions and send related information</li><li>Send technical notices and support messages</li><li>Respond to your comments and questions</li><li>Improve our services and develop new features</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Lock className="w-6 h-6 mr-3 text-cyan-400" />
                 Data Security
                 We implement appropriate security measures to protect your personal information against
-                unauthorized access, alteration, disclosure, or destruction.
+                unauthorized access, alteration, disclosureor destruction.
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Encryption of data in transit and at rest</li><li>Regular security audits and assessments</li><li>Access controls and authentication measures</li><li>Employee training on data protection</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Database className="w-6 h-6 mr-3 text-cyan-400" />
                 Data Sharing
                 We do not sell, trade, or otherwise transfer your personal information to third parties

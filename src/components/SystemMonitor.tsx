@@ -152,7 +152,7 @@ const updateMetrics = useCallback(() => {
       const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {
       const _networkInfo = getNetworkInfo();
-      const _newMetrics: SystemMetrics = {,
+      const _newMetrics: SystemMetrics = {
     score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,

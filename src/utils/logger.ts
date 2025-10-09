@@ -73,7 +73,7 @@ class Logger {
           <string, unknown>): void {
   // TODO: Add content
 }
-    this.log(LogLevel.DEBUG, message, context, metadata);
+    this.log(LogLevel.DEBUG, message, contextmetadata);
   }
   /**
    * Log an info message
@@ -90,7 +90,7 @@ class Logger {
           <string, unknown>): void {
   // TODO: Add content
 }
-    this.log(LogLevel.INFO, message, context, metadata);
+    this.log(LogLevel.INFO, message, contextmetadata);
   }
   /**
    * Log a warning message
@@ -107,7 +107,7 @@ class Logger {
           <string, unknown>): void {
   // TODO: Add content
 }
-    this.log(LogLevel.WARN, message, context, metadata);
+    this.log(LogLevel.WARN, message, contextmetadata);
   }
   /**
    * Log an error message
@@ -177,7 +177,7 @@ class Logger {
           
           <string, unknown>;
     }
-    this.log(LogLevel.ERROR, message, context, { ...meta, error });
+    this.log(LogLevel.ERROR, message, context{ ...meta, error });
   }
   /**
    * Log a fatal error message
@@ -185,7 +185,7 @@ class Logger {
   fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
   // TODO: Add content
 }
-    this.log(LogLevel.FATAL, message, context, metadata);
+    this.log(LogLevel.FATAL, message, contextmetadata);
   }
   /**
    * Core logging method
@@ -323,7 +323,7 @@ class Logger {
   // TODO: Add content
 }
     // In a real application, you would send this to your logging service
-    // For example: Sentry, LogRocket, DataDog, etc.
+    // For example: Sentry, LogRocket, DataDogetc.
     // Example implementation:
     // fetch('/api/logs', {
   // TODO: Add content

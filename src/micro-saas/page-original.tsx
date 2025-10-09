@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
+import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, MailMapPin} from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   const _microSAASServices = [

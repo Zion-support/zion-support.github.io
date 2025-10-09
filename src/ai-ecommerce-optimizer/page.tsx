@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {ShoppingCart, Target, Zap, Settings, CheckCircle, Star,  ShoppingCart,  Target,  Settings from 'lucide-react';
+import {ShoppingCart, Target, Zap, Settings, CheckCircle, StarSettings from 'lucide-react';
 const AIEcommerceOptimizerPage: React.FC = () => {
   const features = [
     {

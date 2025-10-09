@@ -81,7 +81,7 @@ quality = 75,
   if (hasError) {
   // TODO: Add content
 }
-    return (
+
     
           
           
@@ -98,15 +98,6 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
 // >
-        
-          
-          
-          
-          
-          
-          
-          
-          
           <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
     );

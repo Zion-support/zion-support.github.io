@@ -284,8 +284,7 @@ export class ErrorReporter {
   exportErrors(): string {
   // TODO: Add content
 }
-    return JSON.stringify()
-      {
+    return JSON.stringify() {
   // TODO: Add content
 };
   timestamp: new Date().toISOString(),

@@ -616,8 +616,7 @@ const originalFetch = window.fetch;
   public exportErrorData(): string {
   // TODO: Add content
 }
-    return JSON.stringify()
-      {
+    return JSON.stringify() {
   // TODO: Add content
 };
   errors: this.errors,

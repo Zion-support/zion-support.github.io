@@ -215,7 +215,7 @@ export const _validationRules = {
    * Validate password strength
    */
   strongPassword: ()
-    message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
+    message = 'Password must be at least 8 characters with uppercase, lowercase, numberand special character'
   ): ValidationRule
           
           

@@ -19,14 +19,14 @@ interface ServicePageProps {
           
           
           <{ className?: string }>;
-  services: Array<{,
+  services: Array<{
 
   features: string[];,
     price: string;
   }>;
   benefits: string[];
 }
-const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {
+const ServicePage: React.FC<ServicePageProps> = ({ title, description, servicesbenefits }) => {
   // TODO: Add content
 }
   return (
@@ -57,15 +57,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
               to="/contact"
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
           <Phone className="w-5 h-5 mr-2" />
 // Get Free Consultation
             

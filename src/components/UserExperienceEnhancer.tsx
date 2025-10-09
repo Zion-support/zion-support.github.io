@@ -44,7 +44,7 @@ const UserExperienceEnhancer: React.FC
     const handleOffline = () => setIsOnline(false);
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
-    return () => {
+
   // TODO: Add content
 }
       window.removeEventListener('online', handleOnline);
@@ -145,7 +145,7 @@ const links = document.querySelectorAll('a[href]');
       };
       window.addEventListener('error', handleError);
       window.addEventListener('unhandledrejection', handleUnhandledRejection);
-      return () => {
+
   // TODO: Add content
 }
         window.removeEventListener('error', handleError);
@@ -305,7 +305,7 @@ const startTime = Date.now();
       document.addEventListener('visibilitychange', handleVisibilityChange);
       window.addEventListener('scroll', handleScroll, { passive: true });
       window.addEventListener('beforeunload', handleBeforeUnload);
-      return () => {
+
   // TODO: Add content
 }
         document.removeEventListener('visibilitychange', handleVisibilityChange);
@@ -331,7 +331,7 @@ const notification = document.createElement('div');
 }
         notification.remove();
       }, 5000);
-      return () => {
+
   // TODO: Add content
 }
         clearTimeout(timer);

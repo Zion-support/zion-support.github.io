@@ -55,7 +55,7 @@ const PerformanceOptimizer: React.FC
     }
     if (enableServiceWorker) {
     }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHintsenableServiceWorker]);
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
   // TODO: Add content

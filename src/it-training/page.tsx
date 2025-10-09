@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award from 'lucide-react';
+import {GraduationCap, BookOpen, Users, Award, CheckCircle, StarAward from 'lucide-react';
 const ITTrainingPage: React.FC = () => {
   const features = [
     {

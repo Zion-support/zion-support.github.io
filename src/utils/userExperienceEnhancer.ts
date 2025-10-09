@@ -81,6 +81,9 @@ class UserExperienceEnhancer {
   public cleanup(): void {
     // Cleanup UX enhancements
   }
+
 }
+
+
 
 export default UserExperienceEnhancer;

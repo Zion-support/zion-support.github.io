@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Target, Shield,  Eye,  Camera,  Target,  Shield,  Settings from 'lucide-react';
+import {Target, Shield, Eye, CameraSettings from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
 const features = [
     {

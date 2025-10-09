@@ -145,7 +145,7 @@ class AccessibilityService {
       }
     });
     // Check for proper heading hierarchy
-    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5h6'));
     headings.forEach(heading => {
   // TODO: Add content
 }
@@ -223,7 +223,7 @@ const html = document.documentElement;
       }
     });
     // Check for touch target size
-    document.querySelectorAll('button, a, input, select').forEach(element => {
+    document.querySelectorAll('button, a, inputselect').forEach(element => {
   // TODO: Add content
 }
       const rect = element.getBoundingClientRect();

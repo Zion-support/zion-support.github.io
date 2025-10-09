@@ -178,7 +178,7 @@ const memory =
 }
       }
     // Cleanup observers
-    return () => {
+
   // TODO: Add content
 }
       observers.forEach(observer => {
@@ -226,7 +226,7 @@ const memory =
         .then(webVitals => {
   // TODO: Add content
 }
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
+          const { onCLS, onFCP, onLCPonTTFB } = webVitals;
           if (onCLS) {
   // TODO: Add content
 }
@@ -275,7 +275,7 @@ const memory =
 // Monitor performance every 5 seconds
     const interval = setInterval(() => {
     }, 5000);
-    return () => {
+
   // TODO: Add content
 }
       if (_cleanup) _cleanup();

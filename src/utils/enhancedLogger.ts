@@ -191,7 +191,7 @@ export class EnhancedLogger {
           <string, unknown>, source?: string): void {
   // TODO: Add content
 }
-    this.log(LogLevel.DEBUG, message, data, source);
+    this.log(LogLevel.DEBUG, message, datasource);
   }
   /**
    * Log an info message
@@ -216,7 +216,7 @@ export class EnhancedLogger {
           <string, unknown>, source?: string): void {
   // TODO: Add content
 }
-    this.log(LogLevel.INFO, message, data, source);
+    this.log(LogLevel.INFO, message, datasource);
   }
   /**
    * Log a warning message
@@ -241,7 +241,7 @@ export class EnhancedLogger {
           <string, unknown>, source?: string): void {
   // TODO: Add content
 }
-    this.log(LogLevel.WARN, message, data, source);
+    this.log(LogLevel.WARN, message, datasource);
   }
   /**
    * Log an error message
@@ -292,7 +292,7 @@ export class EnhancedLogger {
         stack: error.stack
       };
     }
-    this.log(LogLevel.ERROR, message, logData, source, error?.stack);
+    this.log(LogLevel.ERROR, message, logData, sourceerror?.stack);
   }
   /**
    * Log a fatal error message
@@ -331,7 +331,7 @@ export class EnhancedLogger {
         stack: error.stack
       };
     }
-    this.log(LogLevel.FATAL, message, logData, source, error?.stack);
+    this.log(LogLevel.FATAL, message, logData, sourceerror?.stack);
   }
   /**
    * Start a performance measurement

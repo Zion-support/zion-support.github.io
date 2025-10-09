@@ -83,7 +83,7 @@ class EnhancedErrorBoundary extends Component
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
  errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
@@ -234,15 +234,6 @@ class EnhancedErrorBoundary extends Component
                   onClick={this.handleRetry}
                   className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-200"
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <RefreshCw className="w-4 h-4 mr-2" />
 // Try Again
                 
@@ -259,15 +250,6 @@ class EnhancedErrorBoundary extends Component
                   onClick={this.handleReload}
                   className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <RefreshCw className="w-4 h-4 mr-2" />
 // Reload Page
                 
@@ -284,15 +266,6 @@ class EnhancedErrorBoundary extends Component
                   onClick={this.handleGoHome}
                   className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors duration-200"
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <Home className="w-4 h-4 mr-2" />
 // Go Home
                 
@@ -390,5 +363,8 @@ class EnhancedErrorBoundary extends Component
     }
     return this.props.children;
   }
+
 }
+
+
 export default EnhancedErrorBoundary;

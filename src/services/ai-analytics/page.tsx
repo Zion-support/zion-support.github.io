@@ -1,4 +1,4 @@
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award,  Brain,  BarChart,  Target,  Zap,  TrendingUp,  Star,  Award from 'lucide-react';
+import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, AwardAward from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';

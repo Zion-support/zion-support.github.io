@@ -131,4 +131,5 @@ export function getNextSecurityHeaders()
 //     value
   }));
 }
+
 export default defaultSecurityHeaders;

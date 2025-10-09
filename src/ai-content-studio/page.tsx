@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {FileText, Target, Zap, Settings, CheckCircle,  FileText,  Target,  Settings from 'lucide-react';
+import {FileText, Target, Zap, Settings, CheckCircleSettings from 'lucide-react';
 const AIContentStudioPage: React.FC = () => {
   const features = [
     {

@@ -78,7 +78,7 @@ class ErrorBoundary extends Component
   // TODO: Add content
 }
     // In a real application, you would send this to your error tracking service
-    // For example: Sentry, LogRocket, Bugsnag, etc.
+    // For example: Sentry, LogRocket, Bugsnagetc.
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -312,5 +312,8 @@ class ErrorBoundary extends Component
     }
     return this.props.children;
   }
+
 }
+
+
 export default ErrorBoundary;

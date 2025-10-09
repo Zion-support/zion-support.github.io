@@ -18,7 +18,7 @@ export const _debounce =
   // TODO: Add content
 }
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters
+
           
           
           
@@ -52,7 +52,7 @@ export const throttle =
   // TODO: Add content
 }
   let inThrottle: boolean;
-  return (...args: Parameters
+
           
           
           
@@ -101,9 +101,9 @@ export const useIntersectionObserver = ()
   // TODO: Add content
 }
         observer.observe(element);
-        return () => observer.unobserve(element);
+
       }
-      return () => {};
+
     },
 //     [observer]
   );
@@ -119,9 +119,9 @@ export const useIntersectionObserver = ()
   useEffect(() => {
   // TODO: Add content
 }
-    return () => disconnect();
+
   }, [disconnect]);
-  return { observe, disconnect };
+
 };
 // Image lazy loading hook;
 export const useLazyImage = (src: string, placeholder?: string) => {
@@ -160,7 +160,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
 //       [src, isLoaded, isError]
 //     )
   );
-  return { imageSrc, isLoaded, isError, observe };
+
 };
 // Performance monitoring hook;
 export const usePerformanceMonitoring = () => {
@@ -214,7 +214,7 @@ export const usePerformanceMonitoring = () => {
     if ('web-vitals' in window) {
   // TODO: Add content
 }
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCPgetTTFB }) => {
   // TODO: Add content
 }
         getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));

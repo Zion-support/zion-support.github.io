@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain from 'lucide-react';
+import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPinBrain from 'lucide-react';
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Globe, Shield, Zap, Settings, CheckCircle, Star,  Globe,  Shield,  Settings from 'lucide-react';
+import {Globe, Shield, Zap, Settings, CheckCircle, StarSettings from 'lucide-react';
 const NetworkSolutionsPage: React.FC = () => {
   const features = [
     {

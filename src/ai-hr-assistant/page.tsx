@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Users, Target, Zap, Settings, CheckCircle, Star,  Users,  Target,  Settings from 'lucide-react';
+import {Users, Target, Zap, Settings, CheckCircle, StarSettings from 'lucide-react';
 const AIHRAssistantPage: React.FC = () => {
   const features = [
     {

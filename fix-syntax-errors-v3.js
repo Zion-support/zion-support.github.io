@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix common syntax errors
+// Function to fix specific syntax errors
 function fixSyntaxErrors(content) {
   let fixed = content;
 
@@ -17,6 +17,9 @@ function fixSyntaxErrors(content) {
 
   // Fix malformed object literals with trailing commas (e.g., "{,")
   fixed = fixed.replace(/{\s*,/g, '{');
+
+  // Fix missing return statements in arrow functions
+  fixed = fixed.replace(/(const\s+[A-Za-z_][A-Za-z0-9_]*\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*)(<[^>]+>)/g, '$1return $2');
 
   // Fix duplicate return statements - keep only the last one
   const returnMatches = fixed.match(/return\s*\(/g);
@@ -55,6 +58,28 @@ function fixSyntaxErrors(content) {
 
   // Fix unexpected token issues
   fixed = fixed.replace(/>\s*$/gm, '>');
+
+  // Fix malformed function declarations with missing opening brace
+  fixed = fixed.replace(/(const\s+[A-Za-z_][A-Za-z0-9_]*\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*)(<[^>]+>)/g, '$1{ return $2');
+
+  // Fix missing closing brace before export
+  fixed = fixed.replace(/(\s*}\s*)(export\s+default)/g, '$1\n$2');
+
+  // Fix duplicate function declarations - keep only the last one
+  const functionMatches = fixed.match(/const\s+([A-Za-z_][A-Za-z0-9_]*)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};/g);
+  if (functionMatches) {
+    functionMatches.forEach(match => {
+      const functions = match.split('};');
+      const lastFunction = functions[functions.length - 1] + '};';
+      fixed = fixed.replace(match, lastFunction);
+    });
+  }
+
+  // Fix malformed JSX without proper return
+  fixed = fixed.replace(/(const\s+[A-Za-z_][A-Za-z0-9_]*\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*)(<div[^>]*>)/g, '$1return $2');
+
+  // Fix missing closing parenthesis
+  fixed = fixed.replace(/(\s*}\s*)(\s*}\s*)(export\s+default)/g, '$1\n$2\n$3');
 
   return fixed;
 }

@@ -16,4 +16,5 @@ interface PerformanceMetrics {
     fps: number;
   [key: string]: number;
 }
+
 export default PerformanceDashboard;

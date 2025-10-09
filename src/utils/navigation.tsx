@@ -26,11 +26,7 @@ export const _useRouter = () => {
 }
     window.location.reload();
   return {
-push,
-    replace,
-    back,
-    forward,
-    refresh;
+push, replace, back, forwardrefresh;
   }
 export }
 export const rateLimitingMiddleware = params;

@@ -259,18 +259,6 @@ const isValid = validateAllFields();
 const isValid = Object.keys(errors).length === 0 ||
     Object.values(errors).every(errorArray => errorArray.length === 0);
   return {
-values,
-    errors,
-    touched,
-    isSubmitting,
-    isValid,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-    setFieldValue,
-    setFieldError,
-    setFieldTouched,
-    resetForm,
-    validateField: validateSingleField,
+values, errors, touched, isSubmitting, isValid, handleChange, handleBlur, handleSubmit, setFieldValue, setFieldError, setFieldTouched, resetFormvalidateField: validateSingleField,
     validateAllFields
   };

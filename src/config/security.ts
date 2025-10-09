@@ -141,12 +141,4 @@ export function generateSecureToken(_length: number = 32): string {
       array[i] = Math.floor(Math.random() * 256);
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 export default {
-securityHeaders,
-  rateLimitConfig,
-  corsConfig,
-  sessionConfig,
-  validationPatterns,
-  sanitizeInput,
-  validateEmail,
-  validateUrl,
-  generateSecureToken
+securityHeaders, rateLimitConfig, corsConfig, sessionConfig, validationPatterns, sanitizeInput, validateEmail, validateUrlgenerateSecureToken

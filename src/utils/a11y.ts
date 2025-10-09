@@ -9,7 +9,7 @@
 export function generateId(prefix = 'a11y'): string {
   // TODO: Add content
 }
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+
 }
 /**
  * Announce message to screen readers
@@ -93,7 +93,7 @@ export function trapFocus(element: HTMLElement): () => void {
   // Focus first element
   firstFocusable?.focus();
   // Return cleanup function
-  return () => {
+
   // TODO: Add content
 }
     element.removeEventListener('keydown', handleKeyDown);
@@ -110,7 +110,7 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
   const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes()
 //     element.tagName.toLowerCase()
   );
-  return (
+
     
           
           
@@ -156,7 +156,7 @@ export function makeKeyboardAccessible()
   };
   element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
-  return () => {
+
   // TODO: Add content
 }
     element.removeEventListener('click', onClick);
@@ -389,10 +389,13 @@ export class FocusManager {
           
           
           <HTMLElement>()
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea[tabindex]:not([tabindex="-1"])'
     );
     focusable?.focus();
   }
 }
+
 }
+
+
 export default undefined;

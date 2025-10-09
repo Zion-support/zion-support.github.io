@@ -387,7 +387,7 @@ export function validatePassword(password: string): ValidationResult {
     return { isValid: false, error: 'Password must be no more than 128 characters long' };
   }
   if (!isStrongPassword(password)) {
-    return { isValid: false, error: 'Password must contain uppercase, lowercase, number, and special character' };
+    return { isValid: false, error: 'Password must contain uppercase, lowercase, numberand special character' };
   }
   return { isValid: true };
 }

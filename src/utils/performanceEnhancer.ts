@@ -62,6 +62,9 @@ class PerformanceEnhancer {
   public cleanup(): void {
     // Cleanup resources
   }
+
 }
+
+
 
 export default PerformanceEnhancer;

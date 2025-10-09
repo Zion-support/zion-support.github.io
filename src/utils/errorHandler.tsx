@@ -122,7 +122,7 @@ export class ErrorHandler {
 }
       ErrorHandler.instance = new ErrorHandler(config);
     }
-    return ErrorHandler.instance;
+
   }
   // Handle error
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record

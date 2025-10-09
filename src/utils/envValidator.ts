@@ -103,4 +103,5 @@ export function validateEnv(): EnvConfig {
 }
   return envValidator.getConfig()
 }
+
 export default envValidator;

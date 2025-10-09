@@ -23,7 +23,7 @@ const App: React.FC = () => {
       setIsInitialized(true);
     }, 1000);
     
-    return () => clearTimeout(timer);
+
   }, []);
 
   if (!isInitialized) {

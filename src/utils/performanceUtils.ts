@@ -14,7 +14,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(),
   // TODO: Add content
 }
   let timeout: NodeJS.Timeout | null = null;
-  return function executedFunction(...args: Parameters
+
           
           
           
@@ -55,7 +55,7 @@ export function throttle
   // TODO: Add content
 }
   let inThrottle: boolean;
-  return function executedFunction(...args: Parameters
+
           
           
           
@@ -103,7 +103,7 @@ export function memoize
           
           
           <string, ReturnType<T>>();
-  return ((...args: Parameters<T>): ReturnType<T> => {
+
   // TODO: Add content
 }
     const key = JSON.stringify(args);
@@ -504,7 +504,10 @@ export class FPSMonitor {
 }
     return this.fps;
   }
+
 }
+
+
 export default {
   // TODO: Add content
 }

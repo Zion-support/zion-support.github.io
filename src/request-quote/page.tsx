@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   const [formData, setFormData] = useState({
@@ -159,7 +159,7 @@ const RequestQuotePage: React.FC = () => {
   if (isSubmitted) {
   // TODO: Add content
 }
-    return (
+
     
           
           
@@ -226,15 +226,6 @@ const RequestQuotePage: React.FC = () => {
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <Phone className="w-5 h-5 mr-2" />
 // Contact Us
                 
@@ -251,15 +242,6 @@ const RequestQuotePage: React.FC = () => {
                   href="/"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <ArrowRight className="w-4 h-4 mr-2" />
 // Back to Home
                 
@@ -346,15 +328,6 @@ type="text"
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your full name"
 //                       />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -378,15 +351,6 @@ type="email"
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your email"
 //                       />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -411,15 +375,6 @@ type="text"
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your company name"
 // />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -442,15 +397,6 @@ type="tel"
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your phone number"
 // />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                   </div>
                   {/* Project Information */}
@@ -474,15 +420,6 @@ type="tel"
 // required;
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 //                     >
-                      
-          
-          
-          
-          
-          
-          
-          
-          
           <option value="">Select a service type</option>
                       {serviceTypes.map((type, index) => ()
                         
@@ -510,15 +447,6 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 // >
-                        
-          
-          
-          
-          
-          
-          
-          
-          
           <option value="">Select project size</option>
                         {projectSizes.map((size, index) => ()
                           
@@ -545,15 +473,6 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 // >
-                        
-          
-          
-          
-          
-          
-          
-          
-          
           <option value="">Select timeline</option>
                         {timelines.map((timeline, index) => ()
                           
@@ -581,15 +500,6 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 // >
-                      
-          
-          
-          
-          
-          
-          
-          
-          
           <option value="">Select budget range</option>
                       {budgetRanges.map((range, index) => ()
                         
@@ -619,15 +529,6 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Describe your project requirements and goals..."
 //                     />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -650,15 +551,6 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Any specific technical requirements, integrations, or constraints..."
 // />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                   <button;
 type="submit"
@@ -762,15 +654,6 @@ type="submit"
                     href="tel:+13024640950"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
 // >
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           <Phone className="w-4 h-4 mr-2" />
                     <span className="text-sm">(302) 464-0950</span>
                   </a>
@@ -778,15 +661,6 @@ type="submit"
                     href="mailto:kleber@ziontechgroup.com"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
 // >
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           <Mail className="w-4 h-4 mr-2" />
                     <span className="text-sm">kleber@ziontechgroup.com</span>
                   </a>
@@ -794,15 +668,6 @@ type="submit"
                     href="/contact"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
 // >
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           <MessageSquare className="w-4 h-4 mr-2" />
                     <span className="text-sm">Contact Form</span>
                   </a>

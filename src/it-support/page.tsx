@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Headphones, Shield, Zap, Settings, CheckCircle, Star,  Headphones,  Shield,  Settings from 'lucide-react';
+import {Headphones, Shield, Zap, Settings, CheckCircle, StarSettings from 'lucide-react';
 const ITSupportPage: React.FC = () => {
   const features = [
     {

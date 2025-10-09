@@ -1,11 +1,11 @@
 import React from 'react';
-import { Brain, Shield, Target, Users ,  Brain,  Shield,  Target,  Users from 'lucide-react';
+import { Brain, Shield, Target, UsersUsers from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
   const team = [
-    {,
+    {
  name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
@@ -64,7 +64,6 @@ const AboutPage: React.FC = () => {
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
         </div>
-
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +81,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,7 +115,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,7 +143,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -182,7 +178,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

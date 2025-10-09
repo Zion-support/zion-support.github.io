@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Search, Target, Zap, Settings, CheckCircle, Star,  Search,  Target,  Settings from 'lucide-react';
+import {Search, Target, Zap, Settings, CheckCircle, StarSettings from 'lucide-react';
 const AISEOOptimizerPage: React.FC = () => {
   const features = [
     {

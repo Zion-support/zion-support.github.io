@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Settings, Zap, Shield, BarChart, CheckCircle, Star,  Settings,  Zap,  BarChart from 'lucide-react';
+import {Settings, Zap, Shield, BarChart, CheckCircle, StarBarChart from 'lucide-react';
 const ITAutomationPage: React.FC = () => {
   const features = [
     {

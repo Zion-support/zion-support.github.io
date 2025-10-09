@@ -40,15 +40,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
       }`}
       aria-labelledby="hero-heading"
 //     >
-      
-          
-          
-          
-          
-          
-          
-          
-          
           <div className="max-w-6xl mx-auto">
         <h1
           id="hero-heading"

@@ -1,11 +1,11 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp,  Leaf,  Target,  Zap,  Cloud,  Recycle,  Code,  Users,  Globe,  TrendingUp,  Factory,  Building from 'lucide-react';
+import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp, Cloud, Code, FactoryBuilding from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   const [activeTab, setActiveTab] = useState('solutions');
@@ -244,15 +244,6 @@ const tabs = [
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
 //                 >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           <tab.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{tab.name}</span>
                 </button>

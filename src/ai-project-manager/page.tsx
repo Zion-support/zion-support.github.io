@@ -1,18 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone,  BarChart,  Target,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
-import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, PhoneStar from 'lucide-react';
+import { BarChart, Target, TrendingUp, Users, ClockStar } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIProjectManagerPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   const _features = [
 const AiProjectManagerPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   const features = [

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star ,  Brain,  TrendingUp,  Users,  Clock,  Star from 'lucide-react';
+import { Brain, TrendingUp, Shield, BarChart, Users, Clock, StarStar from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
-import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, BrainPhone} from 'lucide-react';
+import { Brain, TrendingUp, Shield, Users, ClockStar } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIMLPlatformPage: React.FC = () => {

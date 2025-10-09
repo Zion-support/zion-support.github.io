@@ -7,4 +7,5 @@ interface PerformanceMetrics {
     lcp: number | null;,
     ttfb: number | null;
 }
+
 export default PerformanceMonitor;

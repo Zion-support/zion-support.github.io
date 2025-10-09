@@ -25,7 +25,7 @@ export const _withLazyLoading =
 ) => {
   // TODO: Add content
 }
-  return (props: P) => ()
+
     
           
           
@@ -113,9 +113,9 @@ const LazyComponent: React.FC
 }
       observer.observe(elementRef.current);
     }
-    return () => observer.disconnect();
+
   }, [delay, threshold, rootMargin]);
-  return (
+
     
           
           
@@ -161,7 +161,7 @@ export const preloadComponent = (importFunction: () => Promise
           <any>) => {
   // TODO: Add content
 }
-  return () => {
+
   // TODO: Add content
 }
     const component = lazy(importFunction);

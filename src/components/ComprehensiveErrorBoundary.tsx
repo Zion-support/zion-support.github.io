@@ -59,7 +59,7 @@ class ComprehensiveErrorBoundary extends Component
           <State> {
   // TODO: Add content
 }
-    return {
+
   // TODO: Add content
 };
   hasError: true,

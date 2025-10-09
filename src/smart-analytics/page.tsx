@@ -1,5 +1,5 @@
 import React from 'react';
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users,  BarChart,  Brain,  Zap,  Shield from 'lucide-react';
+import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, UsersShield from 'lucide-react';
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [

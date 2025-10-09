@@ -1,8 +1,8 @@
 
 import React from 'react';
 const SitemapPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   return (

@@ -14,4 +14,5 @@ interface BeforeInstallPromptEvent extends Event {
           <void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
+
 export default PWAInstaller;

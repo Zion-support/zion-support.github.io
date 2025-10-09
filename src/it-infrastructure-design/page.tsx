@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Target,  Shield from 'lucide-react';
+import {Settings, Target, BarChart, Shield, CheckCircle, StarShield from 'lucide-react';
 const ITInfrastructureDesignPage: React.FC = () => {
   const features = [
     {

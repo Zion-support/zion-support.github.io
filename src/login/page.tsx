@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 const LoginPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const LoginPage: React.FC = () => {
           <HTMLInputElement>) => {
   // TODO: Add content
 }
-    const { name, value, type, checked } = e.target;
+    const { name, value, typechecked } = e.target;
     setFormData(prev => ({
   // TODO: Add content
 }
@@ -140,15 +140,6 @@ type="email"
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Enter your email"
 //                     />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                 </div>
                 <div>
@@ -175,15 +166,6 @@ type={showPassword ? 'text' : 'password'}
 className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Enter your password"
 //                     />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           <button;
 type="button"
                       onClick={() => setShowPassword(!showPassword)}
@@ -211,15 +193,6 @@ type="checkbox"
                       onChange={handleInputChange}
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2"
 // />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
           <span className="ml-2 text-sm text-gray-300">Remember me</span>
                   </label>
                   <a

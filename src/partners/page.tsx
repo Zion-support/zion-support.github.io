@@ -1,4 +1,4 @@
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users,  Star,  CheckCircle from 'lucide-react';
+import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, MailCheckCircle from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -216,15 +216,6 @@ icon: Globe,
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
-                
-          
-          
-          
-          
-          
-          
-          
-          
           <Handshake className="w-5 h-5 mr-2" />
 // Become a Partner
               

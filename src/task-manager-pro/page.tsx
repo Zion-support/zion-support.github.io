@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone,  CheckSquare,  Users,  Zap,  BarChart from 'lucide-react';
+import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, PhoneBarChart from 'lucide-react';
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
   const features = [
@@ -92,15 +92,6 @@ Supercharge your productivity with our AI-powered task management platform.
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
           <Phone className="w-5 h-5 mr-2" />,
  Call: (302) 464-0950
             </a>

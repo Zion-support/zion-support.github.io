@@ -1,11 +1,11 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe,  Shield,  Award,  Globe from 'lucide-react';
+import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, GlobeGlobe from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const SignupPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ const handleInputChange = (e: React.ChangeEvent
           
           
           <HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, typechecked } = e.target;
     setFormData(prev => ({
   // TODO: Add content
 }

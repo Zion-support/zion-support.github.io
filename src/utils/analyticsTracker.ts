@@ -175,5 +175,8 @@ if (typeof window !== 'undefined') {
       analyticsTracker.initialize();
     });
   }
+
 }
+
+
 export default analyticsTracker;

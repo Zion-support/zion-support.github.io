@@ -165,7 +165,7 @@ const siObserver = new PerformanceObserver((list) => {
       }
     });
     siObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-    return () => {
+
   // TODO: Add content
 }
       fcpObserver.disconnect();
@@ -198,7 +198,7 @@ const analyzeResourceTiming = useCallback(() => {
       if (resource.duration > 1000) resourceMetrics.slowResources++;
       if (resource.transferSize === 0) resourceMetrics.cachedResources++;
     });
-    return resourceMetrics;
+
   }, []);
   // Memory usage monitoring;
 const getMemoryUsage = useCallback(() => {
@@ -206,7 +206,7 @@ const getMemoryUsage = useCallback(() => {
 }
     if (typeof window === 'undefined' || !('memory' in performance)) return null;
     const memory = (performance as any).memory;
-    return {
+
   // TODO: Add content
 };
   usedJSHeapSize: memory.usedJSHeapSize,
@@ -310,7 +310,7 @@ const reportMetrics = useCallback(() => {
     // Callback for custom handling
     onMetricsUpdate?.(metrics);
 // console.log('Performance Report:', report);
-  }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfo, onMetricsUpdate]);
+  }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfoonMetricsUpdate]);
   useEffect(() => {
   // TODO: Add content
 }

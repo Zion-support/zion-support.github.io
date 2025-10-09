@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings from 'lucide-react';
+import {Eye, Target, Zap, Settings, CheckCircle, StarSettings from 'lucide-react';
 const ARVRSolutionsPage: React.FC = () => {
   const features = [
     {

@@ -18,7 +18,7 @@ const ServiceCard: React.FC
           
           
           
-          <ServiceCardProps> = ({ title, description, icon, className = '' }) => {
+          <ServiceCardProps> = ({ title, description, iconclassName = '' }) => {
   // TODO: Add content
 }
   return (

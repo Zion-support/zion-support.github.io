@@ -33,15 +33,6 @@ return (
               href={page.href}
               className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
           <div className="text-3xl mb-3">{page.icon}</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {page.title}

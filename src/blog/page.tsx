@@ -22,6 +22,7 @@ interface BlogPost {
     engagement: number;
   };
 }
+
 export default function BlogPage() {
   // TODO: Add content
 }

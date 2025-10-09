@@ -1,11 +1,11 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
+import {ChevronDown, ChevronUp, Search, Phone, MailMessageSquare} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   const [searchTerm, setSearchTerm] = useState('');
@@ -146,15 +146,6 @@ type="text"
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 // />
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
@@ -184,15 +175,6 @@ type="text"
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
 // >
-                          
-          
-          
-          
-          
-          
-          
-          
-          
           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? ()
                             

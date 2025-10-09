@@ -1,7 +1,7 @@
 import React from 'react';
 const AIWritingAssistantPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   return (
@@ -27,6 +27,7 @@ const AIWritingAssistantPage: React.FC = () => {
       </div>
   );
 }
+
 export default AiWritingAssistantPage;
 };
 export default AIWritingAssistantPage;

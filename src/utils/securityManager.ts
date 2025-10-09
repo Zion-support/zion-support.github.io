@@ -119,5 +119,8 @@ const validRequests = requests.filter((time: number) => time > windowStart);
     }
     return global._rateLimitStorage;
   }
+
 }
+
+
 export default SecurityManager.getInstance();

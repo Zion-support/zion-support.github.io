@@ -174,7 +174,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {
       }
     };
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+
   }, [enableKeyboardNavigation, isVisible]);
   // Focus management
   useEffect(() => {
@@ -203,7 +203,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {
     };
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
-    return () => {
+
   // TODO: Add content
 }
       document.removeEventListener('focusin', handleFocusIn);
@@ -294,7 +294,7 @@ const toggleHighContrast = () => {
   if (!isVisible) {
   // TODO: Add content
 }
-    return (
+
     
           
           

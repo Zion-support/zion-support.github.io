@@ -142,7 +142,7 @@ const AdvancedSEOOptimizer: React.FC
       addStructuredData(structuredData);
     }
     // Add additional SEO meta tags
-}, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
+}, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationDatawebsiteData]);
     if (!meta) {
   // TODO: Add content
 }

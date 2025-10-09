@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react';
+import {Shield, Settings, Zap, Clock, Users, TrendingUpStar from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAutomationPage: React.FC = () => {

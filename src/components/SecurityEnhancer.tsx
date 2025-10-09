@@ -39,7 +39,7 @@ const SecurityEnhancer: React.FC
     }
     // Add security headers
     // Add security event listeners
-  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
+  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtectionenableContentTypeSniffingProtection]);
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = [

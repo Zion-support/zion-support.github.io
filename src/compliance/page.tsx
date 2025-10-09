@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users from 'lucide-react';
+import {ArrowLeft, CheckCircle, Shield, FileText, Users, LockUsers from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
@@ -26,7 +26,7 @@ const CompliancePage: React.FC = () => {
     },
       icon: FileText,
       title: 'Regulatory Compliance',
-      description: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
+      description: 'Full compliance with major regulations including GDPR, CCPA, HIPAAand industry-specific requirements.',
       features: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
       icon: Users,
       title: 'Privacy Rights',
@@ -55,15 +55,6 @@ const CompliancePage: React.FC = () => {
                 to="/privacy"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
 // >
-                
-          
-          
-          
-          
-          
-          
-          
-          
           <ArrowLeft className="w-4 h-4 mr-2" />
 // Back to Privacy Policy
               

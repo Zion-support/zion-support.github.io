@@ -1,6 +1,6 @@
 import React from 'react';
 const TeamPage: React.FC = () => {
-import { Linkedin, Mail, Phone, Award, Users, Brain, Code, Shield } from 'lucide-react';
+import { Linkedin, Mail, Phone, Award, Users, Brain, CodeShield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   const _teamMembers = [

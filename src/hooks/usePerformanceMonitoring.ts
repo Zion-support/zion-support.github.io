@@ -18,7 +18,7 @@ export const _usePerformanceMonitoring = () => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
   // TODO: Add content
 }
-      return () => {};
+
     }
     try {
   // TODO: Add content
@@ -132,7 +132,7 @@ const resourceObserver = new PerformanceObserver(list => {
       });
       resourceObserver.observe({ entryTypes: ['resource'] });
       // Cleanup
-      return () => {
+
   // TODO: Add content
 }
         lcpObserver.disconnect();
@@ -145,7 +145,7 @@ const resourceObserver = new PerformanceObserver(list => {
     } catch (error) {
   // TODO: Add content
 }
-      return () => {};
+
     }
   }, [reportMetric]);
   // Monitor page load performance

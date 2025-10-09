@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Settings, Shield, BarChart, Zap, CheckCircle, Star,  Settings,  Shield,  Zap from 'lucide-react';
+import {Settings, Shield, BarChart, Zap, CheckCircle, StarZap from 'lucide-react';
 const SystemAdministrationPage: React.FC = () => {
   const features = [
     {

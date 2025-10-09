@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target,  Calendar,  Users,  Zap,  Shield from 'lucide-react';
+import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, TargetShield from 'lucide-react';
 import { Link } from 'react-router-dom';
 const AISchedulerPage: React.FC = () => {
   const features = [
@@ -101,15 +101,6 @@ const AISchedulerPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
           <Phone className="w-5 h-5 mr-2" />,
  Call: (302) 464-0950
             </a>

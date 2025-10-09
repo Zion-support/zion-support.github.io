@@ -74,7 +74,7 @@ const ResponsiveContainer: React.FC
 }
       setScreenSize('sm');
     }
-  }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
+  }, [isClient, isMobile, isTablet, isDesktopisLargeDesktop]);
   if (!isClient) {
   // TODO: Add content
 }

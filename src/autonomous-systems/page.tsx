@@ -1,7 +1,7 @@
 import React from 'react';
 const AutonomousSystemsPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+
+    return <div>Coming Soon</div>
   );
 };
   return (

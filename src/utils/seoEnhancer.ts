@@ -52,6 +52,9 @@ class SEOEnhancer {
     this.config = { ...this.config, ...newConfig };
     this.updateMetaTags();
   }
+
 }
+
+
 
 export default SEOEnhancer;

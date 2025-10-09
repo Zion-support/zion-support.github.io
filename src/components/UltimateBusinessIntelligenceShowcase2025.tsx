@@ -91,15 +91,6 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
                     strokeWidth={2}
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
 // />
-                
-          
-          
-          
-          
-          
-          
-          
-          
           </svg>
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
