@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
-import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
+import { ArrowRight, MapPin, Clock, Users, Award, Zap, CheckCircle } from 'lucide-react';
 const CareersPage: React.FC = () => {
   const positions = [
     {

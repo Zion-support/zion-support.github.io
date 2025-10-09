@@ -15,6 +15,8 @@ const PerformanceMonitor: React.FC = () => {
     cls: null,
     ttfb: null
   });
+  
+  const enableConsoleLogging = process.env.NODE_ENV === 'development';
   useEffect(() => {
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;

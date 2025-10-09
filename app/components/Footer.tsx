@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users } from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   const aiServices = [
@@ -13,7 +13,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'AI-powered cloud solutions' }
   ];
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
@@ -24,6 +25,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Database Services', url: '/database', description: 'Database management' },
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
+    { name: 'System Administration', url: '/system-admin', description: 'AI-powered system management' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
@@ -38,6 +40,14 @@ const Footer: React.FC = memo(() => {
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
   ];
+  const microSaasTools = [
+    { name: 'Analytics Tools', url: '/analytics-tools', description: 'AI-powered business intelligence' },
+    { name: 'Communication Tools', url: '/communication-tools', description: 'Team collaboration solutions' },
+    { name: 'Developer Tools', url: '/developer-tools', description: 'AI-powered development tools' },
+    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation tools' },
+    { name: 'Business Apps', url: '/business-apps', description: 'Productivity applications' }
+  ];
+
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -55,7 +65,7 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h3>
@@ -83,6 +93,22 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Micro SAAS Tools */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Micro SAAS Tools</h3>
+            <ul className="space-y-2">
+              {microSaasTools.map((tool, index) => (
+                <li key={index}>
+                  <Link 
+                    href={tool.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {tool.name}
                   </Link>
                 </li>
               ))}

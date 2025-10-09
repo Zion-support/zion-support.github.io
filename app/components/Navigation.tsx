@@ -5,6 +5,9 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, Zap, ArrowRigh
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {

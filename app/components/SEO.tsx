@@ -4,7 +4,7 @@
  * Provides comprehensive SEO meta tags and structured data
  */
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -94,7 +94,7 @@ export const SEO: React.FC<SEOProps> = ({
     return baseStructuredData;
   };
   return (
-    <Helmet>
+    <Head>
       {/* Basic Meta Tags */}
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
@@ -146,7 +146,7 @@ export const SEO: React.FC<SEOProps> = ({
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         as="style"
       />
-    </Helmet>
+    </Head>
   );
 };
 export default SEO;

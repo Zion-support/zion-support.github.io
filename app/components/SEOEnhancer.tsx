@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -81,7 +81,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   };
   return (
     <>
-      <Helmet>
+      <Head>
         {/* Primary meta tags */}
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -112,7 +112,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
-      </Helmet>
+      </Head>
       {children}
     </>
   );
