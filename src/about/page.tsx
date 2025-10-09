@@ -70,7 +70,24 @@ const AboutPage: React.FC = () => {
             We are pioneers in AI and IT solutions, transforming businesses through innovative technology and expert guidance.
           </p>
         </div>
-      </section>
+        <div className='prose prose-lg max-w-none'>
+          <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
+            <h2 className='text-2xl font-bold text-gray-900 mb-4'>
+              Our Mission
+            </h2>
+            <p className='text-gray-600 mb-4'>
+              At Zion Tech Group, we are dedicated to transforming
+              businesses through cutting-edge AI and IT solutions. Our
+              mission is to empower organizations with the technology they
+              need to thrive in the digital age.
+            </p>
+            <p className='text-gray-600'>
+              We combine deep technical expertise with innovative thinking
+              to deliver solutions that drive real business value.
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
