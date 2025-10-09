@@ -154,21 +154,26 @@ const HomePage: React.FC = () => {
           </p>
           
           {/* Key Benefits */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
-            <div className="cyber-card hologram-card p-4 sm:p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
+            <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
               <div className="text-2xl sm:text-3xl mb-3">🚀</div>
               <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6">
+            <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
               <div className="text-2xl sm:text-3xl mb-3">⚡</div>
               <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
             </div>
-            <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
+            <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
               <div className="text-2xl sm:text-3xl mb-3">🔒</div>
               <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
+            </div>
+            <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+              <div className="text-2xl sm:text-3xl mb-3">🌐</div>
+              <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
             </div>
           </div>
           
@@ -202,7 +207,7 @@ const HomePage: React.FC = () => {
           </p>
           
           {/* Primary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
@@ -253,7 +258,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Secondary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
@@ -304,7 +309,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Micro SAAS Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
@@ -355,7 +360,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Additional Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Cybersecurity</h3>
@@ -404,7 +409,7 @@ const HomePage: React.FC = () => {
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Emerging Technologies
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>
@@ -468,7 +473,7 @@ const HomePage: React.FC = () => {
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               IT Services & Infrastructure
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
