@@ -644,10 +644,16 @@ const HomePage: React.FC = () => {
           '@type': 'TechCompany',
           name: 'Zion Tech Group',
           url: 'https://ziontechgroup.com',
+          logo: 'https://ziontechgroup.com/logo.png',
           description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
           foundingDate: '2020',
           numberOfEmployees: '50-100',
           industry: 'Technology',
+          sameAs: [
+            'https://www.linkedin.com/company/ziontechgroup',
+            'https://twitter.com/ziontechgroup',
+            'https://github.com/ziontechgroup'
+          ],
           services: [
             'AI Solutions',
             'Quantum Computing',
@@ -655,15 +661,37 @@ const HomePage: React.FC = () => {
             'Digital Transformation',
             'Cloud Services',
             'Automation',
-            'Business Intelligence'
+            'Business Intelligence',
+            'Machine Learning',
+            'Natural Language Processing',
+            'Computer Vision',
+            'Cybersecurity',
+            'DevOps',
+            'Cloud Migration',
+            'Data Analytics'
           ],
-          contactPoint: {
-            '@type': 'ContactPoint',
-            telephone: '+1-302-464-0950',
-            contactType: 'Customer Service',
-            areaServed: 'US',
-            availableLanguage: 'en'
-          },
+          contactPoint: [
+            {
+              '@type': 'ContactPoint',
+              telephone: '+1-302-464-0950',
+              contactType: 'Customer Service',
+              areaServed: 'US',
+              availableLanguage: 'en',
+              hoursAvailable: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                opens: '09:00',
+                closes: '17:00'
+              }
+            },
+            {
+              '@type': 'ContactPoint',
+              email: 'kleber@ziontechgroup.com',
+              contactType: 'Sales',
+              areaServed: 'US',
+              availableLanguage: 'en'
+            }
+          ],
           address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
@@ -671,6 +699,24 @@ const HomePage: React.FC = () => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
+          },
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: '39.4496',
+            longitude: '-75.7163'
+          },
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '4.9',
+            reviewCount: '127',
+            bestRating: '5',
+            worstRating: '1'
+          },
+          offers: {
+            '@type': 'Offer',
+            description: 'AI and IT Solutions',
+            priceRange: '$79-$2,200',
+            availability: 'https://schema.org/InStock'
           }
         }}
       />

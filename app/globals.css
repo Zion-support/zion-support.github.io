@@ -676,6 +676,81 @@ body {
   }
 }
 
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Focus indicators */
+.focus-visible:focus {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .cyber-card {
+    border-color: var(--neon-cyan);
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .neon-text {
+    color: var(--neon-cyan);
+    text-shadow: none;
+  }
+  
+  .cyber-button {
+    background: var(--neon-cyan);
+    color: black;
+  }
+}
+
+/* High contrast mode class */
+.high-contrast {
+  --neon-cyan: #00ffff;
+  --neon-purple: #ff00ff;
+  --neon-pink: #ff0080;
+  --neon-green: #00ff00;
+  --neon-blue: #0080ff;
+  --neon-orange: #ff8000;
+  --neon-red: #ff0000;
+}
+
+.high-contrast .cyber-card {
+  border-color: var(--neon-cyan);
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.high-contrast .neon-text {
+  color: var(--neon-cyan);
+  text-shadow: none;
+}
+
+.high-contrast .cyber-button {
+  background: var(--neon-cyan);
+  color: black;
+  border: 2px solid var(--neon-cyan);
+}
+
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .cyber-card {
