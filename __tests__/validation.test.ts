@@ -89,7 +89,7 @@ describe('Password Validation', () => {
 
   test('rejects weak passwords', () => {
     expect(validatePassword('short').isValid).toBe(false);
-    expect(validatePassword('')).toBe(false);
+    expect(validatePassword('').isValid).toBe(false);
     expect(validatePassword('alllowercase123!').isValid).toBe(false);
     expect(validatePassword('ALLUPPERCASE123!').isValid).toBe(false);
     expect(validatePassword('NoNumbers!').isValid).toBe(false);
