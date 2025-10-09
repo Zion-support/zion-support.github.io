@@ -1585,7 +1585,6 @@ const MicroSAASPage: React.FC = () => {
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     // Additional Real Micro SAAS Services
     {
       title: 'AI Invoice Generator Pro',

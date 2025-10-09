@@ -1,12 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { ArrowRight, Star, CheckCircle } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -66,12 +60,8 @@ const ServicesPage: React.FC = () => {
       ]
     }
   ];
-<<<<<<< HEAD
-  const additionalServices = [
-=======
 
   const benefits = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
     {
       icon: TrendingUp,
       title: 'Proven ROI',
@@ -150,7 +140,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Main Service Categories */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,7 +205,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Additional Services */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -262,7 +250,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

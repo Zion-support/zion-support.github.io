@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 const DynamicContentShowcase: React.FC = () => {
   return (
     <section className="py-16 px-4">
@@ -86,9 +85,5 @@ const DynamicContentShowcase: React.FC = () => {
     </section>
   );
 };
-<<<<<<< HEAD
-export default DynamicContentShowcase;
-=======
 
 export default DynamicContentShowcase;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d

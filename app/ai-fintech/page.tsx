@@ -350,7 +350,7 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </main>
+      </div>
       <Footer />
     </div>
   );
