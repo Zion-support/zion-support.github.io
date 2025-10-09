@@ -59,6 +59,29 @@ const AIDataVisualizationPage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee' }
   ];
 
+  const useCases = [
+    {
+      icon: BarChart,
+      title: 'Sales Analytics',
+      description: 'Track sales performance, identify trends, and optimize revenue with real-time dashboards.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Marketing Insights',
+      description: 'Analyze campaign performance, customer behavior, and ROI with intelligent visualizations.'
+    },
+    {
+      icon: Database,
+      title: 'Operations Monitoring',
+      description: 'Monitor system performance, track KPIs, and ensure smooth operations with live dashboards.'
+    },
+    {
+      icon: Users,
+      title: 'Customer Analytics',
+      description: 'Understand customer behavior, preferences, and satisfaction with comprehensive analytics.'
+    }
+  ];
+
   return (
     <>
       <SEOOptimizer

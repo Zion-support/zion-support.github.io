@@ -59,6 +59,29 @@ const AISalesAutomationPage: React.FC = () => {
     { number: '200%', label: 'ROI Improvement' }
   ];
 
+  const useCases = [
+    {
+      icon: Building,
+      title: 'B2B Sales',
+      description: 'Automate lead qualification, follow-ups, and pipeline management for B2B sales teams.'
+    },
+    {
+      icon: ShoppingCart,
+      title: 'E-commerce',
+      description: 'Personalize product recommendations and automate customer journey optimization.'
+    },
+    {
+      icon: Home,
+      title: 'Real Estate',
+      description: 'Qualify leads, schedule showings, and automate follow-up communications.'
+    },
+    {
+      icon: Cloud,
+      title: 'SaaS Sales',
+      description: 'Optimize trial-to-paid conversions with intelligent user behavior analysis.'
+    }
+  ];
+
   return (
     <>
       <SEOOptimizer

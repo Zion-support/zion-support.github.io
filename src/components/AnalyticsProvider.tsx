@@ -1,4 +1,5 @@
 'use client';
+import React, { useEffect } from 'react';
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -25,7 +26,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     // Track page views
     const trackPageView = () => {
       if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-        (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
+        (window as { gtag: (...args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX', {
           page_title: document.title,
           page_location: window.location.href,
           send_page_view: true
@@ -39,7 +40,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         const target = e.target as HTMLElement;
         if (target.tagName === 'A' || target.tagName === 'BUTTON') {
           const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
+          const href = (target as HTMLAnchorElement).href || '';
           if ((window as { gtag: unknown }).gtag) {
             (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'click', {
               event_category: 'engagement',
@@ -72,6 +73,10 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
           }
         }
       });
+    };
+    // Handle route changes
+    const handleRouteChange = () => {
+      trackPageView();
     };
     // Initialize analytics
     initAnalytics();

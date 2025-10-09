@@ -47,19 +47,19 @@ const API: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              to="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
             >
               Get API Key
               <span className="ml-2">→</span>
             </Link>
-            <Link
+            <a
               href="#endpoints"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center"
             >
               View Endpoints
               <span className="ml-2">⚛️</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -154,19 +154,19 @@ const API: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
               >
                 Get API Key
                 <span className="ml-2">→</span>
               </Link>
-              <Link
+              <a
                 href="https://docs.ziontechgroup.com"
                 className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center"
               >
                 View Full Docs
                 <span className="ml-2">⚛️</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

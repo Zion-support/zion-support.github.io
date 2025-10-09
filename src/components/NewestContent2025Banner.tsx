@@ -91,7 +91,7 @@ const NewestContent2025Banner: React.FC = () => {
               Explore AI Services
             </Link>
             <Link 
-              href="/contact"
+              to="/contact"
               className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300 text-center"
             >
               Schedule Consultation
