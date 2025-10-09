@@ -33,9 +33,10 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = () => {
+const HomePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
@@ -149,7 +150,11 @@ const HomePage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
+<<<<<<< HEAD:app/page-original.tsx
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
+=======
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
+>>>>>>> cursor/analyze-improve-and-deploy-application-4e50:app/page.tsx
               data-text="Zion Tech Group"
             >
               Zion Tech Group
@@ -1471,5 +1476,7 @@ const HomePage: React.FC = () => {
     </div>
     </>
   );
-};
+});
+
+HomePage.displayName = 'HomePage';
 export default HomePage;

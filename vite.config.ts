@@ -54,7 +54,7 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion'],
+    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom'],
   },
   css: {
     postcss: './postcss.config.js',

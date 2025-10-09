@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -7,7 +7,7 @@ interface PerformanceMetrics {
   cls: number | null;
   ttfb: number | null;
 }
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = memo(() => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -92,5 +92,7 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
-};
+});
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 export default PerformanceMonitor;

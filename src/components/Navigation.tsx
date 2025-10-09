@@ -1,9 +1,14 @@
+<<<<<<< HEAD:src/components/Navigation.tsx
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD:src/components/Navigation.tsx
 import { Link } from 'react-router-dom';
+=======
+import React, { useState, useEffect, memo } from 'react';
+import Link from 'next/link';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4e50:app/components/Navigation.tsx
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
-const Navigation: React.FC = () => {
+const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -439,6 +444,7 @@ const Navigation: React.FC = () => {
       </div>
     </nav>
   );
-};
+});
 
+Navigation.displayName = 'Navigation';
 export default Navigation;
