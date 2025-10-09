@@ -3,7 +3,7 @@
  * Request Middleware System
  * Provides middleware for handling requests and responses
  */
-import logger from '../utils/logger';
+import { logger } from '../utils/logger';
 export type NextFunction = () => Promise<unknown> | unknown;
 export interface MiddlewareContext {
   request: {
@@ -44,7 +44,7 @@ export class MiddlewareExecutor {
       if (index >= this.middlewares.length) {
         return context.response?.data;
       }
-      const _middleware = this.middlewares[index++];
+      const middleware = this.middlewares[index++];
       return await middleware(context, next);
     };
     return await next();
@@ -54,14 +54,14 @@ export class MiddlewareExecutor {
  * Logging middleware
  */
 export const loggingMiddleware: Middleware = async (context, next) => {
-  const _startTime = Date.now();
-  logger.info('Request started', 'RequestMiddleware', {
+  const startTime = Date.now();
+  logger.info('Request started', {
     component: 'RequestMiddleware',
     method: context.request.method,
     url: context.request.url
   });
   try {
-    const _result = await next();
+    const result = await next();
     const _duration = Date.now() - startTime;
     logger.info('Request completed', 'RequestMiddleware', {
       component: 'RequestMiddleware',
