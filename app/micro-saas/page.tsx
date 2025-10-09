@@ -3,16 +3,6 @@ import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Bra
 import MicroSAASCard from '../components/MicroSAASCard';
 
 const MicroSAASPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const microSAASServices = useMemo(() => [
-    // Featured Services
-
-
-
-
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES
     // AI Productivity & Time Management
@@ -421,18 +411,6 @@ const MicroSAASPage: React.FC = () => {
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-
-
-    { id: 'all', name: 'All Services', icon: Grid, count: microSAASServices.length },
-    { id: 'content', name: 'Content & SEO', icon: FileText, count: microSAASServices.filter(s => s.category === 'content' || s.category === 'seo').length },
-    { id: 'analytics', name: 'Analytics & Data', icon: BarChart, count: microSAASServices.filter(s => s.category === 'analytics').length },
-    { id: 'marketing', name: 'Marketing', icon: Target, count: microSAASServices.filter(s => s.category === 'marketing' || s.category === 'social').length },
-    { id: 'automation', name: 'Automation', icon: Zap, count: microSAASServices.filter(s => s.category === 'automation').length },
-    { id: 'productivity', name: 'Productivity', icon: Calendar, count: microSAASServices.filter(s => s.category === 'productivity').length },
-    { id: 'development', name: 'Development', icon: Code, count: microSAASServices.filter(s => s.category === 'development').length },
-    { id: 'finance', name: 'Finance', icon: CreditCard, count: microSAASServices.filter(s => s.category === 'finance').length },
-    { id: 'crm', name: 'CRM & Sales', icon: Users, count: microSAASServices.filter(s => s.category === 'crm').length },
-    { id: 'support', name: 'Support', icon: Headphones, count: microSAASServices.filter(s => s.category === 'support').length }
   ];
 
   const filteredServices = selectedCategory === 'all' 

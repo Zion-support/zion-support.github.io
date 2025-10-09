@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react';
-
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
