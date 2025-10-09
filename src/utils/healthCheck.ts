@@ -140,6 +140,7 @@ class HealthCheckService {
       const memory = (performance as any).memory;
       if (!memory) {
         return {
+          name: 'memory',
           status: 'pass',
           message: 'Memory API not available'
         };
@@ -178,8 +179,10 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
-      const report = performanceMonitor.getReport()
-      const { poor, needsImprovement, good } = report.summary
+      const vitals = performanceMonitor.getCoreWebVitals()
+      const poor = Object.values(vitals).filter(v => v && v > 4000).length
+      const needsImprovement = Object.values(vitals).filter(v => v && v > 2500 && v <= 4000).length
+      const good = Object.values(vitals).filter(v => v && v <= 2500).length
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
       if (poor > 0) {
@@ -194,8 +197,10 @@ class HealthCheckService {
         status,
         message,
         details: {
-          metrics: report.metrics,
-          summary: report.summary
+          vitals,
+          poor,
+          needsImprovement,
+          good
         }
       }
     } catch (error) {

@@ -131,7 +131,7 @@ class SEOOptimizer {
    */
   private getRobotsContent(): string {
     if (!this.currentPageData) return 'index, follow';
-    const directives = [];
+    const directives: string[] = [];
     if (!this.currentPageData.noindex) {
       directives.push('noindex');
     }
@@ -260,7 +260,7 @@ class SEOOptimizer {
         url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
-        priority: '1.0'
+        priority: 1.0
       }
     ];
   }
