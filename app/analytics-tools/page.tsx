@@ -1,143 +1,117 @@
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const MarketingToolsPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Marketing-tools</h1>
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
-const MarketingToolsPage: React.FC = () => {
-  const marketingTools = [
+const AnalyticsToolsPage: React.FC = () => {
+  const analyticsTools = [
     {
-      title: 'AI Content Generator',
-      price: '$199/month',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support'],
-      icon: '✍️',
-      category: 'Content Creation'
-    },
-    {
-      title: 'AI SEO Optimizer',
-      price: '$299/month',
-      description: 'Advanced SEO analysis and optimization recommendations powered by machine learning.',
-      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights'],
-      icon: '🔍',
-      category: 'SEO'
-    },
-    {
-      title: 'AI Social Media Manager',
-      price: '$249/month',
-      description: 'Automated social media management with intelligent posting and engagement optimization.',
-      features: ['Content scheduling', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics'],
-      icon: '📱',
-      category: 'Social Media'
-    },
-    {
-      title: 'AI Email Marketing',
-      price: '$179/month',
-      description: 'Intelligent email marketing campaigns with personalization and automation capabilities.',
-      features: ['Email templates', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management'],
-      icon: '📧',
-      category: 'Email Marketing'
-    },
-    {
-      title: 'AI Ad Campaign Manager',
+      title: 'AI Business Intelligence',
       price: '$399/month',
-      description: 'Automated ad campaign creation and optimization across multiple platforms.',
-      features: ['Campaign creation', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis'],
+      description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
+      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
       icon: '📊',
-      category: 'Advertising'
+      category: 'Business Intelligence'
     },
     {
-      title: 'AI Analytics Dashboard',
+      title: 'AI Web Analytics',
       price: '$299/month',
-      description: 'Comprehensive marketing analytics with AI-powered insights and predictions.',
-      features: ['Real-time analytics', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
+      description: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.',
+      features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
+      icon: '🌐',
+      category: 'Web Analytics'
+    },
+    {
+      title: 'AI Marketing Analytics',
+      price: '$249/month',
+      description: 'Marketing performance analytics with AI-powered optimization recommendations.',
+      features: ['Campaign tracking', 'ROI analysis', 'Attribution modeling', 'Customer journey', 'Channel performance', 'Predictive insights'],
       icon: '📈',
-      category: 'Analytics'
+      category: 'Marketing Analytics'
+    },
+    {
+      title: 'AI Sales Analytics',
+      price: '$199/month',
+      description: 'Sales performance analytics with AI-powered forecasting and optimization.',
+      features: ['Sales forecasting', 'Pipeline analysis', 'Performance tracking', 'Lead scoring', 'Conversion optimization', 'Revenue insights'],
+      icon: '💰',
+      category: 'Sales Analytics'
+    },
+    {
+      title: 'AI Customer Analytics',
+      price: '$179/month',
+      description: 'Customer behavior analytics with AI-powered insights and personalization.',
+      features: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Lifetime value', 'Engagement tracking', 'Personalization insights'],
+      icon: '👥',
+      category: 'Customer Analytics'
+    },
+    {
+      title: 'AI Financial Analytics',
+      price: '$349/month',
+      description: 'Financial performance analytics with AI-powered insights and risk assessment.',
+      features: ['Financial reporting', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling'],
+      icon: '💳',
+      category: 'Financial Analytics'
     }
   ];
 
   const benefits = [
     {
       icon: TrendingUp,
-      title: 'Increase ROI',
-      description: 'Average 250% increase in marketing ROI with AI-powered optimization'
-    },
-    {
-      icon: Clock,
-      title: 'Save Time',
-      description: 'Reduce marketing tasks by 80% with intelligent automation'
+      title: 'Data-Driven Decisions',
+      description: 'Make informed decisions with comprehensive analytics and AI insights'
     },
     {
       icon: Target,
-      title: 'Better Targeting',
-      description: 'Reach the right audience with AI-powered targeting and personalization'
+      title: 'Predictive Insights',
+      description: 'Anticipate trends and opportunities with AI-powered predictions'
     },
     {
       icon: BarChart,
-      title: 'Data-Driven',
-      description: 'Make informed decisions with comprehensive analytics and insights'
+      title: 'Real-Time Monitoring',
+      description: 'Track performance in real-time with live dashboards and alerts'
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered',
+      description: 'Leverage advanced AI algorithms for deeper insights and automation'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Marketing Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
-        <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
+        <title>Analytics Tools - Zion Tech Group</title>
+        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
+        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Marketing Tools
+            AI Analytics Tools
           </h1>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
+            Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
           </p>
-<<<<<<< HEAD
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-          >
-            Contact Us
-          </a>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-=======
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-              <div className="text-gray-300">Marketing Tools</div>
+              <div className="text-gray-300">Analytics Tools</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
               <div className="text-gray-300">Starting Price</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">250%</div>
-              <div className="text-gray-300">Average ROI</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+              <div className="text-gray-300">Accuracy</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">80%</div>
-              <div className="text-gray-300">Time Saved</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">Real-time</div>
+              <div className="text-gray-300">Monitoring</div>
             </div>
           </div>
 
@@ -161,15 +135,15 @@ const MarketingToolsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Marketing Tools Grid */}
+      {/* Analytics Tools Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Marketing Tools
+            Our Analytics Tools
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {marketingTools.map((tool, index) => (
+            {analyticsTools.map((tool, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{tool.icon}</div>
@@ -211,7 +185,7 @@ const MarketingToolsPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our Marketing Tools?
+            Why Choose Our Analytics Tools?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -229,10 +203,10 @@ const MarketingToolsPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Marketing?
+            Ready to Unlock Your Data?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Get started with our AI marketing tools today and see the difference intelligent automation can make.
+            Get started with our AI analytics tools today and transform your data into actionable insights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -254,5 +228,4 @@ const MarketingToolsPage: React.FC = () => {
   );
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
-export default MarketingToolsPage;
+export default AnalyticsToolsPage;
