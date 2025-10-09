@@ -61,8 +61,9 @@ export default function NotFound() {
         {/* Popular Pages */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {popularPages.map((page, index) => (
-            <a key={index}
-              href={page.href}
+            <Link
+              key={index}
+              to={page.href}
               className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
             >
               <div className="text-3xl mb-3">{page.icon}</div>
@@ -72,23 +73,25 @@ export default function NotFound() {
               <p className="text-gray-600 text-sm">
                 {page.description}
               </p>
-            </a>
+            </Link>
           ))}
         </div>
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/"
+          <Link
+            to="/"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
           >
             <Home className="w-4 h-4 mr-2" />
             Go Home
-          </a>
-          <a href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300"
           >
             <Phone className="w-4 h-4 mr-2" />
             Contact Support
-          </a>
+          </Link>
         </div>
       </div>
     </div>
