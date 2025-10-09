@@ -50,6 +50,60 @@ body {
   overflow-x: hidden;
 }
 
+/* Accessibility Enhancements */
+.high-contrast {
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --bg-dark: #000000;
+  --bg-darker: #000000;
+  filter: contrast(150%) brightness(120%);
+}
+
+.high-contrast * {
+  border-color: #ffffff !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus Management */
+.focus-visible {
+  outline: 2px solid var(--primary-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Color Blind Support */
+[data-color-blind="protanopia"] {
+  filter: hue-rotate(90deg) saturate(1.2);
+}
+
+[data-color-blind="deuteranopia"] {
+  filter: hue-rotate(180deg) saturate(1.2);
+}
+
+[data-color-blind="tritanopia"] {
+  filter: hue-rotate(270deg) saturate(1.2);
+}
+
 /* Cyber Grid Background */
 .cyber-grid {
   background-image: 

@@ -8,6 +8,7 @@ import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, C
 const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/it-services/page.tsx
 <<<<<<< HEAD:src/it-services/page.tsx
 <<<<<<< HEAD:src/it-services/page.tsx
@@ -238,6 +239,8 @@ const ITServicesPage: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/it-services/page.tsx
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-2e27
   const services = [
     {
       icon: Cloud,
@@ -601,6 +604,11 @@ const ITServicesPage: React.FC = () => {
                 (302) 464-0950
               </a>
             </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
+>>>>>>> cursor/analyze-improve-and-deploy-application-2e27
       </main>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-a3b8
 

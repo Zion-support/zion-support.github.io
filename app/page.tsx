@@ -9,6 +9,11 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+import EnhancedSEO from '../src/components/EnhancedSEO';
+import EnhancedPerformanceMonitor from '../src/components/EnhancedPerformanceMonitor';
+import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
+import EnhancedAccessibility from '../src/components/EnhancedAccessibility';
+import ResponsiveContainer from '../src/components/ResponsiveContainer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -194,8 +199,8 @@ const HomePage: React.FC = () => {
   ];
 >>>>>>> cursor/website-audit-and-update-with-deployment-d15a
   return (
-    <>
-      <SEOOptimizer
+    <EnhancedErrorBoundary>
+      <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -771,7 +776,11 @@ const HomePage: React.FC = () => {
         {/* Footer */}
         <Footer />
       </div>
-    </>
+      
+      {/* Enhanced Components */}
+      <EnhancedPerformanceMonitor />
+      <EnhancedAccessibility />
+    </EnhancedErrorBoundary>
   );
 };
 
