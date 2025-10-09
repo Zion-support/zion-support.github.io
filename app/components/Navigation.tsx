@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, MessageSquare, Eye, Bot, Share2, Mail as EmailIcon, BarChart3, Projector, Headphones } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -102,10 +102,8 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
       services: [
-<<<<<<< HEAD
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
-<<<<<<< HEAD
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
         { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
@@ -120,7 +118,6 @@ const Navigation: React.FC = () => {
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
-=======
         { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and optimization', icon: Cloud },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions', icon: Shield },
         { name: 'DevOps & CI/CD', path: '/devops', description: 'Streamlined development workflows', icon: Settings },
@@ -129,8 +126,6 @@ const Navigation: React.FC = () => {
         { name: 'Network Services', path: '/networking', description: 'Network design and management', icon: Globe },
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights', icon: BarChart },
         { name: 'Compliance', path: '/compliance', description: 'Regulatory compliance solutions', icon: CheckSquare }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
-=======
         { name: 'Cybersecurity Suite', path: '/cybersecurity-suite', description: 'Advanced security solutions' },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
         { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Development operations' },
@@ -149,7 +144,6 @@ const Navigation: React.FC = () => {
         { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud infrastructure' },
         { name: 'Networking', path: '/networking', description: 'Network infrastructure' },
         { name: 'Security', path: '/security', description: 'Security solutions' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
       ]
     },
     {
@@ -159,8 +153,6 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
-<<<<<<< HEAD
-<<<<<<< HEAD
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
@@ -184,7 +176,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
         { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
-=======
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ AI-powered tools' },
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Business intelligence' },
@@ -230,7 +221,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Marketing Tools', path: '/marketing-tools', description: 'Marketing suite' },
         { name: 'AI Developer Tools', path: '/developer-tools', description: 'Development tools' },
         { name: 'AI Analytics Tools', path: '/analytics-tools', description: 'Analytics suite' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
       ]
     },
     {
@@ -254,8 +244,6 @@ const Navigation: React.FC = () => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-<<<<<<< HEAD
-=======
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-generation quantum algorithms', icon: '⚛️' },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️' },
@@ -274,9 +262,6 @@ const Navigation: React.FC = () => {
     { name: 'Case Studies', path: '/case-studies', icon: '📊' },
     { name: 'Blog', path: '/blog', icon: '📝' },
     { name: 'Contact', path: '/contact', icon: '📞' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   ];
 
   return (
@@ -318,7 +303,6 @@ const Navigation: React.FC = () => {
                 <Brain className="w-4 h-4" />
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {mainNavItems.map((item) => (
@@ -339,26 +323,21 @@ const Navigation: React.FC = () => {
                 <span className="text-sm">⚙️</span>
                 <span className="font-medium">Services</span>
                 <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
               </button>
-<<<<<<< HEAD
               
               <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
                   <div className="grid grid-cols-2 gap-4">
-=======
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-[900px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-2">
                         <div className="flex items-center space-x-2 mb-2">
                           <category.icon className={`w-4 h-4 ${category.color}`} />
                           <span className="text-sm font-semibold text-white">{category.title}</span>
                         </div>
-<<<<<<< HEAD
                         <div className="space-y-2">
                           {category.services.slice(0, 6).map((service, serviceIndex) => (
                             <Link
@@ -483,9 +462,7 @@ const Navigation: React.FC = () => {
                       <div key={categoryIndex}>
                         <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
                         <div className="ml-4 space-y-1">
-=======
                         <div className="space-y-1">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
                           {category.services.slice(0, 3).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
@@ -507,14 +484,8 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             </div>
           </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -570,7 +541,6 @@ const Navigation: React.FC = () => {
                 ))}
               </div>
 
-<<<<<<< HEAD
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
@@ -579,8 +549,6 @@ const Navigation: React.FC = () => {
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
               </a>
-<<<<<<< HEAD
-=======
               {/* Services */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Services</h3>
@@ -635,9 +603,6 @@ const Navigation: React.FC = () => {
                   Get Started
                 </a>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
             </div>
           </div>
         )}
@@ -646,12 +611,6 @@ const Navigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Navigation;
-=======
 export default Navigation;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
-=======
 export default Navigation;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7

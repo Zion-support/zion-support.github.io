@@ -36,7 +36,6 @@ export const memoize = <T extends (...args: any[]) => any>(fn: T): T => {
     cache.set(key, result);
     return result;
   }) as T;
-<<<<<<< HEAD
 }
 /**
  * Lazy load a component with dynamic import
@@ -193,7 +192,6 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
     link.href = url;
     link.as = as;
     document.head.appendChild(link);
-=======
 };
 
 export const isInViewport = (element: Element): boolean => {
@@ -212,7 +210,6 @@ export const preloadImage = (src: string): Promise<void> => {
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src;
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50
   });
 };
 

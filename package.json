@@ -27,7 +27,7 @@
     "build:production": "vite build --mode production",
     "build:clean": "node scripts/optimize-build.js",
     "build:final": "npm run build:clean && npm run build:production",
-    "prebuild": "",
+    "prebuild": "node scripts/generate-sitemap.js",
     "postbuild": "echo \"Build completed successfully\"",
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",

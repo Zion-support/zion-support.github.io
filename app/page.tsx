@@ -1,14 +1,16 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Phone, Star, Zap, Shield, Brain, MessageSquare, Eye, ArrowRight, CheckCircle, Database, Cloud, Settings } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+
+// Lazy load non-critical components
+const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimizer'));
+const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+const Analytics = lazy(() => import('./components/Analytics'));
+const SecurityEnhancer = lazy(() => import('./components/SecurityEnhancer'));
+const UserExperienceEnhancer = lazy(() => import('./components/UserExperienceEnhancer'));
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -58,8 +60,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
-=======
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -192,7 +192,6 @@ const HomePage: React.FC = () => {
       color: 'text-purple-400'
     }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a
   return (
     <>
       <SEOOptimizer
@@ -235,32 +234,42 @@ const HomePage: React.FC = () => {
           }
         }}
       />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enableCodeSplitting={true}
-        enablePrefetching={true}
-      />
-      <AccessibilityEnhancer
-        enableKeyboardNavigation={true}
-        enableScreenReader={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
-      />
-      <SecurityEnhancer
-        enableCSP={true}
-        enableHSTS={true}
-        enableXSSProtection={true}
-        enableClickjackingProtection={true}
-      />
-      <UserExperienceEnhancer
-        enableSmoothScrolling={true}
-        enableLoadingStates={true}
-        enableErrorBoundaries={true}
-        enableAnalytics={true}
-        enableNotifications={true}
-      />
-      <Analytics />
+      <Suspense fallback={null}>
+        <PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        />
+      </Suspense>
+      <Suspense fallback={null}>
+        <AccessibilityEnhancer
+          enableKeyboardNavigation={true}
+          enableScreenReader={true}
+          enableHighContrast={true}
+          enableFocusManagement={true}
+        />
+      </Suspense>
+      <Suspense fallback={null}>
+        <SecurityEnhancer
+          enableCSP={true}
+          enableHSTS={true}
+          enableXSSProtection={true}
+          enableClickjackingProtection={true}
+        />
+      </Suspense>
+      <Suspense fallback={null}>
+        <UserExperienceEnhancer
+          enableSmoothScrolling={true}
+          enableLoadingStates={true}
+          enableErrorBoundaries={true}
+          enableAnalytics={true}
+          enableNotifications={true}
+        />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Analytics />
+      </Suspense>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
         {/* Navigation */}
@@ -292,11 +301,8 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-<<<<<<< HEAD
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
-=======
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
@@ -333,7 +339,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
@@ -351,7 +356,6 @@ const HomePage: React.FC = () => {
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   (302) 464-0950
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/contact"
@@ -366,7 +370,6 @@ const HomePage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   +1 302 464 0950
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a
                 </a>
               </div>
             </div>

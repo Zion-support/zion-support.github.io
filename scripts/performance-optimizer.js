@@ -12,7 +12,6 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-<<<<<<< HEAD
 // Performance optimization script
 function optimizePerformance() {
   // console.log('🚀 Starting performance optimization...');
@@ -35,20 +34,15 @@ function optimizePerformance() {
   
   // console.log('✅ Performance optimization completed!');
 }
-=======
 console.log('🚀 Starting performance optimization...');
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50
 
 // 1. Optimize images
 function optimizeImages() {
   console.log('📸 Optimizing images...');
   // This would typically use sharp or imagemin
-<<<<<<< HEAD
   // console.log('  - Image optimization would be implemented here');
-=======
   // For now, we'll just log the action
   console.log('✅ Images optimized');
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50
 }
 
 // 2. Generate sitemap
@@ -104,7 +98,6 @@ Disallow: /static/`;
 
 // 4. Optimize CSS
 function optimizeCSS() {
-<<<<<<< HEAD
   // This would typically use postcss plugins
   // console.log('  - CSS optimization would be implemented here');
 }
@@ -112,11 +105,9 @@ function optimizeCSS() {
 function optimizeJavaScript() {
   // This would typically use terser or esbuild
   // console.log('  - JavaScript optimization would be implemented here');
-=======
   console.log('🎨 Optimizing CSS...');
   // This would typically use postcss, purgecss, or similar
   console.log('✅ CSS optimized');
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50
 }
 
 // 5. Generate performance report
@@ -149,7 +140,6 @@ function generatePerformanceReport() {
       'Consider using a CDN for static assets'
     ]
   };
-<<<<<<< HEAD
   
   fs.writeFileSync(
     path.join(__dirname, '../performance-report.json'),
@@ -157,11 +147,9 @@ function generatePerformanceReport() {
   );
   
   // console.log('  - Performance report generated: performance-report.json');
-=======
 
   fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
   console.log('✅ Performance report generated');
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50
 }
 
 // 6. Validate build

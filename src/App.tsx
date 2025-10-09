@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 import HomePage from './page';
 import AboutPage from './about/page';
 import ContactPage from './contact/page';
@@ -89,21 +91,12 @@ const ApiPage = lazy(() => import('./api/page'));
 const SitemapPage = lazy(() => import('./sitemap-page'));
 const OfflinePage = lazy(() => import('./offline/page'));
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-      <p className="text-white text-lg">Loading...</p>
-    </div>
-  </div>
-);
-
 const App: React.FC = () => {
   return (
-    <Router>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
+    <ErrorBoundary>
+      <Router>
+        <Suspense fallback={<LoadingSpinner size="xl" text="Loading application..." />}>
+          <Routes>
           {/* Main Pages */}
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -195,9 +188,10 @@ const App: React.FC = () => {
           
           {/* 404 Page */}
           <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
-    </Router>
+          </Routes>
+        </Suspense>
+      </Router>
+    </ErrorBoundary>
   );
 };
 
