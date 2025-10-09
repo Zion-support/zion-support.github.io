@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-import { useRouter } from 'next/router';
 import HomePage from './page';
 import AboutPage from './about/page';
 import ContactPage from './contact/page';
@@ -65,7 +64,7 @@ const DatabasePage = lazy(() => import('./database/page'));
 const NetworkingPage = lazy(() => import('./networking/page'));
 const CloudServicesPage = lazy(() => import('./cloud-services/page'));
 
-// Specialized Solutions Pages
+// Advanced Technology Pages
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
@@ -84,13 +83,13 @@ const ExpenseTrackerPage = lazy(() => import('./expense-tracker/page'));
 const ProductivityPage = lazy(() => import('./productivity/page'));
 const SmartAnalyticsPage = lazy(() => import('./smart-analytics/page'));
 
-// Other Pages
+// API and Utility Pages
 const ApiPage = lazy(() => import('./api/page'));
 const SitemapPage = lazy(() => import('./sitemap-page'));
 const OfflinePage = lazy(() => import('./offline/page'));
 
-// Loading component
-const LoadingSpinner = () => (
+// Loading Spinner Component
+const LoadingSpinner: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <div className="text-center">
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
@@ -101,103 +100,101 @@ const LoadingSpinner = () => (
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
-          {/* Main Pages */}
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          
-          {/* Company Pages */}
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/team" element={<TeamPage />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/news" element={<NewsPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-          <Route path="/cookies" element={<CookiesPage />} />
-          <Route path="/demo" element={<DemoPage />} />
-          <Route path="/consultation" element={<ConsultationPage />} />
-          <Route path="/support" element={<SupportPage />} />
-          <Route path="/status" element={<StatusPage />} />
-          <Route path="/docs" element={<DocsPage />} />
-          <Route path="/api-docs" element={<ApiDocsPage />} />
-          
-          {/* AI Services */}
-          <Route path="/ai-services" element={<AiServicesPage />} />
-          <Route path="/ai-marketing" element={<AiMarketingPage />} />
-          <Route path="/ai-automation" element={<AiAutomationPage />} />
-          <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-          <Route path="/ai-fintech" element={<AiFintechPage />} />
-          <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
-          <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
-          <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
-          <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
-          <Route path="/ai-mobile-app-development" element={<AiMobileAppDevelopmentPage />} />
-          <Route path="/ai-ecommerce-solutions" element={<AiEcommerceSolutionsPage />} />
-          <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
-          <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
-          <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
-          <Route path="/ai-lead-generation" element={<AiLeadGenerationPage />} />
-          <Route path="/ai-document-processing" element={<AiDocumentProcessingPage />} />
-          <Route path="/ai-crm" element={<AiCrmPage />} />
-          <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
-          <Route path="/ai-email-assistant" element={<AiEmailAssistantPage />} />
-          <Route path="/ai-scheduler" element={<AiSchedulerPage />} />
-          <Route path="/ai-writing-assistant" element={<AiWritingAssistantPage />} />
-          
-          {/* Micro SAAS */}
-          <Route path="/micro-saas" element={<MicroSaasPage />} />
-          <Route path="/ai-project-manager" element={<AiProjectManagerPage />} />
-          <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
-          <Route path="/ai-analytics-dashboard" element={<AiAnalyticsDashboardPage />} />
-          <Route path="/ai-email-marketing" element={<AiEmailMarketingPage />} />
-          <Route path="/ai-customer-support-bot" element={<AiCustomerSupportBotPage />} />
-          <Route path="/ai-code-generation" element={<AiCodeGenerationPage />} />
-          
-          {/* IT Services */}
-          <Route path="/it-services" element={<ItServicesPage />} />
-          <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
-          <Route path="/cybersecurity" element={<CybersecurityPage />} />
-          <Route path="/cloud-migration" element={<CloudMigrationPage />} />
-          <Route path="/devops" element={<DevopsPage />} />
-          <Route path="/database" element={<DatabasePage />} />
-          <Route path="/networking" element={<NetworkingPage />} />
-          <Route path="/cloud-services" element={<CloudServicesPage />} />
-          
-          {/* Specialized Solutions */}
-          <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-          <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-          <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
-          <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} />
-          <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
-          <Route path="/robotics" element={<RoboticsPage />} />
-          <Route path="/security" element={<SecurityPage />} />
-          <Route path="/enterprise" element={<EnterprisePage />} />
-          <Route path="/compliance" element={<CompliancePage />} />
-          <Route path="/gdpr" element={<GdprPage />} />
-          
-          {/* Business Apps */}
-          <Route path="/business-apps" element={<BusinessAppsPage />} />
-          <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-          <Route path="/expense-tracker" element={<ExpenseTrackerPage />} />
-          <Route path="/productivity" element={<ProductivityPage />} />
-          <Route path="/smart-analytics" element={<SmartAnalyticsPage />} />
-          
-          {/* Other Pages */}
-          <Route path="/api" element={<ApiPage />} />
-          <Route path="/sitemap" element={<SitemapPage />} />
-          <Route path="/offline" element={<OfflinePage />} />
-          
-          {/* 404 Page */}
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
-    </Router>
+    <Suspense fallback={<LoadingSpinner />}>
+      <div>
+        {/* Main Pages */}
+        <HomePage />
+        <AboutPage />
+        <ContactPage />
+        <ServicesPage />
+        <BlogPage />
+        <CaseStudiesPage />
+        
+        {/* Company Pages */}
+        <PricingPage />
+        <TeamPage />
+        <CareersPage />
+        <NewsPage />
+        <PrivacyPage />
+        <TermsPage />
+        <CookiesPage />
+        <DemoPage />
+        <ConsultationPage />
+        <SupportPage />
+        <StatusPage />
+        <DocsPage />
+        <ApiDocsPage />
+        
+        {/* AI Services Pages */}
+        <AiServicesPage />
+        <AiMarketingPage />
+        <AiAutomationPage />
+        <AiHealthcarePage />
+        <AiFintechPage />
+        <AiContentGenerationPage />
+        <AiDataAnalyticsPage />
+        <AiCybersecurityPage />
+        <AiWorkflowAutomationPage />
+        <AiMobileAppDevelopmentPage />
+        <AiEcommerceSolutionsPage />
+        <AiCustomerSupportPage />
+        <AiSalesAutomationPage />
+        <AiDataVisualizationPage />
+        <AiLeadGenerationPage />
+        <AiDocumentProcessingPage />
+        <AiCrmPage />
+        <AiChatbotBuilderPage />
+        <AiEmailAssistantPage />
+        <AiSchedulerPage />
+        <AiWritingAssistantPage />
+        
+        {/* Micro SAAS Pages */}
+        <MicroSaasPage />
+        <AiProjectManagerPage />
+        <AiSocialMediaManagerPage />
+        <AiAnalyticsDashboardPage />
+        <AiEmailMarketingPage />
+        <AiCustomerSupportBotPage />
+        <AiCodeGenerationPage />
+        
+        {/* IT Services Pages */}
+        <ItServicesPage />
+        <ItInfrastructurePage />
+        <CybersecurityPage />
+        <CloudMigrationPage />
+        <DevopsPage />
+        <DatabasePage />
+        <NetworkingPage />
+        <CloudServicesPage />
+        
+        {/* Advanced Technology Pages */}
+        <QuantumComputingPage />
+        <AutonomousSystemsPage />
+        <BlockchainWeb3Page />
+        <IotEdgeComputingPage />
+        <BusinessIntelligencePage />
+        <RoboticsPage />
+        <SecurityPage />
+        <EnterprisePage />
+        <CompliancePage />
+        <GdprPage />
+        
+        {/* Business Apps Pages */}
+        <BusinessAppsPage />
+        <TaskManagerProPage />
+        <ExpenseTrackerPage />
+        <ProductivityPage />
+        <SmartAnalyticsPage />
+        
+        {/* API and Utility Pages */}
+        <ApiPage />
+        <SitemapPage />
+        <OfflinePage />
+        
+        {/* 404 Page */}
+        <NotFoundPage />
+      </div>
+    </Suspense>
   );
 };
 
