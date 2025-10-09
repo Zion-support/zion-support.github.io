@@ -34,8 +34,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
     }
 
     // Log error to analytics in production
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (...args: any[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: any[]) => void }).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {

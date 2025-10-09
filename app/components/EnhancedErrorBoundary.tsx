@@ -230,4 +230,3 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
 
 export default EnhancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 interface BlogPost {
@@ -22,7 +22,7 @@ const DynamicContentShowcase: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   // Mock data - in a real app, this would come from an API
-  const blogPosts: BlogPost[] = [
+  const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: 'ai-2025-2026-mega-trends-breakthrough',
       title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
@@ -89,7 +89,7 @@ const DynamicContentShowcase: React.FC = () => {
       featured: false,
       stats: { views: 9800, engagement: 92 }
     }
-  ];
+  ], []);
 
   useEffect(() => {
     // Simulate loading
