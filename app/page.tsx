@@ -8,6 +8,10 @@ import SEOOptimizer from './components/SEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
+import EnhancedSEOOptimizer from './components/EnhancedSEOOptimizer';
+import EnhancedPerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import ServiceWorker from './components/ServiceWorker';
@@ -630,10 +634,10 @@ const HomePage: React.FC = () => {
 
   return (
     <ErrorBoundary>
-      <SEOEnhancer
+      <EnhancedSEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting']}
         canonicalUrl="https://ziontechgroup.com"
         ogImage="https://ziontechgroup.com/og-image.jpg"
         structuredData={{
@@ -671,69 +675,43 @@ const HomePage: React.FC = () => {
           }
         }}
       />
-      <SEOOptimizer
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
-        canonicalUrl="https://ziontechgroup.com"
-        structuredData={{
-          '@context': 'https://schema.org',
-          '@type': 'TechCompany',
-          name: 'Zion Tech Group',
-          url: 'https://ziontechgroup.com',
-          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-          foundingDate: '2020',
-          numberOfEmployees: '50-100',
-          industry: 'Technology',
-          services: [
-            'AI Solutions',
-            'Quantum Computing',
-            'Autonomous Systems',
-            'Digital Transformation',
-            'Cloud Services',
-            'Automation',
-            'Business Intelligence'
-          ],
-          contactPoint: {
-            '@type': 'ContactPoint',
-            telephone: '+1-302-464-0950',
-            contactType: 'Customer Service',
-            areaServed: 'US',
-            availableLanguage: 'en'
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'
-          }
-        }}
-      />
-      <PerformanceOptimizer
+      <EnhancedPerformanceOptimizer
         enableImageOptimization={true}
         enableLazyLoading={true}
         enableCodeSplitting={true}
-        enablePrefetching={true}
+        enablePreloading={true}
         enableCriticalCSS={true}
         enableResourceHints={true}
+        enableServiceWorker={true}
+        enableWebVitals={true}
+        enableCompression={true}
       />
-      <AccessibilityEnhancer
+      <EnhancedAccessibilityEnhancer
         enableKeyboardNavigation={true}
-        enableScreenReader={true}
+        enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
         enableAriaLabels={true}
         enableReducedMotion={true}
+        enableSkipLinks={true}
+        enableColorContrast={true}
+        enableFontScaling={true}
       />
       <SecurityEnhancer
         enableCSP={true}
-        enableHSTS={true}
+        enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
       />
-      <Analytics />
+      <EnhancedAnalytics
+        enableGoogleAnalytics={true}
+        enableGoogleTagManager={true}
+        enableCustomEvents={true}
+        enablePerformanceTracking={true}
+        enableUserBehaviorTracking={true}
+        enableConversionTracking={true}
+        enableHeatmapTracking={false}
+      />
       <ServiceWorker />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">

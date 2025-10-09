@@ -1,53 +1,49 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
-const ContactPage: React.FC = () => {
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const ContactPage: React.FC = React.memo((props) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    message: ''}
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const handleInputChange = useCallback((...args) => {}
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
-  };
-
+      [name]: value}
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setSubmitStatus('success')
       setFormData({
         name: '',
         email: '',
         company: '',
         phone: '',
         service: '',
-        message: ''
-      });
+        message: ''}
+      })
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error');}
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false);}
     }
-  };
-
+  }
   const services = [
     'AI Project Manager',
     'AI Social Media Manager',
@@ -68,13 +64,12 @@ const ContactPage: React.FC = () => {
     'Database Services',
     'IT Consulting',
     'Other'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
       <Navigation />
       
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main className="container mx-auto px-4 py-16 pt-24" id="main-content">
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Contact Us">
@@ -103,10 +98,12 @@ const ContactPage: React.FC = () => {
                     <a 
                       href="tel:+13024640950" 
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-                    >
+                     aria-label="
+                      +1 302 464 0950
+                    ">
                       +1 302 464 0950
                     </a>
-                    <p className="text-sm text-gray-400 mt-1">Mon-Fri 9AM-6PM EST</p>
+                    <p className="text-sm text-gray-400 mt-1" style={{ color: "#9CA3AF" }}>Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
 
@@ -117,10 +114,12 @@ const ContactPage: React.FC = () => {
                     <a 
                       href="mailto:kleber@ziontechgroup.com" 
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-                    >
+                     aria-label="
+                      kleber@ziontechgroup.com
+                    ">
                       kleber@ziontechgroup.com
                     </a>
-                    <p className="text-sm text-gray-400 mt-1">We'll respond within 24 hours</p>
+                    <p className="text-sm text-gray-400 mt-1" style={{ color: "#9CA3AF" }}>We'll respond within 24 hours</p>
                   </div>
                 </div>
 
@@ -132,7 +131,7 @@ const ContactPage: React.FC = () => {
                       364 E Main St STE 1008<br />
                       Middletown, DE 19709
                     </address>
-                    <p className="text-sm text-gray-400 mt-1">United States</p>
+                    <p className="text-sm text-gray-400 mt-1" style={{ color: "#9CA3AF" }}>United States</p>
                   </div>
                 </div>
 
@@ -151,22 +150,22 @@ const ContactPage: React.FC = () => {
 
               <div className="mt-8 pt-8 border-t border-gray-700">
                 <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
-                <ul className="space-y-3">
+                <ul className="space-y-3" role="list">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Proven track record with 300% ROI</span>
+                    <span><span className="sr-only">Screen reader: </span>Proven track record with 300% ROI</span>
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span>24/7 support and monitoring</span>
+                    <span><span className="sr-only">Screen reader: </span>24/7 support and monitoring</span>
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Bank-level security and compliance</span>
+                    <span><span className="sr-only">Screen reader: </span>Bank-level security and compliance</span>
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Custom solutions tailored to your needs</span>
+                    <span><span className="sr-only">Screen reader: </span>Custom solutions tailored to your needs</span>
                   </li>
                 </ul>
               </div>
@@ -180,49 +179,47 @@ const ContactPage: React.FC = () => {
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-900/50 border border-green-400 rounded-lg flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                <span className="text-green-400">Thank you! Your message has been sent successfully.</span>
-              </div>
+                <span className="text-green-400"><span className="sr-only">Screen reader: </span>Thank you as any Your message has been sent successfully.</span>
+              </div>}
             )}
-
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-900/50 border border-red-400 rounded-lg flex items-center">
                 <AlertCircle className="w-5 h-5 text-red-400 mr-3" />
-                <span className="text-red-400">Sorry, there was an error sending your message. Please try again.</span>
-              </div>
+                <span className="text-red-400"><span className="sr-only">Screen reader: </span>Sorry, there was an error sending your message. Please try again.</span>
+              </div>}
             )}
-
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
                   </label>
-                  <input
+                  <label htmlFor="name" className="sr-only">name</label><input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300"
                     placeholder="Your full name"
-                  />
+                  / id="name">
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address *
                   </label>
-                  <input
+                  <label htmlFor="email" className="sr-only">email</label><input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300"
                     placeholder="your@email.com"
-                  />
+                  / id="email">
                 </div>
               </div>
 
@@ -231,30 +228,30 @@ const ContactPage: React.FC = () => {
                   <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                     Company
                   </label>
-                  <input
+                  <label htmlFor="company" className="sr-only">company</label><input
                     type="text"
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300"
                     placeholder="Your company name"
-                  />
+                  / id="company">
                 </div>
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                     Phone Number
                   </label>
-                  <input
+                  <label htmlFor="phone" className="sr-only">phone</label><input
                     type="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300"
                     placeholder="+1 (555) 123-4567"
-                  />
+                  / id="phone">
                 </div>
               </div>
 
@@ -267,7 +264,7 @@ const ContactPage: React.FC = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300"
                 >
                   <option value="">Select a service</option>
                   {services.map((service) => (
@@ -287,7 +284,7 @@ const ContactPage: React.FC = () => {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300 resize-vertical"
+                  className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300 resize-vertical"
                   placeholder="Tell us about your project and how we can help..."
                 />
               </div>
@@ -296,7 +293,7 @@ const ContactPage: React.FC = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-              >
+               tabIndex="0">
                 {isSubmitting ? (
                   <div className="flex items-center justify-center">
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
@@ -306,7 +303,7 @@ const ContactPage: React.FC = () => {
                   <div className="flex items-center justify-center">
                     <Send className="w-5 h-5 mr-2" />
                     Send Message
-                  </div>
+                  </div>}
                 )}
               </button>
             </form>
@@ -344,7 +341,6 @@ const ContactPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default ContactPage;
+  )
+}
+export default ContactPage

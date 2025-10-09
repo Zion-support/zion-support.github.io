@@ -134,7 +134,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <div key={key} className="text-center bg-white/5 rounded-xl p-4">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
                   <div className="text-sm text-gray-300 capitalize">
-                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                    {String(key).replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
               ))}

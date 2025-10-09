@@ -1,6 +1,26 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Atom, Server, Network, Layers, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+=======
+import { 
+  Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, 
+  MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, 
+  Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, 
+  Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, 
+  Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, 
+  Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, 
+  PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, 
+  Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, 
+  ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, 
+  Rocket, Microscope, Layers, Database as DbIcon, Server, Network, Cpu as Processor, 
+  HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Router, 
+  RotateCcw, RefreshCw, Move, Link, 
+  HelpCircle, ShieldCheck, FileCheck, 
+  TestTube, BarChart3, 
+  Bell, FileBarChart, LayoutDashboard
+} from 'lucide-react';
+>>>>>>> origin/main
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';

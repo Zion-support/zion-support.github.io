@@ -119,6 +119,11 @@ export class PerformanceMonitor {
     }
   }
 
+  public getReport(): string {
+    const vitals = this.getCoreWebVitals();
+    return JSON.stringify(vitals, null, 2);
+  }
+
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];

@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
-import { CheckCircle, TrendingUp, Phone, Mail } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React, { lazy } from 'react';
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 
-const AIFitnessCoachPage: React.FC = () => {
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const AIFitnessCoachPage: React.FC = React.memo((props) => {
   const features = [
     'AI form analysis',
     'Personalized workout plans',
@@ -14,8 +14,7 @@ const AIFitnessCoachPage: React.FC = () => {
     'Nutrition guidance',
     'Wearable integration',
     'Social challenges'
-  ];
-
+  ]
   const benefits = [
     'Improve workout effectiveness by 40%',
     'Prevent injuries with AI monitoring',
@@ -23,8 +22,7 @@ const AIFitnessCoachPage: React.FC = () => {
     'Track progress automatically',
     'Motivate with AI coaching',
     'Integrate with fitness devices'
-  ];
-
+  ]
   const useCases = [
     'Home workouts',
     'Gym training',
@@ -34,38 +32,36 @@ const AIFitnessCoachPage: React.FC = () => {
     'Muscle building',
     'Flexibility training',
     'Group fitness'
-  ];
-
+  ]
   const pricing = [
     {
       plan: 'Basic',
       price: '$9.99/month',
       features: ['Basic workouts', 'Form analysis', 'Progress tracking', 'Email support'],
-      popular: false
+      popular: false}
     },
     {
       plan: 'Pro',
       price: '$19.99/month',
       features: ['Personalized plans', 'AI coaching', 'Wearable sync', 'Nutrition tips', 'Priority support'],
-      popular: true
+      popular: true}
     },
     {
       plan: 'Elite',
       price: '$39.99/month',
       features: ['Custom training', '1-on-1 AI coach', 'Advanced analytics', 'Group challenges', 'Phone support'],
-      popular: false
+      popular: false}
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main className="container mx-auto px-4 py-16 pt-24" id="main-content">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-green-600/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Dumbbell className="w-4 h-4" />
-            <span>AI Fitness Technology</span>
+            <span><span className="sr-only">Screen reader: </span>AI Fitness Technology</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             AI Fitness Coach
@@ -80,12 +76,14 @@ const AIFitnessCoachPage: React.FC = () => {
               className="cyber-button inline-flex items-center space-x-2"
             >
               <Phone className="w-4 h-4" />
-              <span>Call: (302) 464-0950</span>
+              <span><span className="sr-only">Screen reader: </span>Call: (302) 464-0950</span>
             </a>
             <a
               href="/contact"
               className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
-            >
+             aria-label="
+              Start Free Trial
+            ">
               Start Free Trial
             </a>
           </div>
@@ -158,29 +156,31 @@ const AIFitnessCoachPage: React.FC = () => {
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-green-500' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium"><span className="sr-only">Screen reader: </span>
                       Most Popular
                     </span>
-                  </div>
+                  </div>}
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
                   <p className="text-gray-300">per month</p>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8" role="list">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      <span className="text-gray-300"><span className="sr-only">Screen reader: </span>{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular 
                     ? 'bg-green-600 text-white hover:bg-green-700' 
-                    : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
-                }`}>
+                    : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'`}
+                }`} aria-label="
+                  Get Started
+                " tabIndex="0">
                   Get Started
                 </button>
               </div>
@@ -199,7 +199,7 @@ const AIFitnessCoachPage: React.FC = () => {
                 <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <Shield className="w-4 h-4 text-cyan-400" />
                 </div>
-                <span className="text-sm text-gray-300">{tech}</span>
+                <span className="text-sm text-gray-300"><span className="sr-only">Screen reader: </span>{tech}</span>
               </div>
             ))}
           </div>
@@ -217,21 +217,20 @@ const AIFitnessCoachPage: React.FC = () => {
               className="cyber-button inline-flex items-center space-x-2"
             >
               <Phone className="w-4 h-4" />
-              <span>Call: (302) 464-0950</span>
+              <span><span className="sr-only">Screen reader: </span>Call: (302) 464-0950</span>
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
             >
               <Mail className="w-4 h-4" />
-              <span>Email Us</span>
+              <span><span className="sr-only">Screen reader: </span>Email Us</span>
             </a>
           </div>
         </section>
       </main>
       <Footer />
     </div>
-  );
-};
-
-export default AIFitnessCoachPage;
+  )
+}
+export default AIFitnessCoachPage

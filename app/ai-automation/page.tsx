@@ -1,64 +1,62 @@
 'use client';
-import React from 'react';
+import React, { lazy } from 'react';
 import { CheckCircle, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
-const AIAutomationPage: React.FC = () => {
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const AIAutomationPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Brain,
       title: 'Intelligent Process Discovery',
       description: 'AI automatically identifies and maps your business processes for optimization opportunities.',
-      benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']
+      benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']}
     },
     {
       icon: Zap,
       title: 'Smart Workflow Automation',
       description: 'Deploy AI-powered workflows that learn and adapt to your business needs over time.',
-      benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']
+      benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']}
     },
     {
       icon: Target,
       title: 'Predictive Task Management',
       description: 'AI predicts and prioritizes tasks based on business impact and resource availability.',
-      benefits: ['Smart prioritization', 'Resource optimization', 'Deadline prediction', 'Capacity planning']
+      benefits: ['Smart prioritization', 'Resource optimization', 'Deadline prediction', 'Capacity planning']}
     },
     {
       icon: TrendingUp,
       title: 'Performance Analytics',
       description: 'Comprehensive analytics and insights to measure and improve automation effectiveness.',
-      benefits: ['Real-time metrics', 'Performance dashboards', 'Trend analysis', 'Improvement recommendations']
+      benefits: ['Real-time metrics', 'Performance dashboards', 'Trend analysis', 'Improvement recommendations']}
     }
-  ];
-
+  ]
   const useCases = [
     {
       industry: 'Healthcare',
       description: 'Automate patient scheduling, insurance verification, and medical record processing.',
       savings: '60% reduction in administrative time',
-      icon: Shield
+      icon: Shield}
     },
     {
       industry: 'Finance',
       description: 'Streamline loan processing, fraud detection, and compliance reporting.',
       savings: '45% faster processing times',
-      icon: TrendingUp
+      icon: TrendingUp}
     },
     {
       industry: 'E-commerce',
       description: 'Automate inventory management, order processing, and customer service.',
       savings: '70% reduction in manual errors',
-      icon: Globe
+      icon: Globe}
     },
     {
       industry: 'Manufacturing',
       description: 'Optimize production scheduling, quality control, and supply chain management.',
       savings: '50% improvement in efficiency',
-      icon: Target
+      icon: Target}
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -72,7 +70,7 @@ const AIAutomationPage: React.FC = () => {
         'Email support',
         '10,000 process executions/month'
       ],
-      popular: false
+      popular: false}
     },
     {
       name: 'Professional',
@@ -88,7 +86,7 @@ const AIAutomationPage: React.FC = () => {
         'API integrations',
         'Custom workflow templates'
       ],
-      popular: true
+      popular: true}
     },
     {
       name: 'Enterprise',
@@ -105,10 +103,9 @@ const AIAutomationPage: React.FC = () => {
         'White-label options',
         'Dedicated account manager'
       ],
-      popular: false
+      popular: false}
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -124,10 +121,14 @@ const AIAutomationPage: React.FC = () => {
               Transform your business operations with intelligent automation that learns, adapts, and optimizes your processes in real-time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button px-8 py-4 text-lg">
+              <button className="cyber-button px-8 py-4 text-lg" aria-label="
+                Start Free Trial
+              " tabIndex="0">
                 Start Free Trial
               </button>
-              <button className="cyber-button-outline px-8 py-4 text-lg">
+              <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
+                Watch Demo
+              " tabIndex="0">
                 Watch Demo
               </button>
             </div>
@@ -171,9 +172,9 @@ const AIAutomationPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2" role="list">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                    <li key={idx} className="flex items-center text-sm text-gray-400" style={{ color: "#9CA3AF" }}>
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                       {benefit}
                     </li>
@@ -221,20 +222,20 @@ const AIAutomationPage: React.FC = () => {
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold"><span className="sr-only">Screen reader: </span>
                       Most Popular
                     </span>
-                  </div>
+                  </div>}
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     {plan.price}
-                    <span className="text-lg text-gray-400">{plan.period}</span>
+                    <span className="text-lg text-gray-400" style={{ color: "#9CA3AF" }}><span className="sr-only">Screen reader: </span>{plan.period}</span>
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8" role="list">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
@@ -245,8 +246,10 @@ const AIAutomationPage: React.FC = () => {
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
+                    : 'bg-slate-700 text-white hover:bg-slate-600'`}
+                }`} aria-label="
+                  Get Started
+                " tabIndex="0">
                   Get Started
                 </button>
               </div>
@@ -263,10 +266,14 @@ const AIAutomationPage: React.FC = () => {
             Join thousands of businesses already using AI automation to streamline their operations and boost productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cyber-button px-8 py-4 text-lg">
+            <button className="cyber-button px-8 py-4 text-lg" aria-label="
+              Start Free Trial
+            " tabIndex="0">
               Start Free Trial
             </button>
-            <button className="cyber-button-outline px-8 py-4 text-lg">
+            <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
+              Contact Sales
+            " tabIndex="0">
               Contact Sales
             </button>
           </div>
@@ -275,7 +282,6 @@ const AIAutomationPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIAutomationPage;
+  )
+}
+export default AIAutomationPage

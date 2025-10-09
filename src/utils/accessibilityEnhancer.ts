@@ -20,6 +20,9 @@ interface AccessibilityMetrics {
   keyboardNavigationScore: number;
   screenReaderScore: number;
   overallScore: number;
+  score: number;
+  issues: string[];
+  recommendations: string[];
 }
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
@@ -44,7 +47,10 @@ class AccessibilityEnhancer {
       colorContrastIssues: 0,
       keyboardNavigationScore: 0,
       screenReaderScore: 0,
-      overallScore: 0
+      overallScore: 0,
+      score: 0,
+      issues: [],
+      recommendations: []
     };
   }
   /**
@@ -578,7 +584,16 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
+<<<<<<< HEAD
 Score: ${metrics.overallScore}/100
+=======
+<<<<<<< HEAD
+Score: ${metrics.overallScore}/100
+Issues Found: ${metrics.issues.length}
+Recommendations: ${metrics.recommendations.length}
+=======
+Overall Score: ${metrics.overallScore}/100
+>>>>>>> origin/main
 Focusable Elements: ${metrics.focusableElements}
 Images Without Alt: ${metrics.imagesWithoutAlt}
 Links Without Text: ${metrics.linksWithoutText}
@@ -586,6 +601,10 @@ Headings Without Content: ${metrics.headingsWithoutContent}
 Color Contrast Issues: ${metrics.colorContrastIssues}
 Keyboard Navigation Score: ${metrics.keyboardNavigationScore}
 Screen Reader Score: ${metrics.screenReaderScore}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
+>>>>>>> origin/main
 `;
   }
 }

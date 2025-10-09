@@ -137,7 +137,20 @@ class HealthCheckService {
       };
     }
     try {
+<<<<<<< HEAD
+      const memoryInfo = (performance as any).memory;
+      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
+=======
+      const memory = (performance as any).memory;
+      if (!memory) {
+        return {
+          name: 'memory',
+          status: 'pass',
+          message: 'Memory API not available'
+        };
+      }
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {
@@ -152,9 +165,9 @@ class HealthCheckService {
         status,
         message,
         details: {
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit,
+          used: memoryInfo.usedJSHeapSize,
+          total: memoryInfo.totalJSHeapSize,
+          limit: memoryInfo.jsHeapSizeLimit,
           usedPercent
         }
       }
@@ -171,24 +184,49 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
+<<<<<<< HEAD
       const report = performanceMonitor.getReport()
-      const { poor, needsImprovement, good } = report.summary
+      const reportData = JSON.parse(report)
+=======
+      const vitals = performanceMonitor.getCoreWebVitals()
+      const poor = Object.values(vitals).filter(v => v && v > 4000).length
+      const needsImprovement = Object.values(vitals).filter(v => v && v > 2500 && v <= 4000).length
+      const good = Object.values(vitals).filter(v => v && v <= 2500).length
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-      if (poor > 0) {
-        status = 'warn'
+      let message = `Performance metrics available`
+      
+      // Check if we have any performance data
+      if (reportData && Object.keys(reportData).length > 0) {
+        const values = Object.values(reportData).filter(v => typeof v === 'number') as number[]
+        const poorCount = values.filter(v => v > 4000).length // LCP > 4s is poor
+        const needsImprovementCount = values.filter(v => v > 2500 && v <= 4000).length
+        
+        if (poorCount > 0) {
+          status = 'warn'
+        }
+        if (poorCount > 2) {
+          status = 'fail'
+          message = `Critical performance issues: ${poorCount} poor metrics`
+        } else {
+          message = `Performance: ${values.length - poorCount - needsImprovementCount} good, ${needsImprovementCount} needs improvement, ${poorCount} poor`
+        }
       }
-      if (poor > 2) {
-        status = 'fail'
-        message = `Critical performance issues: ${poor} poor metrics`
-      }
+      
       return {
         name: 'performance',
         status,
         message,
         details: {
-          metrics: report.metrics,
-          summary: report.summary
+<<<<<<< HEAD
+          metrics: reportData,
+          summary: { good: 0, needsImprovement: 0, poor: 0 }
+=======
+          vitals,
+          poor,
+          needsImprovement,
+          good
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
         }
       }
     } catch (error) {

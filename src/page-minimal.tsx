@@ -1,10 +1,15 @@
 import React from 'react';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
-export default function HomePage() {
+
+function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}

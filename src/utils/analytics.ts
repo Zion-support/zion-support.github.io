@@ -1,9 +1,15 @@
 'use client';
 import React from 'react'
 
+<<<<<<< HEAD
 // Declare gtag function
 declare global {
   function gtag(command: string, targetId: string, config?: any): void;
+=======
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: any[]): void;
+>>>>>>> origin/main
 }
 
 /**
@@ -25,7 +31,15 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
+<<<<<<< HEAD
   private config: { gaId: string } = { gaId: '' }
+=======
+<<<<<<< HEAD
+  public config: { gaId: string } = { gaId: '' }
+=======
+  public config: Record<string, any> = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-aa19
+>>>>>>> origin/main
   /**
    * Initialize analytics service
    */
@@ -52,7 +66,7 @@ class AnalyticsService {
       }
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-        gtag('event', event.action, {
+        (window as any).gtag('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -72,7 +86,7 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        gtag('config', this.config.gaId, {
+        (window as any).gtag('config', this.config.gaId, {
           page_path: path,
           page_title: title
         })
@@ -87,7 +101,7 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        gtag('config', this.config.gaId, {
+        (window as any).gtag('config', this.config.gaId, {
           user_id: user.id,
           ...user.properties
         })
@@ -121,7 +135,7 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
-        gtag('event', 'timing_complete', {
+        (window as any).gtag('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
