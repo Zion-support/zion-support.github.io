@@ -1057,9 +1057,32 @@ const HomePage: React.FC = () => {
         </section>
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
-          <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Micro SAAS Solutions
-          </h2>
+          <div className="text-center mb-12">
+            <h2 id="micro-saas-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+              Micro SAAS Solutions
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Over 100+ AI-powered micro applications ready to transform your business. 
+              From developer tools to marketing automation, we have the perfect solution for every need.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <a
+                href="/micro-saas"
+                className="cyber-button inline-flex items-center space-x-2"
+              >
+                <span>Explore All Solutions</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com?subject=Micro SAAS Inquiry"
+                className="cyber-button inline-flex items-center space-x-2"
+                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+              >
+                <span>Get Custom Quote</span>
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
           </p>
