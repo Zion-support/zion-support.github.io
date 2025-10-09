@@ -9,6 +9,7 @@ const ContactPage = lazy(() => import('./contact/page'));
 const ServicesPage = lazy(() => import('./services/page'));
 const BlogPage = lazy(() => import('./blog/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const SpecializedServicesPage = lazy(() => import('./specialized-services/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
 
 // AI Services Pages
@@ -55,6 +56,8 @@ const QuantumAIPage = lazy(() => import('./quantum-ai/page'));
 const DatabaseServicesPage = lazy(() => import('./database-services/page'));
 const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
 const ITSupportPage = lazy(() => import('./it-support/page'));
+const ITConsultingPage = lazy(() => import('./it-consulting/page'));
+const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
 
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
@@ -173,6 +176,7 @@ const App: React.FC = () => {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/specialized-services" element={<SpecializedServicesPage />} />
             
             {/* AI Services Pages */}
             <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
@@ -218,6 +222,8 @@ const App: React.FC = () => {
             <Route path="/database-services" element={<DatabaseServicesPage />} />
             <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
             <Route path="/it-support" element={<ITSupportPage />} />
+            <Route path="/it-consulting" element={<ITConsultingPage />} />
+            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
             
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
