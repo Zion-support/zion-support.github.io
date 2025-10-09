@@ -1633,7 +1633,6 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-ab91
     }
   ];
 
