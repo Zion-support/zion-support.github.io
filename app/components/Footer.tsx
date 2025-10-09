@@ -7,10 +7,27 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
+    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
+    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
+    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
+    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
+    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
+    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
   ];
 
   const itServices = [
+    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT solutions' },
+    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud infrastructure and management' },
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' },
+    { name: 'DevOps', url: '/devops', description: 'Development and operations' },
+    { name: 'Database Management', url: '/database', description: 'Database solutions' },
+    { name: 'Networking', url: '/networking', description: 'Network infrastructure' }
   ];
 
   const microSaasServices = [
@@ -26,59 +43,30 @@ const Footer: React.FC = memo(() => {
     { name: 'Robotics', url: '/robotics', description: 'Intelligent Robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' }
-=======
-    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
-    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
-    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
-    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
-<<<<<<< HEAD
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
-    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
-    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
-    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
-    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
-    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
-=======
-    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation suite' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' },
     { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
     { name: 'AI Machine Learning Platform', url: '/ai-ml-platform', description: 'Complete ML platform' },
     { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
     { name: 'AI Natural Language Processing', url: '/ai-nlp', description: 'Advanced NLP solutions' },
     { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-<<<<<<< HEAD
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
     { name: 'Database Services', url: '/database', description: 'Database management' },
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' }
-=======
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
-    { name: 'Cybersecurity Suite', url: '/cybersecurity-suite', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Development operations' },
-    { name: 'Database Management', url: '/database-management', description: 'Database management' },
+    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' },
     { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
     { name: 'System Administration', url: '/system-administration', description: 'System management' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
     { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT management' },
     { name: 'IT Training & Certification', url: '/it-training', description: 'Staff development' },
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
   ];
 
   const microSaasServices = [
@@ -107,7 +95,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
   ];
 
   const companyLinks = [
@@ -152,8 +139,6 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
@@ -202,7 +187,6 @@ const Footer: React.FC = memo(() => {
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -227,12 +211,9 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
-=======
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -254,8 +235,6 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
-=======
 
           {/* Micro SAAS & Emerging Tech */}
           <div>
