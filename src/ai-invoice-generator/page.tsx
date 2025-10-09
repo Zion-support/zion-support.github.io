@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
@@ -104,6 +105,16 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
   ];
 
   const testimonials = [
+=======
+import {Eye, CheckCircle, Settings, ShoppingCart, Building, Briefcase, Calculator, Receipt} from 'lucide-react';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+import SEOOptimizer from '../../components/SEOOptimizer';
+import React, { memo } from 'react';
+const AIInvoiceGeneratorPage: React.FC = memo(() => {
+  
+    const testimonials = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     {
       name: 'Sarah Johnson',
       role: 'Freelance Designer',
@@ -129,7 +140,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       avatar: '👩‍💻'
     }
   ];
-
   const useCases = [
     {
       title: 'Freelancers & Consultants',
@@ -156,7 +166,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
     }
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -164,11 +173,14 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
         canonicalUrl="https://ziontechgroup.com/ai-invoice-generator"
+<<<<<<< HEAD
 //       />
       
+=======
+      />
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="pt-24">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
@@ -177,19 +189,16 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                 <Receipt className="w-5 h-5 text-purple-400 mr-2" />
                 <span className="text-purple-400 text-sm font-medium">AI Invoice Generator</span>
               </div>
-              
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Generate Professional Invoices with{' '}
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 //                   AI Intelligence
                 </span>
               </h1>
-              
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
 //                 Transform your invoicing process with AI-powered automation. Create, send, and track invoices 
                 effortlessly while gaining valuable insights into your business performance.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
                   href="#pricing"
@@ -206,7 +215,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
 //                   Watch Demo
                 </a>
               </div>
-              
               {/* Key Stats */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
                 <div className="text-center">
@@ -224,7 +232,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-16 bg-slate-800/30">
             <div className="container mx-auto px-4">
@@ -237,7 +244,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
 //                   to revolutionize your billing process.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -259,7 +265,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
               </div>
             </div>
           </section>
-
           {/* Use Cases Section */}
           <section className="py-16">
             <div className="container mx-auto px-4">
@@ -272,7 +277,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                   adapts to your specific needs and industry requirements.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {useCases.map((useCase, index) => (
                   <div key={index} className="text-center group">
@@ -294,7 +298,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}
           <section id="pricing" className="py-16 bg-slate-800/30">
             <div className="container mx-auto px-4">
@@ -307,7 +310,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
 //                   with no hidden fees or setup costs.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {pricingPlans.map((plan, index) => (
                   <div key={index} className={`relative rounded-lg p-8 ${
@@ -322,7 +324,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                         </span>
                       </div>
                     )}
-                    
                     <div className="text-center mb-6">
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -331,7 +332,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                         <span className="text-gray-400 ml-1">{plan.period}</span>
                       </div>
                     </div>
-                    
                     <ul className="space-y-4 mb-8">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
@@ -340,7 +340,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                         </li>
                       ))}
                     </ul>
-                    
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 //                       plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
@@ -353,7 +352,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
               </div>
             </div>
           </section>
-
           {/* Testimonials Section */}
           <section className="py-16">
             <div className="container mx-auto px-4">
@@ -365,7 +363,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
 //                   See how our AI invoice generator is transforming businesses across industries.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6">
@@ -387,7 +384,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
             <div className="container mx-auto px-4 text-center">
@@ -417,12 +413,10 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
             </div>
           </section>
         </main>
-        
         <Footer />
       </div>
     </>
   );
 });
-
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 export default AIInvoiceGeneratorPage;

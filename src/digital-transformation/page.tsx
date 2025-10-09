@@ -1,44 +1,19 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Target, Zap, Settings, BarChart, CheckCircle, Star} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+import {Target, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
-
-
 const DigitalTransformationPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Target,
-      title: 'Strategy Development',
-      description: 'Digital transformation strategy and roadmap development',
-      benefits: ['Strategic planning', 'Technology assessment', 'Change management']
-    },
-    {
-      icon: Zap,
-      title: 'Process Automation',
-      description: 'Automate and optimize business processes',
-      benefits: ['Workflow automation', 'Process optimization', 'Efficiency gains']
-    },
-    {
-      icon: Settings,
-      title: 'Technology Integration',
-      description: 'Integrate new technologies with existing systems',
-      benefits: ['System integration', 'Data migration', 'API development']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Data-driven insights and business intelligence',
-      benefits: ['Data analytics', 'Business intelligence', 'Performance metrics']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -51,7 +26,6 @@ const DigitalTransformationPage: React.FC = () => {
 //             Accelerate your digital transformation journey with our comprehensive solutions. From strategy development to implementation, 
 //             we help you modernize your business and stay competitive in the digital economy.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -68,12 +42,10 @@ const DigitalTransformationPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             Transformation Services
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -99,10 +71,8 @@ const DigitalTransformationPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default DigitalTransformationPage;

@@ -1,44 +1,19 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {MessageSquare, Brain, FileText, Globe, CheckCircle, Star} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+import {MessageSquare, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
-
-
 const AINLPPage: React.FC = () => {
-  const _features = [
-    {
-      icon: MessageSquare,
-      title: 'Text Analysis',
-      description: 'Advanced text processing and sentiment analysis',
-      benefits: ['Sentiment detection', 'Entity extraction', 'Language detection']
-    },
-    {
-      icon: Brain,
-      title: 'Language Understanding',
-      description: 'Deep understanding of human language and context',
-      benefits: ['Intent recognition', 'Context analysis', 'Semantic understanding']
-    },
-    {
-      icon: FileText,
-      title: 'Document Processing',
-      description: 'Intelligent document analysis and information extraction',
-      benefits: ['Document classification', 'Key phrase extraction', 'Summarization']
-    },
-    {
-      icon: Globe,
-      title: 'Multi-language Support',
-      description: 'Support for 100+ languages and dialects',
-      benefits: ['Translation', 'Cross-language analysis', 'Cultural adaptation']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -51,7 +26,6 @@ const AINLPPage: React.FC = () => {
 //             Transform text and speech into actionable insights with our advanced NLP platform. 
 //             Build intelligent applications that understand and process human language naturally.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -68,12 +42,10 @@ const AINLPPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             NLP Capabilities
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -99,10 +71,8 @@ const AINLPPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AINLPPage;

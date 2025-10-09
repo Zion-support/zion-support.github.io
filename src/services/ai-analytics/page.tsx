@@ -7,10 +7,8 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
-
-'use client';
-
 const AIAnalyticsPage: React.FC = () => {
+<<<<<<< HEAD
   const _features = [
     {
       icon: Brain,
@@ -58,6 +56,9 @@ const AIAnalyticsPage: React.FC = () => {
     }
   ];
 
+=======
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   const useCases = [
     {
       title: 'Sales Performance Analysis',
@@ -84,7 +85,6 @@ const AIAnalyticsPage: React.FC = () => {
       color: 'text-yellow-400'
     }
   ];
-
   const pricingTiers = [
     {
       name: 'Starter',
@@ -136,7 +136,6 @@ const AIAnalyticsPage: React.FC = () => {
       bgColor: 'bg-cyan-500/10'
     }
   ];
-
   const benefits = [
     {
       icon: Star,
@@ -159,7 +158,6 @@ const AIAnalyticsPage: React.FC = () => {
       description: '300% average ROI for our analytics clients'
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -189,7 +187,6 @@ const AIAnalyticsPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -219,7 +216,6 @@ const AIAnalyticsPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -237,7 +233,6 @@ const AIAnalyticsPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Pricing */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -283,7 +278,6 @@ const AIAnalyticsPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -301,7 +295,6 @@ const AIAnalyticsPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -341,5 +334,4 @@ const AIAnalyticsPage: React.FC = () => {
     </>
   );
 };
-
 export default AIAnalyticsPage;

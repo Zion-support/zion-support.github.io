@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 
 interface BlogPost {
@@ -125,8 +124,7 @@ export default function BlogPage() {
   ], []);
 
   useEffect(() => {
-    const _timer = setTimeout(() => {
-      setPosts(blogPosts);
+    const timer = setTimeout(() => {
       setLoading(false);
     }, 500);
 

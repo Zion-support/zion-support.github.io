@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
@@ -50,6 +51,11 @@ const AIServicesPage: React.FC = () => {
 //     '99.9% Uptime Guarantee'
   ];
 
+=======
+const AIServicesPage: React.FC = () => {
+  
+  const AiServicesPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   return (
 =======
       return (
@@ -83,6 +89,7 @@ const AIServicesPage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -92,3 +99,7 @@ export default AIServicesPage;
 =======
 export default AiServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+}
+export default AiServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

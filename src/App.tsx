@@ -1,4 +1,4 @@
-import React, { useEffect, useState, lazy } from 'react';
+import React, { useEffect, useState } from 'react';
 import {Routes, Route} from 'react-router-dom';
 <<<<<<< HEAD
 =======
@@ -38,8 +38,13 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 // Lazy load components for better performance
-const _HomePage = lazy(() => import('../app/page'));
+// 
 
 // Import enhancement utilities
 

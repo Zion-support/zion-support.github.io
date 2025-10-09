@@ -2,6 +2,7 @@ import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
@@ -99,6 +100,12 @@ const AiProjectManagerPage: React.FC = () => {
     { icon: Star, value: '4.9/5', label: 'User Rating' }
   ];
 
+=======
+import {Star, Users, TrendingUp, Clock} from 'lucide-react';
+const AIProjectManagerPage: React.FC = () => {
+  
+    const AiProjectManagerPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   return (
 =======
 const AIProjectManagerPage: React.FC = () => {
@@ -133,6 +140,7 @@ const AIProjectManagerPage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -142,3 +150,7 @@ export default AIProjectManagerPage;
 =======
 export default AiProjectManagerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+}
+export default AiProjectManagerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

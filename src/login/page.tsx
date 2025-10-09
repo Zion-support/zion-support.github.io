@@ -12,8 +12,7 @@ const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+  
     setFormData(prev => ({
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value

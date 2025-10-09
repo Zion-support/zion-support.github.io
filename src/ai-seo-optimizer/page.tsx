@@ -1,44 +1,19 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Search, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+import {Search, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
-
-
 const AISEOOptimizerPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Search,
-      title: 'SEO Analysis',
-      description: 'Comprehensive SEO analysis and optimization',
-      benefits: ['Keyword research', 'On-page optimization', 'Technical SEO']
-    },
-    {
-      icon: Target,
-      title: 'Content Optimization',
-      description: 'AI-powered content optimization for search engines',
-      benefits: ['Content scoring', 'Keyword density', 'Readability']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Optimization',
-      description: 'Automated SEO improvements and monitoring',
-      benefits: ['Auto-optimization', 'Performance monitoring', 'Alert system']
-    },
-    {
-      icon: Settings,
-      title: 'Ranking Tracking',
-      description: 'Track and monitor search engine rankings',
-      benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -51,7 +26,6 @@ const AISEOOptimizerPage: React.FC = () => {
 //             Boost your search engine rankings with AI-powered SEO optimization. 
 //             Analyze, optimize, and monitor your website's SEO performance automatically.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -68,12 +42,10 @@ const AISEOOptimizerPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             SEO Optimization Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -99,10 +71,8 @@ const AISEOOptimizerPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AISEOOptimizerPage;

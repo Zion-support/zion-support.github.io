@@ -14,6 +14,7 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
+<<<<<<< HEAD
 const __originalConsoleError = console.error;
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
@@ -24,6 +25,9 @@ const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 

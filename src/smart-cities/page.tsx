@@ -1,44 +1,19 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Building, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+import {Building, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
-
-
 const SmartCitiesPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Building,
-      title: 'Smart Infrastructure',
-      description: 'Intelligent city infrastructure and management systems',
-      benefits: ['Traffic management', 'Energy optimization', 'Waste management']
-    },
-    {
-      icon: Target,
-      title: 'IoT Integration',
-      description: 'Internet of Things solutions for urban environments',
-      benefits: ['Sensor networks', 'Data collection', 'Real-time monitoring']
-    },
-    {
-      icon: Zap,
-      title: 'Energy Management',
-      description: 'Smart energy systems and renewable energy integration',
-      benefits: ['Smart grids', 'Energy storage', 'Renewable integration']
-    },
-    {
-      icon: Settings,
-      title: 'Citizen Services',
-      description: 'Digital services and citizen engagement platforms',
-      benefits: ['Mobile apps', 'Digital services', 'Citizen engagement']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -51,7 +26,6 @@ const SmartCitiesPage: React.FC = () => {
 //             Build the cities of the future with our smart city solutions. From intelligent infrastructure to citizen services, 
 //             we help create sustainable, efficient, and connected urban environments.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -68,12 +42,10 @@ const SmartCitiesPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             Smart City Solutions
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -99,10 +71,8 @@ const SmartCitiesPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default SmartCitiesPage;

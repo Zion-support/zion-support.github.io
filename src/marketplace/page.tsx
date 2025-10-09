@@ -7,40 +7,10 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
-
-'use client';
-
 const MarketplacePage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
-
-  const _categories = [
-    {
-      id: 'products',
-      name: 'Products',
-      icon: ShoppingCart,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      description: 'AI-powered software products and solutions'
-    },
-    {
-      id: 'talent',
-      name: 'Talent',
-      icon: Users,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      description: 'Expert professionals and consultants'
-    },
-    {
-      id: 'equipment',
-      name: 'Equipment',
-      icon: Wrench,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      description: 'Hardware and infrastructure solutions'
-    }
-  ];
-
+  
   const products = [
     {
       id: 1,
@@ -95,7 +65,6 @@ const MarketplacePage: React.FC = () => {
       verified: true
     }
   ];
-
   const talent = [
     {
       id: 1,
@@ -137,7 +106,6 @@ const MarketplacePage: React.FC = () => {
       available: false
     }
   ];
-
   const equipment = [
     {
       id: 1,
@@ -168,7 +136,6 @@ const MarketplacePage: React.FC = () => {
       inStock: true
     }
   ];
-
   const getCurrentItems = () => {
     switch (activeCategory) {
       case 'products':
@@ -181,12 +148,10 @@ const MarketplacePage: React.FC = () => {
         return [];
     }
   };
-
   const filteredItems = getCurrentItems().filter(item =>
 //     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 //     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
   const stats = [
     {
       icon: ShoppingCart,
@@ -213,7 +178,6 @@ const MarketplacePage: React.FC = () => {
       color: 'text-yellow-400'
     }
   ];
-
   const benefits = [
     {
       icon: CheckCircle,
@@ -236,7 +200,6 @@ const MarketplacePage: React.FC = () => {
       description: '100% satisfaction guarantee on all purchases'
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -252,7 +215,6 @@ const MarketplacePage: React.FC = () => {
               Find the perfect tools, talent, and equipment for your business needs.
             </p>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
@@ -265,7 +227,6 @@ const MarketplacePage: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Search and Filters */}
           <div className="mb-12">
             <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -284,7 +245,6 @@ const MarketplacePage: React.FC = () => {
 //                 Filters
               </button>
             </div>
-
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
@@ -303,7 +263,6 @@ const MarketplacePage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Items Grid */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
@@ -330,7 +289,6 @@ const MarketplacePage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   {activeCategory === 'products' && (
                     <>
                       <div className="mb-4">
@@ -354,7 +312,6 @@ const MarketplacePage: React.FC = () => {
                       </div>
                     </>
                   )}
-
                   {activeCategory === 'talent' && (
                     <>
                       <div className="mb-4">
@@ -385,7 +342,6 @@ const MarketplacePage: React.FC = () => {
                       </div>
                     </>
                   )}
-
                   {activeCategory === 'equipment' && (
                     <>
                       <div className="mb-4">
@@ -417,7 +373,6 @@ const MarketplacePage: React.FC = () => {
                       </div>
                     </>
                   )}
-
                   <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
                     {activeCategory === 'talent' ? 'Contact' : 'Add to Cart'}
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -426,7 +381,6 @@ const MarketplacePage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -444,7 +398,6 @@ const MarketplacePage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -484,5 +437,4 @@ const MarketplacePage: React.FC = () => {
     </>
   );
 };
-
 export default MarketplacePage;

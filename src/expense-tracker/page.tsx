@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
+=======
+import {Receipt, CheckCircle, Star, Phone} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import { Link } from 'react-router-dom';
 'use client';
 'use client';
@@ -7,10 +11,8 @@ import { Link } from 'react-router-dom';
 'use client';
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
-
-'use client';
-
 const ExpenseTrackerPage: React.FC = () => {
+<<<<<<< HEAD
   const _features = [
     {
       icon: Receipt,
@@ -103,6 +105,10 @@ const ExpenseTrackerPage: React.FC = () => {
   ];
 
   const integrations = [
+=======
+  
+    const integrations = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
     { name: 'Sage', icon: '📈', description: 'Business management' },
@@ -112,7 +118,6 @@ const ExpenseTrackerPage: React.FC = () => {
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
   ];
-
   const testimonials = [
     {
       name: 'Michael Johnson',
@@ -136,7 +141,6 @@ const ExpenseTrackerPage: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -172,7 +176,6 @@ const ExpenseTrackerPage: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -196,7 +199,6 @@ const ExpenseTrackerPage: React.FC = () => {
             <div className="text-gray-300 text-sm">With automated workflows</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -213,7 +215,6 @@ const ExpenseTrackerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -229,7 +230,6 @@ const ExpenseTrackerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -272,7 +272,6 @@ const ExpenseTrackerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -296,7 +295,6 @@ const ExpenseTrackerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -326,5 +324,4 @@ const ExpenseTrackerPage: React.FC = () => {
     </div>
   );
 };
-
 export default ExpenseTrackerPage;

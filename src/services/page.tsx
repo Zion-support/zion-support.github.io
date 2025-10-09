@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -10,42 +11,12 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4c95
+=======
+import SEOOptimizer from '../components/SEOOptimizer';
+import {Shield, Clock, Users, TrendingUp, MessageSquare, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 const ServicesPage: React.FC = () => {
-  const _aiServices = [
-    {
-      icon: Brain,
-      title: 'AI Services',
-      description: 'Comprehensive AI solutions for every business need',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $1,500/month',
-      popular: true
-    },
-    {
-      icon: Zap,
-      title: 'AI Automation',
-      description: 'Intelligent process automation and workflow optimization',
-      features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
-      price: 'Starting at $2,000/month',
-      popular: false
-    },
-    {
-      icon: Shield,
-      title: 'AI Cybersecurity',
-      description: 'Advanced AI-powered security solutions',
-      features: ['Threat Detection', 'Anomaly Detection', 'Security Monitoring', 'Incident Response'],
-      price: 'Starting at $2,500/month',
-      popular: false
-    },
-    {
-      icon: BarChart,
-      title: 'AI Data Analytics',
-      description: 'Transform data into actionable insights with AI',
-      features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
-      price: 'Starting at $1,800/month',
-      popular: false
-    }
-  ];
-
+  
   const itServices = [
     {
       icon: Cloud,
@@ -80,7 +51,6 @@ const ServicesPage: React.FC = () => {
       popular: false
     }
   ];
-
   const microSaasServices = [
     {
       icon: Code,
@@ -115,38 +85,7 @@ const ServicesPage: React.FC = () => {
       popular: false
     }
   ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Proven ROI',
-      description: 'Average 300% return on investment for our clients'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: '50+ certified professionals with 10+ years experience'
-    },
-    {
-      icon: Shield,
-      title: '24/7 Support',
-      description: 'Round-the-clock support with guaranteed response times'
-    },
-    {
-      icon: Clock,
-      title: 'Fast Delivery',
-      description: 'Quick implementation with minimal downtime'
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '100+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
-  ];
-
-  return (
+      return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Services</h1>
@@ -158,5 +97,4 @@ const ServicesPage: React.FC = () => {
     </div>
   );
 };
-
 export default ServicesPage;

@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import {ArrowLeft, ArrowRight, Target, CheckCircle, Star} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+import {ArrowLeft, ArrowRight, Target, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import React from 'react';
-
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

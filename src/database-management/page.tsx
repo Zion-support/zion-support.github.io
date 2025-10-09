@@ -1,44 +1,19 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Database, Shield, BarChart, Settings, CheckCircle, Star} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+import {Database, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
-
-
 const DatabaseManagementPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Database,
-      title: 'Database Administration',
-      description: 'Comprehensive database management and optimization',
-      benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening']
-    },
-    {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security for your data assets',
-      benefits: ['Encryption', 'Access control', 'Audit logging']
-    },
-    {
-      icon: BarChart,
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and performance optimization',
-      benefits: ['Query optimization', 'Resource monitoring', 'Alerting']
-    },
-    {
-      icon: Settings,
-      title: 'Automated Maintenance',
-      description: 'Automated database maintenance and updates',
-      benefits: ['Automated backups', 'Patch management', 'Health checks']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -51,7 +26,6 @@ const DatabaseManagementPage: React.FC = () => {
 //             Optimize your database performance and security with our comprehensive database management services. 
 //             From design to deployment, we ensure your data infrastructure is robust and efficient.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -68,12 +42,10 @@ const DatabaseManagementPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             Database Services
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -99,10 +71,8 @@ const DatabaseManagementPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default DatabaseManagementPage;

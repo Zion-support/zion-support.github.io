@@ -1,44 +1,19 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Smartphone, Target, Zap, Settings, CheckCircle, Star, Code} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+import {Smartphone, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
-
-
 const AIMobileBuilderPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Smartphone,
-      title: 'AI-Assisted Development',
-      description: 'Intelligent mobile app development with AI assistance',
-      benefits: ['Code generation', 'UI/UX optimization', 'Performance tuning']
-    },
-    {
-      icon: Target,
-      title: 'Cross-Platform Support',
-      description: 'Build for iOS and Android with a single codebase',
-      benefits: ['iOS development', 'Android development', 'Unified codebase']
-    },
-    {
-      icon: Zap,
-      title: 'Rapid Prototyping',
-      description: 'Fast prototyping and MVP development',
-      benefits: ['Quick iteration', 'MVP development', 'Testing']
-    },
-    {
-      icon: Settings,
-      title: 'App Analytics',
-      description: 'Comprehensive app performance and user analytics',
-      benefits: ['User behavior', 'Performance metrics', 'Crash reporting']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -51,7 +26,6 @@ const AIMobileBuilderPage: React.FC = () => {
 //             Build powerful mobile apps faster with AI-assisted development. 
 //             From concept to deployment, accelerate your mobile app development process.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -68,12 +42,10 @@ const AIMobileBuilderPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             Mobile Builder Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -99,10 +71,8 @@ const AIMobileBuilderPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIMobileBuilderPage;

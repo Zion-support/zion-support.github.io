@@ -1,19 +1,20 @@
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import {Star, Phone} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
+=======
+import {Phone} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
-
-
 const Status: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="pt-20">
         <section className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
@@ -39,7 +40,6 @@ const Status: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="container mx-auto px-4 py-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -67,10 +67,8 @@ const Status: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default Status;

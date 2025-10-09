@@ -39,13 +39,13 @@ export class MiddlewareExecutor {
    * Execute middleware chain
    */
   async execute(context: MiddlewareContext): Promise<unknown> {
-    let _index = 0;
-    const _next = async (): Promise<unknown> => {
-      if (index >= this.middlewares.length) {
-        return context.response?.data;
+    let index = 0;
+    
+    const next = async (): Promise<unknown> => {
+      if (index < this.middlewares.length) {
+        const middleware = this.middlewares[index++];
+        return await middleware(context, next);
       }
-      const middleware = this.middlewares[index++];
-      return await middleware(context, next);
     };
     return await next();
   }
@@ -54,7 +54,7 @@ export class MiddlewareExecutor {
  * Logging middleware
  */
 export const _loggingMiddleware: Middleware = async (context, next) => {
-  const _startTime = Date.now();
+  
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
     method: context.request.method,

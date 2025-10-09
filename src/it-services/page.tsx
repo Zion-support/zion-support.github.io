@@ -1,7 +1,6 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+<<<<<<< HEAD
 import { Cloud } from 'lucide-react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -78,6 +77,10 @@ const ITServicesPage: React.FC = () => {
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 
+=======
+const ITServicesPage: React.FC = () => {
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 const ItServicesPage: React.FC = () => {
   return (
 =======
@@ -112,5 +115,10 @@ const ItServicesPage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
 export default ITServicesPage;
+=======
+}
+export default ItServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

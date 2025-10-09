@@ -1,41 +1,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 import {TestTube, Target} from 'lucide-react';
 
 
+=======
+import {TestTube, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 const AIABTestingPage: React.FC = () => {
-  const _features = [
-    {
-      icon: TestTube,
-      title: 'A/B Testing',
-      description: 'AI-powered A/B testing and experimentation',
-      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
-    },
-    {
-      icon: Target,
-      title: 'Multivariate Testing',
-      description: 'Advanced multivariate testing capabilities',
-      benefits: ['Multiple variants', 'Complex testing', 'Interaction analysis']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Optimization',
-      description: 'Intelligent test optimization and recommendations',
-      benefits: ['Auto-optimization', 'Performance tuning', 'Conversion improvement']
-    },
-    {
-      icon: Settings,
-      title: 'Analytics & Reporting',
-      description: 'Comprehensive testing analytics and reporting',
-      benefits: ['Test metrics', 'Performance reports', 'Insight generation']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -48,7 +25,6 @@ const AIABTestingPage: React.FC = () => {
 //             Optimize your digital experiences with AI-powered A/B testing. 
 //             Test, learn, and improve with intelligent experimentation and analysis.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,12 +41,10 @@ const AIABTestingPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             A/B Testing Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -96,10 +70,8 @@ const AIABTestingPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIABTestingPage;

@@ -1,12 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
+=======
+import {CheckCircle, Phone, Mail, MapPin} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import { Link } from 'react-router-dom';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
-
-
 const SmartAnalyticsPage: React.FC = () => {
+<<<<<<< HEAD
   const _features = [
     {
       icon: BarChart,
@@ -96,6 +99,10 @@ const SmartAnalyticsPage: React.FC = () => {
   ];
 
   return (
+=======
+  
+    return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -121,7 +128,6 @@ const SmartAnalyticsPage: React.FC = () => {
             </Link>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -140,7 +146,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -189,7 +194,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -213,7 +217,6 @@ const SmartAnalyticsPage: React.FC = () => {
             </Link>
           </div>
         </section>
-
         {/* Contact Info */}
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -242,5 +245,4 @@ const SmartAnalyticsPage: React.FC = () => {
     </div>
   );
 };
-
 export default SmartAnalyticsPage;

@@ -1,44 +1,19 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Mic, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+import {Mic, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
-
-
 const AIVoiceAssistantPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Mic,
-      title: 'Voice Recognition',
-      description: 'Advanced voice recognition and processing',
-      benefits: ['Speech-to-text', 'Voice commands', 'Multi-language support']
-    },
-    {
-      icon: Target,
-      title: 'Natural Language Processing',
-      description: 'Intelligent conversation and understanding',
-      benefits: ['Context understanding', 'Intent recognition', 'Response generation']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Tasks',
-      description: 'Voice-controlled task automation',
-      benefits: ['Task automation', 'Workflow control', 'Smart scheduling']
-    },
-    {
-      icon: Settings,
-      title: 'Custom Integration',
-      description: 'Custom voice assistant integration',
-      benefits: ['API integration', 'Custom commands', 'Third-party apps']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -51,7 +26,6 @@ const AIVoiceAssistantPage: React.FC = () => {
 //             Build custom voice assistants with AI-powered intelligence. 
 //             Create natural, conversational experiences that understand and respond to user needs.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -68,12 +42,10 @@ const AIVoiceAssistantPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             Voice Assistant Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -99,10 +71,8 @@ const AIVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIVoiceAssistantPage;

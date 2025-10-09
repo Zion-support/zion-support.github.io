@@ -1,35 +1,6 @@
 import React from 'react';
 const API: React.FC = () => {
-  const _apiEndpoints = [
-    {
-      method: 'GET',
-      endpoint: '/api/content',
-      description: 'Get all content',
-      parameters: ['limit', 'offset'],
-      response: 'JSON array of content objects'
-    },
-    {
-      method: 'POST',
-      endpoint: '/api/auth/login',
-      description: 'Authenticate user credentials',
-      parameters: ['email', 'password'],
-      response: 'Authentication token'
-    },
-    {
-      method: 'GET',
-      endpoint: '/api/analytics',
-      description: 'Get analytics and metrics',
-      parameters: ['date_range', 'metrics'],
-      response: 'Analytics data object'
-    },
-    {
-      method: 'POST',
-      endpoint: '/api/content',
-      description: 'Create new content',
-      parameters: ['title', 'content', 'type'],
-      response: 'Created content object'
-    },
-  ];
+  
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">

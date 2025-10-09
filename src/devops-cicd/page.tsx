@@ -1,44 +1,19 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Settings, Zap, Shield, BarChart, CheckCircle, Star, Code} from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+import {Settings, CheckCircle} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
-
-
 const DevOpsCICDPage: React.FC = () => {
-  const _features = [
-    {
-      icon: Settings,
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment pipelines',
-      benefits: ['Automated testing', 'Continuous deployment', 'Quality gates']
-    },
-    {
-      icon: Zap,
-      title: 'Infrastructure as Code',
-      description: 'Manage infrastructure through code and automation',
-      benefits: ['Version control', 'Reproducible environments', 'Cost optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Security Integration',
-      description: 'Built-in security scanning and compliance checks',
-      benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Security gates']
-    },
-    {
-      icon: BarChart,
-      title: 'Monitoring & Analytics',
-      description: 'Comprehensive monitoring and performance analytics',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Alerting']
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -51,7 +26,6 @@ const DevOpsCICDPage: React.FC = () => {
 //             Accelerate your development lifecycle with our comprehensive DevOps and CI/CD solutions. 
 //             Automate your workflows, improve quality, and deploy faster with confidence.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -68,12 +42,10 @@ const DevOpsCICDPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
 //             DevOps Solutions
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -99,10 +71,8 @@ const DevOpsCICDPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default DevOpsCICDPage;

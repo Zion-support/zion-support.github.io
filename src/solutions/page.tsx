@@ -6,40 +6,7 @@ import Footer from '../components/Footer';
 const SolutionsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-  const _solutionCategories = [
-    {
-      id: 'ai',
-      name: 'AI Solutions',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      description: 'Transform your business with cutting-edge artificial intelligence'
-    },
-    {
-      id: 'it',
-      name: 'IT Infrastructure',
-      icon: Cloud,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      description: 'Robust and scalable IT infrastructure solutions'
-    },
-    {
-      id: 'security',
-      name: 'Cybersecurity',
-      icon: Shield,
-      color: 'text-red-400',
-      bgColor: 'bg-red-500/10',
-      description: 'Comprehensive security solutions for your digital assets'
-    },
-    {
-      id: 'automation',
-      name: 'Automation',
-      icon: Zap,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10',
-      description: 'Streamline operations with intelligent automation'
-    }
-  ];
+  
 
   const solutions = {
     ai: [

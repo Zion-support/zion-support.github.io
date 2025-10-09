@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 const PricingPage: React.FC = () => {
   const _plans = [
     {
@@ -59,6 +60,10 @@ const PricingPage: React.FC = () => {
       popular: false
     }
   ];
+=======
+
+const PricingPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 
   const addOns = [
     {

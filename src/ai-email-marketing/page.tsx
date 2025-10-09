@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 
 const AIEmailMarketingPage: React.FC = () => {
@@ -112,6 +113,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIEmailMarketingPage: React.FC = () => {
+=======
+const AIEmailMarketingPage: React.FC = () => {
+  
+      const AiEmailMarketingPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -142,6 +148,7 @@ const AIEmailMarketingPage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -151,3 +158,7 @@ export default AIEmailMarketingPage;
 =======
 export default AiEmailMarketingPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+=======
+}
+export default AiEmailMarketingPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

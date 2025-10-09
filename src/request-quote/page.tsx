@@ -20,6 +20,7 @@ const RequestQuotePage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+<<<<<<< HEAD
   const _serviceTypes = [
 //     'AI Services',
 //     'IT Infrastructure',
@@ -31,6 +32,9 @@ const RequestQuotePage: React.FC = () => {
 //     'Consulting Services',
 //     'Other'
   ];
+=======
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 
   const projectSizes = [
 //     'Small (1-10 employees)',

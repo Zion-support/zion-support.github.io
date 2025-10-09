@@ -7,9 +7,6 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
-
-'use client';
-
 const SignupPage: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -25,38 +22,29 @@ const SignupPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+  
     setFormData(prev => ({
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
       return;
     }
-    
     if (!formData.agreeToTerms) {
       alert('Please agree to the terms and conditions');
       return;
     }
-    
     setIsLoading(true);
-    
     // Simulate signup process
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsLoading(false);
     // Redirect to dashboard or home page
     window.location.href = '/';
   };
-
   const features = [
     {
       icon: Shield,
@@ -74,7 +62,6 @@ const SignupPage: React.FC = () => {
       description: '24/7 support and services across multiple time zones'
     }
   ];
-
   const benefits = [
 //     'Free 14-day trial',
 //     'No setup fees',
@@ -83,7 +70,6 @@ const SignupPage: React.FC = () => {
 //     'Scalable solutions',
 //     'Regular updates'
   ];
-
   return (
     <>
       <Navigation />
@@ -100,7 +86,6 @@ const SignupPage: React.FC = () => {
 //                   Join thousands of businesses transforming with AI and IT solutions
                 </p>
               </div>
-
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -138,7 +123,6 @@ const SignupPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
 //                     Email Address
@@ -156,7 +140,6 @@ const SignupPage: React.FC = () => {
 //                     />
                   </div>
                 </div>
-
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
 //                     Company Name
@@ -173,7 +156,6 @@ const SignupPage: React.FC = () => {
 //                     />
                   </div>
                 </div>
-
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
 //                     Phone Number
@@ -190,7 +172,6 @@ const SignupPage: React.FC = () => {
 //                     />
                   </div>
                 </div>
-
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
 //                     Password
@@ -215,7 +196,6 @@ const SignupPage: React.FC = () => {
                     </button>
                   </div>
                 </div>
-
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
 //                     Confirm Password
@@ -240,7 +220,6 @@ const SignupPage: React.FC = () => {
                     </button>
                   </div>
                 </div>
-
                 <div className="space-y-4">
                   <label className="flex items-start">
                     <input
@@ -262,7 +241,6 @@ const SignupPage: React.FC = () => {
                       </a>
                     </span>
                   </label>
-                  
                   <label className="flex items-start">
                     <input
                       type="checkbox"
@@ -276,7 +254,6 @@ const SignupPage: React.FC = () => {
                     </span>
                   </label>
                 </div>
-
                 <button
                   type="submit"
                   disabled={isLoading}
@@ -292,7 +269,6 @@ const SignupPage: React.FC = () => {
                   )}
                 </button>
               </form>
-
               <div className="mt-8 text-center">
                 <p className="text-gray-300">
                   Already have an account?{' '}
@@ -305,7 +281,6 @@ const SignupPage: React.FC = () => {
                 </p>
               </div>
             </div>
-
             {/* Right Side - Features and Benefits */}
             <div className="space-y-8">
               <div>
@@ -317,7 +292,6 @@ const SignupPage: React.FC = () => {
 //                   to achieve unprecedented growth and efficiency.
                 </p>
               </div>
-
               <div className="space-y-6">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start">
@@ -331,7 +305,6 @@ const SignupPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">
                   What You Get:
@@ -345,7 +318,6 @@ const SignupPage: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               <div className="text-center">
                 <p className="text-gray-400 text-sm mb-4">
 //                   Trusted by 1000+ companies worldwide
