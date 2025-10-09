@@ -48,90 +48,63 @@ const Navigation: React.FC = () => {
         { name: 'AI Sales Forecasting', path: '/ai-sales-forecasting', description: 'Advanced sales predictions', icon: '📊', popular: true },
         { name: 'AI E-commerce Optimizer', path: '/ai-ecommerce-optimizer', description: 'E-commerce optimization', icon: '🛒', popular: true },
         { name: 'AI Design Assistant', path: '/ai-design-assistant', description: 'AI-powered design tool', icon: '🎨', popular: false },
-        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing', icon: '📄', popular: true },
-        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring', icon: '🔒', popular: true },
-        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking', icon: '⚡', popular: false },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants', icon: '🎤', popular: true },
-        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management', icon: '👥', popular: true },
-        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management', icon: '📦', popular: true },
-        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights', icon: '👤', popular: true },
-        { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing', icon: '🧪', popular: false },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions', icon: '🔮', popular: true }
+        { name: 'AI Content Generator', path: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: true },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Document automation', icon: '📄', popular: true },
+        { name: 'AI CRM System', path: '/ai-crm', description: 'Intelligent customer management', icon: '👥', popular: true },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data insights', icon: '📊', popular: true },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security', icon: '🔒', popular: true },
+        { name: 'AI A/B Testing', path: '/ai-ab-testing', description: 'Intelligent testing platform', icon: '🧪', popular: false },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Customer behavior analysis', icon: '👁️', popular: true },
+        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Image recognition solutions', icon: '👁️', popular: true },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Creative content platform', icon: '🎬', popular: true },
+        { name: 'AI Automation', path: '/ai-automation', description: 'Workflow automation', icon: '⚙️', popular: true },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced analytics platform', icon: '📈', popular: true },
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Document intelligence', icon: '📋', popular: true },
+        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial technology solutions', icon: '💳', popular: true }
       ]
     },
     {
-      title: 'AI Services',
+      title: 'AI Solutions',
       icon: Brain,
       color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      hoverColor: 'hover:bg-purple-500/20',
       services: [
-        { name: 'Machine Learning Solutions', path: '/ai-ml-solutions', description: 'Custom ML models and analytics' },
-        { name: 'Natural Language Processing', path: '/ai-nlp', description: 'Advanced text analysis and understanding' },
-        { name: 'Computer Vision', path: '/ai-computer-vision', description: 'Image and video analysis solutions' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI for diagnosis and treatment' },
-        { name: 'AI Financial Services', path: '/ai-fintech', description: 'Fintech AI for fraud detection and trading' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions and threat detection' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI-powered content creation' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data analysis with AI insights' },
-        { name: 'AI Voice & Speech', path: '/ai-voice-speech', description: 'Voice recognition and synthesis' },
-        { name: 'AI Robotics', path: '/ai-robotics', description: 'Intelligent robotics solutions' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI optimized for edge devices' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
-        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
-        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' }
+        { name: 'Machine Learning', path: '/machine-learning', description: 'Custom ML models', icon: '🧠', popular: true },
+        { name: 'Natural Language Processing', path: '/nlp', description: 'Text analysis and generation', icon: '💬', popular: true },
+        { name: 'Computer Vision', path: '/computer-vision', description: 'Image and video analysis', icon: '👁️', popular: true },
+        { name: 'Predictive Analytics', path: '/predictive-analytics', description: 'Future trend prediction', icon: '🔮', popular: true },
+        { name: 'AI Consulting', path: '/ai-consulting', description: 'Strategic AI guidance', icon: '💡', popular: true }
       ]
     },
     {
       title: 'IT Services',
-      icon: Cloud,
-      color: 'text-blue-400',
+      icon: Settings,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      hoverColor: 'hover:bg-green-500/20',
       services: [
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration, setup, and optimization' },
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Streamlined development workflows' },
-        { name: 'Database Services', path: '/database-services', description: 'Database design and optimization' },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise-grade infrastructure' },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Network design and implementation' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT support and maintenance' },
-        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development programs' },
-        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery solutions' },
-        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
-        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide IT support' }
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Seamless cloud transition', icon: '☁️', popular: true },
+        { name: 'DevOps & CI/CD', path: '/devops', description: 'Automated deployment', icon: '🚀', popular: true },
+        { name: 'Database Management', path: '/database-management', description: 'Database optimization', icon: '🗄️', popular: true },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions', icon: '🛡️', popular: true },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Technology strategy', icon: '💼', popular: true }
       ]
     },
     {
-      title: 'Micro SAAS',
-      icon: Zap,
-      color: 'text-cyan-400',
+      title: 'Industry Solutions',
+      icon: Target,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      hoverColor: 'hover:bg-orange-500/20',
       services: [
-        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-generation quantum algorithms' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices and edge computing' },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights and analytics' },
-        { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent robotic solutions' },
-        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
-        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
-        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
-        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
-        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
+        { name: 'Healthcare AI', path: '/healthcare-ai', description: 'Medical AI solutions', icon: '🏥', popular: true },
+        { name: 'Financial Services', path: '/financial-services', description: 'Fintech innovations', icon: '💰', popular: true },
+        { name: 'E-commerce', path: '/ecommerce', description: 'Online retail optimization', icon: '🛒', popular: true },
+        { name: 'Manufacturing', path: '/manufacturing', description: 'Smart manufacturing', icon: '🏭', popular: true },
+        { name: 'Education', path: '/education', description: 'EdTech solutions', icon: '🎓', popular: true }
       ]
     }
-  ];
-
-  const mainNavItems = [
-    { name: 'Home', path: '/', icon: Home },
-    { name: 'About', path: '/about', icon: Users },
-    { name: 'Services', path: '/services', icon: Settings },
-    { name: 'Contact', path: '/contact', icon: Phone }
   ];
 
   return (
@@ -140,69 +113,81 @@ const Navigation: React.FC = () => {
         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-lg">Z</span>
+          <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
-              <p className="text-xs text-cyan-400">AI & IT Solutions</p>
-            </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-            </Link>
-
-            {/* Services Dropdown */}
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
             <div className="relative group">
-              <button className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white">
+              <button
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
                 <span>Services</span>
-                <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                <ChevronDown className="w-4 h-4" />
               </button>
               
+              {/* Services Dropdown */}
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div 
+                  className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-slate-900/95 backdrop-blur-lg border border-cyan-400/20 rounded-xl shadow-2xl z-50"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
                   <div className="p-6">
-                    <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
-                    <div className="grid grid-cols-2 gap-4">
-                      {serviceCategories.map((category, index) => (
-                        <div key={index} className="space-y-2">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                            <span className="text-sm font-semibold text-white">{category.title}</span>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                      {serviceCategories.map((category, categoryIndex) => (
+                        <div key={categoryIndex} className="space-y-4">
+                          <div className="flex items-center space-x-2 mb-4">
+                            <category.icon className={`w-5 h-5 ${category.color}`} />
+                            <h3 className={`text-lg font-semibold ${category.color}`}>
+                              {category.title}
+                            </h3>
                           </div>
                           <div className="space-y-2">
                             {category.services.slice(0, 6).map((service, serviceIndex) => (
-                              <Link
-                                key={serviceIndex}
-                                to={service.path}
-                                className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
-                                onClick={closeAllMenus}
-                              >
-                                <div className="font-medium">{service.name}</div>
-                                <div className="text-xs text-gray-500 group-hover:text-purple-500">
-                                  {service.description}
-                                </div>
-                              </Link>
+                              <div key={serviceIndex}>
+                                <Link
+                                  to={service.path}
+                                  className={`block px-3 py-2 text-sm text-gray-300 hover:text-white ${category.hoverColor} rounded-lg transition-all duration-200 group`}
+                                  onClick={closeAllMenus}
+                                >
+                                  <div className="flex items-center space-x-2">
+                                    <span className="text-lg">{service.icon}</span>
+                                    <div className="flex-1">
+                                      <div className="flex items-center space-x-1">
+                                        <span className="font-medium">{service.name}</span>
+                                        {service.popular && (
+                                          <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded-full">
+                                            Popular
+                                          </span>
+                                        )}
+                                      </div>
+                                      <p className="text-xs text-gray-400 mt-1">
+                                        {service.description}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </Link>
+                                {serviceIndex === 5 && category.services.length > 6 && (
+                                  <Link
+                                    to="/services"
+                                    className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
+                                    onClick={closeAllMenus}
+                                  >
+                                    View All →
+                                  </Link>
+                                )}
+                              </div>
                             ))}
-                            {category.services.length > 6 && (
-                              <Link
-                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                                className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
-                                onClick={closeAllMenus}
-                              >
-                                View All →
-                              </Link>
-                            )}
                           </div>
                         </div>
                       ))}
@@ -218,7 +203,7 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
 
             <Link 
@@ -228,18 +213,18 @@ const Navigation: React.FC = () => {
             >
               Case Studies
             </Link>
-
-            <Link
-              to="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+            
+            <Link 
+              to="/about" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
-              Blog
+              About
             </Link>
-
-            <Link
-              to="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+            
+            <Link 
+              to="/contact" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
               Contact
@@ -248,19 +233,19 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="cyber-button inline-flex items-center"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2"
               onClick={closeAllMenus}
             >
-              <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-cyan-400 transition-colors duration-300 p-2"
+              className="text-white hover:text-cyan-400 transition-colors p-2"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -268,118 +253,50 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-6">
-              {/* Main Navigation */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
-                <Link
-                  to="/"
-                  onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <span className="text-lg">🏠</span>
-                  <span className="font-medium">Home</span>
-                </Link>
-                <Link
-                  to="/about"
-                  onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <span className="text-lg">ℹ️</span>
-                  <span className="font-medium">About</span>
-                </Link>
-                <Link
-                  to="/services"
-                  onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <span className="text-lg">🧠</span>
-                  <span className="font-medium">Services</span>
-                </Link>
-                <Link
-                  to="/case-studies"
-                  onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <span className="text-lg">📊</span>
-                  <span className="font-medium">Case Studies</span>
-                </Link>
-                <Link
-                  to="/blog"
-                  onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <span className="text-lg">📝</span>
-                  <span className="font-medium">Blog</span>
-                </Link>
-                <Link
-                  to="/contact"
-                  onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <span className="text-lg">📞</span>
-                  <span className="font-medium">Contact</span>
-                </Link>
-              </div>
-
-              <a
-                href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 backdrop-blur-lg border-t border-cyan-400/20">
+              <Link
+                to="/services"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Services
+              </Link>
+              <Link
+                to="/case-studies"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 Case Studies
               </Link>
-
               <Link
-                to="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                to="/about"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 transition-colors"
                 onClick={closeAllMenus}
               >
-                Blog
+                About
               </Link>
-
               <Link
                 to="/contact"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
-
-              {/* Contact Info */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3>
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+              <div className="pt-4">
+                <Link
+                  to="/contact"
+                  className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                  onClick={closeAllMenus}
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>kleber@ziontechgroup.com</span>
-                </a>
-                <a
-                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <MapPin className="w-5 h-5" />
-                  <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
-                </a>
+                  Get Started
+                </Link>
               </div>
             </div>
           </div>
         )}
-
       </div>
     </nav>
   );
