@@ -3,9 +3,8 @@
  * API Interceptor Utility
  * Centralized API request handling with error handling, retry logic, and caching
  */
-import { ErrorHandler as ImportedErrorHandler } from './errorHandler';
 import { performanceMetrics } from './performanceMetrics';
-// Local ErrorHandler class definition
+// ErrorHandler class definition
 class ErrorHandler {
   private static instance: ErrorHandler;
   static getInstance(): ErrorHandler {

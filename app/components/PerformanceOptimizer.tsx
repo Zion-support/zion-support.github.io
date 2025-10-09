@@ -107,8 +107,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
           }
-          if (entry.entryType === 'first-input' && 'processingStart' in entry) {
+          if (entry.entryType === 'first-input') {
+<<<<<<< HEAD
+            const fidEntry = entry as any;
+            console.log('FID:', fidEntry.processingStart - entry.startTime);
+=======
             console.log('FID:', (entry as any).processingStart - entry.startTime);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
           }
         });
       });

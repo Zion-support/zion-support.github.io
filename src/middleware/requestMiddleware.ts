@@ -44,8 +44,13 @@ export class MiddlewareExecutor {
       if (index >= this.middlewares.length) {
         return context.response?.data;
       }
+<<<<<<< HEAD
+      const _middleware = this.middlewares[index++];
+      return await _middleware(context, next);
+=======
       const middleware = this.middlewares[index++];
       return await middleware(context, next);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
     };
     return await next();
   }
@@ -113,7 +118,7 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
       url: context.request.url,
       method: context.request.method
     };
-    logger.error('Request error handled', error as Error, {
+    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
       component: 'ErrorHandlingMiddleware',
       ...standardError
     });
