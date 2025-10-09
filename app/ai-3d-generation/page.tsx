@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [

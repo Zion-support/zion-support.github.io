@@ -1,17 +1,17 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Calendar, Users, Target, BarChart, Clock, CheckCircle, AlertCircle, TrendingUp, Zap, Brain, ArrowRight, Phone, Mail, MapPin, Star, Shield, Globe } from 'lucide-react';
+// import { Helmet } from 'react-helmet-async';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const AIProjectManagerPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+  // useEffect(() => {
+//     setIsLoaded(true);
+//   }, []);
 
   const features = [
     {
