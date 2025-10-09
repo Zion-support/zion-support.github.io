@@ -18,14 +18,14 @@ export const usePerformanceMonitoring = () => {
       // LCP - Largest Contentful Paint
       const lcpObserver = new PerformanceObserver(list => {
         const _entries = list.getEntries();
-        const _lastEntry = entries[entries.length - 1];
-        reportMetric('LCP', lastEntry.startTime);
+        const _lastEntry = _entries[_entries.length - 1];
+        reportMetric('LCP', _lastEntry.startTime);
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver(list => {
         const _entries = list.getEntries();
-        entries.forEach(
+        _entries.forEach(
           (entry: PerformanceEntry & { processingStart?: number }) => {
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime;
@@ -38,7 +38,7 @@ export const usePerformanceMonitoring = () => {
       let _clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {
         const _entries = list.getEntries();
-        entries.forEach(
+        _entries.forEach(
           (
             entry: PerformanceEntry & {
               hadRecentInput?: boolean;
@@ -46,17 +46,17 @@ export const usePerformanceMonitoring = () => {
             }
           ) => {
             if (!entry.hadRecentInput && entry.value) {
-              clsValue += entry.value;
+              _clsValue += entry.value;
             }
           }
         );
-        reportMetric('CLS', clsValue);
+        reportMetric('CLS', _clsValue);
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       // FCP - First Contentful Paint
       const fcpObserver = new PerformanceObserver(list => {
         const _entries = list.getEntries();
-        entries.forEach(entry => {
+        _entries.forEach(entry => {
           if (entry.name === 'first-contentful-paint') {
             reportMetric('FCP', entry.startTime);
           }
@@ -66,11 +66,11 @@ export const usePerformanceMonitoring = () => {
       // TTFB - Time to First Byte
       const navigationObserver = new PerformanceObserver(list => {
         const _entries = list.getEntries();
-        entries.forEach((entry) => {
+        _entries.forEach((entry) => {
           if (entry.entryType === 'navigation') {
             const _navEntry = entry as PerformanceNavigationTiming;
-            const _ttfb = navEntry.responseStart - navEntry.requestStart;
-            reportMetric('TTFB', ttfb);
+            const _ttfb = _navEntry.responseStart - _navEntry.requestStart;
+            reportMetric('TTFB', _ttfb);
           }
         });
       });
@@ -78,13 +78,13 @@ export const usePerformanceMonitoring = () => {
       // Resource timing
       const resourceObserver = new PerformanceObserver(list => {
         const _entries = list.getEntries();
-        entries.forEach((entry) => {
+        _entries.forEach((entry) => {
           if (entry.entryType === 'resource') {
             const _resourceEntry = entry as PerformanceResourceTiming;
-            const _loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-            if (loadTime > 1000) {
+            const _loadTime = _resourceEntry.responseEnd - _resourceEntry.requestStart;
+            if (_loadTime > 1000) {
               // Only track slow resources
-              reportMetric('SLOW_RESOURCE', loadTime);
+              reportMetric('SLOW_RESOURCE', _loadTime);
             }
           }
         });

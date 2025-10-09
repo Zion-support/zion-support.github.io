@@ -339,7 +339,10 @@ const ITServicesPage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
-                  <service.icon className="w-8 h-8" />
+                  {(() => {
+                    const IconComponent = service.icon;
+                    return <IconComponent className="w-8 h-8" />;
+                  })()}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
