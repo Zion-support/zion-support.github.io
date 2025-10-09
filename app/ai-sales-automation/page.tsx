@@ -1,14 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -98,9 +93,6 @@ const AISalesAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-<<<<<<< HEAD
-  const testimonials = [
-=======
 
   const stats = [
     { number: '300%', label: 'Increase in Sales' },
@@ -110,7 +102,6 @@ const AISalesAutomationPage: React.FC = () => {
   ];
 
   const useCases = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
     {
       title: 'B2B Lead Generation',
       description: 'Automatically identify and score high-value B2B prospects using AI-powered analysis of company data, website behavior, and engagement patterns.',
