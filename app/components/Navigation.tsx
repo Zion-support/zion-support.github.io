@@ -5,6 +5,9 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, Zap, ArrowRigh
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -56,11 +59,11 @@ const Navigation: React.FC = () => {
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-admin', description: 'System management' }
+        { name: 'System Administration', path: '/it-services', description: 'System management' }
       ]
     },
     {
@@ -74,8 +77,8 @@ const Navigation: React.FC = () => {
         { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
         { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' }
+        { name: 'Analytics Tools', path: '/business-intelligence', description: 'Business intelligence' },
+        { name: 'Communication Tools', path: '/business-apps', description: 'Team collaboration' }
       ]
     },
     {
