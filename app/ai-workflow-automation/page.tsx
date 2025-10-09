@@ -1,81 +1,253 @@
 'use client';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Zap, CheckCircle, ArrowRight, Star, TrendingUp, Users, Target, Brain, Settings, Clock, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
-const AiWorkflowAutomationPage: React.FC = () => {
+const AIWorkflowAutomationPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'Process Automation',
+      description: 'Automate complex business processes with intelligent decision-making'
+    },
+    {
+      icon: Target,
+      title: 'Smart Routing',
+      description: 'Intelligent task routing based on team capabilities and workload'
+    },
+    {
+      icon: Settings,
+      title: 'Exception Handling',
+      description: 'Automated handling of exceptions and edge cases in workflows'
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive workflow analytics and performance monitoring'
+    },
+    {
+      icon: Clock,
+      title: 'Real-Time Monitoring',
+      description: 'Live workflow monitoring with instant alerts and notifications'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhanced team collaboration with automated task assignments'
+    }
+  ];
+
+  const benefits = [
+    '80% process automation achieved',
+    '60% reduction in operational costs',
+    'Real-time workflow monitoring',
+    '50% improvement in task completion time',
+    '90% reduction in manual errors',
+    '75% increase in team productivity'
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$179',
+      period: '/month',
+      description: 'Perfect for small businesses and startups',
+      features: [
+        'Up to 10 workflows',
+        'Basic automation',
+        'Standard analytics',
+        'Email support',
+        'Template library'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$359',
+      period: '/month',
+      description: 'Ideal for growing businesses and teams',
+      features: [
+        'Up to 50 workflows',
+        'Advanced automation',
+        'Detailed analytics',
+        'Priority support',
+        'Custom integrations',
+        'Team collaboration'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$719',
+      period: '/month',
+      description: 'For large organizations with complex needs',
+      features: [
+        'Unlimited workflows',
+        'Custom AI models',
+        'White-label options',
+        '24/7 dedicated support',
+        'API access',
+        'Advanced integrations'
+      ],
+      popular: false
+    }
+  ];
+
   return (
-    <>
-      <SEOOptimizer
-        title="AiWorkflowAutomation - Zion Tech Group"
-        description="Professional AI and IT ai-workflow-automations for your business transformation."
-        keywords={['AI services', 'IT solutions', 'business transformation']}
-        canonicalUrl="https://ziontechgroup.com/service"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
-        <Navigation />
-        <div className="container mx-auto px-4 py-8">
-          {/* Hero Section */}
-          <section className="text-center mb-16 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
-            <div className="relative z-10 py-16 px-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Service
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Professional AI and IT services designed to transform your business operations.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-                >
-                  Get Started Today
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-                >
-                  Contact Us
-                </a>
-              </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center space-x-2 bg-cyan-400/10 border border-cyan-400/20 rounded-full px-4 py-2 mb-6">
+              <Star className="w-4 h-4 text-cyan-400" />
+              <span className="text-cyan-400 text-sm font-medium">Most Popular AI Solution</span>
             </div>
-          </section>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Workflow Automation">
+              AI Workflow Automation
+            </h1>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect">
+              Automate Complex Business Processes with AI
+            </p>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Transform your business operations with AI-powered workflow automation. 
+              Achieve 80% process automation and reduce costs by 60% while improving efficiency.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+                Start Free Trial
+              </button>
+              <Link 
+                to="/contact" 
+                className="flex items-center justify-center space-x-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                <span>Schedule Demo</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
 
-          {/* CTA Section */}
-          <section className="text-center py-16">
-            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Contact us for a free consultation and discover how our services can help your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  <Mail className="w-5 h-5" />
-                  kleber@ziontechgroup.com
-                </a>
+        {/* Features Section */}
+        <section className="mb-16" aria-labelledby="features-heading">
+          <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Powerful Features
+          </h2>
+          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Everything you need to automate your business processes with AI
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="mb-16" aria-labelledby="benefits-heading">
+          <div className="cyber-card p-8">
+            <h2 id="benefits-heading" className="text-3xl font-bold text-white mb-8 text-center neon-text">
+              Proven Results
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300 font-medium">{benefit}</span>
+                </div>
+              ))}
             </div>
-          </section>
-        </div>
-      </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="mb-16" aria-labelledby="pricing-heading">
+          <h2 id="pricing-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Simple Pricing
+          </h2>
+          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Choose the plan that fits your automation needs
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`cyber-card p-8 hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                  plan.popular 
+                    ? 'cyber-button' 
+                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                }`}>
+                  {plan.popular ? 'Get Started' : 'Choose Plan'}
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="cyber-card p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Automate Your Workflows?</h2>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Join thousands of businesses already using AI Workflow Automation to streamline their operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+              Start Free Trial
+            </button>
+            <Link 
+              to="/contact" 
+              className="flex items-center justify-center space-x-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              <span>Contact Sales</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </section>
+      </main>
+
       <Footer />
-    </>
+    </div>
   );
 };
 
-export default PageComponent;
+export default AIWorkflowAutomationPage;

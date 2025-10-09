@@ -1,183 +1,82 @@
-import React, { memo, useMemo, Suspense } from 'react';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './app/page';
+import ContactPage from './app/contact/page';
+import ServicesPage from './app/services/page';
+import SitemapPage from './src/sitemap/page';
 
-// Memoized components for better performance
-const UnifiedContentPromotion = memo(() => (
-  <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
-      <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
-    </div>
-  </div>
-));
+// AI Service Pages
+import AIProjectManagerPage from './app/ai-project-manager/page';
+import AISocialMediaManagerPage from './app/ai-social-media-manager/page';
+import AIAnalyticsPage from './app/ai-analytics/page';
+import AIEmailMarketingPage from './app/ai-email-marketing/page';
+import AICustomerSupportBotPage from './app/ai-customer-support-bot/page';
+import AICodeGenerationPage from './app/ai-code-generation/page';
+import AIVideoGenerationPage from './app/ai-video-generation/page';
+import AIVoiceCloningPage from './app/ai-voice-cloning/page';
+import AIWorkflowAutomationPage from './app/ai-workflow-automation/page';
+import AISalesAutomationPage from './app/ai-sales-automation/page';
+import AIContentWriterPage from './app/ai-content-writer/page';
+import AIDataVisualizationPage from './app/ai-data-visualization/page';
+import AI3DGenerationPage from './app/ai-3d-generation/page';
+import AICustomerSupportPage from './app/ai-customer-support/page';
+import AIFashionDesignPage from './app/ai-fashion-design/page';
+import AIMusicCompositionPage from './app/ai-music-composition/page';
+import AIFitnessCoachPage from './app/ai-fitness-coach/page';
+import AIInventoryManagerPage from './app/ai-inventory-manager/page';
+import AIHRAssistantPage from './app/ai-hr-assistant/page';
+import AIFinancialAdvisorPage from './app/ai-financial-advisor/page';
+import AILegalAssistantPage from './app/ai-legal-assistant/page';
 
-const InteractiveAIROICalculator = memo(() => (
-  <div className="bg-gray-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
-      <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
-    </div>
-  </div>
-));
+// IT Service Pages
+import CloudMigrationPage from './app/cloud-migration/page';
+import ITConsultingPage from './app/it-consulting/page';
 
-const ContentShowcase = memo(() => (
-  <div className="py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
-      <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
-    </div>
-  </div>
-));
+// 404 Page
+import NotFoundPage from './app/not-found';
 
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className="bg-blue-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
-      <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
-    </div>
-  </div>
-));
-
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
-
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch() {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-       
-      // console.error('App Error Boundary caught an error');
-    }
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default function App() {
-  const structuredData = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description:
-        'Leading provider of AI-powered enterprise solutions and digital transformation services',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      sameAs: ['https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
-      offers: {
-        '@type': 'Offer',
-        name: 'AI Enterprise Transformation Services',
-        description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-        price: '50000',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-    }),
-    []
-  );
-
+const App: React.FC = () => {
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Helmet>
-          <title>Zion Tech Group - AI & IT Solutions</title>
-          <meta
-            name="description"
-            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
-          />
-          <meta
-            name="keywords"
-            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
-          />
-          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            property="og:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            name="twitter:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-        </Helmet>
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </div>
-      </HelmetProvider>
-    </ErrorBoundary>
+    <Router>
+      <Routes>
+        {/* Main Pages */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/sitemap" element={<SitemapPage />} />
+        
+        {/* AI Service Pages */}
+        <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+        <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+        <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
+        <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} />
+        <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
+        <Route path="/ai-code-generation" element={<AICodeGenerationPage />} />
+        <Route path="/ai-video-generation" element={<AIVideoGenerationPage />} />
+        <Route path="/ai-voice-cloning" element={<AIVoiceCloningPage />} />
+        <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+        <Route path="/ai-sales-automation" element={<AISalesAutomationPage />} />
+        <Route path="/ai-content-writer" element={<AIContentWriterPage />} />
+        <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
+        <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
+        <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
+        <Route path="/ai-fashion-design" element={<AIFashionDesignPage />} />
+        <Route path="/ai-music-composition" element={<AIMusicCompositionPage />} />
+        <Route path="/ai-fitness-coach" element={<AIFitnessCoachPage />} />
+        <Route path="/ai-inventory-manager" element={<AIInventoryManagerPage />} />
+        <Route path="/ai-hr-assistant" element={<AIHRAssistantPage />} />
+        <Route path="/ai-financial-advisor" element={<AIFinancialAdvisorPage />} />
+        <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+        
+        {/* IT Service Pages */}
+        <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+        <Route path="/it-consulting" element={<ITConsultingPage />} />
+        
+        {/* 404 Page */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
   );
-}
+};
+
+export default App;

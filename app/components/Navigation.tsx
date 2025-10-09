@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, Menu, X, BarChart, MessageSquare, PieChart, Mail as MailIcon, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Cube, Shield, Cloud, Database, Smartphone, Lock } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,14 +80,14 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1 group"
               >
                 <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 <span>{item.name}</span>
-              </a>
+              </Link>
             ))}
             
             {/* Services Dropdown */}
@@ -108,14 +109,14 @@ const Navigation: React.FC = () => {
                       <h3 className="text-cyan-400 font-semibold mb-2 text-sm">Micro SAAS Solutions</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {microSAASServices.slice(0, 4).map((service) => (
-                          <a
+                          <Link
                             key={service.name}
-                            href={service.href}
+                            to={service.href}
                             className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                           >
                             <service.icon className="w-3 h-3" />
                             <span className="text-xs">{service.name}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -125,14 +126,14 @@ const Navigation: React.FC = () => {
                       <h3 className="text-purple-400 font-semibold mb-2 text-sm">AI Services</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {aiServices.slice(0, 4).map((service) => (
-                          <a
+                          <Link
                             key={service.name}
-                            href={service.href}
+                            to={service.href}
                             className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                           >
                             <service.icon className="w-3 h-3" />
                             <span className="text-xs">{service.name}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -142,26 +143,26 @@ const Navigation: React.FC = () => {
                       <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {itServices.map((service) => (
-                          <a
+                          <Link
                             key={service.name}
-                            href={service.href}
+                            to={service.href}
                             className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                           >
                             <service.icon className="w-3 h-3" />
                             <span className="text-xs">{service.name}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
                   </div>
                   
                   <div className="mt-4 pt-4 border-t border-gray-600">
-                    <a
-                      href="/services"
+                    <Link
+                      to="/services"
                       className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                     >
                       View All Services →
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -194,15 +195,15 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   <item.icon className="w-5 h-5" />
                   <span>{item.name}</span>
-                </a>
+                </Link>
               ))}
               
               {/* Mobile Services Section */}
@@ -210,15 +211,15 @@ const Navigation: React.FC = () => {
                 <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS Solutions</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {microSAASServices.slice(0, 6).map((service) => (
-                    <a
+                    <Link
                       key={service.name}
-                      href={service.href}
+                      to={service.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
                       <service.icon className="w-4 h-4" />
                       <span className="text-sm">{service.name}</span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -227,15 +228,15 @@ const Navigation: React.FC = () => {
                 <h3 className="text-purple-400 font-semibold mb-3">AI Services</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {aiServices.slice(0, 4).map((service) => (
-                    <a
+                    <Link
                       key={service.name}
-                      href={service.href}
+                      to={service.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
                       <service.icon className="w-4 h-4" />
                       <span className="text-sm">{service.name}</span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -244,15 +245,15 @@ const Navigation: React.FC = () => {
                 <h3 className="text-green-400 font-semibold mb-3">IT Services</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {itServices.map((service) => (
-                    <a
+                    <Link
                       key={service.name}
-                      href={service.href}
+                      to={service.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
                       <service.icon className="w-4 h-4" />
                       <span className="text-sm">{service.name}</span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>

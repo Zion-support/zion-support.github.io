@@ -1,415 +1,251 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Code, CheckCircle, ArrowRight, Star, TrendingUp, Users, Target, Zap, Brain, Search, Clock, Globe } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const AICodeGenerationPage: React.FC = () => {
   const features = [
-    'Generate code from natural language descriptions',
-    'Support for 50+ programming languages',
-    'Intelligent bug detection and fixing',
-    'Code optimization and performance tuning',
-    'Automated documentation generation',
-    'Unit test generation and validation',
-    'Code review and quality analysis',
-    'Refactoring suggestions and improvements',
-    'API integration and endpoint generation',
-    'Real-time code completion and suggestions'
-  ];
-
-  const benefits = [
-    'Accelerate development by 300%',
-    'Reduce coding errors by 80%',
-    'Improve code quality and maintainability',
-    'Enable non-programmers to create code',
-    'Speed up debugging and testing',
-    'Generate consistent, well-documented code',
-    'Reduce development costs by 60%',
-    'Enable rapid prototyping and MVP development'
-  ];
-
-  const languages = [
-    { name: 'JavaScript', description: 'Web development and Node.js', icon: '🟨' },
-    { name: 'Python', description: 'Data science and backend development', icon: '🐍' },
-    { name: 'Java', description: 'Enterprise applications and Android', icon: '☕' },
-    { name: 'C#', description: 'Microsoft ecosystem and .NET', icon: '🔷' },
-    { name: 'Go', description: 'Cloud-native and microservices', icon: '🐹' },
-    { name: 'Rust', description: 'Systems programming and performance', icon: '🦀' },
-    { name: 'TypeScript', description: 'Type-safe JavaScript development', icon: '🔷' },
-    { name: 'Swift', description: 'iOS and macOS development', icon: '🍎' }
-  ];
-
-  const useCases = [
     {
-      title: 'Web Development',
-      description: 'Generate full-stack web applications and APIs',
-      icon: '🌐',
-      examples: ['React components', 'Express APIs', 'Database schemas', 'Authentication systems']
+      icon: Brain,
+      title: 'Automated Code Review',
+      description: 'AI-powered code analysis for bug detection and quality improvement'
     },
     {
-      title: 'Mobile Development',
-      description: 'Create mobile apps for iOS and Android',
-      icon: '📱',
-      examples: ['React Native apps', 'Flutter widgets', 'Native iOS code', 'Android components']
+      icon: Search,
+      title: 'Security Vulnerability Detection',
+      description: 'Identify and fix security issues before they become problems'
     },
     {
-      title: 'Data Science',
-      description: 'Generate data analysis and ML pipelines',
-      icon: '📊',
-      examples: ['Data processing scripts', 'ML models', 'Visualization code', 'ETL pipelines']
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Automatically optimize code for better performance and efficiency'
     },
     {
-      title: 'DevOps & Automation',
-      description: 'Create deployment and automation scripts',
-      icon: '⚙️',
-      examples: ['Docker configurations', 'CI/CD pipelines', 'Infrastructure code', 'Monitoring scripts']
+      icon: Target,
+      title: 'Git Integration',
+      description: 'Seamless integration with Git for continuous code improvement'
     },
     {
-      title: 'API Development',
-      description: 'Generate RESTful APIs and microservices',
-      icon: '🔌',
-      examples: ['REST endpoints', 'GraphQL schemas', 'Database models', 'Authentication middleware']
+      icon: Clock,
+      title: 'Real-time Analysis',
+      description: 'Get instant feedback on your code as you write it'
     },
     {
-      title: 'Testing & QA',
-      description: 'Create comprehensive test suites and quality assurance',
-      icon: '🧪',
-      examples: ['Unit tests', 'Integration tests', 'E2E tests', 'Performance tests']
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Share insights and improvements across your development team'
     }
   ];
 
-  const pricing = [
+  const benefits = [
+    '70% reduction in bugs and errors',
+    '15+ hours saved per week on code review',
+    '50% improvement in code quality',
+    '90% faster security issue detection',
+    '60% increase in development speed',
+    '85% better code maintainability'
+  ];
+
+  const pricingPlans = [
     {
-      name: 'Developer',
-      price: '$99/month',
-      description: 'Perfect for individual developers',
+      name: 'Starter',
+      price: '$89',
+      period: '/month',
+      description: 'Perfect for individual developers and small teams',
       features: [
-        'Up to 1,000 code generations/month',
-        'Basic language support',
-        'Standard quality output',
+        'Up to 5 repositories',
+        'Basic code analysis',
+        'Standard security checks',
         'Email support',
-        'GitHub integration',
-        'Basic documentation'
+        'Git integration'
       ],
       popular: false
     },
     {
-      name: 'Team',
-      price: '$299/month',
-      description: 'Ideal for development teams',
+      name: 'Professional',
+      price: '$179',
+      period: '/month',
+      description: 'Ideal for growing development teams',
       features: [
-        'Up to 5,000 code generations/month',
-        'All language support',
-        'High quality output',
+        'Up to 25 repositories',
+        'Advanced code analysis',
+        'Comprehensive security checks',
         'Priority support',
-        'Advanced integrations',
         'Team collaboration',
-        'Code review tools',
-        'Custom templates'
+        'Custom rules'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799/month',
-      description: 'For large organizations',
+      price: '$359',
+      period: '/month',
+      description: 'For large organizations and development teams',
       features: [
-        'Unlimited code generations',
-        'Premium quality output',
-        'Dedicated support',
-        'Custom model training',
+        'Unlimited repositories',
+        'Custom AI models',
+        'White-label options',
+        '24/7 dedicated support',
         'API access',
-        'White-label solution',
-        'SLA guarantee',
-        'On-premise deployment'
+        'Advanced integrations'
       ],
       popular: false
     }
   ];
 
-  const technologies = [
-    'GitHub Copilot', 'CodeT5', 'CodeBERT', 'Custom Code Models',
-    'IDE Integration', 'Deep Learning', 'Natural Language Processing',
-    'Code Analysis', 'Static Analysis', 'Machine Learning'
-  ];
-
-  const workflow = [
-    {
-      step: 1,
-      title: 'Describe Your Code',
-      description: 'Input natural language description of what you want to build',
-      icon: '✍️'
-    },
-    {
-      step: 2,
-      title: 'AI Generation',
-      description: 'Our AI generates clean, optimized code',
-      icon: '🤖'
-    },
-    {
-      step: 3,
-      title: 'Review & Test',
-      description: 'Review, test, and refine the generated code',
-      icon: '👁️'
-    },
-    {
-      step: 4,
-      title: 'Deploy & Use',
-      description: 'Integrate the code into your project',
-      icon: '🚀'
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Code Generation - Zion Tech Group</title>
-        <meta name="description" content="Generate code with AI. Create applications, APIs, and scripts from natural language descriptions. Support for 50+ programming languages. Starting at $99/month." />
-        <meta name="keywords" content="AI code generation, programming, code assistant, development tools, automated coding, software development" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Code className="w-4 h-4 mr-2" />
-            Revolutionary Coding Technology
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center space-x-2 bg-cyan-400/10 border border-cyan-400/20 rounded-full px-4 py-2 mb-6">
+              <Star className="w-4 h-4 text-cyan-400" />
+              <span className="text-cyan-400 text-sm font-medium">Most Popular AI Solution</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Code Review Assistant">
+              AI Code Review Assistant
+            </h1>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect">
+              Advanced Automated Code Analysis
+            </p>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Transform your development process with AI-powered code review, security detection, 
+              and performance optimization. Reduce bugs by 70% and save 15+ hours per week.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+                Start Free Trial
+              </button>
+              <Link 
+                to="/contact" 
+                className="flex items-center justify-center space-x-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                <span>Schedule Demo</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Code Generation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Generate high-quality code from natural language descriptions. 
-            Create applications, APIs, and scripts in any programming language with AI assistance.
+        </section>
+
+        {/* Features Section */}
+        <section className="mb-16" aria-labelledby="features-heading">
+          <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Powerful Features
+          </h2>
+          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Everything you need to improve your code quality with AI assistance
           </p>
           
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
-              <div className="text-gray-300">Faster Development</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">80%</div>
-              <div className="text-gray-300">Fewer Errors</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
+        </section>
 
-          {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
-                <span className="text-white font-medium">Middletown, DE</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Powerful Code Generation Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+        {/* Benefits Section */}
+        <section className="mb-16" aria-labelledby="benefits-heading">
+          <div className="cyber-card p-8">
+            <h2 id="benefits-heading" className="text-3xl font-bold text-white mb-8 text-center neon-text">
+              Proven Results
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300 font-medium">{benefit}</span>
                 </div>
               ))}
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Why Choose Our Code AI?</h3>
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <TrendingUp className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Languages */}
-      <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Supported Programming Languages
+        {/* Pricing Section */}
+        <section className="mb-16" aria-labelledby="pricing-heading">
+          <h2 id="pricing-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Simple Pricing
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {languages.map((language, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <div className="text-4xl mb-3">{language.icon}</div>
-                <h3 className="text-lg font-bold text-white mb-2">{language.name}</h3>
-                <p className="text-gray-300 text-sm">{language.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Workflow */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Simple 4-Step Process
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {workflow.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{step.icon}</span>
-                </div>
-                <div className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
-                  Step {step.step}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-300 text-sm">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases */}
-      <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Applications & Use Cases
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 mb-4">{useCase.description}</p>
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-cyan-400">Examples:</h4>
-                  <ul className="space-y-1">
-                    {useCase.examples.map((example, exampleIndex) => (
-                      <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
-                        <ArrowRight className="w-3 h-3 mr-2" />
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Flexible Pricing Plans
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`bg-white rounded-xl shadow-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>
+          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Choose the plan that fits your development needs
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`cyber-card p-8 hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
-                    </span>
+                    </div>
                   </div>
                 )}
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-4">{plan.description}</p>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}</div>
-                  <p className="text-gray-500">per month</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                  </div>
                 </div>
+                
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Code Generation Plan`}
-                  className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}
-                >
-                  Get Started
-                </a>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                  plan.popular 
+                    ? 'cyber-button' 
+                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                }`}>
+                  {plan.popular ? 'Get Started' : 'Choose Plan'}
+                </button>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Technologies */}
-      <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Advanced Technologies
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {technologies.map((tech, index) => (
-              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Generate Code?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Start creating high-quality code with our AI-powered generation technology.
+        {/* CTA Section */}
+        <section className="cyber-card p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Improve Your Code Quality?</h2>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Join thousands of developers already using AI Code Review Assistant to write better code.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+            <button className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+              Start Free Trial
+            </button>
+            <Link 
+              to="/contact" 
+              className="flex items-center justify-center space-x-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              Call (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Email Us
-            </a>
+              <span>Contact Sales</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };

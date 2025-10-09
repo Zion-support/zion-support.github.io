@@ -1,63 +1,63 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Video, CheckCircle, ArrowRight, Star, TrendingUp, Users, Target, Zap, Brain, Camera, Clock, Globe } from 'lucide-react';
+import { FileText, CheckCircle, ArrowRight, Star, TrendingUp, Users, Target, Zap, Brain, BarChart, Clock, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIVideoGenerationPage: React.FC = () => {
+const AIContentWriterPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI Video Editing',
-      description: 'Automated video editing with intelligent scene detection and transitions'
-    },
-    {
-      icon: Camera,
-      title: 'Auto-Generated Content',
-      description: 'Create engaging video content from text descriptions and scripts'
-    },
-    {
-      icon: Users,
-      title: 'Voice Synthesis',
-      description: 'Natural-sounding voiceovers in multiple languages and accents'
+      title: 'AI Content Generation',
+      description: 'Generate high-quality blog posts, articles, and marketing content automatically'
     },
     {
       icon: Target,
-      title: 'Multi-Language Support',
-      description: 'Generate videos in multiple languages with accurate translations'
+      title: 'SEO Optimization',
+      description: 'AI-powered SEO optimization for better search engine rankings'
+    },
+    {
+      icon: BarChart,
+      title: 'Content Analytics',
+      description: 'Track content performance and engagement with detailed analytics'
+    },
+    {
+      icon: Users,
+      title: 'Brand Voice Consistency',
+      description: 'Maintain consistent brand voice across all content with AI assistance'
     },
     {
       icon: Clock,
-      title: 'Quick Rendering',
-      description: 'Fast video processing and rendering for immediate results'
+      title: 'Quick Content Creation',
+      description: 'Generate content 10x faster than traditional writing methods'
     },
     {
       icon: Globe,
-      title: 'Unlimited Exports',
-      description: 'Export unlimited videos in various formats and resolutions'
+      title: 'Multi-Language Support',
+      description: 'Create content in multiple languages with accurate translations'
     }
   ];
 
   const benefits = [
-    '90% reduction in video production time',
-    'Professional quality output',
-    'Unlimited video exports',
-    '60% cost savings on video production',
-    'No technical skills required',
-    'Consistent brand voice and style'
+    '10x increase in content output',
+    'SEO optimized content',
+    'Consistent brand voice',
+    '60% time saved on content creation',
+    '40% improvement in engagement rates',
+    '50% better search engine rankings'
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$79',
       period: '/month',
       description: 'Perfect for small businesses and content creators',
       features: [
-        'Up to 10 videos per month',
-        'Basic AI editing',
-        'Standard quality exports',
+        'Up to 50 articles per month',
+        'Basic AI content generation',
+        'Standard SEO optimization',
         'Email support',
         'Template library'
       ],
@@ -65,26 +65,26 @@ const AIVideoGenerationPage: React.FC = () => {
     },
     {
       name: 'Professional',
-      price: '$399',
+      price: '$159',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        'Up to 50 videos per month',
-        'Advanced AI editing',
-        'High-quality exports',
+        'Up to 200 articles per month',
+        'Advanced AI content generation',
+        'Comprehensive SEO optimization',
         'Priority support',
-        'Custom templates',
-        'Voice synthesis'
+        'Brand voice training',
+        'Content analytics'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$319',
       period: '/month',
-      description: 'For large organizations and production companies',
+      description: 'For large organizations and content teams',
       features: [
-        'Unlimited videos',
+        'Unlimited articles',
         'Custom AI models',
         'White-label options',
         '24/7 dedicated support',
@@ -108,15 +108,15 @@ const AIVideoGenerationPage: React.FC = () => {
               <span className="text-cyan-400 text-sm font-medium">Most Popular AI Solution</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Video Generator">
-              AI Video Generator
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Content Writer">
+              AI Content Writer
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect">
-              Create Professional Videos with AI
+              Generate High-Quality Content with AI
             </p>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Transform your content creation with AI-powered video generation, editing, and voice synthesis. 
-              Create professional videos 90% faster with unlimited exports.
+              Transform your content creation with AI-powered writing assistance. 
+              Generate 10x more content with SEO optimization and consistent brand voice.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -140,7 +140,7 @@ const AIVideoGenerationPage: React.FC = () => {
             Powerful Features
           </h2>
           <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Everything you need to create stunning videos with AI assistance
+            Everything you need to create amazing content with AI assistance
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -181,7 +181,7 @@ const AIVideoGenerationPage: React.FC = () => {
             Simple Pricing
           </h2>
           <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Choose the plan that fits your video production needs
+            Choose the plan that fits your content creation needs
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -226,9 +226,9 @@ const AIVideoGenerationPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="cyber-card p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Create Amazing Videos?</h2>
+          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Content Creation?</h2>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Join thousands of creators already using AI Video Generator to produce professional content.
+            Join thousands of content creators already using AI Content Writer to produce amazing content.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
@@ -250,4 +250,4 @@ const AIVideoGenerationPage: React.FC = () => {
   );
 };
 
-export default AIVideoGenerationPage;
+export default AIContentWriterPage;

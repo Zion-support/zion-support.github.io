@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -109,13 +110,13 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -127,12 +128,12 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {microSAASServices.map((service) => (
                 <li key={service.name}>
-                  <a
-                    href={service.href}
+                  <Link
+                    to={service.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                     {service.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -147,12 +148,12 @@ const Footer: React.FC = () => {
                 <ul className="space-y-1">
                   {aiServices.slice(0, 3).map((service) => (
                     <li key={service.name}>
-                      <a
-                        href={service.href}
+                      <Link
+                        to={service.href}
                         className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
                       >
                         {service.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -162,12 +163,12 @@ const Footer: React.FC = () => {
                 <ul className="space-y-1">
                   {itServices.slice(0, 3).map((service) => (
                     <li key={service.name}>
-                      <a
-                        href={service.href}
+                      <Link
+                        to={service.href}
                         className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm"
                       >
                         {service.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
