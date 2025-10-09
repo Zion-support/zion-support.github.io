@@ -1,131 +1,161 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Clock, Shield, Zap, Phone, Mail, MapPin, Star, Users, TrendingUp } from 'lucide-react';
+import { CheckCircle, Zap, Cloud, Shield, Users, Database } from 'lucide-react';
 
 const ManagedITPage: React.FC = () => {
-  const services = [
+  const managedServices = [
     {
-      title: '24/7 System Monitoring',
-      description: 'Continuous monitoring of your IT infrastructure with instant alerts and proactive issue resolution',
-      features: ['Real-time monitoring', 'Automated alerts', 'Proactive maintenance', 'Performance optimization'],
-      icon: '🔍'
+      name: 'IT Infrastructure Management',
+      price: '$8,000/month',
+      description: 'Complete IT infrastructure management and support',
+      features: [
+        'Server management',
+        'Network monitoring',
+        'Backup and recovery',
+        'Performance optimization'
+      ],
+      icon: Cloud,
+      benefits: [
+        '99.9% uptime guarantee',
+        'Reduced IT costs',
+        'Improved performance',
+        'Expert support'
+      ]
     },
     {
-      title: 'Help Desk Support',
-      description: 'Dedicated support team available 24/7 to resolve any IT issues quickly and efficiently',
-      features: ['24/7 availability', 'Multi-channel support', 'Fast response times', 'Expert technicians'],
-      icon: '🎧'
+      name: 'Help Desk Support',
+      price: '$3,500/month',
+      description: '24/7 help desk and technical support services',
+      features: [
+        '24/7 support',
+        'Remote assistance',
+        'Issue tracking',
+        'User training'
+      ],
+      icon: Users,
+      benefits: [
+        'Faster issue resolution',
+        'Reduced downtime',
+        'Improved productivity',
+        'User satisfaction'
+      ]
     },
     {
-      title: 'Security Management',
-      description: 'Comprehensive security services including threat detection, prevention, and incident response',
-      features: ['Threat monitoring', 'Security updates', 'Incident response', 'Compliance management'],
-      icon: '🛡️'
+      name: 'Security Management',
+      price: '$5,500/month',
+      description: 'Comprehensive security management and monitoring',
+      features: [
+        'Security monitoring',
+        'Threat detection',
+        'Incident response',
+        'Compliance management'
+      ],
+      icon: Shield,
+      benefits: [
+        'Enhanced security',
+        'Threat prevention',
+        'Compliance assurance',
+        'Risk mitigation'
+      ]
     },
     {
-      title: 'Backup & Recovery',
-      description: 'Automated backup solutions with guaranteed data recovery and business continuity planning',
-      features: ['Automated backups', 'Data encryption', 'Quick recovery', 'Business continuity'],
-      icon: '💾'
-    },
-    {
-      title: 'Software Management',
-      description: 'Complete software lifecycle management including installation, updates, and license management',
-      features: ['Software deployment', 'License management', 'Update automation', 'Compliance tracking'],
-      icon: '📦'
-    },
-    {
-      title: 'Network Management',
-      description: 'Network infrastructure monitoring, optimization, and maintenance for optimal performance',
-      features: ['Network monitoring', 'Performance optimization', 'Bandwidth management', 'Troubleshooting'],
-      icon: '🌐'
+      name: 'Cloud Management',
+      price: '$6,500/month',
+      description: 'Cloud infrastructure and application management',
+      features: [
+        'Cloud monitoring',
+        'Cost optimization',
+        'Security management',
+        'Performance tuning'
+      ],
+      icon: Database,
+      benefits: [
+        'Cost optimization',
+        'Improved performance',
+        'Enhanced security',
+        'Scalability'
+      ]
     }
   ];
 
   const benefits = [
     {
-      title: 'Reduced IT Costs',
-      description: 'Save up to 40% on IT expenses with our comprehensive managed services',
-      value: '40%'
+      title: 'Cost Reduction',
+      description: 'Reduce IT costs by up to 40% with managed services',
+      icon: Zap
     },
     {
-      title: 'Improved Uptime',
-      description: 'Achieve 99.9% uptime with proactive monitoring and maintenance',
-      value: '99.9%'
+      title: 'Expert Support',
+      description: 'Access to certified IT professionals and specialists',
+      icon: Users
     },
     {
-      title: 'Faster Response',
-      description: 'Average response time of under 15 minutes for critical issues',
-      value: '<15 min'
+      title: 'Proactive Maintenance',
+      description: 'Prevent issues before they impact your business',
+      icon: Shield
     },
     {
-      title: 'Enhanced Security',
-      description: 'Reduce security incidents by 90% with our comprehensive security management',
-      value: '90%'
+      title: 'Scalability',
+      description: 'Scale your IT infrastructure as your business grows',
+      icon: Cloud
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 (302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  };
-
   return (
-    <>
-      <Helmet>
-        <title>Managed IT Services - Zion Tech Group | 24/7 IT Support</title>
-        <meta name="description" content="Comprehensive managed IT services including 24/7 monitoring, help desk support, security management, and backup solutions. Focus on your business while we manage your IT." />
-        <meta name="keywords" content="managed IT services, IT support, 24/7 monitoring, help desk, IT security, backup solutions, network management" />
-        <link rel="canonical" href="https://ziontechgroup.com/managed-it" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-24">
+      <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Managed <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">IT Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Focus on your business while we handle all your IT needs. 24/7 monitoring, support, and maintenance for optimal performance.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="cyber-button inline-flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Get Started Today
-              </a>
-              <a
-                href="/pricing"
-                className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View Pricing
-              </a>
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Managed IT Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Focus on your business while we manage your IT infrastructure. Our comprehensive managed IT services 
+            provide 24/7 support, monitoring, and maintenance for your technology needs.
+          </p>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
+              <div className="text-gray-300">Clients Served</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime SLA</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+              <div className="text-gray-300">Cost Reduction</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">Support</div>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Services Overview */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Comprehensive IT Management</h2>
-              <p className="text-xl text-gray-300">Everything you need to keep your IT infrastructure running smoothly</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+        {/* Services Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Managed IT Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {managedServices.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-cyan-400/20 rounded-lg flex items-center justify-center mr-4">
+                    <service.icon className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{service.name}</h3>
+                    <div className="text-2xl font-bold text-green-400">{service.price}</div>
+                  </div>
+                </div>
+                
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -135,196 +165,107 @@ const ManagedITPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              ))}
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits:</h4>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <Zap className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Choose Managed IT?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-slate-900" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Process Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Our Process
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-slate-900">1</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Assessment</h3>
+              <p className="text-gray-300">Analyze your current IT infrastructure and needs</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-slate-900">2</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Planning</h3>
+              <p className="text-gray-300">Develop customized IT management strategy</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-slate-900">3</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Implementation</h3>
+              <p className="text-gray-300">Deploy monitoring and management tools</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-slate-900">4</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Management</h3>
+              <p className="text-gray-300">Ongoing monitoring, maintenance, and support</p>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Benefits */}
-        <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Managed IT Services?</h2>
-              <p className="text-xl text-gray-300">Proven results and measurable benefits</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{benefit.value}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Service Levels */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Service Levels</h2>
-              <p className="text-xl text-gray-300">Choose the level of support that fits your needs</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Basic</h3>
-                <div className="text-3xl font-bold text-cyan-400 mb-6">$1,500<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    8x5 Support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Basic Monitoring
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Monthly Reports
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Email Support
-                  </li>
-                </ul>
-                <a
-                  href="/contact"
-                  className="w-full bg-white/10 text-white py-3 px-6 rounded-lg hover:bg-white/20 transition-colors text-center block"
-                >
-                  Get Started
-                </a>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-400 shadow-2xl shadow-cyan-400/20">
-                <div className="text-center mb-4">
-                  <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </span>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-                <div className="text-3xl font-bold text-cyan-400 mb-6">$2,500<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    24/7 Support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Advanced Monitoring
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Weekly Reports
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Phone & Email Support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Security Management
-                  </li>
-                </ul>
-                <a
-                  href="/contact"
-                  className="w-full cyber-button py-3 px-6 rounded-lg text-center block"
-                >
-                  Get Started
-                </a>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-                <div className="text-3xl font-bold text-cyan-400 mb-6">$5,000<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    24/7 Dedicated Support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Real-time Monitoring
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Daily Reports
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Multi-channel Support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Advanced Security
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Dedicated Account Manager
-                  </li>
-                </ul>
-                <a
-                  href="/contact"
-                  className="w-full bg-white/10 text-white py-3 px-6 rounded-lg hover:bg-white/20 transition-colors text-center block"
-                >
-                  Contact Sales
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Simplify Your IT Management?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let us handle your IT so you can focus on growing your business. Contact us today for a free consultation.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">{contactInfo.phone}</div>
-                  <div className="text-gray-400 text-sm">Call us anytime</div>
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">{contactInfo.email}</div>
-                  <div className="text-gray-400 text-sm">Email us</div>
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Middletown, DE</div>
-                  <div className="text-gray-400 text-sm">Our location</div>
-                </div>
-              </div>
-            </div>
-            
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Ready to Simplify Your IT?
+          </h2>
+          <p className="text-purple-100 mb-6">
+            Get comprehensive managed IT services that keep your business running smoothly.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="cyber-button inline-flex items-center text-lg px-8 py-4"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              Get Free Consultation
+              Get Managed IT Consultation
+            </a>
+            <a
+              href="/demo"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              Schedule Demo
             </a>
           </div>
-        </section>
+        </div>
       </div>
-      
-      <Footer />
-    </>
+    </div>
   );
 };
 

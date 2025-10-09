@@ -1,321 +1,268 @@
-'use client';
 import React from 'react';
-import { Calendar, Clock, Users, Zap, Brain, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Target, BarChart } from 'lucide-react';
-import Link from 'next/link';
+import { CheckCircle, Calendar, Zap, Users, Clock, Shield } from 'lucide-react';
 
 const AISchedulerPage: React.FC = () => {
-  const features = [
+  const schedulerFeatures = [
     {
+      name: 'Smart Scheduling',
+      price: '$29/month',
+      description: 'AI-powered scheduling that optimizes time and resources',
+      features: [
+        'Automated scheduling',
+        'Conflict resolution',
+        'Resource optimization',
+        'Calendar integration'
+      ],
       icon: Calendar,
-      title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
-      benefit: 'Save 5+ hours per week'
+      benefits: [
+        '50% time savings',
+        'Reduced conflicts',
+        'Better resource utilization',
+        'Improved productivity'
+      ]
     },
     {
+      name: 'Team Coordination',
+      price: '$49/month',
+      description: 'Advanced team scheduling and coordination features',
+      features: [
+        'Team availability',
+        'Shift management',
+        'Workload balancing',
+        'Communication tools'
+      ],
       icon: Users,
-      title: 'Team Coordination',
-      description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
-      benefit: 'Eliminate scheduling conflicts'
+      benefits: [
+        'Better team coordination',
+        'Reduced scheduling conflicts',
+        'Improved communication',
+        'Enhanced productivity'
+      ]
     },
     {
-      icon: Brain,
-      title: 'Predictive Planning',
-      description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
-      benefit: '95% accuracy in predictions'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Reminders',
-      description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
-      benefit: 'Reduce no-shows by 60%'
-    },
-    {
-      icon: Target,
-      title: 'Meeting Optimization',
-      description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
-      benefit: 'Improve meeting ROI by 40%'
-    },
-    {
-      icon: Shield,
-      title: 'Privacy & Security',
-      description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
-      benefit: '100% secure scheduling'
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Personal',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for individuals',
+      name: 'Meeting Optimization',
+      price: '$39/month',
+      description: 'Intelligent meeting scheduling and optimization',
       features: [
-        'Unlimited personal meetings',
-        'Basic AI scheduling',
-        'Calendar integration',
-        'Email reminders',
-        'Mobile app access',
-        'Standard support'
+        'Meeting room booking',
+        'Time zone handling',
+        'Agenda management',
+        'Follow-up reminders'
       ],
-      popular: false
+      icon: Clock,
+      benefits: [
+        'Faster meeting setup',
+        'Reduced no-shows',
+        'Better meeting outcomes',
+        'Time zone efficiency'
+      ]
     },
     {
-      name: 'Team',
-      price: '$49',
-      period: '/month',
-      description: 'Ideal for small teams',
+      name: 'Enterprise Scheduling',
+      price: '$99/month',
+      description: 'Enterprise-grade scheduling with advanced features',
       features: [
-        'Up to 10 team members',
-        'Advanced AI scheduling',
-        'Team coordination',
-        'Custom meeting types',
-        'Analytics dashboard',
-        'Priority support',
-        'API access',
-        'Custom branding'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$149',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited team members',
-        'Premium AI features',
+        'Multi-location support',
         'Advanced analytics',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options',
-        'SSO integration',
-        'Custom workflows'
+        'Custom workflows',
+        'API integration'
       ],
-      popular: false
+      icon: Shield,
+      benefits: [
+        'Scalable solution',
+        'Advanced insights',
+        'Customizable workflows',
+        'Seamless integration'
+      ]
     }
   ];
 
-  const integrations = [
-    { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
-    { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
-    { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },
-    { name: 'Slack', icon: '💬', description: 'Team communication' },
-    { name: 'Teams', icon: '👥', description: 'Microsoft Teams' },
-    { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
-    { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
-    { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
-  ];
-
-  const testimonials = [
+  const useCases = [
     {
-      name: 'Jennifer Lee',
-      company: 'TechStart',
-      role: 'Operations Manager',
-      content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
-      rating: 5
+      title: 'Healthcare Scheduling',
+      description: 'Patient appointments, staff shifts, and resource management',
+      benefits: ['Reduced wait times', 'Better patient experience', 'Optimized staff utilization', 'Automated reminders']
     },
     {
-      name: 'Robert Martinez',
-      company: 'Consulting Group',
-      role: 'Senior Partner',
-      content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
-      rating: 5
+      title: 'Service Appointments',
+      description: 'Customer service appointments and field service scheduling',
+      benefits: ['Improved customer satisfaction', 'Reduced travel time', 'Better resource allocation', 'Automated notifications']
     },
     {
-      name: 'Amanda Chen',
-      company: 'Digital Agency',
-      role: 'Project Manager',
-      content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
-      rating: 5
+      title: 'Event Management',
+      description: 'Event scheduling, venue booking, and resource coordination',
+      benefits: ['Streamlined planning', 'Reduced conflicts', 'Better resource utilization', 'Automated coordination']
+    },
+    {
+      title: 'Project Management',
+      description: 'Project timelines, team meetings, and milestone tracking',
+      benefits: ['Better project visibility', 'Improved team coordination', 'Reduced delays', 'Automated updates']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-24">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
-            <Calendar className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             AI Scheduler
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Meeting & Event Scheduling
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Intelligent scheduling made simple. Our AI-powered scheduler optimizes your time, 
+            reduces conflicts, and improves productivity with smart automation.
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
-            the best meeting times, coordinate complex team schedules, and optimize your calendar 
-            for maximum productivity.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
-            </a>
-            <Link 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Start Free Trial
-            </Link>
-          </div>
-        </div>
-
-        {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">5+</div>
-            <div className="text-white font-semibold mb-2">Hours Saved</div>
-            <div className="text-gray-300 text-sm">Per week on scheduling tasks</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">95%</div>
-            <div className="text-white font-semibold mb-2">Accuracy</div>
-            <div className="text-gray-300 text-sm">In meeting time predictions</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-400 mb-2">60%</div>
-            <div className="text-white font-semibold mb-2">Fewer No-shows</div>
-            <div className="text-gray-300 text-sm">With smart reminders</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-400 mb-2">100%</div>
-            <div className="text-white font-semibold mb-2">Conflict-Free</div>
-            <div className="text-gray-300 text-sm">Scheduling guaranteed</div>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50%</div>
+              <div className="text-gray-300">Time Savings</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-green-400 mb-2">99%</div>
+              <div className="text-gray-300">Accuracy</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-300">Availability</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-orange-400 mb-2">5min</div>
+              <div className="text-gray-300">Setup Time</div>
+            </div>
           </div>
         </div>
 
         {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Smart Scheduling Features
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            AI Scheduler Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Integrations Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Works with Your Favorite Tools
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
-                <div className="text-4xl mb-3">{integration.icon}</div>
-                <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
-                <p className="text-gray-300 text-sm">{integration.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-cyan-400 scale-105' 
-                  : 'border-slate-700 hover:border-cyan-500/50'
-              }`}>
-                {plan.popular && (
-                  <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {schedulerFeatures.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-cyan-400/20 rounded-lg flex items-center justify-center mr-4">
+                    <feature.icon className="w-8 h-8 text-cyan-400" />
                   </div>
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-gray-300 mb-6">{plan.description}</p>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-gray-300">{plan.period}</span>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{feature.name}</h3>
+                    <div className="text-2xl font-bold text-green-400">{feature.price}</div>
+                  </div>
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
+                
+                <p className="text-gray-300 mb-6">{feature.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Features:</h4>
+                  <ul className="space-y-2">
+                    {feature.features.map((feat, featIndex) => (
+                      <li key={featIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feat}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits:</h4>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <Zap className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all">
                   Get Started
                 </button>
               </div>
             ))}
           </div>
-        </section>
+        </div>
 
-        {/* Testimonials */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            What Our Users Say
+        {/* Use Cases Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Use Cases
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{useCase.title}</h3>
+                <p className="text-gray-600 mb-4">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
                   ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                </div>
+                </ul>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+
+        {/* Technology Stack */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Technology Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calendar className="w-8 h-8 text-slate-900" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Smart Algorithms</h3>
+              <p className="text-gray-300">AI-powered scheduling algorithms that optimize time and resources</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-slate-900" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Team Collaboration</h3>
+              <p className="text-gray-300">Seamless team coordination and communication tools</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-slate-900" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Security & Privacy</h3>
+              <p className="text-gray-300">Enterprise-grade security and data protection</p>
+            </div>
+          </div>
+        </div>
 
         {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Master Your Schedule?
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Ready to Optimize Your Scheduling?
           </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
-            and maximize productivity.
+          <p className="text-purple-100 mb-6">
+            Start using AI-powered scheduling to save time and improve productivity.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
-            </a>
-            <Link 
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Start Free Trial
-            </Link>
+              Get Started
+            </a>
+            <a
+              href="/demo"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              Watch Demo
+            </a>
           </div>
-        </section>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };
