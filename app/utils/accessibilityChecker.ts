@@ -1,3 +1,4 @@
+import Link from 'next/link';
 'use client';
 /**
  * Accessibility Checker Utility
@@ -242,9 +243,9 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has no accessible text`,
-          element: `a[to="${link.getAttribute('href')}"]`,
+          element: `a[href="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '<Link to="..." aria-label="Description">...</Link>'
+          codeExample: '<Link href="..." aria-label="Description">...</Link>',
         });
       }
       // Check for generic link text
@@ -255,7 +256,7 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has generic text: "${text}"`,
-          element: `a[to="${link.getAttribute('href')}"]`,
+          element: `a[href="${link.getAttribute('href')}"]`,
           fix: 'Use descriptive link text that explains the destination',
           codeExample: 'Use "Read full article" instead of "Read more"'
         });
@@ -273,10 +274,10 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.AAA,
           wcagCriterion: '3.2.5',
           message: `Link ${index + 1} opens in new window without warning`,
-          element: `a[to="${link.getAttribute('href')}"]`,
+          element: `a[href="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
           codeExample:
-            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
+            '<Link href="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>',
         });
       }
     });

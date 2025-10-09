@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:app/pages-backup/iot-edge/page.tsx
+=======
+import { CheckCircle, Star, Wifi, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f6a:app/iot-edge/page.tsx
 
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
@@ -139,7 +143,11 @@ const IoTEdgePage: React.FC = () => {
   const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
+<<<<<<< HEAD:app/pages-backup/iot-edge/page.tsx
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f6a:app/iot-edge/page.tsx
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>

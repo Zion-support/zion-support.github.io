@@ -358,7 +358,11 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:app/pages-backup/ai-fintech/page.tsx
     </div>
+=======
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f6a:app/ai-fintech/page.tsx
   );
 };
 

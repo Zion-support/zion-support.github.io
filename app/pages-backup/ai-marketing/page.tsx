@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:app/pages-backup/ai-marketing/page.tsx
+=======
+import Link from 'next/link';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f6a:app/ai-marketing/page.tsx
 import { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react';
 
 const AIMarketingPage: React.FC = () => {

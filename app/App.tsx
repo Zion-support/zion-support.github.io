@@ -1,7 +1,6 @@
 'use client';
 
 import React, { Suspense, lazy, useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
@@ -35,16 +34,20 @@ const _AIMarketingPage = lazy(() => import('./ai-marketing/page'));
 const _AIAutomationPage = lazy(() => import('./ai-automation/page'));
 const _AIHealthcarePage = lazy(() => import('./ai-healthcare/page'));
 const _AIFintechPage = lazy(() => import('./ai-fintech/page'));
+<<<<<<< HEAD
 const _AIDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
 const _AICybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
 const _AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
 const _AICloudInfrastructurePage = lazy(() => import('./ai-cloud-infrastructure/page'));
 const _AIEcommerceSolutionsPage = lazy(() => import('./ai-ecommerce-solutions/page'));
 const _AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
 
 // IT Services Pages
 const _ITServicesPage = lazy(() => import('./it-services/page'));
 const _MicroSAASPage = lazy(() => import('./micro-saas/page'));
+<<<<<<< HEAD
 const _CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 const _CloudServicesPage = lazy(() => import('./cloud-services/page'));
 const _DevOpsPage = lazy(() => import('./devops/page'));
@@ -70,16 +73,33 @@ const _ProductivityPage = lazy(() => import('./productivity/page'));
 const _MarketingToolsPage = lazy(() => import('./marketing-tools/page'));
 
 // Specialized Technology Pages
+=======
+
+// Specialized Services Pages
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
 const _QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const _AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const _BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
 const _BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+<<<<<<< HEAD
+=======
+const _CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
 const _IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 
 // Additional Pages
 const _BlogPage = lazy(() => import('./blog-index'));
 const _GuidesPage = lazy(() => import('./guides/page'));
+<<<<<<< HEAD
 const _SitemapPage = lazy(() => import('./sitemap/page'));
+=======
+<<<<<<< HEAD
+const _SitemapPage = lazy(() => import('./sitemap-page'));
+=======
+const _SitemapPage = lazy(() => import('./sitemap'));
+const _NotFoundPage = lazy(() => import('./not-found'));
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
+>>>>>>> origin/main
 
 // Utils
 import { logger } from './utils/logger';
@@ -151,8 +171,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <HelmetProvider>
-      <AdvancedErrorBoundary
+    <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
@@ -188,16 +207,20 @@ const App: React.FC = () => {
                         <Route path="/ai-automation" element={<_AIAutomationPage />} />
                         <Route path="/ai-healthcare" element={<_AIHealthcarePage />} />
                         <Route path="/ai-fintech" element={<_AIFintechPage />} />
+<<<<<<< HEAD
                         <Route path="/ai-data-analytics" element={<_AIDataAnalyticsPage />} />
                         <Route path="/ai-cybersecurity" element={<_AICybersecurityPage />} />
                         <Route path="/ai-workflow-automation" element={<_AIWorkflowAutomationPage />} />
                         <Route path="/ai-cloud-infrastructure" element={<_AICloudInfrastructurePage />} />
                         <Route path="/ai-ecommerce-solutions" element={<_AIEcommerceSolutionsPage />} />
                         <Route path="/ai-mobile-app-development" element={<_AIMobileAppDevelopmentPage />} />
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                         
                         {/* IT Services Routes */}
                         <Route path="/it-services" element={<_ITServicesPage />} />
                         <Route path="/micro-saas" element={<_MicroSAASPage />} />
+<<<<<<< HEAD
                         <Route path="/cybersecurity" element={<_CybersecurityPage />} />
                         <Route path="/cloud-services" element={<_CloudServicesPage />} />
                         <Route path="/devops" element={<_DevOpsPage />} />
@@ -223,16 +246,28 @@ const App: React.FC = () => {
                         <Route path="/marketing-tools" element={<_MarketingToolsPage />} />
                         
                         {/* Specialized Technology Routes */}
+=======
+                        
+                        {/* Specialized Services Routes */}
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                         <Route path="/quantum-computing" element={<_QuantumComputingPage />} />
                         <Route path="/autonomous-systems" element={<_AutonomousSystemsPage />} />
                         <Route path="/business-intelligence" element={<_BusinessIntelligencePage />} />
                         <Route path="/blockchain-web3" element={<_BlockchainWeb3Page />} />
+<<<<<<< HEAD
+=======
+                        <Route path="/cybersecurity" element={<_CybersecurityPage />} />
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                         <Route path="/iot-edge-computing" element={<_IoTEdgeComputingPage />} />
                         
                         {/* Additional Routes */}
                         <Route path="/blog" element={<_BlogPage />} />
                         <Route path="/guides" element={<_GuidesPage />} />
                         <Route path="/sitemap" element={<_SitemapPage />} />
+<<<<<<< HEAD
+=======
+                        <Route path="*" element={<_NotFoundPage />} />
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                       </Routes>
                     </Suspense>
                   </main>
@@ -255,7 +290,6 @@ const App: React.FC = () => {
           </SEOEnhancer>
         </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
-    </HelmetProvider>
   );
 };
 
