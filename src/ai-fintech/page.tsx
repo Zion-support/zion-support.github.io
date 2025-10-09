@@ -3,6 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 const AIFintechPage: React.FC = () => {
   const aiFintechServices = [
     {

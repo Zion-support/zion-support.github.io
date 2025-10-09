@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Calendar, Clock, Users, CheckCircle, Phone, Mail, ArrowRight, Star, Zap, Brain, Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const [formData, setFormData] = useState({

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
+import { Navigate, Link } from 'react-router-dom';
+import { Database, Brain, Zap, Shield, Code, Globe, Star, Coins } from 'lucide-react';
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
     {
@@ -136,7 +138,7 @@ const BlockchainWeb3Page: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Assessment', 'Regulatory Analysis', 'Risk Management']
     }
   ];
-  // const categories = [...new Set(blockchainServices.map(service => service.category))];
+  const categories = [...new Set(blockchainServices.map(service => service.category))];
   return (
     <>
       <Helmet>
@@ -181,7 +183,7 @@ const BlockchainWeb3Page: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Link className="w-8 h-8 text-purple-600" />
+                  <Code className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3>
                 <p className="text-gray-600">Certified developers with deep blockchain expertise</p>
@@ -293,7 +295,7 @@ const BlockchainWeb3Page: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
-                <Link className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <Code className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3>
                 <p className="text-gray-600">Secure, audited smart contracts for any use case</p>
               </div>

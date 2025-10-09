@@ -1,6 +1,7 @@
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
+import { Cloud } from 'lucide-react';
 export default function RootLayout({
   children
 }: {

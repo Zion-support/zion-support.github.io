@@ -2,6 +2,7 @@
 import React from 'react';
 import { Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
 
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
@@ -158,7 +159,7 @@ const ExpenseTrackerPage: React.FC = () => {
               Call: (302) 464-0950
             </a>
             <Link 
-              href="/contact"
+              to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial
@@ -308,7 +309,7 @@ const ExpenseTrackerPage: React.FC = () => {
               Call: (302) 464-0950
             </a>
             <Link 
-              href="/contact"
+              to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial

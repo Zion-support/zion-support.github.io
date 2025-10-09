@@ -1,4 +1,5 @@
 import React from 'react';
+import { Cloud } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AdaptiveNeuralArchitecturesPage() {

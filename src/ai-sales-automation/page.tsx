@@ -32,6 +32,29 @@ const AISalesAutomationPage: React.FC = () => {
     }
   ];
 
+  const useCases = [
+    {
+      title: 'B2B Sales',
+      description: 'Automate lead qualification, follow-ups, and pipeline management for B2B sales teams.',
+      icon: Building
+    },
+    {
+      title: 'E-commerce',
+      description: 'Personalize product recommendations and automate customer journey optimization.',
+      icon: ShoppingCart
+    },
+    {
+      title: 'Real Estate',
+      description: 'Qualify leads, schedule showings, and manage client relationships automatically.',
+      icon: Home
+    },
+    {
+      title: 'SaaS Sales',
+      description: 'Optimize trial-to-paid conversions with intelligent nurturing and upselling.',
+      icon: Cloud
+    }
+  ];
+
   const pricing = [
     {
       name: 'Starter',

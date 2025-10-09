@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
+import { Navigate } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
     {

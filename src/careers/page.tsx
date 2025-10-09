@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
+import { Cloud, CheckCircle } from 'lucide-react';
 const CareersPage: React.FC = () => {
   const positions = [
     {

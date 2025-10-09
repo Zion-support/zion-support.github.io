@@ -1,4 +1,6 @@
 'use client';
+import React, { useEffect } from 'react';
+
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -10,9 +12,9 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
       document.head.appendChild(script);
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
+      (window as any).dataLayer = (window as any).dataLayer || [];
       function gtag(...args: unknown[]) {
-        window.dataLayer.push(args);
+        (window as any).dataLayer.push(args);
       }
       (window as { gtag: typeof gtag }).gtag = gtag;
       gtag('js', new Date());
@@ -24,6 +26,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     };
     // Track page views
     const trackPageView = () => {
+      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
       if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
         (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
           page_title: document.title,
@@ -62,17 +65,30 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       // Track phone number clicks
       document.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
-        if (target.href && target.href.startsWith('tel:')) {
+        if (target.tagName === 'A' && (target as HTMLAnchorElement).href && (target as HTMLAnchorElement).href.startsWith('tel:')) {
           if ((window as { gtag: unknown }).gtag) {
             (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
               event_category: 'engagement',
               event_label: 'phone_number',
-              value: target.href
+              value: (target as HTMLAnchorElement).href
             });
           }
         }
       });
     };
+    
+    // Handle route changes
+    const handleRouteChange = () => {
+      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+      if ((window as { gtag: unknown }).gtag) {
+        (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
+          page_title: document.title,
+          page_location: window.location.href,
+          send_page_view: true
+        });
+      }
+    };
+    
     // Initialize analytics
     initAnalytics();
     trackPageView();

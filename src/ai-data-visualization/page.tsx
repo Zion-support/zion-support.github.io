@@ -32,6 +32,29 @@ const AIDataVisualizationPage: React.FC = () => {
     }
   ];
 
+  const useCases = [
+    {
+      title: 'Marketing Analytics',
+      description: 'Track campaign performance, customer journey, and ROI across all marketing channels.',
+      icon: BarChart
+    },
+    {
+      title: 'Sales Performance',
+      description: 'Monitor sales metrics, pipeline health, and team performance with real-time dashboards.',
+      icon: TrendingUp
+    },
+    {
+      title: 'Financial Reporting',
+      description: 'Create comprehensive financial reports with automated data collection and visualization.',
+      icon: PieChart
+    },
+    {
+      title: 'Operations Monitoring',
+      description: 'Track operational KPIs, efficiency metrics, and process performance in real-time.',
+      icon: Eye
+    }
+  ];
+
   const pricing = [
     {
       name: 'Starter',

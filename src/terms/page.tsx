@@ -1,4 +1,5 @@
 import React from 'react';
+import { Users } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
 const metadata = {
   title: 'Terms of Service - Zion Tech Group',

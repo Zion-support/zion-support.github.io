@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Star, Users, Award, TrendingUp, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Database, Cloud } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
