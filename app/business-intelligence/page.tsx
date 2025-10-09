@@ -183,6 +183,7 @@ const BusinessIntelligencePage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
               {biServices.map((service, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="text-4xl mb-4">{service.icon}</div>
@@ -226,6 +227,67 @@ const BusinessIntelligencePage: React.FC = () => {
                   </div>
                 </div>
               ))}
+=======
+              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
+                <BarChart className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Visualization</h3>
+                <p className="text-gray-600">Interactive dashboards and custom visualizations for better insights</p>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
+                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3>
+                <p className="text-gray-600">Machine learning models for forecasting and trend analysis</p>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
+                <Database className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Management</h3>
+                <p className="text-gray-600">Data warehousing, ETL, and quality management solutions</p>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
+                <TrendingUp className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance Analytics</h3>
+                <p className="text-gray-600">KPI tracking and performance monitoring with automated insights</p>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
+                <PieChart className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Service BI</h3>
+                <p className="text-gray-600">Empower users with self-service analytics and reporting tools</p>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
+                <Cpu className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Insights</h3>
+                <p className="text-gray-600">Automated insights, anomaly detection, and natural language queries</p>cursor/add-new-services-and-deploy-updates-f159
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">cursor/add-new-services-and-deploy-updates-f159
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Transform Your Data into Insights?
+            </h2>
+            <p className="text-xl mb-8 text-purple-100">cursor/add-new-services-and-deploy-updates-f159
+              Contact our BI experts for a free consultation and custom analytics strategy
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+13024640950"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+              >
+                📞 +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                ✉️ kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="mt-8 text-sm text-purple-200">
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+>>>>>>> resolve-merge-conflicts-1759965566
             </div>
           </div>
         </section>

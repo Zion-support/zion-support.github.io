@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cpu, Sparkles } from 'lucide-react';
+
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -257,11 +257,15 @@ const AIServicesPage: React.FC = () => {
       category: 'Space AI',
       technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
     }
+<<<<<<< HEAD
   ];
 
   const categories = [...new Set(aiServices.map(service => service.category))];
 
   return (
+=======
+  ];return (
+>>>>>>> resolve-merge-conflicts-1759965566
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>

@@ -131,6 +131,7 @@ export default function BlogPage() {
     }, 500);
 
     return () => clearTimeout(timer);
+<<<<<<< HEAD
   }, [blogPosts]);
 
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
@@ -141,6 +142,11 @@ export default function BlogPage() {
   const featuredPosts = posts.filter(post => post.featured);
 
   if (loading) {
+=======
+  }, []);const filteredPosts = selectedCategory === 'all' 
+    ? posts 
+    : posts.filter(post => post.category === selectedCategory);if (loading) {
+>>>>>>> resolve-merge-conflicts-1759965566
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">

@@ -1,282 +1,164 @@
 /**
- * Application Type Definitions
-<<<<<<< HEAD
- * Centralized type definitions for the application
- */
-
-/**
- * Performance Metrics Interface
- * Defines the structure for performance monitoring data
- */
-=======
  * Core types used throughout the application
  */
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0b53
 export interface PerformanceMetrics {
   fcp?: number; // First Contentful Paint
   lcp?: number; // Largest Contentful Paint
   fid?: number; // First Input Delay
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
-<<<<<<< HEAD
   fmp?: number; // First Meaningful Paint
   customMetrics?: Record<string, number>;
 }
 
-/**
- * Performance Report Interface
- * Complete performance report structure
- */
-export interface PerformanceReport {
-  webVitals: Partial<PerformanceMetrics>;
-  resources: ResourceStats;
-  memory: MemoryStats | null;
-  timestamp: number;
-}
-
-/**
- * Resource Statistics Interface
- * Tracks resource loading statistics
- */
-export interface ResourceStats {
-  total: number;
-  scripts: number;
-  styles: number;
-  images: number;
-  fonts: number;
-}
-
-/**
- * Memory Statistics Interface
- * Browser memory usage statistics
- */
-export interface MemoryStats {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
-/**
- * Performance Alert Interface
- * Structure for performance alerts and warnings
- */
-export interface PerformanceAlert {
-  type: 'warning' | 'error' | 'info';
+export interface ErrorInfo {
   message: string;
-  metric: keyof PerformanceMetrics;
-  value: number;
-  threshold: number;
+  stack?: string;
+  componentStack?: string;
+  errorBoundary?: string;
   timestamp: number;
+  userAgent: string;
+  url: string;
 }
 
-/**
- * Layout Shift Interface
- * Extends PerformanceEntry for layout shift tracking
- */
-export interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
-
-/**
- * Performance with Memory Interface
- * Extends Performance API with memory information
- */
-export interface PerformanceWithMemory extends Performance {
-  memory: {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  };
-}
-=======
-}
-
-export interface AppConfig {
-  apiUrl: string;
-  environment: 'development' | 'staging' | 'production';
-  features: {
-    analytics: boolean;
-    performanceMonitoring: boolean;
-    errorTracking: boolean;
-  };
-}
-
-export interface User {
-  id: string;
-  email: string;
+export interface AnalyticsEvent {
   name: string;
-  role: 'admin' | 'user' | 'guest';
-  preferences: UserPreferences;
-}
-
-export interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
-  language: string;
-  notifications: boolean;
-}
-
-export interface ApiResponse<T = any> {
-  success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
-}
-
-export interface PaginationParams {
-  page: number;
-  limit: number;
-  sortBy?: string;
-  sortOrder?: 'asc' | 'desc';
-}
-
-export interface PaginatedResponse<T> extends ApiResponse<T[]> {
-  pagination: {
-    page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
-  };
-}
-
-export interface ErrorBoundaryState {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: React.ErrorInfo;
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+  timestamp: number;
+  properties?: Record<string, any>;
 }
 
 export interface SEOData {
   title: string;
   description: string;
   keywords: string[];
-  canonical?: string;
+  canonicalUrl: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
-  twitterCard?: 'summary' | 'summary_large_image';
-}
-
-export interface NavigationItem {
-  label: string;
-  href: string;
-  children?: NavigationItem[];
-  external?: boolean;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: Record<string, unknown>;
+  robots?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 export interface Service {
   id: string;
-  title: string;
+  name: string;
   description: string;
-  icon: string;
   features: string[];
-  pricing?: {
-    starting: number;
-    currency: string;
-  };
+  benefits: string[];
+  price: string;
+  marketPrice?: string;
+  category: string;
+  technologies: string[];
+  icon?: string;
+  image?: string;
+  popular?: boolean;
+  featured?: boolean;
 }
 
 export interface BlogPost {
   id: string;
   title: string;
-  slug: string;
   excerpt: string;
   content: string;
   author: string;
   publishedAt: string;
   updatedAt: string;
   tags: string[];
-  featuredImage?: string;
-  seo: SEOData;
+  category: string;
+  slug: string;
+  featured?: boolean;
+  image?: string;
+  readTime?: number;
 }
 
-export interface ContactFormData {
+export interface ContactForm {
   name: string;
   email: string;
   company?: string;
   phone?: string;
-  subject: string;
+  service: string;
   message: string;
-  consent: boolean;
+  budget?: string;
+  timeline?: string;
+  preferredContact?: string;
+}
+
+export interface NewsletterSubscription {
+  email: string;
+  firstName?: string;
+  lastName?: string;
+  interests?: string[];
+  source?: string;
 }
 
 export interface Testimonial {
   id: string;
   name: string;
   company: string;
-  role: string;
+  position: string;
   content: string;
-  avatar?: string;
   rating: number;
-  featured: boolean;
+  image?: string;
+  featured?: boolean;
 }
 
 export interface CaseStudy {
   id: string;
   title: string;
-  slug: string;
   client: string;
   industry: string;
   challenge: string;
   solution: string;
   results: string[];
   technologies: string[];
-  featuredImage: string;
-  gallery?: string[];
-  publishedAt: string;
+  duration: string;
+  teamSize: number;
+  image?: string;
+  featured?: boolean;
 }
 
 export interface TeamMember {
   id: string;
   name: string;
-  role: string;
+  position: string;
   bio: string;
-  avatar: string;
-  social: {
-    linkedin?: string;
-    twitter?: string;
-    github?: string;
-  };
+  image: string;
+  linkedin?: string;
+  twitter?: string;
+  github?: string;
+  email?: string;
   expertise: string[];
 }
 
-export interface CompanyInfo {
-  name: string;
-  tagline: string;
-  description: string;
-  founded: number;
-  headquarters: string;
-  contact: {
-    email: string;
-    phone: string;
-    address: string;
-  };
-  social: {
-    linkedin?: string;
-    twitter?: string;
-    facebook?: string;
-    instagram?: string;
-  };
-}
-
-export interface Feature {
+export interface JobOpening {
   id: string;
   title: string;
+  department: string;
+  location: string;
+  type: 'full-time' | 'part-time' | 'contract' | 'internship';
+  experience: string;
   description: string;
-  icon: string;
+  requirements: string[];
   benefits: string[];
-  category: 'performance' | 'security' | 'scalability' | 'reliability';
-}
-
-export interface PricingTier {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  currency: string;
-  period: 'monthly' | 'yearly';
-  features: string[];
-  limitations?: string[];
-  popular?: boolean;
-  cta: string;
+  salary?: string;
+  remote?: boolean;
+  postedAt: string;
+  applicationUrl?: string;
 }
 
 export interface FAQ {
@@ -287,237 +169,219 @@ export interface FAQ {
   order: number;
 }
 
-export interface Event {
+export interface PricingTier {
   id: string;
-  title: string;
+  name: string;
+  price: number;
+  period: 'monthly' | 'yearly' | 'one-time';
   description: string;
-  date: string;
-  time: string;
-  location: string;
-  type: 'webinar' | 'conference' | 'workshop' | 'meetup';
-  registrationUrl?: string;
-  featured: boolean;
+  features: string[];
+  limitations?: string[];
+  popular?: boolean;
+  cta: string;
+  ctaLink: string;
 }
 
-export interface Job {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: 'full-time' | 'part-time' | 'contract' | 'internship';
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  salary?: {
-    min: number;
-    max: number;
-    currency: string;
-  };
-  postedAt: string;
-  applicationUrl: string;
+export interface NavigationItem {
+  label: string;
+  href: string;
+  children?: NavigationItem[];
+  external?: boolean;
+  badge?: string;
 }
 
-export interface NewsletterSubscription {
+export interface FooterLink {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+export interface FooterSection {
+  title: string;
+  links: FooterLink[];
+}
+
+export interface SocialLink {
+  platform: string;
+  url: string;
+  icon: string;
+}
+
+export interface CompanyInfo {
+  name: string;
+  tagline: string;
+  description: string;
+  founded: number;
+  employees: string;
+  headquarters: string;
+  website: string;
   email: string;
-  preferences: {
-    weekly: boolean;
-    monthly: boolean;
-    announcements: boolean;
-    productUpdates: boolean;
-  };
-  subscribedAt: string;
-  status: 'active' | 'unsubscribed' | 'pending';
+  phone: string;
+  social: SocialLink[];
 }
 
-export interface AnalyticsEvent {
-  name: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
+export interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+}
+
+export interface UserPreferences {
+  theme: 'light' | 'dark' | 'auto';
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: boolean;
+  analytics: boolean;
+}
+
+export interface APIResponse<T = any> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
   timestamp: number;
-  userId?: string;
-  sessionId?: string;
 }
 
-export interface PerformanceEntry {
-  name: string;
-  value: number;
-  timestamp: number;
-  category: 'navigation' | 'resource' | 'paint' | 'measure' | 'custom';
+export interface PaginationInfo {
+  page: number;
+  limit: number;
+  total: number;
+  totalPages: number;
+  hasNext: boolean;
+  hasPrev: boolean;
 }
 
-export interface AccessibilityAudit {
+export interface SearchResult {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  type: 'page' | 'blog' | 'service' | 'case-study';
   score: number;
-  issues: AccessibilityIssue[];
-  recommendations: string[];
-  timestamp: number;
+  highlights?: string[];
 }
 
-export interface AccessibilityIssue {
+export interface SearchFilters {
+  type?: string[];
+  category?: string[];
+  dateRange?: {
+    start: string;
+    end: string;
+  };
+  tags?: string[];
+}
+
+export interface CacheConfig {
+  ttl: number; // Time to live in seconds
+  maxSize: number; // Maximum cache size
+  strategy: 'lru' | 'fifo' | 'ttl';
+}
+
+export interface SecurityHeaders {
+  'Content-Security-Policy': string;
+  'X-Frame-Options': string;
+  'X-Content-Type-Options': string;
+  'Referrer-Policy': string;
+  'Permissions-Policy': string;
+}
+
+export interface MonitoringConfig {
+  enabled: boolean;
+  sampleRate: number;
+  endpoints: string[];
+  alerts: {
+    errorRate: number;
+    responseTime: number;
+    availability: number;
+  };
+}
+
+export interface FeatureFlag {
+  name: string;
+  enabled: boolean;
+  description: string;
+  rolloutPercentage: number;
+  conditions?: Record<string, any>;
+}
+
+export interface A11yViolation {
   id: string;
   type: 'error' | 'warning' | 'info';
   message: string;
-  element?: string;
-  selector?: string;
-  wcagLevel: 'A' | 'AA' | 'AAA';
+  element: string;
   impact: 'minor' | 'moderate' | 'serious' | 'critical';
+  help: string;
+  helpUrl?: string;
 }
 
-export interface SecurityAudit {
+export interface PerformanceBudget {
+  fcp: number; // First Contentful Paint (ms)
+  lcp: number; // Largest Contentful Paint (ms)
+  fid: number; // First Input Delay (ms)
+  cls: number; // Cumulative Layout Shift
+  ttfb: number; // Time to First Byte (ms)
+  bundleSize: number; // Bundle size in KB
+  imageSize: number; // Total image size in KB
+}
+
+export interface AuditResult {
   score: number;
-  issues: SecurityIssue[];
+  metrics: PerformanceMetrics;
   recommendations: string[];
-  timestamp: number;
+  budget: PerformanceBudget;
+  passed: boolean;
 }
 
-export interface SecurityIssue {
-  id: string;
-  type: 'vulnerability' | 'warning' | 'info';
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  message: string;
-  affected: string[];
-  fix?: string;
-}
-
-export interface SEOAudit {
-  score: number;
-  issues: SEOIssue[];
-  recommendations: string[];
-  timestamp: number;
-}
-
-export interface SEOIssue {
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  message: string;
-  element?: string;
-  impact: 'low' | 'medium' | 'high';
-  fix?: string;
-}
-
-export interface MonitoringAlert {
-  id: string;
-  type: 'performance' | 'error' | 'security' | 'uptime';
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  message: string;
-  timestamp: number;
-  resolved: boolean;
-  resolvedAt?: number;
-}
-
-export interface SystemHealth {
-  status: 'healthy' | 'degraded' | 'down';
-  uptime: number;
-  responseTime: number;
-  errorRate: number;
-  lastChecked: number;
-  services: ServiceHealth[];
-}
-
-export interface ServiceHealth {
-  name: string;
-  status: 'healthy' | 'degraded' | 'down';
-  responseTime: number;
-  lastChecked: number;
-  dependencies: string[];
-}
-
-export interface LogEntry {
-  id: string;
-  level: 'debug' | 'info' | 'warn' | 'error' | 'fatal';
-  message: string;
-  timestamp: number;
-  source: string;
-  context?: Record<string, any>;
-  stack?: string;
-}
-
-export interface Configuration {
-  environment: string;
-  api: {
-    baseUrl: string;
-    timeout: number;
-    retries: number;
-  };
-  features: {
-    [key: string]: boolean;
-  };
-  monitoring: {
-    enabled: boolean;
-    sampleRate: number;
-    endpoints: string[];
-  };
-  security: {
-    csrf: boolean;
-    cors: string[];
-    rateLimit: {
-      windowMs: number;
-      max: number;
-    };
-  };
-}
-
-// Utility types
-export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
-export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
-export type PartialExcept<T, K extends keyof T> = Partial<T> & Pick<T, K>;
-
-// Generic response wrapper
-export type ApiResult<T> = {
-  success: true;
-  data: T;
-} | {
-  success: false;
-  error: string;
-  code?: string;
-};
-
-// Event handler types
-export type EventHandler<T = Event> = (event: T) => void;
-export type AsyncEventHandler<T = Event> = (event: T) => Promise<void>;
-
-// Component prop types
-export interface BaseComponentProps {
+export interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
   id?: string;
   'data-testid'?: string;
 }
 
-export interface StyledComponentProps extends BaseComponentProps {
-  variant?: 'primary' | 'secondary' | 'tertiary';
-  size?: 'sm' | 'md' | 'lg';
-  disabled?: boolean;
+export interface LoadingState {
+  isLoading: boolean;
+  error?: string;
+  retry?: () => void;
 }
 
-// Form types
-export interface FormField<T = any> {
+export interface FormField {
   name: string;
   label: string;
-  type: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'textarea' | 'select' | 'checkbox' | 'radio';
-  required?: boolean;
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
+  required: boolean;
   placeholder?: string;
+  options?: { value: string; label: string }[];
   validation?: {
-    min?: number;
-    max?: number;
     pattern?: string;
-    message?: string;
+    minLength?: number;
+    maxLength?: number;
+    custom?: (value: any) => string | null;
   };
-  options?: Array<{ value: string; label: string }>;
-  value?: T;
-  onChange?: (value: T) => void;
 }
 
-export interface FormState<T = Record<string, any>> {
-  values: T;
-  errors: Partial<Record<keyof T, string>>;
-  touched: Partial<Record<keyof T, boolean>>;
+export interface FormState {
+  values: Record<string, any>;
+  errors: Record<string, string>;
+  touched: Record<string, boolean>;
   isSubmitting: boolean;
   isValid: boolean;
 }
 
-// Theme types
+export interface Notification {
+  id: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+  title: string;
+  message: string;
+  duration?: number;
+  action?: {
+    label: string;
+    onClick: () => void;
+  };
+}
+
 export interface Theme {
   colors: {
     primary: string;
@@ -544,19 +408,12 @@ export interface Theme {
       '2xl': string;
       '3xl': string;
       '4xl': string;
-      '5xl': string;
-      '6xl': string;
     };
     fontWeight: {
       normal: number;
       medium: number;
       semibold: number;
       bold: number;
-    };
-    lineHeight: {
-      tight: number;
-      normal: number;
-      relaxed: number;
     };
   };
   spacing: {
@@ -566,311 +423,86 @@ export interface Theme {
     lg: string;
     xl: string;
     '2xl': string;
-    '3xl': string;
   };
   borderRadius: {
-    none: string;
     sm: string;
     md: string;
     lg: string;
     xl: string;
-    full: string;
   };
   shadows: {
     sm: string;
     md: string;
     lg: string;
     xl: string;
-    '2xl': string;
-  };
-  breakpoints: {
-    sm: string;
-    md: string;
-    lg: string;
-    xl: string;
-    '2xl': string;
   };
 }
 
-// Animation types
-export interface AnimationConfig {
-  duration: number;
-  easing: string;
-  delay?: number;
-  direction?: 'normal' | 'reverse' | 'alternate' | 'alternate-reverse';
-  fillMode?: 'none' | 'forwards' | 'backwards' | 'both';
-  iterationCount?: number | 'infinite';
-}
-
-export interface TransitionConfig {
-  property: string;
-  duration: number;
-  timingFunction: string;
-  delay?: number;
-}
-
-// Media types
-export interface MediaQuery {
-  minWidth?: number;
-  maxWidth?: number;
-  minHeight?: number;
-  maxHeight?: number;
-  orientation?: 'portrait' | 'landscape';
-  resolution?: number;
-  aspectRatio?: string;
-}
-
-// Layout types
-export interface LayoutConfig {
-  container: {
-    maxWidth: string;
-    padding: string;
-  };
-  grid: {
-    columns: number;
-    gap: string;
-  };
-  breakpoints: {
-    [key: string]: number;
-  };
-}
-
-// Accessibility types
-export interface A11yConfig {
-  skipLinks: boolean;
-  focusManagement: boolean;
-  keyboardNavigation: boolean;
-  screenReaderSupport: boolean;
-  highContrast: boolean;
-  reducedMotion: boolean;
-}
-
-// Performance types
-export interface PerformanceConfig {
-  lazyLoading: boolean;
-  imageOptimization: boolean;
-  codeSplitting: boolean;
-  preloading: boolean;
-  caching: {
-    static: number;
-    dynamic: number;
-  };
-}
-
-// SEO types
-export interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string[];
-  robots: string;
-  canonical?: string;
-  openGraph: {
-    title: string;
-    description: string;
-    image: string;
-    url: string;
-    type: string;
-  };
-  twitter: {
-    card: string;
-    site: string;
-    creator: string;
-  };
-  structuredData?: Record<string, any>;
-}
-
-// Error types
-export interface AppError extends Error {
-  code: string;
-  statusCode: number;
-  context?: Record<string, any>;
-  timestamp: number;
-  userId?: string;
-  sessionId?: string;
-}
-
-export interface ErrorReport {
-  id: string;
-  error: AppError;
-  userAgent: string;
-  url: string;
-  timestamp: number;
-  resolved: boolean;
-  resolvedAt?: number;
-}
-
-// Validation types
-export interface ValidationRule<T = any> {
-  required?: boolean;
-  min?: number;
-  max?: number;
-  minLength?: number;
-  maxLength?: number;
-  pattern?: RegExp;
-  custom?: (value: T) => boolean | string;
-  message?: string;
-}
-
-export interface ValidationSchema<T = Record<string, any>> {
-  [key: string]: ValidationRule<any>;
-}
-
-// State management types
-export interface StateAction<T = any> {
-  type: string;
-  payload?: T;
-  meta?: Record<string, any>;
-}
-
-export interface StateReducer<T = any, A = StateAction> {
-  (state: T, action: A): T;
-}
-
-export interface StateStore<T = any> {
-  state: T;
-  dispatch: (action: StateAction) => void;
-  subscribe: (listener: (state: T) => void) => () => void;
-  getState: () => T;
-}
-
-// API types
-export interface ApiEndpoint {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-  path: string;
-  handler: (req: any, res: any) => Promise<any>;
-  middleware?: Array<(req: any, res: any, next: () => void) => void>;
-  validation?: ValidationSchema;
-  rateLimit?: {
-    windowMs: number;
-    max: number;
-  };
-}
-
-export interface ApiRoute {
-  [key: string]: ApiEndpoint;
-}
-
-// Database types
-export interface DatabaseConfig {
-  host: string;
-  port: number;
-  database: string;
-  username: string;
-  password: string;
-  ssl: boolean;
-  pool: {
-    min: number;
-    max: number;
-    idle: number;
-  };
-}
-
-export interface DatabaseQuery {
-  sql: string;
-  params?: any[];
-  timeout?: number;
-}
-
-export interface DatabaseResult<T = any> {
-  rows: T[];
-  rowCount: number;
-  fields: Array<{
+export interface Config {
+  app: {
     name: string;
-    dataTypeID: number;
-  }>;
+    version: string;
+    environment: 'development' | 'staging' | 'production';
+    debug: boolean;
+  };
+  api: {
+    baseUrl: string;
+    timeout: number;
+    retries: number;
+  };
+  analytics: {
+    enabled: boolean;
+    trackingId?: string;
+    debug: boolean;
+  };
+  monitoring: MonitoringConfig;
+  security: {
+    headers: SecurityHeaders;
+    csp: string;
+  };
+  performance: {
+    budget: PerformanceBudget;
+    monitoring: boolean;
+  };
+  accessibility: {
+    enabled: boolean;
+    strict: boolean;
+    autoFix: boolean;
+  };
+  features: FeatureFlag[];
+  theme: Theme;
 }
 
-// Cache types
-export interface CacheConfig {
-  type: 'memory' | 'redis' | 'file';
-  ttl: number;
-  maxSize?: number;
-  compression?: boolean;
-}
+// Utility types
+export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+export type Required<T, K extends keyof T> = T & { [P in K]-?: T[P] };
+export type DeepPartial<T> = {
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};
+export type NonNullable<T> = T extends null | undefined ? never : T;
+export type ValueOf<T> = T[keyof T];
+export type KeysOfType<T, U> = {
+  [K in keyof T]: T[K] extends U ? K : never;
+}[keyof T];
 
-export interface CacheEntry<T = any> {
-  key: string;
-  value: T;
-  ttl: number;
-  createdAt: number;
-  accessedAt: number;
-}
+// React specific types
+export type ReactComponent<T = {}> = React.ComponentType<T>;
+export type ReactElement = React.ReactElement;
+export type ReactNode = React.ReactNode;
+export type Ref<T> = React.Ref<T>;
+export type RefObject<T> = React.RefObject<T>;
+export type MutableRefObject<T> = React.MutableRefObject<T>;
 
-// Queue types
-export interface QueueConfig {
-  name: string;
-  concurrency: number;
-  retryAttempts: number;
-  retryDelay: number;
-  timeout: number;
-}
-
-export interface QueueJob<T = any> {
-  id: string;
-  type: string;
-  data: T;
-  priority: number;
-  attempts: number;
-  maxAttempts: number;
-  createdAt: number;
-  processedAt?: number;
-  failedAt?: number;
-  error?: string;
-}
-
-// Notification types
-export interface NotificationConfig {
-  type: 'email' | 'sms' | 'push' | 'webhook';
-  template: string;
-  variables: Record<string, any>;
-  recipients: string[];
-  scheduledAt?: number;
-}
-
-export interface NotificationTemplate {
-  id: string;
-  name: string;
-  subject: string;
-  body: string;
-  variables: string[];
-  type: 'email' | 'sms' | 'push';
-}
-
-// File upload types
-export interface FileUpload {
-  id: string;
-  name: string;
-  size: number;
-  type: string;
-  url: string;
-  uploadedAt: number;
-  uploadedBy: string;
-}
-
-export interface FileUploadConfig {
-  maxSize: number;
-  allowedTypes: string[];
-  destination: string;
-  generateThumbnails: boolean;
-  compress: boolean;
-}
-
-// Search types
-export interface SearchConfig {
-  index: string;
-  fields: string[];
-  filters?: Record<string, any>;
-  sort?: Array<{ field: string; direction: 'asc' | 'desc' }>;
-  limit?: number;
-  offset?: number;
-}
-
-export interface SearchResult<T = any> {
-  hits: T[];
-  total: number;
-  took: number;
-  aggregations?: Record<string, any>;
-}
-
-// Export all types
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0b53
+// Event handler types
+export type EventHandler<T = Event> = (event: T) => void;
+export type ChangeEventHandler<T = HTMLInputElement> = (event: React.ChangeEvent<T>) => void;
+export type FormEventHandler<T = HTMLFormElement> = (event: React.FormEvent<T>) => void;
+export type MouseEventHandler<T = HTMLButtonElement> = (event: React.MouseEvent<T>) => void;
+export type KeyboardEventHandler<T = HTMLElement> = (event: React.KeyboardEvent<T>) => void;
+export type FocusEventHandler<T = HTMLElement> = (event: React.FocusEvent<T>) => void;
+export type TouchEventHandler<T = HTMLElement> = (event: React.TouchEvent<T>) => void;
+export type WheelEventHandler<T = HTMLElement> = (event: React.WheelEvent<T>) => void;
+export type DragEventHandler<T = HTMLElement> = (event: React.DragEvent<T>) => void;
+export type ClipboardEventHandler<T = HTMLElement> = (event: React.ClipboardEvent<T>) => void;
+export type AnimationEventHandler<T = HTMLElement> = (event: React.AnimationEvent<T>) => void;
+export type TransitionEventHandler<T = HTMLElement> = (event: React.TransitionEvent<T>) => void;

@@ -41,6 +41,7 @@ const ContentCarousel: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+<<<<<<< HEAD
   return (
     <section className="mb-16" aria-labelledby="carousel-heading">
       <h2 id="carousel-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -60,6 +61,73 @@ const ContentCarousel: React.FC = () => {
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">{slide.title}</h3>
                   <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
                     {slide.description}
+=======
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % contentItems.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
+
+  const formatNumber = (num: number): string => {
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'k';
+    }
+    return num.toString();
+  };return (
+    <div className="bg-gray-50 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Featured Content Spotlight
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our most popular and impactful content that's transforming enterprises worldwide
+          </p>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative">
+          {/* Main carousel content */}
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {/* Image/Visual section */}
+              <div className="relative h-64 lg:h-96 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <div className="text-8xl mb-4">{currentItem.image}</div>
+                  <div className="text-2xl font-bold mb-2">{currentItem.category}</div>
+                  <div className="text-lg opacity-90">{currentItem.readTime}</div>
+                </div>
+                
+                {/* Stats overlay */}
+                {currentItem.stats && (
+                  <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-white">
+                        {formatNumber(currentItem.stats.views)}
+                      </div>
+                      <div className="text-sm text-white opacity-90">views</div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Content section */}
+              <div className="p-8 lg:p-12">
+                <div className="h-full flex flex-col justify-center">
+                  <div className="mb-4">
+                    <span className="inline-block bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {currentItem.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    {currentItem.title}
+                  </h3>
+                  
+                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                    {currentItem.description}
+>>>>>>> resolve-merge-conflicts-1759965566
                   </p>
                 </div>
               </div>

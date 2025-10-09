@@ -65,9 +65,14 @@ const config: AppConfig = {
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
+<<<<<<< HEAD:src/config/appConfig.ts
 export function getConfig<T = unknown>(keyPath: string): T {
   const _keys = keyPath.split('.');
   let value: unknown = config;
+=======
+export function getConfig<T = unknown>(keyPath: string): T {let value: unknown = config;
+
+>>>>>>> resolve-merge-conflicts-1759965566:app/config/appConfig.ts
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key];

@@ -56,9 +56,13 @@ const DEFAULT_ERROR_MESSAGES = {
 /**
  * Get error boundary configuration based on environment
  */
+<<<<<<< HEAD:src/config/errorBoundaryConfig.tsx
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   const _isDevelopment = process.env['NODE_ENV'] === 'development';
   return {
+=======
+export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
+>>>>>>> resolve-merge-conflicts-1759965566:app/config/errorBoundaryConfig.tsx
     logErrors: true,
     showDetails: isDevelopment,
     reportErrors: !isDevelopment,

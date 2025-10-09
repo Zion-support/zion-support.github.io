@@ -21,10 +21,14 @@ const PerformanceDashboard: React.FC = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const _loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+<<<<<<< HEAD:backup-problematic/components/PerformanceDashboard.tsx
+=======
+
+>>>>>>> resolve-merge-conflicts-1759965566:components/PerformanceDashboard.tsx
       setMetrics(prev => ({
         ...prev,
         loadTime: _loadTime,

@@ -1,6 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Globe, Database } from 'lucide-react';
+=======
+
+>>>>>>> resolve-merge-conflicts-1759965566
 
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
@@ -136,11 +140,15 @@ const CybersecurityPage: React.FC = () => {
       category: 'Incident Response',
       technologies: ['Forensic Tools', 'Incident Management', 'Evidence Collection', 'Recovery Tools']
     }
+<<<<<<< HEAD
   ];
 
   const categories = [...new Set(securityServices.map(service => service.category))];
 
   return (
+=======
+  ];return (
+>>>>>>> resolve-merge-conflicts-1759965566
     <>
       <Helmet>
         <title>Cybersecurity Services - Zion Tech Group</title>

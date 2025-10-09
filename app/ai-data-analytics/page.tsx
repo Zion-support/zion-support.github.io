@@ -1,6 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { CheckCircle, Database, Brain, BarChart3, Target } from 'lucide-react';;
+=======
+
+>>>>>>> resolve-merge-conflicts-1759965566
 
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [

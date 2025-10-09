@@ -1,6 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { CheckCircle, Settings, Bot, Workflow, TrendingUp, ArrowRight } from 'lucide-react';;
+=======
+
+>>>>>>> resolve-merge-conflicts-1759965566
 
 const AIWorkflowAutomationPage: React.FC = () => {
   const automationServices = [

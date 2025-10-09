@@ -148,9 +148,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         console.error('Failed to copy error details');
       });
   };
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 >>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
 >>>>>>> cursor/fix-errors-and-merge-to-main-2152
+=======
+
+  // In production, you might want to send this to an error reporting service
+  if (process.env.NODE_ENV === 'production') {
+    // Example: send to error reporting service
+    // errorReportingService.captureException(error, { extra: errorInfo });
+  }
+  }
+
+>>>>>>> resolve-merge-conflicts-1759965566
   render() {
     if (this.state.hasError) {
       // Custom fallback UI

@@ -162,6 +162,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
+<<<<<<< HEAD
   // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
   //   const metaTag = document.createElement('meta');
   //   metaTag.setAttribute(attribute, name);
@@ -227,6 +228,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
+=======
+>>>>>>> resolve-merge-conflicts-1759965566
   return (
     <Helmet>
       {/* Basic Meta Tags */}

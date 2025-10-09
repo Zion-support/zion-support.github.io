@@ -17,10 +17,16 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
+<<<<<<< HEAD:src/hooks/useEnhancedPerformance.ts
     trackAnalytics = true
   } = _options;
   const _mountTimeRef = useRef<number>(0);
   const _renderCountRef = useRef<number>(0);
+=======
+    trackAnalytics = true,
+  } = _options;const _renderCountRef = useRef<number>(0);
+
+>>>>>>> resolve-merge-conflicts-1759965566:app/hooks/useEnhancedPerformance.ts
   useEffect(() => {
     mountTimeRef.current = performance.now();
     renderCountRef.current = 0;
