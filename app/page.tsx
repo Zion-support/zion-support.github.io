@@ -316,34 +316,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Value Proposition Banner */}
-              <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-6 sm:p-8 mb-12 border border-cyan-400/30">
-                <div className="text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 neon-text">
-                    Why Choose Zion Tech Group?
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div className="text-center">
-                      <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                      <div className="text-sm text-gray-300">Successful Projects</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl sm:text-4xl font-bold text-purple-400 mb-2">200+</div>
-                      <div className="text-sm text-gray-300">Happy Clients</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-2">99.9%</div>
-                      <div className="text-sm text-gray-300">Uptime Guarantee</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl sm:text-4xl font-bold text-orange-400 mb-2">24/7</div>
-                      <div className="text-sm text-gray-300">Expert Support</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-<<<<<<< HEAD
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
