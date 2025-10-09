@@ -75,9 +75,13 @@ export class BaseService {
    * Make a GET request
    */
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
-    const _cacheKey = `GET:${endpoint}`;
+    const cacheKey = `GET:${endpoint}`;
     if (useCache) {
+<<<<<<< HEAD
       const cached = this.getFromCache<T>(_cacheKey);
+=======
+      const cached = this.getFromCache<T>(cacheKey);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
       if (cached) return cached;
     }
     try {

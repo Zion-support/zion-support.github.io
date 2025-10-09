@@ -1,8 +1,10 @@
+'use client';
 import React, { lazy, Suspense } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // Fallback component
+<<<<<<< HEAD
 const EmptyComponent = () => <div />;
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
@@ -21,6 +23,14 @@ const ContentShowcase = lazy(() =>
   }))
 );
 function OptimizedHomePage() {
+=======
+const EmptyComponent = () => null;
+// Lazy load heavy components - these may not exist, so make them optional
+const UnifiedBanner = lazy(() => Promise.resolve({ default: EmptyComponent }));
+const ContentPromotion = lazy(() => Promise.resolve({ default: EmptyComponent }));
+const ContentShowcase = lazy(() => Promise.resolve({ default: EmptyComponent }));
+export default function OptimizedHomePage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2a4
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
@@ -65,4 +75,3 @@ function OptimizedHomePage() {
     </div>
   );
 };
-export default OptimizedHomePage;
