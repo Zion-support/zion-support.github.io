@@ -2,15 +2,16 @@
 /**
  * Jest setup file for testing environment
  */
-import React from 'react';
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
-const _originalConsoleError = console.error;
+// eslint-disable-next-line no-console
+const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
 console.error = (...args) => {
-  const _message = args[0]?.toString?.() || args[0]?.message || '';
+  const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;
@@ -57,17 +58,21 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-const _originalConsoleWarn = console.warn;
-const _originalConsoleInfo = console.info;
+// eslint-disable-next-line no-console
+const originalConsoleWarn = console.warn;
+// eslint-disable-next-line no-console
+const originalConsoleInfo = console.info;
+// eslint-disable-next-line no-console
 console.warn = (...args) => {
-  const _message = args[0]?.toString?.() || '';
+  const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
   originalConsoleWarn(...args);
 };
+// eslint-disable-next-line no-console
 console.info = (...args) => {
-  const _message = args[0]?.toString?.() || '';
+  const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
   }
@@ -83,9 +88,10 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return [];
   }
 };
-// Suppress JSDOM navigation warnings
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
+// Additional JSDOM navigation warning suppression
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const suppressNavigationWarnings = (...args: unknown[]) => {
+  if (args[0] && (args[0] as { type?: string; message?: string }).type === 'not implemented' && (args[0] as { type?: string; message?: string }).message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
   originalConsoleError.apply(console, args);

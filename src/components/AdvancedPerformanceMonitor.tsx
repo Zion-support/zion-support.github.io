@@ -29,14 +29,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [];
     // Measure First Contentful Paint (FCP)
-    const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const _fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
-          const _lastEntry = _entries[_entries.length - 1];
+          const entries = list.getEntries();
+          const lastEntry = _entries[_entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -49,14 +49,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('PerformanceObserver' in window) {
       try {
         const fidObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
+          const entries = list.getEntries();
           _entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
               'startTime' in entry
             ) {
-              const _fidEntry = entry as PerformanceEventTiming;
+              const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
                 fid: _fidEntry.processingStart - _fidEntry.startTime
@@ -75,14 +75,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       try {
         let _clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
+          const entries = list.getEntries();
           _entries.forEach(entry => {
             if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
-              const _clsEntry = entry as LayoutShift;
+              const clsEntry = entry as LayoutShift;
               if (!_clsEntry.hadRecentInput) {
                 _clsValue += _clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: _clsValue }));
@@ -98,8 +98,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
     // Measure Time to First Byte (TTFB)
     try {
-      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const _navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
+      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = _navigationEntry
         ? _navigationEntry.responseStart - _navigationEntry.requestStart
         : null;
@@ -129,7 +129,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, []);
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
-    const _resources = performance.getEntriesByType('resource');
+    const resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
@@ -180,7 +180,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, []);
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
-    const _cleanup = measureWebVitals();
+    const cleanup = measureWebVitals();
     measureResourceTiming();
     measureCoreWebVitals();
     // Monitor performance every 5 seconds
@@ -232,7 +232,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
     return recommendations;
   }, [metrics]);
-  const _recommendations = getPerformanceRecommendations();
+  const recommendations = getPerformanceRecommendations();
   if (process.env['NODE_ENV'] === 'development') {
     return (
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
