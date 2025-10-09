@@ -25,9 +25,9 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
+          <div className="lg:col-span-2 space-y-4">
             <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, 
@@ -49,15 +49,29 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Services</h3>
+            <h3 className="text-lg font-semibold text-white">AI Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link href="/ai-automation" className="text-gray-300 hover:text-white transition-colors">AI Automation</Link></li>
+              <li><Link href="/ai-marketing" className="text-gray-300 hover:text-white transition-colors">AI Marketing</Link></li>
+              <li><Link href="/ai-healthcare" className="text-gray-300 hover:text-white transition-colors">AI Healthcare</Link></li>
+              <li><Link href="/ai-fintech" className="text-gray-300 hover:text-white transition-colors">AI Fintech</Link></li>
+              <li><Link href="/ai-content-generation" className="text-gray-300 hover:text-white transition-colors">AI Content</Link></li>
+            </ul>
+          </div>
+
+          {/* Technology Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Technology</h3>
+            <ul className="space-y-2 text-sm">
               <li><Link href="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">Quantum Computing</Link></li>
               <li><Link href="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">Autonomous Systems</Link></li>
               <li><Link href="/business-intelligence" className="text-gray-300 hover:text-white transition-colors">Business Intelligence</Link></li>
               <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li><Link href="/blockchain" className="text-gray-300 hover:text-white transition-colors">Blockchain & Web3</Link></li>
+              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SAAS</Link></li>
             </ul>
           </div>
 
@@ -70,13 +84,17 @@ const Footer: React.FC = memo(() => {
               <li><Link href="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</Link></li>
               <li><Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/privacy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-gray-300 hover:text-white transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
+        </div>
 
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Contact</h3>
+        {/* Contact Info Section */}
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-3 text-sm">
+              <h4 className="text-lg font-semibold text-white">Contact Information</h4>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-gray-400" />
                 <a href="tel:+13026009898" className="text-gray-300 hover:text-white transition-colors">
@@ -95,6 +113,26 @@ const Footer: React.FC = memo(() => {
                   <div>364 E Main St STE 1008</div>
                   <div>Middletown, DE 19709</div>
                 </div>
+              </div>
+            </div>
+            <div className="space-y-3 text-sm">
+              <h4 className="text-lg font-semibold text-white">Business Hours</h4>
+              <div className="flex items-center space-x-3">
+                <Clock className="h-4 w-4 text-gray-400" />
+                <div className="text-gray-300">
+                  <div>Monday - Friday: 9:00 AM - 6:00 PM EST</div>
+                  <div>Saturday: 10:00 AM - 4:00 PM EST</div>
+                  <div>Sunday: Closed</div>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-3 text-sm">
+              <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+              <div className="space-y-2">
+                <Link href="/services" className="block text-gray-300 hover:text-white transition-colors">All Services</Link>
+                <Link href="/contact" className="block text-gray-300 hover:text-white transition-colors">Get Quote</Link>
+                <Link href="/careers" className="block text-gray-300 hover:text-white transition-colors">Join Our Team</Link>
+                <Link href="/blog" className="block text-gray-300 hover:text-white transition-colors">Latest News</Link>
               </div>
             </div>
           </div>
