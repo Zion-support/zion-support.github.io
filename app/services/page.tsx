@@ -35,7 +35,7 @@ const ServicesPage: React.FC = () => {
           price: 'Starting at $1,400/month',
           features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling']
         }
-      ]
+      ],
       title: 'IT Services',
       icon: Cloud,
       color: 'text-blue-400',

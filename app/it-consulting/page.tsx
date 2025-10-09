@@ -52,9 +52,14 @@ import Footer from '../components/Footer';
                     </ul>
 
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-gray-700">
                           <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
                           {benefit}
+                        </li>
+                      ))}
+                    </ul>
 
                   <div className="text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
