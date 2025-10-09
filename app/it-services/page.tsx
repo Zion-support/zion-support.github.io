@@ -1,5 +1,5 @@
 'use client';
-<<<<<<< HEAD
+
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -246,11 +246,6 @@ import {
   Basket as BasketIcon,
   Bag as BagIcon
 } from 'lucide-react';
-=======
-
-import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Search as SearchIcon, FileText as FileTextIcon, Grid, Megaphone, Package, Server, Network, HardDrive, Monitor, Printer, Router, Wifi, Database as DatabaseIcon, Cloud as CloudIcon, Shield as ShieldIcon, Settings as SettingsIcon, Wrench as WrenchIcon, Hammer as HammerIcon, Paintbrush as PaintbrushIcon, Scissors as ScissorsIcon, BookOpen as BookOpenIcon, Calculator as CalculatorIcon, Clock3 as Clock3Icon, Compass as CompassIcon, Navigation as NavigationIcon, Home as HomeIcon, Heart as HeartIcon, Stethoscope as StethoscopeIcon, GraduationCap as GraduationCapIcon, Briefcase as BriefcaseIcon, Car as CarIcon, Plane as PlaneIcon, Ship as ShipIcon, Train as TrainIcon, Factory as FactoryIcon, Building as BuildingIcon, ShoppingCart as ShoppingCartIcon, CreditCard as CreditCardIcon, Gamepad2 as Gamepad2Icon, Music as MusicIcon, Video as VideoIcon, Camera as CameraIcon, Palette as PaletteIcon, Bot as BotIcon, Search as SearchIconIcon, FileText as FileTextIconIcon } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
