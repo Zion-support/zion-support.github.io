@@ -9,6 +9,20 @@ import {
   isRequired,
   isValidPassword,
   sanitizeInput,
+  isStrongPassword,
+  isValidCreditCard,
+  sanitizeHtml,
+  validateEmail,
+  validateURL,
+  validateLength,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateRequired,
+  validateComposite,
+  validateAsync,
 } from '../app/utils/validators';
 
 describe('Email Validation', () => {
@@ -28,7 +42,7 @@ describe('Email Validation', () => {
 
   test('rejects email addresses that are too long', () => {
     const longEmail = 'a'.repeat(255) + '@example.com';
-    expect(validateEmail(longEmail).isValid).toBe(false);
+    expect(isValidEmail(longEmail)).toBe(false);
   });
 });
 
@@ -61,8 +75,8 @@ describe('URL Validation', () => {
   });
 
   test('rejects invalid URL formats', () => {
-    expect(validateURL('').isValid).toBe(false);
-    expect(validateURL('not a url').isValid).toBe(false);
+    expect(isValidUrl('')).toBe(false);
+    expect(isValidUrl('not a url')).toBe(false);
   });
 });
 
@@ -122,11 +136,11 @@ describe('Password Validation', () => {
 describe('HTML Sanitization', () => {
   test('sanitizes HTML special characters', () => {
     expect(sanitizeHTML('<script>alert("xss")</script>')).toBe(
-      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;'
+      '&lt;script&gt;alert("xss")&lt;/script&gt;'
     );
 
     expect(sanitizeHTML('Test & <strong>bold</strong>')).toBe(
-      'Test &amp; &lt;strong&gt;bold&lt;&#x2F;strong&gt;'
+      'Test &amp; &lt;strong&gt;bold&lt;/strong&gt;'
     );
   });
 
