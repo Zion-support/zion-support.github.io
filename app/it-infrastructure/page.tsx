@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
@@ -197,13 +199,9 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: '100%', description: 'Security Compliance' }
   ];
   return (
-    <>
-      <Helmet>
-        <title>IT Infrastructure Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
-        <meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <Navigation />
+      <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -441,7 +439,6 @@ const ITInfrastructurePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 export default ITInfrastructurePage;

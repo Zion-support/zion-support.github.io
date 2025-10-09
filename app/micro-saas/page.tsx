@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
@@ -1585,7 +1587,6 @@ const MicroSAASPage: React.FC = () => {
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     // Additional Real Micro SAAS Services
     {
       title: 'AI Invoice Generator Pro',
@@ -1719,7 +1720,7 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/website-builder',
       popular: true
-=======
+    },
 
     // NEW COMPREHENSIVE MICRO SAAS SERVICES
 
@@ -2139,7 +2140,6 @@ const MicroSAASPage: React.FC = () => {
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
     }
   ];
   const categories = [
@@ -2168,12 +2168,9 @@ const MicroSAASPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
-        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
-      </Helmet>
-      {/* Hero Section */}
+      <Navigation />
+      <main>
+            {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">

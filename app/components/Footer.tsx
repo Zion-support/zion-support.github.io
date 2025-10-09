@@ -53,12 +53,12 @@ const Footer: React.FC = memo(() => {
     hours: 'Mon-Fri: 9AM-6PM EST'
   };
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white cyber-glow">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 neon-glow">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -74,7 +74,7 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">IT Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 neon-glow">IT Services</h3>
             <ul className="space-y-2">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -90,7 +90,7 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 neon-glow">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -106,7 +106,7 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* Support & Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 neon-glow">Support</h3>
             <ul className="space-y-2 mb-6">
               {supportLinks.map((link, index) => (
                 <li key={index}>

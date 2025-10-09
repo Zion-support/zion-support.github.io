@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
@@ -138,12 +140,9 @@ const CybersecurityPage: React.FC = () => {
   ];
   const categories = [...new Set(securityServices.map(service => service.category))];
   return (
-    <>
-      <Helmet>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity services including threat detection, penetration testing, zero trust security, and comprehensive security solutions." />
-        <meta name="keywords" content="cybersecurity services, threat detection, penetration testing, zero trust, security consulting, SOC services" />      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
+      <Navigation />
+      <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -344,7 +343,6 @@ const CybersecurityPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 export default CybersecurityPage;
