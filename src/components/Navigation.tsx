@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:src/components/Navigation.tsx
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
@@ -262,7 +261,6 @@ const Navigation: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              )}
             </div>
 
             <Link 
@@ -355,7 +353,10 @@ const Navigation: React.FC = () => {
                               href={service.path}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
                             >
-                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
+                              {typeof service.icon === 'string' ? service.icon : (() => {
+                                const IconComponent = service.icon;
+                                return <IconComponent className="w-3 h-3 inline mr-1" />;
+                              })()} {service.name}
                             </Link>
                           ))}
                           <Link
@@ -368,7 +369,7 @@ const Navigation: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                )}
               </div>
 
           {/* Contact Info */}

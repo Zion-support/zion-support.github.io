@@ -439,22 +439,14 @@ body {
   }
 }
 
-<<<<<<< HEAD
-@media (max-width: 480px) {
-=======
 /* Enhanced Responsive Design */
 @media (max-width: 640px) {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   .cyber-grid {
     background-size: 20px 20px;
   }
   
   .neon-text {
-<<<<<<< HEAD
-    font-size: 1.2rem;
-=======
     font-size: 1.25rem;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   }
   
   .cyber-text {
@@ -464,17 +456,13 @@ body {
   
   .cyber-card {
     padding: 0.75rem;
-<<<<<<< HEAD
-=======
     margin: 0.5rem;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   }
   
   .cyber-button {
     padding: 8px 16px;
     font-size: 0.8rem;
   }
-<<<<<<< HEAD
 }
 
 /* Loading Animations */
@@ -846,7 +834,7 @@ body {
   
   .quantum-field {
     animation-duration: 3s;
-=======
+  }
   
   .holographic-text {
     font-size: 2rem;
@@ -858,47 +846,11 @@ body {
   
   .hologram-card {
     padding: 0.75rem;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   }
 }
 
 @media (max-width: 480px) {
   .cyber-grid {
-<<<<<<< HEAD
-    background-size: 10px 10px;
-  }
-  
-  .neon-text {
-    text-shadow: 
-      0 0 2px #00ffff,
-      0 0 4px #00ffff,
-      0 0 6px #00ffff;
-  }
-  
-  .cyber-text-3d {
-    transform: perspective(300px) rotateX(5deg);
-  }
-}
-
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  .cyber-text-3d {
-    transform: none;
-  }
-  
-  .quantum-field {
-    animation: none;
-  }
-}
-=======
     background-size: 15px 15px;
   }
   
@@ -1039,5 +991,3 @@ body {
     border-color: rgba(0, 0, 0, 0.1);
   }
 }
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
