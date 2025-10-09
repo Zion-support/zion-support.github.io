@@ -1,160 +1,75 @@
 #!/usr/bin/env node
 
-/**
- * Performance Optimizer for Zion Tech Group Website
- * Optimizes images, CSS, and JavaScript for better performance
- */
-
 const fs = require('fs');
 const path = require('path');
 
 console.log('🚀 Starting performance optimization...');
 
-// Optimize CSS by removing unused styles
-function optimizeCSS() {
-  console.log('📝 Optimizing CSS...');
-  
-  const cssPath = path.join(__dirname, '../dist/assets');
-  if (fs.existsSync(cssPath)) {
-    const files = fs.readdirSync(cssPath);
-    const cssFiles = files.filter(file => file.endsWith('.css'));
+// Remove console.log statements from production code
+function removeConsoleLogs(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
     
-    cssFiles.forEach(file => {
-      const filePath = path.join(cssPath, file);
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Remove unused CSS rules (basic optimization)
-      content = content
-        .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
-        .replace(/\s+/g, ' ') // Minify whitespace
-        .replace(/;\s*}/g, '}') // Remove unnecessary semicolons
-        .replace(/:\s+/g, ':') // Remove space after colons
-        .replace(/,\s+/g, ',') // Remove space after commas
-        .trim();
-      
+    // Remove console.log, console.warn, console.error statements
+    content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);?\s*/g, '');
+    
+    // Remove empty lines that might be left behind
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Optimized ${file}`);
+      console.log(`✅ Cleaned console statements in: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Process all TypeScript and JavaScript files
+function processFiles(dir) {
+  let processedCount = 0;
+  let cleanedCount = 0;
+  
+  function walkDir(currentPath) {
+    const files = fs.readdirSync(currentPath);
+    
+    files.forEach(file => {
+      const filePath = path.join(currentPath, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and dist directories
+        if (!['node_modules', 'dist', '.git', '.next'].includes(file)) {
+          walkDir(filePath);
+        }
+      } else if (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js') || file.endsWith('.jsx')) {
+        processedCount++;
+        
+        if (removeConsoleLogs(filePath)) {
+          cleanedCount++;
+        }
+      }
     });
   }
+  
+  walkDir(dir);
+  
+  console.log(`\n📊 Performance Optimization Summary:`);
+  console.log(`   Files processed: ${processedCount}`);
+  console.log(`   Files with console statements cleaned: ${cleanedCount}`);
 }
 
-// Optimize HTML
-function optimizeHTML() {
-  console.log('📄 Optimizing HTML...');
-  
-  const htmlPath = path.join(__dirname, '../dist/index.html');
-  if (fs.existsSync(htmlPath)) {
-    let content = fs.readFileSync(htmlPath, 'utf8');
-    
-    // Remove unnecessary whitespace
-    content = content
-      .replace(/\s+/g, ' ')
-      .replace(/>\s+</g, '><')
-      .trim();
-    
-    fs.writeFileSync(htmlPath, content);
-    console.log('✅ Optimized index.html');
-  }
+// Main execution
+const srcDir = path.join(__dirname, '..', 'src');
+
+if (fs.existsSync(srcDir)) {
+  processFiles(srcDir);
+  console.log('\n🎉 Performance optimization completed successfully!');
+} else {
+  console.error('❌ Source directory not found:', srcDir);
+  process.exit(1);
 }
-
-// Add performance hints
-function addPerformanceHints() {
-  console.log('⚡ Adding performance hints...');
-  
-  const htmlPath = path.join(__dirname, '../dist/index.html');
-  if (fs.existsSync(htmlPath)) {
-    let content = fs.readFileSync(htmlPath, 'utf8');
-    
-    // Add resource hints
-    const resourceHints = `
-    <link rel="preload" href="/assets/vendor-avszxO8f.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-Djua46cn.css" as="style">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`;
-    
-    // Insert before closing head tag
-    content = content.replace('</head>', `${resourceHints}\n</head>`);
-    
-    fs.writeFileSync(htmlPath, content);
-    console.log('✅ Added performance hints');
-  }
-}
-
-// Generate sitemap
-function generateSitemap() {
-  console.log('🗺️ Generating sitemap...');
-  
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ziontechgroup.com</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-services</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-</urlset>`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/sitemap.xml'), sitemap);
-  console.log('✅ Generated sitemap.xml');
-}
-
-// Generate robots.txt
-function generateRobotsTxt() {
-  console.log('🤖 Generating robots.txt...');
-  
-  const robots = `User-agent: *
-Allow: /
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Performance hints
-Crawl-delay: 1`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/robots.txt'), robots);
-  console.log('✅ Generated robots.txt');
-}
-
-// Main optimization function
-function optimize() {
-  try {
-    optimizeCSS();
-    optimizeHTML();
-    addPerformanceHints();
-    generateSitemap();
-    generateRobotsTxt();
-    
-    console.log('🎉 Performance optimization completed successfully!');
-    console.log('📊 Optimizations applied:');
-    console.log('  - CSS minification and cleanup');
-    console.log('  - HTML minification');
-    console.log('  - Resource hints added');
-    console.log('  - Sitemap generated');
-    console.log('  - Robots.txt generated');
-  } catch (error) {
-    console.error('❌ Error during optimization:', error);
-    process.exit(1);
-  }
-}
-
-// Run optimization
-optimize();

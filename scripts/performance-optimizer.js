@@ -1,74 +1,75 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+#!/usr/bin/env node
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const fs = require('fs');
+const path = require('path');
 
-// Performance optimization script
-function optimizePerformance() {
-  // console.log('🚀 Starting performance optimization...');
-  
-  // 1. Optimize images
-  // console.log('📸 Optimizing images...');
-  optimizeImages();
-  
-  // 2. Optimize CSS
-  // console.log('🎨 Optimizing CSS...');
-  optimizeCSS();
-  
-  // 3. Optimize JavaScript
-  // console.log('⚡ Optimizing JavaScript...');
-  optimizeJavaScript();
-  
-  // 4. Generate performance report
-  // console.log('📊 Generating performance report...');
-  generatePerformanceReport();
-  
-  // console.log('✅ Performance optimization completed!');
-}
+console.log('🚀 Starting performance optimization...');
 
-function optimizeImages() {
-  // This would typically use sharp or imagemin
-  // console.log('  - Image optimization would be implemented here');
-}
-
-function optimizeCSS() {
-  // This would typically use postcss plugins
-  // console.log('  - CSS optimization would be implemented here');
-}
-
-function optimizeJavaScript() {
-  // This would typically use terser or esbuild
-  // console.log('  - JavaScript optimization would be implemented here');
-}
-
-function generatePerformanceReport() {
-  const report = {
-    timestamp: new Date().toISOString(),
-    optimizations: [
-      'CSS import order fixed',
-      'Duplicate package.json keys removed',
-      'Merge conflicts resolved',
-      'Build configuration optimized',
-      'Bundle size optimized'
-    ],
-    metrics: {
-      bundleSize: '134.15 kB (vendor)',
-      cssSize: '23.74 kB',
-      buildTime: '2.58s',
-      warnings: 0,
-      errors: 0
+// Remove console.log statements from production code
+function removeConsoleLogs(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Remove console.log, console.warn, console.error statements
+    content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);?\s*/g, '');
+    
+    // Remove empty lines that might be left behind
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Cleaned console statements in: ${filePath}`);
+      return true;
     }
-  };
-  
-  fs.writeFileSync(
-    path.join(__dirname, '../performance-report.json'),
-    JSON.stringify(report, null, 2)
-  );
-  
-  // console.log('  - Performance report generated: performance-report.json');
+    return false;
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Run optimization
-optimizePerformance();
+// Process all TypeScript and JavaScript files
+function processFiles(dir) {
+  let processedCount = 0;
+  let cleanedCount = 0;
+  
+  function walkDir(currentPath) {
+    const files = fs.readdirSync(currentPath);
+    
+    files.forEach(file => {
+      const filePath = path.join(currentPath, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and dist directories
+        if (!['node_modules', 'dist', '.git', '.next'].includes(file)) {
+          walkDir(filePath);
+        }
+      } else if (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js') || file.endsWith('.jsx')) {
+        processedCount++;
+        
+        if (removeConsoleLogs(filePath)) {
+          cleanedCount++;
+        }
+      }
+    });
+  }
+  
+  walkDir(dir);
+  
+  console.log(`\n📊 Performance Optimization Summary:`);
+  console.log(`   Files processed: ${processedCount}`);
+  console.log(`   Files with console statements cleaned: ${cleanedCount}`);
+}
+
+// Main execution
+const srcDir = path.join(__dirname, '..', 'src');
+
+if (fs.existsSync(srcDir)) {
+  processFiles(srcDir);
+  console.log('\n🎉 Performance optimization completed successfully!');
+} else {
+  console.error('❌ Source directory not found:', srcDir);
+  process.exit(1);
+}
