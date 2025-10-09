@@ -384,10 +384,6 @@ const Navigation: React.FC = () => {
               <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </a>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-de8d
->>>>>>> origin/main
               
               <div className="pt-4 border-t border-gray-700">
                 <a
