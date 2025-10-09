@@ -1,9 +1,35 @@
 import { MetadataRoute } from 'next'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
-  const routes = [
+  
+  // Static pages
+  const staticPages = [
     '',
     '/about',
+    '/contact',
+    '/team',
+    '/careers',
+    '/privacy',
+    '/terms',
+    '/cookies',
+    '/gdpr',
+    '/compliance',
+    '/support',
+    '/docs',
+    '/api-docs',
+    '/status',
+    '/system-status',
+    '/news',
+    '/case-studies',
+    '/consultation',
+    '/demo',
+    '/pricing',
+    '/offline',
+  ]
+
+  // AI Services pages
+  const aiServices = [
     '/ai-services',
     '/ai-marketing',
     '/ai-automation',
@@ -12,49 +38,83 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ai-content-generation',
     '/ai-data-analytics',
     '/ai-cybersecurity',
-    '/ai-workflow-automation',
-    '/ai-cloud-infrastructure',
-    '/ai-ecommerce-solutions',
+    '/ai-lead-generation',
+    '/ai-document-processing',
     '/ai-mobile-app-development',
-    '/ai-sales-automation',
-    '/ai-data-visualization',
-    '/ai-customer-support',
+    '/ai-ecommerce-solutions',
+    '/ai-chatbot-builder',
+    '/ai-voice-cloning',
+    '/ai-writing-assistant',
+    '/ai-scheduler',
+    '/ai-email-assistant',
+    '/ai-3d-generation',
+    '/ai-analytics-dashboard',
+    '/ai-crm',
+  ]
+
+  // IT Services pages
+  const itServices = [
     '/it-services',
-    '/it-infrastructure',
-    '/cybersecurity',
     '/cloud-services',
+    '/cybersecurity',
     '/devops',
     '/database',
     '/networking',
-    '/micro-saas',
-    '/quantum-computing',
-    '/autonomous-systems',
-    '/blockchain-web3',
-    '/iot-edge-computing',
-    '/business-intelligence',
-    '/robotics',
-    '/enterprise',
-    '/case-studies',
-    '/blog',
-    '/contact',
-    '/team',
-    '/careers',
-    '/news',
-    '/docs',
-    '/api-docs',
-    '/support',
-    '/status',
-    '/privacy',
-    '/terms',
-    '/cookies',
-    '/gdpr',
+    '/it-infrastructure',
     '/security',
-    '/compliance'
   ]
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
+
+  // Micro SAAS pages
+  const microSaas = [
+    '/micro-saas',
+    '/business-apps',
+    '/productivity',
+    '/marketing-tools',
+    '/developer-tools',
+    '/expense-tracker',
+    '/task-manager-pro',
+  ]
+
+  // Emerging Tech pages
+  const emergingTech = [
+    '/quantum-computing',
+    '/robotics',
+    '/iot-edge-computing',
+    '/blockchain-web3',
+    '/business-intelligence',
+    '/autonomous-systems',
+    '/blockchain',
+    '/iot-edge',
+  ]
+
+  // Other pages
+  const otherPages = [
+    '/analytics-tools',
+    '/business-intelligence',
+    '/smart-analytics',
+  ]
+
+  // Blog pages (assuming they exist)
+  const blogPages = Array.from({ length: 29 }, (_, i) => `/blog/post-${i + 1}`)
+
+  // Combine all pages
+  const allPages = [
+    ...staticPages,
+    ...aiServices,
+    ...itServices,
+    ...microSaas,
+    ...emergingTech,
+    ...otherPages,
+    ...blogPages,
+  ]
+
+  return allPages.map((page) => ({
+    url: `${baseUrl}${page}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8
+    changeFrequency: page.includes('/blog/') ? 'weekly' : 'monthly',
+    priority: page === '' ? 1.0 : 
+             page.includes('/ai-services') || page.includes('/it-services') ? 0.9 :
+             page.includes('/about') || page.includes('/contact') ? 0.8 :
+             page.includes('/blog/') ? 0.7 : 0.6,
   }))
 }

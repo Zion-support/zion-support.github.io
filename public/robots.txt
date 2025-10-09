@@ -12,12 +12,38 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
-Disallow: /*.json$
-Disallow: /*.xml$
+Disallow: /test/
+Disallow: /debug/
 
 # Allow important pages
-Allow: /contact
-Allow: /about
-Allow: /services
-Allow: /ai-services
-Allow: /blog
+Allow: /ai-services/
+Allow: /it-services/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /team/
+Allow: /careers/
+
+# Block common bot traps
+Disallow: /*.json$
+Disallow: /*?*utm_*
+Disallow: /*?*ref=*
+Disallow: /*?*source=*
+Disallow: /*?*campaign=*
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
