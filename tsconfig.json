@@ -26,31 +26,31 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "app/*"
       ],
       "@/components/*": [
-        "src/components/*"
+        "app/components/*"
       ],
       "@/pages/*": [
-        "src/pages/*"
+        "app/pages/*"
       ],
       "@/utils/*": [
-        "src/utils/*"
+        "app/utils/*"
       ],
       "@/types/*": [
-        "src/types/*"
+        "app/types/*"
       ],
       "@/hooks/*": [
-        "src/hooks/*"
+        "app/hooks/*"
       ],
       "@/config/*": [
-        "src/config/*"
+        "app/config/*"
       ],
       "@/data/*": [
-        "src/data/*"
+        "app/data/*"
       ],
       "@/content/*": [
-        "src/content/*"
+        "app/content/*"
       ]
     },
     "incremental": true,

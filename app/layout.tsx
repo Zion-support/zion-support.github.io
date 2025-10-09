@@ -1,6 +1,6 @@
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import ErrorBoundary from './components/ErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 export default function RootLayout({
   children
 }: {
@@ -177,10 +177,10 @@ export default function RootLayout({
         />
       </head>
       <body className='antialiased'>
-        <ErrorBoundary>
+        <EnhancedErrorBoundary>
           <PerformanceMonitor />
           {children}
-        </ErrorBoundary>
+        </EnhancedErrorBoundary>
       </body>
     </html>
   );

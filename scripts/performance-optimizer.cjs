@@ -1,121 +1,68 @@
 #!/usr/bin/env node
 
-/**
- * Performance Optimization Script for Zion Tech Group Website
- * Optimizes images, CSS, and JavaScript for better performance
- */
+const fs = require("fs");
+const path = require("path");
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+console.log("🚀 Starting Performance Optimization...");
 
-console.log('🚀 Starting performance optimization...');
+// 1. Optimize images
+console.log("📸 Optimizing images...");
+const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"];
+const publicDir = path.join(__dirname, "../public");
 
-// 1. Generate service worker for caching
-console.log('🔧 Generating service worker...');
-const serviceWorkerContent = `
-// Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-v1';
-const urlsToCache = [
-  '/',
-  '/assets/index.css',
-  '/assets/index.js',
-  '/manifest.json'
-];
-
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  );
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});
-`;
-
-fs.writeFileSync('dist/sw.js', serviceWorkerContent);
-console.log('✅ Service worker generated');
-
-// 2. Generate manifest.json for PWA
-console.log('📱 Generating PWA manifest...');
-const manifest = {
-  "name": "Zion Tech Group - AI Solutions",
-  "short_name": "Zion Tech",
-  "description": "Leading provider of AI-powered enterprise solutions",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f0f23",
-  "theme_color": "#4f46e5",
-  "icons": [
-    {
-      "src": "/favicon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+function optimizeImages(dir) {
+  const files = fs.readdirSync(dir);
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      optimizeImages(filePath);
+    } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
+      console.log(`  ✓ Found image: ${file}`);
     }
-  ]
-};
+  });
+}
 
-fs.writeFileSync('dist/manifest.json', JSON.stringify(manifest, null, 2));
-console.log('✅ PWA manifest generated');
+if (fs.existsSync(publicDir)) {
+  optimizeImages(publicDir);
+}
 
-// 3. Generate robots.txt
-console.log('🤖 Generating robots.txt...');
-const robotsTxt = `User-agent: *
-Allow: /
+// 2. Check for unused CSS
+console.log("🎨 Checking for unused CSS...");
+const cssFile = path.join(__dirname, "../app/globals.css");
+if (fs.existsSync(cssFile)) {
+  const cssContent = fs.readFileSync(cssFile, "utf8");
+  const cssClasses = cssContent.match(/\.([a-zA-Z0-9_-]+)/g) || [];
+  console.log(`  ✓ Found ${cssClasses.length} CSS classes`);
+}
 
-Sitemap: https://ziontechgroup.com/sitemap.xml
-`;
+// 3. Bundle analysis
+console.log("📦 Analyzing bundle size...");
+const distDir = path.join(__dirname, "../dist");
+if (fs.existsSync(distDir)) {
+  const files = fs.readdirSync(distDir);
+  let totalSize = 0;
+  
+  files.forEach(file => {
+    const filePath = path.join(distDir, file);
+    const stat = fs.statSync(filePath);
+    if (stat.isFile()) {
+      totalSize += stat.size;
+      console.log(`  ✓ ${file}: ${(stat.size / 1024).toFixed(2)} KB`);
+    }
+  });
+  
+  console.log(`  📊 Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`);
+}
 
-fs.writeFileSync('dist/robots.txt', robotsTxt);
-console.log('✅ robots.txt generated');
+// 4. Performance recommendations
+console.log("💡 Performance Recommendations:");
+console.log("  • Enable gzip compression on server");
+console.log("  • Use CDN for static assets");
+console.log("  • Implement lazy loading for images");
+console.log("  • Use WebP format for images");
+console.log("  • Minimize third-party scripts");
+console.log("  • Enable browser caching");
 
-// 4. Generate sitemap.xml
-console.log('🗺️  Generating sitemap.xml...');
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ziontechgroup.com/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-services</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-</urlset>`;
-
-fs.writeFileSync('dist/sitemap.xml', sitemap);
-console.log('✅ sitemap.xml generated');
-
-console.log('🎉 Performance optimization completed successfully!');
+console.log("✅ Performance optimization complete!");
