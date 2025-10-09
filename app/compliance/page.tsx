@@ -13,7 +13,6 @@ const CompliancePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
@@ -242,7 +241,6 @@ const CompliancePage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Compliance & Certifications</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             We maintain the highest standards of security and compliance to protect your data and ensure regulatory adherence.
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
           </p>
         </section>
 
@@ -299,17 +297,11 @@ const CompliancePage: React.FC = () => {
           <div className="mt-8 text-sm text-blue-200">
             <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-=======
-        </section>
       </main>
       
       <Footer />
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     </div>
   );
 };

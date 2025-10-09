@@ -74,7 +74,10 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' }
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Automated sales processes' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Interactive data visualization' }
       ]
     },
     {
@@ -84,14 +87,16 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-admin', description: 'System management' }
+        { name: 'System Administration', path: '/system-admin', description: 'System management' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT consulting' },
+        { name: 'IT Support', path: '/it-support', description: '24/7 technical support' }
       ]
     },
     {
@@ -101,12 +106,16 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '50+ ready-to-use apps' },
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
         { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
         { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
         { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' }
+        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
+        { name: 'AI Tools', path: '/ai-tools', description: 'AI-powered utilities' },
+        { name: 'Productivity Tools', path: '/productivity-tools', description: 'Efficiency applications' },
+        { name: 'Security Tools', path: '/security-tools', description: 'Security utilities' },
+        { name: 'Finance Tools', path: '/finance-tools', description: 'Financial applications' }
       ]
     },
     {
@@ -121,7 +130,10 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' }
+        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
+        { name: 'E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'AI-powered e-commerce' },
+        { name: 'Mobile Development', path: '/ai-mobile-app-development', description: 'Mobile applications' },
+        { name: 'Enterprise Solutions', path: '/enterprise', description: 'Enterprise-grade solutions' }
       ]
     }
   ];
@@ -301,21 +313,32 @@ const Navigation: React.FC = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {servicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
+                  <div className="ml-4 space-y-3 mt-2">
                     {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex} className="space-y-1">
-                        <div className="text-cyan-400 font-semibold text-sm">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 4).map((service, serviceIndex) => (
+                      <div key={categoryIndex} className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <category.icon className="w-4 h-4 text-cyan-400" />
+                          <div className="text-cyan-400 font-semibold text-sm">{category.title}</div>
+                        </div>
+                        <div className="ml-6 space-y-1">
+                          {category.services.slice(0, 5).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               href={service.path}
-                              className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 text-sm"
+                              className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 text-sm group"
                               onClick={closeAllMenus}
                             >
-                              {service.name}
+                              <div className="font-medium">{service.name}</div>
+                              <div className="text-xs text-gray-500 group-hover:text-gray-400">
+                                {service.description}
+                              </div>
                             </Link>
                           ))}
+                          {category.services.length > 5 && (
+                            <div className="text-xs text-cyan-400 font-medium">
+                              +{category.services.length - 5} more services
+                            </div>
+                          )}
                         </div>
                       </div>
                     ))}
