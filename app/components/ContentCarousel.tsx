@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const ContentCarousel: React.FC = () => {
   return (
@@ -20,7 +19,6 @@ const ContentCarousel: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-4">Digital Transformation</h3>
             <p className="text-gray-300">Transform your business with our digital solutions.</p>
           </div>
-=======
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -125,9 +123,5 @@ const ContentCarousel: React.FC = () => {
     </section>
   );
 };
-<<<<<<< HEAD
-export default ContentCarousel;
-=======
 
 export default ContentCarousel;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d

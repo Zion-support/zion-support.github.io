@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 const ContentStatistics: React.FC = () => {
   return (
     <section className="py-16 px-4">
@@ -21,7 +20,6 @@ const ContentStatistics: React.FC = () => {
             <div className="text-gray-300">Support Available</div>
           </div>
         </div>
-=======
 
 const ContentStatistics: React.FC = () => {
   const stats = [
@@ -72,9 +70,5 @@ const ContentStatistics: React.FC = () => {
     </section>
   );
 };
-<<<<<<< HEAD
-export default ContentStatistics;
-=======
 
 export default ContentStatistics;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d

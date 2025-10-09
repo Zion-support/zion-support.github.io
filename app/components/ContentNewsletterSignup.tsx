@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const ContentNewsletterSignup: React.FC = () => {
   return (
@@ -19,7 +18,6 @@ const ContentNewsletterSignup: React.FC = () => {
           <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
             Subscribe
           </button>
-=======
 'use client';
 
 import React, { useState } from 'react';
@@ -106,9 +104,5 @@ const ContentNewsletterSignup: React.FC = () => {
     </section>
   );
 };
-<<<<<<< HEAD
-export default ContentNewsletterSignup;
-=======
 
 export default ContentNewsletterSignup;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d

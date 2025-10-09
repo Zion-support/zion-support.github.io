@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 const ContentPromotionBanner: React.FC = () => {
   return (
     <section className="py-16 px-4">
@@ -23,7 +22,6 @@ const ContentPromotionBanner: React.FC = () => {
   );
 };
 export default ContentPromotionBanner;
-=======
 
 const ContentPromotionBanner: React.FC = () => {
   return (
