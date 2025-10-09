@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
@@ -72,12 +73,21 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+<<<<<<< HEAD
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
         { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
         { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
         { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
         { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
         { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
+=======
+        { name: 'Machine Learning Models', path: '/machine-learning-models', description: 'Custom ML development' },
+        { name: 'Computer Vision', path: '/computer-vision', description: 'Image recognition & analysis' },
+        { name: 'Natural Language Processing', path: '/natural-language-processing', description: 'Text & language AI' },
+        { name: 'AI Chatbots & Virtual Assistants', path: '/ai-chatbots-virtual-assistants', description: 'Conversational AI' },
+        { name: 'Predictive Analytics', path: '/predictive-analytics', description: 'Forecasting & modeling' },
+        { name: 'AI Recommendation Engines', path: '/ai-recommendation-engines', description: 'Personalized suggestions' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
       ]
     },
     {
@@ -89,6 +99,7 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
+<<<<<<< HEAD
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
         { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
@@ -113,6 +124,23 @@ const Navigation: React.FC = () => {
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+=======
+        { name: 'Cybersecurity Suite', path: '/cybersecurity-suite', description: 'Advanced security solutions' },
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
+        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Development operations' },
+        { name: 'Database Management', path: '/database-management', description: 'Database optimization' },
+        { name: 'Network Solutions', path: '/network-solutions', description: 'Enterprise networking' },
+        { name: 'Mobile App Development', path: '/mobile-app-development', description: 'Native & cross-platform' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
+        { name: 'IT Support & Maintenance', path: '/it-support-maintenance', description: '24/7 technical support' },
+        { name: 'System Integration', path: '/system-integration', description: 'API & system integration' },
+        { name: 'Data Backup & Recovery', path: '/data-backup-recovery', description: 'Disaster recovery' },
+        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale solutions' },
+        { name: 'Identity & Access Management', path: '/identity-access-management', description: 'Security & access control' },
+        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System tuning' },
+        { name: 'Global IT Services', path: '/global-it-services', description: 'Worldwide IT support' },
+        { name: 'IT Training & Certification', path: '/it-training-certification', description: 'Professional development' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
       ]
     },
     {
@@ -122,6 +150,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
+<<<<<<< HEAD
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
@@ -145,27 +174,59 @@ const Navigation: React.FC = () => {
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
         { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
+=======
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
+        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Business intelligence' },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Content creation suite' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
+        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'Drag-and-drop app builder' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Social media automation' },
+        { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-assistant', description: 'E-commerce optimization' },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
+        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'AI-powered design tools' },
+        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring' },
+        { name: 'AI Financial Planner', path: '/ai-financial-planner', description: 'Financial planning & analysis' },
+        { name: 'AI Health Tracker', path: '/ai-health-tracker', description: 'Personal health monitoring' },
+        { name: 'AI Learning Platform', path: '/ai-learning-platform', description: 'Personalized learning' },
+        { name: 'AI Code Generator', path: '/ai-code-generator', description: 'AI-assisted coding' },
+        { name: 'AI Video Creator', path: '/ai-video-creator', description: 'Automated video production' },
+        { name: 'AI Music Composer', path: '/ai-music-composer', description: 'AI music generation' },
+        { name: 'AI App Builder', path: '/ai-app-builder', description: 'Native app development' },
+        { name: 'AI Market Research', path: '/ai-market-research', description: 'Automated market analysis' },
+        { name: 'AI Store Optimizer', path: '/ai-store-optimizer', description: 'E-commerce optimization' },
+        { name: 'AI Data Pipeline', path: '/ai-data-pipeline', description: 'Automated data processing' },
+        { name: 'AI A/B Testing', path: '/ai-ab-testing', description: 'Intelligent testing' },
+        { name: 'AI Website Builder', path: '/ai-website-builder', description: 'AI website creation' },
+        { name: 'AI Live Chat', path: '/ai-live-chat', description: 'Intelligent customer chat' },
+        { name: 'AI Growth Hacker', path: '/ai-growth-hacker', description: 'Automated growth strategies' },
+        { name: 'AI Password Manager', path: '/ai-password-manager', description: 'Secure password management' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
       ]
     },
     {
-      title: 'Specialized',
+      title: 'Emerging Tech',
       icon: Zap,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
       hoverColor: 'hover:bg-orange-100',
       services: [
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
+        { name: 'Robotics & Automation', path: '/robotics-automation', description: 'Intelligent robotics' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
+        { name: 'Biotech AI', path: '/biotech-ai', description: 'AI-powered biotechnology' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-driving & drones' },
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
         { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
-        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
-        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
+        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' }
       ]
     }
 =======
