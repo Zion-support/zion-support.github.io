@@ -104,8 +104,7 @@ export const SEO: React.FC<SEOProps> = ({
     return baseStructuredData;
   };
 
-  return (
-    );
+  return null;
 };
 
 export default SEO;

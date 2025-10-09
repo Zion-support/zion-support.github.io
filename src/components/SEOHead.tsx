@@ -36,8 +36,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const canonicalUrl = canonical || url;
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
 
-  return (
-    );
+  return null;
 };
 
 export default SEOHead;
