@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
 

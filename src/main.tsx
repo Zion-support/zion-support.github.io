@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './globals.css';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
+import './utils/consoleCleanup';
 
 // Initialize performance optimizations immediately
 if (typeof window !== 'undefined') {

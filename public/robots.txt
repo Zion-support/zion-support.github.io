@@ -9,15 +9,65 @@ Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /test/
 
 # Allow important pages
-Allow: /services/
-Allow: /ai-*/
-Allow: /blog/
-Allow: /case-studies/
-Allow: /about/
-Allow: /contact/
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /pricing
+Allow: /case-studies
+
+# AI Services
+Allow: /ai-*
+Allow: /machine-learning
+Allow: /nlp
+Allow: /computer-vision
+Allow: /quantum-ai
+
+# IT Services
+Allow: /cloud-services
+Allow: /cybersecurity
+Allow: /devops
+Allow: /database-services
+Allow: /network-infrastructure
+Allow: /it-support
+
+# Specialized Services
+Allow: /blockchain
+Allow: /autonomous-systems
+Allow: /iot-edge
+Allow: /business-intelligence
+Allow: /robotics
+Allow: /enterprise
+
+# Blog posts
+Allow: /blog/*
+
+# Static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /icons/
+Allow: /fonts/
+
+# Files
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.ico
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.eot
