@@ -47,19 +47,19 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-slate-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+    <header className="bg-slate-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50 cyber-grid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-lg">Z</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 energy-pulse">
+              <span className="text-white font-bold text-lg cyber-text">Z</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              <h1 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors cyber-text neon-pulse">
                 Zion Tech Group
               </h1>
-              <p className="text-xs text-cyan-400">AI & IT Solutions</p>
+              <p className="text-xs text-cyan-400 neon-glow">AI & IT Solutions</p>
             </div>
           </Link>
 
@@ -72,13 +72,13 @@ const Header: React.FC = () => {
                 onMouseEnter={() => setActiveDropdown(category)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors py-2">
-                  <span>{category}</span>
+                <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors py-2 neon-glow">
+                  <span className="cyber-text">{category}</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 
                 {activeDropdown === category && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 py-2 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-400/30 py-2 z-50 cyber-card">
                     {items.map((item, index) => (
                       <Link
                         key={index}
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
             </div>
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              className="cyber-button px-6 py-2 rounded-lg font-semibold text-sm"
             >
               Get Quote
             </Link>

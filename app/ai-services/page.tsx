@@ -39,47 +39,61 @@ const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
       title: 'AI-Powered Business Intelligence',
-      description: 'Transform raw data into actionable insights with advanced AI analytics and predictive modeling.',
+      description: 'Transform raw data into actionable insights with advanced AI analytics and predictive modeling. Our enterprise-grade BI solution processes millions of data points in real-time.',
       icon: BarChart,
       price: 'Starting at $299/month',
+      marketPrice: '$599/month',
       features: [
         'Real-time data processing',
         'Predictive analytics',
         'Automated reporting',
         'Custom dashboards',
         'Machine learning models',
-        'Natural language queries'
+        'Natural language queries',
+        'Advanced visualization',
+        'API integrations'
       ],
       benefits: [
         'Increase decision speed by 400%',
         'Reduce manual analysis by 90%',
         'Improve accuracy by 95%',
-        'Generate 10x more insights'
+        'Generate 10x more insights',
+        'Save 40+ hours weekly',
+        'Boost revenue by 25%'
       ],
       useCases: ['Enterprise Analytics', 'Financial Services', 'Healthcare', 'Manufacturing'],
-      link: '/ai-services/business-intelligence'
+      link: 'https://ziontechgroup.com/ai-business-intelligence',
+      contact: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com'
     },
     {
       title: 'Intelligent Document Processing',
-      description: 'AI-powered document analysis, extraction, and workflow automation for maximum efficiency.',
+      description: 'AI-powered document analysis, extraction, and workflow automation for maximum efficiency. Process thousands of documents with 99.9% accuracy.',
       icon: FileText,
       price: 'Starting at $199/month',
+      marketPrice: '$399/month',
       features: [
         'OCR text extraction',
         'Document classification',
         'Data validation',
         'Workflow automation',
         'Compliance checking',
-        'Multi-format support'
+        'Multi-format support',
+        'Batch processing',
+        'API integration'
       ],
       benefits: [
         'Process documents 15x faster',
         'Reduce errors by 98%',
         'Save 30+ hours weekly',
-        'Improve compliance by 100%'
+        'Improve compliance by 100%',
+        'Cut processing costs by 70%',
+        'Eliminate manual data entry'
       ],
       useCases: ['Legal Firms', 'Accounting', 'Insurance', 'Healthcare'],
-      link: '/ai-services/document-processing'
+      link: 'https://ziontechgroup.com/ai-document-processing',
+      contact: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com'
     },
     {
       title: 'AI Customer Experience Platform',
@@ -431,9 +445,14 @@ const AIServicesPage: React.FC = () => {
                 <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-transform duration-300">
                   <div className="flex items-center mb-4">
                     <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                      <p className="text-cyan-400 font-semibold text-sm">{service.price}</p>
+                      <div className="flex items-center space-x-2">
+                        <p className="text-cyan-400 font-semibold text-sm">{service.price}</p>
+                        {service.marketPrice && (
+                          <p className="text-gray-500 text-xs line-through">{service.marketPrice}</p>
+                        )}
+                      </div>
                     </div>
                   </div>
                   
@@ -474,12 +493,24 @@ const AIServicesPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <a
-                    href={service.link}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
+                  <div className="flex flex-col space-y-2">
+                    <a
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                    >
+                      Get Started <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                    <div className="flex space-x-2 text-xs text-gray-400">
+                      <a href={`tel:${service.contact}`} className="hover:text-cyan-400 transition-colors">
+                        📞 {service.contact}
+                      </a>
+                      <a href={`mailto:${service.email}`} className="hover:text-cyan-400 transition-colors">
+                        ✉️ {service.email}
+                      </a>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

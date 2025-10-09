@@ -93,7 +93,7 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -106,7 +106,7 @@ const Footer: React.FC = memo(() => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
-                  <p className="text-sm text-cyan-400">AI & IT Solutions</p>
+                  <p className="text-sm text-cyan-400 neon-glow">AI & IT Solutions</p>
                 </div>
               </Link>
             </div>
@@ -135,7 +135,7 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text cyber-text">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -162,7 +162,7 @@ const Footer: React.FC = memo(() => {
 
           {/* Micro SaaS Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SaaS</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text cyber-text">Micro SaaS</h3>
             <ul className="space-y-3">
               {microSaaSServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -189,7 +189,7 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text cyber-text">IT Services</h3>
             <ul className="space-y-3">
               {itServices.map((service, index) => (
                 <li key={index}>
@@ -216,7 +216,7 @@ const Footer: React.FC = memo(() => {
 
           {/* Emerging Technologies */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text cyber-text">Emerging Tech</h3>
             <ul className="space-y-3">
               {emergingTech.map((service, index) => (
                 <li key={index}>
