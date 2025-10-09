@@ -1,156 +1,218 @@
-# Zion Tech Group - Advanced AI and IT Solutions Website
+# Zion Tech Group - Advanced AI and IT Solutions
 
-A cutting-edge, high-performance website built with React, TypeScript, and Vite, showcasing advanced AI and IT solutions.
+A modern, high-performance website built with Next.js 15, TypeScript, and Tailwind CSS, showcasing AI and IT services with cutting-edge design and optimization.
 
 ## 🚀 Features
 
-- **High Performance**: Optimized for Core Web Vitals and maximum speed
-- **Modern Stack**: React 18, TypeScript, Vite, Tailwind CSS
-- **AI-Powered**: Advanced AI solutions and implementations
-- **Responsive Design**: Mobile-first, accessible design
-- **SEO Optimized**: Comprehensive SEO and meta tag management
-- **Performance Monitoring**: Real-time performance tracking and analytics
+- **Modern Tech Stack**: Next.js 15, TypeScript, Tailwind CSS
+- **Performance Optimized**: Lazy loading, code splitting, image optimization
+- **SEO Ready**: Comprehensive meta tags, structured data, sitemap
+- **Accessibility**: WCAG 2.1 compliant with keyboard navigation
+- **Responsive Design**: Mobile-first approach with cyber-themed UI
+- **AI Services Showcase**: Comprehensive service listings and pricing
+- **Micro SAAS Solutions**: 50+ ready-to-use business applications
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, Framer Motion
-- **Icons**: Lucide React, Heroicons
-- **Analytics**: Google Analytics, Web Vitals
-- **Testing**: Jest, Testing Library
-- **Linting**: ESLint, Prettier
-- **Build**: Vite with Terser minification
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Deployment**: Vercel/Netlify ready
 
 ## 📦 Installation
 
+1. Clone the repository:
 ```bash
-# Install dependencies
+git clone https://github.com/ziontechgroup/website.git
+cd website
+```
+
+2. Install dependencies:
+```bash
 npm install
+# or
+pnpm install
+```
 
-# Start development server
+3. Run the development server:
+```bash
 npm run dev
+# or
+pnpm dev
+```
 
-# Build for production
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🏗️ Build and Deployment
+
+### Production Build
+```bash
 npm run build
-
-# Preview production build
-npm run preview
+npm run start
 ```
 
-## 🧪 Testing
-
+### Performance Optimization
 ```bash
-# Run all tests
-npm test
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run tests in watch mode
-npm run test:watch
+npm run optimize:all
 ```
 
-## 🔧 Development Scripts
-
+### Deploy to Vercel
 ```bash
-# Type checking
-npm run type-check
-
-# Linting
-npm run lint
-
-# Linting with auto-fix
-npm run lint:fix
-
-# Format code
-npm run format
-
-# Performance optimization
-node scripts/performance-optimizer.js
-
-# Bundle analysis
-npm run build:analyze
+vercel --prod
 ```
 
-## 📊 Performance
-
-The website is optimized for maximum performance with:
-
-- **Code Splitting**: Dynamic imports for optimal bundle sizes
-- **Image Optimization**: WebP format with fallbacks
-- **Caching**: Aggressive caching strategies for static assets
-- **Compression**: Gzip/Brotli compression
-- **CDN Ready**: Optimized for content delivery networks
-
-## 🎯 Core Web Vitals
-
-- **LCP**: < 2.5s (Largest Contentful Paint)
-- **FID**: < 100ms (First Input Delay)
-- **CLS**: < 0.1 (Cumulative Layout Shift)
-- **FCP**: < 1.8s (First Contentful Paint)
-- **TTFB**: < 600ms (Time to First Byte)
-
-## 🏗️ Architecture
-
-```
-src/
-├── components/     # Reusable UI components
-├── pages/         # Page components
-├── hooks/         # Custom React hooks
-├── utils/         # Utility functions
-├── types/         # TypeScript type definitions
-├── config/        # Configuration files
-└── styles/        # Global styles
-
-app/
-├── components/    # App-specific components
-├── pages/         # App pages
-├── utils/         # App utilities
-└── config/        # App configuration
+### Deploy to Netlify
+```bash
+npm run build
+# Upload the .next folder to Netlify
 ```
 
-## 🔒 Security
+## 📁 Project Structure
 
-- **CSP Headers**: Content Security Policy implementation
-- **XSS Protection**: Cross-site scripting prevention
-- **HTTPS**: Secure connections only
-- **Input Validation**: Comprehensive input sanitization
+```
+├── app/                    # Next.js app directory
+│   ├── components/         # Reusable components
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── public/                # Static assets
+│   ├── sitemap.xml        # SEO sitemap
+│   └── robots.txt         # Search engine directives
+├── scripts/               # Build and optimization scripts
+├── next.config.js         # Next.js configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+└── tsconfig.json          # TypeScript configuration
+```
 
-## 📈 Analytics
+## 🎨 Design System
 
-- **Google Analytics**: User behavior tracking
-- **Web Vitals**: Performance metrics monitoring
-- **Error Tracking**: Comprehensive error reporting
-- **Custom Events**: Business-specific analytics
+### Color Palette
+- **Primary**: Cyan (#00ffff)
+- **Secondary**: Purple (#8b5cf6)
+- **Accent**: Pink (#ec4899)
+- **Background**: Dark slate gradient
+- **Text**: White with gray variants
+
+### Typography
+- **Headings**: Bold, neon-text effect
+- **Body**: Inter font family
+- **Code**: Monospace
+
+### Components
+- **Cyber Cards**: Glassmorphism with neon borders
+- **Hologram Cards**: Animated holographic effects
+- **Quantum Cards**: Energy pulse animations
+- **Cyber Buttons**: Gradient with glow effects
+
+## ⚡ Performance Features
+
+- **Image Optimization**: Next.js Image component with WebP/AVIF
+- **Code Splitting**: Dynamic imports for heavy components
+- **Lazy Loading**: Intersection Observer for images
+- **Bundle Analysis**: Webpack bundle analyzer integration
+- **Caching**: Aggressive caching strategies
+- **CDN Ready**: Optimized for global distribution
+
+## 🔍 SEO Features
+
+- **Meta Tags**: Comprehensive meta tag management
+- **Structured Data**: JSON-LD schema markup
+- **Sitemap**: Auto-generated XML sitemap
+- **Robots.txt**: Search engine directives
+- **Open Graph**: Social media optimization
+- **Twitter Cards**: Twitter-specific meta tags
+
+## ♿ Accessibility Features
+
+- **Keyboard Navigation**: Full keyboard support
+- **Screen Reader**: ARIA labels and semantic HTML
+- **High Contrast**: High contrast mode support
+- **Focus Management**: Visible focus indicators
+- **Skip Links**: Skip to main content
+- **Alt Text**: Descriptive image alt text
+
+## 📱 Responsive Design
+
+- **Mobile First**: Mobile-optimized design
+- **Breakpoints**: 
+  - sm: 640px
+  - md: 768px
+  - lg: 1024px
+  - xl: 1280px
+  - 2xl: 1536px
 
 ## 🚀 Deployment
 
-The website is optimized for deployment on:
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push
 
-- **Netlify**: Static site hosting
-- **Vercel**: Edge functions and CDN
-- **AWS S3**: Scalable object storage
-- **CloudFlare**: Global CDN and security
+### Netlify
+1. Build the project: `npm run build`
+2. Upload the `.next` folder to Netlify
+3. Configure redirects and headers
 
-## 📝 Contributing
+### Docker
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+```env
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+```
+
+### Next.js Configuration
+- **Image Optimization**: Enabled with custom domains
+- **Bundle Analysis**: Available with `ANALYZE=true`
+- **TypeScript**: Strict mode enabled
+- **ESLint**: Configured with custom rules
+
+## 📊 Analytics and Monitoring
+
+- **Google Analytics**: Integrated for traffic analysis
+- **Performance Monitoring**: Core Web Vitals tracking
+- **Error Tracking**: Error boundary with reporting
+- **User Experience**: Heatmap and session recording ready
+
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Support
+## 📞 Support
 
-For support and questions:
-- Email: support@ziontechgroup.com
-- Website: https://ziontechgroup.com
-- Documentation: https://docs.ziontechgroup.com
+- **Email**: kleber@ziontechgroup.com
+- **Phone**: +1 (302) 464-0950
+- **Website**: https://ziontechgroup.com
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide for the beautiful icon set
+- Vercel for the deployment platform
 
 ---
 
-Built with ❤️ by the Zion Tech Group team
+**Zion Tech Group** - Transforming businesses with cutting-edge AI and IT solutions.

@@ -1,50 +1,50 @@
 'use client';
 import React, { useEffect, useCallback } from 'react';
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  enableSkipLinks?: boolean;
-  enableKeyboardNav?: boolean;
-  enableFocusIndicators?: boolean;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
 }
 /**
  * Accessibility Enhancer Component
  * Provides comprehensive accessibility improvements
  */
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-  enableSkipLinks = true,
-  enableKeyboardNav = true,
-  enableFocusIndicators = true
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true
 }) => {
   // Add skip links
   useEffect(() => {
-    if (enableSkipLinks) {
+    if (enableScreenReaderSupport) {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
-  }, [enableSkipLinks]);
+  }, [enableScreenReaderSupport]);
   // Add keyboard navigation
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (enableKeyboardNav) {
+    if (enableKeyboardNavigation) {
       // Handle keyboard navigation
       if (event.key === 'Tab') {
         // Ensure focus indicators are visible
         document.body.classList.add('keyboard-navigation');
       }
     }
-  }, [enableKeyboardNav]);
+  }, [enableKeyboardNavigation]);
   useEffect(() => {
-    if (enableKeyboardNav) {
+    if (enableKeyboardNavigation) {
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
-  }, [enableKeyboardNav, handleKeyDown]);
+  }, [enableKeyboardNavigation, handleKeyDown]);
   // Add focus indicators
   useEffect(() => {
-    if (enableFocusIndicators) {
+    if (enableFocusManagement) {
       const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
@@ -54,7 +54,27 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       `;
       document.head.appendChild(style);
     }
-  }, [enableFocusIndicators]);
-  return <>{children}</>;
+  }, [enableFocusManagement]);
+  
+  // Add high contrast mode
+  useEffect(() => {
+    if (enableHighContrast) {
+      const style = document.createElement('style');
+      style.textContent = `
+        @media (prefers-contrast: high) {
+          .high-contrast {
+            --text-primary: #ffffff;
+            --text-secondary: #e5e5e5;
+            --bg-primary: #000000;
+            --bg-secondary: #1a1a1a;
+            --accent: #00ffff;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, [enableHighContrast]);
+  
+  return null;
 };
 export default AccessibilityEnhancer;
