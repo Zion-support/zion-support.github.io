@@ -73,11 +73,6 @@ const CloudMigrationPage: React.FC = () => {
       features: ['Performance tuning', 'Cost optimization', '24/7 support']
     }
   ];
-      description: 'Execute the migration with minimal downtime and maximum data integrity.',
-      duration: '2-4 weeks'
-      step: '04',
-      description: 'Optimize performance and provide ongoing support and monitoring.',
-      icon: TrendingUp,
       duration: 'Ongoing'
 
   const pricingPlans = [
