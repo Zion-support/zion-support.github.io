@@ -1,11 +1,45 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap } from 'lucide-react';
 import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const ITConsultingPage: React.FC = () => {
+  const consultingServices = [
+    {
+      icon: Target,
+      title: 'Strategic IT Planning',
+      description: 'Comprehensive technology roadmap aligned with business goals',
+      features: ['Technology assessment', 'Digital transformation strategy', 'IT governance framework', 'Risk analysis'],
+      benefits: ['Improved efficiency', 'Cost optimization', 'Future-proof solutions', 'Competitive advantage'],
+      price: 'Starting at $2,500'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Migration',
+      description: 'Seamless transition to cloud infrastructure with zero downtime',
+      features: ['Cloud architecture design', 'Data migration', 'Security implementation', 'Performance optimization'],
+      benefits: ['Scalability', 'Cost reduction', 'Enhanced security', 'Global accessibility'],
+      price: 'Starting at $5,000'
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets',
+      features: ['Security audit', 'Threat assessment', 'Incident response', 'Compliance management'],
+      benefits: ['Data protection', 'Regulatory compliance', 'Risk mitigation', 'Business continuity'],
+      price: 'Starting at $3,500'
+    },
+    {
+      icon: Code,
+      title: 'Custom Development',
+      description: 'Tailored software solutions to meet your specific business needs',
+      features: ['Requirements analysis', 'Custom software development', 'API integration', 'Quality assurance'],
+      benefits: ['Business-specific solutions', 'Competitive advantage', 'Scalable architecture', 'Ongoing support'],
+      price: 'Starting at $4,000'
+    }
+  ];
 
   return (
     <>
