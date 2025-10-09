@@ -12,4 +12,4 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = () => {
   );
 };
 
-export default ContentShowcase;
+export default ContentShowcase

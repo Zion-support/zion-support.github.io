@@ -12,4 +12,4 @@ const NewestContent2025Banner: React.FC<NewestContent2025BannerProps> = () => {
   );
 };
 
-export default NewestContent2025Banner;
+export default NewestContent2025Banner

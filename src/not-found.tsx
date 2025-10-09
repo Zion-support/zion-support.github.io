@@ -27,8 +27,7 @@ return (
         </div>
         {/* Popular Pages */}
         <div>
-          {popularPages.map((page, index) => ()
-            
+          {popularPages.map((feature, index) => (
           <Link
               key={index}
               href={page.href}

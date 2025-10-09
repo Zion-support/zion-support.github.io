@@ -1,17 +1,17 @@
-// Sitemap generator utility;
+// Sitemap generator utility
 export interface SitemapUrl {
-  // TODO: Add content
-};
-  loc: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+    // TODO: Add content
+  }
+  loc: string
+  lastmod?: string
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
 }
 export const _generateSitemap = (urls: SitemapUrl[]): string => {
-  // TODO: Add content
-}
-  const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
+    // TODO: Add content
+  }
+  const baseUrl = 'https://ziontechgroup.com'
+  const currentDate = new Date().toISOString().split('T')[0]
   const sitemap = `
           
           
@@ -25,9 +25,9 @@ export const _generateSitemap = (urls: SitemapUrl[]): string => {
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map((url) => {
-  // TODO: Add content
-}
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
+    // TODO: Add content
+  }
+    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`
     return `  
           
           
@@ -42,17 +42,18 @@ ${urls
     <lastmod>${url.lastmod || currentDate}</lastmod>
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
     <priority>${url.priority || 0.8}</priority>
-  </url>`;
-  })
+  </url>`
+  }
+  )
   .join('\n')}
-</urlset>`;
-  return sitemap;
-};
-// Define all the pages for the sitemap;
-export const getAllPages = (): SitemapUrl[] => {
-  // TODO: Add content
+</urlset>`
+  return sitemap
 }
-  const currentDate = new Date().toISOString().split('T')[0];
+// Define all the pages for the sitemap
+export const getAllPages = (): SitemapUrl[] => {
+    // TODO: Add content
+  }
+  const currentDate = new Date().toISOString().split('T')[0]
   return [
   // TODO: Add items,
 ]
@@ -120,5 +121,5 @@ export const getAllPages = (): SitemapUrl[] => {
     { loc: '/cookies', priority: 0.5, changefreq: 'yearly' },
     { loc: '/gdpr', priority: 0.5, changefreq: 'yearly' },
     { loc: '/accessibility', priority: 0.5, changefreq: 'yearly' },
-  ];
-};
+  ]
+}

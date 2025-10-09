@@ -1,2 +1,2 @@
 
-export default AiChatbotBuilderPage;
+export default AiChatbotBuilderPage

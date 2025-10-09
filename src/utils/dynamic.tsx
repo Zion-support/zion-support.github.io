@@ -1,9 +1,9 @@
-'use client';
+'use client'
 interface DynamicOptions {
-  // TODO: Add content
-}
-  loading?: () => React.ReactElement;
-  ssr?: boolean;
+    // TODO: Add content
+  }
+  loading?: () => React.ReactElement
+  ssr?: boolean
 }
 export function dynamic
           
@@ -21,5 +21,5 @@ export function dynamic
 ): ComponentType<unknown> {
 return (props: unknown) => (
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} /></Suspense>
-  );
+  )
 }
