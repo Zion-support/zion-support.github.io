@@ -14,13 +14,8 @@ export const _usePerformanceOptimization = () => {
     const navigation = performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
-<<<<<<< HEAD
-    const paintEntries = performance.getEntriesByType('paint');
-    const metrics: PerformanceMetrics = {
-=======
     const _paintEntries = performance.getEntriesByType('paint');
     const _metrics: PerformanceMetrics = {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
       loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,

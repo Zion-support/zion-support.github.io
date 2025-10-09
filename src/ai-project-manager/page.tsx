@@ -1,10 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -90,8 +86,6 @@ const AIProjectManagerPage: React.FC = () => {
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiProjectManagerPage: React.FC = () => {
   return (
@@ -106,5 +100,7 @@ const AiProjectManagerPage: React.FC = () => {
     </div>
   );
 };
+
+}
 
 export default AiProjectManagerPage;

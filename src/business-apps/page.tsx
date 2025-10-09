@@ -1,11 +1,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import {CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import Footer from '../components/Footer';
+
 
 const BusinessAppsPage: React.FC = () => {
   const _businessApps = [
@@ -280,6 +277,3 @@ const BusinessAppsPage: React.FC = () => {
 };
 
 export default BusinessAppsPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

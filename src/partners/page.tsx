@@ -1,12 +1,9 @@
-'use client';
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import React from 'react';
+
+'use client';
 
 const PartnersPage: React.FC = () => {
   const _partnerTypes = [
@@ -253,6 +250,3 @@ const PartnersPage: React.FC = () => {
 };
 
 export default PartnersPage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

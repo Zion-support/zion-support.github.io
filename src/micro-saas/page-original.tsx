@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 const MicroSAASPage: React.FC = () => {
   const _microSAASServices = [
     // AI-Powered Developer Tools

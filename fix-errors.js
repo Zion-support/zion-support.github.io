@@ -126,8 +126,7 @@ try {
 //   const perfMonitorPath = './src/components/PerformanceMonitor.tsx';
   let _content = fs.readFileSync(perfMonitorPath, 'utf8');
   // Remove merge conflict markers
-  content = content.replace(/^<<<<<<< .*$/gm, '');
-  content = content.replace(/^
+  content = content.replace(/^  content = content.replace(/^
   fs.writeFileSync(perfMonitorPath, content);
 //   } catch (err) {
 //   }
@@ -149,8 +148,7 @@ try {
 //   const errorHandlerPath = './src/utils/errorHandler.ts';
   let _content = fs.readFileSync(errorHandlerPath, 'utf8');
   // Remove merge conflict markers
-  content = content.replace(/^<<<<<<< .*$/gm, '');
-  content = content.replace(/^
+  content = content.replace(/^  content = content.replace(/^
   // Ensure all comment blocks are closed
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
@@ -165,8 +163,7 @@ try {
 //   const appPath = './App.tsx';
   let _content = fs.readFileSync(appPath, 'utf8');
   // Remove merge conflict markers
-  content = content.replace(/^<<<<<<< .*$/gm, '');
-  content = content.replace(/^
+  content = content.replace(/^  content = content.replace(/^
   fs.writeFileSync(appPath, content);
 //   } catch (err) {
 //   }

@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import {Star, Phone} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import React from 'react';
+
 
 const Status: React.FC = () => {
   return (
@@ -73,6 +70,3 @@ const Status: React.FC = () => {
 };
 
 export default Status;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import React from 'react';
+
 
 const AISocialMediaManagerPage: React.FC = () => {
   const _features = [
@@ -302,6 +299,3 @@ const AISocialMediaManagerPage: React.FC = () => {
 };
 
 export default AISocialMediaManagerPage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

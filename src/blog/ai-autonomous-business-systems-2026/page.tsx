@@ -1,9 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-=======
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 export default function AIAutonomousBusinessSystems2026() {
   return (
     <div className="min-h-screen bg-gray-50">

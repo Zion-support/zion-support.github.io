@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const ContactPage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -72,7 +62,6 @@ const ContactPage: React.FC = () => {
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">

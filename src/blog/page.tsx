@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
@@ -165,7 +162,6 @@ export default function BlogPage() {
       </div>
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const BlogPage: React.FC = () => {
   return (
@@ -181,4 +177,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-export default BlogPage;
+}

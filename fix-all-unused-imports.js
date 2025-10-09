@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -65,54 +64,11 @@ function cleanUnusedImports(filePath) {
     });
 
     // Remove unused variable declarations that are assigned but never used
-=======
-
-// Function to remove unused imports from a single file
-function removeUnusedImportsFromFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
     const lines = content.split('\n');
     const newLines = [];
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-<<<<<<< HEAD
-      
-      // Check for unused variable declarations
-      const varMatch = line.match(/const\s+(\w+)\s*=\s*React\.FC.*?;/);
-      if (varMatch) {
-        const varName = varMatch[1];
-        const isUsed = content.includes(varName) && content.indexOf(varName) !== content.lastIndexOf(varName);
-        if (!isUsed) {
-          continue; // Skip this line
-        }
-      }
-      
-      newLines.push(line);
-    }
-    
-    if (newLines.length !== lines.length) {
-      content = newLines.join('\n');
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Cleaned: ${path.relative(__dirname, filePath)}`);
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-}
-
-// Process all page files
-pageFiles.forEach(file => {
-  cleanUnusedImports(file);
-});
-
-console.log(`Processed ${pageFiles.length} page files`);
-=======
       const trimmedLine = line.trim();
       
       // Check if this is an import line
@@ -215,4 +171,3 @@ files.forEach(file => {
 });
 
 console.log(`Fixed ${fixedCount} files`);
->>>>>>> cursor/fix-errors-and-merge-to-main-d933

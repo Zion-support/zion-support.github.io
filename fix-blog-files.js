@@ -18,8 +18,7 @@ function fixBlogFile(filePath) {
     }
 
     // Fix merge conflict markers
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
+    if (content.includes('      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
       return;
     }
 

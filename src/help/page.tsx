@@ -1,12 +1,9 @@
-'use client';
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import React, { useState } from 'react';
+
+'use client';
 
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -486,6 +483,3 @@ const HelpPage: React.FC = () => {
 };
 
 export default HelpPage;
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

@@ -1,11 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-const UltimateBusinessIntelligenceShowcase2025 = () => {
-=======
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligenceShowcase2025 = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
     {

@@ -1,55 +1,11 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIAutomationPage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
-    'Intelligent process automation',
-    'Workflow optimization',
-    'Data processing automation',
-    'Customer service automation',
-    'Document processing',
-    'Email automation',
-    'Task scheduling',
-    'Report generation',
-    'Data validation',
-    'Integration management'
-  ];
-
-  const benefits = [
-    {
-      title: 'Increased Efficiency',
-      description: 'Reduce manual work by up to 80%',
-      icon: Zap
-    },
-    {
-      title: 'Cost Savings',
-      description: 'Lower operational costs significantly',
-      icon: TrendingUp
-    },
-    {
-      title: 'Scalability',
-      description: 'Handle growing workloads automatically',
-      icon: BarChart
-    },
-    {
-      title: 'Accuracy',
-      description: 'Minimize human errors in repetitive tasks',
-      icon: Shield
-    }
-  ];
-
-=======
     {
       icon: Settings,
       title: 'Process Automation',
@@ -131,7 +87,6 @@ const AIAutomationPage: React.FC = () => {
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
   return (
     <>
       <Helmet>
@@ -143,7 +98,6 @@ const AIAutomationPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-<<<<<<< HEAD
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -160,10 +114,7 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutomationPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
         
         <main className="pt-20">
           {/* Hero Section */}
@@ -185,7 +136,6 @@ export default AIAutomationPage;
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
-<<<<<<< HEAD
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
@@ -273,9 +223,6 @@ export default AIAutomationPage;
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Get Free Consultation
-=======
-                  Get Started Today
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
                 </a>
                 <a
                   href="tel:+13024640950"
@@ -285,7 +232,6 @@ export default AIAutomationPage;
                   +1 302 464 0950
                 </a>
               </div>
-<<<<<<< HEAD
               <div className="mt-8 text-sm opacity-90">
                 <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
@@ -314,8 +260,6 @@ export default AIAutomationPage;
               <button className="bg-transparent text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                 Learn More
               </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
             </div>
           </section>
 
@@ -447,9 +391,4 @@ export default AIAutomationPage;
   );
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
 export default AIAutomationPage;

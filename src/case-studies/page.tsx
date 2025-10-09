@@ -1,8 +1,6 @@
 import React from 'react';
 
 const CaseStudiesPage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const _caseStudies = [
     {
       id: 1,
@@ -70,7 +68,6 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">

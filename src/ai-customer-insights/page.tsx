@@ -1,11 +1,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import {Eye, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import Footer from '../components/Footer';
+
 
 const AICustomerInsightsPage: React.FC = () => {
   const _features = [
@@ -106,6 +103,3 @@ const AICustomerInsightsPage: React.FC = () => {
 };
 
 export default AICustomerInsightsPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

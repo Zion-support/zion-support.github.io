@@ -1,12 +1,9 @@
-'use client';
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
 import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import React from 'react';
+
+'use client';
 
 const AIAnalyticsPage: React.FC = () => {
   const _features = [
@@ -341,6 +338,3 @@ const AIAnalyticsPage: React.FC = () => {
 };
 
 export default AIAnalyticsPage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

@@ -1,11 +1,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import {FileText, Target, Zap, Settings, CheckCircle} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import Footer from '../components/Footer';
+
 
 const AIContentStudioPage: React.FC = () => {
   const _features = [
@@ -106,6 +103,3 @@ const AIContentStudioPage: React.FC = () => {
 };
 
 export default AIContentStudioPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

@@ -1,9 +1,11 @@
+import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+import type { 
+
 /**
  * Enhanced Performance Monitoring
  * Comprehensive performance tracking and optimization utilities
  */
 
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
 /**
  * Performance Observer Wrapper
  */
@@ -250,7 +252,6 @@ export class PerformanceMonitor {
 
 // Types
 
-import type { 
   PerformanceReport, 
   ResourceStats, 
   MemoryStats, 

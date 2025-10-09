@@ -1,11 +1,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import {MessageSquare, Brain, FileText, Globe, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import Footer from '../components/Footer';
+
 
 const AINLPPage: React.FC = () => {
   const _features = [
@@ -106,6 +103,3 @@ const AINLPPage: React.FC = () => {
 };
 
 export default AINLPPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

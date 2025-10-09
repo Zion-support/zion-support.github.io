@@ -66,11 +66,7 @@ const _config: AppConfig = {
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
 export function getConfig<T = unknown>(keyPath: string): T {
-<<<<<<< HEAD
-  const keys = keyPath.split('.');
-=======
   const __keys = keyPath.split('.');
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   let value: unknown = config;
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {

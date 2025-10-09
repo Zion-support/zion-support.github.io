@@ -1,11 +1,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import {Settings, Zap, Shield, BarChart, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import Footer from '../components/Footer';
+
 
 const ITAutomationPage: React.FC = () => {
   const _features = [
@@ -106,6 +103,3 @@ const ITAutomationPage: React.FC = () => {
 };
 
 export default ITAutomationPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

@@ -1,8 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+import { Cloud } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const _itServices = [
@@ -73,8 +73,6 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const ItServicesPage: React.FC = () => {
   return (
@@ -89,5 +87,6 @@ const ItServicesPage: React.FC = () => {
     </div>
   );
 };
+}
 
 export default ItServicesPage;
