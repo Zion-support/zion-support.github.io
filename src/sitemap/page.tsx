@@ -1,10 +1,8 @@
-
-
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, Home, Users, Briefcase, FileText, Phone, Mail, Globe } from 'lucide-react';
-
 
 const SitemapPage: React.FC = () => {
   const mainPages = [
@@ -67,219 +65,69 @@ const SitemapPage: React.FC = () => {
     { icon: Globe, text: 'ziontechgroup.com', href: 'https://ziontechgroup.com' },
   ];
 
-  return (
-<<<<<<< HEAD
-    <div>Coming Soon</div>
+  const renderPageSection = (title: string, pages: any[], icon: React.ElementType) => (
+    <div className="cyber-card p-6">
+      <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+        <icon className="w-6 h-6 mr-3 text-cyan-400" />
+        {title}
+      </h3>
+      <ul className="space-y-2">
+        {pages.map((page, index) => (
+          <li key={index}>
+            <Link
+              to={page.path}
+              className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
+            >
+              <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div>
+                <div className="font-medium">{page.name}</div>
+                <div className="text-sm text-gray-400">{page.description}</div>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 
-  )
-    
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-      <div className="container mx-auto px-4 py-16"></div>"
-        <h1 className="text-4xl font-bold text-white mb-8 text-center">Sitemap</h1>"
-        <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-6"></div>"
-          <div className="cyber-card p-6"></div>"
-            <h2 className="text-xl font-bold text-white mb-4">Main Pages</h2>"
-            <ul className="space-y-2"></ul>"
-              <li><a href="/" className="text-cyan-400,"
-  hover:text-cyan-300">Home</a></li>"
-              <li><a href="/services" className="text-cyan-400,"
-  hover:text-cyan-300">Services</a></li>"
-              <li><a href="/contact" className="text-cyan-400,"
-  hover:text-cyan-300">Contact</a></li>"
-              <li><a href="/about" className="text-cyan-400,"
-  hover:text-cyan-300">About</a></li>
-            </ul>
-          </div>"
-            <h2 className="text-xl font-bold text-white mb-4">AI Services</h2>"
-              <li><a href="/ai-services" className="text-cyan-400,"
-  hover:text-cyan-300">AI Solutions</a></li>"
-              <li><a href="/machine-learning" className="text-cyan-400,"
-  hover:text-cyan-300">Machine Learning</a></li>"
-              <li><a href="/automation" className="text-cyan-400,"
-  hover:text-cyan-300">Automation</a></li>"
-            <h2 className="text-xl font-bold text-white mb-4">IT Services</h2>"
-              <li><a href="/it-services" className="text-cyan-400,"
-  hover:text-cyan-300">IT Solutions</a></li>"
-              <li><a href="/cloud-services" className="text-cyan-400,"
-  hover:text-cyan-300">Cloud Services</a></li>"
-              <li><a href="/cybersecurity" className="text-cyan-400,"
-  hover:text-cyan-300">Cybersecurity</a></li>
-=======
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Site Map
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Navigate through all our pages and discover the comprehensive range of AI and IT solutions we offer.
-          </p>
-        </div>
-
-        {/* Main Pages */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
-            <Home className="w-6 h-6 mr-3 text-cyan-400" />
-            Main Pages
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {mainPages.map((page) => (
-              <Link
-                key={page.path}
-                to={page.path}
-                className="block p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                    {page.name}
-                  </h3>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-                </div>
-                <p className="text-gray-300 text-sm">{page.description}</p>
-              </Link>
-            ))}
+      <main className="pt-20">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-8 text-center">Sitemap</h1>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {renderPageSection('Main Pages', mainPages, Home)}
+            {renderPageSection('AI Services', aiServices, Users)}
+            {renderPageSection('IT Services', itServices, Briefcase)}
+            {renderPageSection('Specialized Services', specializedServices, FileText)}
+            {renderPageSection('Additional Pages', additionalPages, FileText)}
           </div>
-        </section>
 
-        {/* AI Services */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
-            <Briefcase className="w-6 h-6 mr-3 text-cyan-400" />
-            AI Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {aiServices.map((service) => (
-              <Link
-                key={service.path}
-                to={service.path}
-                className="block p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                    {service.name}
-                  </h3>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-                </div>
-                <p className="text-gray-300 text-sm">{service.description}</p>
-              </Link>
-            ))}
+          {/* Contact Information */}
+          <div className="cyber-card p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+              {contactInfo.map((info, index) => (
+                <a
+                  key={index}
+                  href={info.href}
+                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  <info.icon className="w-5 h-5 mr-2" />
+                  {info.text}
+                </a>
+              ))}
+            </div>
           </div>
-        </section>
-
-        {/* IT Services */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
-            <FileText className="w-6 h-6 mr-3 text-cyan-400" />
-            IT Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {itServices.map((service) => (
-              <Link
-                key={service.path}
-                to={service.path}
-                className="block p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                    {service.name}
-                  </h3>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-                </div>
-                <p className="text-gray-300 text-sm">{service.description}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* Specialized Services */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
-            <Users className="w-6 h-6 mr-3 text-cyan-400" />
-            Specialized Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {specializedServices.map((service) => (
-              <Link
-                key={service.path}
-                to={service.path}
-                className="block p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                    {service.name}
-                  </h3>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-                </div>
-                <p className="text-gray-300 text-sm">{service.description}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* Additional Pages */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8">Additional Pages</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {additionalPages.map((page) => (
-              <Link
-                key={page.path}
-                to={page.path}
-                className="block p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                    {page.name}
-                  </h3>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-                </div>
-                <p className="text-gray-300 text-sm">{page.description}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8">Contact Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {contactInfo.map((contact, index) => (
-              <a
-                key={index}
-                href={contact.href}
-                className="flex items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 group"
-              >
-                <contact.icon className="w-6 h-6 text-cyan-400 mr-4" />
-                <span className="text-white group-hover:text-cyan-400 transition-colors">
-                  {contact.text}
-                </span>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        {/* Back to Top */}
-        <div className="text-center">
-          <Link
-            to="/"
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
-          >
-            <Home className="w-5 h-5 mr-2" />
-            Back to Home
-          </Link>
         </div>
       </main>
 
       <Footer />
     </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-d6fe
   );
 };
+
 export default SitemapPage;
-
-
-
