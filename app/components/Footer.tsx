@@ -1,6 +1,11 @@
 import React, { memo } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, ExternalLink, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube } from 'lucide-react';
+=======
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-1500
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -91,6 +96,7 @@ const Footer: React.FC = () => {
   ];
 
   const itServices = [
+<<<<<<< HEAD
     { name: 'Cloud Migration', href: '/cloud-migration' },
     { name: 'IT Consulting', href: '/it-consulting' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
@@ -118,6 +124,62 @@ const Footer: React.FC = () => {
     { name: 'HealthTech Infrastructure', href: '/healthtech-infrastructure' },
     { name: 'EdTech Solutions', href: '/edtech-solutions' },
     { name: 'RetailTech Solutions', href: '/retailtech-solutions' },
+=======
+    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
+    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
+    { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
+    { name: 'Database Services', url: '/database', description: 'Database management' },
+    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
+    { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
+    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' }
+  ];
+  const microSaasServices = [
+    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI writing tool' },
+    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Business analytics' },
+    { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
+    { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
+    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
+    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
+    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
+    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
+    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
+    { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
+    { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
+    { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
+    { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
+    { name: 'API Builder', url: '/api-builder', description: 'API development' },
+    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
+  ];
+
+  const emergingTech = [
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
+    { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
+    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
+    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'News', url: '/news' },
+    { name: 'Contact', url: '/contact' }
+  ];
+
+  const supportLinks = [
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api-docs' },
+    { name: 'Support Center', url: '/support' },
+    { name: 'System Status', url: '/status' },
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' }
+>>>>>>> cursor/website-audit-and-update-with-deployment-1500
   ];
 
   const socialLinks = [
