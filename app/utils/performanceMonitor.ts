@@ -233,3 +233,16 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     return `
 Performance Report:
+- Score: ${score}
+- LCP: ${metrics.lcp}ms
+- FID: ${metrics.fid}ms
+- CLS: ${metrics.cls}
+- FCP: ${metrics.fcp}ms
+- TTFB: ${metrics.ttfb}ms
+- Memory Usage: ${metrics.memoryUsage}MB
+- Last Updated: ${new Date().toISOString()}
+    `.trim();
+  }
+}
+
+export default PerformanceMonitor;

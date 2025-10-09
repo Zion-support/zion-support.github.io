@@ -1,4 +1,3 @@
-import React, { useState, useEffect, useCallback } from 'react';
 
 import React, { useState, useEffect } from 'react';
 
@@ -33,189 +32,50 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   const [, setPerformanceScore] = useState(0);
 
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    // Measure LCP
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // Measure FID
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-      });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-
-    // Measure CLS
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
-        }
-      });
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-    // Measure FCP
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-        }
-      });
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-
-    // Measure TTFB
-    const navObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
-        }
-      });
-    });
-    navObserver.observe({ entryTypes: ['navigation'] });
-
-    // Memory usage
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }));
-    }
-
-    return () => {
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
-      fcpObserver.disconnect();
-      navObserver.disconnect();
-    };
-  }, []);
-
   useEffect(() => {
     // Initialize performance monitoring
-    const initializeMonitoring = () => {
-      if (typeof window === 'undefined') return;
-
-      // Monitor LCP
-      if ('PerformanceObserver' in window) {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry;
-          if (lastEntry) {
-            setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-          }
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-        // Monitor FID
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1] as PerformanceEventTiming;
-          if (lastEntry) {
-            const fid = lastEntry.processingStart - lastEntry.startTime;
-            setMetrics(prev => ({ ...prev, fid }));
-          }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        // Monitor CLS
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            const layoutShiftEntry = entry as any;
-            if (!layoutShiftEntry.hadRecentInput) {
-              clsValue += layoutShiftEntry.value;
-              setMetrics(prev => ({ ...prev, cls: clsValue }));
-            }
-          }
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-        // Monitor FCP
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-          if (fcpEntry) {
-            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-          }
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-
-        // Monitor TTFB
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const ttfb = navigation.responseStart - navigation.requestStart;
-          setMetrics(prev => ({ ...prev, ttfb }));
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         }
-
-        // Monitor memory usage
-        if ('memory' in performance) {
-          const memory = (performance as any).memory;
-          setMetrics(prev => ({ 
-            ...prev, 
-            memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-          }));
+        if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
         }
+        if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+          }
+        }
+        if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          }
+        }
+      }
+    });
 
-        return () => {
-          lcpObserver.disconnect();
-          fidObserver.disconnect();
-          clsObserver.disconnect();
-          fcpObserver.disconnect();
-        };
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+
+    // Monitor memory usage
+    const updateMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }));
       }
     };
 
-    const cleanup = initializeMonitoring();
+    const interval = setInterval(updateMemoryUsage, reportInterval);
 
-    // Report metrics periodically
-    if (enableReporting) {
-      const interval = setInterval(() => {
-        if (enableConsoleLogging) {
-          console.log('Performance Metrics:', metrics);
-        }
-      }, reportInterval);
-
-      return () => {
-        clearInterval(interval);
-        if (cleanup) cleanup();
-      };
-    }
-
-    return cleanup;
-  }, [enableConsoleLogging, enableReporting, reportInterval, metrics]);
-
-  // Calculate performance score
-  useEffect(() => {
-    const calculateScore = () => {
-      let score = 100;
-      
-      if (metrics.lcp && metrics.lcp > 2500) score -= 20;
-      if (metrics.fid && metrics.fid > 100) score -= 20;
-      if (metrics.cls && metrics.cls > 0.1) score -= 20;
-      if (metrics.fcp && metrics.fcp > 1800) score -= 20;
-      if (metrics.ttfb && metrics.ttfb > 600) score -= 20;
-
-      setPerformanceScore(Math.max(0, score));
+    return () => {
+      observer.disconnect();
+      clearInterval(interval);
     };
+  }, [reportInterval]);
 
-    calculateScore();
-  }, [metrics]);
-
-  return null; // This component doesn't render anything
+  return null; // This is a monitoring component that doesn't render anything
 };
 
 export default PerformanceMonitor;
