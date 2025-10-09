@@ -1,13 +1,33 @@
-import React, { useEffect, useState, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import PerformanceEnhancer from './utils/performanceEnhancer';
-import SEOEnhancer from './utils/seoEnhancer';
-import AccessibilityEnhancer from './utils/accessibilityEnhancer';
-import SecurityEnhancer from './utils/securityEnhancer';
-import UserExperienceEnhancer from './utils/userExperienceEnhancer';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./page'));
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const AiServicesPage = lazy(() => import('./pages/AiServicesPage'));
+const AiMarketingPage = lazy(() => import('./pages/AiMarketingPage'));
+const AiAutomationPage = lazy(() => import('./pages/AiAutomationPage'));
+const AiHealthcarePage = lazy(() => import('./pages/AiHealthcarePage'));
+const AiFintechPage = lazy(() => import('./pages/AiFintechPage'));
+const ItServicesPage = lazy(() => import('./pages/ItServicesPage'));
+const MicroSaasPage = lazy(() => import('./pages/MicroSaasPage'));
+const QuantumComputingPage = lazy(() => import('./pages/QuantumComputingPage'));
+const CybersecurityPage = lazy(() => import('./pages/CybersecurityPage'));
+const CloudServicesPage = lazy(() => import('./pages/CloudServicesPage'));
+const DigitalTransformationPage = lazy(() => import('./pages/DigitalTransformationPage'));
+const CaseStudiesPage = lazy(() => import('./pages/CaseStudiesPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const CareersPage = lazy(() => import('./pages/CareersPage'));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
+const TermsPage = lazy(() => import('./pages/TermsPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+
+// Components
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -21,56 +41,52 @@ const LoadingSpinner: React.FC = () => (
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-  const [, setEnhancers] = useState<{
-    performance: unknown;
-    seo: unknown;
-    accessibility: unknown;
-    security: unknown;
-    ux: unknown;
-  } | null>(null);
 
   useEffect(() => {
-    initializeEnhancers();
+    // Initialize app
+    setIsInitialized(true);
   }, []);
-
-  const initializeEnhancers = async () => {
-    try {
-      // Initialize enhancers
-      const performanceEnhancer = new PerformanceEnhancer();
-      const seoEnhancer = new SEOEnhancer({
-        title: 'Zion Tech Group - Advanced AI and IT Solutions',
-        description: 'Leading provider of AI and IT solutions for modern enterprises',
-        keywords: ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-        canonicalUrl: 'https://ziontechgroup.com',
-      });
-      const accessibilityEnhancer = new AccessibilityEnhancer();
-      const securityEnhancer = new SecurityEnhancer();
-      const uxEnhancer = new UserExperienceEnhancer();
-
-      setEnhancers({
-        performance: performanceEnhancer,
-        seo: seoEnhancer,
-        accessibility: accessibilityEnhancer,
-        security: securityEnhancer,
-        ux: uxEnhancer,
-      });
-      setIsInitialized(true);
-    } catch (error) {
-      // Error logged to monitoring service
-      setIsInitialized(true);
-    }
-  };
 
   if (!isInitialized) {
     return <LoadingSpinner />;
   }
 
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </div>
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <Navigation />
+          <main>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/ai-services" element={<AiServicesPage />} />
+                <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                <Route path="/ai-automation" element={<AiAutomationPage />} />
+                <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                <Route path="/ai-fintech" element={<AiFintechPage />} />
+                <Route path="/it-services" element={<ItServicesPage />} />
+                <Route path="/micro-saas" element={<MicroSaasPage />} />
+                <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                <Route path="/cloud-services" element={<CloudServicesPage />} />
+                <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 };
 
