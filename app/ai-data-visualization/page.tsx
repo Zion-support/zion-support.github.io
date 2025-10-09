@@ -1,14 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
@@ -100,7 +95,6 @@ const AIDataVisualizationPage: React.FC = () => {
       popular: false
     }
   ];
-<<<<<<< HEAD
   const testimonials = [
     {
       name: 'Alex Thompson',
@@ -124,16 +118,13 @@ const AIDataVisualizationPage: React.FC = () => {
       rating: 5
     }
   ];
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
   const stats = [
     { number: '95%', label: 'Faster Insights' },
     { number: '100+', label: 'Data Sources' },
     { number: '50+', label: 'Chart Types' },
     { number: '24/7', label: 'Real-time Updates' }
   ];
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}

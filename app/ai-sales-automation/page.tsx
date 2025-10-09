@@ -1,14 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -98,9 +93,22 @@ const AISalesAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-<<<<<<< HEAD
   const testimonials = [
-=======
+    {
+      name: 'Sarah Johnson',
+      role: 'VP of Sales',
+      company: 'TechCorp',
+      content: 'Our sales team productivity increased by 300% after implementing Zion Tech Group\'s AI sales automation. Lead conversion rates went from 15% to 45%.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Sales Director',
+      company: 'Growth Inc',
+      content: 'The AI lead scoring is incredibly accurate. We now focus on high-quality prospects and our close rate has tripled.',
+      rating: 5
+    }
+  ];
 
   const stats = [
     { number: '300%', label: 'Increase in Sales' },
@@ -110,7 +118,6 @@ const AISalesAutomationPage: React.FC = () => {
   ];
 
   const useCases = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
     {
       title: 'B2B Lead Generation',
       description: 'Automatically identify and score high-value B2B prospects using AI-powered analysis of company data, website behavior, and engagement patterns.',

@@ -67,7 +67,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' }
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+        { name: 'AI CRM', path: '/ai-crm', description: 'AI-powered customer management' },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO optimization' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing system' },
+        { name: 'AI Mobile Builder', path: '/ai-mobile-builder', description: 'AI-powered app development' }
       ]
     },
     {
@@ -137,7 +142,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -146,7 +151,7 @@ const Navigation: React.FC = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl holographic-text-advanced cyber-glow">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Menu */}

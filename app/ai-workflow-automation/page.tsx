@@ -1,15 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -49,12 +43,28 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['Data encryption', 'Audit trails', 'Compliance ready']
     }
   ];
-<<<<<<< HEAD
   const automationFeatures = [
-=======
+    {
+      icon: Workflow,
+      title: 'Visual Workflow Builder',
+      description: 'Drag-and-drop interface to create complex automation workflows without coding.',
+      benefits: ['No coding required', 'Visual interface', 'Pre-built templates']
+    },
+    {
+      icon: Zap,
+      title: 'Smart Triggers',
+      description: 'Intelligent triggers that automatically start workflows based on data changes, time, or events.',
+      benefits: ['Event-driven', 'Time-based', 'Conditional logic']
+    },
+    {
+      icon: Brain,
+      title: 'AI Decision Making',
+      description: 'AI-powered decision nodes that can analyze data and make intelligent routing decisions.',
+      benefits: ['Smart routing', 'Data analysis', 'Adaptive logic']
+    }
+  ];
 
   const pricingPlans = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
     {
       name: 'Starter',
       price: '$99',
@@ -104,9 +114,33 @@ const AIWorkflowAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-<<<<<<< HEAD
+
   const processSteps = [
-=======
+    {
+      step: 1,
+      title: 'Analyze Current Processes',
+      description: 'We analyze your existing workflows to identify automation opportunities and bottlenecks.',
+      icon: BarChart
+    },
+    {
+      step: 2,
+      title: 'Design Automation Workflows',
+      description: 'Our experts design intelligent workflows that optimize your business processes.',
+      icon: Workflow
+    },
+    {
+      step: 3,
+      title: 'Implement & Test',
+      description: 'We implement the automation solutions and thoroughly test them before deployment.',
+      icon: Zap
+    },
+    {
+      step: 4,
+      title: 'Monitor & Optimize',
+      description: 'Continuous monitoring and optimization to ensure maximum efficiency and ROI.',
+      icon: Settings
+    }
+  ];
 
   const stats = [
     { number: '90%', label: 'Time Savings' },
@@ -116,7 +150,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
   ];
 
   const useCases = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
     {
       title: 'Customer Onboarding',
       description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',

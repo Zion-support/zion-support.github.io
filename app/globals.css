@@ -759,6 +759,245 @@ a {
   100% { transform: translateY(-200px) rotate(360deg); }
 }
 
+/* Advanced Futuristic Animations */
+@keyframes matrix-rain-advanced {
+  0% { 
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% { 
+    opacity: 1;
+  }
+  90% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes neural-pulse-advanced {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    opacity: 0.6;
+    transform: scale(1.1) rotate(90deg);
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.2) rotate(180deg);
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    opacity: 0.6;
+    transform: scale(1.1) rotate(270deg);
+    filter: hue-rotate(270deg);
+  }
+}
+
+@keyframes cyber-scan-advanced {
+  0% { 
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes holographic-shift-advanced {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  16.66% { 
+    background-position: 16.66% 50%;
+    filter: hue-rotate(60deg) brightness(1.2);
+  }
+  33.33% { 
+    background-position: 33.33% 50%;
+    filter: hue-rotate(120deg) brightness(1.4);
+  }
+  50% { 
+    background-position: 50% 50%;
+    filter: hue-rotate(180deg) brightness(1.2);
+  }
+  66.66% { 
+    background-position: 66.66% 50%;
+    filter: hue-rotate(240deg) brightness(1);
+  }
+  83.33% { 
+    background-position: 83.33% 50%;
+    filter: hue-rotate(300deg) brightness(0.8);
+  }
+}
+
+@keyframes energy-pulse-advanced {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(139, 92, 246, 0.3),
+      0 0 40px rgba(0, 255, 255, 0.2),
+      inset 0 0 20px rgba(255, 0, 255, 0.1);
+  }
+  25% { 
+    box-shadow: 
+      0 0 30px rgba(139, 92, 246, 0.5),
+      0 0 60px rgba(0, 255, 255, 0.4),
+      inset 0 0 30px rgba(255, 0, 255, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 0 40px rgba(139, 92, 246, 0.7),
+      0 0 80px rgba(0, 255, 255, 0.6),
+      inset 0 0 40px rgba(255, 0, 255, 0.3);
+  }
+  75% { 
+    box-shadow: 
+      0 0 30px rgba(139, 92, 246, 0.5),
+      0 0 60px rgba(0, 255, 255, 0.4),
+      inset 0 0 30px rgba(255, 0, 255, 0.2);
+  }
+}
+
+/* Enhanced Matrix Rain */
+.matrix-rain-advanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(90deg, transparent 98%, rgba(0, 255, 0, 0.3) 100%),
+    linear-gradient(0deg, transparent 98%, rgba(0, 255, 255, 0.2) 100%);
+  background-size: 3px 3px, 2px 2px;
+  animation: matrix-rain-advanced 2s linear infinite;
+  pointer-events: none;
+}
+
+/* Enhanced Neural Network */
+.neural-network-advanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.neural-network-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 60% 60%, rgba(255, 255, 0, 0.2) 0%, transparent 50%);
+  animation: neural-pulse-advanced 12s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Enhanced Cyber Scan */
+.cyber-scan-advanced {
+  position: relative;
+}
+
+.cyber-scan-advanced::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(0, 255, 255, 0.8), 
+    rgba(255, 0, 255, 0.8), 
+    rgba(0, 255, 255, 0.8), 
+    transparent);
+  animation: cyber-scan-advanced 3s linear infinite;
+}
+
+/* Enhanced Holographic Text */
+.holographic-text-advanced {
+  background: linear-gradient(45deg, 
+    #00ffff, #ff00ff, #ffff00, #00ff00, #ff0080, #8000ff, #00ffff);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographic-shift-advanced 6s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+/* Enhanced Energy Pulse */
+.energy-pulse-advanced {
+  animation: energy-pulse-advanced 3s ease-in-out infinite;
+}
+
+/* Particle System Advanced */
+.particle-system-advanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-system-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #00ffff, transparent),
+    radial-gradient(2px 2px at 40px 70px, #ff00ff, transparent),
+    radial-gradient(1px 1px at 90px 40px, #ffff00, transparent),
+    radial-gradient(1px 1px at 130px 80px, #00ff00, transparent),
+    radial-gradient(3px 3px at 160px 20px, #ff0080, transparent),
+    radial-gradient(1px 1px at 200px 90px, #8000ff, transparent);
+  background-repeat: repeat;
+  background-size: 250px 250px;
+  animation: particle-float 25s linear infinite;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Cyber Grid Advanced */
+.cyber-grid-advanced {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255, 0, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+  animation: grid-pulse 6s ease-in-out infinite;
+}
+
+@keyframes grid-pulse-advanced {
+  0%, 100% { 
+    background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+    opacity: 0.1;
+  }
+  50% { 
+    background-size: 25px 25px, 25px 25px, 50px 50px, 50px 50px;
+    opacity: 0.3;
+  }
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -1,14 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -95,7 +90,6 @@ const AICustomerSupportPage: React.FC = () => {
       popular: false
     }
   ];
-<<<<<<< HEAD
   const testimonials = [
     {
       name: 'Jennifer Martinez',
@@ -119,9 +113,7 @@ const AICustomerSupportPage: React.FC = () => {
       rating: 5
     }
   ];
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
@@ -129,7 +121,6 @@ const AICustomerSupportPage: React.FC = () => {
     { number: '50+', label: 'Languages Supported' }
   ];
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
