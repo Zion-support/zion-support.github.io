@@ -39,6 +39,7 @@ export default function BlogPage() {
       featured: true,
       stats: { views: 18750, engagement: 97 }
     },
+    {
       id: 'ai-2025-2026-mega-trends-breakthrough',
       title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
       description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
@@ -48,6 +49,8 @@ export default function BlogPage() {
       path: '/blog/ai-2025-2026-mega-trends-breakthrough',
       image: '🚀',
       stats: { views: 12500, engagement: 94 }
+    },
+    {
       id: 'ai-2026-autonomous-enterprise-architecture',
       title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
       description: 'Revolutionary autonomous enterprise architecture transforming business operations with self-healing systems and predictive infrastructure.',
