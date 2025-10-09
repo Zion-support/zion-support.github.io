@@ -1,27 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-import { Menu, X, Phone, Mail } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-=======
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, Zap, ArrowRight } from 'lucide-react';
+import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Zap, ArrowRight, Mail } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
-=======
-import { Menu, X, Phone, Mail } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,16 +18,6 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-=======
   const closeAllMenus = () => {
     setServicesOpen(false);
     setIsOpen(false);
@@ -69,7 +44,13 @@ const Navigation: React.FC = () => {
         { name: 'AI Fintech', path: '/ai-fintech' },
         { name: 'AI Content Generation', path: '/ai-content-generation' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' }
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization' }
       ]
     },
     {
@@ -80,10 +61,13 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'IT Infrastructure', path: '/it-infrastructure' },
         { name: 'IT Services', path: '/it-services' },
+        { name: 'Cloud Services', path: '/cloud-services' },
         { name: 'Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'DevOps', path: '/ai-workflow-automation' },
-        { name: 'Database Services', path: '/ai-data-analytics' }
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Database Services', path: '/database' },
+        { name: 'Networking', path: '/networking' },
+        { name: 'System Administration', path: '/it-services' }
       ]
     },
     {
@@ -93,10 +77,11 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       services: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas' },
-        { name: 'Developer Tools', path: '/micro-saas' },
-        { name: 'Business Apps', path: '/micro-saas' },
-        { name: 'Marketing Tools', path: '/micro-saas' },
-        { name: 'Analytics Tools', path: '/micro-saas' }
+        { name: 'Business Apps', path: '/business-apps' },
+        { name: 'Developer Tools', path: '/developer-tools' },
+        { name: 'Marketing Tools', path: '/marketing-tools' },
+        { name: 'Productivity Tools', path: '/productivity' },
+        { name: 'Analytics Tools', path: '/ai-data-analytics' }
       ]
     },
     {
@@ -109,76 +94,32 @@ const Navigation: React.FC = () => {
         { name: 'Autonomous Systems', path: '/autonomous-systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-        { name: 'Business Intelligence', path: '/business-intelligence' }
+        { name: 'Business Intelligence', path: '/business-intelligence' },
+        { name: 'Robotics', path: '/robotics' }
       ]
     }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">Z</span>
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-blue-400 transition-colors">
-              Home
-            </Link>
-            <Link href="/services" className="text-white hover:text-blue-400 transition-colors">
-              Services
-            </Link>
-            <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
-              About
-            </Link>
-            <Link href="/blog" className="text-white hover:text-blue-400 transition-colors">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-white hover:text-blue-400 transition-colors">
-              Contact
-            </Link>
-            <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-600">
-              <a 
-                href="tel:+13026009898" 
-                className="flex items-center space-x-1 text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                <Phone className="h-4 w-4" />
-                <span className="text-sm">(302) 600-9898</span>
-              </a>
-            </div>
-=======
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2 text-2xl font-bold"
-            onClick={closeAllMenus}
-          >
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
-            </div>
-            <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-              Zion Tech Group
-            </span>
-          </Link>
-
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/" className="text-gray-300 hover:text-white transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">              
+            <Link href="/about" className="text-gray-300 hover:text-white transition-colors font-medium">              
               About
             </Link>
             
@@ -186,9 +127,7 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-gray-300"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
@@ -197,7 +136,7 @@ const Navigation: React.FC = () => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[900px] bg-slate-800 rounded-xl shadow-2xl border border-slate-700 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
@@ -205,14 +144,14 @@ const Navigation: React.FC = () => {
                           <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
                             <category.icon className={`w-4 h-4 ${category.color}`} />
                           </div>
-                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
+                          <h3 className="font-semibold text-white text-sm">{category.title}</h3>
                         </div>
                         <div className="space-y-2">
                           {category.services.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              to={service.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors"
+                              href={service.path}
+                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-cyan-400 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
                               {service.name}
@@ -223,10 +162,10 @@ const Navigation: React.FC = () => {
                     ))}
                   </div>
                   
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                  <div className="border-t border-slate-700 mt-6 pt-4 px-6">
                     <Link
-                      to="/services"
-                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
+                      href="/services"
+                      className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
                       View All Services
@@ -237,30 +176,24 @@ const Navigation: React.FC = () => {
             </div>
 
             <Link 
-              to="/case-studies" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              href="/case-studies" 
+              className="font-medium transition-colors hover:text-cyan-400 text-gray-300"
               onClick={closeAllMenus}
             >
               Case Studies
             </Link>
 
             <Link 
-              to="/blog" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              href="/blog" 
+              className="font-medium transition-colors hover:text-cyan-400 text-gray-300"
               onClick={closeAllMenus}
             >
               Blog
             </Link>
 
             <Link 
-              to="/contact" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              href="/contact" 
+              className="font-medium transition-colors hover:text-cyan-400 text-gray-300"
               onClick={closeAllMenus}
             >
               Contact
@@ -268,54 +201,11 @@ const Navigation: React.FC = () => {
 
             {/* CTA Button */}
             <Link
-              to="/contact"
-              className="cyber-button inline-flex items-center"
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-flex items-center"
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
-=======
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
-            </div>
-            <span className="text-white font-bold text-xl">Zion Tech Group</span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
-            </Link>
-            <Link to="/ai-services" className="text-gray-300 hover:text-white transition-colors">
-              AI Services
-            </Link>
-            <Link to="/business-intelligence" className="text-gray-300 hover:text-white transition-colors">
-              Business Intelligence
-            </Link>
-            <Link to="/cloud-services" className="text-gray-300 hover:text-white transition-colors">
-              Cloud Services
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
             </Link>
           </div>
 
@@ -335,18 +225,13 @@ const Navigation: React.FC = () => {
               <Mail className="w-4 h-4" />
               <span className="text-sm">Email</span>
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-<<<<<<< HEAD
-              className="text-white hover:text-blue-400 transition-colors"
-=======
               className="text-gray-300 hover:text-white transition-colors"
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -354,133 +239,59 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
-              <Link 
-                href="/" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
-              >
-                Home
-              </Link>
-              <Link 
-                href="/services" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
-              >
-                Services
-              </Link>
-              <Link 
-                href="/about" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
-=======
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg shadow-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg shadow-lg mt-2">
               <Link
-                to="/"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
+                href="/"
+                className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               
               <Link
-                to="/about"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
+                href="/about"
+                className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
                 onClick={closeAllMenus}
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
               >
                 About
               </Link>
-              <Link 
-                href="/blog" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
+
+              <Link
+                href="/services"
+                className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Services
+              </Link>
+
+              <Link
+                href="/case-studies"
+                className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Case Studies
+              </Link>
+
+              <Link
+                href="/blog"
+                className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
+                onClick={closeAllMenus}
               >
                 Blog
               </Link>
-              <Link 
-                href="/contact" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-=======
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 backdrop-blur-md rounded-lg mt-2">
+
               <Link
-                to="/"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                Home
-              </Link>
-              <Link
-                to="/ai-services"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                AI Services
-              </Link>
-              <Link
-                to="/business-intelligence"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                Business Intelligence
-              </Link>
-              <Link
-                to="/cloud-services"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                Cloud Services
-              </Link>
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors"
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
-                onClick={closeMenu}
+                href="/contact"
+                className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
+                onClick={closeAllMenus}
               >
                 Contact
               </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="border-t border-gray-600 pt-2 mt-2">
-                <a 
-                  href="tel:+13026009898" 
-                  className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>(302) 600-9898</span>
-                </a>
-                <a 
-                  href="mailto:info@ziontechgroup.com" 
-                  className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>info@ziontechgroup.com</span>
-                </a>
-              </div>
-=======
 
-              <Link
-                to="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all mt-4"
-                onClick={closeAllMenus}
-              >
-                <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950
-              </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
-=======
-              <div className="border-t border-gray-700 pt-2 mt-2">
+              <div className="border-t border-slate-700 pt-2 mt-2">
                 <a
                   href="tel:+13024640950"
                   className="flex items-center space-x-2 px-3 py-2 text-gray-300 hover:text-white transition-colors"
@@ -496,7 +307,6 @@ const Navigation: React.FC = () => {
                   <span>kleber@ziontechgroup.com</span>
                 </a>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
             </div>
           </div>
         )}
@@ -505,12 +315,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Navigation;
-=======
-export default Navigation;
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
-=======
-export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-398f

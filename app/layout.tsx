@@ -1,23 +1,5 @@
 import './globals.css';
-<<<<<<< HEAD
-=======
-import PerformanceMonitor from './components/PerformanceMonitor';
-<<<<<<< HEAD
-import ErrorBoundary from './components/ErrorBoundary';
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
-=======
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AnalyticsProvider from './components/AnalyticsProvider';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PWAInstaller from './components/PWAInstaller';
-import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
-<<<<<<< HEAD
 import SEOHead from './components/SEOHead';
-import ErrorBoundary from './components/ErrorBoundary';
-=======
-import SEOOptimizer from './components/SEOOptimizer';
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
 
 export default function RootLayout({
   children,
@@ -169,61 +151,17 @@ export default function RootLayout({
             `
           }}
         />
+        
+        {/* Structured Data */}
         <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js')
-                    .then(function(registration) {
-                      console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                      console.log('SW registration failed: ', registrationError);
-                    });
-                });
-              }
-            `
+            __html: JSON.stringify(structuredData)
           }}
         />
       </head>
       <body className='antialiased'>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {children}
-=======
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          {children}
-        </ErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
-=======
-        <ErrorBoundary>
-          <GlobalErrorBoundary>
-            <AnalyticsProvider>
-              <AccessibilityEnhancer>
-                <PerformanceMonitor />
-                <PerformanceOptimizer />
-                <PWAInstaller />
-                {children}
-              </AccessibilityEnhancer>
-            </AnalyticsProvider>
-          </GlobalErrorBoundary>
-        </ErrorBoundary>
-=======
-        <GlobalErrorBoundary>
-          <AnalyticsProvider>
-            <AccessibilityEnhancer>
-              <PerformanceMonitor />
-              <PerformanceOptimizer />
-              <SEOOptimizer />
-              <PWAInstaller />
-              {children}
-            </AccessibilityEnhancer>
-          </AnalyticsProvider>
-        </GlobalErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
       </body>
     </html>
   );
