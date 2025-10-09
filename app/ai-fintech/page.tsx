@@ -140,9 +140,15 @@ const AIFintechPage: React.FC = () => {
   ];
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main>
+=======
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -351,9 +357,15 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
       <Footer />
     </div>
+=======
+      </div>
+      <Footer />
+    </>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
   );
 };
 export default AIFintechPage;

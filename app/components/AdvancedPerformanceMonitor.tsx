@@ -1,5 +1,5 @@
+'use client';
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -8,15 +8,13 @@ interface PerformanceMetrics {
   ttfb: number | null;
   memory: number | null;
 }
-
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
 }
-
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
-  enableRealTimeMonitoring = true,
+  enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -24,50 +22,44 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     fid: null,
     cls: null,
     ttfb: null,
-    memory: null,
+    memory: null
   });
-
   const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
-
     const observers: PerformanceObserver[] = [];
-
     // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
-
+    const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const _fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          const _entries = list.getEntries();
+          const _lastEntry = _entries[_entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-         
-
-      }
+        // eslint-disable-next-line no-console
+        }
     }
-
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
       try {
         const fidObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          entries.forEach(entry => {
+          const _entries = list.getEntries();
+          _entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
               'startTime' in entry
             ) {
-              const fidEntry = entry as PerformanceEventTiming;
+              const _fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                fid: fidEntry.processingStart - fidEntry.startTime,
+                fid: _fidEntry.processingStart - _fidEntry.startTime
               }));
             }
           });
@@ -75,27 +67,25 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-         
-
-      }
+        // eslint-disable-next-line no-console
+        }
     }
-
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
-        let clsValue = 0;
+        let _clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          entries.forEach(entry => {
+          const _entries = list.getEntries();
+          _entries.forEach(entry => {
             if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
-              const clsEntry = entry as LayoutShift;
-              if (!clsEntry.hadRecentInput) {
-                clsValue += clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: clsValue }));
+              const _clsEntry = entry as LayoutShift;
+              if (!_clsEntry.hadRecentInput) {
+                _clsValue += _clsEntry.value;
+                setMetrics(prev => ({ ...prev, cls: _clsValue }));
               }
             }
           });
@@ -103,78 +93,63 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-         
-
-      }
+        // eslint-disable-next-line no-console
+        }
     }
-
     // Measure Time to First Byte (TTFB)
     try {
-      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry
-        ? navigationEntry.responseStart - navigationEntry.requestStart
+      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const _navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
+      const ttfb = _navigationEntry
+        ? _navigationEntry.responseStart - _navigationEntry.requestStart
         : null;
-
       // Measure Memory Usage
       const memory =
         (performance as Performance & { memory?: { usedJSHeapSize: number } })
           .memory?.usedJSHeapSize || null;
-
       setMetrics(prev => ({
         ...prev,
-        fcp,
+        fcp: _fcp,
         ttfb,
-        memory,
+        memory
       }));
     } catch (error) {
-       
-
-    }
-
+      // eslint-disable-next-line no-console
+      }
     // Cleanup observers
     return () => {
       observers.forEach(observer => {
         try {
           observer.disconnect();
         } catch (error) {
-           
-
-        }
+          // eslint-disable-next-line no-console
+          }
       });
     };
   }, []);
-
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
-
-    const resources = performance.getEntriesByType('resource');
-    const slowResources = resources.filter(
+    const _resources = performance.getEntriesByType('resource');
+    const slowResources = _resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
-
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console
-      console.warn(
-        'Slow resources detected:',
-        slowResources.map((r: PerformanceResourceTiming) => ({
+      => ({
           name: r.name,
           duration: r.duration,
-          size: r.transferSize,
+          size: r.transferSize
         }))
       );
     }
   }, []);
-
   const measureCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     // Use web-vitals library if available
     try {
       import('web-vitals')
         .then(webVitals => {
           const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
-
           if (onCLS) {
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
@@ -203,21 +178,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       // web-vitals not available, continue without it
     }
   }, []);
-
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
-
-    const cleanup = measureWebVitals();
+    const _cleanup = measureWebVitals();
     measureResourceTiming();
     measureCoreWebVitals();
-
     // Monitor performance every 5 seconds
     const interval = setInterval(() => {
       measureResourceTiming();
     }, 5000);
-
     return () => {
-      if (cleanup) cleanup();
+      if (_cleanup) _cleanup();
       clearInterval(interval);
     };
   }, [
@@ -226,52 +197,42 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     measureResourceTiming,
     measureCoreWebVitals,
   ]);
-
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics);
     }
   }, [metrics, onMetricsUpdate]);
-
   // Performance recommendations
   const getPerformanceRecommendations = useCallback(() => {
     const recommendations: string[] = [];
-
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
       );
     }
-
     if (metrics.lcp && metrics.lcp > 2500) {
       recommendations.push(
         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
       );
     }
-
     if (metrics.fid && metrics.fid > 100) {
       recommendations.push(
         'First Input Delay is high. Reduce JavaScript execution time.'
       );
     }
-
     if (metrics.cls && metrics.cls > 0.1) {
       recommendations.push(
         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
       );
     }
-
     if (metrics.ttfb && metrics.ttfb > 600) {
       recommendations.push(
         'Time to First Byte is slow. Optimize server response time.'
       );
     }
-
     return recommendations;
   }, [metrics]);
-
-  const recommendations = getPerformanceRecommendations();
-
+  const _recommendations = getPerformanceRecommendations();
   if (process.env['NODE_ENV'] === 'development') {
     return (
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
@@ -291,13 +252,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               : 'N/A'}
           </div>
         </div>
-        {recommendations.length > 0 && (
+        {_recommendations.length > 0 && (
           <div className='mt-2'>
             <h4 className='font-semibold text-xs text-red-600'>
               Recommendations:
             </h4>
             <ul className='text-xs text-red-600'>
-              {recommendations.map((rec, index) => (
+              {_recommendations.map((rec, index) => (
                 <li key={index}>• {rec}</li>
               ))}
             </ul>
@@ -306,8 +267,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       </div>
     );
   }
-
   return null;
 };
-
 export default AdvancedPerformanceMonitor;

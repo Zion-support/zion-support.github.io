@@ -1,105 +1,120 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Zap, Clock, Database, Wifi } from 'lucide-react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  connectionType?: string;
+}
 
 const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    if (typeof window === 'undefined' || process.env.NODE_ENV !== 'production') return;
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-    // Web Vitals monitoring
-    const reportWebVitals = (metric: any) => {
-      if (window.gtag) {
-        window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
-        });
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+      
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcp = lcpEntries[lcpEntries.length - 1];
+      
+      // Get connection info
+      const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+      
+      const performanceMetrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPaint: fcp ? fcp.startTime : 0,
+        largestContentfulPaint: lcp ? lcp.startTime : 0,
+        firstInputDelay: 0, // Would need to measure this with PerformanceObserver
+        cumulativeLayoutShift: 0, // Would need to measure this with PerformanceObserver
+        connectionType: connection ? connection.effectiveType : 'unknown'
+      };
+
+      setMetrics(performanceMetrics);
+      
+      // Show performance indicator in development
+      if (process.env.NODE_ENV === 'development') {
+        setIsVisible(true);
+        setTimeout(() => setIsVisible(false), 5000);
       }
     };
 
-    // Core Web Vitals
-    const vitals = ['CLS', 'FID', 'FCP', 'LCP', 'TTFB'];
-    
-    vitals.forEach((vital) => {
-      if ('web-vitals' in window) {
-        (window as any)['web-vitals'].getCLS(reportWebVitals);
-        (window as any)['web-vitals'].getFID(reportWebVitals);
-        (window as any)['web-vitals'].getFCP(reportWebVitals);
-        (window as any)['web-vitals'].getLCP(reportWebVitals);
-        (window as any)['web-vitals'].getTTFB(reportWebVitals);
-      }
-    });
-
-    // Performance observer for additional metrics
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            
-            // Page load time
-            const loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
-            if (window.gtag) {
-              window.gtag('event', 'timing_complete', {
-                name: 'page_load',
-                value: Math.round(loadTime),
-              });
-            }
-          }
-          
-          if (entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            
-            // Track slow resources
-            if (resourceEntry.duration > 1000) {
-              if (window.gtag) {
-                window.gtag('event', 'slow_resource', {
-                  event_category: 'Performance',
-                  event_label: resourceEntry.name,
-                  value: Math.round(resourceEntry.duration),
-                });
-              }
-            }
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['navigation', 'resource'] });
+    // Wait for page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
 
-    // Memory usage monitoring (if available)
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      const memoryUsage = {
-        used: memory.usedJSHeapSize,
-        total: memory.totalJSHeapSize,
-        limit: memory.jsHeapSizeLimit,
-      };
-
-      if (window.gtag) {
-        window.gtag('event', 'memory_usage', {
-          event_category: 'Performance',
-          event_label: 'heap_usage',
-          value: Math.round((memoryUsage.used / memoryUsage.limit) * 100),
-        });
-      }
-    }
-
-    // Connection monitoring
-    if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
-      if (window.gtag) {
-        window.gtag('event', 'connection_info', {
-          event_category: 'Performance',
-          event_label: 'connection_type',
-          value: connection.effectiveType === '4g' ? 4 : connection.effectiveType === '3g' ? 3 : 2,
-        });
-      }
-    }
-
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
   }, []);
 
-  return null;
+  if (!isVisible || !metrics) return null;
+
+  const getPerformanceGrade = (loadTime: number) => {
+    if (loadTime < 1000) return { grade: 'A', color: 'text-green-400' };
+    if (loadTime < 2000) return { grade: 'B', color: 'text-yellow-400' };
+    if (loadTime < 3000) return { grade: 'C', color: 'text-orange-400' };
+    return { grade: 'D', color: 'text-red-400' };
+  };
+
+  const grade = getPerformanceGrade(metrics.loadTime);
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-slate-700 z-50 max-w-xs">
+      <div className="flex items-center space-x-2 mb-3">
+        <Zap className="w-4 h-4 text-cyan-400" />
+        <span className="text-sm font-medium text-white">Performance</span>
+        <span className={`text-xs font-bold ${grade.color}`}>
+          {grade.grade}
+        </span>
+      </div>
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-1">
+            <Clock className="w-3 h-3 text-gray-400" />
+            <span className="text-gray-300">Load Time</span>
+          </div>
+          <span className="text-white font-mono">
+            {metrics.loadTime.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-1">
+            <Database className="w-3 h-3 text-gray-400" />
+            <span className="text-gray-300">FCP</span>
+          </div>
+          <span className="text-white font-mono">
+            {metrics.firstContentfulPaint.toFixed(0)}ms
+          </span>
+        </div>
+        
+        {metrics.connectionType && (
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-1">
+              <Wifi className="w-3 h-3 text-gray-400" />
+              <span className="text-gray-300">Connection</span>
+            </div>
+            <span className="text-white font-mono capitalize">
+              {metrics.connectionType}
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

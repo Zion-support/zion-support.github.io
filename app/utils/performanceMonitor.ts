@@ -87,7 +87,9 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-    } catch () {}}
+    } catch (error) {
+      }
+  }
   private observeLCP(): void {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -98,7 +100,9 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
-    } catch () {}}
+    } catch (error) {
+      }
+  }
   private observeFID(): void {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -109,7 +113,9 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-    } catch () {}}
+    } catch (error) {
+      }
+  }
   private observeCLS(): void {
     try {
       let clsValue = 0;
@@ -124,7 +130,9 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-    } catch () {}}
+    } catch (error) {
+      }
+  }
   private setupCustomMetrics(): void {
     // Time to First Byte
     if (performance.timing) {
@@ -154,7 +162,9 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
-    } catch () {}}
+    } catch (error) {
+      }
+  }
   private analyzeResource(entry: PerformanceResourceTiming): void {
     const duration = entry.responseEnd - entry.startTime;
     const size = entry.transferSize || 0;
@@ -173,7 +183,7 @@ class PerformanceMonitor {
   }
   private logMetric(name: string, value: number): void {
     if (process.env.NODE_ENV === 'development') {
-      console.log(`[Performance] ${name}: ${value.toFixed(2)}ms`);
+      }ms`);
     }
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {

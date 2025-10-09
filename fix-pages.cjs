@@ -1,16 +1,27 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+const filesToFix = [
+  'app/ai-data-visualization/page.tsx',
+  'app/ai-sales-automation/page.tsx',
+  'app/ai-workflow-automation/page.tsx',
+  'app/it-services/page.tsx',
+  'app/services/page.tsx'
+];
+
+const basicPageTemplate = `'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
-const AiSalesAutomationPage: React.FC = () => {
+const PageComponent: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="AiSalesAutomation - Zion Tech Group"
-        description="Professional AI and IT ai-sales-automations for your business transformation."
+        title="Service - Zion Tech Group"
+        description="Professional AI and IT services for your business transformation."
         keywords={['AI services', 'IT solutions', 'business transformation']}
         canonicalUrl="https://ziontechgroup.com/service"
       />
@@ -78,4 +89,21 @@ const AiSalesAutomationPage: React.FC = () => {
   );
 };
 
-export default PageComponent;
+export default PageComponent;`;
+
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  const componentName = filePath.split('/')[1].split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'Page';
+  
+  const content = basicPageTemplate
+    .replace('PageComponent', componentName)
+    .replace('Service', componentName.replace('Page', ''))
+    .replace('service', filePath.split('/')[1]);
+  
+  fs.writeFileSync(fullPath, content);
+  console.log(`Fixed ${filePath}`);
+});
+
+console.log('All files fixed!');

@@ -1,14 +1,11 @@
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
-  '/static/css/',
-  '/static/js/',
-  '/_next/static/',
-  '/images/',
-  '/fonts/',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
 ];
 
-// Install event
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -18,7 +15,6 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Fetch event
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -29,7 +25,6 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-// Activate event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {

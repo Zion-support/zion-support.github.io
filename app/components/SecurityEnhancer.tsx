@@ -1,110 +1,195 @@
+'use client';
 import React, { useEffect } from 'react';
 
-const SecurityEnhancer: React.FC = () => {
+interface SecurityEnhancerProps {
+  enableCSP?: boolean;
+  enableHTTPSRedirect?: boolean;
+  enableXSSProtection?: boolean;
+  enableClickjackingProtection?: boolean;
+  enableContentTypeSniffingProtection?: boolean;
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
+  enableCSP = true,
+  enableHTTPSRedirect = true,
+  enableXSSProtection = true,
+  enableClickjackingProtection = true,
+  enableContentTypeSniffingProtection = true
+}) => {
   useEffect(() => {
-    // Add Content Security Policy meta tag
-    const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
-    if (!csp) {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'Content-Security-Policy';
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';";
-      document.head.appendChild(meta);
+    if (enableCSP) {
+      addContentSecurityPolicy();
     }
-
+    
+    if (enableHTTPSRedirect) {
+      enforceHTTPS();
+    }
+    
+    if (enableXSSProtection) {
+      addXSSProtection();
+    }
+    
+    if (enableClickjackingProtection) {
+      addClickjackingProtection();
+    }
+    
+    if (enableContentTypeSniffingProtection) {
+      addContentTypeSniffingProtection();
+    }
+    
     // Add security headers
-    const addSecurityHeader = (name: string, value: string) => {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = name;
-      meta.content = value;
-      document.head.appendChild(meta);
-    };
-
-    addSecurityHeader('X-Content-Type-Options', 'nosniff');
-    addSecurityHeader('X-Frame-Options', 'DENY');
-    addSecurityHeader('X-XSS-Protection', '1; mode=block');
-    addSecurityHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
-    addSecurityHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-
-    // Sanitize user input in forms
-    const sanitizeInput = (input: string): string => {
-      return input
-        .replace(/[<>]/g, '') // Remove potential HTML tags
-        .replace(/javascript:/gi, '') // Remove javascript: protocol
-        .replace(/on\w+=/gi, '') // Remove event handlers
-        .trim();
-    };
-
-    // Add input sanitization to all form inputs
-    const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input) => {
-      input.addEventListener('blur', (e) => {
-        const target = e.target as HTMLInputElement;
-        if (target.value) {
-          target.value = sanitizeInput(target.value);
-        }
-      });
-    });
-
-    // Prevent right-click context menu on sensitive elements
-    const sensitiveElements = document.querySelectorAll('[data-sensitive]');
-    sensitiveElements.forEach((element) => {
-      element.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-      });
-    });
-
+    addSecurityHeaders();
+    
     // Add security event listeners
-    const handleSecurityEvent = (event: Event) => {
-      console.warn('Security event detected:', event.type);
-      // In production, you might want to send this to a security monitoring service
-    };
+    addSecurityEventListeners();
+  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 
-    // Monitor for suspicious activities
+  const addContentSecurityPolicy = () => {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Content-Security-Policy';
+    meta.content = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "img-src 'self' data: https: blob:",
+      "font-src 'self' https://fonts.gstatic.com",
+      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
+      "frame-ancestors 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "object-src 'none'",
+      "media-src 'self'",
+      "worker-src 'self'"
+    ].join('; ');
+    document.head.appendChild(meta);
+  };
+
+  const enforceHTTPS = () => {
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+  };
+
+  const addXSSProtection = () => {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-XSS-Protection';
+    meta.content = '1; mode=block';
+    document.head.appendChild(meta);
+  };
+
+  const addClickjackingProtection = () => {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Frame-Options';
+    meta.content = 'DENY';
+    document.head.appendChild(meta);
+  };
+
+  const addContentTypeSniffingProtection = () => {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Content-Type-Options';
+    meta.content = 'nosniff';
+    document.head.appendChild(meta);
+  };
+
+  const addSecurityHeaders = () => {
+    const headers = [
+      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
+      { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
+      { httpEquiv: 'Strict-Transport-Security', content: 'max-age=63072000; includeSubDomains; preload' }
+    ];
+
+    headers.forEach(header => {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = header.httpEquiv;
+      meta.content = header.content;
+      document.head.appendChild(meta);
+    });
+  };
+
+  const addSecurityEventListeners = () => {
+    // Prevent right-click context menu (optional)
+    document.addEventListener('contextmenu', (e) => {
+      // Only prevent on production
+      if (process.env.NODE_ENV === 'production') {
+        e.preventDefault();
+      }
+    });
+
+    // Prevent text selection (optional)
+    document.addEventListener('selectstart', (e) => {
+      // Only prevent on production
+      if (process.env.NODE_ENV === 'production') {
+        e.preventDefault();
+      }
+    });
+
+    // Prevent drag and drop
+    document.addEventListener('dragover', (e) => {
+      e.preventDefault();
+    });
+
+    document.addEventListener('drop', (e) => {
+      e.preventDefault();
+    });
+
+    // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
     document.addEventListener('keydown', (e) => {
-      // Detect potential XSS attempts
-      if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-        handleSecurityEvent(e);
+      if (process.env.NODE_ENV === 'production') {
+        // F12
+        if (e.keyCode === 123) {
+          e.preventDefault();
+        }
+        // Ctrl+Shift+I
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+          e.preventDefault();
+        }
+        // Ctrl+U
+        if (e.ctrlKey && e.keyCode === 85) {
+          e.preventDefault();
+        }
+        // Ctrl+S
+        if (e.ctrlKey && e.keyCode === 83) {
+          e.preventDefault();
+        }
+        // Ctrl+A
+        if (e.ctrlKey && e.keyCode === 65) {
+          e.preventDefault();
+        }
       }
     });
 
-    // Monitor for iframe injection attempts
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.nodeType === Node.ELEMENT_NODE) {
-            const element = node as Element;
-            if (element.tagName === 'IFRAME' || element.tagName === 'SCRIPT') {
-              // Check if the element was added by user interaction
-              if (!element.hasAttribute('data-trusted')) {
-                console.warn('Untrusted element detected:', element);
-                handleSecurityEvent(new Event('suspicious_element'));
-              }
-            }
+    // Monitor for suspicious activity
+    let suspiciousActivity = 0;
+    const resetSuspiciousActivity = () => {
+      suspiciousActivity = 0;
+    };
+
+    // Reset suspicious activity counter every 5 minutes
+    setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
+
+    // Track rapid clicks (potential bot activity)
+    let clickCount = 0;
+    document.addEventListener('click', () => {
+      clickCount++;
+      if (clickCount > 10) { // More than 10 clicks in 5 minutes
+        suspiciousActivity++;
+        if (suspiciousActivity > 3) {
+          // Could implement additional security measures here
+        }
+      }
+    });
+
+    // Track rapid keyboard input
+    let keyCount = 0;
+    document.addEventListener('keydown', () => {
+      keyCount++;
+      if (keyCount > 100) { // More than 100 keystrokes in 5 minutes
+        suspiciousActivity++;
+        if (suspiciousActivity > 3) {
           }
-        });
-      });
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-
-    // Add nonce to dynamically added scripts
-    const originalCreateElement = document.createElement;
-    document.createElement = function(tagName: string) {
-      const element = originalCreateElement.call(this, tagName);
-      if (tagName.toLowerCase() === 'script') {
-        element.setAttribute('nonce', 'dynamic-script-nonce');
       }
-      return element;
-    };
-
-    // Cleanup
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+    });
+  };
 
   return null;
 };
