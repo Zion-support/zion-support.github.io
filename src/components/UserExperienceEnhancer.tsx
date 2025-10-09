@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface UserExperienceEnhancerProps {
-<<<<<<< HEAD
   // TODO: Add content
 }
   enableSmoothScrolling?: boolean;
@@ -413,17 +412,6 @@ const observer = new PerformanceObserver((list) => {
     }
   }, []);
   return null;
-=======
-  // Add props here
-}
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = () => {
-  return (
-    <div className="userexperienceenhancer">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default UserExperienceEnhancer;

@@ -11,7 +11,6 @@ interface PerformanceMetrics {
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
-<<<<<<< HEAD
 const PerformanceOptimizer: React.FC
           
           
@@ -42,20 +41,9 @@ const PerformanceOptimizer: React.FC
     codeSplit: false,
     resourceHints: 0,
     serviceWorker: false
-=======
-
-const PerformanceOptimizer: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   });
 
   useEffect(() => {
-<<<<<<< HEAD
   // TODO: Add content
 }
     if (enableImageOptimization) {
@@ -258,14 +246,6 @@ if ('IntersectionObserver' in window) {}
               });
             }
           }
-=======
-    // Basic performance monitoring
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
         }
       });
     });

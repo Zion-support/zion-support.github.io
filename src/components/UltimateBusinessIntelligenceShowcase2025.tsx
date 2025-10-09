@@ -3,7 +3,6 @@ import React from 'react';
 interface UltimateBusinessIntelligenceShowcase2025Props {
   // Add props here
 }
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TODO: Add items
@@ -105,15 +104,3 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
 >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025
-=======
-
-const UltimateBusinessIntelligenceShowcase2025: React.FC<UltimateBusinessIntelligenceShowcase2025Props> = () => {
-  return (
-    <div className="ultimatebusinessintelligenceshowcase2025">
-      {/* Component content */}
-    </div>
-  );
-};
-
-export default UltimateBusinessIntelligenceShowcase2025;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

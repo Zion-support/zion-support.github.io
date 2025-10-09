@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 interface AnalyticsContextType {
   // TODO: Add content
 };
@@ -204,17 +203,6 @@ trackEvent,
           <AnalyticsContext.Provider value={contextValue}>
       {children}
     </AnalyticsContext.Provider>
-=======
-interface AnalyticsProviderProps {
-  // Add props here
-}
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = () => {
-  return (
-    <div className="analyticsprovider">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

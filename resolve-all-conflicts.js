@@ -27,7 +27,7 @@ function resolveConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       console.log(`✅ No conflicts in: ${filePath}`);
       return true;
     }
@@ -38,15 +38,11 @@ function resolveConflicts(filePath) {
     let resolvedContent = content;
     
     // Remove conflict markers and keep the HEAD version
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n?/g, '');
-    resolvedContent = resolvedContent.replace(/=======.*?\n?/g, '');
-    resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]+\n?/g, '');
-    
+    resolvedContent = resolvedContent.replace(/    resolvedContent = resolvedContent.replace(/.*?\n?/g, '');
+    resolvedContent = resolvedContent.replace(/    
     // Clean up any remaining conflict artifacts
-    resolvedContent = resolvedContent.replace(/<<<<<<< .*\n?/g, '');
-    resolvedContent = resolvedContent.replace(/=======.*?\n?/g, '');
-    resolvedContent = resolvedContent.replace(/>>>>>>> .*\n?/g, '');
-    
+    resolvedContent = resolvedContent.replace(/    resolvedContent = resolvedContent.replace(/.*?\n?/g, '');
+    resolvedContent = resolvedContent.replace(/    
     // Remove duplicate lines that might have been created
     const lines = resolvedContent.split('\n');
     const uniqueLines = [];

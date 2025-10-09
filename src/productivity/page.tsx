@@ -18,7 +18,6 @@ const PagePage: React.FC = () => {
             This page is under development. Please check back soon for updates.
           </p>
         </section>
-<<<<<<< HEAD
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
@@ -88,8 +87,6 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
             >Get Started Today</a>
               href="tel:+13024640950"
             >Call (302) 464-0950</a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       </main>
       <Footer />
     </div>

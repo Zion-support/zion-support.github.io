@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
@@ -119,19 +118,6 @@ Expected Efficiency Gain (%)
                   Expected return on investment over {timeframe} months
                 </p>
     </section>
-=======
-import React from 'react';
-
-interface InteractiveAIROICalculatorProps {
-  // Add props here
-}
-
-const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = () => {
-  return (
-    <div className="interactiveairoicalculator">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

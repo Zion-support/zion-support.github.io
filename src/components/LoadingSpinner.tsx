@@ -3,7 +3,6 @@ import React from 'react';
 interface LoadingSpinnerProps {
   // Add props here
 }
-<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   text?: string;
@@ -87,15 +86,6 @@ className={cn()
     );
   }
   return spinner;
-=======
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
-  return (
-    <div className="loadingspinner">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default LoadingSpinner;

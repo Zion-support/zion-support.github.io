@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 interface SEOOptimizerProps {
   // TODO: Add content
@@ -22,15 +21,6 @@ const SEOOptimizer: React.FC
           
           <SEOOptimizerProps> = memo(({
   // TODO: Add content
-=======
-import React, { useEffect } from 'react';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 const SEOOptimizer: React.FC<SEOProps> = ({

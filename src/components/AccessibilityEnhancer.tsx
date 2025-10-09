@@ -4,7 +4,6 @@ interface AccessibilityEnhancerProps {
   // Add props here
 }
 
-<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
@@ -79,14 +78,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           
           
           <>{children}</>;
-=======
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = () => {
-  return (
-    <div className="accessibilityenhancer">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default AccessibilityEnhancer;

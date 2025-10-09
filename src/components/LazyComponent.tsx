@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface LazyComponentProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   children: ReactNode;
@@ -241,17 +240,4 @@ const imagePreloads = [
     document.head.appendChild(link);
   });
 };
-=======
-  // Add props here
-}
-
-const LazyComponent: React.FC<LazyComponentProps> = () => {
-  return (
-    <div className="lazycomponent">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default LazyComponent;

@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface OptimizedImageProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   src: string;,
@@ -189,16 +188,6 @@ onError={handleError} className={`transition-opacity duration-300 ${
           
           
           </div>
-=======
-  // Add props here
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = () => {
-  return (
-    <div className="optimizedimage">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
 

@@ -2,7 +2,6 @@ import React from 'react';
 import {  Cloud,  Shield,  Zap,  BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const CloudServicesPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
@@ -67,16 +66,9 @@ const CloudServicesPage: React.FC = () => {
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 // Cloud Services
           
@@ -231,17 +223,6 @@ const PagePage: React.FC = () => {
           
           </a>
           </div>
-=======
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
         </section>
       </main>
       <Footer />

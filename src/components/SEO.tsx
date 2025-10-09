@@ -4,7 +4,6 @@ interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string[];
-<<<<<<< HEAD
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'profile';
@@ -124,36 +123,6 @@ const generateStructuredData = () => {
         '@type': 'Person',
         name: author,
       };
-=======
-  canonicalUrl?: string;
-}
-
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-}) => {
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-    
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     }
     metaKeywords.setAttribute('content', keywords.join(', '));
     

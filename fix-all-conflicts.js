@@ -15,8 +15,7 @@ function fixMergeConflicts(filePath) {
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version (first part)
-    const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
-    const originalContent = content;
+    const conflictRegex = /    const originalContent = content;
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
       modified = true;
       return headContent.trim();
@@ -24,12 +23,8 @@ function fixMergeConflicts(filePath) {
 
     // Remove any remaining conflict markers
     content = content
-      .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/<<<<<<< HEAD/g, '')
-      .replace(/=======/g, '')
-      .replace(/>>>>>>> [^\n]+/g, '');
-
+      .replace(/      .replace(/[\s\S]*?      .replace(/      .replace(//g, '')
+      .replace(/
     // Clean up the content
     content = content
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive empty lines

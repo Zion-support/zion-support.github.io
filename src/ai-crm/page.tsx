@@ -23,7 +23,6 @@ const PagePage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 }
 const AiCrmPage: React.FC = () => {
   return (
@@ -35,7 +34,3 @@ const AICRMPage: React.FC = () => {
     <div>Coming Soon</div>
   );
 };
-=======
-
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

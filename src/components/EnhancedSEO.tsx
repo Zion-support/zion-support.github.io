@@ -6,7 +6,6 @@ interface SEOProps {
   keywords?: string[];
   canonicalUrl?: string;
 }
-<<<<<<< HEAD
 const EnhancedSEO: React.FC
           
           
@@ -19,16 +18,11 @@ const EnhancedSEO: React.FC
           <SEOProps> = ({
   // TODO: Add content
 }
-=======
-
-const EnhancedSEO: React.FC<SEOProps> = ({
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions for modern enterprises',
   keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
   canonicalUrl
 }) => {
-<<<<<<< HEAD
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
@@ -135,43 +129,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           
           </Helmet>
   );
-=======
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-    
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute('content', keywords.join(', '));
-    
-    // Update canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
-      }
-      canonical.setAttribute('href', canonicalUrl);
-    }
-  }, [title, description, keywords, canonicalUrl]);
-
-  return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default EnhancedSEO;

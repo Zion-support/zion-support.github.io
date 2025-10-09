@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   // TODO: Add content
 };
   fcp: number | null;
@@ -15,18 +14,10 @@ interface PerformanceMetrics {
 }
 interface PerformanceMonitorProps {
   // TODO: Add content
-=======
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-<<<<<<< HEAD
   enableReporting?: boolean;
   reportInterval?: number;
 }
@@ -61,13 +52,6 @@ const EnhancedPerformanceMonitor: React.FC
   // TODO: Add content
 };
   fcp: null,
-=======
-}
-
-const EnhancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     lcp: null,
     fid: null,
     cls: null,
@@ -82,7 +66,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdat
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
-<<<<<<< HEAD
       }
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
@@ -316,8 +299,6 @@ const reportMetrics = useCallback(() => {
           fid: metrics.fid,
           cls: metrics.cls,
         },
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       });
     });
 
@@ -328,7 +309,6 @@ const reportMetrics = useCallback(() => {
       console.warn('Performance monitoring not supported:', error);
     }
   }, []);
-<<<<<<< HEAD
   if (!isVisible) return null;
   const performanceScore = calculatePerformanceScore(metrics);
   return (
@@ -419,16 +399,6 @@ const reportMetrics = useCallback(() => {
           </div>
     </div>
   );
-=======
-
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
 
 export default EnhancedPerformanceMonitor;

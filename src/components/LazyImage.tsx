@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface LazyImageProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   src: string;,
@@ -148,15 +147,6 @@ const LazyImage: React.FC
           )}
         </>
       )}
-=======
-  // Add props here
-}
-
-const LazyImage: React.FC<LazyImageProps> = () => {
-  return (
-    <div className="lazyimage">
-      {/* Component content */}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     </div>
   );
 };

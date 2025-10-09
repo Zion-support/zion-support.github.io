@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-<<<<<<< HEAD
 const _baseUrl = 'https://ziontechgroup.com'
   const _routes = [
     '',
@@ -47,14 +46,4 @@ const _baseUrl = 'https://ziontechgroup.com'
     changeFrequency: route === '' ? 'daily' : 'weekly',
     priority: route === '' ? 1 : 0.8,
   }))
-=======
-  return [
-    {
-      url: 'https://ziontechgroup.com',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }

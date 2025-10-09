@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   // TODO: Add content
 };
   fcp: number | null;,
@@ -13,18 +12,10 @@ interface PerformanceMetrics {
 }
 interface PerformanceMonitorProps {
   // TODO: Add content
-=======
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
 
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-<<<<<<< HEAD
   enableRealTimeMonitoring?: boolean;
 }
 const AdvancedPerformanceMonitor: React.FC
@@ -57,13 +48,6 @@ const AdvancedPerformanceMonitor: React.FC
   // TODO: Add content
 };
   fcp: null,
-=======
-}
-
-const AdvancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     lcp: null,
     fid: null,
     cls: null,
@@ -78,7 +62,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdat
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
-<<<<<<< HEAD
     }
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
@@ -221,11 +204,6 @@ const memory =
 }
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available
-=======
-      });
-    });
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     try {
       observer.observe({ entryTypes: ['paint'] });
       return () => observer.disconnect();
@@ -239,7 +217,6 @@ const memory =
       onMetricsUpdate(metrics);
     }
   }, [metrics, onMetricsUpdate]);
-<<<<<<< HEAD
   // Performance recommendations;
 const getPerformanceRecommendations = useCallback(() => {
   // TODO: Add content
@@ -331,9 +308,6 @@ const getPerformanceRecommendations = useCallback(() => {
       </div>
     );
   }
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   return null;
 };
 

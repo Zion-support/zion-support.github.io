@@ -23,7 +23,6 @@ const SetupTestsPage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   // TODO: Add content
@@ -103,7 +102,3 @@ delete (window as unknown as Record
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn()
-=======
-
-export default SetupTestsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
