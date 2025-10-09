@@ -1,129 +1,155 @@
 #!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-// Function to fix duplicate imports
-function fixDuplicateImports(content) {
-  // Fix duplicate imports in the same import statement
-  content = content.replace(
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports, source) => {
-      // Split by comma and clean up
-      const importList = imports.split(',').map(imp => imp.trim()).filter(imp => imp);
-      // Remove duplicates while preserving order
-      const uniqueImports = [...new Set(importList)];
-      return `import { ${uniqueImports.join(', ')} } from '${source}';`;
-    }
-  );
-  return content;
-}
-// Function to fix malformed object literals
-function fixMalformedObjects(content) {
-  // Fix objects that start with comma
-  content = content.replace(/\{\s*,/g, '{');
-  // Fix missing closing braces in object literals
-  content = content.replace(/\{\s*,\s*([^}]+?)\s*$/gm, (match, content) => {
-    // If the line ends with a comma and there's no closing brace, add it
-    if (!content.includes('}')) {
-      return `{${content.trim()}}`;
-    }
-    return match;
-  });
-  return content;
-}
-// Function to fix duplicate return statements
-function fixDuplicateReturns(content) {
-  // Find duplicate return statements in the same function
-  const lines = content.split('\n');
-  let inFunction = false;
-  let returnCount = 0;
-  let fixedLines = [];
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    // Check if we're entering a function
-    if (line.includes('const') && line.includes('= () =>') || 
-        line.includes('function') || 
-        line.includes('React.FC')) {
-      inFunction = true;
-      returnCount = 0;
-    }
-    // Check if we're exiting a function
-    if (inFunction && (line.includes('};') || line.includes('}'))) {
-      inFunction = false;
-      returnCount = 0;
-    }
-    // Count return statements
-    if (inFunction && line.trim().startsWith('return')) {
-      returnCount++;
-      if (returnCount > 1) {
-        // Skip duplicate return statements
-        continue;
-      }
-    }
-    fixedLines.push(line);
-  }
-  return fixedLines.join('\n');
-}
-// Function to fix malformed JSX
-function fixMalformedJSX(content) {
-  // Fix JSX that's not properly formatted
-  content = content.replace(/return\s*\(\s*<div[^>]*>([^<]+)<\/div>\s*\)\s*;\s*return\s*\(/g, 'return (');
-  // Fix missing semicolons
-  content = content.replace(/(\w+)\s*$/gm, (match, word) => {
-    if (word && !word.endsWith(';') && !word.endsWith('}') && !word.endsWith(')') && !word.endsWith(']')) {
-      return word + ';';
-    }
-    return match;
-  });
-  return content;
-}
-// Function to fix specific patterns
-function fixSpecificPatterns(content) {
-  // Fix the specific pattern where there are duplicate imports and malformed objects
-  content = content.replace(
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];\s*'use client';\s*import\s*React[^;]*;/g,
-    (match, imports, source) => {
-      const importList = imports.split(',').map(imp => imp.trim()).filter(imp => imp);
-      const uniqueImports = [...new Set(importList)];
-      return `import React from 'react';\nimport { ${uniqueImports.join(', ')} } from '${source}';`;
-    }
-  );
-  return content;
-}
-// Main function to fix a file
-function fixFile(filePath) {
+
+// Function to fix common syntax errors in TSX files
+function fixTSXFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    // Apply all fixes
-    content = fixDuplicateImports(content);
-    content = fixMalformedObjects(content);
-    content = fixDuplicateReturns(content);
-    content = fixMalformedJSX(content);
-    content = fixSpecificPatterns(content);
+    let originalContent = content;
+    
+    // Fix 1: Remove duplicate imports and malformed import statements
+    content = content.replace(/import\s+{[^}]*}\s+from\s+['"][^'"]*['"];\s*import\s+{[^}]*}\s+from\s+['"][^'"]*['"];/g, (match) => {
+      // Keep only the first import
+      const imports = match.split(';').filter(line => line.trim().startsWith('import'));
+      return imports[0] + ';';
+    });
+    
+    // Fix 2: Fix malformed import statements
+    content = content.replace(/import\s+{[^}]*,\s*from\s+['"][^'"]*['"];/g, (match) => {
+      return match.replace(/,(\s*from)/, '$1');
+    });
+    
+    // Fix 3: Fix object property syntax errors
+    content = content.replace(/\{\s*icon:\s*(\w+),\s*\}/g, '{\n      icon: $1,');
+    content = content.replace(/\{\s*icon:\s*(\w+),\s*$/gm, '{\n      icon: $1,');
+    
+    // Fix 4: Fix missing commas in object definitions
+    content = content.replace(/(\w+):\s*'([^']*)'\s*\n\s*(\w+):/g, "$1: '$2',\n      $3:");
+    content = content.replace(/(\w+):\s*"([^"]*)"\s*\n\s*(\w+):/g, '$1: "$2",\n      $3:');
+    content = content.replace(/(\w+):\s*\[([^\]]*)\]\s*\n\s*(\w+):/g, '$1: [$2],\n      $3:');
+    
+    // Fix 5: Fix JSX closing tag issues
+    content = content.replace(/<(\w+)([^>]*)>\s*$/gm, '<$1$2>');
+    content = content.replace(/<\/?(\w+)([^>]*)>\s*$/gm, '<$1$2>');
+    
+    // Fix 6: Fix malformed JSX attributes
+    content = content.replace(/className="([^"]*)"\s*$/gm, 'className="$1"');
+    content = content.replace(/href="([^"]*)"\s*$/gm, 'href="$1"');
+    
+    // Fix 7: Fix comment syntax in JSX
+    content = content.replace(/\/\/\s*([^<]*)/g, '');
+    content = content.replace(/\/\*\s*([^*]*)\s*\*\//g, '');
+    
+    // Fix 8: Fix missing closing brackets and parentheses
+    const openBrackets = (content.match(/\{/g) || []).length;
+    const closeBrackets = (content.match(/\}/g) || []).length;
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    
+    // Add missing closing brackets
+    if (openBrackets > closeBrackets) {
+      const missing = openBrackets - closeBrackets;
+      content += '\n' + '}'.repeat(missing);
+    }
+    
+    // Add missing closing parentheses
+    if (openParens > closeParens) {
+      const missing = openParens - closeParens;
+      content += ')'.repeat(missing);
+    }
+    
+    // Fix 9: Fix malformed function definitions
+    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*\{[^}]*\}/g, (match) => {
+      if (!match.includes('return')) {
+        return match.replace(/\{([^}]*)\}/, '{\n  return (\n    $1\n  );\n}');
+      }
+      return match;
+    });
+    
+    // Fix 10: Fix duplicate content and malformed structures
+    // Remove duplicate sections
+    const lines = content.split('\n');
+    const seen = new Set();
+    const cleanedLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line && !seen.has(line) && !line.startsWith('//')) {
+        seen.add(line);
+        cleanedLines.push(lines[i]);
+      } else if (!line) {
+        cleanedLines.push(lines[i]);
+      }
+    }
+    
+    content = cleanedLines.join('\n');
+    
+    // Fix 11: Ensure proper JSX structure
+    if (content.includes('return (') && !content.includes(');')) {
+      content = content.replace(/return\s*\(([^)]*)$/s, 'return (\n    $1\n  );');
+    }
+    
+    // Fix 12: Fix metadata object syntax
+    if (filePath.includes('metadata.ts')) {
+      content = content.replace(/export\s+const\s+metadata\s*=\s*\{([^}]*)\}/s, (match, body) => {
+        const fixedBody = body.replace(/(\w+):\s*'([^']*)',?\s*$/gm, '$1: \'$2\',');
+        return `export const metadata = {\n  ${fixedBody.trim()}\n};`;
+      });
+    }
+    
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
+
+// Function to fix specific problematic files
+function fixSpecificFiles() {
+  const problematicFiles = [
+    '/workspace/src/about/page.tsx',
+    '/workspace/src/ai-ab-testing/page.tsx',
+    '/workspace/src/ai-analytics-dashboard/page.tsx',
+    '/workspace/src/ai-analytics/page.tsx',
+    '/workspace/src/metadata.ts'
+  ];
+  
+  problematicFiles.forEach(filePath => {
+    if (fs.existsSync(filePath)) {
+      fixTSXFile(filePath);
+    }
+  });
+}
+
 // Main execution
 async function main() {
-  // Find all TypeScript/JavaScript files in src directory
-  const files = await glob('src/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-  console.log(`Found ${files.length} files to check...`);
+  console.log('Starting syntax error fixes...');
+
+  // Fix specific problematic files first
+  fixSpecificFiles();
+
+  // Find all TSX/TS files with errors
+  const files = await glob('/workspace/src/**/*.{tsx,ts}', { ignore: ['**/node_modules/**'] });
+
   let fixedCount = 0;
   files.forEach(file => {
-    if (fixFile(file)) {
+    if (fixTSXFile(file)) {
       fixedCount++;
     }
   });
+
   console.log(`Fixed ${fixedCount} files`);
+  console.log('Syntax error fixes completed!');
 }
+
 main().catch(console.error);

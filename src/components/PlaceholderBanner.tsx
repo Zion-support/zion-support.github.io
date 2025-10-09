@@ -1,12 +1,10 @@
 import React from 'react';
 interface PlaceholderBannerProps {
-  // Add props here
-}
-const PlaceholderBanner: React.FC<PlaceholderBannerProps> = () => {
+  <PlaceholderBannerProps> = () => {
   return (
     <div className="placeholderbanner">
-      {/* Component content */}
-    </div>
+      {}
+    <div>
   );
 };
 'use client';
@@ -15,3 +13,4 @@ const PlaceholderBanner: React.FC<PlaceholderBannerProps> = () => {
  * Used as a fallback when actual banner components are not available;
  */
 export default PlaceholderBanner;
+}

@@ -1,12 +1,11 @@
 import React from 'react';
 interface ContentShowcaseProps {
-  // Add props here
-}
-const ContentShowcase: React.FC<ContentShowcaseProps> = () => {
+  <ContentShowcaseProps> = () => {
   return (
     <div className="contentshowcase">
-      {/* Component content */}
-    </div>
+      {}
+    <div>
   );
 };
 export default ContentShowcase
+}

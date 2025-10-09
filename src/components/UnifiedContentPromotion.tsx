@@ -1,12 +1,11 @@
 import React from 'react';
 interface UnifiedContentPromotionProps {
-  // Add props here
-}
-const UnifiedContentPromotion: React.FC<UnifiedContentPromotionProps> = () => {
+  <UnifiedContentPromotionProps> = () => {
   return (
     <div className="unifiedcontentpromotion">
-      {/* Component content */}
-    </div>
+      {}
+    <div>
   );
 };
 export default UnifiedContentPromotion
+}

@@ -1,48 +1,6 @@
 interface LinkProps {
-    // TODO: Add content
-  }
-interface LinkProps {// TODO: Add content;}
-};
-  href: string;,
-    children: React.ReactNode
-  className?: string
-  target?: string
-  rel?: string
-  onClick?: () => void
-  'aria-label'?: string
-}
-export const Link: React.FC
-          <LinkProps> = ({
-    // TODO: Add content
-  }
-export const Link: React.FC;
-          <LinkProps> = ({// TODO: Add content;}
-}
-//   href,
-//   children,
-//   className,
-//   target,
-//   rel,
-//   onClick,
-  'aria-label': ariaLabel,
-//   ...props;
-}) => {if (onClick) {}
-    }
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {
-    // TODO: Add content
-  }
-      e.preventDefault()
-      window.location.href = href
-    // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {// TODO: Add content;}
-}
-      e.preventDefault();
-      window.location.href = href;
-    }
-  }
-  return (
-          <div>Coming Soon</div>
+    <LinkProps> = ({
+    <LinkProps> = ({<div>Coming Soon<div>
   )
           <a
       href={href}
@@ -52,9 +10,7 @@ export const Link: React.FC;
       onClick={handleClick}
       aria-label={ariaLabel}
       {...props}
-// >
-      {children}
-          </a>
-  )
+<a>
 }
 export default Link
+}}

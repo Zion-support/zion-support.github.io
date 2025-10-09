@@ -1,12 +1,11 @@
 import React from 'react';
 interface ScrollToTopProps {
-  // Add props here
-}
-const ScrollToTop: React.FC<ScrollToTopProps> = () => {
+  <ScrollToTopProps> = () => {
   return (
     <div className="scrolltotop">
-      {/* Component content */}
-    </div>
+      {}
+    <div>
   );
 };
 export default ScrollToTop;
+}

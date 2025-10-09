@@ -1,12 +1,11 @@
 import React from 'react';
 interface LoadingComponentsProps {
-  // Add props here
-}
-const LoadingComponents: React.FC<LoadingComponentsProps> = () => {
+  <LoadingComponentsProps> = () => {
   return (
     <div className="loadingcomponents">
-      {/* Component content */}
-    </div>
+      {}
+    <div>
   );
 };
 export default LoadingComponents;
+}

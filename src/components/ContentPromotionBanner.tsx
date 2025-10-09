@@ -1,12 +1,11 @@
 import React from 'react';
 interface ContentPromotionBannerProps {
-  // Add props here
-}
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = () => {
+  <ContentPromotionBannerProps> = () => {
   return (
     <div className="contentpromotionbanner">
-      {/* Component content */}
-    </div>
+      {}
+    <div>
   );
 };
 export default ContentPromotionBanner;
+}

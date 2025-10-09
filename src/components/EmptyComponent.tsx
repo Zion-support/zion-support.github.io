@@ -1,12 +1,10 @@
 import React from 'react';
 interface EmptyComponentProps {
-  // Add props here
-}
-const EmptyComponent: React.FC<EmptyComponentProps> = () => {
+  <EmptyComponentProps> = () => {
   return (
     <div className="emptycomponent">
-      {/* Component content */}
-    </div>
+      {}
+    <div>
   );
 };
 'use client';
@@ -15,3 +13,4 @@ const EmptyComponent: React.FC<EmptyComponentProps> = () => {
  * Used as a fallback for optional/missing components;
  */
 export default EmptyComponent;
+}

@@ -1,18 +1,13 @@
 import React from 'react';
 interface PWAInstallerProps {
-  // Add props here
-'use client';
-interface BeforeInstallPromptEvent extends Event {// TODO: Add content;}
-}
-  prompt(): Promise;
-          <void>;
+  <void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 const PWAInstaller: React.FC<PWAInstallerProps> = () => {
   return (
     <div className="pwainstaller">
-      {/* Component content */}
-    </div>
+      {}
+    <div>
   );
 };
 export default PWAInstaller;
