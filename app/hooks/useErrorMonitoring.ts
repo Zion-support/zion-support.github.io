@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from 'react';
-import { useAnalytics } from '../components/AnalyticsProvider';
+import { monitoring } from '../utils/monitoring';
 
 // ErrorInfo interface removed as it's not used in this hook
 
@@ -11,20 +11,18 @@ declare global {
 }
 
 export const useErrorMonitoring = () => {
-  const { trackError } = useAnalytics();
-
   const reportError = useCallback(
     (error: Error, context?: string) => {
-      trackError(error, context);
+      monitoring.trackError(error, { context });
     },
-    [trackError]
+    []
   );
 
   useEffect(() => {
     // Global error handler
     const handleError = (event: unknown) => {
-      const _errorEvent = event as { message: string; error?: Error };
-      const _error = new Error(errorEvent.message);
+      const errorEvent = event as { message: string; error?: Error };
+      const error = new Error(errorEvent.message);
       error.stack = errorEvent.error?.stack;
 
       reportError(error, 'global_error');
@@ -32,7 +30,7 @@ export const useErrorMonitoring = () => {
 
     // Unhandled promise rejection handler
     const handleUnhandledRejection = (event: unknown) => {
-      const _rejectionEvent = event as { reason: unknown };
+      const rejectionEvent = event as { reason: unknown };
       const error =
         rejectionEvent.reason instanceof Error
           ? rejectionEvent.reason

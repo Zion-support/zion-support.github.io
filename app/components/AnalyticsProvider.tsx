@@ -45,7 +45,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         const target = e.target as HTMLElement;
         if (target.tagName === 'A' || target.tagName === 'BUTTON') {
           const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
+          const href = (target as HTMLAnchorElement).getAttribute('href') || '';
           
           if ((window as any).gtag) {
             (window as any).gtag('event', 'click', {
@@ -71,12 +71,13 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       // Track phone number clicks
       document.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
-        if (target.href && target.href.startsWith('tel:')) {
+        const href = (target as HTMLAnchorElement).href;
+        if (href && href.startsWith('tel:')) {
           if ((window as any).gtag) {
             (window as any).gtag('event', 'phone_click', {
               event_category: 'engagement',
               event_label: 'phone_number',
-              value: target.href
+              value: href
             });
           }
         }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { analytics } from '../utils/analytics';
+import { monitoring } from '../utils/monitoring';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -21,7 +21,7 @@ export const usePerformance = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const _paintEntries = performance.getEntriesByType('paint');
+      const paintEntries = performance.getEntriesByType('paint');
 
       const firstContentfulPaint =
         paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
@@ -29,7 +29,7 @@ export const usePerformance = () => {
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
 
       // Measure CLS (Cumulative Layout Shift)
-      let _cumulativeLayoutShift = 0;
+      let cumulativeLayoutShift = 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
@@ -45,7 +45,7 @@ export const usePerformance = () => {
       }
 
       // Measure FID (First Input Delay)
-      let _firstInputDelay = 0;
+      let firstInputDelay = 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
@@ -71,25 +71,22 @@ export const usePerformance = () => {
       setMetrics(performanceData);
       setIsMonitoring(false);
 
-      // Report to analytics using trackTiming
-      analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
-      analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
-      analytics.trackTiming(
-        'performance',
+      // Report to monitoring using trackPerformance
+      monitoring.trackPerformance('load_time', performanceData.loadTime);
+      monitoring.trackPerformance('dom_content_loaded', performanceData.domContentLoaded);
+      monitoring.trackPerformance(
         'first_contentful_paint',
         performanceData.firstContentfulPaint
       );
-      analytics.trackTiming(
-        'performance',
+      monitoring.trackPerformance(
         'largest_contentful_paint',
         performanceData.largestContentfulPaint
       );
-      analytics.trackTiming(
-        'performance',
+      monitoring.trackPerformance(
         'cumulative_layout_shift',
         performanceData.cumulativeLayoutShift
       );
-      analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
+      monitoring.trackPerformance('first_input_delay', performanceData.firstInputDelay);
     };
 
     // Start monitoring

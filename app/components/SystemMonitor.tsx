@@ -9,14 +9,12 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
-import { errorHandler } from '../utils/enhancedErrorHandler';
-
 // Collect basic performance metrics
 const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   
-  const _navigation = window.performance.timing;
-  const _paint = window.performance.getEntriesByType('paint');
+  const navigation = window.performance.timing;
+  const paint = window.performance.getEntriesByType('paint');
   
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
@@ -26,10 +24,10 @@ const _collectPerformanceMetrics = () => {
 
 // Helper functions
 const calculatePerformanceScore = () => {
-  const _metrics = performanceOptimizer.getMetrics();
+  const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   
-  let _score = 100;
+  let score = 100;
   
   // Deduct points for slow load times
   if (metrics.loadTime > 3000) score -= 20;
@@ -40,6 +38,35 @@ const calculatePerformanceScore = () => {
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
   
   return Math.max(0, score);
+};
+
+// Helper functions
+const getMemoryInfo = () => {
+  if (typeof window === 'undefined' || !('memory' in window.performance)) {
+    return { used: 0, total: 0, limit: 0, percentage: 0 };
+  }
+
+  const memory = (window.performance as any).memory;
+  const used = memory.usedJSHeapSize || 0;
+  const total = memory.totalJSHeapSize || 0;
+  const limit = memory.jsHeapSizeLimit || 0;
+  const percentage = limit > 0 ? Math.round((used / limit) * 100) : 0;
+
+  return { used, total, limit, percentage };
+};
+
+const getNetworkInfo = () => {
+  if (typeof window === 'undefined' || !('connection' in window.navigator)) {
+    return { type: 'unknown', downlink: 0, rtt: 0, saveData: false };
+  }
+
+  const connection = (window.navigator as any).connection;
+  return {
+    type: connection.effectiveType || 'unknown',
+    downlink: connection.downlink || 0,
+    rtt: connection.rtt || 0,
+    saveData: connection.saveData || false,
+  };
 };
 
 // Network connection interface
@@ -112,15 +139,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const _performanceMetrics = performanceOptimizer.getMetrics();
-      const _performanceScore = calculatePerformanceScore();
-      const _errorStats = errorHandler.getErrorStatistics();
+      const performanceMetrics = performanceOptimizer.getMetrics();
+      const performanceScore = calculatePerformanceScore();
+      const errorStats = errorHandler.getErrorStats();
 
       // Get memory info
-      const _memoryInfo = getMemoryInfo();
+      const memoryInfo = getMemoryInfo();
 
       // Get network info
-      const _networkInfo = getNetworkInfo();
+      const networkInfo = getNetworkInfo();
 
       const newMetrics: SystemMetrics = {
         performance: {
@@ -175,45 +202,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   useEffect(() => {
     if (!isMonitoring) return;
 
-    const _interval = setInterval(updateMetrics, refreshInterval);
+    const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
 
-  // Get memory information
-  const getMemoryInfo = () => {
-    if ('memory' in performance) {
-      const _memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-      const total = memory.totalJSHeapSize / 1024 / 1024; // MB
-      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-      const _percentage = (used / limit) * 100;
+  // Get memory information (duplicate function - removing)
+  // const getMemoryInfo = () => { ... }
 
-      return { used, total, limit, percentage };
-    }
-
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
-  };
-
-  // Get network information
-  const getNetworkInfo = () => {
-    if ('connection' in navigator) {
-      const _nav = navigator as NavigatorWithConnection;
-      const _connection = nav.connection;
-      return {
-        effectiveType: connection?.effectiveType || 'unknown',
-        downlink: connection?.downlink || 0,
-        rtt: connection?.rtt || 0,
-        saveData: connection?.saveData || false,
-      };
-    }
-
-    return {
-      effectiveType: 'unknown',
-      downlink: 0,
-      rtt: 0,
-      saveData: false,
-    };
-  };
+  // Get network information (duplicate function - removing)
+  // const getNetworkInfo = () => { ... }
 
   // Export data
   const handleExport = () => {

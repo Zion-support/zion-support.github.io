@@ -1,7 +1,17 @@
 'use client';
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 // import { useLocation } from 'react-router-dom';
+
+interface SEOOptimizerProps {
+  children?: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  structuredData?: any;
+}
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   children,
