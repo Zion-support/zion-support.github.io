@@ -5,6 +5,29 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
 const AISalesAutomationPage: React.FC = () => {
+  const useCases = [
+    {
+      icon: Building,
+      title: 'B2B Sales',
+      description: 'Automate lead generation, qualification, and follow-up for B2B sales teams.'
+    },
+    {
+      icon: ShoppingCart,
+      title: 'E-commerce',
+      description: 'Personalize product recommendations and automate abandoned cart recovery.'
+    },
+    {
+      icon: Home,
+      title: 'Real Estate',
+      description: 'Qualify leads, schedule showings, and follow up with potential buyers automatically.'
+    },
+    {
+      icon: Cloud,
+      title: 'SaaS Sales',
+      description: 'Track user behavior, identify expansion opportunities, and automate renewals.'
+    }
+  ];
+
   const features = [
     {
       icon: Target,

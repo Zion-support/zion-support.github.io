@@ -5,6 +5,50 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
+  const useCases = [
+    {
+      icon: Database,
+      title: 'Data Processing',
+      description: 'Automate data collection, validation, and transformation processes.'
+    },
+    {
+      icon: Users,
+      title: 'HR Workflows',
+      description: 'Streamline employee onboarding, performance reviews, and leave management.'
+    },
+    {
+      icon: Globe,
+      title: 'Customer Service',
+      description: 'Automate ticket routing, response generation, and escalation procedures.'
+    },
+    {
+      icon: Settings,
+      title: 'IT Operations',
+      description: 'Automate system monitoring, backup processes, and incident response.'
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$299/month',
+      description: 'Perfect for small teams getting started with automation',
+      features: ['Up to 5 workflows', 'Basic automation', 'Email support', 'Standard templates']
+    },
+    {
+      name: 'Professional',
+      price: '$599/month',
+      description: 'Ideal for growing businesses with complex workflows',
+      features: ['Up to 20 workflows', 'Advanced automation', 'Priority support', 'Custom templates']
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,299/month',
+      description: 'For large organizations with unlimited automation needs',
+      features: ['Unlimited workflows', 'AI-powered automation', '24/7 support', 'Custom development']
+    }
+  ];
+
   const features = [
     {
       icon: Workflow,
@@ -29,26 +73,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
       title: 'Custom Integrations',
       description: 'Connect with any system or application through our extensive integration library.',
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
-    }
-  ];
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$299/month',
-      description: 'Perfect for small teams',
-      features: ['Up to 5 workflows', 'Basic automation', 'Email notifications', 'Standard integrations']
-    },
-    {
-      name: 'Professional',
-      price: '$599/month',
-      description: 'Ideal for growing businesses',
-      features: ['Up to 25 workflows', 'Advanced AI features', 'Custom integrations', 'Analytics dashboard', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299/month',
-      description: 'For large organizations',
-      features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
     }
   ];
   const stats = [
@@ -157,7 +181,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
