@@ -75,10 +75,10 @@ const CareersPage: React.FC = () => {
       </main>
       
       <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
+
     </div>
   );
 };
 
 export default CareersPage;
- cursor/analyze-improve-and-deploy-application-cde4
+
