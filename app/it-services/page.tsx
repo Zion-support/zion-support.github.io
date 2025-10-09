@@ -291,6 +291,440 @@ const ITServicesPage: React.FC = () => {
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'ROI Analysis', 'Change Management', 'Vendor Management'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // NEW COMPREHENSIVE IT SERVICES
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations using AI and machine learning for proactive monitoring, incident management, and automation.',
+      icon: '🤖',
+      price: '$3,500/month',
+      features: [
+        'Predictive Analytics',
+        'Automated Incident Response',
+        'Intelligent Root Cause Analysis',
+        'Performance Optimization',
+        'Capacity Planning',
+        'Anomaly Detection'
+      ],
+      benefits: [
+        'Reduce MTTR by 80%',
+        'Prevent 90% of incidents',
+        'Improve system reliability',
+        'Automate routine tasks'
+      ],
+      marketPrice: '$6,000-15,000/month',
+      category: 'AIOps',
+      technologies: ['Machine Learning', 'Big Data Analytics', 'APM Tools', 'Custom AI Models', 'Real-time Processing'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with continuous verification and least privilege access.',
+      icon: '🔒',
+      price: '$4,200/month',
+      features: [
+        'Identity Verification',
+        'Device Trust Assessment',
+        'Network Segmentation',
+        'Continuous Monitoring',
+        'Policy Enforcement',
+        'Threat Detection'
+      ],
+      benefits: [
+        'Eliminate security perimeters',
+        'Reduce breach risk by 95%',
+        'Enable secure remote work',
+        'Comply with regulations'
+      ],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Zero Trust Security',
+      technologies: ['Identity Management', 'Network Security', 'Endpoint Protection', 'SIEM', 'Custom Security Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Deploy and manage edge computing infrastructure for low-latency applications and IoT devices.',
+      icon: '⚡',
+      price: '$2,800/month',
+      features: [
+        'Edge Server Deployment',
+        'IoT Device Management',
+        'Data Processing at Edge',
+        'Network Optimization',
+        'Security Implementation',
+        'Monitoring & Maintenance'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Enable real-time processing',
+        'Improve user experience',
+        'Reduce bandwidth costs'
+      ],
+      marketPrice: '$5,500-14,000/month',
+      category: 'Edge Computing',
+      technologies: ['Edge Servers', 'IoT Platforms', '5G Networks', 'Edge AI', 'Custom Edge Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Seamless management of hybrid cloud environments across public and private clouds.',
+      icon: '☁️',
+      price: '$3,200/month',
+      features: [
+        'Multi-Cloud Orchestration',
+        'Workload Migration',
+        'Cost Optimization',
+        'Security Management',
+        'Performance Monitoring',
+        'Disaster Recovery'
+      ],
+      benefits: [
+        'Optimize cloud costs by 40%',
+        'Improve flexibility',
+        'Ensure compliance',
+        'Enable seamless scaling'
+      ],
+      marketPrice: '$6,500-18,000/month',
+      category: 'Hybrid Cloud',
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'VMware', 'Kubernetes', 'Terraform'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'API Management & Integration',
+      description: 'Comprehensive API lifecycle management with security, monitoring, and integration capabilities.',
+      icon: '🔌',
+      price: '$1,800/month',
+      features: [
+        'API Gateway Management',
+        'API Security',
+        'Rate Limiting',
+        'Analytics & Monitoring',
+        'Developer Portal',
+        'Integration Services'
+      ],
+      benefits: [
+        'Improve API performance',
+        'Enhance security',
+        'Enable developer self-service',
+        'Accelerate integration'
+      ],
+      marketPrice: '$3,500-9,000/month',
+      category: 'API Management',
+      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'MuleSoft', 'Custom API Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Data Center Modernization',
+      description: 'Transform legacy data centers with modern infrastructure, automation, and energy efficiency.',
+      icon: '🏢',
+      price: '$5,000/month',
+      features: [
+        'Infrastructure Assessment',
+        'Modernization Planning',
+        'Hardware Refresh',
+        'Automation Implementation',
+        'Energy Optimization',
+        'Migration Services'
+      ],
+      benefits: [
+        'Reduce operational costs by 50%',
+        'Improve energy efficiency',
+        'Increase reliability',
+        'Enable modern applications'
+      ],
+      marketPrice: '$10,000-25,000/month',
+      category: 'Data Center',
+      technologies: ['Modern Servers', 'Storage Systems', 'Network Equipment', 'Automation Tools', 'Energy Management'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Service Management (ITSM)',
+      description: 'Comprehensive IT service management with incident, problem, and change management processes.',
+      icon: '📋',
+      price: '$2,200/month',
+      features: [
+        'Incident Management',
+        'Problem Management',
+        'Change Management',
+        'Service Catalog',
+        'Knowledge Management',
+        'SLA Monitoring'
+      ],
+      benefits: [
+        'Improve service quality',
+        'Reduce resolution time',
+        'Increase customer satisfaction',
+        'Enable process automation'
+      ],
+      marketPrice: '$4,500-12,000/month',
+      category: 'ITSM',
+      technologies: ['ServiceNow', 'Jira Service Management', 'Remedy', 'Custom ITSM Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Governance & Compliance',
+      description: 'Establish IT governance frameworks and ensure compliance with industry standards and regulations.',
+      icon: '📊',
+      price: '$2,500/month',
+      features: [
+        'Governance Framework Design',
+        'Compliance Assessment',
+        'Risk Management',
+        'Policy Development',
+        'Audit Support',
+        'Training & Awareness'
+      ],
+      benefits: [
+        'Ensure regulatory compliance',
+        'Reduce audit findings',
+        'Improve risk management',
+        'Establish best practices'
+      ],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Governance',
+      technologies: ['GRC Platforms', 'Risk Management Tools', 'Compliance Software', 'Custom Governance Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Training & Certification',
+      description: 'Comprehensive IT training programs and certification support for your team.',
+      icon: '🎓',
+      price: '$1,500/month',
+      features: [
+        'Custom Training Programs',
+        'Certification Preparation',
+        'Hands-on Labs',
+        'Progress Tracking',
+        'Expert Instructors',
+        'Flexible Delivery'
+      ],
+      benefits: [
+        'Improve team skills',
+        'Increase productivity',
+        'Reduce support tickets',
+        'Enable career growth'
+      ],
+      marketPrice: '$3,000-8,000/month',
+      category: 'Training',
+      technologies: ['Learning Management Systems', 'Virtual Labs', 'Certification Programs', 'Custom Training Content'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Vendor Management',
+      description: 'Strategic vendor management and procurement services for IT hardware, software, and services.',
+      icon: '🤝',
+      price: '$1,800/month',
+      features: [
+        'Vendor Assessment',
+        'Contract Negotiation',
+        'Performance Monitoring',
+        'Cost Optimization',
+        'Risk Management',
+        'Relationship Management'
+      ],
+      benefits: [
+        'Reduce IT costs by 25%',
+        'Improve vendor performance',
+        'Mitigate vendor risks',
+        'Optimize contracts'
+      ],
+      marketPrice: '$3,500-9,000/month',
+      category: 'Vendor Management',
+      technologies: ['Vendor Management Platforms', 'Contract Management', 'Performance Analytics', 'Custom Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Disaster Recovery Planning',
+      description: 'Comprehensive disaster recovery planning and implementation to ensure business continuity.',
+      icon: '🚨',
+      price: '$2,800/month',
+      features: [
+        'Risk Assessment',
+        'Recovery Planning',
+        'Backup Strategy',
+        'Testing & Validation',
+        'Documentation',
+        'Training & Drills'
+      ],
+      benefits: [
+        'Minimize downtime',
+        'Protect critical data',
+        'Ensure business continuity',
+        'Meet compliance requirements'
+      ],
+      marketPrice: '$5,500-14,000/month',
+      category: 'Disaster Recovery',
+      technologies: ['Backup Solutions', 'Replication Tools', 'Recovery Platforms', 'Custom DR Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Performance Optimization',
+      description: 'Comprehensive performance analysis and optimization for IT systems and applications.',
+      icon: '⚡',
+      price: '$2,200/month',
+      features: [
+        'Performance Analysis',
+        'Bottleneck Identification',
+        'Optimization Recommendations',
+        'Capacity Planning',
+        'Load Testing',
+        'Continuous Monitoring'
+      ],
+      benefits: [
+        'Improve system performance',
+        'Reduce response times',
+        'Optimize resource usage',
+        'Enhance user experience'
+      ],
+      marketPrice: '$4,500-12,000/month',
+      category: 'Performance',
+      technologies: ['APM Tools', 'Performance Testing', 'Monitoring Solutions', 'Custom Optimization Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Cost Optimization',
+      description: 'Strategic cost optimization and budget management for IT infrastructure and services.',
+      icon: '💰',
+      price: '$1,600/month',
+      features: [
+        'Cost Analysis',
+        'Budget Planning',
+        'Resource Optimization',
+        'Vendor Negotiation',
+        'ROI Analysis',
+        'Cost Monitoring'
+      ],
+      benefits: [
+        'Reduce IT costs by 30%',
+        'Optimize budget allocation',
+        'Improve ROI',
+        'Enable cost transparency'
+      ],
+      marketPrice: '$3,200-8,000/month',
+      category: 'Cost Optimization',
+      technologies: ['Cost Management Tools', 'Budget Planning Software', 'Analytics Platforms', 'Custom Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Innovation & Digital Transformation',
+      description: 'Drive digital transformation and innovation initiatives to modernize IT operations.',
+      icon: '🚀',
+      price: '$4,500/month',
+      features: [
+        'Digital Strategy Development',
+        'Technology Roadmap',
+        'Innovation Assessment',
+        'Pilot Program Management',
+        'Change Management',
+        'ROI Measurement'
+      ],
+      benefits: [
+        'Accelerate digital transformation',
+        'Drive innovation',
+        'Improve competitiveness',
+        'Enable business growth'
+      ],
+      marketPrice: '$9,000-25,000/month',
+      category: 'Digital Transformation',
+      technologies: ['Emerging Technologies', 'Innovation Platforms', 'Change Management Tools', 'Custom Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Security Operations Center (SOC)',
+      description: '24/7 security monitoring and incident response with advanced threat detection capabilities.',
+      icon: '🛡️',
+      price: '$6,500/month',
+      features: [
+        '24/7 Security Monitoring',
+        'Threat Detection',
+        'Incident Response',
+        'Vulnerability Management',
+        'Security Analytics',
+        'Threat Intelligence'
+      ],
+      benefits: [
+        'Detect threats in real-time',
+        'Respond to incidents quickly',
+        'Reduce security risks',
+        'Ensure compliance'
+      ],
+      marketPrice: '$15,000-40,000/month',
+      category: 'SOC',
+      technologies: ['SIEM', 'SOAR', 'Threat Intelligence', 'Security Analytics', 'Custom SOC Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Compliance & Audit Support',
+      description: 'Comprehensive compliance management and audit support for various industry standards.',
+      icon: '📋',
+      price: '$2,000/month',
+      features: [
+        'Compliance Assessment',
+        'Audit Preparation',
+        'Policy Development',
+        'Control Implementation',
+        'Documentation',
+        'Remediation Support'
+      ],
+      benefits: [
+        'Ensure compliance',
+        'Pass audits successfully',
+        'Reduce compliance costs',
+        'Improve security posture'
+      ],
+      marketPrice: '$4,000-10,000/month',
+      category: 'Compliance',
+      technologies: ['Compliance Platforms', 'Audit Tools', 'Policy Management', 'Custom Compliance Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Project Management',
+      description: 'Expert project management for IT initiatives with agile methodologies and best practices.',
+      icon: '📊',
+      price: '$2,500/month',
+      features: [
+        'Project Planning',
+        'Resource Management',
+        'Risk Management',
+        'Quality Assurance',
+        'Stakeholder Communication',
+        'Progress Tracking'
+      ],
+      benefits: [
+        'Deliver projects on time',
+        'Control project costs',
+        'Manage project risks',
+        'Ensure quality delivery'
+      ],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Project Management',
+      technologies: ['Project Management Tools', 'Agile Methodologies', 'Collaboration Platforms', 'Custom PM Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Architecture & Design',
+      description: 'Strategic IT architecture design and implementation for scalable and secure systems.',
+      icon: '🏗️',
+      price: '$3,800/month',
+      features: [
+        'Architecture Assessment',
+        'Solution Design',
+        'Technology Selection',
+        'Implementation Planning',
+        'Integration Design',
+        'Documentation'
+      ],
+      benefits: [
+        'Design scalable solutions',
+        'Ensure security',
+        'Optimize performance',
+        'Enable future growth'
+      ],
+      marketPrice: '$7,500-20,000/month',
+      category: 'Architecture',
+      technologies: ['Architecture Tools', 'Design Methodologies', 'Integration Platforms', 'Custom Architecture Solutions'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
@@ -307,7 +741,24 @@ const ITServicesPage: React.FC = () => {
     { name: 'Mobile Management', count: itServices.filter(s => s.category === 'Mobile Management').length },
     { name: 'Compliance', count: itServices.filter(s => s.category === 'Compliance').length },
     { name: 'Asset Management', count: itServices.filter(s => s.category === 'Asset Management').length },
-    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length }
+    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length },
+    { name: 'AIOps', count: itServices.filter(s => s.category === 'AIOps').length },
+    { name: 'Zero Trust Security', count: itServices.filter(s => s.category === 'Zero Trust Security').length },
+    { name: 'Edge Computing', count: itServices.filter(s => s.category === 'Edge Computing').length },
+    { name: 'Hybrid Cloud', count: itServices.filter(s => s.category === 'Hybrid Cloud').length },
+    { name: 'API Management', count: itServices.filter(s => s.category === 'API Management').length },
+    { name: 'Data Center', count: itServices.filter(s => s.category === 'Data Center').length },
+    { name: 'ITSM', count: itServices.filter(s => s.category === 'ITSM').length },
+    { name: 'Governance', count: itServices.filter(s => s.category === 'Governance').length },
+    { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
+    { name: 'Vendor Management', count: itServices.filter(s => s.category === 'Vendor Management').length },
+    { name: 'Disaster Recovery', count: itServices.filter(s => s.category === 'Disaster Recovery').length },
+    { name: 'Performance', count: itServices.filter(s => s.category === 'Performance').length },
+    { name: 'Cost Optimization', count: itServices.filter(s => s.category === 'Cost Optimization').length },
+    { name: 'Digital Transformation', count: itServices.filter(s => s.category === 'Digital Transformation').length },
+    { name: 'SOC', count: itServices.filter(s => s.category === 'SOC').length },
+    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length },
+    { name: 'Architecture', count: itServices.filter(s => s.category === 'Architecture').length }
   ];
 
   return (

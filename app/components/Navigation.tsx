@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   ChevronDown, 
   Phone, 
@@ -71,7 +73,9 @@ const Navigation: React.FC = () => {
         { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' }
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' }
       ]
     },
     {
@@ -81,12 +85,14 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
-        { name: 'Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'DevOps', path: '/ai-workflow-automation', description: 'DevOps automation' },
-        { name: 'Database Services', path: '/ai-data-analytics', description: 'Database management' }
+        { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
+        { name: 'Database Services', path: '/database', description: 'Database management' },
+        { name: 'Networking', path: '/networking', description: 'Network infrastructure' },
+        { name: 'IT Support', path: '/support', description: '24/7 technical support' }
       ]
     },
     {
@@ -97,10 +103,10 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-green-100',
       services: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '50+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/micro-saas', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/micro-saas', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/micro-saas', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/micro-saas', description: 'Business intelligence' }
+        { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
+        { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
+        { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
+        { name: 'Productivity Tools', path: '/productivity', description: 'Workflow optimization' }
       ]
     },
     {
@@ -114,7 +120,8 @@ const Navigation: React.FC = () => {
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' }
+        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
+        { name: 'Robotics', path: '/robotics', description: 'Robotic solutions' }
       ]
     }
   ];
