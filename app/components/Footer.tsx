@@ -79,14 +79,14 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-gray-400" />
-                <a href="tel:+13026009898" className="text-gray-300 hover:text-white transition-colors">
-                  (302) 600-9898
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                  (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-gray-400" />
-                <a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  info@ziontechgroup.com
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">

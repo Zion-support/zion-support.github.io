@@ -1,207 +1,320 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, CheckCircle } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Filter, Search } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+
   const serviceCategories = [
     {
-      title: 'Micro SAAS Solutions',
-      description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
-      icon: '💻',
-      link: '/micro-saas',
-      features: ['12+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
+      title: 'AI Content Generator Pro',
+      description: 'Generate high-quality content 10x faster with advanced AI. Blog posts, social media, emails, and more.',
+      icon: '✍️',
+      link: '/ai-content-generation',
+      features: ['50+ Content Templates', 'SEO Optimization', 'Multi-language Support', 'Brand Voice Training', 'Plagiarism Check', 'Real-time Collaboration'],
+      price: 'Starting at $29/month',
+      popular: true,
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Customer Support Bot',
+      description: '24/7 intelligent customer support that never sleeps. Reduce response time by 90% and increase satisfaction.',
+      icon: '💬',
+      link: '/ai-customer-support',
+      features: ['24/7 Availability', '90% Faster Response', 'Multi-language Support', 'Human Handoff', 'Sentiment Analysis', 'Knowledge Base Integration'],
+      price: 'Starting at $199/month',
+      popular: true,
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Sales Automation Suite',
+      description: 'Automate your entire sales process with AI-powered lead scoring, follow-ups, and closing assistance.',
+      icon: '📈',
+      link: '/ai-sales-automation',
+      features: ['Lead Scoring AI', 'Auto Follow-ups', 'Predictive Analytics', 'CRM Integration', 'Email Sequences', 'Performance Optimization'],
+      price: 'Starting at $299/month',
+      popular: true,
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Data Visualization Dashboard',
+      description: 'Transform your data into stunning visual insights with interactive dashboards and real-time analytics.',
+      icon: '📊',
+      link: '/ai-data-visualization',
+      features: ['Interactive Dashboards', '50+ Chart Types', 'Real-time Updates', 'AI Insights', 'Custom Branding', 'Export Options'],
+      price: 'Starting at $149/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Email Marketing Platform',
+      description: 'Revolutionary email marketing with AI-powered personalization, A/B testing, and automated campaigns.',
+      icon: '📧',
+      link: '/ai-email-marketing',
+      features: ['AI Personalization', 'Smart Segmentation', 'A/B Testing', 'Automated Workflows', 'Analytics & Reporting', 'Deliverability Optimization'],
+      price: 'Starting at $99/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Social Media Manager',
+      description: 'Automate your social media presence with AI-generated posts, optimal timing, and engagement optimization.',
+      icon: '📱',
+      link: '/ai-social-media',
+      features: ['Auto Posting', 'Content Generation', 'Optimal Timing', 'Hashtag Research', 'Engagement Analysis', 'Multi-platform Support'],
       price: 'Starting at $79/month',
-      popular: true
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Project Management Tool',
+      description: 'Intelligent project management with AI-powered task prioritization, resource allocation, and deadline prediction.',
+      icon: '📋',
+      link: '/ai-project-management',
+      features: ['Smart Task Prioritization', 'Resource Optimization', 'Deadline Prediction', 'Risk Assessment', 'Team Collaboration', 'Progress Tracking'],
+      price: 'Starting at $199/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Inventory Management',
+      description: 'Optimize your inventory with AI-powered demand forecasting, automated reordering, and waste reduction.',
+      icon: '📦',
+      link: '/ai-inventory-management',
+      features: ['Demand Forecasting', 'Auto Reordering', 'Waste Reduction', 'Multi-location Support', 'Supplier Integration', 'Cost Optimization'],
+      price: 'Starting at $249/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI HR & Recruitment',
+      description: 'Streamline HR processes with AI-powered resume screening, candidate matching, and employee analytics.',
+      icon: '👥',
+      link: '/ai-hr-recruitment',
+      features: ['Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Employee Analytics', 'Performance Tracking', 'Compliance Management'],
+      price: 'Starting at $399/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Financial Analytics',
+      description: 'Advanced financial analytics with AI-powered forecasting, risk assessment, and investment recommendations.',
+      icon: '💰',
+      link: '/ai-financial-analytics',
+      features: ['Financial Forecasting', 'Risk Assessment', 'Investment Analysis', 'Budget Optimization', 'Fraud Detection', 'Compliance Reporting'],
+      price: 'Starting at $499/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Website Builder',
+      description: 'Build professional websites in minutes with AI-powered design, content generation, and optimization.',
+      icon: '🌐',
+      link: '/ai-website-builder',
+      features: ['AI Design Generation', 'Content Creation', 'SEO Optimization', 'Mobile Responsive', 'E-commerce Integration', 'Analytics Dashboard'],
+      price: 'Starting at $49/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Document Processing',
+      description: 'Automate document processing with AI-powered extraction, classification, and intelligent data capture.',
+      icon: '📄',
+      link: '/ai-document-processing',
+      features: ['Document Extraction', 'Smart Classification', 'Data Validation', 'OCR Technology', 'Workflow Automation', 'Integration APIs'],
+      price: 'Starting at $179/month',
+      category: 'Micro SAAS'
     },
     {
       title: 'AI Services',
       description: 'Advanced artificial intelligence solutions including ML, NLP, and computer vision.',
       icon: '🤖',
       link: '/ai-services',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $1,500/month'
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Deep Learning', 'Neural Networks'],
+      price: 'Starting at $1,500/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Marketing Solutions',
       description: 'Revolutionary AI-powered marketing automation, ad optimization, and content generation.',
       icon: '📢',
       link: '/ai-marketing',
-      features: ['Ad Optimization', 'Content Generation', 'Social Media AI', 'Email Marketing AI'],
+      features: ['Ad Optimization', 'Content Generation', 'Social Media AI', 'Email Marketing AI', 'Campaign Automation', 'ROI Optimization'],
       price: 'Starting at $199/month',
-      popular: true
+      popular: true,
+      category: 'AI Services'
     },
     {
       title: 'AI Business Automation',
       description: 'Intelligent automation of business processes with decision-making capabilities.',
       icon: '⚙️',
       link: '/ai-automation',
-      features: ['Workflow Automation', 'Process Intelligence', 'Decision Automation', 'Exception Handling'],
-      price: 'Starting at $399/month'
+      features: ['Workflow Automation', 'Process Intelligence', 'Decision Automation', 'Exception Handling', 'RPA Integration', 'Smart Routing'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Healthcare Solutions',
       description: 'Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.',
       icon: '🏥',
       link: '/ai-healthcare',
-      features: ['Medical Imaging AI', 'Drug Discovery', 'Personalized Medicine', 'Clinical Decision Support'],
-      price: 'Starting at $1,999/month'
+      features: ['Medical Imaging AI', 'Drug Discovery', 'Personalized Medicine', 'Clinical Decision Support', 'Patient Monitoring', 'Diagnostic Assistance'],
+      price: 'Starting at $1,999/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Fintech Solutions',
       description: 'Revolutionary AI-powered financial services including trading, fraud detection, and risk management.',
       icon: '💰',
       link: '/ai-fintech',
-      features: ['Algorithmic Trading', 'Fraud Detection', 'Credit Scoring', 'Wealth Management'],
-      price: 'Starting at $1,499/month'
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including cloud, security, DevOps, and infrastructure.',
-      icon: '⚙️',
-      link: '/it-services',
-      features: ['Cloud Infrastructure', 'Cybersecurity', 'DevOps & CI/CD', 'Database Administration'],
-      price: 'Starting at $1,200/month'
-    },
-    {
-      title: 'Quantum Computing',
-      description: 'Next-generation quantum computing capabilities for complex problem solving.',
-      icon: '⚛️',
-      link: '/quantum-computing',
-      features: ['Quantum Algorithms', 'Quantum Security', 'Optimization', 'Simulation'],
-      price: 'Custom Pricing'
-    },
-    {
-      title: 'Autonomous Systems',
-      description: 'Self-managing and self-optimizing systems for enterprise operations.',
-      icon: '🔄',
-      link: '/autonomous-systems',
-      features: ['Self-Healing Infrastructure', 'Automated Operations', 'Intelligent Monitoring', 'Adaptive Learning'],
-      price: 'Starting at $2,500/month'
-    },
-    {
-      title: 'Business Intelligence',
-      description: 'Data-driven insights and analytics for strategic decision making.',
-      icon: '📊',
-      link: '/business-intelligence',
-      features: ['Real-time Analytics', 'Data Visualization', 'Reporting', 'Dashboard Creation'],
-      price: 'Starting at $1,800/month'
-    },
-    {
-      title: 'Blockchain & Web3',
-      description: 'Decentralized applications, smart contracts, and Web3 solutions.',
-      icon: '🔗',
-      link: '/blockchain',
-      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],
-      price: 'Starting at $8,000/project'
-    },
-    {
-      title: 'IoT & Edge Computing',
-      description: 'Connected devices, edge analytics, and industrial IoT solutions.',
-      icon: '📱',
-      link: '/iot-edge',
-      features: ['Device Management', 'Edge Analytics', 'Industrial IoT', 'Smart Cities'],
-      price: 'Starting at $2,500/month'
-    },
-    {
-      title: 'Robotics & Automation',
-      description: 'Intelligent robots, RPA, and advanced automation solutions.',
-      icon: '🤖',
-      link: '/robotics',
-      features: ['RPA Solutions', 'Industrial Robots', 'Service Robots', 'AI-Powered Automation'],
-      price: 'Starting at $2,500/month'
-    },
-    {
-      title: 'AI Data Analytics',
-      description: 'Advanced AI-powered analytics platform providing real-time insights and predictive modeling.',
-      icon: '📊',
-      link: '/ai-data-analytics',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Business Intelligence', 'Data Visualization'],
-      price: 'Starting at $1,299/month'
+      features: ['Algorithmic Trading', 'Fraud Detection', 'Credit Scoring', 'Wealth Management', 'Risk Assessment', 'Regulatory Compliance'],
+      price: 'Starting at $1,499/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Cybersecurity',
       description: 'AI-powered security solutions with threat detection, SOC services, and compliance management.',
       icon: '🔒',
       link: '/ai-cybersecurity',
-      features: ['AI Threat Detection', 'SOC Services', 'Vulnerability Assessment', 'Compliance Automation'],
-      price: 'Starting at $2,499/month'
-    },
-    {
-      title: 'AI Workflow Automation',
-      description: 'Intelligent automation platform that streamlines business processes with AI-powered workflows.',
-      icon: '🤖',
-      link: '/ai-workflow-automation',
-      features: ['Process Automation', 'RPA Solutions', 'Workflow Optimization', 'Exception Handling'],
-      price: 'Starting at $399/month'
+      features: ['AI Threat Detection', 'SOC Services', 'Vulnerability Assessment', 'Compliance Automation', 'Incident Response', 'Security Analytics'],
+      price: 'Starting at $2,499/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Cloud Infrastructure',
       description: 'AI-powered cloud services including migration, optimization, security, and monitoring.',
       icon: '☁️',
       link: '/ai-cloud-infrastructure',
-      features: ['Cloud Migration', 'Cost Optimization', 'DevOps Automation', 'Security Management'],
-      price: 'Starting at $2,999/month'
+      features: ['Cloud Migration', 'Cost Optimization', 'DevOps Automation', 'Security Management', 'Auto-scaling', 'Performance Monitoring'],
+      price: 'Starting at $2,999/month',
+      category: 'AI Services'
     },
     {
       title: 'AI E-commerce Solutions',
       description: 'Revolutionary AI-powered e-commerce platform with personalization, inventory management, and automated customer service.',
       icon: '🛒',
       link: '/ai-ecommerce-solutions',
-      features: ['AI Personalization', 'Inventory Management', 'Payment Processing', 'Marketing Automation'],
-      price: 'Starting at $1,999/month'
+      features: ['AI Personalization', 'Inventory Management', 'Payment Processing', 'Marketing Automation', 'Recommendation Engine', 'Price Optimization'],
+      price: 'Starting at $1,999/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Mobile App Development',
       description: 'Complete mobile app development with AI integration, machine learning capabilities, and intelligent features.',
       icon: '📱',
       link: '/ai-mobile-app-development',
-      features: ['Native Development', 'AI Integration', 'Cross-platform', 'Analytics'],
-      price: 'Starting at $4,999/project'
+      features: ['Native Development', 'AI Integration', 'Cross-platform', 'Analytics', 'Push Notifications', 'Offline Capabilities'],
+      price: 'Starting at $4,999/project',
+      category: 'AI Services'
     },
     {
-      title: 'Cybersecurity Solutions',
-      description: 'Advanced security services including threat detection and compliance.',
-      icon: '🛡️',
-      link: '/cybersecurity',
-      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
-      price: 'Starting at $2,500/month'
+      title: 'AI Workflow Automation',
+      description: 'Intelligent automation platform that streamlines business processes with AI-powered workflows.',
+      icon: '🤖',
+      link: '/ai-workflow-automation',
+      features: ['Process Automation', 'RPA Solutions', 'Workflow Optimization', 'Exception Handling', 'Integration APIs', 'Performance Analytics'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
     },
     {
-      title: 'AI Content Generation',
-      description: 'Create high-quality content 10x faster with our advanced AI platform.',
-      icon: '✍️',
-      link: '/ai-content-generation',
-      features: ['10x Faster Content', '50+ Languages', 'SEO Optimized', 'Brand Voice Training'],
-      price: 'Starting at $29/month',
-      popular: true
-    },
-    {
-      title: 'AI Customer Support',
-      description: 'Provide 24/7 intelligent customer support with AI that never sleeps.',
-      icon: '💬',
-      link: '/ai-customer-support',
-      features: ['24/7 AI Chat', '90% Faster Response', 'Multi-language', 'Human Handoff'],
-      price: 'Starting at $199/month',
-      popular: true
-    },
-    {
-      title: 'AI Sales Automation',
-      description: 'Automate your sales process and close more deals with AI-powered tools.',
-      icon: '📈',
-      link: '/ai-sales-automation',
-      features: ['Lead Scoring', 'Auto Follow-ups', 'Predictive Analytics', 'Performance Optimization'],
-      price: 'Starting at $299/month',
-      popular: true
+      title: 'AI Data Analytics',
+      description: 'Advanced AI-powered analytics platform providing real-time insights and predictive modeling.',
+      icon: '📊',
+      link: '/ai-data-analytics',
+      features: ['Real-time Analytics', 'Predictive Modeling', 'Business Intelligence', 'Data Visualization', 'Machine Learning', 'Data Mining'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Data Visualization',
       description: 'Transform your data into stunning visual insights with AI-powered analytics.',
       icon: '📊',
       link: '/ai-data-visualization',
-      features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates'],
-      price: 'Starting at $149/month'
-    }
+      features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates', 'Custom Branding', 'Export Options'],
+      price: 'Starting at $149/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including cloud, security, DevOps, and infrastructure.',
+      icon: '⚙️',
+      link: '/it-services',
+      features: ['Cloud Infrastructure', 'Cybersecurity', 'DevOps & CI/CD', 'Database Administration', 'Network Management', 'System Integration'],
+      price: 'Starting at $1,200/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum computing capabilities for complex problem solving.',
+      icon: '⚛️',
+      link: '/quantum-computing',
+      features: ['Quantum Algorithms', 'Quantum Security', 'Optimization', 'Simulation', 'Quantum Machine Learning', 'Cryptography'],
+      price: 'Custom Pricing',
+      category: 'IT Services'
+    },
+    {
+      title: 'Autonomous Systems',
+      description: 'Self-managing and self-optimizing systems for enterprise operations.',
+      icon: '🔄',
+      link: '/autonomous-systems',
+      features: ['Self-Healing Infrastructure', 'Automated Operations', 'Intelligent Monitoring', 'Adaptive Learning', 'Predictive Maintenance', 'Auto-scaling'],
+      price: 'Starting at $2,500/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'Business Intelligence',
+      description: 'Data-driven insights and analytics for strategic decision making.',
+      icon: '📊',
+      link: '/business-intelligence',
+      features: ['Real-time Analytics', 'Data Visualization', 'Reporting', 'Dashboard Creation', 'KPI Tracking', 'Performance Metrics'],
+      price: 'Starting at $1,800/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'Blockchain & Web3',
+      description: 'Decentralized applications, smart contracts, and Web3 solutions.',
+      icon: '🔗',
+      link: '/blockchain',
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications', 'Token Development', 'DApp Creation'],
+      price: 'Starting at $8,000/project',
+      category: 'IT Services'
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Connected devices, edge analytics, and industrial IoT solutions.',
+      icon: '📱',
+      link: '/iot-edge',
+      features: ['Device Management', 'Edge Analytics', 'Industrial IoT', 'Smart Cities', 'Sensor Networks', 'Real-time Processing'],
+      price: 'Starting at $2,500/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'Robotics & Automation',
+      description: 'Intelligent robots, RPA, and advanced automation solutions.',
+      icon: '🤖',
+      link: '/robotics',
+      features: ['RPA Solutions', 'Industrial Robots', 'Service Robots', 'AI-Powered Automation', 'Machine Vision', 'Collaborative Robots'],
+      price: 'Starting at $2,500/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'Cybersecurity Solutions',
+      description: 'Advanced security services including threat detection and compliance.',
+      icon: '🛡️',
+      link: '/cybersecurity',
+      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services', 'Vulnerability Assessment', 'Incident Response'],
+      price: 'Starting at $2,500/month',
+      category: 'IT Services'
+    },
   ];
+
+  // Get unique categories
+  const categories = ['All', ...Array.from(new Set(serviceCategories.map(service => service.category)))];
+  
+  // Filter services based on category and search term
+  const filteredServices = useMemo(() => {
+    return serviceCategories.filter(service => {
+      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+  }, [selectedCategory, searchTerm]);
 
   const additionalServices = [
     {
@@ -277,14 +390,48 @@ const ServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Service Categories
+              Our Services
             </h2>
             <p className="text-xl text-gray-600">
               Choose from our comprehensive range of technology solutions
             </p>
           </div>
+
+          {/* Search and Filter Controls */}
+          <div className="mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+              {/* Search Bar */}
+              <div className="relative w-full md:w-96">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex items-center gap-2">
+                <Filter className="h-5 w-5 text-gray-400" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  {categories.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((service, index) => (
+            {filteredServices.map((service, index) => (
               <div key={index} className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow relative ${service.popular ? 'ring-2 ring-blue-500' : ''}`}>
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -377,6 +524,7 @@ const ServicesPage: React.FC = () => {
           </div>
           <div className="mt-8 text-sm text-blue-200">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p className="mt-2">🌐 https://ziontechgroup.com</p>
           </div>
         </div>
       </section>
