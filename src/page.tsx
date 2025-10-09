@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
+      (window as Window & { gtag?: (command: string, action: string, params: Record<string, unknown>) => void }).gtag?.('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number',
       });
