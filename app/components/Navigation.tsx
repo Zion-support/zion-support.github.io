@@ -45,18 +45,18 @@ const Navigation: React.FC = memo(() => {
       icon: Brain,
       color: 'text-purple-400',
       services: [
-        { name: 'AI Business Intelligence', path: '/ai-services/business-intelligence', description: 'Advanced analytics & insights' },
-        { name: 'AI Document Processing', path: '/ai-services/document-processing', description: 'Intelligent document analysis' },
-        { name: 'AI Customer Experience', path: '/ai-services/customer-experience', description: 'AI-powered customer interactions' },
-        { name: 'AI Marketing Automation', path: '/ai-services/marketing-automation', description: 'Intelligent marketing campaigns' },
-        { name: 'AI Predictive Maintenance', path: '/ai-services/predictive-maintenance', description: 'Equipment failure prevention' },
-        { name: 'AI Supply Chain', path: '/ai-services/supply-chain', description: 'Supply chain optimization' },
-        { name: 'AI Fraud Detection', path: '/ai-services/fraud-detection', description: 'Advanced fraud prevention' },
-        { name: 'AI Content Generation', path: '/ai-services/content-generation', description: 'AI content creation' },
-        { name: 'AI HR Analytics', path: '/ai-services/hr-analytics', description: 'Human resources optimization' },
-        { name: 'AI Process Automation', path: '/ai-services/process-automation', description: 'Intelligent workflow automation' },
-        { name: 'AI Quality Assurance', path: '/ai-services/quality-assurance', description: 'AI-powered quality control' },
-        { name: 'AI Energy Management', path: '/ai-services/energy-management', description: 'Energy optimization solutions' }
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence', description: 'Advanced analytics & insights' },
+        { name: 'AI Document Processing', path: '/ai-document-processor', description: 'Intelligent document analysis' },
+        { name: 'AI Customer Experience', path: '/ai-customer-service', description: 'AI-powered customer interactions' },
+        { name: 'AI Marketing Automation', path: '/ai-marketing', description: 'Intelligent marketing campaigns' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Predictive modeling & forecasting' },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Intelligent workflow automation' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Sales process automation' },
+        { name: 'AI Project Management', path: '/ai-project-management', description: 'AI-powered project management' },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'AI financial planning' },
+        { name: 'AI Healthcare Solutions', path: '/ai-healthcare-solutions', description: 'Healthcare AI solutions' }
       ]
     },
     {
@@ -64,18 +64,18 @@ const Navigation: React.FC = memo(() => {
       icon: Code,
       color: 'text-green-400',
       services: [
-        { name: 'AI Analytics Dashboard', path: '/micro-saas/analytics-dashboard', description: 'Real-time business intelligence' },
-        { name: 'Smart Support Bot', path: '/micro-saas/support-bot', description: 'AI customer service automation' },
-        { name: 'Social Media Manager', path: '/micro-saas/social-manager', description: 'AI social media automation' },
-        { name: 'Email Marketing Suite', path: '/micro-saas/email-marketing', description: 'AI email campaigns' },
-        { name: 'Inventory Management', path: '/micro-saas/inventory-management', description: 'Smart inventory optimization' },
-        { name: 'Lead Scoring System', path: '/micro-saas/lead-scoring', description: 'Intelligent lead qualification' },
-        { name: 'Document Processor', path: '/micro-saas/document-processor', description: 'AI document analysis' },
-        { name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', description: 'AI SEO automation' },
-        { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', description: 'Smart scheduling system' },
-        { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', description: 'Conversation analysis' },
-        { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', description: 'AI expense management' },
-        { name: 'Content Generator', path: '/micro-saas/content-generator', description: 'AI content creation' }
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Real-time business intelligence' },
+        { name: 'Smart Support Bot', path: '/ai-customer-support-bot', description: 'AI customer service automation' },
+        { name: 'Social Media Manager', path: '/ai-social-media-manager', description: 'AI social media automation' },
+        { name: 'Email Marketing Suite', path: '/ai-email-marketing', description: 'AI email campaigns' },
+        { name: 'Inventory Management', path: '/ai-inventory-management', description: 'Smart inventory optimization' },
+        { name: 'Lead Scoring System', path: '/ai-recommendation-engine', description: 'Intelligent lead qualification' },
+        { name: 'Document Processor', path: '/ai-document-processor', description: 'AI document analysis' },
+        { name: 'SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI SEO automation' },
+        { name: 'Appointment Scheduler', path: '/ai-scheduler', description: 'Smart scheduling system' },
+        { name: 'Expense Tracker', path: '/ai-expense-tracker', description: 'AI expense management' },
+        { name: 'Content Generator', path: '/ai-content-generation', description: 'AI content creation' },
+        { name: 'Time Tracker', path: '/ai-time-tracker', description: 'AI time management' }
       ]
     },
     {
@@ -84,11 +84,11 @@ const Navigation: React.FC = memo(() => {
       color: 'text-blue-400',
       services: [
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'IT Support', path: '/it-support', description: 'Comprehensive IT support' },
         { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', description: 'Cloud migration & setup' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'Database Management', path: '/database-management', description: 'Database management' },
-        { name: 'Managed IT', path: '/managed-it', description: '24/7 IT management' }
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration services' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT consulting' }
       ]
     },
     {
@@ -100,7 +100,7 @@ const Navigation: React.FC = memo(() => {
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
         { name: 'Blockchain', path: '/blockchain', description: 'Decentralized solutions' },
         { name: 'IoT Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' }
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' }
       ]
     }
   ];
@@ -124,7 +124,6 @@ const Navigation: React.FC = memo(() => {
             </div>
           </Link>
 
-<<<<<<< HEAD
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
@@ -142,7 +141,7 @@ const Navigation: React.FC = memo(() => {
             <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Micro SAAS
             </Link>
-            <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
+            <Link to="/it-consulting" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               IT Services
             </Link>
             <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
@@ -220,22 +219,6 @@ const Navigation: React.FC = memo(() => {
             </div>
 
             <Link 
-              to="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-              onClick={closeAllMenus}
-            >
-              Case Studies
-            </Link>
-
-            <Link 
-              to="/blog" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Blog
-            </Link>
-
-            <Link 
               to="/contact" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
@@ -306,6 +289,13 @@ const Navigation: React.FC = memo(() => {
                 Micro SAAS
               </Link>
               <Link
+                to="/it-consulting"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                IT Services
+              </Link>
+              <Link
                 to="/pricing"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
@@ -362,54 +352,10 @@ const Navigation: React.FC = memo(() => {
                           </Link>
                         </div>
                       </div>
-=======
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
-            {Object.entries(navigation).map(([category, items]) => (
-              <div
-                key={category}
-                className="relative group"
-                onMouseEnter={() => setServicesOpen(category === 'Services')}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors py-2">
-                  <span>{category}</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                
-                {servicesOpen && category === 'Services' && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 py-2 z-50">
-                    {items.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.href}
-                        className="flex items-center space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors text-gray-300"
-                      >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                      </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
                     ))}
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-
-              <Link
-                to="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Case Studies
-              </Link>
-
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
 
               <Link
                 to="/contact"
@@ -419,14 +365,6 @@ const Navigation: React.FC = memo(() => {
                 Contact
               </Link>
 
-=======
-            ))}
-          </div>
-
-          {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-4 text-sm">
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
@@ -435,84 +373,6 @@ const Navigation: React.FC = memo(() => {
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
               </a>
-<<<<<<< HEAD
-=======
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>info@ziontechgroup.com</span>
-              </a>
-            </div>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Quote
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden border-t border-white/10 py-4">
-            <div className="space-y-4">
-              {Object.entries(navigation).map(([category, items]) => (
-                <div key={category}>
-                  <h3 className="text-cyan-400 font-semibold mb-2 px-4">{category}</h3>
-                  <div className="space-y-1">
-                    {items.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.href}
-                        className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-slate-700/50 transition-colors text-gray-300"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-              
-              {/* Mobile Contact Info */}
-              <div className="border-t border-white/10 pt-4 px-4">
-                <div className="space-y-2">
-                  <a
-                    href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <Phone className="w-4 h-4" />
-                    <span>(302) 464-0950</span>
-                  </a>
-                  <a
-                    href="mailto:info@ziontechgroup.com"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <Mail className="w-4 h-4" />
-                    <span>info@ziontechgroup.com</span>
-                  </a>
-                </div>
-                <Link
-                  to="/contact"
-                  className="block mt-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Quote
-                </Link>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
             </div>
           </div>
         )}
