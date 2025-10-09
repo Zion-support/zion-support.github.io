@@ -5,12 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
   const itServices = [
-    // Infrastructure & Cloud Services
-=======
-  const services = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
     {
       icon: Cloud,
       title: 'IT Infrastructure',
