@@ -32,21 +32,11 @@ export interface LogEntry {
   /** Log level */,
     level: LogLevel
   /** Log message */,
-
   message: string
   /** Timestamp when the log was created */,
-
   timestamp: Date
   /** Optional data associated with the log */
   data?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   /** Source of the log (component, module, etc.) */
   source?: string
@@ -78,10 +68,8 @@ export interface LoggerConfig {
   /** Maximum number of logs to store in memory */,
     maxLogs: number
   /** Enable performance tracking */,
-
   enablePerformance: boolean
   /** Environment name */,
-
   environment: string
 }
 /**
@@ -115,14 +103,6 @@ export class EnhancedLogger {
   private config: LoggerConfig
   private logs: LogEntry[] = []
   private performanceMarks: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number> = new Map()
   private constructor(config: Partial<LoggerConfig> = {}) {
     // TODO: Add content
@@ -136,14 +116,6 @@ export class EnhancedLogger {
    * @returns EnhancedLogger instance
    */
   public static getInstance(config?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <LoggerConfig>): EnhancedLogger {
     // TODO: Add content
   }
@@ -181,14 +153,6 @@ export class EnhancedLogger {
    * ```
    */
   public debug(message: string, data?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>, source?: string): void {
     // TODO: Add content
   }
@@ -206,14 +170,6 @@ export class EnhancedLogger {
    * ```
    */
   public info(message: string, data?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>, source?: string): void {
     // TODO: Add content
   }
@@ -231,14 +187,6 @@ export class EnhancedLogger {
    * ```
    */
   public warn(message: string, data?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>, source?: string): void {
     // TODO: Add content
   }
@@ -267,14 +215,6 @@ export class EnhancedLogger {
 //   public error()
     message: string,
     data?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>,
     error?: Error,
     source?: string,
@@ -306,14 +246,6 @@ export class EnhancedLogger {
 //   public fatal()
     message: string,
     data?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>,
     error?: Error,
     source?: string,
@@ -359,14 +291,6 @@ export class EnhancedLogger {
    * @returns Duration in milliseconds, or undefined if mark not found
    */
   public endPerformance(markName: string, data?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>): number | undefined {
     // TODO: Add content
   }
@@ -406,14 +330,6 @@ export class EnhancedLogger {
     level: LogLevel,
     message: string,
     data?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>,
     source?: string,
     stack?: string,
@@ -422,14 +338,6 @@ export class EnhancedLogger {
   }
     // Check if log level meets minimum threshold
     if (level 
-          
-          
-          
-          
-          
-          
-          
-          
           < this.config.minLevel) return
     const logEntry: LogEntry = {
     // TODO: Add content
@@ -568,14 +476,6 @@ export class EnhancedLogger {
    * @param entry - Log entry to send
    */
   private async logToRemote(entry: LogEntry): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -705,28 +605,12 @@ export class EnhancedLogger {
   }
   total: number;,
     byLevel: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number>
     bySource: Record<string, number>
   } {
     // TODO: Add content
   }
     const byLevel: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number> = {}
     const bySource: Record<string, number> = {}
     this.logs.forEach(log => {
@@ -763,14 +647,6 @@ export class EnhancedLogger {
    * @param config - Partial configuration to merge
    */
   public configure(config: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <LoggerConfig>): void {
     // TODO: Add content
   }

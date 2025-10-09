@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const Pagetsx: React.FC = () => {
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const ApiPage: React.FC = () => {
   const _features = [
     {
       icon: Users,
@@ -12,33 +13,35 @@ const Pagetsx: React.FC = () => {
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
     },
     {
-    icon: TrendingUp,
+      icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'Optimized performance and scalability for enterprise-grade applications',
       benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
     },
     {
-    icon: Shield,
+      icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
     }
-  ]
+  ];
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
-        <title>tsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" /></Helmet>
+        <title>API - Zion Tech Group</title>
+        <meta name="description" content="Advanced API solutions powered by AI and cutting-edge technology" />
+      </Helmet>
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              tsx
+              API Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced tsx solutions powered by AI and cutting-edge technology
+              Advanced API solutions powered by AI and cutting-edge technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
@@ -50,6 +53,7 @@ const Pagetsx: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -73,6 +77,7 @@ const Pagetsx: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gray-800">
           <div className="max-w-4xl mx-auto text-center">
@@ -84,7 +89,9 @@ const Pagetsx: React.FC = () => {
           </div>
         </section>
       </main>
-      <Footer /></div>
-  )
-}
-export default Pagetsx
+      <Footer />
+    </div>
+  );
+};
+
+export default ApiPage;

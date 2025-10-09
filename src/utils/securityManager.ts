@@ -26,14 +26,6 @@ export class SecurityManager {
   }
     return input
 //       .replace(/[
-          
-          
-          
-          
-          
-          
-          
-          
           <>]/g, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+=/gi, '')
@@ -101,14 +93,6 @@ const validRequests = requests.filter((time: number) => time > windowStart)
     return true
   }
   private getRateLimitStorage(): Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number[]> {
     // TODO: Add content
   }

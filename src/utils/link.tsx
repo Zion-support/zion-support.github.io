@@ -10,14 +10,6 @@ interface LinkProps {
   'aria-label'?: string
 }
 export const Link: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
           <LinkProps> = ({
     // TODO: Add content
   }
@@ -41,17 +33,8 @@ if (onClick) {
     }
   }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <a
       href={href}
       className={className}
@@ -62,15 +45,6 @@ if (onClick) {
       {...props}
 // >
       {children}
-    
-          
-          
-          
-          
-          
-          
-          
-          
           </a>
   )
 }

@@ -108,14 +108,6 @@ export interface AppConfig {
   }
 }
 const developmentConfig: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <AppConfig> = {
     // TODO: Add content
   }
@@ -147,14 +139,6 @@ const developmentConfig: Partial
   }
 }
 const stagingConfig: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <AppConfig> = {
     // TODO: Add content
   }
@@ -186,14 +170,6 @@ const stagingConfig: Partial
   }
 }
 const productionConfig: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <AppConfig> = {
     // TODO: Add content
   }
@@ -233,14 +209,6 @@ const productionConfig: Partial
   }
 }
 const testConfig: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <AppConfig> = {
     // TODO: Add content
   }
@@ -278,14 +246,6 @@ export class ConfigManager {
   private config: AppConfig
   private environment: Environment
   private overrides: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <AppConfig> = {}
   constructor() {
     // TODO: Add content
@@ -334,29 +294,12 @@ export class ConfigManager {
    * Deep merge two config objects
    */
   private mergeConfig(base: AppConfig, override: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <AppConfig>): AppConfig {
     // TODO: Add content
   }
     const result = { ...base } as AppConfig
 //     (Object.keys(override) as Array
-          
-          
-          
-          
-          
-          
-          
-          
           <keyof AppConfig>).forEach()
-      
           <K extends keyof AppConfig>(key: K) => {
     // TODO: Add content
   }
@@ -390,37 +333,13 @@ export class ConfigManager {
    * Get configuration value
    */
   get
-          
-          
-          
-          
-          
-          
-          
-          
           <K extends keyof AppConfig>(key: K): AppConfig[K]
 // get
-          
-          
-          
-          
-          
-          
-          
-          
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     key: K,
     nestedKey: NK,
 ): AppConfig[K][NK]
 // get
-          
-          
-          
-          
-          
-          
-          
-          
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     key: K,
     nestedKey?: NK,
@@ -438,38 +357,14 @@ export class ConfigManager {
    * Set configuration value
    */
   set
-          
-          
-          
-          
-          
-          
-          
-          
           <K extends keyof AppConfig>(key: K, value: AppConfig[K]): void
 // set
-          
-          
-          
-          
-          
-          
-          
-          
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     key: K,
     nestedKey: NK,
     value: AppConfig[K][NK]
   ): void
 // set
-          
-          
-          
-          
-          
-          
-          
-          
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     key: K,
     nestedKeyOrValue: NK | AppConfig[K],
@@ -514,14 +409,6 @@ const defaultValue = this.getDefaultForKey(key)
    * Get default value for a config key
    */
   private getDefaultForKey
-          
-          
-          
-          
-          
-          
-          
-          
           <K extends keyof AppConfig>(key: K): AppConfig[K] {
     // TODO: Add content
   }
@@ -632,14 +519,6 @@ const defaultValue = this.getDefaultForKey(key)
    * Update API configuration
    */
   updateAPIConfig(config: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <AppConfig['api']>): void {
     // TODO: Add content
   }
@@ -681,14 +560,6 @@ const defaultValue = this.getDefaultForKey(key)
    * Override configuration
    */
   override(config: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <AppConfig>): void {
     // TODO: Add content
   }
@@ -726,28 +597,12 @@ const defaultValue = this.getDefaultForKey(key)
       errors.push('API baseURL is required')
     }
     if (this.config.api.timeout 
-          
-          
-          
-          
-          
-          
-          
-          
           < 1000) {
     // TODO: Add content
   }
       errors.push('API timeout must be at least 1000ms')
     }
     if (this.config.api.retryAttempts 
-          
-          
-          
-          
-          
-          
-          
-          
           < 0) {
     // TODO: Add content
   }
@@ -755,14 +610,6 @@ const defaultValue = this.getDefaultForKey(key)
     }
     // Validate security configuration
     if (this.config.security.maxRequestsPerMinute 
-          
-          
-          
-          
-          
-          
-          
-          
           < 1) {
     // TODO: Add content
   }

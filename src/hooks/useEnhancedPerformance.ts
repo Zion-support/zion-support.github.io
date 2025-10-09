@@ -23,14 +23,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     trackAnalytics = true
   } = _options
   const mountTimeRef = useRef
-          
-          
-          
-          
-          
-          
-          
-          
           <number>(0)
   const renderCountRef = useRef<number>(0)
   const __mountTimeRef = useRef<number>(0)
@@ -79,14 +71,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
   )
   const trackError = useCallback()
     (error: Error, context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => {
     // TODO: Add content
   }
@@ -99,14 +83,6 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
     [component, trackErrors]
   const trackUserAction = useCallback()
     (action: string, metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => {
 analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
     [component, trackAnalytics]

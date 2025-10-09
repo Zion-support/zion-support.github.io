@@ -6,14 +6,6 @@
 // Simple logger for performance optimizer
   info: (message: string, context?: string) => console.log('[INFO]', message, context),
   performance: (message: string, data: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
 }
@@ -70,14 +62,6 @@ class PerformanceOptimizer {
   private observers: PerformanceObserver[] = []
   private isMonitoring: boolean = false
   constructor(config?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <OptimizationConfig>) {
     // TODO: Add content
   }
@@ -561,8 +545,7 @@ const observer = new PerformanceObserver((list) => {
   // TODO: Add items
 ]
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-      { href: '/css/critical.css', as: 'style' },
-    ]
+      { href: '/css/critical.css', as: 'style' }]
     criticalResources.forEach(resource => {
     // TODO: Add content
   }
@@ -610,14 +593,6 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
     logger.performance('Web Vitals reported', metrics as unknown as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>, 'PerformanceOptimizer')
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
@@ -635,14 +610,6 @@ const observer = new PerformanceObserver((list) => {
   metric_name: key,
             metric_value: value,
             metric_rating: value 
-          
-          
-          
-          
-          
-          
-          
-          
           < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
           }
   )
@@ -679,14 +646,6 @@ Bundle Size: ${metrics.bundleSize}KB
 Cache Hit Rate: ${metrics.cacheHitRate}%
   Recommendations:
 ${score 
-          
-          
-          
-          
-          
-          
-          
-          
           < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}

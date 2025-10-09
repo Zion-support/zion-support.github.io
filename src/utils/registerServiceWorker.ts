@@ -14,14 +14,6 @@ export interface ServiceWorkerConfig {
 export async function registerServiceWorker()
   _config: ServiceWorkerConfig = {}
 ): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <ServiceWorkerRegistration | undefined> {
     // TODO: Add content
   }
@@ -46,14 +38,6 @@ export async function registerServiceWorker()
   }
     // Wait for page to load
     await new Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void>((resolve) => {
     // TODO: Add content
   }
@@ -121,14 +105,6 @@ export async function registerServiceWorker()
  * Unregister service worker
  */
 export async function unregisterServiceWorker(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <boolean> {
     // TODO: Add content
   }
@@ -152,14 +128,6 @@ export async function unregisterServiceWorker(): Promise
  * Check for service worker updates
  */
 export async function checkForUpdates(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -209,14 +177,6 @@ export function clearCaches(): void {
  * Get service worker registration status
  */
 export async function getServiceWorkerStatus(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <{
     // TODO: Add content
   }

@@ -44,8 +44,7 @@ export const _errorHandlingConfig: ErrorConfig = {
   sampleRate: 1.0,
   maxStackTraceLength: 1000,
   ignoreErrors: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //     /ResizeObserver loop/i,
 //     /Non-Error promise rejection captured/i,
 //     /Loading chunk \d+ failed/i,
@@ -91,14 +90,6 @@ export class AppError extends Error {
     public category: ErrorCategory = ErrorCategory.UNKNOWN,
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     public metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   ) {
     // TODO: Add content

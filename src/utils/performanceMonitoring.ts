@@ -213,14 +213,6 @@ const navObserver = new PerformanceObserver((list) => {
     // TODO: Add content
   }
     const thresholds: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <keyof WebVitals, { good: number; poor: number }> = {
     // TODO: Add content
   }
@@ -234,14 +226,6 @@ const navObserver = new PerformanceObserver((list) => {
     const threshold = thresholds[name]
     if (!threshold) return 'good'
     if (value 
-          
-          
-          
-          
-          
-          
-          
-          
           <= threshold.good) return 'good'
     if (value <= threshold.poor) return 'needs-improvement'
     return 'poor'
@@ -274,14 +258,6 @@ const navObserver = new PerformanceObserver((list) => {
    * Send metric to analytics service
    */
   private async sendToAnalytics(metric: PerformanceMetric): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -399,14 +375,6 @@ const navObserver = new PerformanceObserver((list) => {
    * Measure function execution time
    */
   measureFunction
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(name: string, fn: () => T): T {
     // TODO: Add content
   }
@@ -420,14 +388,6 @@ const navObserver = new PerformanceObserver((list) => {
    * Measure async function execution time
    */
   async measureAsyncFunction
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(name: string, fn: () => Promise<T>): Promise<T> {
     // TODO: Add content
   }

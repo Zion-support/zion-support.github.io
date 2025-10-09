@@ -322,21 +322,12 @@ private addStructuredData(data: unknown): void {
    * Generate sitemap data
    */
   generateSitemapData(): Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{ url: string; lastmod: string; changefreq: string; priority: number }> {
     // TODO: Add content
   }
     // This would typically come from your CMS or routing system
     return [
-  // TODO: Add items,
-]
+  // TODO: Add items]
       {
     // TODO: Add content
   }
@@ -360,9 +351,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml
   Disallow: /admin/,
     Disallow: /private/,
     Disallow: /api/,
-
   Disallow: /_next/,
-
   Disallow: /static/`
   }
   /**
@@ -375,14 +364,6 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml
     // Check title length
 const title = document.title
     if (title.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < 30) {
     // TODO: Add content
   }
@@ -399,14 +380,6 @@ const description = document.querySelector('meta[name="description"]')?.getAttri
   }
       issues.push('Missing meta description')
     } else if (description.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < 120) {
     // TODO: Add content
   }

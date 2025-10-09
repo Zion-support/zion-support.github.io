@@ -21,28 +21,12 @@ export interface FieldRule {
   custom?: (value: unknown) => boolean
 }
 export type ValidationRules = Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, FieldRule[]>
 export interface ValidationResult {
     // TODO: Add content
   }
   isValid: boolean;,
     errors: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, string[]>
 }
 export class ValidationError extends Error {
@@ -101,14 +85,6 @@ export function validateStringLength(value: string, min: number, max?: number): 
     // TODO: Add content
   }
     return value.length >= min && value.length 
-          
-          
-          
-          
-          
-          
-          
-          
           <= max
   }
   return value.length >= min
@@ -120,14 +96,6 @@ export function validateNumberRange(value: number, min: number, max: number): bo
     // TODO: Add content
   }
   return value >= min && value 
-          
-          
-          
-          
-          
-          
-          
-          
           <= max
 }
 /**
@@ -139,14 +107,6 @@ export function validateCreditCard(cardNumber: string): boolean {
   const cleaned = cardNumber.replace(/\s/g, '')
   if (!/^\d+$/.test(cleaned)) return false
   if (cleaned.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < 13 || cleaned.length > 19) return false
   let isEven = false
   for (let i = cleaned.length - 1; i >= 0; i--) {
@@ -192,14 +152,6 @@ export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   if (!validateDate(date)) return false
   const time = date.getTime()
   if (min && time 
-          
-          
-          
-          
-          
-          
-          
-          
           < min.getTime()) return false
   if (max && time > max.getTime()) return false
   return true
@@ -212,14 +164,6 @@ export function sanitizeHTML(html: string): string {
   }
   // Remove script tags
 let clean = html.replace(/
-          
-          
-          
-          
-          
-          
-          
-          
           <script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
   // Remove event handlers
   clean = clean.replace(/on\w+="[^"]*"/gi, '')
@@ -230,14 +174,6 @@ let clean = html.replace(/
  * Create custom validator
  */
 export function createCustomValidator
-          
-          
-          
-          
-          
-          
-          
-          
           <T>()
   validator: (value: T) => boolean,
   message: string,
@@ -277,14 +213,6 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
     case 'number':
       if (typeof value !== 'number') return false
       if (rule.min !== undefined && value 
-          
-          
-          
-          
-          
-          
-          
-          
           < rule.min) return false
       if (rule.max !== undefined && value > rule.max) return false
       return true
@@ -309,14 +237,6 @@ export function validateForm<T extends Record<string, unknown>>()
     // TODO: Add content
   }
   const errors: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, string[]> = {}
   for (const field in rules) {
     // TODO: Add content
@@ -369,14 +289,6 @@ export const ValidationRulesBuilder = {
     // TODO: Add content
   }
   required: 
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(): ValidationRule<T> => ({
     // TODO: Add content
   }
@@ -391,14 +303,6 @@ export const ValidationRulesBuilder = {
     message: 'This field is required'
   }),
   email: (): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
@@ -406,14 +310,6 @@ export const ValidationRulesBuilder = {
     message: 'Please enter a valid email address'
   }),
   url: (): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
@@ -421,14 +317,6 @@ export const ValidationRulesBuilder = {
     message: 'Please enter a valid URL'
   }),
   minLength: (min: number): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
@@ -436,26 +324,10 @@ export const ValidationRulesBuilder = {
     message: `Must be at least ${min} characters long`
   }),
   maxLength: (max: number): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
   validate: (value: string) => value.length 
-          
-          
-          
-          
-          
-          
-          
-          
           <= max,
     message: `Must be no more than ${max} characters long`
   }),
@@ -466,14 +338,6 @@ export const ValidationRulesBuilder = {
 //     message
   }),
   range: (min: number, max: number): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <number> => ({
     // TODO: Add content
   }
@@ -481,14 +345,6 @@ export const ValidationRulesBuilder = {
     message: `Must be between ${min} and ${max}`
   }),
   custom: 
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     // TODO: Add content
   }
@@ -536,14 +392,6 @@ class DataValidator {
     return Array.isArray(value)
   }
   isObject(value: unknown): value is Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown> {
     // TODO: Add content
   }

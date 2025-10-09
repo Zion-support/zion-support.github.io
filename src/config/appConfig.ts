@@ -54,14 +54,6 @@ export interface AppConfig {
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
 export function getConfig
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown>(keyPath: string): T {
 const keys = keyPath.split('.')
   const __keys = keyPath.split('.')
@@ -73,14 +65,6 @@ const keys = keyPath.split('.')
     // TODO: Add content
   }
       value = (value as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>)[key]
     } else {
     // TODO: Add content

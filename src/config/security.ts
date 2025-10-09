@@ -80,23 +80,7 @@ export function sanitizeInput(input: string): string {
   }
   return input
 //     .replace(/[
-          
-          
-          
-          
-          
-          
-          
-          
           <>]/g, '') // Remove 
-          
-          
-          
-          
-          
-          
-          
-          
           < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
@@ -127,14 +111,6 @@ export function generateSecureToken(_length: number = 32): string {
   }
     // Fallback for non-browser environments
     for (let _i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
           < length; i++) {
     // TODO: Add content
   }

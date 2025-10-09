@@ -13,14 +13,6 @@ export const _usePerformance = () => {
     // TODO: Add content
   }
   const [metrics, setMetrics] = useState
-          
-          
-          
-          
-          
-          
-          
-          
           <PerformanceMetrics | null>(null)
   const [isMonitoring, setIsMonitoring] = useState(false)
   useEffect(() => {

@@ -6,14 +6,6 @@ interface DynamicOptions {
   ssr?: boolean
 }
 export function dynamic
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends ComponentType<unknown>>()
   importFunc: () => Promise
           <{ default: T }>,

@@ -11,14 +11,6 @@ export interface CacheOptions {
   maxSize?: number; // Maximum number of entries
 }
 export interface CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
           <T> {
     // TODO: Add content
   }
@@ -28,26 +20,10 @@ export interface CacheEntry
     lastAccessed: number
 }
 class AdvancedCache
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown> {
     // TODO: Add content
   }
   private cache: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, CacheEntry<T>> = new Map()
   private accessOrder: string[] = []
   private options: Required<CacheOptions>
@@ -280,14 +256,6 @@ class AdvancedCache
     maxSize: number;,
     hitRate: number;,
     entries: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{
     // TODO: Add content
   }
@@ -299,14 +267,6 @@ class AdvancedCache
     // TODO: Add content
   }
     const entries: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{ key: string; hits: number; age: number }> = []
     const now = Date.now()
     this.cache.forEach((entry, key) => {
@@ -334,14 +294,6 @@ class AdvancedCache
   }
   // Utility method for async operations with caching
 //   public async getOrFetch
-          
-          
-          
-          
-          
-          
-          
-          
           <R extends T>()
     key: string,
     fetcher: () => Promise
@@ -363,26 +315,10 @@ class AdvancedCache
 }
 // Export factory function
 export function createCache
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown>(options?: CacheOptions): AdvancedCache<T> {
     // TODO: Add content
   }
   return new AdvancedCache
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(options)
 }
 // Export default cache instance

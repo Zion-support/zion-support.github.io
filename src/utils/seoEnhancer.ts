@@ -2,7 +2,6 @@
  * SEO Enhancer
  * Basic SEO optimization utilities
  */
-
 interface SEOConfig {
   title: string
   description: string
@@ -18,19 +17,16 @@ interface SEOConfig {
   publisher?: string
   lastModified?: string
 }
-
 class SEOEnhancer {
   private config: SEOConfig
   constructor(config: SEOConfig) {
     this.config = config
     this.init()
   }
-
   private init(): void {
     // Initialize SEO enhancements
     this.updateMetaTags()
   }
-
   private updateMetaTags(): void {
     if (typeof document !== 'undefined') {
       // Update title
@@ -45,11 +41,9 @@ class SEOEnhancer {
       metaDescription.setAttribute('content', this.config.description)
     }
   }
-
   public updateConfig(newConfig: Partial<SEOConfig>): void {
     this.config = { ...this.config, ...newConfig }
     this.updateMetaTags()
   }
 }
-
 export default SEOEnhancer

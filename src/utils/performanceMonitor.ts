@@ -13,14 +13,6 @@ interface PerformanceMetrics {
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint,
   customMetrics: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number>
 }
 class PerformanceMonitor {
@@ -347,14 +339,6 @@ class PerformanceMonitor {
     // TODO: Add content
   }
       if (this.metrics.fcp 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 1800) scores.push(100)
       else if (this.metrics.fcp <= 4000) scores.push(50)
       else scores.push(25)
@@ -364,14 +348,6 @@ class PerformanceMonitor {
     // TODO: Add content
   }
       if (this.metrics.lcp 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 2500) scores.push(100)
       else if (this.metrics.lcp <= 4000) scores.push(75)
       else if (this.metrics.lcp <= 6000) scores.push(50)
@@ -382,14 +358,6 @@ class PerformanceMonitor {
     // TODO: Add content
   }
       if (this.metrics.fid 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 100) scores.push(100)
       else if (this.metrics.fid <= 300) scores.push(75)
       else if (this.metrics.fid <= 500) scores.push(50)
@@ -400,14 +368,6 @@ class PerformanceMonitor {
     // TODO: Add content
   }
       if (this.metrics.cls 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 0.1) scores.push(100)
       else if (this.metrics.cls <= 0.25) scores.push(75)
       else if (this.metrics.cls <= 0.4) scores.push(50)

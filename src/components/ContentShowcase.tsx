@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ContentShowcaseProps {
   // Add props here
 }
-
 const ContentShowcase: React.FC<ContentShowcaseProps> = () => {
   return (
     <div className="contentshowcase">
@@ -11,5 +9,4 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = () => {
     </div>
   );
 };
-
 export default ContentShowcase

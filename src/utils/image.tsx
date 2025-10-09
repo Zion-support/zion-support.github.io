@@ -20,14 +20,6 @@ interface ImageProps {
   onError?: () => void
 }
 export const Image: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
           <ImageProps> = ({
     // TODO: Add content
   }
@@ -49,7 +41,7 @@ quality = 75,
 }) => {
     // TODO: Add content
   }
-  const [, setIsLoaded] = useState(false)
+  const [ setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const _handleLoad = useCallback(() => {
     // TODO: Add content
@@ -83,31 +75,13 @@ quality = 75,
     // TODO: Add content
   }
     return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-      
           <div
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
 // >
-        
-          
-          
-          
-          
-          
-          
-          
-          
           <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
     )
@@ -115,7 +89,6 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   return (
     <div>Coming Soon</div>
   )
-    
           <img
       src={src}
       alt={alt}

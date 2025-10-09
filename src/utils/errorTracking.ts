@@ -29,14 +29,6 @@ export interface ErrorMetadata {
   userId?: string
   sessionId?: string
   context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   tags?: string[]
   timestamp: number
@@ -59,14 +51,6 @@ class ErrorTrackingService {
   }
   private static instance: ErrorTrackingService
   private errors: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, TrackedError> = new Map()
   private errorListeners: Array<(error: TrackedError) => void> = []
   private maxStoredErrors = 1000
@@ -133,14 +117,6 @@ class ErrorTrackingService {
 //   trackError()
     error: Error,
     metadata: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
   ): string {
 const timestamp = Date.now()
@@ -206,14 +182,6 @@ const trackedError: TrackedError = {
   private generateErrorId(message: string): string {
 // Simple hash function for error ID
     for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
           < message.length; i++) {
     // TODO: Add content
   }
@@ -264,14 +232,6 @@ const trackedError: TrackedError = {
    * Report critical errors to external service
    */
   private async reportToExternalService(errorId: string): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -330,14 +290,6 @@ const trackedError: TrackedError = {
   }
   total: number;,
     byCategory: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <ErrorCategory, number>
     bySeverity: Record<ErrorSeverity, number>
     topErrors: TrackedError[]
@@ -346,14 +298,6 @@ const trackedError: TrackedError = {
   }
     const errors = this.getErrors()
     const byCategory = {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <ErrorCategory, number>
     const bySeverity = {} as Record<ErrorSeverity, number>
     errors.forEach(error => {

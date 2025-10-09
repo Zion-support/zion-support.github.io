@@ -11,14 +11,6 @@ export class PerformanceMonitor {
     // TODO: Add content
   }
   private metrics: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number[]> = new Map()
   private observers: PerformanceObserver[] = []
   constructor() {
@@ -68,14 +60,6 @@ export class PerformanceMonitor {
 // Utility Functions
  * Throttle function
 export function throttle
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends (...args: unknown[]) => any>(
  * Request idle callback wrapper
 export function runWhenIdle(callback: () => void, timeout = 1000): void {

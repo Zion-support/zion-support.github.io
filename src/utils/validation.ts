@@ -64,14 +64,6 @@ export function validateLength()
     return { isValid: false, error: `${fieldName} is required` }
   }
   if (value.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < minLength) {
     // TODO: Add content
   }
@@ -94,14 +86,6 @@ export function validatePassword(password: string): ValidationResult {
     return { isValid: false, error: 'Password is required' }
   }
   if (password.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < 8) {
     // TODO: Add content
   }
@@ -116,14 +100,6 @@ export function validatePassword(password: string): ValidationResult {
   const hasLowerCase = /[a-z]/.test(password)
   const hasNumbers = /\d/.test(password)
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|
-          
-          
-          
-          
-          
-          
-          
-          
           <>]/.test(password)
   if (!hasUpperCase) {
     // TODO: Add content
@@ -159,14 +135,6 @@ export function sanitizeHTML(input: any): string {
   return input
     .replace(/&/g, '&amp;')
     .replace(/
-          
-          
-          
-          
-          
-          
-          
-          
           </g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
@@ -209,14 +177,6 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
   // Remove spaces and non-digits
 const cleaned = cardNumber.replace(/\D/g, '')
   if (cleaned.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < 13 || cleaned.length > 19) {
     // TODO: Add content
   }
@@ -273,14 +233,6 @@ export function validateJSON(jsonString: string): ValidationResult {
 export function validateComposite()
   value: string,
   validators: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <(value: string) => ValidationResult>
 ): ValidationResult {
     // TODO: Add content
@@ -300,14 +252,6 @@ export function validateComposite()
 // Async validation
 export async function validateAsync()
   validator: (value: string) => Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <ValidationResult>,
   value: string,
 ): Promise<ValidationResult> {

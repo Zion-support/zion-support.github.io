@@ -15,14 +15,6 @@ export interface ErrorReport {
     url: string;,
     severity: 'low' | 'medium' | 'high' | 'critical'
   context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
 }
 export interface ErrorReporterConfig {
@@ -49,14 +41,6 @@ export class ErrorReporter {
   private config: ErrorReporterConfig
   private errorQueue: ErrorReport[] = []
   private errorCount: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number> = new Map()
   private constructor(config: Partial<ErrorReporterConfig> = {}) {
     // TODO: Add content
@@ -67,14 +51,6 @@ export class ErrorReporter {
    * Get singleton instance
    */
   static getInstance(config?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <ErrorReporterConfig>): ErrorReporter {
     // TODO: Add content
   }
@@ -92,14 +68,6 @@ export class ErrorReporter {
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
     context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   ): void {
     // TODO: Add content
@@ -195,14 +163,6 @@ export class ErrorReporter {
    * Send error to remote logging service
    */
   private async sendToRemote(report: ErrorReport): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -250,14 +210,6 @@ export class ErrorReporter {
   totalErrors: number;,
     uniqueErrors: number;,
     errorsByType: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number>
   } {
     // TODO: Add content
@@ -305,14 +257,6 @@ export const reportError = ()
   error: Error,
   severity?: ErrorReport['severity'],
   context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
 ): void => {
     // TODO: Add content

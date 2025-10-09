@@ -11,14 +11,6 @@ export interface AnalyticsEvent {
   label?: string
   value?: number
   metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
 }
 export interface UserProperties {
@@ -158,14 +150,6 @@ class EnhancedAnalytics {
     // TODO: Add content
   }
           gtag?: (command: string, action: string, parameters: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => void
         }
 // ).gtag,
@@ -177,14 +161,6 @@ class EnhancedAnalytics {
     // TODO: Add content
   }
   gtag: (command: string, action: string, parameters: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => void
         }
       ).gtag('event', event.action, {
@@ -230,14 +206,6 @@ class EnhancedAnalytics {
   )
   }
   public trackError(error: Error, context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>): void {
     // TODO: Add content
   }
@@ -296,14 +264,6 @@ class EnhancedAnalytics {
     label?: string,
     value?: number,
     metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   ): void {
     // TODO: Add content

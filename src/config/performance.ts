@@ -55,13 +55,11 @@ export const _performanceConfig = {
   },
   // Resource hints,
   preload: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
 //   ],
   prefetch: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //     '/api/health',
 //     '/api/config',
 //   ],

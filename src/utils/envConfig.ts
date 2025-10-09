@@ -48,14 +48,6 @@ class EnvironmentConfig {
    * Get the entire configuration object
    */
   public getConfig(): Readonly
-          
-          
-          
-          
-          
-          
-          
-          
           <EnvConfig> {
     // TODO: Add content
   }
@@ -66,14 +58,6 @@ class EnvironmentConfig {
    * Get a specific configuration value
    */
   public get
-          
-          
-          
-          
-          
-          
-          
-          
           <K extends keyof EnvConfig>(key: K): EnvConfig[K] {
     // TODO: Add content
   }
@@ -135,26 +119,10 @@ class EnvironmentConfig {
    * Get API headers with authentication
    */
   public getApiHeaders(): Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, string> {
     // TODO: Add content
   }
     const headers: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, string> = {
     // TODO: Add content
   }

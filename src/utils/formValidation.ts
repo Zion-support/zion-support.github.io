@@ -30,14 +30,6 @@ export const _validationRules = {
    * Validate required field
    */
   required: (message = 'This field is required'): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
@@ -48,14 +40,6 @@ export const _validationRules = {
    * Validate email format
    */
   email: (message = 'Please enter a valid email address'): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
@@ -71,14 +55,6 @@ export const _validationRules = {
    * Validate minimum length
    */
   minLength: (min: number, message?: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
@@ -89,26 +65,10 @@ export const _validationRules = {
    * Validate maximum length
    */
   maxLength: (max: number, message?: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
   validate: (value: string) => value.length 
-          
-          
-          
-          
-          
-          
-          
-          
           <= max,
     message: message || `Must be no more than ${max} characters`
   }),
@@ -130,14 +90,6 @@ export const _validationRules = {
    * Validate URL format
    */
   url: (message = 'Please enter a valid URL'): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
@@ -161,26 +113,10 @@ export const _validationRules = {
    * Validate number range
    */
   numberRange: (min: number, max: number, message?: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <number> => ({
     // TODO: Add content
   }
   validate: (value: number) => value >= min && value 
-          
-          
-          
-          
-          
-          
-          
-          
           <= max,
     message: message || `Must be between ${min} and ${max}`
   }),
@@ -197,14 +133,6 @@ export const _validationRules = {
    * Validate custom condition
    */
   custom: 
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     // TODO: Add content
   }
@@ -217,14 +145,6 @@ export const _validationRules = {
   strongPassword: ()
     message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
   ): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
@@ -235,14 +155,6 @@ export const _validationRules = {
       const hasLowerCase = /[a-z]/.test(value)
       const hasNumber = /[0-9]/.test(value)
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|
-          
-          
-          
-          
-          
-          
-          
-          
           <>]/.test(value)
       const hasMinLength = value.length >= 8
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength
@@ -253,14 +165,6 @@ export const _validationRules = {
    * Validate matching fields (e.g., password confirmation)
    */
   matches: (otherFieldValue: string, fieldName: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <string> => ({
     // TODO: Add content
   }
@@ -271,14 +175,6 @@ export const _validationRules = {
    * Validate file size
    */
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
           <File> => ({
     // TODO: Add content
   }
@@ -287,14 +183,6 @@ export const _validationRules = {
   }
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024
       return file.size 
-          
-          
-          
-          
-          
-          
-          
-          
           <= maxSizeInBytes
     },
     message: message || `File size must not exceed ${maxSizeInMB}MB`
@@ -314,14 +202,6 @@ export const _validationRules = {
  * Validate a single field with multiple rules
  */
 export function validateField
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(value: T, rules: ValidationRule<T>[]): ValidationResult {
     // TODO: Add content
   }
@@ -346,14 +226,6 @@ export function validateField
  * Validate entire form
  */
 export function validateForm
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends Record<string, unknown>>()
   formData: T,
   validationSchema: Record
@@ -362,14 +234,6 @@ export function validateForm
     // TODO: Add content
   }
   const results = {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <keyof T, ValidationResult>
   for (const fieldName in validationSchema) {
     // TODO: Add content
@@ -384,14 +248,6 @@ export function validateForm
  * Check if form is valid
  */
 export function isFormValid
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends Record<string, unknown>>()
   validationResults: Record
           <keyof T, ValidationResult>
@@ -404,14 +260,6 @@ export function isFormValid
  * Get all form errors
  */
 export function getFormErrors
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends Record<string, unknown>>()
   validationResults: Record
           <keyof T, ValidationResult>
@@ -419,14 +267,6 @@ export function getFormErrors
     // TODO: Add content
   }
   const errors = {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <keyof T, string[]>
   for (const fieldName in validationResults) {
     // TODO: Add content
@@ -449,14 +289,6 @@ export function sanitizeInput(input: string): string {
   return input
 //     .trim()
 //     .replace(/[
-          
-          
-          
-          
-          
-          
-          
-          
           <>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
 }
@@ -464,14 +296,6 @@ export function sanitizeInput(input: string): string {
  * Debounce function for form validation
  */
 export function debounce
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends (...args: Parameters<T>) => ReturnType<T>>(),
     func: T,
   wait: number,
@@ -481,14 +305,6 @@ export function debounce
   }
   let timeout: NodeJS.Timeout | null = null
   return function executedFunction(...args: Parameters
-          
-          
-          
-          
-          
-          
-          
-          
           <T>) {
     // TODO: Add content
   }

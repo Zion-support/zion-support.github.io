@@ -272,14 +272,6 @@ const slowResources = resources
     // TODO: Add content
   }
     const thresholds: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, { good: number; poor: number }> = {
     // TODO: Add content
   }
@@ -298,28 +290,12 @@ const slowResources = resources
       return 'good'
     }
     if (value 
-          
-          
-          
-          
-          
-          
-          
-          
           <= threshold.good) {
     // TODO: Add content
   }
       return 'good'
     }
     if (value 
-          
-          
-          
-          
-          
-          
-          
-          
           <= threshold.poor) {
     // TODO: Add content
   }

@@ -14,14 +14,6 @@ fcp?: number; // First Contentful Paint
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
   customMetrics?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number>
 }
 /**
@@ -32,14 +24,6 @@ export interface PerformanceReport {
     // TODO: Add content
   }
   webVitals: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <PerformanceMetrics>;,
     resources: ResourceStats;,
     memory: MemoryStats | null;,

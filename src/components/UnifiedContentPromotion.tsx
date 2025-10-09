@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface UnifiedContentPromotionProps {
   // Add props here
 }
-
 const UnifiedContentPromotion: React.FC<UnifiedContentPromotionProps> = () => {
   return (
     <div className="unifiedcontentpromotion">
@@ -11,5 +9,4 @@ const UnifiedContentPromotion: React.FC<UnifiedContentPromotionProps> = () => {
     </div>
   );
 };
-
 export default UnifiedContentPromotion

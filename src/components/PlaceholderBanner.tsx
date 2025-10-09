@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface PlaceholderBannerProps {
   // Add props here
 }
-
 const PlaceholderBanner: React.FC<PlaceholderBannerProps> = () => {
   return (
     <div className="placeholderbanner">
@@ -11,5 +9,4 @@ const PlaceholderBanner: React.FC<PlaceholderBannerProps> = () => {
     </div>
   );
 };
-
 export default PlaceholderBanner;

@@ -50,14 +50,6 @@ export function trapFocus(element: HTMLElement): () => void {
     // TODO: Add content
   }
   const focusableElements = element.querySelectorAll
-          
-          
-          
-          
-          
-          
-          
-          
           <HTMLElement>()
     'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
   )
@@ -111,14 +103,6 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
 //     element.tagName.toLowerCase()
   )
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
 // isInteractive ||
@@ -179,14 +163,6 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
   }
       const normalized = val / 255
       return normalized 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 0.03928
 // ? normalized / 12.92
         : Math.pow((normalized + 0.055) / 1.055, 2.4)
@@ -384,14 +360,6 @@ export class FocusManager {
     // TODO: Add content
   }
     const focusable = container.querySelector
-          
-          
-          
-          
-          
-          
-          
-          
           <HTMLElement>()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )

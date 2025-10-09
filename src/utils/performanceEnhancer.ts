@@ -2,7 +2,6 @@
  * Performance Enhancer
  * Basic performance optimization utilities
  */
-
 interface PerformanceMetrics {
   lcp: number
   fid: number
@@ -11,7 +10,6 @@ interface PerformanceMetrics {
   ttfb: number
   tbt: number
 }
-
 interface OptimizationConfig {
   enableImageOptimization: boolean
   enableLazyLoading: boolean
@@ -22,7 +20,6 @@ interface OptimizationConfig {
   enableCompression: boolean
   enableCaching: boolean
 }
-
 class PerformanceEnhancer {
   private config: OptimizationConfig
   private metrics: PerformanceMetrics | null = null
@@ -30,12 +27,10 @@ class PerformanceEnhancer {
     this.config = config
     this.init()
   }
-
   private init(): void {
     // Initialize performance monitoring
     this.observePerformance()
   }
-
   private observePerformance(): void {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       try {
@@ -55,14 +50,11 @@ class PerformanceEnhancer {
       }
     }
   }
-
   public getMetrics(): PerformanceMetrics | null {
     return this.metrics
   }
-
   public cleanup(): void {
     // Cleanup resources
   }
 }
-
 export default PerformanceEnhancer

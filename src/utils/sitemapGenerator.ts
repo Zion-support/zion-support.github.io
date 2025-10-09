@@ -13,14 +13,6 @@ export const _generateSitemap = (urls: SitemapUrl[]): string => {
   const baseUrl = 'https://ziontechgroup.com'
   const currentDate = new Date().toISOString().split('T')[0]
   const sitemap = `
-          
-          
-          
-          
-          
-          
-          
-          
           <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
@@ -29,14 +21,6 @@ ${urls
   }
     const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`
     return `  
-          
-          
-          
-          
-          
-          
-          
-          
           <url>
     <loc>${fullUrl}</loc>
     <lastmod>${url.lastmod || currentDate}</lastmod>
@@ -55,8 +39,7 @@ export const getAllPages = (): SitemapUrl[] => {
   }
   const currentDate = new Date().toISOString().split('T')[0]
   return [
-  // TODO: Add items,
-]
+  // TODO: Add items]
     // Main pages
     { loc: '/', priority: 1.0, changefreq: 'daily' },
     { loc: '/about', priority: 0.9, changefreq: 'monthly' },
@@ -120,6 +103,5 @@ export const getAllPages = (): SitemapUrl[] => {
     { loc: '/terms', priority: 0.5, changefreq: 'yearly' },
     { loc: '/cookies', priority: 0.5, changefreq: 'yearly' },
     { loc: '/gdpr', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/accessibility', priority: 0.5, changefreq: 'yearly' },
-  ]
+    { loc: '/accessibility', priority: 0.5, changefreq: 'yearly' }]
 }

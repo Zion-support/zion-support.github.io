@@ -10,14 +10,6 @@ export interface ApiClientConfig {
   retries?: number
   retryDelay?: number
   headers?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, string>
   cacheOptions?: CacheOptions
 }
@@ -31,14 +23,6 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   skipCache?: boolean
 }
 export interface ApiResponse
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown> {
     // TODO: Add content
   }
@@ -65,14 +49,6 @@ class ApiClient {
     // TODO: Add content
   }
   private config: Required
-          
-          
-          
-          
-          
-          
-          
-          
           <Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {
     // TODO: Add content
   }
@@ -80,14 +56,6 @@ class ApiClient {
     cacheOptions?: CacheOptions
   }
   private abortControllers: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, AbortController> = new Map()
   constructor(_config: ApiClientConfig = {}) {
     // TODO: Add content
@@ -111,14 +79,6 @@ class ApiClient {
    * GET request
    */
   async get
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown>()
     url: string,
     config: Omit
@@ -127,14 +87,6 @@ class ApiClient {
     // TODO: Add content
   }
     return this.request
-          
-          
-          
-          
-          
-          
-          
-          
           <T>({
     // TODO: Add content
   }
@@ -148,14 +100,6 @@ class ApiClient {
    * POST request
    */
   async post
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown>()
     url: string,
     data?: unknown,
@@ -165,14 +109,6 @@ class ApiClient {
     // TODO: Add content
   }
     return this.request
-          
-          
-          
-          
-          
-          
-          
-          
           <T>({
     // TODO: Add content
   }
@@ -187,14 +123,6 @@ class ApiClient {
    * PUT request
    */
   async put
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown>()
     url: string,
     data?: unknown,
@@ -204,14 +132,6 @@ class ApiClient {
     // TODO: Add content
   }
     return this.request
-          
-          
-          
-          
-          
-          
-          
-          
           <T>({
     // TODO: Add content
   }
@@ -226,14 +146,6 @@ class ApiClient {
    * DELETE request
    */
   async delete
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown>()
     url: string,
     config: Omit
@@ -242,14 +154,6 @@ class ApiClient {
     // TODO: Add content
   }
     return this.request
-          
-          
-          
-          
-          
-          
-          
-          
           <T>({
     // TODO: Add content
   }
@@ -263,14 +167,6 @@ class ApiClient {
    * PATCH request
    */
   async patch
-          
-          
-          
-          
-          
-          
-          
-          
           <T = unknown>()
     url: string,
     data?: unknown,
@@ -280,14 +176,6 @@ class ApiClient {
     // TODO: Add content
   }
     return this.request
-          
-          
-          
-          
-          
-          
-          
-          
           <T>({
     // TODO: Add content
   }
@@ -302,14 +190,6 @@ class ApiClient {
    * Main request method with retry logic
    */
   private async request
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(config: RequestConfig): Promise<ApiResponse<T>> {
     // TODO: Add content
   }
@@ -331,14 +211,6 @@ class ApiClient {
     // TODO: Add content
   }
       const cached = cacheManager.get
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(cacheKey)
       if (cached !== undefined) {
     // TODO: Add content
@@ -363,14 +235,6 @@ const controller = new AbortController()
     }, timeout)
     let lastError: Error | null = null
     while (attempt 
-          
-          
-          
-          
-          
-          
-          
-          
           < retries) {
     // TODO: Add content
   }
@@ -463,14 +327,6 @@ const controller = new AbortController()
         }
         // Don't retry on certain errors
         if (error instanceof ApiError && error.status 
-          
-          
-          
-          
-          
-          
-          
-          
           < 500) {
     // TODO: Add content
   }
@@ -478,14 +334,6 @@ const controller = new AbortController()
         }
         // Wait before retrying
         if (attempt 
-          
-          
-          
-          
-          
-          
-          
-          
           < retries) {
     // TODO: Add content
   }
@@ -530,14 +378,6 @@ const controller = new AbortController()
    * Update default config
    */
   setConfig(config: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <ApiClientConfig>): void {
     // TODO: Add content
   }
@@ -575,14 +415,6 @@ const controller = new AbortController()
    * Delay helper
    */
   private delay(ms: number): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -592,14 +424,6 @@ const controller = new AbortController()
    * Health check
    */
   async healthCheck(endpoint: string = '/health'): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <boolean> {
     // TODO: Add content
   }

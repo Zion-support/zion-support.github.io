@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ContentNewsletterSignupProps {
   // Add props here
 }
-
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {
   return (
     <div className="contentnewslettersignup">
@@ -11,5 +9,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {
     </div>
   );
 };
-
 export default ContentNewsletterSignup;

@@ -12,14 +12,6 @@ export interface PerformanceMetric {
     timestamp: Date;,
     category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
   metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
 }
 export interface WebVitalsMetrics {
@@ -295,14 +287,6 @@ const lcpObserver = new PerformanceObserver(list => {
    * Measure function execution time
    */
   measureFunction
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(name: string, fn: () => T): T {
     // TODO: Add content
   }
@@ -325,14 +309,6 @@ const lcpObserver = new PerformanceObserver(list => {
    * Measure async function execution time
    */
   async measureAsyncFunction
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(name: string, fn: () => Promise<T>): Promise<T> {
     // TODO: Add content
   }

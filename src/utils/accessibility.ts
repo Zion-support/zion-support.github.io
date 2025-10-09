@@ -77,14 +77,6 @@ class AccessibilityService {
   }
       const v = val / 255
       return v 
-          
-          
-          
-          
-          
-          
-          
-          
           <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)
     }
   )
@@ -241,14 +233,6 @@ const html = document.documentElement
   }
       const rect = element.getBoundingClientRect()
       if (rect.width 
-          
-          
-          
-          
-          
-          
-          
-          
           < 44 || rect.height < 44) {
     // TODO: Add content
   }

@@ -42,14 +42,6 @@ export interface AppError {
   userAgent?: string
   componentStack?: string
   context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   resolved?: boolean
   retryCount?: number
@@ -91,14 +83,6 @@ export class ErrorHandler {
   private config: ErrorHandlerConfig
   private errors: AppError[] = []
   private retryQueue: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{ error: AppError; retryCount: number }> = []
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
     // TODO: Add content
@@ -106,14 +90,6 @@ export class ErrorHandler {
     this.config = { ...defaultErrorHandlerConfig, ...config }
   }
   static getInstance(config?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <ErrorHandlerConfig>): ErrorHandler {
     // TODO: Add content
   }
@@ -126,14 +102,6 @@ export class ErrorHandler {
   }
   // Handle error
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>): AppError {
     // TODO: Add content
   }
@@ -420,15 +388,6 @@ export class ErrorHandler {
       font-family: Arial, sans-serif
     `
     notification.innerHTML = `
-      
-          
-          
-          
-          
-          
-          
-          
-          
           <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
           background: none;,
     border: none;,
@@ -476,26 +435,10 @@ export class ErrorHandler {
     // TODO: Add content
   }
     return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
       error.type === ErrorType.NETWORK &&
 // error.retryCount! 
-          
-          
-          
-          
-          
-          
-          
-          
           < this.config.maxRetries &&
       error.severity !== ErrorSeverity.CRITICAL,
 )
@@ -535,14 +478,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: number}) {
     // TODO: Add content
   }
       if (retryItem.retryCount 
-          
-          
-          
-          
-          
-          
-          
-          
           < this.config.maxRetries) {
     // TODO: Add content
   }
@@ -615,14 +550,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: number}) {
         return acc
       },
       {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <ErrorType, number>
     )
     const bySeverity = this.errors.reduce()
@@ -633,14 +560,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: number}) {
         return acc
       },
       {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <ErrorSeverity, number>
     )
     const resolved = this.errors.filter(error => error.resolved).length
@@ -683,14 +602,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: number}) {
 }
 // React error boundary component
 export class ErrorBoundary extends React.Component
-          
-          
-          
-          
-          
-          
-          
-          
           <
   { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean; error?: Error }
@@ -728,15 +639,6 @@ export class ErrorBoundary extends React.Component
   }
       return (
 this.props.fallback || (
-          
-          
-          
-          
-          
-          
-          
-          
-          
           <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{
@@ -751,15 +653,6 @@ this.props.fallback || (
               }}
 >
               Try again
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </button></div>
         )
       )
@@ -774,14 +667,6 @@ export const useErrorHandler = () => {
   const errorHandler = ErrorHandler.getInstance()
   const handleError = useCallback()
     (error: Error, context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => {
     // TODO: Add content
   }

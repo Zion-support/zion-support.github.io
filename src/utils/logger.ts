@@ -62,14 +62,6 @@ class Logger {
    * Log a debug message
    */
   debug(message: string, context?: LogContext, metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>): void {
     // TODO: Add content
   }
@@ -79,14 +71,6 @@ class Logger {
    * Log an info message
    */
   info(message: string, context?: LogContext, metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>): void {
     // TODO: Add content
   }
@@ -96,14 +80,6 @@ class Logger {
    * Log a warning message
    */
   warn(message: string, context?: LogContext, metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>): void {
     // TODO: Add content
   }
@@ -115,14 +91,6 @@ class Logger {
 //   error()
     message: string,
     errorOrContextOrMetadata?: Error | string | Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
@@ -132,14 +100,6 @@ class Logger {
     let error: Error | undefined
     let context: LogContext | undefined
     let meta: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown> | undefined
     // Handle different parameter combinations
     if (errorOrContextOrMetadata instanceof Error) {
@@ -153,28 +113,12 @@ class Logger {
   }
       context = { component: errorOrContextOrMetadata }
       meta = contextOrMetadata as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
     } else if (typeof errorOrContextOrMetadata === 'object') {
     // TODO: Add content
   }
       context = errorOrContextOrMetadata as LogContext
       meta = contextOrMetadata as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
     }
     this.log(LogLevel.ERROR, message, context, { ...meta, error }
@@ -196,28 +140,12 @@ class Logger {
     message: string,
     context?: LogContext,
     metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   ): void {
     // TODO: Add content
   }
     // Check if we should log this level
     if (level 
-          
-          
-          
-          
-          
-          
-          
-          
           < this.logLevel) {
     // TODO: Add content
   }

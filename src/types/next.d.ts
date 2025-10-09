@@ -6,14 +6,6 @@ export interface Metadata {
   description?: string
   keywords?: string[]
   authors?: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{ name: string; url?: string }> | string[]
   creator?: string
   publisher?: string
@@ -38,14 +30,6 @@ export interface Metadata {
     url?: string
     siteName?: string
     images?: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{
     // TODO: Add content
   }
@@ -57,14 +41,6 @@ export interface Metadata {
     locale?: string
     type?: string
     authors?: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{ name: string; url?: string }> | string[]
     publishedTime?: string
   }

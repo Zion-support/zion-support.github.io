@@ -19,14 +19,6 @@ export interface ErrorLogEntry {
     message: string
   error?: Error
   context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   userAgent?: string
   url?: string
@@ -45,14 +37,6 @@ class ErrorLogger {
     _severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
     context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   ): void {
     // TODO: Add content
@@ -96,14 +80,6 @@ class ErrorLogger {
     // TODO: Add content
   }
     const styles: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <ErrorSeverity, string> = {
     // TODO: Add content
   }
@@ -130,14 +106,6 @@ class ErrorLogger {
    * Send error to external logging service
    */
   private async sendToExternalService(entry: ErrorLogEntry): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> {
     // TODO: Add content
   }
@@ -220,14 +188,6 @@ class ErrorLogger {
 const errorLogger = new ErrorLogger()
 // Convenience functions
 export const logError = (message: string, error?: Error, context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context)
 export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>

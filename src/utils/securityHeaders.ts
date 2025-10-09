@@ -17,8 +17,7 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {
   }
   // Content Security Policy,
   contentSecurityPolicy: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
 //     "style-src 'self' 'unsafe-inline'",
@@ -28,8 +27,7 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {
 //     "frame-ancestors 'none'",
 //     "base-uri 'self'",
 //     "form-action 'self'",
-//     'upgrade-insecure-requests',
-  ].join('; '),
+//     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
   // Prevent clickjacking,
@@ -40,8 +38,7 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {
   referrerPolicy: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy)
   permissionsPolicy: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
     'camera=()',
     'microphone=()',
     'geolocation=()',
@@ -58,14 +55,6 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {
  */
 export function getSecurityHeaders()
   customConfig?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <SecurityHeadersConfig>
 ): Record<string, string> {
   const headers: Record<string, string> = {
@@ -111,14 +100,6 @@ export function getSecurityHeaders()
  */
 export function getNextSecurityHeaders()
   customConfig?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {
     // TODO: Add content

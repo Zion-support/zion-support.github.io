@@ -2,7 +2,6 @@
  * Accessibility Enhancer
  * Basic accessibility optimization utilities
  */
-
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean
   enableScreenReaderSupport: boolean
@@ -10,7 +9,6 @@ interface AccessibilityConfig {
   enableFocusIndicators: boolean
   enableAriaLabels: boolean
 }
-
 class AccessibilityEnhancer {
   private config: AccessibilityConfig
   constructor(config?: AccessibilityConfig) {
@@ -19,17 +17,14 @@ class AccessibilityEnhancer {
       enableScreenReaderSupport: true,
       enableHighContrast: true,
       enableFocusIndicators: true,
-      enableAriaLabels: true,
-    }
+      enableAriaLabels: true}
     this.init()
   }
-
   private init(): void {
     // Initialize accessibility enhancements
     this.setupKeyboardNavigation()
     this.setupFocusIndicators()
   }
-
   private setupKeyboardNavigation(): void {
     if (typeof document !== 'undefined' {
       // Add keyboard navigation support
@@ -42,7 +37,6 @@ class AccessibilityEnhancer {
   )
     }
   }
-
   private setupFocusIndicators(): void {
     if (typeof document !== 'undefined') {
       // Add focus indicators
@@ -56,10 +50,8 @@ class AccessibilityEnhancer {
       document.head.appendChild(style)
     }
   }
-
   public cleanup(): void {
     // Cleanup accessibility enhancements
   }
 }
-
 export default AccessibilityEnhancer

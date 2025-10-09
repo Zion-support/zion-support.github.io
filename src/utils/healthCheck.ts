@@ -18,14 +18,6 @@ export interface HealthCheck {
     status: 'pass' | 'warn' | 'fail'
   message?: string
   details?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
   duration?: number
 }
@@ -34,14 +26,6 @@ class HealthCheckService {
     // TODO: Add content
   }
   private checks: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, HealthCheckFunction> = new Map()
   private startTime: number = Date.now()
   private lastCheckTime: number = 0
@@ -95,14 +79,6 @@ constructor() {
    * Run all health checks
    */
   async runChecks(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <HealthStatus> {
     // TODO: Add content
   }
@@ -111,14 +87,6 @@ constructor() {
     if ()
 //       this.cachedStatus &&
 //       now - this.lastCheckTime 
-          
-          
-          
-          
-          
-          
-          
-          
           < this.cacheTimeout,
 ) {
     // TODO: Add content
@@ -204,14 +172,6 @@ const hasFailures = checks.some((c) => c.status === 'fail')
    * Get current health status (may return cached)
    */
   async getStatus(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <HealthStatus> {
     // TODO: Add content
   }

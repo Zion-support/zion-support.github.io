@@ -72,14 +72,6 @@ export function maxLength(value: string, max: number): boolean {
     // TODO: Add content
   }
   return value.trim().length 
-          
-          
-          
-          
-          
-          
-          
-          
           <= max
 }
 /**
@@ -118,14 +110,6 @@ export function isStrongPassword(password: string): boolean {
   const hasLowerCase = /[a-z]/.test(password)
   const hasNumber = /[0-9]/.test(password)
   const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.
-          
-          
-          
-          
-          
-          
-          
-          
           <>\/?]/.test(password)
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar
 }
@@ -195,14 +179,6 @@ export function sanitizeHtml(html: string): string {
  * Validate object against schema
  */
 export function validateObject
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends Record<string, unknown>>()
   obj: T,
   schema: Record
@@ -237,14 +213,6 @@ export interface FormField {
   }
   value: string;,
     validators: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{
     // TODO: Add content
   }
@@ -254,27 +222,11 @@ export interface FormField {
 }
 export function validateForm()
   fields: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, FormField>
 ): Record<string, string[]> {
     // TODO: Add content
   }
   const errors: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, string[]> = {}
   for (const fieldName in fields) {
     // TODO: Add content
@@ -364,14 +316,6 @@ export function validateURL(url: string): ValidationResult {
 }
 export function validateLength(value: string, min: number, max: number, fieldName = 'Field'): ValidationResult {
   if (value.length 
-          
-          
-          
-          
-          
-          
-          
-          
           < min) {
     return { isValid: false, error: `${fieldName} must be at least ${min} characters long` }
   }
@@ -440,14 +384,6 @@ export function validateJSON(jsonString: string): ValidationResult {
   }
 }
 export function validateComposite(value: string, validators: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <{ validate: (v: string) => boolean; message: string }>): ValidationResult {
   for (const validator of validators) {
     if (typeof validator.validate === 'function' && !validator.validate(value)) {

@@ -19,14 +19,6 @@ export const waitFor = async ()
   timeout = 5000,
   interval = 100,
 ): Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <void> => {
     // TODO: Add content
   }
@@ -49,14 +41,6 @@ export const mockFetch = ()
   response: unknown,
   status = 200,
   headers: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, string> = {}
 ): void => {
     // TODO: Add content
@@ -69,14 +53,6 @@ export const mockFetch = ()
     // TODO: Add content
   }
   ok: status >= 200 && status 
-          
-          
-          
-          
-          
-          
-          
-          
           < 300,
 // status,
         headers: new Headers(headers),
@@ -93,14 +69,6 @@ export class MockStorage implements Storage {
     // TODO: Add content
   }
   private store: Map
-          
-          
-          
-          
-          
-          
-          
-          
           <string, string> = new Map()
   get length(): number {
     // TODO: Add content
@@ -146,14 +114,6 @@ export const createMockStorage = (): MockStorage => {
  * Mock window object
  */
 export const mockWindow = (overrides: Partial
-          
-          
-          
-          
-          
-          
-          
-          
           <Window> = {}): void => {
     // TODO: Add content
   }
@@ -273,14 +233,6 @@ export const generateTestData = {
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
   },
   array: 
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(generator: () => T, length = 5): T[] => {
     // TODO: Add content
   }
@@ -291,14 +243,6 @@ export const generateTestData = {
  * Deep clone an object
  */
 export const deepClone = 
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(obj: T): T => {
     // TODO: Add content
   }
@@ -381,26 +325,10 @@ export class ConsoleSpy {
  * Create a deferred promise
  */
 export interface Deferred
-          
-          
-          
-          
-          
-          
-          
-          
           <T> {
     // TODO: Add content
   }
   promise: Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <T>;,
     resolve: (value: T) => void;,
     reject: (reason?: unknown) => void
@@ -411,14 +339,6 @@ export const createDeferred = <T>(): Deferred<T> => {
   let resolve!: (value: T) => void
   let reject!: (reason?: unknown) => void
   const promise = new Promise
-          
-          
-          
-          
-          
-          
-          
-          
           <T>((res, rej) => {
     // TODO: Add content
   }
@@ -432,14 +352,6 @@ export const createDeferred = <T>(): Deferred<T> => {
  * Retry a function with exponential backoff
  */
 export const retryWithBackoff = async 
-          
-          
-          
-          
-          
-          
-          
-          
           <T>()
   fn: () => Promise
           <T>,
@@ -450,14 +362,6 @@ export const retryWithBackoff = async
   }
   let lastError: Error
   for (let _i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
           < maxRetries; i++) {
     // TODO: Add content
   }
@@ -470,14 +374,6 @@ export const retryWithBackoff = async
   }
       lastError = error as Error
       if (i 
-          
-          
-          
-          
-          
-          
-          
-          
           < maxRetries - 1) {
     // TODO: Add content
   }
@@ -491,14 +387,6 @@ export const retryWithBackoff = async
  * Measure execution time of a function
  */
 export const measureExecutionTime = async 
-          
-          
-          
-          
-          
-          
-          
-          
           <T>()
   fn: () => T | Promise
           <T>

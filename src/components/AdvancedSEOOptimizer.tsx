@@ -1,43 +1,10 @@
 import React, { useEffect } from 'react';
-
 interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
-<<<<<<< HEAD
-  ogImage?: string;
-  structuredData?: unknown;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
-  robots?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  breadcrumbs?: { name: string; url: string }[];
-  faqData?: { question: string; answer: string }[];
-  organizationData?: unknown;
-  websiteData?: unknown;
 }
-const AdvancedSEOOptimizer: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <AdvancedSEOOptimizerProps> = ({
-  // TODO: Add content
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-}
-
 const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions for modern enterprises',
@@ -47,7 +14,6 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
   useEffect(() => {
     // Update document title
     document.title = title;
-    
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -56,7 +22,6 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', description);
-    
     // Update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -65,7 +30,6 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
       document.head.appendChild(metaKeywords);
     }
     metaKeywords.setAttribute('content', keywords.join(', '));
-    
     // Update canonical URL
     if (canonicalUrl) {
       let canonical = document.querySelector('link[rel="canonical"]');
@@ -77,8 +41,6 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
       canonical.setAttribute('href', canonicalUrl);
     }
   }, [title, description, keywords, canonicalUrl]);
-
   return null;
 };
-
 export default AdvancedSEOOptimizer;

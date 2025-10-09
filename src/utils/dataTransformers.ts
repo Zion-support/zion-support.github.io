@@ -42,14 +42,6 @@ export function deepClone<T>(obj: T): T {
  * Deep merge two objects
  */
 export function deepMerge
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends Record<string, unknown>>(target: T, source: Partial<T>): T {
     // TODO: Add content
   }
@@ -74,38 +66,14 @@ export function deepMerge
   }
         output[key] = deepMerge()
 //           targetValue as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>,
 // sourceValue as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
         ) as T[Extract<keyof T, string>]
       } else {
     // TODO: Add content
   }
         output[key] = sourceValue as T[Extract
-          
-          
-          
-          
-          
-          
-          
-          
           <keyof T, string>]
       }
     }
@@ -124,14 +92,6 @@ export function flattenObject()
     // TODO: Add content
   }
   const flattened: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown> = {}
   for (const key in obj) {
     // TODO: Add content
@@ -147,14 +107,6 @@ export function flattenObject()
 //         Object.assign()
 //           flattened,
 //           flattenObject(value as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>, newKey, separator)
         )
       } else {
@@ -171,28 +123,12 @@ export function flattenObject()
  */
 export function unflattenObject()
   obj: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>,
   separator = '.'
 ): Record<string, unknown> {
     // TODO: Add content
   }
   const result: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown> = {}
   for (const key in obj) {
     // TODO: Add content
@@ -202,14 +138,6 @@ export function unflattenObject()
   }
       const keys = key.split(separator)
       for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
           < keys.length; i++) {
     // TODO: Add content
   }
@@ -223,14 +151,6 @@ export function unflattenObject()
   }
           current[k] = current[k] || {}
           current = current[k] as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
         }
       }
@@ -249,14 +169,6 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
     // TODO: Add content
   }
   const result = {} as Pick
-          
-          
-          
-          
-          
-          
-          
-          
           <T, K>
   keys.forEach(key => {
     // TODO: Add content
@@ -274,14 +186,6 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
  * Omit specific keys from an object
  */
 export function omit
-          
-          
-          
-          
-          
-          
-          
-          
           <T extends Record<string, unknown>, K extends keyof T>()
   obj: T,
   keys: K[]
@@ -297,14 +201,6 @@ export function omit
   }
   )
   return result as Omit
-          
-          
-          
-          
-          
-          
-          
-          
           <T, K>
 }
 /**
@@ -326,14 +222,6 @@ export function groupBy<T>()
       return result
     },
     {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, T[]>
   )
 }
@@ -367,14 +255,6 @@ export function unique<T>(array: T[], key?: keyof T): T[] {
  * Sort array by multiple keys
  */
 export function sortBy
-          
-          
-          
-          
-          
-          
-          
-          
           <T>()
   array: T[],
   keys: Array
@@ -387,14 +267,6 @@ export function sortBy
     // TODO: Add content
   }
     for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
           < keys.length; i++) {
     // TODO: Add content
   }
@@ -419,14 +291,6 @@ const aComp =
 //           ? bVal
           : String(bVal)
       if (aComp 
-          
-          
-          
-          
-          
-          
-          
-          
           < bComp) return order === 'asc' ? -1 : 1
       if (aComp > bComp) return order === 'asc' ? 1 : -1
     }
@@ -442,14 +306,6 @@ export function chunk<T>(array: T[], size: number): T[][] {
   }
   const chunks: T[][] = []
   for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
           < array.length; i += size) {
     // TODO: Add content
   }
@@ -461,28 +317,12 @@ export function chunk<T>(array: T[], size: number): T[][] {
  * Zip multiple arrays together
  */
 export function zip
-          
-          
-          
-          
-          
-          
-          
-          
           <T>(...arrays: T[][]): T[][] {
     // TODO: Add content
   }
   const length = Math.max(...arrays.map(arr => arr.length))
   const result: T[][] = []
   for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
           < length; i++) {
     // TODO: Add content
   }
@@ -499,14 +339,6 @@ export function formatBytes(bytes: number, decimals = 2): string {
   if (bytes === 0) return '0 Bytes'
   const k = 1024
   const dm = decimals 
-          
-          
-          
-          
-          
-          
-          
-          
           < 0 ? 0 : decimals
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB']
   const i = Math.floor(Math.log(bytes) / Math.log(k))
@@ -563,14 +395,6 @@ export function formatRelativeTime(date: Date | string | number): string {
   const months = Math.floor(days / 30)
   const years = Math.floor(days / 365)
   if (seconds 
-          
-          
-          
-          
-          
-          
-          
-          
           < 60) return 'just now'
   if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`
   if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`
@@ -586,14 +410,6 @@ export function truncate(str: string, length: number, suffix = '...'): string {
     // TODO: Add content
   }
   if (str.length 
-          
-          
-          
-          
-          
-          
-          
-          
           <= length) return str
   return str.substring(0, length - suffix.length) + suffix
 }

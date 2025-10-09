@@ -11,14 +11,6 @@ export interface ErrorContext {
   userId?: string
   sessionId?: string
   metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>
 }
 export interface TrackedError {
@@ -123,14 +115,6 @@ class EnhancedErrorTracker {
     // TODO: Add content
   }
           gtag?: (command: string, action: string, parameters: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => void
         }
 // ).gtag,
@@ -142,14 +126,6 @@ class EnhancedErrorTracker {
     // TODO: Add content
   }
   gtag: (command: string, action: string, parameters: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, unknown>) => void
         }
       ).gtag('event', 'exception', {
@@ -177,28 +153,12 @@ class EnhancedErrorTracker {
   }
   total: number;,
     byComponent: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number>
     recent: TrackedError[]
   } {
     // TODO: Add content
   }
     const byComponent: Record
-          
-          
-          
-          
-          
-          
-          
-          
           <string, number> = {}
     this.errors.forEach(error => {
       byComponent[component] = (byComponent[component] || 0) + 1

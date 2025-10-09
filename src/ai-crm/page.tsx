@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -23,19 +22,4 @@ const PagePage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-}
-const AiCrmPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-  );
-};
-const AICRMPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-  );
-};
-=======
-
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

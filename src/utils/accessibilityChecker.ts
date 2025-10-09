@@ -49,15 +49,12 @@ export interface A11yIssue {
   /** Issue type/category */,
     type: string
   /** Severity level */,
-
   severity: A11ySeverity
   /** WCAG level this issue violates */,
-
   wcagLevel: WCAGLevel
   /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */
   wcagCriterion: string
   /** Description of the issue */,
-
   message: string
   /** Element selector or description */
   element?: string
@@ -79,10 +76,8 @@ export interface A11yCheckResult {
   /** List of issues */,
     issues: A11yIssue[]
   /** Timestamp of the check */,
-
   timestamp: Date
   /** Overall accessibility score (0-100) */,
-
   score: number
 }
 /**
@@ -184,14 +179,6 @@ export class AccessibilityChecker {
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
           codeExample: '
-          
-          
-          
-          
-          
-          
-          
-          
           <img src="..." alt="Description of image" />'
         }
   )
@@ -211,14 +198,6 @@ export class AccessibilityChecker {
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
           codeExample: '
-          
-          
-          
-          
-          
-          
-          
-          
           <img src="..." alt="" role="presentation" />'
         }
   )
@@ -330,14 +309,6 @@ const h1Count = element.querySelectorAll('h1').length
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
           codeExample: '
-          
-          
-          
-          
-          
-          
-          
-          
           <Link to="..." aria-label="Description">...</Link>'
         }
   )
@@ -381,14 +352,6 @@ const target = link.getAttribute('target')
           fix: 'Add indication that link opens in new window',
           codeExample:
             '
-          
-          
-          
-          
-          
-          
-          
-          
           <Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
         }
   )
@@ -427,14 +390,6 @@ const target = link.getAttribute('target')
           element: 'button',
           fix: 'Add text content or aria-label to the button',
           codeExample: '
-          
-          
-          
-          
-          
-          
-          
-          
           <button aria-label="Close dialog"></button>'
         }
   )
@@ -477,14 +432,6 @@ const target = link.getAttribute('target')
           element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
           fix: 'Associate a label with the form control',
           codeExample: '
-          
-          
-          
-          
-          
-          
-          
-          
           <label for="email">Email:</label><input id="email" name="email" />'
         }
   )
@@ -556,14 +503,6 @@ const elementsWithColor = element.querySelectorAll('[style*="color"]')
           element: el.tagName.toLowerCase(),
           fix: 'Remove tabindex="-1" or use tabindex="0"',
           codeExample: '
-          
-          
-          
-          
-          
-          
-          
-          
           <button tabindex="0">Accessible button</button>'
         }
   )
@@ -592,14 +531,6 @@ const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(b
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
           codeExample: '
-          
-          
-          
-          
-          
-          
-          
-          
           <button onClick={handleClick}>Click me</button>'
         }
   )
@@ -643,8 +574,7 @@ const validRoles = [
 //         'main',
 //         'article',
 //         'note',
-//         'presentation',
-      ]
+//         'presentation']
       if (role && !validRoles.includes(role)) {
     // TODO: Add content
   }
@@ -710,14 +640,6 @@ const labelledBy = el.getAttribute('aria-labelledby')
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
         fix: 'Add a 
-          
-          
-          
-          
-          
-          
-          
-          
           <main> element or role="main"',
         codeExample: '<main><!-- Main content --></main>'
       }

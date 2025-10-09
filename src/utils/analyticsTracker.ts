@@ -32,14 +32,6 @@ class AnalyticsTracker {
   }
   private isInitialized = false
   private queue: Array
-          
-          
-          
-          
-          
-          
-          
-          
           <() => void> = []
   /**
    * Initialize the analytics tracker

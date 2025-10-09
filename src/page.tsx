@@ -31,7 +31,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +42,6 @@ const HomePage: React.FC = () => {
               Comprehensive AI and IT solutions to transform your business
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
@@ -53,7 +51,6 @@ const HomePage: React.FC = () => {
                 Advanced artificial intelligence solutions to automate and optimize your business processes.
               </p>
             </div>
-
             <div className="bg-gray-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
                 <Cloud className="w-6 h-6 text-white" /></div>
@@ -62,7 +59,6 @@ const HomePage: React.FC = () => {
                 Scalable cloud infrastructure and migration services for modern businesses.
               </p>
             </div>
-
             <div className="bg-gray-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
                 <Shield className="w-6 h-6 text-white" /></div>
@@ -74,7 +70,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
