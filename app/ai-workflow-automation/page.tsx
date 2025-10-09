@@ -43,12 +43,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['Data encryption', 'Audit trails', 'Compliance ready']
     }
   ];
-<<<<<<< HEAD
-  const automationFeatures = [
-=======
 
   const pricingPlans = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
     {
       name: 'Starter',
       price: '$99',
@@ -98,9 +94,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-<<<<<<< HEAD
-  const processSteps = [
-=======
 
   const stats = [
     { number: '90%', label: 'Time Savings' },
@@ -110,7 +103,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
   ];
 
   const useCases = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
     {
       title: 'Customer Onboarding',
       description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
