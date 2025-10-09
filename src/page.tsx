@@ -1195,8 +1195,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default HomePage;
-=======
-export default HomePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
