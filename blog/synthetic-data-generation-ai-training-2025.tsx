@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import {ArrowLeft, Database, TrendingUp, Lock} Zap; CheckCircle } from 'lucide-react'
 const SyntheticDataGenerationAITraining2025 = () =>
   return (<div>

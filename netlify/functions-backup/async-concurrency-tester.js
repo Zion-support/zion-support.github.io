@@ -161,7 +161,7 @@ exports.handler = async function (event, context) {try {
     };
 
     return result;
-  } catch (error) {console.error('❌ async-concurrency-tester failed: ') error
+  } catch (error) {// console.error('❌ async-concurrency-tester failed: ') error
       }
     return {
       statusCode: 500,
@@ -190,6 +190,6 @@ exports.handler = async function(event, context) {try { const timestamp = new Da
         summary: { totalTests: Object.keys(asyncTests).length,' successfulTests: Object.values(results).filter(r => r.status === 'completed' || r.status === 'succeeded' || r.status === 'timeout-prevented').length, totalDuration: totalDuration,
         averageTestDuration: (totalDuration / Object.keys(asyncTests).length).toFixed(0
       }, nextRun: new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString() // 4 hours from now
-      }) }; ' return result; } catch (error) {' console.error('❌ async-concurrency-tester failed: ') error
+      }) }; ' return result; } catch (error) {' // console.error('❌ async-concurrency-tester failed: ') error
       } return { statusCode: 500, body: JSON.stringify({' message: Async concurrency tester failed,
         error: error.message}' function: 'async-concurrency-tester';' status: 'error' }) }; } };'

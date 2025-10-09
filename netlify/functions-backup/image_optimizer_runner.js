@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'image_optimizer_runner'}
       });
     };
-//   } catch (error) {console.error('❌ image_optimizer_runner function failed: ') error
+//   } catch (error) {// console.error('❌ image_optimizer_runner function failed: ') error
       }
     return {
       statusCode: 500,
