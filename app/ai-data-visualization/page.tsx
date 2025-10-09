@@ -1,99 +1,72 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
-=======
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart3,
+      icon: BarChart,
       title: 'Interactive Dashboards',
-      description: 'Create stunning, interactive dashboards that bring your data to life with real-time updates.',
-      benefits: ['Real-time Updates', 'Customizable Layouts', 'Interactive Elements', 'Mobile Responsive']
+      description: 'Create stunning, interactive dashboards that automatically update with real-time data.',
+      benefits: ['Real-time Updates', 'Custom Visualizations', 'Interactive Elements', 'Mobile Responsive']
     },
     {
-      icon: PieChart,
-      title: 'Advanced Chart Types',
-      description: 'Comprehensive library of chart types including 3D visualizations and custom graphics.',
-      benefits: ['50+ Chart Types', '3D Visualizations', 'Custom Graphics', 'Animation Effects']
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Leverage machine learning to automatically identify patterns and generate actionable insights.',
+      benefits: ['Pattern Recognition', 'Predictive Analytics', 'Anomaly Detection', 'Smart Recommendations']
     },
     {
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictive analytics that forecast trends and identify patterns in your data.',
-      benefits: ['Trend Forecasting', 'Pattern Recognition', 'Anomaly Detection', 'Risk Assessment']
+      icon: Database,
+      title: 'Multi-Source Integration',
+      description: 'Connect to any data source and automatically transform raw data into meaningful visualizations.',
+      benefits: ['API Integration', 'Database Connections', 'File Uploads', 'Real-time Sync']
     },
     {
-      icon: Eye,
-      title: 'Data Storytelling',
-      description: 'Transform complex data into compelling visual stories that drive decision-making.',
-      benefits: ['Narrative Flow', 'Contextual Insights', 'Actionable Recommendations', 'Executive Summaries']
+      icon: Settings,
+      title: 'Customizable Reports',
+      description: 'Generate automated reports with customizable templates and scheduling options.',
+      benefits: ['Auto-generation', 'Custom Templates', 'Scheduled Reports', 'Export Options']
     }
   ];
 
   const pricing = [
     {
-      name: 'Basic',
-      price: '$299/month',
+      name: 'Starter',
+      price: '$199/month',
       description: 'Perfect for small teams',
-      features: ['Up to 5 dashboards', 'Basic chart types', 'Standard templates', 'Email support']
+      features: ['Up to 5 dashboards', 'Basic visualizations', '2 data sources', 'Email support']
     },
     {
       name: 'Professional',
-      price: '$599/month',
+      price: '$399/month',
       description: 'Ideal for growing businesses',
-      features: ['Up to 25 dashboards', 'All chart types', 'Custom templates', 'Priority support', 'API access']
+      features: ['Unlimited dashboards', 'Advanced AI insights', '10 data sources', 'Priority support', 'Custom branding']
     },
     {
       name: 'Enterprise',
-      price: '$1,199/month',
+      price: '$799/month',
       description: 'For large organizations',
-      features: ['Unlimited dashboards', 'Custom development', 'White-label options', '24/7 support', 'Dedicated account manager']
+      features: ['Everything in Professional', 'Unlimited data sources', 'Custom integrations', 'Dedicated support', 'On-premise deployment']
     }
   ];
-<<<<<<< HEAD
+
   const stats = [
-    { number: '95%', label: 'Faster Insights' },
-    { number: '100+', label: 'Data Sources' },
-    { number: '50+', label: 'Chart Types' },
-    { number: '24/7', label: 'Real-time Updates' }
+    { number: '85%', label: 'Faster Decision Making' },
+    { number: '300%', label: 'Data Processing Speed' },
+    { number: '50+', label: 'Visualization Types' },
+    { number: '99.9%', label: 'Uptime Guarantee' }
   ];
-  const useCases = [
-    {
-      title: 'Sales Analytics',
-      description: 'Track sales performance, pipeline health, and revenue trends with interactive dashboards and AI-powered predictions.',
-      icon: TrendingUp
-    },
-    {
-      title: 'Marketing ROI',
-      description: 'Visualize marketing campaign performance, customer acquisition costs, and ROI across all channels.',
-      icon: Globe
-    },
-    {
-      title: 'Operations Monitoring',
-      description: 'Monitor key operational metrics, identify bottlenecks, and optimize processes with real-time dashboards.',
-      icon: Settings
-    },
-    {
-      title: 'Financial Reporting',
-      description: 'Create comprehensive financial reports with automated data collection and intelligent insights.',
-      icon: Database
-    }
-  ];
+
   return (
     <>
       <SEOOptimizer
-        title="AI Data Visualization Platform - Zion Tech Group"
-        description="Transform data into actionable insights with AI-powered visualization. 95% faster insights, 100+ data sources, and interactive dashboards."
-        keywords={['data visualization', 'business intelligence', 'dashboards', 'data analytics', 'AI insights']}
+        title="AI Data Visualization Solutions - Zion Tech Group"
+        description="Transform your data into actionable insights with AI-powered visualization tools. Create interactive dashboards, automated reports, and intelligent analytics."
+        keywords={['AI data visualization', 'business intelligence', 'data analytics', 'interactive dashboards', 'data insights']}
         canonicalUrl="https://ziontechgroup.com/ai-data-visualization"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -103,14 +76,14 @@ const AIDataVisualizationPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Data Visualization Platform
+                AI Data Visualization Solutions
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform data into actionable insights with AI
+                Transform complex data into stunning, actionable insights
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered data visualization platform helps businesses make data-driven decisions 
-                with interactive dashboards, intelligent insights, and 100+ data source integrations.
+                Our AI-powered data visualization platform automatically transforms your raw data into 
+                interactive dashboards, intelligent reports, and actionable insights that drive business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <a
@@ -140,40 +113,9 @@ const AIDataVisualizationPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-=======
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <Navigation />
-      
-      <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Data Visualization
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your data into stunning visualizations with AI-powered insights, 
-              interactive dashboards, and predictive analytics.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center space-x-2"
-              >
-                <BarChart3 className="w-4 h-4" />
-                <span>Get Started</span>
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Learn More
-              </a>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
             </div>
           </section>
+
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -197,50 +139,23 @@ const AIDataVisualizationPage: React.FC = () => {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
-          {/* Use Cases Section */}
-          <section className="container mx-auto px-4 py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Perfect for Every Department
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
+              {pricing.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+                    index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
                 >
-                  {plan.popular && (
+                  {index === 1 && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-=======
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {index === 1 && (
-                    <div className="text-center mb-4">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
                         Most Popular
                       </span>
                     </div>
@@ -266,15 +181,15 @@ const AIDataVisualizationPage: React.FC = () => {
               ))}
             </div>
           </section>
+
           {/* CTA Section */}
-<<<<<<< HEAD
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Visualize Your Data?
+                Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 1,500+ companies already using our data visualization platform
+                Join 300+ companies already using our AI data visualization solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -299,35 +214,6 @@ const AIDataVisualizationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-=======
-          <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Visualize Your Data?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact us today to learn how AI data visualization can transform your business insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
-                Call (302) 464-0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Email Us
-              </a>
-            </div>
-          </section>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   );
 };
 
