@@ -241,6 +241,21 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
             </div>
+            <div className="mt-4">
+              <h4 className="text-white font-medium mb-2">Legal</h4>
+              <ul className="space-y-1">
+                {legalLinks.slice(0, 3).map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.url}
+                      className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
