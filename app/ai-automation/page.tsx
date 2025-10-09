@@ -16,19 +16,19 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       icon: Zap,
       title: 'Smart Workflow Automation',
       description: 'Deploy AI-powered workflows that learn and adapt to your business needs over time.',
-      benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']}
+      benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']
     },
     {
       icon: Target,
       title: 'Predictive Task Management',
       description: 'AI predicts and prioritizes tasks based on business impact and resource availability.',
-      benefits: ['Smart prioritization', 'Resource optimization', 'Deadline prediction', 'Capacity planning']}
+      benefits: ['Smart prioritization', 'Resource optimization', 'Deadline prediction', 'Capacity planning']
     },
     {
       icon: TrendingUp,
       title: 'Performance Analytics',
       description: 'Comprehensive analytics and insights to measure and improve automation effectiveness.',
-      benefits: ['Real-time metrics', 'Performance dashboards', 'Trend analysis', 'Improvement recommendations']}
+      benefits: ['Real-time metrics', 'Performance dashboards', 'Trend analysis', 'Improvement recommendations']
     }
   ]
   const useCases = [
@@ -36,25 +36,25 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       industry: 'Healthcare',
       description: 'Automate patient scheduling, insurance verification, and medical record processing.',
       savings: '60% reduction in administrative time',
-      icon: Shield}
+      icon: Shield
     },
     {
       industry: 'Finance',
       description: 'Streamline loan processing, fraud detection, and compliance reporting.',
       savings: '45% faster processing times',
-      icon: TrendingUp}
+      icon: TrendingUp
     },
     {
       industry: 'E-commerce',
       description: 'Automate inventory management, order processing, and customer service.',
       savings: '70% reduction in manual errors',
-      icon: Globe}
+      icon: Globe
     },
     {
       industry: 'Manufacturing',
       description: 'Optimize production scheduling, quality control, and supply chain management.',
       savings: '50% improvement in efficiency',
-      icon: Target}
+      icon: Target
     }
   ]
   const pricingPlans = [
@@ -70,7 +70,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         'Email support',
         '10,000 process executions/month'
       ],
-      popular: false}
+      popular: false
     },
     {
       name: 'Professional',
@@ -86,7 +86,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         'API integrations',
         'Custom workflow templates'
       ],
-      popular: true}
+      popular: true
     },
     {
       name: 'Enterprise',
@@ -103,7 +103,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         'White-label options',
         'Dedicated account manager'
       ],
-      popular: false}
+      popular: false
     }
   ]
   return (
@@ -225,7 +225,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold"><span className="sr-only">Screen reader: </span>
                       Most Popular
                     </span>
-                  </div>}
+                  </div>
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -284,4 +284,4 @@ const AIAutomationPage: React.FC = React.memo((props) => {
     </div>
   )
 }
-export default AIAutomationPage
+export default AIAutomationPage;

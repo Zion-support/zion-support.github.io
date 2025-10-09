@@ -41,37 +41,37 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
       title: 'Web Development',
       description: 'Generate full-stack web applications and APIs',
       icon: '🌐',
-      examples: ['React components', 'Express APIs', 'Database schemas', 'Authentication systems']}
+      examples: ['React components', 'Express APIs', 'Database schemas', 'Authentication systems']
     },
     {
       title: 'Mobile Development',
       description: 'Create mobile apps for iOS and Android',
       icon: '📱',
-      examples: ['React Native apps', 'Flutter widgets', 'Native iOS code', 'Android components']}
+      examples: ['React Native apps', 'Flutter widgets', 'Native iOS code', 'Android components']
     },
     {
       title: 'Data Science',
       description: 'Generate data analysis and ML pipelines',
       icon: '📊',
-      examples: ['Data processing scripts', 'ML models', 'Visualization code', 'ETL pipelines']}
+      examples: ['Data processing scripts', 'ML models', 'Visualization code', 'ETL pipelines']
     },
     {
       title: 'DevOps & Automation',
       description: 'Create deployment and automation scripts',
       icon: '⚙️',
-      examples: ['Docker configurations', 'CI/CD pipelines', 'Infrastructure code', 'Monitoring scripts']}
+      examples: ['Docker configurations', 'CI/CD pipelines', 'Infrastructure code', 'Monitoring scripts']
     },
     {
       title: 'API Development',
       description: 'Generate RESTful APIs and microservices',
       icon: '🔌',
-      examples: ['REST endpoints', 'GraphQL schemas', 'Database models', 'Authentication middleware']}
+      examples: ['REST endpoints', 'GraphQL schemas', 'Database models', 'Authentication middleware']
     },
     {
       title: 'Testing & QA',
       description: 'Create comprehensive test suites and quality assurance',
       icon: '🧪',
-      examples: ['Unit tests', 'Integration tests', 'E2E tests', 'Performance tests']}
+      examples: ['Unit tests', 'Integration tests', 'E2E tests', 'Performance tests']
     }
   ]
   const pricing = [
@@ -87,7 +87,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
         'GitHub integration',
         'Basic documentation'
       ],
-      popular: false}
+      popular: false
     },
     {
       name: 'Team',
@@ -103,7 +103,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
         'Code review tools',
         'Custom templates'
       ],
-      popular: true}
+      popular: true
     },
     {
       name: 'Enterprise',
@@ -119,7 +119,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
         'SLA guarantee',
         'On-premise deployment'
       ],
-      popular: false}
+      popular: false
     }
   ]
   const technologies = [
@@ -150,7 +150,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
       step: 4,
       title: 'Deploy & Use',
       description: 'Integrate the code into your project',
-      icon: '🚀'}
+      icon: '🚀'
     }
   ]
   return (
@@ -330,7 +330,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
                     <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium"><span className="sr-only">Screen reader: </span>
                       Most Popular
                     </span>
-                  </div>}
+                  </div>
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
@@ -410,4 +410,4 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
     </div>
   )
 }
-export default AICodeGenerationPage
+export default AICodeGenerationPage;

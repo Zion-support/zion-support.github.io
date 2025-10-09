@@ -37,31 +37,31 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
       title: 'Architecture & Real Estate',
       description: 'Create 3D visualizations and virtual tours',
       icon: '🏗️',
-      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']}
+      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
     },
     {
       title: 'E-commerce',
       description: 'Generate product visualizations and AR experiences',
       icon: '🛒',
-      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']}
+      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
     },
     {
       title: 'Education & Training',
       description: 'Create interactive 3D learning materials',
       icon: '📚',
-      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']}
+      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
     },
     {
       title: 'Entertainment & Media',
       description: 'Produce 3D content for films and animations',
       icon: '🎬',
-      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']}
+      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
     },
     {
       title: 'Manufacturing',
       description: 'Design and prototype products in 3D',
       icon: '🏭',
-      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']}
+      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
   ]
   const pricing = [
@@ -76,7 +76,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
         'Email support',
         'Basic export formats'
       ],
-      popular: false}
+      popular: false
     },
     {
       name: 'Studio',
@@ -91,7 +91,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
         'Animation support',
         'Batch processing'
       ],
-      popular: true}
+      popular: true
     },
     {
       name: 'Enterprise',
@@ -107,7 +107,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
         'White-label solution',
         'SLA guarantee'
       ],
-      popular: false}
+      popular: false
     }
   ]
   const technologies = [
@@ -139,7 +139,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
       step: 4,
       title: 'Export & Use',
       description: 'Download in your preferred format and integrate',
-      icon: '📤'}
+      icon: '📤'
     }
   ]
   return (
@@ -301,7 +301,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
                     <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium"><span className="sr-only">Screen reader: </span>
                       Most Popular
                     </span>
-                  </div>}
+                  </div>
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
@@ -381,4 +381,4 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
     </div>
   )
 }
-export default AI3DGenerationPage
+export default AI3DGenerationPage;

@@ -2,8 +2,8 @@
 import { useEffect, useCallback } from 'react';
 // Simple analytics hook for performance monitoring
 const useAnalytics = () => ({
-  trackPerformance: (name: string, duration: number, category: string) => {
-    console.log('Performance tracked:', name, duration, category);
+  trackEvent: (event: string, data: Record<string, unknown>) => {
+    console.log('Event tracked:', event, data);
   }
 });
 // PerformanceMetrics interface removed as it's not used in this hook
@@ -11,11 +11,7 @@ export const usePerformanceMonitoring = () => {
   const { trackEvent } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
-<<<<<<< HEAD
-      trackPerformance(name, value, 'performance');
-=======
       trackEvent(name, { value });
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6fc5
     },
     [trackEvent]
   );
