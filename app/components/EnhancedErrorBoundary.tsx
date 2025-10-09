@@ -43,16 +43,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-<<<<<<< HEAD
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
-    
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);

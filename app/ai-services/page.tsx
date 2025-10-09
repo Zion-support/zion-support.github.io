@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -294,21 +294,21 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = [
-    { name: 'All', count: aiServices.length },
-    { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
-    { name: 'Machine Learning', count: aiServices.filter(s => s.category === 'Machine Learning').length },
-    { name: 'NLP', count: aiServices.filter(s => s.category === 'NLP').length },
-    { name: 'Computer Vision', count: aiServices.filter(s => s.category === 'Computer Vision').length },
-    { name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length },
-    { name: 'Automation', count: aiServices.filter(s => s.category === 'Automation').length },
-    { name: 'Conversational AI', count: aiServices.filter(s => s.category === 'Conversational AI').length },
-    { name: 'Data Engineering', count: aiServices.filter(s => s.category === 'Data Engineering').length },
-    { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length },
-    { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
-    { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
-    { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
-  ];
+  // const categories = [
+  //   { name: 'All', count: aiServices.length },
+  //   { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
+  //   { name: 'Machine Learning', count: aiServices.filter(s => s.category === 'Machine Learning').length },
+  //   { name: 'NLP', count: aiServices.filter(s => s.category === 'NLP').length },
+  //   { name: 'Computer Vision', count: aiServices.filter(s => s.category === 'Computer Vision').length },
+  //   { name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length },
+  //   { name: 'Automation', count: aiServices.filter(s => s.category === 'Automation').length },
+  //   { name: 'Conversational AI', count: aiServices.filter(s => s.category === 'Conversational AI').length },
+  //   { name: 'Data Engineering', count: aiServices.filter(s => s.category === 'Data Engineering').length },
+  //   { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length },
+  //   { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
+  //   { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
+  //   { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
+  // ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

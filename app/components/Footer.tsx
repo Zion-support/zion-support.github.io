@@ -1,9 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
-=======
 import { 
   Phone, 
   Mail, 
@@ -26,7 +22,6 @@ import {
   Instagram,
   Youtube
 } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 
 const Footer: React.FC = memo(() => {
   const aiServices = [
@@ -59,24 +54,11 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
     { name: 'Robotics', url: '/robotics', description: 'Robotic solutions' }
-=======
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Code, Star, Globe, Users, TrendingUp } from 'lucide-react';
-
-const Footer: React.FC = memo(() => {
-  const aiServices = [
-    { name: 'AI Solutions', url: '/ai-services', icon: Brain },
-    { name: 'AI Marketing', url: '/ai-marketing', icon: TrendingUp },
-    { name: 'AI Automation', url: '/ai-automation', icon: Zap },
-    { name: 'AI Healthcare', url: '/ai-healthcare', icon: Users },
-    { name: 'AI Fintech', url: '/ai-fintech', icon: TrendingUp },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: TrendingUp },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Cloud Infrastructure', url: '/ai-cloud-infrastructure', icon: Globe },
   ];
 
   const itServices = [
-    { name: 'IT Solutions', url: '/it-services', icon: Code },
-    { name: 'Micro SAAS', url: '/micro-saas', icon: Star },
+    { name: 'IT Solutions', url: '/it-services', description: 'Comprehensive IT services' },
+    { name: 'Micro SAAS', url: '/micro-saas', description: 'Small business software solutions' },
     { name: 'Cybersecurity', url: '/cybersecurity', icon: Shield },
     { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', icon: Globe },
     { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', icon: Globe },
@@ -89,8 +71,7 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge', icon: Globe },
     { name: 'Autonomous Systems', url: '/autonomous-systems', icon: Zap },
     { name: 'Robotics', url: '/robotics', icon: Code },
-    { name: 'Business Intelligence', url: '/business-intelligence', icon: TrendingUp },
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
+    { name: 'Business Intelligence', url: '/business-intelligence', icon: TrendingUp }
   ];
 
   const companyLinks = [
@@ -98,7 +79,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Our Team', url: '/team' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
-<<<<<<< HEAD
     { name: 'News', url: '/news' }
   ];
 
@@ -108,10 +88,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Guides', url: '/guides' },
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Support', url: '/support' },
-    { name: 'Community', url: '/community' }
-=======
-    { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' },
+    { name: 'Community', url: '/community' },
+    { name: 'Careers', url: '/careers' }
   ];
 
   const supportLinks = [
@@ -120,8 +98,7 @@ const Footer: React.FC = memo(() => {
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
     { name: 'Status Page', url: '/status' },
-    { name: 'System Status', url: '/system-status' },
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
+    { name: 'System Status', url: '/system-status' }
   ];
 
   const legal = [

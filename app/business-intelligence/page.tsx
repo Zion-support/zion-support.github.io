@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -138,3 +136,11 @@ const BusinessIntelligencePage: React.FC = () => {
     }
   ];
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Page content will be added here */}
+    </div>
+  );
+};
+
+export default BusinessIntelligencePage;
