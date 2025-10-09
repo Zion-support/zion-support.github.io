@@ -559,5 +559,19 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
+    
+    let report = `Found ${this.issues.length} accessibility issues:\n\n`;
+    this.issues.forEach((issue, index) => {
+      report += `${index + 1}. ${issue.type}: ${issue.message}\n`;
+      if (issue.element) {
+        report += `   Element: ${issue.element}\n`;
+      }
+      if ('suggestion' in issue && issue.suggestion) {
+        report += `   Suggestion: ${issue.suggestion}\n`;
+      }
+      report += '\n';
+    });
+    
+    return report;
   }
 }
