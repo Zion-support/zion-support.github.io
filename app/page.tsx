@@ -173,7 +173,7 @@ const HomePage: React.FC = () => {
               <a
                 href="tel:+13024640950"
                 onClick={handlePhoneClick}
-                className="cyber-button w-full sm:w-auto text-center"
+                className="cyber-button-enhanced w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
               >
                 📞 Call: (302) 464-0950
