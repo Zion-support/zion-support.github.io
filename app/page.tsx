@@ -190,6 +190,30 @@ const HomePage: React.FC = () => {
               Get Free Consultation
             </a>
           </div>
+
+          {/* Contact Information */}
+          <div className="mt-8 bg-black/30 backdrop-blur-sm rounded-lg p-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-2xl mb-2">📞</div>
+                <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
+                <p className="text-cyan-400 font-medium">+1 302 464 0950</p>
+                <p className="text-sm text-gray-400">24/7 Support Available</p>
+              </div>
+              <div>
+                <div className="text-2xl mb-2">✉️</div>
+                <h3 className="text-lg font-bold text-white mb-2">Email</h3>
+                <p className="text-cyan-400 font-medium">kleber@ziontechgroup.com</p>
+                <p className="text-sm text-gray-400">Quick Response Guaranteed</p>
+              </div>
+              <div>
+                <div className="text-2xl mb-2">📍</div>
+                <h3 className="text-lg font-bold text-white mb-2">Address</h3>
+                <p className="text-cyan-400 font-medium">364 E Main St STE 1008</p>
+                <p className="text-sm text-gray-400">Middletown, DE 19709</p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Services Section */}
@@ -397,6 +421,70 @@ const HomePage: React.FC = () => {
                 </a>
               </div>
             </article>
+          </div>
+
+          {/* Real Business Solutions Grid */}
+          <div className="mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
+              Real Business Solutions
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏭</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Manufacturing AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Predictive maintenance, quality control, and production optimization for manufacturing facilities.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-blue-400 mb-2">Starting at $2,500/month</div>
+                  <a href="/manufacturing-ai" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🚚</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Supply Chain AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Optimize logistics, demand forecasting, and inventory management with AI-powered solutions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">Starting at $1,800/month</div>
+                  <a href="/supply-chain-ai" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎓</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">EdTech AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Personalized learning, automated grading, and intelligent tutoring systems for educational institutions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-purple-400 mb-2">Starting at $1,200/month</div>
+                  <a href="/edtech-ai" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏢</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Real Estate AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Property valuation, market analysis, and automated property management solutions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-yellow-400 mb-2">Starting at $1,500/month</div>
+                  <a href="/real-estate-ai" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </div>
           </div>
 
           {/* Emerging Technologies Grid */}
