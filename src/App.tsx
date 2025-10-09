@@ -54,10 +54,8 @@ class ErrorBoundary extends React.Component<
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error to monitoring service in production
-    // In production, this should be sent to an error tracking service
-    if (process.env.NODE_ENV === 'development') {
-      // Error logging would be handled by error tracking service in production
-    }
+    // In a real application, you would send this to an error tracking service
+    // like Sentry, LogRocket, or similar
   }
 
   render() {
