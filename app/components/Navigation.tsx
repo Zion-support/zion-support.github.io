@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, FileText, Package, Users, Eye, Shield, Cloud, Database, Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +33,9 @@ const Navigation: React.FC = () => {
     { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
+    { name: 'AI Document Processor', href: '/ai-document-processor', icon: FileText },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Package },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Users },
   ];
 
   const aiServices = [

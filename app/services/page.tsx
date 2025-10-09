@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Star, Users, Award, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, MapPin, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react';
+import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Star, Users, Award, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, MapPin, ArrowRight, CheckCircle, TrendingUp, Mic, Package, Scale, Truck } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -137,6 +137,83 @@ const ServicesPage: React.FC = () => {
       link: '/ai-fitness-coach',
       popular: false,
       category: 'Health & Fitness'
+    },
+    {
+      title: 'AI Document Processor',
+      description: 'Intelligent document processing with OCR, classification, and data extraction',
+      icon: FileText,
+      price: '$139/month',
+      features: ['OCR technology', 'Document classification', 'Data extraction', 'Form processing'],
+      benefits: ['95% accuracy', '80% time saved', 'Automated workflows'],
+      link: '/ai-document-processor',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Inventory Manager',
+      description: 'Smart inventory management with predictive analytics and automated reordering',
+      icon: Package,
+      price: '$169/month',
+      features: ['Predictive analytics', 'Automated reordering', 'Demand forecasting', 'Cost optimization'],
+      benefits: ['30% inventory reduction', '99% stock accuracy', '25% cost savings'],
+      link: '/ai-inventory-manager',
+      popular: true,
+      category: 'Operations'
+    },
+    {
+      title: 'AI HR Assistant',
+      description: 'Streamline HR processes with AI-powered recruitment and employee management',
+      icon: Users,
+      price: '$199/month',
+      features: ['Resume screening', 'Interview scheduling', 'Performance tracking', 'Employee analytics'],
+      benefits: ['60% faster hiring', 'Better candidate matching', 'Reduced bias'],
+      link: '/ai-hr-assistant',
+      popular: true,
+      category: 'Human Resources'
+    },
+    {
+      title: 'AI Financial Advisor',
+      description: 'Personalized financial planning and investment advice powered by AI',
+      icon: CreditCard,
+      price: '$149/month',
+      features: ['Portfolio optimization', 'Risk assessment', 'Tax planning', 'Goal tracking'],
+      benefits: ['15% better returns', 'Risk reduction', 'Automated rebalancing'],
+      link: '/ai-financial-advisor',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Legal Assistant',
+      description: 'AI-powered legal research, document review, and contract analysis',
+      icon: Scale,
+      price: '$299/month',
+      features: ['Legal research', 'Contract analysis', 'Document review', 'Compliance checking'],
+      benefits: ['70% time saved', 'Higher accuracy', 'Cost reduction'],
+      link: '/ai-legal-assistant',
+      popular: false,
+      category: 'Legal'
+    },
+    {
+      title: 'AI Real Estate Assistant',
+      description: 'Smart property analysis, market insights, and investment recommendations',
+      icon: Home,
+      price: '$179/month',
+      features: ['Property valuation', 'Market analysis', 'Investment insights', 'Rental optimization'],
+      benefits: ['Better investment decisions', 'Market timing', 'ROI optimization'],
+      link: '/ai-real-estate-assistant',
+      popular: false,
+      category: 'Real Estate'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Optimize supply chain operations with AI-powered logistics and demand planning',
+      icon: Truck,
+      price: '$249/month',
+      features: ['Route optimization', 'Demand forecasting', 'Supplier management', 'Cost analysis'],
+      benefits: ['20% cost reduction', 'Faster delivery', 'Better visibility'],
+      link: '/ai-supply-chain-optimizer',
+      popular: true,
+      category: 'Operations'
     }
   ];
 
@@ -189,11 +266,29 @@ const ServicesPage: React.FC = () => {
     {
       title: 'AI 3D Generation',
       description: 'Create 3D models and environments with AI technology',
-      icon: Cube,
+      icon: Target,
       price: '$1,600/month',
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
       color: 'text-pink-400',
       category: '3D & Graphics'
+    },
+    {
+      title: 'AI Predictive Maintenance',
+      description: 'Prevent equipment failures with AI-powered predictive analytics',
+      icon: Settings,
+      price: '$1,300/month',
+      features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Risk Assessment'],
+      color: 'text-yellow-400',
+      category: 'Industrial AI'
+    },
+    {
+      title: 'AI Fraud Detection',
+      description: 'Advanced fraud detection and prevention using machine learning',
+      icon: Shield,
+      price: '$1,700/month',
+      features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Automated Alerts'],
+      color: 'text-red-400',
+      category: 'Security AI'
     }
   ];
 
@@ -251,10 +346,28 @@ const ServicesPage: React.FC = () => {
       features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring'],
       color: 'text-indigo-400',
       category: 'Infrastructure'
+    },
+    {
+      title: 'Data Center Services',
+      description: 'Comprehensive data center solutions with high availability and scalability',
+      icon: Building,
+      price: '$1,800/month',
+      features: ['Data Center Design', 'Hardware Management', 'Power & Cooling', 'Disaster Recovery'],
+      color: 'text-orange-400',
+      category: 'Infrastructure'
+    },
+    {
+      title: 'IT Support & Helpdesk',
+      description: '24/7 technical support and helpdesk services for your organization',
+      icon: Phone,
+      price: '$799/month',
+      features: ['24/7 Support', 'Remote Assistance', 'Ticket Management', 'Knowledge Base'],
+      color: 'text-cyan-400',
+      category: 'Support'
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness'];
+  const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness', 'Operations', 'Human Resources', 'Finance', 'Legal', 'Real Estate'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">

@@ -20,6 +20,10 @@ const Footer: React.FC = () => {
     { name: 'AI Email Marketing', href: '/ai-email-marketing' },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
     { name: 'AI Code Review Assistant', href: '/ai-code-generation' },
+    { name: 'AI Document Processor', href: '/ai-document-processor' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager' },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant' },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' },
   ];
 
   const aiServices = [
