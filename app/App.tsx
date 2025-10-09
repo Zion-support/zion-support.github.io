@@ -40,14 +40,21 @@ const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
 // Additional service pages
 const AiServicesPage = lazy(() => import('./ai-services/page'));
+const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
+const AiAutomationPage = lazy(() => import('./ai-automation/page'));
+const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const AiFintechPage = lazy(() => import('./ai-fintech/page'));
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const BlockchainPage = lazy(() => import('./blockchain/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
 const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const IotEdgePage = lazy(() => import('./iot-edge/page'));
+const RoboticsPage = lazy(() => import('./robotics/page'));
 
 // Additional pages
 const BlogPage = lazy(() => import('./blog-index'));
@@ -189,16 +196,27 @@ const App: React.FC = () => {
                         <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<CaseStudiesPage />} />
                         
-                        {/* Service Pages */}
+                        {/* AI Services */}
                         <Route path="/ai-services" element={<AiServicesPage />} />
+                        <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                        <Route path="/ai-automation" element={<AiAutomationPage />} />
+                        <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                        <Route path="/ai-fintech" element={<AiFintechPage />} />
+                        
+                        {/* IT Services */}
                         <Route path="/it-services" element={<ItServicesPage />} />
                         <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        
+                        {/* Specialized Technology */}
                         <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                         <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-                        <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
-                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
                         <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                        <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                        <Route path="/blockchain" element={<BlockchainPage />} />
                         <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} />
+                        <Route path="/iot-edge" element={<IotEdgePage />} />
+                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                        <Route path="/robotics" element={<RoboticsPage />} />
                         
                         {/* Additional Pages */}
                         <Route path="/blog" element={<BlogPage />} />
