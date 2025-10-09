@@ -101,42 +101,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
 
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.breadcrumbs) {
-      return null;
-    }
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
-        item: breadcrumb.url
-      }))
-    };
-  }, [seoData, enableStructuredData]);
-
-  const generateFAQStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.faqs) {
-      return null;
-    }
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: seoData.faqs.map((faq: any) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    };
-  }, [seoData, enableStructuredData]);
-
   // Generate Open Graph data
   const generateOpenGraphData = useCallback(() => {
     if (!enableOpenGraph) return {};
@@ -156,13 +120,35 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
 
-    return {
-      'twitter:card': 'summary_large_image',
-      'twitter:title': seoData.ogTitle || seoData.title,
-      'twitter:description': seoData.ogDescription || seoData.description,
-      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg',
-      'twitter:site': '@ziontechgroup',
-      'twitter:creator': '@ziontechgroup',
+    const faqData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What services does Zion Tech Group offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How can I contact Zion Tech Group?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What makes Zion Tech Group different?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
+          },
+        },
+      ],
     };
   }, [seoData, enableTwitterCards]);
 
@@ -180,42 +166,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     ];
     return metaTags;
   }, [seoData]);
-
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!seoData.breadcrumbs || seoData.breadcrumbs.length === 0) {
-      return null;
-    }
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
-        item: breadcrumb.url
-      }))
-    };
-  }, [seoData.breadcrumbs]);
-
-  const generateFAQStructuredData = useCallback(() => {
-    if (!seoData.faqs || seoData.faqs.length === 0) {
-      return null;
-    }
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: seoData.faqs.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    };
-  }, [seoData.faqs]);
 
   const structuredData = generateStructuredData();
   const openGraphData = generateOpenGraphData();
@@ -254,10 +204,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
+    script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
     structuredDataRef.current = script;
-  };
 
   useEffect(() => {
     if (structuredData) {

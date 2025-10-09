@@ -2,12 +2,16 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
+// Import components from the correct path
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('../src/components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('../src/components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('../src/components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('../src/components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components with better timing
 const preloadComponents = () => {
