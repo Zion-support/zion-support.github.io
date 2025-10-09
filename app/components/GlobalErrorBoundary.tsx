@@ -18,31 +18,31 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
+    // Update state so the next render will show the fallback UI
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
 
-    // Log error to analytics in production
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          stack: error.stack
-        }
-      });
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to a service like Sentry
+      console.error('Production error:', error);
     }
+
+    this.setState({
+      error,
+      errorInfo,
+    });
   }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
 
   render() {
     if (this.state.hasError) {
@@ -51,54 +51,53 @@ class GlobalErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      // Default fallback UI
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center mb-4">
-              <div className="flex-shrink-0">
-                <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-medium text-gray-900">
-                  Something went wrong
-                </h3>
-              </div>
-            </div>
-            <div className="mt-2">
-              <p className="text-sm text-gray-500">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
-            </div>
-            <div className="mt-4 flex space-x-3">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-md rounded-xl p-8 text-center border border-white/20">
+            <div className="text-6xl mb-4">⚠️</div>
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+            </p>
+            
+            <div className="space-y-4">
               <button
-                onClick={() => window.location.reload()}
-                className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Refresh Page
-              </button>
-              <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                onClick={this.handleRetry}
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
               >
                 Try Again
               </button>
+              
+              <button
+                onClick={() => window.location.href = '/'}
+                className="w-full bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all duration-200"
+              >
+                Go Home
+              </button>
             </div>
+
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4">
-                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white">
                   Error Details (Development)
                 </summary>
-                <div className="mt-2 p-3 bg-gray-100 rounded-md">
-                  <pre className="text-xs text-gray-600 whitespace-pre-wrap">
-                    {this.state.error.stack}
-                  </pre>
-                  {this.state.errorInfo && (
-                    <pre className="text-xs text-gray-600 whitespace-pre-wrap mt-2">
-                      {this.state.errorInfo.componentStack}
+                <div className="mt-2 p-4 bg-black/20 rounded-lg text-xs font-mono text-red-400 overflow-auto">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  <div className="mb-2">
+                    <strong>Stack:</strong>
+                    <pre className="whitespace-pre-wrap mt-1">
+                      {this.state.error.stack}
                     </pre>
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Component Stack:</strong>
+                      <pre className="whitespace-pre-wrap mt-1">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
                   )}
                 </div>
               </details>
