@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Sidebar from './Sidebar';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
@@ -34,6 +36,7 @@ const Navigation: React.FC = () => {
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
+    setSidebarOpen(false);
   };
 
   const toggleMenu = () => {
@@ -265,14 +268,21 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          {/* Mobile Menu Buttons */}
+          <div className="lg:hidden flex items-center space-x-2">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 p-2"
+              aria-label="Open sidebar"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 p-2"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -367,6 +377,9 @@ const Navigation: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Sidebar */}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </nav>
   );
 };

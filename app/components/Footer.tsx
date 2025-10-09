@@ -1,5 +1,6 @@
 'use client';
 import React, { memo } from 'react';
+import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
@@ -42,28 +43,6 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
     { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
     { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
-    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
-    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
-    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
-    { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
-    { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
-    { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
-    { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
-    { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
-  ];
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
-  ];
-
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI Tools' },
     { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
     { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
     { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
@@ -71,11 +50,12 @@ const Footer: React.FC = memo(() => {
   ];
 
   const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum Solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent Robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' }
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
+    { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
+    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
+    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
   ];
 
   const companyLinks = [
@@ -143,12 +123,12 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <a 
                   href="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -173,12 +153,12 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <a 
                   href="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All IT Services →
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -200,12 +180,12 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <a 
                   href="/micro-saas"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All Micro SAAS →
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -266,21 +246,11 @@ const Footer: React.FC = memo(() => {
                   {contactInfo.phone}
                 </a>
               </div>
-              <div>
-                <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
-                <ul className="space-y-2">
-                  {emergingTech.slice(0, 3).map((service, index) => (
-                    <li key={index}>
-                      <a 
-                        href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex items-center text-sm text-gray-300">
+                <Mail className="w-4 h-4 mr-2" />
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors">
+                  {contactInfo.email}
+                </a>
               </div>
             </div>
           </div>
