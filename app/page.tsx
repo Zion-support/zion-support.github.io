@@ -3,16 +3,9 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
-import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import EnhancedSEOOptimizer from './components/EnhancedSEOOptimizer';
-import EnhancedPerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import ServiceWorker from './components/ServiceWorker';
 import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton';
@@ -1085,7 +1078,7 @@ const HomePage: React.FC = () => {
 
   return (
     <ErrorBoundary>
-      <EnhancedSEOOptimizer
+      <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting']}
@@ -1126,7 +1119,7 @@ const HomePage: React.FC = () => {
           }
         }}
       />
-      <EnhancedPerformanceOptimizer
+      <PerformanceOptimizer
         enableImageOptimization={true}
         enableLazyLoading={true}
         enableCodeSplitting={true}
@@ -1137,7 +1130,7 @@ const HomePage: React.FC = () => {
         enableWebVitals={true}
         enableCompression={true}
       />
-      <EnhancedAccessibilityEnhancer
+      <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
         enableHighContrast={true}
@@ -1147,21 +1140,6 @@ const HomePage: React.FC = () => {
         enableSkipLinks={true}
         enableColorContrast={true}
         enableFontScaling={true}
-      />
-      <SecurityEnhancer
-        enableCSP={true}
-        enableHTTPSRedirect={true}
-        enableXSSProtection={true}
-        enableClickjackingProtection={true}
-      />
-      <EnhancedAnalytics
-        enableGoogleAnalytics={true}
-        enableGoogleTagManager={true}
-        enableCustomEvents={true}
-        enablePerformanceTracking={true}
-        enableUserBehaviorTracking={true}
-        enableConversionTracking={true}
-        enableHeatmapTracking={false}
       />
       <ServiceWorker />
       
