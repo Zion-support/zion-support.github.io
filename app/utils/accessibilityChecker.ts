@@ -559,3 +559,17 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
+    
+    let report = `Accessibility Report\n`;
+    report += `==================\n\n`;
+    report += `Total Issues: ${this.issues.length}\n\n`;
+    
+    this.issues.forEach((issue, index) => {
+      report += `${index + 1}. ${issue.type}: ${issue.message}\n`;
+      report += `   WCAG Level: ${issue.wcagLevel}\n`;
+      report += `   Element: ${issue.element}\n\n`;
+    });
+    
+    return report;
+  }
+}
