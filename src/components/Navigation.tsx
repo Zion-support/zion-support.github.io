@@ -163,7 +163,7 @@ const Navigation: React.FC = () => {
     { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart3 },
     { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
     { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Check },
+    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
   ];
 
