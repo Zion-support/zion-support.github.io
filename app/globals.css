@@ -438,8 +438,6 @@ body {
     font-size: 0.9rem;
   }
 }
-
-<<<<<<< HEAD
 @media (max-width: 480px) {
   .cyber-grid {
     background-size: 20px 20px;
@@ -537,7 +535,6 @@ body {
     background: #fff !important;
   }
 }
-=======
 /* Particle System */
 .particle-system {
   position: relative;
@@ -872,4 +869,3 @@ body {
     animation: none;
   }
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
