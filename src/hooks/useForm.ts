@@ -37,7 +37,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   validateAllFields: () => boolean;
 }
 export function useForm<T extends Record<string, unknown>>(config: UseFormConfig<T>): UseFormReturn<T> {
-  const { initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true } = config;
+  const { initialValues, validationSchema, onSubmit, validateOnChange = true, validateOnBlur = true } = config;
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
@@ -45,7 +45,7 @@ export function useForm<T extends Record<string, unknown>>(config: UseFormConfig
   // Validate a single field
   const validateSingleField = useCallback(
     (field: keyof T): void => {
-      const fieldRules = validationSchema[field];
+      const fieldRules = validationSchema?.[field];
       if (!fieldRules) return;
       const fieldValue = values[field];
       const rules = fieldRules as ValidationRule<T[keyof T]>[];
@@ -59,7 +59,7 @@ export function useForm<T extends Record<string, unknown>>(config: UseFormConfig
   );
   // Validate all fields
   const validateAllFields = useCallback((): boolean => {
-    if (Object.keys(validationSchema).length === 0) return true;
+    if (!validationSchema || Object.keys(validationSchema).length === 0) return true;
     const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
     const formErrors = getFormErrors(validationResults);
     setErrors(formErrors);

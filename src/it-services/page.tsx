@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -14,6 +14,7 @@ interface ITService {
   benefits: string[];
   technologies: string[];
   contactInfo: string;
+  color?: string;
 }
 
 const ITServicesPage: React.FC = () => {

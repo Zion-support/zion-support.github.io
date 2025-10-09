@@ -3,7 +3,7 @@
  * API Caching Utility
  * Provides caching, deduplication, and retry logic for API calls
  */
-import { CacheManager } from '../utils/enhanced-cache';
+import { CacheManager } from './cacheManager';
 interface ApiCacheConfig {
   ttl?: number;
   maxRetries?: number;
@@ -18,14 +18,14 @@ interface PendingRequest<T> {
  * API Cache Manager with request deduplication
  */
 export class ApiCache {
-  private cache: CacheManager<unknown>;
+  private cache: CacheManager;
   private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
   private config: Required<ApiCacheConfig>;
   constructor(config: ApiCacheConfig = {}) {
     this.cache = new CacheManager({
       maxSize: 500,
       defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
-      storage: 'memory'
+      storage: 'memory' as CacheStorage
     });
     this.config = {
       ttl: config.ttl || 5 * 60 * 1000,
