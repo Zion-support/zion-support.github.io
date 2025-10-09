@@ -1,4 +1,18 @@
 'use client';
+import React, { useState, useCallback, useEffect } from 'react';
+
+interface LayoutShift {
+  entryType: string;
+  hadRecentInput: boolean;
+  value: number;
+}
+
+interface PerformanceEventTiming {
+  entryType: string;
+  processingStart: number;
+  startTime: number;
+}
+
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -23,32 +37,34 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ttfb: null,
     memory: null
   });
+
+  const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [];
     // Measure First Contentful Paint (FCP)
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
+    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          const lastEntry = _entries[_entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-         
-        }
+        console.error('LCP measurement error:', error);
+      }
     }
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
       try {
         const fidObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          _entries.forEach(entry => {
+          entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
@@ -57,7 +73,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                fid: _fidEntry.processingStart - _fidEntry.startTime
+                fid: fidEntry.processingStart - fidEntry.startTime
               }));
             }
           });
@@ -65,24 +81,25 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-         
-        }
+        console.error('FID measurement error:', error);
+      }
     }
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
+        let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          _entries.forEach(entry => {
+          entries.forEach(entry => {
             if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
               const clsEntry = entry as LayoutShift;
-              if (!_clsEntry.hadRecentInput) {
-                _clsValue += _clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: _clsValue }));
+              if (!clsEntry.hadRecentInput) {
+                clsValue += clsEntry.value;
+                setMetrics(prev => ({ ...prev, cls: clsValue }));
               }
             }
           });
@@ -90,15 +107,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-         
-        }
+        console.error('CLS measurement error:', error);
+      }
     }
     // Measure Time to First Byte (TTFB)
     try {
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = _navigationEntry
-        ? _navigationEntry.responseStart - _navigationEntry.requestStart
+      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+      const ttfb = navigationEntry
+        ? navigationEntry.responseStart - navigationEntry.requestStart
         : null;
       // Measure Memory Usage
       const memory =
@@ -106,21 +123,21 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           .memory?.usedJSHeapSize || null;
       setMetrics(prev => ({
         ...prev,
-        fcp: _fcp,
+        fcp,
         ttfb,
         memory
       }));
     } catch (error) {
-       
-      }
+      console.error('Performance measurement error:', error);
+    }
     // Cleanup observers
     return () => {
       observers.forEach(observer => {
         try {
           observer.disconnect();
         } catch (error) {
-           
-          }
+          console.error('Observer cleanup error:', error);
+        }
       });
     };
   }, []);

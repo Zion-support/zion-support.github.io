@@ -1,4 +1,5 @@
 'use client';
+import React, { useEffect } from 'react';
 
 interface AdvancedSEOOptimizerProps {
   title?: string;
@@ -45,6 +46,107 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   organizationData,
   websiteData
 }) => {
+  const updateMetaTag = (name: string, content: string, attribute: string = 'name', additionalAttributes?: Record<string, string>) => {
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attribute, name);
+      if (additionalAttributes) {
+        Object.entries(additionalAttributes).forEach(([key, value]) => {
+          meta.setAttribute(key, value);
+        });
+      }
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
+  };
+
+  const updateCanonicalUrl = (url: string) => {
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = url;
+  };
+
+  const addAlternateLanguageLinks = (locales: { locale: string; url: string }[]) => {
+    locales.forEach(({ locale, url }) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = locale;
+      link.href = url;
+      document.head.appendChild(link);
+    });
+  };
+
+  const addBreadcrumbStructuredData = (breadcrumbs: { name: string; url: string }[]) => {
+    const breadcrumbData = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((crumb, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: crumb.name,
+        item: crumb.url
+      }))
+    };
+    addStructuredData(breadcrumbData);
+  };
+
+  const addFAQStructuredData = (faqData: { question: string; answer: string }[]) => {
+    const faqStructuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqData.map(faq => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    };
+    addStructuredData(faqStructuredData);
+  };
+
+  const addStructuredData = (data: any) => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
+  };
+
+  const addAdditionalSEOTags = () => {
+    // Add viewport meta tag if not present
+    if (!document.querySelector('meta[name="viewport"]')) {
+      const viewport = document.createElement('meta');
+      viewport.name = 'viewport';
+      viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
+      document.head.appendChild(viewport);
+    }
+
+    // Add theme color
+    updateMetaTag('theme-color', '#4f46e5');
+    updateMetaTag('msapplication-TileColor', '#4f46e5');
+    
+    // Add mobile app meta tags
+    updateMetaTag('mobile-web-app-capable', 'yes');
+    updateMetaTag('apple-mobile-web-app-capable', 'yes');
+    updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
+    updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
+    
+    // Add format detection
+    updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
+    
+    // Add referrer policy
+    updateMetaTag('referrer', 'strict-origin-when-cross-origin');
+    
+    // Add content security policy
+    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
+  };
+
   useEffect(() => {
     // Update page title
     document.title = title;
@@ -119,103 +221,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
     
     // Add additional SEO meta tags
-    
+    addAdditionalSEOTags();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
-
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
-  };
-
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = url;
-  };
-
-  const addAlternateLanguageLinks = (locales: { locale: string; url: string }[]) => {
-    locales.forEach(({ locale, url }) => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
-      link.hreflang = locale;
-      link.href = url;
-      document.head.appendChild(link);
-    });
-  };
-
-  const addBreadcrumbStructuredData = (breadcrumbs: { name: string; url: string }[]) => {
-    const breadcrumbData = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((crumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: crumb.name,
-        item: crumb.url
-      }))
-    };
-    addStructuredData(breadcrumbData);
-  };
-
-  const addFAQStructuredData = (faqData: { question: string; answer: string }[]) => {
-    const faqStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faqData.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    };
-    addStructuredData(faqStructuredData);
-  };
-
-  const addStructuredData = (data: any) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-  };
-
-  const addAdditionalSEOTags = () => {
-    // Add viewport meta tag if not present
-    if (!document.querySelector('meta[name="viewport"]')) {}
-
-      const viewport = document.createElement('meta');
-      viewport.name = 'viewport';
-      viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
-      document.head.appendChild(viewport);
-    }
-
-    // Add theme color
-    updateMetaTag('theme-color', '#4f46e5');
-    updateMetaTag('msapplication-TileColor', '#4f46e5');
-    
-    // Add mobile app meta tags
-    updateMetaTag('mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
-    updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
-    
-    // Add format detection
-    updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
-    
-    // Add referrer policy
-    updateMetaTag('referrer', 'strict-origin-when-cross-origin');
-    
-    // Add content security policy
-    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
-  };
 
   return null;
 };
